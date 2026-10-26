@@ -103,3 +103,5 @@ import SFT.Foundation.PrimitiveReductions
 import SFT.Foundation.DerivationTrace
 import SFT.Foundation.DerivationTraceWitnesses
 import SFT.Foundation.DerivationTraceControls
+import SFT.Foundation.DerivationTraceGrammar
+import SFT.Foundation.DerivationTraceEvidence

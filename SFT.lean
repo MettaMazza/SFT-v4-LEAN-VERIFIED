@@ -15,3 +15,5 @@ import SFT.Foundation.RootDerivation
 import SFT.Foundation.OneDerivation
 import SFT.Foundation.CountTrace
 import SFT.Foundation.CountRepresentation
+import SFT.Foundation.Part
+import SFT.Foundation.PartSelection

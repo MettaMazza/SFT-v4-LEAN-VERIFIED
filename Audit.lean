@@ -587,3 +587,14 @@ import SFT
 #print axioms SFT.Foundation.FoldUniformOrder.prefixLength
 #print axioms SFT.Foundation.FoldUniformOrder.uniformLength
 #print axioms SFT.Foundation.FoldUniformOrder.singletonDivision
+#print axioms SFT.Foundation.FoldSorted.rotateProduct
+#print axioms SFT.Foundation.FoldSorted.orderTrans
+#print axioms SFT.Foundation.FoldSorted.reverseOrder
+#print axioms SFT.Foundation.FoldSorted.insertMembership
+#print axioms SFT.Foundation.FoldSorted.insertionOrdered
+#print axioms SFT.Foundation.FoldSorted.sortedMembership
+#print axioms SFT.Foundation.FoldSorted.sortedOrdered
+#print axioms SFT.Foundation.FoldSorted.orderedListsEqual
+#print axioms SFT.Foundation.FoldSorted.sortedNoDuplicates
+#print axioms SFT.Foundation.FoldSorted.foldedUniformDivision
+#print axioms SFT.Foundation.FoldSorted.foldedUniformLength

@@ -11,5 +11,5 @@ for xs in traces:
   expected.append([cells,paired,cells,cells])
 actual=[json.loads(x) for x in run('env','lean','--run','verification/CommonRefinementCases.lean').splitlines()]
 assert actual==expected,(actual,expected)
-report={'status':'PASS','source_commit':info['commit'],**audit,'cases':len(expected),'scope':'pair_cells, both lift functions and generated index-pairing execution; universal native pairing and refinement proofs audited separately; candidate grammar pending'}
+report={'status':'PASS','source_commit':info['commit'],**audit,'cases':len(expected),'scope':'pair_cells, both lift functions and generated index-pairing execution; universal native pairing and refinement proofs audited separately; candidate grammar checked separately by fresh parity'}
 (OUTPUT/'COMMON_REFINEMENT_REPORT.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

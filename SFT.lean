@@ -18,3 +18,8 @@ import SFT.Foundation.CountRepresentation
 import SFT.Foundation.Part
 import SFT.Foundation.PartSelection
 import SFT.Foundation.CommonRefinement
+import SFT.Foundation.PartEquivalence
+
+import SFT.Foundation.RefinementSelection
+
+import SFT.Foundation.FoldDerivation

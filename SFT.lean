@@ -86,3 +86,6 @@ import SFT.Mathematics.ExactArithmeticEvidence
 import SFT.Mathematics.DiscreteObjects
 import SFT.Mathematics.DiscreteRelations
 import SFT.Mathematics.DiscreteSuccession
+import SFT.Mathematics.DiscreteGrammar
+import SFT.Mathematics.DiscreteWitnesses
+import SFT.Mathematics.DiscreteControls

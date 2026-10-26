@@ -1,0 +1,48 @@
+/-! Native reconstruction of SFT-ROOT-THERE-IS-NO-NOTHING.
+Source: sft/foundation/root_theorem.py. Operational presentation boundary. -/
+namespace SFT.Foundation.Root
+inductive Challenge where
+  | absent
+  | presented
+  deriving DecidableEq, Repr
+
+def admissible : Challenge → Prop
+  | .absent => False
+  | .presented => True
+
+-- Retain the actual presentation identity rather than discarding its content.
+structure Presentation (Identity : Type) where
+  identity : Identity
+
+inductive Occurrence (Identity : Type) where
+  | fromPresentation : Presentation Identity → Occurrence Identity
+
+theorem presentationSuppliesOccurrence {Identity : Type} (p : Presentation Identity) :
+    ∃ o : Occurrence Identity, o = .fromPresentation p :=
+  ⟨.fromPresentation p, rfl⟩
+
+theorem admissibleIffPresented (c : Challenge) :
+    admissible c ↔ c = .presented := by
+  cases c with
+  | absent =>
+    constructor
+    · intro h; exact False.elim h
+    · intro h; cases h
+  | presented =>
+    constructor
+    · intro _; rfl
+    · intro _; exact True.intro
+
+theorem uniqueOperationalSurvivor :
+    ∃ c : Challenge, admissible c ∧ ∀ d, admissible d → d = c := by
+  refine ⟨.presented, True.intro, ?_⟩
+  intro d h
+  exact (admissibleIffPresented d).mp h
+
+def candidates : List Challenge := [.absent, .presented]
+theorem candidatesComplete (c : Challenge) : c ∈ candidates := by
+  cases c with
+  | absent => exact List.Mem.head _
+  | presented => exact List.Mem.tail _ (List.Mem.head _)
+theorem noAbsentCounterexample : ¬ admissible .absent := fun h => h
+end SFT.Foundation.Root

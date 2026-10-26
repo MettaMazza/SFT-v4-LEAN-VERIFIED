@@ -1,0 +1,5 @@
+import SFT.Host.Text
+set_option maxRecDepth 10000
+set_option maxHeartbeats 1000000
+theorem probe : SFT.Host.Text.contains "All operational statements".toLower "operational" = true := by decide +kernel
+#print axioms probe

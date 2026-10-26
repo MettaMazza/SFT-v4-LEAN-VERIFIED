@@ -1,0 +1,45 @@
+import SFT.Foundation.One
+/-! Initial positive-count construction for SFT-FOUNDATION-COUNT-001.
+Finite nonempty generation is represented directly by base/successor.
+The full v3 ten-class representation grammar remains a tracked next step. -/
+namespace SFT.Foundation.Count
+inductive PositiveCount where
+  | one
+  | next : PositiveCount → PositiveCount
+  deriving DecidableEq, Repr
+
+def toNat : PositiveCount → Nat
+  | .one => 1
+  | .next n => Nat.succ (toNat n)
+
+theorem strictlyPositive (n : PositiveCount) : 0 < toNat n := by
+  cases n with
+  | one => exact Nat.zero_lt_succ 0
+  | next n => exact Nat.zero_lt_succ (toNat n)
+
+theorem successorExtends (n : PositiveCount) :
+    toNat (.next n) = Nat.succ (toNat n) := rfl
+
+theorem representationInjective (a b : PositiveCount) : toNat a = toNat b → a = b := by
+  induction a generalizing b with
+  | one =>
+    cases b with
+    | one => intro _; rfl
+    | next b =>
+      intro h
+      have hz : toNat b = 0 := Nat.succ.inj h.symm
+      have hp := strictlyPositive b
+      rw [hz] at hp
+      exact False.elim (Nat.lt_irrefl 0 hp)
+  | next a ih =>
+    cases b with
+    | one =>
+      intro h
+      have hz : toNat a = 0 := Nat.succ.inj h
+      have hp := strictlyPositive a
+      rw [hz] at hp
+      exact False.elim (Nat.lt_irrefl 0 hp)
+    | next b =>
+      intro h
+      exact congrArg PositiveCount.next (ih b (Nat.succ.inj h))
+end SFT.Foundation.Count

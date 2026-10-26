@@ -1,0 +1,68 @@
+# Smithian Fold Theory V4: A Native Lean Reconstruction of the Complete V3 Model
+
+**Author:** Maria Smith  
+**Status:** Working draft; unpublished  
+**Draft version:** 0.1.0  
+**Updated:** 2026-10-26T16:58:46+00:00  
+**Implementation:** Lean 4.35.0  
+**Source baseline:** `76f1b34e9e9682989adcbb088797b4ae4ce4fcf1`
+
+## Abstract
+
+This work reconstructs Smithian Fold Theory V3 in native Lean. The reconstruction follows the SFT foundation, There Is No Nothing, through the structural One, finite positive counts, exact parts and Fold, and targets the complete V3 scientific corpus. The source baseline contains 2,781 registered model-admitted claims and 39,278 tracked files. The present implementation establishes thirteen axiom-free results covering the operational root, the structural-One candidate grammar, and an initial positive-count construction. Lean compilation and an explicit axiom audit pass. The complete reconstruction is underway; these first results constitute its foundational implementation checkpoint.
+
+## 1. Objective and source scope
+
+The scientific objective is to reconstruct SFT's zero-axiom, zero-free-parameter structural derivation in Lean, including its unified treatment of gravity, physical constants and particles. The implementation target is 100% of the pinned V3 corpus. Every census statement, registration, dependency and receipt reference is retained in `COVERAGE.json`; every tracked file has a Git object identity in `reference/V3_TRACKED_FILES.tsv`. Native mathematical proofs and reproduction of artifact/runtime behavior are tracked separately.
+
+The pinned source is https://github.com/MettaMazza/ernos-labs-sft-platform at the commit recorded above. Its live census contains 2,781 claims; the earlier 2 August report described 2,777. This reconstruction uses the pinned live census.
+
+## 2. Reconstruction method
+
+V3 is inspected read-only. Its Python scientific modules are not imported into the Lean proof runtime. Source registrations establish the statements and declared scope to recreate. Each implemented result receives a Lean declaration, an explicit proof, a source mapping, and a recorded axiom audit. No unfinished proof or custom axiom declaration is used in the present modules.
+
+The compiler is pinned to `leanprover/lean4:v4.35.0`. `lake build` compiles the library and `Audit.lean`. The audit uses Lean's `#print axioms` on all thirteen exported results. Source hashes and logs are retained under `verification/`.
+
+## 3. Operational root
+
+`SFT.Foundation.Root` models the two registered operational challenge classes: absence and presentation. Presentation retains an explicit identity. The occurrence constructor binds an occurrence to that presentation. The module proves that each presentation supplies its occurrence, that admissibility is equivalent to the presented class, that this survivor is unique, and that enumeration covers both classes. Absence supplies no admissible counterexample.
+
+These declarations reconstruct the operational boundary of `SFT-ROOT-THERE-IS-NO-NOTHING`, independently of presentation content or identity type.
+
+## 4. Structural One
+
+`SFT.Foundation.One` represents the six combinations of none/proper/complete root coverage and absent/present additional material. It proves exhaustive enumeration and that complete coverage without added material is the unique preserving candidate. A whole retains the supplied root presentation and its occurrence witness. These results map to `SFT-FOUNDATION-ONE-001`.
+
+## 5. Positive finite count
+
+`SFT.Foundation.Count` constructs positive counts from a base One and a successor constructor. Its natural-number interpretation is strictly positive, successor extends that interpretation by one, and the interpretation is injective. Naturals here expose an implementation correspondence; the generated count type has no zero constructor. The ten-class V3 representation grammar and the full generation-trace preservation argument are the next implementation steps.
+
+## 6. Verification results
+
+| Check | Current result |
+|---|---|
+| Lean build | PASS |
+| Exported declarations audited | 13 |
+| Audited declarations with axiom dependencies | 0 |
+| Custom axioms or unfinished proofs in current Lean files | None |
+| V3 census claims inventoried | 2,781 |
+| Claims with native implementation work | 3 |
+| Claims with full proof and artifact/runtime parity completed | 0 |
+
+The first successful build exposed `propext` dependencies introduced by simplification in six results. Direct constructive proofs replaced those steps. The final build reports no axiom dependencies for all thirteen results. Both logs are preserved. This report concerns the implemented foundation results; gravity, constants and particle branches have not yet been reconstructed in this project.
+
+## 7. Reproducibility
+
+With the pinned Lean toolchain installed, run `lake build` from the project directory. Run `lake env lean Audit.lean` for the explicit dependency audit. `verification/TURN_001_CHECKPOINT.json` records source hashes, the build result and the continuation point. `TIMELINE.txt` records the exact working sequence. The original V3 sources and protected admission engine remain unchanged.
+
+## 8. Next implementation stage
+
+Complete the Count grammar and trace proofs, then recreate exact Part, structural Fold, part equivalence, assembly and dynamics in dependency order. Continue across every branch in `COVERAGE.json`, preserving scientific statements, derivational dependencies and empirical comparison records.
+
+## 9. Publication record
+
+This manuscript is a local working draft for the eventual Zenodo publication. No DOI has been assigned to this reconstruction and no upload or publication has occurred. Subsequent working turns update this manuscript alongside the chronological timeline.
+
+## Working update — 2026-10-26T16:58:46+00:00
+
+Confirmed the source dependency sequence: Root has no registered dependencies; One depends on Root; Count depends on One; Part depends on One and Count. The current Lean imports follow Root → One → Count. Part remains pending. This update changes document filenames to .txt; mathematical results and verification counts are unchanged.

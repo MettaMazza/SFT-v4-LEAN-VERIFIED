@@ -1,0 +1,13 @@
+✖ [2/8] Building SFT.Foundation.Root (226ms)
+trace: .> LEAN_PATH=/Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/lib/lean /Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /Volumes/One Touch/SFT v4 Full model LEAN/SFT/Foundation/Root.lean -o /Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/lib/lean/SFT/Foundation/Root.olean -i /Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/lib/lean/SFT/Foundation/Root.ilean -c /Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/ir/SFT/Foundation/Root.c --setup /Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/ir/SFT/Foundation/Root.setup.json --json
+error: SFT/Foundation/Root.lean:93:68: Tactic `decide` failed to reduce
+  @decide (boundaryControl.passed = true) (instDecidableEqBool boundaryControl.passed true)
+to `true` or `false`.
+
+After unfolding the instances `instDecidableEqBool`, `Bool.decEq`, and `Classical.propDecidable`, reduction got stuck at
+  Classical.choice ⋯
+
+Hint: Reduction got stuck on `Classical.choice`, which indicates that a `Decidable` instance is defined using classical reasoning, proving an instance exists rather than giving a concrete construction. The `decide` tactic works by evaluating a decision procedure via reduction, and it cannot make progress with such instances. This can occur due to the `open scoped Classical` command, which enables the instance `Classical.propDecidable`.
+Some required targets logged failures:
+- SFT.Foundation.Root
+error: build failed

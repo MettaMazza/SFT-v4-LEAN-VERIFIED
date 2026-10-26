@@ -1,0 +1,59 @@
+import SFT.Foundation.Root
+/-! SFT-FOUNDATION-ONE-001: complete root coverage without added material.
+The candidate grammar is the same six classes as the v3 source. -/
+namespace SFT.Foundation.One
+inductive Coverage where
+  | none | proper | complete
+  deriving DecidableEq, Repr
+inductive Addition where
+  | absent | present
+  deriving DecidableEq, Repr
+structure Candidate where
+  coverage : Coverage
+  addition : Addition
+  deriving DecidableEq, Repr
+
+def exactWhole : Candidate := ⟨.complete, .absent⟩
+def preservesRoot (c : Candidate) : Prop :=
+  c.coverage = .complete ∧ c.addition = .absent
+
+def candidates : List Candidate :=
+  [⟨.none, .absent⟩, ⟨.none, .present⟩,
+   ⟨.proper, .absent⟩, ⟨.proper, .present⟩,
+   ⟨.complete, .absent⟩, ⟨.complete, .present⟩]
+
+theorem candidatesComplete (c : Candidate) : c ∈ candidates := by
+  rcases c with ⟨coverage, addition⟩
+  cases coverage <;> cases addition <;>
+    (repeat first | exact List.Mem.head _ | apply List.Mem.tail)
+
+theorem exactWholeUnique (c : Candidate) : preservesRoot c ↔ c = exactWhole := by
+  rcases c with ⟨coverage, addition⟩
+  constructor
+  · intro h
+    rcases h with ⟨hc, ha⟩
+    cases hc
+    cases ha
+    rfl
+  · intro h
+    cases h
+    exact ⟨rfl, rfl⟩
+
+theorem uniqueSurvivor :
+    ∃ c : Candidate, preservesRoot c ∧ ∀ d, preservesRoot d → d = c := by
+  refine ⟨exactWhole, ⟨rfl, rfl⟩, ?_⟩
+  intro d h
+  exact (exactWholeUnique d).mp h
+
+-- The whole retains the supplied root presentation, with no second identity.
+structure Whole (Identity : Type) where
+  root : Root.Presentation Identity
+
+def retain {Identity : Type} (p : Root.Presentation Identity) : Whole Identity := ⟨p⟩
+theorem retainIdentity {Identity : Type} (p : Root.Presentation Identity) :
+    (retain p).root = p := rfl
+
+theorem retainedOccurrence {Identity : Type} (p : Root.Presentation Identity) :
+    ∃ o : Root.Occurrence Identity, o = .fromPresentation (retain p).root :=
+  Root.presentationSuppliesOccurrence p
+end SFT.Foundation.One

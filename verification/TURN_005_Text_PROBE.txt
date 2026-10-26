@@ -1,0 +1,12 @@
+/-! Constructive host implementation of Python's string-substring membership.
+This is evidence-text processing, not an SFT scientific object or parameter. -/
+namespace SFT.Host.Text
+
+def containsChars (needle : List Char) : List Char → Bool
+  | [] => needle.isEmpty
+  | c :: rest => needle.isPrefixOf (c :: rest) || containsChars needle rest
+
+def contains (haystack needle : String) : Bool :=
+  containsChars needle.toList haystack.toList
+
+end SFT.Host.Text

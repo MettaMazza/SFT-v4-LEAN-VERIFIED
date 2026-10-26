@@ -1,0 +1,9 @@
+true
+true
+TextProbe.lean:4:97: error: Tactic `decide` failed to reduce
+  @decide (SFT.Host.Text.contains "All operational statements".toLower "operational" = true)
+    (instDecidableEqBool (SFT.Host.Text.contains "All operational statements".toLower "operational") true)
+to `true` or `false`.
+
+After unfolding the instances `instDecidableEqBool` and `Bool.decEq`, reduction got stuck at
+  SFT.Host.Text.containsChars "operational".toList "All operational statements".toLower.toList

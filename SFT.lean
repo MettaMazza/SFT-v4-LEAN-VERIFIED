@@ -80,3 +80,6 @@ import SFT.Mathematics.ExactTraceDistribution
 import SFT.Mathematics.ExactArithmeticWitnesses
 import SFT.Mathematics.ExactArithmeticControls
 import SFT.Mathematics.ExactTraceRemainder
+import SFT.Foundation.FormEnforcementEvidence
+import SFT.Foundation.MeasurementEvidence
+import SFT.Mathematics.ExactArithmeticEvidence

@@ -1,0 +1,41 @@
+[
+  [
+    {
+      "expected_behavior": "reject a one-child Fold node",
+      "kind": "false_premise",
+      "observed_behavior": "the one-child production is outside the grammar",
+      "passed": true,
+      "receipt_hash": "sha256:cf5d539e03009fa3af00ff0946d3ec713044da5bc2e2bee752d190163b07757e"
+    },
+    {
+      "expected_behavior": "reject changed source identity",
+      "kind": "tampered_source",
+      "observed_behavior": "changed identity differs",
+      "passed": true,
+      "receipt_hash": "sha256:a100fc522c0df37fd0e0b75aa91cec82a224c73202c30cad2dc0100c34d1d0c0"
+    },
+    {
+      "expected_behavior": "accept generated nonuniform finite trees and reject same-label edges",
+      "kind": "tampered_artifact",
+      "observed_behavior": "all generated examples parse and the same-label node does not",
+      "passed": true,
+      "receipt_hash": "sha256:f13b80b2339fed04795d1133618a727b2b9f359e868ecead459e03e26f120d32"
+    },
+    {
+      "expected_behavior": "refuse completed-infinite trees and unforced constructors",
+      "kind": "boundary",
+      "observed_behavior": "only finite traces ending in One are admitted",
+      "passed": true,
+      "receipt_hash": "sha256:3a75d152f4cd488c7ba8d3b28da410eda03ecf2dcdc7e0d55c6c523ac1f467a6"
+    }
+  ],
+  {
+    "base": "The structural One is the sole terminal constructor.",
+    "completeness": "Any finite assembly from One and Fold is parsed by the productions, and every production output is such an assembly.",
+    "generality": "Structural induction over construction traces establishes the grammar at every generated finite tree depth.",
+    "minimality": "Removing the base or a child, label, provenance or return loses a dependency; later arity or an extra constructor is unforced.",
+    "named_shape_uniqueness": "Only base-included__two-children__labels-distinct-held__children-generated__return-present__finite-leaf-termination__no-extra defines the complete grammar.",
+    "recursion": "The minimal Fold supplies exactly two distinctly held edges; each child must already be a generated finite Form; the node retains its return relation.",
+    "termination": "Every admitted form has a finite construction trace ending only in One leaves. No completed infinite tree is formed."
+  }
+]

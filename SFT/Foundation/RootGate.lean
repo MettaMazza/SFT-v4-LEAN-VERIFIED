@@ -66,4 +66,24 @@ theorem duplicateCandidateRejected : SFT.Engine.censusViolations duplicateCandid
   have impossible := SFT.Engine.passingCensusNoDuplicateIdentifiers _ h
   exact Bool.noConfusion impossible
 
+def registrationWithAxiom (sourceHash : String) : SFT.Engine.ClaimRegistration :=
+  { Evidence.registrationData sourceHash with axioms := ["injected premise"] }
+
+def registrationWithParameter (sourceHash : String) : SFT.Engine.ClaimRegistration :=
+  { Evidence.registrationData sourceHash with freeParameters := ["injected parameter"] }
+
+theorem registrationWithAxiomRejected (sourceHash : String) (contains : String → Bool)
+    (executed : Option String) :
+    SFT.Engine.registrationViolations contains (registrationWithAxiom sourceHash) executed ≠ [] := by
+  intro h
+  have impossible := SFT.Engine.passingRegistrationHasNoAxioms _ _ _ h
+  cases impossible
+
+theorem registrationWithParameterRejected (sourceHash : String) (contains : String → Bool)
+    (executed : Option String) :
+    SFT.Engine.registrationViolations contains (registrationWithParameter sourceHash) executed ≠ [] := by
+  intro h
+  have impossible := SFT.Engine.passingRegistrationHasNoFreeParameters _ _ _ h
+  cases impossible
+
 end SFT.Foundation.Root.Gate

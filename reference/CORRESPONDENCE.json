@@ -32,6 +32,7 @@
         "Candidate": "finite grammar in candidate_records; one constructor per source row",
         "candidateId": "candidate_records/form_name",
         "exactForm": "candidate_records exact_form",
+        "presented": "candidate_records: exact registered field values",
         "survives": "decision_record presented predicate",
         "decisionReason": "decision_record reason",
         "generationRule": "GENERATION_RULE",
@@ -41,7 +42,6 @@
         "candidatesComplete": "completeness_record enumeration",
         "uniqueSurvivor": "closure_record named_shape_uniqueness",
         "survivorAccepted": "source survivor decision",
-        "presented": "candidate_records: exact registered field values",
         "closureRecord": "closure_record: all five source fields",
         "decisionUsesOnlyPresentation": "closure_record generality / decision_record presented predicate",
         "deletionRemovesOnlyWitness": "closure_record minimality within registered candidate partition",
@@ -104,6 +104,8 @@
         "Candidate": "finite grammar in candidate_records; one constructor per source row",
         "candidateId": "candidate_records/form_name",
         "exactForm": "candidate_records exact_form",
+        "coverage": "candidate_records: exact registered field values",
+        "extra": "candidate_records: exact registered field values",
         "survives": "survives conjunction",
         "decisionReason": "decision_reason ordered branches",
         "generationRule": "GENERATION_RULE",
@@ -112,9 +114,7 @@
         "survivor": "unique accepted candidate from source predicate",
         "candidatesComplete": "completeness_record enumeration",
         "uniqueSurvivor": "closure_record named_shape_uniqueness",
-        "survivorAccepted": "source survivor decision",
-        "coverage": "candidate_records: exact registered field values",
-        "extra": "candidate_records: exact registered field values"
+        "survivorAccepted": "source survivor decision"
       },
       "candidate_count": 6,
       "remaining": [
@@ -163,6 +163,9 @@
         "Candidate": "finite grammar in candidate_records; one constructor per source row",
         "candidateId": "candidate_records/form_name",
         "exactForm": "candidate_records exact_form",
+        "coverage": "candidate_records: exact registered field values",
+        "extra": "candidate_records: exact registered field values",
+        "multiplicity": "candidate_records: exact registered field values",
         "survives": "survives conjunction",
         "decisionReason": "decision_reason ordered branches",
         "generationRule": "GENERATION_RULE",
@@ -171,10 +174,7 @@
         "survivor": "unique accepted candidate from source predicate",
         "candidatesComplete": "completeness_record enumeration",
         "uniqueSurvivor": "closure_record named_shape_uniqueness",
-        "survivorAccepted": "source survivor decision",
-        "coverage": "candidate_records: exact registered field values",
-        "extra": "candidate_records: exact registered field values",
-        "multiplicity": "candidate_records: exact registered field values"
+        "survivorAccepted": "source survivor decision"
       },
       "candidate_count": 10,
       "remaining": [
@@ -203,37 +203,42 @@
       "source_path": "sft/foundation/root_theorem.py",
       "source_sha256": "50c5320b466407b22843cb27d96f4b65e1b1a47dcae2a85dea9ee859d32f8230",
       "implemented": {
+        "sourceRecordValue": "root_theorem.py candidate_records/decision_record exact source record serialization",
         "candidateRecord": "candidate_records",
         "completenessRecord": "completeness_record",
+        "sourceDecisionValue": "root_theorem.py candidate_records/decision_record exact source record serialization",
         "decisionRecord": "decision_record",
         "closureValue": "closure_record",
+        "registrationRecord": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "registrationData": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
         "registration": "RootTheoremProgram.registration",
+        "registrationAdapterPreservesRecord": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "generatedCandidateData": "RootTheoremProgram.generate_candidates Candidate dataclass fields",
         "generatedCandidate": "RootTheoremProgram.generate_candidates / Candidate",
+        "generateCandidatesData": "RootTheoremProgram.generate_candidates; exact typed census adapter and source census-gate count/identifier rejection conditions",
         "generateCandidates": "RootTheoremProgram.generate_candidates / CandidateCensus",
+        "candidateDecisionData": "RootTheoremProgram.decide_candidate CandidateDecision dataclass fields",
         "candidateDecision": "RootTheoremProgram.decide_candidate / CandidateDecision",
         "decideCandidate": "RootTheoremProgram.decide_candidate dictionary lookup including unknown ID refusal",
+        "closureEvidenceData": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
         "closureEvidence": "RootTheoremProgram.closure_evidence / ClosureEvidence",
         "tamperedSourceControl": "control_records tampered_source exact predicate",
         "controlRecords": "control_records ordering",
         "controlValue": "control_records dictionary fields",
         "controlResult": "RootTheoremProgram.run_controls / ControlResult",
-        "runControls": "RootTheoremProgram.run_controls",
-        "generatedCandidateData": "RootTheoremProgram.generate_candidates Candidate dataclass fields",
-        "candidateDecisionData": "RootTheoremProgram.decide_candidate CandidateDecision dataclass fields",
-        "closureEvidenceData": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
         "controlResultData": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
         "typedControlResultMatchesRecord": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
         "runControlsData": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
-        "generateCandidatesData": "RootTheoremProgram.generate_candidates; exact typed census adapter and source census-gate count/identifier rejection conditions"
+        "runControls": "RootTheoremProgram.run_controls"
       },
       "status": "zero-axiom executable definitions; stored-artifact parity passed; full general correspondence proof pending",
-      "lean_source_sha256": "e1563e849934ec5aeac759bec9b25af21b05f09334e46e4727b140e683fb8eb2"
+      "lean_source_sha256": "18438a5c31501ce72a44adf0f7c298bd3fcc55d24ce14a36055a83f7d7091ec7"
     },
     {
       "module": "SFT/Foundation/RootGate.lean",
       "source_path": "sft/foundation/root_theorem.py",
       "source_sha256": "50c5320b466407b22843cb27d96f4b65e1b1a47dcae2a85dea9ee859d32f8230",
-      "lean_source_sha256": "45597dcce735fe46be877b2310a9e0e47e7c19c91952e06470438c927e7d9bca",
+      "lean_source_sha256": "fb780712b2ccbac189a543b072dd136c5000b84116ac7b713f2f25fd140a4cf4",
       "implemented": {
         "censusCandidates": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
         "decisions": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
@@ -251,8 +256,48 @@
         "incorrectCardinalityCensus": "RootTheoremProgram.generate_candidates; exact typed census adapter and source census-gate count/identifier rejection conditions",
         "incorrectCardinalityRejected": "RootTheoremProgram.generate_candidates; exact typed census adapter and source census-gate count/identifier rejection conditions",
         "duplicateCandidateCensus": "RootTheoremProgram.generate_candidates; exact typed census adapter and source census-gate count/identifier rejection conditions",
-        "duplicateCandidateRejected": "RootTheoremProgram.generate_candidates; exact typed census adapter and source census-gate count/identifier rejection conditions"
+        "duplicateCandidateRejected": "RootTheoremProgram.generate_candidates; exact typed census adapter and source census-gate count/identifier rejection conditions",
+        "registrationWithAxiom": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "registrationWithParameter": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "registrationWithAxiomRejected": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "registrationWithParameterRejected": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace"
       }
+    },
+    {
+      "module": "SFT/Foundation/RootDerivation.lean",
+      "source_path": "sft/foundation/root_theorem.py",
+      "source_sha256": "50c5320b466407b22843cb27d96f4b65e1b1a47dcae2a85dea9ee859d32f8230",
+      "implemented": {
+        "SourceRecord": "candidate_records dictionary fields candidate_id, presented, exact_form",
+        "SourceDecision": "decision_record output fields candidate_id, survives, reason",
+        "generatedRecord": "candidate_records exact two source records",
+        "decisionRecord": "decision_record presentation predicate, candidate identity retention and exact reasons",
+        "classify": "GENERATION_RULE/completeness_record partition by presentation at proof boundary",
+        "classificationPreservesPresentation": "completeness_record classification retains the partition relation",
+        "generatedClassificationInverse": "candidate_records are representatives of their own presentation classes",
+        "recordClassificationExhaustive": "completeness_record exhaustion for every source-typed record, derived from presentation classifier",
+        "classificationExact": "GENERATION_RULE: records share a class exactly when their presentation flags agree",
+        "decisionAgreesWithClassification": "decision_record depends only on presented; agreement with finite grammar survives",
+        "everyAcceptedRecordHasSurvivorClass": "closure_record named_shape_uniqueness for every source-typed record",
+        "generatedDecisionPreserved": "decision_record exact identity, survival and reason on generated records",
+        "witnessedOccurrence": "decision_record reason and candidate_records exact_form: presentation is the operational occurrence witness",
+        "unpresentedAbsence": "candidate_records unpresented-absence has presented false",
+        "acceptanceIffWitnessedOccurrence": "registered statement: every admitted operational record presents an occurrence",
+        "admittedRecordCannotBeUnpresented": "registered statement and WHY_DERIVATION_CHECK: an admitted operational record cannot instantiate unpresented absence",
+        "unpresentedRecordExcluded": "WHY_DERIVATION_CHECK: non-presentation supplies no counterexample to admit",
+        "decisionIndependentOfMetadata": "closure_record generality: decision does not inspect metadata content, notation or length",
+        "reasonIndependentOfMetadata": "decision_record reason depends only on presentation",
+        "deletingPresentationExcludesRecord": "closure_record minimality: deleting presentation deletes the admissible witness"
+      },
+      "domain": "exact generated record field schema: candidate_id String, presented Bool, exact_form String; no independently invented presentation/occurrence carrier",
+      "related_sources": [
+        {
+          "path": "claims/SFT-ROOT-THERE-IS-NO-NOTHING/WHY_DERIVATION_CHECK.md",
+          "sha256": "6eab6b9ec7660f8929b3894c2498e422eaf1f0d239f12f9566809e8d388f629b"
+        }
+      ],
+      "lean_source_sha256": "51172d5d1e62456607c9e306964b17417e96058723ee950f5e143d8db29b48cf",
+      "role": "root record-level derivation; separate from enumerated candidate TSV output"
     }
   ],
   "host_modules": [
@@ -316,11 +361,11 @@
         "quote": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
         "insertField": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
         "sortFields": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
-        "render": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
-        "renderValues": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
-        "renderFields": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
-        "renderField": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
-        "identity": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites"
+        "identity": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
+        "render": "canonical.py canonical_value / canonical_json: structural recursion rendering JSON values, arrays and sorted object fields",
+        "renderValues": "canonical.py canonical_value / canonical_json: structural recursion rendering JSON values, arrays and sorted object fields",
+        "renderFields": "canonical.py canonical_value / canonical_json: structural recursion rendering JSON values, arrays and sorted object fields",
+        "renderField": "canonical.py canonical_value / canonical_json: structural recursion rendering JSON values, arrays and sorted object fields"
       },
       "lean_source_sha256": "e18e15a44ebce39c9164e6b265dc07f080d0f2c9331650b79ab60d49b5073105",
       "status": "zero-axiom implementation; general algorithm correspondence proof pending"
@@ -428,18 +473,57 @@
         "CandidateCensus": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
         "censusValue": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
         "duplicateIdentifiers": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
+        "positiveCardinality": "engine.py::_census_violations positive signed cardinality and equality checks via explicit Int constructors; constructive successor witness",
+        "cardinalityMatches": "engine.py::_census_violations positive signed cardinality and equality checks via explicit Int constructors; constructive successor witness",
         "censusViolations": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
         "passingCensusHasGenerationRule": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
         "passingCensusHasBoundary": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
         "passingCensusHasPositiveCount": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
         "passingCensusMatchesCount": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
         "passingCensusNoDuplicateIdentifiers": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
-        "positiveCardinality": "engine.py::_census_violations positive signed cardinality and equality checks via explicit Int constructors; constructive successor witness",
-        "cardinalityMatches": "engine.py::_census_violations positive signed cardinality and equality checks via explicit Int constructors; constructive successor witness",
         "positiveCardinalityHasSuccessor": "engine.py::_census_violations positive signed cardinality and equality checks via explicit Int constructors; constructive successor witness",
         "passingCensusPositiveWitness": "engine.py::_census_violations positive signed cardinality and equality checks via explicit Int constructors; constructive successor witness"
       },
       "lean_source_sha256": "fe38dff7d34a1dc8755fd9eff535f69e8baaaec8fbb1f919d048107ae12bfd23"
+    },
+    {
+      "source_path": "sft/engine/engine.py",
+      "source_sha256": "cc150b5556b62f3d67e91ad9d008811abb429b2a3d547159a565b53cfab7e525",
+      "domain": "source-annotated typed records; malformed Python field types outside this domain pending importer validation",
+      "related_sources": [
+        {
+          "path": "sft/engine/model.py",
+          "sha256": "c93df7daef6507b6f448701a4a0d1e077b89b8b1984c29ca70a55e22ca39e0d1"
+        },
+        {
+          "path": "sft/engine/canonical.py",
+          "sha256": "98428dec80cec16ce357df630b2780d9cd2fb3634068a964b001539362ed4901"
+        }
+      ],
+      "module": "SFT/Engine/RegistrationGate.lean",
+      "source_component": "engine/model.py ClaimRegistration/EvidenceMode/ProvenanceClass; engine.py::_registration_violations",
+      "implemented": {
+        "EvidenceMode": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "ProvenanceClass": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "evidenceModeName": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "provenanceName": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "ClaimRegistration": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "registrationValue": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "rootTheoremId": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "insertIdentifier": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "sortIdentifiers": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "missingDependencies": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "registrationHeaderViolations": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "registrationCoreViolations": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "executedSourceViolations": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "registrationViolations": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "passingRegistrationCore": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "listEmptyOfIsEmpty": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "passingRegistrationHasNoAxioms": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "passingRegistrationHasNoFreeParameters": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace",
+        "passingRegistrationNoMissingDependencies": "engine/model.py registration typed fields and enums; engine.py::_registration_violations ordered conditions and necessary passing properties; RootTheoremProgram.registration exact adapter when in Root namespace"
+      },
+      "lean_source_sha256": "39cd2dbd55b4ca550bf3cb29dd6c8a5896c9a4494826fc5139de46856b40bf99"
     }
   ]
 }

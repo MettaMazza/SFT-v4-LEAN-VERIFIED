@@ -10,3 +10,5 @@ import SFT.Foundation.RootGate
 
 import SFT.Engine.EvidenceGates
 import SFT.Engine.CensusGate
+import SFT.Engine.RegistrationGate
+import SFT.Foundation.RootDerivation

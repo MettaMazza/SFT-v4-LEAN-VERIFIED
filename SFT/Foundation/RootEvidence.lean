@@ -1,7 +1,8 @@
+import SFT.Engine.RegistrationGate
 import SFT.Engine.CensusGate
 import SFT.Engine.EvidenceGates
 import SFT.Engine.DecisionGate
-import SFT.Foundation.Root
+import SFT.Foundation.RootDerivation
 import SFT.Host.Canonical
 /-! Source: root_theorem.py::RootTheoremProgram and its record functions.
 Objects encode the exact engine/model.py dataclass fields for canonical serialization.
@@ -10,9 +11,11 @@ Executable correspondence is checked separately from native theorem completion. 
 namespace SFT.Foundation.Root.Evidence
 open SFT.Host.Canonical
 
-def candidateRecord (c : Candidate) : Value := .object [
-  ("candidate_id", .text (candidateId c)), ("presented", .boolean (presented c)),
-  ("exact_form", .text (exactForm c))]
+def sourceRecordValue (r : Derivation.SourceRecord) : Value := .object [
+  ("candidate_id", .text r.candidateId), ("presented", .boolean r.presented),
+  ("exact_form", .text r.exactForm)]
+
+def candidateRecord (c : Candidate) : Value := sourceRecordValue (Derivation.generatedRecord c)
 
 def completenessRecord : Value := .object [
   ("generator", .text generationRule), ("boundary", .text grammarBoundary),
@@ -20,13 +23,16 @@ def completenessRecord : Value := .object [
   ("classes", .array (candidates.map candidateRecord)),
   ("exhaustion", .text "An operational challenge outside the presented class supplies no challenge artifact; every challenge artifact lies in the presented class.")]
 
-def decisionRecord (c : Candidate) : Value := .object [
-  ("candidate_id", .text (candidateId c)), ("survives", .boolean (survives c)),
-  ("reason", .text (decisionReason c))]
+def sourceDecisionValue (d : Derivation.SourceDecision) : Value := .object [
+  ("candidate_id", .text d.candidateId), ("survives", .boolean d.survives),
+  ("reason", .text d.reason)]
+
+def decisionRecord (c : Candidate) : Value :=
+  sourceDecisionValue (Derivation.decisionRecord (Derivation.generatedRecord c))
 
 def closureValue : Value := .object (closureRecord.map fun x => (x.1, .text x.2))
 
-def registration (sourceHash : String) : Value := .object [
+def registrationRecord (sourceHash : String) : Value := .object [
   ("claim_id", .text "SFT-ROOT-THERE-IS-NO-NOTHING"),
   ("title", .text "Premise-free operational root theorem"),
   ("branch", .text "foundation"),
@@ -34,6 +40,25 @@ def registration (sourceHash : String) : Value := .object [
   ("evidence_mode", .text "formal"), ("root_theorems", .array []),
   ("dependencies", .array []), ("axioms", .array []), ("free_parameters", .array []),
   ("provenance", .array [.text "direct_forcing"]), ("source_hash", .text sourceHash)]
+
+def registrationData (sourceHash : String) : SFT.Engine.ClaimRegistration where
+  claimId := "SFT-ROOT-THERE-IS-NO-NOTHING"
+  title := "Premise-free operational root theorem"
+  branch := "foundation"
+  statement := "No admissible operational statement, denial, record, proof object or derivational object is nothing: absence presents no counterexample, while every presented counterexample is an occurrence."
+  evidenceMode := .formal
+  rootTheorems := []
+  dependencies := []
+  axioms := []
+  freeParameters := []
+  provenance := [.directForcing]
+  sourceHash := sourceHash
+
+def registration (sourceHash : String) : Value :=
+  SFT.Engine.registrationValue (registrationData sourceHash)
+
+theorem registrationAdapterPreservesRecord (sourceHash : String) :
+    registration sourceHash = registrationRecord sourceHash := rfl
 
 def generatedCandidateData (c : Candidate) : SFT.Engine.Candidate where
   candidateId := candidateId c

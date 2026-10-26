@@ -54,6 +54,8 @@ jobs:
         run: python3 verification/check_evidence_gates.py
       - name: Census gate and Root census tampering checks
         run: python3 verification/check_census_gate.py
+      - name: Registration constraints and source identity checks
+        run: python3 verification/check_registration_gate.py
       - name: Retain verification evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

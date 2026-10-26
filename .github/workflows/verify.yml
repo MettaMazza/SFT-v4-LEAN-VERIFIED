@@ -63,6 +63,8 @@ jobs:
         run: python3 verification/check_count_representation.py
       - name: Common-refinement construction and pairing checks
         run: python3 verification/check_common_refinement.py
+      - name: Fold controls and finite assembly construction
+        run: python3 verification/check_fold_construction.py
       - name: Retain verification evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

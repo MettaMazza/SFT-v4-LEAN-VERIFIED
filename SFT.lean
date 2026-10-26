@@ -27,3 +27,6 @@ import SFT.Foundation.FoldDerivation
 import SFT.Foundation.Fold
 
 import SFT.Foundation.FoldStage
+import SFT.Foundation.FoldControls
+
+import SFT.Foundation.FoldAssembly

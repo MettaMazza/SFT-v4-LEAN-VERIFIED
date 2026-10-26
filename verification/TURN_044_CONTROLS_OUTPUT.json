@@ -1,0 +1,41 @@
+[
+  [
+    {
+      "expected_behavior": "reject a partial trace as exact form identity",
+      "kind": "false_premise",
+      "observed_behavior": "a trace without the held-b child is not canonical",
+      "passed": true,
+      "receipt_hash": "sha256:5e20b36d04a2ea2840b558ab903752c95cceb38f49438b5bdb170162c7bf5e2e"
+    },
+    {
+      "expected_behavior": "reject changed source identity",
+      "kind": "tampered_source",
+      "observed_behavior": "changed identity differs",
+      "passed": true,
+      "receipt_hash": "sha256:a100fc522c0df37fd0e0b75aa91cec82a224c73202c30cad2dc0100c34d1d0c0"
+    },
+    {
+      "expected_behavior": "reject a child swap while accepting an exact reconstruction",
+      "kind": "tampered_artifact",
+      "observed_behavior": "the exact trace matches and the label-preserving swapped trace differs",
+      "passed": true,
+      "receipt_hash": "sha256:0d1ce333af5b449fc479f184644e7af2aa33d0420c9ed05d507a2ef037aef20d"
+    },
+    {
+      "expected_behavior": "refuse equivalence that discards held labels or finite construction identity",
+      "kind": "boundary",
+      "observed_behavior": "canonical equivalence preserves the entire recursive held-labelled trace",
+      "passed": true,
+      "receipt_hash": "sha256:71d6a575b9efcd3fe83095d8e2ddfd31a254a002cca436f73905ecc186493bfc"
+    }
+  ],
+  {
+    "base": "The One leaf has one complete canonical trace.",
+    "equivalence": "Canonical-trace identity is reflexive, symmetric and transitive and preserves held labels and rooted child relations.",
+    "generality": "Structural induction applies to every generated finite form and does not require a depth bound.",
+    "identity": "Two generated forms are identical exactly when their canonical traces are identical.",
+    "minimality": "Any omission loses source structure; duplication or addition is nonminimal; a changed relation names another form.",
+    "named_shape_uniqueness": "Only complete__node-once__labels-preserved__children-preserved__returns-preserved__trace-canonical__no-extra is an exact identity representation.",
+    "successor": "A Fold trace is forced by its production: Fold marker, held-a child trace, held-b child trace and return marker."
+  }
+]

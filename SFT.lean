@@ -64,3 +64,8 @@ import SFT.Foundation.FormValidation
 import SFT.Foundation.FormAcceptance
 import SFT.Foundation.FormGrammar
 import SFT.Foundation.FormControls
+import SFT.Foundation.FormEvidence
+import SFT.Foundation.FormIdentity
+import SFT.Foundation.FormCanonicalRaw
+import SFT.Foundation.FormEnforcementGrammar
+import SFT.Foundation.FormEnforcementControls

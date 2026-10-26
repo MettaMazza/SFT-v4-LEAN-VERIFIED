@@ -2643,6 +2643,29 @@
         "acceptedIffConstructionTrace": "exact equivalence of generated_collection accepted domain and source base/successor construction traces"
       },
       "domain": "All finite tuple-of-string form collections; exact nonempty distinct accepted domain; singleton base and fresh append construction. Proof predicates introduce no scientific values or parameters. Canonical-form integration remains separately tracked."
+    },
+    {
+      "module": "SFT/Mathematics/DiscreteComplement.lean",
+      "source_path": "sft/mathematics/discrete_mathematics/law.py",
+      "source_sha256": "a7928796f5d4e2e37ede151360fdd19df76edcb4d5110fc9997182698e62cfc1",
+      "lean_source_sha256": "8a30c55b61b5c0192a074f3502660f0b3899b2bdde6a58c2d50265bfb6c1bab7",
+      "implemented": {
+        "filterMemberIff": "held selection membership: exact filter membership proof helper",
+        "filterDistinct": "held selection uniqueness: filtering retains distinctness",
+        "relationComplement": "LawSpec.laws relation complement: hold the unheld pairs in the same complete pair support, retaining support order",
+        "complementMemberIff": "relation complement exact membership and endpoint characterization",
+        "complementDisjoint": "relation complement excludes every held pair",
+        "complementCoversSupport": "held relation and complement cover the complete source pair support",
+        "complementDistinct": "relation complement retains support uniqueness",
+        "anyFalseOfMembers": "generated_relation any(...) guard proof helper",
+        "complementAcceptedOnDistinctSupport": "relation complement is accepted by generated_relation on distinct complete support",
+        "mapDistinct": "complete_pairs uniqueness: injective row encoding preserves distinctness",
+        "appendDistinct": "complete_pairs uniqueness: concatenate distinct disjoint rows",
+        "completePairsDistinct": "generated_relation Cartesian support uniqueness from unique source collections",
+        "complementOfGeneratedCollectionsAccepted": "registered relation-complement law for every pair of accepted generated collections",
+        "doubleComplementMembership": "registered complement law: complement twice recovers exactly the original accepted relation membership, without claiming arbitrary input list-order equality"
+      },
+      "domain": "LawSpec relation-complement law on finite tuple-of-string collections and generated relations; exact source Cartesian support and held-selection acceptance guards. Complement has no separate Python callable: the filter is the formal construction of the registered complementary selection."
     }
   ],
   "host_modules": [

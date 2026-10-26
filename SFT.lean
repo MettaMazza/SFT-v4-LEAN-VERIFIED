@@ -90,3 +90,4 @@ import SFT.Mathematics.DiscreteGrammar
 import SFT.Mathematics.DiscreteWitnesses
 import SFT.Mathematics.DiscreteControls
 import SFT.Mathematics.DiscreteInduction
+import SFT.Mathematics.DiscreteComplement

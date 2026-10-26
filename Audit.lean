@@ -888,3 +888,16 @@ import SFT
 #print axioms SFT.Mathematics.DiscreteObjects.traceCollectionAccepted
 #print axioms SFT.Mathematics.DiscreteObjects.acceptedCollectionTrace
 #print axioms SFT.Mathematics.DiscreteObjects.acceptedIffConstructionTrace
+#print axioms SFT.Mathematics.DiscreteObjects.filterMemberIff
+#print axioms SFT.Mathematics.DiscreteObjects.filterDistinct
+#print axioms SFT.Mathematics.DiscreteObjects.complementMemberIff
+#print axioms SFT.Mathematics.DiscreteObjects.complementDisjoint
+#print axioms SFT.Mathematics.DiscreteObjects.complementCoversSupport
+#print axioms SFT.Mathematics.DiscreteObjects.complementDistinct
+#print axioms SFT.Mathematics.DiscreteObjects.anyFalseOfMembers
+#print axioms SFT.Mathematics.DiscreteObjects.complementAcceptedOnDistinctSupport
+#print axioms SFT.Mathematics.DiscreteObjects.mapDistinct
+#print axioms SFT.Mathematics.DiscreteObjects.appendDistinct
+#print axioms SFT.Mathematics.DiscreteObjects.completePairsDistinct
+#print axioms SFT.Mathematics.DiscreteObjects.complementOfGeneratedCollectionsAccepted
+#print axioms SFT.Mathematics.DiscreteObjects.doubleComplementMembership

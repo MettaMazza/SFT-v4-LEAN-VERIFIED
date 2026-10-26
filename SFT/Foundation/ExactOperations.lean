@@ -191,4 +191,21 @@ theorem fromPairBeyondOne (n d : Nat) (hn : 0 < n) (hd : 0 < d) (h : d < n) :
   dsimp only [fromPair]
   rw [dite_eq_left hn,dite_eq_left hd,dite_eq_right (Nat.not_le_of_gt h)]
 
+def castFraction : Rat → Except String Part
+  | ⟨.ofNat n,d,hd,hr⟩ =>
+    if hn : 0 < n then .ok (castPositive ⟨n,d,hd,hr,hn⟩)
+    else .error "cast requires an exact positive magnitude"
+  | ⟨.negSucc _,_,_,_⟩ => .error "cast requires an exact positive magnitude"
+
+theorem castFractionPositive (n d : Nat) (hd : d ≠ 0) (hr : n.Coprime d) (hn : 0 < n) :
+    castFraction ⟨.ofNat n,d,hd,hr⟩ = .ok (castPositive ⟨n,d,hd,hr,hn⟩) := by
+  dsimp only [castFraction]
+  rw [dite_eq_left hn]
+
+theorem castFractionZeroRejected (d : Nat) (hd : d ≠ 0) (hr : Nat.Coprime 0 d) :
+    castFraction ⟨.ofNat 0,d,hd,hr⟩ = .error "cast requires an exact positive magnitude" := rfl
+
+theorem castFractionSignedRejected (n d : Nat) (hd : d ≠ 0) (hr : (n+1).Coprime d) :
+    castFraction ⟨.negSucc n,d,hd,hr⟩ = .error "cast requires an exact positive magnitude" := rfl
+
 end SFT.Foundation.ExactOperations

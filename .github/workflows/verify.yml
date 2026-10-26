@@ -32,14 +32,18 @@ jobs:
             /claims/SFT-ROOT-THERE-IS-NO-NOTHING/
             /claims/SFT-FOUNDATION-ONE-001/
             /claims/SFT-FOUNDATION-COUNT-001/
-      - name: Install official elan and pinned Lean toolchain
+      - name: Install verified official pinned Lean release
         shell: bash
         run: |
           set -euo pipefail
-          curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o "$RUNNER_TEMP/elan-init.sh"
-          sh "$RUNNER_TEMP/elan-init.sh" -y --default-toolchain none
-          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
-          "$HOME/.elan/bin/elan" toolchain install "$(cat lean-toolchain)"
+          test "$(cat lean-toolchain)" = "leanprover/lean4:v4.35.0"
+          mkdir -p verification/current "$RUNNER_TEMP/sft-lean"
+          archive="$RUNNER_TEMP/lean-4.35.0-linux.tar.zst"
+          curl --proto '=https' --tlsv1.2 --retry 3 --retry-all-errors --retry-delay 2 -fL https://github.com/leanprover/lean4/releases/download/v4.35.0/lean-4.35.0-linux.tar.zst -o "$archive"
+          printf '%s  %s\n' '7289597a44543246c9227b8cae501767e095ce17f6d448b95fc4a8dc97268f6d' "$archive" | sha256sum --check | tee verification/current/TOOLCHAIN_DIGEST.log
+          tar --zstd -xf "$archive" --strip-components=1 -C "$RUNNER_TEMP/sft-lean"
+          echo "$RUNNER_TEMP/sft-lean/bin" >> "$GITHUB_PATH"
+          "$RUNNER_TEMP/sft-lean/bin/lean" --version | tee verification/current/TOOLCHAIN_VERSION.log
       - name: Fresh build, complete declaration audit and candidate parity
         run: python3 verification/check_current_parity.py
       - name: Fresh Root evidence, SHA256 and canonical JSON checks

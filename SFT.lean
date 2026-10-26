@@ -93,3 +93,4 @@ import SFT.Mathematics.DiscreteInduction
 import SFT.Mathematics.DiscreteComplement
 import SFT.Mathematics.DiscreteComposition
 import SFT.Mathematics.DiscreteEvidence
+import SFT.Foundation.PrimitiveMaps

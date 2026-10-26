@@ -7,3 +7,5 @@ import SFT.Foundation.RootEvidence
 import SFT.Engine.DecisionGate
 
 import SFT.Foundation.RootGate
+
+import SFT.Engine.EvidenceGates

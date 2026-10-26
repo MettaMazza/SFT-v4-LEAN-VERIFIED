@@ -23,4 +23,30 @@ theorem tamperedDecisionGateRejected :
   change 2 = 1 at impossible
   exact Nat.noConfusion impossible (fun h => Nat.noConfusion h)
 
+def closure : SFT.Engine.ClosureEvidence :=
+  Evidence.closureEvidenceData (candidates.map Evidence.candidateDecision)
+
+def noMinimalityClosure : SFT.Engine.ClosureEvidence := { closure with minimalityPassed := false }
+
+def noGeneralityClosure : SFT.Engine.ClosureEvidence := { closure with generalityCertificateHash := none }
+
+theorem noMinimalityRejected : SFT.Engine.closureViolations noMinimalityClosure ≠ [] := by
+  intro h
+  have impossible := SFT.Engine.passingClosureHasMinimality _ h
+  exact Bool.noConfusion impossible
+
+theorem noGeneralityRejected : SFT.Engine.closureViolations noGeneralityClosure ≠ [] := by
+  intro h
+  have impossible := SFT.Engine.passingDepthIndependentHasCertificate noGeneralityClosure rfl h
+  exact Bool.noConfusion impossible
+
+def failedControls (sourceHash : String) : List SFT.Engine.ControlResult :=
+  (Evidence.runControlsData sourceHash).map fun c => { c with passed := false }
+
+theorem failedControlsRejected (sourceHash : String) :
+    SFT.Engine.controlViolations (failedControls sourceHash) ≠ [] := by
+  intro h
+  have impossible := SFT.Engine.passingControlsAllPassed _ h
+  exact Bool.noConfusion impossible
+
 end SFT.Foundation.Root.Gate

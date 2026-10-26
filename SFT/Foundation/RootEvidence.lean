@@ -1,3 +1,4 @@
+import SFT.Engine.EvidenceGates
 import SFT.Engine.DecisionGate
 import SFT.Foundation.Root
 import SFT.Host.Canonical
@@ -65,14 +66,18 @@ def decideCandidate (id : String) : Except String Value :=
   | some c => .ok (candidateDecision c)
   | none => .error (SFT.Host.Text.append "KeyError: " id)
 
-def closureEvidence (decisions : List Value) : Value := .object [
-  ("scope", .text "depth_independent"), ("exact_boundary", .text grammarBoundary),
-  ("minimality_passed", .boolean true), ("named_shape_uniqueness_passed", .boolean true),
-  ("proof_hash", .text (identity (.object [
-    ("closure", closureValue), ("decisions", .array decisions)]))),
-  ("generality_certificate_hash", .text (identity (.object [
+def closureEvidenceData (decisions : List Value) : SFT.Engine.ClosureEvidence where
+  scope := .depthIndependent
+  exactBoundary := grammarBoundary
+  minimalityPassed := true
+  namedShapeUniquenessPassed := true
+  proofHash := identity (.object [("closure", closureValue), ("decisions", .array decisions)])
+  generalityCertificateHash := some (identity (.object [
     ("partition", .text "presented or no operational challenge artifact"),
-    ("content_independent", .boolean true), ("closure", closureValue)])))]
+    ("content_independent", .boolean true), ("closure", closureValue)]))
+
+def closureEvidence (decisions : List Value) : Value :=
+  SFT.Engine.closureEvidenceValue (closureEvidenceData decisions)
 
 def tamperedSourceControl (sourceHash : String) : ControlRecord where
   kind := "tampered_source"
@@ -93,7 +98,28 @@ def controlResult (c : ControlRecord) : Value := .object [
   ("expected_behavior", .text c.expected), ("observed_behavior", .text c.observed),
   ("receipt_hash", .text (identity (controlValue c)))]
 
+-- Equality witnesses preserve ControlKind(record["kind"]) on each generated source row.
+def controlResultData (c : ControlRecord) (kind : SFT.Engine.ControlKind)
+    (_sameKind : SFT.Engine.kindName kind = c.kind) : SFT.Engine.ControlResult where
+  kind := kind
+  passed := c.passed
+  expectedBehavior := c.expected
+  observedBehavior := c.observed
+  receiptHash := identity (controlValue c)
+
+theorem typedControlResultMatchesRecord (c : ControlRecord) (kind : SFT.Engine.ControlKind)
+    (sameKind : SFT.Engine.kindName kind = c.kind) :
+    SFT.Engine.controlResultValue (controlResultData c kind sameKind) = controlResult c := by
+  unfold SFT.Engine.controlResultValue controlResultData controlResult
+  rw [sameKind]
+
+def runControlsData (sourceHash : String) : List SFT.Engine.ControlResult := [
+  controlResultData falsePremiseControl .falsePremise rfl,
+  controlResultData (tamperedSourceControl sourceHash) .tamperedSource rfl,
+  controlResultData tamperedArtifactControl .tamperedArtifact rfl,
+  controlResultData boundaryControl .boundary rfl]
+
 def runControls (sourceHash : String) : Value :=
-  .array ((controlRecords sourceHash).map controlResult)
+  .array ((runControlsData sourceHash).map SFT.Engine.controlResultValue)
 
 end SFT.Foundation.Root.Evidence

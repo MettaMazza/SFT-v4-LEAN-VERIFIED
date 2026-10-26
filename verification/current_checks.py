@@ -27,6 +27,9 @@ def fresh_audit():
   original=subprocess.check_output(['git','-C',str(src),'show',info['commit']+':'+m['source_path']])
   assert hashlib.sha256(original).hexdigest()==m['source_sha256'],m['source_path']
   assert hashlib.sha256((PROJECT/m['module']).read_bytes()).hexdigest()==m['lean_source_sha256'],m['module']
+  for extra in m.get('related_sources',[]):
+   blob=subprocess.check_output(['git','-C',str(src),'show',info['commit']+':'+extra['path']])
+   assert hashlib.sha256(blob).hexdigest()==extra['sha256'],extra['path']
  for f in sorted((PROJECT/'SFT').rglob('*.lean')):
   if f.name.startswith('._'):continue
   module=str(f.relative_to(PROJECT));assert module in mapped,module

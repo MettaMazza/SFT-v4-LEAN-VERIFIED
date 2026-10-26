@@ -219,23 +219,34 @@
         "controlResult": "RootTheoremProgram.run_controls / ControlResult",
         "runControls": "RootTheoremProgram.run_controls",
         "generatedCandidateData": "RootTheoremProgram.generate_candidates Candidate dataclass fields",
-        "candidateDecisionData": "RootTheoremProgram.decide_candidate CandidateDecision dataclass fields"
+        "candidateDecisionData": "RootTheoremProgram.decide_candidate CandidateDecision dataclass fields",
+        "closureEvidenceData": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
+        "controlResultData": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
+        "typedControlResultMatchesRecord": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
+        "runControlsData": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters"
       },
       "status": "zero-axiom executable definitions; stored-artifact parity passed; full general correspondence proof pending",
-      "lean_source_sha256": "6643a97f69d363cb8d364d5a4686329a45f0bc67bb9d750faed8a4cf41c3382a"
+      "lean_source_sha256": "bab626b868d277b056ff2f2967107a8abd1aef33256d46ba20db2ee09eb171d4"
     },
     {
       "module": "SFT/Foundation/RootGate.lean",
       "source_path": "sft/foundation/root_theorem.py",
       "source_sha256": "50c5320b466407b22843cb27d96f4b65e1b1a47dcae2a85dea9ee859d32f8230",
-      "lean_source_sha256": "e64ab5138ad8d37599aa6514c489cff52d6791d83229f36749c812b019e4e40a",
+      "lean_source_sha256": "977005a0da915c120e7b64db3fd9d1eb2279c90b70f155c4a10dc322c9b925e6",
       "implemented": {
         "censusCandidates": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
         "decisions": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
         "tamperedDecisions": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
         "originalSurvivorCount": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
         "tamperedSurvivorCount": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
-        "tamperedDecisionGateRejected": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check"
+        "tamperedDecisionGateRejected": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
+        "closure": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
+        "noMinimalityClosure": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
+        "noGeneralityClosure": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
+        "noMinimalityRejected": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
+        "noGeneralityRejected": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
+        "failedControls": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
+        "failedControlsRejected": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters"
       }
     }
   ],
@@ -335,7 +346,62 @@
         "eqOneOfBeq": "constructive helper for exact source len(survivors) != 1 check",
         "passingDecisionGateHasOneSurvivor": "_decision_violations successful forcing necessarily leaves exactly one survivor"
       },
-      "domain": "source-annotated typed records; malformed Python field types outside this domain pending importer validation"
+      "domain": "source-annotated typed records; malformed Python field types outside this domain pending importer validation",
+      "related_sources": [
+        {
+          "path": "sft/engine/model.py",
+          "sha256": "c93df7daef6507b6f448701a4a0d1e077b89b8b1984c29ca70a55e22ca39e0d1"
+        },
+        {
+          "path": "sft/engine/canonical.py",
+          "sha256": "98428dec80cec16ce357df630b2780d9cd2fb3634068a964b001539362ed4901"
+        }
+      ]
+    },
+    {
+      "module": "SFT/Engine/EvidenceGates.lean",
+      "source_path": "sft/engine/engine.py",
+      "source_sha256": "cc150b5556b62f3d67e91ad9d008811abb429b2a3d547159a565b53cfab7e525",
+      "lean_source_sha256": "0aa97564631ca4a7431f1669d32934189a319cb6c45651640c40e4c8fbf4058d",
+      "implemented": {
+        "ClosureScope": "engine/model.py ClosureScope three exact enum alternatives",
+        "ControlKind": "engine/model.py ControlKind four exact enum alternatives",
+        "scopeName": "ClosureScope.value string serialization",
+        "kindName": "ControlKind.value string serialization",
+        "depthIndependent": "_closure_violations identity test with ClosureScope.DEPTH_INDEPENDENT",
+        "ClosureEvidence": "engine/model.py ClosureEvidence fields and optional generality default",
+        "ControlResult": "engine/model.py ControlResult fields",
+        "optionalIdentity": "canonical.is_sha256_identity on Optional[str] domain",
+        "closureEvidenceValue": "canonical.canonical_value dataclass asdict for ClosureEvidence",
+        "controlResultValue": "canonical.canonical_value dataclass asdict for ControlResult",
+        "closureViolations": "_closure_violations within annotated ClosureScope field domain",
+        "hasKind": "_control_violations REQUIRED_CONTROLS.difference membership",
+        "missingKinds": "_control_violations sorted missing control enum values",
+        "duplicateKinds": "_control_violations len(set(kinds)) != len(kinds)",
+        "perControlViolations": "_control_violations ordered per-control passed/behavior/hash checks",
+        "controlViolations": "_control_violations all ordered checks on annotated ControlResult domain",
+        "trueOfNotFalse": "engine.py _closure_violations/_control_violations and engine/model.py enum/dataclass fields; constructive helpers for necessary passing conditions",
+        "passingClosureHasBoundary": "engine.py _closure_violations/_control_violations and engine/model.py enum/dataclass fields; constructive helpers for necessary passing conditions",
+        "passingClosureHasMinimality": "engine.py _closure_violations/_control_violations and engine/model.py enum/dataclass fields; constructive helpers for necessary passing conditions",
+        "passingClosureHasUniqueness": "engine.py _closure_violations/_control_violations and engine/model.py enum/dataclass fields; constructive helpers for necessary passing conditions",
+        "passingDepthIndependentHasCertificate": "engine.py _closure_violations/_control_violations and engine/model.py enum/dataclass fields; constructive helpers for necessary passing conditions",
+        "appendEmptyLeft": "engine.py _closure_violations/_control_violations and engine/model.py enum/dataclass fields; constructive helpers for necessary passing conditions",
+        "appendEmptyRight": "engine.py _closure_violations/_control_violations and engine/model.py enum/dataclass fields; constructive helpers for necessary passing conditions",
+        "emptyPerControlImpliesPassed": "engine.py _closure_violations/_control_violations and engine/model.py enum/dataclass fields; constructive helpers for necessary passing conditions",
+        "emptyControlDetailsAllPassed": "engine.py _closure_violations/_control_violations and engine/model.py enum/dataclass fields; constructive helpers for necessary passing conditions",
+        "passingControlsAllPassed": "engine.py _closure_violations/_control_violations and engine/model.py enum/dataclass fields; constructive helpers for necessary passing conditions"
+      },
+      "domain": "source-annotated enum, Bool, String and Option String fields; invalid Python type inputs need separate importer validation",
+      "related_sources": [
+        {
+          "path": "sft/engine/model.py",
+          "sha256": "c93df7daef6507b6f448701a4a0d1e077b89b8b1984c29ca70a55e22ca39e0d1"
+        },
+        {
+          "path": "sft/engine/canonical.py",
+          "sha256": "98428dec80cec16ce357df630b2780d9cd2fb3634068a964b001539362ed4901"
+        }
+      ]
     }
   ]
 }

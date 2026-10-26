@@ -33,3 +33,8 @@ import SFT.Foundation.FoldAssembly
 import SFT.Foundation.FoldAssemblyGrammar
 
 import SFT.Foundation.FoldAssemblyTrace
+
+import SFT.Foundation.AssemblySupport
+
+import SFT.Foundation.AssemblySets
+import SFT.Foundation.AssemblyControls

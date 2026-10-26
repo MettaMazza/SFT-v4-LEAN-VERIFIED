@@ -68,6 +68,10 @@ jobs:
         run: python3 verification/check_fold_construction.py
       - name: Complete Fold assembly stage and return traces
         run: python3 verification/check_assembly_trace.py
+      - name: Concrete proposed assembly supports
+        run: python3 verification/check_assembly_support.py
+      - name: Assembly controls and finite-set correspondence
+        run: python3 verification/check_assembly_controls.py
       - name: Retain verification evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

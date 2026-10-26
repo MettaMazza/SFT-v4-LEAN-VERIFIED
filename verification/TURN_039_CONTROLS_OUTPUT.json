@@ -1,0 +1,42 @@
+[
+  [
+    {
+      "expected_behavior": "reject a single-preimage Fold fibre",
+      "kind": "false_premise",
+      "observed_behavior": "every control image has two distinct generated preimages",
+      "passed": true,
+      "receipt_hash": "sha256:e83268614e456953e0e9f641234c40c87e29d9dbc29365636a5c8daf3aa630b5"
+    },
+    {
+      "expected_behavior": "reject changed source identity",
+      "kind": "tampered_source",
+      "observed_behavior": "changed identity differs",
+      "passed": true,
+      "receipt_hash": "sha256:a100fc522c0df37fd0e0b75aa91cec82a224c73202c30cad2dc0100c34d1d0c0"
+    },
+    {
+      "expected_behavior": "reject a phase pair with unequal Fold images",
+      "kind": "tampered_artifact",
+      "observed_behavior": "all exact control pairs collide and the phase map is involutive",
+      "passed": true,
+      "receipt_hash": "sha256:0a526cc0b2267d9a2b8f79edb7ce1b5ce4b7a34e96bce8de4a356a897588018c"
+    },
+    {
+      "expected_behavior": "retain exact even-partition and first-cycle scope",
+      "kind": "boundary",
+      "observed_behavior": "six even partitions remain uniform and the one-third orbit closes in two",
+      "passed": true,
+      "receipt_hash": "sha256:34b67649fd5078b8fe9148f2b0d1b0136c5ec085ec39626fe17093e0bfb3fd9e"
+    }
+  ],
+  {
+    "domain": "For x in (0, One], self-junction lies in (0, two Ones]; exact cast returns (0, One].",
+    "first_cycle": "Fold sends one-of-three to two-of-three and two-of-three back to one-of-three. No nonstatic cycle can have positive length below the first count extension beyond identity.",
+    "generality": "The proofs use arbitrary positive numerator/denominator and arbitrary generated positive n, not the finite controls below.",
+    "minimality": "Deleting either preimage, cast closure, phase relation, uniform image or return loses an exact Fold invariant; extra dynamics are unforced.",
+    "named_shape_uniqueness": "Only domain-closed__fibre-exactly-two__phase-collision-present__phase-involution-present__uniform-division-preserved__first-cycle-two__no-extra has every invariant.",
+    "phase_antipode": "Adding half-One twice adds one complete One, which cast removes; therefore phase antipode is an involution. Doubling a half-One translation adds one complete One before cast, so both phase partners share one Fold image.",
+    "preimages": "For image y, the lower preimage y/2 and upper preimage cast(y/2 plus half-One) are distinct, lie on opposite half-circles and both Fold to y. Any Fold preimage has one of these two forms.",
+    "uniform_partition": "For an even generated count two-n, images of i/(two-n) identify i with i+n and are exactly j/n for the n positive residue classes; their distinct sorted gaps remain one/n."
+  }
+]

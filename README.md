@@ -12,7 +12,7 @@
 
 <p align="center">
   <img alt="Lean 4.35.0" src="https://img.shields.io/badge/Lean-4.35.0-163747?style=flat-square&amp;labelColor=0b1825" />
-  <img alt="106 audited results" src="https://img.shields.io/badge/Audited_results-106-163747?style=flat-square&amp;labelColor=0b1825" />
+  <img alt="131 audited results" src="https://img.shields.io/badge/Audited_results-131-163747?style=flat-square&amp;labelColor=0b1825" />
   <img alt="0 axiom dependencies in audited results" src="https://img.shields.io/badge/Axiom_dependencies-0-147d72?style=flat-square&amp;labelColor=0b1825" />
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
@@ -45,12 +45,12 @@ flowchart LR
 
 ## Proof status
 
-**106 proofs completed · 18 candidate records matched · 3 model entries underway.**
+**131 proofs completed · 18 candidate records matched · 3 model entries underway.**
 
 | Progress measure | Current result |
 | :--- | :--- |
-| Lean theorems proved | **106**, all with zero axiom dependencies |
-| Definitions and theorems audited | **274**, all with zero axiom dependencies |
+| Lean theorems proved | **131**, all with zero axiom dependencies |
+| Definitions and theorems audited | **308**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **18 / 18** across Root, One and Count |
 | Complete model entries | **0 / 2,781**; full-entry verification remains in progress |
 
@@ -63,7 +63,7 @@ flowchart LR
 
 **Full-model completion: 0 / 2,781 entries.** Three entries are in progress; 2,778 remain pending. The results above certify the translated portions. Remaining Root work includes general implementation-correspondence proofs, full operational semantics and admission integration. Full-entry completion is tracked separately from finite classification proofs.
 
-[Read the current axiom audit →](verification/TURN_015_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 274 axiom audits →](verification/TURN_015_ALL_DECLARATIONS_AUDIT.log)
+[Read the current axiom audit →](verification/TURN_016_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 308 axiom audits →](verification/TURN_016_ALL_DECLARATIONS_AUDIT.log)
 
 The translated forcing gate checks ordered identifiers, exactly one survivor, explicit reasons and canonical proof-hash identities. A general theorem proves that passing requires one survivor; Root’s tampered decisions are formally rejected. [Gate proofs](SFT/Engine/DecisionGate.lean) · [Root integration](SFT/Foundation/RootGate.lean) · [384-case comparison](verification/TURN_009_DECISION_GATE_REPORT.json)
 
@@ -76,6 +76,8 @@ The Root record-level derivation now quantifies over all records with the source
 One’s record-level derivation proves that complete coverage without addition is necessary and sufficient for acceptance. Omission, fragmentation and unforced addition are rejected for every source-schema record. [One derivation proofs](SFT/Foundation/OneDerivation.lean)
 
 Count’s finite-generation proof now establishes complete exact-once retention at every extension, freshness of the new terminal, rejection of repetition and deletion, and unique identity under the source base/successor clauses. [Count trace derivation](SFT/Foundation/CountTrace.lean)
+
+Count’s proposal theorem derives the ten-class decision from actual retained positions: acceptance is equivalent to complete coverage, no duplication and no ungenerated occurrence. [Semantic bridge](SFT/Foundation/CountRepresentation.lean) · [493-proposal correspondence](verification/TURN_016_COUNT_REPRESENTATION_REPORT.json)
 
 ## Exact correspondence, from the root
 
@@ -116,6 +118,7 @@ SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_decision_gate.py
 SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_evidence_gates.py
 SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_census_gate.py
 SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_registration_gate.py
+SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_count_representation.py
 ```
 
 The scripts read pinned v3 source and artifacts without importing or executing v3 scientific modules. `SFT_V3_SOURCE` overrides the local path in `reference/SOURCE.json`. [GitHub Actions](.github/workflows/verify.yml) performs these checks on pushes and pull requests using the pinned source commit and Lean toolchain.

@@ -69,3 +69,7 @@ import SFT.Foundation.FormIdentity
 import SFT.Foundation.FormCanonicalRaw
 import SFT.Foundation.FormEnforcementGrammar
 import SFT.Foundation.FormEnforcementControls
+import SFT.Foundation.FormEquivalenceRaw
+import SFT.Foundation.MeasurementProtocol
+import SFT.Foundation.MeasurementGrammar
+import SFT.Foundation.MeasurementControls

@@ -1,0 +1,42 @@
+[
+  [
+    {
+      "expected_behavior": "reject target access before the prediction seal",
+      "kind": "false_premise",
+      "observed_behavior": "the boundary protocol rejects pre-seal target access",
+      "passed": true,
+      "receipt_hash": "sha256:d50bf0b850a3563e28bc1fccc42c93fb443c61c5fb341e0bdb386dbe37b379b2"
+    },
+    {
+      "expected_behavior": "reject changed derivation source identity",
+      "kind": "tampered_source",
+      "observed_behavior": "changed identity differs",
+      "passed": true,
+      "receipt_hash": "sha256:d14452d3f3787b761435c81ff8a65aecc730639e7768275e16ef8b2c3a615597"
+    },
+    {
+      "expected_behavior": "reject selective rows or post-measurement law mutation",
+      "kind": "tampered_artifact",
+      "observed_behavior": "both tampered interfaces are rejected",
+      "passed": true,
+      "receipt_hash": "sha256:c2a9b269413a304b295638ea2f578c8280103f5047915335d951341f8e0012cd"
+    },
+    {
+      "expected_behavior": "permit conventional decimals only as post-seal measured records",
+      "kind": "boundary",
+      "observed_behavior": "proof stays exact and measurement records remain quarantined",
+      "passed": true,
+      "receipt_hash": "sha256:7299158bec1f6e65d4397d27e5203f4c26046e2d4f7b9db771968981fd91e37f"
+    }
+  ],
+  {
+    "custody": "Opening targets after the seal prevents answer flow into the derivation.",
+    "direction": "Scientific testing requires consequences to leave a derivation, while clean forcing forbids targets or measurements from entering law selection; only outward derivation-to-measurement flow satisfies both.",
+    "exactness": "The derivation remains exact. A measurement adapter may record conventional decimals only after the law and consequence are sealed.",
+    "generality": "The phase and capability relation is independent of scientific branch, target size and host operating system.",
+    "immutability": "Measurement can validate, invalidate or bound a claim but cannot rewrite its sealed law.",
+    "minimality": "Removing exactness, custody, source identity, row completeness or immutability loses a scientific control; extra rules are unregistered.",
+    "named_shape_uniqueness": "Only derivation-to-measurement__proof-exact__target-after-seal__rows-complete__source-identified__law-unchanged__no-extra satisfies the complete one-way boundary.",
+    "retention": "Complete favorable, unfavorable, failed and tampered rows are required for falsifiability."
+  }
+]

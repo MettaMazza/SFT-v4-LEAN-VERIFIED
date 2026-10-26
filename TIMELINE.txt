@@ -459,3 +459,18 @@ Published 3746d3db2fa93d9fea4321844c5f1e0694d5621e. All 308 published files matc
 6. Updated coverage, README, scientific paper and timeline and retained reports. Ten entries in progress,2771 pending,zero full entries complete.
 
 Next: publish checkpoint, then prove the second-half phase branch, full involution/collision and arbitrary-preimage exhaustion before uniform partitions.
+
+Turn 032 publication receipt — 2026-10-26T21:10:46.126454+00:00
+
+Published e8110de4d3fbebd451ee497526ea15b61be2cf93. All 316 published files match the local manifest. New CI state: [{"id": 40402119885, "status": "in_progress", "conclusion": null, "html_url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/actions/runs/40402119885"}]. Local build, 548 theorem / 998 declaration zero-axiom audit and 1970 candidate comparisons passed. New CI success is not asserted until confirmed. Receipt appended locally for the next source checkpoint. Next: inspect the same new run and continue second-half phase, full involution/collision and preimage exhaustion.
+
+## Turn 033 — 2026-10-26T21:16:32.656186+00:00
+
+1. Read current instructions, timeline, manuscript, coverage, Fold cast/phase proofs and pinned fold_dynamics.py. Continued the actual phase derivations; no verification framework or workflow changes. Confirmed run40401192784 succeeded; run40402119885 remained in progress.
+2. Added FoldPhaseFull.lean. Proved affine complete-One removal, its cast specialization, the full count-pair phase formula and normalization compatibility. Targeted lake build passed.
+3. Proved doubled removal from the original removal traces, using two complete-One removals per step, and derived full-domain phase collision.
+4. Proved phase involution by affine removal, exact doubled shift arithmetic and normalization invariance. Initial elaboration failures concerned denominator associativity and rewriting the outer phase instead of the inner one. Explicit associativity and phaseCountFormula p fixed these; the theorem statements and both branches were preserved. Targeted build then passed.
+5. Imported the module, registered all seven new theorems against the pinned source and extended the existing audit declaration list. Ran python3 verification/check_current_parity.py: fresh lake build, 555 theorem / 1005 declaration audit with zero axiom dependencies, and all 1970 ordered candidate records passed. Retained build/audit/parity reports.
+6. Updated coverage, README and scientific paper with full-domain phase collision/involution; updated this timeline. Ten entries remain in progress,2771 pending,zero full entries complete. No enumeration removed or replaced.
+
+Next: publish this source checkpoint, then prove arbitrary-preimage exhaustion before the uniform-partition theorem.

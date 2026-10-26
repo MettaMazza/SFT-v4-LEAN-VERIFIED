@@ -547,3 +547,10 @@ import SFT
 #print axioms SFT.Foundation.Root.Gate.duplicateCandidateRejected
 #print axioms SFT.Foundation.Root.Gate.registrationWithAxiomRejected
 #print axioms SFT.Foundation.Root.Gate.registrationWithParameterRejected
+#print axioms SFT.Foundation.FoldPhaseFull.affineRemoval
+#print axioms SFT.Foundation.FoldPhaseFull.affineCastRetained
+#print axioms SFT.Foundation.FoldPhaseFull.phaseCountFormula
+#print axioms SFT.Foundation.FoldPhaseFull.phaseNormalized
+#print axioms SFT.Foundation.FoldPhaseFull.doubledRemoval
+#print axioms SFT.Foundation.FoldPhaseFull.fullPhaseCollision
+#print axioms SFT.Foundation.FoldPhaseFull.fullPhaseInvolution

@@ -78,3 +78,5 @@ import SFT.Mathematics.ExactTracePairing
 import SFT.Mathematics.ExactArithmeticGrammar
 import SFT.Mathematics.ExactTraceDistribution
 import SFT.Mathematics.ExactArithmeticWitnesses
+import SFT.Mathematics.ExactArithmeticControls
+import SFT.Mathematics.ExactTraceRemainder

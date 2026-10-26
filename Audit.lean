@@ -809,3 +809,8 @@ import SFT
 #print axioms SFT.Mathematics.ExactArithmeticWitnesses.exactPairingWitnessPassed
 #print axioms SFT.Mathematics.ExactArithmeticWitnesses.heldRemainderPassed
 #print axioms SFT.Mathematics.ExactArithmeticWitnesses.everyWitnessPassed
+#print axioms SFT.Mathematics.ExactArithmeticControls.falsePremisePassed
+#print axioms SFT.Mathematics.ExactArithmeticControls.boundaryPassed
+#print axioms SFT.Mathematics.ExactTraceRemainder.remainderNonempty
+#print axioms SFT.Mathematics.ExactTraceRemainder.sameFormIffNoUnmatched
+#print axioms SFT.Mathematics.ExactTraceRemainder.sameFormRetainsEmptyOne

@@ -1,0 +1,81 @@
+{
+  "controls": [
+    {
+      "expected_behavior": "reject a generated form missing the first required structural condition",
+      "kind": "false_premise",
+      "observed_behavior": "A partial trace omits an admitted generated occurrence.",
+      "passed": true,
+      "receipt_hash": "sha256:33e3d5d241540fd337807b34e03db365ce48e9e3d0ea4d102d153a58df8199c6"
+    },
+    {
+      "expected_behavior": "reject a changed official source identity",
+      "kind": "tampered_source",
+      "observed_behavior": "the changed identity differs from the registered source manifest",
+      "passed": true,
+      "receipt_hash": "sha256:a549a1da4d8bc6d4bc9fb65e0d475f2e3bc196a80c402742f80f637f51eb4e26"
+    },
+    {
+      "expected_behavior": "reject a missing, duplicated or additional survivor",
+      "kind": "tampered_artifact",
+      "observed_behavior": "the generated product contains exactly one registered survivor",
+      "passed": true,
+      "receipt_hash": "sha256:b79ac01f095bf293f4d7a736893d30f1c51e9c6a1c5d98b04f5a8cda8f071219"
+    },
+    {
+      "expected_behavior": "halt any attempt to import an excluded object or answer-producing model",
+      "kind": "boundary",
+      "observed_behavior": "semantic numerical zero is not a value; negative magnitude is replaced by held orientation; irrational, imaginary and floating proof values are excluded; completed infinity and an ungenerated continuum are excluded",
+      "passed": true,
+      "receipt_hash": "sha256:19138ef235a0e43f75285e80856edccff9d19b3aced53986c83f5de9fa2f4fca"
+    }
+  ],
+  "closure": {
+    "boundary_exclusions": [
+      "semantic numerical zero is not a value",
+      "negative magnitude is replaced by held orientation",
+      "irrational, imaginary and floating proof values are excluded",
+      "completed infinity and an ungenerated continuum are excluded"
+    ],
+    "exact_result": "The exact arithmetic kernel is complete positive-trace coverage with disjoint junction, pair-cell product, common-refinement quotient, complete pairing comparison, held-oriented remainder, base/successor generality and no extra rule.",
+    "induction_base": "The structural One supplies the first nonempty trace and exact self-whole.",
+    "induction_step": "Appending one fresh generated occurrence preserves complete trace identity; junction appends it once, pair-cell refinement appends one labelled cell per opposite trace element, and pairing either extends with one mate or records the unmatched held remainder.",
+    "laws": [
+      "disjoint junction is associative on mutually disjoint generated traces",
+      "pair-cell product distributes over disjoint junction by generated cell provenance",
+      "pair-cell product composition is associative after canonical path flattening",
+      "exact quotient exists only with a complete refinement-pairing witness",
+      "comparison returns same-form or a held positive remainder orientation"
+    ],
+    "minimality": "Replacing any admitted coordinate by a generated alternative removes a registered preservation, completeness, exactness or provenance condition.",
+    "named_shape_uniqueness": "The complete product contains exactly one all-admitted coordinate: complete-trace__disjoint-junction__pair-cell-refinement__common-refinement-pairing__complete-trace-pairing__held-oriented-remainder__base-successor-induction__no-extra-rule.",
+    "operational_witnesses": [
+      [
+        "junction-associativity",
+        "(a joined b) joined c and a joined (b joined c) retain the same canonical trace.",
+        true
+      ],
+      [
+        "pair-cell-cardinality",
+        "Two generated cells paired with three generated cells produce the complete six labelled pair cells.",
+        true
+      ],
+      [
+        "product-associativity",
+        "Canonical flattened pair paths are independent of binary grouping.",
+        true
+      ],
+      [
+        "exact-pairing",
+        "Equal complete traces admit one-to-one and onto pairing; unequal traces do not.",
+        true
+      ],
+      [
+        "held-remainder",
+        "A larger trace reports a positive held remainder instead of a negative value.",
+        true
+      ]
+    ]
+  },
+  "survivors": 1,
+  "distinct_identifiers": 256
+}

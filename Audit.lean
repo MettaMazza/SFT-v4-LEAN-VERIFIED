@@ -901,3 +901,14 @@ import SFT
 #print axioms SFT.Mathematics.DiscreteObjects.completePairsDistinct
 #print axioms SFT.Mathematics.DiscreteObjects.complementOfGeneratedCollectionsAccepted
 #print axioms SFT.Mathematics.DiscreteObjects.doubleComplementMembership
+#print axioms SFT.Mathematics.DiscreteObjects.filterAppendExact
+#print axioms SFT.Mathematics.DiscreteObjects.filterOriginRow
+#print axioms SFT.Mathematics.DiscreteObjects.compositionOutgoing
+#print axioms SFT.Mathematics.DiscreteObjects.compositionMemberOrigin
+#print axioms SFT.Mathematics.DiscreteObjects.compositionRetainsLinkedPair
+#print axioms SFT.Mathematics.DiscreteObjects.compositionTotalSingleValued
+#print axioms SFT.Mathematics.DiscreteObjects.generatedMapCompositionTotal
+#print axioms SFT.Mathematics.DiscreteObjects.compositionEndpointSupport
+#print axioms SFT.Mathematics.DiscreteObjects.singletonRowsDistinct
+#print axioms SFT.Mathematics.DiscreteObjects.totalSupportedRelationDistinct
+#print axioms SFT.Mathematics.DiscreteObjects.generatedMapCompositionAccepted

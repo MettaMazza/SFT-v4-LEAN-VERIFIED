@@ -74,3 +74,5 @@ import SFT.Foundation.MeasurementProtocol
 import SFT.Foundation.MeasurementGrammar
 import SFT.Foundation.MeasurementControls
 import SFT.Mathematics.ExactTraceArithmetic
+import SFT.Mathematics.ExactTracePairing
+import SFT.Mathematics.ExactArithmeticGrammar

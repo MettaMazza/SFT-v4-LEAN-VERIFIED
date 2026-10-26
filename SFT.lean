@@ -23,3 +23,7 @@ import SFT.Foundation.PartEquivalence
 import SFT.Foundation.RefinementSelection
 
 import SFT.Foundation.FoldDerivation
+
+import SFT.Foundation.Fold
+
+import SFT.Foundation.FoldStage

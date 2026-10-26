@@ -17,3 +17,4 @@ import SFT.Foundation.CountTrace
 import SFT.Foundation.CountRepresentation
 import SFT.Foundation.Part
 import SFT.Foundation.PartSelection
+import SFT.Foundation.CommonRefinement

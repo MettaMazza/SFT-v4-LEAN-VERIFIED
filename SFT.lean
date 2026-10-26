@@ -73,3 +73,4 @@ import SFT.Foundation.FormEquivalenceRaw
 import SFT.Foundation.MeasurementProtocol
 import SFT.Foundation.MeasurementGrammar
 import SFT.Foundation.MeasurementControls
+import SFT.Mathematics.ExactTraceArithmetic

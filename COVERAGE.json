@@ -611,9 +611,11 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MATH-EXACT-ARITHMETIC-001-28252bae62373d86.json",
       "statement": "Every admitted arithmetic relation on generated positive finite traces and exact parts has one parameter-free structural kernel: disjoint junction for addition, complete pair-cell refinement for product, finite repeated composition for powers, common-refinement pairing for exact quotient and comparison, and held orientation for unmatched remainder; no semantic zero, negative, irrational, floating or completed-infinite value enters the law.",
       "title": "Exact arithmetic and generated number structure",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Mathematics/ExactTraceArithmetic.lean"
+      ],
+      "artifact_runtime_parity": "All five source operations match81 trace pairs and8 constructor inputs; candidate grammar and full program pending",
       "registration_sha256": "9be2dfb4cec4c2a301246af5a76467e46d2a4c99e73c78f0beed1bf2c3b7a184",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -652,7 +654,8 @@
         "statement": "Every admitted arithmetic relation on generated positive finite traces and exact parts has one parameter-free structural kernel: disjoint junction for addition, complete pair-cell refinement for product, finite repeated composition for powers, common-refinement pairing for exact quotient and comparison, and held orientation for unmatched remainder; no semantic zero, negative, irrational, floating or completed-infinite value enters the law.",
         "status": "independently_replicated",
         "title": "Exact arithmetic and generated number structure"
-      }
+      },
+      "verified_scope": "Native trace, disjoint_junction, pair_cell_product, exact_pairing and oriented_remainder on finite tuples of string-path atoms with exact source order/guards/errors and duplicate/empty behavior. General flattened product associativity, left-distribution, pair-cell cardinality and positivity, admitted junction/pairing, duplicate-label rejection and exhaustive remainder tags proved. Complete raw source domain across tuple string paths; non-tuple/non-string Python objects not represented. Remaining registered laws, generated-law candidate grammar, evidence/controls and full integration pending."
     },
     {
       "branch": "mathematics",
@@ -188580,13 +188583,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-26T22:21:04.683940+00:00",
+  "updated_at": "2026-10-26T22:26:55.627828+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 13,
-    "pending": 2768,
+    "in_progress": 14,
+    "pending": 2767,
     "fully_reconstructed_claims": 0,
-    "axiom_free_exported_results": 757,
-    "axiom_free_audited_definitions_and_theorems": 1382
+    "axiom_free_exported_results": 774,
+    "axiom_free_audited_definitions_and_theorems": 1408
   }
 }

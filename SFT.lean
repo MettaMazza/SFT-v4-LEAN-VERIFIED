@@ -30,3 +30,6 @@ import SFT.Foundation.FoldStage
 import SFT.Foundation.FoldControls
 
 import SFT.Foundation.FoldAssembly
+import SFT.Foundation.FoldAssemblyGrammar
+
+import SFT.Foundation.FoldAssemblyTrace

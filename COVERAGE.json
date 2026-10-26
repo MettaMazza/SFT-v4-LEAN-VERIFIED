@@ -370,9 +370,11 @@
       "title": "Complete finite Fold-word assembly",
       "lean_status": "in_progress",
       "lean_modules": [
-        "SFT/Foundation/FoldAssembly.lean"
+        "SFT/Foundation/FoldAssembly.lean",
+        "SFT/Foundation/FoldAssemblyGrammar.lean",
+        "SFT/Foundation/FoldAssemblyTrace.lean"
       ],
-      "artifact_runtime_parity": "Fresh assembly outputs and returns at host depths 0..6, four arbitrary word inputs and six signed extension inputs match source construction; candidate grammar and complete evidence wrappers pending",
+      "artifact_runtime_parity": "All 192 candidate records match pinned source order, identifiers, forms, decisions and reasons; prior word construction/return cases pass; complete stage/transition/return traces checked at depths 0..5. Full evidence wrappers pending.",
       "registration_sha256": "8a8f2e0be4e6674fdc8dd39e6857578e33a66c281324bff2ccd88d7998098614",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -413,7 +415,7 @@
         "registered_by": "Maria Smith",
         "registration_date": "2026-07-23"
       },
-      "verified_scope": "Literal ordered held-a/held-b append recursion and signed-input rejection. Successor membership iff prior word plus permitted label; append injectivity, two distinct branches, both return to their predecessor, every finite successor returns, unique predecessor. Every finite support is duplicate-free and words have required length. Exact support iff length n and all labels in source pair. Excludes outside labels/wrong lengths; proves repetition breaks uniqueness and omission breaks completeness."
+      "verified_scope": "Literal ordered held-a/held-b append recursion and signed-input rejection. Successor membership iff prior word plus permitted label; append injectivity, two distinct branches, both return to their predecessor, every finite successor returns, unique predecessor. Every finite support is duplicate-free and words have required length. Exact support iff length n and all labels in source pair. Excludes outside labels/wrong lengths; proves repetition breaks uniqueness and omission breaks completeness. Exact 192-form grammar, exhaustive membership, identifier decision iff seven criteria, unique survivor and eight adverse-relation rejections. Canonical full-stage trace retains every level; all and only source-generated transitions recorded; each generated child at each earlier level has its transition and return recorded. Transition determined by successor; every return is sound and generated. Canonical assembly facts realise the accepted witness at every positive finite depth; arbitrary-proposal semantic classification remains pending."
     },
     {
       "branch": "foundation",
@@ -188525,13 +188527,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-26T19:44:45.341888+00:00",
+  "updated_at": "2026-10-26T19:53:10.866276+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 7,
     "pending": 2774,
     "fully_reconstructed_claims": 0,
-    "axiom_free_exported_results": 282,
-    "axiom_free_audited_definitions_and_theorems": 563
+    "axiom_free_exported_results": 317,
+    "axiom_free_audited_definitions_and_theorems": 622
   }
 }

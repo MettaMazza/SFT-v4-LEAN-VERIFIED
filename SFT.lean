@@ -13,3 +13,4 @@ import SFT.Engine.CensusGate
 import SFT.Engine.RegistrationGate
 import SFT.Foundation.RootDerivation
 import SFT.Foundation.OneDerivation
+import SFT.Foundation.CountTrace

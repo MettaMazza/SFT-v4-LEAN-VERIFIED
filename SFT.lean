@@ -89,3 +89,4 @@ import SFT.Mathematics.DiscreteSuccession
 import SFT.Mathematics.DiscreteGrammar
 import SFT.Mathematics.DiscreteWitnesses
 import SFT.Mathematics.DiscreteControls
+import SFT.Mathematics.DiscreteInduction

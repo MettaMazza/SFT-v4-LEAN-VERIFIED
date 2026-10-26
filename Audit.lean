@@ -879,3 +879,12 @@ import SFT
 #print axioms SFT.Mathematics.DiscreteWitnesses.allWitnessesPass
 #print axioms SFT.Mathematics.DiscreteControls.falsePremisePassed
 #print axioms SFT.Mathematics.DiscreteControls.boundaryPassed
+#print axioms SFT.Mathematics.DiscreteObjects.distinctSnocParts
+#print axioms SFT.Mathematics.DiscreteObjects.snocInduction
+#print axioms SFT.Mathematics.DiscreteObjects.uniqueNonemptyTraceInduction
+#print axioms SFT.Mathematics.DiscreteObjects.acceptedCollectionNonempty
+#print axioms SFT.Mathematics.DiscreteObjects.generatedCollectionInduction
+#print axioms SFT.Mathematics.DiscreteObjects.singletonCollectionAccepted
+#print axioms SFT.Mathematics.DiscreteObjects.traceCollectionAccepted
+#print axioms SFT.Mathematics.DiscreteObjects.acceptedCollectionTrace
+#print axioms SFT.Mathematics.DiscreteObjects.acceptedIffConstructionTrace

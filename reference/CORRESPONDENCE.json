@@ -2471,6 +2471,37 @@
         "heldSelectionContained": "Discrete law finite tuple-of-string forms: exact membership, uniqueness, collection/selection/pair-support/map/successor guards and preservation properties; structural helper for source any predicate."
       },
       "domain": "Finite tuples of string tuples, encoded by Lists; TupleValue preserves held_selection return shapes. Source errors, empty inputs and sequence order preserved. Registered grammar, general laws and full program integration pending."
+    },
+    {
+      "module": "SFT/Mathematics/DiscreteRelations.lean",
+      "source_path": "sft/mathematics/discrete_mathematics/law.py",
+      "source_sha256": "a7928796f5d4e2e37ede151360fdd19df76edcb4d5110fc9997182698e62cfc1",
+      "lean_source_sha256": "1395608aeb905df7faa7277dfe6451ceb80480009de99fa15bcdc34639160ae9",
+      "implemented": {
+        "completePairIff": "generated_relation complete_pairs Cartesian generation: membership iff both endpoints belong to their respective collections",
+        "generatedRelationContained": "generated_relation accepted output: every retained pair lies in the complete source pair support",
+        "allTrueIffMembers": "is_total_single_valued all(...) predicate, exact membership characterization",
+        "totalSingleValuedIff": "is_total_single_valued: exact one outgoing retained pair for every source member",
+        "filterLengthOne": "is_total_single_valued len(tuple(...)) == 1: singleton characterization",
+        "totalMapSingleRetainedPair": "is_total_single_valued: singleton filtered pair list for every source member"
+      },
+      "domain": "All finite tuple-of-string collections and relations; source guards and pair multiplicity preserved. General proofs, no sampled depths."
+    },
+    {
+      "module": "SFT/Mathematics/DiscreteSuccession.lean",
+      "source_path": "sft/mathematics/discrete_mathematics/law.py",
+      "source_sha256": "a7928796f5d4e2e37ede151360fdd19df76edcb4d5110fc9997182698e62cfc1",
+      "lean_source_sha256": "f555cf7cdf4e46a527e0a6a4911eee64ebf253d4e9e295a65050cd9ba91883f3",
+      "implemented": {
+        "hasAppend": "successor_trace collection concatenation membership",
+        "absentIff": "successor_trace fresh not in collection guard",
+        "distinctCons": "generated_collection len(set(forms)) uniqueness, recursive decomposition",
+        "freshAppendDistinct": "induction_step append one fresh canonical form once: uniqueness preservation",
+        "successorPreservesDistinct": "induction_step freshness-preserving successor maintains uniqueness",
+        "successfulCollectionDistinct": "generated_collection success implies uniqueness",
+        "freshSuccessorCollection": "induction_step fresh successor preserves acceptance by generated_collection"
+      },
+      "domain": "All finite tuple-of-string collections and relations; source guards and pair multiplicity preserved. General proofs, no sampled depths."
     }
   ],
   "host_modules": [

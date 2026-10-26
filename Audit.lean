@@ -841,3 +841,16 @@ import SFT
 #print axioms SFT.Mathematics.DiscreteObjects.emptySourceTotal
 #print axioms SFT.Mathematics.DiscreteObjects.anyFalseAtMember
 #print axioms SFT.Mathematics.DiscreteObjects.heldSelectionContained
+#print axioms SFT.Mathematics.DiscreteObjects.completePairIff
+#print axioms SFT.Mathematics.DiscreteObjects.generatedRelationContained
+#print axioms SFT.Mathematics.DiscreteObjects.allTrueIffMembers
+#print axioms SFT.Mathematics.DiscreteObjects.totalSingleValuedIff
+#print axioms SFT.Mathematics.DiscreteObjects.filterLengthOne
+#print axioms SFT.Mathematics.DiscreteObjects.totalMapSingleRetainedPair
+#print axioms SFT.Mathematics.DiscreteObjects.hasAppend
+#print axioms SFT.Mathematics.DiscreteObjects.absentIff
+#print axioms SFT.Mathematics.DiscreteObjects.distinctCons
+#print axioms SFT.Mathematics.DiscreteObjects.freshAppendDistinct
+#print axioms SFT.Mathematics.DiscreteObjects.successorPreservesDistinct
+#print axioms SFT.Mathematics.DiscreteObjects.successfulCollectionDistinct
+#print axioms SFT.Mathematics.DiscreteObjects.freshSuccessorCollection

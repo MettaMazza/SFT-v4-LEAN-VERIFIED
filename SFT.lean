@@ -84,3 +84,5 @@ import SFT.Foundation.FormEnforcementEvidence
 import SFT.Foundation.MeasurementEvidence
 import SFT.Mathematics.ExactArithmeticEvidence
 import SFT.Mathematics.DiscreteObjects
+import SFT.Mathematics.DiscreteRelations
+import SFT.Mathematics.DiscreteSuccession

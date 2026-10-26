@@ -829,3 +829,15 @@ import SFT
 #print axioms SFT.Mathematics.ExactArithmeticEvidence.registrationHasNoAxioms
 #print axioms SFT.Mathematics.ExactArithmeticEvidence.registrationHasNoFreeParameters
 #print axioms SFT.Mathematics.ExactArithmeticEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Mathematics.DiscreteObjects.hasIff
+#print axioms SFT.Mathematics.DiscreteObjects.emptyCollectionRejected
+#print axioms SFT.Mathematics.DiscreteObjects.emptyMemberAccepted
+#print axioms SFT.Mathematics.DiscreteObjects.generatedCollectionPreserves
+#print axioms SFT.Mathematics.DiscreteObjects.heldEmptySelection
+#print axioms SFT.Mathematics.DiscreteObjects.emptyRelationAccepted
+#print axioms SFT.Mathematics.DiscreteObjects.generatedRelationPreserves
+#print axioms SFT.Mathematics.DiscreteObjects.freshSuccessorAppends
+#print axioms SFT.Mathematics.DiscreteObjects.existingSuccessorRejected
+#print axioms SFT.Mathematics.DiscreteObjects.emptySourceTotal
+#print axioms SFT.Mathematics.DiscreteObjects.anyFalseAtMember
+#print axioms SFT.Mathematics.DiscreteObjects.heldSelectionContained

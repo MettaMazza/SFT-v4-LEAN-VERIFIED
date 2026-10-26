@@ -83,3 +83,4 @@ import SFT.Mathematics.ExactTraceRemainder
 import SFT.Foundation.FormEnforcementEvidence
 import SFT.Foundation.MeasurementEvidence
 import SFT.Mathematics.ExactArithmeticEvidence
+import SFT.Mathematics.DiscreteObjects

@@ -92,3 +92,4 @@ import SFT.Mathematics.DiscreteControls
 import SFT.Mathematics.DiscreteInduction
 import SFT.Mathematics.DiscreteComplement
 import SFT.Mathematics.DiscreteComposition
+import SFT.Mathematics.DiscreteEvidence

@@ -912,3 +912,8 @@ import SFT
 #print axioms SFT.Mathematics.DiscreteObjects.singletonRowsDistinct
 #print axioms SFT.Mathematics.DiscreteObjects.totalSupportedRelationDistinct
 #print axioms SFT.Mathematics.DiscreteObjects.generatedMapCompositionAccepted
+#print axioms SFT.Mathematics.DiscreteEvidence.nativeDecisionPreservesSurvival
+#print axioms SFT.Mathematics.DiscreteEvidence.nativeDecisionPreservesReason
+#print axioms SFT.Mathematics.DiscreteEvidence.registrationHasNoAxioms
+#print axioms SFT.Mathematics.DiscreteEvidence.registrationHasNoFreeParameters
+#print axioms SFT.Mathematics.DiscreteEvidence.lookupDependsOnlyOnIdentifier

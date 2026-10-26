@@ -637,3 +637,17 @@ import SFT
 #print axioms SFT.Foundation.FoldDynamicsControls.falsePremisePassed
 #print axioms SFT.Foundation.FoldDynamicsControls.tamperedArtifactPassed
 #print axioms SFT.Foundation.FoldDynamicsControls.boundaryPassed
+#print axioms SFT.Foundation.FoldDynamicsEvidence.nativeDecisionPreservesSurvival
+#print axioms SFT.Foundation.FoldDynamicsEvidence.nativeDecisionPreservesReason
+#print axioms SFT.Foundation.FoldDynamicsEvidence.registrationHasNoAxioms
+#print axioms SFT.Foundation.FoldDynamicsEvidence.registrationHasNoFreeParameters
+#print axioms SFT.Foundation.FoldDynamicsEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Foundation.FormConstruction.oneSourceTuple
+#print axioms SFT.Foundation.FormConstruction.foldSourceTuple
+#print axioms SFT.Foundation.FormConstruction.everyFormHasLeaf
+#print axioms SFT.Foundation.FormConstruction.leafCountIsFoldCountPlusOne
+#print axioms SFT.Foundation.FormConstruction.generatedInduction
+#print axioms SFT.Foundation.FormConstruction.nonuniformFormsDistinct
+#print axioms SFT.Foundation.FormConstruction.bothHeldLabelsRetained
+#print axioms SFT.Foundation.FormConstruction.noExtraProduction
+#print axioms SFT.Foundation.FormConstruction.encodingInjective

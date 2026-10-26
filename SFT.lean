@@ -57,3 +57,5 @@ import SFT.Foundation.FoldUniformOrder
 import SFT.Foundation.FoldSorted
 import SFT.Foundation.FoldUniformCheck
 import SFT.Foundation.FoldDynamicsControls
+import SFT.Foundation.FoldDynamicsEvidence
+import SFT.Foundation.FormConstruction

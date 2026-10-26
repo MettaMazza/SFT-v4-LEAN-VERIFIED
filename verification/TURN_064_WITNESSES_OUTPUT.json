@@ -1,0 +1,176 @@
+{
+  "controls": [
+    {
+      "expected_behavior": "reject an unregistered operation",
+      "kind": "false_premise",
+      "observed_behavior": "replay halts on an unregistered row",
+      "passed": true,
+      "receipt_hash": "sha256:9ee5105a6b8df1ba244ee3b1ca4bcf7578cc08a1c9dca1431d485db041fddb43"
+    },
+    {
+      "expected_behavior": "reject changed source identity",
+      "kind": "tampered_source",
+      "observed_behavior": "changed identity differs",
+      "passed": true,
+      "receipt_hash": "sha256:a100fc522c0df37fd0e0b75aa91cec82a224c73202c30cad2dc0100c34d1d0c0"
+    },
+    {
+      "expected_behavior": "reject a changed intermediate or output",
+      "kind": "tampered_artifact",
+      "observed_behavior": "the changed terminal value disagrees with its bound identity",
+      "passed": true,
+      "receipt_hash": "sha256:e32dfb7f142e7129743c024e21537bbb47f828d11bfeb3a5857926aeff76cc8c"
+    },
+    {
+      "expected_behavior": "replay the complete exact trace and agree with the independent direct route",
+      "kind": "boundary",
+      "observed_behavior": "both routes terminate at exact two-of-three",
+      "passed": true,
+      "receipt_hash": "sha256:c5c734047d9b9d22e2ae9449966d260d09fd0013d481bc0574f1dbea9667d1b5"
+    }
+  ],
+  "direct": {
+    "value": {
+      "denominator": 3,
+      "numerator": 2
+    }
+  },
+  "false_premise_replay": {
+    "error": "trace contains an unregistered operation"
+  },
+  "false_premise_trace": [
+    {
+      "input_hashes": [
+        "sha256:c8033c8d853149289092eb96a77830622fbd280f8cdfd657a82dfbfb16d7c729"
+      ],
+      "operation": "Fold",
+      "output": {
+        "value": {
+          "denominator": 3,
+          "numerator": 2
+        }
+      },
+      "output_hash": "sha256:adbdbafefa82c9eceffe3182955e1b91fa37330c09f04027ce4351b227035a9c"
+    },
+    {
+      "input_hashes": [
+        "sha256:c156e5d93244630a6ae3506405f75a3208f4d366013f3df8790532467b0ca3a5",
+        "sha256:adbdbafefa82c9eceffe3182955e1b91fa37330c09f04027ce4351b227035a9c"
+      ],
+      "operation": "Take",
+      "output": {
+        "value": {
+          "denominator": 3,
+          "numerator": 1
+        }
+      },
+      "output_hash": "sha256:c8033c8d853149289092eb96a77830622fbd280f8cdfd657a82dfbfb16d7c729"
+    },
+    {
+      "input_hashes": [],
+      "operation": "Select",
+      "output": {
+        "value": {
+          "denominator": 3,
+          "numerator": 2
+        }
+      },
+      "output_hash": "sha256:adbdbafefa82c9eceffe3182955e1b91fa37330c09f04027ce4351b227035a9c"
+    }
+  ],
+  "replay": {
+    "ok": {
+      "value": {
+        "denominator": 3,
+        "numerator": 2
+      }
+    }
+  },
+  "tampered_replay": {
+    "error": "trace row does not replay to its bound output"
+  },
+  "tampered_trace": [
+    {
+      "input_hashes": [
+        "sha256:c8033c8d853149289092eb96a77830622fbd280f8cdfd657a82dfbfb16d7c729"
+      ],
+      "operation": "Fold",
+      "output": {
+        "value": {
+          "denominator": 3,
+          "numerator": 2
+        }
+      },
+      "output_hash": "sha256:adbdbafefa82c9eceffe3182955e1b91fa37330c09f04027ce4351b227035a9c"
+    },
+    {
+      "input_hashes": [
+        "sha256:c156e5d93244630a6ae3506405f75a3208f4d366013f3df8790532467b0ca3a5",
+        "sha256:adbdbafefa82c9eceffe3182955e1b91fa37330c09f04027ce4351b227035a9c"
+      ],
+      "operation": "Take",
+      "output": {
+        "value": {
+          "denominator": 3,
+          "numerator": 1
+        }
+      },
+      "output_hash": "sha256:c8033c8d853149289092eb96a77830622fbd280f8cdfd657a82dfbfb16d7c729"
+    },
+    {
+      "input_hashes": [
+        "sha256:c8033c8d853149289092eb96a77830622fbd280f8cdfd657a82dfbfb16d7c729"
+      ],
+      "operation": "Fold",
+      "output": {
+        "value": {
+          "denominator": 3,
+          "numerator": 1
+        }
+      },
+      "output_hash": "sha256:adbdbafefa82c9eceffe3182955e1b91fa37330c09f04027ce4351b227035a9c"
+    }
+  ],
+  "trace": [
+    {
+      "input_hashes": [
+        "sha256:c8033c8d853149289092eb96a77830622fbd280f8cdfd657a82dfbfb16d7c729"
+      ],
+      "operation": "Fold",
+      "output": {
+        "value": {
+          "denominator": 3,
+          "numerator": 2
+        }
+      },
+      "output_hash": "sha256:adbdbafefa82c9eceffe3182955e1b91fa37330c09f04027ce4351b227035a9c"
+    },
+    {
+      "input_hashes": [
+        "sha256:c156e5d93244630a6ae3506405f75a3208f4d366013f3df8790532467b0ca3a5",
+        "sha256:adbdbafefa82c9eceffe3182955e1b91fa37330c09f04027ce4351b227035a9c"
+      ],
+      "operation": "Take",
+      "output": {
+        "value": {
+          "denominator": 3,
+          "numerator": 1
+        }
+      },
+      "output_hash": "sha256:c8033c8d853149289092eb96a77830622fbd280f8cdfd657a82dfbfb16d7c729"
+    },
+    {
+      "input_hashes": [
+        "sha256:c8033c8d853149289092eb96a77830622fbd280f8cdfd657a82dfbfb16d7c729"
+      ],
+      "operation": "Fold",
+      "output": {
+        "value": {
+          "denominator": 3,
+          "numerator": 2
+        }
+      },
+      "output_hash": "sha256:adbdbafefa82c9eceffe3182955e1b91fa37330c09f04027ce4351b227035a9c"
+    }
+  ]
+}

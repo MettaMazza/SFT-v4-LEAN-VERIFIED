@@ -327,3 +327,25 @@ Next exact step: publish/inspect this checkpoint, finish assembly transition/ret
 Turn 023 publication receipt — 2026-10-26T20:07:10.475079+00:00
 
 Published eefd5e9039dc57892c33f5d4ef36aea3de9c43b8. All 243 published files match the local manifest. GitHub Actions run 40392714764 is confirmed in_progress; remote success is not asserted yet. Local checks pass at 342 theorems, 671 audited declarations, zero axioms, 1714 candidate rows, 9240 proposed-support cases and 385 finite-set cases, plus exact assembly controls/hashes. Saved publication report. Next continuation must inspect that same run and continue transition/return proposal correspondence and evidence wrappers. Full-model goal remains active.
+
+## Turn 024 — working checkpoint 2026-10-26T20:18:31.790457+00:00
+
+1. Continued the assembly source correspondence with AssemblyRecords.lean: structural finite record membership/reflection, exact transition and return equality, required-record coverage, exclusion of ungenerated records, acceptance equivalence, canonical acceptance and missing/incorrect record rejection. Preserved the explicit source coverage relation.
+2. Added AssemblyEvidence.lean with exact registration, candidate record, census, lookup decision and closure fields and hashing inputs. Proved empty axiom/free-parameter registration fields and identifier-only lookup. Imported both modules and updated correspondence and theorem audit.
+3. Existing fresh build, declaration audit and candidate parity passed: 369 theorems, 723 audited definitions/theorems, zero axiom dependencies and all 1714 candidate rows.
+4. Started the complete Assembly output comparison (check_assembly_evidence.py and AssemblyEvidenceParity.lean) before the user directed that verification-framework expansion stop. That process is still running at this checkpoint; no successful result or publication is asserted. No additional record-mutation checker or CI step was added.
+5. Confirmed previous source checkpoint eefd5e9039dc57892c33f5d4ef36aea3de9c43b8 passed GitHub Actions run 40392714764.
+6. Updated the scientific paper with record acceptance results and current audit totals. User directed focus on actual derivations and no unnecessary verification-framework changes; retain existing verification procedures going forward. Full-entry completion remains unchanged.
+
+Continuation: collect the existing comparison result, publish the verified checkpoint with synchronized status files, and advance the original source derivations in dependency order.
+
+## Turn 025 — 2026-10-26T20:22:23.834065+00:00
+
+1. Classified the preceding turn as progress: manuscript/timeline updated and prior CI confirmed successful. Re-read instructions, current timeline, manuscript and coverage. Polled the same live Assembly comparison session 86050; it remains running. Did not restart it or add verification infrastructure.
+2. Read exact_operations.py, its dependencies and engine/exact.py. Selected the next source derivation after One/Count/Part: repeated complete-One removal on positive n/d. Read half_one.py to confirm its dependency on Exact Operations; did not advance it ahead of that dependency.
+3. Added ExactCast.lean with the literal subtraction/retention relation, structural numerator-derived loop, all-input termination trace, unique output, positivity, upper bound, admitted-value fixedness, subtraction equation, complete-One addition invariance and all-positive-whole-turn retention. No denominator bound or scientific parameter introduced. Fraction normalization and remaining operations are explicitly pending.
+4. The initial well-founded recursive equation proofs imported Quot.sound, and a standard subtraction-positivity lemma imported propext. Replaced the recursion with a numerator-derived structural bound and proved subtraction positivity structurally. Corrected the successor subtraction rewrite. Final targeted build and axiom inspection passed.
+5. Imported the module, mapped every declaration to pinned exact_operations.py, regenerated the existing audit and ran the existing fresh parity command. Build, 383 theorem/739 declaration audit (zero axioms), and all 1714 candidate rows passed. No new verification framework or CI steps added.
+6. Updated coverage, README and scientific manuscript; retained existing-check results under TURN_025. Eight entries now in progress, 2773 pending, zero full entries complete. Assembly wrapper comparison is still pending; its success is not asserted.
+
+Next: publish this verified derivation checkpoint, collect the existing Assembly comparison result, then translate the exact Fraction carrier and remaining source operations.

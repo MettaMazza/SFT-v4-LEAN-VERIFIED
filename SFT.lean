@@ -38,3 +38,8 @@ import SFT.Foundation.AssemblySupport
 
 import SFT.Foundation.AssemblySets
 import SFT.Foundation.AssemblyControls
+
+import SFT.Foundation.AssemblyRecords
+
+import SFT.Foundation.AssemblyEvidence
+import SFT.Foundation.ExactCast

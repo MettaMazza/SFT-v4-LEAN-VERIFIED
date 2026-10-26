@@ -573,3 +573,17 @@ import SFT
 #print axioms SFT.Foundation.FoldUniform.prefixContains
 #print axioms SFT.Foundation.FoldUniform.uniformDivisionMembership
 #print axioms SFT.Foundation.FoldUniform.foldedEnumerationMembership
+#print axioms SFT.Foundation.FoldUniformOrder.multiplyShuffle
+#print axioms SFT.Foundation.FoldUniformOrder.cancelPositiveStrict
+#print axioms SFT.Foundation.FoldUniformOrder.normalizedOrder
+#print axioms SFT.Foundation.FoldUniformOrder.divisionOrder
+#print axioms SFT.Foundation.FoldUniformOrder.pairwiseSnoc
+#print axioms SFT.Foundation.FoldUniformOrder.prefixStrictlyOrdered
+#print axioms SFT.Foundation.FoldUniformOrder.uniformStrictlyOrdered
+#print axioms SFT.Foundation.FoldUniformOrder.strictlyOrderedNoDuplicates
+#print axioms SFT.Foundation.FoldUniformOrder.uniformNoDuplicates
+#print axioms SFT.Foundation.FoldUniformOrder.adjacentRawDifference
+#print axioms SFT.Foundation.FoldUniformOrder.adjacentGap
+#print axioms SFT.Foundation.FoldUniformOrder.prefixLength
+#print axioms SFT.Foundation.FoldUniformOrder.uniformLength
+#print axioms SFT.Foundation.FoldUniformOrder.singletonDivision

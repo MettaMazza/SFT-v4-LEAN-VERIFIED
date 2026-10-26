@@ -53,3 +53,4 @@ import SFT.Foundation.FoldPhaseLaws
 import SFT.Foundation.FoldPhaseFull
 import SFT.Foundation.FoldFibres
 import SFT.Foundation.FoldUniform
+import SFT.Foundation.FoldUniformOrder

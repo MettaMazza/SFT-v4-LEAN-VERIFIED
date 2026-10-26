@@ -981,3 +981,12 @@ import SFT
 #print axioms SFT.Foundation.PrimitiveMapEvidence.registrationHasNoAxioms
 #print axioms SFT.Foundation.PrimitiveMapEvidence.registrationHasNoFreeParameters
 #print axioms SFT.Foundation.PrimitiveMapEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Foundation.PrimitiveMaps.productRightOne
+#print axioms SFT.Foundation.PrimitiveMaps.productLeftOne
+#print axioms SFT.Foundation.PrimitiveMaps.selfProductIsSquare
+#print axioms SFT.Foundation.PrimitiveMaps.selfJunctionCastIsFold
+#print axioms SFT.Foundation.PrimitiveMaps.closedWholeCastsOne
+#print axioms SFT.Foundation.PrimitiveMaps.rawOneSelfJunctionBeyondOne
+#print axioms SFT.Foundation.PrimitiveMaps.rawSelfJunctionNotTotal
+#print axioms SFT.Foundation.PrimitiveMaps.takeSelfRejected
+#print axioms SFT.Foundation.PrimitiveMaps.guardedRemovalNotTotal

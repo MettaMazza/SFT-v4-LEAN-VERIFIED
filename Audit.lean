@@ -661,3 +661,7 @@ import SFT
 #print axioms SFT.Foundation.FormValidation.wrongReturnPrecedesMissingChild
 #print axioms SFT.Foundation.FormValidation.leftFalsePrecedesMissingRightChild
 #print axioms SFT.Foundation.FormValidation.missingLeftChildErrors
+#print axioms SFT.Foundation.FormAcceptance.shortAndTrue
+#print axioms SFT.Foundation.FormAcceptance.acceptedOfValid
+#print axioms SFT.Foundation.FormAcceptance.validOfAccepted
+#print axioms SFT.Foundation.FormAcceptance.validityIffFiniteProduction

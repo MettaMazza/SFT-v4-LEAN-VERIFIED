@@ -55,3 +55,4 @@ import SFT.Foundation.FoldFibres
 import SFT.Foundation.FoldUniform
 import SFT.Foundation.FoldUniformOrder
 import SFT.Foundation.FoldSorted
+import SFT.Foundation.FoldUniformCheck

@@ -651,3 +651,13 @@ import SFT
 #print axioms SFT.Foundation.FormConstruction.bothHeldLabelsRetained
 #print axioms SFT.Foundation.FormConstruction.noExtraProduction
 #print axioms SFT.Foundation.FormConstruction.encodingInjective
+#print axioms SFT.Foundation.FormValidation.oneValid
+#print axioms SFT.Foundation.FormValidation.foldEvaluation
+#print axioms SFT.Foundation.FormValidation.generatedFormsValid
+#print axioms SFT.Foundation.FormValidation.oneChildRejected
+#print axioms SFT.Foundation.FormValidation.sameLabelRejected
+#print axioms SFT.Foundation.FormValidation.edgeTailIgnored
+#print axioms SFT.Foundation.FormValidation.missingLeftLabelErrors
+#print axioms SFT.Foundation.FormValidation.wrongReturnPrecedesMissingChild
+#print axioms SFT.Foundation.FormValidation.leftFalsePrecedesMissingRightChild
+#print axioms SFT.Foundation.FormValidation.missingLeftChildErrors

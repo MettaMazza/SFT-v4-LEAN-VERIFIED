@@ -12,7 +12,7 @@
 
 <p align="center">
   <img alt="Lean 4.35.0" src="https://img.shields.io/badge/Lean-4.35.0-163747?style=flat-square&amp;labelColor=0b1825" />
-  <img alt="14 audited results" src="https://img.shields.io/badge/Audited_results-14-163747?style=flat-square&amp;labelColor=0b1825" />
+  <img alt="17 audited results" src="https://img.shields.io/badge/Audited_results-17-163747?style=flat-square&amp;labelColor=0b1825" />
   <img alt="0 axiom dependencies in audited results" src="https://img.shields.io/badge/Axiom_dependencies-0-147d72?style=flat-square&amp;labelColor=0b1825" />
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
@@ -45,25 +45,25 @@ flowchart LR
 
 ## Proof status
 
-**14 proofs completed · 18 candidate records matched · 3 model entries underway.**
+**17 proofs completed · 18 candidate records matched · 3 model entries underway.**
 
 | Progress measure | Current result |
 | :--- | :--- |
-| Lean theorems proved | **14**, all with zero axiom dependencies |
-| Definitions and theorems audited | **104**, all with zero axiom dependencies |
+| Lean theorems proved | **17**, all with zero axiom dependencies |
+| Definitions and theorems audited | **108**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **18 / 18** across Root, One and Count |
 | Complete model entries | **0 / 2,781**; full-entry verification remains in progress |
 
 | Source component | Verified work | Evidence |
 | :--- | :--- | :--- |
-| **Root** | Complete two-class enumeration, unique survivor, survivor acceptance, presentation-only decision, witness deletion within the partition, three control outcomes | [Lean source](SFT/Foundation/Root.lean) |
+| **Root** | Complete two-class enumeration, unique survivor, survivor acceptance, presentation-only decision, witness deletion within the partition, three control outcomes; explicit tampered survivor set and non-uniqueness proofs | [Lean source](SFT/Foundation/Root.lean) |
 | **One** | Complete six-class enumeration, unique survivor and survivor acceptance | [Lean source](SFT/Foundation/One.lean) |
 | **Count** | Complete ten-class enumeration, unique survivor and survivor acceptance | [Lean source](SFT/Foundation/Count.lean) |
 | **Source correspondence** | All 18 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_005_PARITY_REPORT.json) |
 
 **Full-model completion: 0 / 2,781 entries.** Three entries are in progress; 2,778 remain pending. The results above certify the translated portions. Remaining Root work includes general implementation-correspondence proofs, full operational semantics and admission integration. Full-entry completion is tracked separately from finite classification proofs.
 
-[Read the current axiom audit →](verification/TURN_007_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_007_EVIDENCE_REPORT.json) · [All 104 axiom audits →](verification/TURN_007_ALL_DECLARATIONS_AUDIT.log)
+[Read the current axiom audit →](verification/TURN_008_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_008_EVIDENCE_REPORT.json) · [All 108 axiom audits →](verification/TURN_008_ALL_DECLARATIONS_AUDIT.log)
 
 ## Exact correspondence, from the root
 
@@ -95,7 +95,14 @@ lake env lean --run Parity.lean
 lake env lean --run RootParity.lean
 ```
 
-The comparison scripts read the pinned v3 source and artifacts without importing or executing the v3 scientific modules. They require a local v3 checkout at the path recorded in `reference/SOURCE.json`.
+Every verification run rebuilds current Lean code, generates a fresh declaration audit and executes the current parity program. Committed TSVs and logs are historical evidence, never the verification input.
+
+```sh
+SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_current_parity.py
+SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_root_evidence.py
+```
+
+The scripts read pinned v3 source and artifacts without importing or executing v3 scientific modules. `SFT_V3_SOURCE` overrides the local path in `reference/SOURCE.json`. [GitHub Actions](.github/workflows/verify.yml) performs these checks on pushes and pull requests using the pinned source commit and Lean toolchain.
 
 ## Explore the work
 

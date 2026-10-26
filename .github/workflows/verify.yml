@@ -1,0 +1,51 @@
+name: Verify Lean and V3 correspondence
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SFT_V3_SOURCE: ${{ github.workspace }}/_v3
+    steps:
+      - name: Check out formalisation
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Check out pinned V3 evidence
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: MettaMazza/ernos-labs-sft-platform
+          ref: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1
+          path: _v3
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /sft/foundation/
+            /sft/engine/canonical.py
+            /claims/SFT-ROOT-THERE-IS-NO-NOTHING/
+            /claims/SFT-FOUNDATION-ONE-001/
+            /claims/SFT-FOUNDATION-COUNT-001/
+      - name: Install official elan and pinned Lean toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o "$RUNNER_TEMP/elan-init.sh"
+          sh "$RUNNER_TEMP/elan-init.sh" -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          "$HOME/.elan/bin/elan" toolchain install "$(cat lean-toolchain)"
+      - name: Fresh build, complete declaration audit and candidate parity
+        run: python3 verification/check_current_parity.py
+      - name: Fresh Root evidence, SHA256 and canonical JSON checks
+        run: python3 verification/check_root_evidence.py
+      - name: Retain verification evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: lean-verification-${{ github.sha }}
+          path: verification/current/
+          if-no-files-found: error

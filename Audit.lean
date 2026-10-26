@@ -15,3 +15,7 @@ import SFT
 #print axioms SFT.Foundation.Root.tamperedArtifactControlPassed
 
 #print axioms SFT.Foundation.Root.boundaryControlPassed
+
+#print axioms SFT.Foundation.Root.tamperedDistinctSurvivors
+#print axioms SFT.Foundation.Root.tamperedNoUniqueSurvivor
+#print axioms SFT.Foundation.Root.tamperedSurvivorSet

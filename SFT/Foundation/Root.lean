@@ -95,4 +95,22 @@ set_option maxRecDepth 10000 in
 set_option maxHeartbeats 1000000 in
 theorem boundaryControlPassed : boundaryControl.passed = true := rfl
 
+-- Source control_records premise: "Mark both generated classes as surviving."
+def tamperedAcceptance (_ : Candidate) : Bool := true
+
+theorem tamperedDistinctSurvivors :
+    tamperedAcceptance .c0 = true ∧ tamperedAcceptance .c1 = true ∧
+    (Candidate.c0 ≠ Candidate.c1) :=
+  ⟨rfl, rfl, fun h => Candidate.noConfusion h⟩
+
+theorem tamperedNoUniqueSurvivor :
+    ¬ (∃ c : Candidate, ∀ x : Candidate, tamperedAcceptance x = true ↔ x = c) := by
+  intro ⟨c, h⟩
+  have h0 : Candidate.c0 = c := (h .c0).mp rfl
+  have h1 : Candidate.c1 = c := (h .c1).mp rfl
+  exact Candidate.noConfusion (h0.trans h1.symm)
+
+-- Connect the literal source cardinality check to the actual modified survivor set.
+theorem tamperedSurvivorSet : candidates.filter tamperedAcceptance = [.c0, .c1] := rfl
+
 end SFT.Foundation.Root

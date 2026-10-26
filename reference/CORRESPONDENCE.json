@@ -223,16 +223,17 @@
         "closureEvidenceData": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
         "controlResultData": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
         "typedControlResultMatchesRecord": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
-        "runControlsData": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters"
+        "runControlsData": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
+        "generateCandidatesData": "RootTheoremProgram.generate_candidates; exact typed census adapter and source census-gate count/identifier rejection conditions"
       },
       "status": "zero-axiom executable definitions; stored-artifact parity passed; full general correspondence proof pending",
-      "lean_source_sha256": "bab626b868d277b056ff2f2967107a8abd1aef33256d46ba20db2ee09eb171d4"
+      "lean_source_sha256": "e1563e849934ec5aeac759bec9b25af21b05f09334e46e4727b140e683fb8eb2"
     },
     {
       "module": "SFT/Foundation/RootGate.lean",
       "source_path": "sft/foundation/root_theorem.py",
       "source_sha256": "50c5320b466407b22843cb27d96f4b65e1b1a47dcae2a85dea9ee859d32f8230",
-      "lean_source_sha256": "977005a0da915c120e7b64db3fd9d1eb2279c90b70f155c4a10dc322c9b925e6",
+      "lean_source_sha256": "45597dcce735fe46be877b2310a9e0e47e7c19c91952e06470438c927e7d9bca",
       "implemented": {
         "censusCandidates": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
         "decisions": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
@@ -246,7 +247,11 @@
         "noMinimalityRejected": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
         "noGeneralityRejected": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
         "failedControls": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
-        "failedControlsRejected": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters"
+        "failedControlsRejected": "Root closure/control source records and engine closure/control rejection conditions; source-preserving typed adapters",
+        "incorrectCardinalityCensus": "RootTheoremProgram.generate_candidates; exact typed census adapter and source census-gate count/identifier rejection conditions",
+        "incorrectCardinalityRejected": "RootTheoremProgram.generate_candidates; exact typed census adapter and source census-gate count/identifier rejection conditions",
+        "duplicateCandidateCensus": "RootTheoremProgram.generate_candidates; exact typed census adapter and source census-gate count/identifier rejection conditions",
+        "duplicateCandidateRejected": "RootTheoremProgram.generate_candidates; exact typed census adapter and source census-gate count/identifier rejection conditions"
       }
     }
   ],
@@ -402,6 +407,39 @@
           "sha256": "98428dec80cec16ce357df630b2780d9cd2fb3634068a964b001539362ed4901"
         }
       ]
+    },
+    {
+      "source_path": "sft/engine/engine.py",
+      "source_sha256": "cc150b5556b62f3d67e91ad9d008811abb429b2a3d547159a565b53cfab7e525",
+      "domain": "source-annotated typed records; malformed Python field types outside this domain pending importer validation",
+      "related_sources": [
+        {
+          "path": "sft/engine/model.py",
+          "sha256": "c93df7daef6507b6f448701a4a0d1e077b89b8b1984c29ca70a55e22ca39e0d1"
+        },
+        {
+          "path": "sft/engine/canonical.py",
+          "sha256": "98428dec80cec16ce357df630b2780d9cd2fb3634068a964b001539362ed4901"
+        }
+      ],
+      "module": "SFT/Engine/CensusGate.lean",
+      "source_component": "engine/model.py CandidateCensus; engine.py::_census_violations",
+      "implemented": {
+        "CandidateCensus": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
+        "censusValue": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
+        "duplicateIdentifiers": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
+        "censusViolations": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
+        "passingCensusHasGenerationRule": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
+        "passingCensusHasBoundary": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
+        "passingCensusHasPositiveCount": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
+        "passingCensusMatchesCount": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
+        "passingCensusNoDuplicateIdentifiers": "CandidateCensus typed fields, canonical serialization, ordered census checks and necessary passing conditions in engine.py::_census_violations",
+        "positiveCardinality": "engine.py::_census_violations positive signed cardinality and equality checks via explicit Int constructors; constructive successor witness",
+        "cardinalityMatches": "engine.py::_census_violations positive signed cardinality and equality checks via explicit Int constructors; constructive successor witness",
+        "positiveCardinalityHasSuccessor": "engine.py::_census_violations positive signed cardinality and equality checks via explicit Int constructors; constructive successor witness",
+        "passingCensusPositiveWitness": "engine.py::_census_violations positive signed cardinality and equality checks via explicit Int constructors; constructive successor witness"
+      },
+      "lean_source_sha256": "fe38dff7d34a1dc8755fd9eff535f69e8baaaec8fbb1f919d048107ae12bfd23"
     }
   ]
 }

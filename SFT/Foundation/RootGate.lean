@@ -49,4 +49,21 @@ theorem failedControlsRejected (sourceHash : String) :
   have impossible := SFT.Engine.passingControlsAllPassed _ h
   exact Bool.noConfusion impossible
 
+def incorrectCardinalityCensus : SFT.Engine.CandidateCensus :=
+  { Evidence.generateCandidatesData with expectedCardinality := 1 }
+
+theorem incorrectCardinalityRejected : SFT.Engine.censusViolations incorrectCardinalityCensus ≠ [] := by
+  intro h
+  have impossible := SFT.Engine.passingCensusMatchesCount _ h
+  exact Bool.noConfusion impossible
+
+def duplicateCandidateCensus : SFT.Engine.CandidateCensus :=
+  { Evidence.generateCandidatesData with candidates :=
+    [Evidence.generatedCandidateData .c0, Evidence.generatedCandidateData .c0] }
+
+theorem duplicateCandidateRejected : SFT.Engine.censusViolations duplicateCandidateCensus ≠ [] := by
+  intro h
+  have impossible := SFT.Engine.passingCensusNoDuplicateIdentifiers _ h
+  exact Bool.noConfusion impossible
+
 end SFT.Foundation.Root.Gate

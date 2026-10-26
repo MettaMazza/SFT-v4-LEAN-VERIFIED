@@ -12,7 +12,7 @@
 
 <p align="center">
   <img alt="Lean 4.35.0" src="https://img.shields.io/badge/Lean-4.35.0-163747?style=flat-square&amp;labelColor=0b1825" />
-  <img alt="38 audited results" src="https://img.shields.io/badge/Audited_results-38-163747?style=flat-square&amp;labelColor=0b1825" />
+  <img alt="47 audited results" src="https://img.shields.io/badge/Audited_results-47-163747?style=flat-square&amp;labelColor=0b1825" />
   <img alt="0 axiom dependencies in audited results" src="https://img.shields.io/badge/Axiom_dependencies-0-147d72?style=flat-square&amp;labelColor=0b1825" />
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
@@ -45,12 +45,12 @@ flowchart LR
 
 ## Proof status
 
-**38 proofs completed · 18 candidate records matched · 3 model entries underway.**
+**47 proofs completed · 18 candidate records matched · 3 model entries underway.**
 
 | Progress measure | Current result |
 | :--- | :--- |
-| Lean theorems proved | **38**, all with zero axiom dependencies |
-| Definitions and theorems audited | **163**, all with zero axiom dependencies |
+| Lean theorems proved | **47**, all with zero axiom dependencies |
+| Definitions and theorems audited | **180**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **18 / 18** across Root, One and Count |
 | Complete model entries | **0 / 2,781**; full-entry verification remains in progress |
 
@@ -63,11 +63,13 @@ flowchart LR
 
 **Full-model completion: 0 / 2,781 entries.** Three entries are in progress; 2,778 remain pending. The results above certify the translated portions. Remaining Root work includes general implementation-correspondence proofs, full operational semantics and admission integration. Full-entry completion is tracked separately from finite classification proofs.
 
-[Read the current axiom audit →](verification/TURN_010_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_010_EVIDENCE_REPORT.json) · [All 163 axiom audits →](verification/TURN_010_ALL_DECLARATIONS_AUDIT.log)
+[Read the current axiom audit →](verification/TURN_011_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_011_EVIDENCE_REPORT.json) · [All 180 axiom audits →](verification/TURN_011_ALL_DECLARATIONS_AUDIT.log)
 
 The translated forcing gate checks ordered identifiers, exactly one survivor, explicit reasons and canonical proof-hash identities. A general theorem proves that passing requires one survivor; Root’s tampered decisions are formally rejected. [Gate proofs](SFT/Engine/DecisionGate.lean) · [Root integration](SFT/Foundation/RootGate.lean) · [384-case comparison](verification/TURN_009_DECISION_GATE_REPORT.json)
 
 The closure and control gates now retain their source field checks and error order. Native proofs establish required passing properties and reject Root evidence with missing minimality, missing generality certification or failed control flags. [Evidence-gate proofs](SFT/Engine/EvidenceGates.lean) · [432 closure and 576 control cases](verification/TURN_010_EVIDENCE_GATES_REPORT.json)
+
+The census gate preserves signed cardinalities, candidate identity checks and source error order. Native proofs establish positive-cardinality witnesses and reject Root censuses with incorrect counts or duplicate candidates. [Census gate](SFT/Engine/CensusGate.lean) · [1,440-case comparison](verification/TURN_011_CENSUS_GATE_REPORT.json)
 
 ## Exact correspondence, from the root
 
@@ -106,6 +108,7 @@ SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_current_parity.py
 SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_root_evidence.py
 SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_decision_gate.py
 SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_evidence_gates.py
+SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_census_gate.py
 ```
 
 The scripts read pinned v3 source and artifacts without importing or executing v3 scientific modules. `SFT_V3_SOURCE` overrides the local path in `reference/SOURCE.json`. [GitHub Actions](.github/workflows/verify.yml) performs these checks on pushes and pull requests using the pinned source commit and Lean toolchain.

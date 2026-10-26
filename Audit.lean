@@ -1,5 +1,11 @@
 import SFT
-
+#print axioms SFT.Engine.passingCensusHasGenerationRule
+#print axioms SFT.Engine.passingCensusHasBoundary
+#print axioms SFT.Engine.passingCensusHasPositiveCount
+#print axioms SFT.Engine.passingCensusMatchesCount
+#print axioms SFT.Engine.passingCensusNoDuplicateIdentifiers
+#print axioms SFT.Engine.positiveCardinalityHasSuccessor
+#print axioms SFT.Engine.passingCensusPositiveWitness
 #print axioms SFT.Engine.collectEmptyHeadFalse
 #print axioms SFT.Engine.collectEmptyTail
 #print axioms SFT.Engine.eqOneOfBeq
@@ -38,3 +44,5 @@ import SFT
 #print axioms SFT.Foundation.Root.Gate.noMinimalityRejected
 #print axioms SFT.Foundation.Root.Gate.noGeneralityRejected
 #print axioms SFT.Foundation.Root.Gate.failedControlsRejected
+#print axioms SFT.Foundation.Root.Gate.incorrectCardinalityRejected
+#print axioms SFT.Foundation.Root.Gate.duplicateCandidateRejected

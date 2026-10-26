@@ -1,3 +1,4 @@
+import SFT.Engine.CensusGate
 import SFT.Engine.EvidenceGates
 import SFT.Engine.DecisionGate
 import SFT.Foundation.Root
@@ -43,11 +44,14 @@ def generatedCandidateData (c : Candidate) : SFT.Engine.Candidate where
 def generatedCandidate (c : Candidate) : Value :=
   SFT.Engine.candidateValue (generatedCandidateData c)
 
-def generateCandidates : Value := .object [
-  ("generation_rule", .text generationRule), ("grammar_boundary", .text grammarBoundary),
-  ("expected_cardinality", .integer candidates.length),
-  ("completeness_certificate_hash", .text (identity completenessRecord)),
-  ("candidates", .array (candidates.map generatedCandidate))]
+def generateCandidatesData : SFT.Engine.CandidateCensus where
+  generationRule := generationRule
+  grammarBoundary := grammarBoundary
+  expectedCardinality := Int.ofNat candidates.length
+  completenessCertificateHash := identity completenessRecord
+  candidates := candidates.map generatedCandidateData
+
+def generateCandidates : Value := SFT.Engine.censusValue generateCandidatesData
 
 def candidateDecisionData (c : Candidate) : SFT.Engine.CandidateDecision where
   candidateId := candidateId c

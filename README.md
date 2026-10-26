@@ -1,0 +1,105 @@
+<p align="center">
+  <img src="docs/assets/sft-banner.svg" alt="SFT — Structure comes first. The V3 model. Formalised in Lean. One-to-one." width="100%" />
+</p>
+
+<p align="center">
+  <a href="#the-model">The model</a> ·
+  <a href="#proof-status">Proof status</a> ·
+  <a href="ZENODO_PAPER_DRAFT.txt">Read the paper</a> ·
+  <a href="#run-the-proofs">Run the proofs</a> ·
+  <a href="TIMELINE.txt">Timeline</a>
+</p>
+
+<p align="center">
+  <img alt="Lean 4.35.0" src="https://img.shields.io/badge/Lean-4.35.0-163747?style=flat-square&amp;labelColor=0b1825" />
+  <img alt="13 audited results" src="https://img.shields.io/badge/Audited_results-13-163747?style=flat-square&amp;labelColor=0b1825" />
+  <img alt="0 axiom dependencies in audited results" src="https://img.shields.io/badge/Axiom_dependencies-0-147d72?style=flat-square&amp;labelColor=0b1825" />
+  <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
+</p>
+
+# One model. Every derivation. Machine-checked.
+
+**SFT v4 is the native Lean formalisation of Maria Smith’s Smithian Fold Theory v3.** The task is exact: carry the existing model into Lean, preserving its definitions, constraints, dependency order and derivations across all **2,781 registered entries**.
+
+The governing requirement is **1:1 correspondence with v3**. Each scientific declaration is tied to its source. Each completed proof is audited for axiom dependencies. The entire model is the verification target.
+
+## The model
+
+SFT presents a structural unified theory of everything: gravity, particles and physical constants derived from first principles, with zero added axioms and zero free scientific parameters. This repository is the formal verification programme for that existing model.
+
+Its foundation begins with an operational distinction: absence presents no counterexample; a presented challenge supplies an occurrence. The source then develops structural One and exact positive finite count, followed by Part, Fold and the downstream model.
+
+```mermaid
+flowchart LR
+    R["Root<br/>There Is No Nothing"] --> O["One<br/>Structural self-wholeness"]
+    O --> C["Count<br/>Exact positive finite count"]
+    O --> P["Part"]
+    C --> P
+    P -. "continued source dependency order" .-> D["Fold and downstream model"]
+    style R fill:#102d39,stroke:#69dec5,color:#f4fbff
+    style O fill:#102d39,stroke:#69dec5,color:#f4fbff
+    style C fill:#102d39,stroke:#69dec5,color:#f4fbff
+    style P fill:#172333,stroke:#718796,color:#d3dfe6
+    style D fill:#172333,stroke:#718796,color:#d3dfe6
+```
+
+## Proof status
+
+**13 audited Lean results. Zero axiom dependencies in those results. 18 candidate rows matched to v3.**
+
+| Source component | Verified work | Evidence |
+| :--- | :--- | :--- |
+| **Root** | Complete two-class enumeration, unique survivor, survivor acceptance, presentation-only decision, witness deletion within the partition, two control outcomes | [Lean source](SFT/Foundation/Root.lean) |
+| **One** | Complete six-class enumeration, unique survivor and survivor acceptance | [Lean source](SFT/Foundation/One.lean) |
+| **Count** | Complete ten-class enumeration, unique survivor and survivor acceptance | [Lean source](SFT/Foundation/Count.lean) |
+| **Source correspondence** | All 18 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root closure fields and three non-hash controls checked | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_005_PARITY_REPORT.json) |
+
+**Full-model completion: 0 / 2,781 entries.** Three entries are in progress; 2,778 remain pending. The results above certify the translated portions. Remaining Root work includes the boundary control’s zero-axiom kernel proof, source hashing and admission procedures. Full-entry completion is tracked separately from finite classification proofs.
+
+[Read the current axiom audit →](verification/TURN_005_BUILD.log) · [Inspect complete coverage →](COVERAGE.json)
+
+## Exact correspondence, from the root
+
+| Commitment | How it is recorded |
+| :--- | :--- |
+| **Preserve the model** | Scientific declarations map to identified v3 source components. |
+| **Preserve the constraints** | No added axioms, unfinished proofs or free scientific parameters. Audits report actual dependencies. |
+| **Follow dependencies** | Complete the source foundation in order before advancing into dependent claims. |
+| **Keep the evidence visible** | Proof logs, source comparisons and granular coverage accompany checkpoints. |
+| **Keep a complete record** | The chronological timeline records work; the manuscript presents the science. |
+
+The source is pinned to v3 commit [`76f1b34`](https://github.com/MettaMazza/ernos-labs-sft-platform/tree/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1). The [source inventory](reference/V3_TRACKED_FILES.tsv) records 39,278 tracked paths.
+
+## Run the proofs
+
+With Lean’s `elan` toolchain manager installed:
+
+```sh
+git clone https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED.git
+cd SFT-v4-LEAN-VERIFIED
+lake build
+lake env lean Audit.lean
+```
+
+The project pins Lean **4.35.0**. Emit the translated records with:
+
+```sh
+lake env lean --run Parity.lean
+lake env lean --run RootParity.lean
+```
+
+The comparison scripts read the pinned v3 source and artifacts without importing or executing the v3 scientific modules. They require a local v3 checkout at the path recorded in `reference/SOURCE.json`.
+
+## Explore the work
+
+| | |
+| :--- | :--- |
+| **[Scientific manuscript](ZENODO_PAPER_DRAFT.txt)** | The accompanying Zenodo paper draft. Unpublished. |
+| **[Chronological timeline](TIMELINE.txt)** | Exact steps, checks, outcomes and continuation points. |
+| **[Full coverage ledger](COVERAGE.json)** | Every registered entry, original statement and tracked status. |
+| **[Proof audit](Audit.lean)** | The exported results and their Lean axiom checks. |
+| **[Original SFT v3](https://github.com/MettaMazza/ernos-labs-sft-platform)** | The source model being formalised. |
+
+---
+
+<p align="center"><strong>Smithian Fold Theory · Maria Smith</strong><br/><sub>V3 is the source. Lean is the proof language. Exact correspondence is the requirement.</sub></p>

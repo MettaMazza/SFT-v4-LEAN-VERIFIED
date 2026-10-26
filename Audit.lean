@@ -19,3 +19,10 @@ import SFT
 #print axioms SFT.Foundation.Root.tamperedDistinctSurvivors
 #print axioms SFT.Foundation.Root.tamperedNoUniqueSurvivor
 #print axioms SFT.Foundation.Root.tamperedSurvivorSet
+#print axioms SFT.Engine.collectEmptyHeadFalse
+#print axioms SFT.Engine.collectEmptyTail
+#print axioms SFT.Engine.eqOneOfBeq
+#print axioms SFT.Engine.passingDecisionGateHasOneSurvivor
+#print axioms SFT.Foundation.Root.Gate.originalSurvivorCount
+#print axioms SFT.Foundation.Root.Gate.tamperedSurvivorCount
+#print axioms SFT.Foundation.Root.Gate.tamperedDecisionGateRejected

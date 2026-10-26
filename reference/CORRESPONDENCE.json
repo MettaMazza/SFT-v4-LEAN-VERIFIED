@@ -217,10 +217,26 @@
         "controlRecords": "control_records ordering",
         "controlValue": "control_records dictionary fields",
         "controlResult": "RootTheoremProgram.run_controls / ControlResult",
-        "runControls": "RootTheoremProgram.run_controls"
+        "runControls": "RootTheoremProgram.run_controls",
+        "generatedCandidateData": "RootTheoremProgram.generate_candidates Candidate dataclass fields",
+        "candidateDecisionData": "RootTheoremProgram.decide_candidate CandidateDecision dataclass fields"
       },
       "status": "zero-axiom executable definitions; stored-artifact parity passed; full general correspondence proof pending",
-      "lean_source_sha256": "478cbf6132aaab7148b1f378585d9c1f4dd3118d904126745f380b78211cc8a0"
+      "lean_source_sha256": "6643a97f69d363cb8d364d5a4686329a45f0bc67bb9d750faed8a4cf41c3382a"
+    },
+    {
+      "module": "SFT/Foundation/RootGate.lean",
+      "source_path": "sft/foundation/root_theorem.py",
+      "source_sha256": "50c5320b466407b22843cb27d96f4b65e1b1a47dcae2a85dea9ee859d32f8230",
+      "lean_source_sha256": "e64ab5138ad8d37599aa6514c489cff52d6791d83229f36749c812b019e4e40a",
+      "implemented": {
+        "censusCandidates": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
+        "decisions": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
+        "tamperedDecisions": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
+        "originalSurvivorCount": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
+        "tamperedSurvivorCount": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check",
+        "tamperedDecisionGateRejected": "Root generated candidate/decision records, tampered_artifact premise, and engine _decision_violations forcing check"
+      }
     }
   ],
   "host_modules": [
@@ -292,6 +308,34 @@
       },
       "lean_source_sha256": "e18e15a44ebce39c9164e6b265dc07f080d0f2c9331650b79ab60d49b5073105",
       "status": "zero-axiom implementation; general algorithm correspondence proof pending"
+    }
+  ],
+  "engine_modules": [
+    {
+      "module": "SFT/Engine/DecisionGate.lean",
+      "source_path": "sft/engine/engine.py",
+      "source_sha256": "cc150b5556b62f3d67e91ad9d008811abb429b2a3d547159a565b53cfab7e525",
+      "lean_source_sha256": "8dac883751e0dcd18e9fae0b4c22672778b0e3a1b8342ae9096fd2581b9ab57e",
+      "source_component": "SFTAdmissionEngine._decision_violations; canonical.is_sha256_identity; model.Candidate and CandidateDecision",
+      "implemented": {
+        "Candidate": "engine/model.py Candidate exact three typed fields",
+        "CandidateDecision": "engine/model.py CandidateDecision exact four typed fields",
+        "candidateValue": "canonical.py canonical_value dataclass asdict on Candidate",
+        "decisionValue": "canonical.py canonical_value dataclass asdict on CandidateDecision",
+        "pythonWhitespace": "Python str.strip whitespace semantics used by _decision_violations",
+        "blank": "_decision_violations not decision.reason.strip()",
+        "isHexDigit": "canonical.py is_sha256_identity hexadecimal alphabet",
+        "isSha256Identity": "canonical.py is_sha256_identity on source String field domain",
+        "sameIdentifiers": "_decision_violations ordered decision_ids != expected_ids",
+        "survivors": "_decision_violations survivors list comprehension",
+        "collectViolations": "_decision_violations ordered append accumulation",
+        "decisionViolations": "_decision_violations all four checks in source order",
+        "collectEmptyHeadFalse": "constructive helper: no collected violation implies first predicate false",
+        "collectEmptyTail": "constructive helper: no collected violation implies none in remaining checks",
+        "eqOneOfBeq": "constructive helper for exact source len(survivors) != 1 check",
+        "passingDecisionGateHasOneSurvivor": "_decision_violations successful forcing necessarily leaves exactly one survivor"
+      },
+      "domain": "source-annotated typed records; malformed Python field types outside this domain pending importer validation"
     }
   ]
 }

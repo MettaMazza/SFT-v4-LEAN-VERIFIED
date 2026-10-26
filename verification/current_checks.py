@@ -6,7 +6,11 @@ LAKE=shutil.which('lake') or str(Path.home()/'.elan/bin/lake')
 OUTPUT=PROJECT/'verification/current'
 OUTPUT.mkdir(exist_ok=True)
 def run(*args):
- return subprocess.check_output([LAKE,*args],cwd=PROJECT,text=True,stderr=subprocess.STDOUT)
+ try:
+  return subprocess.check_output([LAKE,*args],cwd=PROJECT,text=True,stderr=subprocess.STDOUT)
+ except subprocess.CalledProcessError as e:
+  (OUTPUT/'FAILURE.log').write_text(e.output)
+  raise RuntimeError(e.output) from e
 def source():
  info=json.loads((PROJECT/'reference/SOURCE.json').read_text())
  path=Path(os.environ.get('SFT_V3_SOURCE',info['local_source'])).resolve()
@@ -15,9 +19,21 @@ def source():
 def fresh_audit():
  build=run('build');(OUTPUT/'BUILD.log').write_text(build)
  names=[];theorems=[]
+ info,src=source()
+ correspondence=json.loads((PROJECT/'reference/CORRESPONDENCE.json').read_text())
+ mapped={m['module']:m for group in ['modules','host_modules','engine_modules','evidence_modules'] for m in correspondence.get(group,[])}
+ import hashlib
+ for m in mapped.values():
+  original=subprocess.check_output(['git','-C',str(src),'show',info['commit']+':'+m['source_path']])
+  assert hashlib.sha256(original).hexdigest()==m['source_sha256'],m['source_path']
+  assert hashlib.sha256((PROJECT/m['module']).read_bytes()).hexdigest()==m['lean_source_sha256'],m['module']
  for f in sorted((PROJECT/'SFT').rglob('*.lean')):
   if f.name.startswith('._'):continue
-  s=f.read_text();ns=re.search(r'^namespace (\S+)',s,re.M).group(1)
+  module=str(f.relative_to(PROJECT));assert module in mapped,module
+  s=f.read_text()
+  declarations=set(re.findall(r'^\s*(?:def|theorem|structure|inductive) (\w+)',s,re.M))
+  assert declarations==set(mapped[module]['implemented']),module+' correspondence declarations differ'
+  ns=re.search(r'^namespace (\S+)',s,re.M).group(1)
   assert not re.search(r'^\s*(axiom\s|sorry\b|admit\b|unsafe\s|partial\s)',s,re.M),str(f)
   for kind,n in re.findall(r'^\s*(def|theorem) (\w+)',s,re.M):
    names.append(ns+'.'+n)

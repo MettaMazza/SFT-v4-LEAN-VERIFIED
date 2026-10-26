@@ -27,6 +27,8 @@ jobs:
           sparse-checkout: |
             /sft/foundation/
             /sft/engine/canonical.py
+            /sft/engine/engine.py
+            /sft/engine/model.py
             /claims/SFT-ROOT-THERE-IS-NO-NOTHING/
             /claims/SFT-FOUNDATION-ONE-001/
             /claims/SFT-FOUNDATION-COUNT-001/
@@ -42,6 +44,8 @@ jobs:
         run: python3 verification/check_current_parity.py
       - name: Fresh Root evidence, SHA256 and canonical JSON checks
         run: python3 verification/check_root_evidence.py
+      - name: Typed forcing gate and Root tampering checks
+        run: python3 verification/check_decision_gate.py
       - name: Retain verification evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

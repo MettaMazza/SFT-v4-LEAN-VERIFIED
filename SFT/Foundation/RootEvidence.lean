@@ -1,3 +1,4 @@
+import SFT.Engine.DecisionGate
 import SFT.Foundation.Root
 import SFT.Host.Canonical
 /-! Source: root_theorem.py::RootTheoremProgram and its record functions.
@@ -32,10 +33,14 @@ def registration (sourceHash : String) : Value := .object [
   ("dependencies", .array []), ("axioms", .array []), ("free_parameters", .array []),
   ("provenance", .array [.text "direct_forcing"]), ("source_hash", .text sourceHash)]
 
-def generatedCandidate (c : Candidate) : Value := .object [
-  ("candidate_id", .text (candidateId c)), ("exact_form", .text (exactForm c)),
-  ("trace_hash", .text (identity (.object [
-    ("generator", .text generationRule), ("generated_record", candidateRecord c)])))]
+def generatedCandidateData (c : Candidate) : SFT.Engine.Candidate where
+  candidateId := candidateId c
+  exactForm := exactForm c
+  traceHash := identity (.object [
+    ("generator", .text generationRule), ("generated_record", candidateRecord c)])
+
+def generatedCandidate (c : Candidate) : Value :=
+  SFT.Engine.candidateValue (generatedCandidateData c)
 
 def generateCandidates : Value := .object [
   ("generation_rule", .text generationRule), ("grammar_boundary", .text grammarBoundary),
@@ -43,12 +48,16 @@ def generateCandidates : Value := .object [
   ("completeness_certificate_hash", .text (identity completenessRecord)),
   ("candidates", .array (candidates.map generatedCandidate))]
 
-def candidateDecision (c : Candidate) : Value := .object [
-  ("candidate_id", .text (candidateId c)), ("survives", .boolean (survives c)),
-  ("reason", .text (decisionReason c)),
-  ("proof_hash", .text (identity (.object [
+def candidateDecisionData (c : Candidate) : SFT.Engine.CandidateDecision where
+  candidateId := candidateId c
+  survives := survives c
+  reason := decisionReason c
+  proofHash := identity (.object [
     ("candidate", candidateRecord c), ("decision", decisionRecord c),
-    ("rule", .text "presentation entails an occurrence; nonpresentation supplies no challenge")])))]
+    ("rule", .text "presentation entails an occurrence; nonpresentation supplies no challenge")])
+
+def candidateDecision (c : Candidate) : Value :=
+  SFT.Engine.decisionValue (candidateDecisionData c)
 
 -- Python dictionary lookup raises KeyError for an unregistered ID; explicit error preserves refusal.
 def decideCandidate (id : String) : Except String Value :=

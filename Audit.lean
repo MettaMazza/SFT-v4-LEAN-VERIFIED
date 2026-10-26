@@ -554,3 +554,10 @@ import SFT
 #print axioms SFT.Foundation.FoldPhaseFull.doubledRemoval
 #print axioms SFT.Foundation.FoldPhaseFull.fullPhaseCollision
 #print axioms SFT.Foundation.FoldPhaseFull.fullPhaseInvolution
+#print axioms SFT.Foundation.FoldFibres.lowerNormalized
+#print axioms SFT.Foundation.FoldFibres.firstHalfRecovered
+#print axioms SFT.Foundation.FoldFibres.normalizedHalf
+#print axioms SFT.Foundation.FoldFibres.secondHalfPhaseOnFirst
+#print axioms SFT.Foundation.FoldFibres.preimageExhaustion
+#print axioms SFT.Foundation.FoldFibres.exactTwoPreimages
+#print axioms SFT.Foundation.FoldFibres.cancelAddedBound

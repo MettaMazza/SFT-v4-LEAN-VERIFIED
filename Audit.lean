@@ -973,3 +973,11 @@ import SFT
 #print axioms SFT.Foundation.PrimitiveMapGrammar.sourceAcceptanceIffLeastGenerator
 #print axioms SFT.Foundation.PrimitiveMaps.appendPrimitiveIncreasesSize
 #print axioms SFT.Foundation.PrimitiveMaps.successorPreservesNonminimality
+#print axioms SFT.Foundation.PrimitiveMapControls.falsePremisePassed
+#print axioms SFT.Foundation.PrimitiveMapControls.boundaryPassed
+#print axioms SFT.Foundation.PrimitiveMapControls.tamperedArtifactPassed
+#print axioms SFT.Foundation.PrimitiveMapEvidence.nativeDecisionPreservesSurvival
+#print axioms SFT.Foundation.PrimitiveMapEvidence.nativeDecisionPreservesReason
+#print axioms SFT.Foundation.PrimitiveMapEvidence.registrationHasNoAxioms
+#print axioms SFT.Foundation.PrimitiveMapEvidence.registrationHasNoFreeParameters
+#print axioms SFT.Foundation.PrimitiveMapEvidence.lookupDependsOnlyOnIdentifier

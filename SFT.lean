@@ -97,3 +97,5 @@ import SFT.Foundation.PrimitiveMaps
 import SFT.Foundation.PrimitiveSquare
 import SFT.Foundation.PrimitiveMinimality
 import SFT.Foundation.PrimitiveMapGrammar
+import SFT.Foundation.PrimitiveMapControls
+import SFT.Foundation.PrimitiveMapEvidence

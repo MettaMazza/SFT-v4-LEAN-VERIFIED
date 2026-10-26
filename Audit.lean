@@ -561,3 +561,15 @@ import SFT
 #print axioms SFT.Foundation.FoldFibres.preimageExhaustion
 #print axioms SFT.Foundation.FoldFibres.exactTwoPreimages
 #print axioms SFT.Foundation.FoldFibres.cancelAddedBound
+#print axioms SFT.Foundation.FoldUniform.divisionPointCongr
+#print axioms SFT.Foundation.FoldUniform.lowerIndexImage
+#print axioms SFT.Foundation.FoldUniform.upperIndexImage
+#print axioms SFT.Foundation.FoldUniform.indexPairCollision
+#print axioms SFT.Foundation.FoldUniform.everyEvenIndexImage
+#print axioms SFT.Foundation.FoldUniform.divisionPointInjective
+#print axioms SFT.Foundation.FoldUniform.terminalIsOne
+#print axioms SFT.Foundation.FoldUniform.exactEvenImageSet
+#print axioms SFT.Foundation.FoldUniform.prefixOrigin
+#print axioms SFT.Foundation.FoldUniform.prefixContains
+#print axioms SFT.Foundation.FoldUniform.uniformDivisionMembership
+#print axioms SFT.Foundation.FoldUniform.foldedEnumerationMembership

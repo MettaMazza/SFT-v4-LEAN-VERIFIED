@@ -1,0 +1,14 @@
+import Runtime.Host.SHA256
+inductive Value where
+ | text : String → Value
+ | boolean : Bool → Value
+ | integer : Int → Value
+ | null : Value
+ | array : List Value → Value
+ | object : List (String × Value) → Value
+ deriving Repr
+
+
+#check @Value.rec
+#print axioms SFT.Host.Text.chars
+#print axioms SFT.Host.SHA256.digest

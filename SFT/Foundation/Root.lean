@@ -1,3 +1,4 @@
+import SFT.Host.Text
 /-! Literal formalisation of SFT-ROOT-THERE-IS-NO-NOTHING.
 Source: sft/foundation/root_theorem.py. Candidate constructors encode only the registered
 finite grammar; they add no scientific object. See reference/CORRESPONDENCE.json. -/
@@ -40,8 +41,7 @@ theorem uniqueSurvivor (c : Candidate) : survives c = true ↔ c = survivor := b
 theorem survivorAccepted : survives survivor = true := rfl
 
 
-/-! Source closure and non-hash control semantics. Hash-based source custody
-remains pending its canonical-serialization/SHA-256 translation. -/
+/-! Source closure and non-hash control semantics. Hash-based source custody is translated in RootEvidence; full engine integration remains pending. -/
 def closureRecord : List (String × String) :=
   [("scope", "depth_independent"),
    ("minimality", "Deleting the presented witness deletes the only admissible proof object; no smaller operational witness remains."),
@@ -88,9 +88,11 @@ def boundaryControl : ControlRecord where
   premise := "Claim an unexpressed metaphysical object beyond the operational boundary."
   expected := "refuse the broadened claim because it supplies no checkable object"
   observed := "the theorem remains scoped to admissible operational objects"
-  passed := grammarBoundary.toLower.contains "operational"
+  passed := SFT.Host.Text.contains (SFT.Host.Text.lowerAscii grammarBoundary) "operational"
 
--- Runtime parity is checked for this source boundary condition.
--- Its constructive kernel proof remains pending.
+-- The fixed source boundary is ASCII; this exactly preserves Python lower/substring semantics.
+set_option maxRecDepth 10000 in
+set_option maxHeartbeats 1000000 in
+theorem boundaryControlPassed : boundaryControl.passed = true := rfl
 
 end SFT.Foundation.Root

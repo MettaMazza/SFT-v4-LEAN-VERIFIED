@@ -50,16 +50,16 @@
         "falsePremiseControlPassed": "control_records false_premise passed predicate",
         "tamperedArtifactControl": "control_records tampered_artifact",
         "tamperedArtifactControlPassed": "control_records tampered_artifact passed predicate",
-        "boundaryControl": "control_records boundary; runtime parity only"
+        "boundaryControl": "control_records boundary; runtime parity only",
+        "boundaryControlPassed": "control_records boundary: fixed ASCII grammarBoundary lower/substring predicate"
       },
       "candidate_count": 2,
       "remaining": [
-        "boundary control zero-axiom kernel proof",
-        "tampered_source control and canonical serialization/SHA256",
-        "hash-bound admission wrappers and full closure semantics beyond registered partition"
+        "general host algorithm correspondence proofs",
+        "full operational closure semantics and admission engine integration"
       ],
-      "declaration_count": 22,
-      "lean_source_sha256": "7a9932d1f13b5beb4409368e1c881357811138486597435dd486d15cf6fadda5"
+      "declaration_count": 23,
+      "lean_source_sha256": "6ca23a656a2b5b6ed54df5481ddcf5b9c12ee70421bea8089969a0e2709c5067"
     },
     {
       "module": "SFT/Foundation/One.lean",
@@ -192,5 +192,102 @@
     "SFT.Foundation.Count.uniqueSurvivor",
     "SFT.Foundation.Count.survivorAccepted"
   ],
-  "policy": "Only translate existing V3 scientific content. Representation machinery must have a documented exact source mapping."
+  "policy": "Only translate existing V3 scientific content. Representation machinery must have a documented exact source mapping.",
+  "evidence_modules": [
+    {
+      "module": "SFT/Foundation/RootEvidence.lean",
+      "source_path": "sft/foundation/root_theorem.py",
+      "source_sha256": "50c5320b466407b22843cb27d96f4b65e1b1a47dcae2a85dea9ee859d32f8230",
+      "implemented": {
+        "candidateRecord": "candidate_records",
+        "completenessRecord": "completeness_record",
+        "decisionRecord": "decision_record",
+        "closureValue": "closure_record",
+        "registration": "RootTheoremProgram.registration",
+        "generatedCandidate": "RootTheoremProgram.generate_candidates / Candidate",
+        "generateCandidates": "RootTheoremProgram.generate_candidates / CandidateCensus",
+        "candidateDecision": "RootTheoremProgram.decide_candidate / CandidateDecision",
+        "decideCandidate": "RootTheoremProgram.decide_candidate dictionary lookup including unknown ID refusal",
+        "closureEvidence": "RootTheoremProgram.closure_evidence / ClosureEvidence",
+        "tamperedSourceControl": "control_records tampered_source exact predicate",
+        "controlRecords": "control_records ordering",
+        "controlValue": "control_records dictionary fields",
+        "controlResult": "RootTheoremProgram.run_controls / ControlResult",
+        "runControls": "RootTheoremProgram.run_controls"
+      },
+      "status": "zero-axiom executable definitions; stored-artifact parity passed; full general correspondence proof pending",
+      "lean_source_sha256": "478cbf6132aaab7148b1f378585d9c1f4dd3118d904126745f380b78211cc8a0"
+    }
+  ],
+  "host_modules": [
+    {
+      "module": "SFT/Host/Text.lean",
+      "source_path": "sft/engine/canonical.py",
+      "source_sha256": "98428dec80cec16ce357df630b2780d9cd2fb3634068a964b001539362ed4901",
+      "implemented": {
+        "decode": "constructive UTF-8/string operations implementing JSON escaping, key ordering, and fixed ASCII Root boundary lower/substring; Unicode lower outside this fixed ASCII call is not claimed",
+        "chars": "constructive UTF-8/string operations implementing JSON escaping, key ordering, and fixed ASCII Root boundary lower/substring; Unicode lower outside this fixed ASCII call is not claimed",
+        "append": "constructive UTF-8/string operations implementing JSON escaping, key ordering, and fixed ASCII Root boundary lower/substring; Unicode lower outside this fixed ASCII call is not claimed",
+        "join": "constructive UTF-8/string operations implementing JSON escaping, key ordering, and fixed ASCII Root boundary lower/substring; Unicode lower outside this fixed ASCII call is not claimed",
+        "intercalate": "constructive UTF-8/string operations implementing JSON escaping, key ordering, and fixed ASCII Root boundary lower/substring; Unicode lower outside this fixed ASCII call is not claimed",
+        "equal": "constructive UTF-8/string operations implementing JSON escaping, key ordering, and fixed ASCII Root boundary lower/substring; Unicode lower outside this fixed ASCII call is not claimed",
+        "lexLE": "constructive UTF-8/string operations implementing JSON escaping, key ordering, and fixed ASCII Root boundary lower/substring; Unicode lower outside this fixed ASCII call is not claimed",
+        "le": "constructive UTF-8/string operations implementing JSON escaping, key ordering, and fixed ASCII Root boundary lower/substring; Unicode lower outside this fixed ASCII call is not claimed",
+        "lowerAscii": "constructive UTF-8/string operations implementing JSON escaping, key ordering, and fixed ASCII Root boundary lower/substring; Unicode lower outside this fixed ASCII call is not claimed",
+        "isPrefix": "constructive UTF-8/string operations implementing JSON escaping, key ordering, and fixed ASCII Root boundary lower/substring; Unicode lower outside this fixed ASCII call is not claimed",
+        "containsBytes": "constructive UTF-8/string operations implementing JSON escaping, key ordering, and fixed ASCII Root boundary lower/substring; Unicode lower outside this fixed ASCII call is not claimed",
+        "contains": "constructive UTF-8/string operations implementing JSON escaping, key ordering, and fixed ASCII Root boundary lower/substring; Unicode lower outside this fixed ASCII call is not claimed"
+      },
+      "lean_source_sha256": "3ae0a3fcba1bcfbd36cf08aa7d3c19edbcff3487e28c5fc3fc6ae017e8c9ffd7",
+      "status": "zero-axiom implementation; general algorithm correspondence proof pending"
+    },
+    {
+      "module": "SFT/Host/SHA256.lean",
+      "source_path": "sft/engine/canonical.py",
+      "source_sha256": "98428dec80cec16ce357df630b2780d9cd2fb3634068a964b001539362ed4901",
+      "implemented": {
+        "initial": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "constants": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "bits": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "xor": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "and": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "add": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "rotate": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "small0": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "small1": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "big0": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "big1": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "pad": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "get": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "schedule": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "round": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "block": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "hexDigit": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "wordHex": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest",
+        "digest": "canonical.py sha256_identity hashlib.sha256: FIPS 180-4 fixed initial words, round constants, bit operations, padding, schedule, compression and hexadecimal digest"
+      },
+      "lean_source_sha256": "67784dfc04ce7da651fe74d34b2e20de30b9b32ed0d7ac9c37f70c0cc7a0d0c6",
+      "status": "zero-axiom implementation; general algorithm correspondence proof pending"
+    },
+    {
+      "module": "SFT/Host/Canonical.lean",
+      "source_path": "sft/engine/canonical.py",
+      "source_sha256": "98428dec80cec16ce357df630b2780d9cd2fb3634068a964b001539362ed4901",
+      "implemented": {
+        "Value": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
+        "hex4": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
+        "escapeChar": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
+        "quote": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
+        "insertField": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
+        "sortFields": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
+        "render": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
+        "renderValues": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
+        "renderFields": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
+        "renderField": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites",
+        "identity": "canonical.py canonical_json ensure_ascii=True, separators=(comma,colon), sort_keys=True; Root JSON domain only; dataclass and Enum fields encoded at call sites"
+      },
+      "lean_source_sha256": "e18e15a44ebce39c9164e6b265dc07f080d0f2c9331650b79ab60d49b5073105",
+      "status": "zero-axiom implementation; general algorithm correspondence proof pending"
+    }
+  ]
 }

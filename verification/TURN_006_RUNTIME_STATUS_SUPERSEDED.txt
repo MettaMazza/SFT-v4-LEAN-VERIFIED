@@ -1,0 +1,9 @@
+Evidence runtime translation — not admitted as zero-axiom formal verification
+
+These total Lean implementations preserve the Root evidence fields and match its stored hashes. Their standard-library dependency audit reports propext, Quot.sound and Classical.choice. They are isolated from SFT and Audit default targets. No axiom declarations or unfinished proof tactics are used here, but this runtime draft does not satisfy the zero-axiom verification requirement.
+
+Build explicitly: lake build Runtime
+Check: lake env lean verification/HostAudit.lean
+Compare: python3 verification/check_root_evidence.py
+
+Next: replace axiom-dependent host representations with constructive implementations and establish the correspondence proofs before admitting this code to the verified target.

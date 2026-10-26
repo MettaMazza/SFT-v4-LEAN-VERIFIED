@@ -13,3 +13,5 @@ import SFT
 #print axioms SFT.Foundation.Root.deletionRemovesOnlyWitness
 #print axioms SFT.Foundation.Root.falsePremiseControlPassed
 #print axioms SFT.Foundation.Root.tamperedArtifactControlPassed
+
+#print axioms SFT.Foundation.Root.boundaryControlPassed

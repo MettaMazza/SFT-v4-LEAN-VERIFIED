@@ -15,12 +15,12 @@ for m in cor['modules']:
  for c in census['candidates']:
   d=ds[c['candidate_id']]
   expected.append('\t'.join([Path(m['module']).stem,c['candidate_id'],str(d['survives']).lower(),c['exact_form'],d['reason']]))
-actual=(p/'verification/TURN_005_CANDIDATE_PARITY.tsv').read_text().splitlines()
+actual=(p/'verification/TURN_007_CANDIDATE_PARITY.tsv').read_text().splitlines()
 assert actual==expected,'Ordered candidate identity, decision, exact form or reason differs'
-log=(p/'verification/TURN_005_BUILD.log').read_text()
+log=(p/'verification/TURN_007_BUILD.log').read_text()
 assert 'Build completed successfully' in log
-assert log.count('does not depend on any axioms')==13
+assert log.count('does not depend on any axioms')==14
 assert 'depends on axioms:' not in log
-result={'status':'PASS','source_commit':srcinfo['commit'],'candidate_rows_compared':len(expected),'fields':['order','candidate_id','survives','exact_form','reason'],'native_theorems_audited':13,'axiom_dependencies':0,'scope':'Complete registered Root/One/Count finite candidate classifications; not full source-module or full claim completion.'}
-(p/'verification/TURN_005_PARITY_REPORT.json').write_text(json.dumps(result,indent=2)+'\n')
+result={'status':'PASS','source_commit':srcinfo['commit'],'candidate_rows_compared':len(expected),'fields':['order','candidate_id','survives','exact_form','reason'],'native_theorems_audited':14,'axiom_dependencies':0,'scope':'Complete registered Root/One/Count finite candidate classifications; not full source-module or full claim completion.'}
+(p/'verification/TURN_007_PARITY_REPORT.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))

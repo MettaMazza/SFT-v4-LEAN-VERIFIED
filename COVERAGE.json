@@ -32484,9 +32484,11 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-FOUNDATION-DERIVATION-TRACE-001-457414dd7e3a14e4.json",
       "statement": "Every admitted finite derivation has one exact complete record: immutable source and dependency identities followed by every registered operation in order with exact input and output identities; deterministic replay reproduces every intermediate and the terminal result, and the record traces through admitted dependencies to the root theorem.",
       "title": "Complete replayable derivation trace",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Foundation/DerivationTrace.lean"
+      ],
+      "artifact_runtime_parity": "Pending for DerivationTrace; existing3430 rows remain verified.",
       "registration_sha256": "f0b599909957454e5534ca9816ec343afc836694db59a668123df85f0f013a6b",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -32525,7 +32527,8 @@
         "statement": "Every admitted finite derivation has one exact complete record: immutable source and dependency identities followed by every registered operation in order with exact input and output identities; deterministic replay reproduces every intermediate and the terminal result, and the record traces through admitted dependencies to the root theorem.",
         "status": "independently_replicated",
         "title": "Complete replayable derivation trace"
-      }
+      },
+      "verified_scope": "Native exact row representation, canonical ExactPart identity, ordered Fold/Take dispatch and replay with original output guards/errors and initial third. Constructive base/successor proof: every successfully generated finite operation sequence replays to its computed terminal; accepted-prefix concatenation and one-step extension. No finite length cutoff. Source replay does not inspect input_hashes; preserved without adding acceptance conditions. Complete256 grammar, three-move trace/control witnesses, program outputs and engine/dependency integration remain pending."
     },
     {
       "branch": "foundation",
@@ -188613,13 +188616,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-26T23:35:54.657920+00:00",
+  "updated_at": "2026-10-26T23:43:34.581406+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 16,
-    "pending": 2765,
+    "in_progress": 17,
+    "pending": 2764,
     "fully_reconstructed_claims": 0,
-    "axiom_free_exported_results": 991,
-    "axiom_free_audited_definitions_and_theorems": 1823
+    "axiom_free_exported_results": 1002,
+    "axiom_free_audited_definitions_and_theorems": 1842
   }
 }

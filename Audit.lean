@@ -990,3 +990,14 @@ import SFT
 #print axioms SFT.Foundation.PrimitiveMaps.rawSelfJunctionNotTotal
 #print axioms SFT.Foundation.PrimitiveMaps.takeSelfRejected
 #print axioms SFT.Foundation.PrimitiveMaps.guardedRemovalNotTotal
+#print axioms SFT.Foundation.DerivationTrace.constructedOutputMatches
+#print axioms SFT.Foundation.DerivationTrace.emptyReplay
+#print axioms SFT.Foundation.DerivationTrace.replayConstructedStep
+#print axioms SFT.Foundation.DerivationTrace.generatedTraceReplays
+#print axioms SFT.Foundation.DerivationTrace.replayAppend
+#print axioms SFT.Foundation.DerivationTrace.finiteSuccessorReplay
+#print axioms SFT.Foundation.DerivationTrace.emptySourceReplay
+#print axioms SFT.Foundation.DerivationTrace.foldDispatch
+#print axioms SFT.Foundation.DerivationTrace.takeDispatch
+#print axioms SFT.Foundation.DerivationTrace.unregisteredSelect
+#print axioms SFT.Foundation.DerivationTrace.identityBytesReflexive

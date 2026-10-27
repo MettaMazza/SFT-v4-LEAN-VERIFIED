@@ -1408,3 +1408,11 @@ import SFT
 #print axioms SFT.Mathematics.OrderOperations.upperBoundCheckPreserved
 #print axioms SFT.Mathematics.OrderOperations.lowerBoundsCarrierExtension
 #print axioms SFT.Mathematics.OrderOperations.upperBoundsCarrierExtension
+#print axioms SFT.Mathematics.OrderOperations.allChecksSnoc
+#print axioms SFT.Mathematics.OrderOperations.boundFilterConjunction
+#print axioms SFT.Mathematics.OrderOperations.lowerBoundsHeldExtension
+#print axioms SFT.Mathematics.OrderOperations.upperBoundsHeldExtension
+#print axioms SFT.Mathematics.OrderOperations.meetRetainedOnHeldExtension
+#print axioms SFT.Mathematics.OrderOperations.joinRetainedOnHeldExtension
+#print axioms SFT.Mathematics.OrderOperations.meetRetainedOnCarrierExtension
+#print axioms SFT.Mathematics.OrderOperations.joinRetainedOnCarrierExtension

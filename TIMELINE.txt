@@ -1125,3 +1125,16 @@ Turn 078 publication receipt: pushed 17109ca7b8687fa970a23afd310829a8abba3ca9 to
 5. Updated coverage, README and scientific manuscript: general constructor single-valuedness/totality is now proved; remaining algebra property operations and full integration remain pending.19 entries in progress,2762 pending,zero whole entries complete. Prepared public checkpoint.
 
 Next: implement has_identity and is_associative from the pinned algebra source with exhaustive carrier/pair/triple semantics, preserving source short-circuit/error behavior; then proceed through return mates, commutation and structure maps.
+
+Turn 079 publication receipt: pushed 7c20f917e65f0d8201c4417c0c3455b174caa0c2 to public main; compared 716 files, 0 mismatches. Receipt retained for next checkpoint.
+
+## Turn 080 — 2026-10-27T01:13:01.851755+00:00
+
+1. Classified Turn079 as progress: constructor single-valuedness and total closed lookup proved and published. Read current timeline, paper, coverage and pinned has_identity/is_associative source. Continued source operation order.
+2. Added AlgebraProperties.lean with ordered error-aware allChecked, identityCell/hasIdentity and associationCell/isAssociative. Preserved left-before-right comparisons, nested triple order, early false and lookup error propagation. Added six theorems: allChecked exhaustive success, exact identity cell semantics, full identity equivalence, exhaustive triple equivalence, exact composite equality and accepted-table associativity meaning.
+3. Initial build failed on an inline constructor tactic expression, excessive unfolding of allChecked and unreduced Except binds. Used explicit constructor branches, one-step rewriting and explicit bind/pure reduction; rebuilt successfully. Added accepted-table theorem using established totality/closure.
+4. Registered correspondence/import/audit declarations. Fresh driver compared156 property calls on39 representations against independent reconstruction, without running V3 scientific Python: all16 binary operations in two carrier/row orders plus empty/incomplete/duplicate/external-result diagnostics. All output matched. Retained driver/output/report.
+5. Existing fresh build/audit/parity PASS:1222 theorems,2192 audited declarations,zero axioms,3942 candidate rows. Retained TURN_080 build, complete audit source/log and parity report. No verifier or CI changes.
+6. Updated coverage, README and scientific manuscript.19 entries in progress,2762 pending,zero whole entries complete. Prepared public checkpoint.
+
+Next: translate return_mates and is_commutative, preserving unique-mate failure, identity precheck, ordered enumeration and exceptions; prove their exhaustive semantics before structure-map translation.

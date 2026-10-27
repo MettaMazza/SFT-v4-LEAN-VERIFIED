@@ -1215,3 +1215,9 @@ import SFT
 #print axioms SFT.Mathematics.AlgebraOperations.uniqueProjectedFilter
 #print axioms SFT.Mathematics.AlgebraOperations.inputTestIff
 #print axioms SFT.Mathematics.AlgebraOperations.acceptedLookupTotal
+#print axioms SFT.Mathematics.AlgebraOperations.allCheckedTrueIff
+#print axioms SFT.Mathematics.AlgebraOperations.identityCellTrueIff
+#print axioms SFT.Mathematics.AlgebraOperations.hasIdentityTrueIff
+#print axioms SFT.Mathematics.AlgebraOperations.associativityExhaustiveIff
+#print axioms SFT.Mathematics.AlgebraOperations.associationCellExact
+#print axioms SFT.Mathematics.AlgebraOperations.acceptedAssociativityMeaning

@@ -21,6 +21,7 @@ def guarded (validation : Except String Bool) (body : Unit → Except String Tup
 emit the exact ordered tuple. Fallback branches are unreachable after acceptance. -/
 def canonical : TupleValue → Except String TupleValue
   | .text s => guarded (valid (.text s)) (fun _ => invalid)
+  | .list values => guarded (valid (.list values)) (fun _ => invalid)
   | .tuple values => guarded (valid (.tuple values)) (fun _ =>
     match values with
     | [] => invalid
@@ -44,7 +45,29 @@ def canonical : TupleValue → Except String TupleValue
                       | [] => invalid
                       | _b::rs => match rs with
                         | [] => invalid
-                        | r::_ => combine (canonical l) (fun _ => canonical r))
+                        | r::_ => combine (canonical l) (fun _ => canonical r)
+                    | .list rs => match rs with
+                      | [] => invalid
+                      | _b::rs => match rs with
+                        | [] => invalid
+                        | r::_ => combine (canonical l) (fun _ => canonical r)
+              | .list ls => match ls with
+                | [] => invalid
+                | _a::ls => match ls with
+                  | [] => invalid
+                  | l::_ => match right with
+                    | .text _ => invalid
+                    | .tuple rs => match rs with
+                      | [] => invalid
+                      | _b::rs => match rs with
+                        | [] => invalid
+                        | r::_ => combine (canonical l) (fun _ => canonical r)
+                    | .list rs => match rs with
+                      | [] => invalid
+                      | _b::rs => match rs with
+                        | [] => invalid
+                        | r::_ => combine (canonical l) (fun _ => canonical r)
+    )
 termination_by structural value => value
 
 theorem generatedTrace (form : Form) : canonical (encode form) = .ok (canonicalTrace form) := by
@@ -83,6 +106,42 @@ theorem acceptedHasCanonicalForm (value : TupleValue) (h : FormAcceptance.Accept
     rw [canonical.eq_def]
     dsimp only
     rw [FormAcceptance.validOfAccepted _ (FormAcceptance.Accepted.fold tag a b ret left right extraLeft extraRight named heldA heldB returns hl hr)]
+    change combine (canonical left) (fun _ => canonical right) = _
+    rw [eql]
+    dsimp only [combine]
+    rw [eqr]
+    rfl
+  | foldListLeft tag a b ret left right extraLeft extraRight named heldA heldB returns hl hr ihl ihr =>
+    obtain ⟨l, eql⟩ := ihl
+    obtain ⟨r, eqr⟩ := ihr
+    refine ⟨.fold l r, ?_⟩
+    rw [canonical.eq_def]
+    dsimp only
+    rw [FormAcceptance.validOfAccepted _ (FormAcceptance.Accepted.foldListLeft tag a b ret left right extraLeft extraRight named heldA heldB returns hl hr)]
+    change combine (canonical left) (fun _ => canonical right) = _
+    rw [eql]
+    dsimp only [combine]
+    rw [eqr]
+    rfl
+  | foldListRight tag a b ret left right extraLeft extraRight named heldA heldB returns hl hr ihl ihr =>
+    obtain ⟨l, eql⟩ := ihl
+    obtain ⟨r, eqr⟩ := ihr
+    refine ⟨.fold l r, ?_⟩
+    rw [canonical.eq_def]
+    dsimp only
+    rw [FormAcceptance.validOfAccepted _ (FormAcceptance.Accepted.foldListRight tag a b ret left right extraLeft extraRight named heldA heldB returns hl hr)]
+    change combine (canonical left) (fun _ => canonical right) = _
+    rw [eql]
+    dsimp only [combine]
+    rw [eqr]
+    rfl
+  | foldLists tag a b ret left right extraLeft extraRight named heldA heldB returns hl hr ihl ihr =>
+    obtain ⟨l, eql⟩ := ihl
+    obtain ⟨r, eqr⟩ := ihr
+    refine ⟨.fold l r, ?_⟩
+    rw [canonical.eq_def]
+    dsimp only
+    rw [FormAcceptance.validOfAccepted _ (FormAcceptance.Accepted.foldLists tag a b ret left right extraLeft extraRight named heldA heldB returns hl hr)]
     change combine (canonical left) (fun _ => canonical right) = _
     rw [eql]
     dsimp only [combine]

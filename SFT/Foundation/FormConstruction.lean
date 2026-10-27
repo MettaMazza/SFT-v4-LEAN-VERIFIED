@@ -11,6 +11,7 @@ inductive Form where
 inductive TupleValue where
   | text (value : String)
   | tuple (values : List TupleValue)
+  | list (values : List TupleValue)
 
 def encode : Form → TupleValue
   | .one => .tuple [.text "One"]

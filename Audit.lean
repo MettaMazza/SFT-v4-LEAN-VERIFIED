@@ -1560,3 +1560,9 @@ import SFT
 #print axioms SFT.Foundation.PartEquivalence.Evidence.falsePremisePassed
 #print axioms SFT.Foundation.PartEquivalence.Evidence.tamperedArtifactPassed
 #print axioms SFT.Foundation.PartEquivalence.Evidence.boundaryPassed
+#print axioms SFT.Foundation.FormValidation.listEdgesEvaluation
+#print axioms SFT.Foundation.FormValidation.mixedLeftListEvaluation
+#print axioms SFT.Foundation.FormValidation.mixedRightListEvaluation
+#print axioms SFT.Foundation.FormValidation.listFormRejected
+#print axioms SFT.Foundation.FormValidation.missingListLabelErrors
+#print axioms SFT.Foundation.FormValidation.missingListChildErrors

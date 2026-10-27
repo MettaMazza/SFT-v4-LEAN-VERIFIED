@@ -1,6 +1,6 @@
 import SFT.Foundation.FormValidation
 
-/-! Finite production traces for the source validator's accepted tuple/string
+/-! Finite production traces for the source validator's accepted tuple/list/string
 values, retaining ignored edge tails rather than imposing a stricter parser. -/
 namespace SFT.Foundation.FormAcceptance
 open FormConstruction FormValidation
@@ -12,6 +12,21 @@ inductive Accepted : TupleValue → Prop where
       (heldB : isText b "held-b" = true) (returns : isText ret "return" = true)
       (leftGenerated : Accepted left) (rightGenerated : Accepted right) :
       Accepted (.tuple [tag,.tuple (a::left::extraLeft),.tuple (b::right::extraRight),ret])
+  | foldListLeft (tag a b ret left right : TupleValue) (extraLeft extraRight : List TupleValue)
+      (named : isText tag "Fold" = true) (heldA : isText a "held-a" = true)
+      (heldB : isText b "held-b" = true) (returns : isText ret "return" = true)
+      (leftGenerated : Accepted left) (rightGenerated : Accepted right) :
+      Accepted (.tuple [tag,.list (a::left::extraLeft),.tuple (b::right::extraRight),ret])
+  | foldListRight (tag a b ret left right : TupleValue) (extraLeft extraRight : List TupleValue)
+      (named : isText tag "Fold" = true) (heldA : isText a "held-a" = true)
+      (heldB : isText b "held-b" = true) (returns : isText ret "return" = true)
+      (leftGenerated : Accepted left) (rightGenerated : Accepted right) :
+      Accepted (.tuple [tag,.tuple (a::left::extraLeft),.list (b::right::extraRight),ret])
+  | foldLists (tag a b ret left right : TupleValue) (extraLeft extraRight : List TupleValue)
+      (named : isText tag "Fold" = true) (heldA : isText a "held-a" = true)
+      (heldB : isText b "held-b" = true) (returns : isText ret "return" = true)
+      (leftGenerated : Accepted left) (rightGenerated : Accepted right) :
+      Accepted (.tuple [tag,.list (a::left::extraLeft),.list (b::right::extraRight),ret])
 
 theorem shortAndTrue (left : Except String Bool) (right : Unit → Except String Bool)
     (h : shortAnd left right = .ok true) : left = .ok true ∧ right () = .ok true := by
@@ -24,6 +39,7 @@ theorem shortAndTrue (left : Except String Bool) (right : Unit → Except String
 theorem acceptedOfValid (value : TupleValue) (h : valid value = .ok true) : Accepted value := by
   cases value with
   | text s => cases h
+  | list values => cases h
   | tuple values =>
     cases values with
     | nil => cases h
@@ -75,6 +91,76 @@ theorem acceptedOfValid (value : TupleValue) (h : valid value = .ok true) : Acce
                                     (acceptedOfValid l both.1) (acceptedOfValid r both.2)
                             next noReturn => cases h
                           next noB => cases h
+                      | list items =>
+                        cases items with
+                        | nil => cases h
+                        | cons b rightTail =>
+                          dsimp only at h
+                          split at h
+                          next heldB =>
+                            split at h
+                            next returns =>
+                              cases leftTail with
+                              | nil => cases h
+                              | cons l extraLeft =>
+                                have both := shortAndTrue _ _ h
+                                cases rightTail with
+                                | nil => cases both.2
+                                | cons r extraRight =>
+                                  exact Accepted.foldListRight tag a b ret l r extraLeft extraRight named heldA heldB returns
+                                    (acceptedOfValid l both.1) (acceptedOfValid r both.2)
+                            next noReturn => cases h
+                          next noB => cases h
+                    next noA => cases h
+                | list items =>
+                  cases items with
+                  | nil => cases h
+                  | cons a leftTail =>
+                    dsimp only at h
+                    split at h
+                    next heldA =>
+                      cases right with
+                      | text s => dsimp only at h; split at h <;> cases h
+                      | tuple items =>
+                        cases items with
+                        | nil => cases h
+                        | cons b rightTail =>
+                          dsimp only at h
+                          split at h
+                          next heldB =>
+                            split at h
+                            next returns =>
+                              cases leftTail with
+                              | nil => cases h
+                              | cons l extraLeft =>
+                                have both := shortAndTrue _ _ h
+                                cases rightTail with
+                                | nil => cases both.2
+                                | cons r extraRight =>
+                                  exact Accepted.foldListLeft tag a b ret l r extraLeft extraRight named heldA heldB returns
+                                    (acceptedOfValid l both.1) (acceptedOfValid r both.2)
+                            next noReturn => cases h
+                          next noB => cases h
+                      | list items =>
+                        cases items with
+                        | nil => cases h
+                        | cons b rightTail =>
+                          dsimp only at h
+                          split at h
+                          next heldB =>
+                            split at h
+                            next returns =>
+                              cases leftTail with
+                              | nil => cases h
+                              | cons l extraLeft =>
+                                have both := shortAndTrue _ _ h
+                                cases rightTail with
+                                | nil => cases both.2
+                                | cons r extraRight =>
+                                  exact Accepted.foldLists tag a b ret l r extraLeft extraRight named heldA heldB returns
+                                    (acceptedOfValid l both.1) (acceptedOfValid r both.2)
+                            next noReturn => cases h
+                          next noB => cases h
                     next noA => cases h
               next noName => cases h
 termination_by structural value
@@ -83,6 +169,21 @@ theorem validOfAccepted (value : TupleValue) (h : Accepted value) : valid value 
   induction h with
   | one tag named => exact congrArg Except.ok named
   | fold tag a b ret left right extraLeft extraRight named heldA heldB returns hl hr ihl ihr =>
+    rw [valid,ite_eq_left named,ite_eq_left heldA,ite_eq_left heldB,ite_eq_left returns]
+    change shortAnd (valid left) (fun _ => valid right) = .ok true
+    rw [ihl]
+    exact ihr
+  | foldListLeft tag a b ret left right extraLeft extraRight named heldA heldB returns hl hr ihl ihr =>
+    rw [valid,ite_eq_left named,ite_eq_left heldA,ite_eq_left heldB,ite_eq_left returns]
+    change shortAnd (valid left) (fun _ => valid right) = .ok true
+    rw [ihl]
+    exact ihr
+  | foldListRight tag a b ret left right extraLeft extraRight named heldA heldB returns hl hr ihl ihr =>
+    rw [valid,ite_eq_left named,ite_eq_left heldA,ite_eq_left heldB,ite_eq_left returns]
+    change shortAnd (valid left) (fun _ => valid right) = .ok true
+    rw [ihl]
+    exact ihr
+  | foldLists tag a b ret left right extraLeft extraRight named heldA heldB returns hl hr ihl ihr =>
     rw [valid,ite_eq_left named,ite_eq_left heldA,ite_eq_left heldB,ite_eq_left returns]
     change shortAnd (valid left) (fun _ => valid right) = .ok true
     rw [ihl]

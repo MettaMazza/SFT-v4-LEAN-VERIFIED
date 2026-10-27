@@ -2,7 +2,7 @@ import SFT.Foundation.FormCanonicalRaw
 namespace SFT.Foundation.FormEquivalenceRaw
 open FormConstruction FormCanonicalRaw FormIdentity
 
-/-! Constructive equality for the finite tuple/string representation used by
+/-! Constructive equality for the finite tuple/list/string representation used by
 canonical_trace; recurse over both the value and its nested list constructors. -/
 mutual
   def valueDecEq (left right : TupleValue) : Decidable (left = right) :=
@@ -15,6 +15,13 @@ mutual
     | .tuple vs, .tuple ws => match listDecEq vs ws with
       | isTrue h => isTrue (congrArg TupleValue.tuple h)
       | isFalse h => isFalse (fun eq => h (TupleValue.tuple.inj eq))
+    | .list vs, .list ws => match listDecEq vs ws with
+      | isTrue h => isTrue (congrArg TupleValue.list h)
+      | isFalse h => isFalse (fun eq => h (TupleValue.list.inj eq))
+    | .list _, .text _ => isFalse (by intro h; cases h)
+    | .list _, .tuple _ => isFalse (by intro h; cases h)
+    | .text _, .list _ => isFalse (by intro h; cases h)
+    | .tuple _, .list _ => isFalse (by intro h; cases h)
   termination_by structural left
 
   def listDecEq (left right : List TupleValue) : Decidable (left = right) :=

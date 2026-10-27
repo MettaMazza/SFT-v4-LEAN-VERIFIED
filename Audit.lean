@@ -1181,3 +1181,12 @@ import SFT
 #print axioms SFT.Mathematics.CombinatorialCollections.heldSubsetAdmitted
 #print axioms SFT.Mathematics.CombinatorialCollections.arrangementHeldBranchAdmitted
 #print axioms SFT.Mathematics.CombinatorialCollections.encodedLiteralCollectionRejected
+#print axioms SFT.Mathematics.CombinatorialSelections.sublistAppendAbsent
+#print axioms SFT.Mathematics.CombinatorialSelections.sublistAppendHeld
+#print axioms SFT.Mathematics.CombinatorialSelections.heldChoicePreservesOrder
+#print axioms SFT.Mathematics.CombinatorialSelections.choicePrefixAbsent
+#print axioms SFT.Mathematics.CombinatorialSelections.choicePrefixHeld
+#print axioms SFT.Mathematics.CombinatorialSelections.everyOrderedChoiceDerived
+#print axioms SFT.Mathematics.CombinatorialSelections.rawMembershipIffOrderedChoice
+#print axioms SFT.Mathematics.CombinatorialSelections.encodedMembershipIffOrderedChoice
+#print axioms SFT.Mathematics.CombinatorialSelections.heldExtensionRetainsFoldProvenance

@@ -1332,3 +1332,10 @@ import SFT
 #print axioms SFT.Mathematics.OrderOperations.upperBoundsMembership
 #print axioms SFT.Mathematics.OrderOperations.emptyLowerSelectionRejected
 #print axioms SFT.Mathematics.OrderOperations.emptyUpperSelectionRejected
+#print axioms SFT.Mathematics.OrderOperations.partialOrderChecksIff
+#print axioms SFT.Mathematics.OrderOperations.orderCarrierGuardIff
+#print axioms SFT.Mathematics.OrderOperations.orderEndpointsIff
+#print axioms SFT.Mathematics.OrderOperations.reflexiveCheckIff
+#print axioms SFT.Mathematics.OrderOperations.antisymmetricCheckIff
+#print axioms SFT.Mathematics.OrderOperations.transitiveCheckIff
+#print axioms SFT.Mathematics.OrderOperations.partialOrderMeaning

@@ -137,3 +137,4 @@ import SFT.Mathematics.AlgebraReturnExtension
 import SFT.Mathematics.AlgebraMapExtension
 import SFT.Mathematics.AlgebraDictionaryExtension
 import SFT.Mathematics.OrderOperations
+import SFT.Mathematics.OrderMeaning

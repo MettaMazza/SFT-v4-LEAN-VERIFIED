@@ -145,3 +145,4 @@ import SFT.Mathematics.OrderWitnesses
 import SFT.Mathematics.OrderGrammar
 import SFT.Mathematics.OrderControls
 import SFT.Mathematics.OrderEvidence
+import SFT.Mathematics.OrderInduction

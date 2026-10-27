@@ -1391,3 +1391,11 @@ import SFT
 #print axioms SFT.Mathematics.OrderEvidence.registrationHasNoAxioms
 #print axioms SFT.Mathematics.OrderEvidence.registrationHasNoFreeParameters
 #print axioms SFT.Mathematics.OrderEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Mathematics.OrderOperations.onePartialOrder
+#print axioms SFT.Mathematics.OrderOperations.oneTotalOrder
+#print axioms SFT.Mathematics.OrderOperations.oneLowerBounds
+#print axioms SFT.Mathematics.OrderOperations.oneUpperBounds
+#print axioms SFT.Mathematics.OrderOperations.oneMeet
+#print axioms SFT.Mathematics.OrderOperations.oneJoin
+#print axioms SFT.Mathematics.OrderOperations.partialOrderExtensionIff
+#print axioms SFT.Mathematics.OrderOperations.totalOrderExtensionIff

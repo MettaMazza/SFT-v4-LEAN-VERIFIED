@@ -5,7 +5,7 @@ Working manuscript — unpublished
 
 Abstract
 
-We present a native Lean formalisation of Smithian Fold Theory V3, preserving its definitions, dependency order, declared domains and zero-axiom, zero-free-parameter constraints. The formalisation begins with the operational root, There Is No Nothing, followed by the structural One and exact positive finite count. At the scope established here, their registered candidate grammars contain two, six and ten classes respectively. Constructive proofs establish exhaustive enumeration, the unique surviving class and acceptance of that survivor for each grammar. The 1,340 audited proofs have no axiom dependencies. The translated classifications agree with the V3 artifacts on every candidate's order, identifier, exact form, decision and reason.
+We present a native Lean formalisation of Smithian Fold Theory V3, preserving its definitions, dependency order, declared domains and zero-axiom, zero-free-parameter constraints. The formalisation begins with the operational root, There Is No Nothing, followed by the structural One and exact positive finite count. At the scope established here, their registered candidate grammars contain two, six and ten classes respectively. Constructive proofs establish exhaustive enumeration, the unique surviving class and acceptance of that survivor for each grammar. The 1,353 audited proofs have no axiom dependencies. The translated classifications agree with the V3 artifacts on every candidate's order, identifier, exact form, decision and reason.
 
 1. Model and scope
 
@@ -213,7 +213,7 @@ The Lean implementation uses leanprover/lean4:v4.35.0. The build command is lake
 
 The public formalisation repository is https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED.
 
-Canonical JSON uses the source ASCII-escaping, compact-separator and sorted-key rules on the Root evidence domain. SHA-256 is implemented constructively with its fixed algorithm constants. All 2,390 audited explicit definitions and theorems have no axiom dependencies. Sixteen byte-message checks and ten JSON checks agree with Python standard-library results; these execution checks are separate from a general proof of algorithm correspondence, which remains outstanding. The fixed Root boundary is ASCII, so its lowercase and substring operations preserve the source predicate exactly. These host operations introduce no free scientific parameters.
+Canonical JSON uses the source ASCII-escaping, compact-separator and sorted-key rules on the Root evidence domain. SHA-256 is implemented constructively with its fixed algorithm constants. All 2,403 audited explicit definitions and theorems have no axiom dependencies. Sixteen byte-message checks and ten JSON checks agree with Python standard-library results; these execution checks are separate from a general proof of algorithm correspondence, which remains outstanding. The fixed Root boundary is ASCII, so its lowercase and substring operations preserve the source predicate exactly. These host operations introduce no free scientific parameters.
 
 The typed forcing-gate implementation is additionally checked on 384 combinations of identifier order and cardinality, survivor flags, reason content and hash syntax. The Unicode whitespace predicate agrees with the host language over all 1,114,112 code points.
 
@@ -444,3 +444,9 @@ Exact partial-order admission
 For arbitrary represented finite carrier and relation lists, the partial-order check succeeds if and only if the carrier is nonempty and distinct, the relation is distinct, every relation endpoint belongs to the carrier, every carrier member has its reflexive cell, every pair of reversed relation cells has equal endpoints, and every pair of composable relation cells has its composite in the relation.
 
 The native equivalence follows each original guard and exhaustive traversal. The transitivity condition covers all pairs of relation cells with matching middle endpoints; nonmatching cells impose no composite requirement. The reverse implication establishes success from precisely these same conditions.
+
+Extremal witnesses and returned bounds
+
+Greatest and least operations return a value exactly when the complete filtered list of matching candidates is the singleton containing that value. This characterization retains occurrence multiplicity on unrestricted input lists. Every returned value belongs to the supplied bounds, dominates them in the appropriate direction, and is the only bound with that property. For distinct bounds, those semantic conditions also imply successful return.
+
+Meet succeeds exactly when lower-bound generation succeeds and its complete result has the returned unique greatest witness; join has the corresponding upper-bound and unique least criterion. Every returned meet belongs to the carrier, lies below all held members, and is above every carrier lower bound. Every returned join belongs to the carrier, lies above all held members, and is below every carrier upper bound. Bound-generation errors and absence or multiplicity of matching extrema retain the original outcomes.

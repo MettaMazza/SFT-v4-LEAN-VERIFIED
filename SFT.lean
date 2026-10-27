@@ -138,3 +138,4 @@ import SFT.Mathematics.AlgebraMapExtension
 import SFT.Mathematics.AlgebraDictionaryExtension
 import SFT.Mathematics.OrderOperations
 import SFT.Mathematics.OrderMeaning
+import SFT.Mathematics.OrderExtrema

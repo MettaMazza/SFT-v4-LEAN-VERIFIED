@@ -1339,3 +1339,16 @@ import SFT
 #print axioms SFT.Mathematics.OrderOperations.antisymmetricCheckIff
 #print axioms SFT.Mathematics.OrderOperations.transitiveCheckIff
 #print axioms SFT.Mathematics.OrderOperations.partialOrderMeaning
+#print axioms SFT.Mathematics.OrderOperations.filterSingletonMeaning
+#print axioms SFT.Mathematics.OrderOperations.distinctSingletonFromMembers
+#print axioms SFT.Mathematics.OrderOperations.filterSingletonIff
+#print axioms SFT.Mathematics.OrderOperations.greatestExactSingleton
+#print axioms SFT.Mathematics.OrderOperations.leastExactSingleton
+#print axioms SFT.Mathematics.OrderOperations.greatestMeaning
+#print axioms SFT.Mathematics.OrderOperations.leastMeaning
+#print axioms SFT.Mathematics.OrderOperations.greatestIff
+#print axioms SFT.Mathematics.OrderOperations.leastIff
+#print axioms SFT.Mathematics.OrderOperations.meetSuccessIff
+#print axioms SFT.Mathematics.OrderOperations.joinSuccessIff
+#print axioms SFT.Mathematics.OrderOperations.meetGreatestLowerBound
+#print axioms SFT.Mathematics.OrderOperations.joinLeastUpperBound

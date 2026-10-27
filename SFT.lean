@@ -125,3 +125,4 @@ import SFT.Mathematics.AlgebraTableCoverage
 import SFT.Mathematics.AlgebraProperties
 import SFT.Mathematics.AlgebraReturns
 import SFT.Mathematics.AlgebraReturnMeaning
+import SFT.Mathematics.AlgebraMaps

@@ -1234,3 +1234,9 @@ import SFT
 #print axioms SFT.Mathematics.AlgebraOperations.returnMatesSuccessIff
 #print axioms SFT.Mathematics.AlgebraOperations.returnedMateUniqueMeaning
 #print axioms SFT.Mathematics.AlgebraOperations.acceptedCommutationMeaning
+#print axioms SFT.Mathematics.AlgebraOperations.putImageLookupSame
+#print axioms SFT.Mathematics.AlgebraOperations.putImageLookupOther
+#print axioms SFT.Mathematics.AlgebraOperations.imageRunAppend
+#print axioms SFT.Mathematics.AlgebraOperations.finalMappingValueWins
+#print axioms SFT.Mathematics.AlgebraOperations.preservationCellExact
+#print axioms SFT.Mathematics.AlgebraOperations.preservesOperationTrueIff

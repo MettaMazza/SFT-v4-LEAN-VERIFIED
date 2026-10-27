@@ -1324,3 +1324,11 @@ import SFT
 #print axioms SFT.Mathematics.AlgebraOperations.appendedImageAtFresh
 #print axioms SFT.Mathematics.AlgebraOperations.appendedFreshImageValidIff
 #print axioms SFT.Mathematics.AlgebraOperations.freshDictionaryMapExtensionIff
+#print axioms SFT.Mathematics.OrderOperations.comparableIff
+#print axioms SFT.Mathematics.OrderOperations.totalIff
+#print axioms SFT.Mathematics.OrderOperations.lowerBoundsResult
+#print axioms SFT.Mathematics.OrderOperations.upperBoundsResult
+#print axioms SFT.Mathematics.OrderOperations.lowerBoundsMembership
+#print axioms SFT.Mathematics.OrderOperations.upperBoundsMembership
+#print axioms SFT.Mathematics.OrderOperations.emptyLowerSelectionRejected
+#print axioms SFT.Mathematics.OrderOperations.emptyUpperSelectionRejected

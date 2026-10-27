@@ -26,3 +26,6 @@ Continue pushing verified checkpoints to the authorized public repository MettaM
 
 Batch review amendment (user instruction, 2026-10-27)
 Validate existing work across all represented entries programmatically before resuming individual implementation. Use the consolidated full-program/source-review results to mark supported completions and identify exact gaps together. Dependency order governs filling those gaps; it does not require serial discovery or review. After the batch is reconciled, rerun checks affected by subsequent changes rather than repeatedly rebuilding a new verification framework or rechecking unrelated unchanged programs.
+
+Existing-work batch completion amendment (user instruction, 2026-10-27)
+The final six previously represented entries were requested as one implementation/verification batch. Preserve source dependency order when recording completion, but do not serialize review, status reconciliation or independent checks. Reconcile all newly eligible existing entries together after concrete gaps pass. This supersedes the earlier serial-extension wording for user-authorized batches.

@@ -1,0 +1,167 @@
+⚠ [28/168] Replayed SFT.Foundation.FoldAssemblyGrammar
+warning: SFT/Foundation/FoldAssemblyGrammar.lean:101:48: Local variable 'unique' resembles constructor 'SFT.Foundation.FoldAssemblyGrammar.Uniqueness.unique' - write '.unique' (with a dot) or 'SFT.Foundation.FoldAssemblyGrammar.Uniqueness.unique' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: SFT/Foundation/FoldAssemblyGrammar.lean:113:31: Local variable 'unique' resembles constructor 'SFT.Foundation.FoldAssemblyGrammar.Uniqueness.unique' - write '.unique' (with a dot) or 'SFT.Foundation.FoldAssemblyGrammar.Uniqueness.unique' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: SFT/Foundation/FoldAssemblyGrammar.lean:140:31: Local variable 'unique' resembles constructor 'SFT.Foundation.FoldAssemblyGrammar.Uniqueness.unique' - write '.unique' (with a dot) or 'SFT.Foundation.FoldAssemblyGrammar.Uniqueness.unique' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: SFT/Foundation/FoldAssemblyGrammar.lean:147:31: Local variable 'unique' resembles constructor 'SFT.Foundation.FoldAssemblyGrammar.Uniqueness.unique' - write '.unique' (with a dot) or 'SFT.Foundation.FoldAssemblyGrammar.Uniqueness.unique' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: SFT/Foundation/FoldAssemblyGrammar.lean:168:33: Local variable 'unique' resembles constructor 'SFT.Foundation.FoldAssemblyGrammar.Uniqueness.unique' - write '.unique' (with a dot) or 'SFT.Foundation.FoldAssemblyGrammar.Uniqueness.unique' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+⚠ [144/168] Replayed SFT.Mathematics.GraphReachability
+warning: SFT/Mathematics/GraphReachability.lean:23:0: Definition `SFT.Mathematics.GraphOperations.searchOrder` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+⚠ [147/168] Replayed SFT.Mathematics.GraphCycles
+warning: SFT/Mathematics/GraphCycles.lean:11:0: Definition `SFT.Mathematics.GraphOperations.cycleOrder` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+✖ [161/168] Building SFT.Foundation.MeasurementProtocol (372ms)
+trace: .> LEAN_PATH=/Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/lib/lean /Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /Volumes/One Touch/SFT v4 Full model LEAN/SFT/Foundation/MeasurementProtocol.lean -o /Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/lib/lean/SFT/Foundation/MeasurementProtocol.olean -i /Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/lib/lean/SFT/Foundation/MeasurementProtocol.ilean -c /Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/ir/SFT/Foundation/MeasurementProtocol.c --setup /Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/ir/SFT/Foundation/MeasurementProtocol.setup.json --json
+error: SFT/Foundation/MeasurementProtocol.lean:63:31: Tactic `rfl` failed: The left-hand side
+  if false = true then Host.Canonical.Value.boolean false
+  else if false = true then Host.Canonical.Value.boolean false else if false = true then source else rows
+is not definitionally equal to the right-hand side
+  if
+      truthy
+          (if
+              truthy
+                  (if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+                  else Host.Canonical.Value.boolean !false) =
+                true then
+            rows
+          else
+            if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+            else Host.Canonical.Value.boolean !false) =
+        true then
+    source
+  else
+    if
+        truthy
+            (if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+            else Host.Canonical.Value.boolean !false) =
+          true then
+      rows
+    else
+      if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+      else Host.Canonical.Value.boolean !false
+
+case false.false.false
+pre mutation rows source : Host.Canonical.Value
+hp : truthy pre = false
+hm : truthy mutation = false
+hr : truthy rows = false
+⊢ (if false = true then Host.Canonical.Value.boolean false
+    else if false = true then Host.Canonical.Value.boolean false else if false = true then source else rows) =
+    if
+        truthy
+            (if
+                truthy
+                    (if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+                    else Host.Canonical.Value.boolean !false) =
+                  true then
+              rows
+            else
+              if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+              else Host.Canonical.Value.boolean !false) =
+          true then
+      source
+    else
+      if
+          truthy
+              (if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+              else Host.Canonical.Value.boolean !false) =
+            true then
+        rows
+      else
+        if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+        else Host.Canonical.Value.boolean !false
+error: SFT/Foundation/MeasurementProtocol.lean:63:31: Tactic `rfl` failed: The left-hand side
+  if false = true then Host.Canonical.Value.boolean false
+  else if false = true then Host.Canonical.Value.boolean false else if true = true then source else rows
+is not definitionally equal to the right-hand side
+  if
+      truthy
+          (if
+              truthy
+                  (if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+                  else Host.Canonical.Value.boolean !false) =
+                true then
+            rows
+          else
+            if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+            else Host.Canonical.Value.boolean !false) =
+        true then
+    source
+  else
+    if
+        truthy
+            (if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+            else Host.Canonical.Value.boolean !false) =
+          true then
+      rows
+    else
+      if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+      else Host.Canonical.Value.boolean !false
+
+case false.false.true
+pre mutation rows source : Host.Canonical.Value
+hp : truthy pre = false
+hm : truthy mutation = false
+hr : truthy rows = true
+⊢ (if false = true then Host.Canonical.Value.boolean false
+    else if false = true then Host.Canonical.Value.boolean false else if true = true then source else rows) =
+    if
+        truthy
+            (if
+                truthy
+                    (if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+                    else Host.Canonical.Value.boolean !false) =
+                  true then
+              rows
+            else
+              if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+              else Host.Canonical.Value.boolean !false) =
+          true then
+      source
+    else
+      if
+          truthy
+              (if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+              else Host.Canonical.Value.boolean !false) =
+            true then
+        rows
+      else
+        if truthy (Host.Canonical.Value.boolean !false) = true then Host.Canonical.Value.boolean !false
+        else Host.Canonical.Value.boolean !false
+error: SFT/Foundation/MeasurementProtocol.lean:71:88: unsolved goals
+pre mutation rows source : Host.Canonical.Value
+h : truthy pre = true
+⊢ (if true = true then Host.Canonical.Value.boolean false
+    else if truthy mutation = true then Host.Canonical.Value.boolean false else andValue rows source) =
+    Host.Canonical.Value.boolean false
+error: SFT/Foundation/MeasurementProtocol.lean:83:52: unsolved goals
+pre mutation rows source : Host.Canonical.Value
+hp : truthy pre = false
+hm : truthy mutation = false
+hr : truthy rows = false
+⊢ (if false = true then Host.Canonical.Value.boolean false
+    else if false = true then Host.Canonical.Value.boolean false else if false = true then source else rows) =
+    rows
+error: SFT/Foundation/MeasurementProtocol.lean:89:54: unsolved goals
+pre mutation rows source : Host.Canonical.Value
+hp : truthy pre = false
+hm : truthy mutation = false
+hr : truthy rows = true
+⊢ (if false = true then Host.Canonical.Value.boolean false
+    else if false = true then Host.Canonical.Value.boolean false else if true = true then source else rows) =
+    source
+✔ [165/168] Built SFT.Foundation.ExactOperationsEvidence (386ms)
+✔ [166/168] Built SFT.Foundation.HalfOneEvidence (385ms)
+Some required targets logged failures:
+- SFT.Foundation.MeasurementProtocol
+error: build failed

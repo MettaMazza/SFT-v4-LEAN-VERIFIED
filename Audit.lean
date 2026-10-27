@@ -1566,3 +1566,12 @@ import SFT
 #print axioms SFT.Foundation.FormValidation.listFormRejected
 #print axioms SFT.Foundation.FormValidation.missingListLabelErrors
 #print axioms SFT.Foundation.FormValidation.missingListChildErrors
+#print axioms SFT.Foundation.MeasurementProtocol.sourceExpression
+#print axioms SFT.Foundation.MeasurementProtocol.booleanSpecialization
+#print axioms SFT.Foundation.MeasurementProtocol.preSealOperandRejected
+#print axioms SFT.Foundation.MeasurementProtocol.mutationOperandRejected
+#print axioms SFT.Foundation.MeasurementProtocol.falseRowsReturned
+#print axioms SFT.Foundation.MeasurementProtocol.sourceOperandReturned
+#print axioms SFT.Foundation.MeasurementProtocol.sourceIdentifierReturned
+#print axioms SFT.Foundation.MeasurementProtocol.emptyRowsRetained
+#print axioms SFT.Foundation.MeasurementProtocol.defaultsValueAccepted

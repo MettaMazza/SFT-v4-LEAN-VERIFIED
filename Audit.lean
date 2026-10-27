@@ -1196,3 +1196,11 @@ import SFT
 #print axioms SFT.Mathematics.CombinatorialSelections.singletonLabelsInjective
 #print axioms SFT.Mathematics.CombinatorialSelections.carrierMemberCollection
 #print axioms SFT.Mathematics.CombinatorialSelections.rawSelectionDiscreteAdmission
+#print axioms SFT.Mathematics.AlgebraOperations.allTrueAtMember
+#print axioms SFT.Mathematics.AlgebraOperations.sameSupportMembership
+#print axioms SFT.Mathematics.AlgebraOperations.tableAcceptedData
+#print axioms SFT.Mathematics.AlgebraOperations.acceptedTableClosed
+#print axioms SFT.Mathematics.AlgebraOperations.acceptedInputCoverage
+#print axioms SFT.Mathematics.AlgebraOperations.emptyCarrierRejected
+#print axioms SFT.Mathematics.AlgebraOperations.singleMatchApplied
+#print axioms SFT.Mathematics.AlgebraOperations.noMatchRejected

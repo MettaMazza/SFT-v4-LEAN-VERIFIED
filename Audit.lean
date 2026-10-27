@@ -1302,3 +1302,11 @@ import SFT
 #print axioms SFT.Mathematics.AlgebraOperations.extendedAssociationIff
 #print axioms SFT.Mathematics.AlgebraOperations.oldAssociationCellPreserved
 #print axioms SFT.Mathematics.AlgebraOperations.associationPreservedByExtension
+#print axioms SFT.Mathematics.AlgebraOperations.filterCheckedCongruent
+#print axioms SFT.Mathematics.AlgebraOperations.filterCheckedAppend
+#print axioms SFT.Mathematics.AlgebraOperations.returnCellPreserved
+#print axioms SFT.Mathematics.AlgebraOperations.returnCandidatesExtension
+#print axioms SFT.Mathematics.AlgebraOperations.oldMateRetainedIffFreshFails
+#print axioms SFT.Mathematics.AlgebraOperations.extendedReturnSuccessIff
+#print axioms SFT.Mathematics.AlgebraOperations.oldSearchUniqueIffFreshFails
+#print axioms SFT.Mathematics.AlgebraOperations.returnMatesPreservedByExtension

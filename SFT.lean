@@ -115,3 +115,4 @@ import SFT.Mathematics.CombinatoricsControls
 import SFT.Mathematics.CombinatoricsEvidence
 import SFT.Mathematics.SelectionEncoding
 import SFT.Mathematics.ArrangementSuccessor
+import SFT.Mathematics.ArrangementCounting

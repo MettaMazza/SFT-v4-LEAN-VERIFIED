@@ -1159,3 +1159,11 @@ import SFT
 #print axioms SFT.Mathematics.CombinatorialArrangements.priorArrangementExcludesFresh
 #print axioms SFT.Mathematics.CombinatorialArrangements.insertionPositionUnique
 #print axioms SFT.Mathematics.CombinatorialArrangements.freshArrangementUniqueProvenance
+#print axioms SFT.Mathematics.CombinatorialArrangements.arrangementTraceNonempty
+#print axioms SFT.Mathematics.CombinatorialArrangements.heldTraceNonempty
+#print axioms SFT.Mathematics.CombinatorialArrangements.heldTraceDisjoint
+#print axioms SFT.Mathematics.CombinatorialArrangements.disjointTraceGuard
+#print axioms SFT.Mathematics.CombinatorialArrangements.heldChoiceArithmeticJunction
+#print axioms SFT.Mathematics.CombinatorialArrangements.heldBranchCount
+#print axioms SFT.Mathematics.CombinatorialArrangements.arrangementCountRecurrence
+#print axioms SFT.Mathematics.CombinatorialArrangements.arrangementCountBase

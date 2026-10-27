@@ -171,3 +171,4 @@ import SFT.Foundation.ExactOperationsEvidence
 import SFT.Foundation.HalfOneEvidence
 import SFT.Mathematics.GeometryTopology
 import SFT.Mathematics.GeometryDimension
+import SFT.Mathematics.GeometryPaths

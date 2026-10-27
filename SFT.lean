@@ -152,3 +152,4 @@ import SFT.Mathematics.OrderFreshExtrema
 import SFT.Mathematics.GraphOperations
 import SFT.Mathematics.GraphReachability
 import SFT.Mathematics.GraphPathSoundness
+import SFT.Mathematics.GraphPathCompleteness

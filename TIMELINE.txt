@@ -1421,3 +1421,16 @@ Turn 102 publication receipt: pushed 8248c12d29a92359fd0f6f2e8c5c4c8c7ea1ba99 to
 6. Updated coverage, README and scientific manuscript.21 entries in progress,2760 pending,zero whole entries complete. Prepared verified public checkpoint.
 
 Next: prove the converse that every complete valid path is found by the exact FIFO search, including visited/frontier closure invariants, then original cycle search and return-path correspondence.
+
+Turn 103 publication receipt: pushed 6ea7ae3a703dfb8d3888607a81f5d4e7e679e049 to public main; compared 898 files, 0 mismatches. Receipt retained for next checkpoint.
+
+## Turn 104 — 2026-10-27T03:02:54.260081+00:00
+
+1. Classified Turn103 as progress: admitted-search path soundness proved and published. Read current timeline, paper, coverage and exact search transition definitions. Continued converse derivation without changing executable behavior or verification machinery.
+2. Added GraphPathCompleteness.lean. Defined visited/frontier edge closure; proved skip/expansion retain covered nodes and preserve closure. Proved failed-search certificate by the existing well-founded induction: a finite exhausted collection contains initial visited/frontier nodes, excludes target and is closed under all retained edges.
+3. Proved complete adjacent paths remain in edge-closed collections, complete valid paths imply successful exact search, and admitted reachability iff complete path witness. First build found redundant rewrites after queue case analysis had already substituted the frontier. Removed them; a text replacement then misindented a cases line, corrected indentation. Target build passed.
+4. Added complete path-witness composition, exact carrier-conditioned identity reachability and admitted-graph transitivity. Target build passed. Existing audit exposed propext through direct decidable List membership in expansion closure and its dependent proofs. Replaced that proof branch with existing has Boolean cases plus hasIff, preserving theorem statements. No executable modification.
+5. Final existing fresh build/audit/parity PASS:1459 theorems,2579 audited definitions/theorems,zero axiom dependencies,4966 candidate rows. Twelve new theorems and one proof predicate. Retained TURN_104 evidence; no unchanged-program rerun or verifier/CI change.
+6. Updated coverage, README and scientific manuscript, reconciling earlier pending-completeness wording.21 entries in progress,2760 pending,zero whole entries complete. Prepared verified public checkpoint.
+
+Next: translate original directed-cycle recursive edge traversal with finite-support termination, then derive its exact nontrivial return-path correspondence and source graph witnesses/grammar/program.

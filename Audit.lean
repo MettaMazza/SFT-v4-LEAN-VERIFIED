@@ -1446,3 +1446,15 @@ import SFT
 #print axioms SFT.Mathematics.GraphOperations.acceptedGraphEndpoints
 #print axioms SFT.Mathematics.GraphOperations.reachableHasPath
 #print axioms SFT.Mathematics.GraphOperations.admittedReachabilityHasPath
+#print axioms SFT.Mathematics.GraphOperations.skipRetainsCovered
+#print axioms SFT.Mathematics.GraphOperations.expandRetainsCovered
+#print axioms SFT.Mathematics.GraphOperations.skipPreservesClosure
+#print axioms SFT.Mathematics.GraphOperations.expandPreservesClosure
+#print axioms SFT.Mathematics.GraphOperations.searchFailureCertificate
+#print axioms SFT.Mathematics.GraphOperations.closedAlongPath
+#print axioms SFT.Mathematics.GraphOperations.pathWitnessInClosedSet
+#print axioms SFT.Mathematics.GraphOperations.pathWitnessReachable
+#print axioms SFT.Mathematics.GraphOperations.admittedReachabilityIffPath
+#print axioms SFT.Mathematics.GraphOperations.composePathWitnesses
+#print axioms SFT.Mathematics.GraphOperations.reachableReflexiveIff
+#print axioms SFT.Mathematics.GraphOperations.admittedReachabilityTransitive

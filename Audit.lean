@@ -1151,3 +1151,11 @@ import SFT
 #print axioms SFT.Mathematics.CombinatorialSelections.acceptedSelectionsOutput
 #print axioms SFT.Mathematics.CombinatorialSelections.selectionRecurrenceExact
 #print axioms SFT.Mathematics.CombinatorialSelections.encodedLiteralBehavior
+#print axioms SFT.Mathematics.CombinatorialArrangements.remainderAppend
+#print axioms SFT.Mathematics.CombinatorialArrangements.freshSuccessorRemainder
+#print axioms SFT.Mathematics.CombinatorialArrangements.splitAtMember
+#print axioms SFT.Mathematics.CombinatorialArrangements.insertionPermutation
+#print axioms SFT.Mathematics.CombinatorialArrangements.freshArrangementPartition
+#print axioms SFT.Mathematics.CombinatorialArrangements.priorArrangementExcludesFresh
+#print axioms SFT.Mathematics.CombinatorialArrangements.insertionPositionUnique
+#print axioms SFT.Mathematics.CombinatorialArrangements.freshArrangementUniqueProvenance

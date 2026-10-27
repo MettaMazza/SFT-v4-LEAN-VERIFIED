@@ -1078,3 +1078,15 @@ import SFT
 #print axioms SFT.Mathematics.CombinatorialArrangements.remainderPermutation
 #print axioms SFT.Mathematics.CombinatorialArrangements.arrangementsEmpty
 #print axioms SFT.Mathematics.CombinatorialArrangements.everyArrangementPermutesCarrier
+#print axioms SFT.Mathematics.CombinatorialArrangements.attachedFlatMapValues
+#print axioms SFT.Mathematics.CombinatorialArrangements.arrangementsStepByValues
+#print axioms SFT.Mathematics.CombinatorialArrangements.permutationMember
+#print axioms SFT.Mathematics.CombinatorialArrangements.permutationDistinct
+#print axioms SFT.Mathematics.CombinatorialArrangements.remainderPermutationPreserved
+#print axioms SFT.Mathematics.CombinatorialArrangements.suffixPermutesRemainder
+#print axioms SFT.Mathematics.CombinatorialArrangements.permutationLength
+#print axioms SFT.Mathematics.CombinatorialArrangements.everyPermutationGenerated
+#print axioms SFT.Mathematics.CombinatorialArrangements.arrangementMembershipIff
+#print axioms SFT.Mathematics.CombinatorialArrangements.heldBranchesDistinct
+#print axioms SFT.Mathematics.CombinatorialArrangements.arrangementFamilyDistinct
+#print axioms SFT.Mathematics.CombinatorialArrangements.acceptedArrangementsCompleteUnique

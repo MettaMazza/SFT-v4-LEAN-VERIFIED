@@ -972,3 +972,17 @@ Turn 066 publication receipt: {"commit":"2754304198e1cd4366dc8ccdc0483f84af58d67
 7. Updated coverage, README and scientific manuscript.18 entries in progress,2763 pending,zero whole entries complete. Full output-family uniqueness/converse coverage and disjoint ledger remain pending rather than being inferred from finite tests.
 
 Next: prove every carrier permutation is generated and the full arrangement output family has no duplicates; then translate the exact disjoint class ledger and its conservation law.
+
+Turn 067 publication receipt: {"commit":"ebfc7a591e42fc84d9797d3256a49d723c2c1f22","files_compared":631,"mismatches":[]}. Receipt retained for next source checkpoint.
+
+## Turn 068 — 2026-10-27T00:18:52.506857+00:00
+
+1. Previous goal turn classified as progress: exact unbounded arrangement generator and output-permutation proof published. Inspected authoritative timeline, manuscript, coverage and arrangement modules; continued the two pending general proofs.
+2. Created ArrangementCompleteness.lean. Proved erasure of attachWith membership annotations preserves the entire flatMap output and recovered a source-value-only equation for the existing arrangement recursion. Corrected one higher-order elaboration issue by supplying the explicit list, predicate and mapping function. Generator implementation remained unchanged.
+3. Standard permutation cons-inverse, membership and length lemmas carry propext. Proved constructive membership transfer, distinctness transfer, remainder preservation and length equality from permutation constructors, then suffix/remainder permutation. No standard axiom-bearing lemmas used.
+4. Proved by well-founded induction that every carrier permutation is generated; paired with prior soundness to obtain exact membership equivalence. Proved generic held-head branch uniqueness/disjointness and complete arrangement-family uniqueness. Connected both directly to every accepted result of the actual arrangements API. Twelve new theorems, arbitrary finite carrier size.
+5. Targeted audit found propext in automatically generated Nat.Internal.elimOffset from an impossible length case. Replaced that case tactic with explicit successor injectivity and noConfusion. All twelve results then audited axiom-free.
+6. Registered source correspondence/imports/audits only. Existing fresh build/audit/parity PASS:1091 theorems,1989 audited declarations,zero axioms,3686 candidate rows. Retained TURN_068 evidence. Verifier/CI/generator/enumeration unchanged; prior341-input execution comparison remains applicable because executable operations did not change.
+7. Updated coverage, README and scientific manuscript:18 entries in progress,2763 pending,zero whole entries complete. Arrangement converse completeness and output-family uniqueness no longer pending.
+
+Next: implement the exact disjoint_class_ledger source function and prove source-order class accounting and conservation, then continue remaining combinatorial derivations/program integration.

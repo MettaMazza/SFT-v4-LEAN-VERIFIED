@@ -107,3 +107,4 @@ import SFT.Foundation.DerivationTraceGrammar
 import SFT.Foundation.DerivationTraceEvidence
 import SFT.Mathematics.CombinatorialSelections
 import SFT.Mathematics.CombinatorialArrangements
+import SFT.Mathematics.ArrangementCompleteness

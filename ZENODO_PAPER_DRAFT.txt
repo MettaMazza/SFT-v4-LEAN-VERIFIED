@@ -5,7 +5,7 @@ Working manuscript — unpublished
 
 Abstract
 
-We present a native Lean formalisation of Smithian Fold Theory V3, preserving its definitions, dependency order, declared domains and zero-axiom, zero-free-parameter constraints. The formalisation begins with the operational root, There Is No Nothing, followed by the structural One and exact positive finite count. At the scope established here, their registered candidate grammars contain two, six and ten classes respectively. Constructive proofs establish exhaustive enumeration, the unique surviving class and acceptance of that survivor for each grammar. The 1,468 audited proofs have no axiom dependencies. The translated classifications agree with the V3 artifacts on every candidate's order, identifier, exact form, decision and reason.
+We present a native Lean formalisation of Smithian Fold Theory V3, preserving its definitions, dependency order, declared domains and zero-axiom, zero-free-parameter constraints. The formalisation begins with the operational root, There Is No Nothing, followed by the structural One and exact positive finite count. At the scope established here, their registered candidate grammars contain two, six and ten classes respectively. Constructive proofs establish exhaustive enumeration, the unique surviving class and acceptance of that survivor for each grammar. The 1,484 audited proofs have no axiom dependencies. The translated classifications agree with the V3 artifacts on every candidate's order, identifier, exact form, decision and reason.
 
 1. Model and scope
 
@@ -213,7 +213,7 @@ The Lean implementation uses leanprover/lean4:v4.35.0. The build command is lake
 
 The public formalisation repository is https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED.
 
-Canonical JSON uses the source ASCII-escaping, compact-separator and sorted-key rules on the Root evidence domain. SHA-256 is implemented constructively with its fixed algorithm constants. All 2,595 audited explicit definitions and theorems have no axiom dependencies. Sixteen byte-message checks and ten JSON checks agree with Python standard-library results; these execution checks are separate from a general proof of algorithm correspondence, which remains outstanding. The fixed Root boundary is ASCII, so its lowercase and substring operations preserve the source predicate exactly. These host operations introduce no free scientific parameters.
+Canonical JSON uses the source ASCII-escaping, compact-separator and sorted-key rules on the Root evidence domain. SHA-256 is implemented constructively with its fixed algorithm constants. All 2,611 audited explicit definitions and theorems have no axiom dependencies. Sixteen byte-message checks and ten JSON checks agree with Python standard-library results; these execution checks are separate from a general proof of algorithm correspondence, which remains outstanding. The fixed Root boundary is ASCII, so its lowercase and substring operations preserve the source predicate exactly. These host operations introduce no free scientific parameters.
 
 The typed forcing-gate implementation is additionally checked on 384 combinations of identifier order and cardinality, survivor flags, reason content and hash syntax. The Unicode whitespace predicate agrees with the host language over all 1,114,112 code points.
 
@@ -495,7 +495,7 @@ At a shared interface node, the adjacency list of the composed path equals the c
 
 A successful cut returns exactly the original edge list filtered by unequal held-endpoint membership, preserving edge order and multiplicity. Its membership criterion is proved directly. The internal balance operation is equivalent to nonempty ingress, equal ingress and egress trace counts, and separate distinctness of both trace collections. The executable criterion is retained exactly.
 
-Fresh native execution matches4597 independently reconstructed records for graph construction, paths, adjacency, cuts and balance, including malformed and repeated inputs. Complete return-path correspondence and graph-program integration remain pending.
+Fresh native execution matches4597 independently reconstructed records for graph construction, paths, adjacency, cuts and balance, including malformed and repeated inputs. Complete graph-program integration remains pending.
 
 Finite reachability search
 
@@ -503,7 +503,7 @@ Reachability retains the original identity case: equal origin and target return 
 
 Termination follows from finite support and queue length. Initially the support consists of the origin and every edge target. Every queued node and edge target lies in that support or in visited. A new visit removes the held node from the auxiliary unseen support, strictly decreasing its length. A visited skip leaves support unchanged and strictly shortens the queue. Their lexicographic order is well founded. The auxiliary support does not decide search success, change queue order, omit duplicate enqueues or impose a depth bound.
 
-The native search satisfies the exact fixed-point equation and the original empty-queue, target-hit, visited-skip and fresh-expansion equations. Fresh execution matches8,224 reachability decisions and10,280 ordered outgoing lists across every directed relation on three nodes, with additional duplicate-edge and external-endpoint stress inputs. Cycle search is formalised below; its full return-path correspondence remains pending.
+The native search satisfies the exact fixed-point equation and the original empty-queue, target-hit, visited-skip and fresh-expansion equations. Fresh execution matches8,224 reachability decisions and10,280 ordered outgoing lists across every directed relation on three nodes, with additional duplicate-edge and external-endpoint stress inputs. Cycle search and its full return-path correspondence are formalised below.
 
 Complete path witnesses for successful reachability
 
@@ -527,4 +527,12 @@ The cycle procedure retains the original outer node order and recursively scans 
 
 Finite termination follows from an auxiliary list containing every edge target. Every target remains either in that unseen support or in the held path. A recursive call is made only for a target absent from the held path; that target therefore occurs in unseen support, and removing it strictly decreases the support length. Each local edge scan is structurally recursive on the remaining edge list. Neither argument introduces a depth cutoff.
 
-The native procedure satisfies its exact recursive equation. Empty edge sets and nodes without outgoing edges cannot yield a cycle, and a retained outgoing edge to a held-path member forces a true result. Fresh execution matches3,084 graph-cycle decisions and14,392 recursive visits across all directed relations on three nodes and additional malformed/repeated input stresses. General equivalence with complete nontrivial return paths remains to be proved.
+The native procedure satisfies its exact recursive equation. Empty edge sets and nodes without outgoing edges cannot yield a cycle, and a retained outgoing edge to a held-path member forces a true result. Fresh execution matches3,084 graph-cycle decisions and14,392 recursive visits across all directed relations on three nodes and additional malformed/repeated input stresses. General equivalence with complete nontrivial return paths is established below.
+
+Cycle detection and complete return paths
+
+For every admitted finite graph, the original cycle procedure returns true if and only if there is a complete valid path with at least one edge whose final node occurs earlier in the path. The starting node belongs to the graph carrier; every node and adjacency is checked by the original path validator. Self-loops satisfy the one-edge case. Longer witnesses may contain repeated nodes, with no extra simplicity restriction.
+
+The proof first establishes exact correspondence between the recursive traversal and a finite return trace recording every successive edge target. A trace either closes along a retained edge to an already held node, or advances along a retained edge to a new node and continues with that node appended to the held path. Every such trace is nonempty, contains only retained adjacent edges, and yields a valid node path on an admitted graph. Its terminal target belongs to the held path together with the preceding trace prefix.
+
+Conversely, a complete path ending at a prior node produces a return trace. Traversal follows its retained edges until the first held-node return; if a repeated node occurs before the supplied terminal return, that earlier return supplies the witness. Thus neither the equivalence nor the executable traversal requires paths to be simple. The proof applies to arbitrary finite admitted graphs and does not depend on the finite execution comparisons.

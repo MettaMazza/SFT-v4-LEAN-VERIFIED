@@ -1315,3 +1315,12 @@ import SFT
 #print axioms SFT.Mathematics.AlgebraOperations.oldImageCoveragePreserved
 #print axioms SFT.Mathematics.AlgebraOperations.oldPreservationCellPreserved
 #print axioms SFT.Mathematics.AlgebraOperations.operationMapPreservedByExtension
+#print axioms SFT.Mathematics.AlgebraOperations.acceptedMapKeysPermuteCarrier
+#print axioms SFT.Mathematics.AlgebraOperations.freshOriginAbsent
+#print axioms SFT.Mathematics.AlgebraOperations.putFreshImageAppends
+#print axioms SFT.Mathematics.AlgebraOperations.buildFreshImageAppends
+#print axioms SFT.Mathematics.AlgebraOperations.extendedDictionaryCardinality
+#print axioms SFT.Mathematics.AlgebraOperations.appendedImagePreservesOther
+#print axioms SFT.Mathematics.AlgebraOperations.appendedImageAtFresh
+#print axioms SFT.Mathematics.AlgebraOperations.appendedFreshImageValidIff
+#print axioms SFT.Mathematics.AlgebraOperations.freshDictionaryMapExtensionIff

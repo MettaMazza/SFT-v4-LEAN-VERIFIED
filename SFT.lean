@@ -135,3 +135,4 @@ import SFT.Mathematics.AlgebraInduction
 import SFT.Mathematics.AlgebraExtension
 import SFT.Mathematics.AlgebraReturnExtension
 import SFT.Mathematics.AlgebraMapExtension
+import SFT.Mathematics.AlgebraDictionaryExtension

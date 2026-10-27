@@ -164,3 +164,4 @@ import SFT.Mathematics.GraphExtension
 import SFT.Mathematics.GraphPartitionBalance
 import SFT.Foundation.OneEvidence
 import SFT.Foundation.CountEvidence
+import SFT.Foundation.PartEvidence

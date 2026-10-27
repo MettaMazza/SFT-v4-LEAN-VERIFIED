@@ -1240,3 +1240,11 @@ import SFT
 #print axioms SFT.Mathematics.AlgebraOperations.finalMappingValueWins
 #print axioms SFT.Mathematics.AlgebraOperations.preservationCellExact
 #print axioms SFT.Mathematics.AlgebraOperations.preservesOperationTrueIff
+#print axioms SFT.Mathematics.AlgebraOperations.imageLookupDomain
+#print axioms SFT.Mathematics.AlgebraOperations.putImageKeyContainment
+#print axioms SFT.Mathematics.AlgebraOperations.putImageKeysDistinct
+#print axioms SFT.Mathematics.AlgebraOperations.imageRunKeysDistinct
+#print axioms SFT.Mathematics.AlgebraOperations.generatedImageKeysDistinct
+#print axioms SFT.Mathematics.AlgebraOperations.imageInCarrierIff
+#print axioms SFT.Mathematics.AlgebraOperations.checkedPreservationCellTotal
+#print axioms SFT.Mathematics.AlgebraOperations.acceptedPreservationMeaning

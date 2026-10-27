@@ -1557,3 +1557,6 @@ import SFT
 #print axioms SFT.Foundation.Part.Evidence.falsePremisePassed
 #print axioms SFT.Foundation.Part.Evidence.tamperedArtifactPassed
 #print axioms SFT.Foundation.Part.Evidence.boundaryPassed
+#print axioms SFT.Foundation.PartEquivalence.Evidence.falsePremisePassed
+#print axioms SFT.Foundation.PartEquivalence.Evidence.tamperedArtifactPassed
+#print axioms SFT.Foundation.PartEquivalence.Evidence.boundaryPassed

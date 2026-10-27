@@ -142,3 +142,6 @@ import SFT.Mathematics.OrderExtrema
 import SFT.Mathematics.OrderBoundExistence
 import SFT.Mathematics.OrderMaps
 import SFT.Mathematics.OrderWitnesses
+import SFT.Mathematics.OrderGrammar
+import SFT.Mathematics.OrderControls
+import SFT.Mathematics.OrderEvidence

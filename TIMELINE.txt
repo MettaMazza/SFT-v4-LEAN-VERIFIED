@@ -958,3 +958,17 @@ Turn 065 publication receipt: {"commit":"2d5e199215c8590b6934e4823bf97f0f5c64bda
 7. Updated coverage, README, scientific manuscript and retained build/audit/parity checks:18 entries in progress,2763 pending,zero whole entries complete.
 
 Next: translate source arrangements and disjoint_class_ledger; prove held-choice remainder coverage and exact class accounting, retaining the original source domains and order.
+
+Turn 066 publication receipt: {"commit":"2754304198e1cd4366dc8ccdc0483f84af58d676","files_compared":622,"mismatches":[]}. Receipt retained for next source checkpoint.
+
+## Turn 067 — 2026-10-27T00:13:07.265666+00:00
+
+1. Previous goal turn classified as progress: native selection recurrence and general raw choice proofs published. Read current timeline, paper, coverage and pinned arrangements source. Continued the complete held-choice arrangement generator.
+2. Created CombinatorialArrangements.lean: stable removal of the held label, original carrier guard/error, singleton base, full held-label branch order and recursive suffix enumeration. Proved remainder length bound/strict decrease, exact membership/exclusion, uniqueness preservation, absent-label preservation, exact one-label removal and valid recursive guards.
+3. Initial proof repair retained the surviving held binder after equality elimination. A direct unfold inside distinct introduced Quot.sound through generated congr_simp; replacing split alone did not fix it. Used an explicit definitional target instead. Lean's automatically selected WellFounded.Nat.fix equation also introduced Quot.sound. Replaced that implementation with explicit measure.wf.fix and proved its step through axiom-free WellFounded.fix_eq. No depth cutoff, fuel cap, omitted branch or changed source behavior.
+4. Proved the held/remainder permutation identity and used well-founded induction to establish that every generated arrangement permutes its unique carrier, retaining every label exactly once. Removed a redundant final tactic after a rewrite had already closed the base case. Fifteen new native theorems total.
+5. Registered source correspondence/imports/audits. Existing fresh build/audit/parity PASS:1079 theorems,1977 audited declarations,zero axioms,3686 candidate rows. No verifier or CI changes.
+6. Retained and ran TURN_067_Arrangements.lean. All341 carriers of length0..4 over a,b,empty-One,empty-string match an independent itertools permutation reconstruction, including exact invalid-input errors.64 admitted carriers produce748 matching rows in original order. No V3 scientific Python executed. Retained full output/report and existing build/audit/parity evidence.
+7. Updated coverage, README and scientific manuscript.18 entries in progress,2763 pending,zero whole entries complete. Full output-family uniqueness/converse coverage and disjoint ledger remain pending rather than being inferred from finite tests.
+
+Next: prove every carrier permutation is generated and the full arrangement output family has no duplicates; then translate the exact disjoint class ledger and its conservation law.

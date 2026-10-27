@@ -1,0 +1,180 @@
+{
+  "census": {
+    "candidates": [
+      {
+        "candidate_id": "none-coverage__not-applicable__no-extra",
+        "exact_form": "Trace representation has none coverage, not-applicable retained multiplicity, and no-extra.",
+        "trace_hash": "sha256:3aefa5caef31b3b1e9931f60d19cb2b88a90a410eef00ca58433dcb67c2eb070"
+      },
+      {
+        "candidate_id": "none-coverage__not-applicable__has-extra",
+        "exact_form": "Trace representation has none coverage, not-applicable retained multiplicity, and has-extra.",
+        "trace_hash": "sha256:d6d0d4ed61537528a47f967c0f2b92553d594e9ffb0d94726a926e58b023ab18"
+      },
+      {
+        "candidate_id": "proper-coverage__once__no-extra",
+        "exact_form": "Trace representation has proper coverage, once retained multiplicity, and no-extra.",
+        "trace_hash": "sha256:b84cf26012191f5bac649785b5165598a285edfb6246c2d6c43f77a5de9cbafe"
+      },
+      {
+        "candidate_id": "proper-coverage__once__has-extra",
+        "exact_form": "Trace representation has proper coverage, once retained multiplicity, and has-extra.",
+        "trace_hash": "sha256:5890acbe9c96865cbf6b5a2d0a21b3af1448abede3f198c461e1bb1dacd4b87c"
+      },
+      {
+        "candidate_id": "proper-coverage__duplicated__no-extra",
+        "exact_form": "Trace representation has proper coverage, duplicated retained multiplicity, and no-extra.",
+        "trace_hash": "sha256:8e16f1b60a37fce76ec6b10a71d606e1bcfad37bbe4319a5161b127d81d5be7c"
+      },
+      {
+        "candidate_id": "proper-coverage__duplicated__has-extra",
+        "exact_form": "Trace representation has proper coverage, duplicated retained multiplicity, and has-extra.",
+        "trace_hash": "sha256:9a7db3f1796593a1c2178b80062c26c0f593ee5f512a45aada6a92538ee62861"
+      },
+      {
+        "candidate_id": "complete-coverage__once__no-extra",
+        "exact_form": "Trace representation has complete coverage, once retained multiplicity, and no-extra.",
+        "trace_hash": "sha256:69829ba72ef2320614a631f5385c3b02dac8fda200af4b639793f0d0b2c1e2a9"
+      },
+      {
+        "candidate_id": "complete-coverage__once__has-extra",
+        "exact_form": "Trace representation has complete coverage, once retained multiplicity, and has-extra.",
+        "trace_hash": "sha256:67906b7a82f5022e5aee3a75619a682b08e549962acf49dc28eee5f9aa48594a"
+      },
+      {
+        "candidate_id": "complete-coverage__duplicated__no-extra",
+        "exact_form": "Trace representation has complete coverage, duplicated retained multiplicity, and no-extra.",
+        "trace_hash": "sha256:7caeb45112b047e3cdaff33b4d4b3ea3652d3758d4f635fbeb1bd02b339e6222"
+      },
+      {
+        "candidate_id": "complete-coverage__duplicated__has-extra",
+        "exact_form": "Trace representation has complete coverage, duplicated retained multiplicity, and has-extra.",
+        "trace_hash": "sha256:78cc9232a5b4dd3e0189e6525a8cf17f86e63d1b8f56d1f0ae838f0f287acbe1"
+      }
+    ],
+    "completeness_certificate_hash": "sha256:9734ed97836865cec30abc8cd0539c36839b4b08de3ff60cb510f1e700e9caa1",
+    "expected_cardinality": 10,
+    "generation_rule": "For no retained occurrence, generate the two ungenerated-extra classes. For proper or complete retained coverage, generate the product of exact-once or duplicated multiplicity with absence or presence of ungenerated extra occurrences.",
+    "grammar_boundary": "All representations of any registered nonempty finite generation trace, classified by coverage of its generated occurrences, multiplicity of retained occurrences, and addition of occurrences outside that trace."
+  },
+  "closure": {
+    "exact_boundary": "All representations of any registered nonempty finite generation trace, classified by coverage of its generated occurrences, multiplicity of retained occurrences, and addition of occurrences outside that trace.",
+    "generality_certificate_hash": "sha256:c894a526f6830f0a4b714ce0b823d39a818b2e0ca6e79a252af3ab95deba7dfe",
+    "minimality_passed": true,
+    "named_shape_uniqueness_passed": true,
+    "proof_hash": "sha256:5bdde2e748f2921bcb0d9f1f86181ec8bea9c104d9244977c40b36b8b9532f31",
+    "scope": "depth_independent"
+  },
+  "controls": [
+    {
+      "expected_behavior": "reject absence of a generated occurrence as a positive count",
+      "kind": "false_premise",
+      "observed_behavior": "the no-coverage trace does not survive",
+      "passed": true,
+      "receipt_hash": "sha256:c345212a50305029c7cd1b73683100c6b9364ed11d0e38c4a9eff03143a5c86b"
+    },
+    {
+      "expected_behavior": "reject a changed derivation source identity",
+      "kind": "tampered_source",
+      "observed_behavior": "the changed source identity differs",
+      "passed": true,
+      "receipt_hash": "sha256:5e083bb4485927855fea2404ff3ce7d9bf33d6ea6247bde1e8ee0a067be5920a"
+    },
+    {
+      "expected_behavior": "reject a duplicated occurrence in the complete trace",
+      "kind": "tampered_artifact",
+      "observed_behavior": "the complete duplicated trace does not survive",
+      "passed": true,
+      "receipt_hash": "sha256:2dae34ee14f232523153e550e31280e5e07f53ded597aab0c3045097ecba57d0"
+    },
+    {
+      "expected_behavior": "refuse zero, signed, floating or completed-infinite count claims",
+      "kind": "boundary",
+      "observed_behavior": "only nonempty finitely generated complete traces are admitted",
+      "passed": true,
+      "receipt_hash": "sha256:c3148e0228e6336d8421753971e44b1b76ca7650c9c392cf26a561b431f1a7ca"
+    }
+  ],
+  "decisions": [
+    {
+      "candidate_id": "none-coverage__not-applicable__no-extra",
+      "proof_hash": "sha256:7d87e02b8306a9152857897f9a340906c1611a520ac3a8e6f18fd835bfe1dfdb",
+      "reason": "It retains no occurrence from the registered nonempty trace.",
+      "survives": false
+    },
+    {
+      "candidate_id": "none-coverage__not-applicable__has-extra",
+      "proof_hash": "sha256:3db15ac5a9cc72e8201fe79cea9c48de82ddd31f3a47e3378ada9cc52a364374",
+      "reason": "It retains no occurrence from the registered nonempty trace.",
+      "survives": false
+    },
+    {
+      "candidate_id": "proper-coverage__once__no-extra",
+      "proof_hash": "sha256:c3b731e7a3fc565893935dc751f761799d64e88f1f4953867fdfe849122b44f2",
+      "reason": "It omits at least one generated occurrence and is not the complete trace.",
+      "survives": false
+    },
+    {
+      "candidate_id": "proper-coverage__once__has-extra",
+      "proof_hash": "sha256:811d74092b8a4c2711a16a778700be09f5f65ac20c8f3e1ab32c4178c75352d2",
+      "reason": "It omits at least one generated occurrence and is not the complete trace.",
+      "survives": false
+    },
+    {
+      "candidate_id": "proper-coverage__duplicated__no-extra",
+      "proof_hash": "sha256:8fb097e5809b546260314475154c98f1ce922af81723df40aebe9e9ee6fbd999",
+      "reason": "It omits at least one generated occurrence and is not the complete trace.",
+      "survives": false
+    },
+    {
+      "candidate_id": "proper-coverage__duplicated__has-extra",
+      "proof_hash": "sha256:b2b9c7593d109c189677a2127f9f0eedc3f72298c1c275584ddc68d8f2dfb14a",
+      "reason": "It omits at least one generated occurrence and is not the complete trace.",
+      "survives": false
+    },
+    {
+      "candidate_id": "complete-coverage__once__no-extra",
+      "proof_hash": "sha256:9ab16021f5baeef925efc4244128eff89b02538f8a176258bce42372f5027033",
+      "reason": "It retains every generated occurrence once and adds no occurrence.",
+      "survives": true
+    },
+    {
+      "candidate_id": "complete-coverage__once__has-extra",
+      "proof_hash": "sha256:d4bbeba797c914db840e7367b7896e77a3fdadae6afa8940e36fa33473b46c26",
+      "reason": "It adds an occurrence not supplied by the registered generation trace.",
+      "survives": false
+    },
+    {
+      "candidate_id": "complete-coverage__duplicated__no-extra",
+      "proof_hash": "sha256:f6c10f9542507df2a37b6cf7d7c4b2b156b34b8f87ee7c8c6ddd0c196d37804f",
+      "reason": "It repeats a retained occurrence and therefore changes the generated trace.",
+      "survives": false
+    },
+    {
+      "candidate_id": "complete-coverage__duplicated__has-extra",
+      "proof_hash": "sha256:d0bab090c02c01b53dd9a80a15c78e150f656c924c5190f9107203aefcdc42e6",
+      "reason": "It repeats a retained occurrence and therefore changes the generated trace.",
+      "survives": false
+    }
+  ],
+  "registration": {
+    "axioms": [],
+    "branch": "foundation",
+    "claim_id": "SFT-FOUNDATION-COUNT-001",
+    "dependencies": [
+      "SFT-FOUNDATION-ONE-001"
+    ],
+    "evidence_mode": "formal",
+    "free_parameters": [],
+    "provenance": [
+      "forward_forcing"
+    ],
+    "root_theorems": [
+      "SFT-ROOT-THERE-IS-NO-NOTHING"
+    ],
+    "source_hash": "sha256:f7da3fcd5e30279e37e02e7801b2895711559c1070999aaa4383090dd0aecc44",
+    "statement": "Every generated nonempty finite succession of structural-One occurrences has one exact positive count representation: its complete generation trace, retaining every generated occurrence once and adding none.",
+    "title": "Exact positive finite count"
+  },
+  "unknown_rejected": true
+}

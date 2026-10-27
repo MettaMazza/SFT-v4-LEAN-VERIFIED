@@ -1,0 +1,24 @@
+{
+  "claim_id": "SFT-FOUNDATION-COUNT-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "status": "complete",
+  "dependencies": [
+    "SFT-FOUNDATION-ONE-001"
+  ],
+  "source_component_correspondence": {
+    "form_name, candidate_records, survives, decision_reason, completeness_record": "Count candidateId/exactForm/coverage/multiplicity/extra/candidates/decisionReason/candidatesComplete/uniqueSurvivor; CountRepresentation.classificationExhaustive and acceptedIffExactRetention; CountEvidence.completenessRecord",
+    "closure_record base and successor": "CountTrace baseRetainsOne, successorRetainsPreviousAndTerminal, previousCoverageIsProper, terminalAbsentFromPrevious",
+    "closure_record induction": "CountTrace everyGeneratedPositionRetained, everyGeneratedPositionRetainedOnce, finiteGenerationPreservesExactRetention, completeNonempty",
+    "closure_record minimality and uniqueness": "CountRepresentation omittedPositionRejected, duplicatedRetentionRejected, ungeneratedAdditionRejected, previousPrefixRejected, completeProposalAccepted; CountTrace uniqueCompleteGeneratedTrace; Count.uniqueSurvivor",
+    "closure_record meaning": "CountTrace.Trace finite base/extension syntax; CountEvidence.closureRecord exact source boundary",
+    "control_records": "CountEvidence falsePremise, tamperedSource, tamperedArtifact, boundary, controlRecords and three native outcome proofs",
+    "CountProgram.registration": "CountEvidence.registrationData",
+    "CountProgram.generate_candidates": "CountEvidence.generateCandidatesData",
+    "CountProgram.decide_candidate": "CountEvidence.decideCandidate and generatedLookup",
+    "CountProgram.closure_evidence": "CountEvidence.closureEvidenceData",
+    "CountProgram.run_controls": "CountEvidence.runControls"
+  },
+  "verification": "TURN_112_COUNT_PROGRAM_REPORT.json",
+  "axiom_audit": "TURN_112_ALL_DECLARATIONS_AUDIT.log",
+  "remaining_source_components": []
+}

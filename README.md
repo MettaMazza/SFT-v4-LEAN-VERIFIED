@@ -12,7 +12,7 @@
 
 <p align="center">
   <img alt="Lean 4.35.0" src="https://img.shields.io/badge/Lean-4.35.0-163747?style=flat-square&amp;labelColor=0b1825" />
-  <img alt="1,547 audited results" src="https://img.shields.io/badge/Audited_results-1,547-163747?style=flat-square&amp;labelColor=0b1825" />
+  <img alt="1,555 audited results" src="https://img.shields.io/badge/Audited_results-1,555-163747?style=flat-square&amp;labelColor=0b1825" />
   <img alt="0 axiom dependencies in audited results" src="https://img.shields.io/badge/Axiom_dependencies-0-147d72?style=flat-square&amp;labelColor=0b1825" />
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
@@ -47,20 +47,20 @@ flowchart LR
 
 Entry completion means the entry’s actual pinned V3 content is formalised and its applicable checks pass. Entries are completed in registered dependency order. Missing work must identify a specific V3 source component; general host-library or unrelated platform tasks do not hold a scientific entry open.
 
-**1,547 proofs completed · 5,478 candidate records matched · 1 model entry complete · 20 entries with existing work.**
+**1,555 proofs completed · 5,478 candidate records matched · 3 model entries complete · 18 entries with existing work.**
 
 | Progress measure | Current result |
 | :--- | :--- |
-| Lean theorems proved | **1,547**, all with zero axiom dependencies |
-| Definitions and theorems audited | **2,728**, all with zero axiom dependencies |
+| Lean theorems proved | **1,555**, all with zero axiom dependencies |
+| Definitions and theorems audited | **2,780**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **5,478 / 5,478** across Root, One, Count, Part, Part Equivalence, Fold, Fold Assembly, Exact Operations, Half-One, Fold Dynamics, Form Grammar, Form Enforcement, Measured Value Boundary, Exact Arithmetic Discrete Objects and Primitive Map Uniqueness |
-| Complete model entries | **1 / 2,781** — Root complete; One is next in dependency order |
+| Complete model entries | **3 / 2,781** — Root, One and Count complete; Part is next in dependency order |
 
 | Source component | Verified work | Evidence |
 | :--- | :--- | :--- |
 | **Root — complete** | All pinned Root source functions and program methods mapped; general record derivation, exact enumeration, closure and controls verified | [Completion evidence](verification/TURN_111_ROOT_COMPLETION.json) · [Fresh output checks](verification/TURN_111_ROOT_EVIDENCE_REPORT.json) |
-| **One** | Complete six-class enumeration, unique survivor and survivor acceptance | [Lean source](SFT/Foundation/One.lean) |
-| **Count** | Complete ten-class enumeration, unique survivor and survivor acceptance | [Lean source](SFT/Foundation/Count.lean) |
+| **One — complete** | General record derivation, full grammar, closure, controls and all program methods | [Completion evidence](verification/TURN_112_ONE_COMPLETION.json) |
+| **Count — complete** | General finite-trace derivation, full grammar, closure, controls and all program methods | [Completion evidence](verification/TURN_112_COUNT_COMPLETION.json) |
 | **Part** | 192-form enumeration, exact seven-criterion acceptance, minimality rejections and finite held/whole coordinate construction | [Part proofs](SFT/Foundation/Part.lean) · [Selection proofs](SFT/Foundation/PartSelection.lean) |
 | **Common refinement** | Generated pair cells, complete index pairing, identity/reversal/composition and uniform-refinement preservation | [Derivation](SFT/Foundation/CommonRefinement.lean) |
 | **Fold** | 288-form grammar and exact criteria; acceptance tied to unique minimal Count stage; two distinct retained positions | [Derivation](SFT/Foundation/FoldDerivation.lean) |
@@ -73,11 +73,11 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | **Measured-value boundary** | Exact Boolean protocol conditions, complete 256-candidate product and original controls | [Derivation](SFT/Foundation/MeasurementProtocol.lean) |
 | **Form identity** | Canonical trace injectivity and equivalence for every generated Form; complete 192-candidate identity grammar | [Derivation](SFT/Foundation/FormIdentity.lean) |
 | **Form construction** | Exact finite productions, injective tuple encoding and acceptance of every generated form by the tuple/string validator | [Derivation](SFT/Foundation/FormConstruction.lean) |
-| **Source correspondence** | All 5,478 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_110_PARITY_REPORT.json) |
+| **Source correspondence** | All 5,478 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_112_PARITY_REPORT.json) |
 
 **Full-model completion: 0 / 2,781 entries.** Twenty-one entries are in progress; 2,760 remain pending. The results above certify the translated portions. Remaining Root work includes general implementation-correspondence proofs, full operational semantics and admission integration. Full-entry completion is tracked separately from finite classification proofs.
 
-[Read the current axiom audit →](verification/TURN_110_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 2,728 axiom audits →](verification/TURN_110_ALL_DECLARATIONS_AUDIT.log)
+[Read the current axiom audit →](verification/TURN_112_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 2,780 axiom audits →](verification/TURN_112_ALL_DECLARATIONS_AUDIT.log)
 
 The translated forcing gate checks ordered identifiers, exactly one survivor, explicit reasons and canonical proof-hash identities. A general theorem proves that passing requires one survivor; Root’s tampered decisions are formally rejected. [Gate proofs](SFT/Engine/DecisionGate.lean) · [Root integration](SFT/Foundation/RootGate.lean) · [384-case comparison](verification/TURN_009_DECISION_GATE_REPORT.json)
 
@@ -150,3 +150,5 @@ The scripts read pinned v3 source and artifacts without importing or executing v
 ---
 
 <p align="center"><strong>Smithian Fold Theory · Maria Smith</strong><br/><sub>V3 is the source. Lean is the proof language. Exact correspondence is the requirement.</sub></p>
+
+Batch review: [all 21 existing entries](verification/TURN_112_BATCH_EXISTING_WORK.json). Run `python3 verification/batch_existing_work.py` for the existing global build/audit/parity and exact missing-method inventory. Interface presence alone does not establish derivation completion.

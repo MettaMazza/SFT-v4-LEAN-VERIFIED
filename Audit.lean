@@ -1546,3 +1546,11 @@ import SFT
 #print axioms SFT.Mathematics.GraphOperations.balancePairedExtensionIff
 #print axioms SFT.Mathematics.GraphOperations.balancedPairRequiresFreshTokens
 #print axioms SFT.Mathematics.GraphOperations.firstTokenPairBalanced
+#print axioms SFT.Foundation.One.Evidence.generatedLookup
+#print axioms SFT.Foundation.One.Evidence.falsePremisePassed
+#print axioms SFT.Foundation.One.Evidence.tamperedArtifactPassed
+#print axioms SFT.Foundation.One.Evidence.boundaryPassed
+#print axioms SFT.Foundation.Count.Evidence.generatedLookup
+#print axioms SFT.Foundation.Count.Evidence.falsePremisePassed
+#print axioms SFT.Foundation.Count.Evidence.tamperedArtifactPassed
+#print axioms SFT.Foundation.Count.Evidence.boundaryPassed

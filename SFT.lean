@@ -117,3 +117,4 @@ import SFT.Mathematics.SelectionEncoding
 import SFT.Mathematics.ArrangementSuccessor
 import SFT.Mathematics.ArrangementCounting
 import SFT.Mathematics.SelectionCompleteness
+import SFT.Mathematics.CombinatorialCollections

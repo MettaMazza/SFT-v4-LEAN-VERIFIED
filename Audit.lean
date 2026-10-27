@@ -1174,3 +1174,10 @@ import SFT
 #print axioms SFT.Mathematics.CombinatorialSelections.encodedFormHasUniqueRawChoice
 #print axioms SFT.Mathematics.CombinatorialSelections.acceptedSelectionsComplete
 #print axioms SFT.Mathematics.CombinatorialSelections.acceptedSelectionsCompleteUnique
+#print axioms SFT.Mathematics.CombinatorialCollections.arrangementCollection
+#print axioms SFT.Mathematics.CombinatorialCollections.arrangementConstructionTrace
+#print axioms SFT.Mathematics.CombinatorialCollections.selectionCollection
+#print axioms SFT.Mathematics.CombinatorialCollections.selectionConstructionTrace
+#print axioms SFT.Mathematics.CombinatorialCollections.heldSubsetAdmitted
+#print axioms SFT.Mathematics.CombinatorialCollections.arrangementHeldBranchAdmitted
+#print axioms SFT.Mathematics.CombinatorialCollections.encodedLiteralCollectionRejected

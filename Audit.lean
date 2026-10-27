@@ -1529,3 +1529,12 @@ import SFT
 #print axioms SFT.Mathematics.GraphOperations.newPathOnOldNodesUsesAddedEdge
 #print axioms SFT.Mathematics.GraphOperations.adjacentEndpointsInPath
 #print axioms SFT.Mathematics.GraphOperations.freshOnlyEdgesPreserveOldPathDecision
+#print axioms SFT.Mathematics.GraphOperations.graphConstructorChecks
+#print axioms SFT.Mathematics.GraphOperations.graphConstructorMeaning
+#print axioms SFT.Mathematics.GraphOperations.freshEdgesDisjoint
+#print axioms SFT.Mathematics.GraphOperations.freshGraphAccepted
+#print axioms SFT.Mathematics.GraphOperations.cutSelectionValid
+#print axioms SFT.Mathematics.GraphOperations.validCutResult
+#print axioms SFT.Mathematics.GraphOperations.cutUnderFreshExtension
+#print axioms SFT.Mathematics.GraphOperations.balancePairedExtension
+#print axioms SFT.Mathematics.GraphOperations.freshGraphPairSupportOrder

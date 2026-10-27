@@ -109,3 +109,7 @@ import SFT.Mathematics.CombinatorialSelections
 import SFT.Mathematics.CombinatorialArrangements
 import SFT.Mathematics.ArrangementCompleteness
 import SFT.Mathematics.CombinatorialLedger
+import SFT.Mathematics.CombinatoricsGrammar
+import SFT.Mathematics.CombinatoricsWitnesses
+import SFT.Mathematics.CombinatoricsControls
+import SFT.Mathematics.CombinatoricsEvidence

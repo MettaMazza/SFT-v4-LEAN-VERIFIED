@@ -1515,3 +1515,17 @@ import SFT
 #print axioms SFT.Mathematics.GraphEvidence.registrationHasNoAxioms
 #print axioms SFT.Mathematics.GraphEvidence.registrationHasNoFreeParameters
 #print axioms SFT.Mathematics.GraphEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Mathematics.GraphOperations.oneGraphAccepted
+#print axioms SFT.Mathematics.GraphOperations.oneIdentityPath
+#print axioms SFT.Mathematics.GraphOperations.oneIdentityReachable
+#print axioms SFT.Mathematics.GraphOperations.oneHasNoCycle
+#print axioms SFT.Mathematics.GraphOperations.retainedPathValid
+#print axioms SFT.Mathematics.GraphOperations.retainedPathWitness
+#print axioms SFT.Mathematics.GraphOperations.retainedReachability
+#print axioms SFT.Mathematics.GraphOperations.retainedReturnTrace
+#print axioms SFT.Mathematics.GraphOperations.retainedCycle
+#print axioms SFT.Mathematics.GraphOperations.freshNodeRetainsPaths
+#print axioms SFT.Mathematics.GraphOperations.freshNodeRetainsCycles
+#print axioms SFT.Mathematics.GraphOperations.newPathOnOldNodesUsesAddedEdge
+#print axioms SFT.Mathematics.GraphOperations.adjacentEndpointsInPath
+#print axioms SFT.Mathematics.GraphOperations.freshOnlyEdgesPreserveOldPathDecision

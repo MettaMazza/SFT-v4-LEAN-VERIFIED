@@ -1229,3 +1229,8 @@ import SFT
 #print axioms SFT.Mathematics.AlgebraOperations.noIdentityNoMates
 #print axioms SFT.Mathematics.AlgebraOperations.commutationExhaustiveIff
 #print axioms SFT.Mathematics.AlgebraOperations.commutationCellExact
+#print axioms SFT.Mathematics.AlgebraOperations.returnRowsSuccessIff
+#print axioms SFT.Mathematics.AlgebraOperations.returnMatesSuccessfulParts
+#print axioms SFT.Mathematics.AlgebraOperations.returnMatesSuccessIff
+#print axioms SFT.Mathematics.AlgebraOperations.returnedMateUniqueMeaning
+#print axioms SFT.Mathematics.AlgebraOperations.acceptedCommutationMeaning

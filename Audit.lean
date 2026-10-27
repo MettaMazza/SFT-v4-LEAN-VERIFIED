@@ -1428,3 +1428,13 @@ import SFT
 #print axioms SFT.Mathematics.GraphOperations.balanceMeaning
 #print axioms SFT.Mathematics.GraphOperations.adjacentPairsComposition
 #print axioms SFT.Mathematics.GraphOperations.pathCompositionIff
+#print axioms SFT.Mathematics.GraphOperations.outgoingTarget
+#print axioms SFT.Mathematics.GraphOperations.coverageAfterVisit
+#print axioms SFT.Mathematics.GraphOperations.skipDecreases
+#print axioms SFT.Mathematics.GraphOperations.expandDecreases
+#print axioms SFT.Mathematics.GraphOperations.searchLoopEquation
+#print axioms SFT.Mathematics.GraphOperations.reachableIdentity
+#print axioms SFT.Mathematics.GraphOperations.searchEmpty
+#print axioms SFT.Mathematics.GraphOperations.searchHitsTarget
+#print axioms SFT.Mathematics.GraphOperations.searchSkipsVisited
+#print axioms SFT.Mathematics.GraphOperations.searchExpandsFresh

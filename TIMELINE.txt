@@ -1393,3 +1393,18 @@ Turn 100 publication receipt: pushed ecbdfc3a80d89e30d7f029d6f1de5eafa898dbe3 to
 6. Updated coverage, README and scientific manuscript.21 entries in progress,2760 pending,zero whole entries complete. Prepared verified public checkpoint.
 
 Next: formalise original finite graph reachability and cycle search with termination justified from the finite state, retaining exact queue/visited and edge traversal order; derive their path/return correspondence. Continue full source grammar and integration afterwards.
+
+Turn 101 publication receipt: pushed ffef5f4f49dc18060d5f5152ff2ad49eb3014eee to public main; compared 883 files, 0 mismatches. Receipt retained for next checkpoint.
+
+## Turn 102 — 2026-10-27T02:52:51.380637+00:00
+
+1. Classified Turn101 as progress: graph operations and path composition proved and published. Read current timeline, paper, coverage, pinned reachable/cycle source and existing finite-remainder proofs. Kept scientific work on original traversal, with existing verification workflow unchanged.
+2. Added GraphReachability.lean translating the complete ordered outgoing-edge selection and original reachable queue loop. SearchState carries actual frontier/visited and auxiliary unseen support with coverage proofs. Existing remainder operation removes a newly visited member; lexicographic unseen/queue lengths prove termination. No search cutoff, partial function, omitted edge or changed queue ordering.
+3. Proved outgoing target provenance, coverage after visiting, strict skip/expansion decreases, exact fixed-point equation, original identity case and both terminal cases. Initial build failed when rewriting a queue equality through a dependent match. Destructured the state and eliminated the equality first; target-hit proof also required projection/match reduction before rewriting the equality guard. Target build then passed.
+4. Registered source correspondence/import/audit entries and ran existing verification successfully. Added explicit visited-skip and fresh-expansion equations; target build passed. Replaced deprecated conditional lemma names, retaining statements. Final existing verification passed:1439 native theorems,2557 audited definitions/theorems,zero axiom dependencies,4966 candidate rows. Retained TURN_102 evidence.
+5. Created TURN_102_GraphReachability.lean driver and independent work/check_reach102.py reconstruction. Fresh native execution matched18504 records:8224 reachability decisions and10280 ordered outgoing lists, every512 three-node directed relation plus duplicate-edge and outside-endpoint stress inputs. Retained output/report. No V3 Python imported/executed. No verifier or CI change.
+6. Updated coverage, README and scientific manuscript.21 entries in progress,2760 pending,zero entire entries complete. Prepared public verified checkpoint.
+
+Next: prove general correspondence between this exact FIFO loop and complete path witnesses; formalise original recursive cycle search with finite-support termination and return-path correspondence.
+
+Turn102 preparation: reconciled earlier pending-reachability wording in coverage and paper with the new result. Manifest-only refresh first lacked hashlib in its script environment; supplied the import and regenerated it.

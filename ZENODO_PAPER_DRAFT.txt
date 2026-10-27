@@ -5,7 +5,7 @@ Working manuscript — unpublished
 
 Abstract
 
-We present a native Lean formalisation of Smithian Fold Theory V3, preserving its definitions, dependency order, declared domains and zero-axiom, zero-free-parameter constraints. The formalisation begins with the operational root, There Is No Nothing, followed by the structural One and exact positive finite count. At the scope established here, their registered candidate grammars contain two, six and ten classes respectively. Constructive proofs establish exhaustive enumeration, the unique surviving class and acceptance of that survivor for each grammar. The 1,429 audited proofs have no axiom dependencies. The translated classifications agree with the V3 artifacts on every candidate's order, identifier, exact form, decision and reason.
+We present a native Lean formalisation of Smithian Fold Theory V3, preserving its definitions, dependency order, declared domains and zero-axiom, zero-free-parameter constraints. The formalisation begins with the operational root, There Is No Nothing, followed by the structural One and exact positive finite count. At the scope established here, their registered candidate grammars contain two, six and ten classes respectively. Constructive proofs establish exhaustive enumeration, the unique surviving class and acceptance of that survivor for each grammar. The 1,439 audited proofs have no axiom dependencies. The translated classifications agree with the V3 artifacts on every candidate's order, identifier, exact form, decision and reason.
 
 1. Model and scope
 
@@ -213,7 +213,7 @@ The Lean implementation uses leanprover/lean4:v4.35.0. The build command is lake
 
 The public formalisation repository is https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED.
 
-Canonical JSON uses the source ASCII-escaping, compact-separator and sorted-key rules on the Root evidence domain. SHA-256 is implemented constructively with its fixed algorithm constants. All 2,539 audited explicit definitions and theorems have no axiom dependencies. Sixteen byte-message checks and ten JSON checks agree with Python standard-library results; these execution checks are separate from a general proof of algorithm correspondence, which remains outstanding. The fixed Root boundary is ASCII, so its lowercase and substring operations preserve the source predicate exactly. These host operations introduce no free scientific parameters.
+Canonical JSON uses the source ASCII-escaping, compact-separator and sorted-key rules on the Root evidence domain. SHA-256 is implemented constructively with its fixed algorithm constants. All 2,557 audited explicit definitions and theorems have no axiom dependencies. Sixteen byte-message checks and ten JSON checks agree with Python standard-library results; these execution checks are separate from a general proof of algorithm correspondence, which remains outstanding. The fixed Root boundary is ASCII, so its lowercase and substring operations preserve the source predicate exactly. These host operations introduce no free scientific parameters.
 
 The typed forcing-gate implementation is additionally checked on 384 combinations of identifier order and cardinality, survivor flags, reason content and hash syntax. The Unicode whitespace predicate agrees with the host language over all 1,114,112 code points.
 
@@ -495,4 +495,12 @@ At a shared interface node, the adjacency list of the composed path equals the c
 
 A successful cut returns exactly the original edge list filtered by unequal held-endpoint membership, preserving edge order and multiplicity. Its membership criterion is proved directly. The internal balance operation is equivalent to nonempty ingress, equal ingress and egress trace counts, and separate distinctness of both trace collections. The executable criterion is retained exactly.
 
-Fresh native execution matches4597 independently reconstructed records for graph construction, paths, adjacency, cuts and balance, including malformed and repeated inputs. Reachability and cycle-search formalisation and complete graph-program integration remain pending.
+Fresh native execution matches4597 independently reconstructed records for graph construction, paths, adjacency, cuts and balance, including malformed and repeated inputs. Cycle-search formalisation and complete graph-program integration remain pending.
+
+Finite reachability search
+
+Reachability retains the original identity case: equal origin and target return exactly origin membership in the node carrier. Otherwise the queue starts with the origin and the visited trace is empty. Each iteration removes the queue head, checks target identity before visited membership, skips a previously visited head, or appends a new head to visited and appends every matching unvisited edge target to the queue in original edge order.
+
+Termination follows from finite support and queue length. Initially the support consists of the origin and every edge target. Every queued node and edge target lies in that support or in visited. A new visit removes the held node from the auxiliary unseen support, strictly decreasing its length. A visited skip leaves support unchanged and strictly shortens the queue. Their lexicographic order is well founded. The auxiliary support does not decide search success, change queue order, omit duplicate enqueues or impose a depth bound.
+
+The native search satisfies the exact fixed-point equation and the original empty-queue, target-hit, visited-skip and fresh-expansion equations. Fresh execution matches8,224 reachability decisions and10,280 ordered outgoing lists across every directed relation on three nodes, with additional duplicate-edge and external-endpoint stress inputs. General equivalence between the search result and a complete path witness, and cycle search, remain to be formalised.

@@ -1399,3 +1399,12 @@ import SFT
 #print axioms SFT.Mathematics.OrderOperations.oneJoin
 #print axioms SFT.Mathematics.OrderOperations.partialOrderExtensionIff
 #print axioms SFT.Mathematics.OrderOperations.totalOrderExtensionIff
+#print axioms SFT.Mathematics.OrderOperations.allChecksCongruent
+#print axioms SFT.Mathematics.OrderOperations.boundFilterCongruent
+#print axioms SFT.Mathematics.OrderOperations.retainedComparisonCheck
+#print axioms SFT.Mathematics.OrderOperations.lowerSelectionValid
+#print axioms SFT.Mathematics.OrderOperations.upperSelectionValid
+#print axioms SFT.Mathematics.OrderOperations.lowerBoundCheckPreserved
+#print axioms SFT.Mathematics.OrderOperations.upperBoundCheckPreserved
+#print axioms SFT.Mathematics.OrderOperations.lowerBoundsCarrierExtension
+#print axioms SFT.Mathematics.OrderOperations.upperBoundsCarrierExtension

@@ -1167,3 +1167,10 @@ import SFT
 #print axioms SFT.Mathematics.CombinatorialArrangements.heldBranchCount
 #print axioms SFT.Mathematics.CombinatorialArrangements.arrangementCountRecurrence
 #print axioms SFT.Mathematics.CombinatorialArrangements.arrangementCountBase
+#print axioms SFT.Mathematics.CombinatorialSelections.emptyChoiceEveryCarrier
+#print axioms SFT.Mathematics.CombinatorialSelections.encodedMembershipIff
+#print axioms SFT.Mathematics.CombinatorialSelections.encodedEmptyRetained
+#print axioms SFT.Mathematics.CombinatorialSelections.encodedTracePositive
+#print axioms SFT.Mathematics.CombinatorialSelections.encodedFormHasUniqueRawChoice
+#print axioms SFT.Mathematics.CombinatorialSelections.acceptedSelectionsComplete
+#print axioms SFT.Mathematics.CombinatorialSelections.acceptedSelectionsCompleteUnique

@@ -119,3 +119,4 @@ import SFT.Mathematics.ArrangementCounting
 import SFT.Mathematics.SelectionCompleteness
 import SFT.Mathematics.CombinatorialCollections
 import SFT.Mathematics.SelectionProvenance
+import SFT.Mathematics.SelectionDiscreteLink

@@ -1190,3 +1190,9 @@ import SFT
 #print axioms SFT.Mathematics.CombinatorialSelections.rawMembershipIffOrderedChoice
 #print axioms SFT.Mathematics.CombinatorialSelections.encodedMembershipIffOrderedChoice
 #print axioms SFT.Mathematics.CombinatorialSelections.heldExtensionRetainsFoldProvenance
+#print axioms SFT.Mathematics.CombinatorialSelections.sublistMemberRetained
+#print axioms SFT.Mathematics.CombinatorialSelections.sublistPreservesDistinct
+#print axioms SFT.Mathematics.CombinatorialSelections.eachRawSelectionDistinct
+#print axioms SFT.Mathematics.CombinatorialSelections.singletonLabelsInjective
+#print axioms SFT.Mathematics.CombinatorialSelections.carrierMemberCollection
+#print axioms SFT.Mathematics.CombinatorialSelections.rawSelectionDiscreteAdmission

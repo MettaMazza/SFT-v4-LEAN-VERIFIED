@@ -155,3 +155,7 @@ import SFT.Mathematics.GraphPathSoundness
 import SFT.Mathematics.GraphPathCompleteness
 import SFT.Mathematics.GraphCycles
 import SFT.Mathematics.GraphCycleTrace
+import SFT.Mathematics.GraphWitnesses
+import SFT.Mathematics.GraphGrammar
+import SFT.Mathematics.GraphControls
+import SFT.Mathematics.GraphEvidence

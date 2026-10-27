@@ -1,0 +1,14 @@
+From the project directory with pinned Lean 4.35.0 on PATH:
+
+lake build SFT:static
+mkdir -p verification/current
+lake env lean -c verification/current/fold114.c verification/TURN_114_FoldProgram.lean
+lake env leanc -o verification/current/fold114 verification/current/fold114.c .lake/build/lib/libsft__v4_SFT.a
+ulimit -s 65520
+python3 verification/TURN_114_check_fold.py "$(pwd)/verification/current/fold114"
+python3 verification/batch_existing_work.py
+
+This executes all288 original candidates and checks their actual identifier lookups,
+full census, decisions, closure, controls, registration and every hash against pinned V3.
+No source scientific Python is imported or executed. Source location is read from
+reference/SOURCE.json or SFT_V3_SOURCE through existing current_checks.py.

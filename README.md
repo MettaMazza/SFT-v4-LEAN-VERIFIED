@@ -47,14 +47,14 @@ flowchart LR
 
 Entry completion means the entry’s actual pinned V3 content is formalised and its applicable checks pass. Entries are completed in registered dependency order. Missing work must identify a specific V3 source component; general host-library or unrelated platform tasks do not hold a scientific entry open.
 
-**1,558 proofs completed · 5,478 candidate records matched · 4 model entries complete · 17 entries with existing work.**
+**1,558 proofs completed · 5,478 candidate records matched · 5 model entries complete · 16 entries with existing work.**
 
 | Progress measure | Current result |
 | :--- | :--- |
 | Lean theorems proved | **1,558**, all with zero axiom dependencies |
-| Definitions and theorems audited | **2,805**, all with zero axiom dependencies |
+| Definitions and theorems audited | **2,819**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **5,478 / 5,478** across Root, One, Count, Part, Part Equivalence, Fold, Fold Assembly, Exact Operations, Half-One, Fold Dynamics, Form Grammar, Form Enforcement, Measured Value Boundary, Exact Arithmetic Discrete Objects and Primitive Map Uniqueness |
-| Complete model entries | **4 / 2,781** — Root, One, Count and Part complete |
+| Complete model entries | **5 / 2,781** — Root, One, Count, Part and Fold complete |
 
 | Source component | Verified work | Evidence |
 | :--- | :--- | :--- |
@@ -63,7 +63,7 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | **Count — complete** | General finite-trace derivation, full grammar, closure, controls and all program methods | [Completion evidence](verification/TURN_112_COUNT_COMPLETION.json) |
 | **Part — complete** | General held/whole coordinate derivation, full192 grammar, original closure/controls and all program methods | [Completion evidence](verification/TURN_113_PART_COMPLETION.json) |
 | **Common refinement** | Generated pair cells, complete index pairing, identity/reversal/composition and uniform-refinement preservation | [Derivation](SFT/Foundation/CommonRefinement.lean) |
-| **Fold** | 288-form grammar and exact criteria; acceptance tied to unique minimal Count stage; two distinct retained positions | [Derivation](SFT/Foundation/FoldDerivation.lean) |
+| **Fold — complete** | Minimal-stage derivation, full288 grammar, original closure/controls and all source program methods | [Completion evidence](verification/TURN_114_FOLD_COMPLETION.json) |
 | **Fold assembly** | 192-form grammar; full finite stage, transition and return traces; canonical witness realised with complete unique support | [Assembly derivation](SFT/Foundation/FoldAssembly.lean) |
 | **Exact operations** | Canonical Fraction reduction, exact value preservation, positive-domain guards, normalized cast/Fold/Take, exact unison and Fold-fixed One; complete 128-form grammar and source controls | [Operations](SFT/Foundation/ExactOperations.lean) · [Reduction proofs](SFT/Foundation/FractionReduction.lean) |
 | **Half-One** | Complete first-Fold selection classes, label-exchange invariance, unique self-junction coordinate, self-complementarity and Fold-to-One; all 128 source candidates and four controls | [Derivation](SFT/Foundation/HalfOneDerivation.lean) |
@@ -73,11 +73,11 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | **Measured-value boundary** | Exact Boolean protocol conditions, complete 256-candidate product and original controls | [Derivation](SFT/Foundation/MeasurementProtocol.lean) |
 | **Form identity** | Canonical trace injectivity and equivalence for every generated Form; complete 192-candidate identity grammar | [Derivation](SFT/Foundation/FormIdentity.lean) |
 | **Form construction** | Exact finite productions, injective tuple encoding and acceptance of every generated form by the tuple/string validator | [Derivation](SFT/Foundation/FormConstruction.lean) |
-| **Source correspondence** | All 5,478 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_113_PARITY_REPORT.json) |
+| **Source correspondence** | All 5,478 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_114_PARITY_REPORT.json) |
 
 **Full-model completion: 0 / 2,781 entries.** Twenty-one entries are in progress; 2,760 remain pending. The results above certify the translated portions. Remaining Root work includes general implementation-correspondence proofs, full operational semantics and admission integration. Full-entry completion is tracked separately from finite classification proofs.
 
-[Read the current axiom audit →](verification/TURN_113_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 2,805 axiom audits →](verification/TURN_113_ALL_DECLARATIONS_AUDIT.log)
+[Read the current axiom audit →](verification/TURN_114_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 2,819 axiom audits →](verification/TURN_114_ALL_DECLARATIONS_AUDIT.log)
 
 The translated forcing gate checks ordered identifiers, exactly one survivor, explicit reasons and canonical proof-hash identities. A general theorem proves that passing requires one survivor; Root’s tampered decisions are formally rejected. [Gate proofs](SFT/Engine/DecisionGate.lean) · [Root integration](SFT/Foundation/RootGate.lean) · [384-case comparison](verification/TURN_009_DECISION_GATE_REPORT.json)
 
@@ -151,4 +151,4 @@ The scripts read pinned v3 source and artifacts without importing or executing v
 
 <p align="center"><strong>Smithian Fold Theory · Maria Smith</strong><br/><sub>V3 is the source. Lean is the proof language. Exact correspondence is the requirement.</sub></p>
 
-Batch review: [all 21 existing entries](verification/TURN_113_BATCH_EXISTING_WORK.json). Run `python3 verification/batch_existing_work.py` for the existing global build/audit/parity and exact missing-method inventory. Interface presence alone does not establish derivation completion.
+Batch review: [all 21 existing entries](verification/TURN_114_BATCH_EXISTING_WORK.json). Run `python3 verification/batch_existing_work.py` for the existing global build/audit/parity and exact missing-method inventory. Interface presence alone does not establish derivation completion.

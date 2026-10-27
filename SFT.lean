@@ -113,3 +113,4 @@ import SFT.Mathematics.CombinatoricsGrammar
 import SFT.Mathematics.CombinatoricsWitnesses
 import SFT.Mathematics.CombinatoricsControls
 import SFT.Mathematics.CombinatoricsEvidence
+import SFT.Mathematics.SelectionEncoding

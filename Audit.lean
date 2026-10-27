@@ -1221,3 +1221,11 @@ import SFT
 #print axioms SFT.Mathematics.AlgebraOperations.associativityExhaustiveIff
 #print axioms SFT.Mathematics.AlgebraOperations.associationCellExact
 #print axioms SFT.Mathematics.AlgebraOperations.acceptedAssociativityMeaning
+#print axioms SFT.Mathematics.AlgebraOperations.returnCellTrueIff
+#print axioms SFT.Mathematics.AlgebraOperations.filterCheckedMembership
+#print axioms SFT.Mathematics.AlgebraOperations.returnCandidatesExact
+#print axioms SFT.Mathematics.AlgebraOperations.returnRowsPreserveCarrier
+#print axioms SFT.Mathematics.AlgebraOperations.returnRowsEachUniqueSearch
+#print axioms SFT.Mathematics.AlgebraOperations.noIdentityNoMates
+#print axioms SFT.Mathematics.AlgebraOperations.commutationExhaustiveIff
+#print axioms SFT.Mathematics.AlgebraOperations.commutationCellExact

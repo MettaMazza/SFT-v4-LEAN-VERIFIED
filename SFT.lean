@@ -123,3 +123,4 @@ import SFT.Mathematics.SelectionDiscreteLink
 import SFT.Mathematics.AlgebraOperations
 import SFT.Mathematics.AlgebraTableCoverage
 import SFT.Mathematics.AlgebraProperties
+import SFT.Mathematics.AlgebraReturns

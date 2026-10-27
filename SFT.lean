@@ -161,3 +161,4 @@ import SFT.Mathematics.GraphControls
 import SFT.Mathematics.GraphEvidence
 import SFT.Mathematics.GraphInduction
 import SFT.Mathematics.GraphExtension
+import SFT.Mathematics.GraphPartitionBalance

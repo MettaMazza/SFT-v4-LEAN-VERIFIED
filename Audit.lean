@@ -1538,3 +1538,11 @@ import SFT
 #print axioms SFT.Mathematics.GraphOperations.cutUnderFreshExtension
 #print axioms SFT.Mathematics.GraphOperations.balancePairedExtension
 #print axioms SFT.Mathematics.GraphOperations.freshGraphPairSupportOrder
+#print axioms SFT.Mathematics.GraphOperations.edgeFilterCongruent
+#print axioms SFT.Mathematics.GraphOperations.cutCheckHeldAppend
+#print axioms SFT.Mathematics.GraphOperations.cutHeldSelectionExtension
+#print axioms SFT.Mathematics.GraphOperations.cutCheckUnchangedAway
+#print axioms SFT.Mathematics.GraphOperations.freshHeldCutUpdate
+#print axioms SFT.Mathematics.GraphOperations.balancePairedExtensionIff
+#print axioms SFT.Mathematics.GraphOperations.balancedPairRequiresFreshTokens
+#print axioms SFT.Mathematics.GraphOperations.firstTokenPairBalanced

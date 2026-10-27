@@ -169,3 +169,4 @@ import SFT.Foundation.FoldEvidence
 import SFT.Foundation.PartEquivalenceEvidence
 import SFT.Foundation.ExactOperationsEvidence
 import SFT.Foundation.HalfOneEvidence
+import SFT.Mathematics.GeometryTopology

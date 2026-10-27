@@ -1044,9 +1044,11 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MATH-GEOMETRY-TOPOLOGY-001-a04f7de0ede6e234.json",
       "statement": "Computational geometry is forced as canonical finite cells plus an acyclic held boundary-incidence relation; dimension is retained boundary depth, adjacency is shared incidence, and distance is a shortest generated path with self-distance represented by empty One rather than numerical zero. Computational topology is a complete generated open-family closed under generated joins and pairwise intersections; continuity is exact inverse-image preservation.",
       "title": "Exact finite geometry and topology for computation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Mathematics/GeometryTopology.lean"
+      ],
+      "artifact_runtime_parity": "Four original source witness outcomes proved natively;16 source-behavior examples compiled; full Geometry/Topology program not yet implemented.",
       "registration_sha256": "a36aec5a0a5005e8a166e8ad3c65a465604116d38dcfabdce96715897c28524c",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1084,7 +1086,13 @@
         "statement": "Computational geometry is forced as canonical finite cells plus an acyclic held boundary-incidence relation; dimension is retained boundary depth, adjacency is shared incidence, and distance is a shortest generated path with self-distance represented by empty One rather than numerical zero. Computational topology is a complete generated open-family closed under generated joins and pairwise intersections; continuity is exact inverse-image preservation.",
         "status": "independently_replicated",
         "title": "Exact finite geometry and topology for computation"
-      }
+      },
+      "verified_scope": "Original incidence_is_well_formed, adjacent, is_finite_topology and is_continuous operations translated. General incidence/adjacency/continuity and exact finite-topology acceptance equivalences; finite generated join/intersection closure by induction; carrier-ordered open normalization and dictionary last-row precedence proved. Four original operational witnesses and16 input-behavior regressions pass. Boundary depth, shortest-path operation and full1024 source program remain unimplemented.",
+      "remaining": [
+        "sft/mathematics/geometry_topology/law.py::cell_dimension: translate registered-carrier guard, recursive face depth, visiting-set return-cycle rejection and complete boundary-depth derivation.",
+        "sft/mathematics/geometry_topology/law.py::path_distance: translate endpoint guard, undirected ordered BFS queue/path/visited semantics, empty-One identity, unreachable None and shortest retained path derivation.",
+        "sft/mathematics/geometry_topology/law.py::SPEC: translate full1024 ten-dimension candidate grammar, exact source explanations, remaining depth/path witnesses, original closure/induction/control records and generated_law.py program methods."
+      ]
     },
     {
       "branch": "mathematics",
@@ -188726,13 +188734,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-27T09:19:36.616703+00:00",
+  "updated_at": "2026-10-27T10:11:53.634986+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2760,
+    "in_progress": 1,
+    "pending": 2759,
     "fully_reconstructed_claims": 21,
-    "axiom_free_exported_results": 1576,
-    "axiom_free_audited_definitions_and_theorems": 2892
+    "axiom_free_exported_results": 1596,
+    "axiom_free_audited_definitions_and_theorems": 2929
   }
 }

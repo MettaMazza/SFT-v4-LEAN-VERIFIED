@@ -1438,3 +1438,11 @@ import SFT
 #print axioms SFT.Mathematics.GraphOperations.searchHitsTarget
 #print axioms SFT.Mathematics.GraphOperations.searchSkipsVisited
 #print axioms SFT.Mathematics.GraphOperations.searchExpandsFresh
+#print axioms SFT.Mathematics.GraphOperations.outgoingMembership
+#print axioms SFT.Mathematics.GraphOperations.searchPreservesProperty
+#print axioms SFT.Mathematics.GraphOperations.identityPathWitness
+#print axioms SFT.Mathematics.GraphOperations.pathWitnessTarget
+#print axioms SFT.Mathematics.GraphOperations.extendPathWitness
+#print axioms SFT.Mathematics.GraphOperations.acceptedGraphEndpoints
+#print axioms SFT.Mathematics.GraphOperations.reachableHasPath
+#print axioms SFT.Mathematics.GraphOperations.admittedReachabilityHasPath

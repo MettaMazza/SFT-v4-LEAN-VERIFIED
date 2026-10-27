@@ -1408,3 +1408,16 @@ Turn 101 publication receipt: pushed ffef5f4f49dc18060d5f5152ff2ad49eb3014eee to
 Next: prove general correspondence between this exact FIFO loop and complete path witnesses; formalise original recursive cycle search with finite-support termination and return-path correspondence.
 
 Turn102 preparation: reconciled earlier pending-reachability wording in coverage and paper with the new result. Manifest-only refresh first lacked hashlib in its script environment; supplied the import and regenerated it.
+
+Turn 102 publication receipt: pushed 8248c12d29a92359fd0f6f2e8c5c4c8c7ea1ba99 to public main; compared 892 files, 0 mismatches. Receipt retained for next checkpoint.
+
+## Turn 103 — 2026-10-27T02:57:45.167516+00:00
+
+1. Classified Turn102 as progress: exact FIFO search with termination proved and published. Read timeline, paper, coverage and current graph/search proofs. Continued general path-witness derivation, without changing executable search or verification machinery.
+2. Added GraphPathSoundness.lean. Proved outgoing-list membership iff retained held-to-node edge and absence from visited; proved any edge-closed frontier property preserved by the exact well-founded queue loop. Defined PathWitness as an actual complete node list satisfying original path validity, ending at target and with head origin. Proved identity witness, target membership and witness extension along a retained edge.
+3. First target build failed because Boolean conjunction with true is not definitionally the left Boolean. Rewrote the decidable reflexive equality explicitly instead; build passed. The initial reachability proof used an origin-membership premise. Strengthened it by carrying node=origin or complete-path-witness through the queue, obtaining origin membership from the first edge or original identity result.
+4. Proved acceptedGraphEndpoints directly from the original constructor guards. Proved admittedReachabilityHasPath for arbitrary queried origin/target with only successful original graph construction and successful reachability as premises. Target build passed. Eight new theorems and one path-witness definition; executable operations unchanged.
+5. Registered module in existing source correspondence/import/audit lists. Existing fresh verification PASS:1447 theorems,2566 audited definitions/theorems,zero axioms,4966 candidate rows. Retained TURN_103 build/audit/parity evidence. No unchanged search-driver rerun and no verifier/CI change.
+6. Updated coverage, README and scientific manuscript.21 entries in progress,2760 pending,zero whole entries complete. Prepared verified public checkpoint.
+
+Next: prove the converse that every complete valid path is found by the exact FIFO search, including visited/frontier closure invariants, then original cycle search and return-path correspondence.

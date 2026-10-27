@@ -1310,3 +1310,8 @@ import SFT
 #print axioms SFT.Mathematics.AlgebraOperations.extendedReturnSuccessIff
 #print axioms SFT.Mathematics.AlgebraOperations.oldSearchUniqueIffFreshFails
 #print axioms SFT.Mathematics.AlgebraOperations.returnMatesPreservedByExtension
+#print axioms SFT.Mathematics.AlgebraOperations.extendedImageCoverageIff
+#print axioms SFT.Mathematics.AlgebraOperations.extendedMapChecksIff
+#print axioms SFT.Mathematics.AlgebraOperations.oldImageCoveragePreserved
+#print axioms SFT.Mathematics.AlgebraOperations.oldPreservationCellPreserved
+#print axioms SFT.Mathematics.AlgebraOperations.operationMapPreservedByExtension

@@ -149,3 +149,4 @@ import SFT.Mathematics.OrderInduction
 import SFT.Mathematics.OrderBoundExtension
 import SFT.Mathematics.OrderHeldExtension
 import SFT.Mathematics.OrderFreshExtrema
+import SFT.Mathematics.GraphOperations

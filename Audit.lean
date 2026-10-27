@@ -1418,3 +1418,13 @@ import SFT
 #print axioms SFT.Mathematics.OrderOperations.joinRetainedOnCarrierExtension
 #print axioms SFT.Mathematics.OrderOperations.freshMeetIff
 #print axioms SFT.Mathematics.OrderOperations.freshJoinIff
+#print axioms SFT.Mathematics.GraphOperations.graphConstructorResult
+#print axioms SFT.Mathematics.GraphOperations.adjacentPairsZip
+#print axioms SFT.Mathematics.GraphOperations.pathMeaning
+#print axioms SFT.Mathematics.GraphOperations.emptyPathRejected
+#print axioms SFT.Mathematics.GraphOperations.identityPathIff
+#print axioms SFT.Mathematics.GraphOperations.cutResult
+#print axioms SFT.Mathematics.GraphOperations.cutMembership
+#print axioms SFT.Mathematics.GraphOperations.balanceMeaning
+#print axioms SFT.Mathematics.GraphOperations.adjacentPairsComposition
+#print axioms SFT.Mathematics.GraphOperations.pathCompositionIff

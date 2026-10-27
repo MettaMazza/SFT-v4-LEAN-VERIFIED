@@ -1046,9 +1046,10 @@
       "title": "Exact finite geometry and topology for computation",
       "lean_status": "in_progress",
       "lean_modules": [
-        "SFT/Mathematics/GeometryTopology.lean"
+        "SFT/Mathematics/GeometryTopology.lean",
+        "SFT/Mathematics/GeometryDimension.lean"
       ],
-      "artifact_runtime_parity": "Four original source witness outcomes proved natively;16 source-behavior examples compiled; full Geometry/Topology program not yet implemented.",
+      "artifact_runtime_parity": "Four original source witness outcomes proved natively;16 source-behavior examples compiled; full Geometry/Topology program not yet implemented. Eleven boundary-depth execution cases pass, including the two original dimension witness values, cycles, unrelated cycles and shared-face branches.",
       "registration_sha256": "a36aec5a0a5005e8a166e8ad3c65a465604116d38dcfabdce96715897c28524c",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1087,11 +1088,10 @@
         "status": "independently_replicated",
         "title": "Exact finite geometry and topology for computation"
       },
-      "verified_scope": "Original incidence_is_well_formed, adjacent, is_finite_topology and is_continuous operations translated. General incidence/adjacency/continuity and exact finite-topology acceptance equivalences; finite generated join/intersection closure by induction; carrier-ordered open normalization and dictionary last-row precedence proved. Four original operational witnesses and16 input-behavior regressions pass. Boundary depth, shortest-path operation and full1024 source program remain unimplemented.",
+      "verified_scope": "Original incidence_is_well_formed, adjacent, is_finite_topology and is_continuous operations translated. General incidence/adjacency/continuity and exact finite-topology acceptance equivalences; finite generated join/intersection closure by induction; carrier-ordered open normalization and dictionary last-row precedence proved. Four original operational witnesses and16 input-behavior regressions pass. Boundary depth now retains exact carrier guard, complete face recursion and active-stack cycle rejection. Both directions of equivalence between successful execution and the complete finite boundary-descent derivation are proved. Shortest-path operation and full1024 source program remain unimplemented.",
       "remaining": [
-        "sft/mathematics/geometry_topology/law.py::cell_dimension: translate registered-carrier guard, recursive face depth, visiting-set return-cycle rejection and complete boundary-depth derivation.",
         "sft/mathematics/geometry_topology/law.py::path_distance: translate endpoint guard, undirected ordered BFS queue/path/visited semantics, empty-One identity, unreachable None and shortest retained path derivation.",
-        "sft/mathematics/geometry_topology/law.py::SPEC: translate full1024 ten-dimension candidate grammar, exact source explanations, remaining depth/path witnesses, original closure/induction/control records and generated_law.py program methods."
+        "sft/mathematics/geometry_topology/law.py::SPEC: translate full1024 ten-dimension candidate grammar, exact source explanations, remaining path witness and exact depth witness program record, original closure/induction/control records and generated_law.py program methods."
       ]
     },
     {
@@ -188734,13 +188734,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-27T10:11:53.634986+00:00",
+  "updated_at": "2026-10-27T10:25:19.636160+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 1,
     "pending": 2759,
     "fully_reconstructed_claims": 21,
-    "axiom_free_exported_results": 1596,
-    "axiom_free_audited_definitions_and_theorems": 2929
+    "axiom_free_exported_results": 1611,
+    "axiom_free_audited_definitions_and_theorems": 2952
   }
 }

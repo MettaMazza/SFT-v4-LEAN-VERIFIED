@@ -139,3 +139,6 @@ import SFT.Mathematics.AlgebraDictionaryExtension
 import SFT.Mathematics.OrderOperations
 import SFT.Mathematics.OrderMeaning
 import SFT.Mathematics.OrderExtrema
+import SFT.Mathematics.OrderBoundExistence
+import SFT.Mathematics.OrderMaps
+import SFT.Mathematics.OrderWitnesses

@@ -121,3 +121,4 @@ import SFT.Mathematics.CombinatorialCollections
 import SFT.Mathematics.SelectionProvenance
 import SFT.Mathematics.SelectionDiscreteLink
 import SFT.Mathematics.AlgebraOperations
+import SFT.Mathematics.AlgebraTableCoverage

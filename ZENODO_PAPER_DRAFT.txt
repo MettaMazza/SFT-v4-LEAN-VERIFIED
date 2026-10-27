@@ -5,7 +5,7 @@ Working manuscript — unpublished
 
 Abstract
 
-We present a native Lean formalisation of Smithian Fold Theory V3, preserving its definitions, dependency order, declared domains and zero-axiom, zero-free-parameter constraints. The formalisation begins with the operational root, There Is No Nothing, followed by the structural One and exact positive finite count. At the scope established here, their registered candidate grammars contain two, six and ten classes respectively. Constructive proofs establish exhaustive enumeration, the unique surviving class and acceptance of that survivor for each grammar. The 1,205 audited proofs have no axiom dependencies. The translated classifications agree with the V3 artifacts on every candidate's order, identifier, exact form, decision and reason.
+We present a native Lean formalisation of Smithian Fold Theory V3, preserving its definitions, dependency order, declared domains and zero-axiom, zero-free-parameter constraints. The formalisation begins with the operational root, There Is No Nothing, followed by the structural One and exact positive finite count. At the scope established here, their registered candidate grammars contain two, six and ten classes respectively. Constructive proofs establish exhaustive enumeration, the unique surviving class and acceptance of that survivor for each grammar. The 1,216 audited proofs have no axiom dependencies. The translated classifications agree with the V3 artifacts on every candidate's order, identifier, exact form, decision and reason.
 
 1. Model and scope
 
@@ -213,7 +213,7 @@ The Lean implementation uses leanprover/lean4:v4.35.0. The build command is lake
 
 The public formalisation repository is https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED.
 
-Canonical JSON uses the source ASCII-escaping, compact-separator and sorted-key rules on the Root evidence domain. SHA-256 is implemented constructively with its fixed algorithm constants. All 2,170 audited explicit definitions and theorems have no axiom dependencies. Sixteen byte-message checks and ten JSON checks agree with Python standard-library results; these execution checks are separate from a general proof of algorithm correspondence, which remains outstanding. The fixed Root boundary is ASCII, so its lowercase and substring operations preserve the source predicate exactly. These host operations introduce no free scientific parameters.
+Canonical JSON uses the source ASCII-escaping, compact-separator and sorted-key rules on the Root evidence domain. SHA-256 is implemented constructively with its fixed algorithm constants. All 2,181 audited explicit definitions and theorems have no axiom dependencies. Sixteen byte-message checks and ten JSON checks agree with Python standard-library results; these execution checks are separate from a general proof of algorithm correspondence, which remains outstanding. The fixed Root boundary is ASCII, so its lowercase and substring operations preserve the source predicate exactly. These host operations introduce no free scientific parameters.
 
 The typed forcing-gate implementation is additionally checked on 384 combinations of identifier order and cardinality, survivor flags, reason content and hash syntax. The Unicode whitespace predicate agrees with the host language over all 1,114,112 code points.
 
@@ -353,4 +353,10 @@ Finite algebraic operation tables
 
 The operation-table constructor retains the registered carrier and ordered input/output rows. It first requires a nonempty distinct carrier, then checks that row count equals the complete ordered pair support and that the input sets coincide, and finally checks every result belongs to the carrier. These are the original source checks in their original order. Accepted tables preserve their data, cover exactly the carrier pair support, and have carrier-closed results.
 
-Application filters the retained rows by the requested ordered input pair and returns a result only when exactly one row matches. Empty or multiple matches retain the source error. Fresh execution matches526 constructor cases and2630 lookup cases, including complete two-member operations in every row order and malformed inputs. General single-valuedness from the constructor conditions and the remaining algebraic property derivations are tracked separately.
+Application filters the retained rows by the requested ordered input pair and returns a result only when exactly one row matches. Empty or multiple matches retain the source error. Fresh execution matches526 constructor cases and2630 lookup cases, including complete two-member operations in every row order and malformed inputs. General single-valuedness and total lookup follow from the constructor conditions as established below; the remaining algebraic property derivations are tracked separately.
+
+Complete single-valued operation support
+
+The constructor’s input coverage and row cardinality jointly force the projected input rows to be a permutation of the complete ordered pair support. This follows constructively for arbitrary finite size: locate the first support element in the proposed rows, remove that occurrence, and retain coverage and equal length for the remaining support. Since the carrier is distinct, the complete pair support is distinct, hence so is the projected row-input list.
+
+Consequently, for every pair of carrier members the actual matching-row filter contains exactly one row. The translated apply operation returns its result, and the constructor’s closure check proves that result remains in the registered carrier. No uniqueness assumption is added to the source guards; it is derived from their original coverage and cardinality conditions.

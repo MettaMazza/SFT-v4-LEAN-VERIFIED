@@ -1204,3 +1204,14 @@ import SFT
 #print axioms SFT.Mathematics.AlgebraOperations.emptyCarrierRejected
 #print axioms SFT.Mathematics.AlgebraOperations.singleMatchApplied
 #print axioms SFT.Mathematics.AlgebraOperations.noMatchRejected
+#print axioms SFT.Mathematics.AlgebraOperations.permutationDistinctGeneric
+#print axioms SFT.Mathematics.AlgebraOperations.splitMemberGeneric
+#print axioms SFT.Mathematics.AlgebraOperations.insertionPermutationGeneric
+#print axioms SFT.Mathematics.AlgebraOperations.completeEqualLengthPermutation
+#print axioms SFT.Mathematics.AlgebraOperations.pairProductDistinct
+#print axioms SFT.Mathematics.AlgebraOperations.acceptedInputsPermuteSupport
+#print axioms SFT.Mathematics.AlgebraOperations.acceptedInputsDistinct
+#print axioms SFT.Mathematics.AlgebraOperations.filterEmptyWhenFalse
+#print axioms SFT.Mathematics.AlgebraOperations.uniqueProjectedFilter
+#print axioms SFT.Mathematics.AlgebraOperations.inputTestIff
+#print axioms SFT.Mathematics.AlgebraOperations.acceptedLookupTotal

@@ -131,3 +131,4 @@ import SFT.Mathematics.AlgebraWitnesses
 import SFT.Mathematics.AlgebraGrammar
 import SFT.Mathematics.AlgebraControls
 import SFT.Mathematics.AlgebraEvidence
+import SFT.Mathematics.AlgebraInduction

@@ -1,0 +1,88 @@
+{
+  "census": {
+    "candidates": [
+      {
+        "candidate_id": "unpresented-absence",
+        "exact_form": "No statement, denial, record, trace or identity is presented; there is therefore no operational counterexample to admit.",
+        "trace_hash": "sha256:8b0f607cd624d7e45fb5af28484d0f9ae12f56636c09e7d0b72730f572a81d0a"
+      },
+      {
+        "candidate_id": "presented-occurrence",
+        "exact_form": "A statement, denial, record, trace or identity is presented; that presentation is an occurrence and therefore is not nothing.",
+        "trace_hash": "sha256:6cb18c5ee96566de7b9e9a08633e48be1e3dd7590295920858889f67fee04222"
+      }
+    ],
+    "completeness_certificate_hash": "sha256:15bdb6e089afecc0a45498eabf39d25a1c93e2f5de8346fe998860bde750ed9d",
+    "expected_cardinality": 2,
+    "generation_rule": "Partition every purported operational counterexample by whether it emits an identifiable presentation at the proof boundary.",
+    "grammar_boundary": "All operational statements, denials, records and proof challenges, independent of their internal length or notation."
+  },
+  "closure": {
+    "exact_boundary": "All operational statements, denials, records and proof challenges, independent of their internal length or notation.",
+    "generality_certificate_hash": "sha256:67bee220b6f1c353142b2021a3c83640c1ed69235429155e6ebdf3bc1ee5a608",
+    "minimality_passed": true,
+    "named_shape_uniqueness_passed": true,
+    "proof_hash": "sha256:b06285bf05b81202ccd4331e50c6d5e4f32db07d4f14aecbcb38ac8825ac7716",
+    "scope": "depth_independent"
+  },
+  "controls": [
+    {
+      "expected_behavior": "reject because no counterexample identity or trace exists",
+      "kind": "false_premise",
+      "observed_behavior": "unpresented-absence is not admissible as a counterexample",
+      "passed": true,
+      "receipt_hash": "sha256:afe5d206d2c2de5d7ec6459854a1a4dec09310b2b3514f9569325262c70090a7"
+    },
+    {
+      "expected_behavior": "reject source drift before enumeration",
+      "kind": "tampered_source",
+      "observed_behavior": "the altered identity differs from the registered identity",
+      "passed": true,
+      "receipt_hash": "sha256:4c7f233ed8e6c655aaf1094f2123f8642425ea92e9b9176dc8598b4adaccbc36"
+    },
+    {
+      "expected_behavior": "reject because forcing no longer has a unique survivor",
+      "kind": "tampered_artifact",
+      "observed_behavior": "the tampered survivor set contains both named classes",
+      "passed": true,
+      "receipt_hash": "sha256:a4a220c6532648805adcc82501fa683fc4c87572af689a0a9022abd97255fc0a"
+    },
+    {
+      "expected_behavior": "refuse the broadened claim because it supplies no checkable object",
+      "kind": "boundary",
+      "observed_behavior": "the theorem remains scoped to admissible operational objects",
+      "passed": true,
+      "receipt_hash": "sha256:8d3a9ef27fade730c4c3484657e789118f8f2a67045e21fecc093da702fad8c0"
+    }
+  ],
+  "decisions": [
+    {
+      "candidate_id": "unpresented-absence",
+      "proof_hash": "sha256:a05b0ae640948852199f68e8042506212c38e6d0c3bdc72a1c1c870029626eef",
+      "reason": "Without a presentation there is no counterexample object to admit.",
+      "survives": false
+    },
+    {
+      "candidate_id": "presented-occurrence",
+      "proof_hash": "sha256:c6b4d78467ea08f053d781f0f024c4fbc5960b53eb8f4f044ebdb20811156044",
+      "reason": "Presentation supplies the witnessed occurrence required by the theorem.",
+      "survives": true
+    }
+  ],
+  "registration": {
+    "axioms": [],
+    "branch": "foundation",
+    "claim_id": "SFT-ROOT-THERE-IS-NO-NOTHING",
+    "dependencies": [],
+    "evidence_mode": "formal",
+    "free_parameters": [],
+    "provenance": [
+      "direct_forcing"
+    ],
+    "root_theorems": [],
+    "source_hash": "sha256:c3de6a8fc34d927dce243992a5a0de610f0c8701084ae08b3c9828838f75d915",
+    "statement": "No admissible operational statement, denial, record, proof object or derivational object is nothing: absence presents no counterexample, while every presented counterexample is an occurrence.",
+    "title": "Premise-free operational root theorem"
+  },
+  "unknown_rejected": true
+}

@@ -1,0 +1,136 @@
+{
+  "census": {
+    "candidates": [
+      {
+        "candidate_id": "omitted-root",
+        "exact_form": "Representation has none coverage of the admitted root occurrence and relation no-extra.",
+        "trace_hash": "sha256:ab3bf2a7990ce67f52063b78af5a48c211c4228cd408243dc087c2b275779d95"
+      },
+      {
+        "candidate_id": "replacement-extra",
+        "exact_form": "Representation has none coverage of the admitted root occurrence and relation has-extra.",
+        "trace_hash": "sha256:76f402b7417cebd506e7cee8818524ebfaed73e244dde2cc30cd7c3a551a22f6"
+      },
+      {
+        "candidate_id": "fragmented-root",
+        "exact_form": "Representation has proper coverage of the admitted root occurrence and relation no-extra.",
+        "trace_hash": "sha256:8adaa4ecace7f1914f47b40903a895113c25d44f928513ca29701f8787fad689"
+      },
+      {
+        "candidate_id": "fragment-plus-extra",
+        "exact_form": "Representation has proper coverage of the admitted root occurrence and relation has-extra.",
+        "trace_hash": "sha256:9f299064dc7fc26084c0cbeeda5a672213bdc3369f3f8fc78f8cd3799518b30d"
+      },
+      {
+        "candidate_id": "exact-self-whole",
+        "exact_form": "Representation has complete coverage of the admitted root occurrence and relation no-extra.",
+        "trace_hash": "sha256:258126da54beeac598231fbe1bed20681ee32cbdd5bd601cf8b60af4075e92ea"
+      },
+      {
+        "candidate_id": "whole-plus-extra",
+        "exact_form": "Representation has complete coverage of the admitted root occurrence and relation has-extra.",
+        "trace_hash": "sha256:01e607731f9aeeabd723352913692372bccac11fa801d9de825b64e9a229137c"
+      }
+    ],
+    "completeness_certificate_hash": "sha256:4d733e780b0e83a927e6c34268290ee82101f0a1f790e523fceb2ca3b581d892",
+    "expected_cardinality": 6,
+    "generation_rule": "Generate the product of every root-coverage relation (none, proper, complete) with whether unforced extra material is present.",
+    "grammar_boundary": "All representations classified solely by coverage of the admitted root occurrence and addition of material not supplied by that occurrence."
+  },
+  "closure": {
+    "exact_boundary": "All representations classified solely by coverage of the admitted root occurrence and addition of material not supplied by that occurrence.",
+    "generality_certificate_hash": "sha256:74e4c3761ec998027e1b12ed7c5f2581cd45132d11134cee15e13dffc8c64a19",
+    "minimality_passed": true,
+    "named_shape_uniqueness_passed": true,
+    "proof_hash": "sha256:87c7bd8ee1b561223c7d93309ebfd8662b89cff819f5a38b30f50dd5c48f5b27",
+    "scope": "depth_independent"
+  },
+  "controls": [
+    {
+      "expected_behavior": "reject an omitted root as a representation of the admitted occurrence",
+      "kind": "false_premise",
+      "observed_behavior": "omitted-root does not survive",
+      "passed": true,
+      "receipt_hash": "sha256:0dceced6a8585727559c36b83c2f4b0d0061703175b7ab66d4a653b3be67600a"
+    },
+    {
+      "expected_behavior": "reject a changed source identity",
+      "kind": "tampered_source",
+      "observed_behavior": "tampered source identity differs",
+      "passed": true,
+      "receipt_hash": "sha256:e4188d90cf7ccec55e447016899f3e85a391963b406e3ff5f914e99dcc3daaa3"
+    },
+    {
+      "expected_behavior": "reject addition of an unforced extra to the complete root",
+      "kind": "tampered_artifact",
+      "observed_behavior": "whole-plus-extra does not survive",
+      "passed": true,
+      "receipt_hash": "sha256:c857b9ae91fe5c805ba7e9d7b170f22ea1c25045938c3ae5c2599c5f948a199b"
+    },
+    {
+      "expected_behavior": "refuse numerical magnitude claims not yet derived",
+      "kind": "boundary",
+      "observed_behavior": "the admitted meaning is structural self-wholeness only",
+      "passed": true,
+      "receipt_hash": "sha256:f9b13fb3dc82eeffcfa15517eb3320854a0b96759feb5e9846c0c352df66bce9"
+    }
+  ],
+  "decisions": [
+    {
+      "candidate_id": "omitted-root",
+      "proof_hash": "sha256:638e651d319bdea79d55c6c36849378872a99e0d48343c4b7caa6b85a93f151e",
+      "reason": "It does not retain the admitted root occurrence.",
+      "survives": false
+    },
+    {
+      "candidate_id": "replacement-extra",
+      "proof_hash": "sha256:c6493c8c7ae0776d313afd11f6d7846b26db8dc2ea597568210531258b387ca1",
+      "reason": "It does not retain the admitted root occurrence.",
+      "survives": false
+    },
+    {
+      "candidate_id": "fragmented-root",
+      "proof_hash": "sha256:dab5ba1c22dca023d5c38434a0987490c3d1bb9525095ad2975d74df0ecac403",
+      "reason": "It presupposes a cut and fails to retain the complete admitted identity.",
+      "survives": false
+    },
+    {
+      "candidate_id": "fragment-plus-extra",
+      "proof_hash": "sha256:5481c32d5600ff812dc3460e9796e26be160ef39a9b2c0441dc6a563732a9472",
+      "reason": "It presupposes a cut and fails to retain the complete admitted identity.",
+      "survives": false
+    },
+    {
+      "candidate_id": "exact-self-whole",
+      "proof_hash": "sha256:80937d3b539845ece0e167e0cafc8e3220609d0cd25e7c5670c71c856baa83d0",
+      "reason": "It retains the complete admitted occurrence without omission or addition.",
+      "survives": true
+    },
+    {
+      "candidate_id": "whole-plus-extra",
+      "proof_hash": "sha256:4b4a458070f0eb421838e93d79667908579afaae995913e359f88cf66183a024",
+      "reason": "It introduces material not supplied by the sole admitted dependency.",
+      "survives": false
+    }
+  ],
+  "registration": {
+    "axioms": [],
+    "branch": "foundation",
+    "claim_id": "SFT-FOUNDATION-ONE-001",
+    "dependencies": [
+      "SFT-ROOT-THERE-IS-NO-NOTHING"
+    ],
+    "evidence_mode": "formal",
+    "free_parameters": [],
+    "provenance": [
+      "forward_forcing"
+    ],
+    "root_theorems": [
+      "SFT-ROOT-THERE-IS-NO-NOTHING"
+    ],
+    "source_hash": "sha256:6ae512f49a7053affbd2587a859679ebc636a039a3e1d4a22f59a14f58c3a0f3",
+    "statement": "The unique minimal representation of the admitted root occurrence is its complete self-whole with no unforced addition; this structural identity is the One.",
+    "title": "The structural One"
+  },
+  "unknown_rejected": true
+}

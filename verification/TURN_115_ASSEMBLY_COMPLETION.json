@@ -1,0 +1,21 @@
+{
+  "claim_id": "SFT-FOUNDATION-FOLD-ASSEMBLY-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "status": "complete",
+  "dependencies": [
+    "SFT-FOUNDATION-COUNT-001",
+    "SFT-FOUNDATION-FOLD-001"
+  ],
+  "source_component_correspondence": {
+    "extend/support_after_extensions": "FoldAssembly.extend/supportAfterExtensions/checkedSupport; exactFiniteSupport and supportIffLengthAndHeldLabels",
+    "closure base/successor/uniqueness": "FoldAssembly supportAfterExtensions base equation, successorMembership, appendInjective, branchesDistinct, allFiniteSupportsUnique",
+    "closure return": "FoldAssembly bothBranchesReturn/everySuccessorReturns/returnPredecessorUnique; FoldAssemblyTrace canonicalAssemblyFacts and allReturnRecordsGenerated",
+    "closure minimality/unique shape/generality": "AssemblySupport and AssemblyRecords recordAcceptanceIff, canonicalRecordsAccepted, missingTransitionRejected, missingReturnRejected, incorrectReturnRejected; FoldAssemblyGrammar uniqueSurvivor and exhaustive product; proofs quantify every finite depth",
+    "candidate_records/survives/decision_reason/completeness_record": "FoldAssemblyGrammar complete192 product; AssemblyEvidence candidateRecord/completenessRecord and censusData",
+    "control_records": "AssemblyControls original source predicates, native proofs and complete fresh output hashes",
+    "FoldAssemblyProgram methods": "AssemblyEvidence registrationData/censusData/decideCandidate/closure; AssemblyControls.runControls"
+  },
+  "verification": "TURN_115_PROGRAMS/SFT-FOUNDATION-FOLD-ASSEMBLY-001.report.json",
+  "axiom_audit": "TURN_115_ALL_DECLARATIONS_AUDIT.log",
+  "remaining_source_components": []
+}

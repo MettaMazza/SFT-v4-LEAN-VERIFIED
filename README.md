@@ -47,14 +47,14 @@ flowchart LR
 
 Entry completion means the entry’s actual pinned V3 content is formalised and its applicable checks pass. Entries are completed in registered dependency order. Missing work must identify a specific V3 source component; general host-library or unrelated platform tasks do not hold a scientific entry open.
 
-**1,558 proofs completed · 5,478 candidate records matched · 5 model entries complete · 16 entries with existing work.**
+**1,558 proofs completed · 5,478 candidate records matched · 6 model entries complete · 15 entries with existing work.**
 
 | Progress measure | Current result |
 | :--- | :--- |
 | Lean theorems proved | **1,558**, all with zero axiom dependencies |
 | Definitions and theorems audited | **2,819**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **5,478 / 5,478** across Root, One, Count, Part, Part Equivalence, Fold, Fold Assembly, Exact Operations, Half-One, Fold Dynamics, Form Grammar, Form Enforcement, Measured Value Boundary, Exact Arithmetic Discrete Objects and Primitive Map Uniqueness |
-| Complete model entries | **5 / 2,781** — Root, One, Count, Part and Fold complete |
+| Complete model entries | **6 / 2,781** — Root, One, Count, Part, Fold and Fold Assembly complete |
 
 | Source component | Verified work | Evidence |
 | :--- | :--- | :--- |
@@ -64,7 +64,7 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | **Part — complete** | General held/whole coordinate derivation, full192 grammar, original closure/controls and all program methods | [Completion evidence](verification/TURN_113_PART_COMPLETION.json) |
 | **Common refinement** | Generated pair cells, complete index pairing, identity/reversal/composition and uniform-refinement preservation | [Derivation](SFT/Foundation/CommonRefinement.lean) |
 | **Fold — complete** | Minimal-stage derivation, full288 grammar, original closure/controls and all source program methods | [Completion evidence](verification/TURN_114_FOLD_COMPLETION.json) |
-| **Fold assembly** | 192-form grammar; full finite stage, transition and return traces; canonical witness realised with complete unique support | [Assembly derivation](SFT/Foundation/FoldAssembly.lean) |
+| **Fold assembly — complete** | General support, transition, return and proposal proofs; full192 program matches V3 | [Completion evidence](verification/TURN_115_ASSEMBLY_COMPLETION.json) |
 | **Exact operations** | Canonical Fraction reduction, exact value preservation, positive-domain guards, normalized cast/Fold/Take, exact unison and Fold-fixed One; complete 128-form grammar and source controls | [Operations](SFT/Foundation/ExactOperations.lean) · [Reduction proofs](SFT/Foundation/FractionReduction.lean) |
 | **Half-One** | Complete first-Fold selection classes, label-exchange invariance, unique self-junction coordinate, self-complementarity and Fold-to-One; all 128 source candidates and four controls | [Derivation](SFT/Foundation/HalfOneDerivation.lean) |
 | **Fold dynamics** | Exactly two preimages for every admitted image, with arbitrary-preimage exhaustion; full-domain phase laws, exact sorted output and executable uniformity for every even division and minimal two-cycle | [Derivation](SFT/Foundation/FoldDynamics.lean) |
@@ -152,3 +152,5 @@ The scripts read pinned v3 source and artifacts without importing or executing v
 <p align="center"><strong>Smithian Fold Theory · Maria Smith</strong><br/><sub>V3 is the source. Lean is the proof language. Exact correspondence is the requirement.</sub></p>
 
 Batch review: [all 21 existing entries](verification/TURN_114_BATCH_EXISTING_WORK.json). Run `python3 verification/batch_existing_work.py` for the existing global build/audit/parity and exact missing-method inventory. Interface presence alone does not establish derivation completion.
+
+Full batch validation: **18 / 18 implemented programs pass**, covering all **4,198 actual lookup decisions** and complete registration/census/closure/control/hash outputs. Three existing entries lack program methods. The [21-entry source review](verification/TURN_115_SOURCE_REVIEW.json) lists concrete source gaps and incomplete registered dependencies; the [batch output report](verification/TURN_115_PROGRAMS/REPORT.json) records each comparison. Run `ulimit -s 65520` and then `python3 verification/batch_program_outputs.py` from the project directory to reproduce.

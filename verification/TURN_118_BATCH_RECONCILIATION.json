@@ -1,0 +1,1510 @@
+{
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "status": "PASS",
+  "entries_reconciled": 21,
+  "newly_completed": [
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-ALGEBRA-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001"
+  ],
+  "fully_completed": 15,
+  "remaining_implemented_entries": [
+    {
+      "claim_id": "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [
+        "sft/foundation/measurement_boundary.py::protocol_accepts has no Boolean-only guard and Python and returns an operand: protocol_accepts(all_rows=True, source=\"source-id\") returns \"source-id\". MeasurementProtocol restricts arguments/output to Bool; preserve the original input/output behavior or establish the exact source-declared input restriction before claiming this procedure fully translated."
+      ],
+      "dependencies": [
+        "SFT-FOUNDATION-FORM-ENFORCEMENT-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/MeasurementGrammar.lean",
+          "sha256": "b384149e8605595babf225d2282b3f84600fabc00f423c93ffece97599864224",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/MeasurementProtocol.lean",
+          "sha256": "6a90641ea4c2f9bc0b4b60894ec870d70c2886f9962bcba8b7a5370976f51013",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/MeasurementControls.lean",
+          "sha256": "5657ec3eba6a65786be830d841922ba8b4be3114aff000997cb2159e6483dc78",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/MeasurementEvidence.lean",
+          "sha256": "914ce1f8c2f388642aebb4e24a2eb0b4b0688611090618ea7850f54d43aff7b3",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001.report.json",
+      "program_pass": true,
+      "status": "in_progress",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [
+        "sft/foundation/exact_operations.py:140 ExactOperationsProgram.registration \u2014 translate this original program method and compare its output with V3",
+        "sft/foundation/exact_operations.py:149 ExactOperationsProgram.generate_candidates \u2014 translate this original program method and compare its output with V3",
+        "sft/foundation/exact_operations.py:154 ExactOperationsProgram.decide_candidate \u2014 translate this original program method and compare its output with V3",
+        "sft/foundation/exact_operations.py:159 ExactOperationsProgram.closure_evidence \u2014 translate this original program method and compare its output with V3"
+      ],
+      "dependencies": [
+        "SFT-FOUNDATION-ONE-001",
+        "SFT-FOUNDATION-COUNT-001",
+        "SFT-FOUNDATION-PART-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/ExactOperationsGrammar.lean",
+          "sha256": "4903d2c17afc971f626d6a2fd4628ac51a75f29f78a4a30a3efb10f73fb90e5a",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/ExactCast.lean",
+          "sha256": "511c8b799bf99d04d4c33bb434787298f59e599b885e0347e2b7ddc882818908",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/ExactPartCarrier.lean",
+          "sha256": "2331fd524e0620a2a9ecb63da9ac9a4ae057642604beec2a3ac82ff74558d0cc",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FractionReduction.lean",
+          "sha256": "08313f43f686c378d3b0b189acc7a998ecfd8f2a82195b0ca696234390948628",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/ExactOperations.lean",
+          "sha256": "c592badf6dfeb970a4cfc4a6290f70748f43775f8f34e649b4fd1839dd2bf7b4",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/ExactOperationsControls.lean",
+          "sha256": "ec1cd66df24da29a0fc379f3f1916832ece52c3cb9927c114169dcc45d17f3c0",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": null,
+      "program_pass": false,
+      "status": "in_progress",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-HALF-ONE-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [
+        "sft/foundation/half_one.py:92 HalfOneProgram.registration \u2014 translate this original program method and compare its output with V3",
+        "sft/foundation/half_one.py:94 HalfOneProgram.generate_candidates \u2014 translate this original program method and compare its output with V3",
+        "sft/foundation/half_one.py:96 HalfOneProgram.decide_candidate \u2014 translate this original program method and compare its output with V3",
+        "sft/foundation/half_one.py:99 HalfOneProgram.closure_evidence \u2014 translate this original program method and compare its output with V3"
+      ],
+      "dependencies": [
+        "SFT-FOUNDATION-FOLD-001",
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+        "SFT-FOUNDATION-PART-EQUIVALENCE-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/HalfOneGrammar.lean",
+          "sha256": "81c8e5bf7730ba88fbf4ba231d0cda9dae715d41e66f525247e2005e66b90cc8",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/HalfOneDerivation.lean",
+          "sha256": "531f58b16e94870dc67b888e2fce23c97909bef5cfa124cda9fa3cd1f470c183",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/HalfOneControls.lean",
+          "sha256": "da9396aac88a0e2b966dbc9d822988f69bd9f258a29f4b3153f39d8c904b9be7",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": null,
+      "program_pass": false,
+      "status": "in_progress",
+      "incomplete_dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001"
+      ]
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-FOLD-DYNAMICS-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+        "SFT-FOUNDATION-HALF-ONE-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/FoldDynamicsGrammar.lean",
+          "sha256": "9e81ab3a5384860fd65d8217a2305f30668ec41e1f51f4f9f95a0fcb1f6cf425",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/ExactValueIdentity.lean",
+          "sha256": "f45b801d591c2a0d265bf1b9b5cdd0673b5d3a90478bb3649d33715481fb31f7",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldDynamics.lean",
+          "sha256": "b8137c2a21e1d89453e5c00beed24c0fd4f8ac4ca368cc39e4ba65aae6fd472d",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldCastLaws.lean",
+          "sha256": "c9723b27aeb2867c2e59a74a3b9ef7fd071c87f3ccf9700b8926edc6ed0febaa",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldPhaseLaws.lean",
+          "sha256": "09e2cdb55653d8a3a1e36efe1ea48fcfde09f226b4c223bc76ab8877a93a848d",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldPhaseFull.lean",
+          "sha256": "962898a29792aacfa3c2175eccda021dcf2901ed643f85a7227cd76f00c6507c",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldFibres.lean",
+          "sha256": "b4bbdc87f7a842ea71552ef78d9715dbaee46c502ab6d4ec4b113ae297ec6fb9",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldUniform.lean",
+          "sha256": "f23cfb6e1cfdd8f6f84b4eb521460a3e205482a4a16fbda9b23ff2e1b402cafb",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldUniformOrder.lean",
+          "sha256": "b1ca0ced029b45d6f844fd29a32edc6c6f42c4a63c79be0ced4ae74757c22d29",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldSorted.lean",
+          "sha256": "af04efba944d2393f19c16bf7fad1174b0646774904a60d0f012b73d93316b4e",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldUniformCheck.lean",
+          "sha256": "5975ff3d935594f7bf77ff47a982c9252f1698f135e22755aa18890e2d32457f",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldDynamicsControls.lean",
+          "sha256": "6789cc6284adec771085fc131cff56b778899d2c239459822a82f07387e1187e",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldDynamicsEvidence.lean",
+          "sha256": "79c4baee826fa99564e2703ebfc857f149bbb691e7eb18752f0ab67eb6e4352a",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-FOLD-DYNAMICS-001.report.json",
+      "program_pass": true,
+      "status": "in_progress",
+      "incomplete_dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+        "SFT-FOUNDATION-HALF-ONE-001"
+      ]
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-PRIMITIVE-MAP-UNIQUENESS-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+        "SFT-FOUNDATION-FOLD-DYNAMICS-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/PrimitiveMapGrammar.lean",
+          "sha256": "7ee31da10e9a2fb44fa2729b5be1da74773520dae15de7b686612e7c9470ffcd",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PrimitiveMaps.lean",
+          "sha256": "b5a99527fbb9160ac92f8c977606092e299508a1aaec4279b46dd821300a3da2",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PrimitiveSquare.lean",
+          "sha256": "e0780802c173e864ce2102d1fe979d54bff56f19f7da5b527327d70487ce1d05",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PrimitiveMinimality.lean",
+          "sha256": "51e5b4afc6734e3da0cdb263d7b9b992960cc9d4ab25c2116aea05109d73a18f",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PrimitiveMapControls.lean",
+          "sha256": "cc8feb4dc0b1939ff36741256ddbe42c5c2be1b94424d3b2b0da5b0e26295e09",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PrimitiveMapEvidence.lean",
+          "sha256": "32f539bee6bb3f61cb39adaa157322d49eaebf45456a3d86b4df114ba32c2039",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PrimitiveReductions.lean",
+          "sha256": "f09e0cc03ecdbaaa514eeb696c95055657df68e2babd3ce084dcb420cf1c0818",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-PRIMITIVE-MAP-UNIQUENESS-001.report.json",
+      "program_pass": true,
+      "status": "in_progress",
+      "incomplete_dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+        "SFT-FOUNDATION-FOLD-DYNAMICS-001"
+      ]
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-DERIVATION-TRACE-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+        "SFT-FOUNDATION-FORM-ENFORCEMENT-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/DerivationTraceGrammar.lean",
+          "sha256": "60ca38ef17b4af9c2d50f2020b4d544fa6fbcd64ee00c0dc36a4711cbaaa6966",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/DerivationTrace.lean",
+          "sha256": "5a62a521b0b4255b2213525b7b620a153faadf88070ab37a7fed042b4291d23b",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/DerivationTraceWitnesses.lean",
+          "sha256": "5cac93354f8828934cddb126fbc4ab8da51a2e5b85530e18f721a03688730b74",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/DerivationTraceControls.lean",
+          "sha256": "f7021ba6ecfb71ef47ae184636de2b7916f0f23475a3cb1fb96067dce9c04a5f",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/DerivationTraceEvidence.lean",
+          "sha256": "b948261d2c53f1411a401969c3fd5ca92f124e1b85c70daa6e703aad1378b710",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-DERIVATION-TRACE-001.report.json",
+      "program_pass": true,
+      "status": "in_progress",
+      "incomplete_dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "claim_id": "SFT-ROOT-THERE-IS-NO-NOTHING",
+      "prior_status": "complete",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/Root.lean",
+          "sha256": "bdbbd7ad4d17e1355dd485d986cebf37c2fca5b63aac6662c8208567d93440db",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/RootEvidence.lean",
+          "sha256": "18438a5c31501ce72a44adf0f7c298bd3fcc55d24ce14a36055a83f7d7091ec7",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/RootGate.lean",
+          "sha256": "fb780712b2ccbac189a543b072dd136c5000b84116ac7b713f2f25fd140a4cf4",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/RootDerivation.lean",
+          "sha256": "51172d5d1e62456607c9e306964b17417e96058723ee950f5e143d8db29b48cf",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-ROOT-THERE-IS-NO-NOTHING.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_111_ROOT_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-ONE-001",
+      "prior_status": "complete",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-ROOT-THERE-IS-NO-NOTHING"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/One.lean",
+          "sha256": "d3eed1570c5671c4b82e1d67cbfea6470f42d71c959455cd831be355f8aabec9",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/OneDerivation.lean",
+          "sha256": "d97ab78076ab8f2003edec199feb13e028db79d64a6de398634f623ccd94e4af",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/OneEvidence.lean",
+          "sha256": "818dcdcfb646bb899751078f52e28741e53980b673a4d0eee8b08f09c268619b",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-ONE-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_112_ONE_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-COUNT-001",
+      "prior_status": "complete",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-ONE-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/Count.lean",
+          "sha256": "eca10338ab54f449eb378f1f830983681d7159c6a95adc6f28f60c0f2946db7e",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/CountTrace.lean",
+          "sha256": "03d6200c2f44e96524a09d18ee5b906f6ad638819752cd9ae7f2dc5ee7788221",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/CountRepresentation.lean",
+          "sha256": "5ffff179e23c6fdde0839319a7487d5f2f23809653c7b79bd83176718f93ad9c",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/CountEvidence.lean",
+          "sha256": "ee5f047ae473c3df3ee8c18434a7f907f08de908c49cc5a81f02412c7aaee2f8",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-COUNT-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_112_COUNT_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-PART-001",
+      "prior_status": "complete",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-ONE-001",
+        "SFT-FOUNDATION-COUNT-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/Part.lean",
+          "sha256": "af07f9acafc03de46a75a127fd36d388964cb5a44c3a98675a52373d31a4da45",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PartSelection.lean",
+          "sha256": "49b0d02086a5131af96d1a668a9f8cbc2b14e32628d0d6c91793b05fe23ccafc",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PartEvidence.lean",
+          "sha256": "3eda90e8cf789c634370849c70e2ebf86dc9b01c7c38de4fd529e40483d65c03",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-PART-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_113_PART_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-FOLD-001",
+      "prior_status": "complete",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-ONE-001",
+        "SFT-FOUNDATION-COUNT-001",
+        "SFT-FOUNDATION-PART-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/Fold.lean",
+          "sha256": "cbfbb3b148bb58d442ca2f66fbe20f4c91ac267e3cfb2f284b04d6321b7087d1",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldDerivation.lean",
+          "sha256": "546ab57f3dd5463929aa92cf90b568b31d3a552f9eebe8529b7c95051d28c468",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldStage.lean",
+          "sha256": "2f722e065cfb6300d3efdacb48e02bcd8f4dfffe9a468a781295be1cf2fe56f0",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldControls.lean",
+          "sha256": "173a81dff5db9e06e78e0cc5b96b21dc9db1a966f39e03c28fa752afdd9be630",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldEvidence.lean",
+          "sha256": "90bbcb169136c9910f596f85df0e708f7a669fddbc2651391ff9beb2c6149d7b",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-FOLD-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_114_FOLD_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-PART-EQUIVALENCE-001",
+      "prior_status": "complete",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-ONE-001",
+        "SFT-FOUNDATION-COUNT-001",
+        "SFT-FOUNDATION-PART-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/PartEquivalence.lean",
+          "sha256": "c273f9854a9f1206fc41293e6d61bdd2ecc31924de8d68b6c148d509bf71015c",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/CommonRefinement.lean",
+          "sha256": "172b68abca30042b64eea32c58879a5868063373b642230b4078fdbc796abab6",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/RefinementSelection.lean",
+          "sha256": "13b7f1e1489ebdfc6629b459650253a284cf9f1db48b0cd37c1c132c6f5063e3",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": null,
+      "program_pass": false,
+      "completion_evidence": "verification/TURN_116_PART_EQUIVALENCE_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-FOLD-ASSEMBLY-001",
+      "prior_status": "complete",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-COUNT-001",
+        "SFT-FOUNDATION-FOLD-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/FoldAssemblyGrammar.lean",
+          "sha256": "e33781c5fefe1128a5127750c1a7bbb8599063a2ec2435fcf1efea4fbc9d32a9",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldAssembly.lean",
+          "sha256": "61c7e2559ec89f8e6a3386749585f34a3add299d7a076e8b72c5bb249cd8a1bc",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldAssemblyTrace.lean",
+          "sha256": "8e9235df022d3f6a1250d87bbd5908e01610987a2596c277ebf740f12b62448e",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/AssemblySupport.lean",
+          "sha256": "1e7ec02f4b4d8e5333a874bf2bcaf6a95539af59985bc1e5b37d98c1faa424fc",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/AssemblySets.lean",
+          "sha256": "90ef173ec5a0423375b69fbf28c5e6a5204565f546b6e2622bdad5bfbf18c6f6",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/AssemblyControls.lean",
+          "sha256": "b424380e7be23d0dbbbc0a51975e31cc506ea45bdcf4c5fb7a2e212571db0a70",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/AssemblyRecords.lean",
+          "sha256": "8ffcd8b8df77aff65b8d6d65b699bc227d9a09b67098d37dcafa627f7a120fc7",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/AssemblyEvidence.lean",
+          "sha256": "93454b2b46399eaa74d22ab06f5afafc75eb97600f9e8a4a125d4287ac6d8091",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-FOLD-ASSEMBLY-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_115_ASSEMBLY_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-FORM-GRAMMAR-001",
+      "prior_status": "complete",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-ONE-001",
+        "SFT-FOUNDATION-FOLD-001",
+        "SFT-FOUNDATION-FOLD-ASSEMBLY-001"
+      ],
+      "source_modules_unchanged_since_batch": false,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/FormGrammar.lean",
+          "sha256": "78c18383807097b5bd3c5d3cdef67b4a586aa01368045f53f243771a50c610f5",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FormConstruction.lean",
+          "sha256": "1cb37fd864054eb821b911fbe4f714718f78f9677186c396f84fcd1f66317bea",
+          "unchanged_since_batch": false
+        },
+        {
+          "module": "SFT/Foundation/FormValidation.lean",
+          "sha256": "21d38d24ca4d1e7d22086c272bff8d3c893b1c9d39e6ac86ca111675b059193b",
+          "unchanged_since_batch": false
+        },
+        {
+          "module": "SFT/Foundation/FormAcceptance.lean",
+          "sha256": "b423c81c8c58625069abd231e2cd5e7e73b7d7e0ae2f1adb9ab3efade1a7b258",
+          "unchanged_since_batch": false
+        },
+        {
+          "module": "SFT/Foundation/FormControls.lean",
+          "sha256": "9cc0c461f226353003c76180483ec063752f716598bf02a288588b0fcd890f02",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FormEvidence.lean",
+          "sha256": "2e84bf3dc3878ce8084194545cbda6f168fe674f9ceb4bf86df57900c5b50c43",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-FORM-GRAMMAR-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_117_SFT-FOUNDATION-FORM-GRAMMAR-001_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+      "prior_status": "complete",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-FORM-GRAMMAR-001"
+      ],
+      "source_modules_unchanged_since_batch": false,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/FormEnforcementGrammar.lean",
+          "sha256": "7f3ca0a4f87f328cff27347f523701bfd20ad687be75249bc07750098dec63e9",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FormIdentity.lean",
+          "sha256": "ed5d8289721ce91029d19cf7dded670a272fd7ed51f4050662ba63f3310296d7",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FormCanonicalRaw.lean",
+          "sha256": "fb7b673e64fe8e47b820151eb4caa25105d57a852c80736fd399af6bba63c4fe",
+          "unchanged_since_batch": false
+        },
+        {
+          "module": "SFT/Foundation/FormEnforcementControls.lean",
+          "sha256": "6b1d5e0ee8eee695d349eaf4af88efc4e7442861df5da43a5b6bd65c910af625",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FormEquivalenceRaw.lean",
+          "sha256": "643209eedc632f26cf25bdac974a9e46d331d5b6731cd913268a050870b460f8",
+          "unchanged_since_batch": false
+        },
+        {
+          "module": "SFT/Foundation/FormEnforcementEvidence.lean",
+          "sha256": "4f4beaa6a1375146074dc1ddc3a2447387d669b4cf92d1a2ec65a116d2dc44ce",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-FORM-ENFORCEMENT-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_117_SFT-FOUNDATION-FORM-ENFORCEMENT-001_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [
+        "sft/foundation/measurement_boundary.py::protocol_accepts has no Boolean-only guard and Python and returns an operand: protocol_accepts(all_rows=True, source=\"source-id\") returns \"source-id\". MeasurementProtocol restricts arguments/output to Bool; preserve the original input/output behavior or establish the exact source-declared input restriction before claiming this procedure fully translated."
+      ],
+      "dependencies": [
+        "SFT-FOUNDATION-FORM-ENFORCEMENT-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/MeasurementGrammar.lean",
+          "sha256": "b384149e8605595babf225d2282b3f84600fabc00f423c93ffece97599864224",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/MeasurementProtocol.lean",
+          "sha256": "6a90641ea4c2f9bc0b4b60894ec870d70c2886f9962bcba8b7a5370976f51013",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/MeasurementControls.lean",
+          "sha256": "5657ec3eba6a65786be830d841922ba8b4be3114aff000997cb2159e6483dc78",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/MeasurementEvidence.lean",
+          "sha256": "914ce1f8c2f388642aebb4e24a2eb0b4b0688611090618ea7850f54d43aff7b3",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001.report.json",
+      "program_pass": true,
+      "status": "in_progress",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-MATH-EXACT-ARITHMETIC-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-COUNT-001",
+        "SFT-FOUNDATION-PART-001",
+        "SFT-FOUNDATION-PART-EQUIVALENCE-001",
+        "SFT-FOUNDATION-FORM-ENFORCEMENT-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Mathematics/ExactArithmeticGrammar.lean",
+          "sha256": "e39dd2782d907d66d02758253e7c05d5487689724ed8e4d1b1ce74cf0d90813e",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/ExactTraceArithmetic.lean",
+          "sha256": "87063956a56d1e43a9da339a1ea5c4bd822cde627fb2c10d2eacf9eecd350c4b",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/ExactTracePairing.lean",
+          "sha256": "3c30c61b838e0f70531be8cb5af0753c705d95920ef03a31f3e71ffc941a7901",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/ExactTraceDistribution.lean",
+          "sha256": "9cd3259efa445b84e9e0a22d35369c7d5cf95a31300ec5b7d378b4bab522a83d",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/ExactArithmeticWitnesses.lean",
+          "sha256": "47253d406c8de91390bd27d5e645169c96e510c1dd59661d845b2bff4e1be573",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/ExactArithmeticControls.lean",
+          "sha256": "7cd5278945c4bc1204189218af3e285fd8694628b0a5fa0a4fcabae639eb6598",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/ExactTraceRemainder.lean",
+          "sha256": "58a11a9f0035085f915619ed767042d8febe5db1d1d84950a116e281231cc633",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/ExactArithmeticEvidence.lean",
+          "sha256": "614dbab244df880ce8426d7680e49c3f6e74a18338d94f2384ff31615ea97abb",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-MATH-EXACT-ARITHMETIC-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_118_SFT-MATH-EXACT-ARITHMETIC-001_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-MATH-DISCRETE-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-COUNT-001",
+        "SFT-FOUNDATION-FORM-GRAMMAR-001",
+        "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+        "SFT-MATH-EXACT-ARITHMETIC-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Mathematics/DiscreteGrammar.lean",
+          "sha256": "21b9e5aede9e91d17a5b2d85218483b366dc75796ba99b46d36733e14370b804",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/DiscreteObjects.lean",
+          "sha256": "ef44afc6bc861794790442d7d8380dfd7cc8c3defcd48b8308583065f8526c88",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/DiscreteRelations.lean",
+          "sha256": "1395608aeb905df7faa7277dfe6451ceb80480009de99fa15bcdc34639160ae9",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/DiscreteSuccession.lean",
+          "sha256": "f555cf7cdf4e46a527e0a6a4911eee64ebf253d4e9e295a65050cd9ba91883f3",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/DiscreteWitnesses.lean",
+          "sha256": "62fb986035ae6b8e0cea23f3a57e3ac47264aea919afde9a6fd86753d7088a23",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/DiscreteControls.lean",
+          "sha256": "41533ab090f1a3afe60fd49f18a7f61880234ef61d6ae76fff33fdbcdf4fe8cb",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/DiscreteInduction.lean",
+          "sha256": "7f27881444382dc4d0d0089c19b159e25053c2f9b844e3f80430b66a475e7553",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/DiscreteComplement.lean",
+          "sha256": "8a30c55b61b5c0192a074f3502660f0b3899b2bdde6a58c2d50265bfb6c1bab7",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/DiscreteComposition.lean",
+          "sha256": "46be7a529626469f64bead2d9d0aeeacc69e76c6d9f5abcce0be7e903a387ebc",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/DiscreteEvidence.lean",
+          "sha256": "855e9516068ae455cf6392a28c834b2be07bdc8a42af874db405808e3ba74a21",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-MATH-DISCRETE-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_118_SFT-MATH-DISCRETE-001_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-MATH-COMBINATORICS-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-FOLD-ASSEMBLY-001",
+        "SFT-MATH-EXACT-ARITHMETIC-001",
+        "SFT-MATH-DISCRETE-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Mathematics/CombinatoricsGrammar.lean",
+          "sha256": "2f21c7b1b642ebb64ba16588577a62ff499b8c5f8245ee38a3f8c9552977c9ee",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/CombinatorialSelections.lean",
+          "sha256": "1c1e63910517f497dbfd4d62d7a5778a6b90a0f6b95fb4f6a909b6f42761eb05",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/CombinatorialArrangements.lean",
+          "sha256": "63022c47b5a3fc6b60b943edd596aa92216573dec480e19e549dc534b182d012",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/ArrangementCompleteness.lean",
+          "sha256": "37e268f76c89faae359eedfa595b5ac477f839536fec404082ecf8b837f8271a",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/CombinatorialLedger.lean",
+          "sha256": "bd04aa37b197c0efd6fd498cdc8ed58cb86ac1bc7270e715908ff7df306bd237",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/CombinatoricsWitnesses.lean",
+          "sha256": "7afd706d1dbc5b822224fce708655a9e660368f93d03f9832e97b26a4cbc5619",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/CombinatoricsControls.lean",
+          "sha256": "6955b8c8d3c5ce543147e45b3aeebd90c8cd01a3ae5ecc205f4f600fc616c9d4",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/CombinatoricsEvidence.lean",
+          "sha256": "2218d51ee8f176b08f7dd43aa7365a22fa79ffc0dfef2d5ba954bdf7393a3fb0",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/SelectionEncoding.lean",
+          "sha256": "07ffd9b47b9bb59bbe434041e977cdead24bfc52b537db247272099b46ad9d77",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/ArrangementSuccessor.lean",
+          "sha256": "0479548b9143422e46d77424a9fa60d7ebbca79a6c074755e11cf36b6ba9bdf3",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/ArrangementCounting.lean",
+          "sha256": "056302ae50176f956f04f89d3f7025748ae12aa221a4457cd1b03e9e35af364d",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/SelectionCompleteness.lean",
+          "sha256": "fdb41c13f59aba79e0a6f8083c080d4b422f6bb2d9dbe14c3b334220cde07957",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/CombinatorialCollections.lean",
+          "sha256": "d5e72ef7d53b28972a6022276afef129886807d00d75fc65f8b0db17842b7f16",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/SelectionProvenance.lean",
+          "sha256": "a429801dcf258607a221da023219fbc4bb5acf756a4fb3ba8173fa01c8fb8b77",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/SelectionDiscreteLink.lean",
+          "sha256": "a828b93d58a801609b593bf5bfd60b6a6cd7e379cb1a80bb998bc0500550edcb",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-MATH-COMBINATORICS-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_118_SFT-MATH-COMBINATORICS-001_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-MATH-GRAPH-NETWORK-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-FORM-GRAMMAR-001",
+        "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+        "SFT-MATH-DISCRETE-001",
+        "SFT-MATH-COMBINATORICS-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Mathematics/GraphGrammar.lean",
+          "sha256": "69d046943ed4bcd08e42db0e6b88b25021f6ed51d8eaaed6b74389603655ed7e",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/GraphOperations.lean",
+          "sha256": "abe7c422ceb60288a2fea9e6a453dddeb4ff030c0c26bb94c74c59fe9925a418",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/GraphReachability.lean",
+          "sha256": "7f107a75eeec24e43074dc41496620925a8b405360fd2a414c163995a87600e1",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/GraphPathSoundness.lean",
+          "sha256": "53cc90642f258b9970bf5491635afce5f4d82aa03b5899654b4f8edbee124710",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/GraphPathCompleteness.lean",
+          "sha256": "9502edd8b63aa4e6f0e034997975f44a5c152ce6a6cac11dbbee6277717f5214",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/GraphCycles.lean",
+          "sha256": "389beab355c5a6cf756aab311cbbfff3ab1caf799a06c6065db6c94d7ac19c88",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/GraphCycleTrace.lean",
+          "sha256": "c88194c6aa7c1cbcc56807dfffb7821bb5d286f60044631729c65ea0d00061f6",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/GraphWitnesses.lean",
+          "sha256": "fd9e527834a9d29c290d62af01192fa4782d906617a11ef41c5a33d2719c67d7",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/GraphControls.lean",
+          "sha256": "7e482765e609073474ea3af3f6f5c09348e463f2fd79ec80b3356af72093c967",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/GraphEvidence.lean",
+          "sha256": "e7a5d927fe0f7ad5871b33032af0a0a63fff5952102b4f8ad79da238f6ff0970",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/GraphInduction.lean",
+          "sha256": "94eb8e26766381711f0e07187e44079954cbf2c6111c04aa33b87b180a5805c3",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/GraphExtension.lean",
+          "sha256": "2ef97101eaf3cf418149d235fe778739f9b2ff730fa2d02a8d967657aa4bae09",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/GraphPartitionBalance.lean",
+          "sha256": "9bada4f538dc9d1399065a30ebc93414e4899b411d156668b2f7b379861fa114",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-MATH-GRAPH-NETWORK-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_118_SFT-MATH-GRAPH-NETWORK-001_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-MATH-ALGEBRA-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+        "SFT-MATH-EXACT-ARITHMETIC-001",
+        "SFT-MATH-DISCRETE-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Mathematics/AlgebraGrammar.lean",
+          "sha256": "7fefe34ac168b942417193cca4fddf211239a022547448fd580d94a2ed3ff262",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraOperations.lean",
+          "sha256": "b6b13ef978d4581a14e976d24a86c39726279018c593416caea0e3d766e63d0c",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraTableCoverage.lean",
+          "sha256": "5a3cbf1cfb704f7a885defe909887c87f6b83421ebfe23b0f384902ec1ab7ab6",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraProperties.lean",
+          "sha256": "809dbb99d57fd71bb72b296b28c2611889a496701cb14cefcdb6c6e6327dd9f1",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraReturns.lean",
+          "sha256": "3e2fc5a8a122f43990e4b42033fd07c89a16fe0d000f1845560a6099a6f326e0",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraReturnMeaning.lean",
+          "sha256": "4a394570399ba0313f9a661417fd84f0c3b23d0b6c7fbc3351c32a42531aab29",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraMaps.lean",
+          "sha256": "226212c6bee15e15dc9b80807286f588f1cfa4d53f90ff0573ab8d817463b694",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraMapMeaning.lean",
+          "sha256": "20f1379832c3ebd14416633d830d57215bae723ce7ac3cf908bbac300ec503ea",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraWitnesses.lean",
+          "sha256": "7f224ea520319a9a334e37a8fdfcb5a288fb48a122bdc43176e060599f454199",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraControls.lean",
+          "sha256": "35a6280b64b511f8f30b7ff46bb1094b5c992c641aa21cdfc4c8c91d76aca475",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraEvidence.lean",
+          "sha256": "6aae88be54d98be6c3977a5dbe5b8ccba60a2636cb0c7e7beffc58c543cbf851",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraInduction.lean",
+          "sha256": "65db12fa805bdc9adf04e47f1ef9cc11afde07bc5a8adeb0577643a03c4de9b0",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraExtension.lean",
+          "sha256": "99781d3595c4775aea7c1a1d09681b2c3b7c12290a63d4e342f367cbae9d5b94",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraReturnExtension.lean",
+          "sha256": "026b9bea4773ce4ab145c883246d48a7c198ce2d45af034244e793aa3c358ea3",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraMapExtension.lean",
+          "sha256": "f335259818a8e4eb4c337a175d08025f9d3076c27f5355ee171983e97a8ba77c",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/AlgebraDictionaryExtension.lean",
+          "sha256": "ba9c823bcf2cce0233d43f20d7c7e3404fffa5f62b84c0ae70dc274aa475466c",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-MATH-ALGEBRA-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_118_SFT-MATH-ALGEBRA-001_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-MATH-ORDER-LATTICE-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-MATH-EXACT-ARITHMETIC-001",
+        "SFT-MATH-DISCRETE-001",
+        "SFT-MATH-ALGEBRA-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Mathematics/OrderGrammar.lean",
+          "sha256": "f4a69320c20d7d30a80bfe4ed452958acb08b02dc0769d84ccec11a04fa3f8b8",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/OrderOperations.lean",
+          "sha256": "16c86e65cc4cbd42e930a249093841fa568987bfcb9aff585acf64424493c17f",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/OrderMeaning.lean",
+          "sha256": "c93719a6337ec812d1104bf485580340944ffcf31da20fbbe27337f2cf84e721",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/OrderExtrema.lean",
+          "sha256": "23233fe43e3375de99feb23be24c91894af289f92a901bb419540ada708208a2",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/OrderBoundExistence.lean",
+          "sha256": "2a5a2085870873dc279f6d85c3245a2e9d82c3f4e58aaccf04510a856f7d823e",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/OrderMaps.lean",
+          "sha256": "3ebe0ac6fe6dc35911629019ee8e8135693c90b50556f1f2a7d31165944cd67c",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/OrderWitnesses.lean",
+          "sha256": "2b0c13645ab9c4d62c6d4c13d9884682178cde3f9dac139c31f7f2c2117947a1",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/OrderControls.lean",
+          "sha256": "c434abe19022199aa9557b37d516797b3235cb823f5339697d0921c3b159d4cc",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/OrderEvidence.lean",
+          "sha256": "3a8554574e08d4c97bd7c4cc7d4f5f6e1738031a9b50adce1acb4baa6967c1af",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/OrderInduction.lean",
+          "sha256": "45552bd1f0a39958afa819836354625edfb04934c06ffac3c45b7f6231d40a94",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/OrderBoundExtension.lean",
+          "sha256": "82b648089267be4e3a4455116024dd0416eb225d314f91befd5aa010ffe7c5a4",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/OrderHeldExtension.lean",
+          "sha256": "228e5a2529bb56af998a40b9ffe88e97895183dedafd8d5000168417f5c22e56",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Mathematics/OrderFreshExtrema.lean",
+          "sha256": "987a31a741dccbbb6b5b9cc93be887ad455ca8430541b82366c9c3eae8a0fab0",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-MATH-ORDER-LATTICE-001.report.json",
+      "program_pass": true,
+      "completion_evidence": "verification/TURN_118_SFT-MATH-ORDER-LATTICE-001_COMPLETION.json",
+      "status": "complete",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [
+        "sft/foundation/exact_operations.py:140 ExactOperationsProgram.registration \u2014 translate this original program method and compare its output with V3",
+        "sft/foundation/exact_operations.py:149 ExactOperationsProgram.generate_candidates \u2014 translate this original program method and compare its output with V3",
+        "sft/foundation/exact_operations.py:154 ExactOperationsProgram.decide_candidate \u2014 translate this original program method and compare its output with V3",
+        "sft/foundation/exact_operations.py:159 ExactOperationsProgram.closure_evidence \u2014 translate this original program method and compare its output with V3"
+      ],
+      "dependencies": [
+        "SFT-FOUNDATION-ONE-001",
+        "SFT-FOUNDATION-COUNT-001",
+        "SFT-FOUNDATION-PART-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/ExactOperationsGrammar.lean",
+          "sha256": "4903d2c17afc971f626d6a2fd4628ac51a75f29f78a4a30a3efb10f73fb90e5a",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/ExactCast.lean",
+          "sha256": "511c8b799bf99d04d4c33bb434787298f59e599b885e0347e2b7ddc882818908",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/ExactPartCarrier.lean",
+          "sha256": "2331fd524e0620a2a9ecb63da9ac9a4ae057642604beec2a3ac82ff74558d0cc",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FractionReduction.lean",
+          "sha256": "08313f43f686c378d3b0b189acc7a998ecfd8f2a82195b0ca696234390948628",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/ExactOperations.lean",
+          "sha256": "c592badf6dfeb970a4cfc4a6290f70748f43775f8f34e649b4fd1839dd2bf7b4",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/ExactOperationsControls.lean",
+          "sha256": "ec1cd66df24da29a0fc379f3f1916832ece52c3cb9927c114169dcc45d17f3c0",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": null,
+      "program_pass": false,
+      "status": "in_progress",
+      "incomplete_dependencies": []
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-HALF-ONE-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [
+        "sft/foundation/half_one.py:92 HalfOneProgram.registration \u2014 translate this original program method and compare its output with V3",
+        "sft/foundation/half_one.py:94 HalfOneProgram.generate_candidates \u2014 translate this original program method and compare its output with V3",
+        "sft/foundation/half_one.py:96 HalfOneProgram.decide_candidate \u2014 translate this original program method and compare its output with V3",
+        "sft/foundation/half_one.py:99 HalfOneProgram.closure_evidence \u2014 translate this original program method and compare its output with V3"
+      ],
+      "dependencies": [
+        "SFT-FOUNDATION-FOLD-001",
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+        "SFT-FOUNDATION-PART-EQUIVALENCE-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/HalfOneGrammar.lean",
+          "sha256": "81c8e5bf7730ba88fbf4ba231d0cda9dae715d41e66f525247e2005e66b90cc8",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/HalfOneDerivation.lean",
+          "sha256": "531f58b16e94870dc67b888e2fce23c97909bef5cfa124cda9fa3cd1f470c183",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/HalfOneControls.lean",
+          "sha256": "da9396aac88a0e2b966dbc9d822988f69bd9f258a29f4b3153f39d8c904b9be7",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": null,
+      "program_pass": false,
+      "status": "in_progress",
+      "incomplete_dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001"
+      ]
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-FOLD-DYNAMICS-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+        "SFT-FOUNDATION-HALF-ONE-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/FoldDynamicsGrammar.lean",
+          "sha256": "9e81ab3a5384860fd65d8217a2305f30668ec41e1f51f4f9f95a0fcb1f6cf425",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/ExactValueIdentity.lean",
+          "sha256": "f45b801d591c2a0d265bf1b9b5cdd0673b5d3a90478bb3649d33715481fb31f7",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldDynamics.lean",
+          "sha256": "b8137c2a21e1d89453e5c00beed24c0fd4f8ac4ca368cc39e4ba65aae6fd472d",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldCastLaws.lean",
+          "sha256": "c9723b27aeb2867c2e59a74a3b9ef7fd071c87f3ccf9700b8926edc6ed0febaa",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldPhaseLaws.lean",
+          "sha256": "09e2cdb55653d8a3a1e36efe1ea48fcfde09f226b4c223bc76ab8877a93a848d",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldPhaseFull.lean",
+          "sha256": "962898a29792aacfa3c2175eccda021dcf2901ed643f85a7227cd76f00c6507c",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldFibres.lean",
+          "sha256": "b4bbdc87f7a842ea71552ef78d9715dbaee46c502ab6d4ec4b113ae297ec6fb9",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldUniform.lean",
+          "sha256": "f23cfb6e1cfdd8f6f84b4eb521460a3e205482a4a16fbda9b23ff2e1b402cafb",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldUniformOrder.lean",
+          "sha256": "b1ca0ced029b45d6f844fd29a32edc6c6f42c4a63c79be0ced4ae74757c22d29",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldSorted.lean",
+          "sha256": "af04efba944d2393f19c16bf7fad1174b0646774904a60d0f012b73d93316b4e",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldUniformCheck.lean",
+          "sha256": "5975ff3d935594f7bf77ff47a982c9252f1698f135e22755aa18890e2d32457f",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldDynamicsControls.lean",
+          "sha256": "6789cc6284adec771085fc131cff56b778899d2c239459822a82f07387e1187e",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/FoldDynamicsEvidence.lean",
+          "sha256": "79c4baee826fa99564e2703ebfc857f149bbb691e7eb18752f0ab67eb6e4352a",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-FOLD-DYNAMICS-001.report.json",
+      "program_pass": true,
+      "status": "in_progress",
+      "incomplete_dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+        "SFT-FOUNDATION-HALF-ONE-001"
+      ]
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-PRIMITIVE-MAP-UNIQUENESS-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+        "SFT-FOUNDATION-FOLD-DYNAMICS-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/PrimitiveMapGrammar.lean",
+          "sha256": "7ee31da10e9a2fb44fa2729b5be1da74773520dae15de7b686612e7c9470ffcd",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PrimitiveMaps.lean",
+          "sha256": "b5a99527fbb9160ac92f8c977606092e299508a1aaec4279b46dd821300a3da2",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PrimitiveSquare.lean",
+          "sha256": "e0780802c173e864ce2102d1fe979d54bff56f19f7da5b527327d70487ce1d05",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PrimitiveMinimality.lean",
+          "sha256": "51e5b4afc6734e3da0cdb263d7b9b992960cc9d4ab25c2116aea05109d73a18f",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PrimitiveMapControls.lean",
+          "sha256": "cc8feb4dc0b1939ff36741256ddbe42c5c2be1b94424d3b2b0da5b0e26295e09",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PrimitiveMapEvidence.lean",
+          "sha256": "32f539bee6bb3f61cb39adaa157322d49eaebf45456a3d86b4df114ba32c2039",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/PrimitiveReductions.lean",
+          "sha256": "f09e0cc03ecdbaaa514eeb696c95055657df68e2babd3ce084dcb420cf1c0818",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-PRIMITIVE-MAP-UNIQUENESS-001.report.json",
+      "program_pass": true,
+      "status": "in_progress",
+      "incomplete_dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+        "SFT-FOUNDATION-FOLD-DYNAMICS-001"
+      ]
+    },
+    {
+      "claim_id": "SFT-FOUNDATION-DERIVATION-TRACE-001",
+      "prior_status": "in_progress",
+      "source_review": "verification/TURN_115_SOURCE_REVIEW.json",
+      "missing_source_components": [],
+      "dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001",
+        "SFT-FOUNDATION-FORM-ENFORCEMENT-001"
+      ],
+      "source_modules_unchanged_since_batch": true,
+      "module_checks": [
+        {
+          "module": "SFT/Foundation/DerivationTraceGrammar.lean",
+          "sha256": "60ca38ef17b4af9c2d50f2020b4d544fa6fbcd64ee00c0dc36a4711cbaaa6966",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/DerivationTrace.lean",
+          "sha256": "5a62a521b0b4255b2213525b7b620a153faadf88070ab37a7fed042b4291d23b",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/DerivationTraceWitnesses.lean",
+          "sha256": "5cac93354f8828934cddb126fbc4ab8da51a2e5b85530e18f721a03688730b74",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/DerivationTraceControls.lean",
+          "sha256": "f7021ba6ecfb71ef47ae184636de2b7916f0f23475a3cb1fb96067dce9c04a5f",
+          "unchanged_since_batch": true
+        },
+        {
+          "module": "SFT/Foundation/DerivationTraceEvidence.lean",
+          "sha256": "b948261d2c53f1411a401969c3fd5ca92f124e1b85c70daa6e703aad1378b710",
+          "unchanged_since_batch": true
+        }
+      ],
+      "program_report": "verification/TURN_115_PROGRAMS/SFT-FOUNDATION-DERIVATION-TRACE-001.report.json",
+      "program_pass": true,
+      "status": "in_progress",
+      "incomplete_dependencies": [
+        "SFT-FOUNDATION-EXACT-OPERATIONS-001"
+      ]
+    }
+  ],
+  "verification_reuse": "No scientific source changed. Current full rebuild/zero-axiom audit/candidate parity from TURN_117 retained. Existing complete program comparisons reused only with byte-identical source-mapped modules. Completion propagated through registered dependencies to a fixed point."
+}

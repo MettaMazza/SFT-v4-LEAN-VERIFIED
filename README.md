@@ -47,14 +47,14 @@ flowchart LR
 
 Entry completion means the entry’s actual pinned V3 content is formalised and its applicable checks pass. Entries are completed in registered dependency order. Missing work must identify a specific V3 source component; general host-library or unrelated platform tasks do not hold a scientific entry open.
 
-**1,567 proofs completed · 5,478 candidate records matched · 9 model entries complete · 12 entries with existing work.**
+**1,567 proofs completed · 5,478 candidate records matched · 15 model entries complete · 6 entries with existing work.**
 
 | Progress measure | Current result |
 | :--- | :--- |
 | Lean theorems proved | **1,567**, all with zero axiom dependencies |
 | Definitions and theorems audited | **2,852**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **5,478 / 5,478** across Root, One, Count, Part, Part Equivalence, Fold, Fold Assembly, Exact Operations, Half-One, Fold Dynamics, Form Grammar, Form Enforcement, Measured Value Boundary, Exact Arithmetic Discrete Objects and Primitive Map Uniqueness |
-| Complete model entries | **9 / 2,781** — Root, One, Count, Part, Fold, Fold Assembly, Part Equivalence, Form Grammar and Form Enforcement complete |
+| Complete model entries | **15 / 2,781** — [source-reviewed completion records](verification/TURN_118_BATCH_RECONCILIATION.json) |
 
 | Source component | Verified work | Evidence |
 | :--- | :--- | :--- |
@@ -75,7 +75,7 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | **Form construction** | Exact finite productions, injective tuple encoding and acceptance of every generated form by the tuple/list/string validator | [Derivation](SFT/Foundation/FormConstruction.lean) |
 | **Source correspondence** | All 5,478 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_117_PARITY_REPORT.json) |
 
-**Completed source entries: 9 / 2,781.** Twelve entries contain existing incomplete work; 2,760 remain pending. Each completed entry has a source-component completion record. Concrete remaining gaps are tracked in COVERAGE.json.
+**Completed source entries: 15 / 2,781.** Six entries contain existing incomplete work; 2,760 remain pending. Each completed entry has a source-component completion record. Concrete remaining gaps are tracked in COVERAGE.json.
 
 [Read the current axiom audit →](verification/TURN_117_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 2,852 axiom audits →](verification/TURN_117_ALL_DECLARATIONS_AUDIT.log)
 
@@ -156,3 +156,5 @@ Batch review: [all 21 existing entries](verification/TURN_114_BATCH_EXISTING_WOR
 Full batch validation: **18 / 18 implemented programs pass**, covering all **4,198 actual lookup decisions** and complete registration/census/closure/control/hash outputs. At that batch checkpoint three entries lacked program methods; Part Equivalence is now complete, leaving Exact Operations and Half-One. The [21-entry source review](verification/TURN_115_SOURCE_REVIEW.json) lists concrete source gaps and incomplete registered dependencies; the [batch output report](verification/TURN_115_PROGRAMS/REPORT.json) records each comparison. Run `ulimit -s 65520` and then `python3 verification/batch_program_outputs.py` from the project directory to reproduce.
 
 Part Equivalence checkpoint: all **1,024** fresh native lookup decisions and complete source program outputs match pinned V3. [Program comparison](verification/TURN_116_PART_EQUIVALENCE_PROGRAM_REPORT.json).
+
+Batch completion reconciliation: all **21** represented entries reviewed together, with **6** additional completions propagated through verified dependencies. Existing program results and the current full audit are retained. [Batch reconciliation](verification/TURN_118_BATCH_RECONCILIATION.json).

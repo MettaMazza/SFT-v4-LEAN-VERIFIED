@@ -5,7 +5,7 @@ Working manuscript — unpublished
 
 Abstract
 
-We present a native Lean formalisation of Smithian Fold Theory V3, preserving its definitions, dependency order, declared domains and zero-axiom, zero-free-parameter constraints. The formalisation begins with the operational root, There Is No Nothing, followed by the structural One and exact positive finite count. At the scope established here, their registered candidate grammars contain two, six and ten classes respectively. Constructive proofs establish exhaustive enumeration, the unique surviving class and acceptance of that survivor for each grammar. The 1,459 audited proofs have no axiom dependencies. The translated classifications agree with the V3 artifacts on every candidate's order, identifier, exact form, decision and reason.
+We present a native Lean formalisation of Smithian Fold Theory V3, preserving its definitions, dependency order, declared domains and zero-axiom, zero-free-parameter constraints. The formalisation begins with the operational root, There Is No Nothing, followed by the structural One and exact positive finite count. At the scope established here, their registered candidate grammars contain two, six and ten classes respectively. Constructive proofs establish exhaustive enumeration, the unique surviving class and acceptance of that survivor for each grammar. The 1,468 audited proofs have no axiom dependencies. The translated classifications agree with the V3 artifacts on every candidate's order, identifier, exact form, decision and reason.
 
 1. Model and scope
 
@@ -213,7 +213,7 @@ The Lean implementation uses leanprover/lean4:v4.35.0. The build command is lake
 
 The public formalisation repository is https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED.
 
-Canonical JSON uses the source ASCII-escaping, compact-separator and sorted-key rules on the Root evidence domain. SHA-256 is implemented constructively with its fixed algorithm constants. All 2,579 audited explicit definitions and theorems have no axiom dependencies. Sixteen byte-message checks and ten JSON checks agree with Python standard-library results; these execution checks are separate from a general proof of algorithm correspondence, which remains outstanding. The fixed Root boundary is ASCII, so its lowercase and substring operations preserve the source predicate exactly. These host operations introduce no free scientific parameters.
+Canonical JSON uses the source ASCII-escaping, compact-separator and sorted-key rules on the Root evidence domain. SHA-256 is implemented constructively with its fixed algorithm constants. All 2,595 audited explicit definitions and theorems have no axiom dependencies. Sixteen byte-message checks and ten JSON checks agree with Python standard-library results; these execution checks are separate from a general proof of algorithm correspondence, which remains outstanding. The fixed Root boundary is ASCII, so its lowercase and substring operations preserve the source predicate exactly. These host operations introduce no free scientific parameters.
 
 The typed forcing-gate implementation is additionally checked on 384 combinations of identifier order and cardinality, survivor flags, reason content and hash syntax. The Unicode whitespace predicate agrees with the host language over all 1,114,112 code points.
 
@@ -495,7 +495,7 @@ At a shared interface node, the adjacency list of the composed path equals the c
 
 A successful cut returns exactly the original edge list filtered by unequal held-endpoint membership, preserving edge order and multiplicity. Its membership criterion is proved directly. The internal balance operation is equivalent to nonempty ingress, equal ingress and egress trace counts, and separate distinctness of both trace collections. The executable criterion is retained exactly.
 
-Fresh native execution matches4597 independently reconstructed records for graph construction, paths, adjacency, cuts and balance, including malformed and repeated inputs. Cycle-search formalisation and complete graph-program integration remain pending.
+Fresh native execution matches4597 independently reconstructed records for graph construction, paths, adjacency, cuts and balance, including malformed and repeated inputs. Complete return-path correspondence and graph-program integration remain pending.
 
 Finite reachability search
 
@@ -503,7 +503,7 @@ Reachability retains the original identity case: equal origin and target return 
 
 Termination follows from finite support and queue length. Initially the support consists of the origin and every edge target. Every queued node and edge target lies in that support or in visited. A new visit removes the held node from the auxiliary unseen support, strictly decreasing its length. A visited skip leaves support unchanged and strictly shortens the queue. Their lexicographic order is well founded. The auxiliary support does not decide search success, change queue order, omit duplicate enqueues or impose a depth bound.
 
-The native search satisfies the exact fixed-point equation and the original empty-queue, target-hit, visited-skip and fresh-expansion equations. Fresh execution matches8,224 reachability decisions and10,280 ordered outgoing lists across every directed relation on three nodes, with additional duplicate-edge and external-endpoint stress inputs. Cycle search remains to be formalised.
+The native search satisfies the exact fixed-point equation and the original empty-queue, target-hit, visited-skip and fresh-expansion equations. Fresh execution matches8,224 reachability decisions and10,280 ordered outgoing lists across every directed relation on three nodes, with additional duplicate-edge and external-endpoint stress inputs. Cycle search is formalised below; its full return-path correspondence remains pending.
 
 Complete path witnesses for successful reachability
 
@@ -520,3 +520,11 @@ Every complete valid origin-to-target path is found by the original finite queue
 If search terminates unsuccessfully, the resulting exhausted finite node collection contains the initial frontier and visited nodes, excludes the target, and is closed under every retained edge. A complete adjacent path beginning inside such a collection remains inside it at every transition. Consequently a valid path to the target contradicts unsuccessful search. This establishes completeness without bounding path length or discarding repeated queue entries.
 
 Combining completeness with soundness gives the exact equivalence, for every admitted finite graph: reachability returns true if and only if a complete valid path starts at the queried origin and ends at the queried target. Identity reachability holds exactly for carrier nodes. Complete path witnesses compose at their shared interface, yielding the original transitivity law for reachability.
+
+Exact finite cycle traversal
+
+The cycle procedure retains the original outer node order and recursively scans every edge in its original order. Edges whose origin differs from the current node are skipped. An edge to a node already in the held path returns true immediately. Otherwise its target is appended to the held path and visited recursively; a false result resumes scanning the remaining edges. No branch or edge is removed.
+
+Finite termination follows from an auxiliary list containing every edge target. Every target remains either in that unseen support or in the held path. A recursive call is made only for a target absent from the held path; that target therefore occurs in unseen support, and removing it strictly decreases the support length. Each local edge scan is structurally recursive on the remaining edge list. Neither argument introduces a depth cutoff.
+
+The native procedure satisfies its exact recursive equation. Empty edge sets and nodes without outgoing edges cannot yield a cycle, and a retained outgoing edge to a held-path member forces a true result. Fresh execution matches3,084 graph-cycle decisions and14,392 recursive visits across all directed relations on three nodes and additional malformed/repeated input stresses. General equivalence with complete nontrivial return paths remains to be proved.

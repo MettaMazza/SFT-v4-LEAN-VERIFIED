@@ -1434,3 +1434,16 @@ Turn 103 publication receipt: pushed 6ea7ae3a703dfb8d3888607a81f5d4e7e679e049 to
 6. Updated coverage, README and scientific manuscript, reconciling earlier pending-completeness wording.21 entries in progress,2760 pending,zero whole entries complete. Prepared verified public checkpoint.
 
 Next: translate original directed-cycle recursive edge traversal with finite-support termination, then derive its exact nontrivial return-path correspondence and source graph witnesses/grammar/program.
+
+Turn 104 publication receipt: pushed a931d839c748ed11a1096d6491b1ec4deb439fe7 to public main; compared 904 files, 0 mismatches. Receipt retained for next checkpoint.
+
+## Turn 105 — 2026-10-27T03:07:08.551163+00:00
+
+1. Classified Turn104 as progress: full admitted reachability/path equivalence and transitivity proved and published. Read current timeline, paper, coverage and pinned recursive cycle source. Continued original graph derivations using existing verification workflow.
+2. Added GraphCycles.lean translating the exact ordered recursive edge scan and outer node scan. CycleState carries the original current node/held path and auxiliary finite target support. A recursive call removes a target absent from held path from support; proved strict decrease. Local scan structurally traverses every edge, checks origin then held membership, returns on a successful child, otherwise resumes remaining edges. No cutoff or partial function.
+3. Proved fixed-point equation, empty scan/visit, no-outgoing scan/visit, immediate-return scan/visit and edgeless graph result. Initial build could not infer the tail inclusion proof in an induction call; supplied it explicitly. Target build passed. Nine theorems and seven active definitions, plus proof-carrying state structure.
+4. Registered existing source correspondence/import/audit entries. Created TURN_105_GraphCycles.lean driver and work/check_cycles105.py independent reconstruction. Fresh native execution matched17476 records:3084 graph-cycle decisions and14392 recursive visits over all512 three-node relations plus duplicate/outside-edge stresses, six node collections, four current-node choices and seven held paths. Retained output/report. No V3 scientific Python imported/executed.
+5. Existing fresh build/audit/parity PASS:1468 theorems,2595 audited definitions/theorems,zero axiom dependencies,4966 candidate rows. Retained TURN_105 evidence. No verifier or CI changes.
+6. Updated coverage, README and scientific manuscript, reconciling pending cycle-translation wording.21 entries in progress,2760 pending,zero whole entries complete. Prepared verified public checkpoint.
+
+Next: derive complete nontrivial return-path correspondence for this exact recursive cycle scan; then translate original graph witnesses and full512 candidate/program integration without changing source enumeration.

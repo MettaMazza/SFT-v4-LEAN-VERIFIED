@@ -1458,3 +1458,12 @@ import SFT
 #print axioms SFT.Mathematics.GraphOperations.composePathWitnesses
 #print axioms SFT.Mathematics.GraphOperations.reachableReflexiveIff
 #print axioms SFT.Mathematics.GraphOperations.admittedReachabilityTransitive
+#print axioms SFT.Mathematics.GraphOperations.cycleNextDecreases
+#print axioms SFT.Mathematics.GraphOperations.cycleVisitEquation
+#print axioms SFT.Mathematics.GraphOperations.cycleScanEmpty
+#print axioms SFT.Mathematics.GraphOperations.cycleVisitEmpty
+#print axioms SFT.Mathematics.GraphOperations.cycleScanNoOutgoing
+#print axioms SFT.Mathematics.GraphOperations.cycleVisitNoOutgoing
+#print axioms SFT.Mathematics.GraphOperations.cycleScanImmediateReturn
+#print axioms SFT.Mathematics.GraphOperations.cycleVisitImmediateReturn
+#print axioms SFT.Mathematics.GraphOperations.edgelessGraphHasNoCycle

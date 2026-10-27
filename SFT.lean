@@ -153,3 +153,4 @@ import SFT.Mathematics.GraphOperations
 import SFT.Mathematics.GraphReachability
 import SFT.Mathematics.GraphPathSoundness
 import SFT.Mathematics.GraphPathCompleteness
+import SFT.Mathematics.GraphCycles

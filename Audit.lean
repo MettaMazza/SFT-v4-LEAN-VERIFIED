@@ -1295,3 +1295,10 @@ import SFT
 #print axioms SFT.Mathematics.AlgebraOperations.acceptedSingletonIdentity
 #print axioms SFT.Mathematics.AlgebraOperations.acceptedSingletonAssociation
 #print axioms SFT.Mathematics.AlgebraOperations.newPairSupportExactly
+#print axioms SFT.Mathematics.AlgebraOperations.extendedCarrierMember
+#print axioms SFT.Mathematics.AlgebraOperations.allCheckedAppend
+#print axioms SFT.Mathematics.AlgebraOperations.extendedIdentityIff
+#print axioms SFT.Mathematics.AlgebraOperations.identityPreservedByExtension
+#print axioms SFT.Mathematics.AlgebraOperations.extendedAssociationIff
+#print axioms SFT.Mathematics.AlgebraOperations.oldAssociationCellPreserved
+#print axioms SFT.Mathematics.AlgebraOperations.associationPreservedByExtension

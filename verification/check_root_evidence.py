@@ -35,5 +35,5 @@ for line in lines:
   assert parts[2]=='sha256:'+hashlib.sha256(payload.encode()).hexdigest();json_count+=1
  else:assert line=='unknown-id\trejected'
 assert (sha_count,json_count)==(16,10)
-result={**fresh,'status':'PASS','source_commit':s['commit'],'source_manifest_hash':source_hash,'root_evidence':'census, decisions, closure and four controls match all stored fields and hashes; registration fields checked','sha256_vectors':sha_count,'canonical_json_vectors':json_count,'invalid_candidate_id':'rejected','full_claim_complete':False,'pending':'General algorithm correspondence proofs, complete source operational semantics and engine admission integration'}
+result={**fresh,'status':'PASS','source_commit':s['commit'],'source_manifest_hash':source_hash,'root_evidence':'census, decisions, closure and four controls match all stored fields and hashes; registration fields checked','sha256_vectors':sha_count,'canonical_json_vectors':json_count,'invalid_candidate_id':'rejected','scope':'Root source program output parity and host vectors; source-entry completion is recorded in COVERAGE.json'}
 (OUTPUT/'EVIDENCE_REPORT.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))

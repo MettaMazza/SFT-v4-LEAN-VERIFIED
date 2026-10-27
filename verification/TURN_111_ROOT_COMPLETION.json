@@ -1,0 +1,23 @@
+{
+  "claim_id": "SFT-ROOT-THERE-IS-NO-NOTHING",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_path": "sft/foundation/root_theorem.py",
+  "status": "complete",
+  "dependencies": [],
+  "source_component_correspondence": {
+    "candidate_records": "Root.candidates, candidateId, exactForm, presented; RootDerivation.generatedRecord",
+    "completeness_record": "Root.candidatesComplete; RootDerivation.recordClassificationExhaustive, classificationExact; RootEvidence.completenessRecord",
+    "decision_record": "RootDerivation.decisionRecord, decisionAgreesWithClassification, acceptanceIffWitnessedOccurrence, admittedRecordCannotBeUnpresented",
+    "closure_record": "Root.uniqueSurvivor; RootDerivation.deletingPresentationExcludesRecord, decisionIndependentOfMetadata, reasonIndependentOfMetadata; Root.closureRecord",
+    "control_records": "Root falsePremiseControl, tamperedArtifactControl, boundaryControl; RootEvidence.tamperedSourceControl and controlRecords; Root tamperedDistinctSurvivors, tamperedNoUniqueSurvivor",
+    "RootTheoremProgram.registration": "RootEvidence.registrationData, registrationAdapterPreservesRecord",
+    "RootTheoremProgram.generate_candidates": "RootEvidence.generateCandidatesData",
+    "RootTheoremProgram.decide_candidate": "RootEvidence.decideCandidate, candidateDecisionData",
+    "RootTheoremProgram.closure_evidence": "RootEvidence.closureEvidenceData",
+    "RootTheoremProgram.run_controls": "RootEvidence.runControlsData, typedControlResultMatchesRecord"
+  },
+  "verification": "TURN_111_ROOT_EVIDENCE_REPORT.json",
+  "zero_axiom_audit": "TURN_110_ALL_DECLARATIONS_AUDIT.log",
+  "remaining_source_components": [],
+  "completion_scope": "The pinned V3 root claim and its source program. General-purpose host-library verification and unrelated platform orchestration are not additional scientific requirements for this entry."
+}

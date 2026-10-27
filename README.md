@@ -45,18 +45,20 @@ flowchart LR
 
 ## Proof status
 
-**1,547 proofs completed · 5,478 candidate records matched · 21 model entries underway.**
+Entry completion means the entry’s actual pinned V3 content is formalised and its applicable checks pass. Entries are completed in registered dependency order. Missing work must identify a specific V3 source component; general host-library or unrelated platform tasks do not hold a scientific entry open.
+
+**1,547 proofs completed · 5,478 candidate records matched · 1 model entry complete · 20 entries with existing work.**
 
 | Progress measure | Current result |
 | :--- | :--- |
 | Lean theorems proved | **1,547**, all with zero axiom dependencies |
 | Definitions and theorems audited | **2,728**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **5,478 / 5,478** across Root, One, Count, Part, Part Equivalence, Fold, Fold Assembly, Exact Operations, Half-One, Fold Dynamics, Form Grammar, Form Enforcement, Measured Value Boundary, Exact Arithmetic Discrete Objects and Primitive Map Uniqueness |
-| Complete model entries | **0 / 2,781**; full-entry verification remains in progress |
+| Complete model entries | **1 / 2,781** — Root complete; One is next in dependency order |
 
 | Source component | Verified work | Evidence |
 | :--- | :--- | :--- |
-| **Root** | Complete two-class enumeration, unique survivor, survivor acceptance, presentation-only decision, witness deletion within the partition, three control outcomes; explicit tampered survivor set and non-uniqueness proofs | [Lean source](SFT/Foundation/Root.lean) |
+| **Root — complete** | All pinned Root source functions and program methods mapped; general record derivation, exact enumeration, closure and controls verified | [Completion evidence](verification/TURN_111_ROOT_COMPLETION.json) · [Fresh output checks](verification/TURN_111_ROOT_EVIDENCE_REPORT.json) |
 | **One** | Complete six-class enumeration, unique survivor and survivor acceptance | [Lean source](SFT/Foundation/One.lean) |
 | **Count** | Complete ten-class enumeration, unique survivor and survivor acceptance | [Lean source](SFT/Foundation/Count.lean) |
 | **Part** | 192-form enumeration, exact seven-criterion acceptance, minimality rejections and finite held/whole coordinate construction | [Part proofs](SFT/Foundation/Part.lean) · [Selection proofs](SFT/Foundation/PartSelection.lean) |

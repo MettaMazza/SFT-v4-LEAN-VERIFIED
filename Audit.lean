@@ -1416,3 +1416,5 @@ import SFT
 #print axioms SFT.Mathematics.OrderOperations.joinRetainedOnHeldExtension
 #print axioms SFT.Mathematics.OrderOperations.meetRetainedOnCarrierExtension
 #print axioms SFT.Mathematics.OrderOperations.joinRetainedOnCarrierExtension
+#print axioms SFT.Mathematics.OrderOperations.freshMeetIff
+#print axioms SFT.Mathematics.OrderOperations.freshJoinIff

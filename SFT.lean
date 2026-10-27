@@ -129,3 +129,5 @@ import SFT.Mathematics.AlgebraMaps
 import SFT.Mathematics.AlgebraMapMeaning
 import SFT.Mathematics.AlgebraWitnesses
 import SFT.Mathematics.AlgebraGrammar
+import SFT.Mathematics.AlgebraControls
+import SFT.Mathematics.AlgebraEvidence

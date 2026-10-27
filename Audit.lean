@@ -1273,3 +1273,10 @@ import SFT
 #print axioms SFT.Mathematics.AlgebraGrammar.properties_rejected_rejected
 #print axioms SFT.Mathematics.AlgebraGrammar.maps_rejected_rejected
 #print axioms SFT.Mathematics.AlgebraGrammar.addition_rejected_rejected
+#print axioms SFT.Mathematics.AlgebraControls.falsePremisePassed
+#print axioms SFT.Mathematics.AlgebraControls.boundaryPassed
+#print axioms SFT.Mathematics.AlgebraEvidence.nativeDecisionPreservesSurvival
+#print axioms SFT.Mathematics.AlgebraEvidence.nativeDecisionPreservesReason
+#print axioms SFT.Mathematics.AlgebraEvidence.registrationHasNoAxioms
+#print axioms SFT.Mathematics.AlgebraEvidence.registrationHasNoFreeParameters
+#print axioms SFT.Mathematics.AlgebraEvidence.lookupDependsOnlyOnIdentifier

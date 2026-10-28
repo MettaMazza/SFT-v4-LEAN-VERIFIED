@@ -258,3 +258,8 @@ import SFT.InformationScience.ChannelRelation
 import SFT.InformationScience.ChannelSelections
 import SFT.InformationScience.ChannelCapacity
 import SFT.InformationScience.ChannelComposition
+import SFT.InformationScience.ChannelExtension
+import SFT.InformationScience.ChannelWitnesses
+import SFT.InformationScience.ChannelGrammar
+import SFT.InformationScience.ChannelControls
+import SFT.InformationScience.ChannelEvidence

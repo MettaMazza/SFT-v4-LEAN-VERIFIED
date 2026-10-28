@@ -40,6 +40,7 @@ entries=[
 ('SFT-INFO-QUANTITY-001',r/'verification/TURN_140_QuantityProgram.lean'),
 ('SFT-INFO-ENTROPY-UNCERTAINTY-001',r/'verification/TURN_143_EntropyProgram.lean'),
 ('SFT-INFO-COMPRESSION-REDUNDANCY-001',r/'verification/TURN_145_CompressionProgram.lean'),
+('SFT-INFO-CHANNEL-CAPACITY-001',r/'verification/TURN_148_ChannelProgram.lean'),
 ('SFT-MATH-DYNAMICAL-SYSTEMS-001',r/'verification/TURN_130_DynamicsProgram.lean'),
 ('SFT-MATH-OPTIMIZATION-001',r/'verification/TURN_128_OptimizationProgram.lean'),
 ('SFT-FOUNDATION-FOLD-DYNAMICS-001',r/'verification/TURN_040_FoldDynamicsProgram.lean'),

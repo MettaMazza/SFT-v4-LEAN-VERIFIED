@@ -1753,14 +1753,19 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-INFO-CHANNEL-CAPACITY-001-fb47c7f7be3e832c.json",
       "statement": "An admitted channel is a complete canonical input carrier, complete output carrier and held source-bound transport relation giving every input at least one output. Inputs are confusable exactly when their output supports overlap. A zero-error code is a held input selection with pairwise disjoint output supports. Exact channel capacity is the complete family of greatest-cardinality distinguishable codes, with all ties retained; composition is relational path composition at an equal interface.",
       "title": "Exact finite channels, confusability and capacity",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/InformationScience/ChannelRelation.lean",
         "SFT/InformationScience/ChannelSelections.lean",
         "SFT/InformationScience/ChannelCapacity.lean",
-        "SFT/InformationScience/ChannelComposition.lean"
+        "SFT/InformationScience/ChannelComposition.lean",
+        "SFT/InformationScience/ChannelExtension.lean",
+        "SFT/InformationScience/ChannelWitnesses.lean",
+        "SFT/InformationScience/ChannelGrammar.lean",
+        "SFT/InformationScience/ChannelControls.lean",
+        "SFT/InformationScience/ChannelEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS:19770 cumulative source-expression cases, including186 combinations,399 complete capacity families and6272 compositions. Full candidate program pending.",
+      "artifact_runtime_parity": "PASS:20505 cumulative source-expression cases; fresh1024 actual native lookups and all registration/census/closure/control/hash fields and unknown-ID refusal.",
       "registration_sha256": "1f2720d97321a11866d811dd8aa3be0937a8085218c3d25f9bf9c329a28d223a",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1801,11 +1806,9 @@
         "status": "independently_replicated",
         "title": "Exact finite channels, confusability and capacity"
       },
-      "verified_scope": "Original constructor and exact guard/error precedence; output-support order/membership/inside/nonempty/distinct, exact confusability with source-error behavior, shared-target equivalence/symmetry/self-confusability, original distinguishable-code predicate, pairwise disjoint support proof and singleton code. Complete source-ordered positive-size combinations with exhaustive membership and duplicate freedom; exact greatest-size capacity family retaining every tie, admitted nonempty family and singleton base; original equal ordered-interface composition with first-use deduplication, full path equivalence, admitted totality and no restored confusability.",
-      "remaining": [
-        "SPEC fresh-input successor: exact added support/new confusability pairs and complete old/extended code alternatives.",
-        "Complete1024 grammar, five actual operational witnesses, original controls and full native program comparison."
-      ]
+      "verified_scope": "ChannelRelation retains exact nonempty/unique carrier, duplicate relation cell, endpoint containment and totality checks in original error order. Empty string labels and unused output-carrier entries remain permitted. Native constructor iff and field identity.; Exact source filter and relation order, original outside-source error. Native support iff relation cell, admitted nonempty/inside/distinct output supports.; Original shared-output predicate with original source errors and nonempty/unique/covered held-code guards. Native shared-target iff, overlap symmetry, admitted self-confusability, exact code predicate characterization and pairwise disjointness.; ChannelSelections generates full positive-size combinations in increasing size and source-index order. Native exact length/subsequence iff, completeness and unique combinations/candidates. ChannelCapacity retains exact greatest length and all ties in source order, with native bound/attainment/family iff, nonempty admitted result, unique records and singleton-channel base. Raw empty-candidate maximum error preserved.; ChannelComposition retains ordered carrier equality, original nested relation traversal and first-occurrence deduplication. Native complete path iff, admitted totality and exact fields, and no restored distinction after merged intermediate support.; ChannelCapacity singletonCapacity gives original one-input base. ChannelExtension appends fresh input and exact ordered support; extensionAdmitted preserves original constructor conditions. oldSupport/newSupport/oldOverlap/freshOverlap retain all previous supports and add precisely the new overlap checks. priorCode/appendCode/appendCodePrior establish old-code preservation and extension iff all new pairs are disjoint. candidateAlternatives gives exhaustive old/singleton/extended candidates at every finite successor, without sampled depth.; Complete original1024 ten-axis product, exact source order/IDs/forms/reasons, exhaustive enumeration, criteria equivalence, unique survivor and coordinate rejection. Every actual source witness is computed through translated operations; three witness channels have native constructor proofs and all five witnesses pass. Laws, induction, exclusions and four controls retained.; Fresh full native program matches original registration/census/all1024 identifier-based lookups/closure/controls/all hashes/unknown-ID refusal. Original why/derivation/check/limitations/correspondence terms retained.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_148_CHANNEL_COMPLETION.json"
     },
     {
       "branch": "information_science",
@@ -188865,13 +188868,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T13:49:54.590276+00:00",
+  "updated_at": "2026-10-28T14:09:35.839478+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 1,
+    "in_progress": 0,
     "pending": 2748,
-    "fully_reconstructed_claims": 32,
-    "axiom_free_exported_results": 2444,
-    "axiom_free_audited_definitions_and_theorems": 4620
+    "fully_reconstructed_claims": 33,
+    "axiom_free_exported_results": 2488,
+    "axiom_free_audited_definitions_and_theorems": 4727
   }
 }

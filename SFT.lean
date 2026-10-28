@@ -247,3 +247,10 @@ import SFT.InformationScience.EntropyGrammar
 import SFT.InformationScience.EntropyControls
 import SFT.InformationScience.EntropyEvidence
 import SFT.InformationScience.CompressionDescription
+import SFT.InformationScience.CompressionPrefix
+import SFT.InformationScience.CompressionSupport
+import SFT.InformationScience.CompressionWitnesses
+import SFT.InformationScience.CompressionGrammar
+import SFT.InformationScience.CompressionControls
+import SFT.InformationScience.CompressionEvidence
+import SFT.InformationScience.CompressionCanonical

@@ -177,3 +177,4 @@ import SFT.Mathematics.GeometryWitnesses
 import SFT.Mathematics.GeometryGrammar
 import SFT.Mathematics.GeometryControls
 import SFT.Mathematics.GeometryEvidence
+import SFT.Mathematics.ProbabilityEvents

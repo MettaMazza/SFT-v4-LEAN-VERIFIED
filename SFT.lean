@@ -305,3 +305,7 @@ import SFT.InformationScience.ClassicalResolution
 import SFT.InformationScience.ClassicalWhole
 import SFT.InformationScience.ClassicalClosure
 import SFT.InformationScience.ClassicalExtension
+import SFT.InformationScience.ClassicalWitnesses
+import SFT.InformationScience.ClassicalGrammar
+import SFT.InformationScience.ClassicalControls
+import SFT.InformationScience.ClassicalEvidence

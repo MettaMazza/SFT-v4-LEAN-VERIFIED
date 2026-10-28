@@ -1,0 +1,2 @@
+import SFT.InformationScience.ClassicalWitnesses
+#print axioms SFT.InformationScience.ClassicalWitnesses.allWitnessesPass

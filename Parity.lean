@@ -125,3 +125,7 @@ def main : IO Unit := do
   for c in SFT.Computation.RecursionGrammar.candidates do
     IO.println ("RecursionGrammar\t" ++ SFT.Computation.RecursionGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.RecursionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.RecursionGrammar.exactForm c ++ "\t" ++ SFT.Computation.RecursionGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.BindingGrammar.candidates do
+    IO.println ("BindingGrammar\t" ++ SFT.Computation.BindingGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.BindingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.BindingGrammar.exactForm c ++ "\t" ++ SFT.Computation.BindingGrammar.decisionReason c)
+

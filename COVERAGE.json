@@ -2570,9 +2570,13 @@
         "SFT/Computation/BindingTerms.lean",
         "SFT/Computation/BindingSubstitution.lean",
         "SFT/Computation/BindingCorrespondence.lean",
-        "SFT/Computation/BindingLedger.lean"
+        "SFT/Computation/BindingLedger.lean",
+        "SFT/Computation/BindingWitnesses.lean",
+        "SFT/Computation/BindingGrammar.lean",
+        "SFT/Computation/BindingControls.lean",
+        "SFT/Computation/BindingEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS:756 free-set membership,432 whole-tree rename and864 full substitution output/error comparisons. Claim-specific256 full program pending.",
+      "artifact_runtime_parity": "PASS: fresh full256 actual native lookups, registration/census/closure/controls/all hashes/unknown-ID refusal. Prior2052 free/rename/substitution comparisons retained; active-target/distinct-binder diagnostic additionally passes.",
       "registration_sha256": "5308476617009ef6d115d19a014e47491ade79a2048a2bcbd1cdb2a400f2a7a3",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -2618,11 +2622,10 @@
         "status": "independently_replicated",
         "title": "Fold binding and self-application calculus law"
       },
-      "verified_scope": "Pinned concrete var/app/abs grammar and finite free-set membership; native free occurrence iff, bound-name exclusion, exact whole-tree rename identity/size. Original u/v/w/z fresh search and exhaustion preserved. Native substitution uses structurally recursive carried name mappings, with exact rename composition/identity, variable and held-binder equations and original witness.2052 source-expression comparisons pass. General substitution correspondence and capture/binding/reduction claims remain pending; not inferred from finite cases. Arbitrary-term map composition and mappedExecution/renamedExecution now prove exact correspondence to original whole-body rename and recursive calls. applicationEquation/abstractionEquation reproduce every source branch and error propagation; substitutionError proves every failure is original StopIteration. No capture-safety or reduction claim is inferred from these equations. Structural occurrence ledger now retains occurrence paths, labels and nearest enclosing matching-binder paths. Native exact leaf count, scope lookup/shadowing, registered binder membership and unbound iff no matching scope entry. Concrete source substitution/ledger diagnostic proves outer-to-inner binder reassignment for nestedSource; no raw-helper repair or general registered-domain conclusion.",
+      "verified_scope": "Pinned concrete var/app/abs grammar and finite free-set membership; native free occurrence iff, bound-name exclusion, exact whole-tree rename identity/size. Original u/v/w/z fresh search and exhaustion preserved. Native substitution uses structurally recursive carried name mappings, with exact rename composition/identity, variable and held-binder equations and original witness.2052 source-expression comparisons pass. General substitution correspondence and capture/binding/reduction claims remain pending; not inferred from finite cases. Arbitrary-term map composition and mappedExecution/renamedExecution now prove exact correspondence to original whole-body rename and recursive calls. applicationEquation/abstractionEquation reproduce every source branch and error propagation; substitutionError proves every failure is original StopIteration. No capture-safety or reduction claim is inferred from these equations. Structural occurrence ledger now retains occurrence paths, labels and nearest enclosing matching-binder paths. Native exact leaf count, scope lookup/shadowing, registered binder membership and unbound iff no matching scope entry. Concrete source substitution/ledger diagnostic proves outer-to-inner binder reassignment for nestedSource; no raw-helper repair or general registered-domain conclusion. Complete original256-candidate grammar/exhaustion/sole survivor/coordinate rejection, all three original operational witnesses, original controls and complete native program outputs/hashes now verified.",
       "remaining": [
-        "Exact source-domain issue to resolve: original substitute(abs y (abs u (var y)), x, var y) returns abs u (abs u (var u)); native ledger proves the occurrence changes from outer binder address [] to inner [.body], although x is absent. Locate an actual pinned registered-domain condition excluding this raw input/output, or report the precise correspondence obstruction; do not add a bound-name freshness guard. Complete free/bound/capture proofs under the actual source domain, not an invented restriction.",
-        "spec_data LAMBDA-CALCULUS exact reduction and normal/cyclic traces: locate and faithfully represent actual source reduction relation and prove corresponding retained trace properties; do not import a conventional calculus.",
-        "Original three formal_computation group witnesses and all256 current claim candidates/controls/closure/exposition/full native program outputs and hashes."
+        "Source correspondence obstruction: original substitute(abs y (abs u (app (var y) (var x))), x, var y) returns abs u (abs u (app (var u) (var y))); native occurrence ledger proves reassignment of the existing y occurrence from outer binder [] to inner [.body]. x is free and input binder labels are distinct. Source SEMX alpha-equivalence declaration requires exactly the original bound occurrences; no reconciling domain restriction located in checked pinned source. Await exact source rule/implementation; do not add a guard or change V3.",
+        "spec_data LAMBDA-CALCULUS exact reduction and normal/cyclic traces: locate and faithfully represent actual source reduction relation and prove corresponding retained trace properties; do not import a conventional calculus."
       ],
       "source_diagnostic": {
         "module": "SFT/Computation/BindingLedger.lean",
@@ -2633,7 +2636,9 @@
           "differentHeldBinder",
           "sourceTargetAbsent"
         ],
-        "scope": "Exact original helper behavior and structural binder identity; registered-domain consequence unresolved."
+        "scope": "Exact original helper behavior also with a free substituted target and distinct input binder labels. Source scope reconciliation required; original code unchanged.",
+        "active_target_evidence": "verification/TURN_191_ActiveBinderDiagnostic.lean",
+        "result_log": "verification/TURN_191_BINDER_DIAGNOSTIC.log"
       }
     },
     {
@@ -189021,13 +189026,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T19:39:58.561139+00:00",
+  "updated_at": "2026-10-28T19:46:03.313367+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 1,
     "pending": 2736,
     "fully_reconstructed_claims": 44,
-    "axiom_free_exported_results": 3247,
-    "axiom_free_audited_definitions_and_theorems": 6307
+    "axiom_free_exported_results": 3270,
+    "axiom_free_audited_definitions_and_theorems": 6384
   }
 }

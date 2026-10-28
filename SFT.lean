@@ -357,3 +357,4 @@ import SFT.Computation.BindingWitnesses
 import SFT.Computation.BindingGrammar
 import SFT.Computation.BindingControls
 import SFT.Computation.BindingEvidence
+import SFT.Computation.BindingTrace

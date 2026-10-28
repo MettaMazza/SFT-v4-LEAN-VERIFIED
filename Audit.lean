@@ -3269,3 +3269,11 @@ import SFT
 #print axioms SFT.Computation.BindingEvidence.registrationHasNoAxioms
 #print axioms SFT.Computation.BindingEvidence.registrationHasNoFreeParameters
 #print axioms SFT.Computation.BindingEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Computation.BindingTrace.normalIdentity
+#print axioms SFT.Computation.BindingTrace.normalTraceEmpty
+#print axioms SFT.Computation.BindingTrace.normalNotCyclic
+#print axioms SFT.Computation.BindingTrace.cycleReplay
+#print axioms SFT.Computation.BindingTrace.cycleRepeat
+#print axioms SFT.Computation.BindingTrace.pathRows
+#print axioms SFT.Computation.BindingTrace.traceReplay
+#print axioms SFT.Computation.BindingTrace.successorRetainsTrace

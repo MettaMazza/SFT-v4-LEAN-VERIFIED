@@ -302,3 +302,4 @@ import SFT.InformationScience.ConservationEvidence
 import SFT.InformationScience.ClassicalSupport
 import SFT.InformationScience.ClassicalLedger
 import SFT.InformationScience.ClassicalResolution
+import SFT.InformationScience.ClassicalWhole

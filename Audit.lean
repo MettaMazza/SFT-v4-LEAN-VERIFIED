@@ -2850,3 +2850,11 @@ import SFT
 #print axioms SFT.InformationScience.ClassicalResolution.resolutionOutput
 #print axioms SFT.InformationScience.ClassicalResolution.realizationOutput
 #print axioms SFT.InformationScience.ClassicalResolution.realizationProvenance
+#print axioms SFT.InformationScience.ClassicalWhole.wholeMeaning
+#print axioms SFT.InformationScience.ClassicalWhole.emptyNotWhole
+#print axioms SFT.InformationScience.ClassicalWhole.absentHits
+#print axioms SFT.InformationScience.ClassicalWhole.distinctHits
+#print axioms SFT.InformationScience.ClassicalWhole.emptyClassCount
+#print axioms SFT.InformationScience.ClassicalWhole.classCountCons
+#print axioms SFT.InformationScience.ClassicalWhole.completeClassCount
+#print axioms SFT.InformationScience.ClassicalWhole.originalClassCount

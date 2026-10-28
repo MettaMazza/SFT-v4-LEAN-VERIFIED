@@ -407,3 +407,8 @@ import SFT.Computation.EnumerationGrammar
 import SFT.Computation.EnumerationControls
 import SFT.Computation.EnumerationEvidence
 import SFT.Computation.EnumerationTrace
+import SFT.Computation.ReductionWitnesses
+import SFT.Computation.ReductionGrammar
+import SFT.Computation.ReductionControls
+import SFT.Computation.ReductionEvidence
+import SFT.Computation.ReductionTrace

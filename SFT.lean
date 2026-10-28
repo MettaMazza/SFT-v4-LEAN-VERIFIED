@@ -397,3 +397,8 @@ import SFT.Computation.RecognitionControls
 import SFT.Computation.RecognitionEvidence
 import SFT.Computation.RecognitionDomain
 import SFT.Computation.RecognitionTrace
+import SFT.Computation.HaltingWitnesses
+import SFT.Computation.HaltingGrammar
+import SFT.Computation.HaltingControls
+import SFT.Computation.HaltingEvidence
+import SFT.Computation.HaltingBoundary

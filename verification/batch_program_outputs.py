@@ -34,6 +34,7 @@ entries=[
 ('SFT-MATH-GEOMETRY-TOPOLOGY-001',r/'verification/TURN_124_GeometryProgram.lean'),
 ('SFT-MATH-PROBABILITY-STATISTICS-001',r/'verification/TURN_127_ProbabilityProgram.lean'),
 ('SFT-MATH-LOGIC-PROOF-001',r/'verification/TURN_131_LogicProgram.lean'),
+('SFT-MATH-CATEGORY-TYPE-COMPOSITION-001',r/'verification/TURN_133_CategoryProgram.lean'),
 ('SFT-MATH-DYNAMICAL-SYSTEMS-001',r/'verification/TURN_130_DynamicsProgram.lean'),
 ('SFT-MATH-OPTIMIZATION-001',r/'verification/TURN_128_OptimizationProgram.lean'),
 ('SFT-FOUNDATION-FOLD-DYNAMICS-001',r/'verification/TURN_040_FoldDynamicsProgram.lean'),

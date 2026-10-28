@@ -412,3 +412,8 @@ import SFT.Computation.ReductionGrammar
 import SFT.Computation.ReductionControls
 import SFT.Computation.ReductionEvidence
 import SFT.Computation.ReductionTrace
+import SFT.Computation.DegreesWitnesses
+import SFT.Computation.DegreesGrammar
+import SFT.Computation.DegreesControls
+import SFT.Computation.DegreesEvidence
+import SFT.Computation.DegreeClasses

@@ -169,3 +169,7 @@ def main : IO Unit := do
   for c in SFT.Computation.ReductionGrammar.candidates do
     IO.println ("ReductionGrammar\t" ++ SFT.Computation.ReductionGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ReductionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ReductionGrammar.exactForm c ++ "\t" ++ SFT.Computation.ReductionGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.DegreesGrammar.candidates do
+    IO.println ("DegreesGrammar\t" ++ SFT.Computation.DegreesGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.DegreesGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.DegreesGrammar.exactForm c ++ "\t" ++ SFT.Computation.DegreesGrammar.decisionReason c)
+

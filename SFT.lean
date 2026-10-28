@@ -272,3 +272,5 @@ import SFT.InformationScience.NoiseGrammar
 import SFT.InformationScience.NoiseControls
 import SFT.InformationScience.NoiseEvidence
 import SFT.InformationScience.CodingSupport
+import SFT.InformationScience.CodingImages
+import SFT.InformationScience.CodingDecoding

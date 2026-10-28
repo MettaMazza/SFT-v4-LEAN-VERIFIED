@@ -442,3 +442,8 @@ import SFT.Computation.HypercomputationLimitWitnesses
 import SFT.Computation.HypercomputationLimitGrammar
 import SFT.Computation.HypercomputationLimitControls
 import SFT.Computation.HypercomputationLimitEvidence
+import SFT.Computation.InputSizeWitnesses
+import SFT.Computation.InputSizeGrammar
+import SFT.Computation.InputSizeControls
+import SFT.Computation.InputSizeEvidence
+import SFT.Computation.InputExtent

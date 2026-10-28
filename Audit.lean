@@ -2913,3 +2913,17 @@ import SFT
 #print axioms SFT.InformationScience.QuantumSupport.zipRetainsWord
 #print axioms SFT.InformationScience.QuantumSupport.zipRetainsPositions
 #print axioms SFT.InformationScience.QuantumSupport.admittedProvenance
+#print axioms SFT.InformationScience.QuantumBasis.basisMeaning
+#print axioms SFT.InformationScience.QuantumBasis.rowMembership
+#print axioms SFT.InformationScience.QuantumBasis.recoverSupport
+#print axioms SFT.InformationScience.QuantumBasis.rowInjection
+#print axioms SFT.InformationScience.QuantumBasis.uniqueRows
+#print axioms SFT.InformationScience.QuantumBasis.outputLength
+#print axioms SFT.InformationScience.QuantumBasis.delimiterSupportAccepted
+#print axioms SFT.InformationScience.QuantumBasis.delimiterNamesEqual
+#print axioms SFT.InformationScience.QuantumBasis.delimiterWordsDifferent
+#print axioms SFT.InformationScience.QuantumBasis.delimiterBasisAccepted
+#print axioms SFT.InformationScience.QuantumJoint.jointMeaning
+#print axioms SFT.InformationScience.QuantumJoint.cellMembership
+#print axioms SFT.InformationScience.QuantumJoint.cellCoordinates
+#print axioms SFT.InformationScience.QuantumJoint.jointLeftSuccessor

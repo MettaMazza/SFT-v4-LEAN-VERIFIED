@@ -12,7 +12,7 @@
 
 <p align="center">
   <img alt="Lean 4.35.0" src="https://img.shields.io/badge/Lean-4.35.0-163747?style=flat-square&amp;labelColor=0b1825" />
-  <img alt="1,630 audited results" src="https://img.shields.io/badge/Audited_results-1,630-163747?style=flat-square&amp;labelColor=0b1825" />
+  <img alt="1,650 audited results" src="https://img.shields.io/badge/Audited_results-1,650-163747?style=flat-square&amp;labelColor=0b1825" />
   <img alt="0 axiom dependencies in audited results" src="https://img.shields.io/badge/Axiom_dependencies-0-147d72?style=flat-square&amp;labelColor=0b1825" />
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
@@ -47,12 +47,12 @@ flowchart LR
 
 Entry completion means the entry’s actual pinned V3 content is formalised and its applicable checks pass. Entries are completed in registered dependency order. Missing work must identify a specific V3 source component; general host-library or unrelated platform tasks do not hold a scientific entry open.
 
-**1,630 proofs completed · 5,478 candidate records matched · 21 model entries complete · Geometry and Topology in progress.**
+**1,650 proofs completed · 5,478 candidate records matched · 21 model entries complete · Geometry and Topology in progress.**
 
 | Progress measure | Current result |
 | :--- | :--- |
-| Lean theorems proved | **1,630**, all with zero axiom dependencies |
-| Definitions and theorems audited | **2,983**, all with zero axiom dependencies |
+| Lean theorems proved | **1,650**, all with zero axiom dependencies |
+| Definitions and theorems audited | **3,008**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **5,478 / 5,478** across Root, One, Count, Part, Part Equivalence, Fold, Fold Assembly, Exact Operations, Half-One, Fold Dynamics, Form Grammar, Form Enforcement, Measured Value Boundary, Exact Arithmetic Discrete Objects and Primitive Map Uniqueness |
 | Complete model entries | **21 / 2,781** — [batch completion evidence](verification/TURN_119_BATCH_COMPLETION.json) |
 
@@ -73,11 +73,11 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | **Measured-value boundary** | Exact Boolean protocol conditions, complete 256-candidate product and original controls | [Derivation](SFT/Foundation/MeasurementProtocol.lean) |
 | **Form identity — complete** | Canonical trace injectivity and equivalence for every generated Form; complete 192-candidate identity grammar | [Derivation](SFT/Foundation/FormIdentity.lean) |
 | **Form construction** | Exact finite productions, injective tuple encoding and acceptance of every generated form by the tuple/list/string validator | [Derivation](SFT/Foundation/FormConstruction.lean) |
-| **Source correspondence** | All 5,478 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_122_PARITY_REPORT.json) |
+| **Source correspondence** | All 5,478 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_123_PARITY_REPORT.json) |
 
 **Completed source entries: 21 / 2,781.** The 21 previously represented entries are complete; Geometry and Topology is in progress and 2,759 census entries remain pending. Each completed entry has a source-component completion record. Concrete remaining gaps are tracked in COVERAGE.json.
 
-[Read the current axiom audit →](verification/TURN_122_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 2,983 axiom audits →](verification/TURN_122_ALL_DECLARATIONS_AUDIT.log)
+[Read the current axiom audit →](verification/TURN_123_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 3,008 axiom audits →](verification/TURN_123_ALL_DECLARATIONS_AUDIT.log)
 
 The translated forcing gate checks ordered identifiers, exactly one survivor, explicit reasons and canonical proof-hash identities. A general theorem proves that passing requires one survivor; Root’s tampered decisions are formally rejected. [Gate proofs](SFT/Engine/DecisionGate.lean) · [Root integration](SFT/Foundation/RootGate.lean) · [384-case comparison](verification/TURN_009_DECISION_GATE_REPORT.json)
 
@@ -161,8 +161,10 @@ Batch completion reconciliation: all **21** represented entries reviewed togethe
 
 Final existing-work batch: **6 / 6 programs PASS**, **980 actual candidate decisions**, all original evidence fields and hashes matched. Measurement retains returned operands; Exact Operations and Half-One include their complete source program adapters. [Six-entry completion report](verification/TURN_119_BATCH_COMPLETION.json).
 
-Geometry and Topology: four original operations translated with20 new native proofs, including incidence, shared-face adjacency, exact open-family closure, inverse-image continuity and finite generated joins/intersections. Boundary depth is now translated with a complete descent derivation proved equivalent to execution; path search is translated with returned-path soundness; general minimality/unreachable proofs and the full1024-candidate source program remain explicit work. [Source-specific progress](verification/TURN_120_GEOMETRY_PROGRESS.json).
+Geometry and Topology: four original operations translated with20 new native proofs, including incidence, shared-face adjacency, exact open-family closure, inverse-image continuity and finite generated joins/intersections. Boundary depth is now translated with a complete descent derivation proved equivalent to execution; path search is translated with returned-path soundness; general shortest-path minimality and unreachable-case equivalence are proved; the full1024-candidate source program remains explicit work. [Source-specific progress](verification/TURN_120_GEOMETRY_PROGRESS.json).
 
 Boundary dimension: 15 additional native proofs, exact cycle rejection and both directions of complete face-depth derivation. [Verified source-specific results](verification/TURN_121_GEOMETRY_PROGRESS.json).
 
 Path distance: exact ordered undirected search, constructive returned-path traces and literal edge-scan correspondence;19 additional native proofs. [Source-specific results](verification/TURN_122_GEOMETRY_PROGRESS.json).
+
+General path results: returned paths have minimal length against every finite undirected trace; unreachable None is equivalent to absence of such a trace.20 additional axiom-free proofs. [Source-specific results](verification/TURN_123_GEOMETRY_PROGRESS.json).

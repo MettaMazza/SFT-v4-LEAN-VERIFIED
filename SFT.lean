@@ -172,3 +172,4 @@ import SFT.Foundation.HalfOneEvidence
 import SFT.Mathematics.GeometryTopology
 import SFT.Mathematics.GeometryDimension
 import SFT.Mathematics.GeometryPaths
+import SFT.Mathematics.GeometryShortest

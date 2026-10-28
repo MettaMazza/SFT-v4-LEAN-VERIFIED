@@ -220,3 +220,5 @@ import SFT.InformationScience.SymbolGrammar
 import SFT.InformationScience.SymbolControls
 import SFT.InformationScience.SymbolEvidence
 import SFT.InformationScience.SymbolExtension
+import SFT.InformationScience.EncodingClasses
+import SFT.InformationScience.EncodingDecoder

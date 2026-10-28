@@ -321,3 +321,5 @@ import SFT.InformationScience.QuantumControls
 import SFT.InformationScience.QuantumEvidence
 import SFT.InformationScience.QuantumCanonical
 import SFT.Computation.StateTransition
+import SFT.Computation.StateComposition
+import SFT.Computation.StateExtension

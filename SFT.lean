@@ -185,3 +185,9 @@ import SFT.Mathematics.ProbabilityWitnesses
 import SFT.Mathematics.ProbabilityGrammar
 import SFT.Mathematics.ProbabilityControls
 import SFT.Mathematics.ProbabilityEvidence
+import SFT.Mathematics.OptimizationSelection
+import SFT.Mathematics.OptimizationBounds
+import SFT.Mathematics.OptimizationWitnesses
+import SFT.Mathematics.OptimizationGrammar
+import SFT.Mathematics.OptimizationControls
+import SFT.Mathematics.OptimizationEvidence

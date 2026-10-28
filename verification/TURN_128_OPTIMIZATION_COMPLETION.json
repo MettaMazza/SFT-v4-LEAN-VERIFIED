@@ -1,0 +1,30 @@
+{
+  "claim_id": "SFT-MATH-OPTIMIZATION-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_path": "sft/mathematics/optimization/law.py",
+  "status": "complete",
+  "components": {
+    "feasible_carrier": "OptimizationSelection.feasibleCarrier: exact canonical nonempty carrier guard; last-key verdict dictionary; exact key-set equality; order-preserving true-verdict filter. verdictLastWins, verdictKeysMeaning and feasibleMembership derive original semantics.",
+    "undominated": "OptimizationSelection.undominated: nonempty feasible guard and exact pair-endpoint/inequality guard. retainedMembership characterizes all surviving occurrences; eliminatedWitness supplies the retained feasible better candidate. No acyclicity, transitivity or duplicate-free feasible condition added.",
+    "exact_optimum": "OptimizationSelection.exactOptimum/classifyOptimum: original errors propagated, unique return exactly when held list is singleton; all other lists, including empty or duplicated lists, retain original class tag and list. classifyUniqueIff proves singleton equivalence.",
+    "respects_constraints": "OptimizationSelection.respectsConstraints/constraintsMeaning: every original allowed-set membership; original vacuous truth and repeated constraint-name behavior preserved.",
+    "pareto_frontier": "OptimizationBounds.dominatesMeaning, frontierMembership, frontierEliminationWitness, frontierRetainsIncomparable and emptyCriteriaFrontier: original per-criterion all/any conditions, explicit other-not-equal check, complete carrier filter, no extra guards. Duplicate feasible entries and arbitrary relation rows preserved.",
+    "exact_approximation": "OptimizationBounds.exactApproximation handles full signed Int domain; original invalid bound/nonpositive optimum guard; positive exact reduced optimum/candidate part. approximationRatio/ThroughOne establish original exact certificate.",
+    "SPEC.dimensions": "OptimizationGrammar complete original nine-axis512 product, exact order/IDs/forms/reasons, exhaustive membership/cardinality, criteria equivalence, unique survivor and all coordinate rejection proofs.",
+    "SPEC.witnesses": "OptimizationWitnesses all six records use actual translated operations; allWitnessesPass is kernel proved.",
+    "SPEC.laws_and_induction": "Native arbitrary finite-list results establish complete retained selection, every elimination witness, singleton uniqueness, incomparability and exact positive approximation. Original base/successor/decomposition statement retained verbatim in closure. Source supplies no separate decomposition operation: its exact shared-interface requirement remains the admitted decomposition coordinate and rejection criterion, relying on the registered Graph/Order dependencies without an invented algorithm.",
+    "SPEC.exclusions_and_exposition": "OptimizationControls and OptimizationEvidence retain all original exclusions, why/derivation/check/limitations/correspondence terms. Complexity/objective-family laws remain in their original separate source branches.",
+    "generated_law.py program": "OptimizationEvidence and Controls preserve original registration,512 generated records, actual lookup decisions, closure/generality/control digest payloads and original StopIteration refusal; every output compared against pinned artifacts."
+  },
+  "dependencies": [
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001"
+  ],
+  "dependency_status": "All complete before this entry",
+  "native_audit": "verification/TURN_128_PARITY_REPORT.json",
+  "program_comparison": "verification/TURN_128_PROGRAM_REPORT.json",
+  "source_cases": "verification/TURN_128_OPTIMIZATION_CASES.log",
+  "remaining": [],
+  "completion_count": 24
+}

@@ -1173,9 +1173,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MATH-OPTIMIZATION-001-3385414ceea0fd42.json",
       "statement": "An admitted optimization problem is a complete canonical candidate carrier, a source-bound exact feasibility relation and a witnessed preference relation. Solutions are the complete undominated held selection; uniqueness is claimed only for a singleton, while ties and incomparable Pareto alternatives remain explicit. Constraints, decomposition and approximation are exact trace relations without floating objectives, negative penalties or free tuning parameters.",
       "title": "Exact finite optimization and retained optima",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Mathematics/OptimizationSelection.lean",
+        "SFT/Mathematics/OptimizationBounds.lean",
+        "SFT/Mathematics/OptimizationWitnesses.lean",
+        "SFT/Mathematics/OptimizationGrammar.lean",
+        "SFT/Mathematics/OptimizationControls.lean",
+        "SFT/Mathematics/OptimizationEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS: 1595 source-derived input cases, including465 checking both undominated and exact_optimum; fresh full512 native identifier lookups, complete census/closure/controls/hashes/registration and unknown-ID error. Global7526 candidate rows.",
       "registration_sha256": "eb38cd56085ef27e85c18cc53730672951775537028b07e0b9dfb9d32a92bdfd",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1213,7 +1220,10 @@
         "statement": "An admitted optimization problem is a complete canonical candidate carrier, a source-bound exact feasibility relation and a witnessed preference relation. Solutions are the complete undominated held selection; uniqueness is claimed only for a singleton, while ties and incomparable Pareto alternatives remain explicit. Constraints, decomposition and approximation are exact trace relations without floating objectives, negative penalties or free tuning parameters.",
         "status": "independently_replicated",
         "title": "Exact finite optimization and retained optima"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "All six source operations: complete canonical feasible carrier with last-key verdicts; original preference admission and all undominated occurrences; singleton-only unique result and explicit retained classes; every allowed-set constraint; exact all/any Pareto dominance with incomparable retention; signed-integer approximation input and reduced positive optimum/candidate part. General native membership, elimination witnesses, singleton equivalence, constraint, frontier and ratio/bound derivations. Complete512 candidate product and all original witnesses/closure/controls/program methods; original scope preserved.",
+      "completion_evidence": "verification/TURN_128_OPTIMIZATION_COMPLETION.json"
     },
     {
       "branch": "mathematics",
@@ -188750,13 +188760,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T09:24:10.544917+00:00",
+  "updated_at": "2026-10-28T09:37:46.595132+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2758,
-    "fully_reconstructed_claims": 23,
-    "axiom_free_exported_results": 1777,
-    "axiom_free_audited_definitions_and_theorems": 3265
+    "pending": 2757,
+    "fully_reconstructed_claims": 24,
+    "axiom_free_exported_results": 1826,
+    "axiom_free_audited_definitions_and_theorems": 3382
   }
 }

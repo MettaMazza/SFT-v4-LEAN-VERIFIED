@@ -328,3 +328,8 @@ import SFT.Computation.StateWitnesses
 import SFT.Computation.StateGrammar
 import SFT.Computation.StateControls
 import SFT.Computation.StateEvidence
+import SFT.Computation.LanguageDerivation
+import SFT.Computation.LanguageWitnesses
+import SFT.Computation.LanguageGrammar
+import SFT.Computation.LanguageControls
+import SFT.Computation.LanguageEvidence

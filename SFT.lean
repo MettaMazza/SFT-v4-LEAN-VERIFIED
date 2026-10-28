@@ -427,3 +427,8 @@ import SFT.Computation.UndecidabilityGrammar
 import SFT.Computation.UndecidabilityControls
 import SFT.Computation.UndecidabilityEvidence
 import SFT.Computation.DiagonalTrace
+import SFT.Computation.ProofBoundary
+import SFT.Computation.IncompletenessWitnesses
+import SFT.Computation.IncompletenessGrammar
+import SFT.Computation.IncompletenessControls
+import SFT.Computation.IncompletenessEvidence

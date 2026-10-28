@@ -181,3 +181,7 @@ def main : IO Unit := do
   for c in SFT.Computation.UndecidabilityGrammar.candidates do
     IO.println ("UndecidabilityGrammar\t" ++ SFT.Computation.UndecidabilityGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.UndecidabilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.UndecidabilityGrammar.exactForm c ++ "\t" ++ SFT.Computation.UndecidabilityGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.IncompletenessGrammar.candidates do
+    IO.println ("IncompletenessGrammar\t" ++ SFT.Computation.IncompletenessGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.IncompletenessGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.IncompletenessGrammar.exactForm c ++ "\t" ++ SFT.Computation.IncompletenessGrammar.decisionReason c)
+

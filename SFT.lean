@@ -358,3 +358,8 @@ import SFT.Computation.BindingGrammar
 import SFT.Computation.BindingControls
 import SFT.Computation.BindingEvidence
 import SFT.Computation.BindingTrace
+import SFT.Computation.MachineWitnesses
+import SFT.Computation.MachineGrammar
+import SFT.Computation.MachineControls
+import SFT.Computation.MachineEvidence
+import SFT.Computation.MachineExecution

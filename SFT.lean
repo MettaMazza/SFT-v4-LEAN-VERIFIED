@@ -283,3 +283,5 @@ import SFT.InformationScience.CodingEvidence
 import SFT.InformationScience.MutualObservation
 import SFT.InformationScience.MutualParts
 import SFT.InformationScience.MutualJoint
+import SFT.InformationScience.MutualConditional
+import SFT.InformationScience.MutualDecisions

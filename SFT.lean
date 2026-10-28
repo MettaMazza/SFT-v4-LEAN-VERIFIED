@@ -314,3 +314,8 @@ import SFT.InformationScience.QuantumBasis
 import SFT.InformationScience.QuantumJoint
 import SFT.InformationScience.QuantumUnits
 import SFT.InformationScience.QuantumObservation
+import SFT.InformationScience.QuantumExtension
+import SFT.InformationScience.QuantumWitnesses
+import SFT.InformationScience.QuantumGrammar
+import SFT.InformationScience.QuantumControls
+import SFT.InformationScience.QuantumEvidence

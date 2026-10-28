@@ -1,0 +1,20 @@
+import SFT.InformationScience.QuantumWitnesses
+#print axioms SFT.InformationScience.QuantumExtension.supportSuccessor
+#print axioms SFT.InformationScience.QuantumExtension.provenanceSuccessor
+#print axioms SFT.InformationScience.QuantumExtension.admittedProvenanceSuccessor
+#print axioms SFT.InformationScience.QuantumExtension.successorDistinct
+#print axioms SFT.InformationScience.QuantumExtension.successorTrace
+#print axioms SFT.InformationScience.QuantumExtension.firstPositionSupport
+#print axioms SFT.InformationScience.QuantumExtension.twoLabelBase
+#print axioms SFT.InformationScience.QuantumWitnesses.labels
+#print axioms SFT.InformationScience.QuantumWitnesses.positions
+#print axioms SFT.InformationScience.QuantumWitnesses.source
+#print axioms SFT.InformationScience.QuantumWitnesses.firstMap
+#print axioms SFT.InformationScience.QuantumWitnesses.supportCheck
+#print axioms SFT.InformationScience.QuantumWitnesses.unitCheck
+#print axioms SFT.InformationScience.QuantumWitnesses.basisCheck
+#print axioms SFT.InformationScience.QuantumWitnesses.boundaryCheck
+#print axioms SFT.InformationScience.QuantumWitnesses.jointCheck
+#print axioms SFT.InformationScience.QuantumWitnesses.reconstructionCheck
+#print axioms SFT.InformationScience.QuantumWitnesses.witnesses
+#print axioms SFT.InformationScience.QuantumWitnesses.allWitnessesPass

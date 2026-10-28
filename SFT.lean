@@ -230,3 +230,10 @@ import SFT.InformationScience.EncodingGrammar
 import SFT.InformationScience.EncodingControls
 import SFT.InformationScience.EncodingEvidence
 import SFT.InformationScience.QuantitySupport
+import SFT.InformationScience.QuantityPairs
+import SFT.InformationScience.QuantityProfile
+import SFT.InformationScience.QuantityPositions
+import SFT.InformationScience.QuantityWitnesses
+import SFT.InformationScience.QuantityGrammar
+import SFT.InformationScience.QuantityControls
+import SFT.InformationScience.QuantityEvidence

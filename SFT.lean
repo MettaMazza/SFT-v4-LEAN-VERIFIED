@@ -229,3 +229,4 @@ import SFT.InformationScience.EncodingWitnesses
 import SFT.InformationScience.EncodingGrammar
 import SFT.InformationScience.EncodingControls
 import SFT.InformationScience.EncodingEvidence
+import SFT.InformationScience.QuantitySupport

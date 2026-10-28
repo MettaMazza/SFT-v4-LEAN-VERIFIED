@@ -189,3 +189,7 @@ def main : IO Unit := do
   for c in SFT.Computation.RelativeOracleGrammar.candidates do
     IO.println ("RelativeOracleGrammar\t" ++ SFT.Computation.RelativeOracleGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.RelativeOracleGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.RelativeOracleGrammar.exactForm c ++ "\t" ++ SFT.Computation.RelativeOracleGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.HypercomputationLimitGrammar.candidates do
+    IO.println ("HypercomputationLimitGrammar\t" ++ SFT.Computation.HypercomputationLimitGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.HypercomputationLimitGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.HypercomputationLimitGrammar.exactForm c ++ "\t" ++ SFT.Computation.HypercomputationLimitGrammar.decisionReason c)
+

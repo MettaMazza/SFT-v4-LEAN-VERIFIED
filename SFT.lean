@@ -437,3 +437,8 @@ import SFT.Computation.RelativeOracleWitnesses
 import SFT.Computation.RelativeOracleGrammar
 import SFT.Computation.RelativeOracleControls
 import SFT.Computation.RelativeOracleEvidence
+import SFT.Computation.ComputationalLimit
+import SFT.Computation.HypercomputationLimitWitnesses
+import SFT.Computation.HypercomputationLimitGrammar
+import SFT.Computation.HypercomputationLimitControls
+import SFT.Computation.HypercomputationLimitEvidence

@@ -113,3 +113,7 @@ def main : IO Unit := do
   for c in SFT.Computation.LanguageGrammar.candidates do
     IO.println ("LanguageGrammar\t" ++ SFT.Computation.LanguageGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.LanguageGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.LanguageGrammar.exactForm c ++ "\t" ++ SFT.Computation.LanguageGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.AutomatonGrammar.candidates do
+    IO.println ("AutomatonGrammar\t" ++ SFT.Computation.AutomatonGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.AutomatonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.AutomatonGrammar.exactForm c ++ "\t" ++ SFT.Computation.AutomatonGrammar.decisionReason c)
+

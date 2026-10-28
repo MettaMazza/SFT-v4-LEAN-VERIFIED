@@ -333,3 +333,8 @@ import SFT.Computation.LanguageWitnesses
 import SFT.Computation.LanguageGrammar
 import SFT.Computation.LanguageControls
 import SFT.Computation.LanguageEvidence
+import SFT.Computation.AutomatonRecognition
+import SFT.Computation.AutomatonWitnesses
+import SFT.Computation.AutomatonGrammar
+import SFT.Computation.AutomatonControls
+import SFT.Computation.AutomatonEvidence

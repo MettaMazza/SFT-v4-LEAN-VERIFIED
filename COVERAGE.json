@@ -2360,9 +2360,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-FORM-AUTOMATON-001-a28d36b12b07be8a.json",
       "statement": "The forced finite recognition processes kernel retains finite states; complete input alphabet; source-bound transition relation; initial state; accepting class; complete run trace; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold finite automaton law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Computation/AutomatonRecognition.lean",
+        "SFT/Computation/AutomatonWitnesses.lean",
+        "SFT/Computation/AutomatonGrammar.lean",
+        "SFT/Computation/AutomatonControls.lean",
+        "SFT/Computation/AutomatonEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS: complete256 fresh native actual lookups and all program fields/hashes;6349 prior shared-operation source-expression cases retained because operational definitions are unchanged.",
       "registration_sha256": "a2de0309a0365ae3811a2118ecba3177217d1361279787ab74ad7a0891804201",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -2407,7 +2413,10 @@
         "statement": "The forced finite recognition processes kernel retains finite states; complete input alphabet; source-bound transition relation; initial state; accepting class; complete run trace; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold finite automaton law"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Original finite states/input alphabet/source-bound transition relation/initial state/complete trace use unchanged StateTransition constructor/step/run and its completed general proofs. No conventional machine model, total-transition premise or universality claim is added.; AutomatonRecognition explicitly represents the declarative accepting-class and retained-run statement: Accepted records the original initial carrier membership, complete Path and held terminal class. acceptedMeaning proves iff original run succeeds with exactly that trace and terminal membership. It is a typed proposition interpreting the source statement, not an additional operations.py executable method.; Accepted traces retain the original initial state, exact action-plus-initial length, and input symbols in the admitted system alphabet. A held accepting class retains its terminal within the original state carrier. Empty class rejects; identity trace accepts exactly when its initial state is held in the accepting class.; Original Path/transition composition preserves the full recognition trace and matching interface; one generated input successor accepts precisely with its generated target held in the accepting class. Any admitted carrier/row extension preserves prior accepted traces under the same class. Native base/successor/extension proofs are arbitrary finite, not witness-depth tables.; All three original claim-specific witnesses execute the unchanged native transition run, generated_words and exact_rewrite, with original names/statements and allWitnessesPass. Prior6349 source-expression comparisons remain applicable.; Complete original eight-axis256 candidate product, source order/IDs/forms/reasons, unique survivor/exhaustive coverage/rejections, four controls, closure/exposition/registration and every source hash retained. Fresh full native program matches all256 actual lookups and every output/hash/unknown-ID refusal.",
+      "completion_evidence": "verification/TURN_184_AUTOMATON_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -188971,13 +188980,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T18:43:42.332437+00:00",
+  "updated_at": "2026-10-28T18:52:12.861625+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2740,
-    "fully_reconstructed_claims": 41,
-    "axiom_free_exported_results": 3095,
-    "axiom_free_audited_definitions_and_theorems": 5965
+    "pending": 2739,
+    "fully_reconstructed_claims": 42,
+    "axiom_free_exported_results": 3130,
+    "axiom_free_audited_definitions_and_theorems": 6058
   }
 }

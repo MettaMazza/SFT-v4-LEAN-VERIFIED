@@ -224,3 +224,8 @@ import SFT.InformationScience.EncodingClasses
 import SFT.InformationScience.EncodingDecoder
 import SFT.InformationScience.EncodingMaps
 import SFT.InformationScience.EncodingLoss
+import SFT.InformationScience.EncodingExtension
+import SFT.InformationScience.EncodingWitnesses
+import SFT.InformationScience.EncodingGrammar
+import SFT.InformationScience.EncodingControls
+import SFT.InformationScience.EncodingEvidence

@@ -1,0 +1,32 @@
+{
+  "claim_id": "SFT-INFO-ENCODING-DECODING-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_path": "sft/information_science/encoding_decoding/law.py",
+  "status": "complete",
+  "components": {
+    "validate_encoding": "EncodingClasses validationMeaning/keysMeaning preserve nonempty distinct source/support, equal row count, exact origin-set coverage, unique origins and supported codewords. Empty source strings and empty codeword lists remain legal values; no extra guards.",
+    "source_classes": "EncodingClasses firstCodewords/retainFirst preserve first-use encoding word order; membersFor preserves every source occurrence in order using exact pair membership. classMeaning/memberMeaning, distinct keys, source provenance and admitted nonemptiness proved.",
+    "exact_decoder": "EncodingDecoder inverseClasses succeeds iff every retained class has exactly one member; ordered inverse relation/keys and exact singleton-class iff proved, including empty unvalidated input.",
+    "decode": "Exactly one matching decoder row required; zero or multiple matches retain exact source error. decodeExactlyOnce, uniqueDecode and general decoderLeftInverse proved.",
+    "closed_distinctions": "EncodingLoss sourcePairs retains original positional i<j sequence; closedPair compares first images with original missing-image RuntimeError. selectionMembership and closedLedgerClass prove exact shared-class closure; admitted totality, empty/singleton ledgers proved.",
+    "compose_encodings": "EncodingMaps rejects every duplicate second-stage key or missing intermediate image; preserves original source sequence and unused valid second-stage keys. lookupUnique proves first-match implementation agrees with dictionary lookup under unique interface keys. compositionExists/interfaceMeaning/composedRow prove guard equivalence, totality and full two-way relation composition.",
+    "SPEC.induction": "EncodingExtension singletonBase gives the one-source inverse. membersSuccessor proves exact source-ordered class equality after appending a fresh source and one encoding pair; oldRow/freshRow and usedSuccessor give row and codeword coverage. freshPreservesDecoder proves existing singleton decoding survives an unused codeword. reusedClosesDecoder proves an already used nonempty class gains the fresh source and the extended encoding has no exact decoder.",
+    "SPEC.dimensions/witnesses/controls": "Full original1024 ten-axis product, exact candidate order/IDs/forms/reasons, exhaustive enumeration, coordinate rejection and unique survivor. All five operational witnesses compute through translated functions and pass kernel proof. Original laws, exclusions, induction and all four controls retained.",
+    "generated_law.py and SPEC exposition": "Original information-science registration, complete census, actual decision lookup, closure, control and all digest fields match pinned artifacts under fresh native execution. Unknown identifier retains StopIteration. Why/derivation/check/limitations/correspondence terms retained verbatim."
+  },
+  "dependencies": [
+    "SFT-FOUNDATION-FOLD-ASSEMBLY-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001"
+  ],
+  "dependency_status": "All four complete before this entry",
+  "native_audit": "verification/TURN_138_PARITY_REPORT.json",
+  "program_comparison": "verification/TURN_138_PROGRAM_REPORT.json",
+  "source_cases": [
+    "verification/TURN_136_ENCODING_CASES.log",
+    "verification/TURN_137_ENCODING_CASES.log"
+  ],
+  "remaining": [],
+  "completion_count": 29
+}

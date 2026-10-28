@@ -185,3 +185,7 @@ def main : IO Unit := do
   for c in SFT.Computation.IncompletenessGrammar.candidates do
     IO.println ("IncompletenessGrammar\t" ++ SFT.Computation.IncompletenessGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.IncompletenessGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.IncompletenessGrammar.exactForm c ++ "\t" ++ SFT.Computation.IncompletenessGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.RelativeOracleGrammar.candidates do
+    IO.println ("RelativeOracleGrammar\t" ++ SFT.Computation.RelativeOracleGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.RelativeOracleGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.RelativeOracleGrammar.exactForm c ++ "\t" ++ SFT.Computation.RelativeOracleGrammar.decisionReason c)
+

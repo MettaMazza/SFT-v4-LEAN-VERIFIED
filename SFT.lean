@@ -432,3 +432,8 @@ import SFT.Computation.IncompletenessWitnesses
 import SFT.Computation.IncompletenessGrammar
 import SFT.Computation.IncompletenessControls
 import SFT.Computation.IncompletenessEvidence
+import SFT.Computation.OracleTrace
+import SFT.Computation.RelativeOracleWitnesses
+import SFT.Computation.RelativeOracleGrammar
+import SFT.Computation.RelativeOracleControls
+import SFT.Computation.RelativeOracleEvidence

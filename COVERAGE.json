@@ -2018,9 +2018,11 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-INFO-CONSERVATION-LOSS-001-4e2892e85c1624a2.json",
       "statement": "An information transformation is a total single-valued map over complete source support. Every source distinction is conserved as an image distinction or closed inside an exact predecessor fibre; these two ledgers are disjoint and exhaustive. Reversibility is forced exactly by singleton fibres. An irreversible transformation can be reversed only when a retained predecessor label resolves each non-singleton fibre. Under composition, downstream retained distinctions are a subset of those retained upstream, so a map creates no unrecorded source distinction.",
       "title": "Exact information conservation, loss and transformation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/InformationScience/ConservationLedger.lean"
+      ],
+      "artifact_runtime_parity": "PASS:1747 independent source-expression cases:813 validation,121 complete source-pair lists,813 complete transformation ledger records.",
       "registration_sha256": "ba22d86e27a970b93d1c3a078cc519541ad2539b54b4882bf1729bb7facdc2a0",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -2060,7 +2062,14 @@
         "statement": "An information transformation is a total single-valued map over complete source support. Every source distinction is conserved as an image distinction or closed inside an exact predecessor fibre; these two ledgers are disjoint and exhaustive. Reversibility is forced exactly by singleton fibres. An irreversible transformation can be reversed only when a retained predecessor label resolves each non-singleton fibre. Under composition, downstream retained distinctions are a subset of those retained upstream, so a map creates no unrecorded source distinction.",
         "status": "independently_replicated",
         "title": "Exact information conservation, loss and transformation"
-      }
+      },
+      "verified_scope": "Original validate_transformation support-first/map-second guards/errors and dictionary rows; source_pairs complete ordered original generation and guard/error; transformation_ledger exact five fields, retained/closed pairs, empty-One presentation and source-order first-use image fibres. Native validation/admission, pair membership equivalences, exhaustive disjoint retained/closed partition, sentinel emptiness iff and common-fibre iff for closed pairs on the admitted domain. No new source guard.",
+      "remaining": [
+        "compose/downstream_retention_law: exact two-stage admission and source-order composed rows, native composition image equality and retained-pair subset/no reopened closed pair.",
+        "is_reversible/reverse_record: original distinct image count and singleton/held-predecessor-label record, native singleton-fibre equivalence and reconstruction boundary.",
+        "SPEC induction: singleton image/fibre/empty-pair base and fresh source image membership plus all prior/new pairs with exact retained/closed accounting.",
+        "SPEC full1024 grammar, all five operational witnesses, closure/controls and fresh complete native program verification."
+      ]
     },
     {
       "branch": "information_science",
@@ -188907,13 +188916,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T16:15:47.994767+00:00",
+  "updated_at": "2026-10-28T16:20:22.389035+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2745,
+    "in_progress": 1,
+    "pending": 2744,
     "fully_reconstructed_claims": 36,
-    "axiom_free_exported_results": 2749,
-    "axiom_free_audited_definitions_and_theorems": 5252
+    "axiom_free_exported_results": 2761,
+    "axiom_free_audited_definitions_and_theorems": 5271
   }
 }

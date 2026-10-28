@@ -2748,3 +2748,15 @@ import SFT
 #print axioms SFT.InformationScience.MutualEvidence.registrationHasNoAxioms
 #print axioms SFT.InformationScience.MutualEvidence.registrationHasNoFreeParameters
 #print axioms SFT.InformationScience.MutualEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.InformationScience.ConservationLedger.validationMeaning
+#print axioms SFT.InformationScience.ConservationLedger.observationAdmitted
+#print axioms SFT.InformationScience.ConservationLedger.pairsAdmitted
+#print axioms SFT.InformationScience.ConservationLedger.ledgerAdmitted
+#print axioms SFT.InformationScience.ConservationLedger.retainedMeaning
+#print axioms SFT.InformationScience.ConservationLedger.closedMeaning
+#print axioms SFT.InformationScience.ConservationLedger.pairExhaustion
+#print axioms SFT.InformationScience.ConservationLedger.pairDisjoint
+#print axioms SFT.InformationScience.ConservationLedger.presentEmpty
+#print axioms SFT.InformationScience.ConservationLedger.fibreRows
+#print axioms SFT.InformationScience.ConservationLedger.closedFibre
+#print axioms SFT.InformationScience.ConservationLedger.fibreCloses

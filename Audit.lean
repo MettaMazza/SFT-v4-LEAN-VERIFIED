@@ -3236,3 +3236,13 @@ import SFT
 #print axioms SFT.Computation.BindingCorrespondence.firstFreshError
 #print axioms SFT.Computation.BindingCorrespondence.substitutionWithError
 #print axioms SFT.Computation.BindingCorrespondence.substitutionError
+#print axioms SFT.Computation.BindingLedger.ledgerLength
+#print axioms SFT.Computation.BindingLedger.resolveHeld
+#print axioms SFT.Computation.BindingLedger.resolveOther
+#print axioms SFT.Computation.BindingLedger.resolveRegistered
+#print axioms SFT.Computation.BindingLedger.resolveAbsent
+#print axioms SFT.Computation.BindingLedger.nestedSourceResult
+#print axioms SFT.Computation.BindingLedger.originalBinderLedger
+#print axioms SFT.Computation.BindingLedger.resultingBinderLedger
+#print axioms SFT.Computation.BindingLedger.differentHeldBinder
+#print axioms SFT.Computation.BindingLedger.sourceTargetAbsent

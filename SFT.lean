@@ -254,3 +254,4 @@ import SFT.InformationScience.CompressionGrammar
 import SFT.InformationScience.CompressionControls
 import SFT.InformationScience.CompressionEvidence
 import SFT.InformationScience.CompressionCanonical
+import SFT.InformationScience.ChannelRelation

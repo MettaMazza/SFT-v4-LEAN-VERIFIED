@@ -1,0 +1,26 @@
+import SFT.InformationScience.ChannelRelation
+#print axioms SFT.InformationScience.ChannelRelation.carriersValid
+#print axioms SFT.InformationScience.ChannelRelation.inside
+#print axioms SFT.InformationScience.ChannelRelation.total
+#print axioms SFT.InformationScience.ChannelRelation.makeChannel
+#print axioms SFT.InformationScience.ChannelRelation.rawSupport
+#print axioms SFT.InformationScience.ChannelRelation.outputSupport
+#print axioms SFT.InformationScience.ChannelRelation.overlap
+#print axioms SFT.InformationScience.ChannelRelation.confusable
+#print axioms SFT.InformationScience.ChannelRelation.distinguishableCode
+#print axioms SFT.InformationScience.ChannelRelation.carriersMeaning
+#print axioms SFT.InformationScience.ChannelRelation.insideMeaning
+#print axioms SFT.InformationScience.ChannelRelation.totalMeaning
+#print axioms SFT.InformationScience.ChannelRelation.constructorMeaning
+#print axioms SFT.InformationScience.ChannelRelation.supportMembership
+#print axioms SFT.InformationScience.ChannelRelation.outputMeaning
+#print axioms SFT.InformationScience.ChannelRelation.admittedSupportNonempty
+#print axioms SFT.InformationScience.ChannelRelation.admittedSupportInside
+#print axioms SFT.InformationScience.ChannelRelation.overlapMeaning
+#print axioms SFT.InformationScience.ChannelRelation.overlapSymmetric
+#print axioms SFT.InformationScience.ChannelRelation.confusableResult
+#print axioms SFT.InformationScience.ChannelRelation.codeMeaning
+#print axioms SFT.InformationScience.ChannelRelation.codeDisjoint
+#print axioms SFT.InformationScience.ChannelRelation.singletonCode
+#print axioms SFT.InformationScience.ChannelRelation.rawSupportDistinct
+#print axioms SFT.InformationScience.ChannelRelation.admittedSelfConfusable

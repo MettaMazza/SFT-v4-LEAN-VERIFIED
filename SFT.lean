@@ -274,3 +274,9 @@ import SFT.InformationScience.NoiseEvidence
 import SFT.InformationScience.CodingSupport
 import SFT.InformationScience.CodingImages
 import SFT.InformationScience.CodingDecoding
+import SFT.InformationScience.CodingActions
+import SFT.InformationScience.CodingProvenance
+import SFT.InformationScience.CodingWitnesses
+import SFT.InformationScience.CodingGrammar
+import SFT.InformationScience.CodingControls
+import SFT.InformationScience.CodingEvidence

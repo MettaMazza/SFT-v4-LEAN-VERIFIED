@@ -1,0 +1,35 @@
+{
+  "claim_id": "SFT-MATH-DYNAMICAL-SYSTEMS-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_path": "sft/mathematics/dynamical_systems/law.py",
+  "status": "complete",
+  "components": {
+    "valid_dynamics": "DynamicsTraces.validDynamics/dynamicsMeaning: nonempty/distinct states, distinct transition rows, exact endpoint inclusion, no added deterministic/function condition.",
+    "trajectory_valid": "DynamicsTraces.trajectoryValid/trajectoryMeaning/trajectoryComposition: nonempty trace, every ordered adjacent pair, original separate domain without carrier guard, shared-interface composition.",
+    "transition_time": "DynamicsTraces.transitionTime/transitionCount/identityTime/generatedTime/positiveTransitionTime: exact ordered adjacent pair trace; singleton empty-One marker; empty error.",
+    "fixed_forms": "DynamicsTraces.fixedForms/fixedMembership: original self-transition filtering with source row order and multiplicity.",
+    "first_return": "DynamicsReturns.firstReturn, firstReturnEarliest and firstReturnNoneIff: scan terminal states left-to-right, first equal earlier state and inclusive slice; proved duplicate-free prefix before earliest repeated terminal, absence of prior matching state before chosen start, None exactly when trace distinct, positive return trace and validity inherited from input trajectory.",
+    "predecessor_records": "DynamicsTraces.predecessorRecords/predecessorMembership: every exact source-to-image row retained in order including multiplicities.",
+    "reversible_with_record": "DynamicsTraces.reversibleWithRecord/reversalMeaning/retainedPredecessor/missingRecordRejected: all original rows included in distinct ledger; no stronger equality restriction introduced.",
+    "stable_under_registered_perturbations": "DynamicsStability.perturbationReaches reuses exact GraphOperations.searchLoop/initialSearch: target-before-visited, ordered visited append, complete original edge scan, duplicate enqueues and skip behavior. Existing constructive finite-support termination imposes no search cap. perturbationReachabilityIff proves equivalence to finite transition derivation; stabilityMeaning quantifies every supplied perturbation. No graph carrier/identity wrapper imported.",
+    "SPEC.dimensions": "DynamicsGrammar complete ten-axis1024 product, exact source IDs/forms/reasons/order, membership/cardinality, criteria equivalence, unique survivor and coordinate rejection.",
+    "SPEC.witnesses": "DynamicsWitnesses all seven actual computations, explicit native transition derivations for stability, kernel allWitnessesPass.",
+    "SPEC.laws_and_induction": "Native trajectory composition/time, first-return witnesses, predecessor retention and complete registered stability results formalise original clauses. Original One-state base/successor and all source statements retained in closure; basins/recurrence remain the source first-return/reachability criteria without invented additional routines.",
+    "SPEC.exposition_and_boundaries": "DynamicsControls exclusions and DynamicsEvidence original why/derivation/check/limitations/correspondenceTerms preserved. No continuous-clock, differential, stochastic or unrecorded-predecessor premise added.",
+    "generated_law.py program": "All original registration/census/actual decisions/closure/controls/digest payloads and unknown identifier error; every native output compared to pinned artifacts."
+  },
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-OPTIMIZATION-001"
+  ],
+  "dependency_status": "All complete before this entry",
+  "native_audit": "verification/TURN_130_PARITY_REPORT.json",
+  "program_comparison": "verification/TURN_130_PROGRAM_REPORT.json",
+  "source_cases": [
+    "verification/TURN_129_DYNAMICS_CASES.log",
+    "verification/TURN_130_DYNAMICS_CASES.log"
+  ],
+  "remaining": [],
+  "completion_count": 25
+}

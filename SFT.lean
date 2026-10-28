@@ -192,3 +192,9 @@ import SFT.Mathematics.OptimizationGrammar
 import SFT.Mathematics.OptimizationControls
 import SFT.Mathematics.OptimizationEvidence
 import SFT.Mathematics.DynamicsTraces
+import SFT.Mathematics.DynamicsReturns
+import SFT.Mathematics.DynamicsStability
+import SFT.Mathematics.DynamicsWitnesses
+import SFT.Mathematics.DynamicsGrammar
+import SFT.Mathematics.DynamicsControls
+import SFT.Mathematics.DynamicsEvidence

@@ -1235,11 +1235,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MATH-DYNAMICAL-SYSTEMS-001-3e0e44b65fbe660f.json",
       "statement": "An admitted dynamical system is a complete canonical state carrier with a held transition relation. A trajectory retains every state and transition; time is the positive transition trace and the identity trajectory is empty One. Fixed forms, returns, recurrence, basins, reversibility and stability are admitted only through exhaustive generated witnesses. Merged predecessors remain recoverable only when their exact records are retained.",
       "title": "Exact generated finite dynamical systems",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
-        "SFT/Mathematics/DynamicsTraces.lean"
+        "SFT/Mathematics/DynamicsTraces.lean",
+        "SFT/Mathematics/DynamicsReturns.lean",
+        "SFT/Mathematics/DynamicsStability.lean",
+        "SFT/Mathematics/DynamicsWitnesses.lean",
+        "SFT/Mathematics/DynamicsGrammar.lean",
+        "SFT/Mathematics/DynamicsControls.lean",
+        "SFT/Mathematics/DynamicsEvidence.lean"
       ],
-      "artifact_runtime_parity": "5123 source-derived input cases PASS covering six translated functions; complete Dynamics program remains pending.",
+      "artifact_runtime_parity": "PASS: retained5123 admission/trace/time/record input cases;1093 first-return and6658 stability cases; fresh native1024 actual lookups and every registration/census/closure/control/hash field, including unknown-ID refusal. Global8550 candidate rows.",
       "registration_sha256": "b176bda345b0f4310e7d3b3488fb7cee60979593998ec74450fd1a1e02da6729",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1278,12 +1284,9 @@
         "status": "independently_replicated",
         "title": "Exact generated finite dynamical systems"
       },
-      "verified_scope": "Six exact source operations implemented: valid_dynamics, trajectory_valid, transition_time, fixed_forms, predecessor_records and reversible_with_record. Native admission/trajectory membership, equal-interface composition, transition-count/time identity/positivity, exact fixed/predecessor membership and retained-record inclusion/missing-record rejection proofs. Source-specific domains, duplicate outputs and original absence of extra guards preserved.",
-      "remaining": [
-        "sft/mathematics/dynamical_systems/law.py::first_return: preserve earliest terminal index then earliest equal prior index and exact inclusive slice; prove the returned first-repeat trace against that ordered search.",
-        "sft/mathematics/dynamical_systems/law.py::stable_under_registered_perturbations: original ordered directed BFS, target-before-visited test, retained visited queue behavior and every registered perturbation; termination and exact reachability equivalence without added carrier guards or arbitrary search limits.",
-        "sft/mathematics/dynamical_systems/law.py::SPEC/generated_law.py: original ten-axis1024 complete grammar, seven operational witnesses, laws/induction/exclusions/exposition, four controls and every generated program method with pinned output comparison."
-      ]
+      "verified_scope": "All eight original operations with general native derivations: exact dynamics admission; complete adjacent trajectory validation and equal-interface composition; positive transition-count time/empty-One identity; fixed/predecessor records and exact ledger inclusion; earliest terminal/prior first-return slice with no-return iff distinct and inherited trajectory validity; original ordered directed BFS equivalent to finite transition derivation, universally checked over registered perturbations. Complete original1024 candidate product, seven original witnesses, closure/controls/induction/exclusions/exposition and all generated program methods.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_130_DYNAMICS_COMPLETION.json"
     },
     {
       "branch": "mathematics",
@@ -188768,13 +188771,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T09:44:10.383316+00:00",
+  "updated_at": "2026-10-28T10:03:36.438758+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 1,
+    "in_progress": 0,
     "pending": 2756,
-    "fully_reconstructed_claims": 24,
-    "axiom_free_exported_results": 1841,
-    "axiom_free_audited_definitions_and_theorems": 3403
+    "fully_reconstructed_claims": 25,
+    "axiom_free_exported_results": 1886,
+    "axiom_free_audited_definitions_and_theorems": 3511
   }
 }

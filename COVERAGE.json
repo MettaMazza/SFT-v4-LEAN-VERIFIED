@@ -1425,11 +1425,18 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-INFO-SYMBOL-DISTINCTION-001-e387d64c93f5241d.json",
       "statement": "An admitted symbol is a canonical generated form with a retained held label inside a complete canonical alphabet. Observation is a total single-valued source-bound classification. Two symbols are distinguishable exactly when their retained observation labels differ; symbols sharing one observation image remain distinct microforms but belong to one closed observation class. Every retained and closed distinction is recorded.",
       "title": "Exact symbols, observation classes and distinguishability",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
-        "SFT/InformationScience/SymbolObservation.lean"
+        "SFT/InformationScience/SymbolObservation.lean",
+        "SFT/InformationScience/SymbolClasses.lean",
+        "SFT/InformationScience/SymbolLedger.lean",
+        "SFT/InformationScience/SymbolExtension.lean",
+        "SFT/InformationScience/SymbolWitnesses.lean",
+        "SFT/InformationScience/SymbolGrammar.lean",
+        "SFT/InformationScience/SymbolControls.lean",
+        "SFT/InformationScience/SymbolEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS:2016 source-expression cases covering156 alphabets,1240 validation inputs,124 observed-label lookups and496 distinction inputs, including malformed/duplicate/empty source cases. Full Symbol program not yet translated.",
+      "artifact_runtime_parity": "PASS:22736 input cases across both symbol checkpoints; fresh full512 actual native lookup decisions and all original registration/census/closure/control/hash outputs and unknown-ID refusal. Global11110 candidate rows.",
       "registration_sha256": "89e1a9bd9ce31a579f8efa0fb585cf3623bdeb06a4a8b1139be8c2f00772d5d6",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1469,12 +1476,9 @@
         "status": "independently_replicated",
         "title": "Exact symbols, observation classes and distinguishability"
       },
-      "verified_scope": "Original canonical_alphabet, validate_observation, observed_label and distinguishable. Full pair identity and held-field guards; exact source coverage/count/distinctness/label validation. Native validated total single-valued nonempty lookup, lookup/source and uniqueness laws, exact different-label distinction, unconditional irreflexivity and validated symmetry.",
-      "remaining": [
-        "observation_classes: original validation, first-occurrence label order, exact source fibres; class partition and retained microform derivation.",
-        "distinction_ledger: all ordered-by-position unordered pairs, original two-pass retained/closed classification and errors; exhaustion and successor new-pair derivation, coarsening preservation.",
-        "SPEC/generated program: complete512 candidate product, six operational witnesses, controls/closure/induction/exposition and full native program comparison."
-      ]
+      "verified_scope": "Original full pair symbol identity, canonical alphabet, observation validation, exactly-once lookup, distinguishability, observation classes and positional retained/closed ledger. Native total nonempty lookup, source-retaining class partition, symmetric/irreflexive different-image distinction, complete/disjoint ledgers, exact successor pair order and fresh-row lookup/distinction preservation, precise coarsening closure. Full512 grammar, six original operational witnesses and every generated program record.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_135_SYMBOL_COMPLETION.json"
     },
     {
       "branch": "information_science",
@@ -188801,13 +188805,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T11:03:07.355774+00:00",
+  "updated_at": "2026-10-28T11:18:24.978147+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 1,
+    "in_progress": 0,
     "pending": 2753,
-    "fully_reconstructed_claims": 27,
-    "axiom_free_exported_results": 2020,
-    "axiom_free_audited_definitions_and_theorems": 3799
+    "fully_reconstructed_claims": 28,
+    "axiom_free_exported_results": 2080,
+    "axiom_free_audited_definitions_and_theorems": 3929
   }
 }

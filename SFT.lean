@@ -213,3 +213,10 @@ import SFT.Mathematics.CategoryGrammar
 import SFT.Mathematics.CategoryControls
 import SFT.Mathematics.CategoryEvidence
 import SFT.InformationScience.SymbolObservation
+import SFT.InformationScience.SymbolClasses
+import SFT.InformationScience.SymbolLedger
+import SFT.InformationScience.SymbolWitnesses
+import SFT.InformationScience.SymbolGrammar
+import SFT.InformationScience.SymbolControls
+import SFT.InformationScience.SymbolEvidence
+import SFT.InformationScience.SymbolExtension

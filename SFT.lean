@@ -237,3 +237,5 @@ import SFT.InformationScience.QuantityWitnesses
 import SFT.InformationScience.QuantityGrammar
 import SFT.InformationScience.QuantityControls
 import SFT.InformationScience.QuantityEvidence
+import SFT.InformationScience.EntropyPartition
+import SFT.InformationScience.EntropyRefinement

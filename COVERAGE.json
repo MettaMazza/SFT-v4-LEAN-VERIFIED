@@ -1622,9 +1622,12 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-INFO-ENTROPY-UNCERTAINTY-001-d604932214499ea1.json",
       "statement": "Uncertainty is the complete ledger of deterministic microstate distinctions closed inside each exact observation class. Entropy is the provenance-retaining family of those classes, their exact positive support parts, microstate traces and unresolved-pair ledgers; singleton certainty uses structural empty One. Refining observation can only remove closed pairs, while coarsening can only add them. No stochastic cause, logarithm, numerical zero or floating expectation enters the law.",
       "title": "Exact entropy and uncertainty from deterministic observation classes",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/InformationScience/EntropyPartition.lean",
+        "SFT/InformationScience/EntropyRefinement.lean"
+      ],
+      "artifact_runtime_parity": "PASS:7781 input cases:2008 partition/closed-pair inputs,40 unresolved inputs and5733 refinement inputs. Full Entropy program not yet translated.",
       "registration_sha256": "96bfd04d68dfa649a7d7325257c87db59d86317f10f0ca8b8ca8f84fed77f3dc",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1663,7 +1666,14 @@
         "statement": "Uncertainty is the complete ledger of deterministic microstate distinctions closed inside each exact observation class. Entropy is the provenance-retaining family of those classes, their exact positive support parts, microstate traces and unresolved-pair ledgers; singleton certainty uses structural empty One. Refining observation can only remove closed pairs, while coarsening can only add them. No stochastic cause, logarithm, numerical zero or floating expectation enters the law.",
         "status": "independently_replicated",
         "title": "Exact entropy and uncertainty from deterministic observation classes"
-      }
+      },
+      "verified_scope": "Original exact_partition guards and source-first ordered fibres using exact last-row image semantics; complete/disjoint partition with nonempty distinct members. Original unresolved_pairs structural empty-One or positional pair result and class-ordered closed_pairs flattening. Original refines key-set-only guard and complete pair implication, preserving empty/duplicate support and duplicate-key last-row domain. Native refinement iff characterization, reflexivity/transitivity and iff class containment on admitted partitions.",
+      "remaining": [
+        "entropy_ledger: exact positive Fraction class/whole parts and complete per-class record, preserving the literal empty-One state as a real microstate when present.",
+        "closed_pairs/SPEC.refinement: native closed-pair containment and finite count monotonicity under observation refinement.",
+        "SPEC.induction: fresh microstate updates exactly its image class, exact part weight and new within-class pairs; singleton base.",
+        "SPEC/generated program: complete512 candidate product, five operational witnesses, original controls/closure/exposition and full native comparison."
+      ]
     },
     {
       "branch": "information_science",
@@ -188830,13 +188840,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T12:20:55.613759+00:00",
+  "updated_at": "2026-10-28T12:31:54.537374+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2751,
+    "in_progress": 1,
+    "pending": 2750,
     "fully_reconstructed_claims": 30,
-    "axiom_free_exported_results": 2242,
-    "axiom_free_audited_definitions_and_theorems": 4248
+    "axiom_free_exported_results": 2264,
+    "axiom_free_audited_definitions_and_theorems": 4277
   }
 }

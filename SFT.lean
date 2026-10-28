@@ -239,3 +239,5 @@ import SFT.InformationScience.QuantityControls
 import SFT.InformationScience.QuantityEvidence
 import SFT.InformationScience.EntropyPartition
 import SFT.InformationScience.EntropyRefinement
+import SFT.InformationScience.EntropyLedger
+import SFT.InformationScience.EntropyPairs

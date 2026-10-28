@@ -12,7 +12,7 @@
 
 <p align="center">
   <img alt="Lean 4.35.0" src="https://img.shields.io/badge/Lean-4.35.0-163747?style=flat-square&amp;labelColor=0b1825" />
-  <img alt="2,264 audited results" src="https://img.shields.io/badge/Audited_results-2,264-163747?style=flat-square&amp;labelColor=0b1825" />
+  <img alt="2,287 audited results" src="https://img.shields.io/badge/Audited_results-2,287-163747?style=flat-square&amp;labelColor=0b1825" />
   <img alt="0 axiom dependencies in audited results" src="https://img.shields.io/badge/Axiom_dependencies-0-147d72?style=flat-square&amp;labelColor=0b1825" />
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
@@ -47,12 +47,12 @@ flowchart LR
 
 Entry completion means the entry’s actual pinned V3 content is formalised and its applicable checks pass. Entries are completed in registered dependency order. Missing work must identify a specific V3 source component; general host-library or unrelated platform tasks do not hold a scientific entry open.
 
-**2,264 proofs completed · 12,646 candidate records matched · 30 model entries complete · Entropy and Uncertainty in progress.**
+**2,287 proofs completed · 12,646 candidate records matched · 30 model entries complete · Entropy and Uncertainty in progress.**
 
 | Progress measure | Current result |
 | :--- | :--- |
-| Lean theorems proved | **2,264**, all with zero axiom dependencies |
-| Definitions and theorems audited | **4,277**, all with zero axiom dependencies |
+| Lean theorems proved | **2,287**, all with zero axiom dependencies |
+| Definitions and theorems audited | **4,303**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **12,646 / 12,646** across all30 completed source entries, including Information Quantity |
 | Complete model entries | **30 / 2,781** — [latest completion evidence](verification/TURN_140_QUANTITY_COMPLETION.json) |
 
@@ -73,11 +73,11 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | **Measured-value boundary** | Exact Boolean protocol conditions, complete 256-candidate product and original controls | [Derivation](SFT/Foundation/MeasurementProtocol.lean) |
 | **Form identity — complete** | Canonical trace injectivity and equivalence for every generated Form; complete 192-candidate identity grammar | [Derivation](SFT/Foundation/FormIdentity.lean) |
 | **Form construction** | Exact finite productions, injective tuple encoding and acceptance of every generated form by the tuple/list/string validator | [Derivation](SFT/Foundation/FormConstruction.lean) |
-| **Source correspondence** | All 12,646 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_141_PARITY_REPORT.json) |
+| **Source correspondence** | All 12,646 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_142_PARITY_REPORT.json) |
 
 **Completed source entries: 30 / 2,781.** 30 source entries are complete; Entropy and Uncertainty is in progress and 2,750 census entries remain pending. Each completed entry has a source-component completion record. Concrete remaining gaps are tracked in COVERAGE.json.
 
-[Read the current axiom audit →](verification/TURN_141_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 4,277 axiom audits →](verification/TURN_141_ALL_DECLARATIONS_AUDIT.log)
+[Read the current axiom audit →](verification/TURN_142_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 4,303 axiom audits →](verification/TURN_142_ALL_DECLARATIONS_AUDIT.log)
 
 The translated forcing gate checks ordered identifiers, exactly one survivor, explicit reasons and canonical proof-hash identities. A general theorem proves that passing requires one survivor; Root’s tampered decisions are formally rejected. [Gate proofs](SFT/Engine/DecisionGate.lean) · [Root integration](SFT/Foundation/RootGate.lean) · [384-case comparison](verification/TURN_009_DECISION_GATE_REPORT.json)
 
@@ -203,4 +203,6 @@ Information Quantity: exact complete word support, ordered position successor an
 
 Information Quantity is complete against pinned V3. [Source-component completion evidence](verification/TURN_140_QUANTITY_COMPLETION.json).
 
-Entropy and Uncertainty: exact partition, structural empty-One uncertainty, class-ordered closed pairs and refinement/class-containment equivalence with22 new native proofs and7,781 passing input cases. Exact weighted ledger, pair monotonicity, successor and512 program remain in coverage.
+Entropy and Uncertainty: exact partition, structural empty-One uncertainty, class-ordered closed pairs and refinement/class-containment equivalence with22 new native proofs and7,781 passing input cases. Exact weighted ledger and pair monotonicity are verified; microstate successor and512 program remain in coverage.
+
+Entropy exact weighted ledger and closed-pair monotonicity add23 native proofs and2,024 passing Fraction-based input cases.

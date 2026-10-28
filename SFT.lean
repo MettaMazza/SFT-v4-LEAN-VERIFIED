@@ -385,3 +385,9 @@ import SFT.Computation.ModelGrammar
 import SFT.Computation.ModelControls
 import SFT.Computation.ModelEvidence
 import SFT.Computation.ModelEncoding
+import SFT.Computation.UniversalWitnesses
+import SFT.Computation.UniversalGrammar
+import SFT.Computation.UniversalControls
+import SFT.Computation.UniversalEvidence
+import SFT.Computation.UniversalInterpretation
+import SFT.Computation.ResourceRecord

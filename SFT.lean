@@ -402,3 +402,8 @@ import SFT.Computation.HaltingGrammar
 import SFT.Computation.HaltingControls
 import SFT.Computation.HaltingEvidence
 import SFT.Computation.HaltingBoundary
+import SFT.Computation.EnumerationWitnesses
+import SFT.Computation.EnumerationGrammar
+import SFT.Computation.EnumerationControls
+import SFT.Computation.EnumerationEvidence
+import SFT.Computation.EnumerationTrace

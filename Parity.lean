@@ -161,3 +161,7 @@ def main : IO Unit := do
   for c in SFT.Computation.HaltingGrammar.candidates do
     IO.println ("HaltingGrammar\t" ++ SFT.Computation.HaltingGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.HaltingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.HaltingGrammar.exactForm c ++ "\t" ++ SFT.Computation.HaltingGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.EnumerationGrammar.candidates do
+    IO.println ("EnumerationGrammar\t" ++ SFT.Computation.EnumerationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.EnumerationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.EnumerationGrammar.exactForm c ++ "\t" ++ SFT.Computation.EnumerationGrammar.decisionReason c)
+

@@ -222,3 +222,5 @@ import SFT.InformationScience.SymbolEvidence
 import SFT.InformationScience.SymbolExtension
 import SFT.InformationScience.EncodingClasses
 import SFT.InformationScience.EncodingDecoder
+import SFT.InformationScience.EncodingMaps
+import SFT.InformationScience.EncodingLoss

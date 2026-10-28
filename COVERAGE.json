@@ -1493,9 +1493,11 @@
       "lean_status": "in_progress",
       "lean_modules": [
         "SFT/InformationScience/EncodingClasses.lean",
-        "SFT/InformationScience/EncodingDecoder.lean"
+        "SFT/InformationScience/EncodingDecoder.lean",
+        "SFT/InformationScience/EncodingMaps.lean",
+        "SFT/InformationScience/EncodingLoss.lean"
       ],
-      "artifact_runtime_parity": "PASS:9684 source-expression cases:8281 validations,637 source classes,637 inverse constructions,129 decoder lookups; includes empty codewords, empty/duplicate source strings, unused support, repeated relations and malformed raw inputs. Full Encoding program not yet translated.",
+      "artifact_runtime_parity": "PASS:17237 cumulative encoding input cases, including7553 new loss/composition inputs. Full Encoding program not yet translated.",
       "registration_sha256": "3798cd690c775578f2cd5ec24cf46980ce7cf85695f6f28337c7afa8ede510e7",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1535,10 +1537,8 @@
         "status": "independently_replicated",
         "title": "Exact encoding, decoding and declared representational loss"
       },
-      "verified_scope": "Original validate_encoding, source_classes, exact_decoder and decode. Exact source/support/source-key guards; first-used codeword class order, source-order/multiplicity members, complete provenance, singleton-class inverse existence iff and exact decoder relation/key preservation. Native decoder-after-admitted-encoder returns original source theorem.",
+      "verified_scope": "Original validate_encoding, source_classes, exact_decoder and decode. Exact source/support/source-key guards; first-used codeword class order, source-order/multiplicity members, complete provenance, singleton-class inverse existence iff and exact decoder relation/key preservation. Native decoder-after-admitted-encoder returns original source theorem. Original closed_distinctions first-image positional ledger with exact missing-image behavior; native ledger iff common retained codeword class. Original compose_encodings unique/complete interface guard, existence iff admission, source-order preservation and full relation-composition membership.",
       "remaining": [
-        "closed_distinctions: original positional source pairs and first matching encoding lookup/StopIteration, complete merged-class loss characterization.",
-        "compose_encodings: exact second-map duplicate/coverage guard, source-order image lookup and provenance preservation.",
         "SPEC.induction: fresh-source row extension; fresh codeword preserves singleton decoding, reused codeword extends its loss class.",
         "SPEC/generated program: complete1024 candidate product, five operational witnesses, original controls/closure/exposition and full native comparison."
       ]
@@ -188815,13 +188815,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T11:26:50.018929+00:00",
+  "updated_at": "2026-10-28T11:34:06.828635+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 1,
     "pending": 2752,
     "fully_reconstructed_claims": 28,
-    "axiom_free_exported_results": 2101,
-    "axiom_free_audited_definitions_and_theorems": 3960
+    "axiom_free_exported_results": 2124,
+    "axiom_free_audited_definitions_and_theorems": 3991
   }
 }

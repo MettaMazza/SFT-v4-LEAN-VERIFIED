@@ -105,3 +105,7 @@ def main : IO Unit := do
   for c in SFT.InformationScience.QuantumGrammar.candidates do
     IO.println ("QuantumGrammar\t" ++ SFT.InformationScience.QuantumGrammar.candidateId c ++ "\t" ++ (if SFT.InformationScience.QuantumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.InformationScience.QuantumGrammar.exactForm c ++ "\t" ++ SFT.InformationScience.QuantumGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.StateGrammar.candidates do
+    IO.println ("StateGrammar\t" ++ SFT.Computation.StateGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.StateGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.StateGrammar.exactForm c ++ "\t" ++ SFT.Computation.StateGrammar.decisionReason c)
+

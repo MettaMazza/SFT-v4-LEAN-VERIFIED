@@ -41,6 +41,7 @@ entries=[
 ('SFT-INFO-ENTROPY-UNCERTAINTY-001',r/'verification/TURN_143_EntropyProgram.lean'),
 ('SFT-INFO-COMPRESSION-REDUNDANCY-001',r/'verification/TURN_145_CompressionProgram.lean'),
 ('SFT-INFO-QUANTUM-CORRESPONDENCE-001',r/'verification/TURN_176_QuantumProgram.lean'),
+('SFT-COMP-FORM-STATE-TRANSITION-001',r/'verification/TURN_182_StateProgram.lean'),
 ('SFT-INFO-CLASSICAL-PROBABILISTIC-001',r/'verification/TURN_170_ClassicalProgram.lean'),
 ('SFT-INFO-CONSERVATION-LOSS-001',r/'verification/TURN_164_ConservationProgram.lean'),
 ('SFT-INFO-MUTUAL-CONDITIONAL-001',r/'verification/TURN_158_MutualProgram.lean'),

@@ -2222,13 +2222,18 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-FORM-STATE-TRANSITION-001-6ff1fdc0b1d04180.json",
       "statement": "The forced generated configurations and change kernel retains complete state carrier; held action labels; source-bound transition rows; initial and terminal classes; retained execution traces; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Exact state and transition law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Computation/StateTransition.lean",
         "SFT/Computation/StateComposition.lean",
-        "SFT/Computation/StateExtension.lean"
+        "SFT/Computation/StateExtension.lean",
+        "SFT/Computation/StateWords.lean",
+        "SFT/Computation/StateWitnesses.lean",
+        "SFT/Computation/StateGrammar.lean",
+        "SFT/Computation/StateControls.lean",
+        "SFT/Computation/StateEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS:3397 independent complete constructor/step/run output and error comparisons. Complete256-candidate program remains pending.",
+      "artifact_runtime_parity": "PASS:6349 independent complete output/error comparisons; all256 fresh native candidate lookups and all registration/census/closure/control/hash/unknown-ID outputs.",
       "registration_sha256": "eb70dd6364e5bd267ad911ddb540ea8baf39e7c4c1e0a79a58fb1a01872885e1",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -2273,11 +2278,9 @@
         "status": "independently_replicated",
         "title": "Exact state and transition law"
       },
-      "verified_scope": "ExactTransitionSystem original ordered constructor validation, partial transition relations, singleton-filter step and complete run trace/errors. Native constructor and ordered row admission iff, complete target/source-row membership, step carrier preservation, exact execution-chain iff, original initial state, trace length and all execution states in admitted carrier. StateComposition native terminal-interface Path/execution equivalence, complete serial composition, identity and one-action successor retaining every prior trace position. StateExtension original admitted source-row iff step success, unique coordinates, and exact successful-run preservation under admitted carrier/row extensions; explicit appended-carrier theorem and both component traces retained in any common admitted assembly.",
-      "remaining": [
-        "operations.py group_witnesses(formal_computation): translate generated_words and exact_rewrite in full original domains; prove source support/rewrite meaning and all three actual operational witnesses.",
-        "catalog.py/spec_data.py/generated_law.py: retain original eight axes/all256 candidates/decisions/controls/closure/exposition and compare fresh complete native program including all hashes/unknown-ID behavior."
-      ]
+      "verified_scope": "StateTransition preserves original state/action uniqueness order, nonempty carriers and row-by-row carrier/duplicate-coordinate guards/errors. Partial relations remain allowed. Original step full filter requires exactly one target; original run initial membership/error order/full trace preserved. Native admission iff, row/target membership, all trace states in carrier, initial retention, length and exact execution-chain equivalence.; StateComposition retains exact terminal interface and proves every successful trace has a Path decomposition; serial action/path composition preserves all retained records and joins the shared interface once. StateExtension proves both component traces preserved in a common admitted assembly, with compatibility determined by original constructor.; Native identity path and one-action successor, exact previous trace plus appended target. Every original successful step/execution/run is preserved in any admitted extension retaining original carriers/rows, including explicit append of generated carrier/rows. No unrecorded predecessor or new transition rule.; StateWords exact original alphabet/position uniqueness and nonempty-alphabet errors. Source frontier iteration from empty word, cumulative empty-One marker then every width in source order. Native frontier and cumulative support correspondence, exhaustive membership at every finite depth and complete next-layer append. Original literal empty-One collisions retained, not incorrectly deduplicated.; Original position uniqueness first, equal word/position lengths and held-coordinate validation; exact zip/map output and original errors. Native success iff original conditions, full position trace, exact selected/unchanged coordinate output and preserved length.; All three original native operations: two-step held/returned trace; seven generated words; exact second-position rewrite. Native allWitnessesPass, original names/statements.; Original eight axes/all256 Cartesian candidates, source order/IDs/forms/reasons and every coordinate rejection, unique survivor, full controls/exposition/closure/registration retained. Complete fresh native actual lookup/program outputs/all hashes/unknown-ID refusal match pinned artifacts.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_182_STATE_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -188959,13 +188962,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T18:25:19.936014+00:00",
+  "updated_at": "2026-10-28T18:34:08.440230+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 1,
+    "in_progress": 0,
     "pending": 2741,
-    "fully_reconstructed_claims": 39,
-    "axiom_free_exported_results": 3032,
-    "axiom_free_audited_definitions_and_theorems": 5790
+    "fully_reconstructed_claims": 40,
+    "axiom_free_exported_results": 3063,
+    "axiom_free_audited_definitions_and_theorems": 5879
   }
 }

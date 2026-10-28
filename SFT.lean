@@ -323,3 +323,8 @@ import SFT.InformationScience.QuantumCanonical
 import SFT.Computation.StateTransition
 import SFT.Computation.StateComposition
 import SFT.Computation.StateExtension
+import SFT.Computation.StateWords
+import SFT.Computation.StateWitnesses
+import SFT.Computation.StateGrammar
+import SFT.Computation.StateControls
+import SFT.Computation.StateEvidence

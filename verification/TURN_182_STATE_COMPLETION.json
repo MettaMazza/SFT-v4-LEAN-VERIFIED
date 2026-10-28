@@ -1,0 +1,39 @@
+{
+  "claim_id": "SFT-COMP-FORM-STATE-TRANSITION-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_path": "sft/computation/formal_computation/state_transition/law.py",
+  "related_sources": [
+    "sft/computation/operations.py",
+    "sft/computation/catalog.py",
+    "sft/computation/spec_data.py",
+    "sft/computation/generated_law.py"
+  ],
+  "status": "complete",
+  "components": {
+    "operations.ExactTransitionSystem": "StateTransition preserves original state/action uniqueness order, nonempty carriers and row-by-row carrier/duplicate-coordinate guards/errors. Partial relations remain allowed. Original step full filter requires exactly one target; original run initial membership/error order/full trace preserved. Native admission iff, row/target membership, all trace states in carrier, initial retention, length and exact execution-chain equivalence.",
+    "catalog Trace/Composition laws": "StateComposition retains exact terminal interface and proves every successful trace has a Path decomposition; serial action/path composition preserves all retained records and joins the shared interface once. StateExtension proves both component traces preserved in a common admitted assembly, with compatibility determined by original constructor.",
+    "catalog induction base/successor": "Native identity path and one-action successor, exact previous trace plus appended target. Every original successful step/execution/run is preserved in any admitted extension retaining original carriers/rows, including explicit append of generated carrier/rows. No unrecorded predecessor or new transition rule.",
+    "operations.generated_words": "StateWords exact original alphabet/position uniqueness and nonempty-alphabet errors. Source frontier iteration from empty word, cumulative empty-One marker then every width in source order. Native frontier and cumulative support correspondence, exhaustive membership at every finite depth and complete next-layer append. Original literal empty-One collisions retained, not incorrectly deduplicated.",
+    "operations.exact_rewrite": "Original position uniqueness first, equal word/position lengths and held-coordinate validation; exact zip/map output and original errors. Native success iff original conditions, full position trace, exact selected/unchanged coordinate output and preserved length.",
+    "operations.group_witnesses(formal_computation)": "All three original native operations: two-step held/returned trace; seven generated words; exact second-position rewrite. Native allWitnessesPass, original names/statements.",
+    "catalog/spec_data/generated_law": "Original eight axes/all256 Cartesian candidates, source order/IDs/forms/reasons and every coordinate rejection, unique survivor, full controls/exposition/closure/registration retained. Complete fresh native actual lookup/program outputs/all hashes/unknown-ID refusal match pinned artifacts."
+  },
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": "All seven complete before entry",
+  "native_audit": "verification/TURN_182_PARITY_REPORT.json",
+  "program_comparison": "verification/TURN_182_PROGRAM_REPORT.json",
+  "source_cases": [
+    "verification/TURN_180_STATE_CASES.log",
+    "verification/TURN_182_WORD_CASES.log"
+  ],
+  "remaining": [],
+  "completion_count": 40
+}

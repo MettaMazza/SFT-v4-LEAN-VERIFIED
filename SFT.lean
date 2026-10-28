@@ -246,3 +246,4 @@ import SFT.InformationScience.EntropyWitnesses
 import SFT.InformationScience.EntropyGrammar
 import SFT.InformationScience.EntropyControls
 import SFT.InformationScience.EntropyEvidence
+import SFT.InformationScience.CompressionDescription

@@ -1688,9 +1688,11 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-INFO-COMPRESSION-REDUNDANCY-001-4d46ed451a5cd3c3.json",
       "statement": "Lossless compression is a complete description relation whose retained dictionary and token trace reconstruct the exact canonical message. Redundancy is a message distinction or occurrence reconstructible from retained description structure. Variable codewords are uniquely parseable only with a complete delimiter or prefix-free witness. Every dictionary and token resource is counted; no fixed complete word support can injectively map all its forms into the strictly shorter nonempty support.",
       "title": "Exact lossless compression and redundancy accounting",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/InformationScience/CompressionDescription.lean"
+      ],
+      "artifact_runtime_parity": "PASS:1720 reconstruction/resource and6880 lossless/redundancy source-expression comparisons. Full candidate program pending.",
       "registration_sha256": "63cfec89359668ae1b94aba53347eb59988d6e0ad6e9cb533dbad1f6131decc5",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1729,7 +1731,13 @@
         "statement": "Lossless compression is a complete description relation whose retained dictionary and token trace reconstruct the exact canonical message. Redundancy is a message distinction or occurrence reconstructible from retained description structure. Variable codewords are uniquely parseable only with a complete delimiter or prefix-free witness. Every dictionary and token resource is counted; no fixed complete word support can injectively map all its forms into the strictly shorter nonempty support.",
         "status": "independently_replicated",
         "title": "Exact lossless compression and redundancy accounting"
-      }
+      },
+      "verified_scope": "Exact dictionary/token admission, reconstruction and cell provenance, all resource fields/counts, lossless iff exact nonempty reconstruction with original error behavior, redundancy cell recovery/count, singleton-token base and exact token/block/resource successor.",
+      "remaining": [
+        "prefix_free original guard/prefix check and unique variable-word parsing derivation within source prefix/delimiter boundary.",
+        "fixed_support, shorter_nonempty_support and universal_shortening_impossible with original duplicate-label/position domain, full product order and native cardinality/pigeonhole boundary.",
+        "Complete1024 grammar, all five actual operational witnesses, original controls and full native program comparison."
+      ]
     },
     {
       "branch": "information_science",
@@ -188843,13 +188851,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T13:02:32.560116+00:00",
+  "updated_at": "2026-10-28T13:09:47.853087+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2750,
+    "in_progress": 1,
+    "pending": 2749,
     "fully_reconstructed_claims": 31,
-    "axiom_free_exported_results": 2327,
-    "axiom_free_audited_definitions_and_theorems": 4406
+    "axiom_free_exported_results": 2346,
+    "axiom_free_audited_definitions_and_theorems": 4435
   }
 }

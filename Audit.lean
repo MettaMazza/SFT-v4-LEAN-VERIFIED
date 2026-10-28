@@ -3216,3 +3216,15 @@ import SFT
 #print axioms SFT.Computation.RecursionEvidence.registrationHasNoAxioms
 #print axioms SFT.Computation.RecursionEvidence.registrationHasNoFreeParameters
 #print axioms SFT.Computation.RecursionEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Computation.BindingTerms.freeMeaning
+#print axioms SFT.Computation.BindingTerms.binderNotFree
+#print axioms SFT.Computation.BindingTerms.renameSize
+#print axioms SFT.Computation.BindingTerms.renameIdentity
+#print axioms SFT.Computation.BindingTerms.firstFreshValid
+#print axioms SFT.Computation.BindingTerms.availableMeaning
+#print axioms SFT.Computation.BindingTerms.freshBoundary
+#print axioms SFT.Computation.BindingSubstitution.mapIdentity
+#print axioms SFT.Computation.BindingSubstitution.mapRename
+#print axioms SFT.Computation.BindingSubstitution.variableSubstitution
+#print axioms SFT.Computation.BindingSubstitution.heldBinder
+#print axioms SFT.Computation.BindingSubstitution.sourceWitness

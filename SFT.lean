@@ -349,3 +349,5 @@ import SFT.Computation.RecursionWitnesses
 import SFT.Computation.RecursionGrammar
 import SFT.Computation.RecursionControls
 import SFT.Computation.RecursionEvidence
+import SFT.Computation.BindingTerms
+import SFT.Computation.BindingSubstitution

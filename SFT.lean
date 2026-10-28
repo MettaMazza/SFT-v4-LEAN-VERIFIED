@@ -339,3 +339,8 @@ import SFT.Computation.AutomatonGrammar
 import SFT.Computation.AutomatonControls
 import SFT.Computation.AutomatonEvidence
 import SFT.Computation.RewritingDerivation
+import SFT.Computation.RewritingClasses
+import SFT.Computation.RewritingWitnesses
+import SFT.Computation.RewritingGrammar
+import SFT.Computation.RewritingControls
+import SFT.Computation.RewritingEvidence

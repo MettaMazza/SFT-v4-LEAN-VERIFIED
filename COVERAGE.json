@@ -1820,9 +1820,12 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-INFO-NOISE-ERROR-001-bc42a3ab0291a59b.json",
       "statement": "Noise is a registered source-to-received transformation relation over complete canonical word carriers; error is the exact changed-position trace between a held source and received form. Detection is forced when a nonidentity image lies outside valid code support. Correction is forced only when the received form has one registered source predecessor; multiple predecessors remain an explicit closed source class. No random cause, error probability, distance threshold or unrecorded predecessor inference is admitted.",
       "title": "Exact noise, error, detection and correction boundaries",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/InformationScience/NoiseRelation.lean",
+        "SFT/InformationScience/NoiseCorrection.lean"
+      ],
+      "artifact_runtime_parity": "PASS:10645 source-expression constructor/image/predecessor/correction cases.",
       "registration_sha256": "88f34fc26ea8f3bfd2bc9802bc1eda244c9e049fe986fa51538c25c94a94b7ee",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1861,7 +1864,14 @@
         "statement": "Noise is a registered source-to-received transformation relation over complete canonical word carriers; error is the exact changed-position trace between a held source and received form. Detection is forced when a nonidentity image lies outside valid code support. Correction is forced only when the received form has one registered source predecessor; multiple predecessors remain an explicit closed source class. No random cause, error probability, distance threshold or unrecorded predecessor inference is admitted.",
         "status": "independently_replicated",
         "title": "Exact noise, error, detection and correction boundaries"
-      }
+      },
+      "verified_scope": "Exact ErrorRelation constructor and guard order/errors; error_images and predecessors source-order first-occurrence dedup with complete registered action-cell iff, distinctness and admitted membership/totality. Exact uniquely_correctable and correction_record including empty and ambiguous predecessor classes, native singleton equivalence, registered-source provenance and no competing registered predecessor.",
+      "remaining": [
+        "error_trace: original positionwise comparison and unequal-width error; native identity and complete changed-position derivation.",
+        "detectable: original identity-true/outside-code behavior and error propagation with native characterization.",
+        "SPEC.induction_base and induction_step: identity base; fresh action cells and exact predecessor class extension.",
+        "SPEC: full1024 product, operational witnesses, closure/controls and complete fresh native program comparison."
+      ]
     },
     {
       "branch": "information_science",
@@ -188868,13 +188878,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T14:09:35.839478+00:00",
+  "updated_at": "2026-10-28T14:17:09.519676+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2748,
+    "in_progress": 1,
+    "pending": 2747,
     "fully_reconstructed_claims": 33,
-    "axiom_free_exported_results": 2488,
-    "axiom_free_audited_definitions_and_theorems": 4727
+    "axiom_free_exported_results": 2513,
+    "axiom_free_audited_definitions_and_theorems": 4765
   }
 }

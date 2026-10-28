@@ -263,3 +263,5 @@ import SFT.InformationScience.ChannelWitnesses
 import SFT.InformationScience.ChannelGrammar
 import SFT.InformationScience.ChannelControls
 import SFT.InformationScience.ChannelEvidence
+import SFT.InformationScience.NoiseRelation
+import SFT.InformationScience.NoiseCorrection

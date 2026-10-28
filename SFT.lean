@@ -374,3 +374,8 @@ import SFT.Computation.ProcessGrammar
 import SFT.Computation.ProcessControls
 import SFT.Computation.ProcessEvidence
 import SFT.Computation.ProcessFailure
+import SFT.Computation.AssemblyWitnesses
+import SFT.Computation.AssemblyGrammar
+import SFT.Computation.AssemblyControls
+import SFT.Computation.AssemblyEvidence
+import SFT.Computation.AssemblyDecomposition

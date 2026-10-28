@@ -1361,9 +1361,12 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MATH-CATEGORY-TYPE-COMPOSITION-001-47873a83a90e29fa.json",
       "statement": "Canonical Fold forms act as objects and proof-carrying transitions as arrows. Identity is the empty-One return, composition is forced exactly by equal interfaces, and association follows from canonical complete path flattening. Types are source-bound predicates over generated carriers; products are complete joint pair support and sums retain held alternative labels. Functors preserve interfaces, identity and composition, while naturality is equality of the two complete composite traces.",
       "title": "Forced category, type and compositional structure",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Mathematics/CategoryPaths.lean",
+        "SFT/Mathematics/CategoryTypes.lean"
+      ],
+      "artifact_runtime_parity": "PASS:2053 source-expression cases:256 constructors,1024 composition inputs,259 canonical traces,465 predicates,49 paired product/sum inputs. Full category program not yet translated.",
       "registration_sha256": "37e628ebd988447106f3234939fe6ff9d21b17cd1d1247f2636397f4a01e054c",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1401,7 +1404,14 @@
         "statement": "Canonical Fold forms act as objects and proof-carrying transitions as arrows. Identity is the empty-One return, composition is forced exactly by equal interfaces, and association follows from canonical complete path flattening. Types are source-bound predicates over generated carriers; products are complete joint pair support and sums retain held alternative labels. Functors preserve interfaces, identity and composition, while naturality is equality of the two complete composite traces.",
         "status": "independently_replicated",
         "title": "Forced category, type and compositional structure"
-      }
+      },
+      "verified_scope": "Arrow constructor guards and field retention, exact identity constructor and interfaces, composition rejection/accepted-result trace and interface retention, canonical-path append and three-arrow association for successful source compositions. Exact type predicate key-set check/last-key verdicts, duplicate-retaining membership; complete ordered products and held sums with both-way membership proofs.",
+      "remaining": [
+        "identity: prove arbitrary empty-One-return erasure and left/right canonical identity laws; close composition existence for all source-admitted arrows with matching interfaces.",
+        "functor_preserves: exact last-key object/arrow maps, source guards and interface predicate; original preservation statements.",
+        "naturality_commutes: original ordered fold_path, empty-path IndexError and interface-error behavior, complete route equality.",
+        "SPEC and generated program: full1024 candidate grammar, all seven actual witness records, controls/closure/induction/exposition, complete native program comparison."
+      ]
     },
     {
       "branch": "information_science",
@@ -188781,13 +188791,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T10:23:25.498513+00:00",
+  "updated_at": "2026-10-28T10:30:37.600556+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2755,
+    "in_progress": 1,
+    "pending": 2754,
     "fully_reconstructed_claims": 26,
-    "axiom_free_exported_results": 1932,
-    "axiom_free_audited_definitions_and_theorems": 3627
+    "axiom_free_exported_results": 1952,
+    "axiom_free_audited_definitions_and_theorems": 3657
   }
 }

@@ -31,6 +31,7 @@ entries=[
 ('SFT-MATH-ALGEBRA-001',r/'verification/TURN_086_AlgebraProgram.lean'),
 ('SFT-MATH-ORDER-LATTICE-001',r/'verification/TURN_096_OrderProgram.lean'),
 ('SFT-MATH-GRAPH-NETWORK-001',r/'verification/TURN_107_GraphProgram.lean'),
+('SFT-MATH-GEOMETRY-TOPOLOGY-001',r/'verification/TURN_124_GeometryProgram.lean'),
 ('SFT-FOUNDATION-FOLD-DYNAMICS-001',r/'verification/TURN_040_FoldDynamicsProgram.lean'),
 ('SFT-FOUNDATION-PRIMITIVE-MAP-UNIQUENESS-001',r/'verification/TURN_061_PrimitiveProgram.lean'),
 ('SFT-FOUNDATION-DERIVATION-TRACE-001',r/'verification/TURN_065_TraceProgram.lean')]

@@ -12,7 +12,7 @@
 
 <p align="center">
   <img alt="Lean 4.35.0" src="https://img.shields.io/badge/Lean-4.35.0-163747?style=flat-square&amp;labelColor=0b1825" />
-  <img alt="2,656 audited results" src="https://img.shields.io/badge/Audited_results-2,656-163747?style=flat-square&amp;labelColor=0b1825" />
+  <img alt="2,674 audited results" src="https://img.shields.io/badge/Audited_results-2,674-163747?style=flat-square&amp;labelColor=0b1825" />
   <img alt="0 axiom dependencies in audited results" src="https://img.shields.io/badge/Axiom_dependencies-0-147d72?style=flat-square&amp;labelColor=0b1825" />
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
@@ -47,12 +47,12 @@ flowchart LR
 
 Entry completion means the entry’s actual pinned V3 content is formalised and its applicable checks pass. Entries are completed in registered dependency order. Missing work must identify a specific V3 source component; general host-library or unrelated platform tasks do not hold a scientific entry open.
 
-**2,656 proofs completed · 18,278 candidate records matched · 35 model entries complete · Coding complete.**
+**2,674 proofs completed · 18,278 candidate records matched · 35 model entries complete · Mutual and Conditional Information in progress.**
 
 | Progress measure | Current result |
 | :--- | :--- |
-| Lean theorems proved | **2,656**, all with zero axiom dependencies |
-| Definitions and theorems audited | **5,068**, all with zero axiom dependencies |
+| Lean theorems proved | **2,674**, all with zero axiom dependencies |
+| Definitions and theorems audited | **5,094**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **18,278 / 18,278** across all35 completed source entries, including Coding |
 | Complete model entries | **35 / 2,781** — [latest completion evidence](verification/TURN_153_CODING_COMPLETION.json) |
 
@@ -73,11 +73,11 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | **Measured-value boundary** | Exact Boolean protocol conditions, complete 256-candidate product and original controls | [Derivation](SFT/Foundation/MeasurementProtocol.lean) |
 | **Form identity — complete** | Canonical trace injectivity and equivalence for every generated Form; complete 192-candidate identity grammar | [Derivation](SFT/Foundation/FormIdentity.lean) |
 | **Form construction** | Exact finite productions, injective tuple encoding and acceptance of every generated form by the tuple/list/string validator | [Derivation](SFT/Foundation/FormConstruction.lean) |
-| **Source correspondence** | All 18,278 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_153_PARITY_REPORT.json) |
+| **Source correspondence** | All 18,278 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_155_PARITY_REPORT.json) |
 
-**Completed source entries: 35 / 2,781.** 35 source entries are complete; 2,746 census entries remain pending. Each completed entry has a source-component completion record. Concrete remaining gaps are tracked in COVERAGE.json.
+**Completed source entries: 35 / 2,781.** 35 source entries are complete; Mutual and Conditional Information is in progress and 2,745 census entries remain pending. Each completed entry has a source-component completion record. Concrete remaining gaps are tracked in COVERAGE.json.
 
-[Read the current axiom audit →](verification/TURN_153_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 5,068 axiom audits →](verification/TURN_153_ALL_DECLARATIONS_AUDIT.log)
+[Read the current axiom audit →](verification/TURN_155_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 5,094 axiom audits →](verification/TURN_155_ALL_DECLARATIONS_AUDIT.log)
 
 The translated forcing gate checks ordered identifiers, exactly one survivor, explicit reasons and canonical proof-hash identities. A general theorem proves that passing requires one survivor; Root’s tampered decisions are formally rejected. [Gate proofs](SFT/Engine/DecisionGate.lean) · [Root integration](SFT/Foundation/RootGate.lean) · [384-case comparison](verification/TURN_009_DECISION_GATE_REPORT.json)
 

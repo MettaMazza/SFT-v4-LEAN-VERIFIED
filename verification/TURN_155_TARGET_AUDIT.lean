@@ -1,0 +1,27 @@
+import SFT.InformationScience.MutualObservation
+#print axioms SFT.InformationScience.MutualObservation.supportValid
+#print axioms SFT.InformationScience.MutualObservation.mapValid
+#print axioms SFT.InformationScience.MutualObservation.validateObservation
+#print axioms SFT.InformationScience.MutualObservation.observationClasses
+#print axioms SFT.InformationScience.MutualObservation.labels
+#print axioms SFT.InformationScience.MutualObservation.jointMembers
+#print axioms SFT.InformationScience.MutualObservation.conditionalMembers
+#print axioms SFT.InformationScience.MutualObservation.labelPairs
+#print axioms SFT.InformationScience.MutualObservation.supportMeaning
+#print axioms SFT.InformationScience.MutualObservation.mapMeaning
+#print axioms SFT.InformationScience.MutualObservation.validationMeaning
+#print axioms SFT.InformationScience.MutualObservation.partitionValidity
+#print axioms SFT.InformationScience.MutualObservation.validationFromPartition
+#print axioms SFT.InformationScience.MutualObservation.classesMeaning
+#print axioms SFT.InformationScience.MutualObservation.classesPartition
+#print axioms SFT.InformationScience.MutualObservation.classMembership
+#print axioms SFT.InformationScience.MutualObservation.classNonempty
+#print axioms SFT.InformationScience.MutualObservation.classesCover
+#print axioms SFT.InformationScience.MutualObservation.classesDisjoint
+#print axioms SFT.InformationScience.MutualObservation.labelsMeaning
+#print axioms SFT.InformationScience.MutualObservation.labelsDistinct
+#print axioms SFT.InformationScience.MutualObservation.jointMembership
+#print axioms SFT.InformationScience.MutualObservation.conditionalMembership
+#print axioms SFT.InformationScience.MutualObservation.pairsMembership
+#print axioms SFT.InformationScience.MutualObservation.conditionalCovers
+#print axioms SFT.InformationScience.MutualObservation.conditionalDisjoint

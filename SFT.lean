@@ -309,3 +309,4 @@ import SFT.InformationScience.ClassicalWitnesses
 import SFT.InformationScience.ClassicalGrammar
 import SFT.InformationScience.ClassicalControls
 import SFT.InformationScience.ClassicalEvidence
+import SFT.InformationScience.QuantumSupport

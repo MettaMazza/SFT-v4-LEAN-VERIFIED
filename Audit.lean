@@ -2903,3 +2903,13 @@ import SFT
 #print axioms SFT.InformationScience.ClassicalEvidence.registrationHasNoAxioms
 #print axioms SFT.InformationScience.ClassicalEvidence.registrationHasNoFreeParameters
 #print axioms SFT.InformationScience.ClassicalEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.InformationScience.QuantumSupport.quantityCorrespondence
+#print axioms SFT.InformationScience.QuantumSupport.supportResult
+#print axioms SFT.InformationScience.QuantumSupport.supportAdmission
+#print axioms SFT.InformationScience.QuantumSupport.supportDistinct
+#print axioms SFT.InformationScience.QuantumSupport.supportMembership
+#print axioms SFT.InformationScience.QuantumSupport.branchOutput
+#print axioms SFT.InformationScience.QuantumSupport.branchProjection
+#print axioms SFT.InformationScience.QuantumSupport.zipRetainsWord
+#print axioms SFT.InformationScience.QuantumSupport.zipRetainsPositions
+#print axioms SFT.InformationScience.QuantumSupport.admittedProvenance

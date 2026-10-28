@@ -1,0 +1,16 @@
+import SFT.InformationScience.ConservationReverse
+#print axioms SFT.InformationScience.ConservationReverse.Predecessors
+#print axioms SFT.InformationScience.ConservationReverse.predecessorRecord
+#print axioms SFT.InformationScience.ConservationReverse.reverseRows
+#print axioms SFT.InformationScience.ConservationReverse.reverseRecord
+#print axioms SFT.InformationScience.ConservationReverse.isReversible
+#print axioms SFT.InformationScience.ConservationReverse.uniqueIff
+#print axioms SFT.InformationScience.ConservationReverse.heldIff
+#print axioms SFT.InformationScience.ConservationReverse.rowMembership
+#print axioms SFT.InformationScience.ConservationReverse.reverseAdmitted
+#print axioms SFT.InformationScience.ConservationReverse.uniquePredecessor
+#print axioms SFT.InformationScience.ConservationReverse.uniqueRecovery
+#print axioms SFT.InformationScience.ConservationReverse.heldPredecessors
+#print axioms SFT.InformationScience.ConservationReverse.heldRecovery
+#print axioms SFT.InformationScience.ConservationReverse.distinctPredecessorsNotUnique
+#print axioms SFT.InformationScience.ConservationReverse.reversibleAdmitted

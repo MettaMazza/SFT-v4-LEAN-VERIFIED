@@ -2773,3 +2773,13 @@ import SFT
 #print axioms SFT.InformationScience.ConservationComposition.retainedSubset
 #print axioms SFT.InformationScience.ConservationComposition.contentsPresent
 #print axioms SFT.InformationScience.ConservationComposition.downstreamTrue
+#print axioms SFT.InformationScience.ConservationReverse.uniqueIff
+#print axioms SFT.InformationScience.ConservationReverse.heldIff
+#print axioms SFT.InformationScience.ConservationReverse.rowMembership
+#print axioms SFT.InformationScience.ConservationReverse.reverseAdmitted
+#print axioms SFT.InformationScience.ConservationReverse.uniquePredecessor
+#print axioms SFT.InformationScience.ConservationReverse.uniqueRecovery
+#print axioms SFT.InformationScience.ConservationReverse.heldPredecessors
+#print axioms SFT.InformationScience.ConservationReverse.heldRecovery
+#print axioms SFT.InformationScience.ConservationReverse.distinctPredecessorsNotUnique
+#print axioms SFT.InformationScience.ConservationReverse.reversibleAdmitted

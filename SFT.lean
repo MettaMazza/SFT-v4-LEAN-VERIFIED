@@ -303,3 +303,5 @@ import SFT.InformationScience.ClassicalSupport
 import SFT.InformationScience.ClassicalLedger
 import SFT.InformationScience.ClassicalResolution
 import SFT.InformationScience.ClassicalWhole
+import SFT.InformationScience.ClassicalClosure
+import SFT.InformationScience.ClassicalExtension

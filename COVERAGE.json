@@ -2222,9 +2222,11 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-FORM-STATE-TRANSITION-001-6ff1fdc0b1d04180.json",
       "statement": "The forced generated configurations and change kernel retains complete state carrier; held action labels; source-bound transition rows; initial and terminal classes; retained execution traces; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Exact state and transition law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/StateTransition.lean"
+      ],
+      "artifact_runtime_parity": "PASS:3397 independent complete constructor/step/run output and error comparisons. Complete256-candidate program remains pending.",
       "registration_sha256": "eb70dd6364e5bd267ad911ddb540ea8baf39e7c4c1e0a79a58fb1a01872885e1",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -2268,7 +2270,14 @@
         "statement": "The forced generated configurations and change kernel retains complete state carrier; held action labels; source-bound transition rows; initial and terminal classes; retained execution traces; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Exact state and transition law"
-      }
+      },
+      "verified_scope": "ExactTransitionSystem original ordered constructor validation, partial transition relations, singleton-filter step and complete run trace/errors. Native constructor and ordered row admission iff, complete target/source-row membership, step carrier preservation, exact execution-chain iff, original initial state, trace length and all execution states in admitted carrier.",
+      "remaining": [
+        "catalog.py SPEC Trace/Composition laws: prove serial execution composition/reconstruction from retained transition rows and identity/terminal interface, retaining original partial-operation boundary.",
+        "catalog.py SPEC induction_step: prove fresh generated state/carrier/row extension preserves prior rows and executions when the original constructor admits the extension.",
+        "operations.py group_witnesses(formal_computation): translate generated_words and exact_rewrite in full original domains; prove source support/rewrite meaning and all three actual operational witnesses.",
+        "catalog.py/spec_data.py/generated_law.py: retain original eight axes/all256 candidates/decisions/controls/closure/exposition and compare fresh complete native program including all hashes/unknown-ID behavior."
+      ]
     },
     {
       "branch": "computation",
@@ -188950,13 +188959,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T18:13:48.709777+00:00",
+  "updated_at": "2026-10-28T18:20:03.660187+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2742,
+    "in_progress": 1,
+    "pending": 2741,
     "fully_reconstructed_claims": 39,
-    "axiom_free_exported_results": 3000,
-    "axiom_free_audited_definitions_and_theorems": 5751
+    "axiom_free_exported_results": 3014,
+    "axiom_free_audited_definitions_and_theorems": 5772
   }
 }

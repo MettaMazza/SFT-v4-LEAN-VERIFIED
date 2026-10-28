@@ -2999,3 +2999,17 @@ import SFT
 #print axioms SFT.InformationScience.QuantumCanonical.admittedNamesInjective
 #print axioms SFT.InformationScience.QuantumCanonical.admittedNamesDistinct
 #print axioms SFT.InformationScience.QuantumCanonical.basisInverse
+#print axioms SFT.Computation.StateTransition.rowBoundMeaning
+#print axioms SFT.Computation.StateTransition.stepMeaning
+#print axioms SFT.Computation.StateTransition.runBase
+#print axioms SFT.Computation.StateTransition.runAdmission
+#print axioms SFT.Computation.StateTransition.runFromMeaning
+#print axioms SFT.Computation.StateTransition.executionLength
+#print axioms SFT.Computation.StateTransition.executionInitial
+#print axioms SFT.Computation.StateTransition.validateMeaning
+#print axioms SFT.Computation.StateTransition.createMeaning
+#print axioms SFT.Computation.StateTransition.checkedRowsBound
+#print axioms SFT.Computation.StateTransition.targetMembership
+#print axioms SFT.Computation.StateTransition.stepSourceRow
+#print axioms SFT.Computation.StateTransition.admittedStepBound
+#print axioms SFT.Computation.StateTransition.executionStates

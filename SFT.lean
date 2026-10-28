@@ -191,3 +191,4 @@ import SFT.Mathematics.OptimizationWitnesses
 import SFT.Mathematics.OptimizationGrammar
 import SFT.Mathematics.OptimizationControls
 import SFT.Mathematics.OptimizationEvidence
+import SFT.Mathematics.DynamicsTraces

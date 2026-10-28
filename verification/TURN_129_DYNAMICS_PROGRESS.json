@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "claim_id": "SFT-MATH-DYNAMICAL-SYSTEMS-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "valid_dynamics",
+    "trajectory_valid",
+    "transition_time",
+    "fixed_forms",
+    "predecessor_records",
+    "reversible_with_record"
+  ],
+  "new_theorems": 15,
+  "new_declarations": 21,
+  "input_cases": 5123,
+  "cases_by_operation_group": {
+    "admission": 637,
+    "trajectory": 3731,
+    "fixed_and_predecessor": 273,
+    "reversal": 441,
+    "time": 41
+  },
+  "native_audit": "verification/TURN_129_PARITY_REPORT.json",
+  "entry_complete": false,
+  "remaining": [
+    "sft/mathematics/dynamical_systems/law.py::first_return: preserve earliest terminal index then earliest equal prior index and exact inclusive slice; prove the returned first-repeat trace against that ordered search.",
+    "sft/mathematics/dynamical_systems/law.py::stable_under_registered_perturbations: original ordered directed BFS, target-before-visited test, retained visited queue behavior and every registered perturbation; termination and exact reachability equivalence without added carrier guards or arbitrary search limits.",
+    "sft/mathematics/dynamical_systems/law.py::SPEC/generated_law.py: original ten-axis1024 complete grammar, seven operational witnesses, laws/induction/exclusions/exposition, four controls and every generated program method with pinned output comparison."
+  ]
+}

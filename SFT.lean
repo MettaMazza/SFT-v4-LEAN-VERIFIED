@@ -417,3 +417,8 @@ import SFT.Computation.DegreesGrammar
 import SFT.Computation.DegreesControls
 import SFT.Computation.DegreesEvidence
 import SFT.Computation.DegreeClasses
+import SFT.Computation.UniversalMachineWitnesses
+import SFT.Computation.UniversalMachineGrammar
+import SFT.Computation.UniversalMachineControls
+import SFT.Computation.UniversalMachineEvidence
+import SFT.Computation.UniversalMachineTrace

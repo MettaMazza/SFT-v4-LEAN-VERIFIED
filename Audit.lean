@@ -3403,3 +3403,10 @@ import SFT
 #print axioms SFT.Computation.AssemblyDecomposition.parallelReconstruction
 #print axioms SFT.Computation.AssemblyDecomposition.componentObservationUnique
 #print axioms SFT.Computation.AssemblyDecomposition.parallelComponents
+#print axioms SFT.Computation.ModelSimulation.pathSimulation
+#print axioms SFT.Computation.ModelSimulation.simulatedObservation
+#print axioms SFT.Computation.ModelSimulation.reconstructedTerminal
+#print axioms SFT.Computation.ModelSimulation.identitySimulation
+#print axioms SFT.Computation.ModelSimulation.composeSimulation
+#print axioms SFT.Computation.ModelSimulation.flattenedAppend
+#print axioms SFT.Computation.ModelSimulation.ledgerSuccessor

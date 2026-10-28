@@ -2906,8 +2906,10 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-FORM-MODEL-EQUIVALENCE-001-911ff906b2d84071.json",
       "statement": "The forced bidirectional execution-preserving translations kernel retains complete source descriptions; total encoding; target descriptions; step or trace simulation; result preservation; reverse reconstruction; overhead ledger; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold computational-model equivalence law",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/ModelSimulation.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "4a95bf4d417b24c78361b2c0a9d4a4e8c12b2cab0338b6181cb9df0ca383c2d9",
       "v3_registration": {
@@ -2953,7 +2955,13 @@
         "statement": "The forced bidirectional execution-preserving translations kernel retains complete source descriptions; total encoding; target descriptions; step or trace simulation; result preservation; reverse reconstruction; overhead ledger; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold computational-model equivalence law"
-      }
+      },
+      "verified_scope": "Typed source MODEL-EQUIVALENCE step-or-trace simulation obligation on unchanged Path/step/run operations. Native arbitrary finite path simulation, terminal observation preservation under supplied encoding, retained per-source-step target-action overhead ledger, identity and composed simulations, ledger concatenation/successor. Conditional on the registered translation relation, not a proof that every pair of models is equivalent. Concrete finite encoding/decoder and reverse correspondence remain to connect.",
+      "remaining": [
+        "Connect MODEL-EQUIVALENCE complete source descriptions/total encoding/target descriptions to existing native EncodingClasses/EncodingMaps finite registered table validation and lookup, preserving the exact description representation.",
+        "Connect reverse reconstruction to existing EncodingDecoder exactDecoder/decoderLeftInverse and establish bidirectional registered execution correspondence, retaining target-action overhead segments.",
+        "Translate original MODEL-EQUIVALENCE catalog full256 grammar/witnesses/controls/program and compare fresh native outputs to pinned V3."
+      ]
     },
     {
       "branch": "computation",
@@ -189045,13 +189053,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T21:47:51.469609+00:00",
+  "updated_at": "2026-10-28T21:52:26.602828+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2732,
+    "in_progress": 1,
+    "pending": 2731,
     "fully_reconstructed_claims": 49,
-    "axiom_free_exported_results": 3404,
-    "axiom_free_audited_definitions_and_theorems": 6741
+    "axiom_free_exported_results": 3411,
+    "axiom_free_audited_definitions_and_theorems": 6750
   }
 }

@@ -379,3 +379,4 @@ import SFT.Computation.AssemblyGrammar
 import SFT.Computation.AssemblyControls
 import SFT.Computation.AssemblyEvidence
 import SFT.Computation.AssemblyDecomposition
+import SFT.Computation.ModelSimulation

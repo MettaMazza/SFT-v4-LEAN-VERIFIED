@@ -2760,3 +2760,16 @@ import SFT
 #print axioms SFT.InformationScience.ConservationLedger.fibreRows
 #print axioms SFT.InformationScience.ConservationLedger.closedFibre
 #print axioms SFT.InformationScience.ConservationLedger.fibreCloses
+#print axioms SFT.InformationScience.ConservationComposition.pairHasMeaning
+#print axioms SFT.InformationScience.ConservationComposition.valueExact
+#print axioms SFT.InformationScience.ConservationComposition.keysRows
+#print axioms SFT.InformationScience.ConservationComposition.imageRows
+#print axioms SFT.InformationScience.ConservationComposition.composedImage
+#print axioms SFT.InformationScience.ConservationComposition.composedAdmitted
+#print axioms SFT.InformationScience.ConservationComposition.composeAdmitted
+#print axioms SFT.InformationScience.ConservationComposition.sourceValue
+#print axioms SFT.InformationScience.ConservationComposition.exactComposition
+#print axioms SFT.InformationScience.ConservationComposition.closedPersists
+#print axioms SFT.InformationScience.ConservationComposition.retainedSubset
+#print axioms SFT.InformationScience.ConservationComposition.contentsPresent
+#print axioms SFT.InformationScience.ConservationComposition.downstreamTrue

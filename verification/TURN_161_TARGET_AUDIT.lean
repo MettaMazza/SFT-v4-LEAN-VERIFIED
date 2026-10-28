@@ -1,0 +1,20 @@
+import SFT.InformationScience.ConservationComposition
+#print axioms SFT.InformationScience.ConservationComposition.value
+#print axioms SFT.InformationScience.ConservationComposition.composedRows
+#print axioms SFT.InformationScience.ConservationComposition.compose
+#print axioms SFT.InformationScience.ConservationComposition.contents
+#print axioms SFT.InformationScience.ConservationComposition.pairHas
+#print axioms SFT.InformationScience.ConservationComposition.pairHasMeaning
+#print axioms SFT.InformationScience.ConservationComposition.downstreamRetentionLaw
+#print axioms SFT.InformationScience.ConservationComposition.valueExact
+#print axioms SFT.InformationScience.ConservationComposition.keysRows
+#print axioms SFT.InformationScience.ConservationComposition.imageRows
+#print axioms SFT.InformationScience.ConservationComposition.composedImage
+#print axioms SFT.InformationScience.ConservationComposition.composedAdmitted
+#print axioms SFT.InformationScience.ConservationComposition.composeAdmitted
+#print axioms SFT.InformationScience.ConservationComposition.sourceValue
+#print axioms SFT.InformationScience.ConservationComposition.exactComposition
+#print axioms SFT.InformationScience.ConservationComposition.closedPersists
+#print axioms SFT.InformationScience.ConservationComposition.retainedSubset
+#print axioms SFT.InformationScience.ConservationComposition.contentsPresent
+#print axioms SFT.InformationScience.ConservationComposition.downstreamTrue

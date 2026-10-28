@@ -1,0 +1,32 @@
+{
+  "claim_id": "SFT-MATH-LOGIC-PROOF-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_path": "sft/mathematics/logic_proof/law.py",
+  "status": "complete",
+  "components": {
+    "Proposition": "LogicForms.Proposition/Orientation encode exactly nonempty form and held/complementary-held orientations. makeProposition preserves original string constructor guard/error; propositionRoundTrip covers all represented values; form equality and orientation equality determine object equality. No whitespace normalization or extra canonicalization added.",
+    "ProofStep": "LogicForms.ProofStep/makeProofStep preserve ordered nonempty premises, exact conclusion and nonempty rule name. No rule-registry admission imposed by construction. stepRoundTrip preserves every represented value; proof fields are erased validation witnesses.",
+    "denied": "LogicForms.denied, denialInvolution, denialPreservesForm, denialChangesOrientation and denialDistinct: same form, complementary orientation, exact involution.",
+    "conjunction": "LogicForms.conjunction/conjunctionRetainsBoth retain original joint-complete tag and both proposition objects in order.",
+    "disjunction": "LogicForms.disjunction/disjunctionAdmitted/Rejected retain original held-alternative tag, chosen object and ordered alternatives; reject absent branch.",
+    "proof_is_valid": "LogicInference.proofIsValid reproduces original sequential available-premise checks, exact registered (rule,premises,conclusion) tuple and appended conclusions. checkerIffTrace proves both directions of ordered accepted-rule trace; checkedProofSound proves witness/property preservation relative to initial premises and sound registered rules. No global or imported logical soundness assumed.",
+    "consistent": "LogicInference.consistent/consistentMeaning/opposingPairRejected: original all-propositions absence-of-held-denial predicate; duplicate admission lists and empty lists retain source behavior.",
+    "grammar_complete": "LogicInference.grammarComplete/grammarCompletenessMeaning: original generated-list distinctness and each generated proposition or its denial in decided; consistency remains a separate check. Original vacuous empty grammar and duplicated decided-list behavior retained.",
+    "SPEC.dimensions": "LogicGrammar complete ten-axis1024 product, source IDs/forms/reasons/order, exhaustive enumeration, exact criteria/unique survivor and all coordinate rejections.",
+    "SPEC.witnesses": "LogicWitnesses all seven actual source computations, including wrong-rule rejection and bounded grammar decisions, with kernel allWitnessesPass.",
+    "SPEC.laws_and_induction": "Native form/connective preservation, ordered trace equivalence and grammar-relative completeness formalise original clauses. Source base/successor/exclusions and all exposition retained; no unregistered truth-value arithmetic or global completeness added.",
+    "generated_law.py program": "LogicEvidence/Controls preserve registration/census/actual lookup decisions/closure/generality/controls/hash fields and StopIteration refusal. Every native field compared against pinned source artifacts."
+  },
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-ORDER-LATTICE-001"
+  ],
+  "dependency_status": "All four complete before this entry",
+  "native_audit": "verification/TURN_131_PARITY_REPORT.json",
+  "program_comparison": "verification/TURN_131_PROGRAM_REPORT.json",
+  "source_cases": "verification/TURN_131_LOGIC_CASES.log",
+  "remaining": [],
+  "completion_count": 26
+}

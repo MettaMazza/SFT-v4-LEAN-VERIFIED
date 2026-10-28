@@ -198,3 +198,9 @@ import SFT.Mathematics.DynamicsWitnesses
 import SFT.Mathematics.DynamicsGrammar
 import SFT.Mathematics.DynamicsControls
 import SFT.Mathematics.DynamicsEvidence
+import SFT.Mathematics.LogicForms
+import SFT.Mathematics.LogicInference
+import SFT.Mathematics.LogicWitnesses
+import SFT.Mathematics.LogicGrammar
+import SFT.Mathematics.LogicControls
+import SFT.Mathematics.LogicEvidence

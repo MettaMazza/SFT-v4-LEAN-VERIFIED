@@ -2085,8 +2085,12 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-INFO-CLASSICAL-PROBABILISTIC-001-ce0515fdf69d368b.json",
       "statement": "Classical information is one held member of a complete deterministic support with its provenance retained. Probabilistic information is the exact observation-class ledger over that same support: every class retains its deterministic microstates and exact positive part of the whole. Observation resolves a classical state only for a singleton class; otherwise it returns the complete unresolved class. Deterministic transformations push the ledger forward by exact predecessor grouping. Probability therefore describes unavailable distinctions and does not introduce stochastic dynamics, floating propensities, numerical zero or priors.",
       "title": "Exact classical and probabilistic information correspondence",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/InformationScience/ClassicalSupport.lean",
+        "SFT/InformationScience/ClassicalLedger.lean",
+        "SFT/InformationScience/ClassicalResolution.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "137558961d78519385c37ab2897286c0bc8f6749c34cf6774bd17b9c70998619",
       "v3_registration": {
@@ -2126,7 +2130,13 @@
         "statement": "Classical information is one held member of a complete deterministic support with its provenance retained. Probabilistic information is the exact observation-class ledger over that same support: every class retains its deterministic microstates and exact positive part of the whole. Observation resolves a classical state only for a singleton class; otherwise it returns the complete unresolved class. Deterministic transformations push the ledger forward by exact predecessor grouping. Probability therefore describes unavailable distinctions and does not introduce stochastic dynamics, floating propensities, numerical zero or priors.",
         "status": "independently_replicated",
         "title": "Exact classical and probabilistic information correspondence"
-      }
+      },
+      "verified_scope": "Exact canonical support/classical state and provenance; probability and pushforward complete ordered class ledgers and reduced positive fractions, exact original validation/error order. Native admission/partition/row ratio/positivity/order proofs. Exact observed-label matching, singleton-only classical resolution, complete unresolved members, deterministic realization tags/parts/order and native provenance.2231 ledger/support plus4065 resolution/realization source-expression comparisons PASS. Aggregate zero-axiom audit PASS.",
+      "remaining": [
+        "ledger_is_exact_whole: translate exact sum predicate and prove complete class parts reconstruct whole.",
+        "SPEC.induction: singleton whole-class base and arbitrary fresh microstate class/part successor.",
+        "SPEC: full1024 grammar, six native operational witnesses, original controls and complete generated program comparison."
+      ]
     },
     {
       "branch": "information_science",
@@ -188920,13 +188930,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T16:50:10.884622+00:00",
+  "updated_at": "2026-10-28T16:59:52.365784+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2744,
+    "in_progress": 1,
+    "pending": 2743,
     "fully_reconstructed_claims": 37,
-    "axiom_free_exported_results": 2832,
-    "axiom_free_audited_definitions_and_theorems": 5414
+    "axiom_free_exported_results": 2851,
+    "axiom_free_audited_definitions_and_theorems": 5446
   }
 }

@@ -1,0 +1,25 @@
+import SFT.InformationScience.ClassicalLedger
+#print axioms SFT.InformationScience.ClassicalSupport.canonicalSupport
+#print axioms SFT.InformationScience.ClassicalSupport.ClassicalState
+#print axioms SFT.InformationScience.ClassicalSupport.classicalState
+#print axioms SFT.InformationScience.ClassicalSupport.validateProbability
+#print axioms SFT.InformationScience.ClassicalSupport.validatePushforward
+#print axioms SFT.InformationScience.ClassicalSupport.canonicalMeaning
+#print axioms SFT.InformationScience.ClassicalSupport.classicalMeaning
+#print axioms SFT.InformationScience.ClassicalSupport.probabilityMeaning
+#print axioms SFT.InformationScience.ClassicalSupport.pushforwardMeaning
+#print axioms SFT.InformationScience.ClassicalSupport.probabilityPartition
+#print axioms SFT.InformationScience.ClassicalSupport.pushforwardProbability
+#print axioms SFT.InformationScience.ClassicalLedger.ProbabilityRow
+#print axioms SFT.InformationScience.ClassicalLedger.PushforwardRow
+#print axioms SFT.InformationScience.ClassicalLedger.probabilityRow
+#print axioms SFT.InformationScience.ClassicalLedger.pushforwardRow
+#print axioms SFT.InformationScience.ClassicalLedger.probabilityLedger
+#print axioms SFT.InformationScience.ClassicalLedger.pushforwardLedger
+#print axioms SFT.InformationScience.ClassicalLedger.probabilityOutput
+#print axioms SFT.InformationScience.ClassicalLedger.pushforwardOutput
+#print axioms SFT.InformationScience.ClassicalLedger.admittedLedgerExists
+#print axioms SFT.InformationScience.ClassicalLedger.probabilityRowMeaning
+#print axioms SFT.InformationScience.ClassicalLedger.pushforwardRowMeaning
+#print axioms SFT.InformationScience.ClassicalLedger.probabilityProjection
+#print axioms SFT.InformationScience.ClassicalLedger.pushforwardProjection

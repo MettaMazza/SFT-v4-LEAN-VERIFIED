@@ -299,3 +299,6 @@ import SFT.InformationScience.ConservationWitnesses
 import SFT.InformationScience.ConservationGrammar
 import SFT.InformationScience.ConservationControls
 import SFT.InformationScience.ConservationEvidence
+import SFT.InformationScience.ClassicalSupport
+import SFT.InformationScience.ClassicalLedger
+import SFT.InformationScience.ClassicalResolution

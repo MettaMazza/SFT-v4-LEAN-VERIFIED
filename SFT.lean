@@ -313,3 +313,4 @@ import SFT.InformationScience.QuantumSupport
 import SFT.InformationScience.QuantumBasis
 import SFT.InformationScience.QuantumJoint
 import SFT.InformationScience.QuantumUnits
+import SFT.InformationScience.QuantumObservation

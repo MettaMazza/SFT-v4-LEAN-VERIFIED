@@ -2937,3 +2937,12 @@ import SFT
 #print axioms SFT.InformationScience.QuantumUnits.admittedTrace
 #print axioms SFT.InformationScience.QuantumUnits.traceLength
 #print axioms SFT.InformationScience.QuantumUnits.tracePositions
+#print axioms SFT.InformationScience.QuantumObservation.observationMeaning
+#print axioms SFT.InformationScience.QuantumObservation.retainedMeaning
+#print axioms SFT.InformationScience.QuantumObservation.closedMeaning
+#print axioms SFT.InformationScience.QuantumObservation.retainedClosedDisjoint
+#print axioms SFT.InformationScience.QuantumObservation.retainedClosedCover
+#print axioms SFT.InformationScience.QuantumObservation.recordProjection
+#print axioms SFT.InformationScience.QuantumObservation.reconstructMeaning
+#print axioms SFT.InformationScience.QuantumObservation.reconstruction
+#print axioms SFT.InformationScience.QuantumObservation.observedReconstruction

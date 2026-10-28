@@ -2497,9 +2497,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-FORM-RECURSIVE-FUNCTION-001-291230ba67c75760.json",
       "statement": "The forced structural finite recursion kernel retains structural-One base; generated successor trace; exact step relation; retained intermediate values; composition interface; terminal result; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold recursion law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Computation/RecursionDerivation.lean",
+        "SFT/Computation/RecursionWitnesses.lean",
+        "SFT/Computation/RecursionGrammar.lean",
+        "SFT/Computation/RecursionControls.lean",
+        "SFT/Computation/RecursionEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS: full256 fresh native actual lookups and all fields/hashes;7149 source-expression cases, including800 new recursion cases.",
       "registration_sha256": "0e4bae3d5a81176a04d8c2f5bf72f1cb67cc2a2cdee772c2200bc34eb94bead3",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -2544,7 +2550,10 @@
         "statement": "The forced structural finite recursion kernel retains structural-One base; generated successor trace; exact step relation; retained intermediate values; composition interface; terminal result; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold recursion law"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "RecursionDerivation preserves original successor-trace uniqueness guard and exact error, accepts empty bases/traces/labels as V3 does, and retains base followed by each exact supplied-step result. The typed step has the source tuple-to-tuple callable signature, not a free scientific parameter.800 independent source-expression output/error comparisons pass.; recursionBase retains the supplied initial tuple with no predecessor. valuesSuccessor and recursionSuccessor append exactly one result of the supplied step at the generated successor position while preserving every prior intermediate value. The original distinct-position admission remains unchanged.; Derivation is the exact finite successor chain using the source callable. valuesDerivation, derivationUnique and recursionDerivation prove native soundness/completeness/uniqueness with the executable result. valuesLength/valuesInitial retain the complete initial-plus-successors trace, and stepRelation identifies every held position/predecessor application in that retained output.; valuesTerminal decomposes the full trace into predecessor values followed by its exact terminal value. terminalComposition and valuesComposition compose at the terminal/base interface with the common value retained once. recursionComposition preserves the original combined-trace uniqueness guard. terminalSuccessor is the exact final supplied-step result. All proofs are arbitrary finite, not witness-depth tables; no transfinite domain is introduced.; All three original claim-specific group witnesses execute unchanged transition run, generated_words and exact_rewrite with original names/statements and allWitnessesPass. Prior6349 shared-operation comparisons remain applicable, plus800 new recursion cases.; All256 original eight-axis candidates, exact order/IDs/forms/reasons, exhaustive enumeration/sole survivor/coordinate rejection, four controls, full closure/exposition/registration and hashes. Fresh native execution matches all256 actual lookups, every output/hash and unknown-ID refusal.",
+      "completion_evidence": "verification/TURN_187_RECURSIVE-FUNCTION_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -188990,13 +188999,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T19:08:14.925720+00:00",
+  "updated_at": "2026-10-28T19:15:13.493862+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2738,
-    "fully_reconstructed_claims": 43,
-    "axiom_free_exported_results": 3179,
-    "axiom_free_audited_definitions_and_theorems": 6167
+    "pending": 2737,
+    "fully_reconstructed_claims": 44,
+    "axiom_free_exported_results": 3217,
+    "axiom_free_audited_definitions_and_theorems": 6263
   }
 }

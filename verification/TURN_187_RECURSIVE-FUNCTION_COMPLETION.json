@@ -1,0 +1,40 @@
+{
+  "claim_id": "SFT-COMP-FORM-RECURSIVE-FUNCTION-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_path": "sft/computation/formal_computation/recursive_function/law.py",
+  "related_sources": [
+    "sft/computation/operations.py",
+    "sft/computation/catalog.py",
+    "sft/computation/spec_data.py",
+    "sft/computation/generated_law.py"
+  ],
+  "status": "complete",
+  "components": {
+    "operations.structural_recursion": "RecursionDerivation preserves original successor-trace uniqueness guard and exact error, accepts empty bases/traces/labels as V3 does, and retains base followed by each exact supplied-step result. The typed step has the source tuple-to-tuple callable signature, not a free scientific parameter.800 independent source-expression output/error comparisons pass.",
+    "catalog/spec_data structural-One base and generated successor": "recursionBase retains the supplied initial tuple with no predecessor. valuesSuccessor and recursionSuccessor append exactly one result of the supplied step at the generated successor position while preserving every prior intermediate value. The original distinct-position admission remains unchanged.",
+    "catalog/spec_data exact step relation and retained intermediate values": "Derivation is the exact finite successor chain using the source callable. valuesDerivation, derivationUnique and recursionDerivation prove native soundness/completeness/uniqueness with the executable result. valuesLength/valuesInitial retain the complete initial-plus-successors trace, and stepRelation identifies every held position/predecessor application in that retained output.",
+    "catalog/spec_data composition interface and terminal result": "valuesTerminal decomposes the full trace into predecessor values followed by its exact terminal value. terminalComposition and valuesComposition compose at the terminal/base interface with the common value retained once. recursionComposition preserves the original combined-trace uniqueness guard. terminalSuccessor is the exact final supplied-step result. All proofs are arbitrary finite, not witness-depth tables; no transfinite domain is introduced.",
+    "operations.group_witnesses(formal_computation)": "All three original claim-specific group witnesses execute unchanged transition run, generated_words and exact_rewrite with original names/statements and allWitnessesPass. Prior6349 shared-operation comparisons remain applicable, plus800 new recursion cases.",
+    "catalog/spec_data/generated_law": "All256 original eight-axis candidates, exact order/IDs/forms/reasons, exhaustive enumeration/sole survivor/coordinate rejection, four controls, full closure/exposition/registration and hashes. Fresh native execution matches all256 actual lookups, every output/hash and unknown-ID refusal."
+  },
+  "dependencies": [
+    "SFT-COMP-FORM-REWRITING-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": "All eight complete before entry",
+  "native_audit": "verification/TURN_187_PARITY_REPORT.json",
+  "program_comparison": "verification/TURN_187_PROGRAM_REPORT.json",
+  "source_cases": [
+    "verification/TURN_180_STATE_CASES.log",
+    "verification/TURN_182_WORD_CASES.log",
+    "verification/TURN_187_RECURSION_CASES.log"
+  ],
+  "remaining": [],
+  "completion_count": 44
+}

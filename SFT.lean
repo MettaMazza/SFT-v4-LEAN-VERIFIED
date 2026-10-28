@@ -344,3 +344,8 @@ import SFT.Computation.RewritingWitnesses
 import SFT.Computation.RewritingGrammar
 import SFT.Computation.RewritingControls
 import SFT.Computation.RewritingEvidence
+import SFT.Computation.RecursionDerivation
+import SFT.Computation.RecursionWitnesses
+import SFT.Computation.RecursionGrammar
+import SFT.Computation.RecursionControls
+import SFT.Computation.RecursionEvidence

@@ -338,3 +338,4 @@ import SFT.Computation.AutomatonWitnesses
 import SFT.Computation.AutomatonGrammar
 import SFT.Computation.AutomatonControls
 import SFT.Computation.AutomatonEvidence
+import SFT.Computation.RewritingDerivation

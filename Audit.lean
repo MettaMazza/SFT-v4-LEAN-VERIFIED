@@ -3129,3 +3129,12 @@ import SFT
 #print axioms SFT.Computation.AutomatonEvidence.registrationHasNoAxioms
 #print axioms SFT.Computation.AutomatonEvidence.registrationHasNoFreeParameters
 #print axioms SFT.Computation.AutomatonEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Computation.RewritingDerivation.overwriteRows
+#print axioms SFT.Computation.RewritingDerivation.commuteRows
+#print axioms SFT.Computation.RewritingDerivation.rewriteSuccessorAdmitted
+#print axioms SFT.Computation.RewritingDerivation.rewriteIdempotent
+#print axioms SFT.Computation.RewritingDerivation.recordLength
+#print axioms SFT.Computation.RewritingDerivation.recordCoordinate
+#print axioms SFT.Computation.RewritingDerivation.traceLengthPreserved
+#print axioms SFT.Computation.RewritingDerivation.traceComposition
+#print axioms SFT.Computation.RewritingDerivation.traceRecordsReplay

@@ -212,3 +212,4 @@ import SFT.Mathematics.CategoryWitnesses
 import SFT.Mathematics.CategoryGrammar
 import SFT.Mathematics.CategoryControls
 import SFT.Mathematics.CategoryEvidence
+import SFT.InformationScience.SymbolObservation

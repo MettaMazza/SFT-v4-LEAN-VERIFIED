@@ -447,3 +447,8 @@ import SFT.Computation.InputSizeGrammar
 import SFT.Computation.InputSizeControls
 import SFT.Computation.InputSizeEvidence
 import SFT.Computation.InputExtent
+import SFT.Computation.ExecutionResources
+import SFT.Computation.TimeSpaceWitnesses
+import SFT.Computation.TimeSpaceGrammar
+import SFT.Computation.TimeSpaceControls
+import SFT.Computation.TimeSpaceEvidence

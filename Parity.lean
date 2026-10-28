@@ -197,3 +197,7 @@ def main : IO Unit := do
   for c in SFT.Computation.InputSizeGrammar.candidates do
     IO.println ("InputSizeGrammar\t" ++ SFT.Computation.InputSizeGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.InputSizeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.InputSizeGrammar.exactForm c ++ "\t" ++ SFT.Computation.InputSizeGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.TimeSpaceGrammar.candidates do
+    IO.println ("TimeSpaceGrammar\t" ++ SFT.Computation.TimeSpaceGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.TimeSpaceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.TimeSpaceGrammar.exactForm c ++ "\t" ++ SFT.Computation.TimeSpaceGrammar.decisionReason c)
+

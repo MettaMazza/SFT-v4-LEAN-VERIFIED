@@ -1,0 +1,15 @@
+import SFT.InformationScience.ConservationCardinality
+#print axioms SFT.InformationScience.ConservationCardinality.retainBound
+#print axioms SFT.InformationScience.ConservationCardinality.retainEqualDistinct
+#print axioms SFT.InformationScience.ConservationCardinality.retainUnchanged
+#print axioms SFT.InformationScience.ConservationCardinality.labelCountIffDistinct
+#print axioms SFT.InformationScience.ConservationCardinality.sameLabelCount
+#print axioms SFT.InformationScience.ConservationCardinality.mapDistinctOn
+#print axioms SFT.InformationScience.ConservationCardinality.mapDistinctInjective
+#print axioms SFT.InformationScience.ConservationCardinality.imageMember
+#print axioms SFT.InformationScience.ConservationCardinality.memberImage
+#print axioms SFT.InformationScience.ConservationCardinality.valuesCorrespond
+#print axioms SFT.InformationScience.ConservationCardinality.reversibleIffInjective
+#print axioms SFT.InformationScience.ConservationCardinality.oneMemberList
+#print axioms SFT.InformationScience.ConservationCardinality.injectiveIffSingletonFibres
+#print axioms SFT.InformationScience.ConservationCardinality.reversibleIffSingletonFibres

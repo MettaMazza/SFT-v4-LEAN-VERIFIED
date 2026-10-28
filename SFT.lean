@@ -241,3 +241,8 @@ import SFT.InformationScience.EntropyPartition
 import SFT.InformationScience.EntropyRefinement
 import SFT.InformationScience.EntropyLedger
 import SFT.InformationScience.EntropyPairs
+import SFT.InformationScience.EntropyExtension
+import SFT.InformationScience.EntropyWitnesses
+import SFT.InformationScience.EntropyGrammar
+import SFT.InformationScience.EntropyControls
+import SFT.InformationScience.EntropyEvidence

@@ -38,6 +38,7 @@ entries=[
 ('SFT-INFO-SYMBOL-DISTINCTION-001',r/'verification/TURN_135_SymbolProgram.lean'),
 ('SFT-INFO-ENCODING-DECODING-001',r/'verification/TURN_138_EncodingProgram.lean'),
 ('SFT-INFO-QUANTITY-001',r/'verification/TURN_140_QuantityProgram.lean'),
+('SFT-INFO-ENTROPY-UNCERTAINTY-001',r/'verification/TURN_143_EntropyProgram.lean'),
 ('SFT-MATH-DYNAMICAL-SYSTEMS-001',r/'verification/TURN_130_DynamicsProgram.lean'),
 ('SFT-MATH-OPTIMIZATION-001',r/'verification/TURN_128_OptimizationProgram.lean'),
 ('SFT-FOUNDATION-FOLD-DYNAMICS-001',r/'verification/TURN_040_FoldDynamicsProgram.lean'),

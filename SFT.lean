@@ -255,3 +255,6 @@ import SFT.InformationScience.CompressionControls
 import SFT.InformationScience.CompressionEvidence
 import SFT.InformationScience.CompressionCanonical
 import SFT.InformationScience.ChannelRelation
+import SFT.InformationScience.ChannelSelections
+import SFT.InformationScience.ChannelCapacity
+import SFT.InformationScience.ChannelComposition

@@ -294,3 +294,8 @@ import SFT.InformationScience.ConservationLedger
 import SFT.InformationScience.ConservationComposition
 import SFT.InformationScience.ConservationReverse
 import SFT.InformationScience.ConservationCardinality
+import SFT.InformationScience.ConservationExtension
+import SFT.InformationScience.ConservationWitnesses
+import SFT.InformationScience.ConservationGrammar
+import SFT.InformationScience.ConservationControls
+import SFT.InformationScience.ConservationEvidence

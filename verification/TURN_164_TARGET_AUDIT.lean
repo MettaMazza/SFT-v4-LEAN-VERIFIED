@@ -1,0 +1,22 @@
+import SFT.InformationScience.ConservationWitnesses
+#print axioms SFT.InformationScience.ConservationExtension.validSuccessor
+#print axioms SFT.InformationScience.ConservationExtension.fibreSuccessor
+#print axioms SFT.InformationScience.ConservationExtension.pairSuccessorOrder
+#print axioms SFT.InformationScience.ConservationExtension.pairSuccessorMembership
+#print axioms SFT.InformationScience.ConservationExtension.oldImage
+#print axioms SFT.InformationScience.ConservationExtension.retainedSuccessor
+#print axioms SFT.InformationScience.ConservationExtension.closedSuccessor
+#print axioms SFT.InformationScience.ConservationExtension.singletonValid
+#print axioms SFT.InformationScience.ConservationExtension.singletonBase
+#print axioms SFT.InformationScience.ConservationWitnesses.source
+#print axioms SFT.InformationScience.ConservationWitnesses.identityMap
+#print axioms SFT.InformationScience.ConservationWitnesses.prefixMap
+#print axioms SFT.InformationScience.ConservationWitnesses.eraseMap
+#print axioms SFT.InformationScience.ConservationWitnesses.isTrue
+#print axioms SFT.InformationScience.ConservationWitnesses.identityCheck
+#print axioms SFT.InformationScience.ConservationWitnesses.prefixCheck
+#print axioms SFT.InformationScience.ConservationWitnesses.reversibleCheck
+#print axioms SFT.InformationScience.ConservationWitnesses.reverseCheck
+#print axioms SFT.InformationScience.ConservationWitnesses.processingCheck
+#print axioms SFT.InformationScience.ConservationWitnesses.witnesses
+#print axioms SFT.InformationScience.ConservationWitnesses.allWitnessesPass

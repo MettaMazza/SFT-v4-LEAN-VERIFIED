@@ -93,3 +93,7 @@ def main : IO Unit := do
   for c in SFT.InformationScience.MutualGrammar.candidates do
     IO.println ("MutualGrammar\t" ++ SFT.InformationScience.MutualGrammar.candidateId c ++ "\t" ++ (if SFT.InformationScience.MutualGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.InformationScience.MutualGrammar.exactForm c ++ "\t" ++ SFT.InformationScience.MutualGrammar.decisionReason c)
 
+
+  for c in SFT.InformationScience.ConservationGrammar.candidates do
+    IO.println ("ConservationGrammar\t" ++ SFT.InformationScience.ConservationGrammar.candidateId c ++ "\t" ++ (if SFT.InformationScience.ConservationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.InformationScience.ConservationGrammar.exactForm c ++ "\t" ++ SFT.InformationScience.ConservationGrammar.decisionReason c)
+

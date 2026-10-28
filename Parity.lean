@@ -145,3 +145,7 @@ def main : IO Unit := do
   for c in SFT.Computation.AssemblyGrammar.candidates do
     IO.println ("AssemblyGrammar\t" ++ SFT.Computation.AssemblyGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.AssemblyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.AssemblyGrammar.exactForm c ++ "\t" ++ SFT.Computation.AssemblyGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.ModelGrammar.candidates do
+    IO.println ("ModelGrammar\t" ++ SFT.Computation.ModelGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ModelGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ModelGrammar.exactForm c ++ "\t" ++ SFT.Computation.ModelGrammar.decisionReason c)
+

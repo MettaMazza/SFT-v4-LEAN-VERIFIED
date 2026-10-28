@@ -380,3 +380,8 @@ import SFT.Computation.AssemblyControls
 import SFT.Computation.AssemblyEvidence
 import SFT.Computation.AssemblyDecomposition
 import SFT.Computation.ModelSimulation
+import SFT.Computation.ModelWitnesses
+import SFT.Computation.ModelGrammar
+import SFT.Computation.ModelControls
+import SFT.Computation.ModelEvidence
+import SFT.Computation.ModelEncoding

@@ -1,0 +1,27 @@
+import SFT.InformationScience.CodingSupport
+#print axioms SFT.InformationScience.CodingSupport.supportValid
+#print axioms SFT.InformationScience.CodingSupport.completeSupport
+#print axioms SFT.InformationScience.CodingSupport.selectionValid
+#print axioms SFT.InformationScience.CodingSupport.codebook
+#print axioms SFT.InformationScience.CodingSupport.differenceTrace
+#print axioms SFT.InformationScience.CodingSupport.repeated
+#print axioms SFT.InformationScience.CodingSupport.repetitionCode
+#print axioms SFT.InformationScience.CodingSupport.supportGuard
+#print axioms SFT.InformationScience.CodingSupport.supportAdmission
+#print axioms SFT.InformationScience.CodingSupport.completeMembership
+#print axioms SFT.InformationScience.CodingSupport.completeDistinct
+#print axioms SFT.InformationScience.CodingSupport.completeCount
+#print axioms SFT.InformationScience.CodingSupport.selectionGuard
+#print axioms SFT.InformationScience.CodingSupport.codebookAdmission
+#print axioms SFT.InformationScience.CodingSupport.admittedCodeword
+#print axioms SFT.InformationScience.CodingSupport.commonPositionCarrier
+#print axioms SFT.InformationScience.CodingSupport.differenceMatchesNoise
+#print axioms SFT.InformationScience.CodingSupport.differenceIdentity
+#print axioms SFT.InformationScience.CodingSupport.differenceEmptyMeaning
+#print axioms SFT.InformationScience.CodingSupport.differenceChangesMeaning
+#print axioms SFT.InformationScience.CodingSupport.repetitionAdmission
+#print axioms SFT.InformationScience.CodingSupport.repeatedLength
+#print axioms SFT.InformationScience.CodingSupport.repeatedLabels
+#print axioms SFT.InformationScience.CodingSupport.repetitionInSupport
+#print axioms SFT.InformationScience.CodingSupport.repeatedInjective
+#print axioms SFT.InformationScience.CodingSupport.repetitionDistinct

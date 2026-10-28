@@ -391,3 +391,9 @@ import SFT.Computation.UniversalControls
 import SFT.Computation.UniversalEvidence
 import SFT.Computation.UniversalInterpretation
 import SFT.Computation.ResourceRecord
+import SFT.Computation.RecognitionWitnesses
+import SFT.Computation.RecognitionGrammar
+import SFT.Computation.RecognitionControls
+import SFT.Computation.RecognitionEvidence
+import SFT.Computation.RecognitionDomain
+import SFT.Computation.RecognitionTrace

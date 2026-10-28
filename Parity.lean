@@ -153,3 +153,7 @@ def main : IO Unit := do
   for c in SFT.Computation.UniversalGrammar.candidates do
     IO.println ("UniversalGrammar\t" ++ SFT.Computation.UniversalGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.UniversalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.UniversalGrammar.exactForm c ++ "\t" ++ SFT.Computation.UniversalGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.RecognitionGrammar.candidates do
+    IO.println ("RecognitionGrammar\t" ++ SFT.Computation.RecognitionGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.RecognitionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.RecognitionGrammar.exactForm c ++ "\t" ++ SFT.Computation.RecognitionGrammar.decisionReason c)
+

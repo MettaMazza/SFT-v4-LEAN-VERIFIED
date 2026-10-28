@@ -285,3 +285,8 @@ import SFT.InformationScience.MutualParts
 import SFT.InformationScience.MutualJoint
 import SFT.InformationScience.MutualConditional
 import SFT.InformationScience.MutualDecisions
+import SFT.InformationScience.MutualExtension
+import SFT.InformationScience.MutualWitnesses
+import SFT.InformationScience.MutualGrammar
+import SFT.InformationScience.MutualControls
+import SFT.InformationScience.MutualEvidence

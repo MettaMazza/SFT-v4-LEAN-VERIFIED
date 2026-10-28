@@ -1,0 +1,24 @@
+import SFT.InformationScience.MutualWitnesses
+#print axioms SFT.InformationScience.MutualExtension.validSuccessor
+#print axioms SFT.InformationScience.MutualExtension.jointSuccessor
+#print axioms SFT.InformationScience.MutualExtension.conditionalJoint
+#print axioms SFT.InformationScience.MutualExtension.conditionalSuccessor
+#print axioms SFT.InformationScience.MutualExtension.chosenJoint
+#print axioms SFT.InformationScience.MutualExtension.otherJoint
+#print axioms SFT.InformationScience.MutualExtension.singletonValid
+#print axioms SFT.InformationScience.MutualExtension.singletonJoint
+#print axioms SFT.InformationScience.MutualExtension.singletonConditional
+#print axioms SFT.InformationScience.MutualExtension.singletonWhole
+#print axioms SFT.InformationScience.MutualExtension.jointPartSuccessor
+#print axioms SFT.InformationScience.MutualExtension.conditionalPartSuccessor
+#print axioms SFT.InformationScience.MutualWitnesses.support
+#print axioms SFT.InformationScience.MutualWitnesses.leftMap
+#print axioms SFT.InformationScience.MutualWitnesses.rightMap
+#print axioms SFT.InformationScience.MutualWitnesses.halfCheck
+#print axioms SFT.InformationScience.MutualWitnesses.isTrue
+#print axioms SFT.InformationScience.MutualWitnesses.gridCheck
+#print axioms SFT.InformationScience.MutualWitnesses.emptyCheck
+#print axioms SFT.InformationScience.MutualWitnesses.copyCheck
+#print axioms SFT.InformationScience.MutualWitnesses.dependentCheck
+#print axioms SFT.InformationScience.MutualWitnesses.witnesses
+#print axioms SFT.InformationScience.MutualWitnesses.allWitnessesPass

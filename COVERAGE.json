@@ -2568,7 +2568,8 @@
       "lean_status": "in_progress",
       "lean_modules": [
         "SFT/Computation/BindingTerms.lean",
-        "SFT/Computation/BindingSubstitution.lean"
+        "SFT/Computation/BindingSubstitution.lean",
+        "SFT/Computation/BindingCorrespondence.lean"
       ],
       "artifact_runtime_parity": "PASS:756 free-set membership,432 whole-tree rename and864 full substitution output/error comparisons. Claim-specific256 full program pending.",
       "registration_sha256": "5308476617009ef6d115d19a014e47491ade79a2048a2bcbd1cdb2a400f2a7a3",
@@ -2616,9 +2617,9 @@
         "status": "independently_replicated",
         "title": "Fold binding and self-application calculus law"
       },
-      "verified_scope": "Pinned concrete var/app/abs grammar and finite free-set membership; native free occurrence iff, bound-name exclusion, exact whole-tree rename identity/size. Original u/v/w/z fresh search and exhaustion preserved. Native substitution uses structurally recursive carried name mappings, with exact rename composition/identity, variable and held-binder equations and original witness.2052 source-expression comparisons pass. General substitution correspondence and capture/binding/reduction claims remain pending; not inferred from finite cases.",
+      "verified_scope": "Pinned concrete var/app/abs grammar and finite free-set membership; native free occurrence iff, bound-name exclusion, exact whole-tree rename identity/size. Original u/v/w/z fresh search and exhaustion preserved. Native substitution uses structurally recursive carried name mappings, with exact rename composition/identity, variable and held-binder equations and original witness.2052 source-expression comparisons pass. General substitution correspondence and capture/binding/reduction claims remain pending; not inferred from finite cases. Arbitrary-term map composition and mappedExecution/renamedExecution now prove exact correspondence to original whole-body rename and recursive calls. applicationEquation/abstractionEquation reproduce every source branch and error propagation; substitutionError proves every failure is original StopIteration. No capture-safety or reduction claim is inferred from these equations.",
       "remaining": [
-        "formx free/rename/substitute: establish arbitrary-term correspondence between carried-mapping native substitution and exact source recursive calls, preserving original fresh-name exhaustion; establish current source binding/free-bound occurrence and capture conditions without adding a bound-name freshness guard.",
+        "formx free/rename/substitute and spec_data LAMBDA-CALCULUS: establish the exact held-binder/free-bound occurrence ledgers and capture conditions of the registered term grammar, retaining original fresh-name exclusions and failure domain. Arbitrary-term native/source recursive equation correspondence is now proved.",
         "spec_data LAMBDA-CALCULUS exact reduction and normal/cyclic traces: locate and faithfully represent actual source reduction relation and prove corresponding retained trace properties; do not import a conventional calculus.",
         "Original three formal_computation group witnesses and all256 current claim candidates/controls/closure/exposition/full native program outputs and hashes."
       ]
@@ -189008,13 +189009,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T19:24:56.405513+00:00",
+  "updated_at": "2026-10-28T19:33:08.214349+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 1,
     "pending": 2736,
     "fully_reconstructed_claims": 44,
-    "axiom_free_exported_results": 3229,
-    "axiom_free_audited_definitions_and_theorems": 6284
+    "axiom_free_exported_results": 3237,
+    "axiom_free_audited_definitions_and_theorems": 6292
   }
 }

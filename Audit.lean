@@ -3228,3 +3228,11 @@ import SFT
 #print axioms SFT.Computation.BindingSubstitution.variableSubstitution
 #print axioms SFT.Computation.BindingSubstitution.heldBinder
 #print axioms SFT.Computation.BindingSubstitution.sourceWitness
+#print axioms SFT.Computation.BindingCorrespondence.mapCompose
+#print axioms SFT.Computation.BindingCorrespondence.mappedExecution
+#print axioms SFT.Computation.BindingCorrespondence.renamedExecution
+#print axioms SFT.Computation.BindingCorrespondence.applicationEquation
+#print axioms SFT.Computation.BindingCorrespondence.abstractionEquation
+#print axioms SFT.Computation.BindingCorrespondence.firstFreshError
+#print axioms SFT.Computation.BindingCorrespondence.substitutionWithError
+#print axioms SFT.Computation.BindingCorrespondence.substitutionError

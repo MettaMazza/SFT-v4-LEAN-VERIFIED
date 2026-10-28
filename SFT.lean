@@ -178,3 +178,5 @@ import SFT.Mathematics.GeometryGrammar
 import SFT.Mathematics.GeometryControls
 import SFT.Mathematics.GeometryEvidence
 import SFT.Mathematics.ProbabilityEvents
+import SFT.Mathematics.ProbabilityIndependence
+import SFT.Mathematics.ProbabilityModes

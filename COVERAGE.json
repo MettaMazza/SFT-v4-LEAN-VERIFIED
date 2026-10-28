@@ -1110,9 +1110,11 @@
       "title": "Exact finite probability and statistics from Fold observation",
       "lean_status": "in_progress",
       "lean_modules": [
-        "SFT/Mathematics/ProbabilityEvents.lean"
+        "SFT/Mathematics/ProbabilityEvents.lean",
+        "SFT/Mathematics/ProbabilityIndependence.lean",
+        "SFT/Mathematics/ProbabilityModes.lean"
       ],
-      "artifact_runtime_parity": "15 native source-behavior cases PASS; full Probability program not yet implemented.",
+      "artifact_runtime_parity": "15 event/weight/condition cases and3185 independence/121 mode source-behavior cases PASS; full Probability program remains pending.",
       "registration_sha256": "a28c35f7661e56741262ab0cf09c2539b1be65436ffbcc02c78a88f5bb420a1c",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1152,10 +1154,8 @@
         "status": "independently_replicated",
         "title": "Exact finite probability and statistics from Fold observation"
       },
-      "verified_scope": "Original exact_event/exact_weight/conditional_weight implemented with validation and error precedence, held order, literal empty-One collision and source intersection order preserved. General native proofs of admitted event support/distinctness/containment, positive reduced exact held/whole ratio and through-One bound, common-refinement membership and conditional ratio/bound. Fifteen source-behavior execution cases pass.",
+      "verified_scope": "Original exact_event/exact_weight/conditional_weight implemented with validation and error precedence, held order, literal empty-One collision and source intersection order preserved. General native proofs of admitted event support/distinctness/containment, positive reduced exact held/whole ratio and through-One bound, common-refinement membership and conditional ratio/bound. Fifteen source-behavior execution cases pass. Independence preserves original ordered product/first labels and raw event counts, with empty-joint error. General product-filter identity/cardinality and admitted exact factorization proved. Modal summary preserves first-occurrence order and all ties, with maximal-frequency characterization and existence. 3185 independence and121 mode execution cases pass.",
       "remaining": [
-        "sft/mathematics/probability_statistics/law.py::independent: first-occurrence marginal supports, ordered complete product test, original nonempty event guard, unconstrained raw event counts, empty-joint division failure and exact factorization derivation.",
-        "sft/mathematics/probability_statistics/law.py::exact_mode: first-occurrence labels, complete row counts, maximum and all ties in source order; prove exact modal summary.",
         "sft/mathematics/probability_statistics/law.py::observation_classes: dict last-key precedence, exact key-set check, source-ordered first labels and complete class fibres including duplicate-support behavior; prove partition/provenance properties on original domain.",
         "sft/mathematics/probability_statistics/law.py::SPEC and generated_law.py: full512 nine-axis grammar, exact reasons, original six witnesses, laws/induction/exclusions, four controls and full generated program methods."
       ]
@@ -188747,13 +188747,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T08:58:21.199227+00:00",
+  "updated_at": "2026-10-28T09:14:47.251128+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 1,
     "pending": 2758,
     "fully_reconstructed_claims": 22,
-    "axiom_free_exported_results": 1708,
-    "axiom_free_audited_definitions_and_theorems": 3125
+    "axiom_free_exported_results": 1739,
+    "axiom_free_audited_definitions_and_theorems": 3166
   }
 }

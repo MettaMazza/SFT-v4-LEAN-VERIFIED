@@ -180,3 +180,8 @@ import SFT.Mathematics.GeometryEvidence
 import SFT.Mathematics.ProbabilityEvents
 import SFT.Mathematics.ProbabilityIndependence
 import SFT.Mathematics.ProbabilityModes
+import SFT.Mathematics.ProbabilityObservations
+import SFT.Mathematics.ProbabilityWitnesses
+import SFT.Mathematics.ProbabilityGrammar
+import SFT.Mathematics.ProbabilityControls
+import SFT.Mathematics.ProbabilityEvidence

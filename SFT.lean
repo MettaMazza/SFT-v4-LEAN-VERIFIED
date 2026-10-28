@@ -369,3 +369,8 @@ import SFT.Computation.CircuitGrammar
 import SFT.Computation.CircuitControls
 import SFT.Computation.CircuitEvidence
 import SFT.Computation.CircuitGraph
+import SFT.Computation.ProcessWitnesses
+import SFT.Computation.ProcessGrammar
+import SFT.Computation.ProcessControls
+import SFT.Computation.ProcessEvidence
+import SFT.Computation.ProcessFailure

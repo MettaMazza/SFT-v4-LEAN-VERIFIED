@@ -2927,3 +2927,13 @@ import SFT
 #print axioms SFT.InformationScience.QuantumJoint.cellMembership
 #print axioms SFT.InformationScience.QuantumJoint.cellCoordinates
 #print axioms SFT.InformationScience.QuantumJoint.jointLeftSuccessor
+#print axioms SFT.InformationScience.QuantumUnits.copiesLength
+#print axioms SFT.InformationScience.QuantumUnits.copiesMember
+#print axioms SFT.InformationScience.QuantumUnits.copiesAppend
+#print axioms SFT.InformationScience.QuantumUnits.unchangedLeft
+#print axioms SFT.InformationScience.QuantumUnits.rowAlternatives
+#print axioms SFT.InformationScience.QuantumUnits.alternativesDistinct
+#print axioms SFT.InformationScience.QuantumUnits.traceChecks
+#print axioms SFT.InformationScience.QuantumUnits.admittedTrace
+#print axioms SFT.InformationScience.QuantumUnits.traceLength
+#print axioms SFT.InformationScience.QuantumUnits.tracePositions

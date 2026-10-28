@@ -133,3 +133,7 @@ def main : IO Unit := do
   for c in SFT.Computation.MachineGrammar.candidates do
     IO.println ("MachineGrammar\t" ++ SFT.Computation.MachineGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.MachineGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.MachineGrammar.exactForm c ++ "\t" ++ SFT.Computation.MachineGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.CircuitGrammar.candidates do
+    IO.println ("CircuitGrammar\t" ++ SFT.Computation.CircuitGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.CircuitGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.CircuitGrammar.exactForm c ++ "\t" ++ SFT.Computation.CircuitGrammar.decisionReason c)
+

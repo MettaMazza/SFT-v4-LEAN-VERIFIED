@@ -363,3 +363,9 @@ import SFT.Computation.MachineGrammar
 import SFT.Computation.MachineControls
 import SFT.Computation.MachineEvidence
 import SFT.Computation.MachineExecution
+import SFT.Computation.CircuitComposition
+import SFT.Computation.CircuitWitnesses
+import SFT.Computation.CircuitGrammar
+import SFT.Computation.CircuitControls
+import SFT.Computation.CircuitEvidence
+import SFT.Computation.CircuitGraph

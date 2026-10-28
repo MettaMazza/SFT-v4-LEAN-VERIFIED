@@ -1820,12 +1820,18 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-INFO-NOISE-ERROR-001-bc42a3ab0291a59b.json",
       "statement": "Noise is a registered source-to-received transformation relation over complete canonical word carriers; error is the exact changed-position trace between a held source and received form. Detection is forced when a nonidentity image lies outside valid code support. Correction is forced only when the received form has one registered source predecessor; multiple predecessors remain an explicit closed source class. No random cause, error probability, distance threshold or unrecorded predecessor inference is admitted.",
       "title": "Exact noise, error, detection and correction boundaries",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/InformationScience/NoiseRelation.lean",
-        "SFT/InformationScience/NoiseCorrection.lean"
+        "SFT/InformationScience/NoiseCorrection.lean",
+        "SFT/InformationScience/NoiseTrace.lean",
+        "SFT/InformationScience/NoiseExtension.lean",
+        "SFT/InformationScience/NoiseWitnesses.lean",
+        "SFT/InformationScience/NoiseGrammar.lean",
+        "SFT/InformationScience/NoiseControls.lean",
+        "SFT/InformationScience/NoiseEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS:10645 source-expression constructor/image/predecessor/correction cases.",
+      "artifact_runtime_parity": "PASS:18867 cumulative source-expression cases; all1024 fresh actual native candidate lookups and all original registration/census/closure/control/hash outputs.",
       "registration_sha256": "88f34fc26ea8f3bfd2bc9802bc1eda244c9e049fe986fa51538c25c94a94b7ee",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -1865,13 +1871,9 @@
         "status": "independently_replicated",
         "title": "Exact noise, error, detection and correction boundaries"
       },
-      "verified_scope": "Exact ErrorRelation constructor and guard order/errors; error_images and predecessors source-order first-occurrence dedup with complete registered action-cell iff, distinctness and admitted membership/totality. Exact uniquely_correctable and correction_record including empty and ambiguous predecessor classes, native singleton equivalence, registered-source provenance and no competing registered predecessor.",
-      "remaining": [
-        "error_trace: original positionwise comparison and unequal-width error; native identity and complete changed-position derivation.",
-        "detectable: original identity-true/outside-code behavior and error propagation with native characterization.",
-        "SPEC.induction_base and induction_step: identity base; fresh action cells and exact predecessor class extension.",
-        "SPEC: full1024 product, operational witnesses, closure/controls and complete fresh native program comparison."
-      ]
+      "verified_scope": "NoiseRelation retains original nonempty/unique word carriers, duplicate action triples, endpoint/action-identity and source-totality guard order/errors. Empty words, unused received entries and distinct actions on one source/image pair are preserved. Native constructor/guard iff and field identity.; Exact original source/received admission errors, source relation filter/map and first-occurrence dedup. Native iff registered action-cell membership, distinct outputs, admitted image nonempty/inside and predecessor source containment.; NoiseTrace complete ordered positionPairs and exact differing-label filter. Native indexed membership iff retains every original position and both labels, with full length and identity iff proofs. Exact original position-N labels, empty-One conversion, unequal-width guard/error and changes-output characterization.; Original error_trace invocation/error propagation; identity returns true; changed received form returns codebook nonmembership. Native complete detection characterization and unequal-width error theorem, without adding a source-in-codebook guard.; NoiseCorrection uses exact singleton predecessor test and tagged unique-source/closed-source-class output. Native correction iff complete singleton list, full ambiguous/empty class preservation, registered-source provenance and exclusion of different registered predecessors. Exact out-of-received error preserved.; NoiseExtension native identity-relation admission/singleton predecessor/correction and empty-One trace base. Arbitrary finite appended action cells preserve admission under original cell guards, retain complete received support, and extend image/predecessor classes iff exactly their registered new cells. Native first-occurrence order equations retain original nested relation order. No finite-depth sampling substitutes for the general successor proof.; Full original1024 ten-axis product, exact order/IDs/forms/reasons, exhaustive enumeration, criteria equivalence, sole survivor and coordinate rejection. All five actual operational witnesses execute translated operations; both witness relations have native admission proofs. All source laws, induction, exclusions and four controls retained.; Fresh complete native registration/census/all1024 actual identifier lookups/closure/controls/digest/unknown-ID outputs match pinned V3. Verbatim why, derivation, check, limitations and correspondence terms retained.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_150_NOISE_COMPLETION.json"
     },
     {
       "branch": "information_science",
@@ -188878,13 +188880,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T14:17:09.519676+00:00",
+  "updated_at": "2026-10-28T14:36:47.074327+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 1,
+    "in_progress": 0,
     "pending": 2747,
-    "fully_reconstructed_claims": 33,
-    "axiom_free_exported_results": 2513,
-    "axiom_free_audited_definitions_and_theorems": 4765
+    "fully_reconstructed_claims": 34,
+    "axiom_free_exported_results": 2561,
+    "axiom_free_audited_definitions_and_theorems": 4884
   }
 }

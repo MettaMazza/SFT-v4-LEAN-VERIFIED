@@ -265,3 +265,9 @@ import SFT.InformationScience.ChannelControls
 import SFT.InformationScience.ChannelEvidence
 import SFT.InformationScience.NoiseRelation
 import SFT.InformationScience.NoiseCorrection
+import SFT.InformationScience.NoiseTrace
+import SFT.InformationScience.NoiseExtension
+import SFT.InformationScience.NoiseWitnesses
+import SFT.InformationScience.NoiseGrammar
+import SFT.InformationScience.NoiseControls
+import SFT.InformationScience.NoiseEvidence

@@ -281,3 +281,5 @@ import SFT.InformationScience.CodingGrammar
 import SFT.InformationScience.CodingControls
 import SFT.InformationScience.CodingEvidence
 import SFT.InformationScience.MutualObservation
+import SFT.InformationScience.MutualParts
+import SFT.InformationScience.MutualJoint

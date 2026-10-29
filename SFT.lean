@@ -643,3 +643,8 @@ import SFT.Computation.TransformationGrammar
 import SFT.Computation.TransformationControls
 import SFT.Computation.TransformationEvidence
 import SFT.Computation.ProgramTransformation
+import SFT.Computation.CompilationWitnesses
+import SFT.Computation.CompilationGrammar
+import SFT.Computation.CompilationControls
+import SFT.Computation.CompilationEvidence
+import SFT.Computation.CompilationRelation

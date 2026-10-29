@@ -225,3 +225,7 @@ def main : IO Unit := do
   for c in SFT.Computation.BoundsGrammar.candidates do
     IO.println ("BoundsGrammar\t" ++ SFT.Computation.BoundsGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.BoundsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.BoundsGrammar.exactForm c ++ "\t" ++ SFT.Computation.BoundsGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.ReductionCompletenessGrammar.candidates do
+    IO.println ("ReductionCompletenessGrammar\t" ++ SFT.Computation.ReductionCompletenessGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ReductionCompletenessGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ReductionCompletenessGrammar.exactForm c ++ "\t" ++ SFT.Computation.ReductionCompletenessGrammar.decisionReason c)
+

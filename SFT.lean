@@ -482,3 +482,8 @@ import SFT.Computation.BoundsGrammar
 import SFT.Computation.BoundsControls
 import SFT.Computation.BoundsEvidence
 import SFT.Computation.BoundResources
+import SFT.Computation.ReductionCompletenessWitnesses
+import SFT.Computation.ReductionCompletenessGrammar
+import SFT.Computation.ReductionCompletenessControls
+import SFT.Computation.ReductionCompletenessEvidence
+import SFT.Computation.CompletenessResources

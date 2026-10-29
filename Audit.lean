@@ -4956,3 +4956,16 @@ import SFT
 #print axioms SFT.Computation.SyntaxFormation.joinRetainsRight
 #print axioms SFT.Computation.SyntaxFormation.joinAdmission
 #print axioms SFT.Computation.SyntaxFormation.literalBase
+#print axioms SFT.Computation.NameScope.ledgerDerivation
+#print axioms SFT.Computation.NameScope.derivationLedger
+#print axioms SFT.Computation.NameScope.completeLedger
+#print axioms SFT.Computation.NameScope.exactIdentity
+#print axioms SFT.Computation.NameScope.scopePartition
+#print axioms SFT.Computation.NameScope.disjointScope
+#print axioms SFT.Computation.NameScope.boundSourceRow
+#print axioms SFT.Computation.NameScope.freeHasNoBinding
+#print axioms SFT.Computation.NameScope.noOmittedOccurrences
+#print axioms SFT.Computation.NameScope.scopeExtension
+#print axioms SFT.Computation.NameScope.evaluatedNamesBound
+#print axioms SFT.Computation.NameScope.successfulScope
+#print axioms SFT.Computation.NameScope.scopeConstructsEvaluation

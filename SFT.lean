@@ -593,3 +593,4 @@ import SFT.Computation.SyntaxGrammar
 import SFT.Computation.SyntaxControls
 import SFT.Computation.SyntaxEvidence
 import SFT.Computation.SyntaxFormation
+import SFT.Computation.NameScope

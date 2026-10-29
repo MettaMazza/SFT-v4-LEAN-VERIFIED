@@ -325,3 +325,7 @@ def main : IO Unit := do
   for c in SFT.Computation.EquivalenceGrammar.candidates do
     IO.println ("EquivalenceGrammar\t" ++ SFT.Computation.EquivalenceGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.EquivalenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.EquivalenceGrammar.exactForm c ++ "\t" ++ SFT.Computation.EquivalenceGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.TerminationGrammar.candidates do
+    IO.println ("TerminationGrammar\t" ++ SFT.Computation.TerminationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.TerminationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.TerminationGrammar.exactForm c ++ "\t" ++ SFT.Computation.TerminationGrammar.decisionReason c)
+

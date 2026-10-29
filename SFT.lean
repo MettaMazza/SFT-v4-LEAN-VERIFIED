@@ -623,3 +623,8 @@ import SFT.Computation.EquivalenceGrammar
 import SFT.Computation.EquivalenceControls
 import SFT.Computation.EquivalenceEvidence
 import SFT.Computation.ProgramEquivalence
+import SFT.Computation.TerminationWitnesses
+import SFT.Computation.TerminationGrammar
+import SFT.Computation.TerminationControls
+import SFT.Computation.TerminationEvidence
+import SFT.Computation.TerminationDescent

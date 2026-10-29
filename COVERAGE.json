@@ -5986,9 +5986,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEM-TERMINATION-001-dc2378dbe15b3cfe.json",
       "statement": "The forced absence of continuing execution paths kernel retains program and input support; transition relation; well-founded generated descent witness; complete traces; terminal coverage; cycle counterexample; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold termination law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Computation/TerminationDescent.lean",
+        "SFT/Computation/TerminationWitnesses.lean",
+        "SFT/Computation/TerminationGrammar.lean",
+        "SFT/Computation/TerminationControls.lean",
+        "SFT/Computation/TerminationEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 fresh native lookups and every original field/hash; existing evaluation comparisons retained unchanged.",
       "registration_sha256": "b812e814c74d02c7493dd625150b8c81749e1ed3198e1b4f6fa2d6098f7ac45b",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -6033,7 +6039,10 @@
         "statement": "The forced absence of continuing execution paths kernel retains program and input support; transition relation; well-founded generated descent witness; complete traces; terminal coverage; cycle counterexample; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold termination law"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Seventh Semantics topic TERMINATION: absence of continuing execution paths. Original execution binds operations.py, catalog/spec_data/generated_law, semantics/termination/law.py and execution.py; all8 dependencies complete. Registered boundary explicitly excludes a total termination decider for the universal language.; TerminationDescent.nodes counts the original generated value/name/join tree; Child is exactly a recursive join child. childDecreases proves strict descent and accessible/generatedWellFounded construct native accessibility by structural induction. Call preserves the original unique-environment guard and the right-child condition that the left evaluation succeeded. actualCallDescent/callAccessible/callWellFounded establish well-foundedness of these actual source calls; duplicateHasNoCalls preserves original early rejection.; terminalCoverage reconstructs the entire original Execution with exact initial expression/environment and terminal value or failure for every registered expression/input. Original return records and complete visited subtraces are retained by EvaluationTrace, including left-before-right errors. No unbounded external evaluator or altered source guard is introduced.; Ranked is an explicit proof certificate decreasing on each original ExactTransitionSystem.step result. pathRank/pathBound prove monotonic endpoint rank and a bound on every original retained Path length. nativeBound recovers the bound and complete before/terminal trace from actual successful native execution. noLongContinuation excludes every path longer than the initial certificate rank. Ranks are proof witnesses, not fitted scientific values.; positivePathDescent proves strict endpoint descent for every nonempty original path. cycleExcludesRank excludes every nonempty return cycle from the ranked boundary. originalLoopCounterexample uses the already registered generated loop transition and proves no descent certificate exists. No general termination decider or unconditional termination of every transition system is asserted.; Generated literal/name/base cases construct accessibility without recursive predecessors; original identity paths satisfy the rank bound. serialBound retains full joined action/state records and the bound. successorBound retains the original successor trace and bound. EvaluationTrace preserves all visited child records and terminal results under original join assembly.; All256 fresh native lookup decisions, exact witnesses/four controls and complete registration/census/closure/exposition/hash/unknown-ID fields match pinned V3. Full build/fresh parity/all-declaration audit PASS with zero actual axioms. Original evaluator/transition source unchanged. Scientific V3 Python not executed.",
+      "completion_evidence": "verification/TURN_254_TERMINATION_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -189470,13 +189479,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T14:12:35.730716+00:00",
+  "updated_at": "2026-10-29T14:21:36.070729+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2687,
-    "fully_reconstructed_claims": 94,
-    "axiom_free_exported_results": 5223,
-    "axiom_free_audited_definitions_and_theorems": 11226
+    "pending": 2686,
+    "fully_reconstructed_claims": 95,
+    "axiom_free_exported_results": 5264,
+    "axiom_free_audited_definitions_and_theorems": 11326
   }
 }

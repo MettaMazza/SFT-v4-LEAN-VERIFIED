@@ -674,3 +674,8 @@ import SFT.Physics.GeneratorThreeWitnesses
 import SFT.Physics.GeneratorThreeGrammar
 import SFT.Physics.GeneratorThreeControls
 import SFT.Physics.GeneratorThreeEvidence
+import SFT.Physics.SpatialThreeWitnesses
+import SFT.Physics.SpatialThreeGrammar
+import SFT.Physics.SpatialThreeControls
+import SFT.Physics.SpatialThreeEvidence
+import SFT.Physics.SpatialStability

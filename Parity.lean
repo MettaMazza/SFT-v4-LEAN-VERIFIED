@@ -361,3 +361,7 @@ def main : IO Unit := do
   for c in SFT.Physics.GeneratorThreeGrammar.candidates do
     IO.println ("GeneratorThreeGrammar\t" ++ SFT.Physics.GeneratorThreeGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GeneratorThreeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GeneratorThreeGrammar.exactForm c ++ "\t" ++ SFT.Physics.GeneratorThreeGrammar.decisionReason c)
 
+
+  for c in SFT.Physics.SpatialThreeGrammar.candidates do
+    IO.println ("SpatialThreeGrammar\t" ++ SFT.Physics.SpatialThreeGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpatialThreeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpatialThreeGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpatialThreeGrammar.decisionReason c)
+

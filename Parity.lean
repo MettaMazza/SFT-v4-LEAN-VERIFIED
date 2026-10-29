@@ -369,3 +369,7 @@ def main : IO Unit := do
   for c in SFT.Physics.BoundaryRankGrammar.candidates do
     IO.println ("BoundaryRankGrammar\t" ++ SFT.Physics.BoundaryRankGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.BoundaryRankGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.BoundaryRankGrammar.exactForm c ++ "\t" ++ SFT.Physics.BoundaryRankGrammar.decisionReason c)
 
+
+  for c in SFT.Physics.AlphaGrammar.candidates do
+    IO.println ("AlphaGrammar\t" ++ SFT.Physics.AlphaGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AlphaGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AlphaGrammar.exactForm c ++ "\t" ++ SFT.Physics.AlphaGrammar.decisionReason c)
+

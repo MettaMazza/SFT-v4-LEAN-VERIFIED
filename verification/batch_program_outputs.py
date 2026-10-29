@@ -42,6 +42,7 @@ entries=[
 ('SFT-INFO-COMPRESSION-REDUNDANCY-001',r/'verification/TURN_145_CompressionProgram.lean'),
 ('SFT-INFO-QUANTUM-CORRESPONDENCE-001',r/'verification/TURN_176_QuantumProgram.lean'),
 ('SFT-COMP-DIST-CAUSALITY-001',r/'verification/TURN_264_CausalityProgram.lean'),
+('SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001',r/'verification/TURN_271_AlphaProgram.lean'),
 ('SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001',r/'verification/TURN_269_BoundaryRankProgram.lean'),
 ('SFT-PHYS-SPACE-DIMENSION-THREE-001',r/'verification/TURN_268_SpatialThreeProgram.lean'),
 ('SFT-PHYS-STRUCT-GENERATOR-THREE-001',r/'verification/TURN_267_GeneratorThreeProgram.lean'),

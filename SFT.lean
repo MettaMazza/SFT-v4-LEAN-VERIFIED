@@ -688,3 +688,10 @@ import SFT.Physics.BoundaryGrowth
 import SFT.Physics.BoundaryPairs
 import SFT.Physics.AlphaCovers
 import SFT.Physics.AlphaBlocks
+import SFT.Physics.AlphaWitnesses
+import SFT.Physics.AlphaGrammar
+import SFT.Physics.AlphaControls
+import SFT.Physics.AlphaEvidence
+import SFT.Physics.AlphaPromotion
+import SFT.Physics.AlphaRatio
+import SFT.Physics.AlphaDomain

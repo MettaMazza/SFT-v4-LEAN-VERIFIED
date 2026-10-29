@@ -769,3 +769,8 @@ import SFT.Computation.LocalityGrammar
 import SFT.Computation.LocalityControls
 import SFT.Computation.LocalityEvidence
 import SFT.Computation.Locality
+import SFT.Computation.NetworkComputationWitnesses
+import SFT.Computation.NetworkComputationGrammar
+import SFT.Computation.NetworkComputationControls
+import SFT.Computation.NetworkComputationEvidence
+import SFT.Computation.NetworkComputation

@@ -41,6 +41,7 @@ entries=[
 ('SFT-INFO-ENTROPY-UNCERTAINTY-001',r/'verification/TURN_143_EntropyProgram.lean'),
 ('SFT-INFO-COMPRESSION-REDUNDANCY-001',r/'verification/TURN_145_CompressionProgram.lean'),
 ('SFT-INFO-QUANTUM-CORRESPONDENCE-001',r/'verification/TURN_176_QuantumProgram.lean'),
+('SFT-COMP-DIST-NETWORK-COMPUTATION-001',r/'verification/TURN_294_NetworkComputationProgram.lean'),
 ('SFT-COMP-DIST-LOCALITY-001',r/'verification/TURN_293_LocalityProgram.lean'),
 ('SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001',r/'verification/TURN_292_DistributedKnowledgeProgram.lean'),
 ('SFT-COMP-DIST-FAULT-MODEL-001',r/'verification/TURN_291_FaultModelProgram.lean'),

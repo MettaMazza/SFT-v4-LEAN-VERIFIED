@@ -1,0 +1,22 @@
+import SFT.Computation.NetworkComputation
+#print axioms SFT.Computation.NetworkComputation.ActionAdmitted
+#print axioms SFT.Computation.NetworkComputation.DeliveryAdmitted
+#print axioms SFT.Computation.NetworkComputation.localSource
+#print axioms SFT.Computation.NetworkComputation.identitiesRetained
+#print axioms SFT.Computation.NetworkComputation.traceProvenance
+#print axioms SFT.Computation.NetworkComputation.traceIdentities
+#print axioms SFT.Computation.NetworkComputation.serial
+#print axioms SFT.Computation.NetworkComputation.resourceLedger
+#print axioms SFT.Computation.NetworkComputation.faultLedger
+#print axioms SFT.Computation.NetworkComputation.messageSource
+#print axioms SFT.Computation.NetworkComputation.unregisteredScheduleRejected
+#print axioms SFT.Computation.NetworkComputation.resourceSource
+#print axioms SFT.Computation.NetworkComputation.faultSource
+#print axioms SFT.Computation.NetworkComputation.traceExtension
+#print axioms SFT.Computation.NetworkComputation.changeParallelRight
+#print axioms SFT.Computation.NetworkComputation.changeParallelLeft
+#print axioms SFT.Computation.NetworkComputation.actionExtension
+#print axioms SFT.Computation.NetworkComputation.deliveryExtension
+#print axioms SFT.Computation.NetworkComputation.extendExecution
+#print axioms SFT.Computation.NetworkComputation.extensionRetainsTrace
+#print axioms SFT.Computation.NetworkComputation.resultProcessSource

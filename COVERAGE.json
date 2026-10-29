@@ -7150,9 +7150,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-NETWORK-COMPUTATION-001-504861c17b0bc318.json",
       "statement": "The forced computation over generated communication graphs kernel retains network carrier; local machines; link channels; schedule support; message traces; aggregate result; resource and fault ledgers; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold network-computation law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/NetworkComputation.lean",
+        "SFT/Computation/NetworkComputationWitnesses.lean",
+        "SFT/Computation/NetworkComputationGrammar.lean",
+        "SFT/Computation/NetworkComputationControls.lean",
+        "SFT/Computation/NetworkComputationEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
       "registration_sha256": "2066865990884b0ba219b7314d0d0cdc075d327f785f8cab589e8940993b6955",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7197,7 +7203,11 @@
         "statement": "The forced computation over generated communication graphs kernel retains network carrier; local machines; link channels; schedule support; message traces; aggregate result; resource and fault ledgers; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold network-computation law"
-      }
+      },
+      "verified_scope": "Network,LocalMachine,Node retain complete source carriers. localSource proves every admitted local action uses its own registered machine transition row. initialSupport and resultProcessSource retain registered process identity through the aggregate result.; DeliveryAdmitted/messageSource require original sender,receiver and channel records plus held endpoint machines. Execution retains the exact admitted schedule,complete local state trace and every message.; resourceLedger/faultLedger preserve full action-order ledgers. resourceSource/faultSource prove every item belongs to the declared resource/fault support.; Trace.identity/next and Change retain actual state transitions,all other nodes and identities. traceProvenance/traceIdentities/serial plus changeParallelLeft/Right preserve source interfaces and parallel components.; Componentwise Inclusion,actionExtension,deliveryExtension,extendExecution and extensionRetainsTrace retain all earlier actions,states,messages and aggregate results under source extension.; Full256 grammar,three operational witnesses,four controls and fresh candidate parity PASS. Full program40008 running.",
+      "remaining": [
+        "Original fresh full program field/hash comparison40008; completion after Locality in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -189717,13 +189727,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T23:47:15.083327+00:00",
+  "updated_at": "2026-10-29T23:53:15.843380+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 2,
-    "pending": 2663,
+    "in_progress": 3,
+    "pending": 2662,
     "fully_reconstructed_claims": 116,
-    "axiom_free_exported_results": 6398,
-    "axiom_free_audited_definitions_and_theorems": 14035
+    "axiom_free_exported_results": 6437,
+    "axiom_free_audited_definitions_and_theorems": 14131
   }
 }

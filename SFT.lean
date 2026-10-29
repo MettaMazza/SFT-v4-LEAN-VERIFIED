@@ -581,3 +581,10 @@ import SFT.Computation.SymbolicGrammar
 import SFT.Computation.SymbolicControls
 import SFT.Computation.SymbolicEvidence
 import SFT.Computation.ApproximateBound
+import SFT.Computation.ApproximateWitnesses
+import SFT.Computation.ApproximateGrammar
+import SFT.Computation.ApproximateControls
+import SFT.Computation.ApproximateEvidence
+import SFT.Computation.ApproximateDistinctions
+import SFT.Computation.ApproximateError
+import SFT.Computation.ApproximateTrace

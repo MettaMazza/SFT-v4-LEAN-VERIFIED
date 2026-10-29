@@ -567,3 +567,8 @@ import SFT.Computation.StreamingTrace
 import SFT.Computation.NumericalError
 import SFT.Computation.NumericalLedger
 import SFT.Computation.NumericalTrace
+import SFT.Computation.NumericalWitnesses
+import SFT.Computation.NumericalGrammar
+import SFT.Computation.NumericalControls
+import SFT.Computation.NumericalEvidence
+import SFT.Computation.NumericalBoundary

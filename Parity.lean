@@ -289,3 +289,7 @@ def main : IO Unit := do
   for c in SFT.Computation.OnlineStreamingGrammar.candidates do
     IO.println ("OnlineStreamingGrammar\t" ++ SFT.Computation.OnlineStreamingGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.OnlineStreamingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.OnlineStreamingGrammar.exactForm c ++ "\t" ++ SFT.Computation.OnlineStreamingGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.NumericalGrammar.candidates do
+    IO.println ("NumericalGrammar\t" ++ SFT.Computation.NumericalGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.NumericalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.NumericalGrammar.exactForm c ++ "\t" ++ SFT.Computation.NumericalGrammar.decisionReason c)
+

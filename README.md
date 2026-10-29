@@ -17,15 +17,15 @@
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
 
-## Zenodo preprint - author review copy
+## SFT preprint - publication edition 0.1
 
 **Smithian Fold Theory: A Zero-Axiom, Zero-Free-Parameter Derivation of the Fine-Structure Constant — Lean 4 Formal Verification**
 
 Alpha opens the cumulative SFT theory-of-everything manuscript. The full paper grows with the formalisation of all 2,781 V3 entries.
 
-**[Read the complete review PDF](publication/SFT_REVIEW.pdf)** · [Full paper text](ZENODO_PAPER_DRAFT.txt) · [Review guide and release contents](publication/REVIEW_GUIDE.txt) · [Proposed Zenodo metadata](publication/ZENODO_METADATA_REVIEW.json) · [Machine-readable release index](publication/RELEASE_INDEX.json)
+**[Read the paper](publication/SFT_PAPER.pdf)** · [Zenodo DOI](https://doi.org/10.5281/zenodo.23782217) · [Full text](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Release index](publication/RELEASE_INDEX.json)
 
-This is the GitHub review edition. Zenodo publication awaits Maria Smith's explicit approval. The release package will include the timeline, complete source snapshot and verification evidence alongside the paper.
+Publication edition 0.1 includes linked contents, numbered sections, the full timeline, source snapshot and verification evidence. Further editions require the author's approval at the publication milestones.
 
 # One model. Every derivation. Machine-checked.
 

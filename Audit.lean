@@ -4992,3 +4992,16 @@ import SFT
 #print axioms SFT.Computation.SemSubstitution.renamedExecution
 #print axioms SFT.Computation.SemSubstitution.conflictingBinder
 #print axioms SFT.Computation.SemSubstitution.originalWitness
+#print axioms SFT.Computation.SemValueSubstitution.sourceAgreement
+#print axioms SFT.Computation.SemValueSubstitution.scopeTransport
+#print axioms SFT.Computation.SemValueSubstitution.removeShadowDuplicate
+#print axioms SFT.Computation.SemValueSubstitution.moveTargetToFront
+#print axioms SFT.Computation.SemValueSubstitution.formationPreserved
+#print axioms SFT.Computation.SemValueSubstitution.sourceFormation
+#print axioms SFT.Computation.SemValueSubstitution.noFreshSearchFailure
+#print axioms SFT.Computation.SemValueSubstitution.boundNameNotFree
+#print axioms SFT.Computation.SemValueSubstitution.targetRemoved
+#print axioms SFT.Computation.SemValueSubstitution.otherFreePreserved
+#print axioms SFT.Computation.SemValueSubstitution.binderIdentitiesPreserved
+#print axioms SFT.Computation.SemValueSubstitution.valueShape
+#print axioms SFT.Computation.SemValueSubstitution.evaluatorCallSafety

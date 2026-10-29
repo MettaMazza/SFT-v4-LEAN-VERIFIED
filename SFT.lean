@@ -477,3 +477,8 @@ import SFT.Computation.ParallelGrammar
 import SFT.Computation.ParallelControls
 import SFT.Computation.ParallelEvidence
 import SFT.Computation.ParallelResources
+import SFT.Computation.BoundsWitnesses
+import SFT.Computation.BoundsGrammar
+import SFT.Computation.BoundsControls
+import SFT.Computation.BoundsEvidence
+import SFT.Computation.BoundResources

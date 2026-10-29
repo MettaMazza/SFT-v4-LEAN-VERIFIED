@@ -1,0 +1,41 @@
+{
+  "claim_id": "SFT-COMP-SEM-CORRECTNESS-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "status": "complete",
+  "source_sha256": {
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/semantics/correctness/law.py": "9628d90841376c0562a42c957c93bed6dbbcf613ba0fc9a196539e826985a2ea",
+    "claims/SFT-COMP-SEM-CORRECTNESS-001/execution.py": "4ffab60235e95ea5cea3979405b68934b49c786b5a8f7e734bc7afe06465d44c",
+    "claims/SFT-COMP-SEM-CORRECTNESS-001/independent_validator.py": "11da84190828c22d69256e70f4cb61bd01d6bb79381905d0a24963f9a16f5c64",
+    "claims/SFT-COMP-SEM-CORRECTNESS-001/WHY_DERIVATION_CHECK.md": "b84c62689afc9d7e827bd3da673ace86464aae49ba31d41bbc57d70efd2b2a85",
+    "claims/SFT-COMP-SEM-CORRECTNESS-001/certificate.json": "0b2c9ab59cec20d35b02ee8a0fc3c0aabf7c877a5fed3ccf3f98571f79c78d8a",
+    "claims/SFT-COMP-SEM-CORRECTNESS-001/registration.json": "ddca204e5ff117f4634c09c3a2467dce32181d0b307997b374d9a6e22c1d38e6",
+    "receipts/engine/model_admitted/SFT-COMP-SEM-CORRECTNESS-001-95af5c4c8a0cf03d.json": "9ccdbc448d3abcd06430f30e6f419ce1566867a7ce6b3e13f076191aa87ee14c"
+  },
+  "components": {
+    "actual registered source": "Eighth Semantics topic CORRECTNESS: agreement between execution and specification. Original execution binds operations.py, catalog/spec_data/generated_law, semantics/correctness/law.py and execution.py; all8 dependencies complete. Correctness remains conditional on exact registered pre/post specification and finite input support.",
+    "exact specification and declarations": "ProgramCorrectness.Specification retains the partial/total declaration, precondition and postcondition on the full original execution record. Partial requires the postcondition for every complete original execution of an admitted input. Total additionally retains existence of that execution. The existing finite expression evaluator constructs this existence; no general universal-language termination is inferred.",
+    "proof certificate": "certificate traverses every registered input, checks its exact precondition and postcondition against the full original run, and is equivalent to declared Correct in both modes. Soundness uses complete source Execution replay; completeness reconstructs the original run. failedCertificate gives an actual admitted input with failed postcondition. Specification is an input, not selected from the output.",
+    "complete traces and failures": "ledger retains every input, both specification decisions, mode and complete original execution. completeRecord/everyInputRetained establish exact provenance and complete Execution. failures is exactly the source error-result rows; no failed run is silently dropped. acceptedRows reconstructs each required successful specification check. A runtime failure is governed by the exact registered postcondition, not silently relabeled successful execution.",
+    "base composition successor": "Source expression base and termination reconstruction supply complete original records. supportAssembly/restriction preserve exact input scope; ledgerAssembly/earlierRowRetained retain every prior record under generated extension. consequence proves registered pre/post implication with the same complete source execution. serialAgreement joins original Path records through the exact middle interface and establishes the final postcondition from the retained component certificates.",
+    "complete program verification": "All256 fresh native lookup decisions, exact witnesses/four controls and complete registration/census/closure/exposition/hash/unknown-ID fields match pinned V3. Full build/fresh parity/all-declaration audit PASS with zero actual axioms. Source guards/evaluator/transition operations unchanged and no scientific V3 Python executed."
+  },
+  "dependencies": [
+    "SFT-COMP-SEM-TERMINATION-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": "All8 complete before this entry",
+  "native_audit": "verification/TURN_255_PARITY_REPORT.json",
+  "program_comparison": "verification/TURN_255_PROGRAM_REPORT.json",
+  "remaining": [],
+  "completion_count": 96
+}

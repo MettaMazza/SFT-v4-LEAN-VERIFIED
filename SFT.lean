@@ -628,3 +628,8 @@ import SFT.Computation.TerminationGrammar
 import SFT.Computation.TerminationControls
 import SFT.Computation.TerminationEvidence
 import SFT.Computation.TerminationDescent
+import SFT.Computation.CorrectnessWitnesses
+import SFT.Computation.CorrectnessGrammar
+import SFT.Computation.CorrectnessControls
+import SFT.Computation.CorrectnessEvidence
+import SFT.Computation.ProgramCorrectness

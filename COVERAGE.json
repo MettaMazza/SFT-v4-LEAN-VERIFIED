@@ -6054,9 +6054,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEM-CORRECTNESS-001-95af5c4c8a0cf03d.json",
       "statement": "The forced agreement between execution and specification kernel retains precondition support; program traces; postcondition relation; total or partial termination declaration; failure rows; proof certificate; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold program-correctness law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Computation/ProgramCorrectness.lean",
+        "SFT/Computation/CorrectnessWitnesses.lean",
+        "SFT/Computation/CorrectnessGrammar.lean",
+        "SFT/Computation/CorrectnessControls.lean",
+        "SFT/Computation/CorrectnessEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 fresh native lookups and every original field/hash; existing evaluation comparisons retained unchanged.",
       "registration_sha256": "ddca204e5ff117f4634c09c3a2467dce32181d0b307997b374d9a6e22c1d38e6",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -6101,7 +6107,10 @@
         "statement": "The forced agreement between execution and specification kernel retains precondition support; program traces; postcondition relation; total or partial termination declaration; failure rows; proof certificate; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold program-correctness law"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Eighth Semantics topic CORRECTNESS: agreement between execution and specification. Original execution binds operations.py, catalog/spec_data/generated_law, semantics/correctness/law.py and execution.py; all8 dependencies complete. Correctness remains conditional on exact registered pre/post specification and finite input support.; ProgramCorrectness.Specification retains the partial/total declaration, precondition and postcondition on the full original execution record. Partial requires the postcondition for every complete original execution of an admitted input. Total additionally retains existence of that execution. The existing finite expression evaluator constructs this existence; no general universal-language termination is inferred.; certificate traverses every registered input, checks its exact precondition and postcondition against the full original run, and is equivalent to declared Correct in both modes. Soundness uses complete source Execution replay; completeness reconstructs the original run. failedCertificate gives an actual admitted input with failed postcondition. Specification is an input, not selected from the output.; ledger retains every input, both specification decisions, mode and complete original execution. completeRecord/everyInputRetained establish exact provenance and complete Execution. failures is exactly the source error-result rows; no failed run is silently dropped. acceptedRows reconstructs each required successful specification check. A runtime failure is governed by the exact registered postcondition, not silently relabeled successful execution.; Source expression base and termination reconstruction supply complete original records. supportAssembly/restriction preserve exact input scope; ledgerAssembly/earlierRowRetained retain every prior record under generated extension. consequence proves registered pre/post implication with the same complete source execution. serialAgreement joins original Path records through the exact middle interface and establishes the final postcondition from the retained component certificates.; All256 fresh native lookup decisions, exact witnesses/four controls and complete registration/census/closure/exposition/hash/unknown-ID fields match pinned V3. Full build/fresh parity/all-declaration audit PASS with zero actual axioms. Source guards/evaluator/transition operations unchanged and no scientific V3 Python executed.",
+      "completion_evidence": "verification/TURN_255_CORRECTNESS_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -189479,13 +189488,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T14:21:36.070729+00:00",
+  "updated_at": "2026-10-29T14:29:42.473904+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2686,
-    "fully_reconstructed_claims": 95,
-    "axiom_free_exported_results": 5264,
-    "axiom_free_audited_definitions_and_theorems": 11326
+    "pending": 2685,
+    "fully_reconstructed_claims": 96,
+    "axiom_free_exported_results": 5302,
+    "axiom_free_audited_definitions_and_theorems": 11430
   }
 }

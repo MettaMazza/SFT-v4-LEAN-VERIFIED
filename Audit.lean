@@ -4277,3 +4277,11 @@ import SFT
 #print axioms SFT.Computation.DescriptiveResources.lengthLedgerComposition
 #print axioms SFT.Computation.DescriptiveResources.declaredDepthBoundary
 #print axioms SFT.Computation.DescriptiveResources.translatedMinimumBound
+#print axioms SFT.Computation.SearchTrace.scanComplete
+#print axioms SFT.Computation.SearchTrace.scanPosition
+#print axioms SFT.Computation.SearchTrace.scanTrace
+#print axioms SFT.Computation.SearchTrace.admittedSearch
+#print axioms SFT.Computation.SearchTrace.duplicateCarrierRejected
+#print axioms SFT.Computation.SearchTrace.absentTargetRejected
+#print axioms SFT.Computation.SearchTrace.retainedScan
+#print axioms SFT.Computation.SearchTrace.oneSearch

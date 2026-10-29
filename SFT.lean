@@ -507,3 +507,4 @@ import SFT.Computation.DescriptiveGrammar
 import SFT.Computation.DescriptiveControls
 import SFT.Computation.DescriptiveEvidence
 import SFT.Computation.DescriptiveResources
+import SFT.Computation.SearchTrace

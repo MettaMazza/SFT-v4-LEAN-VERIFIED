@@ -457,3 +457,8 @@ import SFT.Computation.CircuitResourceWitnesses
 import SFT.Computation.CircuitResourceGrammar
 import SFT.Computation.CircuitResourceControls
 import SFT.Computation.CircuitResourceEvidence
+import SFT.Computation.CommunicationQueryWitnesses
+import SFT.Computation.CommunicationQueryGrammar
+import SFT.Computation.CommunicationQueryControls
+import SFT.Computation.CommunicationQueryEvidence
+import SFT.Computation.CommunicationResources

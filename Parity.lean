@@ -205,3 +205,7 @@ def main : IO Unit := do
   for c in SFT.Computation.CircuitResourceGrammar.candidates do
     IO.println ("CircuitResourceGrammar\t" ++ SFT.Computation.CircuitResourceGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.CircuitResourceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.CircuitResourceGrammar.exactForm c ++ "\t" ++ SFT.Computation.CircuitResourceGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.CommunicationQueryGrammar.candidates do
+    IO.println ("CommunicationQueryGrammar\t" ++ SFT.Computation.CommunicationQueryGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.CommunicationQueryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.CommunicationQueryGrammar.exactForm c ++ "\t" ++ SFT.Computation.CommunicationQueryGrammar.decisionReason c)
+

@@ -5222,9 +5222,11 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-ALG-DISTRIBUTED-001-5dfc71b4941c7e3f.json",
       "statement": "The forced local processes exchanging exact records kernel retains process identities; local states; message alphabet; send and receive rows; causal trace; fault boundary; global result reconstruction; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold distributed-algorithm law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/DistributedReplay.lean"
+      ],
+      "artifact_runtime_parity": "Full entry program not yet translated; existing33638 candidate comparisons pass unchanged.",
       "registration_sha256": "e1dccfa3f1a27c0775977109d73f6e5591ca592bee8aba23f0b805582f4f9c45",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -5269,7 +5271,14 @@
         "statement": "The forced local processes exchanging exact records kernel retains process identities; local states; message alphabet; send and receive rows; causal trace; fault boundary; global result reconstruction; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold distributed-algorithm law"
-      }
+      },
+      "verified_scope": "DistributedReplay: named local events tied to registered original System.step; bidirectional event and global replay certificates, exact selected local-state update, unchanged other processes and process identities, serial composition and successor. This checkpoint does not complete the message/causal/fault components.",
+      "remaining": [
+        "Source message alphabet and send/receive rows: represent matched message identity/payload and registered endpoints, with native provenance and rejection proofs.",
+        "Source causal trace and fault boundary: connect matched sends-before-receives and explicit local failures to the global replay certificate.",
+        "Generate full original256 grammar/control/evidence modules and compare every original program field/hash and actual candidate lookup; then source-component completion review."
+      ],
+      "progress_evidence": "verification/TURN_234_DISTRIBUTED_REPLAY_PROGRESS.json"
     },
     {
       "branch": "computation",
@@ -189355,13 +189364,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T10:42:35.618195+00:00",
+  "updated_at": "2026-10-29T10:47:57.961180+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2698,
+    "in_progress": 1,
+    "pending": 2697,
     "fully_reconstructed_claims": 83,
-    "axiom_free_exported_results": 4623,
-    "axiom_free_audited_definitions_and_theorems": 9933
+    "axiom_free_exported_results": 4634,
+    "axiom_free_audited_definitions_and_theorems": 9947
   }
 }

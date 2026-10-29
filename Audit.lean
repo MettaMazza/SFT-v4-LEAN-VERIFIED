@@ -4622,3 +4622,14 @@ import SFT
 #print axioms SFT.Computation.ParallelAlgorithm.scheduledIdentities
 #print axioms SFT.Computation.ParallelAlgorithm.combinedWork
 #print axioms SFT.Computation.ParallelAlgorithm.workCoverage
+#print axioms SFT.Computation.DistributedReplay.localReplay
+#print axioms SFT.Computation.DistributedReplay.replayLocal
+#print axioms SFT.Computation.DistributedReplay.updateOther
+#print axioms SFT.Computation.DistributedReplay.updateSelected
+#print axioms SFT.Computation.DistributedReplay.retainedIdentities
+#print axioms SFT.Computation.DistributedReplay.globalReplay
+#print axioms SFT.Computation.DistributedReplay.globalDerivation
+#print axioms SFT.Computation.DistributedReplay.globalIdentities
+#print axioms SFT.Computation.DistributedReplay.unaffectedProcess
+#print axioms SFT.Computation.DistributedReplay.composition
+#print axioms SFT.Computation.DistributedReplay.successor

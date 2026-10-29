@@ -17,6 +17,16 @@
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
 
+## Zenodo preprint - author review copy
+
+**Zero axioms, Zero Free Parameter, first principle Derivation of the Fine-Structure Constant in SFT v4 LEAN verification introduction**
+
+Alpha opens the cumulative SFT theory-of-everything manuscript. The full paper grows with the formalisation of all 2,781 V3 entries.
+
+**[Read the complete review PDF](publication/SFT_REVIEW.pdf)** · [Full paper text](ZENODO_PAPER_DRAFT.txt) · [Review guide and release contents](publication/REVIEW_GUIDE.txt) · [Proposed Zenodo metadata](publication/ZENODO_METADATA_REVIEW.json) · [Machine-readable release index](publication/RELEASE_INDEX.json)
+
+This is the GitHub review edition. Zenodo publication awaits Maria Smith's explicit approval. The release package will include the timeline, complete source snapshot and verification evidence alongside the paper.
+
 # One model. Every derivation. Machine-checked.
 
 **SFT v4 is the native Lean formalisation of Maria Smith’s Smithian Fold Theory v3.** The task is exact: carry the existing model into Lean, preserving its definitions, constraints, dependency order and derivations across all **2,781 registered entries**.

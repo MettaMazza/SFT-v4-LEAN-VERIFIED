@@ -405,3 +405,7 @@ def main : IO Unit := do
   for c in SFT.Computation.AgreementImpossibilityGrammar.candidates do
     IO.println ("AgreementImpossibilityGrammar\t" ++ SFT.Computation.AgreementImpossibilityGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.AgreementImpossibilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.AgreementImpossibilityGrammar.exactForm c ++ "\t" ++ SFT.Computation.AgreementImpossibilityGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.ReplicationGrammar.candidates do
+    IO.println ("ReplicationGrammar\t" ++ SFT.Computation.ReplicationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ReplicationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ReplicationGrammar.exactForm c ++ "\t" ++ SFT.Computation.ReplicationGrammar.decisionReason c)
+

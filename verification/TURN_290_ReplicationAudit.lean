@@ -1,0 +1,27 @@
+import SFT.Computation.Replication
+#print axioms SFT.Computation.Replication.identitiesRetained
+#print axioms SFT.Computation.Replication.replicaCountRetained
+#print axioms SFT.Computation.Replication.recipientHeld
+#print axioms SFT.Computation.Replication.originalTransition
+#print axioms SFT.Computation.Replication.unaffectedCopyRetained
+#print axioms SFT.Computation.Replication.traceIdentities
+#print axioms SFT.Computation.Replication.traceUpdateProvenance
+#print axioms SFT.Computation.Replication.serialTrace
+#print axioms SFT.Computation.Replication.traceLength
+#print axioms SFT.Computation.Replication.consistent
+#print axioms SFT.Computation.Replication.stateClass
+#print axioms SFT.Computation.Replication.consistencyMeaning
+#print axioms SFT.Computation.Replication.classMeaning
+#print axioms SFT.Computation.Replication.completeStateClass
+#print axioms SFT.Computation.Replication.distinctClasses
+#print axioms SFT.Computation.Replication.convergenceObservation
+#print axioms SFT.Computation.Replication.conflictRejectsConsistency
+#print axioms SFT.Computation.Replication.parallelConsistency
+#print axioms SFT.Computation.Replication.lostOrderCannotRecover
+#print axioms SFT.Computation.Replication.earlierUpdateRetained
+#print axioms SFT.Computation.Replication.changeParallelRight
+#print axioms SFT.Computation.Replication.changeParallelLeft
+#print axioms SFT.Computation.Replication.stepParallel
+#print axioms SFT.Computation.Replication.traceSuccessor
+#print axioms SFT.Computation.Replication.retainedOrderLoss
+#print axioms SFT.Computation.Replication.nativeOrderLossCannotRecover

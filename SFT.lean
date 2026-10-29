@@ -749,3 +749,8 @@ import SFT.Computation.AgreementImpossibilityGrammar
 import SFT.Computation.AgreementImpossibilityControls
 import SFT.Computation.AgreementImpossibilityEvidence
 import SFT.Computation.AgreementImpossibility
+import SFT.Computation.ReplicationWitnesses
+import SFT.Computation.ReplicationGrammar
+import SFT.Computation.ReplicationControls
+import SFT.Computation.ReplicationEvidence
+import SFT.Computation.Replication

@@ -1,0 +1,51 @@
+{
+  "claim_id": "SFT-COMP-DIST-CONSENSUS-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/distributed_computation/consensus/law.py": "44b90e1da3ff255597244a92370e54de9b72d88a57d60576c22325b6dbd6764c",
+    "claims/SFT-COMP-DIST-CONSENSUS-001/WHY_DERIVATION_CHECK.md": "bfb106550c763953cbb1954b1f4639415fdbfc7e2004662de9c88278cf6eb2a1",
+    "claims/SFT-COMP-DIST-CONSENSUS-001/registration.json": "8a11c9a713afae590342b2b3885dd0c24b79f78b9dbcf4b94a364e64b86f5ca9",
+    "claims/SFT-COMP-DIST-CONSENSUS-001/execution.py": "1f03a5046de66471ad2fc440fed82644d5ca3496b18b27bf3264adcd238afef7",
+    "claims/SFT-COMP-DIST-CONSENSUS-001/independent_validator.py": "4d4fda19c9c4da8bf0b430b2802d8395b4a48a74edc91ff29b9ef03d30762ae0",
+    "claims/SFT-COMP-DIST-CONSENSUS-001/certificate.json": "c67b202363b0118d118168e2ec23c7df933530888bf626b1dafd7e88ec14400e"
+  },
+  "components": {
+    "inputs,valid proposals and decision states": "Record retains original input/state/message/boundary fields. coverageMeaning,terminalMeaning,acceptanceMeaning,proposalValidity and everyProcessDecides prove exact terminal acceptance and source proposal membership without a conventional algorithm.",
+    "agreement and termination": "agreement proves all retained decision values equal. pendingRejects excludes any pending process state. terminationExplicit retains the source declaration; no unrestricted liveness theorem is substituted.",
+    "message traces and fault boundary": "messageMeaning and allMessagesReconstruct retain every original Communication delivery. boundaryExplicit requires named communication/fault declarations. compose and incompatibleBoundaryRejected preserve matching declared interfaces.",
+    "base,composition and successor": "singleAccepted,compositionAccepted,processSuccessor prove the one-process base and complete input/state/message ledger assembly and extension. earlierInputsRetained and earlierMessagesRetained preserve prior records; terminalAppend retains common decisions.",
+    "grammar and controls": "Original complete256 grammar,three witnesses,four controls and every original program field/hash match pinned V3; unknown-ID rejection verified."
+  },
+  "dependencies": [
+    "SFT-COMP-DIST-PARTIAL-ORDER-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": {
+    "SFT-COMP-DIST-PARTIAL-ORDER-001": "complete",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+    "SFT-MATH-DISCRETE-001": "complete",
+    "SFT-MATH-GRAPH-NETWORK-001": "complete",
+    "SFT-MATH-LOGIC-PROOF-001": "complete",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+    "SFT-INFO-ENCODING-DECODING-001": "complete",
+    "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+  },
+  "native_checks": {
+    "axiom_dependencies": 0,
+    "audit": "verification/TURN_288_PARITY_REPORT.json",
+    "cases": "verification/TURN_288_BATCH_CASE_REPORT.json"
+  },
+  "remaining": [],
+  "status": "complete",
+  "program_comparison": "verification/TURN_288_Consensus_PROGRAM_REPORT.json"
+}

@@ -452,3 +452,8 @@ import SFT.Computation.TimeSpaceWitnesses
 import SFT.Computation.TimeSpaceGrammar
 import SFT.Computation.TimeSpaceControls
 import SFT.Computation.TimeSpaceEvidence
+import SFT.Computation.CircuitResources
+import SFT.Computation.CircuitResourceWitnesses
+import SFT.Computation.CircuitResourceGrammar
+import SFT.Computation.CircuitResourceControls
+import SFT.Computation.CircuitResourceEvidence

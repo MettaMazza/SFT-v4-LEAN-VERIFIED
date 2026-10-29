@@ -3861,9 +3861,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-CPLX-CIRCUIT-RESOURCE-001-9f3e28733488ad63.json",
       "statement": "The forced circuit structural resources kernel retains generated gates; wires; dependency order; longest causal layer trace; output support; shared-subcircuit identity; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold circuit size and depth law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Computation/CircuitResources.lean",
+        "SFT/Computation/CircuitResourceWitnesses.lean",
+        "SFT/Computation/CircuitResourceGrammar.lean",
+        "SFT/Computation/CircuitResourceControls.lean",
+        "SFT/Computation/CircuitResourceEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 fresh native lookups and every original field/hash; unchanged6349 shared-operation comparisons retained.",
       "registration_sha256": "92a481de499c2358476fdb0a6ec26365c26a110a27c3ff989df0180a247fb004",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -3908,7 +3914,10 @@
         "statement": "The forced circuit structural resources kernel retains generated gates; wires; dependency order; longest causal layer trace; output support; shared-subcircuit identity; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold circuit size and depth law"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Third complexity topic CIRCUIT-RESOURCE, exact six-file execution binding, independent validator and all8 completed dependencies. Generated gates/wires, dependency order, longest causal layer trace, output support and shared-subcircuit identity. Source scope remains resource accounting, not arbitrary lower bounds.; CircuitResources.causalTraces applies the original rawSelections enumeration to the declared dependency order and filters with the original pathIsValid. causalTraceMeaning proves exact equivalence to an original HeldChoice in that order plus a valid graph path. No sampled path list or assumed completeness premise replaces the enumeration.; longestFromMeaning proves the selected maximum is an actual retained candidate and bounds every candidate length. completeLongestTrace combines the full enumeration theorem with that maximum: whenever an admitted causal trace exists, the native result is an admitted longest trace and bounds every causal trace respecting the declared order. longestRetainsWires reconstructs every actual gate and adjacent wire from the graph. oneGateDepth gives the structural One base.; registeredGateWireSupport derives unique gate and wire identities and held endpoints from original makeGraph. gateCount and wireCount are exact carrier reports; sharedIdentityCount retains gate count under changed wire incidence, preserving shared-subcircuit identity. Existing CircuitGraph.evaluationPath/outputHeld connect full original Category evaluation to graph path/output support; feedForwardExcludesReturn retains the declared feed-forward boundary.; gateSuccessor and wireComposition prove exact retained carrier increments and sums. retainedOrderedTrace preserves every prior causal trace under dependency-order extension using the original absent-choice constructor. Existing CircuitComposition.serial/successor/completeTrace retain every component interface and local trace, without discarding shared identities or claiming a lower bound.; All256 original complexity-axis candidates,3 resourceLedger witnesses,4 controls, registration/census/closure/exposition and hashes. Fresh native full256 actual lookups and every source field/hash/unknown-ID refusal match pinned V3. Existing resource-ledger and shared-operation checks retained.",
+      "completion_evidence": "verification/TURN_213_CIRCUIT_RESOURCE_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -189174,13 +189183,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-28T23:49:23.543662+00:00",
+  "updated_at": "2026-10-28T23:57:03.458337+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2718,
-    "fully_reconstructed_claims": 63,
-    "axiom_free_exported_results": 3881,
-    "axiom_free_audited_definitions_and_theorems": 8015
+    "pending": 2717,
+    "fully_reconstructed_claims": 64,
+    "axiom_free_exported_results": 3914,
+    "axiom_free_audited_definitions_and_theorems": 8108
   }
 }

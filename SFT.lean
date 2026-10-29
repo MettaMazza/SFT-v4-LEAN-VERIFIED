@@ -572,3 +572,11 @@ import SFT.Computation.NumericalGrammar
 import SFT.Computation.NumericalControls
 import SFT.Computation.NumericalEvidence
 import SFT.Computation.NumericalBoundary
+import SFT.Computation.SymbolicValues
+import SFT.Computation.SymbolicEvaluation
+import SFT.Computation.SymbolicContext
+import SFT.Computation.SymbolicTrace
+import SFT.Computation.SymbolicWitnesses
+import SFT.Computation.SymbolicGrammar
+import SFT.Computation.SymbolicControls
+import SFT.Computation.SymbolicEvidence

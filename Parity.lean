@@ -293,3 +293,7 @@ def main : IO Unit := do
   for c in SFT.Computation.NumericalGrammar.candidates do
     IO.println ("NumericalGrammar\t" ++ SFT.Computation.NumericalGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.NumericalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.NumericalGrammar.exactForm c ++ "\t" ++ SFT.Computation.NumericalGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.SymbolicGrammar.candidates do
+    IO.println ("SymbolicGrammar\t" ++ SFT.Computation.SymbolicGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SymbolicGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SymbolicGrammar.exactForm c ++ "\t" ++ SFT.Computation.SymbolicGrammar.decisionReason c)
+

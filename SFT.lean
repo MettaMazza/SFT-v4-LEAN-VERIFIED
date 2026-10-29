@@ -580,3 +580,4 @@ import SFT.Computation.SymbolicWitnesses
 import SFT.Computation.SymbolicGrammar
 import SFT.Computation.SymbolicControls
 import SFT.Computation.SymbolicEvidence
+import SFT.Computation.ApproximateBound

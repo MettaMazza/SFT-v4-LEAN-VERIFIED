@@ -4849,3 +4849,12 @@ import SFT
 #print axioms SFT.Computation.SymbolicEvidence.registrationHasNoAxioms
 #print axioms SFT.Computation.SymbolicEvidence.registrationHasNoFreeParameters
 #print axioms SFT.Computation.SymbolicEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Computation.ApproximateBound.admission
+#print axioms SFT.Computation.ApproximateBound.reconstruct
+#print axioms SFT.Computation.ApproximateBound.positiveCandidate
+#print axioms SFT.Computation.ApproximateBound.boundedPart
+#print axioms SFT.Computation.ApproximateBound.rejectsNegativeCandidate
+#print axioms SFT.Computation.ApproximateBound.rejectsNegativeOptimum
+#print axioms SFT.Computation.ApproximateBound.sourceRows
+#print axioms SFT.Computation.ApproximateBound.exactBound
+#print axioms SFT.Computation.ApproximateBound.extensionPreserves

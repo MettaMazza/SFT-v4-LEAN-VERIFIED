@@ -1,0 +1,22 @@
+import SFT.Computation.Synchronization
+#print axioms SFT.Computation.Synchronization.observe
+#print axioms SFT.Computation.Synchronization.ledger
+#print axioms SFT.Computation.Synchronization.blocked
+#print axioms SFT.Computation.Synchronization.release
+#print axioms SFT.Computation.Synchronization.releaseMeaning
+#print axioms SFT.Computation.Synchronization.participantIdentities
+#print axioms SFT.Computation.Synchronization.systemIdentities
+#print axioms SFT.Computation.Synchronization.eachParticipantEnabled
+#print axioms SFT.Computation.Synchronization.noBlockedRelease
+#print axioms SFT.Computation.Synchronization.blockedParticipantPreventsRelease
+#print axioms SFT.Computation.Synchronization.ledgerRetainsParticipants
+#print axioms SFT.Computation.Synchronization.ledgerAppend
+#print axioms SFT.Computation.Synchronization.jointAssembly
+#print axioms SFT.Computation.Synchronization.successorPreservesEarlier
+#print axioms SFT.Computation.Synchronization.serialTrace
+#print axioms SFT.Computation.Synchronization.allReadyRelease
+#print axioms SFT.Computation.Synchronization.exactReadiness
+#print axioms SFT.Computation.Synchronization.blockedRowsComplete
+#print axioms SFT.Computation.Synchronization.jointSourceRows
+#print axioms SFT.Computation.Synchronization.traceRetainsIdentities
+#print axioms SFT.Computation.Synchronization.traceLength

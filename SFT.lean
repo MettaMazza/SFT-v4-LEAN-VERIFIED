@@ -724,3 +724,8 @@ import SFT.Physics.MixingWitnesses
 import SFT.Physics.MixingGrammar
 import SFT.Physics.MixingControls
 import SFT.Physics.MixingEvidence
+import SFT.Computation.SynchronizationWitnesses
+import SFT.Computation.SynchronizationGrammar
+import SFT.Computation.SynchronizationControls
+import SFT.Computation.SynchronizationEvidence
+import SFT.Computation.Synchronization

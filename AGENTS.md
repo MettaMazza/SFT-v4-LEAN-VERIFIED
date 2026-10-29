@@ -29,3 +29,5 @@ Validate existing work across all represented entries programmatically before re
 
 Existing-work batch completion amendment (user instruction, 2026-10-27)
 The final six previously represented entries were requested as one implementation/verification batch. Preserve source dependency order when recording completion, but do not serialize review, status reconciliation or independent checks. Reconcile all newly eligible existing entries together after concrete gaps pass. This supersedes the earlier serial-extension wording for user-authorized batches.
+
+Publication continuation clarification (user, 2026-10-29): Pressing Continue explicitly authorises resuming the goal. Pause only when the NEXT specified publication milestone has been reached and its complete updated review package is ready on GitHub. Do not pause merely because an earlier edition was published. Zenodo publications must explicitly select SFT_PAPER.pdf as default preview and verify the public landing-page preview, not only upload checksums.

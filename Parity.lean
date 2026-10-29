@@ -385,3 +385,7 @@ def main : IO Unit := do
   for c in SFT.Physics.MixingGrammar.candidates do
     IO.println ("MixingGrammar\t" ++ SFT.Physics.MixingGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MixingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MixingGrammar.exactForm c ++ "\t" ++ SFT.Physics.MixingGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.SynchronizationGrammar.candidates do
+    IO.println ("SynchronizationGrammar\t" ++ SFT.Computation.SynchronizationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SynchronizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SynchronizationGrammar.exactForm c ++ "\t" ++ SFT.Computation.SynchronizationGrammar.decisionReason c)
+

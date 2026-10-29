@@ -6536,9 +6536,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-SYNCHRONIZATION-001-e1b5a01e71410f40.json",
       "statement": "The forced jointly enabled process transitions kernel retains participant identities; readiness states; rendezvous label; joint transition; blocked rows; causal trace; release state; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold synchronization law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/Synchronization.lean",
+        "SFT/Computation/SynchronizationGrammar.lean",
+        "SFT/Computation/SynchronizationWitnesses.lean",
+        "SFT/Computation/SynchronizationControls.lean",
+        "SFT/Computation/SynchronizationEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256 candidate comparison; full program fields/hash check running.",
       "registration_sha256": "597d9ebe005906b5adda3a78a3247122d01a4026177c5afddafdc875281a5776",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -6583,7 +6589,11 @@
         "statement": "The forced jointly enabled process transitions kernel retains participant identities; readiness states; rendezvous label; joint transition; blocked rows; causal trace; release state; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold synchronization law"
-      }
+      },
+      "verified_scope": "Native source-bound joint readiness/release equivalence, complete blocked rows, all participant/system retention, source transition membership, serial trace and parallel participant composition, successor, original complete256 grammar/witnesses/controls.170 cases,340 exact kernel output checks; full build/fresh candidate parity/all-declaration zero-axiom audit passed.",
+      "remaining": [
+        "Fresh complete GeneratedComputationProgram output/hash comparison is running on live session96725; check original process before completion."
+      ]
     },
     {
       "branch": "computation",
@@ -189634,13 +189644,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T21:27:30.749113+00:00",
+  "updated_at": "2026-10-29T22:24:54.597019+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2672,
+    "in_progress": 1,
+    "pending": 2671,
     "fully_reconstructed_claims": 109,
-    "axiom_free_exported_results": 6024,
-    "axiom_free_audited_definitions_and_theorems": 13133
+    "axiom_free_exported_results": 6064,
+    "axiom_free_audited_definitions_and_theorems": 13229
   }
 }

@@ -1,0 +1,21 @@
+import SFT.Computation.Locality
+#print axioms SFT.Computation.Locality.admittedRow
+#print axioms SFT.Computation.Locality.neighborhood
+#print axioms SFT.Computation.Locality.identityNeighborhood
+#print axioms SFT.Computation.Locality.neighborhoodHeld
+#print axioms SFT.Computation.Locality.traceEndpoints
+#print axioms SFT.Computation.Locality.traceRows
+#print axioms SFT.Computation.Locality.serial
+#print axioms SFT.Computation.Locality.traceExtension
+#print axioms SFT.Computation.Locality.neighborhoodTrace
+#print axioms SFT.Computation.Locality.identityAtRadius
+#print axioms SFT.Computation.Locality.traceNeighborhood
+#print axioms SFT.Computation.Locality.exactNeighborhood
+#print axioms SFT.Computation.Locality.view
+#print axioms SFT.Computation.Locality.viewRow
+#print axioms SFT.Computation.Locality.viewProvenance
+#print axioms SFT.Computation.Locality.indistinguishableOutput
+#print axioms SFT.Computation.Locality.lowerWitness
+#print axioms SFT.Computation.Locality.query
+#print axioms SFT.Computation.Locality.queryBoundary
+#print axioms SFT.Computation.Locality.omittedRowRejected

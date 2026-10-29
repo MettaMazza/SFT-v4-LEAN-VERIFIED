@@ -6944,7 +6944,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-FAULT-MODEL-001-812aad3547d57947.json",
       "statement": "The forced declared deviations from process rules kernel retains nominal transition relation; generated fault actions; affected components; detection observations; recovery relation; uncorrectable boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold computational fault-model law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Computation/FaultModel.lean",
         "SFT/Computation/FaultModelWitnesses.lean",
@@ -6952,7 +6952,7 @@
         "SFT/Computation/FaultModelControls.lean",
         "SFT/Computation/FaultModelEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
+      "artifact_runtime_parity": "PASS full256 actual identifier lookups and every original program field/hash.",
       "registration_sha256": "e1dba0081df3ba1a53ee7c03af12e14d0ca6dffe7f96cad6fe4c30530d69a015",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -6998,10 +6998,9 @@
         "status": "independently_replicated",
         "title": "Fold computational fault-model law"
       },
-      "verified_scope": "Transition,Fault,Model retain nominal relation,generated actions,affected component and observation. deviationMeaning proves declared fault membership and deviation from nominal transition support.; detectionMeaning gives exact separation from nominal observation support; indistinguishableNominal proves an observation-only decision cannot distinguish identical observations.; recoveryMeaning preserves exact declared row,affected component and post-fault source state. outsideMeaning,uncorrectableMeaning,recoverableMeaning partition outside support,no recovery and complete matching recovery rows.; exactGuarantee quantifies only over generated fault actions. Outside actions remain outside regardless of any available recovery row. No ungenerated-fault guarantee.; RecoveryTrace.identity/next retain source rows and matching state interfaces; recoveryTraceProvenance,recoveryRowTrace,serialRecovery prove exact trace reconstruction. recoveryExtension,earlierFaultRetained and composedGuarantee preserve earlier records under source assembly and one-form extension.; Original full256 grammar,three witnesses,four controls and program binding; fresh parity passes. Original full output/hash comparator76176 running.",
-      "remaining": [
-        "Original fresh full program field/hash comparison76176; completion after Replication in dependency order."
-      ]
+      "verified_scope": "Transition,Fault,Model retain nominal relation,generated actions,affected component and observation. deviationMeaning proves declared fault membership and deviation from nominal transition support.; detectionMeaning gives exact separation from nominal observation support; indistinguishableNominal proves an observation-only decision cannot distinguish identical observations.; recoveryMeaning preserves exact declared row,affected component and post-fault source state. outsideMeaning,uncorrectableMeaning,recoverableMeaning partition outside support,no recovery and complete matching recovery rows.; exactGuarantee quantifies only over generated fault actions. Outside actions remain outside regardless of any available recovery row. No ungenerated-fault guarantee.; RecoveryTrace.identity/next retain source rows and matching state interfaces; recoveryTraceProvenance,recoveryRowTrace,serialRecovery prove exact trace reconstruction. recoveryExtension,earlierFaultRetained and composedGuarantee preserve earlier records under source assembly and one-form extension.; Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_291_FAULT_MODEL_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -7082,9 +7081,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-LOCALITY-001-d75dcc0dc6937266.json",
       "statement": "The forced bounded dependency neighborhoods kernel retains network graph; process neighborhood; local inputs; communication radius trace; locally indistinguishable instances; output constraint; lower witness; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold locality law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/Locality.lean",
+        "SFT/Computation/LocalityWitnesses.lean",
+        "SFT/Computation/LocalityGrammar.lean",
+        "SFT/Computation/LocalityControls.lean",
+        "SFT/Computation/LocalityEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
       "registration_sha256": "e7075770eb73b229e1d87aeaf2f22eedcf59d34cfba11b3cfc59e778dea8812c",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7129,7 +7134,11 @@
         "statement": "The forced bounded dependency neighborhoods kernel retains network graph; process neighborhood; local inputs; communication radius trace; locally indistinguishable instances; output constraint; lower witness; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold locality law"
-      }
+      },
+      "verified_scope": "Network preserves registered processes and directed communication rows. exactNeighborhood proves computed membership iff a retained registered trace reaches the process within the stated radius; neighborhoodHeld excludes unsupported result identities.; Reach.identity/next retains every communication row; traceEndpoints,traceRows,serial and traceExtension prove endpoints,source rows,serial composition and successor preservation.; viewRow/viewProvenance retain process identity and actual local input observation. indistinguishableOutput/lowerWitness prove the observation-relative output boundary for locally identical instances with incompatible required outputs.; queryBoundary rejects a process outside the registered carrier. omittedRowRejected excludes any trace that uses an unregistered channel row. Radius is the trace length bound, not a fitted scientific parameter.; Complete256 grammar,three operational witnesses,four controls and fresh candidate parity PASS. Original full program comparison28996 running.",
+      "remaining": [
+        "Original fresh full program field/hash comparison28996; completion after Distributed Knowledge in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -189708,13 +189717,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T23:40:49.449127+00:00",
+  "updated_at": "2026-10-29T23:47:15.083327+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 2,
-    "pending": 2664,
-    "fully_reconstructed_claims": 115,
-    "axiom_free_exported_results": 6359,
-    "axiom_free_audited_definitions_and_theorems": 13940
+    "pending": 2663,
+    "fully_reconstructed_claims": 116,
+    "axiom_free_exported_results": 6398,
+    "axiom_free_audited_definitions_and_theorems": 14035
   }
 }

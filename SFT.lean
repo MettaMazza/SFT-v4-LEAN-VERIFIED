@@ -764,3 +764,8 @@ import SFT.Computation.DistributedKnowledgeGrammar
 import SFT.Computation.DistributedKnowledgeControls
 import SFT.Computation.DistributedKnowledgeEvidence
 import SFT.Computation.DistributedKnowledge
+import SFT.Computation.LocalityWitnesses
+import SFT.Computation.LocalityGrammar
+import SFT.Computation.LocalityControls
+import SFT.Computation.LocalityEvidence
+import SFT.Computation.Locality

@@ -1,0 +1,52 @@
+{
+  "claim_id": "SFT-COMP-DIST-LOCALITY-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/distributed_computation/locality/law.py": "97b0513872901a57ed54fbf0e13bcad90257b67a0800d9a32fc2ee22e2d0f2b7",
+    "claims/SFT-COMP-DIST-LOCALITY-001/WHY_DERIVATION_CHECK.md": "ce2a5f029880376bc6cd67c91063d9fb73e7a27257e276d9a204401e73694b2f",
+    "claims/SFT-COMP-DIST-LOCALITY-001/registration.json": "e7075770eb73b229e1d87aeaf2f22eedcf59d34cfba11b3cfc59e778dea8812c",
+    "claims/SFT-COMP-DIST-LOCALITY-001/execution.py": "f5199d3958f748a2ff07c30ef47dc42f42217fd69e6764ceb4b6a72a3d8dde85",
+    "claims/SFT-COMP-DIST-LOCALITY-001/independent_validator.py": "49b68bbb29ec6495dacdb9b22cff886a3184f19623abdda9d1929ac671e1a6e7",
+    "claims/SFT-COMP-DIST-LOCALITY-001/certificate.json": "0f05bec8e4c3504abc35947aea9f27896c2f122beb8aaca5bf9b1c2236867d54"
+  },
+  "components": {
+    "network and neighborhood": "Network preserves registered processes and directed communication rows. exactNeighborhood proves computed membership iff a retained registered trace reaches the process within the stated radius; neighborhoodHeld excludes unsupported result identities.",
+    "trace and composition": "Reach.identity/next retains every communication row; traceEndpoints,traceRows,serial and traceExtension prove endpoints,source rows,serial composition and successor preservation.",
+    "local inputs and lower witness": "viewRow/viewProvenance retain process identity and actual local input observation. indistinguishableOutput/lowerWitness prove the observation-relative output boundary for locally identical instances with incompatible required outputs.",
+    "boundary": "queryBoundary rejects a process outside the registered carrier. omittedRowRejected excludes any trace that uses an unregistered channel row. Radius is the trace length bound, not a fitted scientific parameter.",
+    "grammar and controls": "Complete256 grammar,three operational witnesses,four controls and fresh candidate parity PASS. Original full program comparison28996 running."
+  },
+  "dependencies": [
+    "SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": {
+    "SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001": "in_progress",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+    "SFT-MATH-DISCRETE-001": "complete",
+    "SFT-MATH-GRAPH-NETWORK-001": "complete",
+    "SFT-MATH-LOGIC-PROOF-001": "complete",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+    "SFT-INFO-ENCODING-DECODING-001": "complete",
+    "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+  },
+  "native_checks": {
+    "kernel_output_checks": 834,
+    "axiom_dependencies": 0,
+    "audit": "verification/TURN_293_PARITY_REPORT.json"
+  },
+  "remaining": [
+    "Original fresh full program field/hash comparison28996; completion after Distributed Knowledge in dependency order."
+  ],
+  "status": "native_derivation_and_parity_pass_program_comparison_running"
+}

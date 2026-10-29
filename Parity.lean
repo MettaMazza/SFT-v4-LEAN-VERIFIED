@@ -417,3 +417,7 @@ def main : IO Unit := do
   for c in SFT.Computation.DistributedKnowledgeGrammar.candidates do
     IO.println ("DistributedKnowledgeGrammar\t" ++ SFT.Computation.DistributedKnowledgeGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.DistributedKnowledgeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.DistributedKnowledgeGrammar.exactForm c ++ "\t" ++ SFT.Computation.DistributedKnowledgeGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.LocalityGrammar.candidates do
+    IO.println ("LocalityGrammar\t" ++ SFT.Computation.LocalityGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.LocalityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.LocalityGrammar.exactForm c ++ "\t" ++ SFT.Computation.LocalityGrammar.decisionReason c)
+

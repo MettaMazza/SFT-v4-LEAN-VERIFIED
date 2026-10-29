@@ -373,3 +373,7 @@ def main : IO Unit := do
   for c in SFT.Physics.AlphaGrammar.candidates do
     IO.println ("AlphaGrammar\t" ++ SFT.Physics.AlphaGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AlphaGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AlphaGrammar.exactForm c ++ "\t" ++ SFT.Physics.AlphaGrammar.decisionReason c)
 
+
+  for c in SFT.Physics.LeptonGrammar.candidates do
+    IO.println ("LeptonGrammar\t" ++ SFT.Physics.LeptonGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.LeptonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.LeptonGrammar.exactForm c ++ "\t" ++ SFT.Physics.LeptonGrammar.decisionReason c)
+

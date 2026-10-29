@@ -1,0 +1,46 @@
+{
+  "claim_id": "SFT-COMP-DIST-SYNCHRONIZATION-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/distributed_computation/synchronization/law.py": "e77d6c779020b074d6ea6e22e7dd3c78ac3f1733e946c1941c582e37eff69230",
+    "claims/SFT-COMP-DIST-SYNCHRONIZATION-001/execution.py": "08013ca6c8d2d38da0c7039e37a545600a83eda1a5999366c4a6a3db1fce902b",
+    "claims/SFT-COMP-DIST-SYNCHRONIZATION-001/independent_validator.py": "9378d208d5f2d5d6e699aa27e577cf72c7e1f0e1ff9f3ca65698641c6b34b3dd",
+    "claims/SFT-COMP-DIST-SYNCHRONIZATION-001/WHY_DERIVATION_CHECK.md": "0c036a1b030febf7ddd664c30d221a72dc4a89b19f1d662b6adfc0fa47aeef1a",
+    "claims/SFT-COMP-DIST-SYNCHRONIZATION-001/certificate.json": "cc3bbb18f4fffc042bbc776e9ec0ae30b28dada2e2e0aa864a9d49e61610832c",
+    "claims/SFT-COMP-DIST-SYNCHRONIZATION-001/registration.json": "597d9ebe005906b5adda3a78a3247122d01a4026177c5afddafdc875281a5776",
+    "receipts/engine/model_admitted/SFT-COMP-DIST-SYNCHRONIZATION-001-e1b5a01e71410f40.json": "1fb84762d6fa78b8945915002781fab2e060e65a0de8877d64f7840fbcef6824"
+  },
+  "dependencies": [
+    "SFT-COMP-DIST-CAUSALITY-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "all_registered_dependencies_complete": true,
+  "components": {
+    "participant identities, readiness states, rendezvous label": "Participant retains identity, source System and current state; observe calls original step with shared label. ledgerRetainsParticipants proves no loss or change of held rows.",
+    "joint transition and release state": "releaseMeaning proves actual release iff Joint; exactReadiness proves release exists iff every participant has an enabled original step; jointSourceRows reconstructs each transition in its original relation. participantIdentities/systemIdentities preserve registry interfaces.",
+    "blocked rows": "blockedRowsComplete proves exact failure-row membership; blockedParticipantPreventsRelease excludes joint release if any held participant fails. noBlockedRelease proves successful joint release has no blocked row; ledger retains every observation rather than stopping at the first failure.",
+    "causal trace and serial composition": "Trace retains initial and every intermediate joint state in rendezvous order; serialTrace composes only on the same intermediate state. traceLength retains one readiness record per event; traceRetainsIdentities preserves participant identities through any finite trace.",
+    "base and successor, parallel assembly": "Joint.identity and Trace.identity retain identity forms. jointAssembly combines complete participant transitions for a common label; successorPreservesEarlier extends with one enabled participant without changing earlier rows. ledgerAppend retains both component ledgers.",
+    "candidate grammar and original witnesses/controls": "Complete original256 candidates, three operational causalClosure witnesses, four controls, all actual identifier lookups and every registration/census/closure/control/hash field match pinned V3; unknown identifier rejected."
+  },
+  "native_checks": {
+    "cases": 170,
+    "kernel_output_checks": 340,
+    "axiom_dependencies": 0,
+    "audit": "verification/TURN_283_PARITY_REPORT.json"
+  },
+  "remaining": [],
+  "status": "complete",
+  "program_comparison": "verification/TURN_283_PROGRAM_REPORT.json",
+  "completion_count": 110
+}

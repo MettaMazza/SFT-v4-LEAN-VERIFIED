@@ -759,3 +759,8 @@ import SFT.Computation.FaultModelGrammar
 import SFT.Computation.FaultModelControls
 import SFT.Computation.FaultModelEvidence
 import SFT.Computation.FaultModel
+import SFT.Computation.DistributedKnowledgeWitnesses
+import SFT.Computation.DistributedKnowledgeGrammar
+import SFT.Computation.DistributedKnowledgeControls
+import SFT.Computation.DistributedKnowledgeEvidence
+import SFT.Computation.DistributedKnowledge

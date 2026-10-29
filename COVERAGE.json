@@ -6876,7 +6876,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-REPLICATION-CONSISTENCY-001-79243bdec0bda3d9.json",
       "statement": "The forced multiple retained state copies kernel retains replica identities; update events; propagation relation; conflict classes; consistency observation; convergence trace; lost-order ledger; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold replication and consistency law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Computation/Replication.lean",
         "SFT/Computation/ReplicationWitnesses.lean",
@@ -6884,7 +6884,7 @@
         "SFT/Computation/ReplicationControls.lean",
         "SFT/Computation/ReplicationEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program hash comparison running.",
+      "artifact_runtime_parity": "PASS full256 actual identifier lookups and every original program field/hash.",
       "registration_sha256": "cc61d0657b6b7ceb677fd1c93f0e5c64b6da95ffb4bb7eea0cbaa393aee113b7",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -6930,10 +6930,9 @@
         "status": "independently_replicated",
         "title": "Fold replication and consistency law"
       },
-      "verified_scope": "Replica/Update/Change/Step retain identities,state,update labels,registered events,actual source transition and original propagation row. identitiesRetained,replicaCountRetained,recipientHeld,originalTransition and unaffectedCopyRetained preserve source carriers.; Trace retains every update and intermediate replica state. traceIdentities,traceUpdateProvenance,traceLength and serialTrace establish complete provenance and interfaces.; consistent/stateClass,consistencyMeaning,classMeaning,completeStateClass and distinctClasses give exact complete state observations and disjoint conflict classes. convergenceObservation and conflictRejectsConsistency derive agreement/rejection without timing or an imported merge policy.; OrderLoss retains both distinct update histories and identical terminal observations. retainedOrderLoss links it to two admitted native traces; nativeOrderLossCannotRecover proves no observation-only reconstruction. Concrete two-order replay proof verifies an actual example.; Trace.identity,changeParallelLeft/Right,stepParallel,parallelConsistency,traceSuccessor and earlierUpdateRetained preserve original identities,interfaces and prior history records.; Original complete256 candidates,three witnesses,four controls,full original program binding and fresh parity pass. Full output/hash comparison remains live on29310.",
-      "remaining": [
-        "Original fresh full program field/hash comparison on29310; complete after Agreement Impossibility in dependency order."
-      ]
+      "verified_scope": "Replica/Update/Change/Step retain identities,state,update labels,registered events,actual source transition and original propagation row. identitiesRetained,replicaCountRetained,recipientHeld,originalTransition and unaffectedCopyRetained preserve source carriers.; Trace retains every update and intermediate replica state. traceIdentities,traceUpdateProvenance,traceLength and serialTrace establish complete provenance and interfaces.; consistent/stateClass,consistencyMeaning,classMeaning,completeStateClass and distinctClasses give exact complete state observations and disjoint conflict classes. convergenceObservation and conflictRejectsConsistency derive agreement/rejection without timing or an imported merge policy.; OrderLoss retains both distinct update histories and identical terminal observations. retainedOrderLoss links it to two admitted native traces; nativeOrderLossCannotRecover proves no observation-only reconstruction. Concrete two-order replay proof verifies an actual example.; Trace.identity,changeParallelLeft/Right,stepParallel,parallelConsistency,traceSuccessor and earlierUpdateRetained preserve original identities,interfaces and prior history records.; Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_290_REPLICATION_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -7014,9 +7013,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001-2e47ee8465ef950f.json",
       "statement": "The forced information available to local processes kernel retains global execution support; local observation maps; indistinguishability classes; individual knowledge ledgers; common-knowledge iteration; decision boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold distributed-knowledge law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/DistributedKnowledge.lean",
+        "SFT/Computation/DistributedKnowledgeWitnesses.lean",
+        "SFT/Computation/DistributedKnowledgeGrammar.lean",
+        "SFT/Computation/DistributedKnowledgeControls.lean",
+        "SFT/Computation/DistributedKnowledgeEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
       "registration_sha256": "2f9441f2b55724ff3d9bbcf5e41381b0169617a09775979a2aef97aff2f2b16b",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7061,7 +7066,11 @@
         "statement": "The forced information available to local processes kernel retains global execution support; local observation maps; indistinguishability classes; individual knowledge ledgers; common-knowledge iteration; decision boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold distributed-knowledge law"
-      }
+      },
+      "verified_scope": "Model and Observer preserve execution support and local maps. admittedMaps proves complete validated maps on admitted support.; localClassMeaning,individualMeaning,individualTruth,sameObservationKnowledge,counterexampleRejects establish exact indistinguishability support and knowledge.; commonIteration,commonReachability,commonStable prove the complete finite iteration and exact path closure without a depth cutoff. commonMeaning,commonTruth,commonImpliesIndividual establish observation-relative common knowledge.; decisionBoundary excludes unregistered execution support. commonPathComposition and commonExtension preserve exact registered relation paths.; Full256 grammar,three operational witnesses,four controls; fresh parity PASS. Full original program comparison12944 running.",
+      "remaining": [
+        "Original fresh full program field/hash comparison12944; completion after Fault Model in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -189699,13 +189708,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T23:32:22.797897+00:00",
+  "updated_at": "2026-10-29T23:40:49.449127+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 2,
-    "pending": 2665,
-    "fully_reconstructed_claims": 114,
-    "axiom_free_exported_results": 6317,
-    "axiom_free_audited_definitions_and_theorems": 13836
+    "pending": 2664,
+    "fully_reconstructed_claims": 115,
+    "axiom_free_exported_results": 6359,
+    "axiom_free_audited_definitions_and_theorems": 13940
   }
 }

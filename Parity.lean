@@ -413,3 +413,7 @@ def main : IO Unit := do
   for c in SFT.Computation.FaultModelGrammar.candidates do
     IO.println ("FaultModelGrammar\t" ++ SFT.Computation.FaultModelGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.FaultModelGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.FaultModelGrammar.exactForm c ++ "\t" ++ SFT.Computation.FaultModelGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.DistributedKnowledgeGrammar.candidates do
+    IO.println ("DistributedKnowledgeGrammar\t" ++ SFT.Computation.DistributedKnowledgeGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.DistributedKnowledgeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.DistributedKnowledgeGrammar.exactForm c ++ "\t" ++ SFT.Computation.DistributedKnowledgeGrammar.decisionReason c)
+

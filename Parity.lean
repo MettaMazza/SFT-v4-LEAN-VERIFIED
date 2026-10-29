@@ -305,3 +305,7 @@ def main : IO Unit := do
   for c in SFT.Computation.SyntaxGrammar.candidates do
     IO.println ("SyntaxGrammar\t" ++ SFT.Computation.SyntaxGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SyntaxGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SyntaxGrammar.exactForm c ++ "\t" ++ SFT.Computation.SyntaxGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.SemBindingGrammar.candidates do
+    IO.println ("SemBindingGrammar\t" ++ SFT.Computation.SemBindingGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SemBindingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SemBindingGrammar.exactForm c ++ "\t" ++ SFT.Computation.SemBindingGrammar.decisionReason c)
+

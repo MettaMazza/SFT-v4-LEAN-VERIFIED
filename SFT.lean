@@ -597,3 +597,8 @@ import SFT.Computation.NameScope
 import SFT.Computation.SemBindingTerms
 import SFT.Computation.SemSubstitution
 import SFT.Computation.SemValueSubstitution
+import SFT.Computation.SemBindingWitnesses
+import SFT.Computation.SemBindingGrammar
+import SFT.Computation.SemBindingControls
+import SFT.Computation.SemBindingEvidence
+import SFT.Computation.NameReplacement

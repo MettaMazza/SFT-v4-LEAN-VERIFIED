@@ -41,6 +41,7 @@ entries=[
 ('SFT-INFO-ENTROPY-UNCERTAINTY-001',r/'verification/TURN_143_EntropyProgram.lean'),
 ('SFT-INFO-COMPRESSION-REDUNDANCY-001',r/'verification/TURN_145_CompressionProgram.lean'),
 ('SFT-INFO-QUANTUM-CORRESPONDENCE-001',r/'verification/TURN_176_QuantumProgram.lean'),
+('SFT-COMP-CPLX-APPROXIMATION-001',r/'verification/TURN_221_ApproximationProgram.lean'),
 ('SFT-COMP-CPLX-AVERAGE-WORST-001',r/'verification/TURN_220_AverageWorstProgram.lean'),
 ('SFT-COMP-CPLX-REDUCTION-COMPLETENESS-001',r/'verification/TURN_219_ReductionCompletenessProgram.lean'),
 ('SFT-COMP-CPLX-BOUNDS-001',r/'verification/TURN_218_BoundsProgram.lean'),

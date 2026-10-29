@@ -492,3 +492,8 @@ import SFT.Computation.AverageWorstGrammar
 import SFT.Computation.AverageWorstControls
 import SFT.Computation.AverageWorstEvidence
 import SFT.Computation.ProfileResources
+import SFT.Computation.ApproximationWitnesses
+import SFT.Computation.ApproximationGrammar
+import SFT.Computation.ApproximationControls
+import SFT.Computation.ApproximationEvidence
+import SFT.Computation.ApproximationResources

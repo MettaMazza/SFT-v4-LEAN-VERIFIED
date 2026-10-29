@@ -719,3 +719,8 @@ import SFT.Physics.LeptonPrediction
 import SFT.Physics.LeptonExperiment
 import SFT.Physics.LeptonCustody
 import SFT.Physics.LeptonValidation
+import SFT.Physics.ElectroweakMixing
+import SFT.Physics.MixingWitnesses
+import SFT.Physics.MixingGrammar
+import SFT.Physics.MixingControls
+import SFT.Physics.MixingEvidence

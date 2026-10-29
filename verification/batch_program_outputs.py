@@ -44,6 +44,7 @@ entries=[
 ('SFT-COMP-DIST-CAUSALITY-001',r/'verification/TURN_264_CausalityProgram.lean'),
 ('SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001',r/'verification/TURN_273_LeptonProgram.lean'),
 ('SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001',r/'verification/TURN_275_TerminalProgram.lean'),
+('SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002',r/'verification/TURN_279_MixingProgram.lean'),
 ('SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001',r/'verification/TURN_271_AlphaProgram.lean'),
 ('SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001',r/'verification/TURN_269_BoundaryRankProgram.lean'),
 ('SFT-PHYS-SPACE-DIMENSION-THREE-001',r/'verification/TURN_268_SpatialThreeProgram.lean'),

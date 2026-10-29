@@ -548,3 +548,8 @@ import SFT.Computation.RandomizedGrammar
 import SFT.Computation.RandomizedControls
 import SFT.Computation.RandomizedEvidence
 import SFT.Computation.ScheduledAlgorithm
+import SFT.Computation.ParallelAlgorithmWitnesses
+import SFT.Computation.ParallelAlgorithmGrammar
+import SFT.Computation.ParallelAlgorithmControls
+import SFT.Computation.ParallelAlgorithmEvidence
+import SFT.Computation.ParallelAlgorithm

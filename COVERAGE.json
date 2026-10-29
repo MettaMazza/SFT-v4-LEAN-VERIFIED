@@ -6946,9 +6946,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-FAULT-MODEL-001-812aad3547d57947.json",
       "statement": "The forced declared deviations from process rules kernel retains nominal transition relation; generated fault actions; affected components; detection observations; recovery relation; uncorrectable boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold computational fault-model law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/FaultModel.lean",
+        "SFT/Computation/FaultModelWitnesses.lean",
+        "SFT/Computation/FaultModelGrammar.lean",
+        "SFT/Computation/FaultModelControls.lean",
+        "SFT/Computation/FaultModelEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
       "registration_sha256": "e1dba0081df3ba1a53ee7c03af12e14d0ca6dffe7f96cad6fe4c30530d69a015",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -6993,7 +6999,11 @@
         "statement": "The forced declared deviations from process rules kernel retains nominal transition relation; generated fault actions; affected components; detection observations; recovery relation; uncorrectable boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold computational fault-model law"
-      }
+      },
+      "verified_scope": "Transition,Fault,Model retain nominal relation,generated actions,affected component and observation. deviationMeaning proves declared fault membership and deviation from nominal transition support.; detectionMeaning gives exact separation from nominal observation support; indistinguishableNominal proves an observation-only decision cannot distinguish identical observations.; recoveryMeaning preserves exact declared row,affected component and post-fault source state. outsideMeaning,uncorrectableMeaning,recoverableMeaning partition outside support,no recovery and complete matching recovery rows.; exactGuarantee quantifies only over generated fault actions. Outside actions remain outside regardless of any available recovery row. No ungenerated-fault guarantee.; RecoveryTrace.identity/next retain source rows and matching state interfaces; recoveryTraceProvenance,recoveryRowTrace,serialRecovery prove exact trace reconstruction. recoveryExtension,earlierFaultRetained and composedGuarantee preserve earlier records under source assembly and one-form extension.; Original full256 grammar,three witnesses,four controls and program binding; fresh parity passes. Original full output/hash comparator76176 running.",
+      "remaining": [
+        "Original fresh full program field/hash comparison76176; completion after Replication in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -189690,13 +189700,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T23:23:50.838976+00:00",
+  "updated_at": "2026-10-29T23:30:40.564344+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 2,
-    "pending": 2666,
+    "in_progress": 3,
+    "pending": 2665,
     "fully_reconstructed_claims": 113,
-    "axiom_free_exported_results": 6278,
-    "axiom_free_audited_definitions_and_theorems": 13737
+    "axiom_free_exported_results": 6317,
+    "axiom_free_audited_definitions_and_theorems": 13836
   }
 }

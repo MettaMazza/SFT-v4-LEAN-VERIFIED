@@ -1,0 +1,25 @@
+import SFT.Computation.FaultModel
+#print axioms SFT.Computation.FaultModel.deviation
+#print axioms SFT.Computation.FaultModel.detected
+#print axioms SFT.Computation.FaultModel.matching
+#print axioms SFT.Computation.FaultModel.recoveryRows
+#print axioms SFT.Computation.FaultModel.classify
+#print axioms SFT.Computation.FaultModel.deviationMeaning
+#print axioms SFT.Computation.FaultModel.detectionMeaning
+#print axioms SFT.Computation.FaultModel.indistinguishableNominal
+#print axioms SFT.Computation.FaultModel.matchingMeaning
+#print axioms SFT.Computation.FaultModel.recoveryMeaning
+#print axioms SFT.Computation.FaultModel.outsideMeaning
+#print axioms SFT.Computation.FaultModel.uncorrectableMeaning
+#print axioms SFT.Computation.FaultModel.recoverableMeaning
+#print axioms SFT.Computation.FaultModel.correctable
+#print axioms SFT.Computation.FaultModel.allGeneratedCorrectable
+#print axioms SFT.Computation.FaultModel.correctableMeaning
+#print axioms SFT.Computation.FaultModel.exactGuarantee
+#print axioms SFT.Computation.FaultModel.recoveryTraceProvenance
+#print axioms SFT.Computation.FaultModel.serialRecovery
+#print axioms SFT.Computation.FaultModel.recoveryRowTrace
+#print axioms SFT.Computation.FaultModel.extend
+#print axioms SFT.Computation.FaultModel.recoveryExtension
+#print axioms SFT.Computation.FaultModel.earlierFaultRetained
+#print axioms SFT.Computation.FaultModel.composedGuarantee

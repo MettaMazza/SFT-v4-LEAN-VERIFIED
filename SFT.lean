@@ -754,3 +754,8 @@ import SFT.Computation.ReplicationGrammar
 import SFT.Computation.ReplicationControls
 import SFT.Computation.ReplicationEvidence
 import SFT.Computation.Replication
+import SFT.Computation.FaultModelWitnesses
+import SFT.Computation.FaultModelGrammar
+import SFT.Computation.FaultModelControls
+import SFT.Computation.FaultModelEvidence
+import SFT.Computation.FaultModel

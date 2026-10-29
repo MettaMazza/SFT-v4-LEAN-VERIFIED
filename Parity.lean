@@ -409,3 +409,7 @@ def main : IO Unit := do
   for c in SFT.Computation.ReplicationGrammar.candidates do
     IO.println ("ReplicationGrammar\t" ++ SFT.Computation.ReplicationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ReplicationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ReplicationGrammar.exactForm c ++ "\t" ++ SFT.Computation.ReplicationGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.FaultModelGrammar.candidates do
+    IO.println ("FaultModelGrammar\t" ++ SFT.Computation.FaultModelGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.FaultModelGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.FaultModelGrammar.exactForm c ++ "\t" ++ SFT.Computation.FaultModelGrammar.decisionReason c)
+

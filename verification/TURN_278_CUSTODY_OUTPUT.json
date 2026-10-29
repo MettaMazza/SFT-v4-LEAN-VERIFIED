@@ -1,0 +1,222 @@
+{
+  "checks": {
+    "changed_content": "CustodyHalt: released target content differs from the pre-seal commitment; target release identity differs from its contents",
+    "context": "ok",
+    "exchange": "ok",
+    "missing_context_target": "TargetAccessViolation: post-seal target identities do not match the registration",
+    "missing_target": "CustodyHalt: released target support differs from the commitment; released target content differs from the pre-seal commitment; target release identity differs from its contents",
+    "preseal": "TargetAccessViolation: target material cannot be opened before prediction seal",
+    "repeated_release": "CustodyHalt: target vault has already released its registered package",
+    "reseal": "TargetAccessViolation: prediction is already sealed and cannot be replaced",
+    "source": "ok",
+    "tampered_source": "ValueError: external measurement snapshot differs from registration",
+    "wrong_custodian": "CustodyHalt: custodian identity differs; target release identity differs from its contents",
+    "wrong_envelope": "CustodyHalt: prediction seal is not bound to the preregistered envelope",
+    "wrong_experiment": "CustodyHalt: prediction seal belongs to a different experiment",
+    "wrong_release_hash": "CustodyHalt: target release identity differs from its contents",
+    "wrong_release_seal": "CustodyHalt: release is bound to a different prediction seal; target release identity differs from its contents"
+  },
+  "commitment": {
+    "commitment_hash": "sha256:b3683ca437ecba2b5e48e1a3ee10f6957aaa966675d6dbc472af3a3aad550d39",
+    "custodian_id": "SFT-EXP-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-001-external-target-custodian",
+    "expected_envelope_hash": "sha256:eb287c7b7a5798e881378c1b10a69f8cb4c39669ea750c7c9005914cc9cb408a",
+    "experiment_id": "SFT-EXP-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-001",
+    "target_identity_hash": "sha256:b2f6ad1ac3452b0cf5183206caecf0cdd545bbdb661f49dc6717e73218ccfe0d",
+    "target_ids": [
+      "NIST-CODATA-2022-MUON-ELECTRON-MASS-RATIO",
+      "NIST-CODATA-2022-MUON-TAU-MASS-RATIO"
+    ]
+  },
+  "envelope": {
+    "experiment_id": "SFT-EXP-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-001",
+    "experiment_registration_hash": "sha256:6afe8b16d52fbb1222fc8989eed171401112ddbffb6bc676737a42292f4f2d80",
+    "frozen_relation_hash": "sha256:03febfe188acc83a8229d2bd45feb22484d2a027ef085e4abe9f7678c8e2e21e",
+    "registered_inputs": {
+      "registered-premise": "sha256:4ae4a86ba7fd13c1f6201abe367e3dd6954d7864a9fafaf8bc15aacaf60c5524"
+    },
+    "withheld_target_ids": [
+      "NIST-CODATA-2022-MUON-ELECTRON-MASS-RATIO",
+      "NIST-CODATA-2022-MUON-TAU-MASS-RATIO"
+    ]
+  },
+  "execution": {
+    "completed": true,
+    "input_manifest_hash": "sha256:a5d47fdbaf50f008c5bac125be4e774b03a24e0cc19b7b8fcead1d73856c744b",
+    "output": {
+      "family": "physical-observation",
+      "label": "terminal-cubic-mass-ratios-inside-both-complete-codata-intervals"
+    },
+    "output_hash": "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c",
+    "program_hash": "sha256:6c6e7a45780a7b1199b4053a739e62d5911e3b4c2cfc5560caf6663927bedcab",
+    "program_id": "SFT-EXP-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-001-prediction",
+    "trace": [
+      {
+        "argument_hashes": [
+          "sha256:4ae4a86ba7fd13c1f6201abe367e3dd6954d7864a9fafaf8bc15aacaf60c5524"
+        ],
+        "opcode": "input",
+        "output_hash": "sha256:4ae4a86ba7fd13c1f6201abe367e3dd6954d7864a9fafaf8bc15aacaf60c5524",
+        "position": {
+          "value": 1
+        }
+      },
+      {
+        "argument_hashes": [
+          "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c"
+        ],
+        "opcode": "label",
+        "output_hash": "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c",
+        "position": {
+          "value": 2
+        }
+      },
+      {
+        "argument_hashes": [
+          "sha256:4ae4a86ba7fd13c1f6201abe367e3dd6954d7864a9fafaf8bc15aacaf60c5524",
+          "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c"
+        ],
+        "opcode": "pair",
+        "output_hash": "sha256:ff442f62585d70c2c2b569a1a5d34c278029ec42f8b5c83e0386dffeb4281a7c",
+        "position": {
+          "value": 3
+        }
+      },
+      {
+        "argument_hashes": [
+          "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c"
+        ],
+        "opcode": "emit",
+        "output_hash": "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c",
+        "position": {
+          "value": 4
+        }
+      }
+    ],
+    "trace_hash": "sha256:dc9034c50f22b898cd37062e3cb51c1261f283b85f7c86b69117ab8478f8bb86"
+  },
+  "prediction_seal": {
+    "envelope_hash": "sha256:eb287c7b7a5798e881378c1b10a69f8cb4c39669ea750c7c9005914cc9cb408a",
+    "experiment_id": "SFT-EXP-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-001",
+    "prediction_hash": "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c",
+    "seal_hash": "sha256:548881048b83fc140d5bbd461f092c9f1ab859332ebf312ea18b88bd4ae7226c",
+    "trace_hash": "sha256:dc9034c50f22b898cd37062e3cb51c1261f283b85f7c86b69117ab8478f8bb86"
+  },
+  "program_document": {
+    "instructions": [
+      {
+        "arguments": [
+          "registered-premise"
+        ],
+        "destination": "premise",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "physical-observation",
+          "terminal-cubic-mass-ratios-inside-both-complete-codata-intervals"
+        ],
+        "destination": "prediction",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "premise",
+          "prediction"
+        ],
+        "destination": "bound-result",
+        "opcode": "pair"
+      },
+      {
+        "arguments": [
+          "prediction"
+        ],
+        "destination": "",
+        "opcode": "emit"
+      }
+    ],
+    "program_id": "SFT-EXP-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-001-prediction",
+    "schema": "sft-v3-fold-program/1"
+  },
+  "registration": {
+    "all_rows_required": true,
+    "claim_id": "SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001",
+    "expected_observation_label": "terminal-cubic-mass-ratios-inside-both-complete-codata-intervals",
+    "experiment_id": "SFT-EXP-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-001",
+    "falsification_condition": "Either terminal prediction interval fails to overlap its complete source interval, source custody changes, or any failed row is omitted.",
+    "frozen_relation": "Both terminal-cubic mass-ratio intervals overlap their complete CODATA intervals.",
+    "prediction_program": {
+      "instructions": [
+        {
+          "arguments": [
+            "registered-premise"
+          ],
+          "destination": "premise",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "physical-observation",
+            "terminal-cubic-mass-ratios-inside-both-complete-codata-intervals"
+          ],
+          "destination": "prediction",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "premise",
+            "prediction"
+          ],
+          "destination": "bound-result",
+          "opcode": "pair"
+        },
+        {
+          "arguments": [
+            "prediction"
+          ],
+          "destination": "",
+          "opcode": "emit"
+        }
+      ],
+      "program_id": "SFT-EXP-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-001-prediction",
+      "schema": "sft-v3-fold-program/1"
+    },
+    "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+    "target_ids": [
+      "NIST-CODATA-2022-MUON-ELECTRON-MASS-RATIO",
+      "NIST-CODATA-2022-MUON-TAU-MASS-RATIO"
+    ],
+    "target_inaccessible_before_seal": true,
+    "target_locators": [
+      [
+        "NIST-CODATA-2022-MUON-ELECTRON-MASS-RATIO",
+        "NIST-CODATA-2022-ALL-CONSTANTS",
+        "fixed-width muon-electron mass ratio row"
+      ],
+      [
+        "NIST-CODATA-2022-MUON-TAU-MASS-RATIO",
+        "NIST-CODATA-2022-ALL-CONSTANTS",
+        "fixed-width muon-tau mass ratio row"
+      ]
+    ]
+  },
+  "registration_hash": "sha256:6afe8b16d52fbb1222fc8989eed171401112ddbffb6bc676737a42292f4f2d80",
+  "release": {
+    "custodian_id": "SFT-EXP-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-001-external-target-custodian",
+    "custody_nonce": "sha256:4b2b14b3d1c7a9525cf2312b68edafd074078f21f217a402cdf0c9ea04020f16",
+    "experiment_id": "SFT-EXP-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-001",
+    "prediction_seal_hash": "sha256:548881048b83fc140d5bbd461f092c9f1ab859332ebf312ea18b88bd4ae7226c",
+    "release_hash": "sha256:3922ee351b345c52d9e306d9d656418f280217cf8b68f70c81b553eeb9f5bd4b",
+    "target_identity_hash": "sha256:b2f6ad1ac3452b0cf5183206caecf0cdd545bbdb661f49dc6717e73218ccfe0d",
+    "targets": {
+      "NIST-CODATA-2022-MUON-ELECTRON-MASS-RATIO": {
+        "family": "external-observation",
+        "label": "terminal-cubic-mass-ratios-inside-both-complete-codata-intervals"
+      },
+      "NIST-CODATA-2022-MUON-TAU-MASS-RATIO": {
+        "family": "external-observation",
+        "label": "terminal-cubic-mass-ratios-inside-both-complete-codata-intervals"
+      }
+    }
+  }
+}

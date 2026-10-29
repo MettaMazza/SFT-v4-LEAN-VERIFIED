@@ -1,0 +1,157 @@
+{
+  "audit": {
+    "additional_fields_present": false,
+    "auditor_id": "sft-v3-hostile-empirical-package-auditor/1",
+    "certificate_hash": "sha256:172be72ac83a8eacbe812b01e59250f2ca7cdb290edb3bfc3caa2b0fe454500e",
+    "executable_source_present": false,
+    "package_hash": "sha256:2741a496f035d2f623fbe96ebb2b9b852e2fb9175155cb179311ae533578c4a5",
+    "passed": true,
+    "program_hash": "sha256:6c6e7a45780a7b1199b4053a739e62d5911e3b4c2cfc5560caf6663927bedcab",
+    "protected_tree_unchanged": true
+  },
+  "checks": {
+    "changed_predictions_fail": true,
+    "changed_source": "ValueError: external measurement snapshot differs from registration",
+    "changed_tree": "HostilePackageHalt: empirical package failed data-only or protected-tree audit",
+    "executable_key": true,
+    "extra_field": true,
+    "missing_field": true,
+    "missing_row": "KeyError: NIST-CODATA-2022-MUON-ELECTRON-MASS-RATIO",
+    "numeric_disagreement": "ValueError: terminal numeric interval result differs from sealed label comparison",
+    "pair_prediction": "ValueError: prediction emitted an invalid physical observation label",
+    "registered_spec": "ok",
+    "release_invalid_identity": "CustodyHalt: release target identity is invalid",
+    "vault_empty_identity": "CustodyHalt: target vault requires experiment, custodian and nonce identities",
+    "vault_empty_targets": "CustodyHalt: target vault requires complete named target support",
+    "vault_invalid_envelope": "CustodyHalt: target vault requires the preregistered prediction-envelope identity",
+    "wrong_prediction_family": "ValueError: prediction emitted an invalid physical observation label"
+  },
+  "comparison_rows": [
+    {
+      "observed": "terminal-cubic-mass-ratios-inside-both-complete-codata-intervals",
+      "passed": true,
+      "predicted": "terminal-cubic-mass-ratios-inside-both-complete-codata-intervals",
+      "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+      "source_locator": "fixed-width muon-electron mass ratio row",
+      "target_id": "NIST-CODATA-2022-MUON-ELECTRON-MASS-RATIO"
+    },
+    {
+      "observed": "terminal-cubic-mass-ratios-inside-both-complete-codata-intervals",
+      "passed": true,
+      "predicted": "terminal-cubic-mass-ratios-inside-both-complete-codata-intervals",
+      "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+      "source_locator": "fixed-width muon-tau mass ratio row",
+      "target_id": "NIST-CODATA-2022-MUON-TAU-MASS-RATIO"
+    }
+  ],
+  "numeric_passed": true,
+  "snapshot_after_hash": "sha256:3c9e160d545ac9f51649429521c78690a59b998c17641671aee3b7bec46546dc",
+  "snapshot_before_hash": "sha256:3c9e160d545ac9f51649429521c78690a59b998c17641671aee3b7bec46546dc",
+  "tampered_control": {
+    "observed": "changed-external-observation",
+    "passed": true,
+    "predicted": "terminal-cubic-mass-ratios-inside-both-complete-codata-intervals",
+    "target_id": "deliberately-tampered-unfavorable-control"
+  },
+  "trace": [
+    {
+      "argument_hashes": [
+        "sha256:4ae4a86ba7fd13c1f6201abe367e3dd6954d7864a9fafaf8bc15aacaf60c5524"
+      ],
+      "opcode": "input",
+      "output_hash": "sha256:4ae4a86ba7fd13c1f6201abe367e3dd6954d7864a9fafaf8bc15aacaf60c5524",
+      "position": {
+        "value": 1
+      }
+    },
+    {
+      "argument_hashes": [
+        "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c"
+      ],
+      "opcode": "label",
+      "output_hash": "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c",
+      "position": {
+        "value": 2
+      }
+    },
+    {
+      "argument_hashes": [
+        "sha256:4ae4a86ba7fd13c1f6201abe367e3dd6954d7864a9fafaf8bc15aacaf60c5524",
+        "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c"
+      ],
+      "opcode": "pair",
+      "output_hash": "sha256:ff442f62585d70c2c2b569a1a5d34c278029ec42f8b5c83e0386dffeb4281a7c",
+      "position": {
+        "value": 3
+      }
+    },
+    {
+      "argument_hashes": [
+        "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c"
+      ],
+      "opcode": "emit",
+      "output_hash": "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c",
+      "position": {
+        "value": 4
+      }
+    }
+  ],
+  "validation": {
+    "all_rows_preserved": true,
+    "data_source_ids": [
+      "NIST-CODATA-2022-ALL-CONSTANTS"
+    ],
+    "evaluator_verified_seal": true,
+    "experiment_registration_hash": "sha256:6afe8b16d52fbb1222fc8989eed171401112ddbffb6bc676737a42292f4f2d80",
+    "falsification_condition": "Either terminal prediction interval fails to overlap its complete source interval, source custody changes, or any failed row is omitted.",
+    "isolation_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "attempted_forbidden_operations": [],
+      "certificate_hash": "sha256:b1c8307fe636656fa3a014f0b5a7f94ff6c59e4e377bfd0434c47e2b22d7b7e2",
+      "comparison_code_present": false,
+      "comparison_implementation_identity_hash": "sha256:62e857570412e255bdcab4dcabfeead069d2ba1d8a144fa005d61eb452181043",
+      "completed": true,
+      "denied_capabilities": [
+        "clock",
+        "dynamic_import",
+        "environment",
+        "filesystem_read",
+        "filesystem_write",
+        "foreign_function",
+        "network",
+        "subprocess"
+      ],
+      "executor_id": "SFT-EXP-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-001-prediction-executor",
+      "host_platform": "Darwin",
+      "input_manifest_hash": "sha256:a5d47fdbaf50f008c5bac125be4e774b03a24e0cc19b7b8fcead1d73856c744b",
+      "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+      "output_hash": "sha256:39e4b1198cda3ac4929cbedae360401d58348c70a08646533a814b31e710243c",
+      "prediction_seal_hash": "sha256:548881048b83fc140d5bbd461f092c9f1ab859332ebf312ea18b88bd4ae7226c",
+      "program_hash": "sha256:6c6e7a45780a7b1199b4053a739e62d5911e3b4c2cfc5560caf6663927bedcab",
+      "python_implementation": "CPython",
+      "registered_target_identity_hash": "sha256:b2f6ad1ac3452b0cf5183206caecf0cdd545bbdb661f49dc6717e73218ccfe0d",
+      "target_material_present": false,
+      "trace_hash": "sha256:dc9034c50f22b898cd37062e3cb51c1261f283b85f7c86b69117ab8478f8bb86"
+    },
+    "measurement_receipt_hash": "sha256:cbca0b4410f39699e01456c2a835fcdc54c885ab250f35dcf2e9bd71392bad2a",
+    "measurements": [
+      "NIST-CODATA-2022-MUON-ELECTRON-MASS-RATIO: predicted terminal-cubic-mass-ratios-inside-both-complete-codata-intervals; observed terminal-cubic-mass-ratios-inside-both-complete-codata-intervals; exact match True",
+      "NIST-CODATA-2022-MUON-TAU-MASS-RATIO: predicted terminal-cubic-mass-ratios-inside-both-complete-codata-intervals; observed terminal-cubic-mass-ratios-inside-both-complete-codata-intervals; exact match True",
+      "deliberately tampered unfavorable control rejected"
+    ],
+    "passed": true,
+    "target_custody_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "certificate_hash": "sha256:0fdfacc4ee0989c0d437b4833d4af567a3af97ad95097dc6ab3b435c5d8572a2",
+      "custodian_id": "SFT-EXP-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-001-external-target-custodian",
+      "experiment_registration_hash": "sha256:6afe8b16d52fbb1222fc8989eed171401112ddbffb6bc676737a42292f4f2d80",
+      "prediction_seal_hash": "sha256:548881048b83fc140d5bbd461f092c9f1ab859332ebf312ea18b88bd4ae7226c",
+      "registered_target_identity_hash": "sha256:b2f6ad1ac3452b0cf5183206caecf0cdd545bbdb661f49dc6717e73218ccfe0d",
+      "released_after_prediction_seal": true,
+      "target_absent_until_prediction_seal": true,
+      "target_release_manifest_hash": "sha256:3922ee351b345c52d9e306d9d656418f280217cf8b68f70c81b553eeb9f5bd4b"
+    },
+    "target_opened_after_seal": true,
+    "validated_seal_hash": "sha256:03febfe188acc83a8229d2bd45feb22484d2a027ef085e4abe9f7678c8e2e21e"
+  }
+}

@@ -5456,3 +5456,16 @@ import SFT
 #print axioms SFT.Computation.ProgramVerification.identityProof
 #print axioms SFT.Computation.ProgramVerification.composedProof
 #print axioms SFT.Computation.ProgramVerification.earlierStepRetained
+#print axioms SFT.Computation.CausalClosure.linkedMeaning
+#print axioms SFT.Computation.CausalClosure.expansionMeaning
+#print axioms SFT.Computation.CausalClosure.preservesOriginal
+#print axioms SFT.Computation.CausalClosure.joinsHeld
+#print axioms SFT.Computation.CausalClosure.expansionSound
+#print axioms SFT.Computation.CausalClosure.roundsSound
+#print axioms SFT.Computation.CausalClosure.fixedPointClosed
+#print axioms SFT.Computation.CausalClosure.pathLeast
+#print axioms SFT.Computation.CausalClosure.exactClosure
+#print axioms SFT.Computation.CausalClosure.cycleBoundary
+#print axioms SFT.Computation.CausalClosure.roundsPreserve
+#print axioms SFT.Computation.CausalClosure.pathEndpoints
+#print axioms SFT.Computation.CausalClosure.emptyPathImpossible

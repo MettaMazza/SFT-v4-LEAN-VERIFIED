@@ -6394,8 +6394,10 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-CONCURRENCY-001-a3a2d3ef12a8166c.json",
       "statement": "The forced multiple enabled process transitions kernel retains process identities; local states; enabled actions; interleaving or independent-step support; complete schedules; observation traces; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold concurrency law",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/CausalClosure.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "95db2df51d252f263136a89d6514af270c10c321396b3debfcd5e2a4bb824160",
       "v3_registration": {
@@ -6441,7 +6443,13 @@
         "statement": "The forced multiple enabled process transitions kernel retains process identities; local states; enabled actions; interleaving or independent-step support; complete schedules; observation traces; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold concurrency law"
-      }
+      },
+      "verified_scope": "Original positive-edge path closure: exact expansion membership, original-edge retention, arbitrary-round path soundness, least closed relation and self-edge/positive-cycle equivalence. Native loop and Concurrency completion remain pending.",
+      "remaining": [
+        "Implement causal_closure fixed-point iteration with native termination proof, original unique-event and escaped-edge guard order, deduplicated relation and Python-sorted final tuple; verify exact outputs.",
+        "Formalise Concurrency process identities/local states/enabled actions, complete interleaving or independent-step schedule support and observation traces.",
+        "Implement full256 distributed_computation candidate grammar, three causal operational witnesses, four controls and fresh native program comparison."
+      ]
     },
     {
       "branch": "computation",
@@ -189524,13 +189532,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T15:07:01.372846+00:00",
+  "updated_at": "2026-10-29T15:15:12.114642+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2681,
+    "in_progress": 1,
+    "pending": 2680,
     "fully_reconstructed_claims": 100,
-    "axiom_free_exported_results": 5457,
-    "axiom_free_audited_definitions_and_theorems": 11834
+    "axiom_free_exported_results": 5470,
+    "axiom_free_audited_definitions_and_theorems": 11850
   }
 }

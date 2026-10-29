@@ -4814,9 +4814,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-ALG-TREES-GRAPHS-001-0c1d76188752d9f5.json",
       "statement": "The forced finite relational traversal and structure kernel retains generated vertices and edges; root or start identity; frontier support; visited ledger; path or component witness; termination; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold tree and graph algorithm law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Computation/TraversalTrace.lean",
+        "SFT/Computation/TreesGraphsWitnesses.lean",
+        "SFT/Computation/TreesGraphsGrammar.lean",
+        "SFT/Computation/TreesGraphsControls.lean",
+        "SFT/Computation/TreesGraphsEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 fresh native lookups and every original field/hash; unchanged shared-operation comparisons retained.",
       "registration_sha256": "231e67cd6177e16f0de72589173cb3a30d0b43411e2bcb1a79318477ebdeb9be",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -4861,7 +4867,10 @@
         "statement": "The forced finite relational traversal and structure kernel retains generated vertices and edges; root or start identity; frontier support; visited ledger; path or component witness; termination; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold tree and graph algorithm law"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Fourth Algorithms topic TREES-GRAPHS, original six-file binding, independent validator and all8 completed dependencies. Generated vertices/edges, root/start identity, frontier support, visited ledger, path-or-component witness and termination.; TraversalTrace.Traversal records every original GraphOperations search state with exact frontier/visited lists. Its empty/hit/skip/expand constructors retain the original branch order and conditions. finiteTraversal constructs a finite complete trace using original searchOrder/skipDecreases/expandDecreases; no depth cap or frontier pruning is added.; traversalReplays proves every retained trace gives the original searchLoop result. exactFrontierExpansion retains visited append and the full ordered outgoingUnvisited frontier append. visitRetained and frontierCoverage prove custody of prior visits and every queued identity. Original makeGraph admission and edge identities remain unchanged.; rootedTraversalReconstructs links the finite trace to original reachable for distinct endpoints. rootIdentity preserves the original same-node membership branch. acceptedPathCertificate derives the original PathWitness from a successful trace; rejectedPathCertificate excludes any path after exhausted-frontier failure. Existing source path composition and graph extension proofs remain inherited unchanged.; empiricalTranslationBoundary retains original MeasurementProtocol pre-seal/no-mutation/all-rows/identified-source conditions. Finite graph results do not substitute for physical-network measurement.; All256 original algorithms-axis candidates,3 search/recursion witnesses,4 controls and full registration/census/closure/exposition/hash outputs agree with pinned V3 in fresh native execution. All actual lookup decisions and unknown-ID behavior agree. Existing graph-operation and shared-operation comparisons retained.",
+      "completion_evidence": "verification/TURN_228_TREES_GRAPHS_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -189301,13 +189310,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T09:56:50.859147+00:00",
+  "updated_at": "2026-10-29T10:02:33.216467+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2704,
-    "fully_reconstructed_claims": 77,
-    "axiom_free_exported_results": 4383,
-    "axiom_free_audited_definitions_and_theorems": 9344
+    "pending": 2703,
+    "fully_reconstructed_claims": 78,
+    "axiom_free_exported_results": 4417,
+    "axiom_free_audited_definitions_and_theorems": 9433
   }
 }

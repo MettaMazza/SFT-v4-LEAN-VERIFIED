@@ -523,3 +523,8 @@ import SFT.Computation.StringsSequencesGrammar
 import SFT.Computation.StringsSequencesControls
 import SFT.Computation.StringsSequencesEvidence
 import SFT.Computation.SequenceTrace
+import SFT.Computation.TreesGraphsWitnesses
+import SFT.Computation.TreesGraphsGrammar
+import SFT.Computation.TreesGraphsControls
+import SFT.Computation.TreesGraphsEvidence
+import SFT.Computation.TraversalTrace

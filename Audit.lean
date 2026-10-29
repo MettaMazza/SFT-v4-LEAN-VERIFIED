@@ -4724,3 +4724,17 @@ import SFT
 #print axioms SFT.Computation.NumericalError.rowsCount
 #print axioms SFT.Computation.NumericalError.zeroReferenceRejected
 #print axioms SFT.Computation.NumericalError.negativeReferenceRejected
+#print axioms SFT.Computation.NumericalLedger.replay
+#print axioms SFT.Computation.NumericalLedger.reconstruct
+#print axioms SFT.Computation.NumericalLedger.rowMeaning
+#print axioms SFT.Computation.NumericalLedger.supportLengths
+#print axioms SFT.Computation.NumericalLedger.exactAdmission
+#print axioms SFT.Computation.NumericalLedger.referencePositive
+#print axioms SFT.Computation.NumericalLedger.approximationPositive
+#print axioms SFT.Computation.NumericalLedger.rowProvenance
+#print axioms SFT.Computation.NumericalLedger.composition
+#print axioms SFT.Computation.NumericalLedger.successor
+#print axioms SFT.Computation.NumericalLedger.allPositiveAccepted
+#print axioms SFT.Computation.NumericalLedger.positiveLedger
+#print axioms SFT.Computation.NumericalLedger.everyRowPositive
+#print axioms SFT.Computation.NumericalLedger.noOmittedRows

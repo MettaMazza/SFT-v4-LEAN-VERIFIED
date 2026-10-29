@@ -213,3 +213,7 @@ def main : IO Unit := do
   for c in SFT.Computation.RandomnessGrammar.candidates do
     IO.println ("RandomnessGrammar\t" ++ SFT.Computation.RandomnessGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.RandomnessGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.RandomnessGrammar.exactForm c ++ "\t" ++ SFT.Computation.RandomnessGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.ReversibilityCostGrammar.candidates do
+    IO.println ("ReversibilityCostGrammar\t" ++ SFT.Computation.ReversibilityCostGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ReversibilityCostGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ReversibilityCostGrammar.exactForm c ++ "\t" ++ SFT.Computation.ReversibilityCostGrammar.decisionReason c)
+

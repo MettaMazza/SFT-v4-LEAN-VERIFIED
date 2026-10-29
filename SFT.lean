@@ -467,3 +467,8 @@ import SFT.Computation.RandomnessGrammar
 import SFT.Computation.RandomnessControls
 import SFT.Computation.RandomnessEvidence
 import SFT.Computation.RandomnessResources
+import SFT.Computation.ReversibilityCostWitnesses
+import SFT.Computation.ReversibilityCostGrammar
+import SFT.Computation.ReversibilityCostControls
+import SFT.Computation.ReversibilityCostEvidence
+import SFT.Computation.ReversibilityResources

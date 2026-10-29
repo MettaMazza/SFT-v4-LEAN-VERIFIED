@@ -5363,7 +5363,8 @@
       "lean_status": "in_progress",
       "lean_modules": [
         "SFT/Computation/NumericalError.lean",
-        "SFT/Computation/NumericalLedger.lean"
+        "SFT/Computation/NumericalLedger.lean",
+        "SFT/Computation/NumericalTrace.lean"
       ],
       "artifact_runtime_parity": "Full entry program not yet translated; existing34150 candidate comparisons pass unchanged.",
       "registration_sha256": "61dd57afd4e608433d22162c2404bac87dfd8b0b51ed5118379d28019bd80ebf",
@@ -5411,13 +5412,13 @@
         "status": "independently_replicated",
         "title": "Fold numerical-algorithm law"
       },
-      "verified_scope": "NumericalError and NumericalLedger preserve original exact_error_ledger. Successful execution is equivalent to the complete ordered positive paired-row certificate, with original guards and every cell value/orientation. Native proofs establish both-direction admission/replay, all input and row positivity, equal support lengths, exact row provenance/count, composition and successor, and constructive success for all equal-length nonempty positive supports.",
+      "verified_scope": "NumericalError/NumericalLedger original exact error kernel and complete paired-row certificates; NumericalTrace connects the original state-transition execution to registered exact numerical values and complete error ledgers. Checker iff complete numerical observations; all state identities in order, source-row provenance, original ledger admission, composition, missing/invalid rejection, successor retention and exact action-count-plus-one observations.",
       "remaining": [
-        "Numerical source carrier: connect finite discretization and update trace to the original exact error ledger and output interval.",
+        "Numerical source finite discretization and output interval: connect its registered exact finite cells and interval bounds to the retained numerical trace.",
         "Numerical source stability witness and convergence certificate: translate their admitted finite relation/dependency components.",
         "Generate the original256 candidate grammar, controls and complete program binding; run fresh full native program comparison and source-component closure review."
       ],
-      "progress_evidence": "verification/TURN_238_NUMERICAL_LEDGER_PROGRESS.json"
+      "progress_evidence": "verification/TURN_239_NUMERICAL_TRACE_PROGRESS.json"
     },
     {
       "branch": "computation",
@@ -189385,13 +189386,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T11:25:35.283016+00:00",
+  "updated_at": "2026-10-29T11:31:31.396612+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 1,
     "pending": 2695,
     "fully_reconstructed_claims": 85,
-    "axiom_free_exported_results": 4739,
-    "axiom_free_audited_definitions_and_theorems": 10178
+    "axiom_free_exported_results": 4752,
+    "axiom_free_audited_definitions_and_theorems": 10192
   }
 }

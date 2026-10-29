@@ -4738,3 +4738,16 @@ import SFT
 #print axioms SFT.Computation.NumericalLedger.positiveLedger
 #print axioms SFT.Computation.NumericalLedger.everyRowPositive
 #print axioms SFT.Computation.NumericalLedger.noOmittedRows
+#print axioms SFT.Computation.NumericalTrace.replay
+#print axioms SFT.Computation.NumericalTrace.reconstruct
+#print axioms SFT.Computation.NumericalTrace.correspondence
+#print axioms SFT.Computation.NumericalTrace.identityTrace
+#print axioms SFT.Computation.NumericalTrace.recordCount
+#print axioms SFT.Computation.NumericalTrace.eachRecord
+#print axioms SFT.Computation.NumericalTrace.composition
+#print axioms SFT.Computation.NumericalTrace.nativeUpdateTrace
+#print axioms SFT.Computation.NumericalTrace.missingStateRejects
+#print axioms SFT.Computation.NumericalTrace.invalidLedgerRejects
+#print axioms SFT.Computation.NumericalTrace.successorRecord
+#print axioms SFT.Computation.NumericalTrace.nativeCount
+#print axioms SFT.Computation.NumericalTrace.updateSuccessor

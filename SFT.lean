@@ -744,3 +744,8 @@ import SFT.Computation.ConsensusControls
 import SFT.Computation.ConsensusEvidence
 import SFT.Computation.DistributedOrder
 import SFT.Computation.Consensus
+import SFT.Computation.AgreementImpossibilityWitnesses
+import SFT.Computation.AgreementImpossibilityGrammar
+import SFT.Computation.AgreementImpossibilityControls
+import SFT.Computation.AgreementImpossibilityEvidence
+import SFT.Computation.AgreementImpossibility

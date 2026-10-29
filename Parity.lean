@@ -401,3 +401,7 @@ def main : IO Unit := do
   for c in SFT.Computation.ConsensusGrammar.candidates do
     IO.println ("ConsensusGrammar\t" ++ SFT.Computation.ConsensusGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ConsensusGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ConsensusGrammar.exactForm c ++ "\t" ++ SFT.Computation.ConsensusGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.AgreementImpossibilityGrammar.candidates do
+    IO.println ("AgreementImpossibilityGrammar\t" ++ SFT.Computation.AgreementImpossibilityGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.AgreementImpossibilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.AgreementImpossibilityGrammar.exactForm c ++ "\t" ++ SFT.Computation.AgreementImpossibilityGrammar.decisionReason c)
+

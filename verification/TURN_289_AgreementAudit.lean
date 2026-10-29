@@ -1,0 +1,25 @@
+import SFT.Computation.AgreementImpossibility
+#print axioms SFT.Computation.AgreementImpossibility.supported
+#print axioms SFT.Computation.AgreementImpossibility.witness
+#print axioms SFT.Computation.AgreementImpossibility.pairs
+#print axioms SFT.Computation.AgreementImpossibility.witnesses
+#print axioms SFT.Computation.AgreementImpossibility.supportMeaning
+#print axioms SFT.Computation.AgreementImpossibility.witnessMeaning
+#print axioms SFT.Computation.AgreementImpossibility.pairMeaning
+#print axioms SFT.Computation.AgreementImpossibility.enumerationComplete
+#print axioms SFT.Computation.AgreementImpossibility.Correct
+#print axioms SFT.Computation.AgreementImpossibility.observationOnlyEquality
+#print axioms SFT.Computation.AgreementImpossibility.contradiction
+#print axioms SFT.Computation.AgreementImpossibility.noObservationOnlySolver
+#print axioms SFT.Computation.AgreementImpossibility.hiddenPredecessor
+#print axioms SFT.Computation.AgreementImpossibility.schedulerBoundary
+#print axioms SFT.Computation.AgreementImpossibility.unsupportedScheduleRejects
+#print axioms SFT.Computation.AgreementImpossibility.transferWithSupport
+#print axioms SFT.Computation.AgreementImpossibility.extend
+#print axioms SFT.Computation.AgreementImpossibility.supportExtension
+#print axioms SFT.Computation.AgreementImpossibility.witnessExtension
+#print axioms SFT.Computation.AgreementImpossibility.observedSuccessor
+#print axioms SFT.Computation.AgreementImpossibility.sameObservationSuccessor
+#print axioms SFT.Computation.AgreementImpossibility.successorWitness
+#print axioms SFT.Computation.AgreementImpossibility.earlierTraceRetained
+#print axioms SFT.Computation.AgreementImpossibility.identityCannotConflict

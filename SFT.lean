@@ -538,3 +538,8 @@ import SFT.Computation.DynamicProgrammingGrammar
 import SFT.Computation.DynamicProgrammingControls
 import SFT.Computation.DynamicProgrammingEvidence
 import SFT.Computation.DynamicProgrammingTrace
+import SFT.Computation.OptimizationWitnesses
+import SFT.Computation.OptimizationGrammar
+import SFT.Computation.OptimizationControls
+import SFT.Computation.OptimizationEvidence
+import SFT.Computation.OptimizationTrace

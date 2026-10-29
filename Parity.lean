@@ -269,3 +269,7 @@ def main : IO Unit := do
   for c in SFT.Computation.DynamicProgrammingGrammar.candidates do
     IO.println ("DynamicProgrammingGrammar\t" ++ SFT.Computation.DynamicProgrammingGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.DynamicProgrammingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.DynamicProgrammingGrammar.exactForm c ++ "\t" ++ SFT.Computation.DynamicProgrammingGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.OptimizationGrammar.candidates do
+    IO.println ("OptimizationGrammar\t" ++ SFT.Computation.OptimizationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.OptimizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.OptimizationGrammar.exactForm c ++ "\t" ++ SFT.Computation.OptimizationGrammar.decisionReason c)
+

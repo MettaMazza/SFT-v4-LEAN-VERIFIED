@@ -612,3 +612,4 @@ import SFT.Computation.MeaningGrammar
 import SFT.Computation.MeaningControls
 import SFT.Computation.MeaningEvidence
 import SFT.Computation.MeaningCorrespondence
+import SFT.Computation.StructuralTyping

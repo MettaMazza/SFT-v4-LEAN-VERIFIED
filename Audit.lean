@@ -5127,3 +5127,15 @@ import SFT
 #print axioms SFT.Computation.MeaningCorrespondence.joinMeaning
 #print axioms SFT.Computation.MeaningCorrespondence.contextualMeaning
 #print axioms SFT.Computation.MeaningCorrespondence.preservesSuccessfulObservation
+#print axioms SFT.Computation.StructuralTyping.formation
+#print axioms SFT.Computation.StructuralTyping.checkSound
+#print axioms SFT.Computation.StructuralTyping.checkComplete
+#print axioms SFT.Computation.StructuralTyping.checkMeaning
+#print axioms SFT.Computation.StructuralTyping.preservesEvaluation
+#print axioms SFT.Computation.StructuralTyping.completeTypedTrace
+#print axioms SFT.Computation.StructuralTyping.substitution
+#print axioms SFT.Computation.StructuralTyping.substitutionEvaluation
+#print axioms SFT.Computation.StructuralTyping.mismatchRejects
+#print axioms SFT.Computation.StructuralTyping.rejectedMismatch
+#print axioms SFT.Computation.StructuralTyping.exactMismatch
+#print axioms SFT.Computation.StructuralTyping.noTypedMismatch

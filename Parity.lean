@@ -217,3 +217,7 @@ def main : IO Unit := do
   for c in SFT.Computation.ReversibilityCostGrammar.candidates do
     IO.println ("ReversibilityCostGrammar\t" ++ SFT.Computation.ReversibilityCostGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ReversibilityCostGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ReversibilityCostGrammar.exactForm c ++ "\t" ++ SFT.Computation.ReversibilityCostGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.ParallelGrammar.candidates do
+    IO.println ("ParallelGrammar\t" ++ SFT.Computation.ParallelGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ParallelGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ParallelGrammar.exactForm c ++ "\t" ++ SFT.Computation.ParallelGrammar.decisionReason c)
+

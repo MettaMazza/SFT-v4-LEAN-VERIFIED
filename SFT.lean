@@ -472,3 +472,8 @@ import SFT.Computation.ReversibilityCostGrammar
 import SFT.Computation.ReversibilityCostControls
 import SFT.Computation.ReversibilityCostEvidence
 import SFT.Computation.ReversibilityResources
+import SFT.Computation.ParallelWitnesses
+import SFT.Computation.ParallelGrammar
+import SFT.Computation.ParallelControls
+import SFT.Computation.ParallelEvidence
+import SFT.Computation.ParallelResources

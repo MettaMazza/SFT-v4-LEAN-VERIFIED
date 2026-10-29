@@ -1,0 +1,41 @@
+{
+  "claim_id": "SFT-COMP-CPLX-PARALLEL-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "status": "complete",
+  "source_sha256": {
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/complexity/parallel/law.py": "0078757bdcef9205068f2b8145c2519ba0d385efa8b353f3334bda130f86ecfb",
+    "claims/SFT-COMP-CPLX-PARALLEL-001/execution.py": "d2e6460eba136aa20f3bd920eed95a949a26674a1c49bba1239040a3dcaa971a",
+    "claims/SFT-COMP-CPLX-PARALLEL-001/independent_validator.py": "965b607e7abc621e3265f425bf33643ed1a6936f35f90d3d83835a02fe68c90e",
+    "claims/SFT-COMP-CPLX-PARALLEL-001/WHY_DERIVATION_CHECK.md": "7cafa1c40753863fbecd2451fea72283ae612cee36d9609e3f75492686191954",
+    "claims/SFT-COMP-CPLX-PARALLEL-001/certificate.json": "7347099a9ba4cefdc902db718955d6da10153a26511dbe5d1c26c90ea91caa42",
+    "claims/SFT-COMP-CPLX-PARALLEL-001/registration.json": "87b24a1a90e898c8fcfea603ce7ec597cc45574bc8b08d20b640bca417559d20",
+    "receipts/engine/model_admitted/SFT-COMP-CPLX-PARALLEL-001-d451551a66fdaf12.json": "078ae82d136b8c1e38ed7a5a034a847af188022c5088e5a353d50713737046f3"
+  },
+  "components": {
+    "actual pinned source": "Seventh complexity topic PARALLEL, exact six-file binding, independent validator and all8 dependencies complete. Task graph, independent ready sets, layer schedule, work/span traces, synchronization rows and reconstruction. No physical processor count or timing constant.",
+    "ready set derivation": "ParallelResources.ready filters the full declared graph node carrier by held identity, absence from completed tasks and all incoming predecessors completed. readyMeaning and completeReadySet prove exact equivalence. readyIndependence derives absence of dependency edges between simultaneous ready tasks.",
+    "complete layer enumeration": "readyChoices uses original rawSelections on the full readySet; completeReadyChoices proves its exact HeldChoice correspondence. LayerSchedule admits these generated choices, not an arbitrary sampled list. generatedLayerReady/Independent derive actual readiness and independence for every selected task.",
+    "synchronization and work": "synchronizationRows retains every original incoming graph edge for the selected layer; completeSynchronization proves exact membership and generatedSynchronization proves every predecessor completed. workReconstruction derives the full ordered layer flattening. completeWork transfers full graph coverage to the actual work trace without requiring graph.nodes to have the execution order.",
+    "span and composition": "fullSpan applies the existing complete original ordered causal-path enumeration and native maximum to the actual work trace; it yields an attained valid span bounding every admitted causal path in that order. serialSchedule/workComposition preserve exact completed interfaces and all work rows; retainedLayerSuccessor and oneTaskLayer establish extension and base. Original resourceLedger retains exact work trace/support/counts.",
+    "complete source program": "Full256 original complexity-axis candidates,3 resourceLedger witnesses,4 controls, registration/census/closure/exposition and hashes. Fresh native full256 actual lookups and all fields/hashes/unknown-ID match V3. Unchanged resource-ledger/shared-operation checks retained."
+  },
+  "dependencies": [
+    "SFT-COMP-CPLX-REVERSIBILITY-COST-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": "All8 complete before this entry",
+  "native_audit": "verification/TURN_217_PARITY_REPORT.json",
+  "program_comparison": "verification/TURN_217_PROGRAM_REPORT.json",
+  "remaining": [],
+  "completion_count": 68
+}

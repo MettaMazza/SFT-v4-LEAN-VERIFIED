@@ -5360,9 +5360,11 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-ALG-NUMERICAL-001-3f1c19281f4ac6c8.json",
       "statement": "The forced exactly bounded approximation procedures kernel retains exact input parts; finite discretization; update trace; orientation-labelled error; stability witness; convergence certificate; output interval; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold numerical-algorithm law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/NumericalError.lean"
+      ],
+      "artifact_runtime_parity": "Full entry program not yet translated; existing34150 candidate comparisons pass unchanged.",
       "registration_sha256": "61dd57afd4e608433d22162c2404bac87dfd8b0b51ed5118379d28019bd80ebf",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -5407,7 +5409,14 @@
         "statement": "The forced exactly bounded approximation procedures kernel retains exact input parts; finite discretization; update trace; orientation-labelled error; stability witness; convergence certificate; output interval; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold numerical-algorithm law"
-      }
+      },
+      "verified_scope": "NumericalError translates exact_error_ledger with original equal/nonempty support and positive-value guards, every ordered cell row, the equality One marker and held-below/held-above positive exact differences. Native proofs establish exact normalized values, positivity, guard behavior and successful row counts. This is the error-ledger component, not completion of Numerical Algorithms.",
+      "remaining": [
+        "Numerical source carrier: connect finite discretization and update trace to the original exact error ledger and output interval.",
+        "Numerical source stability witness and convergence certificate: translate their admitted finite relation/dependency components.",
+        "Generate the original256 candidate grammar, controls and complete program binding; run fresh full native program comparison and source-component closure review."
+      ],
+      "progress_evidence": "verification/TURN_237_NUMERICAL_ERROR_PROGRESS.json"
     },
     {
       "branch": "computation",
@@ -189375,13 +189384,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T11:01:50.771952+00:00",
+  "updated_at": "2026-10-29T11:11:12.274035+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2696,
+    "in_progress": 1,
+    "pending": 2695,
     "fully_reconstructed_claims": 85,
-    "axiom_free_exported_results": 4716,
-    "axiom_free_audited_definitions_and_theorems": 10150
+    "axiom_free_exported_results": 4725,
+    "axiom_free_audited_definitions_and_theorems": 10163
   }
 }

@@ -4715,3 +4715,12 @@ import SFT
 #print axioms SFT.Computation.StreamingTrace.updateSummary
 #print axioms SFT.Computation.StreamingTrace.continuation
 #print axioms SFT.Computation.StreamingTrace.retainedLoss
+#print axioms SFT.Computation.NumericalError.equalMarker
+#print axioms SFT.Computation.NumericalError.belowValue
+#print axioms SFT.Computation.NumericalError.aboveValue
+#print axioms SFT.Computation.NumericalError.positiveError
+#print axioms SFT.Computation.NumericalError.rejectSupport
+#print axioms SFT.Computation.NumericalError.admittedSupport
+#print axioms SFT.Computation.NumericalError.rowsCount
+#print axioms SFT.Computation.NumericalError.zeroReferenceRejected
+#print axioms SFT.Computation.NumericalError.negativeReferenceRejected

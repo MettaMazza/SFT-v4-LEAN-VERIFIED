@@ -670,3 +670,7 @@ import SFT.Physics.GeneratorThreeDerivation
 import SFT.Physics.FoldReturnCarrier
 import SFT.Physics.FoldFirstReturn
 import SFT.Physics.GeneratorOperations
+import SFT.Physics.GeneratorThreeWitnesses
+import SFT.Physics.GeneratorThreeGrammar
+import SFT.Physics.GeneratorThreeControls
+import SFT.Physics.GeneratorThreeEvidence

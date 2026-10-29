@@ -357,3 +357,7 @@ def main : IO Unit := do
   for c in SFT.Computation.CausalityGrammar.candidates do
     IO.println ("CausalityGrammar\t" ++ SFT.Computation.CausalityGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.CausalityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.CausalityGrammar.exactForm c ++ "\t" ++ SFT.Computation.CausalityGrammar.decisionReason c)
 
+
+  for c in SFT.Physics.GeneratorThreeGrammar.candidates do
+    IO.println ("GeneratorThreeGrammar\t" ++ SFT.Physics.GeneratorThreeGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GeneratorThreeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GeneratorThreeGrammar.exactForm c ++ "\t" ++ SFT.Physics.GeneratorThreeGrammar.decisionReason c)
+

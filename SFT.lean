@@ -704,3 +704,9 @@ import SFT.Physics.LeptonControls
 import SFT.Physics.LeptonEvidence
 import SFT.Physics.LeptonLedger
 import SFT.Physics.LeptonTerminal
+import SFT.Physics.TerminalWitnesses
+import SFT.Physics.TerminalGrammar
+import SFT.Physics.TerminalControls
+import SFT.Physics.TerminalEvidence
+import SFT.Physics.LeptonIntervals
+import SFT.Physics.LeptonIsolation

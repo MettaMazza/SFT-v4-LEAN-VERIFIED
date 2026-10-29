@@ -1,7 +1,7 @@
 """Run all existing complete program drivers against pinned V3; no scientific Python execution."""
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import json,subprocess,hashlib,resource,sys
+import json,subprocess,hashlib,resource,sys,ast
 from current_checks import PROJECT as r, LAKE, source
 info,v=source();pin=info['commit'];out=r/'verification/current/batch_programs';out.mkdir(parents=True,exist_ok=True)
 subprocess.run([sys.executable,str(r/'verification/batch_existing_work.py')],cwd=r,check=True)
@@ -43,6 +43,7 @@ entries=[
 ('SFT-INFO-QUANTUM-CORRESPONDENCE-001',r/'verification/TURN_176_QuantumProgram.lean'),
 ('SFT-COMP-DIST-CAUSALITY-001',r/'verification/TURN_264_CausalityProgram.lean'),
 ('SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001',r/'verification/TURN_273_LeptonProgram.lean'),
+('SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001',r/'verification/TURN_275_TerminalProgram.lean'),
 ('SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001',r/'verification/TURN_271_AlphaProgram.lean'),
 ('SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001',r/'verification/TURN_269_BoundaryRankProgram.lean'),
 ('SFT-PHYS-SPACE-DIMENSION-THREE-001',r/'verification/TURN_268_SpatialThreeProgram.lean'),
@@ -130,8 +131,22 @@ def check(item):
   census=read(claim,'candidate_census.json');census.pop('claim_id');receipt=read(claim,'elimination_receipt.json');reg=read(claim,'registration.json')
   expected={'census':census,'decisions':receipt['decisions'],'closure':receipt['closure'],'controls':read(claim,'controls.json')['controls']}
   for k,value in expected.items():assert actual[k]==value,k+' differs'
-  for k in ['claim_id','title','branch','statement','dependencies']:assert actual['registration'][k]==reg[k],k+' differs'
-  rr=actual['registration'];assert rr['source_hash']==source_hash and rr['evidence_mode']=='formal';assert rr['axioms']==rr['free_parameters']==[];assert rr['root_theorems']==([] if claim=='SFT-ROOT-THERE-IS-NO-NOTHING' else ['SFT-ROOT-THERE-IS-NO-NOTHING']);assert rr['provenance']==reg['provenance_classes'],'provenance differs from pinned registration'
+  for k in ['claim_id','title','branch','dependencies']:assert actual['registration'][k]==reg[k],k+' differs'
+  statement=reg['statement'];mode='formal'
+  runtime_specs={
+   'SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001':('sft/physics/prior_value_laws.py','CHARGED_LEPTON_CUBIC_SPEC'),
+   'SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001':('sft/physics/terminal_lepton_law.py','TERMINAL_LEPTON_SPEC'),
+  }
+  if claim in runtime_specs:
+   path,spec_name=runtime_specs[claim]
+   tree=ast.parse(subprocess.check_output(['git','-C',str(v),'show',pin+':'+path],text=True))
+   spec=next(n.value for n in tree.body if isinstance(n,ast.Assign) and getattr(n.targets[0],'id','')==spec_name)
+   fields={k.arg:k.value for k in spec.keywords}
+   statement=ast.literal_eval(fields['statement'])
+   assert ' '.join(statement.split())==' '.join(reg['statement'].split())
+   if 'evidence_mode' in fields:mode=fields['evidence_mode'].attr.lower()
+  assert actual['registration']['statement']==statement,'statement differs from exact source'
+  rr=actual['registration'];assert rr['source_hash']==source_hash and rr['evidence_mode']==mode;assert rr['axioms']==rr['free_parameters']==[];assert rr['root_theorems']==([] if claim=='SFT-ROOT-THERE-IS-NO-NOTHING' else ['SFT-ROOT-THERE-IS-NO-NOTHING']);assert rr['provenance']==reg['provenance_classes'],'provenance differs from pinned registration'
   if 'unknown_rejected' in actual:assert actual['unknown_rejected'] is True
   if 'unknown_id' in actual:assert actual['unknown_id']=='StopIteration' or actual['unknown_id'].startswith('KeyError:')
   result={'claim_id':claim,'status':'PASS','candidate_rows':len(actual['decisions']),'source_manifest_hash':source_hash,'driver':str(driver.relative_to(r)),'driver_sha256':hashlib.sha256(driver.read_bytes()).hexdigest(),'matched':['registration','complete census','all decisions','closure','four controls','every embedded hash'],'unknown_identifier_check':'PASS' if 'unknown_id' in actual or 'unknown_rejected' in actual else 'separate Root HostChecks'}

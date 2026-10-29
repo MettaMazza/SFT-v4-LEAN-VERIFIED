@@ -666,3 +666,4 @@ import SFT.Computation.CausalityGrammar
 import SFT.Computation.CausalityControls
 import SFT.Computation.CausalityEvidence
 import SFT.Computation.CausalProvenance
+import SFT.Physics.GeneratorThreeDerivation

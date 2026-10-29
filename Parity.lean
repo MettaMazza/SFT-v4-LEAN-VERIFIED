@@ -237,3 +237,7 @@ def main : IO Unit := do
   for c in SFT.Computation.ApproximationGrammar.candidates do
     IO.println ("ApproximationGrammar\t" ++ SFT.Computation.ApproximationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ApproximationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ApproximationGrammar.exactForm c ++ "\t" ++ SFT.Computation.ApproximationGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.ParameterizedGrammar.candidates do
+    IO.println ("ParameterizedGrammar\t" ++ SFT.Computation.ParameterizedGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ParameterizedGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ParameterizedGrammar.exactForm c ++ "\t" ++ SFT.Computation.ParameterizedGrammar.decisionReason c)
+

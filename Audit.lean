@@ -5948,3 +5948,15 @@ import SFT
 #print axioms SFT.Physics.LeptonIsolation.searchSound
 #print axioms SFT.Physics.LeptonIsolation.terminalSearchComplete
 #print axioms SFT.Physics.LeptonIsolation.terminalNativeRun
+#print axioms SFT.Physics.LeptonRatios.refinementRetainsAll
+#print axioms SFT.Physics.LeptonRatios.refinementSound
+#print axioms SFT.Physics.LeptonRefinement.muonElectronExact
+#print axioms SFT.Physics.LeptonRefinement.muonElectronContained
+#print axioms SFT.Physics.LeptonRefinement.muonElectronOverlap
+#print axioms SFT.Physics.LeptonRefinement.muonTauExact
+#print axioms SFT.Physics.LeptonRefinement.muonTauContained
+#print axioms SFT.Physics.LeptonRefinement.muonTauOverlap
+#print axioms SFT.Physics.LeptonRefinement.nativeRefinementRun
+#print axioms SFT.Physics.LeptonRefinement.muonElectronRun
+#print axioms SFT.Physics.LeptonRefinement.muonTauRun
+#print axioms SFT.Physics.LeptonRefinement.bothRowsOverlap

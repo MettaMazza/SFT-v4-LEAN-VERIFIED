@@ -209,3 +209,7 @@ def main : IO Unit := do
   for c in SFT.Computation.CommunicationQueryGrammar.candidates do
     IO.println ("CommunicationQueryGrammar\t" ++ SFT.Computation.CommunicationQueryGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.CommunicationQueryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.CommunicationQueryGrammar.exactForm c ++ "\t" ++ SFT.Computation.CommunicationQueryGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.RandomnessGrammar.candidates do
+    IO.println ("RandomnessGrammar\t" ++ SFT.Computation.RandomnessGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.RandomnessGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.RandomnessGrammar.exactForm c ++ "\t" ++ SFT.Computation.RandomnessGrammar.decisionReason c)
+

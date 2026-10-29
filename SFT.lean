@@ -462,3 +462,8 @@ import SFT.Computation.CommunicationQueryGrammar
 import SFT.Computation.CommunicationQueryControls
 import SFT.Computation.CommunicationQueryEvidence
 import SFT.Computation.CommunicationResources
+import SFT.Computation.RandomnessWitnesses
+import SFT.Computation.RandomnessGrammar
+import SFT.Computation.RandomnessControls
+import SFT.Computation.RandomnessEvidence
+import SFT.Computation.RandomnessResources

@@ -1,4 +1,4 @@
-## 113 / 2,781 V3 entries complete
+## 114 / 2,781 V3 entries complete
 
 **6,317 Lean theorems proved · 0 axiom dependencies · Communication complete.**
 
@@ -61,14 +61,14 @@ flowchart LR
 
 Entry completion means the entry’s actual pinned V3 content is formalised and its applicable checks pass. Entries are completed in registered dependency order. Missing work must identify a specific V3 source component; general host-library or unrelated platform tasks do not hold a scientific entry open.
 
-**6,317 proofs completed · 48,998 candidate records matched · 113 model entries complete · Communication complete.**
+**6,317 proofs completed · 48,998 candidate records matched · 114 model entries complete · Communication complete.**
 
 | Progress measure | Current result |
 | :--- | :--- |
 | Lean theorems proved | **6,317**, all with zero axiom dependencies |
 | Definitions and theorems audited | **13,836**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **48,998 / 48,998** across 116 represented source entries |
-| Complete model entries | **113 / 2,781** — [latest completion evidence](verification/TURN_288_Consensus_COMPLETION.json) |
+| Complete model entries | **114 / 2,781** — [latest completion evidence](verification/TURN_289_AGREEMENT_COMPLETION.json) |
 
 | Source component | Verified work | Evidence |
 | :--- | :--- | :--- |
@@ -89,7 +89,7 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | **Form construction** | Exact finite productions, injective tuple encoding and acceptance of every generated form by the tuple/list/string validator | [Derivation](SFT/Foundation/FormConstruction.lean) |
 | **Source correspondence** | All 47,206 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_279_PARITY_REPORT.json) |
 
-**Completed source entries: 113 / 2,781.** 3 entries are in progress and 2,665 remain pending. Exact source-component evidence is in COVERAGE.json.
+**Completed source entries: 114 / 2,781.** 2 entries are in progress and 2,665 remain pending. Exact source-component evidence is recorded in COVERAGE.json.
 
 [Read the current axiom audit →](verification/TURN_291_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 13,836 axiom audits →](verification/TURN_291_ALL_DECLARATIONS_AUDIT.log)
 
@@ -167,7 +167,7 @@ The scripts read pinned v3 source and artifacts without importing or executing v
 
 Batch review: [all 21 existing entries](verification/TURN_114_BATCH_EXISTING_WORK.json). Run `python3 verification/batch_existing_work.py` for the existing global build/audit/parity and exact missing-method inventory. Interface presence alone does not establish derivation completion.
 
-Retained full-program verification covers **112 / 112 implemented programs** and **48,230 actual lookup decisions**, including complete registration/census/closure/control/hash outputs. The original [batch source review](verification/TURN_115_SOURCE_REVIEW.json) is reconciled by the subsequent completion records; all identified gaps are closed in the [final six-entry report](verification/TURN_119_BATCH_COMPLETION.json). Run `ulimit -s 65520` and then `python3 verification/batch_program_outputs.py` to reproduce all 112 comparisons.
+Retained full-program verification covers **113 / 113 implemented programs** and **48,486 actual lookup decisions**, including complete registration/census/closure/control/hash outputs. The original [batch source review](verification/TURN_115_SOURCE_REVIEW.json) is reconciled by the subsequent completion records; all identified gaps are closed in the [final six-entry report](verification/TURN_119_BATCH_COMPLETION.json). Run `ulimit -s 65520` and then `python3 verification/batch_program_outputs.py` to reproduce all 113 comparisons.
 
 Part Equivalence checkpoint: all **1,024** fresh native lookup decisions and complete source program outputs match pinned V3. [Program comparison](verification/TURN_116_PART_EQUIVALENCE_PROGRAM_REPORT.json).
 
@@ -235,8 +235,10 @@ Distributed Partial Order and Consensus: native carrier,closure,trace,compositio
 
 Agreement Impossibility: native contradiction for equal local observations with different required decisions,exact scheduler support,complete witness enumeration and retained successor proofs pass with zero axioms;1,024 kernel cases pass. Full-program comparison runs alongside the earlier batch.
 
-DistributedOrder, Consensus complete: original full-program comparisons PASS; dependency-ordered completed count 113 / 2,781.
+DistributedOrder, Consensus complete: original full-program comparisons PASS; dependency-ordered completed count 114 / 2,781.
 
 Replication/Consistency: native source-bound update traces,identity preservation,complete state classes,composition,successor and retained order-loss proofs pass with zero axioms.726 kernel outputs and two concrete replay orders pass. Full-program comparison runs concurrently with Agreement Impossibility.
 
 Fault Model: source-bound detection/recovery/uncorrectable classification,exact generated-support guarantee and retained recovery/composition proofs pass with zero axioms.3,328 kernel outputs pass; original full-program comparison runs concurrently.
+
+AgreementImpossibility complete: original full-program comparisons PASS; 114 completed entries.

@@ -1,0 +1,43 @@
+{
+  "claim_id": "SFT-COMP-ALG-ARITHMETIC-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "status": "complete",
+  "source_sha256": {
+    "sft/foundation/derivation_trace.py": "72057c85521a9d736c8fbc65aac028f480dd7563fe5c504af6eace3914497c03",
+    "sft/foundation/exact_operations.py": "f4d8c614ce33778f892d0c6c33023bcd8e72626a0be4cbb8124a95039947c02d",
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/algorithms/arithmetic/law.py": "ec0f5aaf0f5ef97cf3e3a36c5611728267add92c501428484901c674e393db0c",
+    "claims/SFT-COMP-ALG-ARITHMETIC-001/execution.py": "495cde3aaa81326740ff515f375347bf3f49bef9747e587e990e2b5beb79104b",
+    "claims/SFT-COMP-ALG-ARITHMETIC-001/independent_validator.py": "88c6b878423c025584b75003380c1107e52a007efc4bd5691fdf6741debd652d",
+    "claims/SFT-COMP-ALG-ARITHMETIC-001/WHY_DERIVATION_CHECK.md": "7683a11eda80d99e326fa4e93c2a415f2ab24f1b545670960dd5b50d46d08e4f",
+    "claims/SFT-COMP-ALG-ARITHMETIC-001/certificate.json": "81afe8b6505f2439d38281a36ea0c9533597c8029f4200aa5353d1b795225cfd",
+    "claims/SFT-COMP-ALG-ARITHMETIC-001/registration.json": "bf4f8572d8b0aaab807809726c750c83dbc227c2237e383ecaf229f856b490df",
+    "receipts/engine/model_admitted/SFT-COMP-ALG-ARITHMETIC-001-af254db83c3bc4c6.json": "fcbe3bc14c56c497326437de0c02ec4a0f2a75e8f7ae6c56b0db34c19ab222be"
+  },
+  "components": {
+    "actual pinned source": "Second Algorithms topic ARITHMETIC, exact six-file binding, independent validator and all8 completed dependencies. Canonical arithmetic inputs, structural operations, intermediate exact parts, normalization, termination trace and result reconstruction.",
+    "exact execution correspondence": "ArithmeticTrace.Execution represents every original DerivationTrace.execute step, ordered input identities and output row. generatedExecution and executionGenerates prove both directions of correspondence with original recordFrom. No new operation or answer-producing function is introduced.",
+    "complete termination and custody": "completeTerminationTrace proves one retained row per operation and exact operation-order reconstruction. intermediateIdentities binds each output hash to its actual exact part. everyIntermediateExact preserves positive numerator, through-One bound and coprime normal form for all retained intermediate rows.",
+    "normalization and reconstruction": "normalizedIntermediateValue retains exact cross-multiplication equality of original normalizePositive. Existing exact primitive definitions and proofs remain unchanged. terminalReconstruction derives original replayFrom result from the complete recorded execution.",
+    "composition and boundary": "traceComposition concatenates actual executions with the shared intermediate part; arithmeticSuccessor records exact next operation and ordered input hashes; structuralOneBase supplies the original One. rejectedFirstOperation preserves every original dispatcher or arithmetic rejection. Input/normalization guards and exact structural arithmetic operations are inherited from their unchanged source-bound definitions.",
+    "complete source program": "All256 algorithms-axis candidates,3 original search/recursion witnesses,4 controls and complete registration/census/closure/exposition/hash records match pinned V3 under fresh native execution, including all actual lookups and unknown-ID rejection. Existing exact operation and shared-operation comparisons retained."
+  },
+  "dependencies": [
+    "SFT-COMP-ALG-SEARCH-ORDER-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": "All8 complete before this entry",
+  "native_audit": "verification/TURN_226_PARITY_REPORT.json",
+  "program_comparison": "verification/TURN_226_PROGRAM_REPORT.json",
+  "remaining": [],
+  "completion_count": 76
+}

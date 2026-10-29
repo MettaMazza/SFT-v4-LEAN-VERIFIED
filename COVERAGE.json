@@ -4678,9 +4678,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-ALG-ARITHMETIC-001-af254db83c3bc4c6.json",
       "statement": "The forced computation over exact positive parts kernel retains canonical arithmetic inputs; structural operations; intermediate exact parts; normalization; termination trace; result reconstruction; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold exact arithmetic-algorithm law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Computation/ArithmeticTrace.lean",
+        "SFT/Computation/ArithmeticWitnesses.lean",
+        "SFT/Computation/ArithmeticGrammar.lean",
+        "SFT/Computation/ArithmeticControls.lean",
+        "SFT/Computation/ArithmeticEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 fresh native lookups and every original field/hash; unchanged shared-operation comparisons retained.",
       "registration_sha256": "bf4f8572d8b0aaab807809726c750c83dbc227c2237e383ecaf229f856b490df",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -4725,7 +4731,10 @@
         "statement": "The forced computation over exact positive parts kernel retains canonical arithmetic inputs; structural operations; intermediate exact parts; normalization; termination trace; result reconstruction; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold exact arithmetic-algorithm law"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Second Algorithms topic ARITHMETIC, exact six-file binding, independent validator and all8 completed dependencies. Canonical arithmetic inputs, structural operations, intermediate exact parts, normalization, termination trace and result reconstruction.; ArithmeticTrace.Execution represents every original DerivationTrace.execute step, ordered input identities and output row. generatedExecution and executionGenerates prove both directions of correspondence with original recordFrom. No new operation or answer-producing function is introduced.; completeTerminationTrace proves one retained row per operation and exact operation-order reconstruction. intermediateIdentities binds each output hash to its actual exact part. everyIntermediateExact preserves positive numerator, through-One bound and coprime normal form for all retained intermediate rows.; normalizedIntermediateValue retains exact cross-multiplication equality of original normalizePositive. Existing exact primitive definitions and proofs remain unchanged. terminalReconstruction derives original replayFrom result from the complete recorded execution.; traceComposition concatenates actual executions with the shared intermediate part; arithmeticSuccessor records exact next operation and ordered input hashes; structuralOneBase supplies the original One. rejectedFirstOperation preserves every original dispatcher or arithmetic rejection. Input/normalization guards and exact structural arithmetic operations are inherited from their unchanged source-bound definitions.; All256 algorithms-axis candidates,3 original search/recursion witnesses,4 controls and complete registration/census/closure/exposition/hash records match pinned V3 under fresh native execution, including all actual lookups and unknown-ID rejection. Existing exact operation and shared-operation comparisons retained.",
+      "completion_evidence": "verification/TURN_226_ARITHMETIC_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -189283,13 +189292,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T09:43:45.766285+00:00",
+  "updated_at": "2026-10-29T09:50:05.237444+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2706,
-    "fully_reconstructed_claims": 75,
-    "axiom_free_exported_results": 4317,
-    "axiom_free_audited_definitions_and_theorems": 9167
+    "pending": 2705,
+    "fully_reconstructed_claims": 76,
+    "axiom_free_exported_results": 4351,
+    "axiom_free_audited_definitions_and_theorems": 9256
   }
 }

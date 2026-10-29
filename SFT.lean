@@ -513,3 +513,8 @@ import SFT.Computation.SearchOrderGrammar
 import SFT.Computation.SearchOrderControls
 import SFT.Computation.SearchOrderEvidence
 import SFT.Computation.OrderingTrace
+import SFT.Computation.ArithmeticWitnesses
+import SFT.Computation.ArithmeticGrammar
+import SFT.Computation.ArithmeticControls
+import SFT.Computation.ArithmeticEvidence
+import SFT.Computation.ArithmeticTrace

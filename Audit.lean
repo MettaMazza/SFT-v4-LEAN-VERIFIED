@@ -5469,3 +5469,15 @@ import SFT
 #print axioms SFT.Computation.CausalClosure.roundsPreserve
 #print axioms SFT.Computation.CausalClosure.pathEndpoints
 #print axioms SFT.Computation.CausalClosure.emptyPathImpossible
+#print axioms SFT.Computation.CausalTermination.filterMonotone
+#print axioms SFT.Computation.CausalTermination.filterStrict
+#print axioms SFT.Computation.CausalTermination.growsMeaning
+#print axioms SFT.Computation.CausalTermination.missingDecreases
+#print axioms SFT.Computation.CausalTermination.roundsAppend
+#print axioms SFT.Computation.CausalTermination.nativeRounds
+#print axioms SFT.Computation.CausalTermination.nativeStable
+#print axioms SFT.Computation.CausalTermination.stableClosed
+#print axioms SFT.Computation.CausalTermination.pairCellMember
+#print axioms SFT.Computation.CausalTermination.nativeClosed
+#print axioms SFT.Computation.CausalTermination.nativeExact
+#print axioms SFT.Computation.CausalTermination.nativeCycleBoundary

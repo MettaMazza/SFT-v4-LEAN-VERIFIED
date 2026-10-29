@@ -5918,9 +5918,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEM-PROGRAM-EQUIVALENCE-001-ad7d0dba57a7c30f.json",
       "statement": "The forced indistinguishable generated behavior kernel retains two program descriptions; common input support; complete traces; observation relation; retained/closed distinctions; equivalence certificate; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold program-equivalence law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Computation/ProgramEquivalence.lean",
+        "SFT/Computation/EquivalenceWitnesses.lean",
+        "SFT/Computation/EquivalenceGrammar.lean",
+        "SFT/Computation/EquivalenceControls.lean",
+        "SFT/Computation/EquivalenceEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 fresh native lookups and every original field/hash; existing evaluation comparisons retained unchanged.",
       "registration_sha256": "0d691744fa9ac3ee2cb0541169f3291802a2d84936bcf586bcf9a097cd2d351d",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -5965,7 +5971,10 @@
         "statement": "The forced indistinguishable generated behavior kernel retains two program descriptions; common input support; complete traces; observation relation; retained/closed distinctions; equivalence certificate; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold program-equivalence law"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Sixth Semantics topic PROGRAM-EQUIVALENCE: indistinguishable generated behavior. Original execution binds operations.py, catalog/spec_data/generated_law, semantics/program_equivalence/law.py and execution.py; all8 dependencies complete. V3 limits equivalence to registered observation/input support, with complete traces and retained/closed distinctions.; ProgramEquivalence.ledger maps every original common input environment to both full EvaluationTrace.run records and their registered observations. inputRecord/recordInput establish exact membership provenance. completeExecutions reconstructs both actual source execution derivations, including their full syntax and environment in trace endpoints. No result-only substitution for traces.; certificate traverses the entire finite input support and compares the two registered observation labels. certificateSound/certificateComplete/exactCertificate establish equivalence with agreement at every input. distinguishingInput constructs an actual retained input with unequal observations whenever the certificate fails. Equivalence is not exported beyond the declared input and observation boundary.; closedMeaning and retainedMeaning characterize exact equal/unequal observation rows. completeDistinctions/disjointDistinctions prove exhaustive disjoint accounting. equivalenceClosesEveryRow and retainedRefutes link the certificate relation to the full distinction ledger. Original program traces remain retained even when their observation distinction is closed.; Identity compares each program with itself, symmetry reverses descriptions, and composition retains observation agreement through an intermediate description. supportAssembly combines separately established input supports; supportRestriction proves no implicit export to new inputs. ledgerAssembly and earlierRowRetained retain every original complete execution record under generated support extension. observationPostmap proves preservation under a declared downstream label map, without assuming arbitrary new observers preserve equivalence. Inherited EvaluationTrace retains both component traces in original join execution.; All256 fresh native candidate lookups, exact group witnesses/four controls and complete registration/census/closure/exposition/hash/unknown-ID outputs match pinned V3. Full build/fresh parity/all-declaration audit PASS with zero actual axioms. Original evaluator/guards unchanged and7007 existing source-expression comparisons retained. No scientific V3 Python execution or source mutation.",
+      "completion_evidence": "verification/TURN_253_EQUIVALENCE_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -189461,13 +189470,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T14:05:16.922776+00:00",
+  "updated_at": "2026-10-29T14:12:35.730716+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2688,
-    "fully_reconstructed_claims": 93,
-    "axiom_free_exported_results": 5179,
-    "axiom_free_audited_definitions_and_theorems": 11119
+    "pending": 2687,
+    "fully_reconstructed_claims": 94,
+    "axiom_free_exported_results": 5223,
+    "axiom_free_audited_definitions_and_theorems": 11226
   }
 }

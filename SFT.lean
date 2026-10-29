@@ -618,3 +618,8 @@ import SFT.Computation.TypeGrammar
 import SFT.Computation.TypeControls
 import SFT.Computation.TypeEvidence
 import SFT.Computation.TypeInterfaces
+import SFT.Computation.EquivalenceWitnesses
+import SFT.Computation.EquivalenceGrammar
+import SFT.Computation.EquivalenceControls
+import SFT.Computation.EquivalenceEvidence
+import SFT.Computation.ProgramEquivalence

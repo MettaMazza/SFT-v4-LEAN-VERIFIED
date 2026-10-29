@@ -695,3 +695,6 @@ import SFT.Physics.AlphaEvidence
 import SFT.Physics.AlphaPromotion
 import SFT.Physics.AlphaRatio
 import SFT.Physics.AlphaDomain
+import SFT.Physics.LeptonTake
+import SFT.Physics.LeptonSupport
+import SFT.Physics.LeptonInvariants

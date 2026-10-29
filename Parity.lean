@@ -245,3 +245,7 @@ def main : IO Unit := do
   for c in SFT.Computation.DescriptiveGrammar.candidates do
     IO.println ("DescriptiveGrammar\t" ++ SFT.Computation.DescriptiveGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.DescriptiveGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.DescriptiveGrammar.exactForm c ++ "\t" ++ SFT.Computation.DescriptiveGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.SearchOrderGrammar.candidates do
+    IO.println ("SearchOrderGrammar\t" ++ SFT.Computation.SearchOrderGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SearchOrderGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SearchOrderGrammar.exactForm c ++ "\t" ++ SFT.Computation.SearchOrderGrammar.decisionReason c)
+

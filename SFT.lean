@@ -508,3 +508,8 @@ import SFT.Computation.DescriptiveControls
 import SFT.Computation.DescriptiveEvidence
 import SFT.Computation.DescriptiveResources
 import SFT.Computation.SearchTrace
+import SFT.Computation.SearchOrderWitnesses
+import SFT.Computation.SearchOrderGrammar
+import SFT.Computation.SearchOrderControls
+import SFT.Computation.SearchOrderEvidence
+import SFT.Computation.OrderingTrace

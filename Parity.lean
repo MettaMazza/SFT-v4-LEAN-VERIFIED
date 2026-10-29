@@ -253,3 +253,7 @@ def main : IO Unit := do
   for c in SFT.Computation.ArithmeticGrammar.candidates do
     IO.println ("ArithmeticGrammar\t" ++ SFT.Computation.ArithmeticGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ArithmeticGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ArithmeticGrammar.exactForm c ++ "\t" ++ SFT.Computation.ArithmeticGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.StringsSequencesGrammar.candidates do
+    IO.println ("StringsSequencesGrammar\t" ++ SFT.Computation.StringsSequencesGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.StringsSequencesGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.StringsSequencesGrammar.exactForm c ++ "\t" ++ SFT.Computation.StringsSequencesGrammar.decisionReason c)
+

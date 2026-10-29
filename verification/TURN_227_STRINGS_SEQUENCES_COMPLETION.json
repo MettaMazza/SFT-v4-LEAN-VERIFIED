@@ -1,0 +1,40 @@
+{
+  "claim_id": "SFT-COMP-ALG-STRINGS-SEQUENCES-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "status": "complete",
+  "source_sha256": {
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/algorithms/strings_sequences/law.py": "a306e21d5bba1ac32bab3161dcf8b3735747039285594633d34ecc78f0db550a",
+    "claims/SFT-COMP-ALG-STRINGS-SEQUENCES-001/execution.py": "a09b19cbaac639e4d0e1548704b28597f67a75bdbff3a739e1edcfbc6685a000",
+    "claims/SFT-COMP-ALG-STRINGS-SEQUENCES-001/independent_validator.py": "09a1ddcfda9876cc9f1f8679bbc7623cf70f88eb936fe9f75af95b2427f26867",
+    "claims/SFT-COMP-ALG-STRINGS-SEQUENCES-001/WHY_DERIVATION_CHECK.md": "460ed8fc0f045e480d16074356214efe1016b3244b744e9e4bf0671d57a04edc",
+    "claims/SFT-COMP-ALG-STRINGS-SEQUENCES-001/certificate.json": "9d3f0556db619accbbe377e51d461480fde8489d832595afcd477950a7eb015c",
+    "claims/SFT-COMP-ALG-STRINGS-SEQUENCES-001/registration.json": "c7000647b7c7b7e1405fc37e822ad3303f912f2a5873f4d87906fc432f25c81f",
+    "receipts/engine/model_admitted/SFT-COMP-ALG-STRINGS-SEQUENCES-001-5c2fb101d63e8d37.json": "3273556f6bdda460b7e93490d72182a40595274a692ba7b27ffc9a61cf8a1096"
+  },
+  "components": {
+    "actual pinned source": "Third Algorithms topic STRINGS-SEQUENCES, original six-file binding and independent validator; all8 dependencies complete. Complete positions, held symbols, substring-or-subsequence relation, scan trace, match ledger and reconstruction witness. The formalisation implements the explicitly registered subsequence alternative.",
+    "complete matching construction": "SequenceTrace.matchesFrom generates all skip/take position choices in the finite ordered source. Match records the complete branch trace with exact symbol equality at every taken position. everyMatchGenerated and generatedMatchTrace prove both directions; completeMatchLedger establishes exact enumeration equivalence. Repeated symbols retain their distinct matching positions.",
+    "reconstruction and finite positions": "matchLength proves one retained position per target symbol. matchReconstructs derives the ordered source selection. exactPositionSymbol reconstructs each zipped position/symbol pair as an exact source prefix, held symbol and suffix with its exact offset. positionBounds proves each recorded index lies within the declared finite source interval.",
+    "base and extension": "singletonMatch proves the one-symbol base. retainedExtension preserves every prior matching trace and its position ledger when finite source rows are appended. Empty pattern and exhausted-source branches remain explicit host sequence boundaries; no ungenerated infinite stream is treated as complete.",
+    "complete source program": "All256 original algorithms-axis candidates,3 original search/recursion witnesses,4 controls, registration/census/closure/exposition and all hashes agree with pinned V3 in fresh native execution. All actual candidate lookups and unknown-ID error agree. Existing source operations and shared-operation checks remain unchanged."
+  },
+  "dependencies": [
+    "SFT-COMP-ALG-ARITHMETIC-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": "All8 complete before this entry",
+  "native_audit": "verification/TURN_227_PARITY_REPORT.json",
+  "program_comparison": "verification/TURN_227_PROGRAM_REPORT.json",
+  "remaining": [],
+  "completion_count": 77
+}

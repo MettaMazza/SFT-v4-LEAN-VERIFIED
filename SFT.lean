@@ -518,3 +518,8 @@ import SFT.Computation.ArithmeticGrammar
 import SFT.Computation.ArithmeticControls
 import SFT.Computation.ArithmeticEvidence
 import SFT.Computation.ArithmeticTrace
+import SFT.Computation.StringsSequencesWitnesses
+import SFT.Computation.StringsSequencesGrammar
+import SFT.Computation.StringsSequencesControls
+import SFT.Computation.StringsSequencesEvidence
+import SFT.Computation.SequenceTrace

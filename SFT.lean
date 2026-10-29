@@ -543,3 +543,8 @@ import SFT.Computation.OptimizationGrammar
 import SFT.Computation.OptimizationControls
 import SFT.Computation.OptimizationEvidence
 import SFT.Computation.OptimizationTrace
+import SFT.Computation.RandomizedWitnesses
+import SFT.Computation.RandomizedGrammar
+import SFT.Computation.RandomizedControls
+import SFT.Computation.RandomizedEvidence
+import SFT.Computation.ScheduledAlgorithm

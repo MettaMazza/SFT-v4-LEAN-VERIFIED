@@ -273,3 +273,7 @@ def main : IO Unit := do
   for c in SFT.Computation.OptimizationGrammar.candidates do
     IO.println ("OptimizationGrammar\t" ++ SFT.Computation.OptimizationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.OptimizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.OptimizationGrammar.exactForm c ++ "\t" ++ SFT.Computation.OptimizationGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.RandomizedGrammar.candidates do
+    IO.println ("RandomizedGrammar\t" ++ SFT.Computation.RandomizedGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.RandomizedGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.RandomizedGrammar.exactForm c ++ "\t" ++ SFT.Computation.RandomizedGrammar.decisionReason c)
+

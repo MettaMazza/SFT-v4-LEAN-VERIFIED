@@ -528,3 +528,8 @@ import SFT.Computation.TreesGraphsGrammar
 import SFT.Computation.TreesGraphsControls
 import SFT.Computation.TreesGraphsEvidence
 import SFT.Computation.TraversalTrace
+import SFT.Computation.AlgebraicGeometricWitnesses
+import SFT.Computation.AlgebraicGeometricGrammar
+import SFT.Computation.AlgebraicGeometricControls
+import SFT.Computation.AlgebraicGeometricEvidence
+import SFT.Computation.AlgebraGeometryTrace

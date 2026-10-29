@@ -559,3 +559,8 @@ import SFT.Computation.DistributedAlgorithmGrammar
 import SFT.Computation.DistributedAlgorithmControls
 import SFT.Computation.DistributedAlgorithmEvidence
 import SFT.Computation.DistributedMessages
+import SFT.Computation.OnlineStreamingWitnesses
+import SFT.Computation.OnlineStreamingGrammar
+import SFT.Computation.OnlineStreamingControls
+import SFT.Computation.OnlineStreamingEvidence
+import SFT.Computation.StreamingTrace

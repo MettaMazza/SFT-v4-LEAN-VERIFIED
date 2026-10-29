@@ -285,3 +285,7 @@ def main : IO Unit := do
   for c in SFT.Computation.DistributedAlgorithmGrammar.candidates do
     IO.println ("DistributedAlgorithmGrammar\t" ++ SFT.Computation.DistributedAlgorithmGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.DistributedAlgorithmGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.DistributedAlgorithmGrammar.exactForm c ++ "\t" ++ SFT.Computation.DistributedAlgorithmGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.OnlineStreamingGrammar.candidates do
+    IO.println ("OnlineStreamingGrammar\t" ++ SFT.Computation.OnlineStreamingGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.OnlineStreamingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.OnlineStreamingGrammar.exactForm c ++ "\t" ++ SFT.Computation.OnlineStreamingGrammar.decisionReason c)
+

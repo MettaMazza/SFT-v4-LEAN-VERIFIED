@@ -487,3 +487,8 @@ import SFT.Computation.ReductionCompletenessGrammar
 import SFT.Computation.ReductionCompletenessControls
 import SFT.Computation.ReductionCompletenessEvidence
 import SFT.Computation.CompletenessResources
+import SFT.Computation.AverageWorstWitnesses
+import SFT.Computation.AverageWorstGrammar
+import SFT.Computation.AverageWorstControls
+import SFT.Computation.AverageWorstEvidence
+import SFT.Computation.ProfileResources

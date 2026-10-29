@@ -229,3 +229,7 @@ def main : IO Unit := do
   for c in SFT.Computation.ReductionCompletenessGrammar.candidates do
     IO.println ("ReductionCompletenessGrammar\t" ++ SFT.Computation.ReductionCompletenessGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ReductionCompletenessGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ReductionCompletenessGrammar.exactForm c ++ "\t" ++ SFT.Computation.ReductionCompletenessGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.AverageWorstGrammar.candidates do
+    IO.println ("AverageWorstGrammar\t" ++ SFT.Computation.AverageWorstGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.AverageWorstGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.AverageWorstGrammar.exactForm c ++ "\t" ++ SFT.Computation.AverageWorstGrammar.decisionReason c)
+

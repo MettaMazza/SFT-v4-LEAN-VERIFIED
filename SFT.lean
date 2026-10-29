@@ -679,3 +679,10 @@ import SFT.Physics.SpatialThreeGrammar
 import SFT.Physics.SpatialThreeControls
 import SFT.Physics.SpatialThreeEvidence
 import SFT.Physics.SpatialStability
+import SFT.Physics.BoundaryRankWitnesses
+import SFT.Physics.BoundaryRankGrammar
+import SFT.Physics.BoundaryRankControls
+import SFT.Physics.BoundaryRankEvidence
+import SFT.Physics.BoundarySupport
+import SFT.Physics.BoundaryGrowth
+import SFT.Physics.BoundaryPairs

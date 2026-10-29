@@ -309,3 +309,7 @@ def main : IO Unit := do
   for c in SFT.Computation.SemBindingGrammar.candidates do
     IO.println ("SemBindingGrammar\t" ++ SFT.Computation.SemBindingGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SemBindingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SemBindingGrammar.exactForm c ++ "\t" ++ SFT.Computation.SemBindingGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.EvaluationGrammar.candidates do
+    IO.println ("EvaluationGrammar\t" ++ SFT.Computation.EvaluationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.EvaluationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.EvaluationGrammar.exactForm c ++ "\t" ++ SFT.Computation.EvaluationGrammar.decisionReason c)
+

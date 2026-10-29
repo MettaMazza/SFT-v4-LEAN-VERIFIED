@@ -602,3 +602,8 @@ import SFT.Computation.SemBindingGrammar
 import SFT.Computation.SemBindingControls
 import SFT.Computation.SemBindingEvidence
 import SFT.Computation.NameReplacement
+import SFT.Computation.EvaluationWitnesses
+import SFT.Computation.EvaluationGrammar
+import SFT.Computation.EvaluationControls
+import SFT.Computation.EvaluationEvidence
+import SFT.Computation.EvaluationTrace

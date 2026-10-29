@@ -734,3 +734,13 @@ import SFT.Computation.CommunicationGrammar
 import SFT.Computation.CommunicationControls
 import SFT.Computation.CommunicationEvidence
 import SFT.Computation.Communication
+import SFT.Computation.DistributedOrderWitnesses
+import SFT.Computation.DistributedOrderGrammar
+import SFT.Computation.DistributedOrderControls
+import SFT.Computation.DistributedOrderEvidence
+import SFT.Computation.ConsensusWitnesses
+import SFT.Computation.ConsensusGrammar
+import SFT.Computation.ConsensusControls
+import SFT.Computation.ConsensusEvidence
+import SFT.Computation.DistributedOrder
+import SFT.Computation.Consensus

@@ -393,3 +393,11 @@ def main : IO Unit := do
   for c in SFT.Computation.CommunicationGrammar.candidates do
     IO.println ("CommunicationGrammar\t" ++ SFT.Computation.CommunicationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.CommunicationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.CommunicationGrammar.exactForm c ++ "\t" ++ SFT.Computation.CommunicationGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.DistributedOrderGrammar.candidates do
+    IO.println ("DistributedOrderGrammar\t" ++ SFT.Computation.DistributedOrderGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.DistributedOrderGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.DistributedOrderGrammar.exactForm c ++ "\t" ++ SFT.Computation.DistributedOrderGrammar.decisionReason c)
+
+
+  for c in SFT.Computation.ConsensusGrammar.candidates do
+    IO.println ("ConsensusGrammar\t" ++ SFT.Computation.ConsensusGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ConsensusGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ConsensusGrammar.exactForm c ++ "\t" ++ SFT.Computation.ConsensusGrammar.decisionReason c)
+

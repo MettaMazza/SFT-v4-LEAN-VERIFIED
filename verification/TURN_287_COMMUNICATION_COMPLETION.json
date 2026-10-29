@@ -1,0 +1,44 @@
+{
+  "claim_id": "SFT-COMP-DIST-COMMUNICATION-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/distributed_computation/communication/law.py": "145f645478375b0a02793494653c5586c761a88d85e14e4b221257ee51947f17",
+    "claims/SFT-COMP-DIST-COMMUNICATION-001/WHY_DERIVATION_CHECK.md": "a06808616806ede2ea14b4d0f90e5efb846369bb035359547c1050a6bbce0512",
+    "claims/SFT-COMP-DIST-COMMUNICATION-001/registration.json": "e7ce4b686bf65ddf1f9a7cbb2e4e3173fd910f477837a3b256d3a08eee4501b5",
+    "claims/SFT-COMP-DIST-COMMUNICATION-001/execution.py": "3119d2960647e9ae544d250b2e0214e318633b96537ed5350000f651befb6713",
+    "claims/SFT-COMP-DIST-COMMUNICATION-001/independent_validator.py": "dbfe57a5f09e0c533b0559406a362170028c7b644ca6eaee9c5c835f791bfba0",
+    "claims/SFT-COMP-DIST-COMMUNICATION-001/certificate.json": "3cef83399eef259b6097bd5544b7b5789e14c136ee40b6e3df7d4023655f2de9"
+  },
+  "components": {
+    "carrier and trace": "Event/ChannelRow/Delivery retain complete sender,receiver,message,send event,channel row,receive event. candidateMeaning and deliveryMeaning prove full held product membership iff original endpoint/channel membership and matching message/content coordinates; transformationProvenance and traceRows reconstruct exact original rows.",
+    "boundary": "missingSendRejected,missingReceiveRejected,missingChannelRejected exclude absent rows; endpointMeaning retains every endpoint/content match. Arbitrary finite relations are represented; reliability,ordering and delay are not assumed.",
+    "composition": "serialComposition retains intermediate event and complete delivery trace; traceMessage preserves message identity; parallelLeft/parallelRight retain complete component records. recordedTransformation links actual delivery rows to admitted ConservationLedger. lossPreserved uses the existing V3 transformation-composition law.",
+    "base and successor": "Trace.identity retains original event with empty trace and no predecessor. extensionRetains preserves every old delivery on source-ledger extension. pairSuccessor,retainedSuccessor,lostSuccessor preserve every earlier pair record; complete recursive pairs supplies all new pair distinctions.",
+    "retained/lost distinctions": "retainedMeaning/lostMeaning,deliveryDistinctionExhaustion/disjoint prove exact and disjoint partition of all held source distinctions. pairEndpoints proves both trace records retained. This applies to actual delivery traces without imposing a deterministic/reliable channel.",
+    "full grammar,controls and program": "Original complete256 grammar,three witnesses,four controls,every registration/census/decision/closure/control output field and hash match pinned V3; unknown-ID rejection matches."
+  },
+  "dependencies": [
+    "SFT-COMP-DIST-SYNCHRONIZATION-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "all_registered_dependencies_complete": true,
+  "native_checks": {
+    "kernel_output_checks": 4266,
+    "axiom_dependencies": 0,
+    "audit": "verification/TURN_286_PARITY_REPORT.json"
+  },
+  "remaining": [],
+  "status": "complete",
+  "program_comparison": "verification/TURN_286_PROGRAM_REPORT.json",
+  "completion_count": 111
+}

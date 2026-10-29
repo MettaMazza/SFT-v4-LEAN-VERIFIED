@@ -6604,7 +6604,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-COMMUNICATION-001-59defe90f59d3eef.json",
       "statement": "The forced exact record transfer kernel retains sender and receiver; message identity; send event; channel row; receive event; retained/lost distinctions; delivery trace; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold communication law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Computation/Communication.lean",
         "SFT/Computation/CommunicationWitnesses.lean",
@@ -6612,7 +6612,7 @@
         "SFT/Computation/CommunicationControls.lean",
         "SFT/Computation/CommunicationEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS fresh256 candidate rows; complete program output/hash comparison running.",
+      "artifact_runtime_parity": "PASS full256 fresh actual lookup decisions and every original program field/hash.",
       "registration_sha256": "e7ce4b686bf65ddf1f9a7cbb2e4e3173fd910f477837a3b256d3a08eee4501b5",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -6658,10 +6658,9 @@
         "status": "independently_replicated",
         "title": "Fold communication law"
       },
-      "verified_scope": "Event/ChannelRow/Delivery retain complete sender,receiver,message,send event,channel row,receive event. candidateMeaning and deliveryMeaning prove full held product membership iff original endpoint/channel membership and matching message/content coordinates; transformationProvenance and traceRows reconstruct exact original rows.; missingSendRejected,missingReceiveRejected,missingChannelRejected exclude absent rows; endpointMeaning retains every endpoint/content match. Arbitrary finite relations are represented; reliability,ordering and delay are not assumed.; serialComposition retains intermediate event and complete delivery trace; traceMessage preserves message identity; parallelLeft/parallelRight retain complete component records. recordedTransformation links actual delivery rows to admitted ConservationLedger. lossPreserved uses the existing V3 transformation-composition law.; Trace.identity retains original event with empty trace and no predecessor. extensionRetains preserves every old delivery on source-ledger extension. pairSuccessor,retainedSuccessor,lostSuccessor preserve every earlier pair record; complete recursive pairs supplies all new pair distinctions.; retainedMeaning/lostMeaning,deliveryDistinctionExhaustion/disjoint prove exact and disjoint partition of all held source distinctions. pairEndpoints proves both trace records retained. This applies to actual delivery traces without imposing a deterministic/reliable channel.; Original eight binary axes,all256 candidates,three causal witnesses,four controls and full GeneratedComputationProgram binding. Fresh candidate parity and axiom audit pass. Full field/hash comparison running on original session6164.",
-      "remaining": [
-        "Complete fresh GeneratedComputationProgram field/hash comparison running on session6164."
-      ]
+      "verified_scope": "Event/ChannelRow/Delivery retain complete sender,receiver,message,send event,channel row,receive event. candidateMeaning and deliveryMeaning prove full held product membership iff original endpoint/channel membership and matching message/content coordinates; transformationProvenance and traceRows reconstruct exact original rows.; missingSendRejected,missingReceiveRejected,missingChannelRejected exclude absent rows; endpointMeaning retains every endpoint/content match. Arbitrary finite relations are represented; reliability,ordering and delay are not assumed.; serialComposition retains intermediate event and complete delivery trace; traceMessage preserves message identity; parallelLeft/parallelRight retain complete component records. recordedTransformation links actual delivery rows to admitted ConservationLedger. lossPreserved uses the existing V3 transformation-composition law.; Trace.identity retains original event with empty trace and no predecessor. extensionRetains preserves every old delivery on source-ledger extension. pairSuccessor,retainedSuccessor,lostSuccessor preserve every earlier pair record; complete recursive pairs supplies all new pair distinctions.; retainedMeaning/lostMeaning,deliveryDistinctionExhaustion/disjoint prove exact and disjoint partition of all held source distinctions. pairEndpoints proves both trace records retained. This applies to actual delivery traces without imposing a deterministic/reliable channel.; Original complete256 grammar,three witnesses,four controls,every registration/census/decision/closure/control output field and hash match pinned V3; unknown-ID rejection matches.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_287_COMMUNICATION_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -6673,9 +6672,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-PARTIAL-ORDER-001-d04af273dac3a8a8.json",
       "statement": "The forced causal event ordering kernel retains event carrier; reflexive identity ledger; antisymmetric strict precedence; transitive closure; incomparable pairs; linear-extension support; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold distributed partial-order law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/DistributedOrder.lean",
+        "SFT/Computation/DistributedOrderWitnesses.lean",
+        "SFT/Computation/DistributedOrderGrammar.lean",
+        "SFT/Computation/DistributedOrderControls.lean",
+        "SFT/Computation/DistributedOrderEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; original full program comparison running.",
       "registration_sha256": "5cf11485468c3cf1d7215672a103d4281d1a853d0729b0d3c14bc037b57938bc",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -6720,7 +6725,11 @@
         "statement": "The forced causal event ordering kernel retains event carrier; reflexive identity ledger; antisymmetric strict precedence; transitive closure; incomparable pairs; linear-extension support; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold distributed partial-order law"
-      }
+      },
+      "verified_scope": "Ledger.source,identities,identityMeaning,relationMeaning,reflexive,identityBase retain every held event identity.; Original causalClosure via CausalProvenance.execute; exactProvenance reconstructs original process/message rows; antisymmetric and transitive derive the reflexive partial-order properties from admitted original closure.; incomparableMeaning and incomparableDistinct give exact held unordered distinctions; completeLinearExtensions uses full inherited arrangement enumeration and complete causal checks. noInventedTotalOrder proves both independent event orders remain in support.; earlierRelation retains original reflexive and strict rows in admitted source assembly,using original earlierNativeRow and appendSource. Full source records remain in Ledger.source.; Original complete256 candidates,three causal witnesses,four controls and full program binding; fresh parity passes. Full program output/hash comparison remains live.",
+      "remaining": [
+        "Complete original fresh DistributedOrder program field/hash comparison in live batch session73018; record completions in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -6732,9 +6741,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-CONSENSUS-001-48ae9b96daea76ff.json",
       "statement": "The forced terminal common decision kernel retains process inputs; proposal validity; message traces; decision states; agreement relation; termination declaration; fault boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold consensus law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/Consensus.lean",
+        "SFT/Computation/ConsensusWitnesses.lean",
+        "SFT/Computation/ConsensusGrammar.lean",
+        "SFT/Computation/ConsensusControls.lean",
+        "SFT/Computation/ConsensusEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; original full program comparison running.",
       "registration_sha256": "8a11c9a713afae590342b2b3885dd0c24b79f78b9dbcf4b94a364e64b86f5ca9",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -6779,7 +6794,11 @@
         "statement": "The forced terminal common decision kernel retains process inputs; proposal validity; message traces; decision states; agreement relation; termination declaration; fault boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold consensus law"
-      }
+      },
+      "verified_scope": "Record retains original input/state/message/boundary fields. coverageMeaning,terminalMeaning,acceptanceMeaning,proposalValidity and everyProcessDecides prove exact terminal acceptance and source proposal membership without a conventional algorithm.; agreement proves all retained decision values equal. pendingRejects excludes any pending process state. terminationExplicit retains the source declaration; no unrestricted liveness theorem is substituted.; messageMeaning and allMessagesReconstruct retain every original Communication delivery. boundaryExplicit requires named communication/fault declarations. compose and incompatibleBoundaryRejected preserve matching declared interfaces.; singleAccepted,compositionAccepted,processSuccessor prove the one-process base and complete input/state/message ledger assembly and extension. earlierInputsRetained and earlierMessagesRetained preserve prior records; terminalAppend retains common decisions.; Original complete256 candidates,three causal witnesses,four controls and full program binding; fresh parity passes. Full program output/hash comparison remains live.",
+      "remaining": [
+        "Complete original fresh Consensus program field/hash comparison in live batch session73018; record completions in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -189653,13 +189672,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T22:45:14.792226+00:00",
+  "updated_at": "2026-10-29T23:08:41.221990+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 1,
-    "pending": 2670,
-    "fully_reconstructed_claims": 110,
-    "axiom_free_exported_results": 6112,
-    "axiom_free_audited_definitions_and_theorems": 13339
+    "in_progress": 2,
+    "pending": 2668,
+    "fully_reconstructed_claims": 111,
+    "axiom_free_exported_results": 6192,
+    "axiom_free_audited_definitions_and_theorems": 13537
   }
 }

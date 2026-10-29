@@ -607,3 +607,8 @@ import SFT.Computation.EvaluationGrammar
 import SFT.Computation.EvaluationControls
 import SFT.Computation.EvaluationEvidence
 import SFT.Computation.EvaluationTrace
+import SFT.Computation.MeaningWitnesses
+import SFT.Computation.MeaningGrammar
+import SFT.Computation.MeaningControls
+import SFT.Computation.MeaningEvidence
+import SFT.Computation.MeaningCorrespondence

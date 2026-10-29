@@ -21,7 +21,7 @@ def nameCheck : Bool := match evaluate [("x",.positive half)] (.name "x") with
    | .zero => false
    | .negative _ => false
    | .positive part => decide (part.numerator = 1) && decide (part.denominator = 2)
-def identityCheck : Bool := SFT.Host.Text.isPrefix "SFT-COMP".toUTF8.data.toList "SFT-COMP-SEM-BINDING".toUTF8.data.toList
+def identityCheck : Bool := SFT.Host.Text.isPrefix "SFT-COMP".toUTF8.data.toList "SFT-COMP-SEM".toUTF8.data.toList
 def witnesses : List Witness := [
  ⟨"semantics-witness-1","semantics exact operational witness 1 for SFT-COMP-SEM-EVALUATION-001",joinCheck⟩,
  ⟨"semantics-witness-2","semantics exact operational witness 2 for SFT-COMP-SEM-EVALUATION-001",nameCheck⟩,

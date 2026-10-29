@@ -313,3 +313,7 @@ def main : IO Unit := do
   for c in SFT.Computation.EvaluationGrammar.candidates do
     IO.println ("EvaluationGrammar\t" ++ SFT.Computation.EvaluationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.EvaluationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.EvaluationGrammar.exactForm c ++ "\t" ++ SFT.Computation.EvaluationGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.MeaningGrammar.candidates do
+    IO.println ("MeaningGrammar\t" ++ SFT.Computation.MeaningGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.MeaningGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.MeaningGrammar.exactForm c ++ "\t" ++ SFT.Computation.MeaningGrammar.decisionReason c)
+

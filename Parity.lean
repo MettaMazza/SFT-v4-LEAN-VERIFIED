@@ -349,3 +349,7 @@ def main : IO Unit := do
   for c in SFT.Computation.VerificationGrammar.candidates do
     IO.println ("VerificationGrammar\t" ++ SFT.Computation.VerificationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.VerificationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.VerificationGrammar.exactForm c ++ "\t" ++ SFT.Computation.VerificationGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.ConcurrencyGrammar.candidates do
+    IO.println ("ConcurrencyGrammar\t" ++ SFT.Computation.ConcurrencyGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ConcurrencyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ConcurrencyGrammar.exactForm c ++ "\t" ++ SFT.Computation.ConcurrencyGrammar.decisionReason c)
+

@@ -5900,3 +5900,16 @@ import SFT
 #print axioms SFT.Physics.LeptonLedger.generatorCarrier
 #print axioms SFT.Physics.LeptonLedger.carrierComplete
 #print axioms SFT.Physics.LeptonLedger.normalizedInvariantCarrier
+#print axioms SFT.Physics.LeptonTerminal.colourPositive
+#print axioms SFT.Physics.LeptonTerminal.depthsPositive
+#print axioms SFT.Physics.LeptonTerminal.powerBase
+#print axioms SFT.Physics.LeptonTerminal.powerSuccessor
+#print axioms SFT.Physics.LeptonTerminal.exactCorrection
+#print axioms SFT.Physics.LeptonTerminal.exactTerminal
+#print axioms SFT.Physics.LeptonTerminal.smallerThanAdmitted
+#print axioms SFT.Physics.LeptonTerminal.retainsPositiveProduct
+#print axioms SFT.Physics.LeptonTerminal.nativeDepths
+#print axioms SFT.Physics.LeptonTerminal.generatorSupport
+#print axioms SFT.Physics.LeptonTerminal.coupleEveryRoot
+#print axioms SFT.Physics.LeptonTerminal.threeRootCoupling
+#print axioms SFT.Physics.LeptonTerminal.heldCorrectionReassembly

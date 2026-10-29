@@ -712,3 +712,6 @@ import SFT.Physics.LeptonIntervals
 import SFT.Physics.LeptonIsolation
 import SFT.Physics.LeptonRatios
 import SFT.Physics.LeptonRefinement
+import SFT.Physics.LeptonDecimal
+import SFT.Physics.LeptonSource
+import SFT.Physics.LeptonComparison

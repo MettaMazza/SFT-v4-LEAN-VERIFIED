@@ -5960,3 +5960,7 @@ import SFT
 #print axioms SFT.Physics.LeptonRefinement.muonElectronRun
 #print axioms SFT.Physics.LeptonRefinement.muonTauRun
 #print axioms SFT.Physics.LeptonRefinement.bothRowsOverlap
+#print axioms SFT.Physics.LeptonSource.muonElectronParsed
+#print axioms SFT.Physics.LeptonSource.muonTauParsed
+#print axioms SFT.Physics.LeptonComparison.nativeComparison
+#print axioms SFT.Physics.LeptonComparison.bothRowsPassed

@@ -6604,9 +6604,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-COMMUNICATION-001-59defe90f59d3eef.json",
       "statement": "The forced exact record transfer kernel retains sender and receiver; message identity; send event; channel row; receive event; retained/lost distinctions; delivery trace; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold communication law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/Communication.lean",
+        "SFT/Computation/CommunicationWitnesses.lean",
+        "SFT/Computation/CommunicationGrammar.lean",
+        "SFT/Computation/CommunicationControls.lean",
+        "SFT/Computation/CommunicationEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; complete program output/hash comparison running.",
       "registration_sha256": "e7ce4b686bf65ddf1f9a7cbb2e4e3173fd910f477837a3b256d3a08eee4501b5",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -6651,7 +6657,11 @@
         "statement": "The forced exact record transfer kernel retains sender and receiver; message identity; send event; channel row; receive event; retained/lost distinctions; delivery trace; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold communication law"
-      }
+      },
+      "verified_scope": "Event/ChannelRow/Delivery retain complete sender,receiver,message,send event,channel row,receive event. candidateMeaning and deliveryMeaning prove full held product membership iff original endpoint/channel membership and matching message/content coordinates; transformationProvenance and traceRows reconstruct exact original rows.; missingSendRejected,missingReceiveRejected,missingChannelRejected exclude absent rows; endpointMeaning retains every endpoint/content match. Arbitrary finite relations are represented; reliability,ordering and delay are not assumed.; serialComposition retains intermediate event and complete delivery trace; traceMessage preserves message identity; parallelLeft/parallelRight retain complete component records. recordedTransformation links actual delivery rows to admitted ConservationLedger. lossPreserved uses the existing V3 transformation-composition law.; Trace.identity retains original event with empty trace and no predecessor. extensionRetains preserves every old delivery on source-ledger extension. pairSuccessor,retainedSuccessor,lostSuccessor preserve every earlier pair record; complete recursive pairs supplies all new pair distinctions.; retainedMeaning/lostMeaning,deliveryDistinctionExhaustion/disjoint prove exact and disjoint partition of all held source distinctions. pairEndpoints proves both trace records retained. This applies to actual delivery traces without imposing a deterministic/reliable channel.; Original eight binary axes,all256 candidates,three causal witnesses,four controls and full GeneratedComputationProgram binding. Fresh candidate parity and axiom audit pass. Full field/hash comparison running on original session6164.",
+      "remaining": [
+        "Complete fresh GeneratedComputationProgram field/hash comparison running on session6164."
+      ]
     },
     {
       "branch": "computation",
@@ -189643,13 +189653,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T22:37:51.226143+00:00",
+  "updated_at": "2026-10-29T22:45:14.792226+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2671,
+    "in_progress": 1,
+    "pending": 2670,
     "fully_reconstructed_claims": 110,
-    "axiom_free_exported_results": 6064,
-    "axiom_free_audited_definitions_and_theorems": 13229
+    "axiom_free_exported_results": 6112,
+    "axiom_free_audited_definitions_and_theorems": 13339
   }
 }

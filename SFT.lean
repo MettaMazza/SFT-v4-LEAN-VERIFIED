@@ -729,3 +729,8 @@ import SFT.Computation.SynchronizationGrammar
 import SFT.Computation.SynchronizationControls
 import SFT.Computation.SynchronizationEvidence
 import SFT.Computation.Synchronization
+import SFT.Computation.CommunicationWitnesses
+import SFT.Computation.CommunicationGrammar
+import SFT.Computation.CommunicationControls
+import SFT.Computation.CommunicationEvidence
+import SFT.Computation.Communication

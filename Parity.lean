@@ -389,3 +389,7 @@ def main : IO Unit := do
   for c in SFT.Computation.SynchronizationGrammar.candidates do
     IO.println ("SynchronizationGrammar\t" ++ SFT.Computation.SynchronizationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SynchronizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SynchronizationGrammar.exactForm c ++ "\t" ++ SFT.Computation.SynchronizationGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.CommunicationGrammar.candidates do
+    IO.println ("CommunicationGrammar\t" ++ SFT.Computation.CommunicationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.CommunicationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.CommunicationGrammar.exactForm c ++ "\t" ++ SFT.Computation.CommunicationGrammar.decisionReason c)
+

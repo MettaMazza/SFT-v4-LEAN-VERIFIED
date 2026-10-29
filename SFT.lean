@@ -638,3 +638,8 @@ import SFT.Computation.SpecificationGrammar
 import SFT.Computation.SpecificationControls
 import SFT.Computation.SpecificationEvidence
 import SFT.Computation.FormalSpecification
+import SFT.Computation.TransformationWitnesses
+import SFT.Computation.TransformationGrammar
+import SFT.Computation.TransformationControls
+import SFT.Computation.TransformationEvidence
+import SFT.Computation.ProgramTransformation

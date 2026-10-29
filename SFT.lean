@@ -554,3 +554,8 @@ import SFT.Computation.ParallelAlgorithmControls
 import SFT.Computation.ParallelAlgorithmEvidence
 import SFT.Computation.ParallelAlgorithm
 import SFT.Computation.DistributedReplay
+import SFT.Computation.DistributedAlgorithmWitnesses
+import SFT.Computation.DistributedAlgorithmGrammar
+import SFT.Computation.DistributedAlgorithmControls
+import SFT.Computation.DistributedAlgorithmEvidence
+import SFT.Computation.DistributedMessages

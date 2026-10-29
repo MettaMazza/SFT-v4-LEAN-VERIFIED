@@ -281,3 +281,7 @@ def main : IO Unit := do
   for c in SFT.Computation.ParallelAlgorithmGrammar.candidates do
     IO.println ("ParallelAlgorithmGrammar\t" ++ SFT.Computation.ParallelAlgorithmGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ParallelAlgorithmGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ParallelAlgorithmGrammar.exactForm c ++ "\t" ++ SFT.Computation.ParallelAlgorithmGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.DistributedAlgorithmGrammar.candidates do
+    IO.println ("DistributedAlgorithmGrammar\t" ++ SFT.Computation.DistributedAlgorithmGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.DistributedAlgorithmGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.DistributedAlgorithmGrammar.exactForm c ++ "\t" ++ SFT.Computation.DistributedAlgorithmGrammar.decisionReason c)
+

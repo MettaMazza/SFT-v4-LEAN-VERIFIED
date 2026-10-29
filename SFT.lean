@@ -613,3 +613,8 @@ import SFT.Computation.MeaningControls
 import SFT.Computation.MeaningEvidence
 import SFT.Computation.MeaningCorrespondence
 import SFT.Computation.StructuralTyping
+import SFT.Computation.TypeWitnesses
+import SFT.Computation.TypeGrammar
+import SFT.Computation.TypeControls
+import SFT.Computation.TypeEvidence
+import SFT.Computation.TypeInterfaces

@@ -317,3 +317,7 @@ def main : IO Unit := do
   for c in SFT.Computation.MeaningGrammar.candidates do
     IO.println ("MeaningGrammar\t" ++ SFT.Computation.MeaningGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.MeaningGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.MeaningGrammar.exactForm c ++ "\t" ++ SFT.Computation.MeaningGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.TypeGrammar.candidates do
+    IO.println ("TypeGrammar\t" ++ SFT.Computation.TypeGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.TypeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.TypeGrammar.exactForm c ++ "\t" ++ SFT.Computation.TypeGrammar.decisionReason c)
+

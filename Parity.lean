@@ -333,3 +333,7 @@ def main : IO Unit := do
   for c in SFT.Computation.CorrectnessGrammar.candidates do
     IO.println ("CorrectnessGrammar\t" ++ SFT.Computation.CorrectnessGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.CorrectnessGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.CorrectnessGrammar.exactForm c ++ "\t" ++ SFT.Computation.CorrectnessGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.SpecificationGrammar.candidates do
+    IO.println ("SpecificationGrammar\t" ++ SFT.Computation.SpecificationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SpecificationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SpecificationGrammar.exactForm c ++ "\t" ++ SFT.Computation.SpecificationGrammar.decisionReason c)
+

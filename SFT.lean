@@ -633,3 +633,8 @@ import SFT.Computation.CorrectnessGrammar
 import SFT.Computation.CorrectnessControls
 import SFT.Computation.CorrectnessEvidence
 import SFT.Computation.ProgramCorrectness
+import SFT.Computation.SpecificationWitnesses
+import SFT.Computation.SpecificationGrammar
+import SFT.Computation.SpecificationControls
+import SFT.Computation.SpecificationEvidence
+import SFT.Computation.FormalSpecification

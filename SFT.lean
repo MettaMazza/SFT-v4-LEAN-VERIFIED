@@ -648,3 +648,8 @@ import SFT.Computation.CompilationGrammar
 import SFT.Computation.CompilationControls
 import SFT.Computation.CompilationEvidence
 import SFT.Computation.CompilationRelation
+import SFT.Computation.VerificationWitnesses
+import SFT.Computation.VerificationGrammar
+import SFT.Computation.VerificationControls
+import SFT.Computation.VerificationEvidence
+import SFT.Computation.ProgramVerification

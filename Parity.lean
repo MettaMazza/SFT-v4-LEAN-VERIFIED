@@ -301,3 +301,7 @@ def main : IO Unit := do
   for c in SFT.Computation.ApproximateGrammar.candidates do
     IO.println ("ApproximateGrammar\t" ++ SFT.Computation.ApproximateGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ApproximateGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ApproximateGrammar.exactForm c ++ "\t" ++ SFT.Computation.ApproximateGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.SyntaxGrammar.candidates do
+    IO.println ("SyntaxGrammar\t" ++ SFT.Computation.SyntaxGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SyntaxGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SyntaxGrammar.exactForm c ++ "\t" ++ SFT.Computation.SyntaxGrammar.decisionReason c)
+

@@ -588,3 +588,8 @@ import SFT.Computation.ApproximateEvidence
 import SFT.Computation.ApproximateDistinctions
 import SFT.Computation.ApproximateError
 import SFT.Computation.ApproximateTrace
+import SFT.Computation.SyntaxWitnesses
+import SFT.Computation.SyntaxGrammar
+import SFT.Computation.SyntaxControls
+import SFT.Computation.SyntaxEvidence
+import SFT.Computation.SyntaxFormation

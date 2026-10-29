@@ -19,7 +19,7 @@
 
 ## Zenodo preprint - author review copy
 
-**Zero axioms, Zero Free Parameter, first principle Derivation of the Fine-Structure Constant in SFT v4 LEAN verification introduction**
+**Smithian Fold Theory: A Zero-Axiom, Zero-Free-Parameter Derivation of the Fine-Structure Constant — Lean 4 Formal Verification**
 
 Alpha opens the cumulative SFT theory-of-everything manuscript. The full paper grows with the formalisation of all 2,781 V3 entries.
 

@@ -265,3 +265,7 @@ def main : IO Unit := do
   for c in SFT.Computation.AlgebraicGeometricGrammar.candidates do
     IO.println ("AlgebraicGeometricGrammar\t" ++ SFT.Computation.AlgebraicGeometricGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.AlgebraicGeometricGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.AlgebraicGeometricGrammar.exactForm c ++ "\t" ++ SFT.Computation.AlgebraicGeometricGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.DynamicProgrammingGrammar.candidates do
+    IO.println ("DynamicProgrammingGrammar\t" ++ SFT.Computation.DynamicProgrammingGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.DynamicProgrammingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.DynamicProgrammingGrammar.exactForm c ++ "\t" ++ SFT.Computation.DynamicProgrammingGrammar.decisionReason c)
+

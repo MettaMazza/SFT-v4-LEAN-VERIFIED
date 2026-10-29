@@ -533,3 +533,8 @@ import SFT.Computation.AlgebraicGeometricGrammar
 import SFT.Computation.AlgebraicGeometricControls
 import SFT.Computation.AlgebraicGeometricEvidence
 import SFT.Computation.AlgebraGeometryTrace
+import SFT.Computation.DynamicProgrammingWitnesses
+import SFT.Computation.DynamicProgrammingGrammar
+import SFT.Computation.DynamicProgrammingControls
+import SFT.Computation.DynamicProgrammingEvidence
+import SFT.Computation.DynamicProgrammingTrace

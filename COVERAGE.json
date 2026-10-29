@@ -4950,9 +4950,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-ALG-DYNAMIC-PROGRAMMING-001-f6b1c405c189bb4f.json",
       "statement": "The forced reuse of exact overlapping subproblem results kernel retains problem decomposition graph; dependency order; subproblem identities; retained result table; composition recurrence; final reconstruction; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold dynamic-programming law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Computation/DynamicProgrammingTrace.lean",
+        "SFT/Computation/DynamicProgrammingWitnesses.lean",
+        "SFT/Computation/DynamicProgrammingGrammar.lean",
+        "SFT/Computation/DynamicProgrammingControls.lean",
+        "SFT/Computation/DynamicProgrammingEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 fresh native lookups and every original field/hash; unchanged shared-operation comparisons retained.",
       "registration_sha256": "85f3a4dbb89f8e8bb941e01625fd0bcc1f1dc22822e93cf78905c9232d8e8fe5",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -4997,7 +5003,10 @@
         "statement": "The forced reuse of exact overlapping subproblem results kernel retains problem decomposition graph; dependency order; subproblem identities; retained result table; composition recurrence; final reconstruction; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold dynamic-programming law"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Sixth Algorithms topic DYNAMIC-PROGRAMMING; original six-file program binding, WHY/DERIVATION/CHECK, independent validator, source certificate and registration; all8 dependencies complete. Source carrier names decomposition graph, dependency order, subproblem identities, result table, recurrence and reconstruction.; DynamicProgrammingTrace represents decomposition rows as identity/dependency lists, recurrence rows as identity/input-values/result and retained table as identity/result rows. Reads uses exact existing lookupFirst. matchingResults retains every exact matching recurrence row and result admits a sole row only. This is a typed realization of the source named carrier and exact relation, not an imported problem recurrence.; readsReconstruct/inputsReads and executionReplays/runExecution prove bidirectional executable/certificate correspondence. readProvenance retains every dependency identity and result in order; readCount retains all occurrences including repeated dependencies. tableCount gives exactly one retained result per executed task; tableIdentities preserves the exact initial/scheduled identity sequence and distinctResults preserves source identity uniqueness. Missing dependency or unresolved recurrence halts.; selectedRow binds each admitted result to its exact source relation row. finalReconstruction and fromEmpty establish a finite derivation through the actual problem decomposition and recurrence for every retained result. reusedResult and cachedIdentityRetained prove overlapping subproblem lookups retain exactly the same result across later table extensions. No omitted dependency, fitted value or selected conventional answer is supplied.; composition preserves the shared retained table and all prior rows; successor appends one exact task/result and identityBase retains the initial table. problemInvariant propagates a problem-specific invariant only from proved local recurrence/decomposition preservation and established dependency results. The original requirement to prove decomposition and optimal-substructure for each problem remains explicit; no arbitrary problem is asserted optimal.; All256 original algorithms-axis candidates,3 original search/recursion witnesses,4 controls and every original registration/census/closure/exposition/hash field agree with pinned V3 under fresh native execution, including all candidate-ID lookups and unknown-ID rejection.",
+      "completion_evidence": "verification/TURN_230_DYNAMIC_PROGRAMMING_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -189319,13 +189328,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T10:08:25.525950+00:00",
+  "updated_at": "2026-10-29T10:23:06.974244+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2702,
-    "fully_reconstructed_claims": 79,
-    "axiom_free_exported_results": 4451,
-    "axiom_free_audited_definitions_and_theorems": 9523
+    "pending": 2701,
+    "fully_reconstructed_claims": 80,
+    "axiom_free_exported_results": 4498,
+    "axiom_free_audited_definitions_and_theorems": 9630
   }
 }

@@ -1,0 +1,41 @@
+{
+  "claim_id": "SFT-COMP-ALG-DYNAMIC-PROGRAMMING-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "status": "complete",
+  "source_sha256": {
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/algorithms/dynamic_programming/law.py": "6fb3549cc4be955c60a787d913f3fdf0f9339982fd7ee8f1686b657eb0bf99ca",
+    "claims/SFT-COMP-ALG-DYNAMIC-PROGRAMMING-001/execution.py": "33e6ad49bf7fc208b8b54422bf2d0a9fe8f3351ccb70b6ab985d14e95bde493d",
+    "claims/SFT-COMP-ALG-DYNAMIC-PROGRAMMING-001/independent_validator.py": "35a4d4e7704596cbacd4855ae6e27415338d99b7e3103b96abdcda23cc232046",
+    "claims/SFT-COMP-ALG-DYNAMIC-PROGRAMMING-001/WHY_DERIVATION_CHECK.md": "ee5fd99ddcf97be59266854a3f389b028ba68f592544c5805a0923dd1c9b65de",
+    "claims/SFT-COMP-ALG-DYNAMIC-PROGRAMMING-001/certificate.json": "6c1b21f07d588392510b7a8e548ba4068e76f4891e65ca2cd181b3dbd2bd5941",
+    "claims/SFT-COMP-ALG-DYNAMIC-PROGRAMMING-001/registration.json": "85f3a4dbb89f8e8bb941e01625fd0bcc1f1dc22822e93cf78905c9232d8e8fe5",
+    "receipts/engine/model_admitted/SFT-COMP-ALG-DYNAMIC-PROGRAMMING-001-f6b1c405c189bb4f.json": "74afb9befbdb43c288ee258160b3302e392603b3f1d35e8339f02be5ed9ceb3f"
+  },
+  "components": {
+    "actual pinned source": "Sixth Algorithms topic DYNAMIC-PROGRAMMING; original six-file program binding, WHY/DERIVATION/CHECK, independent validator, source certificate and registration; all8 dependencies complete. Source carrier names decomposition graph, dependency order, subproblem identities, result table, recurrence and reconstruction.",
+    "carrier and executable relation": "DynamicProgrammingTrace represents decomposition rows as identity/dependency lists, recurrence rows as identity/input-values/result and retained table as identity/result rows. Reads uses exact existing lookupFirst. matchingResults retains every exact matching recurrence row and result admits a sole row only. This is a typed realization of the source named carrier and exact relation, not an imported problem recurrence.",
+    "dependency order and trace": "readsReconstruct/inputsReads and executionReplays/runExecution prove bidirectional executable/certificate correspondence. readProvenance retains every dependency identity and result in order; readCount retains all occurrences including repeated dependencies. tableCount gives exactly one retained result per executed task; tableIdentities preserves the exact initial/scheduled identity sequence and distinctResults preserves source identity uniqueness. Missing dependency or unresolved recurrence halts.",
+    "reuse and reconstruction": "selectedRow binds each admitted result to its exact source relation row. finalReconstruction and fromEmpty establish a finite derivation through the actual problem decomposition and recurrence for every retained result. reusedResult and cachedIdentityRetained prove overlapping subproblem lookups retain exactly the same result across later table extensions. No omitted dependency, fitted value or selected conventional answer is supplied.",
+    "closure and problem boundary": "composition preserves the shared retained table and all prior rows; successor appends one exact task/result and identityBase retains the initial table. problemInvariant propagates a problem-specific invariant only from proved local recurrence/decomposition preservation and established dependency results. The original requirement to prove decomposition and optimal-substructure for each problem remains explicit; no arbitrary problem is asserted optimal.",
+    "complete source program": "All256 original algorithms-axis candidates,3 original search/recursion witnesses,4 controls and every original registration/census/closure/exposition/hash field agree with pinned V3 under fresh native execution, including all candidate-ID lookups and unknown-ID rejection."
+  },
+  "dependencies": [
+    "SFT-COMP-ALG-ALGEBRAIC-GEOMETRIC-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": "All8 complete before this entry",
+  "native_audit": "verification/TURN_230_PARITY_REPORT.json",
+  "program_comparison": "verification/TURN_230_PROGRAM_REPORT.json",
+  "remaining": [],
+  "completion_count": 80
+}

@@ -686,3 +686,5 @@ import SFT.Physics.BoundaryRankEvidence
 import SFT.Physics.BoundarySupport
 import SFT.Physics.BoundaryGrowth
 import SFT.Physics.BoundaryPairs
+import SFT.Physics.AlphaCovers
+import SFT.Physics.AlphaBlocks

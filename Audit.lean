@@ -5481,3 +5481,16 @@ import SFT
 #print axioms SFT.Computation.CausalTermination.nativeClosed
 #print axioms SFT.Computation.CausalTermination.nativeExact
 #print axioms SFT.Computation.CausalTermination.nativeCycleBoundary
+#print axioms SFT.Computation.CausalOperations.insertMember
+#print axioms SFT.Computation.CausalOperations.sortedSetMember
+#print axioms SFT.Computation.CausalOperations.escapesMeaning
+#print axioms SFT.Computation.CausalOperations.cycleMeaning
+#print axioms SFT.Computation.CausalOperations.closureAdmission
+#print axioms SFT.Computation.CausalOperations.insertDistinct
+#print axioms SFT.Computation.CausalOperations.sortedSetDistinct
+#print axioms SFT.Computation.CausalOperations.pathTransport
+#print axioms SFT.Computation.CausalOperations.sortedSetPath
+#print axioms SFT.Computation.CausalOperations.nativeSourceResult
+#print axioms SFT.Computation.CausalOperations.nativeDistinct
+#print axioms SFT.Computation.CausalOperations.nativeAcyclic
+#print axioms SFT.Computation.CausalOperations.sourceWitnessClosure

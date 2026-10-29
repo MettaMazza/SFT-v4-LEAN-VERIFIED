@@ -655,3 +655,4 @@ import SFT.Computation.VerificationEvidence
 import SFT.Computation.ProgramVerification
 import SFT.Computation.CausalClosure
 import SFT.Computation.CausalTermination
+import SFT.Computation.CausalOperations

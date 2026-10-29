@@ -83,16 +83,25 @@ theorem roundsAppend (pairSupport first middle last : List Edge)
   | base => exact left
   | next rows prior ih => exact .next _ ih
 
--- The recursive result carries its complete derivation and fixed-point proof.
--- Projections avoid an extensional rewrite of a well-founded recursion equation.
+-- Structural recursion uses the proved missing-cell bound. At zero, a growing
+-- round is contradictory; no incomplete result is returned or truncated.
+def closeBounded (pairSupport : List Edge) : (bound : Nat) → (rows : List Edge) →
+    (missing pairSupport rows).length ≤ bound →
+    { result : List Edge // Rounds pairSupport rows result ∧ ¬ grows pairSupport result = true }
+ | 0, rows, budget =>
+    if growth : grows pairSupport rows = true then
+      False.elim (Nat.not_lt_zero _ (Nat.lt_of_lt_of_le (missingDecreases _ _ growth) budget))
+    else ⟨rows,.base,growth⟩
+ | bound + 1, rows, budget =>
+    if growth : grows pairSupport rows = true then
+      let next := closeBounded pairSupport bound (expand pairSupport rows)
+        (Nat.lt_succ_iff.mp (Nat.lt_of_lt_of_le (missingDecreases _ _ growth) budget))
+      ⟨next.val,roundsAppend _ _ _ _ (.next rows .base) next.property.1,next.property.2⟩
+    else ⟨rows,.base,growth⟩
+
 def closeCertified (pairSupport rows : List Edge) :
     { result : List Edge // Rounds pairSupport rows result ∧ ¬ grows pairSupport result = true } :=
-  if growth : grows pairSupport rows = true then
-    let next := closeCertified pairSupport (expand pairSupport rows)
-    ⟨next.val,roundsAppend _ _ _ _ (.next rows .base) next.property.1,next.property.2⟩
-  else ⟨rows,.base,growth⟩
-termination_by (missing pairSupport rows).length
-decreasing_by exact missingDecreases _ _ growth
+  closeBounded pairSupport (missing pairSupport rows).length rows (Nat.le_refl _)
 
 def closeRows (pairSupport rows : List Edge) : List Edge := (closeCertified pairSupport rows).val
 

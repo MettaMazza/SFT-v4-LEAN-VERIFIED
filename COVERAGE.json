@@ -6397,7 +6397,8 @@
       "lean_status": "in_progress",
       "lean_modules": [
         "SFT/Computation/CausalClosure.lean",
-        "SFT/Computation/CausalTermination.lean"
+        "SFT/Computation/CausalTermination.lean",
+        "SFT/Computation/CausalOperations.lean"
       ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "95db2df51d252f263136a89d6514af270c10c321396b3debfcd5e2a4bb824160",
@@ -6445,9 +6446,8 @@
         "status": "independently_replicated",
         "title": "Fold concurrency law"
       },
-      "verified_scope": "Original positive-edge path closure: exact expansion membership, original-edge retention, arbitrary-round path soundness, least closed relation and self-edge/positive-cycle equivalence. Native loop and Concurrency completion remain pending. Native complete expansion loop terminates by strict missing-pair decrease without a cutoff. Its certified result reconstructs actual finite expansion rounds and reaches no-growth fixed point; nativeExact proves membership iff original positive path and nativeCycleBoundary derives exact cycle exclusion.",
+      "verified_scope": "CausalClosure/CausalTermination prove arbitrary-round path soundness, strict missing-pair termination, stable transitivity, least closure and exact cycle boundary. The complete native loop retains its round/fixed-point certificate without truncation. Original causal_closure guard order/error strings, input set deduplication, cycle exclusion and sorted output implemented. Native admission iff original guards and result, universal exact output positive-path membership, duplicate-free output and acyclicity proofs; kernel exact source witness closure. 1602 complete native output/error cases pass against independent positive-reachability reference with Python set/sort and original guard precedence.",
       "remaining": [
-        "Implement original causal_closure unique-event and escaped-edge guard order, initial set deduplication and Python-sorted final tuple; verify exact source outputs.",
         "Formalise Concurrency process identities/local states/enabled actions, complete interleaving or independent-step schedule support and observation traces.",
         "Implement full256 distributed_computation candidate grammar, three causal operational witnesses, four controls and fresh native program comparison."
       ]
@@ -189533,13 +189533,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-29T15:23:01.810078+00:00",
+  "updated_at": "2026-10-29T15:36:33.501603+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 1,
     "pending": 2680,
     "fully_reconstructed_claims": 100,
-    "axiom_free_exported_results": 5482,
-    "axiom_free_audited_definitions_and_theorems": 11867
+    "axiom_free_exported_results": 5495,
+    "axiom_free_audited_definitions_and_theorems": 11887
   }
 }

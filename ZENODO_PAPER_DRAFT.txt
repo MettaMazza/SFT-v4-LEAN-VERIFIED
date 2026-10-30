@@ -665,11 +665,27 @@ The identity test first checks that the proposed identity belongs to the carrier
 
 The associativity test traverses every ordered carrier triple. For each triple it evaluates the left composite before the right composite in the original order. On accepted operation tables, successful exhaustive checking is equivalent to equality of the two actual composed results for every triple. Totality and closure of the constructor supply the intermediate operation results, so no associativity law is assumed. Fresh execution agrees on 156 property calls over 39 table representations, including every two-member binary operation in two orders and malformed diagnostic representations.
 
+Let μ(a,b) denote the successful result of applyOperation on an accepted table with carrier C. Section 37 establishes μ(a,b)∈C for a,b∈C. The checked traversal has the equations allChecked(p,[])=ok(true); on x::X it evaluates p(x), continues on X only after ok(true), returns ok(false) after false, and propagates an error. Induction on X proves
+  allChecked(p,X)=ok(true) ⇔ ∀x∈X, p(x)=ok(true).
+For an identity cell, success of the left comparison forces μ(e,a)=a; only then is the right comparison evaluated, and success forces μ(a,e)=a. Combining this equivalence with the initial membership guard and traversal gives
+  hasIdentity(e)=ok(true) ⇔ e∈C and ∀a∈C, μ(e,a)=a=μ(a,e).
+For association, the evaluated sequence is u=μ(a,b), l=μ(u,c), v=μ(b,c), r=μ(a,v). Closure supplies u,v∈C, so all four lookups exist. The cell is true exactly when l=r. Applying the traversal equivalence at each of the three nested carrier lists yields
+  isAssociative=ok(true) ⇔ ∀a,b,c∈C, μ(μ(a,b),c)=μ(a,μ(b,c)).
+This derives the meaning of exhaustive checking; it does not assert that every accepted table is associative.
+
+
 39. Held return mates and commutation
 
 The return-mate operation retains the source identity precheck. For each carrier member it exhausts candidate mates in carrier order and tests return to identity on both sides. Exactly one matching candidate is required; zero or multiple matches return None, while lookup exceptions propagate. Successful candidate filtering retains precisely those carrier members satisfying both return equations. Successful mate-row construction preserves the carrier order and provides a singleton candidate search for each returned row.
 
 Commutation is evaluated on every ordered carrier pair, comparing both operation results with the original left-before-right evaluation. Its successful result is equivalent to all pair comparisons passing, and each comparison is equivalent to equality of the actual results. Fresh execution matches 156 return-mate and commutation calls across 39 table representations, covering all two-member operations in two orders and malformed diagnostics.
+
+For a proposed identity e and an item a, define the successful candidate list K_e(a) by checked filtering of C. A candidate b is retained precisely when both ordered operations return e. Induction on the filter gives
+  b∈K_e(a) ⇔ b∈C and applyOperation(a,b)=ok(e) and applyOperation(b,a)=ok(e).
+The recursion retains carrier order. Its empty base returns []; each successful head test either prepends that head or omits it, and any evaluated error propagates. Return-row construction accepts the item only if K_e(a)=[b]. With successful later rows R it prepends (a,b), so projection onto first coordinates reproduces the original item list by induction. An empty or multi-element candidate list returns None at that step.
+
+For commutation, evaluate l=μ(a,b) and then r=μ(b,a). The cell returns true exactly when l=r. Applying the checked-traversal equivalence twice gives exhaustive agreement of all ordered pair cells. The candidate and commutation calculations use the retained table operation; neither replaces it with a named algebraic law.
+
 
 40. Public return and commutation semantics
 
@@ -677,11 +693,32 @@ The return-mate API produces a successful row list if and only if its identity t
 
 For accepted operation tables, the commutation test succeeds if and only if the actual operation outputs agree for every ordered pair and its reversal. The constructor’s totality supplies both outputs in the converse direction, so the equivalence does not rely on vacuous comparisons of missing operations.
 
+Let Success(e) mean that returnMates produces ok(Some(R)) for some row list R. Its initial branch requires hasIdentity(e)=ok(true). Row recursion then gives
+  Success(e) ⇔ hasIdentity(e)=ok(true) and ∀a∈C, ∃b, returnCandidates(e,a)=ok([b]).
+For the forward implication, the successful row projection contains every original a, and its corresponding row supplies the singleton search. For the reverse implication, take the mate supplied for the head, construct later rows by induction on the tail, and prepend the resulting pair. The empty tail closes with Some([]).
+
+For a returned (a,b), singleton membership and the candidate-filter equivalence give b∈C and μ(a,b)=e=μ(b,a). Any other c∈C satisfying both equations belongs to the same singleton [b], hence c=b. Thus uniqueness follows from exhaustive singleton filtering. Similarly, on an accepted table, total lookup supplies μ(a,b) and μ(b,a) for every pair. Substituting these values into the cell equivalence proves
+  isCommutative=ok(true) ⇔ ∀a,b∈C, μ(a,b)=μ(b,a).
+Totality is used in the reverse implication to construct the successful comparisons, not merely to rule out counterexamples.
+
+
 41. Operation-preserving maps
 
 The mapping relation is converted to the source dictionary semantics: the first occurrence fixes a key’s position, and subsequent occurrences replace its value. Native proofs establish replacement lookup, preservation of other lookups and the last occurrence’s value. The preservation operation retains the source sequence of checks: dictionary cardinality, presence of every source origin with a target-carrier image, then the operation equation for every ordered source pair.
 
 Each equation compares the image of the source operation result with the target operation applied to the two input images, in the source evaluation order. Successful preservation is equivalent to all original checks passing; each successful cell comparison is equivalent to equality of its actual results. Fresh execution agrees on 1555 complete dictionary comparisons and 6220 preservation calls across repeated-key, extra-key and external-image mappings. Dictionary invariants and accepted-table totality are established below.
+
+Write put(D,a,v) for the source dictionary update and lookup(D,a) for its optional lookup. Structural induction on D gives
+  lookup(put(D,a,v),a)=Some(v),
+  lookup(put(D,a,v),b)=lookup(D,b) for b≠a.
+At a matching key, replacement leaves its position unchanged; if no key matches, recursion appends the new pair. Processing concatenated mapping lists satisfies run(D,U++V)=run(run(D,U),V). Therefore a final occurrence (a,v) fixes lookup(build(U++[(a,v)]),a)=Some(v), preserving last-value semantics rather than rejecting repeated keys.
+
+Let D be the built dictionary and f its lookup value where defined. The first two preservation guards require |D|=|C_source| and, for every a∈C_source, a defined f(a)∈C_target. For each ordered source pair, the cell evaluates in order
+  u=μ_source(a,b), f(u), f(a), f(b), v=μ_target(f(a),f(b)),
+and then compares f(u) with v. Given these successful lookups, the cell is true exactly when
+  f(μ_source(a,b))=μ_target(f(a),f(b)).
+The two nested checked traversals turn successful preservation into the conjunction of the original cardinality guard, image-membership guard and this equality at every source pair. Missing dictionary entries and operation failures retain their source error path and evaluation order.
+
 
 42. Total structure-map semantics
 

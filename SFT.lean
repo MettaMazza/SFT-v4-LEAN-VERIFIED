@@ -810,3 +810,8 @@ import SFT.Computation.SignatureGrammar
 import SFT.Computation.SignatureControls
 import SFT.Computation.SignatureEvidence
 import SFT.Computation.Signature
+import SFT.Computation.ProofKnowledgeWitnesses
+import SFT.Computation.ProofKnowledgeGrammar
+import SFT.Computation.ProofKnowledgeControls
+import SFT.Computation.ProofKnowledgeEvidence
+import SFT.Computation.ProofKnowledge

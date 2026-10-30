@@ -1,0 +1,19 @@
+import SFT.Computation.ProofKnowledge
+#print axioms SFT.Computation.ProofKnowledge.accepts
+#print axioms SFT.Computation.ProofKnowledge.extractions
+#print axioms SFT.Computation.ProofKnowledge.acceptanceMeaning
+#print axioms SFT.Computation.ProofKnowledge.extractionMeaning
+#print axioms SFT.Computation.ProofKnowledge.extractable
+#print axioms SFT.Computation.ProofKnowledge.exactExtraction
+#print axioms SFT.Computation.ProofKnowledge.knowledge
+#print axioms SFT.Computation.ProofKnowledge.exactKnowledge
+#print axioms SFT.Computation.ProofKnowledge.interactionRuns
+#print axioms SFT.Computation.ProofKnowledge.acceptedExtraction
+#print axioms SFT.Computation.ProofKnowledge.failures
+#print axioms SFT.Computation.ProofKnowledge.failureMeaning
+#print axioms SFT.Computation.ProofKnowledge.missingStatement
+#print axioms SFT.Computation.ProofKnowledge.acceptanceExtension
+#print axioms SFT.Computation.ProofKnowledge.extractionExtension
+#print axioms SFT.Computation.ProofKnowledge.extendInteraction
+#print axioms SFT.Computation.ProofKnowledge.extendAccepted
+#print axioms SFT.Computation.ProofKnowledge.extensionRetainsTranscript

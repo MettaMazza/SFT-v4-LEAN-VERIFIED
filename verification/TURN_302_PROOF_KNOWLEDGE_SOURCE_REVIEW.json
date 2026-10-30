@@ -1,0 +1,52 @@
+{
+  "claim_id": "SFT-COMP-SEC-PROOF-KNOWLEDGE-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/cryptography_security/proof_knowledge/law.py": "82907caac5b22d191c4f4b195d9285172279f682d20b600e24624059b24653a3",
+    "claims/SFT-COMP-SEC-PROOF-KNOWLEDGE-001/WHY_DERIVATION_CHECK.md": "0406dbcdca23c34248c579bf6fcc0e4c7fdefbc391c4c6d6642e7f8b0bd86081",
+    "claims/SFT-COMP-SEC-PROOF-KNOWLEDGE-001/registration.json": "a987f6c94bbfdf95b8cb759d055fdc71c7d11e8b7087c23fa80d7fcf60316737",
+    "claims/SFT-COMP-SEC-PROOF-KNOWLEDGE-001/execution.py": "709369fbaa6f06de9c92ff8ed081586e0a93adffcf4c11261f97f3ce16a7f4aa",
+    "claims/SFT-COMP-SEC-PROOF-KNOWLEDGE-001/independent_validator.py": "0ecb842173c574b55159a3078c52ec0322856a863f673158e274478a619414f7",
+    "claims/SFT-COMP-SEC-PROOF-KNOWLEDGE-001/certificate.json": "5808b9f67e3e23a0d23360df834764fcd654b336165e9dbb29696a13b2eb7cd6"
+  },
+  "components": {
+    "exact carriers": "Statement support,witness relation,prover/verifier systems,transcript and acceptance supports,extractor rows and registered adversary. acceptanceMeaning and extractionMeaning give exact supported relation membership.",
+    "extraction derivation": "exactExtraction constructs an actual registered extractor row and a witness in the statement/witness relation from the computed nonempty extraction ledger,with the converse. exactKnowledge proves the whole registered-adversary check equivalent to extraction of every accepted admitted transcript.",
+    "interaction trace": "Interaction retains actual prover and verifier executions and the exact terminal/initial interface. interactionRuns reconstructs both executions. acceptedExtraction obtains an actual source witness from an accepted interaction under the checked registered knowledge property.",
+    "boundary and extension": "failureMeaning enumerates exactly the accepted admitted transcripts lacking extraction. missingStatement rejects unregistered statements. acceptanceExtension,extractionExtension,extendInteraction and extendAccepted preserve earlier source records and executions.",
+    "grammar and controls": "Original security256 grammar,three witnesses,four controls and fresh parity pass.1024 concrete outcomes enumerate finite witness,extraction,acceptance and adversary support combinations; actual native interaction produces a source-bound witness with zero axioms. Full program67919 running."
+  },
+  "dependencies": [
+    "SFT-COMP-SEC-SIGNATURE-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": {
+    "SFT-COMP-SEC-SIGNATURE-001": "in_progress",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+    "SFT-MATH-DISCRETE-001": "complete",
+    "SFT-MATH-GRAPH-NETWORK-001": "complete",
+    "SFT-MATH-LOGIC-PROOF-001": "complete",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+    "SFT-INFO-ENCODING-DECODING-001": "complete",
+    "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+  },
+  "native_checks": {
+    "kernel_output_checks": 1024,
+    "axiom_dependencies": 0,
+    "audit": "verification/TURN_302_PARITY_REPORT.json"
+  },
+  "remaining": [
+    "Original fresh full program field/hash comparison67919; completion after Signature in dependency order."
+  ],
+  "status": "native_derivation_and_parity_pass_program_comparison_running"
+}

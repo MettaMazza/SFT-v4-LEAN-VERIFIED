@@ -453,3 +453,7 @@ def main : IO Unit := do
   for c in SFT.Computation.SignatureGrammar.candidates do
     IO.println ("SignatureGrammar\t" ++ SFT.Computation.SignatureGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SignatureGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SignatureGrammar.exactForm c ++ "\t" ++ SFT.Computation.SignatureGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.ProofKnowledgeGrammar.candidates do
+    IO.println ("ProofKnowledgeGrammar\t" ++ SFT.Computation.ProofKnowledgeGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ProofKnowledgeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ProofKnowledgeGrammar.exactForm c ++ "\t" ++ SFT.Computation.ProofKnowledgeGrammar.decisionReason c)
+

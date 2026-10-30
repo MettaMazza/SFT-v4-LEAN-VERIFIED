@@ -2430,6 +2430,40 @@ For a fresh source, appending its one encoding pair leaves every previous source
 
 These source-extension statements hold for arbitrary finite source lists satisfying the original admission and freshness conditions. They do not rely on the witness source size. All 1,024 original encoding kernels and all five operational witnesses are retained. Fresh native execution agrees with every pinned registration, census, decision, closure, control and digest field, including unknown-identifier refusal. The Encoding and Decoding entry is complete within its original finite representation boundary; code-length value, compression, channel reliability and correction remain subsequent source subjects.
 
+
+Let S'=S++[z] and E'=E++[(z,w)], where z∉S and E is admitted on S. Key coverage implies z∉keys(E). For every old s∈S and word v, splitting membership in the appended relation gives
+
+\[
+ (s,v)\in E'\iff(s,v)\in E,\qquad
+ (z,v)\in E'\iff v=w.
+\]
+
+The new pair cannot match an old source because s≠z. Conversely, no old pair has source z, so its only new image is w. Induction through the ordered source filter therefore establishes
+
+\[
+ F'_v=F_v++\begin{cases}[z],&v=w,\\\lbrack\rbrack,&v\ne w,\end{cases}
+ \qquad
+ v\in\operatorname{images}(E')\iff v\in\operatorname{images}(E)\lor v=w.
+\]
+
+These are respectively an ordered-list identity and a membership equivalence; the old source order is retained in every class. The singleton base is computed directly:
+
+\[
+ \operatorname{exactDecoder}([z],[(z,w)])=\operatorname{Some}([(w,z)]).
+\]
+
+Suppose the old exact decoder exists and w is unused. For any old used v, v≠w, so F'_v=F_v remains singleton by the old decoder theorem. Since w is unused, F_w=[] and hence F'_w=[z]. The displayed image-membership equivalence exhausts the new classes: each is either an old singleton or this new singleton. Applying the singleton-class criterion constructs an extended exact decoder.
+
+If w is already used, admission supplies an old member of F_w. Then F'_w=F_w++[z] cannot be singleton: writing F_w=x::R, equality with [y] would force R++[z]=[], contradicted by z's membership in that append. The new encoding still emits the class for w, so a successful inverse would require this nonsingleton list to be singleton. Therefore
+
+\[
+ w\in\operatorname{images}(E)\ \Longrightarrow\
+ \operatorname{exactDecoder}(S',E')=\mathrm{None}.
+\]
+
+The successor proof quantifies over the original finite lists and every fresh source; it does not assume a particular codeword length, nor replace a merged class with an arbitrary representative. The ten binary source coordinates enumerate 2^10=1,024 kernels, with their original admission conjunction selecting exactly the all-admitted tuple.
+
+
 93. Complete information support and position generation
 
 The information-quantity support operation requires at least two distinct held labels and a nonempty canonical position trace. Its complete ordered Cartesian support contains exactly the words whose length equals the position-trace length and whose labels belong to the held alphabet. Native proofs establish completeness and duplicate freedom for every finite admitted input. Appending one position extends every prior word once with every held label in the original product order.

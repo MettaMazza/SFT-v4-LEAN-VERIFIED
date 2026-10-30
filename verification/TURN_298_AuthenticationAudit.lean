@@ -1,0 +1,21 @@
+import SFT.Computation.Authentication
+#print axioms SFT.Computation.Authentication.matching
+#print axioms SFT.Computation.Authentication.witnesses
+#print axioms SFT.Computation.Authentication.supported
+#print axioms SFT.Computation.Authentication.accepts
+#print axioms SFT.Computation.Authentication.witnessMeaning
+#print axioms SFT.Computation.Authentication.acceptanceBoundary
+#print axioms SFT.Computation.Authentication.acceptedCredential
+#print axioms SFT.Computation.Authentication.accepted
+#print axioms SFT.Computation.Authentication.impersonations
+#print axioms SFT.Computation.Authentication.impersonationMeaning
+#print axioms SFT.Computation.Authentication.authentic
+#print axioms SFT.Computation.Authentication.exactAuthenticity
+#print axioms SFT.Computation.Authentication.rejectedImpersonation
+#print axioms SFT.Computation.Authentication.exactVerificationTrace
+#print axioms SFT.Computation.Authentication.traceExtension
+#print axioms SFT.Computation.Authentication.acceptanceExtension
+#print axioms SFT.Computation.Authentication.unregisteredAttempt
+#print axioms SFT.Computation.Authentication.missingChallenge
+#print axioms SFT.Computation.Authentication.missingResponse
+#print axioms SFT.Computation.Authentication.acceptedImpersonationFails

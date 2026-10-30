@@ -790,3 +790,8 @@ import SFT.Computation.IntegrityGrammar
 import SFT.Computation.IntegrityControls
 import SFT.Computation.IntegrityEvidence
 import SFT.Computation.Integrity
+import SFT.Computation.AuthenticationWitnesses
+import SFT.Computation.AuthenticationGrammar
+import SFT.Computation.AuthenticationControls
+import SFT.Computation.AuthenticationEvidence
+import SFT.Computation.Authentication

@@ -1,0 +1,53 @@
+{
+  "claim_id": "SFT-COMP-SEC-AUTHENTICATION-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/cryptography_security/authentication/law.py": "33fdf12757018c70676e8dab20cff1ae2957345ff260efd97849eecb1af4685d",
+    "claims/SFT-COMP-SEC-AUTHENTICATION-001/WHY_DERIVATION_CHECK.md": "1077d189dacf7326ef4a30516ad82c7713c02bec8ac8b22df5ad1cb1baa74c12",
+    "claims/SFT-COMP-SEC-AUTHENTICATION-001/registration.json": "e6312351ace3042be4bda2d868278926082194cf301f8c96e62318976b02357e",
+    "claims/SFT-COMP-SEC-AUTHENTICATION-001/execution.py": "0cdbbc9ea7377b4210ee489dda24db56b46e478c14e50e1edbb66a330f2ea9e9",
+    "claims/SFT-COMP-SEC-AUTHENTICATION-001/independent_validator.py": "d9499f7eb1df217fc0c54512a45eda89c7e3ebf418d7a2c48bf13c17fd6275b5",
+    "claims/SFT-COMP-SEC-AUTHENTICATION-001/certificate.json": "a8740b61ee8e17daec963a48f7373c9da4b7945123a51e9cc5aff9e86640c3d6"
+  },
+  "components": {
+    "principal/credential/challenge carriers": "Model,Credential,Response and Attempt retain principal identities,credential ownership,registered challenges,response rows and complete adversary attempt support. witnessMeaning and acceptanceBoundary prove exact support and field matching.",
+    "exact verification trace": "acceptedCredential and exactVerificationTrace prove accepted status iff the complete retained attempt/principal/challenge/credential/response witness exists. Credential acceptance is not assumed to identify the actual actor.",
+    "impersonation ledger": "impersonationMeaning retains exactly every accepted attempt whose actor differs from its claim. exactAuthenticity connects the computed whole-ledger check to actor/claim equality across every accepted supported attempt.",
+    "acceptance boundary": "rejectedImpersonation and acceptedImpersonationFails prove the checked guarantee and its explicit failure witness. unregisteredAttempt,missingChallenge and missingResponse reject unsupported records.",
+    "source extension": "Componentwise Extension,traceExtension and acceptanceExtension retain original credential/response records and complete accepted verification traces. No stronger identity claim than the registered credential/adversary support is made.",
+    "grammar and controls": "Original security256 grammar,three witnesses,four controls and fresh parity pass.4100 concrete support/impersonation outcomes and native verification/failure proofs pass. Full program36396 running."
+  },
+  "dependencies": [
+    "SFT-COMP-SEC-INTEGRITY-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": {
+    "SFT-COMP-SEC-INTEGRITY-001": "in_progress",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+    "SFT-MATH-DISCRETE-001": "complete",
+    "SFT-MATH-GRAPH-NETWORK-001": "complete",
+    "SFT-MATH-LOGIC-PROOF-001": "complete",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+    "SFT-INFO-ENCODING-DECODING-001": "complete",
+    "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+  },
+  "native_checks": {
+    "kernel_output_checks": 4100,
+    "axiom_dependencies": 0,
+    "audit": "verification/TURN_298_PARITY_REPORT.json"
+  },
+  "remaining": [
+    "Original fresh full program field/hash comparison36396; completion after Integrity in dependency order."
+  ],
+  "status": "native_derivation_and_parity_pass_program_comparison_running"
+}

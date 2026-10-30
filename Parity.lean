@@ -477,3 +477,7 @@ def main : IO Unit := do
   for c in SFT.Computation.PostQuantumBoundaryGrammar.candidates do
     IO.println ("PostQuantumBoundaryGrammar\t" ++ SFT.Computation.PostQuantumBoundaryGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.PostQuantumBoundaryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.PostQuantumBoundaryGrammar.exactForm c ++ "\t" ++ SFT.Computation.PostQuantumBoundaryGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.InferenceGrammar.candidates do
+    IO.println ("InferenceGrammar\t" ++ SFT.Computation.InferenceGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.InferenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.InferenceGrammar.exactForm c ++ "\t" ++ SFT.Computation.InferenceGrammar.decisionReason c)
+

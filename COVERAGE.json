@@ -7829,7 +7829,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEC-MULTIPARTY-001-211b27cbbbc88f0e.json",
       "statement": "The forced joint function evaluation with local privacy kernel retains party identities; private inputs; communication process; joint output relation; local views; simulation or leakage ledger; fault boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold multiparty-computation law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Computation/Multiparty.lean",
         "SFT/Computation/MultipartyWitnesses.lean",
@@ -7837,7 +7837,7 @@
         "SFT/Computation/MultipartyControls.lean",
         "SFT/Computation/MultipartyEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
+      "artifact_runtime_parity": "PASS full256 actual identifier lookups and every original program field/hash.",
       "registration_sha256": "a774fd96e14990a0d2550aad62b53563f7c77c01c8950df86b2c659571008e2a",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7883,10 +7883,9 @@
         "status": "independently_replicated",
         "title": "Fold multiparty-computation law"
       },
-      "verified_scope": "Party identities,private inputs,joint output relation,local views,communication process and explicit registered corruption sets. rowMeaning,corruptionInputMeaning and coalitionViewMeaning preserve exact source projections.; pairMeaning gives complete ordered joint rows. leakageMeaning identifies exactly pairs agreeing in joint output and corrupted inputs but distinguished by coalition views.; exactPrivacy proves computed per-coalition check equivalent to view agreement for all pairs with matching public output/corrupted input. noLeakage excludes every leakage row under that check. exactSecurity checks every registered corruption; registeredPrivacy applies it to an admitted execution.; Execution retains actual communication steps and source output row with explicit registered coalition. executionTrace reconstructs all retained transitions; excludedCorruption rejects undeclared adversaries.; rowExtension,extendExecution and leakageExtension preserve all earlier source rows,communication traces,corruption boundaries and leakage witnesses.; Original256 grammar,three witnesses,four controls and fresh parity pass.768 finite support/view/corruption cases and actual nativeExecution/nativePrivacy passzeroaxioms. Full program2384 running.",
-      "remaining": [
-        "Original fresh full program field/hash comparison2384; completion after ZeroKnowledge in dependency order."
-      ]
+      "verified_scope": "Party identities,private inputs,joint output relation,local views,communication process and explicit registered corruption sets. rowMeaning,corruptionInputMeaning and coalitionViewMeaning preserve exact source projections.; pairMeaning gives complete ordered joint rows. leakageMeaning identifies exactly pairs agreeing in joint output and corrupted inputs but distinguished by coalition views.; exactPrivacy proves computed per-coalition check equivalent to view agreement for all pairs with matching public output/corrupted input. noLeakage excludes every leakage row under that check. exactSecurity checks every registered corruption; registeredPrivacy applies it to an admitted execution.; Execution retains actual communication steps and source output row with explicit registered coalition. executionTrace reconstructs all retained transitions; excludedCorruption rejects undeclared adversaries.; rowExtension,extendExecution and leakageExtension preserve all earlier source rows,communication traces,corruption boundaries and leakage witnesses.; Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_304_MULTIPARTY_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -8105,9 +8104,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-LEARN-INFERENCE-001-483c9c1cb618e3c5.json",
       "statement": "The forced selection among generated hypotheses kernel retains hypothesis support; evidence rows; compatibility relation; retained candidates; eliminated candidates; proof trace; uncertainty ledger; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold inference law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/Inference.lean",
+        "SFT/Computation/InferenceWitnesses.lean",
+        "SFT/Computation/InferenceGrammar.lean",
+        "SFT/Computation/InferenceControls.lean",
+        "SFT/Computation/InferenceEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
       "registration_sha256": "38e119213c881a0e6bcee481b9b20aaa085367e8e033861183256bbb52ca1a49",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -8152,7 +8157,11 @@
         "statement": "The forced selection among generated hypotheses kernel retains hypothesis support; evidence rows; compatibility relation; retained candidates; eliminated candidates; proof trace; uncertainty ledger; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold inference law"
-      }
+      },
+      "verified_scope": "consistentHypotheses preserves original ordered filtering and error priority for duplicate names and empty support. executableOutput,outputNameMeaning and duplicateNamesRejected connect the program to exact source rows;194 outputs use expected executable results from pinned V3 functions.; compatibilityMeaning and retainedMeaning prove exact evidence-to-hypothesis compatibility. eliminatedMeaning,exhaustive and disjoint prove the complete exclusive retained/eliminated ledger.; ProofTrace,traceOfRetained and traceRetained reconstruct the exact source and every compatible evidence row. uncertaintyMeaning proves complete ordered distinct-name retained pairs.; moreEvidence proves retained candidates under added evidence were previously retained; hypothesisExtension preserves compatible earlier hypotheses when support expands.; Original learning256 grammar,three native consistent_hypotheses witnesses,four controls and fresh parity pass. No prior distribution or pretrained weight. Full program40968 running.",
+      "remaining": [
+        "Original fresh full program field/hash comparison40968; completion after PostQuantumBoundary in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -189846,13 +189855,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T01:14:19.093959+00:00",
+  "updated_at": "2026-10-30T01:19:53.990667+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 4,
-    "pending": 2649,
-    "fully_reconstructed_claims": 128,
-    "axiom_free_exported_results": 6923,
-    "axiom_free_audited_definitions_and_theorems": 15409
+    "pending": 2648,
+    "fully_reconstructed_claims": 129,
+    "axiom_free_exported_results": 6958,
+    "axiom_free_audited_definitions_and_theorems": 15502
   }
 }

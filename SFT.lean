@@ -840,3 +840,8 @@ import SFT.Computation.PostQuantumBoundaryGrammar
 import SFT.Computation.PostQuantumBoundaryControls
 import SFT.Computation.PostQuantumBoundaryEvidence
 import SFT.Computation.PostQuantumBoundary
+import SFT.Computation.Inference
+import SFT.Computation.InferenceWitnesses
+import SFT.Computation.InferenceGrammar
+import SFT.Computation.InferenceControls
+import SFT.Computation.InferenceEvidence

@@ -1,0 +1,19 @@
+import SFT.Computation.Inference
+#print axioms SFT.Computation.Inference.compatible
+#print axioms SFT.Computation.Inference.retained
+#print axioms SFT.Computation.Inference.eliminated
+#print axioms SFT.Computation.Inference.consistentHypotheses
+#print axioms SFT.Computation.Inference.compatibilityMeaning
+#print axioms SFT.Computation.Inference.retainedMeaning
+#print axioms SFT.Computation.Inference.eliminatedMeaning
+#print axioms SFT.Computation.Inference.exhaustive
+#print axioms SFT.Computation.Inference.disjoint
+#print axioms SFT.Computation.Inference.moreEvidence
+#print axioms SFT.Computation.Inference.hypothesisExtension
+#print axioms SFT.Computation.Inference.traceOfRetained
+#print axioms SFT.Computation.Inference.traceRetained
+#print axioms SFT.Computation.Inference.uncertainty
+#print axioms SFT.Computation.Inference.uncertaintyMeaning
+#print axioms SFT.Computation.Inference.executableOutput
+#print axioms SFT.Computation.Inference.outputNameMeaning
+#print axioms SFT.Computation.Inference.duplicateNamesRejected

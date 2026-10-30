@@ -1525,6 +1525,34 @@ The complete ordered node-pair product extends row by row: each old left-node ro
 
 For an already successful held cut selection, extending the node carrier and appending edges returns exactly the old cut list followed by the added edges whose endpoint held-membership differs. Selection validity follows from the original nonempty and carrier-membership guard; no distinctness requirement is added to the held list. For an internally balanced pair of ingress/egress trace lists, appending one previously absent trace to each side preserves equal counts and separate distinctness, hence preserves the original balance predicate.
 
+
+Let G = (V,E) be admitted, z ∉ V, and A a distinct added-edge list whose endpoints lie in V' = V ++ [z] and whose every edge touches z. If e belonged to both E and A, an old endpoint would equal z, contradicting z ∉ V. Thus E and A are disjoint, their concatenation is distinct, and all constructor guards hold for G' = (V',E ++ A).
+
+Writing row(u,V) = [(u,v):v ∈ V] as an ordered list, the full pair-support identity is
+
+\[
+ \operatorname{Pairs}(V')=
+ \mathop{\mathrm{concat}}_{u\in V}(\operatorname{row}(u,V)\mathbin{+\!+}[(u,z)])
+ \mathbin{+\!+}(\operatorname{row}(z,V)\mathbin{+\!+}[(z,z)]).
+\]
+
+This distributes map and flatMap over append and retains each old row's order. For a previously successful cut with fixed held H, filter distribution gives
+
+\[
+ \operatorname{Cut}_H(E\mathbin{+\!+}A)
+ =\operatorname{Cut}_H(E)\mathbin{+\!+}
+ [e\in A\mid(e_1\in H)\mathbin{\mathrm{xor}}(e_2\in H)].
+\]
+
+For balanced ingress and egress lists I,O and fresh respective traces i,o,
+
+\[
+ |I\mathbin{+\!+}[i]|=|I|+1=|O|+1=|O\mathbin{+\!+}[o]|.
+\]
+
+Fresh append preserves each list's distinctness, and the incoming list remains nonempty, proving the original balance predicate after extension.
+
+
 68. Held-partition updates and exact paired-balance conditions
 
 Appending a carrier node to a valid held selection replaces each endpoint-membership test by membership in the old selection or in that appended singleton. Filtering the complete original edge list by the resulting unequal-membership test gives exactly the updated cut, including the original allowance for repeated held nodes. An edge whose endpoints differ from the appended node has an unchanged cut decision.
@@ -1533,9 +1561,39 @@ For an admitted old graph, a genuinely fresh node belongs to neither endpoint of
 
 Appending one ingress trace and one egress trace yields internal balance if and only if the original trace counts agree, each original trace list is distinct, and neither appended trace already occurs on its respective side. This characterization includes empty original lists: their first trace pair is balanced. For an already balanced pair, the exact remaining requirements are freshness on both sides. No restriction on trace contents is added to the original operation.
 
+
+Define the endpoint indicator χ_H(x) by membership in the held list. Appending y gives χ_(H++[y])(x) = χ_H(x) ∨ (x=y). Therefore the updated cut is exactly
+
+\[
+ [e\in E\mid(\chi_H(e_1)\lor e_1=y)
+ \mathbin{\mathrm{xor}}(\chi_H(e_2)\lor e_2=y)].
+\]
+
+If neither endpoint is y, both added equalities are false and the old cut decision is unchanged. When y = z is fresh to an admitted old graph, this applies to every old edge. For H' = H ++ [z], the combined carrier/edge extension consequently satisfies
+
+\[
+ \operatorname{Cut}_{H'}(E\mathbin{+\!+}A)
+ =\operatorname{Cut}_{H}(E)\mathbin{+\!+}\operatorname{Cut}_{H'}(A),
+\]
+
+where the rightmost term denotes the same ordered crossing-edge filter. Repeated members in H affect neither the indicator nor the source's valid-selection guard.
+
+The exact paired-balance equivalence is
+
+\[
+ \begin{aligned}
+ \operatorname{Balance}(I\mathbin{+\!+}[i],O\mathbin{+\!+}[o])\iff{}&
+ |I|=|O|\land\operatorname{Distinct}(I)\land\operatorname{Distinct}(O)\\
+ &\land i\notin I\land o\notin O.
+ \end{aligned}
+\]
+
+The appended incoming list is automatically nonempty; equal successor lengths cancel to |I| = |O|, and distinctness of each append is exactly prior distinctness plus absence of the new trace. In particular Balance([i],[o]) = true for arbitrary traces i,o, including empty traces, because trace contents are unrestricted by this operation.
+
+
 69. Batch source-program correspondence
 
-Native execution of all forty-four implemented source programs reproduces the pinned V3 registration fields, complete candidate censuses, all 23910 actual identifier-based decisions, closure and generality records, original control results and every embedded digest. The complete classification comparison across all 44 represented entries covers 23910 candidates; Exact Operations and Half-One include their complete source program adapters. All 3278 theorem proofs and 6394 audited definitions/theorems have zero axiom dependencies.
+In the recorded forty-four-program verification batch, native execution reproduces the pinned V3 registration fields, complete candidate censuses, all 23,910 actual identifier-based decisions, closure and generality records, original control results and every embedded digest. The complete classification comparison across all 44 represented entries covers 23,910 candidates; Exact Operations and Half-One include their complete source program adapters. The batch contains 3,278 theorem proofs and 6,394 audited definitions/theorems with zero axiom dependencies. These are the recorded batch totals, not the cumulative totals of the growing formalisation.
 
 Fold Assembly combines the general finite-support, uniqueness, transition, return and proposal-classification proofs with exact execution of its original 192-candidate program. This completes the registered assembly entry after its Count and Fold dependencies. Completion is recorded separately from output parity alone. The Form adapters preserve tuple and list edge inputs; the protocol adapter preserves the original operand-returning behavior for literal host records and proves its Boolean specialization.
 

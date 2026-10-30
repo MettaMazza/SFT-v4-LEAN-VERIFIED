@@ -572,3 +572,6 @@ def main : IO Unit := do
 
   for c in SFT.Computation.ManyBodyGrammar.candidates do
     IO.println ("ManyBodyGrammar\t" ++ SFT.Computation.ManyBodyGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ManyBodyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ManyBodyGrammar.exactForm c ++ "\t" ++ SFT.Computation.ManyBodyGrammar.decisionReason c)
+
+  for c in SFT.Computation.MathematicalModellingGrammar.candidates do
+    IO.println ("MathematicalModellingGrammar\t" ++ SFT.Computation.MathematicalModellingGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.MathematicalModellingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.MathematicalModellingGrammar.exactForm c ++ "\t" ++ SFT.Computation.MathematicalModellingGrammar.decisionReason c)

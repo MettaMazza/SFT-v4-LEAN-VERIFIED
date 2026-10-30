@@ -980,3 +980,8 @@ import SFT.Computation.ManyBodyWitnesses
 import SFT.Computation.ManyBodyGrammar
 import SFT.Computation.ManyBodyControls
 import SFT.Computation.ManyBodyEvidence
+import SFT.Computation.MathematicalModelling
+import SFT.Computation.MathematicalModellingWitnesses
+import SFT.Computation.MathematicalModellingGrammar
+import SFT.Computation.MathematicalModellingControls
+import SFT.Computation.MathematicalModellingEvidence

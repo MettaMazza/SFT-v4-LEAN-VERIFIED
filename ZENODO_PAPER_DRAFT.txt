@@ -8687,7 +8687,22 @@ The complete error enumeration, generated fault-depth trace and source decoder d
 
 All four coding-specific theorems have zero axiom dependencies. The registered build, audit and fresh V3 comparison preserve the complete 256-candidate grammar and the unchanged fault-operation comparisons, including all original width-three, width-five and width-seven census rows.
 
-Fold quantum universality law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 170 source entries are complete.
+Fold quantum universality law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+For depth \(d\), let \(E_h\) and \(E_r\) be the words obtained from the held and returned repetition encodings by masks of size at most \(d\). Arbitrary-depth correction gives
+\[
+ x\in E_h\Rightarrow\operatorname{decode}(x)=\operatorname{ok}(\mathrm{held}),
+ \qquad
+ x\in E_r\Rightarrow\operatorname{decode}(x)=\operatorname{ok}(\mathrm{returned}).
+\]
+If one word belonged to both supports, the same decoder result would equal two distinct successful labels. Constructor injectivity contradicts this, establishing \(E_h\cap E_r=\varnothing\).
+
+The empty-mask recursion satisfies \(\operatorname{change}([],w)=w\). Applying correction to that mask yields the left-inverse identity
+\[
+ \operatorname{encode}(a,D)=\operatorname{ok}(w)
+ \Rightarrow\operatorname{decode}(w)=\operatorname{ok}(a).
+\]
+For a nonempty declared mask, the complete mask-membership theorem supplies the size bound used by correction. Thus both reconstruction and disjointness are consequences of the retained decoder on the specified error family.
 
 305. Complete error census and successor recovery
 
@@ -8697,9 +8712,23 @@ Extending an admitted fault-depth trace preserves recovery for all previously de
 
 All four error-correction-specific theorems have zero axiom dependencies. The registered build, audit and fresh V3 comparison preserve the complete 256-candidate grammar and unchanged shared source operations.
 
-Fold quantum algorithm-family law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 171 source entries are complete.
+Fold quantum algorithm-family law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
 
-Fold quantum complexity law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 172 source entries are complete.
+Fold quantum complexity law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+For an admitted encoding with \(t=|D|\), list replication gives
+\[
+ |w|=2t+1.
+\]
+The complete census theorem identifies each actual row by
+\[
+ (u,a)\in\operatorname{CensusRows}
+ \iff\exists m,\ m\text{ is a sublist of }[0,\ldots,2t]
+ \land |m|\le t\land u=\operatorname{change}(m,\bar a,w).
+\]
+Correction applied to this witness proves \(\operatorname{decode}(u)=\operatorname{ok}(a)\) for every row, while the exhaustive map supplies every permitted mask's row in source order.
+
+If \(D'=D{+\!\!+}[d']\) is admitted, then its budget is \(t+1\). An old mask still satisfies \(|m|\le t\le t+1\), so applying the same correction theorem to the enlarged encoding recovers \(a\). This preserves recovery for each earlier mask without omitting the new depth's additional masks.
 
 306. Recovery at every contained circuit location
 
@@ -8709,7 +8738,22 @@ Induction over the complete causal circuit trace establishes recovery after ever
 
 All seven fault-tolerance theorems, three operation compositions and the recovered-execution representation have zero axiom dependencies. The registered build, audit and fresh V3 comparison preserve the full 256-candidate grammar and unchanged source gate and error operations.
 
-Fold quantum communication law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 173 source entries are complete.
+Fold quantum communication law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+Recovery is the original composition
+\[
+ \operatorname{recover}_D(u)=
+ \operatorname{decode}(u)\mathbin{\mathrm{bind}}
+ (a\mapsto\operatorname{encode}(a,D)).
+\]
+For encoded \(w\) and a declared mask, decoding gives the original label and re-encoding gives exactly \(w\). Therefore repeated declared fault locations satisfy
+\[
+ \operatorname{recoverLocations}_D([m_1,\ldots,m_k],w)
+ =\operatorname{ok}(w),
+\]
+by induction on the location list.
+
+For annotated branch rows \(((w,\phi),m)\), containment supplies an admitted encoding of \(w\) and a declared mask. Componentwise recovery then returns exactly the branch projection of the annotated list, preserving phase and order. If that projection equals a gate's complete output support, recovery restores that entire output. Induction over Forward, with complete contained annotations for every retained state and terminal state, constructs RecoveredExecution for all circuit locations. A decoder error is forwarded unchanged by recover; the theorem requires the stated containment premises at each location.
 
 307. Exact simulator execution and observation correspondence
 
@@ -8719,9 +8763,26 @@ Every selected observation branch and every interference-group branch correspond
 
 All five simulation-specific theorems have zero axiom dependencies. The registered build, audit and fresh V3 comparison preserve the full 256-candidate grammar and unchanged shared source operations.
 
-Fold quantum coding law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 174 source entries are complete.
+Fold quantum coding law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
 
-Fold quantum error-correction law, Fold quantum fault-tolerance law, Fold quantum simulation law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 177 source entries are complete.
+Fold quantum error-correction law, Fold quantum fault-tolerance law, Fold quantum simulation law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+For an admitted decoded request \(q\), with all gates admitted, the interpreter and circuit trace satisfy
+\[
+ \operatorname{interpret}(c)=\operatorname{some}(\operatorname{ok}(P,B))
+ \iff\operatorname{Forward}(q_0,q_G,P,B).
+\]
+The forward implication reconstructs the actual evaluator trace; the reverse replays it through the same decoded request. Error correspondence is equally exact:
+\[
+ \operatorname{interpret}(c)=\operatorname{some}(\operatorname{error}(e))
+ \iff\operatorname{evaluate}(q_0,q_G)=\operatorname{error}(e).
+\]
+The successful trace implies \(|P|=|q_G|\), \(|B|=|q_0|\) and unchanged phase cycle. Combining branch-trace correspondence with observation membership gives
+\[
+ z\in B_{\rm selected}\iff
+ [\exists b\in q_0,\ T_{C_0}(q_G,b,z)]\land f(z_w)=l.
+\]
+The same formula characterizes membership in the interference group labelled \(l\). Thus decoded simulation retains exactly the target request's execution, errors, resources and classified branch provenance.
 
 308. Complete quantum verification challenge schedules
 
@@ -8731,6 +8792,19 @@ Claim and witness supports retain their complete pair-cell construction. Verifie
 
 All four verification-specific theorems have zero axiom dependencies. The native build and fresh source comparison retain the complete 256-candidate grammar and unchanged operational witnesses and controls.
 
+Let \(Q\) be the registered list of Boolean branch challenges and let
+\[
+ A(z)\iff\exists b\in B_0,\ T_C(G,b,z)\land f(z_w)=l
+\]
+be exact selected-branch membership after the actual circuit execution. The complete challenge computation is
+\[
+ \bigwedge_{q\in Q}\ \bigwedge_{z\in B_{\rm selected}}q(z)=\mathrm{true}
+ \iff
+ \forall q\in Q,\ \forall b\in B_0,\ \forall z,\
+ T_C(G,b,z)\land f(z_w)=l\Rightarrow q(z)=\mathrm{true}.
+\]
+This follows by expanding both finite all-members checks and substituting the branch-membership equivalence. A supplied challenge \(q\) with such a traced selected branch \(z\) and \(q(z)=\mathrm{false}\) contradicts the universal result and rejects the schedule. If instead its outcome is \(o\ne l\), the branch is absent from the selected state but \((z,o)\) remains in the complete record. The schedule quantifies over all registered challenges and all accepted traced branches.
+
 309. Joint hypothesis-search provenance and retained alternatives
 
 Each selected hypothesis-search branch corresponds, in both directions, to an original sample/hypothesis pair cell, its exact word-and-phase circuit trace and its observation label. The same correspondence holds for interference groups. The complete measurement record retains every alternative and its exact trace, including alternatives outside the selected class.
@@ -8738,6 +8812,23 @@ Each selected hypothesis-search branch corresponds, in both directions, to an or
 The complete record contains exactly the product of the original sample and hypothesis support sizes. Circuit and branch ledgers retain the original gate and support resources. The inherited classical inference and evaluation laws retain consistent hypotheses, sealed predictions, all withheld evaluation targets and their separation from training examples. No pretrained quantum model, fitted amplitude or unexplained speedup is introduced.
 
 All four learning-specific theorems have zero axiom dependencies. The registered build and fresh candidate comparison preserve the full 256-candidate grammar, original witnesses and controls.
+
+For sample support \(E\), hypothesis support \(H\), their admitted joint state \(J\), circuit \(G\) and selected label \(l\), exact membership factors through both constructions:
+\[
+ z\in B_{\rm selected}\iff
+ \exists e,h,b,\ \operatorname{Cell}(E,H,e,h,b)
+ \land T_{C_J}(G,b,z)\land f(z_w)=l.
+\]
+The same conjunction describes an interference-fibre member. For the complete observation record, the label is unrestricted:
+\[
+ (z,o)\in R\iff
+ [\exists b\in J,\ T_{C_J}(G,b,z)]\land f(z_w)=o.
+\]
+Thus every terminal alternative, including unselected outcomes, retains an initial joint branch and its complete circuit trace. Composition gives \(|J|=|E||H|\); gate execution preserves this count, and complete observation gives
+\[
+ |R|=|E||H|.
+\]
+This cardinality concerns the full retained record, not merely the selected hypothesis class.
 
 310. Bidirectional classical and quantum operational correspondence
 
@@ -8747,6 +8838,23 @@ When every original phase action is a complete-cycle shift, the word trace embed
 
 All eight correspondence-specific theorems and the word-trace representation have zero axiom dependencies. The registered build and fresh source comparison retain the complete 256-candidate grammar, witnesses and controls.
 
+WordTrace keeps each registered word lookup while BranchTrace additionally retains the phase update. Projection removes only those phase fields:
+\[
+ T_C(G,(x,\phi),(y,\psi))\Rightarrow W(G,x,y).
+\]
+Conversely, for a nonempty cycle \(C\) and held \(\phi\in C\), induction on WordTrace chooses each next phase using the registered shift and gives
+\[
+ W(G,x,y)\iff\exists\psi,\ T_C(G,(x,\phi),(y,\psi)).
+\]
+With an actual Forward execution, this is equivalent to terminal-word membership; observation adds the same registered label test on \(y\).
+
+If every gate shift is zero modulo \(|C|\), each chosen phase remains \(\phi\), so the lifted trace ends at \((y,\phi)\). A singleton state is admitted when its phase is held in a distinct cycle of length at least two. Its circuit ledger then satisfies
+\[
+ |P|=|G|,\quad |B_{\rm terminal}|=1,\quad
+ [|B|\mid B\in P]=\operatorname{replicate}(|G|,1).
+\]
+Phase-sensitive information remains in the lifted execution even though its word projection has classical correspondence.
+
 311. Registered self-description and quantum computation limits
 
 The original complementary verdict is represented by an admitted singleton phase-labelled quantum request whose registered interpreter output is proved exactly. If a predictor answers on the same decoded description selecting that complementary execution, correctness contradicts the original complement operation. Total prediction is therefore excluded when the registered grammar retains the corresponding admitted self-description support.
@@ -8755,9 +8863,18 @@ The inherited halting boundary quantifies over every predictor with the register
 
 All three limits-specific theorems have zero axiom dependencies. The registered build and fresh source comparison preserve the complete 256-candidate grammar, original operational witnesses and controls.
 
-Fold quantum verification law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 178 source entries are complete.
+Fold quantum verification law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
 
-Fold quantum learning law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 179 source entries are complete.
+Fold quantum learning law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+Let \(c\) decode to the registered name selecting a singleton request with complementary verdict \(\bar v\), held phase \(\phi\), admitted cycle \(C\) and empty gate list. Its interpreter result is exactly
+\[
+ \operatorname{interpret}(c)
+ =\operatorname{some}(\operatorname{ok}([],([([\bar v],\phi)],C))).
+\]
+If a predictor answers \(v\) on this same \(c\), the source complement operation supplies \(\bar v\ne v\). Correctness on that decoded request would require \(v=\bar v\), a contradiction.
+
+For the total-prediction theorem, the registered support premise first supplies such a decoded self-description and a complementary admitted request for each answer there. Totality supplies an answer in the source Verdict domain. Substitution into the exact interpreter equation and correctness produces the contradiction above. The same-description support and verdict-interface premises are retained explicitly; the proof does not assume that every arbitrary finite registry contains such a self-description.
 
 312. Complete target-package custody checks
 
@@ -8767,9 +8884,23 @@ Exchange acceptance is equivalent to all seven original checks passing: experime
 
 Eight native theorems have zero axiom dependencies. Eleven constructor cases and thirty exchange-tampering cases reproduce the pinned source commitments, release records, hashes and errors. The complete target-custody entry is verified against the pinned source, including its full grammar, operational witness, controls and program output identities.
 
-Full operational classical-quantum correspondence law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 180 source entries are complete.
+Full operational classical-quantum correspondence law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
 
-Limits of Fold quantum computation law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 181 source entries are complete.
+Limits of Fold quantum computation law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+For sorted named target package \(V\) and nonce \(n\), the committed content identity is
+\[
+ h_T=H([(\mathrm{name},n,\mathrm{value})\mid
+                         (\mathrm{name},\mathrm{value})\in\operatorname{sort}(V)]).
+\]
+The vault retains \(V,n\), sorted target identities, experiment \(e\), custodian \(k\), expected envelope \(h_E\), and initially false released state. Release checks that state first, then matching seal experiment and envelope. Success returns the unchanged package and nonce, binds the release to the seal hash, and sets only the vault's released flag to true; another release consequently rejects.
+
+Exchange verification collects ordered violations \(V_1{+\!\!+}\cdots{+\!\!+}V_7\). Each \(V_i\) is empty exactly when its check passes, so
+\[
+ \operatorname{verify}=\operatorname{ok}()
+ \iff\bigwedge_{i=1}^{7}\operatorname{check}_i.
+\]
+The checks compare experiment identities, custodian, seal, envelope, sorted complete names, both recomputed and declared content identities, and the recomputed release-payload identity. This is an equality-of-record-identities theorem, with no hash-injectivity premise.
 
 313. Named-target admission and portable custody grammar
 
@@ -8779,7 +8910,26 @@ The original commitment-release-verification witness retains every computed iden
 
 Fifteen constructor/input cases and thirty exchange-tampering cases match the pinned source. The named-entry proofs, general witness protocol and complete grammar are audited with zero axiom dependencies. Custody remains a prerequisite for empirical testing; it does not assert that a physical relation has passed an empirical test.
 
-Portable target commitment and post-seal custody complete: native source derivations,full256 enumeration,original operational witnesses,all 4 controls and every original program output field/hash are verified against pinned V3. 182 source entries are complete.
+Portable target commitment and post-seal custody complete: native source derivations, full 256-candidate enumeration, original operational witnesses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+The named-target representation follows
+\[
+ N([])=\operatorname{some}([]),\qquad
+ N((\operatorname{text}(s),v)::r)
+   =\operatorname{some}((s,v)::N_r)
+\]
+when \(N(r)=\operatorname{some}(N_r)\); any nontext key returns none. Induction proves both preservation and reconstruction:
+\[
+ N(E)=\operatorname{some}(V)\Rightarrow
+ [(\operatorname{text}(s),v)\mid(s,v)\in V]=E,
+\]
+\[
+ N([(\operatorname{text}(s),v)\mid(s,v)\in V])
+ =\operatorname{some}(V).
+\]
+Payloads and order are unchanged. The constructor retains its original identity guards before this conversion and its named-support and envelope guards afterward.
+
+For the original witness package, any syntactically valid envelope identity permits construction; the matching prediction record then permits release. Retained package, nonce, identities and recomputed release hash make all seven verification violations empty, and the released prediction-seal hash equals the supplied seal hash. This proves the witness protocol for every such admitted envelope identity, alongside the concrete source execution.
 
 314. Data-only package admission and protected-tree retention
 
@@ -8789,7 +8939,26 @@ Protected-tree snapshots retain all enumerated census and admitted-model files, 
 
 The original 256-form grammar, sole survivor, source-rejection witness and four controls are preserved. Sixty document-audit cases, ten source-rejection cases and four filesystem cases reproduce the pinned operations, certificate fields, hashes and errors. All registered native declarations have zero axiom dependencies. The full original program-output comparison passes; the hostile-package entry is complete.
 
-Hostile empirical-package and authority protection complete: native source derivations,full256 enumeration,original operational witnesses,all 4 controls and every original program output field/hash are verified against pinned V3. 183 source entries are complete.
+Hostile empirical-package and authority protection complete: native source derivations, full 256-candidate enumeration, original operational witnesses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+After the original document parser succeeds, let \(E\) indicate a supplied executable-source field, \(A\) an additional field, and \(S_0,S_1\) the protected snapshots. The audit decision is
+\[
+ \operatorname{pass}\iff\neg E\land\neg A\land S_0=S_1.
+\]
+A successful certificate therefore yields snapshot equality and binds
+\[
+ h_{\rm package}=H(\mathrm{document}),\qquad
+ h_{\rm program}=H(\operatorname{canonical}(\mathrm{parsedProgram})).
+\]
+A changed snapshot contradicts the equality conjunct; parser errors propagate unchanged. Executable-source rejection returns an error for every supplied value, distinguishing a nonblank text source from missing or invalid source material.
+
+For enumerated file lists \(F_c,F_a\), snapshot construction returns the ordered rows
+\[
+ \operatorname{hashFiles}(F_c){+\!\!+}\operatorname{hashFiles}(F_a),
+ \quad
+ \operatorname{hashFiles}(F)=[(p,\mathrm{sha256}(\mathrm{bytes}))\mid(p,\mathrm{bytes})\in F].
+\]
+Their path projection equals the complete input path projection. The snapshot identity hashes the retained root and this full ordered row list; missing authority directories preserve the original rejection.
 
 315. Physical observation, reference pairing and complete comparisons
 
@@ -8801,6 +8970,24 @@ The observation-carrier experiment preserves both registered BIPM rows and their
 
 Twelve comparison cases and the complete experiment registration reproduce the pinned source operations. These results concern the original registered structural-label comparison; they do not treat a reported decimal inscription as a proof value. The complete original program-output comparison passes. Whole blind-validator execution remains under verification, so the observation-carrier entry is not yet counted complete.
 
+The observation carrier starts with one phenomenon/reference pair and extends by
+\[
+ P'=P{+\!\!+}[(o,r)],\qquad
+ \operatorname{take}_{|P|}(P')=P,\qquad |P'|=|P|+1.
+\]
+The prediction program has exactly four instructions: read the registered premise, construct the physical-observation label, pair premise and prediction in a held register, then emit the prediction label. It has one input read and one final emission; successful execution has four trace rows.
+
+For target row \(t\) and released label \(v_t\), comparison retains target identity, source identity and source locator and sets
+\[
+ \operatorname{pass}(t)\iff p=v_t.
+\]
+Recursive comparison preserves the complete ordered target-identity projection and rejects a missing release row. Acceptance is
+\[
+ \left(\bigwedge_{t\in T}p=v_t\right)
+ \land p\ne\texttt{changed-external-observation}.
+\]
+The second conjunct is the original deliberately changed-label control. These equations describe the registered structural-label experiment; the emitted label is the registered program label, while the premise is retained in its bound trace.
+
 316. Source-bound observation validation and prediction sealing
 
 The native observation validator retains the source sequence: validate the registered specification and source snapshot, construct the input and preregistered custody envelope, execute the capability-closed prediction, seal its output and trace, audit the protected state, release and verify custody, and compare every registered row. Its certificates retain the original executor, interpreter, program, input, target, comparison and seal identities. The final receipt binds the complete comparison record and deliberately changed control to the derivation seal and source snapshot.
@@ -8810,11 +8997,49 @@ A changed snapshot is rejected by the complete validator. The prediction seal bi
 All 256 original observation-program lookups and their census, decision, closure, control and registration fields and hashes reproduce V3. The final whole-validator comparison includes the original 1,979,202 source bytes and remains under verification.
 
 
+The validator is the ordered composition
+\[
+ \mathrm{specification}\to\mathrm{sourceCheck}\to\mathrm{parse}
+ \to\mathrm{inputs/vault}\to\mathrm{execute}\to\mathrm{seal}
+ \to\mathrm{protectedAudit}\to\mathrm{release/verify}
+ \to\mathrm{openTargets}\to\mathrm{compare}.
+\]
+Each failing operation returns its original error before later stages execute. The seal's retained fields obey
+\[
+ (e,h_p,h_t,h_E)=
+ (\mathrm{experimentId},\mathrm{execution.outputHash},
+   \mathrm{execution.traceHash},H(\mathrm{envelope}(\mathrm{derivationSeal}))).
+\]
+A prior seal rejects replacement; an empty premise rejects input construction. The protected audit additionally requires the parsed program's canonical identity to equal the execution's program identity.
+
+The final receipt hashes the experiment registration, derivation seal, prediction seal, source snapshot, complete comparison rows, changed-label control and execution trace identity. Final acceptance is the all-row/control predicate of the preceding section. These are the retained native pipeline definitions and proved component bindings; the separate complete byte-for-byte validator comparison remains required for whole-entry completion.
+
 317. Half-One vacuum floor and complete finite oscillator spectrum
 
 Complete binary support retains precisely the half-One under self-pairing to the One. The native proof also establishes uniqueness among arbitrary admitted positive parts, self-antipodality and the one-Fold return. At positive depth k, the complete spectrum contains 2^k parts (2j−1)/2^(k+1), for j=1,…,2^k. Each part lies in the positive unit domain. The ordered construction is injective; adjacent raw numerators differ by two, while successor depth doubles cardinality and doubles the common denominator. The paired successor numerators lie one half-spacing on either side of their retained parent coordinate.
 
 The general native derivation and all four original operational witnesses have zero axiom dependencies. Fresh native evaluation agrees with all 510 ordered source values at depths 1 through 8. The complete 256-form grammar is retained and kernel checked. All 256 actual candidate lookups, original program fields, hashes and controls reproduce V3. The implementation-distinct V3 validator accepts the native output and rejects an omitted candidate, an additional survivor and a failed control. The Half-One vacuum-floor entry is complete.
+
+The complete binary part support contains \(1/2\) and One. Self-pairing to One selects only \(1/2\), and the general positive-part theorem strengthens this to
+\[
+ \operatorname{selfJunction}(p)=\mathrm{One}\iff p=\tfrac12.
+\]
+The same part is its own complement and folds to One. For positive depth \(k\), let \(N=2^k\). The complete spectrum is
+\[
+ p_i=\frac{2i+1}{2N},\qquad 0\le i<N.
+\]
+Normalization retains the cross-product identity with this raw fraction. Since \(0<2i+1<2N\), every level is in the positive unit domain. Equal normalized levels imply equal raw numerators and hence equal indices, proving injectivity.
+
+The successor doubles support and denominator. Writing \(n_i=2i+1\), its paired numerators satisfy
+\[
+ n_{2i}=2n_i-1,\qquad n_{2i+1}=2n_i+1,
+\]
+so the two successor values are
+\[
+ p'_{2i}=p_i-\frac1{4N},\qquad
+ p'_{2i+1}=p_i+\frac1{4N}.
+\]
+Adjacent raw numerators differ by two, and complete cardinality is \(2^k\) at every generated depth.
 
 318. Exact cosmic-ratio continuations and outward source intervals
 
@@ -8822,9 +9047,52 @@ The generation volume 27 has least binary cover depth 5. The complete cover has 
 
 External source intervals are used only after structural forcing. The pinned Planck density rows give the complete outward dark-to-baryon interval [238/45,1210/223]. The pinned Planck and SH0ES route records give [720/679,3704/3345] for late divided by early. Both exact predictions lie within their respective interval. Native proofs retain all six original comparison witnesses. The source checks retain both uncertainties, source identities, the density confidence boundary, both Hubble route qualifications and matching units; no central-value-only tolerance replaces these intervals.
 
+With forced binary and generator values \(b=2,c=3\), the volume \(c^c=27\) has least cover \(2^5=32\). The source ratios are
+\[
+ f_b=\frac5{32},\quad f_d=\frac{27}{32},\quad
+ R_0=\frac{27}{5},\quad
+ R_1=\frac{27}{5+1/(32-1)}=\frac{279}{52}.
+\]
+The unit part over 31 has the complete five-step return trace already displayed. For the Hubble construction,
+\[
+ f_m=\frac13,\quad f_v=\frac23,\quad T=2^3=8,\quad
+ \delta_0=\frac{2/3}{8}=\frac1{12},
+\]
+\[
+ \delta_1=\frac{2/3+1/(2^7-1)}8=\frac{257}{3048},
+ \qquad R_1^{H}=1+\delta_1=\frac{3305}{3048}.
+\]
+The depth-seven orbit supplies the original complete return over 127.
+
+For post-seal numerator and denominator rows \(n\pm u_n,d\pm u_d\), with \(0<u_n<n\) and \(0<u_d<d\), the source comparison uses
+\[
+ I=\left[\frac{n-u_n}{d+u_d},\frac{n+u_n}{d-u_d}\right].
+\]
+Substitution of the pinned density rows yields \([238/45,1210/223]\); the pinned Hubble rows yield \([720/679,3704/3345]\). Exact rational comparison accepts both leading and refined ratios in their respective intervals. The route, confidence, source-identity and unit guards precede this comparison.
+
 319. Dual quark cubics and first complete dyadic separation
 
 The role-exchanged quark invariant triples are (1,1/8,1/383) and (1,1/12,1/3071). The native search follows every original dyadic-support successor from depth one and stops at the first complete three-interval census. Its exact down-type intervals are [(1/64,1/32),(7/64,1/8),(27/32,55/64)]; its exact up-type intervals are [(1/256,1/128),(11/128,23/256),(29/32,233/256)]. Kernel proofs establish these complete search outputs, three positive separated intervals in each channel, and correspondence of the search recursion to the original stopping rule. The representation retains exact polynomial invariants and rational enclosures.
+
+The two invariant routes agree exactly:
+\[
+ s_u=\frac1{b(c+c)}=\frac1{b^2c}=\frac1{12},\qquad
+ s_d=\frac1{b(c+1)}=\frac1{b^2b}=\frac18
+ \quad(b=2,c=3).
+\]
+The role-exchanged reaches use depth seven for the down product and seven plus three for the up product:
+\[
+ q_d=\frac1{3\cdot2^7-1}=\frac1{383},\qquad
+ q_u=\frac1{3\cdot2^{10}-1}=\frac1{3071}.
+\]
+Thus the cubic equations are \(x^3+s_dx=x^2+q_d\) and \(x^3+s_ux=x^2+q_u\). The executable compares their positive and counter sides exactly, retaining which is larger and the positive difference.
+
+At dyadic depth \(k\), it traverses all adjacent positive endpoints
+\[
+ \left(\frac{i+1}{2^k},\frac{i+2}{2^k}\right),
+ \qquad 0\le i<2^k-1.
+\]
+An exact lower endpoint yields a singleton interval; otherwise an exact upper endpoint or opposite endpoint hands retains the bracket. Search starts at depth one with the source fuel 32, returns at the first census of three brackets, and otherwise advances one depth. SearchRun records every failed count before the successful depth. Exact evaluation gives the displayed down and up lists at depths six and eight, with three positive separated intervals in each channel.
 
 320. Squared Planck/proton support and terminal transport
 

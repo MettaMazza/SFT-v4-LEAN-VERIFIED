@@ -910,3 +910,5 @@ import SFT.Computation.ClassicalLearningGrammar
 import SFT.Computation.ClassicalLearningControls
 import SFT.Computation.ClassicalLearningEvidence
 import SFT.Computation.ClassicalLearning
+import SFT.Physics.CapabilityPrediction
+import SFT.Physics.CapabilityValues

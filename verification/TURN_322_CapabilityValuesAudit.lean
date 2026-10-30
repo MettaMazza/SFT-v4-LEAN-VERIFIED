@@ -1,0 +1,27 @@
+import SFT.Physics.CapabilityValues
+#print axioms SFT.Physics.CapabilityValues.whitespace
+#print axioms SFT.Physics.CapabilityValues.nonblank
+#print axioms SFT.Physics.CapabilityValues.count
+#print axioms SFT.Physics.CapabilityValues.heldLabel
+#print axioms SFT.Physics.CapabilityValues.equal
+#print axioms SFT.Physics.CapabilityValues.equalList
+#print axioms SFT.Physics.CapabilityValues.equalEntries
+#print axioms SFT.Physics.CapabilityValues.countJSON
+#print axioms SFT.Physics.CapabilityValues.canonical
+#print axioms SFT.Physics.CapabilityValues.canonicalList
+#print axioms SFT.Physics.CapabilityValues.canonicalEntries
+#print axioms SFT.Physics.CapabilityValues.identity
+#print axioms SFT.Physics.CapabilityValues.table
+#print axioms SFT.Physics.CapabilityValues.countPositive
+#print axioms SFT.Physics.CapabilityValues.countIdentity
+#print axioms SFT.Physics.CapabilityValues.zeroRejected
+#print axioms SFT.Physics.CapabilityValues.labelIdentity
+#print axioms SFT.Physics.CapabilityValues.labelNonblank
+#print axioms SFT.Physics.CapabilityValues.tableEmptyRejected
+#print axioms SFT.Physics.CapabilityValues.countExt
+#print axioms SFT.Physics.CapabilityValues.labelExt
+#print axioms SFT.Physics.CapabilityValues.equalMeaning
+#print axioms SFT.Physics.CapabilityValues.equalListMeaning
+#print axioms SFT.Physics.CapabilityValues.equalEntriesMeaning
+#print axioms SFT.Physics.CapabilityValues.tableAdmission
+#print axioms SFT.Physics.CapabilityValues.duplicateKeysRejected

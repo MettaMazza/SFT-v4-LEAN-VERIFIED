@@ -795,3 +795,8 @@ import SFT.Computation.AuthenticationGrammar
 import SFT.Computation.AuthenticationControls
 import SFT.Computation.AuthenticationEvidence
 import SFT.Computation.Authentication
+import SFT.Computation.HashingWitnesses
+import SFT.Computation.HashingGrammar
+import SFT.Computation.HashingControls
+import SFT.Computation.HashingEvidence
+import SFT.Computation.Hashing

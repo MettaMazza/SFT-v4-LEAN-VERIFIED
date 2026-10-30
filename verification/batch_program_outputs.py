@@ -41,6 +41,7 @@ entries=[
 ('SFT-INFO-ENTROPY-UNCERTAINTY-001',r/'verification/TURN_143_EntropyProgram.lean'),
 ('SFT-INFO-COMPRESSION-REDUNDANCY-001',r/'verification/TURN_145_CompressionProgram.lean'),
 ('SFT-INFO-QUANTUM-CORRESPONDENCE-001',r/'verification/TURN_176_QuantumProgram.lean'),
+('SFT-COMP-SEC-HASHING-001',r/'verification/TURN_299_HashingProgram.lean'),
 ('SFT-COMP-SEC-AUTHENTICATION-001',r/'verification/TURN_298_AuthenticationProgram.lean'),
 ('SFT-COMP-SEC-INTEGRITY-001',r/'verification/TURN_297_IntegrityProgram.lean'),
 ('SFT-COMP-SEC-SECRECY-001',r/'verification/TURN_296_SecrecyProgram.lean'),

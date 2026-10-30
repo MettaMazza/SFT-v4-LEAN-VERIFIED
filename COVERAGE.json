@@ -7285,7 +7285,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEC-SECRECY-001-73a1685ef3e59a0b.json",
       "statement": "The forced observation-relative message indistinguishability kernel retains message support; key or transformation support; ciphertext relation; adversary observation; closed message distinctions; disclosure boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold secrecy law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Computation/Secrecy.lean",
         "SFT/Computation/SecrecyWitnesses.lean",
@@ -7293,7 +7293,7 @@
         "SFT/Computation/SecrecyControls.lean",
         "SFT/Computation/SecrecyEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
+      "artifact_runtime_parity": "PASS full256 actual identifier lookups and every original program field/hash.",
       "registration_sha256": "db53c51a2c0ba87156fc1c5b8e70cc20080641a496bc783c0f07095110638146",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7339,10 +7339,9 @@
         "status": "independently_replicated",
         "title": "Fold secrecy law"
       },
-      "verified_scope": "Model and Row preserve held message/key support,source transformation rows,ciphertexts and exact adversary observation. admitted,supportedMeaning and possibleMeaning reconstruct every possible message from a specific supported transformation row.; pairRows/pairMeaning enumerate the complete supported ordered pair product. closedLedgerMeaning proves that its filtered ledger contains exactly every supported distinct-message pair with identical adversary observation. distinctionExhaustion/distinctionDisjoint partition closed and separated distinctions.; ambiguityWitness retains two distinct supported predecessor messages. noObservationRecovery proves that the registered observation alone cannot recover both distinct messages in a closed pair.; missingTransformation/missingKey reject unsupported records. downstreamObservationClosed proves deterministic processing preserves an already-closed observation distinction. disclosureBoundary shows explicitly additional distinguishing disclosure can change the result.; Extension preserves held support,transformation rows and earlier observation values. admissionExtension,closedExtension,possibleExtension preserve source records and previous closed distinctions.; Original security256 grammar,three native security partition witnesses,four controls and fresh parity pass.1729 concrete ledger/message/disclosure checks and native ambiguity/recovery proofs pass. Full program10445 running.",
-      "remaining": [
-        "Original fresh full program field/hash comparison10445; completion after One-Wayness in dependency order."
-      ]
+      "verified_scope": "Model and Row preserve held message/key support,source transformation rows,ciphertexts and exact adversary observation. admitted,supportedMeaning and possibleMeaning reconstruct every possible message from a specific supported transformation row.; pairRows/pairMeaning enumerate the complete supported ordered pair product. closedLedgerMeaning proves that its filtered ledger contains exactly every supported distinct-message pair with identical adversary observation. distinctionExhaustion/distinctionDisjoint partition closed and separated distinctions.; ambiguityWitness retains two distinct supported predecessor messages. noObservationRecovery proves that the registered observation alone cannot recover both distinct messages in a closed pair.; missingTransformation/missingKey reject unsupported records. downstreamObservationClosed proves deterministic processing preserves an already-closed observation distinction. disclosureBoundary shows explicitly additional distinguishing disclosure can change the result.; Extension preserves held support,transformation rows and earlier observation values. admissionExtension,closedExtension,possibleExtension preserve source records and previous closed distinctions.; Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_296_SECRECY_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -7492,9 +7491,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEC-HASHING-001-30adbf79b53883ef.json",
       "statement": "The forced fixed-interface many-to-one record mapping kernel retains message support; deterministic map; complete output support; collision fibres; preimage ledger; composition and domain separation; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold hashing law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/Hashing.lean",
+        "SFT/Computation/HashingWitnesses.lean",
+        "SFT/Computation/HashingGrammar.lean",
+        "SFT/Computation/HashingControls.lean",
+        "SFT/Computation/HashingEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
       "registration_sha256": "51abc85efa78d747b2dd4f8c646b1dd096cf4a65224140440ce8836a07fb1e32",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7539,7 +7544,11 @@
         "statement": "The forced fixed-interface many-to-one record mapping kernel retains message support; deterministic map; complete output support; collision fibres; preimage ledger; composition and domain separation; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold hashing law"
-      }
+      },
+      "verified_scope": "Model retains finite message support,deterministic transform and complete declared output support. outputMembership proves every supported image is retained. No external hashing algorithm or hardness premise is imported.; fibreMeaning,everySourceRetained and collisionMeaning prove exact predecessor and complete collision support,including source membership,distinct messages and equal outputs.; largerDomainNotInjective,largerDomainCollision and largerDomainWitness constructively derive an actual supported collision when the distinct source domain exceeds the output support. Uses the existing proved finite counting relation; no classical axiom or stronger security premise.; postCompositionPreservesCollision proves deterministic downstream processing cannot restore a closed distinction. distinctDomains and sameDomainEquality retain exact held domain labels without asserting cryptographic resistance.; Extension,fibreExtension and collisionExtension retain earlier messages,outputs and map values,so all earlier predecessor/collision witnesses persist.; Original security256 grammar,three witnesses,four controls and fresh parity pass.36 concrete outputs cover all eight three-message/two-output maps,empty support and domain labels; eight general-theorem collision witnesses audit zeroaxioms. Full program 17892 running.",
+      "remaining": [
+        "Original fresh full program field/hash comparison17892; completion after Authentication in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -189764,13 +189773,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T00:20:45.206799+00:00",
+  "updated_at": "2026-10-30T00:31:19.027872+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 3,
-    "pending": 2658,
-    "fully_reconstructed_claims": 120,
-    "axiom_free_exported_results": 6592,
-    "axiom_free_audited_definitions_and_theorems": 14527
+    "pending": 2657,
+    "fully_reconstructed_claims": 121,
+    "axiom_free_exported_results": 6627,
+    "axiom_free_audited_definitions_and_theorems": 14618
   }
 }

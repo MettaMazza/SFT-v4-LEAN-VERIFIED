@@ -1599,11 +1599,52 @@ Fold Assembly combines the general finite-support, uniqueness, transition, retur
 
 70. Complete Part Equivalence source correspondence
 
-The registered common-refinement entry combines the general nested pair-cell, complete lifting, constructive bijection and uniform-refinement proofs with all 1024 original witness forms. Its complete native program reproduces every registered candidate and actual identifier-based decision, closure/generality certificate, control record and digest. The original tampered-artifact predicate counts accepted candidates in the complete enumeration and accepts the specified equal lifted traces; the unequal example is rejected. The three non-hash control outcomes have native proofs. Registration retains only the original One, Count and Part dependencies and introduces no axioms or free scientific parameters. Together these results complete the registered Part Equivalence entry.
+The registered common-refinement entry combines the general nested pair-cell, complete lifting, constructive bijection and uniform-refinement proofs with all 1,024 original witness forms. Its complete native program reproduces every registered candidate and actual identifier-based decision, closure/generality certificate, control record and digest. The original tampered-artifact predicate counts accepted candidates in the complete enumeration and accepts the specified equal lifted traces; the unequal example is rejected. The three non-hash control outcomes have native proofs. Registration retains only the original One, Count and Part dependencies and introduces no axioms or free scientific parameters. Together these results complete the registered Part Equivalence entry.
+
+
+For ordered source lists A,B, write P(A,B) = concat_(a in A)[label(a,b): b in B]. The lifted selections are L_A = P(A_held,B_all) and L_B = P(A_all,B_held). The source generates index pairs by zipping [0,...,|L_A|-1] with [0,...,|L_B|-1]. Every generated index is bounded, so its acceptance condition reduces exactly to
+
+\[
+ \operatorname{hasGeneratedBijection}(L_A,L_B)=\mathrm{true}
+ \iff |L_A|=|L_B|.
+\]
+
+With equal lengths n, the generated pairs are [(i,i): 0 ≤ i < n]; every left and right index occurs. The forward and backward maps satisfy g(f(i)) = i and f(g(j)) = j. For a uniform descendant type C, the refined maps (a,c) ↦ (f(a),c) and (b,c) ↦ (g(b),c) retain both inverse identities. On the ordered source lists, induction over A and distribution of length over append prove that equal source lengths give equal lengths of P(A,C), hence preserve the generated pairing. Origin cells satisfy (a,b) ∈ originCells(A,B) iff a ∈ A and b ∈ B; labels retain this origin witness without requiring label injectivity.
+
+The original equal-selection control has lifted lengths 1·4 = 2·2 = 4. The unequal control has lengths 1·3 = 3 and 2·1 = 2, so the same predicate rejects it. The complete grammar retains its eight binary choices and one four-way pairing choice, giving 2^8·4 = 1,024 forms.
+
 
 71. Finite Form source input correspondence
 
 The source validator requires a tuple at a Form root and accesses either tuple or list containers at the held edges. The formalisation retains both containers and their mixed combinations, arbitrary finite child forms and ignored trailing edge items. Its acceptance equivalence characterizes precisely the finite One/Fold productions over this representation. Original short-circuit order preserves false returns and index errors, including distinct tuple and list error messages. Canonicalization validates before recursively emitting the ordered trace, and every accepted represented input has a generated canonical Form. Canonical equality retains the established identity and equivalence laws. Fresh native execution reproduces all 288 Grammar and 192 Enforcement candidate decisions, complete evidence values and hashes. These results complete both registered entries in dependency order.
+
+
+Let T denote a tuple constructor and E range independently over tuple or list constructors at each edge. The finite acceptance productions are
+
+\[
+ \frac{}{\operatorname{Accepted}(T[\text{One}])},\qquad
+ \frac{\operatorname{Accepted}(l)\quad\operatorname{Accepted}(r)}
+ {\operatorname{Accepted}(T[\text{Fold},E_L[\text{held-a},l,\ldots],
+ E_R[\text{held-b},r,\ldots],\text{return}])}.
+\]
+
+The trailing items at each edge are arbitrary and ignored, while the outer tuple has exactly the displayed length. Case analysis on the validator's ordered tests extracts one of these productions from a true result. Induction on a production proves the converse, retaining all four tuple/list edge combinations:
+
+\[
+ \operatorname{valid}(v)=\operatorname{ok}(\mathrm{true})
+ \iff \operatorname{Accepted}(v).
+\]
+
+Validation errors propagate unchanged; a false validation returns the source's outside-grammar error before canonical recursion. For accepted inputs the canonical trace C obeys
+
+\[
+ C(T[\text{One}])=T[\text{One}],\qquad
+ C(\operatorname{FoldRaw}(l,r))=
+ T[\text{Fold},\text{held-a},C(l),\text{held-b},C(r),\text{return}].
+\]
+
+Here FoldRaw denotes any of the four admitted edge-container combinations above. Induction on the acceptance production constructs f = One in the base case and f = Fold(f_l,f_r) in the recursive case. Thus valid(v) = ok(true) implies the existence of a finite Form f with canonical(v) = ok(canonicalTrace(f)). This derivation preserves both child order and error short-circuiting.
+
 
 72. Completed mathematics source entries
 
@@ -1615,7 +1656,30 @@ The initial 21 represented entries and Geometry/Topology are complete against th
 
 The measurement protocol preserves Python conjunction semantics on its literal host records: truth testing controls evaluation, a false all-rows operand is returned unchanged, and an admitted source operand is returned unchanged. A nonempty source identifier therefore remains that identifier. Boolean inputs agree with the original Boolean protocol theorem. Constructive integer cases distinguish zero from positive and negative host integers without axioms. These host values are external protocol data, not added scientific parameters.
 
-The current audit covers 3278 theorems and 6394 definitions/theorems with zero axiom dependencies. The census contains 2781 entries;2746 entries remain beyond these completed results.
+These foundation and mathematics batches contribute to the cumulative completed census; their batch sizes are not the total coverage of the growing formalisation.
+
+
+Write t(x) for host truth testing. For Boolean protocol fields p (target before seal), m (measurement changes law), r (all rows) and s (identified source), the exact acceptance theorem is
+
+\[
+ A(p,m,r,s)=\neg p\land\neg m\land r\land s,\qquad
+ A(p,m,r,s)=\mathrm{true}\iff
+ p=\mathrm{false}\land m=\mathrm{false}\land r=\mathrm{true}\land s=\mathrm{true}.
+\]
+
+For general literal host values, define x & y = y when t(x) is true and x otherwise. The source expression is ((¬t(p) & ¬t(m)) & r) & s, where negated truth values are Boolean host values. Splitting on the first two truth tests gives the exact operand-returning equation
+
+\[
+ A_{\rm host}(p,m,r,s)=
+ \begin{cases}
+ \mathrm{false},&t(p)\lor t(m),\\
+ r,&\neg t(p)\land\neg t(m)\land\neg t(r),\\
+ s,&\neg t(p)\land\neg t(m)\land t(r).
+ \end{cases}
+\]
+
+Truth testing is false for null, zero, empty text and empty arrays/objects; it is true for nonzero integers and nonempty containers/text, and agrees with a Boolean's value. Consequently A_host(false,false,true,"source-id") = "source-id" and A_host(false,false,[],"source-id") = []. Restricting all four operands to Booleans recovers A by exhaustive Boolean cases, without coercing arbitrary source identifiers to Boolean outputs.
+
 
 74. Finite incidence and open-family derivations
 

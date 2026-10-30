@@ -3497,3 +3497,27 @@ The executed transition then gives r_(p+k) = r_k. Repeated removal of a complete
 
 Thus positivity and exact recurrence persist at every finite continuation, without a cutoff on denominators or Fold depth. Each generated odd successor q = 2n+3 satisfies q > 1 and q mod 2 = 1 by the exact remainder identity (3+2n) mod 2 = 3 mod 2 = 1, so the same first-return theorem applies for every supplied n. Five native theorems establish these statements with no axiom dependencies. The executable odd-denominator wrapper and its complete registered entry checks are separate from these general recurrence theorems.
 
+
+345. Exact odd-denominator orbit interface and returned traces
+
+The executable recurrence interface retains the original guard order. Boolean inputs and integer denominators d ≤ 1 receive the positive-denominator error. On the remaining domain the derived binary count is two, and the next test is exactly
+
+\[
+ \lfloor d/2\rfloor\,2=d.
+\]
+
+Equality rejects the denominator as even; otherwise the source unit part 1/d is passed to the original first-return loop. Its result retains every successive Fold, with the returned source included as the last member. The final guard rejects an empty trace or an element outside the positive One domain. For every represented Part p, its stored inequalities give 0 < numerator(p) ≤ denominator(p); induction on a trace therefore proves that its outside-domain test is false. Consequently every nonempty successful trace is preserved unchanged by this final guard.
+
+The exact computed traces include
+
+\[
+ \begin{aligned}
+ d=3 &: (2/3,1/3),\\
+ d=5 &: (2/5,4/5,3/5,1/5),\\
+ d=7 &: (2/7,4/7,1/7),\\
+ d=9 &: (2/9,4/9,8/9,7/9,5/9,1/9).
+ \end{aligned}
+\]
+
+Their lengths are respectively 2,4,3,6, with each ordered equality proved by native computation. Twenty-one interface definitions and theorems have no axiom dependencies. Fresh Lean execution agrees with the unchanged pinned V3 function and its original dependencies on 36 cases: both Boolean inputs and every integer from −2 through 31, comparing the full ordered rational traces and exact rejection outcomes. This finite comparison complements the general recurrence derivation of section 344; it does not replace that derivation.
+

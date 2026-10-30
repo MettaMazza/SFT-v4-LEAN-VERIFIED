@@ -830,3 +830,8 @@ import SFT.Computation.AdversarialGrammar
 import SFT.Computation.AdversarialControls
 import SFT.Computation.AdversarialEvidence
 import SFT.Computation.Adversarial
+import SFT.Computation.SecurityDefinitionWitnesses
+import SFT.Computation.SecurityDefinitionGrammar
+import SFT.Computation.SecurityDefinitionControls
+import SFT.Computation.SecurityDefinitionEvidence
+import SFT.Computation.SecurityDefinition

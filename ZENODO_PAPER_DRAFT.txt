@@ -2171,6 +2171,43 @@ The native arrow constructor retains name, source, target and the complete nonem
 
 Type membership uses the complete source key-set comparison and the last registered verdict for each key. It preserves carrier order and repeated occurrences. The product is the full ordered pair support, with membership equivalent to membership in both factors. The sum retains the original left-held and right-held tags; its membership theorem identifies exactly the corresponding source alternative. Empty and repeated carriers retain the original source behavior. These results formalise the path-association and finite type-constructor components of the registered compositional entry.
 
+
+Write an arrow as a=(n_a,s_a,t_a,T_a). Its constructor admits it exactly when the name, source, target and trace are nonempty. Composition in the order a then b first requires t_a=s_b and then applies this same constructor to
+
+\[
+ J(a,b)=(n_b\mathbin{+}\text{∘}\mathbin{+}n_a,\ s_a,\ t_b,\ T_a++T_b).
+\]
+
+For a trace T, let K(T) filter out every item with the source byte prefix "empty-One-return". This includes every matching prefix, rather than only the exact identity record. Filter distribution over append proves
+
+\[
+ K(T_a++T_b)=K(T_a)++K(T_b).
+\]
+
+For successful three-arrow compositions, both groupings have source s_a and target t_c. Their canonical paths agree because
+
+\[
+ (K(T_a)++K(T_b))++K(T_c)
+ =K(T_a)++(K(T_b)++K(T_c)),
+\]
+
+by induction establishing list-append associativity. This is the source's interface and canonical-path equality.
+
+For carrier C and predicate rows R, admission requires keys(R)⊆C and C⊆keys(R), with membership rather than multiplicity comparison. The type list is [x∈C:v_R(x)=Some(true)], where v_R uses the last verdict at x. Thus empty C and R return [], while C=[a,a], R=[(a,false),(a,true)] return [a,a]. For ordered factor lists A,B,
+
+\[
+ \begin{aligned}
+ A\times B&=\operatorname{concat}_{a\in A}[(a,b):b\in B],\\
+ (a,b)\in A\times B&\iff a\in A\land b\in B,\\
+ A\mathbin{\sqcup}B&=[(\text{left-held},a):a\in A]++[(\text{right-held},b):b\in B],\\
+ (t,x)\in A\mathbin{\sqcup}B&\iff
+ (t=\text{left-held}\land x\in A)\lor(t=\text{right-held}\land x\in B).
+ \end{aligned}
+\]
+
+The product equivalence follows by extracting an outer-list member and then an inner mapped member; its converse constructs those same occurrences. Sum membership splits the append and recovers the exact tag from its mapped pair. Both constructions preserve duplicates and order.
+
+
 87. Identity, transport and route comparison
 
 For every nonempty source object, the exact original identity constructor succeeds. Its empty-One return contributes no canonical transition. Successful left and right identity compositions retain the other arrow's source, target and canonical path. Composition of source-admitted arrows exists precisely when the first target equals the second source; original field admission and complete trace retention are preserved. These results derive the registered identity and interface conditions constructively.
@@ -2178,6 +2215,45 @@ For every nonempty source object, the exact original identity constructor succee
 The native transport predicate retains the exact source procedure: the last object and arrow mapping for each key is used, every supplied arrow must have its name and endpoints mapped, and its image endpoints must equal the mapped endpoints. Native equivalence gives these conditions for every supplied arrow. The predicate retains the source's empty-input behavior and does not introduce additional executable checks.
 
 Naturality replays each supplied nonempty route in order, propagating the original first composition failure. The resulting trace is exactly the concatenation of the input arrow traces. Route comparison succeeds precisely when source, target and the complete canonical traces agree. Empty input retains the source indexing error. All 1,024 original kernels, seven operational witnesses and complete generated-program outputs are verified against the pinned V3 records, completing the registered finite compositional entry.
+
+
+For nonempty object x, the identity record is
+
+\[
+ I_x=(\text{id:}x,\ x,\ x,\ [\text{empty-One-return:}x]),\qquad K(T_{I_x})=[].
+\]
+
+The prefix calculation removes its sole trace item. Consequently successful left and right identity compositions preserve the other arrow's interfaces, with canonical paths []++K(T_a)=K(T_a) and K(T_a)++[]=K(T_a). For admitted a,b, their concatenated trace is nonempty, the joined name contains the composition symbol, and the retained source/target are nonempty. Thus J(a,b) is admitted, proving
+
+\[
+ (\exists c,\ \operatorname{compose}(a,b)=\operatorname{ok}(c))\iff t_a=s_b.
+\]
+
+Let O and M be the last-value object and arrow lookup maps. The transport predicate is exactly
+
+\[
+ \forall a\in A,\ \exists b,s,t,\
+ M(n_a)=\operatorname{Some}(b)\land O(s_a)=\operatorname{Some}(s)
+ \land O(t_a)=\operatorname{Some}(t)\land s_b=s\land t_b=t.
+\]
+
+Lookup satisfies lookup(R++[(k,v)],k)=Some(v), by induction on R. Empty A makes the universal predicate true. No additional path-composition or identity test is inserted into this source predicate.
+
+Route replay begins at its first arrow and repeatedly composes with the next. Formally FoldRest(a,[])=ok(a); FoldRest(a,b::R) propagates a composition error immediately, or recurses on its successful result and R. The empty route gives the original tuple-index error. On every successful nonempty route [a_1,...,a_n], induction using trace retention gives
+
+\[
+ s_{\rm result}=s_{a_1},\qquad
+ T_{\rm result}=T_{a_1}++\cdots++T_{a_n}.
+\]
+
+The left route is replayed before the right. Once both return l,r, the comparison succeeds exactly when
+
+\[
+ s_l=s_r\land t_l=t_r\land K(T_l)=K(T_r).
+\]
+
+The first left failure is propagated without replaying the right; a right failure is propagated after successful left replay. These are the complete source route-comparison conditions. The ten binary grammar coordinates enumerate 2^10=1,024 candidates, with acceptance equivalent to their original all-admitted conjunction.
+
 
 88. Symbols and observation-relative distinction
 

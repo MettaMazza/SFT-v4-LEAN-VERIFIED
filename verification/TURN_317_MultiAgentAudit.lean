@@ -1,0 +1,22 @@
+import SFT.Computation.MultiAgent
+#print axioms SFT.Computation.MultiAgent.actionSupported
+#print axioms SFT.Computation.MultiAgent.rowAdmitted
+#print axioms SFT.Computation.MultiAgent.rows
+#print axioms SFT.Computation.MultiAgent.localObservations
+#print axioms SFT.Computation.MultiAgent.observationMeaning
+#print axioms SFT.Computation.MultiAgent.actionMeaning
+#print axioms SFT.Computation.MultiAgent.recordedActionsSupported
+#print axioms SFT.Computation.MultiAgent.rowMeaning
+#print axioms SFT.Computation.MultiAgent.jointComposition
+#print axioms SFT.Computation.MultiAgent.communication
+#print axioms SFT.Computation.MultiAgent.communicationMeaning
+#print axioms SFT.Computation.MultiAgent.finalState
+#print axioms SFT.Computation.MultiAgent.replay
+#print axioms SFT.Computation.MultiAgent.replayMeaning
+#print axioms SFT.Computation.MultiAgent.cycleCheck
+#print axioms SFT.Computation.MultiAgent.cycleLedger
+#print axioms SFT.Computation.MultiAgent.traceEnd
+#print axioms SFT.Computation.MultiAgent.cycleMeaning
+#print axioms SFT.Computation.MultiAgent.cycleLedgerMeaning
+#print axioms SFT.Computation.MultiAgent.rowExtension
+#print axioms SFT.Computation.MultiAgent.traceExtension

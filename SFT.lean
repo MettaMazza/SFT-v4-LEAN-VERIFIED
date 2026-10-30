@@ -885,3 +885,8 @@ import SFT.Computation.ReinforcementGrammar
 import SFT.Computation.ReinforcementControls
 import SFT.Computation.ReinforcementEvidence
 import SFT.Computation.Reinforcement
+import SFT.Computation.MultiAgentWitnesses
+import SFT.Computation.MultiAgentGrammar
+import SFT.Computation.MultiAgentControls
+import SFT.Computation.MultiAgentEvidence
+import SFT.Computation.MultiAgent

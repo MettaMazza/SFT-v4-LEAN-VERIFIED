@@ -513,3 +513,7 @@ def main : IO Unit := do
   for c in SFT.Computation.ReinforcementGrammar.candidates do
     IO.println ("ReinforcementGrammar\t" ++ SFT.Computation.ReinforcementGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ReinforcementGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ReinforcementGrammar.exactForm c ++ "\t" ++ SFT.Computation.ReinforcementGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.MultiAgentGrammar.candidates do
+    IO.println ("MultiAgentGrammar\t" ++ SFT.Computation.MultiAgentGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.MultiAgentGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.MultiAgentGrammar.exactForm c ++ "\t" ++ SFT.Computation.MultiAgentGrammar.decisionReason c)
+

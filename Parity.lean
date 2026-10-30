@@ -667,3 +667,7 @@ def main : IO Unit := do
 
   for c in SFT.Physics.PlanckBaseGrammar.candidates do
     IO.println ("PlanckBaseGrammar\t" ++ SFT.Physics.PlanckBaseGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PlanckBaseGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PlanckBaseGrammar.exactForm c ++ "\t" ++ SFT.Physics.PlanckBaseGrammar.decisionReason c)
+
+
+  for c in SFT.Mathematics.ExactRelationsGrammar.candidates do
+    IO.println ("ExactRelationsGrammar\t" ++ SFT.Mathematics.ExactRelationsGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.ExactRelationsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.ExactRelationsGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.ExactRelationsGrammar.decisionReason c)

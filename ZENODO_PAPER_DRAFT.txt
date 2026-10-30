@@ -4385,6 +4385,24 @@ Composition retains the intermediate input and both input translations. The fina
 
 All 256 original candidates and all complete native program fields and hashes agree with pinned V3. These results complete the registered Fold Computability-Reduction Law.
 
+
+Let I(x,y) and D(b,a) be the supplied input and answer translations, each defined by finite encoding lookup followed by exact decoding. Totality on source S and target T means ∀x∈S, ∃y∈T, I(x,y). The registered answer correspondence is the explicit equivalence
+
+\[
+ A_S(x,a)\iff\exists b,\ A_T(y,b)\land D(b,a)\qquad(x\in S,\ I(x,y)).
+\]
+
+Given A_S(x,a), totality supplies y and the forward implication supplies b. A target procedure answer retains a selected request and halt certificate, so replay gives its full trace before++[b] and normal terminal b. Expanding D(b,a) retains the actual code word, encoding lookup and answer decoder result. Conversely, a target answer and its decoding yield A_S(x,a) by the reverse implication.
+
+For successive reductions with intermediate answer a₁ and final answer a₂, substitute the second correspondence into the first:
+
+\[
+ A_S(x,a)\iff\exists a_2,a_1,\ A_T(z,a_2)\land D_2(a_2,a_1)\land D_1(a_1,a).
+\]
+
+Totality supplies and retains both intermediate input y and final input z in their respective domains. The two reverse implications prove the reverse direction in the opposite order. With the same validated table and its exact inverse, translation uniqueness forces output=input; applying this to both input and held answer proves identity preservation. The domain successor law separates the new head input's translated witness from totality on the old tail, by the two cases of list membership.
+
+
 152. Finite relative computability classes
 
 Registered problems and their certified reductions form an original generated finite graph. Its exact reachability operation supplies complete retained paths. Every reduction step on such a path retains its finite encoders, decoders and bidirectional correctness certificate. Native path composition supplies transitive closure without replacing the intermediate interfaces.
@@ -4395,6 +4413,20 @@ Strict one-way reachability is transitive and excludes mutual equivalence. A fin
 
 All 256 original candidates and every complete native program field and hash agree with pinned V3. These results complete the registered Fold Degrees-of-Computability Law.
 
+
+Write x↝y for true reachability in the admitted finite problem graph. Define x∼y iff x↝y and y↝x, and retain the ordered class [y∈nodes:x∼y]. Filter membership proves that this list contains exactly the held mutually reachable nodes. Identity paths give x∼x, swapping the two paths gives symmetry, and path composition in both directions gives transitivity. Hence x∼x′ transports class membership in both directions. If two classes share z, composing x↝z↝y and y↝z↝x proves x∼y.
+
+Strict reachability is x≺y iff both nodes are held, x↝y and not y↝x. If x≺y and y≺z, composition gives x↝z. A reverse z↝x would compose with y↝z to contradict not y↝x. Thus strict reachability is transitive and excludes mutuality. Incomparability requires both reachability tests false; any complete path in either direction would force its test true.
+
+For equivalent replacements x∼x′ and y∼y′, transport is the path composition
+
+\[
+ x'\rightsquigarrow x\rightsquigarrow y\rightsquigarrow y'.
+\]
+
+Applying the same construction in reverse proves transport of absence by contradiction. Therefore strictness and incomparability preserve equivalent representatives. Retaining graph nodes and edges retains each original path and thus every mutual witness; the singleton graph [One] with no edges has class [One]. Finally, complete reachability reconstruction gives an ordered path whose every adjacent pair is a registered edge. The supplied edge certificate then recovers each reduction's total input map and bidirectional answer map along that path.
+
+
 153. Universal-machine execution and recognition
 
 The frozen description grammar retains exact machine requests: the original generated machine, its initial input and every requested action. Native finite encoding and decoding reconstruct each admitted request. Prefix-free description streams have a unique complete parse. Interpretation returns precisely the original machine execution, preserving its complete trace and original errors.
@@ -4403,6 +4435,19 @@ A terminal execution retains its output and excludes further transitions. Conver
 
 The identity trace supplies the base. Serial execution retains the intermediate state and concatenated action and trace rows. Retained decoding and registry selections preserve all prior interpreted observations; every newly admitted encoded request is covered by the same finite grammar theorem. All 256 original candidates and complete program fields and hashes agree with pinned V3. These results complete the registered Fold Universal-Machine Execution Law.
 
+
+For a decoded code and selected request q, exact observation is
+
+\[
+ I(w)=\operatorname{some}(o)\iff
+ \operatorname{run}_{q.machine}(q.initial,q.actions)=o.
+\]
+
+Both directions follow by expanding interpretation and using the successful decoder and registry lookup. A halt certificate therefore yields I(w)=some(ok(b++[t])), |b|=|actions|, and no successful outgoing step at t. Conversely, a successful interpreted trace reconstructs its path; supplying the stated normal-terminal boundary completes the halt certificate. A decision retains t=accept or t=reject. An unresolved prefix replays through the same equation while its endpoint inequalities exclude a decision. Original run errors likewise remain the identical interpreted errors.
+
+For prefix-free code support, two held codeword lists L,R with concatenate(L)=concatenate(R) satisfy L=R by the complete unique-parse theorem. If an extension preserves decoding at w and every previous successful registry selection, interpretation-origin reconstruction supplies the same request and run; substituting those retained selections preserves the exact observation. The original loop supplies an unresolved prefix at every finite depth and fails total decision on its registered input, as proved in Section 148.
+
+
 154. Generated diagonal contradiction
 
 The registered undecidability construction applies on languages supporting exact self-encoding and complementation. The native diagonal constructor applies the original complementary-verdict operation and realizes its result in a generated machine with its complete identity-halt trace. Both held verdicts are supported, and the original failure boundary is retained.
@@ -4410,6 +4455,25 @@ The registered undecidability construction applies on languages supporting exact
 Self-application retains the same generated code, decoded description and selected request used to query the proposed decider. Totality supplies a held answer on that description. The exact diagonal constructor supplies its complement and the corresponding native interpreted execution. Correctness would equate the proposed answer with that observed complementary answer, contradicting the proved absence of a complement fixed point. Thus a total correct internal decider is excluded on the explicitly registered self-encoding/complement domain.
 
 The contradiction retains each decoding, selection, construction and execution witness. Exact retained decoding and registry selections preserve self-support under extension. The identity trace supplies the base; original path composition preserves intermediate interfaces and complete action/trace records. All 256 original candidates and complete native program fields and hashes agree with pinned V3, completing the Fold Undecidable-Problem Law.
+
+
+Let c(v) be the original complement of a held verdict. The diagonal constructor returns the request
+
+\[
+ q_v=(M_v,c(v),[]),\qquad
+ M_v=(\,[c(v)],\,[\mathrm{fold}],\,[]\,).
+\]
+
+The machine is admitted: its singleton carriers are distinct and nonempty, and its empty transition relation passes validation. Its identity path halts at c(v), since no outgoing row exists, and run(q_v)=ok([c(v)]). Both held verdicts produce this request; an invalid verdict propagates the original complement error.
+
+Self-support retains a single code w decoded to n such that any predictor answer v there selects the corresponding constructed q_v at n. Totality supplies a held v with predictor(w)=ok(v). The native construction and selected registry row give
+
+\[
+ I(w)=\operatorname{some}(\operatorname{ok}([c(v)])).
+\]
+
+Correctness for this same code requires v=c(v), contradicting the complement's no-fixed-point theorem. This instantiation proves exclusion of a total correct internal decider on the stated self-supported domain. If an extension preserves decoding and the selected request, the same w,n and constructor witness continue to establish self-support; the contradiction retains its exact source interface.
+
 
 155. Computational proof-system boundary
 

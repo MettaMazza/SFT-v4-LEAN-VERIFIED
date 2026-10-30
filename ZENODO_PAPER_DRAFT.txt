@@ -2936,7 +2936,50 @@ Appending a fresh input and its complete nonempty, duplicate-free support within
 
 Every prior distinguishable code remains valid. Its extension by the fresh input is distinguishable exactly when each prior member has disjoint support from the fresh input. The native exhaustive successor theorem establishes that every generated code is an old code, the fresh singleton, or such a permitted extension of an old code, and conversely every one of those alternatives is generated. This closes arbitrary finite carrier growth while retaining the full candidate family used by the greatest-cardinality selection.
 
-All 1024 channel kernels and all five original operational witnesses are retained. Fresh native execution matches every original registration, census, actual candidate lookup, closure, control and digest field. The cumulative 20505 source-expression comparisons include 735 fresh-input support/code checks alongside constructor, support, confusability, capacity and composition cases. Channel Capacity is complete at the source finite zero-error boundary; probabilistic error rates and asymptotic coding claims remain outside that original boundary.
+All 1,024 channel kernels and all five original operational witnesses are retained. Fresh native execution matches every original registration, census, actual candidate lookup, closure, control and digest field. The cumulative 20,505 source-expression comparisons include 735 fresh-input support/code checks alongside constructor, support, confusability, capacity and composition cases. Channel Capacity is complete at the source finite zero-error boundary; probabilistic error rates and asymptotic coding claims remain outside that original boundary.
+
+
+Let C=(I,O,R) be admitted, let x∉I be fresh, and let T be a nonempty distinct list contained in O. The source extension is
+
+\[
+ I'=I\mathbin{++}[x],\qquad O'=O,\qquad
+ R'=R\mathbin{++}[(x,t):t\in T].
+\]
+
+Distinctness of I' follows from freshness. The new cells are distinct because their second coordinates are distinct; no new cell can coincide with an old cell, since endpoint containment would put x in I. Old endpoints remain inside the extended carriers, and new endpoints lie there by T⊆O. Old inputs retain a transport witness, while nonempty T supplies one for x. These four facts establish the extended constructor's admission conditions.
+
+Filtering distributes over relation concatenation. For the fresh rows alone,
+
+\[
+ S_{[(x,t):t\in T]}(s)=\begin{cases}T,&s=x,\\\lbrack\rbrack,&s\ne x.\end{cases}
+\]
+
+Hence S_{R'}(s)=S_R(s) for every old s. No old cell begins at x, so S_R(x)=[] and S_{R'}(x)=T. The preserved support equations imply
+
+\[
+ \operatorname{overlap}_{R'}(s,u)=\operatorname{overlap}_{R}(s,u)\quad(s,u\in I),
+ \qquad\operatorname{overlap}_{R'}(s,x)\iff\exists t\in T,\ (s,t)\in R.
+\]
+
+For any held list H contained in I, its nonemptiness, distinctness and old pair decisions are unchanged, proving Code_{C'}(H) iff Code_C(H). If H is already a code, freshness preserves distinctness of H++[x]. Its positional pairs consist exactly of old pairs and pairs (s,x) for s∈H, in the established interleaved source order. Therefore
+
+\[
+ \operatorname{Code}_{C'}(H\mathbin{++}[x])
+ \iff\forall s\in H,\ \neg\operatorname{overlap}_{R'}(s,x).
+\]
+
+For the converse restriction used below, a nonempty H contained in I with Code_{C'}(H++[x]) inherits distinctness and all old pair tests from that longer code. The old overlap identity then proves Code_C(H).
+
+Write K(C) for the complete candidate list, before selecting maximum cardinality. Induction through the take/skip constructors shows that any canonical selection of I++[x] either omits the final x and is chosen from I, or equals H++[x] for H chosen from I. In the latter case H=[] yields the fresh singleton; otherwise the restriction argument supplies an old code and the extension test supplies separation. This proves the exhaustive membership equivalence
+
+\[
+ L\in K(C')\iff L\in K(C)\ \lor\ L=[x]\ \lor
+ \exists H\in K(C),\ L=H\mathbin{++}[x]
+ \land\forall s\in H,\ \neg\operatorname{overlap}_{R'}(s,x).
+\]
+
+Conversely, an old selection remains chosen in the appended carrier; [x] is a singleton code; and appending x to a chosen old code remains a canonical selection and passes exactly the stated separation tests. Thus every listed alternative is generated, and none is missing. This is a membership characterization of the complete existing enumeration, not a replacement ordering for that enumeration. The maximum-family construction continues to act on the full ordered candidate list.
+
 
 103. Registered action relations and exact correction
 

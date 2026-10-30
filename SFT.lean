@@ -855,3 +855,8 @@ import SFT.Computation.RepresentationLearningGrammar
 import SFT.Computation.RepresentationLearningControls
 import SFT.Computation.RepresentationLearningEvidence
 import SFT.Computation.RepresentationLearning
+import SFT.Computation.GeneralizationWitnesses
+import SFT.Computation.GeneralizationGrammar
+import SFT.Computation.GeneralizationControls
+import SFT.Computation.GeneralizationEvidence
+import SFT.Computation.Generalization

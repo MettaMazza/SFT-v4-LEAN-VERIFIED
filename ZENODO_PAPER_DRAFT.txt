@@ -2353,11 +2353,76 @@ Encoding admission retains the original nonempty, distinct source and code-suppo
 
 The exact decoder exists if and only if every used codeword class contains a single source occurrence. Its ordered inverse relation preserves those codeword keys. Decoder lookup requires exactly one matching image and retains the original error on zero or multiple matches. Constructive proofs establish that applying the resulting decoder to every row of an admitted lossless encoding returns the original canonical source. The raw operations retain their original empty and malformed-input behavior independently of encoding admission.
 
+
+For source list S, code-support list W and encoding rows E, the exact admission condition is
+
+\[
+ \begin{aligned}
+ &S\ne[]\land W\ne[]\land\operatorname{Distinct}(S)\land\operatorname{Distinct}(W)\\
+ &\land |E|=|S|\land\operatorname{keys}(E)\subseteq S\land S\subseteq\operatorname{keys}(E)\\
+ &\land\operatorname{Distinct}(\operatorname{keys}(E))
+ \land\forall(s,w)\in E,\ w\in W.
+ \end{aligned}
+\]
+
+Each word w is a list of held labels; this guard does not require w itself to be nonempty. Put U=firstCodewords(map(second,E)) and F_w=[s∈S:(s,w)∈E]. Then
+
+\[
+ s\in F_w\iff s\in S\land(s,w)\in E,\qquad
+ (w,T)\in\operatorname{sourceClasses}(S,E)\iff w\in\operatorname{map}(\mathrm{second},E)\land T=F_w.
+\]
+
+First-occurrence filtering gives distinct U in encoding order, while each F_w preserves source order. On admitted inputs, every used w has an encoding row whose source lies in S, so every emitted class is nonempty.
+
+The inverse operation traverses these classes in order. It maps (w,[s]) to (w,s), rejects a class of zero or multiple occurrences, and returns the empty decoder on an empty class list. Induction over the class list proves
+
+\[
+ (\exists D,\ \operatorname{exactDecoder}(S,E)=\operatorname{Some}(D))
+ \iff\forall(w,F)\in\operatorname{sourceClasses}(S,E),\ \exists s,\ F=[s].
+\]
+
+On success, the decoder keys equal the class keys in order, and (w,s)∈D iff (w,[s]) is a source class. Decoder lookup succeeds exactly when [s':(w,s') occurs in D]=[s]. For an admitted row (s,w)∈E, source provenance gives s∈F_w; the singleton-class condition forces F_w=[s]. Hence (w,s)∈D. Distinct class keys give exactly one decoder match, establishing
+
+\[
+ \operatorname{decode}(w,D)=\operatorname{ok}(s)
+ \quad\text{for every }(s,w)\in E.
+\]
+
+This is the exact left-inverse result, retaining the admitted-encoding and successful-decoder hypotheses. The raw class/inverse operations retain their separate empty-input behavior.
+
+
 91. Closed encoding distinctions and exact composition
 
 The closed-distinction ledger enumerates source pairs in their original positional order and compares each source's first encoding image. On admitted encodings the computation is total. A pair occurs in the closed ledger precisely when it is one of the generated source pairs and both members belong to the same retained codeword class. The empty and singleton source cases retain empty ledgers; missing first images retain the original error behavior on unvalidated inputs.
 
 Encoding composition requires distinct second-stage interface keys and an image for every first-stage codeword. Native existence is equivalent to these exact conditions. Every source occurrence remains in its original order, and an output relation holds precisely when a first-stage source-to-codeword relation joins a second-stage codeword-to-output relation. No source alphabet or injectivity condition beyond the original composition guard is added.
+
+
+Let f_E(s) be the first encoding image for s, when present. The source pair list obeys P([])=[] and P(a::R)=[(a,b):b∈R]++P(R). The closed-pair operation looks up a before b, returns its original StopIteration-derived error if either image is missing, and otherwise tests equality of the two images. On admitted inputs its ordered ledger C therefore satisfies
+
+\[
+ (a,b)\in C\iff (a,b)\in P(S)\land
+ \exists w,\ a\in F_w\land b\in F_w.
+\]
+
+In one direction, a shared class supplies both encoding rows; distinct admitted source keys identify their first images as w. In the other, equal first images supply the two original rows and, with a,b∈S, give membership in F_w. The pair generator returns [] on empty or singleton sources, and the selection retains its source order.
+
+For first-stage E and second-stage rows H, composition admission is exactly
+
+\[
+ \operatorname{Distinct}(\operatorname{keys}(H))\land
+ \forall(s,w)\in E,\ w\in\operatorname{keys}(H).
+\]
+
+Coverage supplies a second-stage image for each row; induction on E constructs the complete output. Conversely, a successful public composition must have passed this guard. The recursive application maps (s,w)::R to (s,f_H(w)) followed by the recursively mapped tail, propagating any missing-image error. Thus a successful output J obeys
+
+\[
+ \operatorname{keys}(J)=\operatorname{keys}(E),\qquad
+ (s,v)\in J\iff\exists w,\ (s,w)\in E\land(w,v)\in H.
+\]
+
+The first equality is an ordered-list identity, preserving repeated source occurrences. For the second, induction supplies the intermediate lookup; distinct second-stage keys make lookup equivalent to the recorded row (w,v). No separate source-alphabet validation or injectivity premise is added to this composition condition.
+
 
 92. Encoding source extension and finite closure
 

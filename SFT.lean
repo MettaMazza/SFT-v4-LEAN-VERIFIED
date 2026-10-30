@@ -1031,3 +1031,7 @@ import SFT.QuantumComputation.Circuit
 import SFT.QuantumComputation.CircuitGrammar
 import SFT.QuantumComputation.CircuitControls
 import SFT.QuantumComputation.CircuitEvidence
+import SFT.QuantumComputation.Universality
+import SFT.QuantumComputation.UniversalityGrammar
+import SFT.QuantumComputation.UniversalityControls
+import SFT.QuantumComputation.UniversalityEvidence

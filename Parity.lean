@@ -461,3 +461,7 @@ def main : IO Unit := do
   for c in SFT.Computation.ZeroKnowledgeGrammar.candidates do
     IO.println ("ZeroKnowledgeGrammar\t" ++ SFT.Computation.ZeroKnowledgeGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ZeroKnowledgeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ZeroKnowledgeGrammar.exactForm c ++ "\t" ++ SFT.Computation.ZeroKnowledgeGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.MultipartyGrammar.candidates do
+    IO.println ("MultipartyGrammar\t" ++ SFT.Computation.MultipartyGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.MultipartyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.MultipartyGrammar.exactForm c ++ "\t" ++ SFT.Computation.MultipartyGrammar.decisionReason c)
+

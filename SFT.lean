@@ -820,3 +820,8 @@ import SFT.Computation.ZeroKnowledgeGrammar
 import SFT.Computation.ZeroKnowledgeControls
 import SFT.Computation.ZeroKnowledgeEvidence
 import SFT.Computation.ZeroKnowledge
+import SFT.Computation.MultipartyWitnesses
+import SFT.Computation.MultipartyGrammar
+import SFT.Computation.MultipartyControls
+import SFT.Computation.MultipartyEvidence
+import SFT.Computation.Multiparty

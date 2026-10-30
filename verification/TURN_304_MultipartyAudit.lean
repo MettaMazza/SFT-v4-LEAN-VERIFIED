@@ -1,0 +1,25 @@
+import SFT.Computation.Multiparty
+#print axioms SFT.Computation.Multiparty.supported
+#print axioms SFT.Computation.Multiparty.rows
+#print axioms SFT.Computation.Multiparty.rowMeaning
+#print axioms SFT.Computation.Multiparty.corruptedInputs
+#print axioms SFT.Computation.Multiparty.coalitionViews
+#print axioms SFT.Computation.Multiparty.corruptionInputMeaning
+#print axioms SFT.Computation.Multiparty.coalitionViewMeaning
+#print axioms SFT.Computation.Multiparty.pairs
+#print axioms SFT.Computation.Multiparty.pairMeaning
+#print axioms SFT.Computation.Multiparty.samePublic
+#print axioms SFT.Computation.Multiparty.leaks
+#print axioms SFT.Computation.Multiparty.leakageLedger
+#print axioms SFT.Computation.Multiparty.leakageMeaning
+#print axioms SFT.Computation.Multiparty.executionTrace
+#print axioms SFT.Computation.Multiparty.excludedCorruption
+#print axioms SFT.Computation.Multiparty.privateFor
+#print axioms SFT.Computation.Multiparty.exactPrivacy
+#print axioms SFT.Computation.Multiparty.noLeakage
+#print axioms SFT.Computation.Multiparty.secure
+#print axioms SFT.Computation.Multiparty.exactSecurity
+#print axioms SFT.Computation.Multiparty.registeredPrivacy
+#print axioms SFT.Computation.Multiparty.rowExtension
+#print axioms SFT.Computation.Multiparty.extendExecution
+#print axioms SFT.Computation.Multiparty.leakageExtension

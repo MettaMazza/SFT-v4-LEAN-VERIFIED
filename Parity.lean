@@ -581,3 +581,6 @@ def main : IO Unit := do
 
   for c in SFT.QuantumComputation.InformationUnitGrammar.candidates do
     IO.println ("InformationUnitGrammar\t" ++ SFT.QuantumComputation.InformationUnitGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.InformationUnitGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.InformationUnitGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.InformationUnitGrammar.decisionReason c)
+
+  for c in SFT.QuantumComputation.StateCompositionGrammar.candidates do
+    IO.println ("StateCompositionGrammar\t" ++ SFT.QuantumComputation.StateCompositionGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.StateCompositionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.StateCompositionGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.StateCompositionGrammar.decisionReason c)

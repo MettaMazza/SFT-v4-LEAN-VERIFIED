@@ -1003,3 +1003,7 @@ import SFT.QuantumComputation.InformationUnit
 import SFT.QuantumComputation.InformationUnitGrammar
 import SFT.QuantumComputation.InformationUnitControls
 import SFT.QuantumComputation.InformationUnitEvidence
+import SFT.QuantumComputation.StateComposition
+import SFT.QuantumComputation.StateCompositionGrammar
+import SFT.QuantumComputation.StateCompositionControls
+import SFT.QuantumComputation.StateCompositionEvidence

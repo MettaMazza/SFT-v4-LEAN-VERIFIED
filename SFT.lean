@@ -875,3 +875,8 @@ import SFT.Computation.ComputationalInductionGrammar
 import SFT.Computation.ComputationalInductionControls
 import SFT.Computation.ComputationalInductionEvidence
 import SFT.Computation.ComputationalInduction
+import SFT.Computation.SearchPlanningWitnesses
+import SFT.Computation.SearchPlanningGrammar
+import SFT.Computation.SearchPlanningControls
+import SFT.Computation.SearchPlanningEvidence
+import SFT.Computation.SearchPlanning

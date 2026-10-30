@@ -1,0 +1,52 @@
+{
+  "claim_id": "SFT-COMP-LEARN-SEARCH-PLANNING-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/learning_intelligence/search_planning/law.py": "a6f2bb19c5298b35625466d2d3c0bf42fe6b57fc851544d49287e5651c3d9f22",
+    "claims/SFT-COMP-LEARN-SEARCH-PLANNING-001/WHY_DERIVATION_CHECK.md": "1509b9712a1e11f8e42f1ed5a4349d0e254327c96508c8e5f578f6a929c96d03",
+    "claims/SFT-COMP-LEARN-SEARCH-PLANNING-001/registration.json": "b0f93fc9a0768c513cd99d007781a8add35f31388c53d4bd0f1b189686f7a19c",
+    "claims/SFT-COMP-LEARN-SEARCH-PLANNING-001/execution.py": "06e381efad4c0b2c6d7f4e4b9936fa67ed2e8b7e77cade36b004d3221e82e497",
+    "claims/SFT-COMP-LEARN-SEARCH-PLANNING-001/independent_validator.py": "f25681d6e8039c34cf014c34e97e64bbb3e0272f0959c4866faee5d7e374a1c2",
+    "claims/SFT-COMP-LEARN-SEARCH-PLANNING-001/certificate.json": "04c4547dcc950ca06ac918bf6c4622ab240819d7504d792b1768a102b4c9595e"
+  },
+  "components": {
+    "source carrier and selection": "Model retains state/action transition system,initial state,goal class and complete plan support. acceptedMeaning and selectionMeaning prove exact supported plans reaching a goal through an actual execution.",
+    "execution and failure": "selectedExecution constructs a full source transition execution. exhaustive and disjoint retain every supported plan in success/failure ledgers. runFailure excludes failed executions.",
+    "complete ledgers": "ledgerComplete retains every supported plan and actual run result,including errors. resourceComplete retains exact action count for each plan.",
+    "composition and extension": "planComposition proves serial plans retain the shared interface and final goal. selectedExtension preserves successful plans under admitted enlarged state/transition/goal/plan support.",
+    "grammar and controls": "Original256 grammar,three witnesses,four controls and fresh parity pass.1536 concrete outputs and nativeComposition/nativeExecution passzeroaxioms. Full original program 42866 running. Only generated environment model covered."
+  },
+  "dependencies": [
+    "SFT-COMP-LEARN-INDUCTION-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": {
+    "SFT-COMP-LEARN-INDUCTION-001": "in_progress",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+    "SFT-MATH-DISCRETE-001": "complete",
+    "SFT-MATH-GRAPH-NETWORK-001": "complete",
+    "SFT-MATH-LOGIC-PROOF-001": "complete",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+    "SFT-INFO-ENCODING-DECODING-001": "complete",
+    "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+  },
+  "native_checks": {
+    "kernel_output_checks": 1536,
+    "axiom_dependencies": 0,
+    "audit": "verification/TURN_315_PARITY_REPORT.json"
+  },
+  "remaining": [
+    "Original fresh full program field/hash comparison42866; completion after ComputationalInduction in dependency order."
+  ],
+  "status": "native_derivation_and_parity_pass_program_comparison_running"
+}

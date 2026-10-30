@@ -3521,3 +3521,32 @@ The exact computed traces include
 
 Their lengths are respectively 2,4,3,6, with each ordered equality proved by native computation. Twenty-one interface definitions and theorems have no axiom dependencies. Fresh Lean execution agrees with the unchanged pinned V3 function and its original dependencies on 36 cases: both Boolean inputs and every integer from −2 through 31, comparing the full ordered rational traces and exact rejection outcomes. This finite comparison complements the general recurrence derivation of section 344; it does not replace that derivation.
 
+
+346. Exact Fraction and held-rank recurrence correspondence
+
+Let c_q(n) denote the original positive cast: repeatedly subtract q while the retained numerator is greater than q. Each subtraction preserves the remainder, so induction on the actual removal trace proves
+
+\[
+ c_q(n)\bmod q=n\bmod q.
+\]
+
+For positive n and q, the cast lies in 1,…,q. The held-rank Fold is
+
+\[
+ F_q(n)=\begin{cases}q,&2n\bmod q=0,\\2n\bmod q,&\text{otherwise}.\end{cases}
+\]
+
+It lies in the same held-rank interval and has remainder 2n mod q. Two ranks in 1,…,q with equal remainders are equal: a nonzero remainder names the rank itself, while zero names the retained whole q. Hence
+
+\[
+ c_q(n+n)=F_q(n).
+\]
+
+Write N(n,q) for the original normalized positive Fraction n/q. The already derived normalization and Fold-cast identity now yields the exact state equation
+
+\[
+ \operatorname{Fold}(N(n,q))=N(c_q(n+n),q)=N(F_q(n),q).
+\]
+
+For the unit orbit define x_k = N(r_k,q), where r_k is the actual held-rank iteration from section 344. Then Fold(x_k) = x_(k+1). The rank return r_p = 1 supplied for every odd q > 1 therefore gives x_p = x_0. This is equality of the actual normalized Fraction states, including their positive-cast convention, rather than only equality of modular residues. Eight native declarations establish this correspondence and Fraction-return existence with no axiom dependencies. The original loop's first-return branch and successful output for arbitrary odd q are the next correspondence obligations.
+

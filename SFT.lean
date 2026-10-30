@@ -1015,3 +1015,7 @@ import SFT.QuantumComputation.PhaseInterference
 import SFT.QuantumComputation.PhaseInterferenceGrammar
 import SFT.QuantumComputation.PhaseInterferenceControls
 import SFT.QuantumComputation.PhaseInterferenceEvidence
+import SFT.QuantumComputation.Entanglement
+import SFT.QuantumComputation.EntanglementGrammar
+import SFT.QuantumComputation.EntanglementControls
+import SFT.QuantumComputation.EntanglementEvidence

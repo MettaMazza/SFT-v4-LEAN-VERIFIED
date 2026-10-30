@@ -590,3 +590,6 @@ def main : IO Unit := do
 
   for c in SFT.QuantumComputation.PhaseInterferenceGrammar.candidates do
     IO.println ("PhaseInterferenceGrammar\t" ++ SFT.QuantumComputation.PhaseInterferenceGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.PhaseInterferenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.PhaseInterferenceGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.PhaseInterferenceGrammar.decisionReason c)
+
+  for c in SFT.QuantumComputation.EntanglementGrammar.candidates do
+    IO.println ("EntanglementGrammar\t" ++ SFT.QuantumComputation.EntanglementGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.EntanglementGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.EntanglementGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.EntanglementGrammar.decisionReason c)

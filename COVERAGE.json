@@ -7625,7 +7625,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEC-SIGNATURE-001-1e80fcc3c81615ba.json",
       "statement": "The forced publicly checkable source authorization kernel retains message support; signing relation; verification relation; key identities; accepted signatures; forgery adversary support; correctness trace; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold signature law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Computation/Signature.lean",
         "SFT/Computation/SignatureWitnesses.lean",
@@ -7633,7 +7633,7 @@
         "SFT/Computation/SignatureControls.lean",
         "SFT/Computation/SignatureEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
+      "artifact_runtime_parity": "PASS full256 actual identifier lookups and every original program field/hash.",
       "registration_sha256": "716eea1b2beac248e51bef766f9c14a982db712c00280a61a34460349dd7bbf3",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7679,10 +7679,9 @@
         "status": "independently_replicated",
         "title": "Fold signature law"
       },
-      "verified_scope": "Exact message/key support,signing relation,verification relation,accepted signatures and registered adversary rows. signingMeaning,verificationMeaning,signedMeaning and acceptedMeaning establish exact membership.; exactCorrectness proves the computed whole-signing check equivalent to verification of every supported signed row. correctnessTrace carries the signed row into a source-bound verification trace; correctnessRetainsRow proves retained identity.; forgeryMeaning gives the complete accepted-but-unsigned ledger within the registered adversary. exactUnforgeability proves computed whole-adversary check equivalent to signature-row membership for every verified adversary row; noGeneratedForgery excludes ledger members under that check.; missingKeyRejected and outsideAdversary prove exact source exclusions. signingExtension,verificationExtension,extendSigning and extendVerification retain earlier source rows and phase traces. No unrestricted or number-theoretic hardness assertion imported.; Original security256 grammar,three witnesses,four controls and fresh parity pass.2048 concrete outputs exercise all signing,verification,adversary subsets of the three-row carrier,plus native retained correctness trace. Full program21848 running.",
-      "remaining": [
-        "Original fresh full program field/hash comparison21848; completion after Commitment in dependency order."
-      ]
+      "verified_scope": "Exact message/key support,signing relation,verification relation,accepted signatures and registered adversary rows. signingMeaning,verificationMeaning,signedMeaning and acceptedMeaning establish exact membership.; exactCorrectness proves the computed whole-signing check equivalent to verification of every supported signed row. correctnessTrace carries the signed row into a source-bound verification trace; correctnessRetainsRow proves retained identity.; forgeryMeaning gives the complete accepted-but-unsigned ledger within the registered adversary. exactUnforgeability proves computed whole-adversary check equivalent to signature-row membership for every verified adversary row; noGeneratedForgery excludes ledger members under that check.; missingKeyRejected and outsideAdversary prove exact source exclusions. signingExtension,verificationExtension,extendSigning and extendVerification retain earlier source rows and phase traces. No unrestricted or number-theoretic hardness assertion imported.; Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_301_SIGNATURE_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -7901,9 +7900,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEC-ADVERSARIAL-001-feaa06a2fbc1430f.json",
       "statement": "The forced computation against generated hostile strategies kernel retains system process; adversary grammar; resources; interaction schedules; security property; complete favorable and unfavorable rows; stopping rule; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold adversarial-computation law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/Adversarial.lean",
+        "SFT/Computation/AdversarialWitnesses.lean",
+        "SFT/Computation/AdversarialGrammar.lean",
+        "SFT/Computation/AdversarialControls.lean",
+        "SFT/Computation/AdversarialEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
       "registration_sha256": "c83988f9febcc8ea1dce8749d9ae854f30a7248eb9d230846785e14d57294cfa",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7948,7 +7953,11 @@
         "statement": "The forced computation against generated hostile strategies kernel retains system process; adversary grammar; resources; interaction schedules; security property; complete favorable and unfavorable rows; stopping rule; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold adversarial-computation law"
-      }
+      },
+      "verified_scope": "System process,registered strategies,resource bound,schedules,security states and stopping states. rowMeaning proves exact source strategy/schedule/resource admission.; favorableMeaning and unfavorableMeaning identify every admitted secure/insecure final-state row; outcomeExhaustion and outcomeDisjoint establish complete exclusive classification.; exactSecurity proves computed whole-row security equivalent to secure outcomes for every admitted schedule. noUnfavorable excludes every adverse row; counterexampleRejectsSecurity refutes the computed security result from an actual adverse member.; Execution retains actual source transitions and terminal state; StoppedExecution retains the source stopping rule. executionMeaning reconstructs the trace and actualSecurity applies the checked result. undefinedAdversary and overBudget reject exact source exclusions.; rowExtension,favorableExtension,unfavorableExtension,extendExecution and extendStopped preserve earlier source rows,outcomes and stopped traces under registered support/resource extension.; Original256 grammar,three witnesses,four controls and fresh parity pass.2048 strategy/schedule/resource/security-support outputs plus nativeExecution/nativeStop/nativeSecurity passzeroaxioms. Full program30123 running.",
+      "remaining": [
+        "Original fresh full program field/hash comparison30123; completion after Multiparty in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -189819,13 +189828,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T01:00:11.674608+00:00",
+  "updated_at": "2026-10-30T01:04:32.630736+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 4,
-    "pending": 2652,
-    "fully_reconstructed_claims": 125,
-    "axiom_free_exported_results": 6811,
-    "axiom_free_audited_definitions_and_theorems": 15116
+    "pending": 2651,
+    "fully_reconstructed_claims": 126,
+    "axiom_free_exported_results": 6850,
+    "axiom_free_audited_definitions_and_theorems": 15215
   }
 }

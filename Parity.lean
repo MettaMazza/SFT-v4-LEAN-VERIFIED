@@ -465,3 +465,7 @@ def main : IO Unit := do
   for c in SFT.Computation.MultipartyGrammar.candidates do
     IO.println ("MultipartyGrammar\t" ++ SFT.Computation.MultipartyGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.MultipartyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.MultipartyGrammar.exactForm c ++ "\t" ++ SFT.Computation.MultipartyGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.AdversarialGrammar.candidates do
+    IO.println ("AdversarialGrammar\t" ++ SFT.Computation.AdversarialGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.AdversarialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.AdversarialGrammar.exactForm c ++ "\t" ++ SFT.Computation.AdversarialGrammar.decisionReason c)
+

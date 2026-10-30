@@ -825,3 +825,8 @@ import SFT.Computation.MultipartyGrammar
 import SFT.Computation.MultipartyControls
 import SFT.Computation.MultipartyEvidence
 import SFT.Computation.Multiparty
+import SFT.Computation.AdversarialWitnesses
+import SFT.Computation.AdversarialGrammar
+import SFT.Computation.AdversarialControls
+import SFT.Computation.AdversarialEvidence
+import SFT.Computation.Adversarial

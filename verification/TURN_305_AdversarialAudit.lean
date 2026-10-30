@@ -1,0 +1,25 @@
+import SFT.Computation.Adversarial
+#print axioms SFT.Computation.Adversarial.admitted
+#print axioms SFT.Computation.Adversarial.rows
+#print axioms SFT.Computation.Adversarial.favorable
+#print axioms SFT.Computation.Adversarial.unfavorable
+#print axioms SFT.Computation.Adversarial.rowMeaning
+#print axioms SFT.Computation.Adversarial.favorableMeaning
+#print axioms SFT.Computation.Adversarial.unfavorableMeaning
+#print axioms SFT.Computation.Adversarial.outcomeExhaustion
+#print axioms SFT.Computation.Adversarial.outcomeDisjoint
+#print axioms SFT.Computation.Adversarial.secure
+#print axioms SFT.Computation.Adversarial.exactSecurity
+#print axioms SFT.Computation.Adversarial.stops
+#print axioms SFT.Computation.Adversarial.executionMeaning
+#print axioms SFT.Computation.Adversarial.actualSecurity
+#print axioms SFT.Computation.Adversarial.undefinedAdversary
+#print axioms SFT.Computation.Adversarial.overBudget
+#print axioms SFT.Computation.Adversarial.rowExtension
+#print axioms SFT.Computation.Adversarial.favorableExtension
+#print axioms SFT.Computation.Adversarial.unfavorableExtension
+#print axioms SFT.Computation.Adversarial.extendExecution
+#print axioms SFT.Computation.Adversarial.extendStopped
+#print axioms SFT.Computation.Adversarial.retainedSchedule
+#print axioms SFT.Computation.Adversarial.noUnfavorable
+#print axioms SFT.Computation.Adversarial.counterexampleRejectsSecurity

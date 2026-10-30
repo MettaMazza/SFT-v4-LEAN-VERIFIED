@@ -4022,17 +4022,79 @@ The exact coordinate rewrite retains its original position validation and output
 
 Retained step records associate rule identity, source word, held replacement position, replacement symbol and successor word. Replaying a record uses the unchanged exact rewrite operation. Each valid record preserves word length and carries the complete selected/unchanged coordinate correspondence. Finite chains compose at their exact successor/source interface, preserve length and retain a replay proof for every recorded step. These typed records express the declared provenance fields; they do not add an executable operation to V3.
 
+
+For a fixed matching position trace P, write R_{h,a}(w) for the coordinate rewrite. At each coordinate p the overwrite equation reduces to
+
+\[
+ \text{if }p=h\text{ then }b\text{ else }(\text{if }p=h\text{ then }a\text{ else }x)
+ =\text{if }p=h\text{ then }b\text{ else }x.
+\]
+
+Induction on the paired position/word lists therefore gives R_{h,b}(R_{h,a}(w))=R_{h,b}(w). Setting b=a proves idempotence. For h≠k, the three cases p=h, p=k and neither give the same value in either order, proving
+
+\[
+ R_{k,b}(R_{h,a}(w))=R_{h,a}(R_{k,b}(w)).
+\]
+
+Length preservation leaves the rewrite admission conditions unchanged after the first replacement: P remains distinct, the word still has length |P|, and h is still held in P. Thus overwrite also holds for the admitted executable results.
+
+A record r=(ruleIdentity,h,a,w,v) replays precisely when exactRewrite(w,h,P,a)=ok(v). Its coordinate theorem gives the entire retained map from (p,x) to (p,if p=h then a else x), and |v|=|w|. Define T(w,[],w) as the identity trace; prepend r to T(v,rs,t) only when r replays from w to v. Induction over this trace gives |t|=|w| and replay validity for every member of the record list. Induction over a first trace ending at m, with a second beginning at m, proves T(w,rs++ss,t). Every recorded rewrite and its rule identity remain in that concatenation.
+
+
 137. Registered rewrite boundaries and trace classes
 
 The finite relation of registered rewrite applications retains complete records, including rule identity, source word, selected position, replacement and successor. Admitted applications belong to this retained relation, have both endpoints in the generated carrier and replay the original exact rewrite operation. Every admitted application has an exact source-symbol occurrence at its held position, a source-word decomposition around that occurrence and the replacement at that same coordinate. Missing registrations and endpoints outside the generated carrier are excluded by the declared boundary; the raw executable helper keeps its original guards.
 
 A terminal word has no admitted outgoing application. Consequently its retained traces are empty and it cannot begin a cyclic or branching trace. A cyclic trace retains a nonempty return path, which can be repeated by exact composition. A branching trace retains two admitted applications from the same word with distinct successors; each yields its own complete one-step trace. Identity, serial composition and one-record succession preserve the retained relation. Extending the registered application relation and generated carrier preserves all previous traces. These predicates formalise the declared finite trace classes; no claim of universal termination or confluence is introduced. Full 256-candidate native program agreement and the original three operational witnesses complete the registered Rewriting entry.
 
+
+For registered records Q and carrier C, define A(r) by r∈Q, source(r)∈C, successor(r)∈C and exact replay. A retained trace additionally requires its initial word in C and A(r) for each record. For an admitted record, equal word/position lengths and membership of its held position h imply an occurrence (h,x)∈zip(P,w). Induction through that zipped list locates the occurrence and produces a decomposition
+
+\[
+ w=u\mathbin{++}(x::v),\qquad (h,a)\in\operatorname{zip}(P,\operatorname{successor}(r)).
+\]
+
+Here a is the record's replacement. The coordinate theorem supplies the second statement at the same held position. Failure of record registration or either carrier membership directly contradicts the corresponding conjunct of A(r).
+
+Terminal(w) means w∈C and no admitted record has source w. Any nonempty retained trace has a head record whose source is w, contradicting this condition; hence every retained trace starting there has an empty record list. This excludes both a nonempty return cycle and the two outgoing records required for branching.
+
+For a retained return trace T(w,rs,w), serial composition gives T(w,rs++rs,w). For two admitted records r and s from w with different successors, the replay constructor followed by identity gives T(w,[r],successor(r)) and T(w,[s],successor(s)), retaining the distinct endpoints. Appending an admitted record to a trace ending at its source is the same serial construction. If Q⊆Q′ and C⊆C′, each record keeps its replay proof and both endpoint memberships transfer by inclusion; induction is unnecessary for the unchanged trace itself. These inclusions establish preservation of every previous retained trace under the registered extension.
+
+
 138. Structural finite recursion with complete values
 
 The recursion operation validates unique successor-position identities, then retains the supplied base and every value produced by its exact step relation. Empty bases, empty successor traces and empty string labels retain their original behavior. Native derivation chains agree exactly with the executable result and uniquely determine all intermediate values. The full trace has one value per successor plus the base.
 
-At every finite depth, appending a generated successor appends exactly its step result and preserves the complete earlier trace. The terminal value supplies the base interface for subsequent recursion. Composition concatenates predecessor records with the second complete trace, retaining the shared interface once; its admission uses the original distinct-position check on the combined trace. These results establish structural-One base, arbitrary finite successor, exact intermediate-value provenance and terminal composition without a completed transfinite object.800 independent output/error comparisons and all 256 original native program comparisons pass, completing the registered Fold Recursion Law.
+At every finite depth, appending a generated successor appends exactly its step result and preserves the complete earlier trace. The terminal value supplies the base interface for subsequent recursion. Composition concatenates predecessor records with the second complete trace, retaining the shared interface once; its admission uses the original distinct-position check on the combined trace. These results establish structural-One base, arbitrary finite successor, exact intermediate-value provenance and terminal composition without a completed transfinite object. 800 independent output/error comparisons and all 256 original native program comparisons pass, completing the registered Fold Recursion Law.
+
+
+Let f(v,p) be the supplied exact step on list-valued v, and let V(b,P) retain all values. Its defining equations are
+
+\[
+ V(b,[])=[b],\qquad V(b,p::P)=b::V(f(b,p),P).
+\]
+
+Structural recursion returns ok(V(b,P)) exactly when P has distinct position identities. The derivation relation has the matching base clause D(b,[],[b]) and successor clause taking D(f(b,p),P,τ) to D(b,p::P,b::τ). Induction on P constructs D(b,P,V(b,P)); induction on any certificate D(b,P,τ) proves τ=V(b,P). Thus the executable trace and the full derivation chain agree uniquely. The same recursion gives head(V)=b and |V(b,P)|=|P|+1.
+
+Let t(b,P) be the recursively computed terminal and B(b,P) the predecessor list, omitting that terminal. Induction gives
+
+\[
+ V(b,P)=B(b,P)\mathbin{++}[t(b,P)],
+\]
+
+\[
+ t(b,L\mathbin{++}R)=t(t(b,L),R),\qquad
+ V(b,L\mathbin{++}R)=B(b,L)\mathbin{++}V(t(b,L),R).
+\]
+
+The empty-left case is immediate. In the successor case, retain b, replace the recursive base by f(b,p), and apply the induction hypothesis to the remaining left positions. Taking R=[p] yields
+
+\[
+ V(b,P\mathbin{++}[p])=V(b,P)\mathbin{++}[f(t(b,P),p)].
+\]
+
+The executable composition and successor equations require precisely the original distinctness check on the combined position trace. For every pair (p,v) in zip(P,B(b,P)), induction also places f(v,p) in V(b,P): the head pair yields the next base, and each tail pair uses the recursive proof. This retains the exact step result for every successor, including empty list-valued bases.
+
 
 139. Fold binding and self-application calculus
 
@@ -4043,6 +4105,35 @@ The entry's source-bound operational kernel is the exact transition system, gene
 Normal traces have no successful outgoing registered step; their identity execution is retained and they cannot form a nonempty cycle. Cyclic traces retain a nonempty return path, replay through the exact source execution, and compose with themselves while retaining both copies of the trace. These native results hold for arbitrary finite paths. No conventional beta-reduction model is imported.
 
 All 256 original program decisions, three operational witnesses, controls, registration, closure and hashes agree with the pinned entry. The registered Fold Binding and Self-Application Calculus Law is complete within its original boundary. Source: claims/SFT-COMP-FORM-LAMBDA-CALCULUS-001/execution.py and its six-file source manifest; current computation publication v1.5.1 section 14.
+
+
+Using the retained path P(s,u,b,t), induction on its constructors gives
+
+\[
+ (x,a)\in\operatorname{zip}(b,u)\Longrightarrow
+ \exists y,\ (x,a,y)\in R.
+\]
+
+The head case uses the actual row selected by the successful step; the tail case applies the induction hypothesis. For s∈S, replay is run(s,u)=ok(b++[t]). The identity path has u=b=[]; appending a successful edge t→v produces run(s,u++[a])=ok((b++[t])++[v]). The serial and admitted-extension equations of Section 132 preserve these exact records.
+
+The normal and cyclic trace classes are
+
+\[
+ N(s)\iff s\in S\land\forall a,t,\ \operatorname{step}(s,a)\ne\operatorname{ok}(t),
+\]
+
+\[
+ C(s)\iff s\in S\land\exists u,b,\ u\ne[]\land P(s,u,b,s).
+\]
+
+A path from a normal state is either identity or has a first successful edge. The latter contradicts N(s), so its action list must be empty, and N(s) excludes C(s). Identity still executes to [s]. A cyclic witness replays to b++[s], and composing it with itself gives
+
+\[
+ \operatorname{run}(s,u\mathbin{++}u)=\operatorname{ok}((b\mathbin{++}b)\mathbin{++}[s]).
+\]
+
+This retains both complete traversals of the cycle within the registered transition kernel.
+
 
 140. Separate FORMX source components
 

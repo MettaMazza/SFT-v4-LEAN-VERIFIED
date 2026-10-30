@@ -1067,3 +1067,7 @@ import SFT.QuantumComputation.Verification
 import SFT.QuantumComputation.VerificationGrammar
 import SFT.QuantumComputation.VerificationControls
 import SFT.QuantumComputation.VerificationEvidence
+import SFT.QuantumComputation.Learning
+import SFT.QuantumComputation.LearningGrammar
+import SFT.QuantumComputation.LearningControls
+import SFT.QuantumComputation.LearningEvidence

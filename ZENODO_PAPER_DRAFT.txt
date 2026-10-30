@@ -3203,9 +3203,66 @@ Appending an action's registered images preserves the old image list and its ord
 
 The stated total source/codeword relation retains one codeword for each registered source. Native recovery proves that every received image of that codeword in a correctable family decodes to the held codeword while preserving the source row. The same recovery result follows after an action addition precisely when the complete successor disjointness conditions hold. No injective message assignment beyond the stated source-map constraint is imposed.
 
-The original width-three repetition example is a held codebook and its complete single-label image families are disjoint. The one-position uncoded control fails correction; a width-two repetition family also fails, giving the exact finite separation witness for the retained width. Coding includes all 2048 original kernels and all six original operational witnesses. The cumulative 19745 source-expression comparisons include 9375 action-successor detection, correction and decoding outputs. Coding remains within the original finite classical boundary, without a stochastic error model, metric threshold, imported asymptotic rate or quantum-code claim.
+The original width-three repetition example is a held codebook and its complete single-label image families are disjoint. The one-position uncoded control fails correction; a width-two repetition family also fails, giving the exact finite separation witness for the retained width. Coding includes all 2,048 original kernels and all six original operational witnesses. The cumulative 19,745 source-expression comparisons include 9,375 action-successor detection, correction and decoding outputs. Coding remains within the original finite classical boundary, without a stochastic error model, metric threshold, imported asymptotic rate or quantum-code claim.
 
-Fresh native execution of the complete Coding program matches all 2048 original candidate lookups together with every registration, census, closure, control and digest field and the unknown-identifier rejection. These results accompany the native source derivations and complete the Coding entry on its original finite classical domain.
+Fresh native execution of the complete Coding program matches all 2,048 original candidate lookups together with every registration, census, closure, control and digest field and the unknown-identifier rejection. These results accompany the native source derivations and complete the Coding entry on its original finite classical domain.
+
+
+Let F(w) be the ordered image list registered for codeword w. For action cells R, its registered-image constructor is [v:(w,v,a)∈R], retaining all matching occurrences. Membership is equivalent to existence of a matching action a. The general detection, correction and source-class definitions are exactly those of section 106 with E_A(w) replaced by F(w); substituting E_A recovers the original single-label operations by definition.
+
+For a singleton action f, put F_f(w)=[f(w)]. Two such lists overlap iff their sole values agree, so
+
+\[
+ \operatorname{Correct}(C,F_f)\iff\forall(u,w)\in P(C),\ f(u)\ne f(w).
+\]
+
+For old and added families F,G, define (F⊕G)(w)=F(w)++G(w). Membership splits into the old or added list. Applying that split to the universal detection condition proves both directions of
+
+\[
+ \operatorname{Detect}(C,F\oplus G)\iff
+ \operatorname{Detect}(C,F)\land\operatorname{Detect}(C,G).
+\]
+
+Define X_C(F,G) to mean that, for every positional pair (u,w)∈P(C), no received word belongs to both F(u) and G(w). Expanding the two append memberships yields precisely four cases:
+
+\[
+ \operatorname{Correct}(C,F\oplus G)\iff
+ \operatorname{Correct}(C,F)\land X_C(F,G)\land X_C(G,F)\land\operatorname{Correct}(C,G).
+\]
+
+For the forward direction, each alleged shared image in one case embeds into the two extended lists and contradicts their disjointness. Conversely, an overlap in the extended lists belongs to one of old–old, old–new, new–old or new–new, and the corresponding conjunct excludes it. Both cross orientations are retained because P(C) uses source order.
+
+The extended source class remains the single ordered filter
+
+\[
+ H_{C,F\oplus G}(v)=[w\in C:v\in F(w)\lor v\in G(w)].
+\]
+
+Each source occurrence is tested once against the disjunction; the two separate filtered lists are not concatenated. This preserves the actual source-list multiplicity even when both families contain v for the same source.
+
+For registered source labels S, code list C and row list E, the source-map condition is
+
+\[
+ \forall s\in S,\ \exists c\in C,\ (s,c)\in E
+ \land\forall d,\ (s,d)\in E\Rightarrow d=c.
+\]
+
+Select that retained c for a source s. Under Correct(C,F), the general source-class induction proves that every v∈F(c) decodes to uniqueSource(c). The row (s,c) is retained alongside this recovery statement. Different source labels are not required by this condition to have different codewords. Under the four successor conditions, apply the same result to F⊕G; this establishes recovery after the action addition without strengthening the source-map domain.
+
+For the concrete alphabet [a,b] and width three, the complete lists are
+
+\[
+ E(aaa)=[aaa,baa,aba,aab],\qquad E(bbb)=[bbb,abb,bab,bba].
+\]
+
+They are disjoint; every changed word lies outside [aaa,bbb], and baa occurs only in the aaa family. The complete support has 2^3=8 distinct words, while aaa and bbb differ at all three positions. These computations give the retained support, difference, detection, correction and decoding witnesses. For width two,
+
+\[
+ E(aa)=[aa,ba,ab],\qquad E(bb)=[bb,ab,ba],
+\]
+
+so ab and ba witness failure of correction. At width one, E(a)=[a,b] and E(b)=[b,a] overlap as well. These full finite lists establish the protected and unprotected witness results directly.
+
 
 108. Exact observation incidence and conditional class restriction
 

@@ -726,21 +726,53 @@ Dictionary updates preserve distinct keys, and the complete dictionary construct
 
 For accepted source and target operation tables, those image checks supply the mapped inputs and the image of every source operation result; constructor closure supplies membership of the intermediate source result. Each preservation comparison consequently terminates with a Boolean result rather than a missing-key or operation error. The public preservation operation succeeds exactly when its original size and image checks hold and the image of every source operation result equals the corresponding target operation result.
 
+Let keys(D) project dictionary origins. If its keys are distinct, put(D,a,v) either replaces an existing value without changing keys or appends a previously absent key. Induction over the input relation therefore gives distinct(keys(build(mapping))). Lookup induction gives
+  (∃v, lookup(D,a)=Some(v)) ⇔ a∈keys(D).
+Unfolding the image guard gives
+  imageInCarrier(D,T,a)=true ⇔ ∃v∈T, imageAt(D,a)=ok(v).
+For a,b∈C_source, accepted-table totality produces u=μ_source(a,b)∈C_source. The image guard supplies f(u),f(a),f(b), with f(a),f(b)∈C_target. Target totality then produces μ_target(f(a),f(b)). Consequently every checked cell terminates with the Boolean comparison f(u)=μ_target(f(a),f(b)). Substitution in the exhaustive pair traversal yields the exact public equivalence
+  preservesOperation=ok(true) ⇔
+  |D|=|C_source| and (∀a∈C_source, f(a) exists in C_target)
+  and (∀a,b∈C_source, f(μ_source(a,b))=μ_target(f(a),f(b))).
+The dictionary and table facts supply each value used in this equality.
+
+
 43. Original algebra witnesses and complete grammar
 
 Both original operation tables are retained and accepted by the translated constructor. The six registered witnesses are proved from their actual computations: complete four-row coverage, structural One identity, exhaustive association, exact two-sided return mates, commutation of the symmetric table together with failure of commutation for the lawful left-projection table, and preservation by the canonical self-map. All original names and statements are retained.
 
-The algebra grammar contains all 512 products of its nine source dimensions. Native proofs establish exhaustive membership, exact cardinality, the unique all-preserving survivor, equivalence of acceptance to every original criterion, and rejection of each inadmissible coordinate. Fresh execution matches every candidate record’s order, identifier, survivor decision, exact form and reason against the pinned source artifacts. These finite grammar proofs accompany the general operation derivations; full program and model integration remain separately tracked.
+The algebra grammar contains all 512 products of its nine source dimensions. Native proofs establish exhaustive membership, exact cardinality, the unique all-preserving survivor, equivalence of acceptance to every original criterion, and rejection of each inadmissible coordinate. Fresh execution matches every candidate record’s order, identifier, survivor decision, exact form and reason against the pinned source artifacts. These finite grammar proofs accompany the general operation derivations and complete-program correspondence. The algebra entry is recorded complete against its registered V3 source.
+
+Abbreviate the witness labels One and held by O and H. Its four ordered cells are
+  O·O=O, O·H=H, H·O=H, H·H=O.
+These cover all pairs and stay in {O,H}; O preserves both labels. In the ordered triple sequence OOO, OOH, OHO, OHH, HOO, HOH, HHO, HHH, both parenthesizations evaluate respectively to
+  O, H, H, O, H, O, O, H.
+Thus association is checked on all eight triples. The mate searches give K_O(O)=[O] and K_O(H)=[H], producing [(O,O),(H,H)]. The table is symmetric. By contrast, the second lawful table has a·a=a, a·b=a, b·a=b, b·b=b; for its distinct labels a·b=a≠b=b·a, so commutation fails. The self-map f(O)=O,f(H)=H satisfies f(x·y)=f(x)·f(y) on every cell by direct substitution. These computations establish the six original witness predicates.
+
+The nine binary grammar axes generate 2⁹=512 ordered tuples. Acceptance is equivalent to the conjunction of the nine admitted-coordinate conditions. The all-preserving tuple satisfies that conjunction; any accepted tuple equals it coordinate by coordinate. A rejected value falsifies its coordinate condition, establishing the exclusion proofs while retaining the full product enumeration.
+
 
 44. Algebra program correspondence
 
-The translated algebra program retains its original registration and dependencies, all 512 candidate records and lookup decisions, completeness certificate, closure and generality payloads, and four original controls. Candidate lookup depends only on the registered identifier, and an unknown identifier retains the source StopIteration outcome. Fresh native execution reproduces the pinned source artifacts, including every census trace identity, decision proof identity, closure and generality certificate, control receipt and registration field. These correspondence results accompany the general operation, return and map derivations above; full engine and dependency integration remains separately tracked.
+The translated algebra program retains its original registration and dependencies, all 512 candidate records and lookup decisions, completeness certificate, closure and generality payloads, and four original controls. Candidate lookup depends only on the registered identifier, and an unknown identifier retains the source StopIteration outcome. Fresh native execution reproduces the pinned source artifacts, including every census trace identity, decision proof identity, closure and generality certificate, control receipt and registration field. These correspondence results accompany the general operation, return and map derivations above. The registered algebra entry and its dependencies are complete in the coverage ledger.
 
 45. Algebraic induction base and carrier extension
 
 The One carrier has exactly its self pair. Its closed operation returns One, and both identity and association hold. More generally, closure and complete pair coverage force the sole result of any accepted singleton carrier to be its member; identity and association follow for every such accepted table.
 
 Appending a fresh member retains the original nested-loop order of pair generation. Each existing left-member row gains its cell with the fresh right member, followed by the fresh left-member row and the fresh self cell. The enlarged support partitions into old pairs, old-to-fresh pairs, fresh-to-old pairs and the self pair. Exactly the last three classes are new, and a distinct original carrier with a fresh added member generates a distinct complete pair support. These results establish the base and pair-generation component of the original algebra induction; the property checks on an extended operation remain explicit obligations.
+
+For a singleton carrier [o], pair support is [(o,o)]. Accepted-table totality and closure give μ(o,o)∈[o], forcing μ(o,o)=o. Hence o·o=o establishes both identity equations, and both association branches reduce to μ(μ(o,o),o)=μ(o,μ(o,o))=o.
+
+Let z∉C. Distributing the ordered pair generator over C++[z] gives the exact list equation
+  P(C++[z])=
+    concat_(a∈C)([(a,b):b∈C]++[(a,z)])
+    ++[(z,b):b∈C]++[(z,z)].
+This preserves the interleaving of each old row with its new final cell. Pair membership consequently separates into four cases:
+  (a∈C and b∈C), (a∈C and b=z),
+  (a=z and b∈C), or (a=z and b=z).
+Freshness makes these cases disjoint. Excluding membership in P(C) leaves exactly the final three cases, so no new pair is omitted and no old pair is reclassified as new. Distinctness of C and freshness of z give distinct(C++[z]); applying pair-product distinctness proves the enlarged support has no duplicate pairs. This constructs the complete extension support; the chosen outputs and their property checks are handled by the subsequent extension results.
+
 
 46. Identity and association under carrier extension
 

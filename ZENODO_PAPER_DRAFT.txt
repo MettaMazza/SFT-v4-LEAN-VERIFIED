@@ -3270,13 +3270,69 @@ Mutual and conditional information begins with nonempty duplicate-free support a
 
 Native validation equivalence connects this admission to the existing exact observation partition. Each class contains exactly the support forms mapped to its label; classes are nonempty, cover the support and are disjoint for different labels. The complete marginal-label product retains every pair in left-major/right-minor order. Each joint member belongs precisely to the held support and both corresponding observation classes.
 
-Conditional membership first restricts to a given class, then filters by the target observation. Native coverage and disjointness prove that these target restrictions partition every given class, retaining source order and exact provenance. Independent source-expression comparisons pass 637 validations,637 class outputs,5832 joint-member filters,5832 conditional-member filters and 648 complete ordered label products.
+Conditional membership first restricts to a given class, then filters by the target observation. Native coverage and disjointness prove that these target restrictions partition every given class, retaining source order and exact provenance. Independent source-expression comparisons pass 637 validations, 637 class outputs, 5,832 joint-member filters, 5,832 conditional-member filters and 648 complete ordered label products.
+
+
+Let S be the ordered support and O the observation rows. Validation succeeds exactly when
+
+\[
+ S\ne[]\land\operatorname{Distinct}(S)\land\operatorname{Distinct}(\operatorname{keys}(O))
+ \land\operatorname{keys}(O)\subseteq S\land S\subseteq\operatorname{keys}(O).
+\]
+
+The support conditions are tested before the map conditions, and success returns O unchanged. These are precisely the exact-partition admission conditions: splitting or recombining the conjunction proves the bridge in both directions. Write f_O(s) for lookup and F_O(a)=[s∈S:f_O(s)=Some(a)]. Observed labels L_O are retained on first occurrence while scanning S. Then a∈L_O iff some s∈S has image a, and the emitted classes are [(a,F_O(a)):a∈L_O]. The witnessing s makes each emitted fibre nonempty; total lookup supplies a fibre for every s; deterministic lookup makes two fibres sharing a member have equal labels.
+
+For observations L,R, the full pair enumeration is concat_{a∈L_L}[(a,b):b∈L_R]. Unpacking map and concatenation membership proves that (a,b) occurs iff both marginal labels occur. Define
+
+\[
+ J_{ab}=[s\in S:f_L(s)=\operatorname{Some}(a)\land f_R(s)=\operatorname{Some}(b)].
+\]
+
+Filter membership proves exactly these three conditions: source membership and the two image equalities. Conditional restriction, with given observation G and target T, is
+
+\[
+ C_{ab}=\operatorname{filter}_{f_T=\operatorname{Some}(b)}F_G(a),\qquad
+ s\in C_{ab}\iff s\in S\land f_G(s)=\operatorname{Some}(a)\land f_T(s)=\operatorname{Some}(b).
+\]
+
+For any s∈F_G(a), target-map coverage supplies b and places s in C_{ab}; this b occurs in L_T. If s also belongs to C_{ac}, equality of its target lookup forces b=c. Thus the restrictions cover the given fibre and different target labels are disjoint, with all filters preserving source order.
+
 
 109. Exact joint fractions and marginal-product comparison
 
 The joint ledger visits every pair of observed labels in left-major/right-minor order. Each row retains the exact support-ordered joint member list, its normalized part of the whole support, both normalized marginal parts, their normalized product and the original comparison label. An empty joint cell retains the original empty-One presentation and empty-One-below-product relation. Literal empty-One source labels remain admitted.
 
-Native proofs establish positive marginal counts, exact count-ratio values of every present joint cell and both marginals, the product fraction value, and the four comparison cases through exact integer cross-products. Full label projection proves that every marginal-label pair is retained in source order; admitted ledger evaluation preserves left-then-right validation. Independent comparisons pass 1360 complete ledgers,144 guard-order cases and 252 rational comparison cases, bringing the observation and joint-ledger comparison total to 15342.
+Native proofs establish positive marginal counts, exact count-ratio values of every present joint cell and both marginals, the product fraction value, and the four comparison cases through exact integer cross-products. Full label projection proves that every marginal-label pair is retained in source order; admitted ledger evaluation preserves left-then-right validation. Independent comparisons pass 1,360 complete ledgers, 144 guard-order cases and 252 rational comparison cases, bringing the observation and joint-ledger comparison total to 15,342.
+
+
+Put N=|S|, l_a=|F_L(a)|, r_b=|F_R(b)| and j_{ab}=|J_{ab}|. Validation gives N>0; each emitted marginal label has a witnessing state, giving l_a,r_b>0. Normalize the marginal ratios to positive reduced pairs (u_a,v_a) and (x_b,y_b). Their exact value equations are
+
+\[
+ l_a v_a=u_aN,\qquad r_b y_b=x_bN.
+\]
+
+The normalized product (p,q) satisfies (u_a x_b)q=p(v_a y_b), with p,q positive. If J_{ab} is empty, its count part is structural empty One and its displayed member list is ["empty-One"]. Otherwise its part (h,k) is the normalized positive count ratio, with
+
+\[
+ j_{ab}k=hN,\qquad h>0,\quad k>0,\quad\gcd(h,k)=1.
+\]
+
+Nonempty member lists are displayed unchanged, so a literal source name "empty-One" remains present. Comparison is defined by the complete four-way case split
+
+\[
+ \operatorname{relation}(J_{ab},p/q)=
+ \begin{cases}
+ \text{empty-One-below-product},&J_{ab}=[],\\
+ \text{equal},&J_{ab}\ne[]\land hq=pk,\\
+ \text{joint-below-product},&J_{ab}\ne[]\land hq<pk,\\
+ \text{joint-above-product},&J_{ab}\ne[]\land pk<hq.
+ \end{cases}
+\]
+
+The empty constructor is distinct from every positive fraction. For a fraction, equality is tested first, then less-than; when both fail, natural-number order gives the reverse strict inequality. These cases establish the comparison labels without rounding.
+
+Each row is constructed from its two labels, presented members, joint part, both marginal parts, their product and this comparison. Induction over the complete label-pair list proves that projecting the row labels returns the input pair list exactly. Hence no absent joint cell or marginal-label combination is dropped. The ledger validates the left observation first and the right observation second, retaining the first error encountered; successful evaluation returns those complete rows.
+
 
 110. Conditional fractions, resolution and retained dependence
 
@@ -3284,7 +3340,40 @@ The conditional ledger enumerates every target label inside every given label in
 
 The executable resolution rule counts, within each given class, precisely the presented member lists unequal to the source empty-One sentinel and requires one such row together with a nonempty target dictionary. This exact raw comparison is retained even for a source form literally named empty-One. Native equivalences characterize that count rule without adding a domain restriction.
 
-Factorization is exactly the conjunction of joint-cell presence and equality with the marginal product across every ledger row. Dependence retains, in original order, all and only the rows whose comparison is unequal, returning the source sentinel when none remain. Native all-cell and retained-cell equivalences accompany 1504 independent comparisons for each of the conditional ledger, resolution, factorization and complete dependence ledger. The cumulative observation and ledger comparison total is 21358.
+Factorization is exactly the conjunction of joint-cell presence and equality with the marginal product across every ledger row. Dependence retains, in original order, all and only the rows whose comparison is unequal, returning the source sentinel when none remain. Native all-cell and retained-cell equivalences accompany 1,504 independent comparisons for each of the conditional ledger, resolution, factorization and complete dependence ledger. The cumulative observation and ledger comparison total is 21,358.
+
+
+For given label a and target label b, write g_a=|F_G(a)| and c_{ab}=|C_{ab}|. Every emitted given label has g_a>0. An empty C_{ab} receives structural empty One; a nonempty cell has a normalized positive part (u,v) satisfying
+
+\[
+ c_{ab}v=u g_a,\qquad c_{ab}>0.
+\]
+
+Conditional rows enumerate L_G×L_T in given-major order, retaining the presented intersection and this part. Induction on the row constructor proves that the label projection is exactly that full product. Validation nevertheless follows the executable argument order: target first, then given. Both this error order and the different row-enumeration order are preserved.
+
+Let e=["empty-One"] be the source's literal list sentinel, and let R be the presented conditional rows. The exact counted-row predicate and resolution rule are
+
+\[
+ B_a(r)\iff r.\mathrm{givenLabel}=a\land r.\mathrm{members}\ne e,
+\]
+\[
+ \operatorname{Resolved}\iff
+ \left(\forall(a,F_G(a))\text{ in the given classes},\ |[r\in R:B_a(r)]|=1\right)
+ \land\text{target dictionary}\ne[].
+\]
+
+Expanding the Boolean conjunction, filter and all predicates proves this characterization. It deliberately compares the presented member list: a real singleton source list ["empty-One"] is excluded by the same equality test, even if its exact fraction is positive. No extra source-name guard changes that behavior.
+
+For joint rows Q, the factorization predicate is
+
+\[
+ \operatorname{Factorizes}\iff\forall r\in Q,
+ \left(\exists p,\ r.\mathrm{jointPart}=\mathrm{part}(p)\right)
+ \land r.\mathrm{relation}=\text{equal}.
+\]
+
+An empty joint constructor returns false; a positive constructor tests comparison equality. Induction over Q establishes the all-cell equivalence. The responsible list is D=[r∈Q:r.relation≠equal], so filter membership proves that it contains all and only unequal rows in their existing order. Dependence is structural empty One exactly when D=[], and otherwise retains D in full. Errors from joint-ledger construction propagate through both decisions.
+
 
 111. Fresh-source joint and conditional succession
 
@@ -3292,11 +3381,61 @@ For a fresh source form, each observation extends by its one assigned label. Nat
 
 The exact joint fraction is recomputed against the extended support count. The conditional fraction is recomputed against the extended given-class count, using the retained intersection plus its possible new member. Native ratio equations establish these updates for arbitrary finite support. The singleton base has one joint member and one conditional member with normalized whole part. Marginal class and label succession use the established observation-extension derivation.
 
-All five original operational witnesses pass native proof: half-parts conditioned on the first coordinate, exact factorization of the complete grid, empty grid dependence, resolution by the copied observation, and nonfactorization with retained dependence cells for the nontrivial copy. Independent fresh-source comparisons pass 1344 each of conditional ledgers, resolution, factorization and full dependence ledgers, bringing the cumulative source-expression total to 26734.
+All five original operational witnesses pass native proof: half-parts conditioned on the first coordinate, exact factorization of the complete grid, empty grid dependence, resolution by the copied observation, and nonfactorization with retained dependence cells for the nontrivial copy. Independent fresh-source comparisons pass 1,344 each of conditional ledgers, resolution, factorization and full dependence ledgers, bringing the cumulative source-expression total to 26,734.
+
+
+Append a fresh x∉S with assigned left and right labels l,r. Freshness preserves support/key distinctness, and appending the same source key to each observation preserves total coverage. Old lookups remain unchanged; lookup of x gives its appended label. Induction through the joint filter therefore gives
+
+\[
+ J'_{ab}=J_{ab}\mathbin{++}
+ \begin{cases}[x],&l=a\land r=b,\\\lbrack\rbrack,&\text{otherwise}.\end{cases}
+\]
+
+The base case evaluates the two label equalities at x. In the induction step, old lookup equality preserves the head's keep/drop decision and the tail induction supplies the appended term. Thus only the designated cell gains x. Conditional restriction equals the joint filter with given and target in that order; substituting their assigned labels g,t yields
+
+\[
+ C'_{ab}=C_{ab}\mathbin{++}
+ \begin{cases}[x],&g=a\land t=b,\\\lbrack\rbrack,&\text{otherwise}.\end{cases}
+\]
+
+Write δ_{ab}=1 when both labels match and 0 otherwise. For any positive successor joint part (u',v'), the prior joint-value theorem and the exact list equation give
+
+\[
+ (|J_{ab}|+\delta_{ab})v'=u'(|S|+1).
+\]
+
+For a positive successor conditional part (h',k'), given-fibre succession supplies the changed denominator as well:
+
+\[
+ (|C_{ab}|+\mathbf1_{g=a\land t=b})k'
+ =h'(|F_G(a)|+\mathbf1_{g=a}).
+\]
+
+Empty cells retain the empty constructor until they gain a member. In the singleton base, both joint and conditional lists are [x]; normalization of (1,1) yields numerator and denominator 1. These equations cover the complete finite update, including newly occurring labels.
+
+For the witness support [aa,ab,ba,bb], the first- and second-coordinate marginal classes each have size 2, and every coordinate joint cell has size 1. Thus each joint part is 1/4=(1/2)(1/2), every conditional part is 1/2, factorization holds and the dependence list is empty. Comparing the first coordinate with its copy gives diagonal counts 2 and off-diagonal counts 0. The diagonal parts 1/2 exceed the product 1/4; off-diagonal cells are empty-below-product. Hence factorization fails and all four unequal rows remain. Each given copy-class has exactly one nonsentinel presented target cell, establishing the resolution witness.
+
 
 112. Complete mutual and conditional program correspondence
 
-Fresh native execution of all 1024 original mutual and conditional information candidate lookups matches the pinned census, registration, closure, controls and every retained digest, including rejection of an unknown identifier. Together with the exact ledger, decision and arbitrary finite source-successor proofs, this completes the entry on its original deterministic finite domain. No logarithm, prior, stochastic cause or added scalar measure is introduced.
+Fresh native execution of all 1,024 original mutual and conditional information candidate lookups matches the pinned census, registration, closure, controls and every retained digest, including rejection of an unknown identifier. Together with the exact ledger, decision and arbitrary finite source-successor proofs, this completes the entry on its original deterministic finite domain. No logarithm, prior, stochastic cause or added scalar measure is introduced.
+
+
+The candidate grammar is the full ordered product of ten binary axes: support, observations, marginals, joint incidence, conditional restriction, mutual comparison, factorization, deterministic status, generality and added measure. Each axis enumerates its rejected value followed by its admitted value. Consequently
+
+\[
+ |\mathcal G|=\prod_{i=1}^{10}2=2^{10}=1{,}024.
+\]
+
+For any candidate, its chosen constructor belongs to its corresponding two-element list. Repeated concatenation membership, followed by the final map membership, places that candidate in the generated list. The source identifier decision agrees on every constructor combination with the conjunction of all ten admitted-field tests. Therefore
+
+\[
+ \operatorname{accept}(c)\iff\bigwedge_{i=1}^{10}(c_i=\mathrm{admitted})
+ \iff c=(\mathrm{admitted},\ldots,\mathrm{admitted}).
+\]
+
+Any rejected field contradicts the corresponding projection of that equality and therefore rejects the candidate. The complete grammar classification accompanies the observation, fraction, decision and arbitrary finite successor derivations above; those derivations supply the mathematical content of the retained kernel.
+
 
 113. Exact conservation and loss of source distinctions
 

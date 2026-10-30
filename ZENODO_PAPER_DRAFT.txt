@@ -3094,7 +3094,49 @@ A codebook returns the original held selection, in order, when it is nonempty, d
 
 Codeword difference retains the complete indexed changed-position trace and both labels at each change. Equality gives empty One; unequal widths retain Coding's original common-carrier error. The general position correspondence follows the established exact Noise and Error derivation.
 
-The repetition constructor maps each supplied label to its constant word over the full position list. Its original helper accepts repeated labels, preserving output multiplicity and order. Under complete support's distinct-label condition, nonempty width makes the repetition map injective and its words distinct; each word belongs to the generated support. Independent source-expression comparisons pass 600 complete-support cases,600 repetition cases,1785 held-codebook cases and 1600 difference cases.
+The repetition constructor maps each supplied label to its constant word over the full position list. Its original helper accepts repeated labels, preserving output multiplicity and order. Under complete support's distinct-label condition, nonempty width makes the repetition map injective and its words distinct; each word belongs to the generated support. Independent source-expression comparisons pass 600 complete-support cases, 600 repetition cases, 1,785 held-codebook cases and 1,600 difference cases.
+
+
+For an alphabet list A and position list P, coding support succeeds precisely when
+
+\[
+ |A|\ge2\land\operatorname{Distinct}(A)\land P\ne[].
+\]
+
+Put n=|P|. The output is the complete ordered word list W_n(A), with W_0(A)=[[]] and W_{n+1}(A)=concat_{a∈A}[a::w:w∈W_n(A)]. The head/tail decomposition proves by induction
+
+\[
+ w\in W_n(A)\iff |w|=n\land\forall a\in w,\ a\in A,
+ \qquad |W_n(A)|=|A|^n.
+\]
+
+For distinct A, different leading labels separate the generated blocks and the tail induction excludes repeats within each block. Thus the complete support is distinct. Position names enter this constructor through their list length; no distinct-position-name condition is added.
+
+For an arbitrary supplied support U and held list H, the codebook result has the exact characterization
+
+\[
+ \operatorname{codebook}(U,H)=\operatorname{ok}(K)
+ \iff H\ne[]\land\operatorname{Distinct}(H)\land H\subseteq U\land K=H.
+\]
+
+The operation therefore retains the exact order and contents of H. If U=W_n(A) is admitted complete support, every w∈K belongs to U, so the preceding membership theorem gives |w|=n and every cell in A. For two retained words u,v, their two width equalities imply |u|=|v|. No guard on U beyond held-list membership is introduced by codebook itself.
+
+For equal-width u,v, differenceTrace uses exactly the Noise and Error changed-position construction. Consequently
+
+\[
+ \operatorname{differenceTrace}(u,v)=\operatorname{ok}(\mathrm{emptyOne})\iff u=v,
+\]
+
+and its changes result consists exactly of the one-based printed positions where u and v differ, with both labels retained. On unequal widths it returns Coding's own common-position-carrier error, rather than substituting Noise and Error's error text.
+
+Define the constant word r_P(a)=map(λp.a,P). Repetition admission requires only |A|≥2 and P≠[], and returns [r_P(a):a∈A] in alphabet-list order. Induction on P gives
+
+\[
+ |r_P(a)|=|P|,\qquad b\in r_P(a)\Longrightarrow b=a.
+\]
+
+Thus any emitted word from a label a∈A belongs to admitted W_n(A). Since P is nonempty, equality r_P(a)=r_P(b) forces equality of their first cells, a=b. The map is therefore injective, and distinct A yields a distinct repetition list. Repeated labels in the broader repetition helper remain repeated output words; this proof uses the distinctness already supplied by complete-support admission and does not change that helper's guard.
+
 
 106. Complete single-label error images and exact decoding
 

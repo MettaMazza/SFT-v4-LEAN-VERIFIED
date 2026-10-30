@@ -1027,3 +1027,7 @@ import SFT.QuantumComputation.GateLaw
 import SFT.QuantumComputation.GateLawGrammar
 import SFT.QuantumComputation.GateLawControls
 import SFT.QuantumComputation.GateLawEvidence
+import SFT.QuantumComputation.Circuit
+import SFT.QuantumComputation.CircuitGrammar
+import SFT.QuantumComputation.CircuitControls
+import SFT.QuantumComputation.CircuitEvidence

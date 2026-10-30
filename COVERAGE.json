@@ -10486,8 +10486,13 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-QUANTUM-CIRCUIT-001-63e751cf9ab382cd.json",
       "statement": "The forced quantum circuits kernel retains generated wires; information units; reversible gates; causal circuit order; complete branchwise evaluation; inverse circuit; observation boundary; resource ledger; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
       "title": "Fold quantum circuit syntax and semantics law",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/QuantumComputation/Circuit.lean",
+        "SFT/QuantumComputation/CircuitGrammar.lean",
+        "SFT/QuantumComputation/CircuitControls.lean",
+        "SFT/QuantumComputation/CircuitEvidence.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "4b71701383c3e7a1eb7fb339887039335f0b52dd93f37d5f63e651e104bbed36",
       "v3_registration": {
@@ -10533,7 +10538,11 @@
         "statement": "The forced quantum circuits kernel retains generated wires; information units; reversible gates; causal circuit order; complete branchwise evaluation; inverse circuit; observation boundary; resource ledger; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
         "status": "independently_replicated",
         "title": "Fold quantum circuit syntax and semantics law"
-      }
+      },
+      "remaining": [
+        "Full original program13712 comparison;complete in dependency order after Gate."
+      ],
+      "verified_scope": "applicationAdmitted proves accepted original gate application preserves state admission; evaluationHasExactTrace derives the full causal Forward trace from successful executable evaluation and the original admission conditions.; circuitInverseAndLedger proves the exact reverse-order inverse,one predecessor state per gate,and unchanged complete branch count.; circuitPhaseCycle proves the original phase cycle persists through every gate;circuitObservationRecord proves the terminal record has the initial branch count and reconstructs the full terminal state with that same cycle.; Shared generated support,information units,pair-cell wires,gate semantics and serial evaluation unchanged;original3264 gate/phase,4165 serial-evaluation and8537 observation comparisons retained.; Exact complete256 grammar,8 witnesses,4 controls and every claim-specific program field preserved. Fresh registered build/zeroaxiom/parity PASS;full original program13712 running."
     },
     {
       "branch": "quantum_computation",
@@ -190176,13 +190185,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T08:12:56.267968+00:00",
+  "updated_at": "2026-10-30T08:16:44.818659+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 3,
-    "pending": 2613,
+    "in_progress": 4,
+    "pending": 2612,
     "fully_reconstructed_claims": 165,
-    "axiom_free_exported_results": 8269,
-    "axiom_free_audited_definitions_and_theorems": 18754
+    "axiom_free_exported_results": 8285,
+    "axiom_free_audited_definitions_and_theorems": 18801
   }
 }

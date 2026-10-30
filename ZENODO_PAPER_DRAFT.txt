@@ -6507,17 +6507,93 @@ The native decimal parser retains positive finite decimal records, exact exponen
 
 The native comparison record combines those parsed triples with the actual terminal construction and interval refinements. It retains both predicted intervals, both source intervals, both central values, each overlap outcome and their conjunction. The complete record is proved successful and independently reproduced field by field. The source-row and numerical comparison components feed the original post-seal held-label prediction, custody and adverse-control procedure.
 
+For a finite decimal with positive concatenated digit integer \(n\), \(p\) fractional places and integer exponent \(e\), the parser constructs the normalized exact value
+\[
+ v=
+ \begin{cases}
+ n10^e/10^p,&e\ge0,\\
+ n/10^{p+(-e)},&e<0.
+ \end{cases}
+\]
+The original digit, whitespace, exponent and finite-positive-record checks precede this construction. Fixed-width selection requires a row of at least 110 characters, whose stripped first 60 characters equal the requested quantity name. Exactly one such row must exist. The next 25 characters supply the central value \(c\), and the following 25 supply uncertainty \(u\). Admission requires \(0<u<c\), returning
+\[
+ (c-u,c,c+u).
+\]
+For the pinned snapshot the two exact triples are
+\[
+ \left(\frac{2067682781}{10^7},\frac{2067682827}{10^7},
+                     \frac{2067682873}{10^7}\right),
+\qquad
+ \left(\frac{118919}{2000000},\frac{118927}{2000000},
+                     \frac{23787}{400000}\right).
+\]
+The comparison row retains the predicted interval, source endpoints, central value and overlap decision. For \(P=[a,b]\) and \(S=[c,d]\),
+\[
+ \operatorname{overlap}(P,S)=[d\ge a]\land[b\ge c].
+\]
+The complete record's acceptance is the conjunction of both overlap decisions. Native execution of the parser and both terminal refinements returns that record, whose conjunction is proved true.
+
 225. Registered terminal prediction and empirical validation
 
 The registered predictor reads the sealed derivation premise, constructs the physical-observation label, retains the premise/label pair, and emits the label. Native proofs establish the output, retention of the bound premise and all four trace positions for every admitted nonblank premise. Source data-only instruction fields are retained. Complete before/after protected-tree records are compared across prediction execution. The target vault commits both original external rows, permits a single release only after the matching envelope is sealed, and verifies the experiment, custodian, seal, support, target content and release identity.
 
 Both released rows are compared without omission. The original unfavorable control changes the external-observation label and is rejected. The numeric comparison and label comparison must agree; a disagreement produces the original terminal validation failure. The native wrapper is connected to the kernel-proved complete source-row and refinement result. Fresh execution reproduces every original empirical-validation field, including the prediction trace, isolation certificate, custody certificate and measurement-receipt identity. Host metadata in the source receipt is retained explicitly as metadata, independently of native Lean execution. The Charged-Lepton Terminal entry is complete within its original empirical and observational-derivation boundaries.
 
+For a nonblank derivation seal \(s\), the registered four-instruction program performs
+\[
+ \operatorname{input}(s),\quad
+ \operatorname{label}(\text{physical-observation},L),\quad
+ \operatorname{pair}(s,L),\quad
+ \operatorname{emit}(L).
+\]
+Its output theorem gives the original label \(L\); its retained bound-result is the premise/label pair, and its complete position ledger is \([1,2,3,4]\). This is the registered held-label program; the numeric construction is connected by the separate agreement gate below.
+
+The protected-tree comparison requires equality of root identity, the complete ordered path/hash list, and snapshot hash. The data-only audit also checks the registered field set and absence of executable-source fields. A vault release requires that it has not already released, that the prediction experiment matches, and that the envelope hash matches its commitment. Release marks the vault used. Verification requires an empty violation list covering experiment, custodian, prediction seal, envelope, complete target support, committed content and release-payload identity. The native rejection theorems exclude access before a seal, replacement of an existing seal, and a second release.
+
+For both released target rows \(i\), the label check is \([L=L_i]\). Its combined result is
+\[
+ V=\left(\bigwedge_i[L=L_i]\right)
+       \land[L\ne\text{changed-external-observation}].
+\]
+The original two target comparisons are true and the unfavorable changed-label control is rejected. For numeric result \(N\), the wrapper requires
+\[
+ N.\operatorname{allRowsPassed}=V.
+\]
+A discrepancy returns the original validation error. The native terminal record has \(N.\operatorname{allRowsPassed}=\operatorname{true}\); combining its complete parser/refinement execution with a passing custody-and-label validation constructs the successful terminal wrapper. Host identifiers remain receipt metadata.
+
 226. Electroweak Fold-fibre mixing
 
 The native binary count generates the half-One balance image. At binary depth two, the complete support is the ordered sequence 1/4,1/2,3/4,1. Filtering that entire support by exact Fold return yields precisely 1/4 and 3/4. Both parts are proved to return to 1/2, they are distinct, and their positive sum is exactly One. A completeness theorem excludes every other depth-two preimage. The source construction therefore returns unified=1/2, sin_squared=1/4 and cos_squared=3/4.
 
 The enumeration preserves the original rational-image and positive-depth guards and every generated support position. Native membership equivalence identifies each retained part exactly with membership in the original support together with the required Fold image. The complete 256-form grammar, unique preserving form, three operational witnesses and four controls reproduce all pinned V3 program fields and identities. Measurement remains a later sealed claim, outside this bare exact squared-channel construction.
+
+For support count \(m\), enumerate every exact positive part in source order:
+\[
+ E_m=[1/m,2/m,\ldots,m/m],\qquad |E_m|=m.
+\]
+Filtering by Fold image \(y\) has the exact membership property
+\[
+ p\in\operatorname{returning}(y,E_m)
+ \iff p\in E_m\land\operatorname{Fold}(p)=y.
+\]
+With native binary count two and binary depth two, \(m=2^2=4\), so
+\[
+ E_4=[1/4,1/2,3/4,1].
+\]
+Kernel evaluation and the membership theorem give
+\[
+ \operatorname{returning}(1/2,E_4)=[1/4,3/4],
+\]
+\[
+ \operatorname{Fold}(1/4)=1/2,\qquad
+ \operatorname{Fold}(3/4)=1/2,\qquad
+ 1/4\ne3/4,\qquad1/4+3/4=1.
+\]
+Thus every depth-two returning member equals one of these two parts. The native operation also checks that the preimage count equals the binary count and that the sum partitions One, yielding
+\[
+ (\operatorname{unified},\sin^2,\cos^2)=(1/2,1/4,3/4).
+\]
+The original guard sequence is retained: zero depth fails the preimage guard, while Boolean true reaches and fails the positive-power count guard.
 
 227. Joint synchronization and retained readiness
 
@@ -6527,6 +6603,32 @@ Native proofs establish that a joint release exists exactly when every held part
 
 The complete 256-form synchronization grammar, three source operational witnesses, four controls and every original program output field and hash agree with pinned V3. Together with the general readiness, release, blocked-row and retained-composition derivations, this completes the registered Fold Synchronization entry.
 
+For rendezvous label \(a\) and participant \(p=(i,M,s)\), the full observation row is
+\[
+ O_a(p)=(p,\operatorname{step}(M,s,a)).
+\]
+The ledger maps this operation over every participant; filtering its error outcomes gives exactly the blocked rows. Its participant projection recovers the original complete list.
+
+Joint release has the empty-list identity and a successor for each enabled transition:
+\[
+ \frac{\operatorname{step}(M,s,a)=\operatorname{ok}t
+       \quad\operatorname{Joint}(a,P,Q)}
+      {\operatorname{Joint}(a,(i,M,s)::P,(i,M,t)::Q)}.
+\]
+Replay and reconstruction prove
+\[
+ \operatorname{release}(a,P)=\operatorname{some}Q
+ \iff\operatorname{Joint}(a,P,Q),
+\]
+\[
+ \exists Q,\operatorname{release}(a,P)=\operatorname{some}Q
+ \iff\forall p\in P,\exists t,\
+        \operatorname{step}(p.M,p.s,a)=\operatorname{ok}t.
+\]
+A held failed transition contradicts this condition. Induction preserves participant and system identity lists, and reconstructs every enabled transition's original source row.
+
+For a finite label trace, each successor retains the prior readiness list before its joint release. The state-list count therefore equals the label-list count. Serial composition concatenates both labels and retained states through the exact middle participant list. Parallel assembly combines the two joint derivations, and its observation ledger is the concatenation of their complete ledgers.
+
 228. Communication and exact record transfer
 
 A communication record retains the sender and receiver, message identity, both endpoint events and the actual channel relation row. The native construction enumerates the complete held event/channel product. A delivery is retained exactly when its events and relation row belong to their source ledgers and its endpoint, content and message coordinates agree. Missing send, receive or channel records exclude a purported delivery. No reliability, ordering or delay assumption follows from these records.
@@ -6535,17 +6637,75 @@ Delivery traces retain every intermediate event and channel row. Serial composit
 
 The complete 256-form Communication grammar, original operational witnesses, controls and every program output field and hash reproduce pinned V3. With the native delivery and distinction derivations, this completes the registered Fold Communication entry.
 
+For send event \(s\), receive event \(t\), and channel row \(r\), compatibility is the conjunction
+\[
+ s.\operatorname{process}=r.\operatorname{sender},\quad
+ t.\operatorname{process}=r.\operatorname{receiver},\quad
+ s.\operatorname{content}=r.\operatorname{input},\quad
+ t.\operatorname{content}=r.\operatorname{output},\quad
+ s.\operatorname{message}=t.\operatorname{message}.
+\]
+The complete candidate list is the ordered product of all sends, receives and channel rows. Filtering it gives
+\[
+ (s,t,r)\in\operatorname{deliveries}(S,T,R)
+ \iff s\in S\land t\in T\land r\in R\land\operatorname{compatible}(s,t,r).
+\]
+Thus absence of any one source record excludes the delivery. Trace composition requires the exact shared intermediate event, and induction preserves message identity from first to last event.
+
+For a delivery list \(D=d::R\), its ordered occurrence-pair enumeration is
+\[
+ \operatorname{pairs}(d::R)=[(d,e):e\in R]\mathbin{+\!\!+}\operatorname{pairs}(R),
+ \qquad\operatorname{pairs}([])=[].
+\]
+Among these pairs with unequal sent contents, retained rows have unequal received contents and lost rows have equal received contents. Equality case analysis proves exhaustiveness; equality and inequality cannot both hold, proving disjointness. Both endpoints reconstruct as original deliveries. Appending delivery records preserves earlier pairs and their classifications. Mapping each delivery to its sent/received content pair supplies the recorded information transformation; its admitted downstream composition preserves distinctions already closed by that map.
+
 229. Distributed partial orders and retained event identities
 
 The distributed event ledger retains the event carrier, strict causal closure and a separate reflexive identity row for every held event. Native proofs derive reflexivity, antisymmetry and transitivity from the original admitted causal closure. Every nonidentity row reconstructs from its original process or message provenance. Incomparability is exactly the absence of both directions in the reflexive relation, and its endpoints are distinct held events.
 
 The linear-extension support enumerates every permutation satisfying all strict causal rows. It does not choose a total global order for incomparable events: the two-event independent carrier retains both orders. Admitted source assembly preserves earlier identity and causal rows. Exhaustive execution on all 512 relations over three events agrees with independent closure,cycle rejection,identity,incomparability and linear-extension computations.
 
+For event carrier \(V\) and admitted strict causal output \(C\), retain the reflexive relation separately:
+\[
+ I_V=[(v,v):v\in V],\qquad R=I_V\mathbin{+\!\!+}C.
+\]
+Membership is exactly
+\[
+ (a,b)\in R\iff(a\in V\land a=b)\lor(a,b)\in C.
+\]
+Reflexivity follows from the identity rows. Two strict opposite directions would form a positive cycle, so antisymmetry follows from causal admission. For transitivity, identity cases reduce to the other premise, and the strict/strict case uses causal path composition. Every nonidentity row therefore retains the original process/message provenance.
+
+The incomparable-pair ledger contains precisely
+\[
+ a,b\in V,\qquad(a,b)\notin R,\qquad(b,a)\notin R.
+\]
+Its endpoints must be distinct because each held identity is in \(R\). The linear-extension list retains all permutations respecting every strict edge:
+\[
+ s\in\operatorname{extensions}
+ \iff\operatorname{Perm}(s,V)\land
+       \forall(a,b)\in C,\operatorname{Before}(a,b,s).
+\]
+For independent events \(a,b\), both \([a,b]\) and \([b,a]\) are retained. Admitted source extension preserves both prior identity rows and prior causal proofs.
+
 230. Consensus under a declared communication and fault boundary
 
 A consensus record retains the process inputs,proposal values,decision states,complete message deliveries,communication model,fault model and termination declaration. Native acceptance is equivalent to complete process coverage,a common terminal value drawn from the original proposals,admitted message provenance and explicit boundary and termination declarations. Every process has that terminal decision; two held decision rows therefore agree. A pending decision state excludes terminal acceptance. This statement does not infer an unrestricted termination guarantee from the existence of an admitted finite record.
 
 Composition checks equality of the declared communication and fault boundaries and retains both input,decision and message ledgers. Compatible accepted records with the same terminal value assemble to an accepted record. The one-process identity record is accepted under its named boundary,and adjoining a process with that common proposal preserves acceptance and every earlier input/message record. Six hundred concrete acceptance cases agree with independent evaluation of the same conditions.
+
+Let \(P\) be the process identities projected from the input rows, \(D\) the decision rows, and \(v\) the proposed common terminal value. Coverage requires
+\[
+ \forall p\in P,\exists d\in D,\ d.\operatorname{process}=p,
+ \qquad
+ \forall d\in D,\ d.\operatorname{process}\in P.
+\]
+The exact acceptance condition conjoins this coverage with nonempty communication and fault names, a true termination declaration, \(v\) belonging to the original proposals,
+\[
+ \forall d\in D,\ d.\operatorname{decision}=\operatorname{some}v,
+\]
+and source admission of every retained message delivery. Consequently every process has row \((p,\operatorname{some}v)\), every two decisions agree, and the common value reconstructs from an original input. A row \((p,\operatorname{none})\) contradicts the terminal condition.
+
+The public composition operation first requires equality of the two communication-model names and fault-model names. With that compatibility and acceptance of both records at the same \(v\), concatenating their inputs, decisions, sends, receives, channels and messages preserves acceptance; their termination flags are conjoined. A one-process record with its own proposal and terminal decision is accepted under named boundaries. Appending such a record preserves the earlier input and message ledgers. These are implications from the retained finite certificate and its declared boundary, not a derivation of unrestricted termination.
 
 231. Agreement impossibility from indistinguishable predecessors
 
@@ -6558,6 +6718,30 @@ Extending the source support preserves earlier witnesses and execution records. 
 Fold distributed partial-order law is complete: the native derivations,complete 256-form grammar,original witnesses and controls,and all program outputs and hashes agree with pinned V3.
 
 Fold consensus law is complete: the native derivations,complete 256-form grammar,original witnesses and controls,and all program outputs and hashes agree with pinned V3.
+
+An execution \(e\) retains predecessor identity \(p_e\), trace \(T_e\), observation \(o_e\), required decision \(d_e\) and schedule \(s_e\). For grammar \(G\), support means
+\[
+ e\in G.\operatorname{executions}
+ \land s_e\in G.\operatorname{schedulerSupport}.
+\]
+The contradiction-witness condition is exactly
+\[
+ W_G(a,b)\iff
+ \operatorname{supported}_G(a)\land\operatorname{supported}_G(b)
+ \land o_a=o_b\land p_a\ne p_b\land d_a\ne d_b.
+\]
+The complete ordered execution product, filtered by this condition, contains \((a,b)\) exactly when \(W_G(a,b)\) holds.
+
+Suppose an observation-only rule \(f\) were correct on every supported execution, so \(f(o_e)=d_e\). Congruence applied to \(o_a=o_b\) gives
+\[
+ d_a=f(o_a)=f(o_b)=d_b,
+\]
+contradicting the witness's different required decisions. Therefore
+\[
+ W_G(a,b)\Longrightarrow
+ \neg\exists f,\ \forall e,\operatorname{supported}_G(e)\Rightarrow f(o_e)=d_e.
+\]
+An absent schedule rejects support and hence the witness. Transfer to another grammar requires supportedness there for both original executions. Extending execution and scheduler lists preserves old support. Appending the same observed event to both traces preserves observation equality and leaves predecessor and required-decision identities unchanged, so the contradiction persists whenever both extended executions are supported. Pairing an execution with itself cannot satisfy \(d_e\ne d_e\).
 
 232. Replication,consistency observations and retained update order
 

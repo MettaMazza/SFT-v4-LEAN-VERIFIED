@@ -805,3 +805,8 @@ import SFT.Computation.CommitmentGrammar
 import SFT.Computation.CommitmentControls
 import SFT.Computation.CommitmentEvidence
 import SFT.Computation.Commitment
+import SFT.Computation.SignatureWitnesses
+import SFT.Computation.SignatureGrammar
+import SFT.Computation.SignatureControls
+import SFT.Computation.SignatureEvidence
+import SFT.Computation.Signature

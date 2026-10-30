@@ -1,0 +1,25 @@
+import SFT.Computation.Signature
+#print axioms SFT.Computation.Signature.supported
+#print axioms SFT.Computation.Signature.signs
+#print axioms SFT.Computation.Signature.verifies
+#print axioms SFT.Computation.Signature.signed
+#print axioms SFT.Computation.Signature.accepted
+#print axioms SFT.Computation.Signature.forgeries
+#print axioms SFT.Computation.Signature.signingMeaning
+#print axioms SFT.Computation.Signature.signedMeaning
+#print axioms SFT.Computation.Signature.correct
+#print axioms SFT.Computation.Signature.exactCorrectness
+#print axioms SFT.Computation.Signature.forgeryMeaning
+#print axioms SFT.Computation.Signature.unforgeable
+#print axioms SFT.Computation.Signature.exactUnforgeability
+#print axioms SFT.Computation.Signature.noGeneratedForgery
+#print axioms SFT.Computation.Signature.correctnessTrace
+#print axioms SFT.Computation.Signature.correctnessRetainsRow
+#print axioms SFT.Computation.Signature.verificationMeaning
+#print axioms SFT.Computation.Signature.acceptedMeaning
+#print axioms SFT.Computation.Signature.signingExtension
+#print axioms SFT.Computation.Signature.verificationExtension
+#print axioms SFT.Computation.Signature.extendSigning
+#print axioms SFT.Computation.Signature.extendVerification
+#print axioms SFT.Computation.Signature.missingKeyRejected
+#print axioms SFT.Computation.Signature.outsideAdversary

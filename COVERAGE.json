@@ -7627,9 +7627,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEC-SIGNATURE-001-1e80fcc3c81615ba.json",
       "statement": "The forced publicly checkable source authorization kernel retains message support; signing relation; verification relation; key identities; accepted signatures; forgery adversary support; correctness trace; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold signature law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/Signature.lean",
+        "SFT/Computation/SignatureWitnesses.lean",
+        "SFT/Computation/SignatureGrammar.lean",
+        "SFT/Computation/SignatureControls.lean",
+        "SFT/Computation/SignatureEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
       "registration_sha256": "716eea1b2beac248e51bef766f9c14a982db712c00280a61a34460349dd7bbf3",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7674,7 +7680,11 @@
         "statement": "The forced publicly checkable source authorization kernel retains message support; signing relation; verification relation; key identities; accepted signatures; forgery adversary support; correctness trace; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold signature law"
-      }
+      },
+      "verified_scope": "Exact message/key support,signing relation,verification relation,accepted signatures and registered adversary rows. signingMeaning,verificationMeaning,signedMeaning and acceptedMeaning establish exact membership.; exactCorrectness proves the computed whole-signing check equivalent to verification of every supported signed row. correctnessTrace carries the signed row into a source-bound verification trace; correctnessRetainsRow proves retained identity.; forgeryMeaning gives the complete accepted-but-unsigned ledger within the registered adversary. exactUnforgeability proves computed whole-adversary check equivalent to signature-row membership for every verified adversary row; noGeneratedForgery excludes ledger members under that check.; missingKeyRejected and outsideAdversary prove exact source exclusions. signingExtension,verificationExtension,extendSigning and extendVerification retain earlier source rows and phase traces. No unrestricted or number-theoretic hardness assertion imported.; Original security256 grammar,three witnesses,four controls and fresh parity pass.2048 concrete outputs exercise all signing,verification,adversary subsets of the three-row carrier,plus native retained correctness trace. Full program21848 running.",
+      "remaining": [
+        "Original fresh full program field/hash comparison21848; completion after Commitment in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -189781,13 +189791,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T00:40:37.758939+00:00",
+  "updated_at": "2026-10-30T00:45:39.601241+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 2,
-    "pending": 2656,
+    "in_progress": 3,
+    "pending": 2655,
     "fully_reconstructed_claims": 123,
-    "axiom_free_exported_results": 6663,
-    "axiom_free_audited_definitions_and_theorems": 14716
+    "axiom_free_exported_results": 6699,
+    "axiom_free_audited_definitions_and_theorems": 14815
   }
 }

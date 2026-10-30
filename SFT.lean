@@ -999,3 +999,7 @@ import SFT.QuantumComputation.ReversibleEvidence
 import SFT.QuantumComputation.ReversibleSuccessor
 import SFT.QuantumComputation.ReversibleExecution
 import SFT.QuantumComputation.ReversibleInterpretation
+import SFT.QuantumComputation.InformationUnit
+import SFT.QuantumComputation.InformationUnitGrammar
+import SFT.QuantumComputation.InformationUnitControls
+import SFT.QuantumComputation.InformationUnitEvidence

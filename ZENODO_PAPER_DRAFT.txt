@@ -6751,6 +6751,30 @@ A replay retains every update and intermediate replica state. Serial composition
 
 The order-loss ledger retains two different update histories that reach identical terminal copies. The native theorem proves that no function of those terminal copies alone can reconstruct both histories. Two concrete source-bound replay orders establish such a witness: each reaches the same two updated copies,while both event orders remain in the trace record. 726 exact consistency/class outputs and all three replay/order-loss proofs pass with zero axiom dependencies.
 
+An update \(u\) is admitted only when it belongs to the registered update list, its sender/receiver pair belongs to the propagation relation, and its sender is held in the replica list. Its change constructor selects a replica with identity \(u.\operatorname{receiver}\) and applies
+\[
+ \operatorname{step}(M,s,u.\operatorname{label})=\operatorname{ok}t.
+\]
+It replaces that selected replica's state \(s\) by \(t\), retaining its identity and all other list positions. Induction over the selection gives
+\[
+ \operatorname{ids}(R')=\operatorname{ids}(R),\qquad |R'|=|R|,
+\]
+and preserves every held copy with a different identity. The changed state reconstructs from the original transition row \((s,u.\operatorname{label},t)\).
+
+A replay successor retains its update and prior replica list before continuing from the changed list. Consequently the update and prior-state lists have equal lengths, and serial replay concatenates both through the exact middle replica list. Consistency and state-class membership are
+\[
+ \operatorname{consistent}(R,v)\iff\forall r\in R,\ r.\operatorname{state}=v,
+\qquad
+ r\in\operatorname{class}(R,v)\iff r\in R\land r.\operatorname{state}=v.
+\]
+Each copy belongs to its own state class; different classes cannot share a copy. Two held unequal states contradict consistency at any common \(v\).
+
+If two retained replays have histories \(U\ne V\) but the same terminal copies \(F\), any proposed history recovery \(h\) would have to satisfy
+\[
+ U=h(F)=V,
+\]
+a contradiction. Keeping the complete histories supplies the distinction that their common terminal observation omits.
+
 233. Declared computational fault support and recovery
 
 The fault carrier retains nominal transition/observation rows,generated fault actions,the affected component and its observed outcome,and the declared recovery relation. Native proofs identify a deviation exactly by generated membership and exclusion from the nominal transition relation. Detection distinguishes observations absent from nominal support;identical observations remain indistinguishable to an observation-only decision.
@@ -6761,6 +6785,26 @@ Recovery traces retain every declared row and exact intermediate state interface
 
 Fold agreement-impossibility law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
 
+For nominal transition/observation rows \(N\), generated faults \(G\), and recovery rows \(R\), define
+\[
+ \operatorname{deviation}(f)\iff f\in G\land f.\operatorname{action}\notin\operatorname{fst}(N),
+\qquad
+ \operatorname{detected}(f)\iff f.\operatorname{observation}\notin\operatorname{snd}(N).
+\]
+The recovery list is exactly
+\[
+ R_f=[r\in R:r.\operatorname{component}=f.\operatorname{component}
+                   \land r.\operatorname{before}=f.\operatorname{after}].
+\]
+Classification first tests \(f\in G\): absence gives outside; membership with \(R_f=[]\) gives uncorrectable; membership with \(R_f\ne[]\) returns the whole recoverable list \(R_f\). Thus a recovery row alone does not admit an ungenerated fault.
+
+The complete guarantee is
+\[
+ \operatorname{allGeneratedCorrectable}=\operatorname{true}
+ \iff\forall f\in G,\exists r\in R_f.
+\]
+Each matching row gives a one-step recovery trace from the fault's resulting state on the same component. Serial recovery concatenates through the shared intermediate state. Appending declared models preserves both components' generated faults and recovery witnesses, so their two complete guarantees imply the combined guarantee. Detection remains observation-relative: if a fault observation equals a nominal observation, every function of that observation gives the same answer on both.
+
 234. Distributed knowledge from local observations
 
 The admitted carrier retains finite global execution support and complete local observation maps. An individual knowledge ledger contains exactly the propositions true at every supported execution with the same local observation. Native proofs establish truth at the actual execution, invariance under equal observations, and rejection by an indistinguishable counterexample.
@@ -6768,6 +6812,25 @@ The admitted carrier retains finite global execution support and complete local 
 Common knowledge iterates the union of registered local indistinguishability relations, including each supported identity, to its finite fixed point. The construction terminates by exhausting missing supported pairs and has no imposed iteration cutoff. The resulting relation is proved equivalent to retained paths and closed under composition. Common knowledge implies every registered observer’s individual knowledge. Decision admission requires validated observation maps and a supported actual execution. The concrete checks include a two-observer chain in which individual knowledge holds but common knowledge fails.
 
 Fold replication and consistency law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+
+For supported executions \(E\), observer map \(o\), actual execution \(a\), and truth support \(T\), define
+\[
+ [a]_o=[e\in E:o(a)=o(e)],\qquad
+ K_o(a,T)\iff\forall e\in[a]_o,\ e\in T.
+\]
+The actual supported execution belongs to its own class, so \(K_o(a,T)\) implies \(a\in T\). Equal observations give equal class membership conditions and therefore the same knowledge decision. An indistinguishable \(e\notin T\) rejects that decision.
+
+The common-knowledge base relation contains every supported identity and every pair identified by at least one registered observer:
+\[
+ B=\{(e,e):e\in E\}\ \cup\
+   \{(a,b)\in E\times E:\exists o,\ o(a)=o(b)\}.
+\]
+Its finite native closure \(B^+\) is equivalent to retained positive paths in \(B\); the explicit identity rows provide reflexivity. The missing-pair decrease proves termination and transitivity. Common knowledge is
+\[
+ K_{\rm common}(a,T)\iff
+ \forall e\in E,\ \operatorname{Path}(B,a,e)\Rightarrow e\in T.
+\]
+Every individual indistinguishability edge is a base path, so common knowledge implies each registered observer's individual knowledge. The public decision additionally requires the original execution-support and observation-map admission and actual membership \(a\in E\). A chain of different observers' edges may reach a false execution outside one observer's immediate class, explaining the retained distinction between individual and common knowledge.
 
 235. Locality from registered communication neighborhoods
 
@@ -6777,6 +6840,31 @@ Local views retain each reachable process identity together with its input obser
 
 Fold computational fault-model law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
 
+For process carrier \(V\) and directed rows \(R\), the finite-radius neighborhood recurrence is
+\[
+ N_0(p)=[q\in V:q=p],
+\]
+\[
+ N_{r+1}(p)=[q\in V:q=p\lor
+       \exists b\in V,\ (p,b)\in R\land q\in N_r(b)].
+\]
+A retained reachability trace has either the supported identity or one registered edge followed by a trace from its endpoint. Induction in both directions proves, for \(p\in V\),
+\[
+ q\in N_r(p)\iff
+ \exists T,\operatorname{Reach}(p,T,q)\land |T|\le r.
+\]
+Every trace endpoint belongs to \(V\) and every edge belongs to \(R\). Serial traces concatenate, while inclusion of process and edge supports transports each earlier trace unchanged.
+
+The local view is the ordered list
+\[
+ \operatorname{view}(p,r)=[(q,\operatorname{image}(I,q)):q\in N_r(p)].
+\]
+Every view row reconstructs its reachable process. If two views \(A,B\) are equal, congruence gives \(f(A)=f(B)\) for any view-only decision \(f\). Thus \(A=B\) and required outputs \(x\ne y\) imply
+\[
+ \neg\exists f,\ f(A)=x\land f(B)=y.
+\]
+The query rejects \(p\notin V\), and a missing edge contradicts trace provenance.
+
 236. Computation over generated communication networks
 
 The network carrier retains registered local machines, link channels, schedule support, local actions, resources and faults. Each admitted action is tied to an actual transition row of its registered local machine. Each message retains both endpoint events and the exact channel transformation, with registered endpoint processes. An execution retains its initial form, admitted action schedule, every intermediate state, complete messages and aggregate result. Every output process is proved to come from a registered local machine.
@@ -6784,6 +6872,25 @@ The network carrier retains registered local machines, link channels, schedule s
 Resource and fault ledgers preserve the ordered action records, and every ledger item is proved to belong to its declared support. Identity and serial execution preserve traces and process identities; parallel component changes retain the other component. Componentwise extension preserves earlier machine, message, schedule, resource and fault records and carries the complete earlier execution into the extended network. A concrete two-process execution checks state changes, message delivery, resource and fault records, plus rejection of missing transitions, channels, sends and incompatible message identities. Operating systems, cloud platforms and physical networks remain downstream validation domains.
 
 Fold distributed-knowledge law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+
+A registered network action \(a\) carries process, before-state, label, after-state, resource list and fault list. Admission retains
+\[
+ a\in A,\quad
+ \exists m\in M,\ m.\operatorname{process}=a.\operatorname{process}
+ \land\operatorname{step}(m.\operatorname{system},a.\operatorname{before},a.\operatorname{label})
+       =\operatorname{ok}(a.\operatorname{after}),
+\]
+and membership of every action resource and fault in their declared network supports. A delivery additionally requires the original communication admission and registered machines at both endpoint processes.
+
+The state-change constructor replaces a selected node \((a.\operatorname{process},a.\operatorname{before})\) by \((a.\operatorname{process},a.\operatorname{after})\). Induction preserves the process-identity list. A complete execution retains a registered action schedule, the full state trace, all admitted messages and registered initial processes. Therefore every final process reconstructs from an original local machine.
+
+The complete resource and fault ledgers are
+\[
+ \mathcal R=\operatorname{flatMap}(\operatorname{resources},A_{\rm run}),
+ \qquad
+ \mathcal F=\operatorname{flatMap}(\operatorname{faults},A_{\rm run}).
+\]
+Trace provenance supplies admission of each action, so every member of these ledgers belongs to its declared support. Componentwise network inclusion transports machine, event, channel, action, schedule, resource and fault witnesses. The resulting extended execution has exactly the same actions, intermediate states, messages and final nodes.
 
 237. Resource-relative one-wayness and exact security partitions
 
@@ -6795,6 +6902,31 @@ The original security partition operation requires duplicate-free message suppor
 
 Fold locality law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
 
+For supported forward map \(F\), its inverse fibre is
+\[
+ F^{-1}(y)=\{x\in S:\operatorname{image}(F,x)=\operatorname{some}y\}.
+\]
+Totality on \(S\) supplies such a fibre containing every original input. An attempt \(a\) succeeds exactly when
+\[
+ a.\operatorname{proposed}\in S
+ \land\operatorname{image}(F,a.\operatorname{proposed})
+       =\operatorname{some}(a.\operatorname{observed}).
+\]
+Admission is separately
+\[
+ a\in G.\operatorname{attempts}\land
+ \operatorname{run}(G.M,G.i,a.\operatorname{actions})=\operatorname{ok}(a.\operatorname{states})
+ \land|a.\operatorname{actions}|\le G.\operatorname{bound}.
+\]
+Filtering by the latter conditions yields exactly the admitted attempts. Conjoining failure across that complete filtered list gives
+\[
+ \operatorname{allBoundedFail}(F,G)=\operatorname{true}
+ \iff\forall a,\operatorname{admitted}(G,a)\Rightarrow\neg\operatorname{success}(F,a),
+\]
+hence excludes an admitted successful inverse. The resource bound belongs to the retained process grammar; increasing it may admit an already retained successful trace.
+
+The separate security partition succeeds exactly when message support is distinct, observation keys match that support, and observation-row count equals support count. Its class for view \(v\) is the lexically ordered fibre \(F^{-1}(v)\); class labels are the ordered distinct observed labels. Membership therefore retains both supported predecessor and exact image. If one message belongs to two classes, lookup determinacy equates their labels, proving disjointness of differently labeled classes.
+
 238. Observation-relative secrecy and disclosure
 
 The carrier retains message support, key or transformation support, exact ciphertext rows and the registered adversary observation. A possible message is reconstructed from a particular supported transformation whose ciphertext has the observed value. The complete ordered pair ledger retains every supported pair; its closed ledger contains exactly those pairs with distinct messages and equal adversary observations. Closed and separated distinctions exhaust the supported distinct-message pairs and are disjoint.
@@ -6803,6 +6935,26 @@ A closed pair supplies two distinct supported predecessor messages. No decision 
 
 Fold network-computation law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
 
+For transformation rows \(r=(m,k,c)\), admission requires registered row, supported message and key, and a defined adversary observation \(o(c)\). The possible-message ledger has exact membership
+\[
+ m\in\operatorname{possible}(v)
+ \iff\exists r,\ r\in R\land r.m=m\land r.m\in M\land r.k\in K
+                       \land o(r.c)=\operatorname{some}v.
+\]
+The complete ordered product of admitted rows is filtered into closed and separated pairs. A closed pair satisfies
+\[
+ \operatorname{admitted}(a)\land\operatorname{admitted}(b)
+ \land a.m\ne b.m\land o(a.c)=o(b.c);
+\]
+a separated pair uses inequality of those observations. Equality case analysis is exhaustive and disjoint on supported pairs with distinct messages.
+
+For a closed pair, any observation-only decoder recovering both messages would give
+\[
+ a.m=\operatorname{decode}(o(a.c))
+     =\operatorname{decode}(o(b.c))=b.m,
+\]
+contradicting distinctness. Deterministic post-processing preserves observation equality by congruence. In contrast, an additional disclosure \(d\) with \(d(a)\ne d(b)\) separates the combined views \((o(a.c),d(a))\) and \((o(b.c),d(b))\). Extension preserves earlier ambiguity when it retains the message/key/row supports and the original observation on each retained row.
+
 239. Integrity of protected records
 
 The carrier retains message identities, protected records, allowed transformations, adversarial changes and the exact verification relation. Acceptance requires a registered change, its protected source record and the corresponding before/after verification row. The accepted and rejected ledgers exhaust the supported change domain and are disjoint. A separate false-accept ledger retains exactly the accepted changes outside the allowed transformation support.
@@ -6810,6 +6962,25 @@ The carrier retains message identities, protected records, allowed transformatio
 The computed integrity check is proved equivalent to authorization of every accepted change. Its successful result excludes every unauthorized accepted change in the registered support; an actual unauthorized acceptance witnesses failure of that check. The verifier is not assumed sound. Retained execution traces reconstruct each accepted change with matching record interfaces. Under the checked integrity result every trace change is authorized. Identity, serial composition and source extension preserve the actual trace and its source records. The 1,026 concrete checks include incomplete support and verification relations, complete verdict ledgers, a two-step execution and a verifier that accepts an unauthorized change. Integrity alone makes no secrecy or authorship claim.
 
 Fold one-wayness law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+
+For protected records \(R\), generated changes \(C\), allowed changes \(A\), and verification relation \(V\), exact acceptance is
+\[
+ \operatorname{accept}(c)\iff
+ c\in C\land c.\operatorname{before}\in R
+       \land(c.\operatorname{before},c.\operatorname{after})\in V.
+\]
+Supported changes with the verification row form the accepted ledger; supported changes without it form the rejected ledger. These exhaust the supported domain and are disjoint. The false-accept ledger is
+\[
+ F=[c\in C:\operatorname{accept}(c)\land c\notin A].
+\]
+The computed integrity condition satisfies
+\[
+ \operatorname{integrity}=\operatorname{true}
+ \iff\forall c,\operatorname{accept}(c)\Rightarrow c\in A.
+\]
+Thus any actual accepted \(c\notin A\) is a concrete refutation, rather than an excluded possibility assumed away.
+
+A trace constructor retains each accepted change's exact before/after interface and continues from that after-record. Induction reconstructs acceptance of every trace row. Applying a successful integrity check then proves authorization of every row. Identity and serial trace constructors preserve the original interfaces. Inclusion of protected records, changes, allowed rows and verification rows transports earlier acceptance and complete traces into the extended model; it does not by itself assert integrity for newly added changes.
 
 240. Authentication relative to registered identity support
 

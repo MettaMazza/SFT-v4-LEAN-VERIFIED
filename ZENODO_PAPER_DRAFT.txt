@@ -3740,35 +3740,145 @@ Each rejected field contradicts the corresponding projection of this equality. T
 
 The support correspondence generates every held-label word across a nonempty canonical position trace. Its original validator requires at least two distinct labels and distinct positions. Native correspondence with the information-quantity construction preserves the full Cartesian order and proves exhaustive word membership and duplicate freedom. Empty string labels remain allowed.
 
-The superposition-equivalent record retains the complete branch family and pairs each word with its full position-label trace. Projecting these records recovers the original branch family in order; projecting each trace recovers both its original word and every canonical position. The amplitude field retains the original not-admitted-at-support-boundary marker.3200 independent comparisons cover full support/provenance outputs and original errors. Information-unit traces, basis records, joint support and observation/reconstruction are established below; the canonical basis-name correspondence is established below.
+The superposition-equivalent record retains the complete branch family and pairs each word with its full position-label trace. Projecting these records recovers the original branch family in order; projecting each trace recovers both its original word and every canonical position. The amplitude field retains the original not-admitted-at-support-boundary marker. 3,200 independent comparisons cover full support/provenance outputs and original errors. Information-unit traces, basis records, joint support and observation/reconstruction are established below; the canonical basis-name correspondence is established below.
+
+
+Write L for the ordered label list and P for the ordered position list, with n=|P|. Admission is precisely |L|≥2, Distinct(L), n>0 and Distinct(P). The recursive complete support is
+
+\[
+ W_0(L)=[[]],\qquad W_{n+1}(L)=\mathop{\mathrm{concat}}_{\ell\in L}[\ell::w:w\in W_n(L)].
+\]
+
+Induction on n proves w∈W_n(L) if and only if |w|=n and every label of w belongs to L: the successor case removes the first label and applies the induction hypothesis to the tail. Distinct labels and distinct tails make each block duplicate-free, and different first labels separate different blocks. This establishes duplicate freedom of the complete support.
+
+For each admitted w, define T_P(w)=zip(P,w). The returned branch record is (W_n,[(w,T_P(w)):w∈W_n],not-admitted-at-support-boundary). Equal lengths permit simultaneous induction on P and w, giving
+
+\[
+ \pi_1(T_P(w))=P,\qquad\pi_2(T_P(w))=w.
+\]
+
+Projecting the word field of the outer record likewise returns W_n in its original order. Thus the complete alternative family and each branch's full origin are retained by the construction itself.
+
 
 125. Basis records and joint support
 
 The basis correspondence retains each original word together with its source colon-delimited basis name. Projecting the retained words reconstructs complete input support exactly, and distinct words yield distinct word/name records. The name field alone is not injective over the original unrestricted string-label domain: labels a and a:a at two canonical positions generate the distinct words (a,a:a) and (a:a,a), both named basis:a:a:a. The accepted support, distinct words and identical names are established by native proofs. Consequently, retained-record correspondence and name-only uniqueness are separate propositions; the latter does not hold over the complete executable domain.
 
-Joint support requires two nonempty duplicate-free word carriers and enumerates every left/right pair in source order, retaining both coordinates and their concatenation. Native membership equivalence establishes complete pair coverage; coordinate recovery preserves both source words even when concatenated values coincide.993 independent output comparisons cover exact basis and joint records, errors, empty words and delimiter-containing labels.
+Joint support requires two nonempty duplicate-free word carriers and enumerates every left/right pair in source order, retaining both coordinates and their concatenation. Native membership equivalence establishes complete pair coverage; coordinate recovery preserves both source words even when concatenated values coincide. 993 independent output comparisons cover exact basis and joint records, errors, empty words and delimiter-containing labels.
+
+
+For a word w=[w_1,…,w_n], the executable name is B(w)=“basis:”++intercalate(“:”,w), and the basis record list is [(w,B(w)):w∈S]. Projection onto its first component gives S. Equality of two records immediately gives equality of their words, establishing injectivity of the retained-record map without any condition on delimiters inside labels. The raw example satisfies
+
+\[
+ B([\text{a},\text{a:a}])=\text{basis:a:a:a}=B([\text{a:a},\text{a}]),
+\]
+
+while the two first coordinates differ. The fixed inherited Fold labels used in the registered derivation have the separate name-injectivity proof below.
+
+For admitted left and right carriers A and C, the joint construction is
+
+\[
+ J(A,C)=\mathop{\mathrm{concat}}_{a\in A}[(a,c,a\mathbin{++}c):c\in C].
+\]
+
+Expanding the nested list maps proves (a,c,z)∈J(A,C) exactly when a∈A, c∈C and z=a++c. Equality of two emitted triples forces equality of both first and second coordinates by projection. Hence the joint correspondence retains the original pair even if concatenation alone would erase its split.
+
 
 126. Independently realized information-unit traces
 
-Each canonical position retains a four-field record: its position name, the one-Fold-information-distinction tag, the all-first-label baseline word and the word differing only at that position by the second held label. Native proofs place both words in the full generated support, identify the baseline with repeated first labels and establish distinctness of the alternatives for distinct labels. The admitted trace has exactly one row per position and preserves the entire position order at arbitrary finite depth.1600 independent complete-record and original-error comparisons pass, including empty strings and delimiter-containing labels.
+Each canonical position retains a four-field record: its position name, the one-Fold-information-distinction tag, the all-first-label baseline word and the word differing only at that position by the second held label. Native proofs place both words in the full generated support, identify the baseline with repeated first labels and establish distinctness of the alternatives for distinct labels. The admitted trace has exactly one row per position and preserves the entire position order at arbitrary finite depth. 1,600 independent complete-record and original-error comparisons pass, including empty strings and delimiter-containing labels.
+
+
+Let a and b be the first two distinct admitted labels. For zero-based position i<n, the baseline and its independently changed alternative are
+
+\[
+ u_i=a^i\mathbin{++}[a]\mathbin{++}a^{n-i-1}=a^n,\qquad
+ v_i=a^i\mathbin{++}[b]\mathbin{++}a^{n-i-1}.
+\]
+
+Here a^k means the list of k copies of a. Both words have length n and every component belongs to L, so complete-support membership puts both in W_n(L). If u_i=v_i, cancelling the common prefix of i copies gives equal heads a=b, contradicting distinctness. The four-field row is (P_i,one-Fold-information-distinction,u_i,v_i).
+
+The recursive implementation emits the head-position row and increments i before processing the remaining positions. Its invariant is i+|remaining positions|=n. Induction preserves this invariant, proves membership of both words in every row, and gives exactly n rows whose position projection is P. Thus the construction establishes an independent distinction at every position for arbitrary finite depth.
+
 
 127. Exact support observation and reconstruction
 
 Observation retains every branch with the selected image in source order, together with its complete complement and a record of every original branch and image. An empty complement retains the original empty-One marker. Native membership proofs establish disjoint and exhaustive accounting of retained and closed alternatives. Projecting the complete reconstruction record recovers the original support in order. On canonical nonempty support, reconstruction accepts this record and returns exactly the pre-observation support.
 
-The raw observation helper preserves its original domain, including repeated support words when the observation keys cover that support set exactly. Reconstruction separately rejects repeated branch keys, as in the source.4660 independent comparisons cover full observation records, reconstruction outputs and original errors, including empty words, empty labels, repeated support, reversed mapping order and literal empty-One branch labels.
+The raw observation helper preserves its original domain, including repeated support words when the observation keys cover that support set exactly. Reconstruction separately rejects repeated branch keys, as in the source. 4,660 independent comparisons cover full observation records, reconstruction outputs and original errors, including empty words, empty labels, repeated support, reversed mapping order and literal empty-One branch labels.
+
+
+Let O have distinct word keys whose set equals the support set, and write f_O(w) for lookup of the image of w. For selected image y the emitted lists are
+
+\[
+ R_y=[w\in S:f_O(w)=y],\qquad C_y=[w\in S:w\notin R_y],\qquad
+ E=[(w,f_O(w)):w\in S].
+\]
+
+Observation rejects an empty R_y. Otherwise it returns y, R_y, the presented C_y (using the empty-One marker when empty), and E. Filter membership gives w∈R_y iff w∈S and f_O(w)=y; the complementary filter gives w∈C_y iff w∈S and w∉R_y. These equivalences prove disjointness and exhaustive accounting of S while preserving each filtered order.
+
+List induction gives π₁(E)=S. Reconstruction first requires E nonempty and Distinct(π₁(E)), then returns π₁(E). Consequently canonical nonempty duplicate-free S is recovered exactly. The raw observation guard checks distinct observation keys and coverage in both directions; it does not require distinct S. Repeated support occurrences therefore remain present in E, and the separate reconstruction guard rejects them exactly as specified by the source.
+
 
 128. Canonical position succession
 
 Adding one fresh canonical position preserves support admission and extends every prior branch by every held label in the original Cartesian order. The extended support remains duplicate-free. Each branch provenance is exactly its previous position-label trace followed by the fresh position and chosen label; a complete information-unit trace exists for the extended support. The first-position construction retains all held labels, with the original two-label instance producing its two branches. All six original operational witnesses pass native proof on their fixed source inputs. Name-only bijection holds throughout the registered fixed-label Fold support, as established below.
 
+
+For fresh p∉P, admission persists because P++[p] is nonempty and duplicate-free. Define the ordered extension E_L(S)=concat_{w∈S}[w++[ℓ]:ℓ∈L]. Distribution over concatenated blocks, followed by induction on depth, proves the ordered identity
+
+\[
+ W_{n+1}(L)=E_L(W_n(L)).
+\]
+
+The base is W_1(L)=[[ℓ]:ℓ∈L]. In the successor proof, each existing leading-label block is extended internally, preserving both its leading label and the source's order. For |w|=|P|, simultaneous list induction also gives
+
+\[
+ \operatorname{zip}(P\mathbin{++}[p],w\mathbin{++}[\ell])
+ =\operatorname{zip}(P,w)\mathbin{++}[(p,\ell)].
+\]
+
+The support-admission theorem then supplies duplicate freedom of the extended support, and the information-unit construction supplies its full position trace. At the original two-label base, P=[p1] produces [[held-a],[held-b]]. These base and successor results establish the construction at each finite canonical depth.
+
+
 129. Quantum support program correspondence
 
-Fresh native execution reproduces all 1024 original candidate lookups and all registration, census, closure, control, hash and unknown-identifier outputs. All six operational witnesses hold for the original fixed held-a/held-b support. These program results retain the source declarations verbatim; they do not establish name-only injectivity for arbitrary accepted string labels. The delimiter collision refutes name-only injectivity over arbitrary accepted string labels. The registered Fold Assembly generator fixes its labels to held-a and held-b, and the quantum grammar refers to the two held Fold labels. Native proofs establish name-only injectivity and the unique inverse on this generated domain at every finite depth; the arbitrary-label collision is outside that registered grammar and remains faithfully represented in the raw helper behavior.
+Fresh native execution reproduces all 1,024 original candidate lookups and all registration, census, closure, control, hash and unknown-identifier outputs. All six operational witnesses hold for the original fixed held-a/held-b support. These program results retain the source declarations verbatim; they do not establish name-only injectivity for arbitrary accepted string labels. The delimiter collision refutes name-only injectivity over arbitrary accepted string labels. The registered Fold Assembly generator fixes its labels to held-a and held-b, and the quantum grammar refers to the two held Fold labels. Native proofs establish name-only injectivity and the unique inverse on this generated domain at every finite depth; the arbitrary-label collision is outside that registered grammar and remains faithfully represented in the raw helper behavior.
+
+
+The complete grammar has ten binary axes: unit, support, basis, provenance, superposition, composition, observation, record, generality and addition. Each is enumerated in rejected/admitted order. The nested product therefore contains 2¹⁰=1,024 candidates, and membership of a constructor in each binary axis proves membership of every candidate in this product. Exhaustive constructor analysis establishes
+
+\[
+ \operatorname{survives}(c)=\operatorname{criteriaDecision}(c),\qquad
+ \operatorname{survives}(c)=\mathrm{true}\iff\bigwedge_{i=1}^{10}(c_i=\mathrm{admitted}).
+\]
+
+The conjunction fixes the unique all-admitted survivor. Its support, basis and provenance fields refer to the complete inherited Fold construction proved in the surrounding sections.
+
+The six original witnesses use L=[held-a,held-b] and three positions. Complete support contains eight distinct words; the unit trace has three rows; the basis has eight records with eight distinct names; and the superposition record retains the exact amplitude-boundary marker. The joint witness combines two singleton-word carriers on each side, emitting four pair cells. Finally, observation by the first held label retains four of the eight branches, while the complete image record reconstructs all eight. These are direct evaluations of the same general constructions, alongside the exhaustive candidate output comparison.
+
 
 130. Canonical Fold basis bijection
 
-The registered Fold Assembly generator supplies precisely held-a and held-b. Quantum support with these inherited labels contains exactly the words in Fold Assembly at the same finite depth. The original colon-joined basis names uniquely identify these words: the native proof establishes exact character decoding, cancels the basis prefix and recovers the held-label sequence. Hence all emitted names are distinct and every emitted name has one and only one source word. This result holds at arbitrary finite depth and preserves the original executable functions on their broader raw input domains. Together with the unit, provenance, pair-support, observation, reconstruction and succession proofs and the complete 1024-candidate program correspondence, it completes the registered quantum-information support entry.
+The registered Fold Assembly generator supplies precisely held-a and held-b. Quantum support with these inherited labels contains exactly the words in Fold Assembly at the same finite depth. The original colon-joined basis names uniquely identify these words: the native proof establishes exact character decoding, cancels the basis prefix and recovers the held-label sequence. Hence all emitted names are distinct and every emitted name has one and only one source word. This result holds at arbitrary finite depth and preserves the original executable functions on their broader raw input domains. Together with the unit, provenance, pair-support, observation, reconstruction and succession proofs and the complete 1,024-candidate program correspondence, it completes the registered quantum-information support entry.
+
+
+Put H=[held-a,held-b]. Complete-support membership and the inherited Fold generator give the same condition,
+
+\[
+ w\in W_n(H)\iff |w|=n\ \land\ (\forall x\in w,\ x=\text{held-a}\ \lor\ x=\text{held-b}).
+\]
+
+To prove name injectivity, decode the name's bytes into characters. Each character of the fixed prefix, delimiter and held labels belongs to the explicit finite alphabet {h,e,l,d,-,a,b,:,s,i}; character-list induction proves exact decoding on that alphabet. Equality B(u)=B(v) therefore yields equality of their character lists. Cancelling the fixed “basis:” prefix leaves equality of the colon-joined label sequences.
+
+For nonempty sequences, prefixing a colon produces blocks “:held-a” or “:held-b”, each of length seven. Their seventh characters distinguish the alternatives. Equality forces the same first label; cancelling the common seven-character block reduces to equality of the remaining blocks. Induction recovers the entire label sequence. The empty case is separated by the presence or absence of a first block. Hence
+
+\[
+ u,v\in W_n(H),\ B(u)=B(v)\ \Longrightarrow\ u=v.
+\]
+
+For any emitted name z, membership in the mapped name list supplies a word w with B(w)=z. The preceding implication proves that any other such source word equals w. Thus every emitted name has exactly one preimage, and the complete basis-name list is duplicate-free at every admitted finite depth.
+
 
 131. Exact generated transition systems
 

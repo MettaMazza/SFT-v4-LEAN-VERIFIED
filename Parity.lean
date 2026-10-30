@@ -587,3 +587,6 @@ def main : IO Unit := do
 
   for c in SFT.QuantumComputation.SuperpositionGrammar.candidates do
     IO.println ("SuperpositionGrammar\t" ++ SFT.QuantumComputation.SuperpositionGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.SuperpositionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.SuperpositionGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.SuperpositionGrammar.decisionReason c)
+
+  for c in SFT.QuantumComputation.PhaseInterferenceGrammar.candidates do
+    IO.println ("PhaseInterferenceGrammar\t" ++ SFT.QuantumComputation.PhaseInterferenceGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.PhaseInterferenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.PhaseInterferenceGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.PhaseInterferenceGrammar.decisionReason c)

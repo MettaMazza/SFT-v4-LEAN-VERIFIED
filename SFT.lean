@@ -1011,3 +1011,7 @@ import SFT.QuantumComputation.Superposition
 import SFT.QuantumComputation.SuperpositionGrammar
 import SFT.QuantumComputation.SuperpositionControls
 import SFT.QuantumComputation.SuperpositionEvidence
+import SFT.QuantumComputation.PhaseInterference
+import SFT.QuantumComputation.PhaseInterferenceGrammar
+import SFT.QuantumComputation.PhaseInterferenceControls
+import SFT.QuantumComputation.PhaseInterferenceEvidence

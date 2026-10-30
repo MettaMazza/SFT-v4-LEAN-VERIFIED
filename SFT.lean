@@ -1019,3 +1019,7 @@ import SFT.QuantumComputation.Entanglement
 import SFT.QuantumComputation.EntanglementGrammar
 import SFT.QuantumComputation.EntanglementControls
 import SFT.QuantumComputation.EntanglementEvidence
+import SFT.QuantumComputation.Measurement
+import SFT.QuantumComputation.MeasurementGrammar
+import SFT.QuantumComputation.MeasurementControls
+import SFT.QuantumComputation.MeasurementEvidence

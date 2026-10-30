@@ -593,3 +593,6 @@ def main : IO Unit := do
 
   for c in SFT.QuantumComputation.EntanglementGrammar.candidates do
     IO.println ("EntanglementGrammar\t" ++ SFT.QuantumComputation.EntanglementGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.EntanglementGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.EntanglementGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.EntanglementGrammar.decisionReason c)
+
+  for c in SFT.QuantumComputation.MeasurementGrammar.candidates do
+    IO.println ("MeasurementGrammar\t" ++ SFT.QuantumComputation.MeasurementGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.MeasurementGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.MeasurementGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.MeasurementGrammar.decisionReason c)

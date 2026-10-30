@@ -1,0 +1,25 @@
+import SFT.Computation.ClassificationPrediction
+#print axioms SFT.Computation.ClassificationPrediction.outputs
+#print axioms SFT.Computation.ClassificationPrediction.outputMeaning
+#print axioms SFT.Computation.ClassificationPrediction.predict
+#print axioms SFT.Computation.ClassificationPrediction.predictionMeaning
+#print axioms SFT.Computation.ClassificationPrediction.predictionSource
+#print axioms SFT.Computation.ClassificationPrediction.trainingRetained
+#print axioms SFT.Computation.ClassificationPrediction.agrees
+#print axioms SFT.Computation.ClassificationPrediction.matchesLedger
+#print axioms SFT.Computation.ClassificationPrediction.nonmatches
+#print axioms SFT.Computation.ClassificationPrediction.agreementMeaning
+#print axioms SFT.Computation.ClassificationPrediction.matchLedgerMeaning
+#print axioms SFT.Computation.ClassificationPrediction.nonmatchMeaning
+#print axioms SFT.Computation.ClassificationPrediction.evaluationExhaustion
+#print axioms SFT.Computation.ClassificationPrediction.falsified
+#print axioms SFT.Computation.ClassificationPrediction.falsifications
+#print axioms SFT.Computation.ClassificationPrediction.falsifiedMeaning
+#print axioms SFT.Computation.ClassificationPrediction.falsificationMeaning
+#print axioms SFT.Computation.ClassificationPrediction.evaluationDisjoint
+#print axioms SFT.Computation.ClassificationPrediction.noPredictionNotFalsified
+#print axioms SFT.Computation.ClassificationPrediction.unsupportedInput
+#print axioms SFT.Computation.ClassificationPrediction.targetNotTraining
+#print axioms SFT.Computation.ClassificationPrediction.extendSealed
+#print axioms SFT.Computation.ClassificationPrediction.extensionPreservesOutputs
+#print axioms SFT.Computation.ClassificationPrediction.extensionPreservesPrediction

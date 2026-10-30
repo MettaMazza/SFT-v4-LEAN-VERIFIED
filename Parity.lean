@@ -481,3 +481,7 @@ def main : IO Unit := do
   for c in SFT.Computation.InferenceGrammar.candidates do
     IO.println ("InferenceGrammar\t" ++ SFT.Computation.InferenceGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.InferenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.InferenceGrammar.exactForm c ++ "\t" ++ SFT.Computation.InferenceGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.ClassificationPredictionGrammar.candidates do
+    IO.println ("ClassificationPredictionGrammar\t" ++ SFT.Computation.ClassificationPredictionGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ClassificationPredictionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ClassificationPredictionGrammar.exactForm c ++ "\t" ++ SFT.Computation.ClassificationPredictionGrammar.decisionReason c)
+

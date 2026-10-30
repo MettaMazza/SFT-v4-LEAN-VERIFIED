@@ -845,3 +845,8 @@ import SFT.Computation.InferenceWitnesses
 import SFT.Computation.InferenceGrammar
 import SFT.Computation.InferenceControls
 import SFT.Computation.InferenceEvidence
+import SFT.Computation.ClassificationPredictionWitnesses
+import SFT.Computation.ClassificationPredictionGrammar
+import SFT.Computation.ClassificationPredictionControls
+import SFT.Computation.ClassificationPredictionEvidence
+import SFT.Computation.ClassificationPrediction

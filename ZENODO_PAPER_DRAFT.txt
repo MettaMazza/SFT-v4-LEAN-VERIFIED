@@ -3443,19 +3443,87 @@ A transformation assigns exactly one image to each member of complete duplicate-
 
 The transformation ledger classifies each pair by exact image equality. Different images retain the distinction; equal images close it. Native membership equivalences prove that these two ledgers disjointly exhaust the complete source-pair list. Empty ledgers have the original empty-One presentation. The full record retains source support, first-occurrence image support, both pair ledgers and exact predecessor fibres.
 
-For an admitted transformation, a closed pair lies in a common image fibre. Conversely, every source pair whose two members lie in a common image fibre is closed. These statements retain the exact source provenance of loss. Independent comparisons pass 813 validations,121 complete ordered pair outputs and 813 full transformation records, including empty-string and literal empty-One labels, reversed mappings and invalid source/map cases.
+For an admitted transformation, a closed pair lies in a common image fibre. Conversely, every source pair whose two members lie in a common image fibre is closed. These statements retain the exact source provenance of loss. Independent comparisons pass 813 validations, 121 complete ordered pair outputs and 813 full transformation records, including empty-string and literal empty-One labels, reversed mappings and invalid source/map cases.
+
+
+For source list S and transformation rows T, admission requires S≠[], distinct S, distinct keys(T), and key-set equality with S. Support is checked before the map, and success retains T unchanged. Let f_T(s) denote its admitted image. The complete pair recursion is
+
+\[
+ P([])=[],\qquad P(x::R)=[(x,y):y\in R]\mathbin{++}P(R).
+\]
+
+The two ordered subledgers are
+
+\[
+ R_T=[(x,y)\in P(S):f_T(x)\ne f_T(y)],\qquad
+ C_T=[(x,y)\in P(S):f_T(x)=f_T(y)].
+\]
+
+Filter membership proves each defining equivalence. Decidable equality places every pair in one of the two lists; simultaneous membership would assert both equality and its negation. Thus these ledgers exhaust the original pairs without overlap, retaining their source traversal order. Empty lists are presented as structural empty One, and nonempty lists are retained intact.
+
+The full record is (S,L_T,present(R_T),present(C_T),[(a,F_T(a)):a∈L_T]), where L_T is the first-occurrence image-label list and F_T(a)=[s∈S:f_T(s)=a]. For a closed pair, total lookup supplies its first endpoint's label a; equality gives that same label for the second endpoint, placing both in F_T(a). Conversely, two endpoints of a source pair in F_T(a) have equal images and the pair is closed. This proves the correspondence between closed distinctions and their exact predecessor fibres.
+
 
 114. Composition and downstream retention
 
 Transformation composition first validates the source map, derives its middle support in source-order first occurrence, and validates the second map on that complete middle support. Its output retains one row per original source form in the original order. Native proofs establish exact successive lookup and preservation of transformation admission.
 
-When two source forms have equal first images, their composed images are equal. Every closed upstream pair therefore remains closed. Since the retained and closed ledgers are disjoint and exhaustive, each retained composite pair must have been retained upstream. The native downstream-retention theorem proves this subset relation for arbitrary finite admitted compositions, and establishes that the original executable law returns true. No external record or newly created distinction is introduced. Independent comparisons pass 648 complete compositions and 648 downstream results, including the original validation errors and reordered maps; the cumulative comparison total is 3043.
+When two source forms have equal first images, their composed images are equal. Every closed upstream pair therefore remains closed. Since the retained and closed ledgers are disjoint and exhaustive, each retained composite pair must have been retained upstream. The native downstream-retention theorem proves this subset relation for arbitrary finite admitted compositions, and establishes that the original executable law returns true. No external record or newly created distinction is introduced. Independent comparisons pass 648 complete compositions and 648 downstream results, including the original validation errors and reordered maps; the cumulative comparison total is 3,043.
+
+
+Composition validates T on S, forms its complete first-occurrence image support L_T, and validates U on L_T. The emitted rows are
+
+\[
+ V=[(s,f_U(f_T(s))):s\in S].
+\]
+
+The implementation's lookup default is unreachable on these admitted queries: totality supplies f_T(s), its occurrence puts it in L_T, and U is total on L_T. Induction on the row construction gives keys(V)=S and image_V(s)=Some(f_U(f_T(s))) for s∈S. Therefore V preserves distinct keys, coverage and source order and is an admitted transformation.
+
+If (x,y)∈C_T, then f_T(x)=f_T(y). Applying f_U yields f_U(f_T(x))=f_U(f_T(y)), so
+
+\[
+ C_T\subseteq C_V.
+\]
+
+Suppose a retained composite pair were not retained upstream. Its source-pair membership and exhaustive equality split would place it in C_T, hence C_V, contradicting disjointness of R_V and C_V. Consequently
+
+\[
+ R_V\subseteq R_T.
+\]
+
+The executable downstream law removes only the presentation constructor and tests membership in R_T for every pair of R_V. The subset result supplies every test, so the all predicate returns true for admitted compositions. Validation errors retain their original order through the ledger, composition and final-ledger calls.
+
 
 115. Exact predecessor records and recovery
 
 The reverse record visits the predecessor fibres in their original order. A singleton fibre returns its source label directly; every other fibre returns the original held-predecessor-labels record with its complete ordered member list. Native equivalences establish precisely when each form is produced. Every source with the recorded image equals the unique predecessor in a singleton record. For a held record, membership is exactly source membership together with the recorded image. Two distinct retained predecessors exclude a unique record.
 
-The executable reversibility decision retains V3's comparison of the number of distinct admitted dictionary images with the number of source forms. Independent comparisons pass 813 such decisions and 813 complete reverse records, including original errors and unrestricted string labels. The cumulative transformation comparison total is 4669. The native count-decision equivalence with singleton fibres is established below.
+The executable reversibility decision retains V3's comparison of the number of distinct admitted dictionary images with the number of source forms. Independent comparisons pass 813 such decisions and 813 complete reverse records, including original errors and unrestricted string labels. The cumulative transformation comparison total is 4,669. The native count-decision equivalence with singleton fibres is established below.
+
+
+For a predecessor member list M, the exact record cases are
+
+\[
+ B(M)=\begin{cases}\operatorname{unique}(s),&M=[s],\\
+ \operatorname{heldLabels}(M),&|M|\ne1.\end{cases}
+\]
+
+Splitting M into empty, singleton and longer lists proves B(M)=unique(s) iff M=[s], and B(M)=heldLabels(H) iff H=M and |M|≠1. Reverse rows map (a,F_T(a)) to (a,B(F_T(a))) without reordering fibres. Thus a unique record for a supplies F_T(a)=[s]. Any source t with image a belongs to that fibre and hence equals s. A held record satisfies
+
+\[
+ t\in H\iff t\in S\land f_T(t)=a.
+\]
+
+If two different predecessors lie in M, uniqueness would force both to equal its alleged singleton member and contradict their difference. No member is selected from a merged fibre.
+
+Let D=map(second,T) be the dictionary-value list, and let L(D) retain its first occurrences. After validation, the executable reversibility result is exactly
+
+\[
+ \operatorname{isReversible}(S,T)=\operatorname{ok}(|L(D)|=|S|).
+\]
+
+This is the original count expression; the next derivation relates it to the fibre-based recovery records.
+
 
 116. Reversibility is equivalent to singleton fibres
 
@@ -3463,17 +3531,81 @@ For every transformation admitted by the original validator, the executable dist
 
 Distinct mapped source values are equivalent to injectivity on the held source support. Injectivity makes each nonempty image fibre a singleton; conversely, singleton fibres identify any two sources with the same image. These implications prove both directions of V3's reversibility statement on arbitrary finite admitted supports, without a new guard or an assumed inverse. The established reverse-record recovery theorems then give direct recovery for singleton fibres and complete retained predecessor alternatives for merged fibres.
 
+
+A first-occurrence scan can never lengthen a list. If it skips a head already seen, its tail output has length at most the tail length and therefore strictly less than the original list length. Hence equality of input and output lengths forces every head to be retained and, recursively, absent from the later list. Conversely, a distinct list with no initially seen member is retained unchanged. Starting with an empty seen list gives
+
+\[
+ |L(X)|=|X|\iff\operatorname{Distinct}(X).
+\]
+
+Let D=map(second,T) and V=[f_T(s):s∈S]. A value in D has a dictionary row; unique keys make lookup return that row's value, and coverage puts its key in S, so the value occurs in V. Conversely, lookup of any admitted s yields a retained dictionary row and thus a value of D. Therefore D and V have identical value membership. Their first-occurrence lists are distinct and mutually contained; finite distinct-list length bounds in both directions give |L(D)|=|L(V)|. Since |V|=|S|,
+
+\[
+ |L(D)|=|S|\iff|L(V)|=|V|\iff\operatorname{Distinct}(V).
+\]
+
+On distinct S, injectivity of f_T makes V distinct: a repeated head value would identify its source with a later source, contradicting distinctness, and the tail follows by induction. Conversely, if V is distinct, equal mapped values cannot occur at two different source positions; splitting source membership into head and tail proves injectivity. Thus the original count test is equivalent to injectivity on S.
+
+Each observed fibre is nonempty and distinct. Under injectivity, choose one of its members s; every other member has the same image and must equal s, so the fibre is [s]. Conversely, two sources with equal images lie in the same observed fibre, and singleton fibres make those sources equal. Combining the equivalences proves
+
+\[
+ \operatorname{isReversible}(S,T)=\operatorname{ok}(\mathrm{true})
+ \iff f_T\text{ is injective on }S
+ \iff\forall a\in L_T,\ \exists s,\ F_T(a)=[s].
+\]
+
+The argument uses membership and distinct counts, so arbitrary admitted dictionary-row order is preserved. Recovery follows from the existing reverse records, without postulating an inverse function.
+
+
 117. Source succession and conservation of pair accounting
 
 The singleton transformation has one source, one held image, one singleton predecessor fibre and empty retained and closed pair ledgers. Native evaluation proves the complete original record. Adding a fresh source and one image row preserves the admitted transformation conditions. Every image fibre retains its old members and appends the new source exactly when its label matches the added image.
 
 The complete pair list after extension retains the original source traversal order, adding one pair between each prior source and the fresh source. A retained successor pair is exactly a previously retained pair or a new old/fresh pair with unequal images. A closed successor pair is exactly a previously closed pair or a new old/fresh pair with equal images. These native equivalences establish exhaustive successor accounting for arbitrary finite support.
 
-All five original operational witnesses pass native proof: identity conservation, exact prefix loss, the identity/prefix reversibility boundary, complete held predecessor records and downstream erasure. Fresh-source comparisons pass 1395 validations,15 complete ordered pair lists and 1395 full ledgers. The cumulative source-expression comparison total is 7474.
+All five original operational witnesses pass native proof: identity conservation, exact prefix loss, the identity/prefix reversibility boundary, complete held predecessor records and downstream erasure. Fresh-source comparisons pass 1,395 validations, 15 complete ordered pair lists and 1,395 full ledgers. The cumulative source-expression comparison total is 7,474.
+
+
+For fresh x∉S and appended row (x,v), put S'=S++[x] and T'=T++[(x,v)]. The established observation successor preserves admission, retains all old images, and gives image_{T'}(x)=Some(v). Its exact fibre update is
+
+\[
+ F_{T'}(a)=F_T(a)\mathbin{++}\begin{cases}[x],&v=a,\\\lbrack\rbrack,&v\ne a.\end{cases}
+\]
+
+The pair list retains its nested source order. Explicitly, E_x([])=[] and E_x(y::R)=([(y,z):z∈R]++[(y,x)])++E_x(R), and P(S++[x])=E_x(S). Membership is exactly old pair membership or a new pair (s,x) with s∈S. Substituting the old and fresh image equations into the two filters yields
+
+\[
+ p\in R_{T'}\iff p\in R_T\lor\exists s\in S,\ p=(s,x)\land f_T(s)\ne v,
+\]
+\[
+ p\in C_{T'}\iff p\in C_T\lor\exists s\in S,\ p=(s,x)\land f_T(s)=v.
+\]
+
+Both directions follow from the pair split: old endpoints keep their images; a new pair compares exactly its old image with v. The formulas classify the complete ordered successor list, without replacing it by a differently ordered concatenation of pair classes.
+
+At the singleton base, S=[s], T=[(s,a)], the ledger is ([s],[a],emptyOne,emptyOne,[(a,[s])]). For the witness S=[aa,ab,ba,bb], P(S) has six pairs. Identity retains all six and closes none. Prefix projection closes exactly (aa,ab) and (ba,bb), retaining the other four; its fibres are [aa,ab] and [ba,bb]. Identity has four distinct images and is reversible, whereas prefix projection has two and is not. Both prefix reverse rows retain their two predecessor labels. Composing prefix projection with a↦one,b↦one closes all six pairs and leaves no retained pair, establishing the downstream-erasure witness.
+
 
 118. Complete conservation and transformation program correspondence
 
-Fresh native execution matches all 1024 original candidate lookups, registration, census, closure, controls, hashes and unknown-identifier rejection. Together with exhaustive pair accounting, exact composition, downstream retention, reversibility equivalence, predecessor recovery and arbitrary finite source succession, this completes the entry on its original deterministic finite domain. No scalar conservation measure, assumed inverse or unrecorded source distinction is introduced.
+Fresh native execution matches all 1,024 original candidate lookups, registration, census, closure, controls, hashes and unknown-identifier rejection. Together with exhaustive pair accounting, exact composition, downstream retention, reversibility equivalence, predecessor recovery and arbitrary finite source succession, this completes the entry on its original deterministic finite domain. No scalar conservation measure, assumed inverse or unrecorded source distinction is introduced.
+
+
+The complete registered grammar has ten binary axes: support, map, provenance, pair accounting, loss, reversal, composition, conservation, generality and addition. Each axis generates its rejected constructor followed by its admitted constructor, giving
+
+\[
+ |\mathcal G|=2^{10}=1{,}024.
+\]
+
+Choosing the appropriate member of each axis list and applying nested product membership proves that every typed candidate is enumerated. Exhausting the ten constructor choices establishes equality between the source identifier decision and the conjunction of the ten admitted-field tests. Hence
+
+\[
+ \operatorname{accept}(c)\iff\bigwedge_{i=1}^{10}c_i=\mathrm{admitted}
+ \iff c=(\mathrm{admitted},\ldots,\mathrm{admitted}).
+\]
+
+Projecting this equality onto any rejected field gives a contradiction, proving rejection for each failed criterion. This complete finite classification accompanies the source-pair, composition, fibre, recovery and successor derivations above.
+
 
 119. Classical state, observation classes and deterministic realization
 

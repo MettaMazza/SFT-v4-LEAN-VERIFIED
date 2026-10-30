@@ -1,0 +1,74 @@
+{
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source": "sft/physics/measurement_laws.py",
+  "source_sha256": "8f00975e86bf56fa533d139f3c57696cba8d0c9447beab16778264b75216237b",
+  "source_claims": [
+    "SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001",
+    "SFT-PHYS-MEAS-UNIT-COMPARISON-001"
+  ],
+  "scope": "Verified native components; not new full-entry completion",
+  "new_theorems": 64,
+  "audited_declarations": 154,
+  "axioms": [],
+  "modules": [
+    "DimensionComposition",
+    "DimensionGrammar",
+    "DimensionEvidence",
+    "DimensionReferenceTransport",
+    "DimensionExperiment"
+  ],
+  "correspondence": [
+    {
+      "source_component": "DIMENSION_COMPOSITION statement/exact_result: finite products and exact quotients of independent kind carriers, compared by held form",
+      "lean": "SFT/Physics/DimensionComposition.lean",
+      "encoding": "Finite kind/product/quotient paths; numerator/denominator occurrence counts; residual pair by exact common-factor cancellation; finite complete-support decision",
+      "proved": [
+        "independent primitive kinds",
+        "product association and commutation",
+        "quotient orientation",
+        "common-factor cancellation for arbitrary composite paths",
+        "telescoping",
+        "outside-support absence",
+        "soundness and completeness of finite form comparison"
+      ]
+    },
+    {
+      "source_component": "DIMENSION_COMPOSITION full original eight-axis product and GeneratedEmpiricalPhysicsProgram methods",
+      "lean": [
+        "SFT/Physics/DimensionGrammar.lean",
+        "SFT/Physics/DimensionEvidence.lean"
+      ],
+      "comparison": "PASS, all 256 candidates and all original fields/hashes; unchanged independent validator accepts original and rejects all three adverse variants"
+    },
+    {
+      "source_component": "DIMENSION_COMPOSITION original experiment specification",
+      "lean": "SFT/Physics/DimensionExperiment.lean",
+      "proved": [
+        "complete two-row count",
+        "both source labels retained",
+        "changed source rejected",
+        "spec validation succeeds"
+      ]
+    },
+    {
+      "source_component": "UNIT_COMPARISON same-dimension positive-ratio reference transport",
+      "lean": "SFT/Physics/DimensionReferenceTransport.lean",
+      "proved": [
+        "complete finite dimension gate connected to admitted reference comparisons",
+        "unlike forms excluded",
+        "reciprocal return",
+        "composition",
+        "ratio independence of dimension",
+        "equivalent unreduced descriptions admitted"
+      ]
+    }
+  ],
+  "remaining": [
+    "Full DIMENSION_COMPOSITION empirical validator execution against the original 1979202-byte BIPM snapshot and empirical_validation.json",
+    "Dependency-ordered registration after OBSERVATION_CARRIER and QUANTITY_CARRIER",
+    "UNIT_COMPARISON original full grammar/program/empirical translation and checks"
+  ],
+  "resource_outcome": "Full validator dependency rebuild stopped after unchanged GeneratorThreeGrammar reached approximately 19 GB RSS; accepted five-module targeted builds and audits passed. Six original comparisons preserved.",
+  "completed_entries": 192,
+  "total_entries": 2781
+}

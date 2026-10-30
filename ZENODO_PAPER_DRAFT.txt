@@ -9583,3 +9583,71 @@ A chain begins with one comparison and extends by appending a comparison whose s
  C(P\mathbin{+\!+}[b\to c])=C(P)\circ C_{bc}.
 \]
 The constructor retains the prior chain and the appended comparison. Each collapse uses the positive ratio product and transitive dimension identity; hence every supplied finite chain has a positive ratio and preserves the dimension of its endpoints. Thirteen native theorems establish exclusion of unlike dimensions, positive ratios, reciprocal return, exact composition, telescoping and the finite-chain base and successor equations, with zero axiom dependencies. This component formalizes transport on admitted references; canonical dimension generation and each entry's original complete grammar and empirical comparison remain separate source work.
+
+352. Finite canonical dimension composition
+
+The registered dimension statement describes canonical finite products and exact quotients of independent quantity kinds. Represent a generated description by a kind label, a product of two descriptions, or an exact quotient of two descriptions. Its support is the finite list of kind labels appearing in that description, retaining both operands at every composition. No measured value enters this construction.
+
+For a held kind k, retain a numerator count n and denominator count d. A matching kind contributes (1,0), and an absent kind contributes (0,0). Products add like-side counts; quotients exchange the second operand's sides:
+\[
+ C_k(ab)=(n_a+n_b,d_a+d_b),\qquad
+ C_k(a/b)=(n_a+d_b,d_a+n_b).
+\]
+These are counts of occurrences in the finite description. Their zero denotes absence of a factor, not a physical zero magnitude. Cancellation gives the canonical residual pair
+\[
+ R(n,d)=(n-d,d-n).
+\]
+At least one residual side is absent: if n≤d, n−d=0; otherwise d≤n and d−n=0. Induction on the common appended count c proves
+\[
+ R(n+c,d+c)=R(n,d).
+\]
+Thus a common numerator/denominator factor cancels exactly without choosing a numerical scale or using a signed physical magnitude.
+
+Write F_k(p)=R(C_k(p)) for the held form of description p at kind k. Descriptions share a dimension precisely when their forms agree at every kind. Reflexivity, symmetry and transitivity follow from equality of the residual pairs. Distinct primitive labels cannot be identified: at label k, the description k has pair (1,0), whereas a different primitive q has pair (0,0). This retains the independence of the kind carriers.
+
+Finite count addition proves product commutation and association. Exchanging denominator orientation proves
+\[
+ (a/b)/c \sim a/(bc),\qquad a/(b/c)\sim(ac)/b.
+\]
+Here ∼ means equality of all held kind forms. For (ab)/b, the counts at each kind are n_a+n_b+d_b and d_a+d_b+n_b. Reordering the same appended support and applying common-factor cancellation gives
+\[
+ (ab)/b\sim a,\qquad a/a\sim 1.
+\]
+The final notation denotes absence of every residual factor, not an extra primitive quantity. Likewise, the counts of (a/b)(b/c) contain the common addition n_b+d_b on both sides. Removing that addition proves
+\[
+ (a/b)(b/c)\sim a/c.
+\]
+These identities hold for every supplied finite description, including composite denominator descriptions.
+
+353. Complete finite decision of held dimension identity
+
+Let S(p) be the complete generated support of a description p. Induction on its construction proves that k∉S(p) implies C_k(p)=(0,0), hence F_k(p)=(0,0). For products and quotients, absence from the appended support implies absence from both operand supports, and the count equations preserve the absent pair.
+
+The executable comparison checks every label in S(a)++S(b):
+\[
+ B(a,b)=\bigwedge_{k\in S(a)\mathbin{+\!+}S(b)}
+             [F_k(a)=F_k(b)].
+\]
+If B is true, finite-list induction supplies equality at each listed kind. Any unlisted kind is absent from both supports and has pair (0,0) on both sides. Therefore the finite comparison establishes equality at every kind. Conversely, equality at every kind supplies every conjunction member, so finite-list induction makes B true:
+\[
+ B(a,b)=\mathrm{true}\iff
+       \forall k,\ F_k(a)=F_k(b).
+\]
+Duplicate occurrences and support order do not omit a kind: the comparison retains the complete operand supports, and repeated equality checks preserve the result. Distinct primitive kind labels are rejected by the finite comparison because its soundness would otherwise contradict primitive independence. The construction, cancellation identities and complete finite decision are established by 31 native theorems; all 39 declarations in this component have zero axiom dependencies.
+
+The original measurement grammar remains a separate complete product of eight binary source coordinates: carrier, relation, provenance, prediction access, measurement record, row retention, finite generality and extra rule. All 256 forms are retained. A form survives exactly when each coordinate has its admitted source value, giving one survivor and an explicit rejected coordinate for every alternative. The dimension-specific relation is the original canonical-dimension-path relation. The accompanying evidence retains the original registration, dependencies, two operational pairing witnesses, closure records and four executable controls. These grammar and evidence components add 20 native theorems. Their candidate decisions supplement the finite dimension construction above.
+
+354. Reference transport on equivalent generated descriptions
+
+Same-dimension reference transport can now use the generated paths themselves. A reference retains a name and a finite dimension description. Its comparison carries an exact positive ratio and the proved relation ∼ from Sections 352–353, rather than requiring identical written descriptions. The finite decision and its soundness theorem admit a comparison exactly on the proved dimension relation. A failed decision excludes every such comparison, independently of which numerical ratio is proposed.
+
+Reversal uses symmetry of ∼ and the normalized reciprocal; composition uses transitivity and normalized ratio multiplication:
+\[
+ (a\xrightarrow{x}b)^{-1}=b\xrightarrow{x^{-1}}a,\qquad
+ (a\xrightarrow{x}b\xrightarrow{y}c)=a\xrightarrow{xy}c.
+\]
+Both resulting reference pairs pass the complete finite dimension comparison. Their ratio equations and reciprocal return are the exact positive-ratio identities of Section 351. Replacing a comparison's ratio cannot change its independently retained dimension relation.
+
+The constructors admit, for example, the descriptions pq and qp by product commutation, and (pq)/q and p by common-factor cancellation. They therefore preserve equivalence of generated descriptions instead of imposing identity of their unreduced syntax. Nine native theorems and the comparison constructors establish this connection with zero axiom dependencies.
+
+For the dimension entry, fresh compiled Lean execution reproduces all 256 V3 candidate lookups, registration fields, census and proof hashes, closure, controls and unknown-identifier rejection. The unchanged V3 independent validator accepts the complete output and rejects omitted enumeration, an additional survivor and a failed control. The translated experiment preserves the original two BIPM target rows, source identity, registered prediction label, and post-seal comparison protocol. Four experiment theorems establish its source-hash rejection branch, complete two-row count, both retained observation labels and registered specification validity. The full byte-level empirical validator comparison remains separate from these accepted program and experiment results.

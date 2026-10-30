@@ -865,3 +865,8 @@ import SFT.Computation.SampleComplexityGrammar
 import SFT.Computation.SampleComplexityControls
 import SFT.Computation.SampleComplexityEvidence
 import SFT.Computation.SampleComplexity
+import SFT.Computation.LearningOptimizationWitnesses
+import SFT.Computation.LearningOptimizationGrammar
+import SFT.Computation.LearningOptimizationControls
+import SFT.Computation.LearningOptimizationEvidence
+import SFT.Computation.LearningOptimization

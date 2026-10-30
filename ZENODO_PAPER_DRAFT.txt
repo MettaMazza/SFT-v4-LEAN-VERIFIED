@@ -3611,13 +3611,58 @@ Projecting this equality onto any rejected field gives a contradiction, proving 
 
 A classical information state retains one member of the complete nonempty duplicate-free support together with that support as provenance. A total observation partitions the same support by its labels in first-occurrence order. Each probability row retains its entire ordered microstate class and the reduced positive fraction of complete support occupied by that class. Native proofs identify the exact class membership, retained order and fraction count equation. Deterministic pushforward constructs corresponding image rows with complete predecessor classes and exact parts.
 
-Observation first requires exactly one row for its observed label. A singleton member class returns its held classical state; every other retained class returns all its members. The native singleton equivalence and unresolved-member identity preserve this boundary. Deterministic realization visits the probability rows in order, pairing every original microstate with the deterministic-member tag while retaining the class label and its exact support part. Source-expression comparisons cover 6296 support, ledger, resolution and realization outputs and error cases, including empty labels and original validation order. Exact-whole closure and the source microstate-successor construction are established below.
+Observation first requires exactly one row for its observed label. A singleton member class returns its held classical state; every other retained class returns all its members. The native singleton equivalence and unresolved-member identity preserve this boundary. Deterministic realization visits the probability rows in order, pairing every original microstate with the deterministic-member tag while retaining the class label and its exact support part. Source-expression comparisons cover 6,296 support, ledger, resolution and realization outputs and error cases, including empty labels and original validation order. Exact-whole closure and the source microstate-successor construction are established below.
+
+
+Canonical support admission is S≠[] and Distinct(S). A classical-state request succeeds exactly when this holds and h∈S, returning (heldState=h,supportProvenance=S). For observation O, probability validation checks the support first, then distinct keys and complete key coverage. Pushforward validation has the same successful domain but checks duplicate map keys before support validation, retaining the original short-circuit errors.
+
+For each first-occurrence label a, let F_a=[s∈S:f_O(s)=a], m_a=|F_a| and N=|S|. The probability row is (a,F_a,(u_a,v_a)), with the positive reduced part satisfying
+
+\[
+ m_a v_a=u_aN,\qquad u_a>0,\quad v_a>0,\quad\gcd(u_a,v_a)=1.
+\]
+
+The row maps from the entropy ledger preserve its label, members and part exactly. Induction on those maps proves that projecting label/member pairs returns the original ordered partition. Pushforward uses the same record with image/predecessor field names, so its source provenance and fraction equation are identical.
+
+Resolution first forms H=[r in rows:r.label=a]. It returns the outside-observation error unless H=[r] is exactly a singleton. For that sole row,
+
+\[
+ \operatorname{resolveMembers}(M)=\operatorname{classicalState}(s)\iff M=[s].
+\]
+
+The empty and longer-list cases return unresolvedClass(M) with M unchanged. Deterministic realization maps each row to (a,[(s,"deterministic-member"):s∈F_a],(u_a,v_a)). Projecting first coordinates recovers F_a by list induction, while the label and fraction are unchanged by construction. The realization therefore exposes every original member in order.
+
 
 120. Complete observation-class cardinality
 
 For every total observation of a finite support, the sum of the full fibre cardinalities over the first-occurrence observed labels equals the support cardinality. The proof counts each source occurrence against distinct observed labels: exactly its own image contributes once. Induction over the support then reconstructs the complete count. No equal-class-size assumption is used.
 
-The raw exact-whole helper retains its Fraction input domain, including signed and zero fractions. Integer cross-multiplication accumulates the exact numerator and denominator; the nonempty ledger is whole precisely when those values are equal. Generated probability and pushforward rows supply their original positive reduced fractions to this calculation.3614 independent source-expression comparisons pass, including 2801 raw fraction lists and 813 generated-ledger or original-error cases. The universal reduced-fraction bridge and exact-whole result are established below.
+The raw exact-whole helper retains its Fraction input domain, including signed and zero fractions. Integer cross-multiplication accumulates the exact numerator and denominator; the nonempty ledger is whole precisely when those values are equal. Generated probability and pushforward rows supply their original positive reduced fractions to this calculation. 3,614 independent source-expression comparisons pass, including 2,801 raw fraction lists and 813 generated-ledger or original-error cases. The universal reduced-fraction bridge and exact-whole result are established below.
+
+
+Let L be the distinct list of observed labels, and define
+
+\[
+ H_L(a)=\sum_{b\in L}\mathbf1_{b=a},\qquad
+ K(S,O,L)=\sum_{a\in L}|F_O(a)|.
+\]
+
+If a∉L, every summand in H_L(a) is zero. If a∈L and L is distinct, its unique matching position contributes one and every other position contributes zero, so H_L(a)=1. For f_O(s)=a, expanding each fibre filter at the head gives
+
+\[
+ K(s::S,O,L)=H_L(a)+K(S,O,L).
+\]
+
+Total observation coverage supplies such an a∈L for each source. Induction over S, starting from K([],O,L)=0, therefore yields K(S,O,L)=|S|. This counts every source occurrence exactly once without assuming equal fibre sizes.
+
+The raw exact-sum helper begins with (n,d)=(0,1) and, for each rational p/q, updates
+
+\[
+ (n,d)\longmapsto(nq+pd,dq).
+\]
+
+Here n,p are integers and d,q are natural denominators; zero and negative input fractions remain admitted. Cross-multiplication gives (nq+pd)/(dq)=n/d+p/q, so induction represents the exact rational sum. The executable whole test is false on an empty input list; on a nonempty list it tests n=d after all updates. Generated positive reduced parts enter this same helper through their exact numerator and denominator, without changing its broader raw domain.
+
 
 121. Exact-whole closure and microstate succession
 
@@ -3625,13 +3670,71 @@ Every generated probability ledger and deterministic pushforward ledger reconstr
 
 The singleton base retains its sole classical state with complete provenance, one observation class and one exact whole part. Extending admitted support by one fresh microstate preserves admission. Its assigned class gains exactly that state in source order, every other class retains its members, and each reduced fraction satisfies the updated membership-to-support ratio. The successor ledger again reconstructs the exact whole. These statements apply at arbitrary finite depth and preserve deterministic membership throughout. Full candidate enumeration and complete program correspondence are verified below.
 
+
+For generated rows, let N>0 be the support size, m_i each row's microstate count and a_i/b_i its reduced part. The native row equation is a_iN=m_i b_i. At an intermediate sum with numerator n, denominator d and represented count u, use the invariant nN=ud. Adding one row gives
+
+\[
+ (nb_i+a_id)N
+ =(nN)b_i+(a_iN)d
+ =u d b_i+m_i b_i d
+ =(u+m_i)(db_i).
+\]
+
+Thus the same invariant holds after each exact update. Starting from (0,1,0), induction over all rows gives n_final N=(Σ_i m_i)d_final. The class-count theorem supplies Σ_i m_i=N; cancellation of positive N yields n_final=d_final. The rows cannot be empty because their member count is N>0. Hence the executable exact-whole predicate returns true.
+
+The natural-number accumulator for these positive rows agrees with the signed raw helper after embedding its numerator into the integers: their recurrences have identical multiplication and addition updates. Probability and pushforward row maps preserve the part list exactly. Consequently the preceding argument proves exact-whole closure for both generated ledger types, not only for unreduced count fractions.
+
+For fresh x∉S with assigned label v, validation remains admitted after S'=S++[x], O'=O++[(x,v)]. Old lookup values persist, and the assigned fibre gains x:
+
+\[
+ F'_a=F_a\mathbin{++}\begin{cases}[x],&a=v,\\\lbrack\rbrack,&a\ne v.\end{cases}
+\]
+
+Every successor row with part a'_i/b'_i therefore satisfies
+
+\[
+ (|F_i|+\mathbf1_{i=v})b'_i=a'_i(N+1).
+\]
+
+Applying the universal closure result to the newly admitted ledger proves that it again reconstructs the whole. At the singleton base S=[s], O=[(s,a)], the state is (s,[s]), the projected ledger is [(a,[s])], and its part is 1/1. The same base and successor construction preserves deterministic-member provenance at every finite stage.
+
+
 122. Classical and probabilistic operational witnesses
 
-All six original operational witnesses pass native proof: held-state provenance, two equal half classes, unequal three-quarter and one-quarter parts, singleton versus unresolved-class resolution, deterministic prefix pushforward reconstructing the whole, and exposed deterministic-member traces. Complete 1024-candidate program correspondence is verified below.
+All six original operational witnesses pass native proof: held-state provenance, two equal half classes, unequal three-quarter and one-quarter parts, singleton versus unresolved-class resolution, deterministic prefix pushforward reconstructing the whole, and exposed deterministic-member traces. Complete 1,024-candidate program correspondence is verified below.
+
+
+For the original witness support S=[aa,ab,ba,bb], requesting held state aa returns (aa,S). Prefix observation gives the ordered classes F_a=[aa,ab] and F_b=[ba,bb], so both reduced fractions are 2/4=1/2. The unequal observation instead gives [aa,ab,ba] and [bb], with parts 3/4 and 1/4. These compute the held-state, half-class and unequal-class witnesses directly.
+
+Fine observation labels each microstate by itself, so the aa row has members [aa] and resolves to classicalState(aa). Under prefix observation, label a has members [aa,ab] and returns that exact unresolved class. Prefix pushforward retains the same two predecessor lists and its exact sum is
+
+\[
+ (0,1)\xrightarrow{1/2}(1,2)\xrightarrow{1/2}(4,4),
+\]
+
+so the whole test succeeds. The unequal example similarly gives (0,1)→(3,4)→(16,16). Finally, realization returns [(aa,deterministic-member),(ab,deterministic-member)] in the first prefix row and the corresponding ba,bb pairs in the second. Every emitted member has the required tag while its source label, row label and fraction are preserved. These are the six complete operational witness evaluations.
+
 
 123. Complete classical and probabilistic correspondence
 
-All 1024 original candidates and six operational witnesses are retained. Fresh native execution matches original registration, complete census, actual identifier-based decisions, closure, controls, hashes and unknown-identifier rejection. Together with the exact class ledger, singleton-only resolution, deterministic realization, universal whole closure and arbitrary microstate succession, this completes the registered finite correspondence. Empirical frequencies retain their separately registered blind-data boundary.
+All 1,024 original candidates and six operational witnesses are retained. Fresh native execution matches original registration, complete census, actual identifier-based decisions, closure, controls, hashes and unknown-identifier rejection. Together with the exact class ledger, singleton-only resolution, deterministic realization, universal whole closure and arbitrary microstate succession, this completes the registered finite correspondence. Empirical frequencies retain their separately registered blind-data boundary.
+
+
+The grammar enumerates ten binary choices: support, classical state, observation, parts, meaning, resolution, transformation, normalization, generality and addition. Each axis retains its rejected and admitted alternatives in source order, so
+
+\[
+ |\mathcal G|=2^{10}=1{,}024.
+\]
+
+Membership in each two-element axis list constructs membership in the complete nested product. Constructor case analysis proves that the source identifier decision equals the conjunction of all ten admitted-field decisions; their conjunction identifies exactly the all-admitted candidate:
+
+\[
+ \operatorname{accept}(c)\iff\bigwedge_{i=1}^{10}c_i=\mathrm{admitted}
+ \iff c=(\mathrm{admitted},\ldots,\mathrm{admitted}).
+\]
+
+Each rejected field contradicts the corresponding projection of this equality. The full candidate classification accompanies the ledger, resolution, realization, exact-whole and arbitrary finite successor derivations in this block.
+
 
 124. Quantum-information branch support and provenance
 

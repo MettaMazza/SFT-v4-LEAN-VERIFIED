@@ -6001,9 +6001,61 @@ This excludes exactly positive cycles. Reflexive edges arise only when justified
 
 Every growing expansion round fills at least one previously missing pair cell of the finite event support. This strict decrease establishes native termination without a cutoff. The executable result retains its complete expansion derivation and no-growth certificate. For carrier-supported original edges, its relation contains exactly the positive original paths; the final self-edge test is therefore exactly the positive-cycle boundary. Executed examples reconstruct the three-edge closure of a three-event chain, the complete cyclic relation of a two-event cycle, and empty closures. The complete Concurrency entry is verified below.
 
+For finite pair support \(U\) and current rows \(R\), define missing cells and growth by
+\[
+ M_U(R)=[e\in U:e\notin R],\qquad
+ G_U(R)\iff\exists e\in U,\ \operatorname{linked}(R,e)\land e\notin R.
+\]
+Expansion preserves every currently held supported cell, and a growth witness adds at least one previously missing cell. The strict filter-count theorem therefore gives
+\[
+ G_U(R)\Longrightarrow |M_U(E_U(R))|<|M_U(R)|.
+\]
+The native recursion starts with the exact bound \(|M_U(R)|\). In a growing round it expands and recurses with the reduced bound. At bound zero, growth would imply a natural number strictly less than zero and is impossible. A nongrowing round returns immediately. Thus the returned value carries both
+\[
+ \operatorname{Rounds}(U,R,\operatorname{closeRows}(U,R))
+ \quad\text{and}\quad
+ \neg G_U(\operatorname{closeRows}(U,R)).
+\]
+There is no branch returning an unfinished closure when the bound is exhausted.
+
+Take \(U\) to be the complete ordered pair support of the event carrier. Supported original edges give supported path endpoints, so every potential linked pair is in \(U\). Nongrowth then implies transitivity. Combining original-edge preservation, round soundness and leastness yields
+\[
+ (a,b)\in\operatorname{closeRows}(U,R)
+ \iff\operatorname{Path}(R,a,b).
+\]
+Self-edge exclusion is consequently equivalent to absence of positive return paths.
+
 209. Exact causal operation boundary and output
 
 The native causal operation preserves the source guard order: repeated event identities are rejected first, followed by escaping edges and positive cycles. Repeated edges are retained as set input and produce no repeated output row. Successful output has exactly the original positive-path relation and is emitted in lexicographic string-pair order. The original three-event witness is established directly by kernel reduction. A further 1602 complete native output/error comparisons cover every three-event directed graph, reversed input order, duplicate edges, Unicode and empty labels, and guard precedence. The exact missing-pair bound supports structural recursion: at zero a growing round is contradictory, so no incomplete result can be returned.
+
+Let \(\operatorname{sortSet}\) remove repeated pairs and emit pairs using the source lexicographic string ordering. Its membership and distinctness statements are
+\[
+ e\in\operatorname{sortSet}(R)\iff e\in R,\qquad
+ \operatorname{Distinct}(\operatorname{sortSet}(R)).
+\]
+The public operation first checks event-identity uniqueness, then checks endpoints of \(\operatorname{sortSet}(R)\), then computes the closure and checks self-edges. Writing
+\(K=\operatorname{closeRows}(\operatorname{pairCells}(V),\operatorname{sortSet}(R))\), its exact successful-output condition is
+\[
+ \operatorname{causalClosure}(V,R)=\operatorname{ok}O
+ \iff
+ \operatorname{Distinct}(V)
+ \land\neg\operatorname{escapes}(V,\operatorname{sortSet}(R))
+ \land\neg\operatorname{hasCycle}(K)
+ \land O=\operatorname{sortSet}(K).
+\]
+The escape predicate is false exactly when every retained edge has both endpoints in \(V\); the cycle predicate is true exactly when some self-edge is held. Membership-preserving sorting transports paths in both directions, so accepted output satisfies
+\[
+ (a,b)\in O\iff\operatorname{Path}(R,a,b),\qquad
+ \operatorname{Distinct}(O),\qquad
+ \forall a,\neg\operatorname{Path}(R,a,a).
+\]
+The original witness reduces to
+\[
+ \operatorname{causalClosure}([a,b,c],[(a,b),(b,c)])
+ =\operatorname{ok}[(a,b),(a,c),(b,c)].
+\]
+The ordered rejection branches preserve precedence when more than one input defect is present.
 
 210. Complete concurrency schedules and local observations
 
@@ -6011,11 +6063,59 @@ The complete event schedule support retains exactly the permutations of the decl
 
 Serial assembly preserves intermediate local states and every event record. Two enabled independent events on distinct processes may occur in either order with the same local endpoints; this is structural coexistence without a physical simultaneity assertion. The original causal kernel, three operational witnesses, complete 256-member grammar, four controls and every native program field agree with pinned V3, completing the Fold Concurrency Law.
 
+Let \(\operatorname{Before}(a,b,s)\) mean that scanning schedule \(s\) reaches \(a\) with \(b\) in the remaining suffix. The causal checker satisfies
+\[
+ \operatorname{causalCheck}(R,s)=\operatorname{true}
+ \iff\forall(a,b)\in R,\operatorname{Before}(a,b,s).
+\]
+Filtering the complete arrangement list, with the explicit empty-carrier case, gives
+\[
+ s\in\operatorname{allSchedules}(V,R)
+ \iff \operatorname{Perm}(s,V)\land
+       \forall(a,b)\in R,\operatorname{Before}(a,b,s),
+\]
+under distinct event identities. For \(V=[]\), the empty schedule is retained exactly when the causal checker accepts it.
+
+For each process \(p\), project scheduled events to its actions \(A_p\) and prior states \(B_p\). A local trace skips other processes' events and requires each own event to satisfy
+\[
+ \operatorname{step}(M_p,e.\operatorname{before},e.\operatorname{action})
+ =\operatorname{ok}(e.\operatorname{after}).
+\]
+Induction reconstructs the local path and, for an admitted initial state \(i_p\),
+\[
+ \operatorname{run}(M_p,i_p,A_p)
+ =\operatorname{ok}(B_p\mathbin{+\!\!+}[t_p]).
+\]
+The admitted global schedule retains unique registries, a permutation of all event identities, original event rows, process binding, causal acceptance and a local trace for every registered process. These witnesses supply both enabledness of every event and the complete local observation for every process. Local traces compose through their shared middle state. Two enabled events with distinct process identities admit both local orderings, each with the same process-specific initial and final states.
+
 211. Computational causality and retained provenance
 
 The event predecessor structure retains the original generated event carrier and the separate process-order and message-edge ledgers. A positive predecessor path is formed by an original row or by composing two such paths at their shared intermediate event. Native proofs equate the successful causal-closure output with precisely these retained source paths; every process-order and message row is preserved. The original event-uniqueness, endpoint and cycle guards remain unchanged.
 
 Transitivity follows from path composition, while the admitted closure has neither self-predecessors nor reverse predecessor pairs. Incomparability is the absence of paths in both directions. Its complete generated pair support retains the event memberships without assuming a total global order. Empty edge ledgers have no predecessors. Assembly preserves both component ledgers and their interface paths, and every earlier causal output row remains in an admitted extension. These results concern computational predecessor structure; physical causal claims retain V3's later empirical-branch boundary. The original 256 candidates, operational witnesses, four controls and full native program outputs are verified against the pinned source, completing Fold Computational Causality.
+
+For source \(S=(V,P,M)\), keep process-order edges \(P\) and message edges \(M\) separate and execute closure on \(P\mathbin{+\!\!+}M\). The provenance constructors are
+\[
+ \frac{(a,b)\in P}{a\prec_S b},\qquad
+ \frac{(a,b)\in M}{a\prec_S b},\qquad
+ \frac{a\prec_S b\quad b\prec_S c}{a\prec_S c}.
+\]
+Induction in both directions establishes
+\[
+ a\prec_S b\iff\operatorname{Path}(P\mathbin{+\!\!+}M,a,b).
+\]
+For an accepted output \(O\), the closure theorem gives
+\[
+ (a,b)\in O\iff a\prec_S b.
+\]
+Every original process and message edge is therefore retained. Path composition proves transitivity; cycle rejection gives \((a,a)\notin O\), and a reversed pair would compose with its forward pair to contradict that result.
+
+The incomparability decision is precisely
+\[
+ \operatorname{incomparable}(O,a,b)
+ \iff\neg(a\prec_S b)\land\neg(b\prec_S a).
+\]
+Its complete pair ledger additionally requires \(a,b\in V\). Appending two sources concatenates their event, process-order and message lists. Each component provenance proof transports into the combined source, and compatible paths compose at their common event. If both the old and combined source executions are admitted, every earlier output row persists. Empty process and message ledgers admit no positive predecessor proof.
 
 212. Structural generator three: exact recurrence derivation
 
@@ -6023,11 +6123,63 @@ For every finite Fold depth, the recursively doubled support count equals the ca
 
 The native Fold retains the complete first-return trace 1/3 → 2/3 → 1/3 and the complete trace 1/7 → 2/7 → 4/7 → 1/7. The intermediate states are proved distinct from the initial state, establishing first return with respective positive transition counts two and three. For every count strictly after two, three is no larger; every count strictly after three is therefore nonminimal. This establishes existence and minimal positive-successor order without a bounded denominator search or measurement premise. The executable first-return routine, complete ten-axis program and original controls are verified below.
 
+Let \(W_d\) be the complete generated Fold-word list after \(d\) extensions, and define its support count by
+\[
+ s_0=1,\qquad s_{d+1}=s_d+s_d.
+\]
+The word-extension cardinality theorem gives \(|W_d|=s_d\) by induction. The positive-depth count satisfies \(s_d>1\); its positive predecessor \(p_d\) is characterized uniquely by
+\[
+ p_d+1=s_d.
+\]
+The unit part is \(u_d=\operatorname{normalizePart}(1,p_d)\). In particular,
+\[
+ s_2=4,\quad p_2=3,\quad u_2=\frac13;\qquad
+ s_3=8,\quad p_3=7,\quad u_3=\frac17.
+\]
+The exact Fold transitions are
+\[
+ \frac13\longmapsto\frac23\longmapsto\frac13,\qquad
+ \frac17\longmapsto\frac27\longmapsto\frac47\longmapsto\frac17.
+\]
+The transition lists omit the initial state and retain each successive state:
+\[
+ B=[2/3,1/3],\qquad T=[2/7,4/7,1/7].
+\]
+A first-return certificate requires a trace \(L=L_0\mathbin{+\!\!+}[u]\), a proof of every Fold transition from \(u\), and \(v\ne u\) for every \(v\in L_0\). The displayed intermediate fractions satisfy those inequalities, proving first returns with \(|B|=2\) and \(|T|=3\).
+
+For a natural count \(n\), \(2<n\) implies \(3\le n\). The witnessed ternary return therefore attains the least distinct positive successor of the binary count. If \(3<n\), the same witness satisfies \(2<3<n\), so \(n\) is nonminimal. Existence is supplied by the complete ternary orbit, rather than by a finite denominator search.
+
 213. Native first-return execution
 
 The original Fold first-return operation is implemented with its complete transition trace. It advances the exact positive part, tests equality with the original part, and then tests previous visitation. A prior visit before return produces the original recurrence error. A proof carried by the native execution records precisely these branches and connects every successful result to the retained first-return predicate.
 
 Reduced denominators cannot increase under Fold. Consequently every executed part belongs to a finite carrier determined by the original denominator, and each fresh transition strictly reduces the remaining carrier. This proves termination without an arbitrary iteration bound or an additional scientific parameter. The native binary and ternary outputs and generator-period result are kernel-proved. Public Fraction guards and positive integer/Boolean count guards retain the original admission and rejection behavior. Complete-output comparisons for all 820 numerator/denominator pairs through denominator 40, including repeated rational representations, returning and nonreturning parts, and four invalid inputs pass against independent exact-arithmetic reference traces. The finite test set supplements the general loop and first-return proofs.
+
+For initial part \(u\), current part \(x\) and seen-key list \(S\), set \(y=\operatorname{Fold}(x)\). The source loop tests, in order:
+\[
+ y=u:\ \operatorname{ok}[y];\qquad
+ y\ne u,\ \operatorname{key}(y)\in S:\ \operatorname{error}(\text{recurrence});
+\]
+otherwise it recurses from \(y\) with \(\operatorname{key}(y)::S\), prepending \(y\) to a successful returned trace. Its native run judgment retains exactly the return, repeated-visit and fresh-advance branches. Induction over a successful judgment reconstructs every transition and excludes the initial part from all preterminal states.
+
+For the original reduced denominator \(D\), Fold normalization proves
+\[
+ \operatorname{denominator}(\operatorname{Fold}(x))
+ \le\operatorname{denominator}(x)\le D.
+\]
+The complete finite key carrier is
+\[
+ C_D=[(n,d):n\in\operatorname{through}(D),\
+                   d\in\operatorname{through}(D)],
+\]
+where \(\operatorname{through}(D)=[D,D-1,\ldots,0]\). Every admitted part with denominator at most \(D\) belongs to this carrier because its positive numerator is no greater than its denominator. The loop invariant covers each such key by the remaining or seen list. A fresh key must therefore belong to the remaining list, and removing it strictly decreases that list's length. The recursion starts with \(|C_D|\); an advancing branch at zero contradicts this strict decrease. This derives termination from the original denominator.
+
+The checked public interface preserves Fraction admission and the original errors. Count inputs separately reject Booleans, nonpositive depths and predecessors at or below One. Kernel evaluation gives
+\[
+ \operatorname{firstReturn}(1/3)=\operatorname{ok}B,\qquad
+ \operatorname{firstReturn}(1/7)=\operatorname{ok}T.
+\]
+The generator operation takes \(k=|B|+1\), executes the unit-part return at depth \(k\), and verifies \(|B|=2\) and \(|T|=k\); its exact result is \(\operatorname{ok}3\).
 
 214. Complete Structural Generator Three entry
 
@@ -6035,11 +6187,59 @@ The ten registered binary structural axes generate all 1,024 candidate forms. Na
 
 The full StructuralPhysicsProgram reproduces every registered candidate, identifier-based decision, complete closure record, original control field and associated hash against pinned V3. The full-entry result therefore includes the Fold-support construction, positive predecessor, first-return existence, minimal successor proof, original executable guards and all 1,024 forms. This completes the Structural Generator Three entry with no axiom dependencies or free scientific parameters.
 
+The registered candidate is the ordered ten-coordinate tuple of carrier, action, recurrence, binary anchor, successor, unit construction, orbit record, order closure, measurement direction and extension rule. Each coordinate contains its original rejected and admitted alternative, so the complete product list has
+\[
+ |\mathcal C|=\underbrace{2\cdot2\cdots2}_{10\text{ factors}}=1,024,
+ \qquad\forall c:\operatorname{Candidate},\ c\in\mathcal C.
+\]
+Let \(c_*\) have the admitted alternative in every coordinate. The native decision equivalences are
+\[
+ \operatorname{survives}(c)=\operatorname{criteriaDecision}(c),\qquad
+ \operatorname{survives}(c)=\operatorname{true}
+ \iff\bigwedge_{i=1}^{10}(c_i=\operatorname{admitted})
+ \iff c=c_*.
+\]
+Each rejected-coordinate theorem returns false for the original decision. These criteria retain the exact positive-period carrier, double-and-cast action, complete first return, depth-two anchor, least positive successor, support-predecessor unit part, every orbit transition, positive-count closure, derivation-before-measurement direction and absence of an extra rule.
+
+The three executable witness checks retain
+\[
+ \operatorname{map}(\operatorname{key},B)=[(2,3),(1,3)],\qquad
+ \operatorname{map}(\operatorname{key},T)=[(2,7),(4,7),(1,7)],
+ \qquad\operatorname{generatorPeriod}=\operatorname{ok}3.
+\]
+These evaluations accompany the support, predecessor, transition and minimality derivations above. Full program comparison additionally retains every candidate decision, closure and original control record with its source hash; the classification does not replace those derivations.
+
 215. Spatial Dimension Three
 
 The complete ordered pair support of the two held Fold fibre roles contains four cells. The original stability constraint retains a positive independent-direction count strictly above the fibre boundary and strictly below pair-cell saturation. Native enumeration retains every positive count in this open window, preserving ascending order and excluding both endpoints. For every generated count, these two strict inequalities imply equality to three; the complete native result is the singleton[3].
 
 The independently completed Fold-recurrence operation also returns three. The native spatial-dimension operation checks equality between the complete stability census and the singleton recurrence result, establishing the original cross-lock. Exact integer and Boolean guards are retained. All 1,024 original grammar forms, three operational witnesses, four controls and complete program fields/hashes are verified against pinned V3, completing Spatial Dimension Three. Measurement remains downstream of the sealed structural count.
+
+For ordered fibre-label lists \(L,R\), the generated pair support satisfies
+\[
+ |\operatorname{pairCells}(L,R)|=|L|\,|R|.
+\]
+The original Fold label support has length two, hence its full self-pair support has four cells. Positive counts are enumerated in ascending order by
+\[
+ P_0=[],\qquad P_{n+1}=P_n\mathbin{+\!\!+}[n+1],
+ \qquad k\in P_n\iff0<k\le n.
+\]
+For fibre count \(b\), the stability list is
+\[
+ S_b=[k\in P_{b^2}:b<k\land k<b^2].
+\]
+Its exact membership theorem is \(k\in S_b\iff b<k<b^2\), excluding both endpoints. At \(b=2\),
+\[
+ 2<k<4\Longrightarrow 3\le k\le3\Longrightarrow k=3,\qquad S_2=[3].
+\]
+The public stability operation admits integer fibre counts at least two and preserves rejection of Booleans, negative values, zero and One.
+
+Finally the spatial operation computes \(S_2\), obtains the independently derived generator count \(g\), and checks \(S_2=[g]\). With \(\operatorname{generatorPeriod}=\operatorname{ok}3\), the exact cross-lock is
+\[
+ \operatorname{spatialDimension}=\operatorname{ok}3
+ =\operatorname{generatorPeriod}.
+\]
+Thus the full stability enumeration and the retained first-return recurrence identify the same count before downstream measurement.
 
 216. Boundary Rank Two
 

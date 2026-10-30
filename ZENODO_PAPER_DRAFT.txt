@@ -1119,17 +1119,111 @@ The One carrier with its identity relation is both a partial and total order. It
 
 For a fresh carrier addition preserving every old comparison cell, the original endpoint and distinct-relation guards are retained. Partial-order success on the enlarged carrier is equivalent to the new reflexive cell, antisymmetry for every reversed pair touching the fresh member, and closure for every composable triple touching it. Old-only obligations follow from the prior order and retained comparisons. Given prior totality and an admitted enlarged partial order, totality of the enlarged order is equivalent to comparison between the fresh member and each old member.
 
+
+The base carrier and relation are C₁ = [One] and R₁ = [(One,One)]. Their single relation cell simultaneously supplies reflexivity, antisymmetry, transitivity and comparability. Direct filtering gives
+
+\[
+ L_{R_1}([One])=U_{R_1}([One])=[One],\qquad
+ \operatorname{meet}=\operatorname{join}=\operatorname{ok}(\operatorname{some}(One)).
+\]
+
+For C' = C ++ [z], assume Partial(C,R), z ∉ C, distinct R', all endpoints of R' in C', and exact retention (a,b) ∈ R' ⇔ (a,b) ∈ R for old a,b. Then
+
+\[
+ \begin{aligned}
+ \operatorname{Partial}(C',R')\iff{}&(z,z)\in R'\\
+ &\land[\forall a,b,\ (a,b),(b,a)\in R'\land(a=z\lor b=z)\Rightarrow a=b]\\
+ &\land[\forall a,b,c,\ (a,b),(b,c)\in R'\land
+ (a=z\lor b=z\lor c=z)\Rightarrow(a,c)\in R'].
+ \end{aligned}
+\]
+
+To prove the reverse direction, classify each endpoint as old or equal to z. All-old cells reduce through retention to the old laws; every remaining case is one of the displayed new checks. Freshness preserves carrier distinctness, while relation distinctness and endpoint admission remain explicit hypotheses. If the old order is total and the extended relation is already a partial order, the same split gives
+
+\[
+ \operatorname{Total}(C',R')\iff
+ \forall a\in C,\ (z,a)\in R'\lor(a,z)\in R'.
+\]
+
+The old-old comparisons transfer, and (z,z) is supplied by extended reflexivity.
+
+
 56. Bound lists under carrier extension
 
 Successful bound generation establishes that the held selection is nonempty and contained in the original carrier. When every old comparison cell is retained and that held selection remains fixed, every old candidate has the same bound-check result in the enlarged relation.
 
 The enlarged lower-bound list is exactly the original ordered list followed by the added member when it lies below every held member; otherwise the list is unchanged. The upper-bound list has the dual formula. These are equalities of the actual generated lists, preserving order and occurrence multiplicity, and require no additional distinctness assumption.
 
+
+Let the held selection H be valid on C, and let R' retain all old comparisons. For every x ∈ C and h ∈ H, retention identifies both lower and upper comparison tests. Hence the complete old-candidate filters are unchanged. Using the list identity
+
+\[
+ \operatorname{filter}(P,C\mathbin{+\!+}[z])
+ =\operatorname{filter}(P,C)\mathbin{+\!+}\operatorname{filter}(P,[z]),
+\]
+
+the actual extended bound lists are
+
+\[
+ L_{C',R'}(H)=L_{C,R}(H)\mathbin{+\!+}
+ \begin{cases}[z],&\forall h\in H,\ z\le_{R'}h,\\\text{empty list},&\text{otherwise},\end{cases}
+\]
+
+\[
+ U_{C',R'}(H)=U_{C,R}(H)\mathbin{+\!+}
+ \begin{cases}[z],&\forall h\in H,\ h\le_{R'}z,\\\text{empty list},&\text{otherwise}.\end{cases}
+\]
+
+The original successful bound result proves H ≠ [] and H ⊆ C ⊆ C', so the extended guard also succeeds. These formulas do not require freshness of z or distinctness of C: an appended repeated label remains an appended occurrence, exactly as in the source lists.
+
+
 57. Held-selection updates and extremal retention
 
 Adding a carrier member to an already valid held selection filters the existing lower-bound list by comparison below that member, and filters the upper-bound list by comparison above it. These are equalities of the generated lists, retaining their order and multiplicity. On an accepted partial order, the old meet remains the meet exactly when it lies below the added held member; the old join remains exactly when it lies above it.
 
 For an admitted carrier extension that retains all old comparisons, an existing meet remains exactly when the added carrier member, if it is a lower bound, lies below that meet. The join condition is dual: an added upper bound must lie above the old join. The conditions preserve the original conditional existence of extrema and include all old carrier candidates through the complete prior bound properties.
+
+
+For an added held member y ∈ C, the finite all-test splits as
+
+\[
+ [\forall h\in H\mathbin{+\!+}[y],\ x\le_R h]
+ \iff[\forall h\in H,\ x\le_R h]\land x\le_R y.
+\]
+
+Consequently, for previously valid H,
+
+\[
+ L_R(H\mathbin{+\!+}[y])=[x\in L_R(H)\mid x\le_R y],\qquad
+ U_R(H\mathbin{+\!+}[y])=[x\in U_R(H)\mid y\le_R x].
+\]
+
+Assume an accepted partial order and prior returned meet m and join j. If m ≤_R y, then m remains a lower bound of the enlarged held selection; every new lower bound was an old lower bound and therefore lies below m. Conversely any returned meet m must lie below y. The dual argument proves
+
+\[
+ \operatorname{meet}(H\mathbin{+\!+}[y])=\operatorname{ok}(\operatorname{some}(m))\iff m\le_R y,
+\]
+
+\[
+ \operatorname{join}(H\mathbin{+\!+}[y])=\operatorname{ok}(\operatorname{some}(j))\iff y\le_R j.
+\]
+
+For carrier extension C' = C ++ [z], instead keep H fixed, retain all old comparisons, and assume Partial(C',R'). Every old lower-bound candidate is still bounded by m; only the appended candidate can add an obligation. Thus
+
+\[
+ \operatorname{meet}(C',R',H)=\operatorname{ok}(\operatorname{some}(m))
+ \iff[(\forall h\in H,\ z\le_{R'}h)\Rightarrow z\le_{R'}m].
+\]
+
+Similarly,
+
+\[
+ \operatorname{join}(C',R',H)=\operatorname{ok}(\operatorname{some}(j))
+ \iff[(\forall h\in H,\ h\le_{R'}z)\Rightarrow j\le_{R'}z].
+\]
+
+If z is not a bound, the corresponding implication is vacuous; if it is a bound, its comparison with the prior extremum is required. The accepted-order extremum equivalences of section 53 turn these complete bound conditions into actual successful returns.
+
 
 58. Extremal selection of the added carrier member
 

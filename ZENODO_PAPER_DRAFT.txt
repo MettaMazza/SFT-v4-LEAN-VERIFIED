@@ -4137,7 +4137,18 @@ This retains both complete traversals of the cycle within the registered transit
 
 140. Separate FORMX source components
 
-The later FORMX source defines variable, application and abstraction tuples, free-name membership, whole-tree renaming and substitution. Their native translation preserves the exact finite fresh-name search and exhaustion behavior. Structural induction establishes the application and abstraction execution equations at arbitrary term depth, including mapping composition and error propagation.2052 source-expression comparisons supplement these equations. These translated helper components belong to the separately registered FORMX entry; its completion is not claimed here.
+The later FORMX source defines variable, application and abstraction tuples, free-name membership, whole-tree renaming and substitution. Their native translation preserves the exact finite fresh-name search and exhaustion behavior. Structural induction establishes the application and abstraction execution equations at arbitrary term depth, including mapping composition and error propagation. 2,052 source-expression comparisons supplement these equations. These translated helper components belong to the separately registered FORMX entry; its completion is not claimed here.
+
+
+Free-name membership follows FV(var(x))={x}, FV(app(u,v))=FV(u)∪FV(v), and FV(abs(b,t))=FV(t)\{b}. Structural induction identifies these occurrence clauses with the executable Boolean. Whole-tree renaming changes every matching variable and binder label. Induction preserves term size and proves identity renaming. For whole-tree mapping M_f, induction also gives
+
+\[
+ M_f(M_g(t))=M_{f\circ g}(t),\qquad
+ \operatorname{substituteWith}(M_g(t),f,x,r)=\operatorname{substituteWith}(t,f\circ g,x,r).
+\]
+
+Application substitution evaluates the left child first, propagates its error if present, then evaluates the right child and constructs the application. Substitution into abs(b,t) returns it unchanged when b=x. Otherwise, if b∉FV(r), it substitutes in the body and retains b. If b∈FV(r), it selects the first c in [u,v,w,z] with c∉FV(t), c∉FV(r) and c≠x, renames the whole body from b to c, substitutes into that renamed body and constructs abs(c,result). Exhaustion returns StopIteration. Induction on the search proves the selected-name conditions. Induction on the term proves that every propagated substitution error is that same exhaustion error. Mapping composition establishes the exact abstraction execution equation at arbitrary depth.
+
 
 141. Finite executable descriptions and halt traces
 
@@ -4147,6 +4158,16 @@ Native induction and execution correspondence establish uniqueness of the comple
 
 The complete 256-candidate structural derivation, original three witnesses, four controls and every native program field and digest agree with the pinned entry. These results complete the registered Fold Abstract-Machine Law within its original description boundary.
 
+
+A halt certificate is H(s,u,b,t) := s∈S ∧ P(s,u,b,t) ∧ N(t), where N(t) is the no-successful-outgoing-step predicate. Path reconstruction gives
+
+\[
+ H(s,u,b,t)\Longrightarrow\operatorname{run}(s,u)=\operatorname{ok}(b\mathbin{++}[t]),\qquad |b|=|u|.
+\]
+
+Two execution certificates with the same initial state and actions both equal the result of runFrom; equality of their successful results gives equality of the full traces. Admission and row membership put every configuration in S. Any nonidentity continuation from t begins with a successful edge, contradicting N(t); hence every continuation has an empty action list. For N(s), H(s,[],[],s) is the identity halt. Composing P(s,u,b,m) with H(m,v,c,t) yields H(s,u++v,b++c,t), retaining the terminal boundary. Description admission is exactly w=[empty-One] or 0<|w|≤|positions| with all symbols held in the alphabet, as proved by generated-word membership.
+
+
 142. Circuit interfaces and complete evaluation traces
 
 Finite connected local transformations retain the generated node/wire carrier and typed interfaces supplied by the admitted Graph and Category dependencies. The native evaluation relation records successive successful original Category compositions. Induction proves complete ordered concatenation of all local trace rows, preservation of the initial interface, rejection of interface mismatches, serial composition and arbitrary finite successor extension.
@@ -4155,13 +4176,36 @@ When component interfaces are registered graph nodes and their local transformat
 
 The full 256-candidate structural derivation, original operational witnesses, controls and complete native program agree with the pinned entry. This completes Fold Circuit Syntax and Evaluation within its generated-finite boundary. Resource size and depth comparisons remain with the source Complexity entries.
 
+
+A successful Category composition a;b requires target(a)=source(b) and returns source(a), target(b), and trace(a)++trace(b). Evaluation begins with identity and repeatedly applies this exact composition. For locals L=[c₁,…,cₙ] evaluated from a to r, induction gives
+
+\[
+ \operatorname{source}(r)=\operatorname{source}(a),\qquad
+ \operatorname{trace}(r)=\operatorname{trace}(a)\mathbin{++}\operatorname{trace}(c_1)\mathbin{++}\cdots\mathbin{++}\operatorname{trace}(c_n).
+\]
+
+The successor case substitutes the composition equation and reassociates concatenation. A mismatched next interface contradicts its required successful edge. Induction over a first evaluation composes it with a second; taking the second to contain one component proves successor extension.
+
+For registered graph components, each local endpoint is a held node and their pair is a held edge. Interface equality joins this edge to the current output. Induction concatenates these paths and places the final output in the node carrier. The source cycle predicate is true exactly when a held node n starts a valid path n::(b++[t]) with t∈n::b. If the predicate is false, any such return would imply true by the return-path theorem. This proves the stated feed-forward exclusion and retains complete path evidence for a declared cycle.
+
+
 143. Operational process observations and failure traces
 
 An admitted operational process retains its initial generated configuration, exact enabled transition rows, requested choices and full configuration trace. Successful and failed observations remain the original source outputs. Native failure records are equivalent to the original execution error branches at arbitrary finite depth. Each record decomposes the requested choices into a successfully executed prefix, the failing action and its unexecuted suffix. The complete successful prefix replays exactly up to the failure configuration.
 
 A recorded failure excludes a successful result on the same execution. Prepending a successful path preserves every prior choice/configuration and propagates the same original error. Terminal processes retain their explicit no-outgoing-step boundary; cyclic processes retain a nonempty return path that replays and composes without losing records. These results use the unchanged source transition system and its admitted finite trace operations. No process algebra, distributed timing or stochastic selection is introduced.
 
-All 256 original grammar members and native lookup decisions,3 operational witnesses,4 controls, registration/closure records and hashes agree with pinned V3. These results complete the registered Fold Operational-Process Law within its original generated-finite boundary.
+All 256 original grammar members and native lookup decisions, 3 operational witnesses, 4 controls, registration/closure records and hashes agree with pinned V3. These results complete the registered Fold Operational-Process Law within its original generated-finite boundary.
+
+
+A failure certificate F(s,u,b,q,e) stops when step(s,a)=error(e), with u=a::rest, b=[] and q=s. Its continued clause prepends a successful edge s→t to a failure from t, retaining s in b. Induction follows the executable propagation of errors. Conversely, induction on u splits its first step into error or success and reconstructs the corresponding certificate. Thus
+
+\[
+ \operatorname{runFrom}(s,u)=\operatorname{error}(e)\iff\exists b,q,\ F(s,u,b,q,e).
+\]
+
+Induction on the certificate extracts u=v++a::z, P(s,v,b,q) and step(q,a)=error(e). The prefix replays as runFrom(s,v)=ok(b++[q]); z is the unexecuted suffix. Distinct error/success constructors exclude a successful result for the same input. Prepending P(s,v,b,m) to F(m,u,c,q,e) gives F(s,v++u,b++c,q,e), by induction on the prefix. For s∈S, the outer run passes its initial-state check and emits the same error.
+
 
 144. Process composition and exact decomposition
 
@@ -4170,6 +4214,24 @@ Every retained serial execution decomposes at any declared cut in its action tra
 Independent parallel records retain both systems, their initial configurations, action choices and original observations separately. Component execution reconstructs the observed pair, and unchanged component records determine unchanged observations. The exact source Category interface rule retains both local traces and rejects mismatch. These records add no shared state, timing, communication or scheduler. Concurrency involving communication or shared causality remains downstream as in V3.
 
 The original 256-candidate grammar, witnesses, controls and complete native program agree with the pinned source. These results complete the registered Fold Process Composition and Decomposition Law within its original boundary.
+
+
+For a declared cut u++v, induction on u establishes
+
+\[
+ P(s,u\mathbin{++}v,b,t)\iff\exists m,c,d,\ b=c\mathbin{++}d\ \land P(s,u,c,m)\ \land P(m,v,d,t).
+\]
+
+At the empty cut choose m=s and c=[]; the second path is the original path. For a successor cut, remove the first edge, apply the induction hypothesis to the remainder, and prepend the edge and source state to the first component. The reverse direction is serial composition. Native replay gives component outputs c++[m] and d++[t], while the original output is (c++d)++[t].
+
+For independent systems L,R, initials l,r and actions u,v, reconstruction consists of
+
+\[
+ O_L=\operatorname{run}_L(l,u),\qquad O_R=\operatorname{run}_R(r,v).
+\]
+
+Pairing these equalities reconstructs (O_L,O_R), including either component's original error result. Equal systems, initials and action lists force equal observations by substitution. This product retains two independent original executions. Category composition instead uses the exact interface and trace equation of Section 142.
+
 
 145. Registered step-to-trace simulation
 

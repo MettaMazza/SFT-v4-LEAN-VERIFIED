@@ -1229,6 +1229,24 @@ If z is not a bound, the corresponding implication is vacuous; if it is a bound,
 
 For an accepted carrier extension retaining all original comparisons, the added member is selected as meet exactly when it lies below every held member and above every member of the original lower-bound list. Dually, it is selected as join exactly when it lies above every held member and below every original upper bound. The original bound lists arise from successful nonempty held selections. Every original bound participates in these conditions; reflexivity supplies the added member's self-comparison, and accepted partial-order antisymmetry supplies extremal uniqueness. No existence of an old meet or join is required.
 
+
+Let B = L_(C,R)(H) be the successfully generated old lower-bound list, and let C' = C ++ [z] carry an accepted relation R' retaining all old comparisons. Then
+
+\[
+ \operatorname{meet}(C',R',H)=\operatorname{ok}(\operatorname{some}(z))
+ \iff[\forall h\in H,\ z\le_{R'}h]\land[\forall b\in B,\ b\le_{R'}z].
+\]
+
+Necessity follows by applying the returned-meet conditions to every old lower bound. For sufficiency, any lower-bound candidate in C' is either old, hence belongs to B by retained comparisons, or is z itself. The displayed condition handles the former; reflexivity handles the latter. The accepted-order equivalence then yields the actual singleton extremum. Dually, for B = U_(C,R)(H),
+
+\[
+ \operatorname{join}(C',R',H)=\operatorname{ok}(\operatorname{some}(z))
+ \iff[\forall h\in H,\ h\le_{R'}z]\land[\forall b\in B,\ z\le_{R'}b].
+\]
+
+Only successful old bound generation is assumed: B need not have had an extremum before the extension.
+
+
 59. Generated graphs, complete paths and cuts
 
 Graph construction checks a nonempty canonical node collection, duplicate-free edge relations and membership of every edge endpoint in the carrier, in that order. Path validation retains the nonempty path, every node membership and every adjacent ordered edge. The recursively generated adjacency list is proved equal to the original path zipped with its tail. The identity path is admitted exactly for a node in the carrier.
@@ -1237,7 +1255,44 @@ At a shared interface node, the adjacency list of the composed path equals the c
 
 A successful cut returns exactly the original edge list filtered by unequal held-endpoint membership, preserving edge order and multiplicity. Its membership criterion is proved directly. The internal balance operation is equivalent to nonempty ingress, equal ingress and egress trace counts, and separate distinctness of both trace collections. The executable criterion is retained exactly.
 
-Fresh native execution matches 4597 independently reconstructed records for graph construction, paths, adjacency, cuts and balance, including malformed and repeated inputs. Complete engine admission integration remains pending.
+Fresh native execution matches 4597 independently reconstructed records for graph construction, paths, adjacency, cuts and balance, including malformed and repeated inputs. The complete native GraphProgram also matches the pinned V3 registration, all 512 candidate decisions, census and decision hashes, closure, controls and unknown-identifier behavior.
+
+
+For node list V and edge list E, successful construction requires
+
+\[
+ V\ne[],\quad\operatorname{Distinct}(V),\quad\operatorname{Distinct}(E),\quad
+ \forall(u,v)\in E,\ u,v\in V.
+\]
+
+For a nonempty path P = [v₀,…,vₙ], the complete adjacent list is Adj(P) = [(v₀,v₁),…,(vₙ₋₁,vₙ)], equivalently zip(P,tail(P)). Path admission is exactly
+
+\[
+ P\ne[]\land(\forall v\in P,\ v\in V)\land
+ (\forall e\in\operatorname{Adj}(P),\ e\in E).
+\]
+
+At interface z, take P = A ++ [z] and Q = z :: B. The concatenation retains z once, and the exact adjacency identity is
+
+\[
+ \operatorname{Adj}(A\mathbin{+\!+}(z::B))
+ =\operatorname{Adj}(A\mathbin{+\!+}[z])\mathbin{+\!+}\operatorname{Adj}(z::B).
+\]
+
+Splitting node membership and the exhaustive edge check across this concatenation proves validity of the composite if and only if both components are valid. For a nonempty held selection H ⊆ V, the cut is the ordered filter
+
+\[
+ \operatorname{Cut}_H(E)=[(u,v)\in E\mid(u\in H)\mathbin{\mathrm{xor}}(v\in H)].
+\]
+
+Thus an edge occurs in the result exactly when it occurs in E and exactly one endpoint is held. Finally, for incoming and outgoing trace lists I,O, the original balance predicate is
+
+\[
+ I\ne[]\land |I|=|O|\land\operatorname{Distinct}(I)\land\operatorname{Distinct}(O).
+\]
+
+This is the complete executable predicate; no additional conservation condition is inserted.
+
 
 60. Finite reachability search
 
@@ -1246,6 +1301,28 @@ Reachability retains the original identity case: equal origin and target return 
 Termination follows from finite support and queue length. Initially the support consists of the origin and every edge target. Every queued node and edge target lies in that support or in visited. A new visit removes the held node from the auxiliary unseen support, strictly decreasing its length. A visited skip leaves support unchanged and strictly shortens the queue. Their lexicographic order is well founded. The auxiliary support does not decide search success, change queue order, omit duplicate enqueues or impose a depth bound.
 
 The native search satisfies the exact fixed-point equation and the original empty-queue, target-hit, visited-skip and fresh-expansion equations. Fresh execution matches 8,573 reachability decisions and 10,280 ordered outgoing lists across every directed relation on three nodes, with additional duplicate-edge and external-endpoint stress inputs. Cycle search and its full return-path correspondence are formalised below.
+
+
+Let Q be the queue, S the visited list and t the target. Define Out_E(u,S) to be the ordered list of edge targets v for edges (u,v) ∈ E with v ∉ S. The exact recursive cases are
+
+\[
+ \begin{aligned}
+ \operatorname{Search}([],S)&=\mathrm{false},\\
+ \operatorname{Search}(u::Q,S)&=\mathrm{true}&&\text{if }u=t,\\
+ &=\operatorname{Search}(Q,S)&&\text{if }u\ne t\text{ and }u\in S,\\
+ &=\operatorname{Search}(Q\mathbin{+\!+}\operatorname{Out}_E(u,S\mathbin{+\!+}[u]),S\mathbin{+\!+}[u])
+ &&\text{otherwise}.
+ \end{aligned}
+\]
+
+The target test precedes the visited test. Initially Q = [origin] and S = []; equal origin and target are handled separately by origin ∈ V. Let U be the auxiliary unseen list, initially origin :: map(target,E). Coverage states that every queued node and every edge target lies in U or S. A fresh head u therefore belongs to U. Removing all its occurrences strictly decreases |U|; a visited skip leaves U unchanged and decreases |Q|. Each recursive call consequently decreases the lexicographic measure
+
+\[
+ (|U|,|Q|).
+\]
+
+Finite-list length makes this order well founded. Expansion still appends every source-ordered unvisited target, including duplicate enqueues; the auxiliary measure proves termination without changing the displayed search equations.
+
 
 61. Complete path witnesses for successful reachability
 

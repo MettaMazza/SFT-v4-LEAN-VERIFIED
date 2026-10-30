@@ -1107,3 +1107,8 @@ import SFT.Physics.QuarkChannelsGrammar
 import SFT.Physics.QuarkChannelsWitnesses
 import SFT.Physics.QuarkChannelsControls
 import SFT.Physics.QuarkChannelsEvidence
+
+import SFT.Physics.QuarkCubicsGrammar
+import SFT.Physics.QuarkCubicsWitnesses
+import SFT.Physics.QuarkCubicsControls
+import SFT.Physics.QuarkCubicsEvidence

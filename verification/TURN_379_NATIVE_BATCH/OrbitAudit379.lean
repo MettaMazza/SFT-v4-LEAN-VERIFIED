@@ -1,0 +1,26 @@
+import SFT.Mathematics.OrbitOrderIdentity
+#print axioms SFT.Mathematics.OrbitOrderIdentity.cancelReducedFactor
+#print axioms SFT.Mathematics.OrbitOrderIdentity.subtractCommonLeft
+#print axioms SFT.Mathematics.OrbitOrderIdentity.equalRemainderDividesDifference
+#print axioms SFT.Mathematics.OrbitOrderIdentity.moduloAddMultiple
+#print axioms SFT.Mathematics.OrbitOrderIdentity.reducedReturnForward
+#print axioms SFT.Mathematics.OrbitOrderIdentity.multiplyMinusOneReturn
+#print axioms SFT.Mathematics.OrbitOrderIdentity.reducedReturnIffOrder
+#print axioms SFT.Mathematics.OrbitOrderIdentity.binaryReturnIffOrder
+#print axioms SFT.Mathematics.OrbitOrderIdentity.addMul
+#print axioms SFT.Mathematics.OrbitOrderIdentity.moduloMulReduce
+#print axioms SFT.Mathematics.OrbitOrderIdentity.foldRank
+#print axioms SFT.Mathematics.OrbitOrderIdentity.rankIterate
+#print axioms SFT.Mathematics.OrbitOrderIdentity.moduloSelf
+#print axioms SFT.Mathematics.OrbitOrderIdentity.foldRankResidue
+#print axioms SFT.Mathematics.OrbitOrderIdentity.iterationRemainder
+#print axioms SFT.Mathematics.OrbitOrderIdentity.executedReturnIffOrder
+#print axioms SFT.Mathematics.OrbitOrderIdentity.FirstReducedReturn
+#print axioms SFT.Mathematics.OrbitOrderIdentity.FirstBinaryOrder
+#print axioms SFT.Mathematics.OrbitOrderIdentity.firstReturnIffFirstOrder
+#print axioms SFT.Mathematics.OrbitOrderIdentity.heldRemainder
+#print axioms SFT.Mathematics.OrbitOrderIdentity.heldRemainderRecovers
+#print axioms SFT.Mathematics.OrbitOrderIdentity.heldRemainderInjective
+#print axioms SFT.Mathematics.OrbitOrderIdentity.foldRankBounds
+#print axioms SFT.Mathematics.OrbitOrderIdentity.iterateBounds
+#print axioms SFT.Mathematics.OrbitOrderIdentity.exactExecutedReturnIffOrder

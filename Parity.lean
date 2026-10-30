@@ -654,3 +654,7 @@ def main : IO Unit := do
 
   for c in SFT.Physics.QuarkChannelsGrammar.candidates do
     IO.println ("QuarkChannelsGrammar\t" ++ SFT.Physics.QuarkChannelsGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.QuarkChannelsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.QuarkChannelsGrammar.exactForm c ++ "\t" ++ SFT.Physics.QuarkChannelsGrammar.decisionReason c)
+
+  for c in SFT.Physics.QuarkCubicsGrammar.candidates do
+    IO.println ("QuarkCubicsGrammar\t" ++ SFT.Physics.QuarkCubicsGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.QuarkCubicsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.QuarkCubicsGrammar.exactForm c ++ "\t" ++ SFT.Physics.QuarkCubicsGrammar.decisionReason c)
+

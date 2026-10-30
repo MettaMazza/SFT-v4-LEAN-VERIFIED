@@ -1093,3 +1093,5 @@ import SFT.Physics.ObservationGrammar
 import SFT.Physics.ObservationEvidence
 import SFT.Physics.ObservationExperiment
 import SFT.Physics.ObservationComparison
+import SFT.Physics.ObservationValidation
+import SFT.Physics.ObservationValidationProofs

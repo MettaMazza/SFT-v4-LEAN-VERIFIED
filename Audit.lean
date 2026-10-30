@@ -8567,3 +8567,8 @@ import SFT
 #print axioms SFT.Physics.ObservationComparison.acceptanceRequiresAllRows
 #print axioms SFT.Physics.ObservationComparison.missingRowRejects
 #print axioms SFT.Physics.ObservationComparison.registeredComparisons
+#print axioms SFT.Physics.ObservationValidation.resealRejected
+#print axioms SFT.Physics.ObservationValidation.sourceMismatchRejects
+#print axioms SFT.Physics.ObservationValidation.sealBindsExecution
+#print axioms SFT.Physics.ObservationValidation.emptyPremiseRejected
+#print axioms SFT.Physics.ObservationValidation.programDocumentRetained

@@ -1,0 +1,22 @@
+import SFT.Computation.OneWayness
+#print axioms SFT.Computation.OneWayness.admitted
+#print axioms SFT.Computation.OneWayness.success
+#print axioms SFT.Computation.OneWayness.successLedger
+#print axioms SFT.Computation.OneWayness.successMeaning
+#print axioms SFT.Computation.OneWayness.successFibre
+#print axioms SFT.Computation.OneWayness.everyForwardImageHasPredecessor
+#print axioms SFT.Computation.OneWayness.exhaustiveInverseContainsSource
+#print axioms SFT.Computation.OneWayness.ledgerComplete
+#print axioms SFT.Computation.OneWayness.ledgerProvenance
+#print axioms SFT.Computation.OneWayness.boundedFailure
+#print axioms SFT.Computation.OneWayness.noAdmittedSuccess
+#print axioms SFT.Computation.OneWayness.outOfGrammar
+#print axioms SFT.Computation.OneWayness.overBudget
+#print axioms SFT.Computation.OneWayness.extendedGrammarRetains
+#print axioms SFT.Computation.OneWayness.traceMatches
+#print axioms SFT.Computation.OneWayness.traceMatchesMeaning
+#print axioms SFT.Computation.OneWayness.boundedAttempts
+#print axioms SFT.Computation.OneWayness.boundedAttemptsMeaning
+#print axioms SFT.Computation.OneWayness.allBoundedFail
+#print axioms SFT.Computation.OneWayness.exactBoundedFailure
+#print axioms SFT.Computation.OneWayness.computedNoAdmittedSuccess

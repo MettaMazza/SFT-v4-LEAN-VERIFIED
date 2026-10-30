@@ -425,3 +425,7 @@ def main : IO Unit := do
   for c in SFT.Computation.NetworkComputationGrammar.candidates do
     IO.println ("NetworkComputationGrammar\t" ++ SFT.Computation.NetworkComputationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.NetworkComputationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.NetworkComputationGrammar.exactForm c ++ "\t" ++ SFT.Computation.NetworkComputationGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.OneWaynessGrammar.candidates do
+    IO.println ("OneWaynessGrammar\t" ++ SFT.Computation.OneWaynessGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.OneWaynessGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.OneWaynessGrammar.exactForm c ++ "\t" ++ SFT.Computation.OneWaynessGrammar.decisionReason c)
+

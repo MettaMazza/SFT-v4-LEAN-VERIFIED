@@ -774,3 +774,9 @@ import SFT.Computation.NetworkComputationGrammar
 import SFT.Computation.NetworkComputationControls
 import SFT.Computation.NetworkComputationEvidence
 import SFT.Computation.NetworkComputation
+import SFT.Computation.OneWaynessWitnesses
+import SFT.Computation.OneWaynessGrammar
+import SFT.Computation.OneWaynessControls
+import SFT.Computation.OneWaynessEvidence
+import SFT.Computation.OneWayness
+import SFT.Computation.SecurityPartition

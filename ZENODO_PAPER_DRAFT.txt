@@ -4923,11 +4923,39 @@ An admitted closed operation table supplies every generated input pair with its 
 
 For incidence geometry, each face coordinate is equivalent to its actual retained boundary row. The original cell-dimension algorithm is linked to its complete finite boundary-descent derivation, preserving admission and cycle rejection. Geometry remains finite and exact. All 256 original candidates, operational witnesses and complete native program records and hashes agree with pinned V3, completing the Fold Algebraic and Geometric Algorithm Law.
 
+
+For an admitted closed table, total lookup on held a,x supplies a held next result b with applyOperation(a,x)=ok(b). Induction on the finite input list repeats this construction, retaining row (a,x,b) before the recursive rows. The empty input has no rows and terminal a. Induction on the resulting Execution certificate proves replay, row count equal to input count, and projection of each row's right input equal to the original input list. Every row's two inputs and result remain in the carrier.
+
+Serial composition joins two such certificates at their shared identity and concatenates both input and row lists. A one-operation second certificate appends exactly (current,right,next). A failed first lookup propagates its original error by expansion of the run definition.
+
+For boundary relation B, filter/map membership gives
+
+\[
+ f\in faces(B,c)\iff(f,c)\in B.
+\]
+
+A depth node requires c absent from the current visiting list and derivations for every face under visiting++[c]. If their retained heights are H, the node height is heightMaximum(H)+1. Face derivations preserve every boundary member in order. Under the original incidence and held-cell admission, the exact algorithm satisfies cellDimension(c)=ok(h) iff DepthDerivation(B,[],c,h). The visiting exclusion retains the original cycle boundary.
+
+
 177. Exact subproblem reuse and reconstruction
 
 The finite decomposition retains each subproblem identity and its complete ordered dependency list. Each dependency lookup reads an existing exact result, including repeated references to overlapping subproblems. A result is admitted only through its sole matching registered recurrence row. Executable table construction and its typed execution certificate imply one another, and each task adds one retained result. Its identity sequence is exactly the initial sequence followed by the schedule, preserving the source distinct-identity condition. Missing dependencies or unresolved recurrence rows halt the construction.
 
 Every result constructed from the empty table has a finite derivation through the actual decomposition and recurrence rows. Reuse preserves the original dependency identity and value across later table extensions. Composition and successor preserve all earlier rows and their shared interface. A problem invariant follows by induction when its local recurrence preserves that invariant from the established dependency results. The decomposition and optimal-substructure conditions must be proved for each problem, as required by V3; no particular recurrence or optimum is supplied by the generic construction. All 256 original candidates, operational witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold Dynamic-Programming Law.
+
+
+Dependency reads traverse the ordered key list, looking up each value in the current table; failure of any lookup returns none. Their typed empty/next certificates are equivalent to successful inputs lookup by induction and preserve |values|=|dependencies|. Each zipped dependency/value pair is an actual table row.
+
+The recurrence result is admitted only when the complete list of matching (key,values,result) rows has exactly one element. A task appends that key/result row and continues. Induction proves
+
+\[
+ run(rules,T,tasks)=some(U)\iff Execution(rules,T,tasks,U),
+\]
+
+and yields |U|=|T|+|tasks| and map(key,U)=map(key,T)++map(key,tasks). Thus distinctness of this combined identity sequence transfers to the final table. Missing dependency values or a non-singleton recurrence match halt the construction.
+
+Given an invariant on initial rows and a local recurrence rule preserving it from every paired dependency result, induction on Execution proves the invariant for the terminal table. Taking the invariant to be a finite derivation through the registered decomposition and recurrence rows reconstructs every result produced from the empty table. Each execution extends T by a suffix; first lookup of an existing key remains unchanged under suffix extension, preserving repeated reuse. Serial certificates compose at the exact intermediate table, and a singleton final task gives successor extension.
+
 
 178. Complete optimization traversal
 
@@ -4935,11 +4963,41 @@ The traversal retains every feasible candidate in source order and every exact i
 
 The incumbent history contains its initial class and one state for each traversed candidate. Each prefix reconstructs its exact incumbent, and serial composition preserves that shared class. Extending both the candidate support and preference relation retains precisely the forms with neither an old nor a new dominator. An earlier optimum can disappear only through an added dominance witness. The singleton carrier supplies the base. All 256 original candidates, operational witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold Optimization-Algorithm Law.
 
+
+For candidate x, eliminators(P,x) filters every preference row whose target is x. The comparison ledger maps every feasible candidate to this full incoming-row list, so its identity projection is exactly the feasible list. Keep(x) means no preference row targets x; advance appends x to the incumbent precisely in that case. Induction gives
+
+\[
+ scan(P,I,F)=I\mathbin{++}retained(F,P).
+\]
+
+The kept branch appends its candidate and reassociates concatenation; the eliminated branch leaves the incumbent unchanged. With I=[], terminal membership is exactly x∈F and no incoming dominance row. Under preference admission, each eliminated feasible x has a distinct held dominator recorded in eliminators(P,x). Ties and incomparable survivors are retained; classification is unique exactly when the complete survivor list is a singleton.
+
+History begins with I and recurses after each advance, giving |F|+1 incumbent states. Serial scan first computes scan(P,I,L), then uses that exact incumbent for R. Its history equation removes the first history's last state before adjoining the second complete history, retaining the shared state once. With support F++G and preference P++Q, survival requires membership in either support and absence of both old and new dominators. If an old survivor disappears, its elimination witness cannot be in P and must therefore be a new row in Q.
+
+
 179. Scheduled algorithms and exact success support
 
 Every registered schedule executes the same held deterministic kernel and initial form. The complete schedule ledger retains each identity and its execution trace or error, with one associated resource record. Exact outcomes define a covering, disjoint partition. Successful schedule identities are precisely the members of the registered target-outcome class; canonical schedule identities imply duplicate-free success support contained in the whole support.
 
 The success part uses the original held-support/whole-support operation. Its positive result satisfies the exact count-ratio identity and lies through One; empty support selection retains the original empty-One marker. Resource reconstruction retains the full observation trace, its initial-observation-inclusive count and the supplied occupied-state support and count. Composition and successor preserve all previous records. Apparent randomness remains an unresolved or externally measured deterministic schedule, with the original measurement boundary unchanged. All 256 original candidates, witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold Randomized-Algorithm Law.
+
+
+For each registered (name,actions), branches retains the same machine and initial form with that action list. Mapping to (execution,resource result) gives one record per schedule and projects back to the complete ordered execution list. Outcome classes from Section 162 cover every branch and are disjoint for different outcomes.
+
+Success names are the identity projection of the target-outcome class. Map/filter membership gives
+
+\[
+ name\in Success(o)\iff\exists b\in Schedule,\ b.name=name\land outcome(b)=o.
+\]
+
+Consequently success support is contained in the whole identity support. Induction on filtering preserves identity distinctness, so canonical schedules admit the exact event operation. For a positive success fraction p/q, the original weight theorem gives
+
+\[
+ |Success(o)|q=p\,|ScheduleNames|,\qquad p\le q.
+\]
+
+An empty success list retains the original empty-One weight marker. Successful resource reconstruction gives the full trace, timeCount=|actions|+1 and spaceCount=|occupied|; execution failure propagates the same error to the resource result. Map distribution proves composition of record lists and the exact one-record successor, preserving every previous execution and resource observation.
+
 
 180. Causally independent algorithm layers
 

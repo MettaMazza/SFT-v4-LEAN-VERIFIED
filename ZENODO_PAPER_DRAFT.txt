@@ -7841,9 +7841,27 @@ The discretization retains its declared finite source relation, generated cells 
 
 The boundary ledger records all source distinctions closed by shared cells; the retained ledger records source pairs with distinct images. A registered projection from refined cells to coarse cells proves that refinement preserves earlier distinctions and that every finer closed class lies within a coarse class. Serial assembly and adjoining a source edge preserve all earlier operator records.
 
-All 513 source encoding,loss,operator and exact projection comparisons pass. The complete 256-candidate grammar,three original witnesses and four adverse controls pass native verification with zero axiom dependencies. The construction uses finite generated forms throughout.
+All 513 source encoding, loss, operator and exact projection comparisons pass. The complete 256-candidate grammar, three original witnesses and four adverse controls pass native verification with zero axiom dependencies. The construction uses finite generated forms throughout.
 
-Fold error-propagation law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold error-propagation law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+Let \(q:X\to C\) denote the admitted first-lookup coverage map. For each declared edge \((x, y)\in R\), total coverage supplies both images, so the local operator is
+\[
+ \operatorname{op}(x, y)=((x, y), q(x), q(y)).
+\]
+Traversing \(R\) yields the ordered operator list, whose source-edge projection is exactly \(R\). Empty traversal returns the empty list; adjoining an edge appends its operator after all earlier records. A failed endpoint lookup rejects that local operator.
+
+The distinction ledgers use the complete source-pair support:
+\[
+ L_{\rm closed}=[(x, y)\mid q(x)=q(y)],\qquad
+ L_{\rm retained}=[(x, y)\mid q(x)\ne q(y)].
+\]
+For coarse and fine coverage \(q_c, q_f\), registered projection \(\pi\) supplies
+\(\pi(q_f(x))=q_c(x)\) for their retained source images. If \(q_f(x)=q_f(y)\), substitution gives \(q_c(x)=q_c(y)\). Contraposition therefore yields
+\[
+ q_c(x)\ne q_c(y)\Rightarrow q_f(x)\ne q_f(y).
+\]
+Thus finer equality implies coarser equality on the corresponding retained source support, and earlier distinctions survive refinement.
 
 273. Registered convergence traces and successor certificates
 
@@ -7851,29 +7869,76 @@ Each refinement step retains the exact reference and obtains both reports from r
 
 A separate checked certificate establishes strict decrease of the unresolved-class count. For traces satisfying that certificate, the number of successor steps plus the terminal unresolved count is bounded by the initial unresolved count. This conditional result does not assert strict descent for every registered refinement. Target acceptance additionally requires the declared terminal identity and an admitted exact report.
 
-All 793 source-derived step,trace,target and class-descent comparisons pass. The complete 256-candidate grammar,three original witnesses and four adverse controls pass native verification with zero axiom dependencies.
+All 793 source-derived step, trace, target and class-descent comparisons pass. The complete 256-candidate grammar, three original witnesses and four adverse controls pass native verification with zero axiom dependencies.
+
+For an admitted exact report \(r\), define its ordered unresolved-class list by
+\[
+ U(r)=[\operatorname{cell}(\rho)\mid \rho\in r_{\rm errors},\
+                           \rho_{\rm orientation}\ne\mathrm{equal}].
+\]
+Nesting is \(\forall c\in U(r'), c\in U(r)\). A registered step additionally requires its named pair in both the refinement and comparison relations and successful exact reports at both names. The recursive step runner and the Steps constructors agree by induction, with one retained report pair per successor name.
+
+Nesting composes by membership implication. Hence an initial absence \(c\notin U(r_0)\) implies \(c\notin U(r_k)\). Strict descent adds \(|U(r')|<|U(r)|\). For a certified strict trace of \(k\) steps,
+\[
+ k+|U(r_k)|\le |U(r_0)|.
+\]
+The base is equality at \(k=0\). For a successor, strict natural-number decrease gives \(1+|U(r_1)|\le|U(r_0)|\); combining it with the inductive tail bound proves the displayed inequality. Target acceptance still separately requires a registered terminal name and its admitted report. Neither nesting alone nor target-name membership is substituted for the strict-descent certificate.
 
 274. Typed scientific symbolic traces and normalization
 
-The model retains its exact environment,registered rewrite rules and generated expression syntax. Each admitted rewrite preserves the source and target type interfaces and the exact evaluator value. The evaluator-derived literal form retains the original returned value or rejection; for typed expressions it is a positive exact value and evaluating that literal reproduces the same result.
+The model retains its exact environment, registered rewrite rules and generated expression syntax. Each admitted rewrite preserves the source and target type interfaces and the exact evaluator value. The evaluator-derived literal form retains the original returned value or rejection; for typed expressions it is a positive exact value and evaluating that literal reproduces the same result.
 
-Typed rewrite traces retain every original record and registered rule identity. Induction proves type,value and normalized-result preservation through the complete trace. Serial composition and adjoining a rewrite preserve all earlier records. Normality relative to the registered rewrite rules requires its original normality certificate; evaluation to a literal alone does not assert termination of arbitrary rules. Physical interpretation remains outside formal symbolic closure.
+Typed rewrite traces retain every original record and registered rule identity. Induction proves type, value and normalized-result preservation through the complete trace. Serial composition and adjoining a rewrite preserve all earlier records. Normality relative to the registered rewrite rules requires its original normality certificate; evaluation to a literal alone does not assert termination of arbitrary rules. Physical interpretation remains outside formal symbolic closure.
 
-All 320 original evaluator comparisons and two concrete typed-rewrite/normalization proofs pass. The complete 256-candidate grammar,three witnesses and four controls pass native verification with zero axiom dependencies.
+All 320 original evaluator comparisons and two concrete typed-rewrite/normalization proofs pass. The complete 256-candidate grammar, three witnesses and four controls pass native verification with zero axiom dependencies.
 
-Fold discretization law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold discretization law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For environment \(\Gamma\), let \(E_\Gamma(e)\) be exact evaluation and define
+\[
+ N_\Gamma(e)=E_\Gamma(e).\operatorname{map}
+                (v\mapsto\operatorname{Literal}(v)).
+\]
+Thus \(E_\Gamma(e)=\operatorname{ok}(v)\) gives
+\(N_\Gamma(e)=\operatorname{ok}(\operatorname{Literal}(v))\).
+For a typed expression in an environment with distinct names, evaluation supplies a positive exact fraction \(v\), and replay gives
+\(E_\Gamma(\operatorname{Literal}(v))=\operatorname{ok}(v)\).
+
+Each Rewrite contains its registered record, admission proof, and typed source and target. Its value-preservation theorem implies
+\[
+ N_\Gamma(\operatorname{source}(r))
+ =N_\Gamma(\operatorname{target}(r)).
+\]
+The identity TypedTrace retains its typed expression. At each successor, transitivity composes this equality with the tail equality, proving equal normal-form results and the same positive evaluation at both endpoints. The trace also retains membership of every rule in the registered rule list. Concatenating traces preserves these results. A Normalized certificate additionally carries the terminal predicate Normal relative to those rules; this is distinct from the evaluator's literal result.
 
 275. Registered simulation and complete observation traces
 
-Simulation executes the original admitted state system from a registered initial state under its declared action schedule. Each visited state is mapped to a retained observation. Reconstruction recovers the exact state execution and every observation lookup. There is one observation per visited state,including the initial form; an omitted visited observation halts the report.
+Simulation executes the original admitted state system from a registered initial state under its declared action schedule. Each visited state is mapped to a retained observation. Reconstruction recovers the exact state execution and every observation lookup. There is one observation per visited state, including the initial form; an omitted visited observation halts the report.
 
 Serial execution preserves the state and observation interfaces. Appending an admitted transition adds its exact next state and observation while preserving earlier records. Extending an admitted model with retained transition and observation rows preserves its earlier reports. Comparison acceptance records only membership in the declared relation between the simulated and external observation traces. The result remains a consequence of its registered model; empirical natural-law status is not derived by simulation.
 
-All 1,280 source-execution and observation comparisons pass,covering valid traces,missing transitions,invalid actions,outside initial states and omitted observations. The complete 256-candidate grammar,three original witnesses and four controls pass native verification with zero axiom dependencies.
+All 1,280 source-execution and observation comparisons pass, covering valid traces, missing transitions, invalid actions, outside initial states and omitted observations. The complete 256-candidate grammar, three original witnesses and four controls pass native verification with zero axiom dependencies.
 
-Fold convergence-certificate law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold convergence-certificate law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
 
-Fold scientific symbolic-computation law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold scientific symbolic-computation law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For state observation map \(O\), observation recursion is
+\[
+ \operatorname{obs}([])=\operatorname{some}([]),\qquad
+ \operatorname{obs}(s::u)=\operatorname{some}(v::w)
+\]
+exactly when \(\operatorname{lookup}(O, s)=\operatorname{some}(v)\) and
+\(\operatorname{obs}(u)=\operatorname{some}(w)\). Simulation combines
+\[
+ \operatorname{run}(P, s, a)=\operatorname{ok}(\tau),\qquad
+ \operatorname{obs}(\tau)=\operatorname{some}(\omega).
+\]
+Reconstruction yields the state Execution and the complete ObservationRows trace. Induction on observation rows gives \(|\omega|=|\tau|\); the execution trace includes the initial state, so
+\[
+ |\omega|=|a|+1.
+\]
+For an appended admitted action leading to \(s'\), its registered observation \(v'\) extends the report by \(\tau{+\!\!+}[s']\) and \(\omega{+\!\!+}[v']\). Serial paths use the retained intermediate interface and concatenate their observation segments without losing the visited states. Model extension preserves old transition rows and exact observation lookups. External comparison remains the exact membership test \((\omega,\omega_{\rm external})\in C\) in the supplied comparison relation.
 
 276. Exact computational dynamics and orbit certificates
 
@@ -7885,7 +7950,21 @@ Serial composition joins equal state interfaces. Appending a registered transiti
 
 All 2,745 comparisons with the original dynamics routines pass, including every two-state transition relation, valid and invalid trajectories, fixed forms, predecessor records, earliest returns and ordered perturbation searches. The complete 256-candidate grammar, three original witnesses and four controls pass native verification with zero axiom dependencies.
 
-Fold simulation law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold simulation law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For admitted update relation \(R\) on states \(S\), an orbit trajectory
+\(\tau=[s_0,\ldots, s_k]\) requires every state in \(S\), every adjacent pair in \(R\), and an admitted transition-time result. The identity trajectory has
+\[
+ \operatorname{orbit}([s])=([s],\operatorname{EmptyOneClock},\mathrm{none}).
+\]
+For an accepted orbit, no return is equivalent to distinctness of \(\tau\). A returned cycle has the exact decomposition
+\[
+ \tau=(u{+\!\!+}[t]{+\!\!+}v){+\!\!+}[t]{+\!\!+}w,\qquad
+ \operatorname{cycle}=[t]{+\!\!+}v{+\!\!+}[t],
+\]
+with \(u{+\!\!+}[t]{+\!\!+}v\) distinct and \(t\notin u\). These conditions identify the first repeated state and retain the intervening registered transitions.
+
+If a ledger \(L\) contains \(s_0\) and is closed under \(R\), induction on adjacent pairs proves \(\forall s\in\tau, s\in L\). Fixed-form membership is exactly \((s, s)\in R\); registered perturbation stability is exactly reachability of the terminal from every supplied start. Appending \((s_k, s_{k+1})\in R\) appends precisely that pair to the time trace. Orbit composition joins the shared state once, and inclusion of state and update supports preserves the same admitted orbit.
 
 277. Inverse problems and retained predecessor fibres
 
@@ -7897,6 +7976,23 @@ Relational composition retains the intermediate witness in both directions. The 
 
 All 1,984 source-admitted fibre, registered-exclusion and exact relational-composition cases pass. The complete 256-candidate grammar, three original witnesses and four controls pass native verification with zero axiom dependencies.
 
+For source support \(X\), observation support \(Y\) and admitted relation \(R\subseteq X\times Y\), the inverse fibre is
+\[
+ F(y)=[x\in X\mid(x, y)\in R],\qquad
+ \operatorname{reconstruct}(y)=\operatorname{some}(x)\iff F(y)=[x].
+\]
+A singleton fibre supplies the exact source and forward-row witness. Two distinct fibre members contradict singleton reconstruction, so ambiguity returns none. Any fibre member also proves \(y\in Y\); consequently an unregistered observation cannot reconstruct a source.
+
+For applied exclusions \(A\) with certificate \(A\subseteq D\), the remaining list is
+\[
+ F_A(y)=[x\in F(y)\mid x\notin A].
+\]
+An undeclared possible source \(x\notin D\) cannot belong to \(A\) and remains in \(F_A(y)\). Successful excluded reconstruction requires \(F_A(y)=[x]\), yielding both its original forward witness and uniqueness among remaining members. Composition retains the intermediate source:
+\[
+ (x, z)\in R;Q\iff\exists y,\ (x, y)\in R\land(y, z)\in Q.
+\]
+For a fresh appended source \(x'\), with old relation decisions retained, the new fibre is \(F(y){+\!\!+}[x']\) if \((x', y)\) is present, and \(F(y)\) otherwise.
+
 278. Computational statistics from exact support traces
 
 A statistical computation retains complete canonical sample support and its total statistic map. The exact summary preserves every class label, all source samples in that class, the reduced positive class-to-whole fraction and every unresolved within-class distinction. Classes cover the complete support without overlap. Singleton certainty retains structural empty One.
@@ -7907,9 +8003,28 @@ A fresh sample extends the exact classification trace, changes only its correspo
 
 All 608 checks pass: 488 comparisons with the original exact entropy-ledger routine, including invalid-input errors and fresh-sample extensions, and 120 complete classification-trace equations. The complete 256-candidate grammar, three original witnesses and four controls pass native verification with zero axiom dependencies.
 
-Fold computational-dynamics law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold computational-dynamics law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
 
-Fold inverse-problem law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold inverse-problem law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For canonical sample support \(X\) and total statistic \(f\), each class is
+\[
+ C_y=[x\in X\mid f(x)=y].
+\]
+Coverage follows by taking \(y=f(x)\); if a sample belongs to both \(C_y\) and \(C_z\), uniqueness of its statistic image gives \(y=z\). Each summary row retains \(C_y\), its unresolved within-class pairs and a positive exact fraction \(a_y/b_y\) satisfying
+\[
+ |C_y|\, b_y=a_y|X|,\qquad a_y\le b_y.
+\]
+ClassificationTrace records every lookup in order. Its base has two empty lists, and its successor adds one sample and label; hence label count equals sample count, and concatenation composes certificates.
+
+For fresh \(x'\notin X\) assigned \(v\),
+\[
+ C'_y=C_y{+\!\!+}
+ \begin{cases}[x'],&v=y,\\ [],&v\ne y,\end{cases}
+ \qquad
+ |C'_y|\, b'_y=a'_y(|X|+1).
+\]
+The new classification trace appends \(v\); only the matching class gains the fresh sample and its unresolved pairs. Under a second deterministic statistic \(g\), equal \(f\)-images have equal \(g(f(\cdot))\)-images, so closed distinctions remain closed and retained downstream distinctions were already retained upstream.
 
 279. Complete coordinate products and high-dimensional computation
 
@@ -7921,7 +8036,22 @@ The resource ledger records the exact numbers of generated product rows, retaine
 
 All 1,320 literal-product, factored-relation, original relation-admission, retained-execution and projection cases pass. The complete 256-candidate grammar, three original witnesses and four controls pass native verification with zero axiom dependencies.
 
-Fold computational-statistics law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold computational-statistics law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For coordinate lists \(A_1,\ldots, A_d\), complete support is generated recursively:
+\[
+ P([])=[[]],\qquad
+ P(A::R)=\mathop{\operatorname{concat}}_{a\in A}[a::r\mid r\in P(R)].
+\]
+The corresponding CoordinateTrace chooses one member from each list. Induction proves
+\[
+ r\in P(A_1,\ldots, A_d)\iff
+ \text{\(r\) has that complete coordinate trace},\quad
+ |r|=d,\quad |P|=\prod_{i=1}^{d}|A_i|.
+\]
+Distinct coordinate carriers give distinct rows because different heads separate branches and induction separates equal-head tails. Factored relations use the same recursion on local source/target pairs, retaining a FactorTrace for every materialized pair.
+
+Replay of edges checks the current source equality and relation membership at each step; it is equivalent to the typed Execution. Sparse-relation admission places both endpoints in \(P\), so induction preserves generated terminal support. The resource tuple is \((|P|,|R|,|\tau|)\). Projection recursively selects the declared indices and returns exactly that many values if all indices exist. If distinct rows \(a, b\) both project to \(p\), simultaneous decoding would imply \(a=d(\operatorname{some}(p))=b\), a contradiction.
 
 280. Many-body joint support and interaction records
 
@@ -7933,7 +8063,25 @@ A configuration is a canonical held selection of the declared joint support. Its
 
 The resource ledger records body identities, interaction edges, generated joint states, admitted update rows and executed transitions. These are consequences of retained finite structures; no physical many-body law or quantum amplitude is imported. All 1,716 original graph-admission and source-admitted selection, relation and execution checks pass. The complete 256-candidate grammar, three original witnesses and four controls pass native verification with zero axiom dependencies.
 
-Fold high-dimensional computation law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold high-dimensional computation law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For bodies \(B_1,\ldots, B_n\) with local carriers \(S_i\), the joint support is
+\[
+ J=P(S_1,\ldots, S_n),\qquad |J|=\prod_i|S_i|,\qquad
+ x\in J\Rightarrow |x|=n.
+\]
+Graph admission proves distinct body identities and membership of both endpoints of every interaction edge. Canonical local carriers give duplicate-free \(J\). An admitted update relation lies in \(J\times J\); execution retains its actual rows and a terminal member of \(J\). Composition concatenates traces, and a successor appends its registered update pair.
+
+For held configuration \(H\subseteq J\), the exact missing list and correlation ledger are
+\[
+ M=[x\in J\mid x\notin H],\qquad
+ C=[(x,[x\in H])\mid x\in J].
+\]
+The unrestricted factorization check tests equality of support membership in both directions; for an admitted configuration, \(H\subseteq J\) is already certified, so
+\[
+ \operatorname{factorized}(H)\iff\forall x\in J,\ x\in H.
+\]
+Any \(x\in M\) therefore rejects factorization. Adding a body extends an old row \(x\) by each admitted new coordinate \(s\), producing \(x{+\!\!+}[s]\). Resource counts retain the numbers of bodies, interaction edges, joint rows, update rows and executed rows separately.
 
 281. Prediction seals and registered target access
 
@@ -7941,9 +8089,30 @@ The source empirical boundary separates prediction from target opening. An unsea
 
 After sealing, the supplied target identities must coincide with the registered identity set. The native membership-equivalence proof preserves this set comparison, including repeated registered identities. Successful opening retains both the existing seal and the target material; premature access and mismatched identities are rejected. The canonical-value comparison protocol also preserves the source operand-returning conjunction and rejects measurement-driven changes to the law.
 
-These boundary results pass 124 checks against the pinned source, including identity-set cases, access ordering, replacement rejection and seal hashes. The mathematical-modelling translation remains in progress; these results establish the stated boundary components only. Registration declarations are audited separately from the actual Lean theorem dependencies.
+These boundary results pass 124 checks against the pinned source, including identity-set cases, access ordering, replacement rejection and seal hashes. These seal and target-access results form the empirical-boundary component of the completed mathematical-modelling entry. Registration declarations are audited separately from the actual Lean theorem dependencies.
 
-Fold many-body computation law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold many-body computation law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+The seal identity is the canonical hash of the exact object
+\[
+ \{\mathrm{experiment\_id}:e,\ \mathrm{prediction\_hash}:p,\
+   \mathrm{trace\_hash}:t,\ \mathrm{envelope\_hash}:v\}.
+\]
+Sealing is a two-case operation: an empty seal slot returns the fresh seal; an occupied slot rejects replacement. Target opening first requires an existing seal \(s\), then checks supplied and registered identity lists by
+\[
+ \operatorname{match}(A, R)\iff
+ (\forall a\in A,\ a\in R)\land(\forall r\in R,\ r\in A)
+ \iff\forall n,\ n\in A\leftrightarrow n\in R.
+\]
+Thus order and repeated identities do not alter the source set-comparison condition. When it holds, opening returns exactly \((s,\mathrm{material})\), preserving both; otherwise it rejects.
+
+For Boolean protocol fields, admission is
+\[
+ \neg\mathrm{targetBeforeSeal}\land
+ \neg\mathrm{measurementChangesLaw}\land
+ \mathrm{allRows}\land\mathrm{sourceIdentified}.
+\]
+The canonical-value operation retains the source operand-returning conjunction. If the first two operands are false in truth value and allRows is true in truth value, its result is the original source operand; a truthy law-mutation operand yields Boolean false. This preserves the source's value-level behavior as well as the Boolean boundary.
 
 282. Formal structures, observations and retained model comparisons
 
@@ -7955,6 +8124,25 @@ Each comparison retains its formal input, observation and admitted comparison pr
 
 These results preserve the source boundary that fitting observations or producing an opaque prediction does not establish the model law. The 1,164 source-admitted execution, comparison and empirical-boundary checks pass, together with the complete 256-candidate grammar, three exact-error witnesses and four controls. All native audited declarations have zero axiom dependencies.
 
+A correspondence supplies finite formal support \(X\), observation support \(Y\), relation \(R\subseteq X\times Y\), and admitted registration. Registration proves
+\[
+ \mathrm{declaredAxioms}=[],\quad
+ \mathrm{freeParameters}=[],\quad
+ \mathrm{missingDependencies}=[],
+\]
+together with nonempty classified provenance. These are registration-field statements; the separate Lean axiom audit concerns actual proof dependencies.
+
+OperationTrace has identity and registered-edge successor constructors. Its replay satisfies
+\[
+ \operatorname{execute}(x,\tau)=\operatorname{some}(z)
+ \iff x\in X\land\operatorname{OperationTrace}(x,\tau, z).
+\]
+Every trace edge belongs to \(R\); induction proves serial composition and transport under relation inclusion. For supplied comparison rows \(C\), each with the admitted protocol and supported endpoints, the complete ledger is
+\[
+ L(C)=[((c_x, c_y),[(c_x, c_y)\in R])\mid c\in C].
+\]
+Consequently \(|L(C)|=|C|\) and \(L(C{+\!\!+}D)=L(C){+\!\!+}L(D)\). Falsifying rows are exactly those supplied rows failing membership in \(R\). Revision stores \((L_{\rm old}, L_{\rm new})\); projection recovers the unchanged old ledger instead of overwriting prior comparison evidence.
+
 283. Reversible gates and exact phase-labelled support
 
 A reversible gate has a nonempty finite word map with distinct sources and distinct targets, together with a nonempty phase-successor trace. Inversion swaps each source and target while retaining row order and the phase trace. The inverse satisfies the same admission conditions; applying the row inversion twice recovers the original gate.
@@ -7963,9 +8151,27 @@ An admitted state has nonempty branch support, distinct words and a distinct pha
 
 Complete support generation uses every word of the declared position count over the registered alphabet, in literal product order. The source permits a singleton alphabet; that domain is preserved. Generated-support membership is equivalent to the exact word length and membership of every label in the declared alphabet.
 
-These components pass 818 comparisons against the pinned V3 operations, including rejected inputs and exact phase results. All 38 audited draft definitions and theorems have zero axiom dependencies. Gate application, the complete inverse state trace and the remaining reversible-model components are still being formalised.
+These components pass 818 comparisons against the pinned V3 operations, including rejected inputs and exact phase results. All 38 declarations in this component audit have zero axiom dependencies. Gate application, the complete inverse state trace and the other reversible-model components are included in the completed reversible-model entry.
 
-Fold mathematical-modelling law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold mathematical-modelling law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For gate map \(G\) and successor trace \(u\), admission is
+\[
+ G\ne[],\quad\operatorname{distinct}(\pi_1G),\quad
+ \operatorname{distinct}(\pi_2G),\quad u\ne[].
+\]
+Inversion maps \((x, y)\mapsto(y, x)\), swaps the two uniqueness conditions, retains \(u\), and satisfies \((G^{-1})^{-1}=G\) in the original row order. A state \((B, C)\) requires nonempty branch list \(B\), distinct branch words, distinct phase cycle \(C\) with \(|C|\ge2\), and every branch phase in \(C\).
+
+For \(C_i\) the phase at index \(i\), phase action is
+\[
+ (w, C_i)\longmapsto(w, C_{(i+s)\bmod d}),\qquad
+ d=|C|,\quad s=|u|\bmod d.
+\]
+Phase lookup and the modulo bound prove that the result remains in \(C\). Mapping this action over branches retains the exact word list, and therefore its nonemptiness and distinctness; state admission is preserved. Complete support over alphabet \(A\) and \(n\) registered positions satisfies
+\[
+ w\in\operatorname{support}\iff |w|=n\land\forall a\in w,\ a\in A.
+\]
+The original positive, distinct alphabet guard permits \(|A|=1\).
 
 284. Exact inverse phase and branch reconstruction
 
@@ -7973,7 +8179,24 @@ For a phase-cycle length d, an original phase index below d and a shift s below 
 
 The complete branch transformation combines a registered word lookup with this phase action. When target words are distinct, reversing the word-map rows recovers each source word. The branch-level inverse theorem restores every original word and phase pair in order, including all retained branches.
 
-The implementation passes 3,264 additional comparisons against original V3 gate application and inverse-state results. The 17 additional declarations have zero axiom dependencies. Full wrapper admission and domain-preservation integration remain part of the ongoing reversible-model formalisation.
+The implementation passes 3,264 additional comparisons against original V3 gate application and inverse-state results. The 17 additional declarations have zero axiom dependencies. Wrapper admission and domain preservation are established by the integrated round-trip derivation below.
+
+For \(d>0\), \(i<d\) and \(s<d\), define the exact inverse shift
+\[
+ \bar s=\begin{cases}0,&s=0,\\d-s,&s\ne0.\end{cases}
+\]
+The modular reconstruction is
+\[
+ ((i+s)\bmod d+\bar s)\bmod d=i.
+\]
+When \(s=0\), reduction returns \(i\). Otherwise \(s+(d-s)=d\); moving the first remainder through addition reduces the expression to \((i+d)\bmod d=i\). Distinct phase-cycle labels make phaseIndex of a selected label recover its unique original index, so this arithmetic identity restores the original phase.
+
+For the word map, a forward lookup \(G(w)=v\) and distinct target words imply \(G^{-1}(v)=w\). Combining the two inverses gives
+\[
+ (w, C_i)\xmapsto{G, s}(v, C_{(i+s)\bmod d})
+ \xmapsto{G^{-1},\bar s}(w, C_i).
+\]
+Induction over the branch list restores each head pair and then the tail, proving equality of the entire original ordered branch list.
 
 285. Admitted gate round trips
 
@@ -7981,7 +8204,26 @@ For every admitted state and reversible gate whose source domain equals the comp
 
 The output support is exactly the inverse gate's source domain. This equality is derived from the forward operation and gate admission. Applying the inverse gate with the source inverse-phase action therefore restores the complete original state, including branch order, word identities, phase labels and phase cycle. The round-trip theorem needs no additional inverse-domain assumption.
 
-The constructive proofs have zero axiom dependencies. The underlying operation definitions are unchanged from the implementation checked against 3,264 original V3 application and inverse-state cases. Joint composition, observation records and the other remaining reversible-model components are still being formalised.
+The constructive proofs have zero axiom dependencies. The underlying operation definitions are unchanged from the implementation checked against 3,264 original V3 application and inverse-state cases. Joint composition, observation records and the other reversible-model components are included in the completed entry.
+
+The application-domain check is equality of complete support membership:
+\[
+ \forall w,\ w\in\pi_1G\leftrightarrow w\in\operatorname{support}(B).
+\]
+With admitted state and gate, every source lookup and phase shift therefore succeeds. Distinct gate targets preserve distinct output words, and the transformation preserves branch count and phase-cycle membership, giving an admitted output state \(B'\).
+
+The transformed-support theorem gives
+\[
+ v\in\operatorname{support}(B')
+ \iff\exists(w,\phi)\in B,\ G(w)=v.
+\]
+Domain equality and gate admission identify this support with \(\pi_2G=\pi_1G^{-1}\). Hence the inverse-domain condition is derived from the forward application. Applying the branch inverse theorem yields the full round trip
+\[
+ \operatorname{apply}(B, G,\mathrm{false})=\operatorname{ok}(B')
+ \quad\Longrightarrow\quad
+ \operatorname{apply}(B', G^{-1},\mathrm{true})=\operatorname{ok}(B).
+\]
+The existence theorem additionally supplies \(B'\), its admission and \(|B'|=|B|\); no separate inverse-domain premise is needed.
 
 286. Complete joint-state composition
 
@@ -7989,7 +8231,21 @@ Joint-state composition enumerates the literal Cartesian product of the two bran
 
 The native proofs establish both exact output-word membership and the full product branch count. Every pair of input branches contributes its registered row. For admitted inputs with a shared phase cycle, all phase lookups succeed; final admission follows the original state constructor's distinct-word check. The source guard and its rejection behavior are preserved.
 
-The implementation matches V3 in 2,809 composition cases: 1,003 accepted results and 1,806 rejections. All 19 composition definitions and theorems have zero axiom dependencies. These results complete the joint-composition component of the ongoing reversible-model translation.
+The implementation matches V3 in 2,809 composition cases: 1,003 accepted results and 1,806 rejections. All 19 composition definitions and theorems have zero axiom dependencies. These results establish the joint-composition component of the completed reversible-model entry.
+
+For a shared phase cycle \(C\) of length \(d\), joint construction sends
+\[
+ ((u, C_i),(v, C_j))
+ \longmapsto
+ (u{+\!\!+}[\mathrm{joint}]{+\!\!+}v,\ C_{(i+j)\bmod d}).
+\]
+Its outer traversal follows the left branch list and its inner traversal follows the right branch list. Thus the complete joint word projection is
+\[
+ \mathop{\operatorname{concat}}_{l\in B_L}
+ [\, l_w{+\!\!+}[\mathrm{joint}]{+\!\!+}r_w\mid r\in B_R\,],
+ \qquad |B_{\rm joint}|=|B_L||B_R|.
+\]
+Every generated word has exactly the stated pair-of-input-branches membership witness. Admitted phases make every index lookup and modular shift succeed. The final state constructor still checks distinct joint words: admitted inputs and equal cycles do not bypass this source guard. Accordingly composition returns the generated state when that word-list check passes and the original duplicate-word error otherwise; unequal phase cycles reject before joint construction.
 
 287. Complete observation and predecessor records
 
@@ -8000,6 +8256,24 @@ Selection retains precisely the branches assigned the requested label, in their 
 Predecessor merging groups all classified branches under the source's sorted target labels. Each original predecessor retains its word and phase. The factorization decision holds precisely when every combination of a retained left coordinate and retained right coordinate belongs to the registered joint support, with the source nonempty and uniqueness guards preserved.
 
 These operations pass 8,537 comparisons against original V3 observation, predecessor-merge and factorization outputs. All 28 native definitions and theorems have zero axiom dependencies.
+
+A classification \(f\) is admitted when its source words are distinct and have exactly the state's support membership. Complete recording traverses the original branches:
+\[
+ R=[((w,\phi), f(w))\mid(w,\phi)\in B],\qquad
+ \pi_1R=B,\quad |R|=|B|.
+\]
+For requested label \(l\), selection is
+\[
+ B_l=[(w,\phi)\in B\mid f(w)=l].
+\]
+This filter preserves original order, distinct words and phase membership. A nonempty \(B_l\) therefore forms an admitted state with the original cycle; an empty \(B_l\) returns the registered rejection. The complete record \(R\) remains separate from the selected class.
+
+Predecessor merging sorts the distinct observed labels and returns \([(l, B_l)]\) in that order; each original branch belongs to its corresponding group with word and phase retained. For a nonempty, duplicate-free joint support \(J\), the factorization check is
+\[
+ \operatorname{factorable}(J)\iff
+ \forall(a, b)\in J,\ \forall(c, d)\in J,\ (a, d)\in J.
+\]
+The nested all-members traversal proves exactly this closure over retained left and right coordinates.
 
 288. Complete repetition fault-mask enumeration
 

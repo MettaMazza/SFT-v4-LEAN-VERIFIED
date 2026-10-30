@@ -1075,3 +1075,7 @@ import SFT.QuantumComputation.ClassicalCorrespondence
 import SFT.QuantumComputation.ClassicalCorrespondenceGrammar
 import SFT.QuantumComputation.ClassicalCorrespondenceControls
 import SFT.QuantumComputation.ClassicalCorrespondenceEvidence
+import SFT.QuantumComputation.Limits
+import SFT.QuantumComputation.LimitsGrammar
+import SFT.QuantumComputation.LimitsControls
+import SFT.QuantumComputation.LimitsEvidence

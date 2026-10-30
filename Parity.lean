@@ -635,3 +635,6 @@ def main : IO Unit := do
 
   for c in SFT.QuantumComputation.ClassicalCorrespondenceGrammar.candidates do
     IO.println ("ClassicalCorrespondenceGrammar\t" ++ SFT.QuantumComputation.ClassicalCorrespondenceGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.ClassicalCorrespondenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.ClassicalCorrespondenceGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.ClassicalCorrespondenceGrammar.decisionReason c)
+
+  for c in SFT.QuantumComputation.LimitsGrammar.candidates do
+    IO.println ("LimitsGrammar\t" ++ SFT.QuantumComputation.LimitsGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.LimitsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.LimitsGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.LimitsGrammar.decisionReason c)

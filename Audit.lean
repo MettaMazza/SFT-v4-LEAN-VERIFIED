@@ -8457,3 +8457,17 @@ import SFT
 #print axioms SFT.QuantumComputation.ClassicalCorrespondenceEvidence.registrationHasNoAxioms
 #print axioms SFT.QuantumComputation.ClassicalCorrespondenceEvidence.registrationHasNoFreeParameters
 #print axioms SFT.QuantumComputation.ClassicalCorrespondenceEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.QuantumComputation.Limits.complementaryQuantumExecution
+#print axioms SFT.QuantumComputation.Limits.selfPredictionContradiction
+#print axioms SFT.QuantumComputation.Limits.totalInternalQuantumPredictionExcluded
+#print axioms SFT.QuantumComputation.LimitsGrammar.generatedCardinality
+#print axioms SFT.QuantumComputation.LimitsGrammar.candidatesComplete
+#print axioms SFT.QuantumComputation.LimitsGrammar.uniqueSurvivor
+#print axioms SFT.QuantumComputation.LimitsGrammar.acceptanceIffExactCriteria
+#print axioms SFT.QuantumComputation.LimitsControls.falsePremisePassed
+#print axioms SFT.QuantumComputation.LimitsControls.boundaryPassed
+#print axioms SFT.QuantumComputation.LimitsEvidence.nativeDecisionPreservesSurvival
+#print axioms SFT.QuantumComputation.LimitsEvidence.nativeDecisionPreservesReason
+#print axioms SFT.QuantumComputation.LimitsEvidence.registrationHasNoAxioms
+#print axioms SFT.QuantumComputation.LimitsEvidence.registrationHasNoFreeParameters
+#print axioms SFT.QuantumComputation.LimitsEvidence.lookupDependsOnlyOnIdentifier

@@ -3884,7 +3884,27 @@ For any emitted name z, membership in the mapped name list supplies a word w wit
 
 A transition system retains the ordered generated state carrier, held action labels and source/action/target rows. Construction first checks state uniqueness, then action uniqueness and nonempty carriers; it then checks each row in order for carrier membership and repeated source/action coordinates. The relation may be partial. A requested step succeeds exactly when its matching target list is a singleton, preserving the original missing-transition boundary.
 
-Execution first checks that the initial state belongs to the carrier, then retains that initial state and every successive generated target, propagating the first failed step. Native proofs identify successful execution exactly with an inductive chain of the original step results. Every admitted trace begins at its registered initial state, has one position for every action plus the initial position, and remains entirely within the state carrier. Constructor admission is equivalent to the exact original carrier and ordered-row conditions.3397 independent comparisons cover complete outputs and original errors, including duplicate states/actions, empty strings, missing transitions, repeated coordinates, escaped rows and failure order.
+Execution first checks that the initial state belongs to the carrier, then retains that initial state and every successive generated target, propagating the first failed step. Native proofs identify successful execution exactly with an inductive chain of the original step results. Every admitted trace begins at its registered initial state, has one position for every action plus the initial position, and remains entirely within the state carrier. Constructor admission is equivalent to the exact original carrier and ordered-row conditions. 3,397 independent comparisons cover complete outputs and original errors, including duplicate states/actions, empty strings, missing transitions, repeated coordinates, escaped rows and failure order.
+
+
+Write a system as (S,A,R), where each retained row is (s,a,t). Row admission requires s,t∈S and a∈A. Scanning the relation maintains the list K of previously seen (source,action) coordinates: an empty remainder succeeds; a head row succeeds only if it is carrier-bound and (s,a)∉K, after which validation continues with (s,a)::K. Together with distinct, nonempty S and A, this is exactly constructor admission, including its ordered failure behavior.
+
+Define T_R(s,a)=[t:(s,a,t) occurs in R]. The executable step satisfies
+
+\[
+ \operatorname{step}(s,a)=\operatorname{ok}(t)\iff T_R(s,a)=[t].
+\]
+
+The retained execution relation has the two clauses
+
+\[
+ E(s,[],[s]),\qquad
+ \frac{\operatorname{step}(s,a)=\operatorname{ok}(t)\quad E(t,u,\tau)}
+ {E(s,a::u,s::\tau)}.
+\]
+
+Induction on the requested action list proves runFrom(s,u)=ok(τ) iff E(s,u,τ), by matching each successful step and recursive result; either error branch propagates unchanged. The outer run additionally requires s∈S. Induction on E gives head(τ)=s and |τ|=|u|+1. Each successful step selects a retained row, whose validation gives its target in S. Starting with s∈S, the same induction therefore puts every trace state in S.
+
 
 132. Retained execution composition and extension
 
@@ -3892,11 +3912,56 @@ Every successful execution admits an exact decomposition into its retained prede
 
 For every admitted system, a requested transition succeeds if and only if its exact source/action/target row belongs to the retained relation. Original constructor validation excludes any second target row at the same coordinate. Consequently, an admitted extension that retains the earlier state carrier and transition rows preserves every earlier successful execution with its exact trace. This applies to appended carriers and rows and to both components embedded in a common admitted assembly. Compatibility is decided by the original constructor; no additional transition or scheduling rule is imposed.
 
+
+Make the terminal interface explicit by writing P(s,u,b,t) for a retained path with actions u, predecessor list b and terminal t. Its identity clause is P(s,[],[],s); its successor clause prepends the current state and action after an exact successful step. Induction in both directions establishes
+
+\[
+ E(s,u,\tau)\iff\exists b,t,\ \tau=b\mathbin{++}[t]\ \land\ P(s,u,b,t).
+\]
+
+If P(s,u,b,m) and P(m,v,c,t), induction on the first path gives
+
+\[
+ P(s,u\mathbin{++}v,b\mathbin{++}c,t),\qquad
+ \operatorname{runFrom}(s,u\mathbin{++}v)=\operatorname{ok}((b\mathbin{++}c)\mathbin{++}[t]).
+\]
+
+The identity case returns the second path. The successor case retains the first edge and applies the induction hypothesis to its remainder. Taking the second path to be the single edge m→t yields the old complete trace b++[m] followed by [t], with no repeated interface inserted.
+
+For an admitted relation, the seen-coordinate invariant excludes any later row at a previously encountered coordinate. Induction through validation therefore gives T_R(s,a)=[t] whenever (s,a,t)∈R. Together with step membership, this proves step(s,a)=ok(t) iff (s,a,t)∈R. If an admitted extension retains S and every row of R, each old step still succeeds with the same target. Induction on the original execution preserves its exact trace, and retained initial-state membership preserves the outer run. Appended carriers and common admitted assemblies are direct instances of these two inclusions.
+
+
 133. Generated words and exact coordinate rewrite
 
 The generated-word operation retains the original empty-One marker and then every complete word layer up to the given finite position depth, preserving both layer order and Cartesian order. Native induction identifies the exact frontier at every depth and proves that one new position appends the entire next layer. The original unique-alphabet, unique-position and nonempty-alphabet conditions remain unchanged; the literal empty-One symbol remains allowed.
 
-Exact rewriting validates the unique position trace, equal word/position lengths and selected held position. The output retains the full position trace, changes the selected coordinate to its replacement and preserves every other coordinate and total length.2952 independent full-output/error comparisons and all three original formal-computation witnesses pass. Fresh native execution matches every original 256-candidate lookup, registration, census, closure, control and digest field. These results complete Exact State and Transition Law on its registered generated-finite boundary; no language, machine model or resource bound is introduced.
+Exact rewriting validates the unique position trace, equal word/position lengths and selected held position. The output retains the full position trace, changes the selected coordinate to its replacement and preserves every other coordinate and total length. 2,952 independent full-output/error comparisons and all three original formal-computation witnesses pass. Fresh native execution matches every original 256-candidate lookup, registration, census, closure, control and digest field. These results complete Exact State and Transition Law on its registered generated-finite boundary; no language, machine model or resource bound is introduced.
+
+
+Let F_n be the current word frontier and G_n the retained cumulative output. The source recurrence is
+
+\[
+ F_0=[[]],\quad G_0=[[\text{empty-One}]],\qquad
+ F_{n+1}=\mathop{\mathrm{concat}}_{w\in F_n}[w\mathbin{++}[a]:a\in A],\quad
+ G_{n+1}=G_n\mathbin{++}F_{n+1}.
+\]
+
+The ordered word-extension identity proves F_n=W_n(A). Substitution into the second recurrence gives G_n=[[empty-One]]++W_1(A)++⋯++W_n(A), retaining every layer and its order. Admission requires distinct A and P and nonempty A; the depth n=|P| may be zero. Membership is exactly the marker word or a word of positive length at most n whose symbols all belong to A. The host empty frontier [] and the one-symbol marker word [empty-One] remain different objects.
+
+For an admitted rewrite, P is distinct, |w|=|P| and the selected position h lies in P. The output is the coordinatewise map
+
+\[
+ R_{h,r}(w)_i=\begin{cases}r,&P_i=h,\\w_i,&P_i\ne h.\end{cases}
+\]
+
+Simultaneous induction over P and w proves
+
+\[
+ \operatorname{zip}(P,R_{h,r}(w))=[(p,\text{if }p=h\text{ then }r\text{ else }x):(p,x)\in\operatorname{zip}(P,w)].
+\]
+
+The empty case is immediate; each successor retains its position and emits exactly the selected replacement or original symbol before the inductive tail. The same induction gives |R_{h,r}(w)|=|w|. Thus the displayed trace proves the selected-coordinate change and every unchanged coordinate together.
+
 
 134. Finite language derivation certificates
 
@@ -3904,11 +3969,52 @@ The language formation rules retain the empty construction frontier and append a
 
 For the complete cumulative language output, membership is exactly the original empty-One marker or a positive-depth derivation bounded by the registered position trace. The marker and the empty host frontier remain distinct, and literal marker-valued alphabet symbols retain their original behavior. The shared native operation proofs and all three claim-specific witnesses combine with full 256-candidate program/output/hash agreement to complete the registered Fold Formal-Language and Grammar Law. No completed infinite language or conventional grammar model is introduced.
 
+
+The native finite certificate D_A(n,w) has precisely the source's seed and append clauses:
+
+\[
+ D_A(0,[]),\qquad
+ \frac{D_A(n,w)\quad a\in A}{D_A(n+1,w\mathbin{++}[a])}.
+\]
+
+Soundness follows by induction on the certificate: the seed belongs to W_0(A), and ordered extension inserts each appended held symbol into W_{n+1}(A). Conversely, membership in W_{n+1}(A) decomposes into a predecessor w∈W_n(A) and a∈A with result w++[a]. Induction on n constructs the corresponding append certificate. Hence
+
+\[
+ w\in W_n(A)\iff D_A(n,w),\qquad
+ D_A(n,w)\Longrightarrow |w|=n\ \land\ \forall a\in w,\ a\in A.
+\]
+
+Every successor certificate therefore has a recoverable predecessor and final held symbol. Substituting this equivalence into cumulative-output membership gives w∈G_N iff w=[empty-One] or there exists 0<n≤N with D_A(n,w). This disjunction preserves literal marker-valued symbols in ordinary generated words as well as the distinguished initial marker.
+
+For D_A(m,u) and D_A(n,v), induction on the second certificate proves D_A(m+n,u++v). The seed uses u++[]=u. Its append case applies one append to the induction hypothesis and reassociates (u++v)++[a]=u++(v++[a]). Thus concatenation retains the complete finite construction certificate at the summed depth.
+
+
 135. Finite recognition with retained accepting classes
 
 The finite-recognition kernel retains its generated states, input alphabet, original transition relation, initial state, accepting class and complete run. Its accepting-class statement is represented by a native predicate requiring the original successful execution and a terminal state held in that class. This predicate is proved equivalent to the retained-path representation; it does not introduce a new executable source method.
 
 Accepted traces preserve the initial state, full trace length and admitted input alphabet. The identity trace accepts exactly when its state belongs to the accepting class; an empty class admits no accepted trace. Matching paths compose with every trace position retained, and an admitted carrier/transition extension preserves earlier accepted traces. A one-symbol successor retains its prior trace and uses the original generated target. All results hold at arbitrary finite depth. Full 256-candidate program, witness, control and hash correspondence completes the registered Fold Finite Automaton Law without an equivalence-to-all-models or universality assertion.
+
+
+For accepting class F, the retained acceptance statement is
+
+\[
+ \operatorname{Accepted}(s,u,F,\tau)\iff s\in S\ \land\
+ \exists b,t,\ \tau=b\mathbin{++}[t]\ \land\ P(s,u,b,t)\ \land\ t\in F.
+\]
+
+The terminal-state recursion returns t on b++[t], by induction on b. Applying the execution/path correspondence in each direction therefore proves
+
+\[
+ \operatorname{Accepted}(s,u,F,\tau)\iff
+ \operatorname{run}(s,u)=\operatorname{ok}(\tau)\ \land\
+ \exists t,\ \operatorname{terminalState}(\tau)=\operatorname{some}(t)\ \land\ t\in F.
+\]
+
+This immediately gives rejection for F=[] and, for s∈S, identity acceptance iff s∈F. The execution theorem gives head(τ)=s and |τ|=|u|+1. In an admitted system every edge has its action in A; induction over the path places every requested symbol in A. If F is held in S, the retained accepting terminal also lies in S.
+
+Composition uses the path equation of Section 132 and membership of its final t in F. For a one-symbol extension, a successful step from the previous terminal m to t∈F gives the accepted trace (b++[m])++[t] on input u++[a]. Finally, an admitted carrier/row extension preserves the exact run and leaves its terminal and accepting membership unchanged; the displayed equivalence transfers acceptance directly. These deductions retain all intermediate states at arbitrary finite depth.
+
 
 136. Retained held-position rewrite traces
 

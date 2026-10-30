@@ -551,3 +551,6 @@ def main : IO Unit := do
 
   for c in SFT.Computation.ConvergenceGrammar.candidates do
     IO.println ("ConvergenceGrammar\t" ++ SFT.Computation.ConvergenceGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ConvergenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ConvergenceGrammar.exactForm c ++ "\t" ++ SFT.Computation.ConvergenceGrammar.decisionReason c)
+
+  for c in SFT.Computation.ScientificSymbolicGrammar.candidates do
+    IO.println ("ScientificSymbolicGrammar\t" ++ SFT.Computation.ScientificSymbolicGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ScientificSymbolicGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ScientificSymbolicGrammar.exactForm c ++ "\t" ++ SFT.Computation.ScientificSymbolicGrammar.decisionReason c)

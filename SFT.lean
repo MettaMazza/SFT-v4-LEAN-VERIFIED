@@ -945,3 +945,8 @@ import SFT.Computation.ConvergenceWitnesses
 import SFT.Computation.ConvergenceGrammar
 import SFT.Computation.ConvergenceControls
 import SFT.Computation.ConvergenceEvidence
+import SFT.Computation.ScientificSymbolic
+import SFT.Computation.ScientificSymbolicWitnesses
+import SFT.Computation.ScientificSymbolicGrammar
+import SFT.Computation.ScientificSymbolicControls
+import SFT.Computation.ScientificSymbolicEvidence

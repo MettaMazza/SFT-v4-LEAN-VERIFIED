@@ -4669,6 +4669,18 @@ Induction on the original execution path constructs a retained inverse ledger wi
 
 This closes the classical information-retention cost within the registered scope. All 256 original candidates, resource witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold Reversibility-Cost Law.
 
+
+For action a and target t, the original transition fibre is F(a,t)=[s∈states:step(s,a)=ok(t)]. Filter membership proves this equality of conditions exactly. If distinct x,y belong to the fibre, its predecessor record cannot be unique. A recovery function with recover(t)=x and recover(t)=y would give x=y by transitivity, contradicting their distinction.
+
+A retained inverse starts at the forward terminal and stores rows (source,action,target) in reverse traversal order. Its identity has no rows. Its successor checks the actual forward step and moves from the row's target to its source. Induction on a forward path constructs
+
+\[
+ P(s,u,b,t)\Longrightarrow\exists R,\ Inverse(t,R,s)\land |R|=|u|.
+\]
+
+The forward successor case appends its first edge after the inverse of the remaining path. Inverse serial composition justifies this order. The undo operation checks current=row.target and that the original source step reaches row.target, then recurses from row.source. Induction on Inverse therefore proves undo(t,R)=ok(s), and membership induction proves every retained row is an actual forward transition. Its resource trace is t::map(source,R), so map-length preservation gives timeCount=|R|+1 while the original ledger retains occupied support unchanged.
+
+
 164. Independent and causally layered work
 
 The native ready-set construction retains exactly the declared tasks not yet completed whose incoming predecessors are all completed. This condition proves that simultaneous ready tasks have no dependency edge between them. The original ordered-selection generator exhausts every layer choice over that ready set. Every synchronization row is an original incoming graph edge, and its predecessor belongs to the completed interface.
@@ -4676,6 +4688,19 @@ The native ready-set construction retains exactly the declared tasks not yet com
 The layer schedule reconstructs the entire ordered work trace, preserving every task and synchronization interface under serial composition and successor extension. Full source coverage is transferred to the work trace without imposing the graph-carrier order on execution. The complete original causal-path enumeration and native maximum produce an attained span bounding every admissible causal trace in the declared execution order. Original resource ledgers retain exact work and support counts; no physical processor count or timing constant is introduced.
 
 All 256 original candidates, resource witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold Parallel-Complexity Law.
+
+
+Readiness is the exact predicate
+
+\[
+ Ready(D,x)\iff x\in nodes\land x\notin D\land
+ \forall p,\ (p,x)\in edges\Longrightarrow p\in D.
+\]
+
+Boolean conjunction and edge-list membership establish equivalence with the executable ready test; filtering the node carrier therefore gives exactly Ready. If x and y are ready and (x,y) is an edge, readiness of y forces x∈D, contradicting readiness of x. Ordered selections of this complete ready set enumerate every declared layer choice. Synchronization filtering retains exactly original edges whose target lies in the layer, so each predecessor belongs to D.
+
+A layer schedule has identity result D and successor state D++layer. Induction gives result=D++flatten(layers). The same induction proves serial schedule composition, and list concatenation gives flatten(L++K)=flatten(L)++flatten(K). A new admitted layer appends its complete work without changing previous rows. Starting from D=[], declared result coverage transfers directly to the flattened work trace, without requiring execution order to equal node-carrier order. The complete ordered causal-path maximum from Section 160, applied to this work order, supplies an attained span bounding every admitted path. Resource-ledger projection retains the complete work trace and its supplied occupied support with their exact counts.
+
 
 165. Finite resource comparison certificates
 
@@ -4685,6 +4710,18 @@ An adversarial lower witness retains two problem-family inputs with identical re
 
 All 256 original candidates, resource witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold Lower- and Upper-Bound Law.
 
+
+A verified resource record retains its registry lookup, successful native run and admitted resource ledger. These reconstruct the actual path and give measured(time)=|observed| and measured(space)=|occupied|. Over a nonempty finite family, induction compares the head cost with an attained maximum of the tail, selects an actual member, and proves every cost is bounded by the selected cost. Instantiating verification at that member yields a verified upper witness.
+
+For a lower witness, let x,y be held inputs with observe(x)=observe(y) but required(x)≠required(y). Any correct response based on that observation would satisfy
+
+\[
+ required(x)=respond(observe(x))=respond(observe(y))=required(y),
+\]
+
+a contradiction. A lower certificate supplies such a pair for each declared model whose measured cost is below B. Instantiation at any allegedly correct below-bound model excludes it, proving correctness implies not(cost<B) within that comparison family. Appending inputs preserves both held witnesses; composing comparison families splits model membership into the original two cases and retains the corresponding witness. The singleton upper bound is reflexive.
+
+
 166. Resource-preserving reductions and completeness
 
 A verified reduction retains its complete source domain, total encoded input translation and bidirectional answer decoder. Every source input has a registered executable overhead record satisfying the frozen resource law. Native reconstruction recovers its original observation history, occupied support and exact counts. Across stages, every trace is retained and the sum of verified observation costs equals the length of the full concatenated trace.
@@ -4693,6 +4730,20 @@ Reduction chains preserve each original mapping, intermediate description and ov
 
 All 256 original candidates, resource witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold Reduction and Completeness Law.
 
+
+VerifiedReduction conjoins total input translation, bidirectional answer preservation, and—for every held source input x—a selected verified overhead record r satisfying the frozen resource law. Instantiation supplies its target input, actual overhead lookup and complete answer equivalence. Resource reconstruction gives the overhead row's observation trace, occupied support and their exact counts.
+
+For stage records R, define trace([])=[], trace(r::R)=r.observed++trace(R), cost([])=0 and cost(r::R)=r.timeCount+cost(R). Induction substitutes each verified r.timeCount=|r.observed| and obtains
+
+\[
+ cost(R)=|trace(R)|,\quad
+ trace(L\mathbin{++}R)=trace(L)\mathbin{++}trace(R),\quad
+ cost(L\mathbin{++}R)=cost(L)+cost(R).
+\]
+
+A reduction chain is identity or a verified first reduction followed by another chain. Induction on the first chain composes it with a second while retaining every map, intermediate problem and overhead law. Hard(I,t) means every p∈I has such a chain to t; Complete(I,t) additionally requires t∈I. Composing each supplied chain transports hardness to a subsequent target. Membership in fresh::I splits the obligation into Chain(fresh,t) and Hard(I,t). Identity therefore supplies completeness for the singleton inventory.
+
+
 167. Complete instance-family resource profiles
 
 Each generated support cell retains its instance assignment and original resource record. Canonical-support validation, exact cell coverage and source lookups preserve distribution provenance and the explicit multiplicity of repeated instances. The exact aggregate sums every cell cost. Original positive-fraction normalization divides that sum by the full support-cell count, and native proofs establish exact value preservation without floating arithmetic or fitted weights. Original event weighting retains the exact support parts and its admission boundary.
@@ -4700,6 +4751,20 @@ Each generated support cell retains its instance assignment and original resourc
 The greatest-resource class contains every tied maximum. Native finite proofs construct a verified greatest member, bound every record and bound the aggregate by the complete support count times that resource value. Composition and successor extension preserve all costs and cells. The empirical-distribution alternative retains its original complete-row, identified-source and sealed measurement obligations.
 
 All 256 original candidates, resource witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold Average- and Worst-Case Law.
+
+
+Complete support cells satisfy map(identity,cells)=support and retain successful lookups from each cell identity to its instance name and from that name to its resource record. Lookup membership reconstructs both provenance rows. Map-length preservation gives |map(record,cells)|=|support|, including repeated instances represented by different cells.
+
+Let m(r) select time or space count. Define C([])=0 and C(r::R)=m(r)+C(R). A verified record has positive m because the original ledger requires nonempty observation and occupied support. Thus a nonempty verified family has positive total. Normalizing C(R)/|R| to positive fraction p/q preserves the exact equation
+
+\[
+ p\,|R|=C(R)\,q.
+\]
+
+For complete cells replace |R| by |support| using the count identity. The original exact-event weighting supplies support parts and propagates its original admission errors.
+
+For an attained peak k, the greatest class is [r∈R:m(r)=m(k)]. Filter membership proves this condition. If r bounds every member, compare it with the peak; the peak also bounds r, so antisymmetry gives equal costs. Hence this class retains all and only tied maxima. Induction gives C(L++R)=C(L)+C(R) and, when every m(r)≤B, C(R)≤|R|B. Taking a singleton right list gives the exact successor aggregate. The empirical alternative retains preSeal=false, mutation=false, allRows=true and identified=true from the original measurement predicate.
+
 
 168. Exact approximation and retained objective distinction
 

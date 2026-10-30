@@ -4772,11 +4772,37 @@ The approximation construction retains the registered optimization carrier, pref
 
 The output certificate retains the original computation trace, time ledger and occupied support. Missing objective rows and invalid lower optima preserve the source failure boundary. Carrier extension preserves a retained optimum under the original absence of a better preference row, and the singleton construction supplies its base. No unregistered metric or irrational ratio is admitted. All 256 original candidates, resource witnesses, controls and native program fields and hashes agree with pinned V3, completing the Fold Approximation-Complexity Law.
 
+
+Complete objective data supplies each feasible candidate x with a held positive cell list C_x. The registered objective order is (x,y)∈preferred iff |C_x|<|C_y|. A retained optimum o has no incoming better preference row. If |C_x|<|C_o|, the order equivalence supplies precisely the excluded row (x,o). Therefore |C_o|≤|C_x|. Applying this bound in both directions to two optima proves their objective lengths equal.
+
+Put b=|C_o| and c=|C_x|. Completeness supplies b>0 and the optimum argument gives b≤c. The source approximation operation returns the normalized exact part p/q for b/c and proves
+
+\[
+ bq=pc.
+\]
+
+A missing objective lookup contradicts completeness at that held candidate. With b>0 but not b≤c, the original approximation operation returns its invalid-lower-optimum error. A verified computation ending in x retains run(request)=ok(before++[x]), the full numbered observation projection and unchanged occupied support. Appending feasible candidates retains o whenever the original no-better-row condition still holds. The singleton with empty preference relation is its own optimum.
+
+
 169. Resource stratification by structural coordinates
 
 A named structural coordinate is extracted from the retained fields of each declared input. Native proofs establish both source-row provenance and uniqueness of the extracted coordinate. Total extraction yields a complete family partition: every held input belongs to its extracted coordinate class, and classes with different coordinates cannot share an input. Missing coordinates fail the extraction condition. The construction introduces no fitted constant.
 
 Every family member retains its original verified resource record, complete time trace, occupied support and exact counts. An answer-preserving reduction that preserves the extracted coordinate maps a source family into the corresponding target family while retaining its input encoding, answer decoding and verified resource overhead. Two-stage coordinate preservation and full-family composition, singleton and successor proofs retain all source rows. All 256 original candidates and complete native program records and hashes match pinned V3, completing the Fold Parameterized-Complexity Law.
+
+
+For retained forms F, extraction first looks up input x, then the named coordinate k in its field list:
+
+\[
+ extract(F,k,x)=lookup(lookup(F,x),k).
+\]
+
+A successful extraction yields both actual rows (x,fields) and (k,coordinate). Two successes on the same lookup have equal coordinates. Define Family(c)=[x∈inputs:extract(F,k,x)=some(c)]. Filter membership gives this exact condition; total extraction places every held input in its obtained class, while uniqueness makes classes with distinct coordinates disjoint. A missing extraction at a held input contradicts totality.
+
+Filter distribution gives Family_{L++R}(c)=Family_L(c)++Family_R(c). The singleton and admitted successor follow by substituting the extracted coordinate. Complete resource lookup for a family member retains its actual resource row and the observation/support projections and counts.
+
+A verified reduction supplies target y, its encoded input map, answer equivalence and verified overhead record. Coordinate preservation gives extract(target,k,y)=extract(source,k,x); substitution of the source class equation places y in the corresponding target class. For two stages, transitivity through the extracted intermediate coordinate proves preservation across the composition, retaining both actual mappings.
+
 
 170. Shortest exact descriptions at declared finite depth
 
@@ -4784,9 +4810,40 @@ The frozen alphabet generates every nonempty description through the declared de
 
 Translation retains its source encoding row and target decoder result. An actual translated description with an explicit overhead trace bounds the target minimum; concatenation preserves exact length accounting. Singleton and depth-extension proofs retain the complete finite construction. Descriptions beyond the declared depth are excluded. The original boundary remains: unrestricted shortest-description values are uncomputable, and finite censuses state their depth explicitly. The finite minimum procedure does not assert unrestricted completeness. All 256 original candidates and complete native program records and hashes match pinned V3.
 
+
+The finite census is the original nonempty word layers through depth d filtered by exact decoding to object x. Thus
+
+\[
+ w\in Census_d(x)\iff
+ (\exists n,\ 0<n\le d\land w\in W_n)\land decode(w)=ok(x).
+\]
+
+On a nonempty census, shortestFrom compares the next length with the current best and retains the shorter, choosing the next on a tie. Induction proves its result is a census member and has length no greater than every member. Filtering by equality to this attained minimum retains exactly all tied minima: the reverse direction follows by antisymmetry between a proposed minimum and the attained member. Every retained minimum therefore decodes to x; the selected registry request then reconstructs its unchanged execution by the interpretation equation.
+
+If d≤e, the same width witness remains admitted at depth e. If |w|>d, word-length characterization contradicts the census width bound, excluding w. The singleton minimum is itself. A retained translation supplies its actual encoding row and decoder result; if a translated census member satisfies |translated|≤|source|+|overhead|, the target minimum satisfies that same upper bound by transitivity. Concatenation length is exactly additive. These are finite-depth minimum and explicit-overhead results.
+
+
 171. Exact search on registered carriers
 
 The translated search operation preserves the original admission order: repeated carrier identities are rejected before target membership is checked. A held target yields its original position label and exact identity. Native induction proves finite exhaustion, reconstructs the carrier as the unmatched prefix followed by the target and remaining suffix, and establishes that every earlier comparison differs from the target. Appending further carrier rows retains an already found position; the singleton base returns position-1. These search results combine with the exact ordering construction and complete native entry-program comparison presented below.
+
+
+The scan equations are scan(t,[])=none and
+
+\[
+ scan(t,x::R)=
+ \begin{cases}some(0),&x=t,\\map(succ,scan(t,R)),&x\ne t.\end{cases}
+\]
+
+For held t, induction on the carrier finds an index: the head match returns zero, otherwise membership lies in the tail and the inductive index is incremented. Induction on a successful scan also reconstructs
+
+\[
+ carrier=B\mathbin{++}(t::A),\qquad |B|=index,\qquad
+ \forall x\in B,\ x\ne t.
+\]
+
+The matching head gives B=[]; a nonmatching head is prepended to the tail's unmatched prefix. Positional lookup at that index consequently returns t. With distinct carrier and held target, the executable result is (position-(index+1),t). Its guard order first rejects duplicate carriers, then rejects absence, retaining the original errors. A successful scan in L remains at the same index in L++R by induction on L, so admitted extensions preserve the found position. The singleton returns (position-1,t).
+
 
 172. Exact ordering and complete recursion traces
 

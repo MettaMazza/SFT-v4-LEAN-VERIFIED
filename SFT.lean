@@ -1039,3 +1039,7 @@ import SFT.QuantumComputation.Algorithms
 import SFT.QuantumComputation.AlgorithmsGrammar
 import SFT.QuantumComputation.AlgorithmsControls
 import SFT.QuantumComputation.AlgorithmsEvidence
+import SFT.QuantumComputation.Complexity
+import SFT.QuantumComputation.ComplexityGrammar
+import SFT.QuantumComputation.ComplexityControls
+import SFT.QuantumComputation.ComplexityEvidence

@@ -563,3 +563,6 @@ def main : IO Unit := do
 
   for c in SFT.Computation.InverseProblemGrammar.candidates do
     IO.println ("InverseProblemGrammar\t" ++ SFT.Computation.InverseProblemGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.InverseProblemGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.InverseProblemGrammar.exactForm c ++ "\t" ++ SFT.Computation.InverseProblemGrammar.decisionReason c)
+
+  for c in SFT.Computation.ComputationalStatisticsGrammar.candidates do
+    IO.println ("ComputationalStatisticsGrammar\t" ++ SFT.Computation.ComputationalStatisticsGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ComputationalStatisticsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ComputationalStatisticsGrammar.exactForm c ++ "\t" ++ SFT.Computation.ComputationalStatisticsGrammar.decisionReason c)

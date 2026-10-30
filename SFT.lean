@@ -965,3 +965,8 @@ import SFT.Computation.InverseProblemWitnesses
 import SFT.Computation.InverseProblemGrammar
 import SFT.Computation.InverseProblemControls
 import SFT.Computation.InverseProblemEvidence
+import SFT.Computation.ComputationalStatistics
+import SFT.Computation.ComputationalStatisticsWitnesses
+import SFT.Computation.ComputationalStatisticsGrammar
+import SFT.Computation.ComputationalStatisticsControls
+import SFT.Computation.ComputationalStatisticsEvidence

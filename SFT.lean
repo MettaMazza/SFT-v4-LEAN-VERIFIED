@@ -950,3 +950,8 @@ import SFT.Computation.ScientificSymbolicWitnesses
 import SFT.Computation.ScientificSymbolicGrammar
 import SFT.Computation.ScientificSymbolicControls
 import SFT.Computation.ScientificSymbolicEvidence
+import SFT.Computation.Simulation
+import SFT.Computation.SimulationWitnesses
+import SFT.Computation.SimulationGrammar
+import SFT.Computation.SimulationControls
+import SFT.Computation.SimulationEvidence

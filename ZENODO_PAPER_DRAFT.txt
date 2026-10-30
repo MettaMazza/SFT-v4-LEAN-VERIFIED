@@ -2261,6 +2261,33 @@ A source symbol retains its canonical form and held label as an ordered pair. Al
 
 The native lookup selects the label only when exactly one source row matches the full symbol pair. Constructive results establish that every member of a validated alphabet has exactly one nonempty observed label and that each returned label retains its original observation row. Two source-admitted labels produce a retained distinction exactly when those labels differ. The operation is irreflexive, including its original early return before observation lookup, and is symmetric on a validated alphabet. These results formalise the alphabet, observation-admission and pairwise-distinction components of the registered symbol entry.
 
+
+For symbol s=(form,label), let Held(s) mean both fields are nonempty. The alphabet constructor checks A≠[] and Distinct(A), then checks Held(s) for every s∈A and returns A unchanged. For observation rows O=[(s_i,l_i)], write K=map(first,O). The separate observation predicate is exactly
+
+\[
+ A\ne[]\land |O|=|A|\land\operatorname{Distinct}(K)
+ \land K\subseteq A\land A\subseteq K
+ \land\forall(s,l)\in O,\ l\ne\text{empty string}.
+\]
+
+Define L_O(s)=[l:(s,l) occurs in O], retaining row order and matching the entire symbol pair. Lookup has the exact success equivalence
+
+\[
+ \operatorname{observedLabel}(O,s)=\operatorname{ok}(l)
+ \iff L_O(s)=[l].
+\]
+
+Coverage supplies a row for s∈A, and distinct source keys exclude a second matching row. Thus validation implies a unique lookup result l; its original row (s,l)∈O and the final validation clause imply that l is nonempty. Zero or multiple matching rows retain the original lookup error.
+
+Distinction first returns ok(false) when s=t, even if lookup would fail. Otherwise it looks up s and then t, propagating the first error. For successful labels l,r, its result is
+
+\[
+ \operatorname{distinguishable}(O,s,t)=\operatorname{ok}(\operatorname{decide}(l\ne r)).
+\]
+
+If s=t, lookup determinism forces l=r, so this equation also agrees with the early-return branch. Inequality symmetry proves symmetry whenever both lookups succeed, and therefore for members of a validated alphabet. Irreflexivity follows directly from the early branch without validation.
+
+
 89. Observation classes, complete distinction ledgers and extension
 
 Observation classes retain the first occurrence order of the observed labels and the original alphabet order of every source fibre. Constructive results establish that their labels are distinct, their fibres are nonempty, every source symbol occurs in its corresponding fibre, and a symbol cannot belong to two fibres with unequal labels. This partitions the complete admitted alphabet without replacing or erasing microform identity.
@@ -2270,6 +2297,55 @@ The pair ledger generates every original positional pair with the earlier symbol
 Appending a fresh symbol generates one new pair with each prior symbol in the original nested-loop order, while preserving prior pairs. Appending its one observation row supplies its unique nonempty label and preserves every old lookup and distinction; every member of the extended alphabet still has a nonempty observed label. Under coarsening, a previously closed distinction remains closed, and a previously retained distinction closes exactly when its image labels are merged. These results establish the source successor and coarsening clauses.
 
 All 512 original symbol kernels and all six operational witnesses are retained and verified. Fresh native execution matches the pinned registration, census, decisions, closure, controls and digest fields, including unknown-identifier refusal. This completes the registered finite Symbol Distinction entry, preserving its original exclusion of linguistic meaning, occurrence frequencies and downstream information quantities.
+
+
+Collecting the unique labels in alphabet order produces rows R with map(first,R)=A. Their membership equivalence is
+
+\[
+ (s,l)\in R\iff s\in A\land\operatorname{observedLabel}(O,s)=\operatorname{ok}(l).
+\]
+
+Let F_l=[s:(s,l) occurs in R] and L=firstLabels(map(second,R)). The class list [(l,F_l):l∈L] has distinct labels. Every l∈L comes from a row, proving F_l is nonempty; every collected row places its symbol in the corresponding fibre. If s∈F_l and s∈F_r, the two successful lookups are equal and hence l=r. Collection and filtering preserve alphabet order rather than replacing symbols with their labels.
+
+The positional-pair generator has the exact recurrence
+
+\[
+ P([])=[],\qquad P(a::R)=[(a,b):b\in R]++P(R).
+\]
+
+On validated observations, let D(p) be the defined Boolean distinction for each pair. The retained and closed passes return, in generated order,
+
+\[
+ U=[p\in P(A):D(p)=\mathrm{true}],\qquad
+ C=[p\in P(A):D(p)=\mathrm{false}].
+\]
+
+Their membership laws imply U∩C is empty: a shared pair would have both Boolean results. Every generated pair has one of those results, proving exhaustiveness as membership in U or C. This does not assert that concatenating the two passes reconstructs the original interleaved order. A singleton alphabet generates P([a])=[].
+
+For a fresh symbol z, define E_z([])=[] and
+
+\[
+ E_z(a::R)=([(a,b):b\in R]++[(a,z)])++E_z(R).
+\]
+
+Distributing map over append proves P(A++[z])=E_z(A). Thus every prior pair remains and every old a contributes (a,z), in its original nested-loop position. Appending observation row (z,l) gives
+
+\[
+ L_{O++[(z,l)]}(s)=L_O(s)++
+ \begin{cases}[l],&z=s,\\\lbrack\rbrack,&z\ne s.\end{cases}
+\]
+
+For z∉A and validated O, key coverage gives z∉keys(O), so its new lookup is uniquely l. Old lookups are unchanged because z differs from every old symbol. When l is nonempty, every member of A++[z] consequently has a nonempty label, and each old distinction result is unchanged.
+
+For a coarsening map m and fine/coarse lookups related by l↦m(l), the labelled-distinction equation gives
+
+\[
+ D_{\rm fine}(s,t)=\mathrm{true}\land D_{\rm coarse}(s,t)=\mathrm{false}
+ \iff l\ne r\land m(l)=m(r).
+\]
+
+If l=r, their images are equal and both distinctions are closed. These implications retain the stipulated fine and coarse lookup correspondences. The nine binary symbol coordinates enumerate 2^9=512 kernels, with the original conjunction selecting the all-admitted tuple.
+
 
 90. Encoding classes and exact inverse decoding
 

@@ -7417,3 +7417,13 @@ import SFT
 #print axioms SFT.Physics.CapabilityOperations.assertSameExact
 #print axioms SFT.Physics.CapabilityOperations.assertDifferentRejected
 #print axioms SFT.Physics.CapabilityOperations.reductionValue
+#print axioms SFT.Physics.CapabilityLiterals.registeredInput
+#print axioms SFT.Physics.CapabilityLiterals.absentInput
+#print axioms SFT.Physics.CapabilityLiterals.structuralLiteral
+#print axioms SFT.Physics.CapabilityExecution.emissionPreservesRegisters
+#print axioms SFT.Physics.CapabilityExecution.assertionPreservesState
+#print axioms SFT.Physics.CapabilityExecution.duplicateRejected
+#print axioms SFT.Physics.CapabilityExecution.newRegisterHeld
+#print axioms SFT.Physics.CapabilityExecution.runEmpty
+#print axioms SFT.Physics.CapabilityExecution.commitTrace
+#print axioms SFT.Physics.CapabilityExecution.runTraceLength

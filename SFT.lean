@@ -914,3 +914,5 @@ import SFT.Physics.CapabilityPrediction
 import SFT.Physics.CapabilityValues
 import SFT.Physics.CapabilityAdmission
 import SFT.Physics.CapabilityOperations
+import SFT.Physics.CapabilityLiterals
+import SFT.Physics.CapabilityExecution

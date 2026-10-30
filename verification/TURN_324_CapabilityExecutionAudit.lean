@@ -1,0 +1,22 @@
+import SFT.Physics.CapabilityExecution
+#print axioms SFT.Physics.CapabilityExecution.initial
+#print axioms SFT.Physics.CapabilityExecution.traceRow
+#print axioms SFT.Physics.CapabilityExecution.occupied
+#print axioms SFT.Physics.CapabilityExecution.commit
+#print axioms SFT.Physics.CapabilityExecution.emissionPreservesRegisters
+#print axioms SFT.Physics.CapabilityExecution.assertionPreservesState
+#print axioms SFT.Physics.CapabilityExecution.duplicateRejected
+#print axioms SFT.Physics.CapabilityExecution.newRegisterHeld
+#print axioms SFT.Physics.CapabilityExecution.canonicalInstruction
+#print axioms SFT.Physics.CapabilityExecution.canonicalProgram
+#print axioms SFT.Physics.CapabilityExecution.canonicalTraceRow
+#print axioms SFT.Physics.CapabilityExecution.canonicalTrace
+#print axioms SFT.Physics.CapabilityExecution.insertInput
+#print axioms SFT.Physics.CapabilityExecution.sortedInputs
+#print axioms SFT.Physics.CapabilityExecution.canonicalInputs
+#print axioms SFT.Physics.CapabilityExecution.dispatch
+#print axioms SFT.Physics.CapabilityExecution.run
+#print axioms SFT.Physics.CapabilityExecution.execute
+#print axioms SFT.Physics.CapabilityExecution.runEmpty
+#print axioms SFT.Physics.CapabilityExecution.commitTrace
+#print axioms SFT.Physics.CapabilityExecution.runTraceLength

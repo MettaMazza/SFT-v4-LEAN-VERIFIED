@@ -545,3 +545,6 @@ def main : IO Unit := do
 
   for c in SFT.Computation.ErrorPropagationGrammar.candidates do
     IO.println ("ErrorPropagationGrammar\t" ++ SFT.Computation.ErrorPropagationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ErrorPropagationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ErrorPropagationGrammar.exactForm c ++ "\t" ++ SFT.Computation.ErrorPropagationGrammar.decisionReason c)
+
+  for c in SFT.Computation.DiscretizationGrammar.candidates do
+    IO.println ("DiscretizationGrammar\t" ++ SFT.Computation.DiscretizationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.DiscretizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.DiscretizationGrammar.exactForm c ++ "\t" ++ SFT.Computation.DiscretizationGrammar.decisionReason c)

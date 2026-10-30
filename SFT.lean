@@ -935,3 +935,8 @@ import SFT.Computation.ErrorPropagationWitnesses
 import SFT.Computation.ErrorPropagationGrammar
 import SFT.Computation.ErrorPropagationControls
 import SFT.Computation.ErrorPropagationEvidence
+import SFT.Computation.Discretization
+import SFT.Computation.DiscretizationWitnesses
+import SFT.Computation.DiscretizationGrammar
+import SFT.Computation.DiscretizationControls
+import SFT.Computation.DiscretizationEvidence

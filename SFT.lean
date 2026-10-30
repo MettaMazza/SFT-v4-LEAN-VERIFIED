@@ -970,3 +970,8 @@ import SFT.Computation.ComputationalStatisticsWitnesses
 import SFT.Computation.ComputationalStatisticsGrammar
 import SFT.Computation.ComputationalStatisticsControls
 import SFT.Computation.ComputationalStatisticsEvidence
+import SFT.Computation.HighDimensional
+import SFT.Computation.HighDimensionalWitnesses
+import SFT.Computation.HighDimensionalGrammar
+import SFT.Computation.HighDimensionalControls
+import SFT.Computation.HighDimensionalEvidence

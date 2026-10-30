@@ -8,7 +8,7 @@ Unpublished continuation; edition 0.1 remains the frozen published preprint
 
 Abstract
 
-Smithian Fold Theory (SFT) develops a structural theory of everything from its operational root, with zero added axioms and zero free scientific parameters. This cumulative preprint presents its native Lean formalisation, preserving the definitions, dependency order, derivations, complete candidate grammars, controls and empirical boundaries of the existing V3 model. The opening result is the exact terminal inverse fine-structure ratio, alpha^(-1) = 503846395469/3676744786. Its binary covers, typed structural blocks, finite direction-promotion ladder and exact rational assembly are derived before measurement; the corresponding Lean proofs have no axiom dependencies. The manuscript then develops the broader verified model, from the operational root, structural One, Count, Part and Fold through mathematics, information, computation and the completed physics results. This edition covers 189 completed entries of the 2,781-entry V3 census. The accompanying formalisation contains 8,573 audited theorems; the audit covers 19,655 declarations and reports zero axiom dependencies. Source correspondence, executable comparisons and chronological records accompany the manuscript. Successive versions will incorporate further completed derivations until the full model is formalised.
+Smithian Fold Theory (SFT) develops a structural theory of everything from its operational root, with zero added axioms and zero free scientific parameters. This cumulative preprint presents its native Lean formalisation, preserving the definitions, dependency order, derivations, complete candidate grammars, controls and empirical boundaries of the existing V3 model. The opening result is the exact terminal inverse fine-structure ratio, alpha^(-1) = 503846395469/3676744786. Its binary covers, typed structural blocks, finite direction-promotion ladder and exact rational assembly are derived before measurement; the corresponding Lean proofs have no axiom dependencies. The manuscript then develops the broader verified model, from the operational root, structural One, Count, Part and Fold through mathematics, information, computation and the completed physics results. This edition covers 189 completed entries of the 2,781-entry V3 census. The accompanying formalisation contains 9,010 audited theorems; the audit covers 20,445 declarations and reports zero axiom dependencies. Source correspondence, executable comparisons and chronological records accompany the manuscript. Successive versions will incorporate further completed derivations until the full model is formalised.
 
 1. Opening result: the fine-structure constant
 
@@ -56,6 +56,14 @@ SFT distinguishes the structural One, generated positive finite counts and exact
 
 6. Operational root
 
+Let R be the registered challenge-record domain and P(r) its presentation flag. Write U for unpresented-absence and O for presented-occurrence. Classification and acceptance are
+  κ(r)=U if P(r)=false; κ(r)=O if P(r)=true,
+  A(r)=P(r).
+The Boolean cases are exhaustive, so for every r∈R,
+  A(r)=true ⇔ κ(r)=O,
+  κ(r)=κ(s) ⇔ P(r)=P(s).
+In the generated grammar G=[U,O], A(U)=false and A(O)=true. Filtering G therefore gives [O], proving both existence and uniqueness of the survivor. Deleting O gives filter_A([U])=[], while the modified acceptance A′(U)=A′(O)=true gives filter_A′(G)=[U,O]. Since U≠O, the modified survivor set is not unique. The typed boundary concerns these operational presentation records; neither identifier nor descriptive text enters P.
+
 The registered operational challenge partition has exactly two classes: unpresented-absence and presented-occurrence. An unpresented challenge supplies no counterexample. A presented challenge supplies an occurrence and is therefore not nothing at the operational boundary.
 
 The decision accepts precisely presented-occurrence. Exhaustive enumeration establishes that both registered classes occur in the candidate list. The unique-survivor theorem establishes that a candidate is accepted if and only if it is presented-occurrence. No premise about a particular presentation's internal content is introduced.
@@ -74,6 +82,12 @@ Source claim: SFT-ROOT-THERE-IS-NO-NOTHING.
 
 7. Structural One
 
+Let C={none, proper, complete} denote root coverage and E={no-extra, has-extra} denote added coverage. The source relation domain is C×E, with 3·2=6 classes. Its survival predicate is
+  S(c,e) ⇔ (c=complete) ∧ (e=no-extra).
+For c=none or c=proper the first conjunct fails; for e=has-extra the second fails. The pair (complete,no-extra) satisfies both, hence
+  {(c,e)∈C×E : S(c,e)} = {(complete,no-extra)}.
+This singleton is exact-self-whole. For every source record r, the classification map retains precisely its two relations, so S(r)⇔κ(r)=(complete,no-extra). Metadata changes preserve both relations and therefore preserve the decision. These relations express structural wholeness before any numerical magnitude is assigned.
+
 A representation of the root occurrence is classified by its coverage—none, proper or complete—and by whether it adds unforced material. The product gives six classes: omitted-root, replacement-extra, fragmented-root, fragment-plus-extra, exact-self-whole and whole-plus-extra, in source enumeration order.
 
 The representation survives precisely when its coverage is complete and it contains no extra material. Thus exact-self-whole is the unique surviving class. Omission, fragmentation and addition are rejected by the same ordered conditions as in V3. The One is structural self-wholeness, not a numerical magnitude introduced at this stage.
@@ -87,6 +101,15 @@ The complete One source program preserves its registered dependency, all six ord
 Source claim: SFT-FOUNDATION-ONE-001. Registered dependency: the operational root.
 
 8. Exact positive finite count
+
+Let B be the base generation trace with its sole occurrence position o. For an extension of trace t, write lift for the embedding of prior positions and ν for the fresh terminal, with ν outside the image of lift. Define complete retention recursively by
+  R(B)=[o],
+  R(extend(t))=map(lift,R(t)) ++ [ν].
+The base is nonempty and contains its generated position exactly once. If R(t) contains every generated position exactly once, injectivity of lift preserves those occurrences and their uniqueness; freshness of ν prevents a repetition when it is appended. Thus induction establishes nonemptiness, complete coverage and exact-once retention at every finite extension.
+
+For a proposed finite retention L, let m_L(x) be the number of occurrences of generated position x, and Extra(L) indicate an outside-trace occurrence. The admitted condition is
+  (∀x generated by t, m_L(x)=1) ∧ ¬Extra(L).
+Deleting a generated x makes m_L(x)=0; duplicating it makes m_L(x)>1; an outside addition makes Extra(L) true. Each modification therefore fails one explicit conjunct. Retaining only map(lift,R(t)) at an extension fails at ν. The grammar count is 2+2·2·2=10: two extra-material cases with no coverage, and two coverage cases (proper or complete), two multiplicities and two extra-material cases. Its unique admitted class is complete, once, no-extra.
 
 V3 defines positive finite count through the complete generation trace of a nonempty finite succession of structural-One occurrences. Every generated occurrence is retained once and no ungenerated occurrence is added.
 
@@ -107,6 +130,12 @@ The complete Count source program preserves its registered dependency, all ten o
 Source claim: SFT-FOUNDATION-COUNT-001. Registered dependency: the structural One.
 
 9. Exact positive part coordinate
+
+Let W be the nonempty generated fibre trace of the registered partition and H(x) the held-selection predicate. The selected trace is S=filter_H(W). For every fibre x,
+  x∈S ⇔ x∈W ∧ H(x).
+Consequently S⊆W, and filtering cannot duplicate a fibre absent repetition in W. A witness x∈W with H(x) makes S nonempty. At the host-record level this gives 0<length(S)≤length(W). The coordinate retains the generation records themselves:
+  coord(S,W)=(S,W),  π₁(coord(S,W))=S,  π₂(coord(S,W))=W.
+If a coordinate has these same two projections, ordered-pair equality identifies it with (S,W). The registered admission condition is the conjunction of complete partition coverage, disjointness, equal fibres, an internal held selection, presence of the held record, presence of the whole record and absence of an extra coordinate. Failure of any one conjunct rejects the form. No cross-partition equivalence follows at this stage; that relation is derived in the subsequent common-refinement construction.
 
 The Part derivation registers a finite partition of the structural One and a held selection. Its seven relation domains classify partition coverage, overlap, fibre equality, selection relation, held-count presence, whole-count presence and unforced-extra-coordinate presence. Their source-ordered product contains 192 forms. A native theorem establishes that acceptance is equivalent to all seven requirements: complete, disjoint, equal-fibred, within-partition, both counts present and no extra coordinate. Exactly that form survives. Removing either count, omitting whole coverage, allowing overlap or unequal fibres, using an empty or outside selection, or adding an unforced coordinate is proved to fail.
 
@@ -2549,6 +2578,19 @@ The role-exchanged quark invariant triples are (1,1/8,1/383) and (1,1/12,1/3071)
 
 320. Squared Planck/proton support and terminal transport
 
+Write c=3 for the derived generator and b=2 for the derived binary count. The successor volume and its least cover are
+  V = c^(c+1) = 3^4 = 81,
+  d = min{k ∈ ℕ : k>0 and 81 ≤ 2^k} = 7.
+Indeed 2^6=64<81≤128=2^7; monotonicity gives 2^k≤64 for every positive k<7. The complete support is N=b^d=128. Its positive predecessor m satisfies m+1=N, hence m=127 uniquely. Consequently the squared hierarchy is H²=b^m=2^127, and the corresponding unsquared exponent is m/2=127/2. These are successive operations on the derived counts; no exponent is independently selected.
+
+For terminal transport let α=3676744786/503846395469 and g_c=2/3. The removed share and retained complement are
+  g_c α = 7353489572/1511539186407,
+  t = 1−g_c α = 1504185696835/1511539186407.
+The inequalities 0<7353489572<1511539186407 imply 0<t<1. Multiplication of the bare squared carrier by this complement gives
+  H_terminal² = 2^127 t
+             = 255923934603817488008405160690199418432572494970880/1511539186407.
+Thus 0<H_terminal²<H². This equation describes the terminal component; completion of that separate source entry is recorded separately from completion of the base hierarchy.
+
 Generator-three successor volume is 81, whose least binary cover depth is 7. Complete support has 128 positions and its unique positive predecessor has 127 massive positions. The retained unsquared exponent is 127/2; the exact squared comparison carrier is 2^127. Native proofs retain the least-cover exclusion, predecessor uniqueness and both exact exponent records.
 
 Terminal transport uses the already derived electromagnetic share 3676744786/503846395469 and the colour share 2/3. The retained positive One-complement multiplies the bare hierarchy once, producing 255923934603817488008405160690199418432572494970880/1511539186407. The native result preserves the strict-positive-retained-share guard and the lower squared hierarchy.
@@ -2565,11 +2607,30 @@ The quark-channel invariant entry is complete: both independent constructions yi
 
 322. Complete prime-sector construction
 
+Using the least cover d=7 derived above, define
+  P = {p ∈ {2,3,4,5,6,7} : ∀a ∈ {2,…,p−1}, a does not divide p}.
+The proper-divisor range for p=2 is empty. For p=3, neither 2 divides 3; for p=5, none of 2,3,4 divides 5; for p=7, none of 2,3,4,5,6 divides 7. The excluded counts have explicit divisors: 4=2·2 and 6=2·3. Therefore P={2,3,5,7}, with every count in the source range decided. For each admitted p, complete squared support and its positive predecessor give
+  M(p)+1=p²,  M(p)=p²−1,
+  g(p)=(p−1)/p.
+Evaluation in source order yields
+  (M(2),M(3),M(5),M(7))=(3,8,24,48),
+  (g(2),g(3),g(5),g(7))=(1/2,2/3,4/5,6/7).
+Although 11 is prime, 11>7, so it is outside this derived sector support.
+
 The independently generated successor-cover ceiling is seven. The native construction tests every proper divisor of every count from two through that ceiling and retains precisely (2,3,5,7). Applying the original positive-predecessor operation to each complete squared sector support gives mediator counts (3,8,24,48); applying it to each sector before exact division gives couplings (1/2,2/3,4/5,6/7). Eleven is prime and excluded by the same finite ceiling. Kernel-checked exact results and fresh evaluation agree with the pinned construction, including all 34 primality decisions from zero through 33. These results add no selected sector or fitted coupling.
 
 The quark-cubic entry is complete. Fresh native execution reproduces every one of its 256 candidate lookups and all original fields and hashes. The V3 implementation-distinct validator accepts that output and rejects an omitted candidate, an additional survivor and a failed control. The exact cubic invariants and complete first dyadic root separation are retained as established above.
 
 323. Exact Fold return and binary multiplicative order
+
+For q>0, let h_q(x) be the held representative of x modulo q: h_q(x)=x mod q when that remainder is nonzero, and h_q(x)=q otherwise. The executed recurrence is
+  r_0=p,  r_(k+1)=h_q(2r_k).
+Induction gives r_k ≡ p·2^k (mod q): the initial step is p≡p·1, and doubling the induction identity gives r_(k+1)≡2p·2^k=p·2^(k+1). For a reduced input, gcd(p,q)=1. Because held representatives are unique in {1,…,q},
+  r_k=p ⇔ p·2^k≡p (mod q)
+        ⇔ q divides p(2^k−1)
+        ⇔ q divides 2^k−1
+        ⇔ 2^k≡1 (mod q).
+The cancellation uses gcd(p,q)=1. Taking the least positive k on both sides identifies first Fold return with first binary multiplicative order whenever that return exists. For odd q>1, existence follows from the finite-carrier argument below; the even-denominator transient is treated separately.
 
 For every supplied positive reduced part p/q through the One, native repeated double-and-cast execution satisfies rank_k modulo q = p times 2^k modulo q. The complete-denominator representative is retained when a remainder vanishes. Reducedness permits cancellation of p: an exact return to the original held rank occurs if and only if 2^k modulo q equals 1 modulo q. The first-positive-return and first-positive-order predicates therefore have the same least index. These identities hold at arbitrary supplied finite depth; they do not use a bounded prime list. All 25 definitions and supporting theorems have zero Lean axiom dependencies.
 
@@ -2582,6 +2643,14 @@ Let the supplied reduced denominator be 2^a times an odd positive core m. Native
 For any first binary order, distinct positions before that first return cannot collide. The complete indexed cycle has exactly that many positions, and every admitted reduced numerator repeats with that period. All four original finite witnesses also pass: the five displayed order values, every reduced rank through odd denominator 99, the ten prime-period divisibility cases and the denominator 73 tiling count. Fresh native execution reproduces all 2,006 original ordered traces, containing 57,842 retained positions. The current component batch contains 96 audited definitions and theorems with zero axiom dependencies.
 
 325. Complete cyclotomic counting and source-loop termination
+
+For odd q>1, gcd(2,q)=1. If two powers at indices i<j have the same residue, cancellation of 2^i gives 2^(j−i)≡1 (mod q). The q+1 residues at indices 0,…,q cannot all be distinct in a carrier of q residues, so a positive return exists. Let ℓ be the least such index. For a reduced starting rank p, an equality r_i=r_j with 0≤i<j<ℓ would imply 2^(j−i)≡1, contradicting minimality. Hence its complete cycle C(p) has exactly ℓ members.
+
+For any cycles C(p), C(s), suppose r_i(p)=r_j(s). Each cycle has period ℓ, so advancing within the cycle by the complementary index ℓ−j expresses s as an iterate of p. The same reasoning expresses p as an iterate of s. Thus C(p)=C(s). Every reduced rank lies in its own cycle, and distinct cycles are disjoint. If R_q={r:1≤r<q, gcd(r,q)=1} and C is the number of cycles, successive removal of complete cycles therefore gives
+  |R_q| = ℓ C.
+For prime q, each 1≤r<q is coprime to q, so |R_q|=q−1 and
+  q−1 = ℓ C, hence ℓ divides q−1.
+This is a finite partition derivation for each admitted denominator, independent of the finite witness table.
 
 For every admitted odd denominator above the One, the finite carrier forces a first binary return. If no return occurred through the carrier bound, one more executed position than there are held ranks would have to remain distinct, contradicting the exact finite count. The original order loop therefore terminates, and its returned count is the first binary multiplicative order. For every reduced numerator, the original orbit loop returns a complete ordered trace of exactly this length.
 

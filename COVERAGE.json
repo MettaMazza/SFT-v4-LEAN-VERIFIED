@@ -10818,14 +10818,14 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-QUANTUM-CODING-001-b79afc51951dfbeb.json",
       "statement": "The forced quantum coding kernel retains logical branch support; redundant joint words; reversible encoder; declared error actions; disjoint syndrome supports; decoder and reconstruction trace; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
       "title": "Fold quantum coding law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/QuantumComputation/Coding.lean",
         "SFT/QuantumComputation/CodingGrammar.lean",
         "SFT/QuantumComputation/CodingControls.lean",
         "SFT/QuantumComputation/CodingEvidence.lean"
       ],
-      "artifact_runtime_parity": "pending",
+      "artifact_runtime_parity": "PASS all256 actual identifier lookups,all original program fields and hashes,unknown-ID rejection.",
       "registration_sha256": "0b366237f97a615862eee273cb0bd6fbd2199ffa5743290858d1fc57712b0eec",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -10871,10 +10871,9 @@
         "status": "independently_replicated",
         "title": "Fold quantum coding law"
       },
-      "remaining": [
-        "Full original program89079 comparison;complete in dependency order after Communication."
-      ],
-      "verified_scope": "declaredErrorSupportsDisjoint proves the original held and returned words cannot overlap under their declared bounded error actions.; everyDeclaredErrorReconstructed proves every mask in the actual generated error family decodes to its original logical label.; noDeclaredError proves the empty error action preserves the exact word;encoderReconstruction proves the original admitted encoder has the original decoder as a left inverse.; Shared encodeAdmission,heldCorrection,returnedCorrection and exhaustiveCorrection preserve original label/trace guards,redundant words,all masks,decoder domain and recovery at arbitrary generated depth. Original1322 fault-operation comparisons,including168 complete census rows at widths3/5/7,remain applicable. No error family or decoder restriction is added.; Exact complete256 grammar,8 witnesses,4 controls and every claim-specific program field preserved. Registered build/zeroaxiom/fresh parity PASS;full original program89079 running."
+      "remaining": [],
+      "verified_scope": "declaredErrorSupportsDisjoint proves the original held and returned words cannot overlap under their declared bounded error actions.; everyDeclaredErrorReconstructed proves every mask in the actual generated error family decodes to its original logical label.; noDeclaredError proves the empty error action preserves the exact word;encoderReconstruction proves the original admitted encoder has the original decoder as a left inverse.; Shared encodeAdmission,heldCorrection,returnedCorrection and exhaustiveCorrection preserve original label/trace guards,redundant words,all masks,decoder domain and recovery at arbitrary generated depth. Original1322 fault-operation comparisons,including168 complete census rows at widths3/5/7,remain applicable. No error family or decoder restriction is added.; Exact complete256 grammar,8 witnesses,4 controls and every claim-specific program field preserved. Registered build/zeroaxiom/fresh parity PASS;full original program89079 running.",
+      "completion_evidence": "verification/TURN_362_QUANTUM_COMPLETION.json"
     },
     {
       "branch": "quantum_computation",
@@ -11022,8 +11021,13 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-QUANTUM-SIMULATION-001-daf61c89738fb9f6.json",
       "statement": "The forced quantum simulation kernel retains encoded target state support; reversible update law; phase and interference traces; observation map; exact simulator correspondence; resource ledger; falsification boundary; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
       "title": "Fold quantum simulation law",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/QuantumComputation/Simulation.lean",
+        "SFT/QuantumComputation/SimulationGrammar.lean",
+        "SFT/QuantumComputation/SimulationControls.lean",
+        "SFT/QuantumComputation/SimulationEvidence.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "b759891c434eab7e419e6896818e7ac1299529615a8ff30fb6c80fac9ac0e326",
       "v3_registration": {
@@ -11069,7 +11073,11 @@
         "statement": "The forced quantum simulation kernel retains encoded target state support; reversible update law; phase and interference traces; observation map; exact simulator correspondence; resource ledger; falsification boundary; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
         "status": "independently_replicated",
         "title": "Fold quantum simulation law"
-      }
+      },
+      "remaining": [
+        "Full original program16028 comparison;complete in dependency order after FaultTolerance."
+      ],
+      "verified_scope": "exactExecutionCorrespondence proves interpreted successful execution equivalent to the exact admitted Forward circuit trace;exactErrorCorrespondence proves original evaluation errors are preserved in both directions.; simulationResourceAgreement proves identical gate-count ledger,complete branch count and held phase cycle.; simulatedObservationCorrespondence and simulatedInterferenceCorrespondence connect every selected or merged output branch to exactly its original input branch,full word/phase trace,and registered classification label.; Shared frozen encoding,actual reversible gate operations,inverse traces,observation reconstruction and predecessor merging unchanged;original4165 serial-evaluation,3264 gate and8537 observation comparisons retained. The source simulator remains a derivation from its registered model;no empirical law is inferred from simulation alone.; Exact complete256 grammar,8 witnesses,4 controls and all claim-specific program fields preserved. Registered build/zeroaxiom/fresh parity PASS;full original program16028 running."
     },
     {
       "branch": "quantum_computation",
@@ -190240,13 +190248,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T08:52:59.048211+00:00",
+  "updated_at": "2026-10-30T08:57:27.142289+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 3,
-    "pending": 2605,
-    "fully_reconstructed_claims": 173,
-    "axiom_free_exported_results": 8393,
-    "axiom_free_audited_definitions_and_theorems": 19129
+    "pending": 2604,
+    "fully_reconstructed_claims": 174,
+    "axiom_free_exported_results": 8409,
+    "axiom_free_audited_definitions_and_theorems": 19176
   }
 }

@@ -1059,3 +1059,7 @@ import SFT.QuantumComputation.FaultTolerance
 import SFT.QuantumComputation.FaultToleranceGrammar
 import SFT.QuantumComputation.FaultToleranceControls
 import SFT.QuantumComputation.FaultToleranceEvidence
+import SFT.QuantumComputation.Simulation
+import SFT.QuantumComputation.SimulationGrammar
+import SFT.QuantumComputation.SimulationControls
+import SFT.QuantumComputation.SimulationEvidence

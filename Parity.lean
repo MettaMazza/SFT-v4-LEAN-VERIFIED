@@ -675,3 +675,7 @@ def main : IO Unit := do
 
   for c in SFT.Mathematics.LimitContinuumGrammar.candidates do
     IO.println ("LimitContinuumGrammar\t" ++ SFT.Mathematics.LimitContinuumGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.LimitContinuumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.LimitContinuumGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.LimitContinuumGrammar.decisionReason c)
+
+
+  for c in SFT.Physics.VacuumOddGrammar.candidates do
+    IO.println ("VacuumOddGrammar\t" ++ SFT.Physics.VacuumOddGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumOddGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumOddGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumOddGrammar.decisionReason c)

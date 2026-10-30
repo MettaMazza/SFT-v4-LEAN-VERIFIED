@@ -2251,3 +2251,11 @@ Selection retains precisely the branches assigned the requested label, in their 
 Predecessor merging groups all classified branches under the source's sorted target labels. Each original predecessor retains its word and phase. The factorization decision holds precisely when every combination of a retained left coordinate and retained right coordinate belongs to the registered joint support, with the source nonempty and uniqueness guards preserved.
 
 These operations pass 8,537 comparisons against original V3 observation, predecessor-merge and factorization outputs. All 28 native definitions and theorems have zero axiom dependencies.
+
+288. Complete repetition fault-mask enumeration
+
+For a generated fault-depth trace of length d, the repetition encoder retains 2d + 1 copies of the held label. The fault census enumerates every position selection of size zero through d, in the original combination order, and records the changed word and its decoded label.
+
+The native enumeration theorem establishes that a mask occurs exactly when it is a source-order sublist of the full position range with length at most d. It applies to arbitrary widths and depths. The decoder preserves the original rejection conditions: empty words, labels outside held/returned, and tied counts.
+
+All 18 translated definitions and proved results have zero axiom dependencies. The implementation passes 1,322 original-source comparisons, including all 168 census rows for widths 3, 5 and 7 across both held labels. The arbitrary-depth correction theorem remains under formalisation.

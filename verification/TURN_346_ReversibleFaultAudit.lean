@@ -1,0 +1,19 @@
+import verification.TURN_346_ReversibleFaultDraft
+#print axioms SFT.QuantumComputation.ReversibleFaults.encode
+#print axioms SFT.QuantumComputation.ReversibleFaults.labelCount
+#print axioms SFT.QuantumComputation.ReversibleFaults.decode
+#print axioms SFT.QuantumComputation.ReversibleFaults.combinations
+#print axioms SFT.QuantumComputation.ReversibleFaults.faultMasks
+#print axioms SFT.QuantumComputation.ReversibleFaults.changeFrom
+#print axioms SFT.QuantumComputation.ReversibleFaults.decodeMasks
+#print axioms SFT.QuantumComputation.ReversibleFaults.exhaustiveFaultCensus
+#print axioms SFT.QuantumComputation.ReversibleFaults.faultWordLength
+#print axioms SFT.QuantumComputation.ReversibleFaults.emptySublist
+#print axioms SFT.QuantumComputation.ReversibleFaults.zeroCombinations
+#print axioms SFT.QuantumComputation.ReversibleFaults.combinationSound
+#print axioms SFT.QuantumComputation.ReversibleFaults.emptyOfLengthZero
+#print axioms SFT.QuantumComputation.ReversibleFaults.combinationComplete
+#print axioms SFT.QuantumComputation.ReversibleFaults.combinationExactly
+#print axioms SFT.QuantumComputation.ReversibleFaults.rangeLoopMembership
+#print axioms SFT.QuantumComputation.ReversibleFaults.rangeMembership
+#print axioms SFT.QuantumComputation.ReversibleFaults.faultMasksExactly

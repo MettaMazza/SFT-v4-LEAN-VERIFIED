@@ -473,3 +473,7 @@ def main : IO Unit := do
   for c in SFT.Computation.SecurityDefinitionGrammar.candidates do
     IO.println ("SecurityDefinitionGrammar\t" ++ SFT.Computation.SecurityDefinitionGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SecurityDefinitionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SecurityDefinitionGrammar.exactForm c ++ "\t" ++ SFT.Computation.SecurityDefinitionGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.PostQuantumBoundaryGrammar.candidates do
+    IO.println ("PostQuantumBoundaryGrammar\t" ++ SFT.Computation.PostQuantumBoundaryGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.PostQuantumBoundaryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.PostQuantumBoundaryGrammar.exactForm c ++ "\t" ++ SFT.Computation.PostQuantumBoundaryGrammar.decisionReason c)
+

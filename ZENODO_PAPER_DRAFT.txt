@@ -4851,11 +4851,35 @@ The registered finite carrier generates its full arrangement census. Exact compa
 
 Structural recursion retains the initial value and the result of each exact registered successor step. Its trace contains one more value than successor positions, and every transition reconstructs from its prior value and position. Duplicate successor identities retain the original rejection. All three original search and recursion witnesses pass. The complete 256 algorithms-axis census and all native registration, decision, closure, control and hash outputs agree with pinned V3, completing the Fold Searching and Ordering Law.
 
+
+The ordering predicate on x::R requires every pair (x,y), y∈R, in the registered relation and recursively requires ordering of R. Its empty case is true. Induction equates this Boolean with the corresponding empty/next invariant. Filtering the complete arrangement census therefore gives, for a nonempty distinct carrier C,
+
+\[
+ r\in orders(C,\rho)\iff Perm(r,C)\land Invariant(\rho,r).
+\]
+
+Permutation preserves carrier membership and length. Combining membership with the class ledger gives x in class a of r iff x∈C and classify(x)=a, retaining distinct identities in each duplicate-value class. To append fresh, require (x,fresh)∈ρ for every old x. Induction on the invariant splits each comparison into an old element or fresh and preserves the earlier order.
+
+For successor positions P and exact step f, recursion has V(b,[])=[b] and V(b,p::P)=b::V(f(b,p),P). Induction constructs the corresponding retained step certificate and proves |V(b,P)|=|P|+1. Distinct successor identities make the original wrapper return this exact trace; duplicate identities retain its rejection.
+
+
 173. Exact arithmetic execution certificates
 
 The arithmetic execution certificate retains each original registered operation, ordered input identities, intermediate exact part and bound output identity. Native proofs establish both directions of correspondence between this stepwise certificate and the original trace recorder. The recorded operation sequence is reconstructed exactly, with one row per operation. Every retained part remains positive, bounded through the structural One and in coprime normal form. Original fraction normalization preserves exact value by cross multiplication.
 
 Terminal replay follows from the complete recorded execution. Serial composition retains the shared intermediate part and both row sequences; successor extension records the exact next operation and its inputs. The structural One supplies the base execution. Original operation failures propagate unchanged. All 256 original candidates, operational witnesses and native program fields and hashes agree with pinned V3, completing the Fold Exact Arithmetic-Algorithm Law.
+
+
+Arithmetic Execution(a,ops,rows,b) has identity Execution(a,[],[],a). A successor requires execute(op,a)=ok(c), then a certificate from c through the remaining operations, and prepends row(op,stepInputs(op,a),c). Induction on ops in the forward direction and on the certificate in reverse proves
+
+\[
+ recordFrom(a,ops)=ok(rows,b)\iff Execution(a,ops,rows,b).
+\]
+
+The same successor structure gives |rows|=|ops| and map(operation,rows)=ops. Each constructed row binds outputHash=partIdentity(output). Its Part value carries 0<n≤d and Coprime(n,d). Original positive normalization additionally supplies n·d′=n′·d, preserving the exact fraction.
+
+The existing generated-trace replay theorem applied to this correspondence gives replayFrom(a,rows)=ok(b). Induction on a first certificate composes operations and rows by concatenation at its exact terminal/initial interface. Taking the second certificate to have one operation gives the successor row with its original ordered inputs. Structural One gives the identity base. If the first execute call fails, expanding recordFrom immediately propagates that same error.
+
 
 174. Finite sequence matches and position reconstruction
 
@@ -4863,11 +4887,35 @@ For the registered subsequence alternative, complete finite scanning retains eve
 
 Every recorded position and symbol reconstructs an exact source prefix, held symbol and suffix, with the position equal to its original offset. All positions lie inside the declared finite source interval. Appending source rows preserves earlier matches and their positions; a single held symbol supplies the base. No ungenerated infinite stream is treated as complete. All 256 original candidates, operational witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold String and Sequence Algorithm Law.
 
+
+For starting offset k, target x::N and source y::R, the complete match generator first emits all skip matches at k+1, then—only when y=x—prepends k to every take match for N in R. An empty target emits the single empty position list; a nonempty target in an empty source emits none. Induction establishes the equivalence
+
+\[
+ positions\in matchesFrom(k,N,S)\iff Match(k,N,S,positions),
+\]
+
+where Match has exactly done, skip and take constructors. The forward direction splits membership between skip and take blocks; the reverse direction inserts each constructor into its corresponding generated block. Induction gives |positions|=|N| and reconstructs N as a source-order selection.
+
+For each (i,x)∈zip(positions,N), the same induction gives S=B++x::A and i=k+|B|. A skip prepends its source head to B; a take at the current head uses B=[]; later takes apply the tail induction. Thus k≤i<k+|S|. Repeated symbols retain their distinct offsets. Extending the source appends to the unused suffix in every constructor, preserving each prior position list. A singleton matching symbol has the singleton position list [k].
+
+
 175. Finite graph traversal certificates
 
 The traversal certificate retains the complete frontier and visited ledger at each original search step. Empty-frontier termination, target detection, repeated-visit skipping and fresh-vertex expansion preserve the source branch order. A finite trace is constructed using the original decreasing unseen-support/frontier measure. Expansion appends every original outgoing unvisited target in edge order; no frontier cap or pruning changes the search.
 
 Native replay yields the original reachability result. A successful rooted traversal provides the existing path witness, while exhausted-frontier failure excludes such a path. The same-node case retains original node-membership semantics. Existing path composition and graph extension proofs preserve the generated structure. Physical-network application retains the original empirical translation protocol. All 256 original candidates, witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold Tree and Graph Algorithm Law.
+
+
+Each traversal snapshot retains unseen support U, visited list V and complete frontier Q. Its branches, in original order, are: Q=[] returns false; a head equal to the target returns true; a different already-visited head is skipped; otherwise the fresh head h is expanded. Expansion sets
+
+\[
+ V'=V\mathbin{++}[h],\qquad Q'=rest\mathbin{++}outgoingUnvisited(edges,h,V').
+\]
+
+The frontier invariant places every frontier node in U or V. A fresh h therefore belongs to U and its removal strictly reduces |U|. Skipping keeps U and shortens Q. Both branches decrease the lexicographic measure (|U|,|Q|), so well-founded induction constructs a finite snapshot trace without discarding frontier rows.
+
+Induction on that trace applies the matching source search equation at each constructor, proving searchLoop(initialSnapshot)=recordedAnswer. For distinct origin and target, this is the original reachability result. Under graph admission, true reconstructs a complete path by reachability/path equivalence; false excludes any such path because that path would force true. The same-origin case retains the original test of node membership. The empirical translation condition remains preSeal=false, mutation=false, allRows=true and identified=true.
+
 
 176. Finite algebraic and geometric execution
 

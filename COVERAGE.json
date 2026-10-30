@@ -38135,9 +38135,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MATTER-QUARK-INVARIANTS-003-8dad6c72f49f916b.json",
       "statement": "Complete colour, hand and electroweak channel counts independently cross-lock with exact Fold products, forcing up pair sum 1/12, down pair sum 1/8 and least binary cover depths seven and five.",
       "title": "Quark channel invariants and cover depths",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/QuarkInvariants.lean",
+        "SFT/Physics/QuarkIsolation.lean",
+        "SFT/Physics/QuarkChannelsGrammar.lean",
+        "SFT/Physics/QuarkChannelsWitnesses.lean",
+        "SFT/Physics/QuarkChannelsControls.lean",
+        "SFT/Physics/QuarkChannelsEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS all256 actual candidate lookups, original fields/hashes, source controls and implementation-distinct validator; original accepted and three tampered cases rejected.",
       "registration_sha256": "7987bf84ee6b9f35e043b5288beac430a333b2c09729429e39e8a3cc15a187cb",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -38176,7 +38183,10 @@
         "statement": "Complete colour, hand and electroweak channel counts independently cross-lock with exact Fold products, forcing up pair sum 1/12, down pair sum 1/8 and least binary cover depths seven and five.",
         "status": "independently_replicated",
         "title": "Quark channel invariants and cover depths"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_378_QUARKCHANNELS_COMPLETION.json",
+      "verified_scope": "quark_channel_invariants and quark_cubic_invariants: exact independent channel/Fold-product cross-lock, both cover guards, all four channel fields and role-exchanged exact invariant triples. Cubic functions are retained here as verified components of the following entry.; Original QUARK_INVARIANTS_SPEC: all 256 original ordered candidates, completeness, decision equivalence, uniqueness and every omitted-coordinate rejection.; Every original executable witness, computed from native invariant construction.; Original four StructuralPhysicsProgram controls and depth-independent closure fields, including full enumeration and exact source predicates.; Original StructuralPhysicsProgram registration, candidate lookup, decision, census, canonical records and hashes; fresh full-program comparison and V3 implementation-distinct validator."
     },
     {
       "branch": "physics",
@@ -190315,13 +190325,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T16:46:43.879909+00:00",
+  "updated_at": "2026-10-30T17:45:51.782886+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 1,
-    "pending": 2596,
-    "fully_reconstructed_claims": 184,
-    "axiom_free_exported_results": 8624,
-    "axiom_free_audited_definitions_and_theorems": 19764
+    "pending": 2595,
+    "fully_reconstructed_claims": 185,
+    "axiom_free_exported_results": 8654,
+    "axiom_free_audited_definitions_and_theorems": 19856
   }
 }

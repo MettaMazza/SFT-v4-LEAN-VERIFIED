@@ -1100,3 +1100,10 @@ import SFT.Physics.VacuumFloorGrammar
 import SFT.Physics.VacuumFloorWitnesses
 import SFT.Physics.VacuumFloorControls
 import SFT.Physics.VacuumFloorEvidence
+
+import SFT.Physics.QuarkInvariants
+import SFT.Physics.QuarkIsolation
+import SFT.Physics.QuarkChannelsGrammar
+import SFT.Physics.QuarkChannelsWitnesses
+import SFT.Physics.QuarkChannelsControls
+import SFT.Physics.QuarkChannelsEvidence

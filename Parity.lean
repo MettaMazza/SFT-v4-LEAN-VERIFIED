@@ -651,3 +651,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.VacuumFloorGrammar.candidates do
     IO.println ("VacuumFloorGrammar\t" ++ SFT.Physics.VacuumFloorGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumFloorGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumFloorGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumFloorGrammar.decisionReason c)
+
+  for c in SFT.Physics.QuarkChannelsGrammar.candidates do
+    IO.println ("QuarkChannelsGrammar\t" ++ SFT.Physics.QuarkChannelsGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.QuarkChannelsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.QuarkChannelsGrammar.exactForm c ++ "\t" ++ SFT.Physics.QuarkChannelsGrammar.decisionReason c)

@@ -3144,7 +3144,56 @@ Single-label image generation begins with the unchanged source word, then visits
 
 The complete error family retains each source occurrence with its full image list. Detection holds exactly when each image is either its source or outside the codebook. Correction holds exactly when every positional pair of source image families has no common received word. Native equivalences establish these conditions over the full generated lists, including raw duplicate source occurrences.
 
-Decoding filters source occurrences in their original order by exact received-image membership. A singleton gives the original unique-source record; any other length gives the entire closed source class. The native correction theorem proves that disjoint source families yield an empty or singleton filtered list. Consequently, every registered received image of a correctable code decodes to its source. Conversely, every unique decoded source is a retained codeword with that received image in its registered family. No distance or prior is used. Independent source-expression comparisons pass 1600 image lists,465 complete families,465 detection decisions,465 correction decisions and 2790 decoding records.
+Decoding filters source occurrences in their original order by exact received-image membership. A singleton gives the original unique-source record; any other length gives the entire closed source class. The native correction theorem proves that disjoint source families yield an empty or singleton filtered list. Consequently, every registered received image of a correctable code decodes to its source. Conversely, every unique decoded source is a retained codeword with that received image in its registered family. No distance or prior is used. Independent source-expression comparisons pass 1,600 image lists, 465 complete families, 465 detection decisions, 465 correction decisions and 2,790 decoding records.
+
+
+For the supplied label list A, the complete changed-image recursion is
+
+\[
+ D_A([])=[],\qquad D_A(h::t)=[a::t:a\in A,\ a\ne h]\mathbin{++}[h::v:v\in D_A(t)].
+\]
+
+The image list is E_A(w)=[w]++D_A(w). The first branch changes the first position; the second retains it and recursively changes a later position. Induction, splitting on whether the unchanged prefix is empty, proves the exact equivalence
+
+\[
+ v\in D_A(w)\iff\exists p,h,t,a,\ w=p\mathbin{++}(h::t)
+ \land a\in A\land a\ne h\land v=p\mathbin{++}(a::t).
+\]
+
+The forward proof extracts the replacement from the head filter or prepends the unchanged head to the tail induction's prefix. Conversely, an empty prefix selects the head branch; a nonempty prefix selects the recursive branch. Thus E_A(w) contains precisely identity and every registered single-label replacement. Mapping and filtering retain the original label multiplicities and visit order.
+
+Each branch preserves length, giving |v|=|w| for every v∈E_A(w). A changed image cannot equal w: cancelling the unchanged prefix would give a=h, contradicting the replacement guard. If all labels of w lie in A, each changed image also uses only A, since its unchanged cells retain that property and its replacement was selected from A. Together with preserved width, complete-support membership proves closure of all images inside the admitted support.
+
+For a code list C, the family [(w,E_A(w)):w∈C] has exactly |C| rows, one per source occurrence. Expanding the Boolean all/any tests yields
+
+\[
+ \operatorname{Detect}(C,A)\iff\forall w\in C,\forall v\in E_A(w),\ v=w\lor v\notin C,
+\]
+\[
+ \operatorname{Correct}(C,A)\iff\forall(u,w)\in P(C),\
+ \neg\exists v,\ v\in E_A(u)\land v\in E_A(w),
+\]
+
+where P(C) is the full positional pair list. The pair condition retains raw source occurrences rather than silently deduplicating C.
+
+The received source class is the ordered filter
+
+\[
+ H_{C,A}(v)=[w\in C:v\in E_A(w)],\qquad
+ w\in H_{C,A}(v)\iff w\in C\land v\in E_A(w).
+\]
+
+Decoding applies the singleton/closed-class record constructor to this exact list. Hence decode(v)=uniqueSource(w) iff H_{C,A}(v)=[w]; every nonsingleton result retains H_{C,A}(v) intact.
+
+To prove correct decoding, induct on C. If its head has no image v, the filtered list equals the tail's class and correction restricts to the tail's positional pairs. If the head does have image v, every tail occurrence must reject v: accepting it would give a shared image for that head–tail positional pair, contradicting Correct. The filtered tail is therefore empty and the whole class is the head singleton. Thus
+
+\[
+ \operatorname{Correct}(C,A)\Longrightarrow
+ H_{C,A}(v)=[]\ \lor\ \exists w,\ H_{C,A}(v)=[w].
+\]
+
+When w∈C and v∈E_A(w), class membership excludes the empty case and identifies the singleton as w, proving decode(v)=uniqueSource(w). Conversely, a unique-source record gives that singleton class; its member must be a retained source with v in its generated family. This proves both recovery and provenance using the full registered image enumeration.
+
 
 107. General coding action succession and retained source provenance
 

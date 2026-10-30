@@ -569,3 +569,6 @@ def main : IO Unit := do
 
   for c in SFT.Computation.HighDimensionalGrammar.candidates do
     IO.println ("HighDimensionalGrammar\t" ++ SFT.Computation.HighDimensionalGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.HighDimensionalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.HighDimensionalGrammar.exactForm c ++ "\t" ++ SFT.Computation.HighDimensionalGrammar.decisionReason c)
+
+  for c in SFT.Computation.ManyBodyGrammar.candidates do
+    IO.println ("ManyBodyGrammar\t" ++ SFT.Computation.ManyBodyGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ManyBodyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ManyBodyGrammar.exactForm c ++ "\t" ++ SFT.Computation.ManyBodyGrammar.decisionReason c)

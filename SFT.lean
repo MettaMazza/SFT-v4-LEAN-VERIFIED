@@ -975,3 +975,8 @@ import SFT.Computation.HighDimensionalWitnesses
 import SFT.Computation.HighDimensionalGrammar
 import SFT.Computation.HighDimensionalControls
 import SFT.Computation.HighDimensionalEvidence
+import SFT.Computation.ManyBody
+import SFT.Computation.ManyBodyWitnesses
+import SFT.Computation.ManyBodyGrammar
+import SFT.Computation.ManyBodyControls
+import SFT.Computation.ManyBodyEvidence

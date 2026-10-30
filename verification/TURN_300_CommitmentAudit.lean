@@ -1,0 +1,24 @@
+import SFT.Computation.Commitment
+#print axioms SFT.Computation.Commitment.supported
+#print axioms SFT.Computation.Commitment.generated
+#print axioms SFT.Computation.Commitment.verifies
+#print axioms SFT.Computation.Commitment.accepted
+#print axioms SFT.Computation.Commitment.acceptedMeaning
+#print axioms SFT.Computation.Commitment.pairs
+#print axioms SFT.Computation.Commitment.pairMeaning
+#print axioms SFT.Computation.Commitment.binding
+#print axioms SFT.Computation.Commitment.exactBinding
+#print axioms SFT.Computation.Commitment.bindingCollisions
+#print axioms SFT.Computation.Commitment.collisionMeaning
+#print axioms SFT.Computation.Commitment.incompatibleOpenings
+#print axioms SFT.Computation.Commitment.twoOpeningsAgree
+#print axioms SFT.Computation.Commitment.observationClass
+#print axioms SFT.Computation.Commitment.observationClassMeaning
+#print axioms SFT.Computation.Commitment.hiddenMessagesCannotRecover
+#print axioms SFT.Computation.Commitment.bindingHidingBoundary
+#print axioms SFT.Computation.Commitment.supportExtension
+#print axioms SFT.Computation.Commitment.generatedExtension
+#print axioms SFT.Computation.Commitment.verificationExtension
+#print axioms SFT.Computation.Commitment.extendCommit
+#print axioms SFT.Computation.Commitment.extendOpening
+#print axioms SFT.Computation.Commitment.hiddenExtension

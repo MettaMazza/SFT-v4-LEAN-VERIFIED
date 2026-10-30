@@ -7421,7 +7421,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEC-AUTHENTICATION-001-2c39303d9b2dd557.json",
       "statement": "The forced source-identity verification kernel retains principal identities; credential support; challenge records; response relation; verifier trace; impersonation support; acceptance boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold authentication law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Computation/Authentication.lean",
         "SFT/Computation/AuthenticationWitnesses.lean",
@@ -7429,7 +7429,7 @@
         "SFT/Computation/AuthenticationControls.lean",
         "SFT/Computation/AuthenticationEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
+      "artifact_runtime_parity": "PASS full256 actual identifier lookups and every original program field/hash.",
       "registration_sha256": "e6312351ace3042be4bda2d868278926082194cf301f8c96e62318976b02357e",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7475,10 +7475,9 @@
         "status": "independently_replicated",
         "title": "Fold authentication law"
       },
-      "verified_scope": "Model,Credential,Response and Attempt retain principal identities,credential ownership,registered challenges,response rows and complete adversary attempt support. witnessMeaning and acceptanceBoundary prove exact support and field matching.; acceptedCredential and exactVerificationTrace prove accepted status iff the complete retained attempt/principal/challenge/credential/response witness exists. Credential acceptance is not assumed to identify the actual actor.; impersonationMeaning retains exactly every accepted attempt whose actor differs from its claim. exactAuthenticity connects the computed whole-ledger check to actor/claim equality across every accepted supported attempt.; rejectedImpersonation and acceptedImpersonationFails prove the checked guarantee and its explicit failure witness. unregisteredAttempt,missingChallenge and missingResponse reject unsupported records.; Componentwise Extension,traceExtension and acceptanceExtension retain original credential/response records and complete accepted verification traces. No stronger identity claim than the registered credential/adversary support is made.; Original security256 grammar,three witnesses,four controls and fresh parity pass.4100 concrete support/impersonation outcomes and native verification/failure proofs pass. Full program36396 running.",
-      "remaining": [
-        "Original fresh full program field/hash comparison36396; completion after Integrity in dependency order."
-      ]
+      "verified_scope": "Model,Credential,Response and Attempt retain principal identities,credential ownership,registered challenges,response rows and complete adversary attempt support. witnessMeaning and acceptanceBoundary prove exact support and field matching.; acceptedCredential and exactVerificationTrace prove accepted status iff the complete retained attempt/principal/challenge/credential/response witness exists. Credential acceptance is not assumed to identify the actual actor.; impersonationMeaning retains exactly every accepted attempt whose actor differs from its claim. exactAuthenticity connects the computed whole-ledger check to actor/claim equality across every accepted supported attempt.; rejectedImpersonation and acceptedImpersonationFails prove the checked guarantee and its explicit failure witness. unregisteredAttempt,missingChallenge and missingResponse reject unsupported records.; Componentwise Extension,traceExtension and acceptanceExtension retain original credential/response records and complete accepted verification traces. No stronger identity claim than the registered credential/adversary support is made.; Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_298_AUTHENTICATION_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -7559,9 +7558,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEC-COMMITMENT-001-402789a36ddf9054.json",
       "statement": "The forced binding and hiding record phases kernel retains message support; opening support; commit relation; verification relation; hiding observation classes; binding collision ledger; phase trace; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold commitment law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/Commitment.lean",
+        "SFT/Computation/CommitmentWitnesses.lean",
+        "SFT/Computation/CommitmentGrammar.lean",
+        "SFT/Computation/CommitmentControls.lean",
+        "SFT/Computation/CommitmentEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
       "registration_sha256": "b7daea37ca5a503917e7a2123345f0ca2e23be72f11a0cbfe2c4b7e548711160",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7606,7 +7611,11 @@
         "statement": "The forced binding and hiding record phases kernel retains message support; opening support; commit relation; verification relation; hiding observation classes; binding collision ledger; phase trace; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold commitment law"
-      }
+      },
+      "verified_scope": "Model and Row retain message/opening support,exact generation and verification rows,and registered commitment observations. acceptedMeaning/pairMeaning prove the complete supported accepted pair product.; exactBinding proves the computed whole-pair check equivalent to unique messages among verified equal-commitment openings. collisionMeaning identifies the complete collision ledger; incompatibleOpenings gives exact failure evidence.; observationClassMeaning retains exact generated rows in each registered view. hiddenMessagesCannotRecover proves inability to recover both distinct hidden messages from that view. bindingHidingBoundary states the precise additional observation condition needed to force conflicting verified openings; no unconditional incompatibility added.; CommitTrace and OpeningTrace retain actual generation,verification and shared commitment. twoOpeningsAgree proves phase-bound message agreement under the checked binding result.; Extension,supportExtension,generatedExtension,verificationExtension,extendCommit,extendOpening and hiddenExtension retain source records,phase interfaces and earlier observation classes.; Original security256 grammar,three witnesses,four controls and fresh parity pass.2313 concrete outcomes plus nativeCompatibleHiding check all finite commit/verification/observation supports used and explicit absent-row boundaries. Full program 68362 running.",
+      "remaining": [
+        "Original fresh full program field/hash comparison68362; completion after Hashing in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -189772,13 +189781,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T00:33:02.265395+00:00",
+  "updated_at": "2026-10-30T00:40:37.758939+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 2,
-    "pending": 2657,
-    "fully_reconstructed_claims": 122,
-    "axiom_free_exported_results": 6627,
-    "axiom_free_audited_definitions_and_theorems": 14618
+    "pending": 2656,
+    "fully_reconstructed_claims": 123,
+    "axiom_free_exported_results": 6663,
+    "axiom_free_audited_definitions_and_theorems": 14716
   }
 }

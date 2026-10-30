@@ -445,3 +445,7 @@ def main : IO Unit := do
   for c in SFT.Computation.HashingGrammar.candidates do
     IO.println ("HashingGrammar\t" ++ SFT.Computation.HashingGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.HashingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.HashingGrammar.exactForm c ++ "\t" ++ SFT.Computation.HashingGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.CommitmentGrammar.candidates do
+    IO.println ("CommitmentGrammar\t" ++ SFT.Computation.CommitmentGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.CommitmentGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.CommitmentGrammar.exactForm c ++ "\t" ++ SFT.Computation.CommitmentGrammar.decisionReason c)
+

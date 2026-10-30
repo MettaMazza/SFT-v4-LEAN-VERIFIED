@@ -800,3 +800,8 @@ import SFT.Computation.HashingGrammar
 import SFT.Computation.HashingControls
 import SFT.Computation.HashingEvidence
 import SFT.Computation.Hashing
+import SFT.Computation.CommitmentWitnesses
+import SFT.Computation.CommitmentGrammar
+import SFT.Computation.CommitmentControls
+import SFT.Computation.CommitmentEvidence
+import SFT.Computation.Commitment

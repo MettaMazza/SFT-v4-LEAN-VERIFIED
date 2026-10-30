@@ -596,3 +596,6 @@ def main : IO Unit := do
 
   for c in SFT.QuantumComputation.MeasurementGrammar.candidates do
     IO.println ("MeasurementGrammar\t" ++ SFT.QuantumComputation.MeasurementGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.MeasurementGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.MeasurementGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.MeasurementGrammar.decisionReason c)
+
+  for c in SFT.QuantumComputation.GateLawGrammar.candidates do
+    IO.println ("GateLawGrammar\t" ++ SFT.QuantumComputation.GateLawGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.GateLawGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.GateLawGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.GateLawGrammar.decisionReason c)

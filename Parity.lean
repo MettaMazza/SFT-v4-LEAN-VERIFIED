@@ -605,3 +605,6 @@ def main : IO Unit := do
 
   for c in SFT.QuantumComputation.UniversalityGrammar.candidates do
     IO.println ("UniversalityGrammar\t" ++ SFT.QuantumComputation.UniversalityGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.UniversalityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.UniversalityGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.UniversalityGrammar.decisionReason c)
+
+  for c in SFT.QuantumComputation.AlgorithmsGrammar.candidates do
+    IO.println ("AlgorithmsGrammar\t" ++ SFT.QuantumComputation.AlgorithmsGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.AlgorithmsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.AlgorithmsGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.AlgorithmsGrammar.decisionReason c)

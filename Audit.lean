@@ -8299,3 +8299,17 @@ import SFT
 #print axioms SFT.QuantumComputation.UniversalityEvidence.registrationHasNoAxioms
 #print axioms SFT.QuantumComputation.UniversalityEvidence.registrationHasNoFreeParameters
 #print axioms SFT.QuantumComputation.UniversalityEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.QuantumComputation.Algorithms.everyBranchHasExactTrace
+#print axioms SFT.QuantumComputation.Algorithms.selectedBranchCorrectness
+#print axioms SFT.QuantumComputation.Algorithms.interferenceBranchCorrectness
+#print axioms SFT.QuantumComputation.AlgorithmsGrammar.generatedCardinality
+#print axioms SFT.QuantumComputation.AlgorithmsGrammar.candidatesComplete
+#print axioms SFT.QuantumComputation.AlgorithmsGrammar.uniqueSurvivor
+#print axioms SFT.QuantumComputation.AlgorithmsGrammar.acceptanceIffExactCriteria
+#print axioms SFT.QuantumComputation.AlgorithmsControls.falsePremisePassed
+#print axioms SFT.QuantumComputation.AlgorithmsControls.boundaryPassed
+#print axioms SFT.QuantumComputation.AlgorithmsEvidence.nativeDecisionPreservesSurvival
+#print axioms SFT.QuantumComputation.AlgorithmsEvidence.nativeDecisionPreservesReason
+#print axioms SFT.QuantumComputation.AlgorithmsEvidence.registrationHasNoAxioms
+#print axioms SFT.QuantumComputation.AlgorithmsEvidence.registrationHasNoFreeParameters
+#print axioms SFT.QuantumComputation.AlgorithmsEvidence.lookupDependsOnlyOnIdentifier

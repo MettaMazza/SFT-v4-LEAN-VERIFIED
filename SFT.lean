@@ -1035,3 +1035,7 @@ import SFT.QuantumComputation.Universality
 import SFT.QuantumComputation.UniversalityGrammar
 import SFT.QuantumComputation.UniversalityControls
 import SFT.QuantumComputation.UniversalityEvidence
+import SFT.QuantumComputation.Algorithms
+import SFT.QuantumComputation.AlgorithmsGrammar
+import SFT.QuantumComputation.AlgorithmsControls
+import SFT.QuantumComputation.AlgorithmsEvidence

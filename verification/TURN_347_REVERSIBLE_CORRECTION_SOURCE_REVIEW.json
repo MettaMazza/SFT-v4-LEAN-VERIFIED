@@ -1,0 +1,50 @@
+{
+  "status": "partial native draft; full entry incomplete",
+  "claim_id": "SFT-QUANTUM-REVERSIBLE-MODEL-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/quantum_computation/operations.py": "16f8518b61505e0258a930b176734b70ac90fd9784056c0cb13d3632fb5c2841",
+    "sft/quantum_computation/reversible_model/law.py": "d8883ce099a539a454ff66310e5a2a1a35ae6b2e709f6a99b4b61980a81c122f",
+    "claims/SFT-QUANTUM-REVERSIBLE-MODEL-001/WHY_DERIVATION_CHECK.md": "1ed49bb16e44491f7ce0ce76d31122d11731f126e5d0cb7f64e99b98be18bd2e"
+  },
+  "audited_declarations": 38,
+  "axiom_dependencies": 0,
+  "source_cases": 818,
+  "components": [
+    "Exact ReversibleGate validation/error order,word-map inverse,source/target exchange,double inversion and inverse admission;phase-successor trace unchanged.",
+    "Exact FoldQuantumState constructor guards;admitted nonempty/unique support,distinct cycle length at least two,and all branch phases in cycle.",
+    "Native phase index and lookup,modular phase shift,branch-support preservation and proof every admitted nonempty phase action produces another admitted state with identical word support and cycle.",
+    "complete_support preserves singleton alphabet acceptance,full literal product order,phase initialization and source rejection behavior,including empty-phase-cycle IndexError;membership iff exact length and labels.",
+    "Constructive modular inverseIndex and phaseInverse for arbitrary admitted finite phase cycles;branchPhaseInverse restores entire original branch phase record.",
+    "Exact apply_gate domain guard,word-map lookup and inverse_phase arithmetic;transformedBranchesInverse proves recovery of every original word/phase pair in order.",
+    "transformedSupport characterizes every output word by an original retained branch and exact registered lookup. inverseDomainFromApplication derives the inverse domain check from admitted forward execution.",
+    "transformationExists,transformedDistinct and transformedLength establish total forward transformation,distinct output support and exact retained branch count. applicationExists proves source-valid wrappers cannot reach the internal missing-word/phase error.",
+    "applicationInverse and admittedRoundTrip prove arbitrary admitted matching-domain gate applications restore the full original state under the source inverse gate and inverse phase operation,without an extra inverse-domain premise.",
+    "jointBranchMeaning fixes exact source word concatenation and phase index sum modulo cycle length. pairWords/jointWords preserve complete literal Cartesian order;pairCount/jointCount and compositionCount give exact product cardinality.",
+    "jointMembership/compositionSupport establish every and only source pair-cell words;compositionSource retains identical phase cycles,complete generated rows and original state admission.",
+    "jointBranchExists/pairExists/jointExists establish all valid phases generate. admittedCompositionDecision proves exact source final uniqueness guard after common phase-cycle admission;no stronger fixed-word-length assumption is introduced.",
+    "classificationValid preserves unique map keys and exact complete-support domain. admittedRecordExists proves record generation for every accepted classification.",
+    "recordMembership/completeRecord/recordCount/retainedExactly/retainedOrder reconstruct every original word and phase and preserve source selection order. observationSource/Membership/Reconstruction/Decision prove exact retained class,complete record,admitted nonempty result and original empty-class rejection.",
+    "sortedMembership preserves all labels through the exact native sort;groupedMembership and predecessorRecordPreserved retain every original predecessor with its original phase. predecessorAdmitted proves original accepted classification yields complete grouped rows.",
+    "factorableMeaning is the exact closure under projected Cartesian pairs on original admitted nonempty unique support.",
+    "Exact repetition encoding/decoding, source-ordered combinations and exhaustiveFaultCensus; source tie-only rejection retained, including acceptance of even non-tied words.",
+    "combinationExactly proves membership iff source-order sublist of exact requested length. faultMasksExactly proves all and only position sublists of length at most depth for arbitrary widths/depths; zero axiom dependencies.",
+    "changedCountBound and changedCounts bound changed labels and retain complete count; majorityFromBudget establishes strict majority at width2d+1. heldCorrection/returnedCorrection and exhaustiveCorrection prove every admitted source census returns every changed word with its original decoded label,at arbitrary depth and in full original order.",
+    "All eight operational witnesses execute original translated support,phase,composition,merge,factorization,observation,inverse and full fault operations; complete named witness output agrees with pinned V3."
+  ],
+  "remaining": [
+    "Remaining reversible-model WHY/DERIVATION/CHECK support/resource/universal interpretation and branch/depth successor correspondence.",
+    "Complete eight-axis256 grammar,four controls and original program field/hash verification."
+  ],
+  "additional_audited_declarations": 30,
+  "additional_source_cases": 3264,
+  "composition_audited_declarations": 19,
+  "composition_source_cases": 2809,
+  "observation_audited_declarations": 28,
+  "observation_source_cases": 8537,
+  "fault_audited_declarations": 18,
+  "fault_source_cases": 1322,
+  "correction_audited_declarations": 14,
+  "witness_audited_declarations": 16,
+  "original_operational_witnesses": 8
+}

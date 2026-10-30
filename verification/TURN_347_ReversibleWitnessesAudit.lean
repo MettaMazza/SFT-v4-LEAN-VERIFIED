@@ -1,0 +1,17 @@
+import verification.TURN_347_ReversibleWitnessesDraft
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.cycle
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.state
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.gate
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.stateGenerated
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.gateGenerated
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.supportCheck
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.phaseCheck
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.compositionCheck
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.mergeCheck
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.factorCheck
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.observationCheck
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.inverseCheck
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.faultsCheck
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.checks
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.allWitnessesPassed
+#print axioms SFT.QuantumComputation.ReversibleWitnesses.operationalWitnesses

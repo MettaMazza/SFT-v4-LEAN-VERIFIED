@@ -1,0 +1,15 @@
+import verification.TURN_347_ReversibleCorrectionDraft
+#print axioms SFT.QuantumComputation.ReversibleFaults.removePosition
+#print axioms SFT.QuantumComputation.ReversibleFaults.removedOther
+#print axioms SFT.QuantumComputation.ReversibleFaults.removedLength
+#print axioms SFT.QuantumComputation.ReversibleFaults.changeAgreesAbove
+#print axioms SFT.QuantumComputation.ReversibleFaults.removeEarlierUnchanged
+#print axioms SFT.QuantumComputation.ReversibleFaults.changedCountBound
+#print axioms SFT.QuantumComputation.ReversibleFaults.changedCounts
+#print axioms SFT.QuantumComputation.ReversibleFaults.changedExternalGuard
+#print axioms SFT.QuantumComputation.ReversibleFaults.majorityFromBudget
+#print axioms SFT.QuantumComputation.ReversibleFaults.heldCorrection
+#print axioms SFT.QuantumComputation.ReversibleFaults.returnedCorrection
+#print axioms SFT.QuantumComputation.ReversibleFaults.decodeMasksComplete
+#print axioms SFT.QuantumComputation.ReversibleFaults.encodeAdmission
+#print axioms SFT.QuantumComputation.ReversibleFaults.exhaustiveCorrection

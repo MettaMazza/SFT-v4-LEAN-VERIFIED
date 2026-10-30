@@ -6988,7 +6988,25 @@ The carrier retains principal identities, credential ownership, challenge record
 
 Credential acceptance is not assumed to establish the actual actor. The complete impersonation ledger contains exactly the accepted attempts whose actor differs from the claimed principal. The computed authenticity check is equivalent to equality of actor and claim for every accepted supported attempt. Its success excludes impersonation in that registered support, while an accepted impersonation witnesses failure. Componentwise source extension preserves earlier verification traces and accepted records. The 4,100 concrete checks include missing support, incorrect credential ownership, absent response rows, a retained verification trace and an explicitly accepted impersonation. Identity claims therefore retain V3’s exact credential and adversary boundary.
 
-Fold secrecy law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold secrecy law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+Write \(A,P,C,Q,R\) for the registered attempts, principals, credentials, challenges and response rows. For an attempt \(a\), the exact acceptance predicate is
+\[
+ \operatorname{Accept}(a)\iff
+ a\in A\land a_{\rm claimed}\in P\land a_{\rm challenge}\in Q
+ \land\exists c\in C\,
+ (c_{\rm identity}=a_{\rm credential}\land c_{\rm principal}=a_{\rm claimed})
+ \land(a_{\rm credential},a_{\rm challenge},a_{\rm response})\in R.
+\]
+Filtering \(C\) by the two credential equalities gives the witness list. Nonemptiness supplies its first witness; conversely any matching member proves nonemptiness. Together with the three support checks and response membership, this proves the equivalence with VerificationTrace. Thus the authenticity derivation is
+\[
+ I=[a\in A\mid\operatorname{Accept}(a)\land a_{\rm actor}\ne a_{\rm claimed}],
+ \qquad
+ \operatorname{Authentic}=\mathrm{true}
+ \iff\forall a,\ \operatorname{Accept}(a)\Rightarrow
+ a_{\rm actor}=a_{\rm claimed}.
+\]
+An element of \(I\) contradicts the right-hand equality directly. Componentwise extension preserves every conjunct of Accept and therefore the complete trace; it does not remove the requirement to check authenticity over any newly added attempts.
 
 241. Hashing fibres, collisions and domain separation
 
@@ -6998,7 +7016,20 @@ For duplicate-free message support larger than the declared output support, nati
 
 Source extension preserves earlier messages, outputs and map values, hence earlier predecessor and collision witnesses. Concrete checks cover all eight maps from three messages to two declared outputs, their full fibres and collision ledgers, empty support and domain labels. Each of the eight maps also instantiates the general larger-domain collision theorem. Collision resistance retains its source resource boundary; the existence of a finite collision is not denied.
 
-Fold integrity law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold integrity law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+Let \(M\) be the message list, \(Y\) the declared output list and \(h\) the map, with \(x\in M\Rightarrow h(x)\in Y\). Ordered filters give
+\[
+ F_y=[x\in M\mid h(x)=y],\qquad
+ C=[(a,b)\in M\times M\mid a\ne b\land h(a)=h(b)].
+\]
+The preimage ledger is \([(y,F_y)\mid y\in Y]\); every source message belongs to its own \(F_{h(x)}\). If \(M\) has no duplicates and \(|Y|<|M|\), injectivity on \(M\) would inject its distinct members into the declared finite output list, contradicting the finite cardinality bound. Hence
+\[
+ |Y|<|M|,\ \operatorname{distinct}(M)
+ \Longrightarrow C\ne[]
+ \Longrightarrow\exists a,b\in M,\ a\ne b\land h(a)=h(b).
+\]
+The last implication extracts a pair from the complete nonempty ledger. For any downstream map \(g\), equality substitution gives \(g(h(a))=g(h(b))\). Domain separation is the pair construction \(h_d(x)=(d,h(x))\): unequal first coordinates force unequal outputs, while \((d,u)=(d,v)\iff u=v\). An extension retaining map values on old messages consequently retains their fibres and collisions.
 
 242. Commitment binding, hiding and retained phases
 
@@ -7008,7 +7039,24 @@ The hiding observation classes retain the exact generated commit rows. A class c
 
 Commit and opening traces retain actual source rows and their shared commitment interface. Under the checked binding result, two accepted openings of the same retained commitment agree on the message. Source extension preserves the generation and verification rows, phase interfaces and earlier observation classes. The 2,313 concrete outcomes cover finite commit, verification and observation supports, explicit missing message/opening/source rows, collisions and the compatible binding-and-hiding example.
 
-Fold authentication law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold authentication law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For a row \(r=(m,o,c)\), put \(S(r)\iff m\in M\land o\in O\), \(G(r)\iff S(r)\land r\in C\), and \(V(r)\iff S(r)\land r\in V_0\), where \(C,V_0\) are the commit and verification lists. The accepted list is \(V_0\) filtered by \(S\). Exhaustive pairing derives
+\[
+ \operatorname{Binding}=\mathrm{true}
+ \iff\forall a,b,\ V(a)\land V(b)\land a_c=b_c\Rightarrow a_m=b_m,
+\]
+\[
+ B=[(a,b)\mid V(a)\land V(b)\land a_c=b_c\land a_m\ne b_m].
+\]
+Here the comprehension for \(B\) traverses the ordered accepted-pair list. Each member refutes Binding by applying its equality conclusion to the unequal messages. An opening trace adds \(V(r)\) and \(r_c=c_{\rm committed}\); two such equalities yield the shared-commitment premise and hence equal opened messages.
+
+For observation image \(O_{\rm obs}\), the hiding class is
+\[
+ H_v=[r\in C\mid S(r)\land O_{\rm obs}(r_c)=\operatorname{some}(v)].
+\]
+If \(a,b\in H_v\) and \(a_m\ne b_m\), a decoder recovering both would imply
+\(a_m=d(\operatorname{some}(v))=b_m\), a contradiction. A binding failure follows only with the additional verified-opening premises and the stated implication from equal observations to equal commitments. The same row memberships and unchanged observation images transport these traces and classes through the registered extension.
 
 243. Signature correctness and exact adversary support
 
@@ -7018,7 +7066,18 @@ The complete forgery ledger contains precisely the registered adversary rows tha
 
 Source extension preserves signing and verification rows and their retained traces. Missing keys and rows outside the adversary support have explicit exclusion proofs. All 2,048 concrete outcomes across the finite signing, verification and adversary supports pass, together with the retained native correctness trace.
 
-Fold hashing law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold hashing law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For \(r=(k,m,\sigma)\), let \(S(r)\iff k\in K\land m\in M\), \(G(r)\iff S(r)\land r\in G_0\), and \(V(r)\iff S(r)\land r\in V_0\). The complete checks and forgery ledger are
+\[
+ \operatorname{Correct}=\mathrm{true}\iff\forall r,\ G(r)\Rightarrow V(r),
+ \qquad F=[r\in A\mid V(r)\land r\notin G_0],
+\]
+\[
+ \operatorname{Unforgeable}=\mathrm{true}
+ \iff\forall r\in A,\ V(r)\Rightarrow r\in G_0.
+\]
+Correctness converts a signing trace \((r,G(r))\) into \((r,V(r))\), retaining \(k,m,\sigma\) exactly. If \(r\in F\), the unforgeability implication produces \(r\in G_0\), contradicting the ledger's exclusion. The quantifier is over the registered adversary list \(A\). A missing key prevents \(S(r)\); a row outside \(A\) cannot enter \(F\). Componentwise inclusion preserves the positive signing and verification memberships and their traces, without asserting that a newly enlarged adversary list automatically passes the old security check.
 
 244. Proof of knowledge and source-bound extraction
 
@@ -7028,15 +7087,49 @@ The computed knowledge check covers every accepted transcript in the registered 
 
 An interaction retains actual prover and verifier runs and their shared terminal/initial interface. Both transition traces reconstruct from their source rows. An accepted interaction under the checked knowledge result yields an actual extractor row and a witness of its statement. Source extension preserves accepted rows, extraction witnesses and earlier interactions. All 1,024 finite support checks pass, together with an explicit interacting prover/verifier and its extracted witness.
 
+For a transcript \(t\), statement support \(\Sigma\), transcript list \(T\), accepted list \(A\), witness relation \(W\) and extractor rows \(E\), define
+\[
+ \operatorname{Accept}(t)\iff t_s\in\Sigma\land t\in T\land t\in A,\qquad
+ E_t=[e\in E\mid e_t=t\land(t_s,e_w)\in W].
+\]
+Inspection of the filtered list proves \(E_t\ne[]\iff\exists e\in E,\ e_t=t\land(t_s,e_w)\in W\). Applying that equivalence at every registered adversary transcript gives
+\[
+ \operatorname{Knowledge}=\mathrm{true}
+ \iff\forall t\in D,\ \operatorname{Accept}(t)\Rightarrow
+ \exists e\in E,\ e_t=t\land(t_s,e_w)\in W.
+\]
+The failure ledger is \([t\in D\mid\operatorname{Accept}(t)\land E_t=[]]\). An interaction separately carries
+\[
+ \operatorname{run}(P,i,u)=\operatorname{ok}(\tau_P),\quad
+ \operatorname{last?}(\tau_P)=\operatorname{some}(j),\quad
+ \operatorname{run}(V,j,v)=\operatorname{ok}(\tau_V).
+\]
+Run admission reconstructs both transition executions. For an accepted interaction in \(D\), Knowledge supplies the extractor row and its witness relation membership. Extension preserves these exact runs, row memberships and shared interface, so the same transcript and extraction witness remain available.
+
 245. Zero knowledge, simulation and closed witness distinctions
 
-Real transcripts retain their statement and witness supports. Simulator rows retain the same statement, an actual process execution and its terminal transcript. The exact observation relation determines the views of each transcript. A matching simulator row is proved to have the identical statement and the same admitted observations as its real transcript. The computed coverage check is equivalent to existence of such a registered simulator row for every supported real row. The failure ledger enumerates every uncovered real row.
+Real transcripts retain their statement and witness supports. Simulator rows record a statement and transcript; a retained SimulationTrace additionally certifies the actual process execution and its terminal transcript. The exact observation relation determines the views of each transcript. A matching simulator row is proved to have the identical statement and the same admitted observations as its real transcript. The computed coverage check is equivalent to existence of such a registered simulator row for every supported real row. The failure ledger enumerates every uncovered real row.
 
 Acceptance correctness is proved equivalent to acceptance of every supported real transcript. For distinct witnesses of a common statement, a shared matching simulator view closes their witness distinction: the observed view cannot simultaneously recover both witnesses. This result is relative to the registered observation relation and simulator support.
 
 The complete ordered-pair enumeration supplies closed and retained distinction ledgers. Exact membership theorems establish that these ledgers are disjoint and exhaustive for same-statement, distinct-witness pairs. Source extension preserves real rows, the registered observations and simulator executions. The 3,584 concrete outcomes cover observation relations, simulator support, acceptance, coverage failures and both distinction ledgers, alongside an actual simulator execution and a native closed-witness proof.
 
-Fold commitment law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold commitment law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+Write \(R\) for the real rows whose statements and statement/witness pairs are supported, \(S\) for the registered simulator rows and \(O\) for the observation relation. Define
+\[
+ \mathcal V(t)=\{v\mid(t,v)\in O\},\qquad
+ r\sim s\iff r_{\rm statement}=s_{\rm statement}
+                 \land\mathcal V(r_{\rm transcript})=\mathcal V(s_{\rm transcript}).
+\]
+The equality here is equality of membership, implemented by checking inclusion in both directions; observation-list ordering or multiplicity is not asserted equal. Filtering \(S\) by this predicate and testing nonemptiness proves
+\[
+ \operatorname{Covered}=\mathrm{true}\iff\forall r\in R,\ \exists s\in S,\ r\sim s.
+\]
+A SimulationTrace additionally proves the actual simulator run and
+\(\operatorname{last?}(\tau_s)=\operatorname{some}(s_{\rm transcript})\). Those execution fields are separate from the matching-row check.
+
+For same-statement rows \(a,b\in R\) with different witnesses, a common matching simulator row gives \(\mathcal V(a_t)=\mathcal V(b_t)\) by transitivity. For any common observed \(v\), simultaneous decoding implies \(a_w=d(v)=b_w\), contradicting \(a_w\ne b_w\). The ordered pair list \(R\times R\), filtered by equal statement and unequal witness, splits according to the Boolean same-views check into disjoint closed and retained ledgers. Coverage failures are exactly the real rows with no matching simulator row; correctness separately checks \(r_t\in A\) for every \(r\in R\).
 
 246. Multiparty computation and explicit corruption boundaries
 
@@ -7046,7 +7139,26 @@ For each coalition, exact projection retains its private inputs and local views.
 
 Source extension preserves earlier joint rows, communication executions and leakage witnesses. All 768 concrete checks over private-input support, joint relations, local views and corruption sets pass. An explicit source-bound communication execution also satisfies the checked registered privacy theorem.
 
-Fold signature law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold signature law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+Let \(J\) be the joint-relation rows whose private-input owners and local-view owners are registered, with each input itself in the private-input support. For coalition \(C\), retain the source list order in the projections
+\[
+ I_C(r)=[i\in r_{\rm inputs}\mid i_{\rm party}\in C],\qquad
+ V_C(r)=[v\in r_{\rm views}\mid v_{\rm party}\in C].
+\]
+The leakage ledger filters \(J\times J\) by
+\[
+ a_{\rm output}=b_{\rm output}\land I_C(a)=I_C(b)\land V_C(a)\ne V_C(b).
+\]
+Consequently the all-pairs check has the exact meaning
+\[
+ \operatorname{Private}(C)=\mathrm{true}\iff
+ \forall a,b\in J,\ 
+ [a_{\rm output}=b_{\rm output}\land I_C(a)=I_C(b)]
+ \Rightarrow V_C(a)=V_C(b).
+\]
+Each leakage member contradicts this implication. Whole-support security is
+\(\forall C\in\mathcal C,\operatorname{Private}(C)=\mathrm{true}\), where \(\mathcal C\) is the declared corruption list. An execution supplies \(C\in\mathcal C\) and an actual communication run, so this universal statement applies to its own coalition. Extension preserves the row, coalition membership and run; since its projections are unchanged, an earlier leakage witness also remains a witness.
 
 247. Adversarial computation and complete outcome ledgers
 
@@ -7056,7 +7168,26 @@ The favorable and unfavorable ledgers contain every admitted row according to it
 
 Actual executions retain the complete communication steps and terminal state. A stopped execution additionally satisfies the registered stopping rule. Source extension preserves earlier schedules, both outcome ledgers and actual stopped traces. All 2,048 concrete checks pass over strategy, schedule, resource and security supports, together with an explicit stopped execution and its native security proof.
 
-Fold proof-of-knowledge law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold proof-of-knowledge law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For registered schedules \(L\), strategies \(D\), resource bound \(B\) and secure terminal states \(Q\), write
+\[
+ J=[s\in L\mid s_{\rm strategy}\in D\land|s_{\rm actions}|\le B],\qquad
+ J_+=[s\in J\mid s_{\rm final}\in Q],\quad
+ J_-=[s\in J\mid s_{\rm final}\notin Q].
+\]
+Deciding the terminal membership yields the exhaustive disjoint partition of \(J\). The all-rows computation proves
+\[
+ \operatorname{Secure}=\mathrm{true}
+ \iff\forall s\in J,\ s_{\rm final}\in Q.
+\]
+A member of \(J_-\) refutes this statement. An Execution additionally requires
+\[
+ \operatorname{run}(P,s_{\rm initial},s_{\rm actions})
+ =\operatorname{ok}(s_{\rm trace}),\qquad
+ \operatorname{last?}(s_{\rm trace})=\operatorname{some}(s_{\rm final});
+\]
+a StoppedExecution adds membership in the stopping-state list. Thus applying Secure to the execution's source row establishes security of its actual recorded terminal state. Extension increases the resource allowance, preserves schedules and runs, and preserves secure-state membership in both directions; these conditions retain both outcome ledgers and the stopped trace.
 
 248. Observation-based and resource-bounded security
 
@@ -7068,7 +7199,31 @@ Full observation closure retains every supported secret in each admitted observe
 
 Reduction certificates retain source admission, successful guesses and resource costs; bounded failure transfers through a checked certificate. Identity and serial composition preserve the reduction interfaces. Source extension retains previous attempts and success witnesses. All 1,024 concrete outcomes and both distinguishing native examples pass.
 
-Fold zero-knowledge law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold zero-knowledge law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+Let \(J\) contain precisely the registered attempts with a supported secret, an admitted secret/view pair and a registered adversary. Define
+\[
+ S=[a\in J\mid a_{\rm guess}=a_{\rm secret}],\qquad
+ S_B=[a\in S\mid a_{\rm cost}\le B].
+\]
+The two all-failure checks satisfy
+\[
+ \operatorname{AllFail}\iff\forall a\in J,\ a_{\rm guess}\ne a_{\rm secret},
+ \quad
+ \operatorname{Fail}_B\iff
+ \forall a\in J,\ a_{\rm cost}\le B\Rightarrow a_{\rm guess}\ne a_{\rm secret}.
+\]
+Thus AllFail implies \(\operatorname{Fail}_B\); if \(b\le B\), the latter implies \(\operatorname{Fail}_b\) by transitivity of the cost inequality. A reduction \(f:J_1\to J_2\) preserves success and satisfies \(\operatorname{cost}(f(a))\le\operatorname{cost}(a)\). A successful source attempt costing at most \(B\) would therefore be a successful target attempt within \(B\), proving
+\[
+ \operatorname{Fail}_B(J_2)\Rightarrow\operatorname{Fail}_B(J_1).
+\]
+Identity and composition satisfy the same conditions, with the composed cost bound obtained by transitivity.
+
+Full observation closure is
+\[
+ s\in X\land(s,v)\in O\Rightarrow\forall t\in X,\ (t,v)\in O.
+\]
+For distinct \(s,t\) in a common view class, simultaneous recovery requires \(s=d(v)=t\), a contradiction. This conclusion concerns recovering both identities from one view; it does not imply that every individual guess in \(J\) fails.
 
 249. Classical security under an enlarged interface boundary
 
@@ -7078,7 +7233,20 @@ A declared quantum-capable interface remains distinct from an operational classi
 
 The exact missing-dependency ledger identifies unfulfilled reduction dependencies. A reduction use retains evidence for every registered dependency and an actual source- and success-preserving resource certificate; bounded failure transfers through that certificate. Migration preserves earlier interfaces, queries, resource allowances and actual classical traces. All 770 concrete checks pass, including admitted declarations that do not qualify as classical executions.
 
-Fold multiparty-computation law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold multiparty-computation law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For query list \(q_1,\ldots,q_n\), interface \(I\), registered query rows \(Q\), count limit \(N\) and resource limit \(B\), admission is exactly
+\[
+ \bigl(\forall i,\ q_i\in Q\land(q_i)_{\rm oracle}\in I\bigr)
+ \land n\le N\land\sum_{i=1}^{n}(q_i)_{\rm cost}\le B.
+\]
+The cost recursion is \(c([])=0\), \(c(q::r)=q_{\rm cost}+c(r)\). A ClassicalLedger adds
+\[
+ \forall q\in L,\ q_{\rm oracle.capability}=\mathrm{classical}.
+\]
+A member with capability quantumInterface contradicts the distinct capability constructors. A ClassicalExecution separately supplies \(\operatorname{run}(P,i,a)=\operatorname{ok}(\tau)\), from which the transition execution is reconstructed.
+
+For dependencies \(D\) and available records \(A\), the exact missing ledger is \([d\in D\mid d\notin A]\). A ReductionUse provides \(\forall d\in D,d\in A\), eliminating every member of that ledger, together with the source-, success- and cost-preserving reduction of the preceding section. Its bounded-failure transfer follows from that certificate. Migration preserves old query membership, increases both limits and preserves actual runs, so it transports the same classical execution without changing its queries or capability evidence.
 
 250. Inference from generated hypotheses and exact evidence
 
@@ -7088,7 +7256,24 @@ Retained and eliminated ledgers are proved exhaustive and disjoint over the regi
 
 Adding evidence cannot introduce a previously eliminated candidate. Extending hypothesis support preserves earlier compatible records. These derivations introduce neither a prior distribution nor a pretrained weight. All 194 concrete checks pass, including executable expected outputs regenerated from the pinned source function, empty-support boundaries and duplicate-name rejection priority.
 
-Fold adversarial-computation law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold adversarial-computation law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+Write a hypothesis as \(h=(n_h,R_h)\), with evidence list \(E\) and ordered hypothesis list \(H\). The exact survival rule is
+\[
+ \operatorname{Fit}_E(h)\iff\forall e\in E,\ e\in R_h,\qquad
+ H_E=[h\in H\mid\operatorname{Fit}_E(h)].
+\]
+The executable checks unique names first, then rejects an empty \(E\) or \(H\), otherwise returning \([n_h\mid h\in H_E]\). Hence a returned name \(n\) has an actual source witness \(h\in H\) with \(n_h=n\) and \(E\subseteq R_h\). Filtering \(H\) by Fit and its Boolean negation partitions its members, and the retained proof trace is precisely \((h,h\in H,E\subseteq R_h)\).
+
+For evidence extension \(E\subseteq E'\),
+\[
+ E'\subseteq R_h\Rightarrow E\subseteq R_h,\qquad H_{E'}\subseteq H_E.
+\]
+For hypothesis extension \(H\subseteq H'\), an old retained record remains retained against the same evidence. The uncertainty ledger is the full ordered list
+\[
+ U_E=[(a,b)\in H_E\times H_E\mid n_a\ne n_b].
+\]
+Its membership theorem follows by the two list traversals and the final identity comparison, retaining each source record and its original order.
 
 251. Sealed classification, prediction and target custody
 
@@ -7098,7 +7283,21 @@ Targets are kept in a separate evaluation structure. Its held-apart condition pr
 
 Extension preserves the earlier sealed hypothesis and its predictions under the stated source-interface conditions. All 1,536 concrete input, label, rule, prediction and falsification checks pass. These formal results preserve the registered boundary: natural-data performance requires the separate empirical constitution.
 
-Fold information-theoretic and computational-security law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold information-theoretic and computational-security law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For sealed hypothesis \(h\), supported inputs \(X\) and labels \(Y\), prediction uses the ordered list
+\[
+ L_h(x)=[y\mid(x,y)\in R_h,\ x\in X,\ y\in Y],\qquad
+ \operatorname{predict}_h(x)=\operatorname{ok}(y)\iff L_h(x)=[y].
+\]
+This is a singleton-list condition: repeated rows are not silently deduplicated. The sealed record carries \(h\in H_E\), so every training row belongs to \(R_h\). Evaluation then separates
+\[
+ M=[t\in T\mid\operatorname{predict}_h(t_x)=\operatorname{ok}(t_y)],
+\]
+\[
+ F=[t\in T\mid\exists y,\ \operatorname{predict}_h(t_x)=\operatorname{ok}(y)\land y\ne t_y].
+\]
+An error outcome is a nonmatch but cannot supply the successful prediction required for \(F\). Match and falsification membership are therefore disjoint. Custody requires \(\forall t\in T,\forall e\in E,\ t_x\ne e_x\), implying \((t_x,t_y)\notin E\). The registered extension preserves input and label lists, retains \(h\), and admits no new evidence outside the old evidence; it therefore preserves the same output list and exact prediction.
 
 252. Representation grammar and preserved distinctions
 
@@ -7108,7 +7307,24 @@ The construction reuses the previously verified encoding laws. A shared codeword
 
 Composition retains source identities and proves each resulting row comes through an actual intermediate encoding and interface row. Source extension preserves prior transformation and task traces. All 518 concrete checks pass, including missing-interface rejection, complete closed/retained ledgers, task outputs and composition, together with native transformation and closure fixtures. No opaque transformation is admitted without its exact source trace.
 
-Fold post-quantum security-boundary law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold post-quantum security-boundary law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+A transformation is a source row with explicit membership evidence
+\[
+ x\in X,\qquad w\in G,\qquad(x,w)\in E,
+\]
+and a task trace adds \((w,y)\in T\). The complete task and complexity ledgers satisfy
+\[
+ y\in\operatorname{tasks}(w)\iff(w,y)\in T,\qquad
+ (x,n)\in C_E\iff\exists w,\ (x,w)\in E\land|w|=n.
+\]
+Under the registered encoding-validation check, equal transformation words give a closed distinction and unequal words give a retained distinction. If \(x\ne x'\) and both transformations have word \(w\), recovering both would require \(x=d(w)=x'\), which is impossible. Equal words also imply equal task lists by substitution.
+
+For an admitted interface composition \(E;I\), exact row correspondence is
+\[
+ (x,z)\in E;I\iff\exists w,\ (x,w)\in E\land(w,z)\in I.
+\]
+The source projection of the resulting list equals that of \(E\), preserving the original source order. The closed ledger uses complete source pairs sharing an encoding class; the retained ledger uses differing lookup images. Componentwise source, grammar, encoding and task inclusion transports the original transformation and task trace with the identical word and result.
 
 253. Generalization and exhaustive target-family certificates
 
@@ -7118,7 +7334,20 @@ The failure ledger retains exact adverse targets and each such member refutes th
 
 A structural certificate carries a generated target family, its base proof and a successor proof. Induction derives correctness for every generated member. Transferring that result to the target support additionally requires explicit exhaustive coverage. Generalization retains the source boundary: it is empirical unless the structural successor proof exhausts the target family. All 64 concrete held-target checks and a native structural-family fixture pass.
 
-Fold inference law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold inference law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+Let \(W\) be withheld inputs, \(T_W=[t\in T\mid t_x\in W]\), and \(p\) the sealed predictor. The exact finite check is
+\[
+ \operatorname{Pass}\iff\forall t\in T_W,\ p(t_x)=\operatorname{ok}(t_y).
+\]
+The supplied completeness condition \(\forall x\in W,\exists t\in T,\ t_x=x\) places such a witness in \(T_W\); applying Pass proves a checked target value for every withheld input. The failure ledger filters \(T_W\) by unsuccessful agreement, so any member contradicts Pass. With unchanged predictions, extending the target support preserves old failures, and passing the enlarged support implies passing its old members.
+
+For the structural case, a certificate supplies a generated target \(g(n)\), the base \(P(0)\), and \(\forall n,P(n)\Rightarrow P(n+1)\), where
+\[
+ P(n)\equiv p(g(n)_x)=\operatorname{ok}(g(n)_y).
+\]
+Natural-number induction gives \(\forall n,P(n)\). The additional coverage premise
+\(\forall t\in T_W,\exists n,g(n)=t\) then substitutes each target into this family theorem and proves Pass. This last coverage step is explicit; correctness on the generated family alone does not identify it with the target support.
 
 254. Sample complexity and constructive teaching witnesses
 
@@ -7128,7 +7357,18 @@ For every distinct rejected alternative in the hypothesis support, the construct
 
 A larger supported sample preserves the teaching certificate when the target fits the added evidence and hypothesis support remains unchanged. All 1,024 concrete support, sample, relation and ambiguity checks and the native distinguishing-witness fixture pass. The source boundary is retained: each family requires a generated certificate; no asymptotic formula is imported.
 
-Fold classification and prediction law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold classification and prediction law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For selected sample \(S\), possible examples \(E\), hypotheses \(H\) and target \(t\), the teaching condition is
+\[
+ S\subseteq E,\quad t\in H,\quad S\subseteq R_t,\quad
+ \forall h\in H,\ S\subseteq R_h\Rightarrow n_h=n_t.
+\]
+It follows that every retained pair has equal names, so the distinct-name ambiguity ledger has no member. For an alternative \(a\in H\) with \(n_a\ne n_t\), compatibility would contradict the final teaching condition. Traversing the finite sample therefore yields
+\[
+ \exists e\in S,\ e\in R_t\land e\notin R_a.
+\]
+Constructively, failure of the all-members test is located at a head element that fails membership or recursively in the tail; target compatibility supplies membership in \(R_t\). The resource ledger is \([(e,1)\mid e\in S]\), and the sample size is \(|S|\). If \(S\subseteq S'\), the hypothesis list is unchanged, \(S'\subseteq E'\), and the target fits \(S'\), every hypothesis fitting \(S'\) also fits \(S\). The original name-closure implication thus proves teaching for the enlarged sample.
 
 255. Exact optimization over evidence-compatible hypotheses
 
@@ -7138,7 +7378,32 @@ Tied undominated identities remain together; selection does not introduce a tie 
 
 All 512 concrete evidence, hypothesis-relation and objective outputs pass, together with native trace and elimination-witness proofs. Gradient, differentiability and fitted parameter spaces are not assumed.
 
-Fold representation-learning boundary law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold representation-learning boundary law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+Let
+\[
+ F=[n_h\mid h\in H,\ E\subseteq R_h],\qquad
+ O=\operatorname{scan}_{\prec}([],F).
+\]
+The scan theorem gives the exact survivor certificate
+\[
+ n\in O\iff n\in F\land\forall b,\ (b,n)\notin{\prec}.
+\]
+Under the source preference-validity check, each omitted \(n\in F\) has an actual \(b\in F\), \(b\ne n\), with \((b,n)\) in its elimination ledger. Two feasible names without such incoming rows both survive; the algorithm adds no tie-breaking order.
+
+The recorded history contains its initial state and one state per candidate:
+\[
+ |\operatorname{history}_{\prec}([],F)|=|F|+1,\qquad
+ \operatorname{scan}_{\prec}([],F_1{+\!\!+}F_2)
+ =\operatorname{scan}_{\prec}(\operatorname{scan}_{\prec}([],F_1),F_2).
+\]
+For \(F'=F{+\!\!+}N\) and \({\prec}'={\prec}{+\!\!+}A\), extension has the exact form
+\[
+ n\in O'\iff(n\in F\lor n\in N)
+ \land\forall b,\ (b,n)\notin{\prec}
+ \land\forall b,\ (b,n)\notin A.
+\]
+Thus appended objective rows are checked explicitly against every retained identity, and the complete trace reconstructs the same traversal.
 
 256. Computational induction and exact successor tests
 

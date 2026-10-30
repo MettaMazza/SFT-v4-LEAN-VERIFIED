@@ -2987,7 +2987,49 @@ An error relation retains nonempty duplicate-free source and received word carri
 
 Image and predecessor extraction filters the original action relation, then removes repeated words in first-occurrence order. Native membership equivalences establish that a word is retained exactly when a corresponding action cell exists. Images of an admitted source are nonempty and lie in the received carrier; every retained predecessor lies in the source carrier. Both lists are duplicate-free. An unused received entry has an empty predecessor class, preserving the original domain.
 
-Correction is unique exactly when the complete registered predecessor list is a singleton. The unique record retains that source; every other list, including the empty list, is returned intact as a closed source class. Native proofs establish that a uniquely corrected source has a registered action cell and that any registered predecessor of that received word equals the corrected source. No likelihood, distance rule or inferred predecessor enters the construction. Independent source-expression comparisons pass 7693 constructor cases,738 image extractions,738 predecessor extractions and 1476 correction decisions/records.
+Correction is unique exactly when the complete registered predecessor list is a singleton. The unique record retains that source; every other list, including the empty list, is returned intact as a closed source class. Native proofs establish that a uniquely corrected source has a registered action cell and that any registered predecessor of that received word equals the corrected source. No likelihood, distance rule or inferred predecessor enters the construction. Independent source-expression comparisons pass 7,693 constructor cases, 738 image extractions, 738 predecessor extractions and 1,476 correction decisions/records.
+
+
+Let S and V be source and received word lists, and R the ordered list of triples (s,v,a). Admission requires nonempty distinct S,V, distinct R, and
+
+\[
+ \forall(s,v,a)\in R,\ s\in S\land v\in V\land a\ne\text{empty string},
+ \qquad\forall s\in S,\ \exists v,a,\ (s,v,a)\in R.
+\]
+
+The checks occur in this order: carriers, repeated triples, endpoint/action conditions, totality. Success returns the original lists. Empty words remain allowed; different actions on the same source/image pair remain distinct triples.
+
+Let F be the first-occurrence word filter. Its scan skips a word already in the seen list, otherwise emits it and adds it to that list. Induction proves membership in the scan output iff membership in its input and absence from its initial seen list. Emitted words cannot recur because each is thereafter seen; hence F preserves membership and produces a distinct ordered list. Define
+
+\[
+ I_R(s)=F([v:(s,v,a)\in R]),\qquad P_R(v)=F([s:(s,v,a)\in R]).
+\]
+
+Filter and projection membership, followed by membership preservation of F, give
+
+\[
+ v\in I_R(s)\iff\exists a,\ (s,v,a)\in R
+ \iff s\in P_R(v).
+\]
+
+Thus totality makes each admitted source's image list nonempty, and endpoint containment places images in V and predecessors in S. Querying an image list requires s∈S; querying predecessors requires v∈V. An unused admitted v has P_R(v)=[], whereas a query outside V retains its error.
+
+The correction record is defined by the complete predecessor list:
+
+\[
+ \operatorname{record}(P)=\begin{cases}\operatorname{uniqueSource}(s),&P=[s],\\
+ \operatorname{closedSourceClass}(P),&|P|\ne1.\end{cases}
+\]
+
+Splitting a list into empty, singleton, and at-least-two cases proves |P|=1 iff P=[s] for some s, and record(P)=uniqueSource(s) iff P=[s]. Therefore
+
+\[
+ \operatorname{correction}(v)=\operatorname{ok}(\operatorname{uniqueSource}(s))
+ \iff v\in V\land P_R(v)=[s].
+\]
+
+Membership of s in that singleton supplies a registered action (s,v,a). Any other registered predecessor t belongs to P_R(v) by the same membership equivalence and must equal s. If |P_R(v)|≠1, the record returns the entire P_R(v), including the empty list, with no selected replacement predecessor.
+
 
 104. Complete position traces, detection and action succession
 
@@ -2997,7 +3039,52 @@ The detection function retains identity as true. For nonidentical equal-width fo
 
 The identity-action base admits a single source and yields its singleton predecessor class, unique correction and empty-One trace. At each finite successor, appended registered action cells extend the received support by their exact images. Native admission preservation retains the original carrier and cell conditions. Complete image and predecessor membership after extension is equivalent to prior membership or a new matching action cell. First-occurrence order equations retain the original traversal and deduplication behavior. These results cover arbitrary finite action additions, including shared images, without selecting among ambiguous predecessors.
 
-Noise and Error retains all 1024 kernels, all five operational witnesses and both admitted witness relations. Fresh native execution matches every original registration, census, actual candidate lookup, closure, control, hash and unknown-identifier result. The cumulative 18867 source-expression comparisons include 1600 trace,6400 detection and 222 successor comparisons. The entry is complete at its finite structural boundary; stochastic frequencies, physical noise mechanisms and asymptotic reliability remain outside that original claim.
+Noise and Error retains all 1,024 kernels, all five operational witnesses and both admitted witness relations. Fresh native execution matches every original registration, census, actual candidate lookup, closure, control, hash and unknown-identifier result. The cumulative 18,867 source-expression comparisons include 1,600 trace, 6,400 detection and 222 successor comparisons. The entry is complete at its finite structural boundary; stochastic frequencies, physical noise mechanisms and asymptotic reliability remain outside that original claim.
+
+
+At an initial index k, the position-pair recursion emits (k,s_0,v_0) and continues at k+1 on the two tails; it stops when either word ends. Its indexed membership theorem is
+
+\[
+ (i,a,b)\in Q_k(s,v)\iff\exists j,\ i=k+j\land s[j]=\operatorname{Some}(a)\land v[j]=\operatorname{Some}(b).
+\]
+
+The head case has j=0; the tail case increments j and uses k+1+j=k+(j+1). For equal-width words, induction also gives |Q_k(s,v)|=|s|. Filtering Q_k by a≠b gives exactly the changed positions, retaining order and both labels. Presentation maps (i,a,b) to ("position-" followed by the decimal representation of i+1,a,b).
+
+For equal widths, the changed list is empty iff s=v: identical heads are removed and induction applies to the tails; unequal heads would be retained and contradict emptiness. Conversely, identical words have no unequal head at any step. Consequently
+
+\[
+ \operatorname{errorTrace}(s,v)=\operatorname{ok}(\mathrm{emptyOne})\iff s=v.
+\]
+
+For equal-width unequal words, the trace is the complete mapped changed list. Unequal widths return the common-position-carrier error before presentation. For any supplied valid-word list B, detection therefore satisfies
+
+\[
+ \operatorname{detectable}(B,s,v)=\operatorname{ok}
+ \left(\begin{cases}\mathrm{true},&s=v,\\v\notin B,&s\ne v\end{cases}\right)
+ \quad\text{when }|s|=|v|.
+\]
+
+The unequal-width error propagates unchanged; no membership guard on s is introduced.
+
+For appended action cells A, the exact extension is
+
+\[
+ S'=S,\qquad V'=F(V\mathbin{++}[v:(s,v,a)\in A]),\qquad R'=R\mathbin{++}A.
+\]
+
+Assume the original relation is admitted, A is distinct and disjoint from R, and every added cell has its source in S and a nonempty action label. Concatenation preserves distinct triples; first-occurrence filtering preserves a nonempty distinct received carrier. Old endpoints remain admitted, new images enter V' by construction, and every old totality witness remains in R'. These facts prove extension admission.
+
+Distributing filter and map over concatenation gives the exact order equations
+
+\[
+ P_{R'}(v)=F([s:(s,v,a)\in R]\mathbin{++}[s:(s,v,a)\in A]),
+\]
+\[
+ I_{R'}(s)=F([v:(s,v,a)\in R]\mathbin{++}[v:(s,v,a)\in A]).
+\]
+
+Membership is consequently old membership or existence of a matching added action cell, in both directions. Shared images retain every predecessor through this same construction. At the identity base, S=V=[s] and R=[(s,s,"identity")]. The guards hold directly, P_R(s)=[s], correction returns uniqueSource(s), and the unchanged word has empty-One trace. This proves the base and finite action-successor clauses on the registered domain.
+
 
 105. Complete coding support and held codebooks
 

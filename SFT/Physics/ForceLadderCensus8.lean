@@ -1,0 +1,11 @@
+import SFT.Physics.ForceLadderGrammarBase
+namespace SFT.Physics.ForceLadderGrammar
+set_option maxRecDepth 20000
+set_option maxHeartbeats 4000000
+theorem decisionCensus8 (minimality : Minimality) (measurement : Measurement) (record : Record) (extension : Extension) : survives ⟨.admitted,.rejected,.rejected,.rejected,minimality,measurement,record,extension⟩ = criteriaDecision ⟨.admitted,.rejected,.rejected,.rejected,minimality,measurement,record,extension⟩ := by
+ cases minimality <;> cases measurement <;> cases record <;> cases extension
+ all_goals rfl
+theorem uniqueCensus8 (minimality : Minimality) (measurement : Measurement) (record : Record) (extension : Extension) : criteriaDecision ⟨.admitted,.rejected,.rejected,.rejected,minimality,measurement,record,extension⟩ = true ↔ (⟨.admitted,.rejected,.rejected,.rejected,minimality,measurement,record,extension⟩ : Candidate) = survivor := by
+ cases minimality <;> cases measurement <;> cases record <;> cases extension
+ all_goals constructor <;> intro h <;> first | rfl | cases h
+end SFT.Physics.ForceLadderGrammar

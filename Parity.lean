@@ -658,3 +658,12 @@ def main : IO Unit := do
   for c in SFT.Physics.QuarkCubicsGrammar.candidates do
     IO.println ("QuarkCubicsGrammar\t" ++ SFT.Physics.QuarkCubicsGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.QuarkCubicsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.QuarkCubicsGrammar.exactForm c ++ "\t" ++ SFT.Physics.QuarkCubicsGrammar.decisionReason c)
 
+
+  for c in SFT.Mathematics.OrbitGrammar.candidates do
+    IO.println ("OrbitGrammar\t" ++ SFT.Mathematics.OrbitGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.OrbitGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.OrbitGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.OrbitGrammar.decisionReason c)
+
+  for c in SFT.Physics.ForceLadderGrammar.candidates do
+    IO.println ("ForceLadderGrammar\t" ++ SFT.Physics.ForceLadderGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ForceLadderGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ForceLadderGrammar.exactForm c ++ "\t" ++ SFT.Physics.ForceLadderGrammar.decisionReason c)
+
+  for c in SFT.Physics.PlanckBaseGrammar.candidates do
+    IO.println ("PlanckBaseGrammar\t" ++ SFT.Physics.PlanckBaseGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PlanckBaseGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PlanckBaseGrammar.exactForm c ++ "\t" ++ SFT.Physics.PlanckBaseGrammar.decisionReason c)

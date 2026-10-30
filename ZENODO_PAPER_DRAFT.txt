@@ -2865,3 +2865,13 @@ The base has T₀+1=1=2^0. If T_n+1=2^n, then T_(n+1)+1=2T_n+2=2(T_n+1)=2^(n+1).
 The normalized rational operations evaluate the source expressions at each original supplied depth. For h=1/2^k, the centered quadratic quotient is ((1+h)²−2+(1−h)²)/h²=2. The forward cubic quotient is ((1+2h)³−2(1+h)³+1)/h²=6+6h, so its error is E_k=6/2^k and 2E_(k+1)=E_k. The complete five-term dyadic sum with its boundary term is (16+8+4+2+1+1)/32=1. These calculations use exact normalized signed rational arithmetic for intermediate subtraction while retaining positive generated rungs and error bounds.
 
 Fresh native execution reproduces 57 exact rational rows: fourteen rungs, ten quadratic quotients, nine cubic quotients, nine errors, nine doubled successor errors, five ordered ledger terms and the complete ledger. The four original source witness expressions also evaluate to true. These finite execution comparisons accompany the arbitrary-depth derivations in Sections 334–336; they do not replace them. The component audit covers 171 definitions and theorems without axiom dependencies.
+
+338. Complete finite traces and the typed object boundary
+
+Let r_n be the generated rung from Section 334. Define the ordered trace T₀=[r₀] and T_(n+1)=T_n++[r_(n+1)]. At the base, |T₀|=1. Since appending one record adds one to list length, induction gives |T_n|=n+1. The append construction retains every prior record and contains its new terminal rung.
+
+Membership in T_(n+1) splits into membership in T_n or equality with r_(n+1). Induction therefore gives p∈T_n⇒∃k≤n, p=r_k. Conversely, if k≤n+1, either k=n+1, in which case the appended terminal record supplies r_k, or k≤n, in which case induction and retention supply it. Thus
+  p∈T_n ⇔ ∃k≤n, p=r_k.
+Every record is a positive exact Part, so p∈T_n implies p_numerator>0. Moreover |T_n|=n+1<n+2=|T_(n+1)|: every reached finite trace has a strictly longer generated successor. This is an arbitrary supplied finite-depth construction, with no largest-stage object.
+
+The original typed grammar's acceptance equivalence fixes all eight admitted coordinates. Projecting that equality to its object, continuum and cardinality coordinates gives finite-stage, unbounded-process-boundary and finite-bound-count respectively. A candidate with completed-infinity, ambient-real-line or completed-comparison in those coordinates is rejected by the corresponding proved coordinate exclusion. The finite traces above provide the explicit generated-stage construction, while these exclusions state the source object-language boundary. The ten declarations in this component have zero axiom dependencies.

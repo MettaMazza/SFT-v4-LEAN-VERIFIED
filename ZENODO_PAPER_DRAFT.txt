@@ -3586,3 +3586,25 @@ This also proves T is nonempty. For odd q, the even-denominator guard cannot hol
 
 Nine native theorems establish the Fraction-state collision exclusion, actual loop success, guard passage and complete wrapper result with no axiom dependencies. The theorem is quantified over the full admitted odd-denominator domain.
 
+
+348. Original vacuum recurrence witnesses
+
+The four original witness records use the actual odd-denominator orbit function. The first requires the ordered trace (2/3,1/3); the next two require trace lengths four and three for denominators five and seven. The fourth checks every denominator d = 2n+3 for n = 0,…,14 and requires that the final returned Fraction is 1/d:
+
+\[
+ \bigwedge_{n=0}^{14}
+ \operatorname{last}(\operatorname{oddDenominatorOrbit}(2n+3))=1/(2n+3).
+\]
+
+All four predicates evaluate to true in native Lean, retaining their original names and statements. The complete prefix gives the following denominator/period pairs:
+
+\[
+ \begin{aligned}
+ &(3,2),(5,4),(7,3),(9,6),(11,10),\\
+ &(13,12),(15,4),(17,8),(19,18),(21,6),\\
+ &(23,11),(25,20),(27,18),(29,28),(31,5).
+ \end{aligned}
+\]
+
+These periods are lengths of the full ordered traces, whose final elements are respectively 1/d. Fresh execution matches those traces against the original V3 function. Ten witness definitions and theorems have no axiom dependencies. The general result for arbitrary odd denominators is the theorem of section 347; this complete finite prefix preserves the source's additional concrete witnesses.
+

@@ -10416,14 +10416,14 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-QUANTUM-GATE-001-495704206fd6c701.json",
       "statement": "The forced quantum transformations and gates kernel retains bijective branch-word map; period-held phase action; complete domain and image support; exact inverse; source-bound gate identity; composition interface; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
       "title": "Fold reversible transformation and gate law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/QuantumComputation/GateLaw.lean",
         "SFT/QuantumComputation/GateLawGrammar.lean",
         "SFT/QuantumComputation/GateLawControls.lean",
         "SFT/QuantumComputation/GateLawEvidence.lean"
       ],
-      "artifact_runtime_parity": "pending",
+      "artifact_runtime_parity": "PASS all256 actual identifier lookups,all original program fields and hashes,unknown-ID rejection.",
       "registration_sha256": "6debf2a0e164b40a87f2856c030bf32f946d7bd451bfb2418c318f56a2782252",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -10469,10 +10469,9 @@
         "status": "independently_replicated",
         "title": "Fold reversible transformation and gate law"
       },
-      "remaining": [
-        "Full original program87046 comparison;complete in dependency order after Measurement."
-      ],
-      "verified_scope": "transformedRowsExactly proves every transformed word/phase branch comes from exactly the original lookup and held phase action,and every corresponding source row appears. exactGateBranch connects that equivalence to an accepted original apply_gate.; completeImageSupport proves the result support equals the full registered target support;branchMapInjective proves admitted source words cannot merge to the same target.; Shared native applicationExists/admittedRoundTrip/applicationInverse prove exact admission,full branch count and full state recovery by the original inverse;forwardSerial and exactInverseTrace preserve causal composition. Original3264 source application/phase comparisons and4165 serial gate traces apply unchanged.; Exact complete256 grammar,8 witnesses,4 controls and every claim-specific program field preserved. Registered build/zeroaxiom/fresh parity PASS;full original program87046 running."
+      "remaining": [],
+      "verified_scope": "transformedRowsExactly proves every transformed word/phase branch comes from exactly the original lookup and held phase action,and every corresponding source row appears. exactGateBranch connects that equivalence to an accepted original apply_gate.; completeImageSupport proves the result support equals the full registered target support;branchMapInjective proves admitted source words cannot merge to the same target.; Shared native applicationExists/admittedRoundTrip/applicationInverse prove exact admission,full branch count and full state recovery by the original inverse;forwardSerial and exactInverseTrace preserve causal composition. Original3264 source application/phase comparisons and4165 serial gate traces apply unchanged.; Exact complete256 grammar,8 witnesses,4 controls and every claim-specific program field preserved. Registered build/zeroaxiom/fresh parity PASS;full original program87046 running.",
+      "completion_evidence": "verification/TURN_356_QUANTUM_COMPLETION.json"
     },
     {
       "branch": "quantum_computation",
@@ -10756,8 +10755,13 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-QUANTUM-COMMUNICATION-001-01059b1cbe86b894.json",
       "statement": "The forced quantum communication kernel retains sender and receiver supports; joint state composition; local transformations; channel relation; retained correlations; observation records; resource and loss ledger; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
       "title": "Fold quantum communication law",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/QuantumComputation/Communication.lean",
+        "SFT/QuantumComputation/CommunicationGrammar.lean",
+        "SFT/QuantumComputation/CommunicationControls.lean",
+        "SFT/QuantumComputation/CommunicationEvidence.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "510aec3fe5efd36d315478f6aa16bf857081a0d4a29434b638ae26eb4860242b",
       "v3_registration": {
@@ -10803,7 +10807,11 @@
         "statement": "The forced quantum communication kernel retains sender and receiver supports; joint state composition; local transformations; channel relation; retained correlations; observation records; resource and loss ledger; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
         "status": "independently_replicated",
         "title": "Fold quantum communication law"
-      }
+      },
+      "remaining": [
+        "Full original program91150 comparison;complete in dependency order after Complexity."
+      ],
+      "verified_scope": "receiverSupportRetained and senderSupportRetained prove both original component supports reconstruct exactly from the complete joint observation record using original Cell provenance.; localSenderProvenance proves every joint branch after local sender transformation retains an original sender branch with exact word lookup and phase shift,plus the original receiver component.; completeCommunicationRecordCost proves the complete observation record count equals the product of sender and receiver branch counts.; Shared Entanglement correlationRequiresBothDistinctions/retainedCorrelationWitness preserve exact correlated-support witnesses;everyComponentRecordRetained and Measurement.closedDistinctionRetained preserve unselected records. Inherited ChannelRelation constructor/support/overlap and EncodingLoss closed-distinction semantics remain unchanged,as do CommunicationResources query/resource ledgers. Physical transmission capacity and security retain the original empirical boundary.; Original2809 composition,3264 gate and8537 observation/factorization comparisons remain applicable. Exact complete256 grammar,8 witnesses,4 controls and every claim-specific program field preserved. Registered build/zeroaxiom/fresh parity PASS;full original program91150 running."
     },
     {
       "branch": "quantum_computation",
@@ -190210,13 +190218,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T08:30:04.329881+00:00",
+  "updated_at": "2026-10-30T08:34:16.107139+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 5,
-    "pending": 2609,
-    "fully_reconstructed_claims": 167,
-    "axiom_free_exported_results": 8330,
-    "axiom_free_audited_definitions_and_theorems": 18939
+    "pending": 2608,
+    "fully_reconstructed_claims": 168,
+    "axiom_free_exported_results": 8345,
+    "axiom_free_audited_definitions_and_theorems": 18985
   }
 }

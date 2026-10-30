@@ -1011,6 +1011,33 @@ Greatest and least operations return a value exactly when the complete filtered 
 
 Meet succeeds exactly when lower-bound generation succeeds and its complete result has the returned unique greatest witness; join has the corresponding upper-bound and unique least criterion. Every returned meet belongs to the carrier, lies below all held members, and is above every carrier lower bound. Every returned join belongs to the carrier, lies above all held members, and is below every carrier upper bound. Bound-generation errors and absence or multiplicity of matching extrema retain the original outcomes.
 
+
+Using the ordered extremal filters G_R and E_R of section 50, successful greatest selection gives G_R(B) = [g]. Filter membership then yields
+
+\[
+ g\in B,\qquad\forall b\in B,\ b\le_R g,\qquad
+ \forall r\in B,\ (\forall b\in B,\ b\le_R r)\Rightarrow r=g.
+\]
+
+Indeed, any such rival r belongs to G_R(B), and membership of [g] forces r = g. The least case reverses both comparisons. Conversely, if B is distinct, filtering preserves distinctness; membership of g together with exclusion of every different rival forces the entire matching list to be [g]. Distinctness matters here: two occurrences of the same matching label produce a two-entry list and the original selector returns none.
+
+For successful lower-bound generation B = L_R(H), substitute its membership equivalence into the greatest result:
+
+\[
+ m\in C,\quad\forall h\in H,\ m\le_R h,\quad
+ \forall x\in C,\ (\forall h\in H,\ x\le_R h)\Rightarrow x\le_R m.
+\]
+
+The dual substitution for B = U_R(H) gives
+
+\[
+ j\in C,\quad\forall h\in H,\ h\le_R j,\quad
+ \forall x\in C,\ (\forall h\in H,\ h\le_R x)\Rightarrow j\le_R x.
+\]
+
+These conclusions follow from actual returned witnesses. They do not assume that an extremum exists for every held selection.
+
+
 53. Conditional meet/join existence and monotonicity
 
 The original bound guard succeeds exactly for a nonempty held selection whose members belong to the carrier. Bound generation then returns its full ordered filter. On a distinct carrier, both bound lists are distinct. For an accepted partial order and a valid held selection, meet returns a given value if and only if it is a carrier lower bound above every other carrier lower bound. Join has the dual equivalence. Antisymmetry supplies extremal uniqueness, so the converses imply actual successful evaluation.
@@ -1019,11 +1046,72 @@ Monotonicity succeeds exactly when both endpoint images exist for every source c
 
 The six original witnesses are proved using their actual operations and original names/statements: the diamond is a partial order, its arms remain incomparable, the chain is total while the diamond is not, the arms meet at One and join at whole, and the canonical identity mapping preserves every diamond comparison. Fresh execution reproduces all six witness rows.
 
+
+Assume Partial(C,R), H ≠ [], and H ⊆ C. The bound guard then returns its ordered filter, and distinctness of C implies distinctness of that filter. If m is a greatest lower bound and r is another greatest member of L_R(H), then
+
+\[
+ r\le_R m\quad\text{and}\quad m\le_R r
+ \quad\Longrightarrow\quad r=m
+\]
+
+by antisymmetry. Thus the greatest-filter list is exactly [m] and evaluation returns ok(some(m)). The least-upper-bound proof is dual. Together with section 52 this establishes
+
+\[
+ \operatorname{meet}(C,R,H)=\operatorname{ok}(\operatorname{some}(m))
+ \iff m\text{ satisfies the displayed greatest-lower-bound conditions},
+\]
+
+and the analogous join equivalence. No existence is asserted when those conditions have no witness.
+
+For the actual mapping dictionary I, monotonicity has the exact finite interpretation
+
+\[
+ \forall(a,b)\in R,\ \exists u,v,\
+ \operatorname{lookup}(I,a)=\operatorname{some}(u)\land
+ \operatorname{lookup}(I,b)=\operatorname{some}(v)\land(u,v)\in S.
+\]
+
+A missing endpoint image makes its cell false; an empty R has no cells to fail. The original diamond uses C = [One,left,right,whole] and
+
+\[
+ R=\{(x,x):x\in C\}\cup
+ \{(One,left),(One,right),(One,whole),(left,whole),(right,whole)\}.
+\]
+
+Neither (left,right) nor (right,left) occurs. Direct complete bound selection gives
+
+\[
+ L_R([left,right])=[One],\qquad U_R([left,right])=[whole],
+\]
+
+so the corresponding extremal filters return meet One and join whole. The three-member chain has the reflexive cells and (a,b),(b,c),(a,c), giving comparability of every pair. Finally the identity dictionary satisfies (f(a),f(b)) = (a,b) ∈ R for each relation cell, proving the sixth witness directly.
+
+
 54. Complete order grammar and program correspondence
 
 The order/lattice grammar retains all 512 combinations of its nine original dimensions: carrier identity, relation provenance, partial-order witnesses, comparability, bound generation, meet uniqueness, join uniqueness, monotonicity and extra-order status. Native proofs establish complete membership, cardinality, exact acceptance criteria, the sole all-admitted survivor and rejection of each inadmissible coordinate. Every combination remains in the source order.
 
-The native program retains its original registration and dependencies, complete candidate records, identifier lookup behavior, completeness and trace identities, decision proof identities, closure and generality payloads, and four original controls. Fresh execution matches all 512 candidate records and complete program fields against the pinned source artifacts. Unknown identifiers retain StopIteration. These results accompany the general order, bound and monotonicity derivations; source induction and full model integration remain separately tracked.
+The native program retains its original registration and dependencies, complete candidate records, identifier lookup behavior, completeness and trace identities, decision proof identities, closure and generality payloads, and four original controls. Fresh execution matches all 512 candidate records and complete program fields against the pinned source artifacts. Unknown identifiers retain StopIteration. These results accompany the general order, bound, monotonicity and carrier-extension derivations for the completed order/lattice entry. Completion of this entry is distinct from completion of the entire SFT formalisation.
+
+
+Let A_i be the ordered two-choice list for source dimension i, with rejected choice followed by admitted choice. The complete candidate list is the ordered Cartesian product
+
+\[
+ \Gamma=A_1\times\cdots\times A_9,\qquad
+ |\Gamma|=\prod_{i=1}^{9}|A_i|=2^9=512.
+\]
+
+Every typed candidate has one member of each A_i and therefore belongs to Γ. For a candidate c, let p_i(c) assert that its ith coordinate is the original admitted choice. Exhaustive evaluation establishes
+
+\[
+ \operatorname{survives}(c)=\operatorname{criteriaDecision}(c),\qquad
+ \operatorname{criteriaDecision}(c)=\mathrm{true}
+ \iff\bigwedge_{i=1}^{9}p_i(c)
+ \iff c=c_*.
+\]
+
+Here c_* is the tuple of all nine admitted choices. A rejected coordinate contradicts the corresponding conjunct, so no candidate with any rejected coordinate survives. These equations describe the complete registered grammar; the order-operation derivations in sections 50–53 establish the mathematical content tested by its admitted choices. The program comparison checks all 512 source-ordered records and their accompanying fields, rather than sampling only c_*.
+
 
 55. Order induction base and comparison extension
 

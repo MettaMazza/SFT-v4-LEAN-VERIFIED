@@ -1055,3 +1055,7 @@ import SFT.QuantumComputation.ErrorCorrection
 import SFT.QuantumComputation.ErrorCorrectionGrammar
 import SFT.QuantumComputation.ErrorCorrectionControls
 import SFT.QuantumComputation.ErrorCorrectionEvidence
+import SFT.QuantumComputation.FaultTolerance
+import SFT.QuantumComputation.FaultToleranceGrammar
+import SFT.QuantumComputation.FaultToleranceControls
+import SFT.QuantumComputation.FaultToleranceEvidence

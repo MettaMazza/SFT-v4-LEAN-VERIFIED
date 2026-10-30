@@ -11424,7 +11424,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MEAS-TARGET-CUSTODY-001-288826223673d547.json",
       "statement": "Within the registered blind-exchange grammar, target content remains unavailable to prediction in exactly one form: a distinct custodian commits the complete named target package and prediction envelope before execution, then releases that unchanged package once to the matching experiment only after a matching prediction seal exists.",
       "title": "Portable target commitment and post-seal custody",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Physics/TargetCustody.lean",
         "SFT/Physics/TargetCustodyInputs.lean",
@@ -11432,7 +11432,7 @@
         "SFT/Physics/TargetCustodyWitness.lean",
         "SFT/Physics/TargetCustodyEvidence.lean"
       ],
-      "artifact_runtime_parity": "pending",
+      "artifact_runtime_parity": "PASS all256 actual identifier lookups,all original program fields and hashes,unknown-ID rejection.",
       "registration_sha256": "49eb57cb6014c9e8c1d96f06253c27e40987e31b552b7788defea51bd87cd6a1",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -11474,9 +11474,8 @@
         "title": "Portable target commitment and post-seal custody"
       },
       "verified_scope": "Original constructor,complete sorted target identities,nonce/content/experiment/envelope commitment and release fields are translated in TargetCustody;constructorRetainsCommitment/releasePreservesPackage and releaseRequiresMatchingSeal preserve exact source guards and state.; cannotReleaseTwice/successfulReleaseCannotRepeat prove original one-use release. exchangeChecksExactly proves all seven original exchange checks necessary and sufficient;no hash-injectivity premise is added.; TargetCustodyInputs preserves source string/non-string key admission;completeTargetEntries/everyNamedPackageAccepted prove every named canonical target entry is retained in order and no named package is lost. Payloads are represented after source canonical_value conversion;the custody protocol treats them opaquely and retains the actual SHA256 calculation. Generic host-object adapters are separate host translation work,not a stronger scientific prerequisite.; The exact original commit-release-verify witness remains executable with all original computed hashes. witnessRunPassed proves its release/exchange behavior for any valid registered envelope identity,without evaluating numerical hash values in the proof. Fresh executable comparison checks the concrete source witness along with all program outputs.; Complete original eight-axis256 grammar,all ordering/IDs/forms/reasons,unique survivor,all rejected coordinates,original four controls,registration/census/decision/closure output and hashes are translated.15 original constructor/input cases and30 exchange-tampering cases pass;native build,audit and fresh candidate parity pass.; Source prediction inaccessibility is the registered distinct-custodian/pre-seal-commitment/post-seal-release protocol and inherited capability-closed predictor;host-specific sandbox claims remain excluded as in V3. Full original program29476 comparison remains running.",
-      "remaining": [
-        "Full original TargetCustodyProgram29476 comparison of256 actual candidate lookups,witness,controls and all program fields/hashes."
-      ]
+      "remaining": [],
+      "completion_evidence": "verification/TURN_371_QUANTUM_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -11488,8 +11487,12 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MEAS-HOSTILE-PACKAGE-001-40d8e9ab7ac20349.json",
       "statement": "Within the registered empirical-package grammar, contributor material can enter official prediction without gaining execution or scientific authority in exactly one form: strict data-only program fields are parsed by the admitted interpreter, the census and model-admitted receipts are identical before and after handling, and every extra field, executable source or protected-tree change halts admission.",
       "title": "Hostile empirical-package and authority protection",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Physics/HostilePackage.lean",
+        "SFT/Physics/HostileGrammar.lean",
+        "SFT/Physics/HostileEvidence.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "d8c5d5700e9cc11942c7f4bd63e79bc8fddbf8b19d0a24479e4647e2f3abde1f",
       "v3_registration": {
@@ -11530,7 +11533,11 @@
         "statement": "Within the registered empirical-package grammar, contributor material can enter official prediction without gaining execution or scientific authority in exactly one form: strict data-only program fields are parsed by the admitted interpreter, the census and model-admitted receipts are identical before and after handling, and every extra field, executable source or protected-tree change halts admission.",
         "status": "independently_replicated",
         "title": "Hostile empirical-package and authority protection"
-      }
+      },
+      "remaining": [
+        "Full original HostileProgram comparison of256 actual candidate lookups,witness,controls and all program fields/hashes."
+      ],
+      "verified_scope": "Exact original document parser and errors, executable-source and additional-field detection, complete snapshot equality, passing predicate, parsed program and all certificate fields/hashes are translated. parserFailureRetained, acceptedTreeUnchanged and acceptedCertificateBound prove the corresponding acceptance obligations.; rejectExecutableSource preserves the original text/non-text domain and errors. sourceNeverAdmitted proves every supplied source is rejected. changedSnapshotNeverAdmitted proves a changed complete snapshot cannot be admitted.; snapshotFromFiles retains both protected trees and every enumerated file in the original order, hashes raw bytes and computes the exact canonical snapshot hash. snapshotRetainsBothTrees and snapshotRetainsEveryFile prove retention. Source filesystem enumeration supplies ordered native file inputs; operating-system traversal is separate host adapter work.; Complete original eight-axis256 grammar, IDs/order/forms/reasons, sole survivor, all rejected coordinates, original executable-source rejection witness, four controls and all program methods/hashes are translated.; Fresh operational comparison matches pinned isolated source modules for60 audit cases,10 source rejection cases and4 actual temporary filesystem snapshots, including missing-directory precedence and path-component ordering. Native build, all-declaration zero-axiom audit and fresh candidate parity pass."
     },
     {
       "branch": "physics",
@@ -190287,13 +190294,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T11:00:29.555220+00:00",
+  "updated_at": "2026-10-30T11:12:43.281740+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 1,
-    "pending": 2599,
-    "fully_reconstructed_claims": 181,
-    "axiom_free_exported_results": 8503,
-    "axiom_free_audited_definitions_and_theorems": 19450
+    "pending": 2598,
+    "fully_reconstructed_claims": 182,
+    "axiom_free_exported_results": 8529,
+    "axiom_free_audited_definitions_and_theorems": 19521
   }
 }

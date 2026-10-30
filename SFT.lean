@@ -1084,3 +1084,6 @@ import SFT.Physics.TargetCustodyInputs
 import SFT.Physics.TargetCustodyGrammar
 import SFT.Physics.TargetCustodyWitness
 import SFT.Physics.TargetCustodyEvidence
+import SFT.Physics.HostilePackage
+import SFT.Physics.HostileGrammar
+import SFT.Physics.HostileEvidence

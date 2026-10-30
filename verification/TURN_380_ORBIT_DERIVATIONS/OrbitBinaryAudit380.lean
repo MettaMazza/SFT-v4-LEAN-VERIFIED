@@ -1,0 +1,25 @@
+import SFT.Mathematics.OrbitBinaryDepth
+#print axioms SFT.Mathematics.OrbitBinaryDepth.moduloOne
+#print axioms SFT.Mathematics.OrbitBinaryDepth.gcdOneLeft
+#print axioms SFT.Mathematics.OrbitBinaryDepth.dividesProduct
+#print axioms SFT.Mathematics.OrbitBinaryDepth.reducedWithDivisor
+#print axioms SFT.Mathematics.OrbitBinaryDepth.gcdMultiplyReduced
+#print axioms SFT.Mathematics.OrbitBinaryDepth.binaryCoprimeOdd
+#print axioms SFT.Mathematics.OrbitBinaryDepth.binaryPowerCoprimeOdd
+#print axioms SFT.Mathematics.OrbitBinaryDepth.powerAdd
+#print axioms SFT.Mathematics.OrbitBinaryDepth.gcdAtBinaryDepth
+#print axioms SFT.Mathematics.OrbitBinaryDepth.gcdAfterBinaryDepth
+#print axioms SFT.Mathematics.OrbitBinaryDepth.denominatorAtBinaryDepth
+#print axioms SFT.Mathematics.OrbitBinaryDepth.denominatorAfterBinaryDepth
+#print axioms SFT.Mathematics.OrbitBinaryDepth.denominatorBeforeBinaryDepth
+#print axioms SFT.Mathematics.OrbitBinaryDepth.gcdRemainder
+#print axioms SFT.Mathematics.OrbitBinaryDepth.sameRemainderSameGcd
+#print axioms SFT.Mathematics.OrbitBinaryDepth.executedDenominator
+#print axioms SFT.Mathematics.OrbitBinaryDepth.executedDenominatorFormula
+#print axioms SFT.Mathematics.OrbitBinaryDepth.executedDenominatorAtDepth
+#print axioms SFT.Mathematics.OrbitBinaryDepth.executedDenominatorAfterDepth
+#print axioms SFT.Mathematics.OrbitBinaryDepth.executedDenominatorBeforeDepth
+#print axioms SFT.Mathematics.OrbitBinaryDepth.positiveRemainingDepthEven
+#print axioms SFT.Mathematics.OrbitBinaryDepth.exactBinaryTransient
+#print axioms SFT.Mathematics.OrbitBinaryDepth.actualNormalizedDenominator
+#print axioms SFT.Mathematics.OrbitBinaryDepth.firstOddDenominatorAtDepth

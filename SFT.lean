@@ -1051,3 +1051,7 @@ import SFT.QuantumComputation.Coding
 import SFT.QuantumComputation.CodingGrammar
 import SFT.QuantumComputation.CodingControls
 import SFT.QuantumComputation.CodingEvidence
+import SFT.QuantumComputation.ErrorCorrection
+import SFT.QuantumComputation.ErrorCorrectionGrammar
+import SFT.QuantumComputation.ErrorCorrectionControls
+import SFT.QuantumComputation.ErrorCorrectionEvidence

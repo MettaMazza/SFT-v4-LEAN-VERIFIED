@@ -10889,8 +10889,13 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-QUANTUM-ERROR-CORRECTION-001-a4791dcbf8753c32.json",
       "statement": "The forced quantum error correction kernel retains forced repetition width 2t+1; exact fault-depth trace; all error masks through t; majority held-label decoder; syndrome ledger; recovery certificate; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
       "title": "Fold quantum error-correction law",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/QuantumComputation/ErrorCorrection.lean",
+        "SFT/QuantumComputation/ErrorCorrectionGrammar.lean",
+        "SFT/QuantumComputation/ErrorCorrectionControls.lean",
+        "SFT/QuantumComputation/ErrorCorrectionEvidence.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "9d3d3f6ecc35f717acafbe0c8ca6227630dc3621f740961f3bc8bfe73421cce3",
       "v3_registration": {
@@ -10936,7 +10941,11 @@
         "statement": "The forced quantum error correction kernel retains forced repetition width 2t+1; exact fault-depth trace; all error masks through t; majority held-label decoder; syndrome ledger; recovery certificate; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
         "status": "independently_replicated",
         "title": "Fold quantum error-correction law"
-      }
+      },
+      "remaining": [
+        "Full original program45034 comparison;complete in dependency order after Coding."
+      ],
+      "verified_scope": "exactRepetitionWidth proves every admitted encoding has the original width2t+1.; completeCensusRows proves actual census-row membership equivalent to an original ordered mask inside the full width with length at most the generated depth,and the exact resulting word/label.; everyCensusRowRecovers proves the original decoder recovers every actual census row;successorRetainsRecovery proves every former declared error still recovers after an admitted generated depth successor.; Shared faultMasksExactly/exhaustiveCorrection preserve complete enumeration and recovery at every admitted positive finite depth;original1322 source-operation comparisons,including all168 width3/5/7 census rows,remain applicable. No masks or original decoder cases are removed.; Exact complete256 grammar,8 witnesses,4 controls and all claim-specific program fields preserved. Registered build/zeroaxiom/fresh parity PASS;full original program45034 running."
     },
     {
       "branch": "quantum_computation",
@@ -190225,13 +190234,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T08:39:26.893462+00:00",
+  "updated_at": "2026-10-30T08:43:56.971382+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 4,
-    "pending": 2607,
+    "in_progress": 5,
+    "pending": 2606,
     "fully_reconstructed_claims": 170,
-    "axiom_free_exported_results": 8360,
-    "axiom_free_audited_definitions_and_theorems": 19031
+    "axiom_free_exported_results": 8375,
+    "axiom_free_audited_definitions_and_theorems": 19077
   }
 }

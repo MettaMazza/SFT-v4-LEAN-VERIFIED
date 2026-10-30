@@ -2570,6 +2570,45 @@ The exact entropy partition requires nonempty duplicate-free microstate support,
 
 The original refinement operation has a broader raw domain than partition admission: it tests only the two observation key sets against support and retains dictionary last-row behavior for repeated keys. Its native characterization states exactly that equality under the fine observation implies equality under the coarse observation for every support pair. The relation is reflexive on matching-key observations and transitive. For admitted exact partitions, refinement holds if and only if every fine class is contained in a coarse class. These results retain deterministic observation provenance without introducing a stochastic source or scalar entropy value.
 
+
+Let S be the microstate support and O the observation rows. Partition admission is
+
+\[
+ S\ne[]\land\operatorname{Distinct}(S)\land\operatorname{Distinct}(\operatorname{keys}(O))
+ \land\operatorname{keys}(O)\subseteq S\land S\subseteq\operatorname{keys}(O).
+\]
+
+Writing f_O(s) for the source's last-row lookup, define F_l=[s∈S:f_O(s)=Some(l)]. The emitted partition is [(l,F_l):l∈firstLabels(observedValues(O,S))]. An emitted row has a witnessing source state, so its fibre is nonempty. Key coverage supplies each state's image, hence its fibre; equality of the deterministic lookup proves that intersecting fibres have equal labels. Filtering the distinct support preserves distinctness within every fibre and its original order.
+
+For any finite member list M, let P(M) be its positional pair list. The structural uncertainty result is
+
+\[
+ U(M)=\begin{cases}\mathrm{emptyOne},&P(M)=[],\\
+ \mathrm{pairs}(P(M)),&P(M)\ne[].\end{cases}
+\]
+
+The pair recurrence gives P([])=P([x])=[]; for x::y::R its first row contains (x,y), so it is nonempty. Therefore U(M)=emptyOne iff M has at most one occurrence, even on the raw list domain. This structural result is separate from any ordinary microstate string named "empty-One". For an admitted partition [(l_i,F_i)], the full closed ledger is concat_i P(F_i), retaining class order and each within-class pair order.
+
+The raw refinement predicate requires key-set coverage for both observations but does not add their partition-admission guards. Its exact condition is
+
+\[
+ O_f\preceq_S O_c\iff
+ \operatorname{keysMatch}(S,O_f)\land\operatorname{keysMatch}(S,O_c)
+ \land\forall a,b\in S,\ f_{O_f}(a)=f_{O_f}(b)\Rightarrow f_{O_c}(a)=f_{O_c}(b).
+\]
+
+Reflexivity follows from identity of the equality implication. For transitivity, apply the fine-to-middle implication and then the middle-to-coarse implication to the same pair. Repeated raw keys retain last-row lookup, and the empty support with empty observations satisfies the predicate.
+
+For two admitted partitions, select a base member x of any fine fibre F. Every y∈F has the same fine image as x; refinement forces its coarse image to equal x's, placing all of F in the coarse fibre containing x. Conversely, if every fine fibre lies in some coarse fibre, equal fine images put a,b into the same fine fibre and hence into one coarse fibre, proving equal coarse images. Thus
+
+\[
+ O_f\preceq_S O_c\iff
+ \forall F\in\mathcal P_f,\ \exists C\in\mathcal P_c,\ F\subseteq C,
+\]
+
+where the quantifiers range over the member lists of the admitted labelled partition rows. This proves the source refinement relation from finite observation records without assigning a scalar entropy value.
+
+
 96. Exact entropy parts and closed-pair monotonicity
 
 Each entropy record retains its observation label, exact positive support part, complete microstate trace and structural unresolved-distinction value. The native construction preserves the partition's record order and uses the exact reduced fraction of the class cardinality over the complete support cardinality. A cross-product identity proves preservation of that rational value, and the part is positive and at most the whole. Literal empty-One microstate labels remain ordinary retained microstates; structural empty-One uncertainty is the separate unresolved-distinction result.

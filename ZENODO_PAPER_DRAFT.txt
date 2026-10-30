@@ -3073,3 +3073,11 @@ Its numerator is positive and smaller than its denominator. Taking this positive
   C=(8642477221479757−1930922298157999)/8642477221479757
    =6711554923321758/8642477221479757.
 The exact normalized sum satisfies S+C=8642477221479757/8642477221479757=1. Native evaluation uses the normalized positive-fraction addition, reciprocal, division and positive-take operations; fifteen component declarations have zero axiom dependencies. These rational results accompany the complete source grammar and validation required for full entry registration.
+
+342. Positive-take domain and arbitrary positive running levels
+
+The count-taking operation first admits an integer count c≥2 and an integer take depth t≥1, excluding Boolean inputs. It then performs the original repeated positive predecessor operation. For every supplied finite r,t, the native recursion proves take(r+t+2,t+1)=r+1. The actual terminal inputs therefore give take(16,3)=13. The guard does not silently require t<c: if a further predecessor is requested after reaching the One, the original predecessor error propagates. Thus initial domain admission and successful completion of the repeated take remain distinct source conditions.
+
+For every positive integer level l=n+1, evaluation of the generated binary and pair counts yields the exact normalized fraction
+  R(n+1)=N((n+3)²,4(n+2)²+(n+3)²).
+The charged numerator is positive because n+3>0, and the denominator is positive because it contains that positive charged term. This identity is proved uniformly in n, while the support construction fixes the terminal instance n=12. Thirteen audited declarations establish the original count-taking domain, its recursion, terminal instance and arbitrary positive-level running-share identity without axiom dependencies.

@@ -2225,3 +2225,11 @@ For a phase-cycle length d, an original phase index below d and a shift s below 
 The complete branch transformation combines a registered word lookup with this phase action. When target words are distinct, reversing the word-map rows recovers each source word. The branch-level inverse theorem restores every original word and phase pair in order, including all retained branches.
 
 The implementation passes 3,264 additional comparisons against original V3 gate application and inverse-state results. The 17 additional declarations have zero axiom dependencies. Full wrapper admission and domain-preservation integration remain part of the ongoing reversible-model formalisation.
+
+285. Admitted gate round trips
+
+For every admitted state and reversible gate whose source domain equals the complete state support, forward gate application produces an admitted result with the same number of branches. Every output word comes from a retained input branch through the registered word map. Distinct target words preserve distinct support; phase actions preserve membership in the registered cycle.
+
+The output support is exactly the inverse gate's source domain. This equality is derived from the forward operation and gate admission. Applying the inverse gate with the source inverse-phase action therefore restores the complete original state, including branch order, word identities, phase labels and phase cycle. The round-trip theorem needs no additional inverse-domain assumption.
+
+The constructive proofs have zero axiom dependencies. The underlying operation definitions are unchanged from the implementation checked against 3,264 original V3 application and inverse-state cases. Joint composition, observation records and the other remaining reversible-model components are still being formalised.

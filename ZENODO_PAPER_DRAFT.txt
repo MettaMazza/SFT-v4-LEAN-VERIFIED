@@ -2521,6 +2521,49 @@ The position-trace computation explicitly tests both first held labels for every
 
 All 512 quantity kernels and all five operational witnesses are retained. Fresh native execution matches the pinned registration, census, decisions, closure, controls and all digest fields, including unknown-identifier refusal. Information Quantity is complete within the original exact finite boundary; conventional logarithmic units remain post-seal correspondence summaries rather than SFT proof values.
 
+
+For distinct nonempty support S, generate P([])=[] and P(a::R)=[(a,b):b∈R]++P(R). Induction proves that every pair has endpoints in S and unequal endpoints. Each head-row pair is unique, all tail pairs are unique by induction, and a head-row pair cannot equal a tail pair because its first endpoint a does not occur in R. For any distinct a,b∈S, either one is the current head, producing the corresponding ordered pair, or both lie in the tail and induction applies. Thus
+
+\[
+ a,b\in S\land a\ne b\ \Longrightarrow\
+ (a,b)\in P(S)\lor(b,a)\in P(S),
+ \qquad (a,b)\in P(S)\Longrightarrow(b,a)\notin P(S).
+\]
+
+The original nonidentity filter consequently leaves P(S) unchanged. Together with duplicate freedom, these facts establish exactly one record for each unordered distinct pair.
+
+For observation rows O, admission requires Distinct(keys(O)), keys(O)⊆S and S⊆keys(O). It precedes the nonempty/distinct support check. The image f_O(w) is its first lookup value, with the raw missing-lookup fallback retained; under admission every support word has a matching row and the fallback is not used. Empty label strings remain valid. The profile is
+
+\[
+ \bigl(S,\ \operatorname{firstLabels}([f_O(w):w\in S]),\ U_O,\ C_O\bigr),
+\]
+
+where U_O=[(a,b)∈P(S):f_O(a)≠f_O(b)] and C_O=[(a,b)∈P(S):f_O(a)=f_O(b)]. Equality case analysis proves each generated pair belongs to one pass; equality and inequality cannot both hold, proving disjointness. A class label l occurs iff some w∈S satisfies f_O(w)=l, and first-occurrence filtering makes those labels distinct while preserving their order.
+
+For a fine observation, f_O(a)=f_O(b) implies a=b on S. Since every generated pair has unequal endpoints, every pair is retained and none is closed. For compatible coarse images f_C=m∘f_O on the pair endpoints, equality is preserved by m, giving
+
+\[
+ C_O\subseteq C_C,\qquad U_C\subseteq U_O.
+\]
+
+The second inclusion follows by contradiction: equal fine images would force equal coarse images, contradicting coarse retention.
+
+Let L begin with its first two distinct held labels a,b, and let n=|P|. At position i, with j positions following it, the actual source check is
+
+\[
+ \forall u\in W_L(i),\ \forall v\in W_L(j),\
+ u++a::v\in W_L(i+(j+1))\land u++b::v\in W_L(i+(j+1)).
+\]
+
+The independent-position theorem proves both membership clauses for every prefix and suffix; prefix cancellation proves the two words differ. Induction over P increments i and decreases the remaining tail, retaining i+|remaining|=n. Hence every check succeeds on the admitted complete support and the returned trace is exactly
+
+\[
+ T(P)=[(p,\text{one-Fold-distinction}):p\in P],\qquad |T(P)|=|P|.
+\]
+
+Map distribution over append yields T(P++Q)=T(P)++T(Q), and in particular T(P++[z])=T(P)++[(z,one-Fold-distinction)]. Invalid support inputs propagate their original error before these position checks. The nine binary source coordinates enumerate 2^9=512 kernels with the original all-admitted conjunction.
+
+
 95. Deterministic entropy partitions and observation refinement
 
 The exact entropy partition requires nonempty duplicate-free microstate support, unique observation keys and exact support-key coverage. Class labels follow their first observed occurrence in the original support order; each fibre retains its microstates in that order. Native proofs establish complete coverage, disjoint classes, nonempty fibres and distinct members. Unresolved distinctions are the complete positional pair list within each class. Empty and singleton lists return structural empty One; the general empty-One result is equivalent to at most one input member. The complete closed-pair output flattens these class ledgers in class order.

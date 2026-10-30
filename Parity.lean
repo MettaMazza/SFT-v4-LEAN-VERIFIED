@@ -548,3 +548,6 @@ def main : IO Unit := do
 
   for c in SFT.Computation.DiscretizationGrammar.candidates do
     IO.println ("DiscretizationGrammar\t" ++ SFT.Computation.DiscretizationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.DiscretizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.DiscretizationGrammar.exactForm c ++ "\t" ++ SFT.Computation.DiscretizationGrammar.decisionReason c)
+
+  for c in SFT.Computation.ConvergenceGrammar.candidates do
+    IO.println ("ConvergenceGrammar\t" ++ SFT.Computation.ConvergenceGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ConvergenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ConvergenceGrammar.exactForm c ++ "\t" ++ SFT.Computation.ConvergenceGrammar.decisionReason c)

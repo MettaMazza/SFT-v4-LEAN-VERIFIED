@@ -940,3 +940,8 @@ import SFT.Computation.DiscretizationWitnesses
 import SFT.Computation.DiscretizationGrammar
 import SFT.Computation.DiscretizationControls
 import SFT.Computation.DiscretizationEvidence
+import SFT.Computation.Convergence
+import SFT.Computation.ConvergenceWitnesses
+import SFT.Computation.ConvergenceGrammar
+import SFT.Computation.ConvergenceControls
+import SFT.Computation.ConvergenceEvidence

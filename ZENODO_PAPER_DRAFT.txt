@@ -4585,6 +4585,20 @@ Every finite nonempty sequence of configuration ledgers has an attained peak spa
 
 Ordered ledger composition retains shifted transition labels. An admitted observation/support successor preserves prior rows and adds one to each count. Original serial path composition counts the shared intermediate observation once. All 256 original candidates, resource witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold Time and Space Resource Law.
 
+
+An admitted ledger satisfies π₂(timeTrace)=τ, spaceSupport=O, timeCount=|τ| and spaceCount=|O|. Therefore equal complete timeTrace fields imply equal histories by applying π₂. For a halt trace τ=b++[t], path length gives timeCount=|actions|+1 and the halt certificate excludes every successful outgoing step at t.
+
+An attained peak in a nonempty ledger list is constructed inductively. The singleton is its own peak. Given a peak p of the tail, compare the head's space count with p's. Select p when the head count is smaller or equal; otherwise select the head. Transitivity of ≤ proves the selected member bounds the whole list. Substitution of spaceCount=|O| ties every bound to its actual occupied support.
+
+Numbered observation rows satisfy, by induction on L,
+
+\[
+ timeRows_k(L\mathbin{++}R)=timeRows_k(L)\mathbin{++}timeRows_{k+|L|}(R).
+\]
+
+An admitted extension τ++[next], O++[fresh] consequently appends (transition-(1+|τ|),next) and increases both counts by one. For composed paths with action lists u,v, the retained trace is (b++c)++[t], giving timeCount=|u|+|v|+1. The shared interface is counted once. The concrete loop has run(held,[])=ok([held]) and run(held,[fold])=ok([held,held]); the histories differ despite their common terminal label.
+
+
 160. Circuit structural resources
 
 The declared dependency order is exhausted by the original ordered-selection generator. Filtering those selections with the original graph-path check retains exactly the admissible ordered causal traces. Native maximum selection returns an actual longest trace whenever this domain is nonempty, and its length bounds every admitted trace in that dependency order. Each selected gate and adjacent wire is reconstructed from the registered graph.
@@ -4592,6 +4606,18 @@ The declared dependency order is exhausted by the original ordered-selection gen
 Original graph admission preserves unique gate and wire identities and held endpoints. Gate size counts the canonical gate carrier, so changed wire incidence does not duplicate a shared component. Original circuit evaluation retains complete local traces and interfaces and establishes output support. The singleton gate supplies the base. Carrier extension, wire composition and dependency-order extension preserve their exact records and counts.
 
 These statements close resource accounting within the declared circuit boundary. All 256 original candidates, resource witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold Circuit Size and Depth Law.
+
+
+For declared dependency order O, the complete causal domain is C(G,O)=filter(pathIsValid(G),rawSelections(O)). Ordered-selection completeness and filter membership yield
+
+\[
+ p\in C(G,O)\iff HeldChoice(O,p)\land pathIsValid(G,p)=true.
+\]
+
+The longest-trace fold starts from an actual first member and compares it with each remaining path, choosing the new path when its length is at least the current length. Induction proves the selected path remains in the input list and bounds the length of every member. Thus any valid ordered witness makes the domain nonempty and yields an actual longest valid ordered path. Path validity reconstructs every selected gate in G.nodes and every adjacent wire in G.edges.
+
+Gate count is |G.nodes| and wire count is |G.edges|. Original graph admission gives distinct carriers and held edge endpoints. Consequently changing the wire list alone leaves gate count unchanged; appending one gate raises its count by one, and concatenating wire lists adds their lengths. An old ordered path remains a held choice after a new position is appended, using the absent-choice constructor, so the old causal trace remains present. The one-node graph [held] with no wires has longest trace [held]. Evaluation and output-interface preservation use the exact composition derivation of Section 142.
+
 
 161. Communication and query resources
 
@@ -4601,6 +4627,18 @@ The result certificate binds the decoded protocol identity to its registered exe
 
 All 256 original candidates, three resource-ledger witnesses and all native program fields and hashes agree with pinned V3, completing the Fold Communication and Query Complexity Law.
 
+
+For flattened answer records R, define sent(R)=[(identity,query)] and received(R)=[(identity,answer)] in the same order. Map-length induction gives both lengths equal to |R|. Pairing corresponding projections and restoring the record proves by induction
+
+\[
+ restore(zip(sent(R),received(R)))=R.
+\]
+
+The head reconstructs its original identity, query and answer; the tail uses the induction hypothesis. Valid-ledger provenance therefore recovers the selected declared interface for every restored record. Ledger append flattens to concatenation, so both projections concatenate and queryCount(L++K)=queryCount(L)+queryCount(K). A singleton has one record; appending it preserves all previous records and adds one query.
+
+The protocol certificate retains decode(code)=ok(name), registry(name)=request, distributedInputs(participant)=request.initial, the successful request run, a valid oracle ledger and an admitted local resource ledger. Expanding interpretation reproduces the protocol observation. Lookup membership retains both the protocol row and distributed-input row. Execution reconstruction gives τ=b++[t], the complete path and |b|=|actions|; resource reconstruction returns τ and the unchanged local-knowledge list. An unknown decoded protocol name contradicts the selected registry lookup, while an unknown oracle identity contradicts ledger validity. No uniqueness of answers is required beyond the source relation.
+
+
 162. Scheduled unresolved branch resources
 
 Every registered branch retains its label and complete deterministic execution request. Native schedule evaluation applies the original transition process to every branch, preserving order, multiplicity, successful traces and failure records. Successful runs reconstruct their actual paths and terminal observations. The terminal-output classes cover the complete declared branch support and are pairwise disjoint; failures remain explicitly classified.
@@ -4608,6 +4646,20 @@ Every registered branch retains its label and complete deterministic execution r
 A registered schedule description retains its source identity and exact encoding/decoding relation. Its complete encoded-position ledger supplies the exact description cost. Ordered composition and successor extension preserve every earlier execution record. The external-source alternative retains the original sealed measurement boundary, including complete rows and identified source; randomness is not introduced as a causal premise.
 
 All 256 original candidates, resource witnesses and complete program fields and hashes agree with pinned V3, completing the Fold Randomness-Resource Law.
+
+
+For branch b=(label,request), execute(b)=(label,run(request)); the schedule result is its ordered map. Induction gives its exact length and label projection, while map membership gives every result an original branch witness. Successful runs reconstruct a path and terminal; failures retain their original error.
+
+Let outcome(b) be failed(error) or returned(endLabel(trace)). The class for o is the source schedule filtered by outcome(b)=o, so
+
+\[
+ b\in class(o)\iff b\in schedule\land outcome(b)=o.
+\]
+
+Each branch belongs to its own outcome class. Membership in two classes implies equality of their outcomes by transitivity, proving disjointness for distinct outcomes. A successful trace b++[t] has endLabel=some(t), by induction on b. The classification keeps source order and multiplicity.
+
+Map distribution yields executions(L++K)=executions(L)++executions(K); the singleton and successor equations follow directly. Validated finite encoding supplies each registered schedule name's supported code and exact decoding. An exact position-cell record for that code w gives both description counts |w| and retains the actual registry and encoding rows. For the external-source alternative, acceptance is equivalent to preSeal=false, mutation=false, allRows=true and identified=true, preserving the original sealed measurement conditions.
+
 
 163. Information retained for inverse execution
 

@@ -7524,3 +7524,17 @@ import SFT
 #print axioms SFT.Computation.StabilityEvidence.registrationHasNoAxioms
 #print axioms SFT.Computation.StabilityEvidence.registrationHasNoFreeParameters
 #print axioms SFT.Computation.StabilityEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Computation.ErrorPropagation.replay
+#print axioms SFT.Computation.ErrorPropagation.reconstruct
+#print axioms SFT.Computation.ErrorPropagation.exactTransport
+#print axioms SFT.Computation.ErrorPropagation.completeDependencyRows
+#print axioms SFT.Computation.ErrorPropagation.serialComposition
+#print axioms SFT.Computation.ErrorPropagation.localProvenance
+#print axioms SFT.Computation.ErrorPropagation.terminalReconstruction
+#print axioms SFT.Computation.ErrorPropagation.orientationRetained
+#print axioms SFT.Computation.ErrorPropagation.successor
+#print axioms SFT.Computation.ErrorPropagation.pathComposition
+#print axioms SFT.Computation.ErrorPropagation.propagationSource
+#print axioms SFT.Computation.ErrorPropagation.mergeProvenance
+#print axioms SFT.Computation.ErrorPropagation.closedCellCancellation
+#print axioms SFT.Computation.ErrorPropagation.terminalIndependentOfRoute

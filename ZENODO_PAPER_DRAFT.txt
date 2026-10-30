@@ -2470,6 +2470,49 @@ The information-quantity support operation requires at least two distinct held l
 
 For every generated prefix and suffix, inserting any held label produces a member of the corresponding complete support. Inserting two distinct held labels with the same prefix and suffix produces distinct words. These statements establish the arbitrary finite independent-position support relation. Support composition retains the original left-outer/right-inner pair order and concatenates the two source words. Each output occurs precisely through such a source pair; raw duplicate or variable-length input supports retain their original behavior. No logarithmic value or additional information scale is introduced.
 
+
+For an ordered held alphabet L, the source word generator is
+
+\[
+ W_L(0)=[\lbrack\rbrack],\qquad
+ W_L(n+1)=\operatorname{concat}_{a\in L}[a::w:w\in W_L(n)].
+\]
+
+The public support operation first requires |L|≥2 and Distinct(L), then requires a nonempty distinct position list P. It returns W_L(|P|). Induction on n proves the complete membership equivalence
+
+\[
+ w\in W_L(n)\iff |w|=n\land\forall a\in w,\ a\in L.
+\]
+
+At n=0 the sole generated word is the empty list. At a successor, extracting a flatMap row gives a∈L and a generated tail of length n. Conversely a word of length n+1 has a head a∈L and a tail satisfying the induction hypothesis, reconstructing that same generated row.
+
+Duplicate freedom follows by induction too. Within a row, a::u=a::v forces u=v, preserving distinct tails. Across different head rows, a::u=b::v forces a=b, contradicting distinct head labels. Appending one position has the ordered-list identity
+
+\[
+ W_L(n+1)=\operatorname{concat}_{w\in W_L(n)}[w++[a]:a\in L].
+\]
+
+To prove it, append-extension distributes over concatenated rows and commutes with a fixed head prefix. The base n=0 gives the ordered singleton words; the successor follows by distributing over the original outer label rows. Thus the identity preserves the exact generated order, not only membership.
+
+For u∈W_L(n), v∈W_L(m) and a∈L, the membership characterization and append-length equation yield
+
+\[
+ u++v\in W_L(n+m),\qquad
+ u++a::v\in W_L(n+(m+1)).
+\]
+
+If a≠b, equality u++a::v=u++b::v would cancel the common prefix by induction and then force a=b by head equality. Hence the two held alternatives are distinct at every finite position with the same surrounding context.
+
+For arbitrary nonempty support lists A,B, composition returns the original nested concatenation
+
+\[
+ C(A,B)=\operatorname{concat}_{u\in A}[u++v:v\in B],\qquad
+ w\in C(A,B)\iff\exists u\in A,\exists v\in B,\ w=u++v.
+\]
+
+The equivalence follows by extracting or constructing the outer and inner mapped occurrences. Empty factors take the original error branch. On raw supports no distinctness or equal-length guard is added, so repeated concatenations and variable-length words retain their source behavior.
+
+
 94. Exact information profiles and independent position traces
 
 For every admitted support, the positional pair construction contains each unordered nonidentity pair once, with its earlier support member first. The native derivation establishes endpoint provenance, absence of self-pairs and reversed duplicates, complete pair coverage and unique records. Observation admission requires unique image keys and exact support-key coverage before the support-pair validation. Empty observation labels remain permitted. The profile retains the support trace, first-occurrence observation-class order, retained distinctions with unequal images, and closed distinctions with equal images. These ledgers are disjoint and exhaust the complete support pairs. Fine observation retains every pair and closes none; coarsening cannot reopen a closed distinction and can only remove retained distinctions.

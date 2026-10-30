@@ -870,3 +870,8 @@ import SFT.Computation.LearningOptimizationGrammar
 import SFT.Computation.LearningOptimizationControls
 import SFT.Computation.LearningOptimizationEvidence
 import SFT.Computation.LearningOptimization
+import SFT.Computation.ComputationalInductionWitnesses
+import SFT.Computation.ComputationalInductionGrammar
+import SFT.Computation.ComputationalInductionControls
+import SFT.Computation.ComputationalInductionEvidence
+import SFT.Computation.ComputationalInduction

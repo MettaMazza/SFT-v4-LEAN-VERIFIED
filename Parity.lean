@@ -501,3 +501,7 @@ def main : IO Unit := do
   for c in SFT.Computation.LearningOptimizationGrammar.candidates do
     IO.println ("LearningOptimizationGrammar\t" ++ SFT.Computation.LearningOptimizationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.LearningOptimizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.LearningOptimizationGrammar.exactForm c ++ "\t" ++ SFT.Computation.LearningOptimizationGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.ComputationalInductionGrammar.candidates do
+    IO.println ("ComputationalInductionGrammar\t" ++ SFT.Computation.ComputationalInductionGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ComputationalInductionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ComputationalInductionGrammar.exactForm c ++ "\t" ++ SFT.Computation.ComputationalInductionGrammar.decisionReason c)
+

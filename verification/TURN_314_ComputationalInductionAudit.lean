@@ -1,0 +1,12 @@
+import SFT.Computation.ComputationalInduction
+#print axioms SFT.Computation.ComputationalInduction.alternatives
+#print axioms SFT.Computation.ComputationalInduction.minimalRules
+#print axioms SFT.Computation.ComputationalInduction.successorTest
+#print axioms SFT.Computation.ComputationalInduction.extendEvidence
+#print axioms SFT.Computation.ComputationalInduction.successorMeaning
+#print axioms SFT.Computation.ComputationalInduction.alternativeMeaning
+#print axioms SFT.Computation.ComputationalInduction.nextAlternatives
+#print axioms SFT.Computation.ComputationalInduction.falsifiedSuccessor
+#print axioms SFT.Computation.ComputationalInduction.minimalityMeaning
+#print axioms SFT.Computation.ComputationalInduction.generatedContinuation
+#print axioms SFT.Computation.ComputationalInduction.grammarExtension

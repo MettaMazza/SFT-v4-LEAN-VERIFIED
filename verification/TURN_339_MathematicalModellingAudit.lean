@@ -1,0 +1,21 @@
+import verification.TURN_339_MathematicalModellingDraft
+#print axioms SFT.Computation.MathematicalModelling.noDeclaredAxioms
+#print axioms SFT.Computation.MathematicalModelling.noFreeParameters
+#print axioms SFT.Computation.MathematicalModelling.dependencyClosure
+#print axioms SFT.Computation.MathematicalModelling.sealedComparisonBoundary
+#print axioms SFT.Computation.MathematicalModelling.comparisonRecord
+#print axioms SFT.Computation.MathematicalModelling.comparisonExpression
+#print axioms SFT.Computation.MathematicalModelling.comparisonPreservesSource
+#print axioms SFT.Computation.MathematicalModelling.comparisonRejectsMutation
+#print axioms SFT.Computation.MathematicalModelling.assembleSeal
+#print axioms SFT.Computation.MathematicalModelling.sealPrediction
+#print axioms SFT.Computation.MathematicalModelling.unsealedAccepts
+#print axioms SFT.Computation.MathematicalModelling.resealRejected
+#print axioms SFT.Computation.MathematicalModelling.identitiesMatch
+#print axioms SFT.Computation.MathematicalModelling.identitiesExactly
+#print axioms SFT.Computation.MathematicalModelling.measurementContext
+#print axioms SFT.Computation.MathematicalModelling.preSealTargetRejected
+#print axioms SFT.Computation.MathematicalModelling.registeredTargetPreserved
+#print axioms SFT.Computation.MathematicalModelling.unregisteredTargetRejected
+#print axioms SFT.Computation.MathematicalModelling.openTargets
+#print axioms SFT.Computation.MathematicalModelling.exactTargetOpening

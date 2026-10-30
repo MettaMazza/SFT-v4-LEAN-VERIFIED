@@ -906,19 +906,104 @@ For a successful operation map from an accepted source table, the generated dict
 
 These facts discharge the dictionary-size and old-image preservation conditions for the concrete appended mapping. With the old source and target operations retained and the old target carrier included, that mapping preserves the enlarged operation exactly when the fresh image belongs to the enlarged target and every new source pair passes the operation equation. The dictionary’s original first-key order and last-value replacement behavior are retained.
 
+
+Let I = buildImages(M) for the original mapping list M. Successful map admission gives |I| = |C| and a defined image for every a ∈ C. Since the accepted carrier is distinct, coverage and equal length imply
+
+\[
+ \operatorname{keys}(I)\sim C,
+\]
+
+where ∼ denotes list permutation. For z ∉ C, membership preservation under permutation gives z ∉ keys(I), hence lookup(I,z) = none. The original update therefore takes its absent-key branch:
+
+\[
+ I'=\operatorname{buildImages}(M\mathbin{+\!+}[(z,v)])
+   =I\mathbin{+\!+}[(z,v)],\qquad
+ |I'|=|I|+1=|C|+1=|C\mathbin{+\!+}[z]|.
+\]
+
+For every a ∈ C, freshness implies a ≠ z, so lookup(I',a) = lookup(I,a); meanwhile lookup(I',z) = some(v). Substitution into section 48 discharges the size and old-image obligations and gives
+
+\[
+ \operatorname{MapSuccess}(M\mathbin{+\!+}[(z,v)])\iff
+ v\in D'\ \land\
+ \forall a,b\in C',\ (a=z\lor b=z)\Longrightarrow
+ f'(\mu'(a,b))=\nu'(f'(a),f'(b)).
+\]
+
+This uses the accepted old source, successful old map, preserved old source and target cells, and inclusion D ⊆ D'. Repeated keys elsewhere retain the original replacement rule; freshness is used only for this appended key.
+
+
 50. Finite order and bound operations
 
 The order kernel retains the original nonempty distinct carrier and distinct relation checks, rejects external endpoints, and exhaustively evaluates reflexivity, antisymmetry and transitivity. Totality requires both partial-order success and comparability of every generated carrier pair. The latter equivalence is proved natively.
 
 Lower and upper bounds retain the nonempty held-selection guard and reject external held members. Successful results contain exactly the carrier members satisfying every held comparison, in original carrier order. Greatest and least witnesses are selected only when the complete matching list has exactly one entry. Meet and join retain the bound-selection errors and conditional extremal result. Monotonicity retains dictionary replacement semantics and checks both endpoint images and every source comparison.
 
-Fresh execution matches 1404 order, bound and extremal records and 13932 monotonicity comparisons, covering all two-member relations together with malformed carriers/relations, repeated and outside selections, and repeated-key mappings. These execution results accompany the stated bound and totality proofs; general partial-order and extremal derivations and complete program integration remain separately tracked.
+Fresh execution matches 1404 order, bound and extremal records and 13932 monotonicity comparisons, covering all two-member relations together with malformed carriers/relations, repeated and outside selections, and repeated-key mappings. These execution results accompany the general partial-order and extremal proofs. The complete 512-candidate program comparison also matches the pinned V3 registration, census, decisions, closure, controls and unknown-identifier behavior.
+
+
+Write a ≤_R b for (a,b) ∈ R. For a held selection H with H ≠ [] and every member in C, the actual bound lists are the ordered filters
+
+\[
+ L_R(H)=[x\in C\mid\forall h\in H,\ x\le_R h],\qquad
+ U_R(H)=[x\in C\mid\forall h\in H,\ h\le_R x].
+\]
+
+The bracket notation denotes list filtering, retaining carrier order and multiplicity. Their membership equivalences follow directly from filter membership and the finite all-test. For a bound list B, form the complete extremal lists
+
+\[
+ G_R(B)=[g\in B\mid\forall b\in B,\ b\le_R g],\qquad
+ E_R(B)=[e\in B\mid\forall b\in B,\ e\le_R b].
+\]
+
+The greatest selector returns some(g) exactly when G_R(B) = [g]; the least selector similarly requires E_R(B) = [e]. Thus, after successful bound selection,
+
+\[
+ \operatorname{meet}(C,R,H)=\operatorname{some}(m)
+ \iff G_R(L_R(H))=[m],\qquad
+ \operatorname{join}(C,R,H)=\operatorname{some}(j)
+ \iff E_R(U_R(H))=[j].
+\]
+
+An empty or outside held selection returns the original error before extremal selection. Total order is also conditional:
+
+\[
+ \operatorname{Total}(C,R)\iff\operatorname{Partial}(C,R)
+ \land\forall a,b\in C,\ (a\le_R b\lor b\le_R a).
+\]
+
+For a monotone map f from source relation R to target relation S, the comparison condition is (a,b) ∈ R ⇒ (f(a),f(b)) ∈ S, with the original dictionary and endpoint-image admission checks retained. No comparison absent from R is supplied by the map check.
+
 
 51. Exact partial-order admission
 
 For arbitrary represented finite carrier and relation lists, the partial-order check succeeds if and only if the carrier is nonempty and distinct, the relation is distinct, every relation endpoint belongs to the carrier, every carrier member has its reflexive cell, every pair of reversed relation cells has equal endpoints, and every pair of composable relation cells has its composite in the relation.
 
 The native equivalence follows each original guard and exhaustive traversal. The transitivity condition covers all pairs of relation cells with matching middle endpoints; nonmatching cells impose no composite requirement. The reverse implication establishes success from precisely these same conditions.
+
+
+With Distinct denoting absence of repeated list entries, the complete admission equivalence is
+
+\[
+ \begin{aligned}
+ \operatorname{Partial}(C,R)\iff{}&C\ne[]\land\operatorname{Distinct}(C)
+ \land\operatorname{Distinct}(R)\\
+ &\land[\forall(a,b)\in R,\ a\in C\land b\in C]\\
+ &\land[\forall a\in C,\ (a,a)\in R]\\
+ &\land[\forall a,b,\ (a,b)\in R\land(b,a)\in R\Rightarrow a=b]\\
+ &\land[\forall a,b,c,\ (a,b)\in R\land(b,c)\in R\Rightarrow(a,c)\in R].
+ \end{aligned}
+\]
+
+For each finite traversal the elementary equivalence is
+
+\[
+ \operatorname{all}(P,[x_1,\ldots,x_n])=\mathrm{true}
+ \iff\bigwedge_{i=1}^{n}P(x_i)=\mathrm{true}.
+\]
+
+Applying it to carrier cells proves the reflexive clause. Applying it twice to relation cells proves antisymmetry and transitivity. In the latter traversal, a pair of cells (a,b),(u,c) passes automatically when b ≠ u; when b = u, its check is exactly (a,c) ∈ R. Therefore every composable pair is tested, and the displayed transitive clause supplies precisely the checks needed for the reverse implication. Combining these traversal equivalences with the three initial guards and endpoint check proves both directions of admission.
+
 
 52. Extremal witnesses and returned bounds
 

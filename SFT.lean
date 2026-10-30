@@ -930,3 +930,8 @@ import SFT.Computation.StabilityGrammar
 import SFT.Computation.StabilityControls
 import SFT.Computation.StabilityEvidence
 import SFT.Computation.ErrorPropagation
+import SFT.Computation.ErrorBound
+import SFT.Computation.ErrorPropagationWitnesses
+import SFT.Computation.ErrorPropagationGrammar
+import SFT.Computation.ErrorPropagationControls
+import SFT.Computation.ErrorPropagationEvidence

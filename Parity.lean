@@ -542,3 +542,6 @@ def main : IO Unit := do
 
   for c in SFT.Computation.StabilityGrammar.candidates do
     IO.println ("StabilityGrammar\t" ++ SFT.Computation.StabilityGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.StabilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.StabilityGrammar.exactForm c ++ "\t" ++ SFT.Computation.StabilityGrammar.decisionReason c)
+
+  for c in SFT.Computation.ErrorPropagationGrammar.candidates do
+    IO.println ("ErrorPropagationGrammar\t" ++ SFT.Computation.ErrorPropagationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ErrorPropagationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ErrorPropagationGrammar.exactForm c ++ "\t" ++ SFT.Computation.ErrorPropagationGrammar.decisionReason c)

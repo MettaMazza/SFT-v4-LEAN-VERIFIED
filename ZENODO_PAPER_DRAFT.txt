@@ -2241,3 +2241,13 @@ Joint-state composition enumerates the literal Cartesian product of the two bran
 The native proofs establish both exact output-word membership and the full product branch count. Every pair of input branches contributes its registered row. For admitted inputs with a shared phase cycle, all phase lookups succeed; final admission follows the original state constructor's distinct-word check. The source guard and its rejection behavior are preserved.
 
 The implementation matches V3 in 2,809 composition cases: 1,003 accepted results and 1,806 rejections. All 19 composition definitions and theorems have zero axiom dependencies. These results complete the joint-composition component of the ongoing reversible-model translation.
+
+287. Complete observation and predecessor records
+
+An admitted classification assigns exactly one label to each word in the full state support. The observation record retains every original word, phase and assigned label. Its projection reconstructs the original branch list, and its length equals the original branch count.
+
+Selection retains precisely the branches assigned the requested label, in their original order. A nonempty selected class remains an admitted state with the original phase cycle; an empty class receives the source rejection. The complete observation record remains available independently of the selected class.
+
+Predecessor merging groups all classified branches under the source's sorted target labels. Each original predecessor retains its word and phase. The factorization decision holds precisely when every combination of a retained left coordinate and retained right coordinate belongs to the registered joint support, with the source nonempty and uniqueness guards preserved.
+
+These operations pass 8,537 comparisons against original V3 observation, predecessor-merge and factorization outputs. All 28 native definitions and theorems have zero axiom dependencies.

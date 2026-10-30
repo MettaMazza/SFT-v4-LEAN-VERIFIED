@@ -2827,7 +2827,44 @@ An admitted finite channel retains nonempty duplicate-free input and output carr
 
 Output support filters the retained relation by the queried source and preserves every corresponding target in relation order. Native theorems establish exact cell membership, membership within the output carrier, nonemptiness for admitted inputs and absence of repeated targets. A query outside the input carrier retains the original error. Confusability is equivalent to the existence of a retained target shared by both inputs. The overlap is symmetric, and every admitted input is self-confusable because its support is nonempty. No probability or error threshold enters these predicates.
 
-The distinguishable-code predicate retains its original nonempty, unique-input and input-coverage guards and tests every positional input pair. Its native characterization establishes that admitted codes have pairwise disjoint output supports. Every admitted single input forms a distinguishable singleton code. Independent source-expression comparisons pass 3913 constructor cases,600 output-support cases,2400 confusability cases and 6000 code cases, covering malformed and empty carriers, duplicate cells, missing transport, empty labels, repeated held inputs and invalid queries. Complete capacity selection, composition and the fresh-carrier successor are established below.
+The distinguishable-code predicate retains its original nonempty, unique-input and input-coverage guards and tests every positional input pair. Its native characterization establishes that admitted codes have pairwise disjoint output supports. Every admitted single input forms a distinguishable singleton code. Independent source-expression comparisons pass 3,913 constructor cases, 600 output-support cases, 2,400 confusability cases and 6,000 code cases, covering malformed and empty carriers, duplicate cells, missing transport, empty labels, repeated held inputs and invalid queries. Complete capacity selection, composition and the fresh-carrier successor are established below.
+
+
+Write a channel as (I,O,R), where I and O are ordered carriers and R is the ordered list of transport cells. Constructor success is equivalent to
+
+\[
+ I\ne[]\land O\ne[]\land\operatorname{Distinct}(I)\land\operatorname{Distinct}(O)
+ \land\operatorname{Distinct}(R)\land R\subseteq I\times O
+ \land\forall x\in I,\ \exists y,\ (x,y)\in R.
+\]
+
+The constructor checks carrier validity first, then repeated cells, then endpoint containment, then totality; the first failed condition returns its corresponding source error. Success retains I,O,R exactly. No output-surjectivity requirement is imposed.
+
+For an input x, define the ordered support
+
+\[
+ S_R(x)=\operatorname{map}(\operatorname{second},\operatorname{filter}_{\operatorname{first}=x}R).
+\]
+
+Unpacking filter and map membership proves y∈S_R(x) iff (x,y)∈R. Totality therefore supplies a support member for every admitted x, while endpoint containment places every support member in O. Distinctness follows because two filtered cells have the same first coordinate x, so equality of their second coordinates implies equality of the cells. A query succeeds exactly for x∈I and returns this ordered support; other queries return the outside-input error.
+
+The overlap predicate has the exact characterization
+
+\[
+ \operatorname{overlap}_R(x,z)\iff\exists y,\ (x,y)\in R\land(z,y)\in R.
+\]
+
+Swapping the two conjuncts proves symmetry. Totality supplies the same witness twice to prove self-confusability for admitted inputs. The public confusability operation checks the left input's support, then the right input's support, preserving that error order, and returns overlap when both queries succeed.
+
+Let P(H) be the positional-pair list of a held input list H. Its code predicate is
+
+\[
+ \operatorname{Code}(H)\iff H\ne[]\land\operatorname{Distinct}(H)\land H\subseteq I
+ \land\forall(x,z)\in P(H),\ \neg\operatorname{overlap}_R(x,z).
+\]
+
+A shared support target would witness overlap and contradict the final clause. Conversely, absence of any shared target makes that Boolean overlap false for every tested pair. For H=[x] with x∈I, the pair list is empty, so all code conditions hold directly. These are exact finite relations and guards, without probability weights.
+
 
 101. Complete finite capacity families and relation composition
 
@@ -2837,7 +2874,61 @@ The capacity computation takes the greatest candidate length and retains every c
 
 Composition requires equality of the ordered interface carriers. It traverses the first relation and then each matching second relation row, keeping the first occurrence of each resulting endpoint cell. Native proofs establish that composite membership is equivalent to a retained two-edge path through the interface, and that admitted channels compose to a total admitted channel. If two inputs share an intermediate output, totality of the second channel supplies a common final output; composition therefore cannot restore that merged distinction.
 
-Independent source-expression comparisons pass 186 combination enumerations,399 complete candidate/capacity families and 6272 compositions, covering all retained ties, repeated raw combination labels, relation-row permutations, first-occurrence duplicates and ordered-interface mismatch errors. The fresh-input successor and complete candidate program complete the Channel Capacity entry as established below.
+Independent source-expression comparisons pass 186 combination enumerations, 399 complete candidate/capacity families and 6,272 compositions, covering all retained ties, repeated raw combination labels, relation-row permutations, first-occurrence duplicates and ordered-interface mismatch errors. The fresh-input successor and complete candidate program complete the Channel Capacity entry as established below.
+
+
+A canonical selection is an order-preserving subsequence of the carrier, generated by the empty, skip and take constructors. The complete size-k enumeration obeys
+
+\[
+ B_0(I)=[\,[]\,],\qquad B_{k+1}([])=[],\qquad
+ B_{k+1}(x::I)=\operatorname{map}(x::\cdot,B_k(I))\mathbin{++}B_{k+1}(I).
+\]
+
+Induction on the carrier matches the first branch to take and the second to skip, proving H∈B_k(I) iff |H|=k and H is a canonical selection of I. With T_0(I)=[] and T_{k+1}(I)=T_k(I)++B_{k+1}(I), this gives
+
+\[
+ H\in T_n(I)\iff 0<|H|\le n\land\operatorname{Chosen}(H,I).
+\]
+
+Every chosen selection has length at most |I|. Filtering T_{|I|}(I) by Code therefore gives exactly all canonical distinguishable codes. For distinct I, take and skip branches cannot share a selection: a take selection contains the head x, whereas x is absent from the remaining carrier. Induction proves distinctness within each size; unequal lengths separate different sizes. Filtering preserves that distinctness. Any admitted input supplies a singleton candidate, establishing nonemptiness.
+
+For the candidate list C, the maximum recurrence is
+
+\[
+ M([])=0,\qquad M(H::C)=\begin{cases}M(C),&|H|<M(C),\\|H|,&\text{otherwise}.\end{cases}
+\]
+
+Induction proves both |H|≤M(C) for every H∈C and M(C)≤b whenever every candidate has length at most b. On a nonempty list, either the head attains the recurrence value or the tail induction supplies a maximizer. Consequently the retained family K=[H∈C:|H|=M(C)] satisfies
+
+\[
+ H\in K\iff H\in C\land\forall G\in C,\ |G|\le|H|.
+\]
+
+Every tie is retained in the original enumeration order. Nonempty C gives nonempty K; distinct C gives distinct K. The raw empty-candidate case retains the source max-empty-sequence error. For a one-input carrier [x], the candidate list and capacity family are both [[x]].
+
+For composition, the ordered output carrier of the first channel must equal the ordered input carrier of the second. Let
+
+\[
+ P(R_1,R_2)=\operatorname{concat}_{(x,y)\in R_1}[(x,z):(y,z)\in R_2],
+ \qquad R_{21}=\operatorname{firstCells}(P(R_1,R_2)).
+\]
+
+The nested enumeration retains relation order; firstCells skips cells already seen and otherwise emits the cell before continuing with it added to the seen list. Induction proves that a cell survives this scan iff it occurs in the input and was absent from the initial seen list, and that the output is duplicate-free. Starting with no seen cells preserves membership, so
+
+\[
+ (x,z)\in R_{21}\iff\exists y,\ (x,y)\in R_1\land(y,z)\in R_2.
+\]
+
+Endpoint containment follows from the two component relations. For each first-channel input x, its totality supplies y; interface equality makes y an admitted second-channel input, whose totality supplies z. This proves composite totality and hence admission with the retained endpoint carriers.
+
+Finally, if x and x' share y in R_1, second-channel totality supplies one z with (y,z)∈R_2. The path characterization gives both (x,z) and (x',z) in R_{21}. Therefore
+
+\[
+ \operatorname{overlap}_{R_1}(x,x')\ \Longrightarrow\operatorname{overlap}_{R_{21}}(x,x').
+\]
+
+Thus the no-restored-distinction statement follows from the actual finite relation composition and its totality, with no replacement transport rule.
+
 
 102. Fresh-input closure of exact channel capacity
 

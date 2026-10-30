@@ -1439,13 +1439,55 @@ The proof first establishes exact correspondence between the recursive traversal
 
 Conversely, a complete path ending at a prior node produces a return trace. Traversal follows its retained edges until the first held-node return; if a repeated node occurs before the supplied terminal return, that earlier return supplies the witness. Thus neither the equivalence nor the executable traversal requires paths to be simple. The proof applies to arbitrary finite admitted graphs and does not depend on the finite execution comparisons.
 
+
+The retained ReturnTrace relation has exactly two constructors. A closing edge (u,v) ∈ E with v ∈ H yields trace [v]. An advancing edge (u,v) ∈ E with v ∉ H followed by a return trace T from (v,H ++ [v]) yields v :: T. Induction over these constructors proves nonemptiness, every required adjacent edge, and a closing decomposition
+
+\[
+ T=A\mathbin{+\!+}[t],\qquad t\in H\mathbin{+\!+}A.
+\]
+
+Induction over the exact recursive scan proves it returns true exactly when such a trace exists. With H = [u], graph admission supplies all endpoint memberships and converts u :: T to a complete valid path. Thus the exact graph-level equivalence is
+
+\[
+ \operatorname{CycleExists}(G)=\mathrm{true}\iff
+ \exists u,A,t,\ u\in V\land\operatorname{Valid}_G(u::(A\mathbin{+\!+}[t]))
+ \land t\in u::A.
+\]
+
+The displayed path has at least one edge, including when A is empty. Conversely, follow its adjacent edges until the first target already in the held prefix. That edge supplies the closing constructor; all earlier edges supply advancing constructors. Any earlier repetition closes sooner and is still detected, so simplicity is neither assumed nor imposed.
+
+
 65. Graph witnesses and complete registered grammar
 
 The six original graph witnesses are retained with their exact names, statements and executable predicates: valid chain path, missing-edge rejection, directed reachability, explicit cycle return, exact crossing cut and paired internal balance. The chain and cycle examples satisfy the original graph constructor. Positive reachability and return results follow from the general path theorems; the negative chain cases follow from the exact traversal equations.
 
 The registered graph grammar exhausts all 512 combinations of its nine binary structural coordinates: nodes, edges, orientation, path, connectivity, cycle, cut, balance and additional rules. Native proofs establish complete enumeration, cardinality, equality of source classification with the preservation criteria, the unique all-preserving survivor, and rejection when any coordinate is replaced by its source alternative. No candidate is omitted.
 
-Fresh native execution of the complete graph program matches the pinned registration, census, all 512 actual candidate lookups and decisions, trace and proof hashes, closure and generality records, four original controls and unknown-identifier behavior. These results accompany the general path/search and cycle/return equivalences. Source graph induction obligations and full engine admission integration remain separately tracked.
+Fresh native execution of the complete graph program matches the pinned registration, census, all 512 actual candidate lookups and decisions, trace and proof hashes, closure and generality records, four original controls and unknown-identifier behavior. These results accompany the general path/search and cycle/return equivalences. The source graph induction results appear below; the graph entry and its complete native program correspondence are recorded as complete.
+
+
+The chain witness uses V = [a,b,c], E = [(a,b),(b,c)]. Therefore Adj([a,b,c]) = E, whereas Adj([a,c]) = [(a,c)] is absent. Its concrete results are
+
+\[
+ \operatorname{Valid}([a,b,c])=\mathrm{true},\quad
+ \operatorname{Valid}([a,c])=\mathrm{false},\quad
+ \operatorname{Reachable}(a,c)=\mathrm{true},\quad
+ \operatorname{Reachable}(c,a)=\mathrm{false}.
+\]
+
+The reverse search exhausts immediately because c has no outgoing edge. Appending (c,a) supplies the return path [a,b,c,a], so cycle detection is true on the augmented graph and false on the chain. Holding H = [a] gives Cut_H(E) = [(a,b)]. The balance witness uses I = [[i1],[i2]] and O = [[o1],[o2]]: both are distinct, I is nonempty and |I| = |O| = 2.
+
+For the original nine binary grammar axes, Γ = A₁×⋯×A₉ has
+
+\[
+ |\Gamma|=2^9=512,\qquad
+ \operatorname{survives}(c)=\mathrm{true}
+ \iff\bigwedge_{i=1}^{9}[c_i=\operatorname{admitted}_i]
+ \iff c=c_*.
+\]
+
+Complete product membership covers every typed tuple. Equality with the original source decision is checked over that full product, and a rejected coordinate contradicts the corresponding conjunct. These grammar results accompany the six operational witnesses and general graph proofs.
+
 
 66. Graph induction and locality of path updates
 
@@ -1453,7 +1495,27 @@ The One graph with no edges is admitted by the original constructor, supplies it
 
 For a carrier extended by a fresh node and an appended edge selection, any newly valid path whose nodes all belong to the old carrier must contain an added edge absent from the old relation. When each added edge has the fresh node as an endpoint and that node is absent from the old carrier, such a path cannot use an added edge. Hence the original and extended path-validation results are exactly equal on every sequence of old nodes, including rejected sequences. This establishes the locality of path updates in the source fresh-node induction step.
 
-These results retain the explicit conditions of the extension. They do not impose new constructor guards or restrict the original graph operations. Ordered pair-support generation, cut and paired-balance extension are established below; held-selection characterization is established below; full source and engine admission integration remain separately tracked.
+These results retain the explicit conditions of the extension. They do not impose new constructor guards or restrict the original graph operations. Ordered pair-support generation, cut and paired-balance extension are established below; held-selection characterization is also established below. These are results of the completed graph entry.
+
+
+The base graph is G₁ = ([One],[]), with Valid([One]) = true, Reachable(One,One) = true and CycleExists(G₁) = false. If V ⊆ V' and E ⊆ E', every valid old path retains all node and edge checks. Every old return trace likewise retains each edge and held-prefix comparison. The path and cycle equivalences therefore transfer positive reachability and cycle results.
+
+For V' = V ++ [z] and E' = E ++ A, suppose a sequence P contains only old nodes, is rejected by G and accepted by G'. The accepted path is nonempty and satisfies all node checks already in V. Hence some adjacency must account for the change:
+
+\[
+ \exists e\in\operatorname{Adj}(P),\quad e\in A\land e\notin E.
+\]
+
+Now assume z ∉ V and every edge of A touches z. Both endpoints of every adjacency in P belong to P and hence to V. No such adjacency can touch z, contradicting the displayed witness. Thus
+
+\[
+ \forall P\text{ with nodes in }V,\quad
+ \operatorname{Valid}_{(V\mathbin{+\!+}[z],E\mathbin{+\!+}A)}(P)
+ =\operatorname{Valid}_{(V,E)}(P).
+\]
+
+The equality includes rejected and empty sequences. It follows from the explicit fresh-endpoint condition, without adding a restriction to the original path validator.
+
 
 67. Admitted graph extension, ordered pairs, cuts and balance
 

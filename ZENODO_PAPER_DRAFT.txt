@@ -3548,5 +3548,41 @@ Write N(n,q) for the original normalized positive Fraction n/q. The already deri
  \operatorname{Fold}(N(n,q))=N(c_q(n+n),q)=N(F_q(n),q).
 \]
 
-For the unit orbit define x_k = N(r_k,q), where r_k is the actual held-rank iteration from section 344. Then Fold(x_k) = x_(k+1). The rank return r_p = 1 supplied for every odd q > 1 therefore gives x_p = x_0. This is equality of the actual normalized Fraction states, including their positive-cast convention, rather than only equality of modular residues. Eight native declarations establish this correspondence and Fraction-return existence with no axiom dependencies. The original loop's first-return branch and successful output for arbitrary odd q are the next correspondence obligations.
+For the unit orbit define x_k = N(r_k,q), where r_k is the actual held-rank iteration from section 344. Then Fold(x_k) = x_(k+1). The rank return r_p = 1 supplied for every odd q > 1 therefore gives x_p = x_0. This is equality of the actual normalized Fraction states, including their positive-cast convention, rather than only equality of modular residues. Eight native declarations establish this correspondence and Fraction-return existence with no axiom dependencies. The original loop's first-return branch and successful output for arbitrary odd q follow from the visited-state argument below.
+
+
+347. General success of the original odd-denominator first-return loop
+
+For odd q, reducedness gives gcd(r_k,q) = 1. Normalization therefore leaves the numerator unchanged:
+
+\[
+ \operatorname{numerator}(x_k)=r_k/\gcd(r_k,q)=r_k.
+\]
+
+Equality of Fraction states implies equality of their held ranks. Before the first binary period p, the rank-cancellation proof excludes every collision at distinct positions, hence
+
+\[
+ 0\le i<j<p\quad\Longrightarrow\quad x_i\ne x_j.
+\]
+
+At loop position k < p, retain the invariant that the current state is x_k and every stored visited key is the key of some x_i with i ≤ k. The actual next Fold is x_(k+1). If k+1 = p, this state is x_0, so the original return-to-source branch succeeds before testing visited keys. If it differs from the source, k+1 < p. A visited-key match would then give x_(k+1) = x_i with i ≤ k, contradicting the displayed collision exclusion. Thus the non-source-repeat error branch is impossible. Advancing adds exactly the next key and preserves the invariant. Induction over the terminating original Run proves successful output.
+
+The retained first-return theorem supplies the complete trace structure
+
+\[
+ \operatorname{firstReturn}(x_0)=\operatorname{ok}(T),\qquad
+ T=B\mathbin{+\!+}[x_0],\qquad
+ \operatorname{Steps}(x_0,T),\qquad
+ \forall x\in B,\ x\ne x_0.
+\]
+
+This also proves T is nonempty. For odd q, the even-denominator guard cannot hold: if floor(q/2)·2 = q, taking remainders gives q mod 2 = 0, contradicting q mod 2 = 1. The wrapper therefore reaches the original loop, and its final positive-domain guard preserves T by section 345. For every supplied n with (n+2) mod 2 = 1,
+
+\[
+ \exists T,\quad
+ \operatorname{oddDenominatorOrbit}(n+2)=\operatorname{ok}(T)
+ \land\operatorname{FirstReturn}(1/(n+2),T).
+\]
+
+Nine native theorems establish the Fraction-state collision exclusion, actual loop success, guard passage and complete wrapper result with no axiom dependencies. The theorem is quantified over the full admitted odd-denominator domain.
 

@@ -2615,6 +2615,59 @@ Each entropy record retains its observation label, exact positive support part, 
 
 Refinement implies inclusion of each fine class's positional pairs in its containing coarse class. The complete closed-pair ledger has no repeated pair records, both within a class and across disjoint classes. Native finite-list counting therefore proves that a finer admitted observation has no more closed pairs than an admitted coarser observation it refines. The result applies to arbitrary finite admitted support and retains every pair's source coordinates.
 
+
+For an admitted support S and partition [(l_i,F_i)], put N=|S| and m_i=|F_i|. Admission and nonempty fibres give N>0 and m_i>0. The exact record constructor is
+
+\[
+ R_i=(l_i,\operatorname{normalizePositive}(m_i,N),F_i,U(F_i)).
+\]
+
+Writing the normalized positive fraction as (a_i,b_i), normalization proves
+
+\[
+ m_i b_i=a_i N,\qquad a_i>0,\quad b_i>0.
+\]
+
+Since F_i is an ordered filter of S, induction on S gives m_i≤N: retaining a head increments both lengths, while discarding it increments only the support length. Normalization therefore yields a_i≤b_i and hence 0<a_i/b_i≤1. The ledger recursion emits R_i followed by the recursively constructed tail. Induction on the partition proves that projecting each record to (label,microstates) returns the original partition exactly, while each unresolved-distinction field remains U(F_i). A partition error is returned unchanged; no record is manufactured for an inadmissible input.
+
+Let P(X) denote the positional pairs of a list. Its ordered recurrence is
+
+\[
+ P([])=[],\qquad P(x::X)=[(x,y):y\in X]\mathbin{++}P(X).
+\]
+
+For predicates p,q with p(x)⇒q(x) on S, induction through this recurrence proves
+
+\[
+ P(\operatorname{filter}_p S)\subseteq P(\operatorname{filter}_q S).
+\]
+
+If p rejects the head, every pair comes from the tail and survives the induction. If p accepts it, q accepts it too; a head pair survives because its second coordinate also satisfies the implication, and a tail pair survives by induction. Thus the proof retains the source orientation of pairs, rather than replacing positional pairs by arbitrary ordered pairs.
+
+Write C(O)=concat_i P(F_i) for the complete closed ledger. Under admitted fine and coarse observations, refinement supplies a containing coarse fibre for every fine fibre. Applying filtered-pair containment inside each such fibre gives
+
+\[
+ O_f\preceq_S O_c\ \Longrightarrow\ C(O_f)\subseteq C(O_c).
+\]
+
+For a distinct support, P(S) has no duplicates: head pairs have different second coordinates, the tail is duplicate-free by induction, and a head pair cannot occur in the tail because its first coordinate is absent there. Each fibre inherits distinctness. Across different fibres, a repeated pair would place its first coordinate in both fibres, forcing their labels equal, contrary to distinct emitted labels. Consequently C(O) is duplicate-free for every admitted partition.
+
+Finally, for a duplicate-free list A contained in B, remove every occurrence of the head a of A from B. Membership of a makes the filtered list strictly shorter; distinctness of A ensures its tail is still contained in that filtered list. Induction gives
+
+\[
+ |\operatorname{tail}(A)|\le|B\setminus\{a\}|<|B|,
+ \qquad |A|\le|B|.
+\]
+
+Applying this finite-list argument to the closed ledgers establishes
+
+\[
+ O_f\preceq_S O_c\ \Longrightarrow\ |C(O_f)|\le|C(O_c)|.
+\]
+
+This is the declared finite closed-distinction monotonicity, with exact rational support parts retained separately in the records.
+
+
 97. Entropy successor closure and exact finite completion
 
 For one deterministic microstate, the exact partition is one class whose native normalized support part is One and whose unresolved ledger is structural empty One. Adding a fresh state preserves every prior image and appends the new observation in source order. Its assigned class appends precisely that state; every other class retains its member trace. The pair successor preserves the original nested order and contains exactly the old class pairs together with one pair from each prior same-class member to the fresh state. Each returned class part satisfies the exact member-count/new-support-count ratio. The changed total is retained in the weights of all classes.

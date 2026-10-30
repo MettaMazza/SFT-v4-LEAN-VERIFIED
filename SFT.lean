@@ -960,3 +960,8 @@ import SFT.Computation.ComputationalDynamicsWitnesses
 import SFT.Computation.ComputationalDynamicsGrammar
 import SFT.Computation.ComputationalDynamicsControls
 import SFT.Computation.ComputationalDynamicsEvidence
+import SFT.Computation.InverseProblem
+import SFT.Computation.InverseProblemWitnesses
+import SFT.Computation.InverseProblemGrammar
+import SFT.Computation.InverseProblemControls
+import SFT.Computation.InverseProblemEvidence

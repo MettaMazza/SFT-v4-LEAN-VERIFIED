@@ -560,3 +560,6 @@ def main : IO Unit := do
 
   for c in SFT.Computation.ComputationalDynamicsGrammar.candidates do
     IO.println ("ComputationalDynamicsGrammar\t" ++ SFT.Computation.ComputationalDynamicsGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ComputationalDynamicsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ComputationalDynamicsGrammar.exactForm c ++ "\t" ++ SFT.Computation.ComputationalDynamicsGrammar.decisionReason c)
+
+  for c in SFT.Computation.InverseProblemGrammar.candidates do
+    IO.println ("InverseProblemGrammar\t" ++ SFT.Computation.InverseProblemGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.InverseProblemGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.InverseProblemGrammar.exactForm c ++ "\t" ++ SFT.Computation.InverseProblemGrammar.decisionReason c)

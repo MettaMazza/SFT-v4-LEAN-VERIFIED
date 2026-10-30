@@ -1,0 +1,52 @@
+{
+  "claim_id": "SFT-COMP-SCI-SIMULATION-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/scientific_computation/simulation/law.py": "7ed32e34e667c421e39818fee5a768b8c2158bb7fbf39194d63f663816bc21fe",
+    "sft/information_science/encoding_decoding/law.py": "9579d9c4804044271ad96146c54947e9bb4363b9528219275468770c1e28fd4f",
+    "claims/SFT-COMP-SCI-SIMULATION-001/WHY_DERIVATION_CHECK.md": "26067b2d9e6963fe9d831fcfe59ec2c0deab7dc9ca7ee74302d4878c4cba6014",
+    "claims/SFT-COMP-SCI-SIMULATION-001/registration.json": "fa53825502632f38c3ddb58c7b0b5cf5a7be3524facf8ad6c3341572ee474cdc",
+    "claims/SFT-COMP-SCI-SIMULATION-001/execution.py": "3d2d038876ddf991e4bc6d6ef159b47d1682f44870e25f3667ac660d49f75a4d",
+    "claims/SFT-COMP-SCI-SIMULATION-001/independent_validator.py": "59121d12c170f6b18bff68df6b8124fced8c6381963cb5b0e308adb0c6fae19b",
+    "claims/SFT-COMP-SCI-SIMULATION-001/certificate.json": "fb78e86fad92b56b3cae390705ec2cb08f44e1758abde0b66510517e2a618a91"
+  },
+  "components": {
+    "admitted execution": "Model carries original state-system admission and exact observation map with unique keys. simulationSource/executionCertificate reconstruct original run/Execution;simulationStates proves every visited state lies in registered carrier.",
+    "complete observation source": "ObservationRows and replay/reconstruction retain every actual source lookup in order. completeObservationCount gives one observation for every state,including initial. missingObservationRejected halts omitted visited observations;registeredObservation proves source map membership.",
+    "composition/successor/extension": "composedSimulation preserves serial state and observation traces;successorSimulation appends actual next state/observation. simulationExtension preserves every accepted report under admitted retained states/transitions and observations.",
+    "comparison boundary": "comparisonAccepted/comparisonBoundary use only the declared observation/external-trace relation. This proves a registered model consequence,not an empirical natural-law claim.",
+    "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+  },
+  "dependencies": [
+    "SFT-COMP-SCI-SYMBOLIC-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": {
+    "SFT-COMP-SCI-SYMBOLIC-001": "complete",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+    "SFT-MATH-DISCRETE-001": "complete",
+    "SFT-MATH-GRAPH-NETWORK-001": "complete",
+    "SFT-MATH-LOGIC-PROOF-001": "complete",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+    "SFT-INFO-ENCODING-DECODING-001": "complete",
+    "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+  },
+  "native_checks": {
+    "kernel_output_checks": 1280,
+    "axiom_dependencies": 0,
+    "audit": "verification/TURN_333_PARITY_REPORT.json"
+  },
+  "remaining": [],
+  "status": "complete",
+  "program_comparison": "verification/TURN_333_PROGRAM_REPORT.json"
+}

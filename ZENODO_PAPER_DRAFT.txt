@@ -1840,7 +1840,19 @@ A trace contradicts None by completeness; a successful result contradicts absenc
 
 The ten registered binary dimensions generate all 1,024 kernels in the original order. Native proofs establish product membership, exact cardinality, agreement of identifier acceptance with the original structural criteria, the unique admitted kernel, and rejection upon replacement of each required coordinate. All six source operational witnesses are evaluated by the translated operations; the original depth and path witnesses are additionally obtained from the general native derivations and source queue equations. The closure evidence retains the original five laws, induction base and successor, exclusions and control records. Connectedness and reversible incidence-preserving deformation retain their original named criteria and source explanations; the source entry introduces no separate executable procedure for those clauses.
 
-Fresh native execution reproduces every original registration, census, decision, closure, control and digest field, including all 1,024 identifier-based decisions and refusal of an unknown identifier. Together with the general incidence, dimension, adjacency, shortest-path, topology and continuity derivations, these results complete the registered Geometry/Topology entry. The current completed census total is 35 of 2,781, with 2,746 entries remaining.
+Fresh native execution reproduces every original registration, census, decision, closure, control and digest field, including all 1,024 identifier-based decisions and refusal of an unknown identifier. Together with the general incidence, dimension, adjacency, shortest-path, topology and continuity derivations, these results complete the registered Geometry/Topology entry. This entry is included in the cumulative completed census reported in the model and scope section.
+
+
+Writing each registered coordinate as admitted or rejected, the full geometry grammar is the ordered product of the ten two-element coordinate lists. Thus
+
+\[
+ |\mathcal G|=\prod_{i=1}^{10}2=1,024,\qquad
+ \operatorname{accept}(c)=\mathrm{true}\iff
+ \bigwedge_{i=1}^{10}(c_i=\mathrm{admitted})\iff c=c_*.
+\]
+
+The coordinates are cells, incidence, dimension, adjacency, distance, opens, connectedness, continuity, deformation and addition. Product membership is proved by selecting each coordinate in its original two-element list. Conjunction elimination proves rejection if any coordinate is replaced by its rejected alternative; conjunction introduction proves acceptance of c_*. These enumeration results accompany the operational derivations in the preceding sections.
+
 
 79. Exact events and common-refinement weights
 
@@ -1848,17 +1860,95 @@ An admitted event preserves its supplied order and is a duplicate-free held sele
 
 A nonmarker event weight is the reduced positive held-count/whole-count fraction. Native proofs establish exact cross-multiplication equality with the original counts, positive numerator, coprime numerator and denominator, and the through-One bound. Conditioning first validates the event and then the condition in the original order. Its common refinement selects exactly the support states belonging to both held sets; an empty refinement or marker condition returns empty One. Every fractional result is the exact refinement-count/condition-count ratio and is bounded by the whole. No fitted quantity, stochastic premise or additional scientific parameter enters these operations. The observation-class construction and complete probability program are included below.
 
+
+For support S and held list H, admission is exactly the conjunction S≠[], Distinct(S), Distinct(H), and H⊆S, with support checked before H. Its event result is e when H=[] and H otherwise, where e is the source empty-One literal. For nonmarker results, let a=|H|, b=|S|, g=gcd(a,b). Reduction gives
+
+\[
+ n=a/g,\qquad d=b/g,\qquad ad=nb,\qquad
+ n>0,\quad d>0,\quad\gcd(n,d)=1,\quad n\le d.
+\]
+
+The cardinality bound a≤b is constructive: for H=x::R, remove x from S; distinctness ensures R is still contained in that remainder, induction bounds |R|, and removal strictly decreases |S|. Thus |H|≤|S|, and positive-fraction normalization preserves the through-One bound. The marker branch is tested on the returned event value itself, so a nonempty held list equal to e retains the original marker behavior.
+
+For admitted event H and condition C, the common-refinement list is
+
+\[
+ R=[x\in S\mid x\in H\land x\in C],\qquad
+ x\in R\iff x\in S\land x\in H\land x\in C.
+\]
+
+After validating H and then C, the procedure returns e if the condition result equals e or R=[]. Otherwise it reduces |R|/|C| to n/d and proves
+
+\[
+ |R|d=n|C|,\qquad 0<n\le d,\qquad\gcd(n,d)=1.
+\]
+
+Filtering preserves distinctness of S and gives R⊆C, so the same cardinality argument yields |R|≤|C|. The original first error is propagated before any later condition check.
+
+
 80. Pair-cell factorization and exact modal summaries
 
 The independence operation extracts marginal labels in their first-occurrence order and compares the supplied joint support with their complete ordered Cartesian product. The native product-filter identity establishes that retaining pair cells by both held-event predicates yields the Cartesian product of the retained marginal cells. Its cardinality is the product of the two retained marginal cardinalities. For duplicate-free held selections contained in their marginal supports, these cardinalities equal the supplied held counts; cross-multiplication therefore proves exact joint-weight factorization. The operational procedure retains the source rejection of incomplete or differently ordered products, its nonempty-event guard, raw event-list lengths and empty-joint division error.
 
 The modal summary counts every occurrence in the complete trace, forms the greatest count over first-occurrence labels and retains every label attaining it in that order. Native proofs characterize membership exactly as trace membership with frequency at least that of every other trace label. Every nonempty trace has a modal label, the output contains no duplicate labels, and every tied alternative is retained. The empty trace retains the original rejection. These operations introduce no stochastic parameter.
 
+
+Let A and B be the first-occurrence marginal lists extracted from joint J, and let P(A,B) list every (a,b) in outer-A, inner-B order. For held lists H,K, filter distribution gives the exact ordered identity
+
+\[
+ [ (a,b)\in P(A,B)\mid a\in H\land b\in K]
+ =P([a\in A\mid a\in H],[b\in B\mid b\in K]).
+\]
+
+Induction over A proves the identity row by row; distributing length over append gives |P(A,B)|=|B|·|A|. When H,K are distinct and contained in their respective distinct supports, each filtered marginal has the held cardinality. Hence, for the complete ordered product J=P(A,B), with J_HK the retained joint list,
+
+\[
+ |J_{HK}|=|K|\,|H|,\qquad |J|=|B|\,|A|,
+ \qquad |J_{HK}|\,|A|\,|B|=|H|\,|K|\,|J|.
+\]
+
+For nonempty admitted events and joint support, this is the exact source cross-multiplication test for joint-weight factorization. The executable procedure still uses raw |H| and |K| outside these theorem hypotheses: it does not silently deduplicate them. Its preliminary ordered-product equality test also retains the original rejection of reordered joint lists.
+
+For a trace X, define c_X(a)=|[x∈X:x=a]| and let L be its first-occurrence labels. The maximum recurrence and mode list are
+
+\[
+ m_X([])=0,\qquad m_X(a::R)=\max(c_X(a),m_X(R)),\qquad
+ M(X)=[a\in L\mid c_X(a)=m_X(L)].
+\]
+
+Induction establishes that m_X(L) bounds every label count and is at most any common upper bound. Therefore
+
+\[
+ a\in M(X)\iff a\in X\land\forall b\in X,\ c_X(b)\le c_X(a).
+\]
+
+For nonempty L, the recurrence attains its maximum either at its head or at the inductively selected tail label, proving existence of a mode. Filtering a distinct first-occurrence list preserves distinctness and order. If c_X(b)=c_X(a) for a retained a and b∈X, the same maximality inequality proves b is retained, including every tie.
+
+
 81. Observation partitions and completed finite probability entry
 
 An observation assigns each admitted support state its final dictionary value. Repeated mapping keys retain their last value, and admission requires equality of mapping-key and support sets. Native proofs establish that every support state has an image and that the image trace retains the support length. Distinct class labels are taken in first-occurrence order. Each class consists exactly of the support rows mapped to its label, retaining their original order and multiplicity. Every support state is covered, each emitted class is nonempty, and a state cannot belong to classes with different labels. Observation therefore closes distinctions between deterministic support states without adding a stochastic evolution law.
 
 The complete nine-dimensional source product contains 512 candidate kernels. Native enumeration and criteria proofs establish the unique all-admitted kernel and rejection of each substituted coordinate. All six original operational witnesses evaluate successfully; their joint passing result is kernel checked. Native execution matches every source registration, census, decision, closure, control and digest field for all 512 identifier lookups, and preserves unknown-identifier refusal. The original induction, derivation exposition, correspondence terminology and empirical exclusions are retained. These results complete the V3 finite probability and descriptive-statistics entry. Inferential claims about natural measurements retain V3's requirement for preregistered blind validation through the empirical engine.
+
+
+Write f_M(x) for the final mapping value at key x. Admission is the pair of membership inclusions keys(M)⊆S and S⊆keys(M). Induction on the mapping list proves
+
+\[
+ (\exists y,\ f_M(x)=\operatorname{Some}(y))\iff x\in\operatorname{keys}(M).
+\]
+
+Thus every admitted support row contributes exactly one value to the image trace Y, and induction on S gives |Y|=|S|. Define L=firstLabels(Y) and F_y=[x∈S:f_M(x)=Some(y)]. The emitted rows are [(y,F_y):y∈L], with exact membership law
+
+\[
+ (y,T)\in\operatorname{classRows}(S,M)
+ \iff (\exists x\in S,\ f_M(x)=\operatorname{Some}(y))\land T=F_y.
+\]
+
+Every emitted row therefore has a witness x and is nonempty. For each x∈S, the admitted mapping supplies y and hence its emitted class F_y containing x. If x∈F_y and x∈F_z, then Some(y)=f_M(x)=Some(z), so y=z. This proves coverage and separation of differently labelled classes while retaining support order and any repeated support occurrences. The observation operation's key-set guard does not add a distinctness requirement to its supplied support list.
+
+The nine binary probability coordinates give 2^9=512 kernels. The conjunction of their original admission criteria holds exactly at the all-admitted tuple; each rejected coordinate falsifies its corresponding conjunct. The finite classification and operational witness results accompany the general event, factorization, mode and partition derivations above.
+
 
 82. Exact finite optimization and retained alternatives
 

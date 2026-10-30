@@ -8471,3 +8471,11 @@ import SFT
 #print axioms SFT.QuantumComputation.LimitsEvidence.registrationHasNoAxioms
 #print axioms SFT.QuantumComputation.LimitsEvidence.registrationHasNoFreeParameters
 #print axioms SFT.QuantumComputation.LimitsEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Physics.TargetCustody.constructorRetainsCommitment
+#print axioms SFT.Physics.TargetCustody.cannotReleaseTwice
+#print axioms SFT.Physics.TargetCustody.releasePreservesPackage
+#print axioms SFT.Physics.TargetCustody.successfulReleaseCannotRepeat
+#print axioms SFT.Physics.TargetCustody.releaseRequiresMatchingSeal
+#print axioms SFT.Physics.TargetCustody.verifyEmpty
+#print axioms SFT.Physics.TargetCustody.violationRowEmpty
+#print axioms SFT.Physics.TargetCustody.exchangeChecksExactly

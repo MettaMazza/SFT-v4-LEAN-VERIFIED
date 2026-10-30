@@ -8281,7 +8281,25 @@ For a generated fault-depth trace of length d, the repetition encoder retains 2d
 
 The native enumeration theorem establishes that a mask occurs exactly when it is a source-order sublist of the full position range with length at most d. It applies to arbitrary widths and depths. The decoder preserves the original rejection conditions: empty words, labels outside held/returned, and tied counts.
 
-All 18 translated definitions and proved results have zero axiom dependencies. The implementation passes 1,322 original-source comparisons, including all 168 census rows for widths 3, 5 and 7 across both held labels. Arbitrary-depth correction is established in Section 289.
+All 18 translated definitions and proved results have zero axiom dependencies. The implementation passes 1, 322 original-source comparisons, including all 168 census rows for widths 3, 5 and 7 across both held labels. Arbitrary-depth correction is established in Section 289.
+
+For ordered position list \(P\), the combinations recursion is
+\[
+ C(P, 0)=[[]],\qquad C([], k+1)=[],
+\]
+\[
+ C(p::P, k+1)=[p::m\mid m\in C(P, k)]{+\!\!+}C(P, k+1).
+\]
+The first branch includes the current position and the second omits it, preserving the original combination order. Induction on \(P\) proves
+\[
+ m\in C(P, k)\iff m\text{ is a source-order sublist of }P\land|m|=k.
+\]
+Concatenating these lists for \(k=0,\ldots, d\) over \(P=[0,\ldots, w-1]\) therefore gives
+\[
+ m\in\operatorname{Masks}(w, d)
+ \iff m\text{ is a sublist of }[0,\ldots, w-1]\land|m|\le d.
+\]
+An admitted depth trace has nonempty distinct labels and length \(d\); encoding returns \(w=2d+1\) copies of the selected held/returned label. Changing a word tests each successive position against \(m\), preserving word length. The decoder first checks nonempty support and allowed labels, then rejects equal held/returned counts and otherwise returns the strictly more numerous label.
 
 289. Arbitrary-depth repetition correction
 
@@ -8289,55 +8307,160 @@ For every admitted repetition encoding with fault depth d, every mask in the com
 
 The native correction theorem applies to both held and returned labels at arbitrary finite depth. The complete census returns precisely its source-ordered changed words, each paired with the original decoded label; no mask is omitted. All 14 correction definitions and theorems have zero axiom dependencies.
 
-The eight original operational witnesses are also reproduced: complete support,phase action,joint composition,predecessor merging,nonfactorability,observation with retained record,inverse recovery,and exhaustive repetition correction at widths 3,5 and 7. Their complete named output agrees with V3. All 16 witness declarations have zero axiom dependencies.
+The eight original operational witnesses are also reproduced: complete support, phase action, joint composition, predecessor merging, nonfactorability, observation with retained record, inverse recovery, and exhaustive repetition correction at widths 3, 5 and 7. Their complete named output agrees with V3. All 16 witness declarations have zero axiom dependencies.
+
+Let \(r\) be the opposite-label count and \(c\) the original-label count after applying a census mask \(m\). The change recursion proves
+\[
+ r\le|m|\le d,\qquad c+r=2d+1.
+\]
+For the count bound, a changed head consumes one occurrence of its position from the mask; removing that position does not affect any later position. Induction bounds the remaining opposite labels. The second identity follows because each word position contains exactly one of the two labels.
+
+If \(c\le r\), then \(c+r\le2r\le2d\), contradicting \(c+r=2d+1\). Hence \(r<c\), and the original decoder returns the original label for both encodings. Induction over the complete ordered mask list now gives
+\[
+ \operatorname{Census}(a, D)=
+ \operatorname{ok}\bigl(
+ [(\operatorname{change}(m,\bar a, a^{\, 2d+1}), a)
+       \mid m\in\operatorname{Masks}(2d+1, d)]\bigr).
+\]
+Here \(a^{\, 2d+1}\) denotes list replication, \(\bar a\) the other held label, and \(d=|D|\). The result covers every admitted finite depth and every enumerated mask, including the empty mask.
 
 290. Reversible-model grammar and operational controls
 
-The eight registered binary axes generate all 256 source candidates. Native exhaustion and uniqueness proofs establish the sole all-preserving member and reject each alternative coordinate. Every candidate identifier,exact form,decision and reason agrees with the pinned V3 census.
+The eight registered binary axes generate all 256 source candidates. Native exhaustion and uniqueness proofs establish the sole all-preserving member and reject each alternative coordinate. Every candidate identifier, exact form, decision and reason agrees with the pinned V3 census.
 
-All four original controls retain their exact tests,descriptions and receipt hashes. These outputs agree with V3. The registration,census,decision lookup and closure representations preserve the original canonical record structure. Their 70 native definitions and theorems have zero axiom dependencies.
+All four original controls retain their exact tests, descriptions and receipt hashes. These outputs agree with V3. The registration, census, decision lookup and closure representations preserve the original canonical record structure. Their 70 native definitions and theorems have zero axiom dependencies.
 
 Observation-record extension preserves the complete earlier record and appends the newly classified branch. Native append and successor theorems establish both exact order and retention of every earlier record row.
 
-Pair-cell and phase extension obey the same exact append laws: complete earlier rows remain in their original order,followed by every newly generated row. Position extension uses the established Fold-word successor identity. All seven successor theorems have zero axiom dependencies.
+Pair-cell and phase extension obey the same exact append laws: complete earlier rows remain in their original order, followed by every newly generated row. Position extension uses the established Fold-word successor identity. All seven successor theorems have zero axiom dependencies.
+
+The grammar is the ordered product of the support, unit, composition, phase, transformation, observation, generality and addition axes:
+\[
+ \mathcal G=\prod_{i=1}^{8}[\mathrm{rejected},\mathrm{admitted}],
+ \qquad|\mathcal G|=256,\qquad
+ \operatorname{survives}(g)\iff\bigwedge_i g_i=\mathrm{admitted}.
+\]
+The source identifier comparison equals this coordinate criterion. Complete enumeration and the conjunction therefore establish the single all-admitted survivor.
+
+Writing \(s\) for its identifier, \(s_-\) for the incomplete-support identifier, \(h\) for the supplied source hash, \(S\) for the enumerated survivor identifiers, \(E\) for the exclusions and \(W\) for the original witness Booleans, the four original control predicates are exactly
+\[
+ s_-\ne s,\qquad H(\{\mathrm{changed}:h\})\ne h,\qquad
+ |S|=1,\qquad E\ne[]\land\bigwedge W.
+\]
+These are the retained source tests; the artifact control checks the literal survivor count.
+
+For admitted observation records, recursion proves
+\[
+ \operatorname{record}(B{+\!\!+}C)
+ =\operatorname{record}(B){+\!\!+}\operatorname{record}(C).
+\]
+A newly classified branch thus appends exactly its branch/label row. The same list induction gives the pair-row, joint-row and phase-row append laws. Position extension retains the full Fold-word successor identity \(W_{n+1}=\operatorname{extendWords}(A, W_n)\).
 
 291. Complete finite reversible execution and interpretation
 
-A finite execution trace retains each admitted gate application and its predecessor state. Serial composition preserves every earlier row. Applying the inverse gates in exact reverse order restores the initial state. The predecessor-record length equals the number of gate applications,and the complete branch count is preserved throughout execution.
+A finite execution trace retains each admitted gate application and its predecessor state. Serial composition preserves every earlier row. Applying the inverse gates in exact reverse order restores the initial state. The predecessor-record length equals the number of gate applications, and the complete branch count is preserved throughout execution.
 
-The frozen-description interface retains each registered initial state and gate sequence. Its decoder recovers the exact request,and evaluation invokes only the source gate operation. Every registered description has its corresponding interpretation;admitted traces preserve their complete record,reverse execution and resource counts. The construction retains the source boundary of finite registered computation without assigning thermodynamic energy.
+The frozen-description interface retains each registered initial state and gate sequence. Its decoder recovers the exact request, and evaluation invokes only the source gate operation. Every registered description has its corresponding interpretation; admitted traces preserve their complete record, reverse execution and resource counts. The construction retains the source boundary of finite registered computation without assigning thermodynamic energy.
 
-All 18 execution and interpretation declarations have zero axiom dependencies. The implementation agrees with 4,165 traces formed by repeated applications of V3 operations. The registered project build and audit cover 8,573 native theorems and 19,655 declarations with zero axiom dependencies;all 60,518 candidate rows match pinned V3.
+All 18 execution and interpretation declarations have zero axiom dependencies. The implementation agrees with 4, 165 traces formed by repeated applications of V3 operations. The registered build, axiom audit and fresh candidate comparisons verify the complete reversible-model implementation against pinned V3.
 
-Complete Fold reversible-computation model complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 161 source entries are complete.
+Complete Fold reversible-computation model complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+Forward execution has an identity constructor and a successor retaining the current state, admitted gate and exact application result:
+\[
+ B_0\xrightarrow{G_1}B_1\xrightarrow{G_2}\cdots
+ \xrightarrow{G_k}B_k,\qquad
+ P=[B_0,\ldots, B_{k-1}].
+\]
+Each gate's round-trip theorem supplies its inverse step. Inductively invert the tail first, then the head, yielding
+\[
+ B_k\xrightarrow{G_k^{-1}}\cdots\xrightarrow{G_1^{-1}}B_0,
+ \qquad |P|=k,\qquad |B_k|=|B_0|.
+\]
+Every inverse step uses the registered inverse phase action. Concatenation of forward traces concatenates both gate and predecessor lists.
+
+The interpreter decodes a codeword to a name, looks up that name's request \((B_0,[G_i])\), and runs this exact gate evaluator. Under unique registry names, admitted encoding and an exact decoder, each registered request has an admitted codeword \(c\) satisfying
+\[
+ \operatorname{interpret}(c)
+ =\operatorname{some}(\operatorname{evaluate}(B_0,[G_i])).
+\]
+For an admitted Forward trace, evaluation returns precisely \((P, B_k)\); inverse execution and both counts above therefore transfer to that interpretation.
 
 292. Fold quantum information unit
 
-An admitted one-position support over the two held labels contains exactly the two corresponding one-label words. Every generated position retains both distinct alternatives,with its complete earlier and later word support. The registered finite phase-label carrier remains unchanged.
+An admitted one-position support over the two held labels contains exactly the two corresponding one-label words. Every generated position retains both distinct alternatives, with its complete earlier and later word support. The registered finite phase-label carrier remains unchanged.
 
-Observation selects only the originally classified alternatives. Its complete two-row record reconstructs the original branches and retains the phase cycle. These properties use the original support and observation operations,without importing a conventional qubit or complex-vector representation.
+Observation selects only the originally classified alternatives. Its complete two-row record reconstructs the original branches and retains the phase cycle. These properties use the original support and observation operations, without importing a conventional qubit or complex-vector representation.
 
-The native unit proofs and the complete unchanged 256-candidate grammar pass the registered build,zero-axiom audit and fresh V3 candidate comparison. The shared phase,gate,composition,observation and fault-correction operations retain their verified source behavior.
+The native unit proofs and the complete unchanged 256-candidate grammar pass the registered build, zero-axiom audit and fresh V3 candidate comparison. The shared phase, gate, composition, observation and fault-correction operations retain their verified source behavior.
+
+For admitted complete support over two distinct labels \(a, b\) and one position,
+\[
+ \operatorname{support}(B)=[[a],[b]],\qquad |B|=2.
+\]
+Given generated prefix \(u\) and suffix \(v\), the complete product includes both
+\(u{+\!\!+}[a]{+\!\!+}v\) and \(u{+\!\!+}[b]{+\!\!+}v\).
+They have the same generated length and alphabet membership; equality would force \(a=b\) at the inserted coordinate, contradicting distinctness.
+
+For an accepted observation with complete record \(R\), reconstruction gives
+\[
+ \pi_1R=B,\qquad |R|=2,\qquad C_{\rm selected}=C_{\rm original}.
+\]
+Every selected branch has word \([a]\) or \([b]\) and its classification lookup equals the selected label. The two alternatives and phase carrier are therefore retained by the original complete-support and observation operations.
 
 293. Joint-state provenance and marginal reconstruction
 
-Every generated joint branch has precisely the provenance of an original left and right branch pair. Its word is the original concatenation with the joint separator;its phase is selected by the sum of the component phase indices modulo the common cycle. The complete row order and product branch count are retained.
+Every generated joint branch has precisely the provenance of an original left and right branch pair. Its word is the original concatenation with the joint separator; its phase is selected by the sum of the component phase indices modulo the common cycle. The complete row order and product branch count are retained.
 
 Every pair of admitted component branches contributes its cell. Projecting the retained component provenance reconstructs both original marginals. These proofs preserve the original word domain and state-constructor guards.
 
-For a registered nonempty unique pair support,the original nonfactorable decision holds exactly when a cross-pair formed from its projected coordinates is missing. The positive decision is exactly closure under every such cross-pair. The ten native composition declarations have zero axiom dependencies;the shared original composition and factorization comparisons remain applicable.
+For a registered nonempty unique pair support, the original nonfactorable decision holds exactly when a cross-pair formed from its projected coordinates is missing. The positive decision is exactly closure under every such cross-pair. The ten native composition declarations have zero axiom dependencies; the shared original composition and factorization comparisons remain applicable.
 
-Fold quantum information-unit law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 162 source entries are complete.
+Fold quantum information-unit law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+Define a component-provenance cell by
+\[
+ \operatorname{Cell}(l, r, z)\iff
+ l\in B_L\land r\in B_R\land\operatorname{jointBranch}(C, l, r)
+ =\operatorname{some}(z).
+\]
+Successful composition establishes
+\[
+ z\in B_J\iff\exists l, r,\operatorname{Cell}(l, r, z).
+\]
+Every admitted pair \(l, r\) supplies a cell. Since both component states have nonempty branch lists, choosing a branch on the other side proves the marginal equivalences
+\[
+ l\in B_L\iff\exists r, z,\ z\in B_J\land\operatorname{Cell}(l, r, z),
+\]
+with the symmetric formula for \(r\in B_R\). These projections use retained provenance, not an assumed parser for the joint-word separator. Each cell separately proves its concatenated word and modular sum of phase indices.
+
+For nonempty duplicate-free pair support \(J\), failure of the nested cross-pair check supplies an actual failed member at each traversal:
+\[
+ \operatorname{factorable}(J)=\operatorname{ok}(\mathrm{false})
+ \iff\exists l, r\in J,\ (l_1, r_2)\notin J.
+\]
+Conversely any such pair witnesses failure of the complete closure test.
 
 294. Complete generated support and phase retention
 
-For an admitted alphabet of size b and generated position trace of length k,the source support contains exactly b^k branches. Every branch records a word of length k over the registered alphabet and the initial held phase label. The exact membership theorem includes every generated word.
+For an admitted alphabet of size b and generated position trace of length k, the source support contains exactly b^k branches. Every branch records a word of length k over the registered alphabet and the initial held phase label. The exact membership theorem includes every generated word.
 
-Every nonempty phase action preserves the entire word support,its exact branch count and its distinctness. The construction retains one word-and-phase record per branch without introducing an amplitude magnitude,normalization constant or stochastic selection.
+Every nonempty phase action preserves the entire word support, its exact branch count and its distinctness. The construction retains one word-and-phase record per branch without introducing an amplitude magnitude, normalization constant or stochastic selection.
 
-The five native support theorems and the claim-specific complete 256-candidate grammar pass the registered build,zero-axiom audit and fresh source comparison. The shared original operation checks remain applicable because the executable operations are unchanged.
+The five native support theorems and the claim-specific complete 256-candidate grammar pass the registered build, zero-axiom audit and fresh source comparison. The shared original operation checks remain applicable because the executable operations are unchanged.
 
-Fold quantum state-composition law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 163 source entries are complete.
+Fold quantum state-composition law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+For alphabet \(A\), \(k\) registered positions and initial phase \(\phi\), complete generation returns
+\[
+ B=[(w,\phi)\mid w\in W_k(A)],\qquad
+ (w,\psi)\in B\iff |w|=k\land(\forall a\in w,\ a\in A)\land\psi=\phi.
+\]
+The word recursion has \(|W_0|=1\) and \(|W_{k+1}|=|A|\,|W_k|\). Induction therefore yields
+\[
+ |B|=|A|^k.
+\]
+For every admitted nonempty phase-action trace, the mapped word projection remains exactly \(W_k(A)\). The original phase-action preservation theorem gives admitted output, and equality of word projections gives unchanged branch count and distinct support. Thus the generated count and membership are preserved together, not inferred from a sample of branches.
 
 295. Exact phase period and predecessor interference
 
@@ -8347,6 +8470,20 @@ Each reported interference fibre contains exactly the original branches assigned
 
 All seven phase and interference theorems have zero axiom dependencies. The claim-specific full 256-candidate grammar passes the registered build, audit and fresh V3 comparison; the unchanged shared operational comparisons remain applicable.
 
+For phase-cycle length \(d\), a trace of length \(d\) has shift \(d\bmod d=0\). Phase-index reconstruction proves \(\operatorname{shift}(C, 0,\phi)=\phi\) for each registered phase. Applying this equality to every branch gives
+\[
+ \operatorname{phaseAction}(B, u)=\operatorname{ok}(B)
+ \quad\text{when }|u|=d.
+\]
+For a general admitted action with shift \(s\), any nonempty reverse trace whose length modulo \(d\) is the source inverse shift \(\bar s\) restores the same state by the modular inverse identity.
+
+If predecessor merging returns groups \(G\), then for every retained group \((l, F_l)\),
+\[
+ b\in F_l\iff b\in B\land\operatorname{lookup}(f, b_{\rm word})
+                                      =\operatorname{some}(l).
+\]
+The branch \(b\) includes its original phase. Two branches with the same registered image therefore inhabit the same exact fibre, both retained; no phase or predecessor is replaced by the class label.
+
 296. Exact component correlations and retained observation provenance
 
 For the admitted nonempty, unique finite pair support, nonfactorability is equivalent to the presence of retained pairs with a missing cross pair. The two retained pairs necessarily differ in both component coordinates. The original source factorability decision therefore has a constructive correlation witness.
@@ -8355,7 +8492,22 @@ After pair-cell composition and observation, a selected branch corresponds exact
 
 All four entanglement theorems have zero axiom dependencies. The complete 256-candidate grammar passes the registered build, audit and fresh V3 comparison. The shared composition and observation operations retain their original verified source correspondence.
 
-Superposition-equivalent Fold support law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 164 source entries are complete.
+Superposition-equivalent Fold support law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+For nonempty unique joint support \(J\), a missing cross pair gives retained \(l, r\in J\) with \((l_1, r_2)\notin J\). If \(l_1=r_1\), this cross pair is \(r\in J\); if \(l_2=r_2\), it is \(l\in J\). Both contradict its absence. Hence
+\[
+ \operatorname{nonfactorable}(J)\Rightarrow
+ \exists l, r\in J,\ l_1\ne r_1\land l_2\ne r_2
+                         \land(l_1, r_2)\notin J.
+\]
+The converse failure witness is the same absent cross pair in the original factorability test.
+
+For successful composition followed by observation label \(v\), exact membership composes to
+\[
+ z\in B_{\rm selected}\iff
+ \exists l, r,\operatorname{Cell}(l, r, z)\land f(z_{\rm word})=v.
+\]
+Without the final label condition, every component cell still belongs to the branch projection of the complete observation record. Thus selecting a class changes selected support while preserving the record of all original component pairs.
 
 297. Exact measurement selection and complete reconstruction
 
@@ -8365,6 +8517,20 @@ Projecting the record onto its original branch rows and retaining the unchanged 
 
 All four measurement theorems have zero axiom dependencies. The complete 256-candidate grammar passes the registered build, audit and fresh V3 comparison. The unchanged observation operation retains its original source-comparison evidence.
 
+For an accepted observation, classification totality supplies for each \(b\in B\) a registered outcome \(o\) with \((b, o)\in R\). If \(o\ne v\), exact selected-class membership gives
+\[
+ b\notin B_v,\qquad(b, o)\in R.
+\]
+The first conclusion concerns the selected state; the second preserves the omitted branch in the complete record. The filter equation is
+\[
+ B_v=[b\in B\mid f(b_{\rm word})=v],
+\]
+which retains order. Since \(\pi_1R=B\) and the selected phase cycle equals the original cycle \(C\), complete reconstruction is the structural equality
+\[
+ (\pi_1R, C_{\rm selected})=(B, C).
+\]
+Every original word and phase is restored by projection, including branches outside the selected class.
+
 298. Exact reversible gate branch correspondence
 
 Every output branch of an accepted gate application corresponds to an original input branch through the registered word map and exact held phase action. Conversely, every such input branch contributes its corresponding output branch. The result support equals the complete registered image support, and admitted distinct source words cannot merge to one target word.
@@ -8373,7 +8539,20 @@ The original inverse gate and inverse phase shift recover the entire original st
 
 All four gate-specific theorems have zero axiom dependencies. The complete 256-candidate grammar passes the registered build, audit and fresh V3 comparison. The unchanged shared phase, application and serial-evaluation operations retain their source-comparison evidence.
 
-Fold phase and interference operation law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 165 source entries are complete.
+Fold phase and interference operation law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+For gate \(G\) acting with shift \(s\) on cycle \(C\), the exact branch correspondence is
+\[
+ z\in B'\iff\exists b\in B,\
+ \operatorname{lookup}(G, b_{\rm word})=\operatorname{some}(z_{\rm word})
+ \land\operatorname{shift}(C, s, b_{\rm phase})
+                         =\operatorname{some}(z_{\rm phase}).
+\]
+Induction on the branch transformation proves both directions: a produced head supplies its source row, while tail membership uses the induction hypothesis. With gate admission, the image support is exactly the target projection of \(G\). If two source words have the same lookup image, uniqueness of target rows in the inverse map gives
+\[
+ G(x)=y=G(x')\Rightarrow x=x'.
+\]
+The admitted inverse application restores the complete original state. For a gate list, serial composition retains causal order and the inverse proof uses precisely the reversed list with inverse word maps and inverse phase shifts.
 
 299. Exact circuit evaluation, inverse and observation ledger
 
@@ -8383,6 +8562,19 @@ The final observation record retains the original branch count. Its branch proje
 
 All five circuit-specific theorems have zero axiom dependencies. The registered build, audit and fresh comparison preserve the full 256-candidate grammar. Shared gate, serial-evaluation and observation operations retain their original source-comparison evidence.
 
+Suppose the initial state and every listed gate are admitted and evaluation returns \((P, B_k)\). Induction over the evaluator uses admission preservation for its head application, then reconstructs the tail, proving Forward for the entire run. The resulting circuit certificate gives
+\[
+ \operatorname{Backward}(B_k,\operatorname{reverseOrder}(G), B_0),
+ \quad |P|=|G|,\quad |B_k|=|B_0|,\quad C_k=C_0.
+\]
+The last equality follows by composing the phase-cycle equality from every application.
+
+For an accepted terminal observation with complete record \(R\), observation reconstruction and these invariants imply
+\[
+ |R|=|B_0|,\qquad(\pi_1R, C_0)=(B_k, C_k).
+\]
+The record reconstructs the entire terminal state, rather than only its selected branch class. All identities refer to the actual successful evaluation and original gate operations.
+
 300. Exact simulation of the frozen circuit-description grammar
 
 The common interpreter decodes a registered description and executes its exact finite circuit. Successful interpretation determines the original decoded name, source-bound request and complete causal trace. Every registered description in the valid frozen encoding grammar has a corresponding code whose interpretation preserves that trace, its reverse-order inverse, the held phase cycle and the gate-count ledger.
@@ -8391,7 +8583,23 @@ Observation after interpreted execution retains the original branch count. The c
 
 All four universality-specific theorems have zero axiom dependencies. The registered build, audit and fresh V3 comparison preserve the complete 256-candidate grammar and unchanged shared source operations.
 
-Fold entangling-composition law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 166 source entries are complete.
+Fold entangling-composition law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+Successful interpretation has a recoverable source chain
+\[
+ \operatorname{decode}(c)=\operatorname{ok}(n),\quad
+ \operatorname{lookup}(\mathcal R, n)=\operatorname{some}(q),\quad
+ \operatorname{evaluate}(q_{\rm initial}, q_{\rm gates})
+                       =\operatorname{ok}(P, B).
+\]
+For a valid frozen encoding with unique registry names and an exact decoder, every registered request with an admitted Forward execution has some admitted codeword satisfying this chain. Substituting the request into the circuit theorems supplies its exact inverse execution, unchanged phase cycle and \(|P|=|q_{\rm gates}|\).
+
+An accepted observation after that interpretation has
+\[
+ |R|=|q_{\rm initial}.{\rm branches}|,\qquad
+ (\pi_1R, q_{\rm initial}.{\rm phaseCycle})=B.
+\]
+Thus encoding coverage, request recovery and exact circuit execution are separate proved links. The quantifier is over the complete registered description grammar admitted by the encoding and decoder.
 
 301. Exact algorithm branch derivations and decoded outcomes
 
@@ -8401,7 +8609,24 @@ A selected observation branch has exactly such an input-to-output trace together
 
 The branch-trace representation and all three algorithm-specific theorems have zero axiom dependencies. The registered build, audit and fresh V3 comparison preserve the full 256-candidate grammar and unchanged shared operations.
 
-Fold quantum measurement-semantics law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 167 source entries are complete.
+Fold quantum measurement-semantics law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+For fixed cycle \(C\), define the branch relation recursively:
+\[
+ T_C([], b, z)\iff b=z,
+\]
+\[
+ T_C(g::G, b, z)\iff
+ \exists m,\ \operatorname{lookup}(g, b_w)=\operatorname{some}(m_w)
+ \land\operatorname{shift}(C, s_g, b_\phi)=\operatorname{some}(m_\phi)
+ \land T_C(G, m, z),
+ \qquad s_g=|g_{\rm successors}|\bmod|C|.
+\]
+Induction on the full Forward trace, using the gate branch correspondence at each head, proves
+\[
+ z\in B_{\rm terminal}\iff\exists b\in B_{\rm initial},\ T_C(G, b, z).
+\]
+Exact observation membership appends \(f(z_w)=v\) to this condition for a selected class. Exact predecessor-fibre membership appends the same condition for an interference group. Both therefore retain an actual initial branch and every intermediate word lookup and phase action in causal order.
 
 302. Exact live-support and measurement resource counts
 
@@ -8411,7 +8636,19 @@ Canonical input and occupied-position records, causal-depth witnesses, gate and 
 
 All five quantum-resource theorems have zero axiom dependencies. The registered build, audit and fresh comparison preserve the complete 256-candidate grammar and unchanged shared source operations.
 
-Fold reversible transformation and gate law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 168 source entries are complete.
+Fold reversible transformation and gate law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+Let \(n=|B_0|\) and \(k=|G|\). Each gate preserves branch count, so induction on Forward proves the same count for every predecessor state in \(P\), as well as for the terminal state:
+\[
+ [\,|B|\mid B\in P\,]=\operatorname{replicate}(k, n),
+ \qquad |B_{\rm terminal}|=n.
+\]
+Serial execution concatenates the two predecessor lists; their lengths add to the combined gate count. For complete support over alphabet size \(b\) and position count \(m\), substitution of the generated cardinality gives
+\[
+ [\,|B|\mid B\in P\,]=\operatorname{replicate}(k, b^m),
+ \qquad |B_{\rm terminal}|=b^m,\qquad |R_{\rm observation}|=b^m.
+\]
+The last equality follows from complete observation-record reconstruction, not from counting selected branches. These are exact finite support and gate ledgers for the admitted execution.
 
 303. Exact communication provenance and complete joint records
 
@@ -8421,7 +8658,26 @@ The complete record has exactly the product of the sender and receiver branch co
 
 All four communication-specific theorems have zero axiom dependencies. The registered build, audit and fresh V3 comparison preserve the complete 256-candidate grammar and unchanged shared operations.
 
-Fold quantum circuit syntax and semantics law complete: native source derivations,full256 enumeration,original8 witnesses/fault censuses,all 4 controls and every original program output field/hash are verified against pinned V3. 169 source entries are complete.
+Fold quantum circuit syntax and semantics law complete: native source derivations, full 256-candidate enumeration, all eight original witnesses and fault censuses, all four controls, and every original program output field and hash are verified against pinned V3.
+
+For sender state \(S\), receiver state \(T\), their accepted joint state and complete observation record \(R\), component provenance gives
+\[
+ t\in T\iff\exists s, z,\ z\in\pi_1R\land\operatorname{Cell}(S, T, s, t, z),
+\]
+and symmetrically for \(s\in S\). This follows from the complete marginal theorem and \(\pi_1R=B_{\rm joint}\), so branches outside the selected observation class remain represented.
+
+If a local sender gate first produces \(S'\), each joint branch has the stronger chain
+\[
+ z\in B_{\rm joint}\iff
+ \exists s, s', t,\ s\in S\land G(s_w)=s'_w
+ \land\operatorname{shift}(C, s_G, s_\phi)=s'_\phi
+ \land\operatorname{Cell}(S', T, s', t, z),
+\]
+where the lookup and phase equalities denote their successful Option results. This combines exact gate provenance with exact joint-cell membership. Finally, complete observation and product cardinality give
+\[
+ |R|=|S|\,|T|.
+\]
+The count and provenance describe the retained finite communication construction; the physical correspondence remains attached to its registered media evidence.
 
 304. Exact coding reconstruction and disjoint error supports
 

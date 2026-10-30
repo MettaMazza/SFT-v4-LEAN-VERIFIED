@@ -4239,13 +4239,44 @@ The model-equivalence construction retains a translation between the two registe
 
 The overhead ledger retains one complete target-action segment for each source step. Flattening concatenates all generated target actions in order; appending a source step appends exactly its target segment. No constant overhead or one-target-step restriction is introduced. Identity simulation and composition of successive simulations preserve the exact path relation. Registered finite encoding and exact reverse decoding connect these traces to the held model descriptions.
 
+
+The supplied translation e satisfies StepSimulation exactly when every successful source step s→t has a target path P_T(e(s),a,b,e(t)) for some finite target actions a and predecessors b. Induction over a source path constructs a ledger L with one target-action segment per source step:
+
+\[
+ P_S(s,u,b,t)\Longrightarrow\exists L,c,\quad |L|=|u|\ \land\
+ P_T(e(s),\operatorname{flatten}(L),c,e(t)).
+\]
+
+The identity uses empty ledger and identity target path. At a successor, apply the supplied step simulation to the first edge, prepend its segment to the inductively obtained ledger, and compose the two target paths. When e(s) belongs to the target carrier, replay returns c++[e(t)]. The ledger satisfies flatten(L++K)=flatten(L)++flatten(K), by induction on L; in particular appending one segment appends exactly that segment to the target actions. Identity simulation uses the original one-step path. Composing two simulations applies the second path-simulation theorem to the first simulation's finite segment, preserving the twice-translated endpoints.
+
+
 146. Finite registered model translation and reconstruction
 
 The description translation composes the original finite encoding lookup with the target description decoder. Validated tables and their exact decoders provide total lookup on each registered carrier. Shared used-code coverage supplies a target description for every source description and derives its exact reverse reconstruction. Uniqueness follows from the unchanged lookup and decoder operations.
 
 For an admitted original system, every successful native execution reconstructs its complete path and terminal carrier membership. The registered step-or-trace simulation constructs the corresponding target execution and its complete action-segment ledger. The finite-table reconstruction then decodes the translated terminal back to the original terminal. Applying this construction in each direction establishes the registered bidirectional execution correspondence under the two supplied simulation conditions. Equivalence retains V3’s boundary of the two registered generated model grammars.
 
-All 256 original candidates, native lookup decisions,3 witnesses,4 controls and complete program fields and hashes agree with pinned V3. Together with the native encoding, trace and reconstruction results, this completes the registered Fold Computational-Model Equivalence Law.
+All 256 original candidates, native lookup decisions, 3 witnesses, 4 controls and complete program fields and hashes agree with pinned V3. Together with the native encoding, trace and reconstruction results, this completes the registered Fold Computational-Model Equivalence Law.
+
+
+Write E₁,E₂ for the validated finite encoding tables and D₁,D₂ for their exact decoders. Translation is the original relational composition
+
+\[
+ T_{E,D}(x,y)\iff\exists w,\ \operatorname{lookup}(E,x)=\operatorname{some}(w)\ \land\
+ \operatorname{decode}(w,D)=\operatorname{ok}(y).
+\]
+
+For held x, validation supplies its code w and the exact decoder gives decode(w,D₁)=ok(x). Used-code coverage places w in E₂, yielding a row (y,w) with y in the target carrier. Its decoder gives decode(w,D₂)=ok(y), while validated lookup at y returns w. Thus T_{E₁,D₂}(x,y) and T_{E₂,D₁}(y,x). Two translations from the same x have equal lookup codes and then equal decoder results, proving uniqueness.
+
+A successful source run decomposes into b++[t], with t in the admitted source carrier. Registered reconstruction puts e(s) in the target carrier and supplies the reverse translation from e(t) to t. Section 145 then constructs the target run and ledger:
+
+\[
+ |L|=|u|,\qquad \operatorname{run}_T(e(s),\operatorname{flatten}(L))
+ =\operatorname{ok}(c\mathbin{++}[e(t)]),\qquad T_{E_2,D_1}(e(t),t).
+\]
+
+The same construction in the other direction uses its separately supplied simulation and coverage conditions. The reverse terminal correspondence follows from the validated tables themselves.
+
 
 147. Interpretation of frozen generated descriptions
 
@@ -4253,7 +4284,23 @@ A frozen description retains its complete generated transition system, initial c
 
 Resource records retain the original numbered observation trace and occupied support. The initial observation is counted: a successful execution records one more observation than requested actions. Native proofs reconstruct every recorded observation and occupied label. The same original base, successor and composition operations preserve complete traces and terminal results under interpretation; no external machine model or fixed resource overhead is imposed.
 
-All 256 original grammar members and full program outputs match pinned V3.36 additional fresh native resource comparisons cover guard precedence, repeated observations, Unicode and position labels. These results complete the registered Fold Universal-Computation Law.
+All 256 original grammar members and full program outputs match pinned V3. 36 additional fresh native resource comparisons cover guard precedence, repeated observations, Unicode and position labels. These results complete the registered Fold Universal-Computation Law.
+
+
+A frozen request q stores (machine,initial,actions). Interpretation first decodes code w to name n, then looks up q in the registry. Its successful selection equation is
+
+\[
+ \operatorname{decode}(w,D)=\operatorname{ok}(n),\quad
+ \operatorname{lookup}(G,n)=\operatorname{some}(q)
+ \Longrightarrow I_G(w)=\operatorname{some}(\operatorname{run}_{q.machine}(q.initial,q.actions)).
+\]
+
+A decoder error or missing registry lookup yields no interpretation. Conversely, case analysis of an observed interpretation recovers the exact decoded name, registry row and unchanged run producing it. For distinct registry names and validated encoding with exact decoder, finite round-trip reconstruction supplies such a code for every held request.
+
+If the observed run succeeds with τ, path reconstruction gives τ=b++[t], P(q.initial,q.actions,b,t), and |b|=|q.actions|. Thus |τ|=|q.actions|+1, including the initial observation. Equality of the deterministic interpretation result gives uniqueness of its observation, including original errors. An empty action request with held initial state returns that state's singleton trace. Successor and serial path equations apply to the selected unchanged run.
+
+
+For trace τ and separately supplied occupied list O, resource admission requires Distinct(O), τ≠[] and O≠[]. Its exact ledger is ([(transition-i,τᵢ)] starting at i=1, O, |τ|, |O|). Induction on τ proves that projecting the numbered rows recovers τ and that their count is |τ|. The other three fields retain O, |τ| and |O| directly. Substituting the successful-execution length equation gives timeCount=|actions|+1; no equality between occupied support and trace is required.
 
 148. Recognition, decision and unresolved execution
 
@@ -4263,7 +4310,22 @@ A decision retains a complete original execution path terminating at an acceptin
 
 Total decision applies to every registered input, retaining its initial configuration and exact action input. Native proofs reconstruct its complete terminating observation and establish the successor decomposition of the domain obligation. Terminating decisions exclude continuation at their terminal boundary. These results preserve the source distinction between partial recognition and total decision without importing a conventional machine model or completed infinite trace.
 
-The full 256 original computability grammar and complete native program agree with pinned V3.13 additional fresh native comparisons cover exact enumeration, guard order, held complements and excluded labels. These results complete the registered Fold Recognition and Decision Law.
+The full 256 original computability grammar and complete native program agree with pinned V3. 13 additional fresh native comparisons cover exact enumeration, guard order, held complements and excluded labels. These results complete the registered Fold Recognition and Decision Law.
+
+
+Define a decision by a halt certificate together with terminal∈{accept,reject}. An unresolved prefix instead retains P(s,u,b,c), initial membership, c≠accept and c≠reject. Both replay to b++[terminal/current], but either unresolved inequality contradicts the corresponding decision label. The explicit halt boundary excludes a further successful step from a decision.
+
+For a finite input list Q, total decision is the quantified statement that each held (initial,actions) has such a decision certificate. List membership yields the exact successor equation
+
+\[
+ \operatorname{Decides}(q::Q)\iff
+ (\exists b,t,\operatorname{Decision}(q.initial,q.actions,b,t))\land\operatorname{Decides}(Q).
+\]
+
+The forward direction selects head and tail memberships; the reverse direction splits membership into those cases. Each certificate reconstructs the original terminating observation.
+
+For the admitted one-state system with edge held --fold→ held, induction on n constructs a path with n fold actions and n held predecessors, ending at held. Since held is neither answer label, every such prefix is unresolved. Any supposed decision ends in the sole carrier state held; its existing fold edge contradicts the halt boundary. Hence these arbitrary finite prefixes do not supply a terminating decision.
+
 
 149. Terminal witnesses and the held halting boundary
 
@@ -4272,6 +4334,18 @@ A halting witness retains the complete finite execution path and an explicit ter
 The contradiction certificate retains the exact decoded self-description, selected registered process and prediction at that same code. A correct prediction and a process realizing its held complement cannot both hold. When total prediction includes a supported registered self-description and its complementary execution, instantiation at that description produces the contradiction. This result preserves the declared self-description support and does not supply a halting decision for all generated universal-machine descriptions.
 
 The complete 256-candidate grammar and every native program output field and hash agree with pinned V3. These results complete the registered Fold Halting Boundary Law.
+
+
+Halts(M,s) means that some finite actions, predecessor list and terminal form a halt certificate. Define Correct(accept,M,s) by its halting implication and Correct(reject,M,s) by its nonhalting implication, retaining both clauses in the source predicate. The held complement satisfies
+
+\[
+ c(\mathrm{accept})=\mathrm{reject},\qquad c(\mathrm{reject})=\mathrm{accept},\qquad c(v)\ne v.
+\]
+
+If both a prediction v and its complement c(v) are correct for the same process, case analysis on v supplies Halts(M,s) and its negation. The generated stop system has its identity halt because it has no edges. The generated one-state loop cannot halt: carrier membership forces the terminal to held, where the fold self-edge contradicts the required no-outgoing-step condition. They realize the complement of reject and accept respectively.
+
+For the registered contradiction, decode one retained code w to n, look up its selected process M, and obtain predictor(w)=v. Correctness at that same code gives Correct(v,M,held); its supported complement record gives Correct(c(v),M,held). The preceding two-case argument yields contradiction. Total prediction is used only to obtain v at the retained self-description; its explicit support supplies the selected complementary process. The derivation keeps those exact registration and self-support premises.
+
 
 150. Effective finite enumeration and reconstruction
 
@@ -4282,6 +4356,24 @@ The one-description base has its original first position. Arbitrary finite block
 Each retained description links through the original finite encoding and exact decoder to its complete registered machine request. Interpretation reproduces the original execution with the same initial configuration and action input. Enumeration itself supplies no additional termination or answer claim.
 
 All 256 original candidates and every full native program field and hash agree with pinned V3. These results complete the registered Fold Effective-Enumeration Law.
+
+
+Let E_k(D) enumerate descriptions starting at integer k. Its clauses are E_k([])=[] and E_k(d::D)=(position-k,d)::E_{k+1}(D). Induction gives the second-coordinate projection D and length |D|. For zero-based index i with D[i]=d, induction on D and i proves
+
+\[
+ E_k(D)[i]=(\mathrm{position}\text{-}(k+i),d).
+\]
+
+The successor case uses (k+1)+i=k+(i+1). If i≥|D|, recursive positional lookup returns none. Validation requires distinct, nonempty D, so the projected admitted descriptions remain duplicate-free.
+
+Induction on a first block L establishes the exact offset equation
+
+\[
+ E_k(L\mathbin{++}R)=E_k(L)\mathbin{++}E_{k+|L|}(R).
+\]
+
+The one-description base is [(position-1,d)]. Taking R=[fresh] gives the admitted successor row (position-(1+|L|),fresh), with all prior rows unchanged. For a held indexed description, finite encoding round-trip supplies its supported code; registry lookup and interpretation then return the unchanged machine request's observation. This links each reconstructed position to execution without adding a termination conclusion.
+
 
 151. Explicit reductions and answer reconstruction
 

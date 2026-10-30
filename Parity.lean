@@ -509,3 +509,7 @@ def main : IO Unit := do
   for c in SFT.Computation.SearchPlanningGrammar.candidates do
     IO.println ("SearchPlanningGrammar\t" ++ SFT.Computation.SearchPlanningGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SearchPlanningGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SearchPlanningGrammar.exactForm c ++ "\t" ++ SFT.Computation.SearchPlanningGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.ReinforcementGrammar.candidates do
+    IO.println ("ReinforcementGrammar\t" ++ SFT.Computation.ReinforcementGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ReinforcementGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ReinforcementGrammar.exactForm c ++ "\t" ++ SFT.Computation.ReinforcementGrammar.decisionReason c)
+

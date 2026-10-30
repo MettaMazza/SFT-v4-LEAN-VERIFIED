@@ -1,0 +1,21 @@
+import SFT.Computation.Reinforcement
+#print axioms SFT.Computation.Reinforcement.rowAdmitted
+#print axioms SFT.Computation.Reinforcement.replay
+#print axioms SFT.Computation.Reinforcement.retained
+#print axioms SFT.Computation.Reinforcement.rejected
+#print axioms SFT.Computation.Reinforcement.labels
+#print axioms SFT.Computation.Reinforcement.evaluations
+#print axioms SFT.Computation.Reinforcement.replayMeaning
+#print axioms SFT.Computation.Reinforcement.retainedMeaning
+#print axioms SFT.Computation.Reinforcement.exhaustion
+#print axioms SFT.Computation.Reinforcement.rowMeaning
+#print axioms SFT.Computation.Reinforcement.compared
+#print axioms SFT.Computation.Reinforcement.comparisonMeaning
+#print axioms SFT.Computation.Reinforcement.evaluationComplete
+#print axioms SFT.Computation.Reinforcement.rowExtension
+#print axioms SFT.Computation.Reinforcement.traceExtension
+#print axioms SFT.Computation.Reinforcement.retainedExtension
+#print axioms SFT.Computation.Reinforcement.finalState
+#print axioms SFT.Computation.Reinforcement.traceComposition
+#print axioms SFT.Computation.Reinforcement.labelComposition
+#print axioms SFT.Computation.Reinforcement.disjoint

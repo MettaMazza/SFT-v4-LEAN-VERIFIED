@@ -880,3 +880,8 @@ import SFT.Computation.SearchPlanningGrammar
 import SFT.Computation.SearchPlanningControls
 import SFT.Computation.SearchPlanningEvidence
 import SFT.Computation.SearchPlanning
+import SFT.Computation.ReinforcementWitnesses
+import SFT.Computation.ReinforcementGrammar
+import SFT.Computation.ReinforcementControls
+import SFT.Computation.ReinforcementEvidence
+import SFT.Computation.Reinforcement

@@ -539,3 +539,6 @@ def main : IO Unit := do
 
   for c in SFT.Computation.ExactApproximateGrammar.candidates do
     IO.println ("ExactApproximateGrammar\t" ++ SFT.Computation.ExactApproximateGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ExactApproximateGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ExactApproximateGrammar.exactForm c ++ "\t" ++ SFT.Computation.ExactApproximateGrammar.decisionReason c)
+
+  for c in SFT.Computation.StabilityGrammar.candidates do
+    IO.println ("StabilityGrammar\t" ++ SFT.Computation.StabilityGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.StabilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.StabilityGrammar.exactForm c ++ "\t" ++ SFT.Computation.StabilityGrammar.decisionReason c)

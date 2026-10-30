@@ -1689,11 +1689,87 @@ Each proposed open is projected onto carrier order and an empty projection is re
 
 Continuity constructs its image map with the last supplied row for each key, requires exactly the source point keys, and tests each target open's source-ordered inverse image against the supplied source open family. No extra topology validation or normalization of the supplied source family is inserted. Native proofs establish the exact key-support and inverse-image conditions and last-row precedence. The original incidence, adjacency, finite-topology and continuity witnesses hold. The path-search operation, returned-path soundness, general minimality and unreachable-case equivalence are established below.
 
+
+For a carrier list C and boundary list B, the admission and adjacency equivalences are
+
+\[
+ \begin{aligned}
+ \operatorname{Inc}(C,B)\iff{}& C\ne[]\land\operatorname{Distinct}(C)
+ \land\operatorname{Distinct}(B)\\
+ &\land\forall(a,b)\in B,\ a\in C\land b\in C\land a\ne b,\\
+ \operatorname{Adj}_B(x,y)\iff{}&x\ne y\land\exists f,\ (f,x)\in B\land(f,y)\in B.
+ \end{aligned}
+\]
+
+The ordered face list is F_B(c) = [a : (a,c) occurs in B]. Swapping the two face-membership witnesses proves adjacency symmetry; x ≠ x excludes self-adjacency. Neither implication inserts an incidence guard into Adj.
+
+Let e denote the original empty-One literal, and write E(L) = e if L = [], otherwise L. For a point list P, define
+
+\[
+ \begin{aligned}
+ N_P(U)&=E([x\in P\mid x\in U]),\\
+ U\mathbin{\vee_P}V&=E([x\in P\mid x\in U\lor x\in V]),\\
+ U\mathbin{\wedge_P}V&=E([x\in P\mid x\in U\land x\in V]),\\
+ K&=\operatorname{distinctWords}([N_P(U):U\in\mathcal O]).
+ \end{aligned}
+\]
+
+These are ordered-list operations with the source literal e, including its original collision behavior. The topology predicate is exactly
+
+\[
+ P\ne[]\land\operatorname{Distinct}(P)\land |K|=|\mathcal O|
+ \land e\in K\land P\in K
+ \land\forall U,V\in K,\ U\vee_P V\in K\land U\wedge_P V\in K.
+\]
+
+The generated join has J([])=e and J(U::R)=U∨_P J(R); the generated intersection has I([])=P and I(U::R)=U∧_P I(R). For a list R of members of K, induction begins with e∈K or P∈K and applies the displayed binary closure at each cons, proving J(R),I(R)∈K.
+
+For a supplied mapping list M, f_M(x) is the last value whose key is x, if present. Hence f_(M++[(x,y)])(x)=y. Define the inverse-open list by V_M(U)=E([x∈P : f_M(x) is present and belongs to U]). Then the source continuity predicate is precisely
+
+\[
+ \operatorname{keys}(M)\subseteq P\ \land\ P\subseteq\operatorname{keys}(M)
+ \ \land\ \forall U\in\mathcal O_{\rm target},\ V_M(U)\in\mathcal O_{\rm source}.
+\]
+
+The inclusions express list membership, so duplicate mapping keys remain admitted and use last-row precedence. The supplied source family is tested directly.
+
+
 75. Boundary-depth dimension
 
 For a registered finite incidence complex, the dimension function returns one for a cell with no faces and one plus the maximum of the recursively derived face dimensions otherwise. The active descent stack rejects a return to a cell already on that stack. Independent branches share the parent stack, preserving the original push/pop behavior; an unrelated cycle outside the queried descent does not cause rejection. Termination follows constructively by removing each newly visited label from the finite support. This support introduces no depth bound or scientific parameter.
 
 A native inductive derivation records every face in source order, its own complete derivation and the maximum rule at the parent. The successful computation is equivalent in both directions to this derivation for every admitted input and result. All successful dimensions are positive; the original carrier-admission and return-cycle error conditions are retained. Execution reproduces the original triangle dimension of three and edge dimension of two, together with leaf, invalid-carrier, reachable-cycle, unrelated-cycle and shared-descendant cases.
+
+
+With visiting stack S and ordered faces F_B(c)=[f_1,...,f_k], successful depth evaluation follows
+
+\[
+ d_S(c)=
+ \begin{cases}
+ \operatorname{error}(\text{return cycle}),&c\in S,\\
+ 1+\max(0,d_{S++[c]}(f_1),\ldots,d_{S++[c]}(f_k)),&c\notin S,
+ \end{cases}
+\]
+
+where any child error is propagated in source order before a numerical maximum is returned. The maximum of an empty child list is zero, giving a leaf dimension of one. Every child receives S++[c], rather than the final stack from a sibling branch.
+
+For successful children with ordered heights h_1,...,h_k, the native derivation rule is
+
+\[
+ \frac{c\notin S\qquad
+       D_B(S++[c],f_1,h_1)\quad\cdots\quad D_B(S++[c],f_k,h_k)}
+ {D_B(S,c,1+\max(0,h_1,\ldots,h_k))}.
+\]
+
+The auxiliary support initially contains c followed by all first endpoints of B. At a fresh node, removing every occurrence of c strictly decreases its length; each child remains covered by unseen support or the visiting stack. Well-founded induction therefore yields both directions
+
+\[
+ \operatorname{boundaryDepth}(B,S,c)=\operatorname{ok}(h)
+ \iff D_B(S,c,h).
+\]
+
+Here boundaryDepth denotes a state carrying the stated support-coverage invariant. Under Inc(C,B) and c∈C, the public dimension call starts with S=[] and has the same equivalence. Every successful h is a successor and thus h>0. In the original witness, p,q,r have no faces and dimension 1; pq and qr have dimension 1+max(1,1)=2; triangle has dimension 1+max(2,2)=3.
+
 
 76. Ordered undirected path search
 
@@ -1701,11 +1777,64 @@ The path-distance procedure checks only membership of its two endpoints in the s
 
 The formal implementation has a constructive termination proof over unseen edge-endpoint support and queue length. Its extension decision is proved equivalent to the literal early-return edge scan. Every returned nonidentity path has a native inductive trace beginning at the origin and extended by original undirected incidences to the target. Endpoint rejection, empty-One identity, exhausted queue, visited-node skipping and fresh expansion are explicit native laws. Source-case execution preserves reversed-edge traversal, off-carrier intermediate labels, self-edges, duplicate queue entries and edge-order tie selection. Exhaustive checks on all 64 directed edge subsets over three labels and all 576 endpoint pairs agree with independent enumeration of simple paths for reachability and minimal length. The finite checks accompany the general shortest-path and unreachable-case theorems below.
 
+
+For each source edge (a,b), the neighbor of u is b when a=u, otherwise a when b=u, and absent otherwise. Let N_E(u,V) be the resulting ordered neighbor list after removing members of V; duplicate occurrences remain. For queue head (u,p), tail Q and visited list V, put V'=V++[u]. The loop equations are
+
+\[
+ \begin{aligned}
+ L(V,[]) &= \mathrm{None},\\
+ L(V,(u,p)::Q)&=L(V,Q) &&(u\in V),\\
+ L(V,(u,p)::Q)&=\mathrm{Some}(p++[t]) &&(u\notin V,\ t\in N_E(u,V')),\\
+ L(V,(u,p)::Q)&=L\bigl(V',Q++[(v,p++[v]):v\in N_E(u,V')]\bigr)
+ &&(u\notin V,\ t\notin N_E(u,V')).
+ \end{aligned}
+\]
+
+The initial queue is [(o,[o])]. The unseen support initially contains o and both endpoint lists of E. Skipping a visited head reduces queue length; fresh expansion removes its node from unseen support. Thus (|unseen|,|queue|) strictly decreases lexicographically on every recursive call.
+
+Returned-path soundness uses the constructors
+
+\[
+ \frac{}{T_E(o,o,[o])},\qquad
+ \frac{T_E(o,u,p)\quad((u,v)\in E\lor(v,u)\in E)}{T_E(o,v,p++[v])}.
+\]
+
+Every queued extension has this trace, so a target extension does too. The public endpoint guard is o,t∈C; it returns an error otherwise, returns Some(e) for o=t, and invokes L for distinct endpoints. This guard imposes no carrier-membership test on intermediate edge endpoints.
+
+
 77. General shortest-path and reachability derivations
 
 The search queue preserves nondecreasing path lengths and a width of at most one edge. When a node is visited, every adjacent node that remains unvisited has a queued route bounded by any path to that visited node followed by the edge. This invariant, together with the retained origin route, supplies a frontier route no longer than any proposed trace to an unvisited endpoint. Since the target is returned upon discovery and is never queued, the final extension is no longer than any alternative trace to that target.
 
 For every finite source edge list and distinct admitted endpoints, every undirected trace therefore yields a successful returned path of no greater length. Combined with returned-path soundness, this proves minimality of the actual result against all finite undirected alternatives. The procedure returns None if and only if no such trace exists. The proof retains the original carrier guard and does not require unique edges, globally admitted edge endpoints, or exclusion of loops. Equal endpoints retain the separate source identity result, empty One. These statements are general native proofs, with zero axiom dependencies; they do not depend on a finite regression bound.
+
+
+For a queue Q, define B_Q(v,n) to mean that some (v,p)∈Q has |p|≤n. The preserved frontier conditions are
+
+\[
+ o\in V\lor B_Q(o,1),\qquad
+ \forall u\in V,\ T_E(o,u,p)\land(u\sim_E v)
+ \Rightarrow v\in V\lor B_Q(v,|p|+1),
+\]
+
+where u∼_E v means either orientation occurs in E. Queue order requires each head path to be no longer than every later path; queue width requires |p_2|≤|p_1|+1 for every two queued paths. Skipping a visited head preserves frontier coverage. Fresh expansion supplies each still-unvisited neighbor with the extended head path and retains the old queue tail; the width bound ensures the appended extensions preserve order.
+
+Induction on T_E(o,v,p) gives a queued path of length at most |p| whenever v∉V. If v is also absent from the queue, the stronger bound is |q|+1≤|p|: the last trace edge either has a visited predecessor, which would force v to be queued, or has an unvisited predecessor to which the induction bound applies. The target is never queued because it is returned immediately upon discovery. At that return, queue order gives
+
+\[
+ |p_{\rm head}++[t]|=|p_{\rm head}|+1\le |q|+1\le |p_{\rm alternative}|.
+\]
+
+Consequently, for distinct admitted endpoints, every alternative trace yields a successful result r with |r|≤|p_alternative|. Determinism identifies r with any already returned result, proving minimality. Finally,
+
+\[
+ \operatorname{pathDistance}(C,E,o,t)=\operatorname{ok}(\mathrm{None})
+ \iff\neg\exists p,\ T_E(o,t,p)
+ \qquad(o,t\in C,\ o\ne t).
+\]
+
+A trace contradicts None by completeness; a successful result contradicts absence of traces by soundness. These implications quantify over arbitrary finite edge lists and finite alternative traces.
+
 
 78. Completed finite geometry and topology entry
 

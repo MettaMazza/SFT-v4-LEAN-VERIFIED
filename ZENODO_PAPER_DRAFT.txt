@@ -367,6 +367,10 @@ Maria Smith. Smithian Fold Theory V3. https://github.com/MettaMazza/ernos-labs-s
 
 17. Discrete collections and held selections
 
+Write C=[c₁,…,c_n] for the ordered source collection. Admission requires n>0 and c_i≠c_j whenever i≠j. For a held list H, successful selection requires ∀h∈H, h∈C. If H=[] the result is the structural empty-One form; otherwise the result retains H itself. The complete ordered pair support is
+  P(A,B)=concat_{a∈A}[(a,b):b∈B].
+List induction gives (a,b)∈P(A,B) ⇔ a∈A ∧ b∈B. Thus every admitted held relation R⊆P(A,B) retains both origins of each pair. A fresh successor is C′=C++[x] with x∉C; pairwise distinctness of C plus freshness proves distinctness of C′. For a source a, define Out_R(a) as the retained list of pairs whose first endpoint is a. The source one-image condition is ∀a∈A, length(Out_R(a))=1. This counts pair occurrences, including any repetition, rather than replacing the list by a set.
+
 For finite tuple-of-string forms, generated collections retain their exact input order and reject an empty collection or repeated forms. A successful held selection retains only members of its source collection; the native membership procedure is equivalent to list membership. An empty held selection returns the structural empty-One form, whereas a nonempty selection returns the tuple of held forms. Generated relations retain their accepted pair sequence within the complete Cartesian pair support. Fresh successor construction appends the new form and rejects an already retained member. The total-single-valued predicate counts exactly one outgoing pair for each source member and is true on an empty source. The implementation preserves these source guards, including the distinction between an empty collection and a collection containing an empty form. These results concern the discrete operations; the registered candidate grammar and the remaining general discrete laws are separately tracked.
 
 For arbitrary finite source collections, membership of an ordered pair in complete pair support is equivalent to membership of its two endpoints in their respective collections. Every pair in a successful generated relation therefore has an origin in the left collection and a target in the right. The total-single-valued predicate is equivalent to an exact singleton condition on the retained outgoing pair list for every source member; repeated pairs remain counted as repeated occurrences. Fresh succession preserves collection uniqueness, and appending a fresh form to an accepted generated collection yields another accepted generated collection. These proofs apply at arbitrary finite size by structural induction, without a depth cutoff.
@@ -375,13 +379,28 @@ The discrete candidate grammar enumerates the complete product of eight binary q
 
 18. Finite collection induction
 
+Let Generated(C) mean that C is obtained by a singleton base [x] and steps C↦C++[y] with y∉C. The forward induction establishes
+  Generated(C) ⇒ C≠[] and C has no repeated members.
+Conversely, split any admitted nonempty list into its prefix and final member. A singleton supplies the base. For a longer list, the prefix is nonempty and distinct, and the final member is absent from it; induction constructs the prefix and then the fresh append. Hence Generated(C) is equivalent to the source admission condition. For any property Q, the two premises
+  ∀x, Q([x]),
+  ∀C,y, Generated(C) ∧ Q(C) ∧ y∉C ⇒ Q(C++[y])
+therefore imply Q(C) for every admitted C. No bound on the finite list length enters this argument.
+
 The accepted domain of the discrete collection operation is exactly characterized by finite construction traces with a singleton base and freshness-preserving append steps. Every such construction yields a nonempty distinct collection accepted by the source operation, and every accepted collection has such a construction. Consequently, a property established for every singleton and preserved by each fresh append holds for every accepted collection, at arbitrary finite length. The converse decomposition recovers both uniqueness of the preceding collection and freshness of the last member. These results concern the exact tuple-of-string operational domain and introduce no additional scientific constructors or free parameters.
 
 19. Complementary discrete relations
 
+For supported R, define Rᶜ=filter_{p∉R}(P(A,B)), retaining the canonical support order. Filter membership gives
+  p∈Rᶜ ⇔ p∈P(A,B) ∧ p∉R.
+Consequently R and Rᶜ have no common member. Every p∈P(A,B) either belongs to R or fails its decidable finite membership test and belongs to Rᶜ. They therefore cover P(A,B). Applying the membership equation twice, with R⊆P(A,B), gives p∈(Rᶜ)ᶜ ⇔ p∈R. This establishes the involution on membership; it does not replace arbitrary held-list order by a claim of list equality.
+
 For accepted generated source collections, the complete Cartesian pair support contains each pair once. Holding precisely the support pairs absent from a given relation produces its complement within that same support, preserving support order. The complement satisfies the original generated-relation acceptance guard. Its membership is equivalent to source-endpoint membership together with absence from the held relation; it is disjoint from the held relation, and the two cover the complete support. For an accepted relation, taking the complement twice restores its membership. This is a membership result: the source permits arbitrary held-pair order, which need not equal the canonical support order.
 
 20. Composition of discrete maps
+
+For R on A×B and S on B×C, the composition enumerates (a,c) for every retained occurrence (a,b)∈R linked to (b,c)∈S. Therefore
+  (a,c)∈S∘R ⇔ there exists b with (a,b)∈R and (b,c)∈S.
+If Out_R(a)=[(a,b_a)] and Out_S(b_a)=[(b_a,c_a)], the nested enumeration for a contains precisely [(a,c_a)]. Thus length(Out_(S∘R)(a))=1. Endpoint containment follows from a∈A and c_a∈C. With unique input pairs, two identical output occurrences would require the same unique first link and same unique second link, so no duplicate output is introduced. This derives preservation of the actual singleton-list map condition.
 
 Relation composition retains each pair of linked occurrences through their equal intermediate endpoint. Every composed pair has witnesses in both input relations, and every linked pair is retained. For a total single-valued first relation whose targets belong to the second relation’s source, and a total single-valued second relation, the outgoing composed pair list for every original source member is a singleton. Thus composition preserves the original exact one-image predicate. When both input relations satisfy their generated-relation guards on the shared interface, the composed relation also satisfies that guard on the first source and final target: its endpoints are supported and its pairs are unique. These results preserve finite occurrence counts and require no fitted values or additional scientific parameters.
 
@@ -389,11 +408,17 @@ The native discrete program adapter preserves the registered program interface a
 
 21. Primitive Fold maps and ordered composition
 
+On admitted reduced parts 0<x≤1, write I(x)=x, S(x)=x², K(x)=1 and F(x)=cast(2x). Finite word evaluation satisfies E([],x)=x and E(f::w,x)=E(w,f(x)); induction gives E(u++v,x)=E(v,E(u,x)). The identities I(x)=I(y)⇒x=y and K(x)=K(y)=1 identify the identity and constant behaviors. If S(x)=S(y), positive cross-values have equal squares. If either cross-value were strictly smaller, monotonicity of positive multiplication would make its square strictly smaller too. Both strict alternatives are impossible, so the cross-values agree and reduced-ratio identity forces x=y. For 0<x<1, multiplication by positive x preserves x<1, giving x²<x. Repeated application yields S^n(x)<x for every positive n, excluding a return; x=1 is fixed. Finally F(1/2)=F(1)=1 with 1/2≠1, while F(1/3)=2/3 and F(2/3)=1/3. Fold is therefore noninjective and has a nonstatic recurrent pair.
+
 The declared primitive self-maps are identity, square, constant One and Fold on reduced positive exact parts through One. Native evaluation retains each original operation, including exact rational normalization for square, and executes arbitrary finite words from left to right. Concatenating two words is equivalent to executing the first followed by the second. Typed primitive words and their original string names have identical execution; unknown names retain the source ValueError. Identity is injective and fixes every input; constant One collapses every input to the fixed One. Squaring preserves its exact rational value and the admitted part domain. Fold is noninjective because half-One and One share an image, and has a nonstatic recurrent orbit through one-third and two-thirds. These results supply the primitive operational derivations; the complete least-size uniqueness argument remains separately tracked.
 
 The square primitive is injective on the entire admitted exact-part domain. Equality of normalized squared parts implies equality of the original squared cross-products, hence equality of their positive cross-values and of the reduced parts. For every proper part, its square is strictly smaller in exact cross-product order and remains proper. Structural induction then establishes strict contraction at every positive finite iteration count. A positive-time return under square occurs if and only if the input is the fixed One, excluding nonstatic recurrent square orbits throughout the declared domain.
 
 22. Least-size primitive generator
+
+The declared generating predicate is noninjectivity together with nonstatic finite recurrence. At word size one, I fails noninjectivity; S fails noninjectivity and has no nonstatic return; K has only the fixed image One; F satisfies both conditions by the preceding exact identities. Hence F is the unique admitted size-one primitive. A finite word of later size has size>1, so cannot be a least-size generator when F already has size one. Appending one primitive increases size by one and preserves this exclusion. The executed prefix count is
+  4¹+4²+4³=4+16+64=84,
+with every ordered word retained. The argument concerns this declared four-primitive grammar and predicate.
 
 Within the declared four-primitive ordered-word grammar, generation is represented by noninjectivity together with nonstatic finite recurrence. The native behavior proofs exclude identity, square and constant One and establish that Fold generates. Fold is therefore the unique least-size generating word. This result quantifies over every finite word, beyond the executed size-three prefix. Appending a primitive increases construction size by one and preserves the nonminimality of every later word. The complete executed prefix contains all 84 words of sizes one, two and three; each source acceptance decision is equivalent to the derived least-generator predicate. Fresh execution preserves every word, one-based rank, identifier, exact form, decision and reason. The source explicitly restricts uniqueness to the declared normalized grammar and generator predicate. Its local normalization reductions are established on the exact operational domain; unrestricted expression-language uniqueness is not asserted.
 
@@ -402,6 +427,13 @@ The native primitive-map program preserves all 84 actual candidate lookups, comp
 The stated primitive normalization reductions hold for the native exact operations. Multiplication by One on either side preserves every admitted part; self-product is square and casting self-junction is Fold. Any positive Fraction whose numerator is a positive integral multiple of its denominator casts to the One. Raw self-junction is not a total self-map of admitted parts, since its value at One exceeds One. Guarded removal rejects equal operands for every admitted part and therefore is not total. These results retain the source’s declared normalized grammar and operation guards.
 
 23. Ordered exact derivation traces
+
+For an accepted operation o and current value x, let T_o(x) be its exact result. A constructed row records o, the ordered inputs, y=T_o(x), and the canonical identity H(y). Replay accepts the row only when its recomputed y and H(y) both equal the record. With R denoting replay, the base and successor equations are
+  R([],x)=x,
+  R(row(o,x)::t,x)=R(t,T_o(x))
+when the recorded fields match; otherwise replay rejects. Induction proves replay of every constructed finite trace, and splitting at a prefix gives R(u++v,x)=R(v,R(u,x)) whenever the prefix succeeds. In the concrete three-move trace,
+  1/3 →F 2/3 →Take(1,·) 1/3 →F 2/3.
+The terminal equals the direct first Fold result, while an unregistered operation or a recorded output unequal to the recomputed value fails the corresponding replay condition.
 
 A derivation row retains its operation name, ordered input identities, exact output and output identity. The native replay function starts at one-of-three and executes the registered Fold or guarded Take operation in source order. Each result must match both the recorded exact output and its canonical SHA256 identity. Unknown operations and mismatched outputs retain the original rejection behavior.
 
@@ -2749,3 +2781,17 @@ Normalizing the two equal positive numerators against the same denominator gives
 Thus the uncast local gap transports by the generated binary factor. This statement concerns the local gap before whole-turn casting; it does not identify every directed gap with the shorter circular separation or omit a change of cast branch. The component's seven audited declarations have no axiom dependencies.
 
 For two positions on the same Fold branch, the actual casting operation preserves this doubled gap. If 2u≤d, then also 2l≤d; both cast numerators are unchanged, and their difference is 2(u−l). If d<2l, then d<2u and both doubled numerators are at most 2d. Casting therefore removes exactly d from each. The retained difference is (2u−d)−(2l−d)=2u−2l=2(u−l). The shared-removal identity follows by restoring d to both retained numerators and cancelling the common added term. Thus both same-branch cases are connected to actual complete-One removal, not only to uncast arithmetic. Branch-crossing shorter-separation classification is a separate part of the relation derivation. The local component now has eleven audited declarations without axiom dependencies.
+
+331. Least common return of every positive finite cycle family
+
+For supplied positive periods a,b, let g=gcd(a,b). The actual native least-common-multiple operation is L=ab/g. Since g divides both a and b, exact division yields L=a(b/g)=b(a/g). Thus a divides L, b divides L, and L>0. Also gL=ab.
+
+To prove minimality, let c>0 be any shared return, so a divides c and b divides c. Then ab divides both ac and bc. The constructive greatest-common-divisor property gives ab dividing gcd(ac,bc). Positive scaling gives gcd(ac,bc)=c·gcd(a,b)=cg. Therefore cg=abk=gLk for a finite count k. Cancelling the positive g gives c=Lk, so L divides every positive shared return and L≤c. This establishes the first common return, not merely one common multiple.
+
+For a nonempty supplied finite family, retain its first period p and the remaining finite list P. Define J(p,[])=p and J(p,q::P)=J(lcm(p,q),P). Induction proves positivity and the exact characterization, for every positive n,
+  J(p,P) divides n ⇔ p divides n and every period in P divides n.
+The empty-tail case is the single cycle. At a successor, divisibility by lcm(p,q) is equivalent to simultaneous divisibility by p and q, by the two-period result; the induction hypothesis handles the remaining list. Applying the characterization to n=J(p,P) shows that every supplied period returns there. Applying it to any other positive shared return n shows J(p,P) divides n and hence J(p,P)≤n. The original witness is J(2,[3,4])=12. All sixteen native definitions and theorems in this derivation have zero axiom dependencies; the construction uses no completed infinite family or fixed period table.
+
+332. Held orientation and exact shorter-part selection
+
+For two supplied generated positive parts a=n_a/d_a and b=n_b/d_b, compare the positive cross-products n_a d_b and n_b d_a. Define s=a when n_a d_b≤n_b d_a, and s=b otherwise. In the first case s≤b and s=a; in the second case n_b d_a<n_a d_b, so s≤a and s=b. Hence s belongs to the supplied pair, remains positive and is no longer than either member. The held side is retained as a separate label. Changing that label changes neither the cross-products nor s, so orientation introduces no signed magnitude. In the tie case n_a d_b=n_b d_a, either presentation has the same exact ratio. The native shorter-part component proves these statements without axioms. The combined exact-relations component audit covers 26 modules and 179 declarations, all with zero axiom dependencies; its complete-program comparison remains a separate verification step.

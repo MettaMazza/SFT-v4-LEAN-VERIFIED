@@ -533,3 +533,6 @@ def main : IO Unit := do
   for c in SFT.Computation.ClassicalLearningGrammar.candidates do
     IO.println ("ClassicalLearningGrammar\t" ++ SFT.Computation.ClassicalLearningGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ClassicalLearningGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ClassicalLearningGrammar.exactForm c ++ "\t" ++ SFT.Computation.ClassicalLearningGrammar.decisionReason c)
 
+
+  for c in SFT.Physics.CapabilityGrammar.candidates do
+    IO.println ("CapabilityGrammar\t" ++ SFT.Physics.CapabilityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CapabilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CapabilityGrammar.exactForm c ++ "\t" ++ SFT.Physics.CapabilityGrammar.decisionReason c)

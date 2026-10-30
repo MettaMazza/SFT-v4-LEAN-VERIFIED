@@ -916,3 +916,6 @@ import SFT.Physics.CapabilityAdmission
 import SFT.Physics.CapabilityOperations
 import SFT.Physics.CapabilityLiterals
 import SFT.Physics.CapabilityExecution
+import SFT.Physics.CapabilityDocuments
+import SFT.Physics.CapabilityGrammar
+import SFT.Physics.CapabilityEvidence

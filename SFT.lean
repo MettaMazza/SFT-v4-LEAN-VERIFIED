@@ -1063,3 +1063,7 @@ import SFT.QuantumComputation.Simulation
 import SFT.QuantumComputation.SimulationGrammar
 import SFT.QuantumComputation.SimulationControls
 import SFT.QuantumComputation.SimulationEvidence
+import SFT.QuantumComputation.Verification
+import SFT.QuantumComputation.VerificationGrammar
+import SFT.QuantumComputation.VerificationControls
+import SFT.QuantumComputation.VerificationEvidence

@@ -7413,7 +7413,24 @@ Adding an observation retains exactly those previous alternatives whose relation
 
 A structural continuation certificate carries generated evidence, a checked base and a successor proof. Induction establishes every generated row from that certificate. Finite agreement alone does not prove unrestricted continuation: a concrete checked example retains a rule on existing observations and rejects it on the next observation. All 1,026 concrete outputs and a native certified-continuation fixture pass.
 
-Fold generalization law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold generalization law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For observations \(E\), rule list \(H\) and rule relation \(R_h\), put
+\[
+ A(E)=[h\in H\mid\forall e\in E,\ e\in R_h].
+\]
+The appended-evidence derivation splits list membership in \(E{+\!\!+}[e]\):
+\[
+ h\in A(E{+\!\!+}[e])\iff h\in A(E)\land e\in R_h.
+\]
+Thus a missing successor row removes precisely that rule; no new retained rule appears merely by adding evidence. The minimal-rule list further filters feasible names by absence of an incoming row in the registered objective relation:
+\[
+ n\in M(E)\iff n\in[n_h\mid h\in A(E)]
+                    \land\forall b,\ (b,n)\notin{\prec}.
+\]
+For a SuccessorCertificate with generated evidence \(g\), its fields are
+\(g(0)\in R_h\) and \(\forall n,\ g(n)\in R_h\Rightarrow g(n+1)\in R_h\).
+Induction applies the base at zero and the supplied successor implication at each next index, proving \(\forall n,g(n)\in R_h\). This continuation theorem uses the certificate's actual successor proof; the finite filter \(A(E)\) alone supplies only the evidence memberships it tested. Enlarging \(H\) with \(E\) fixed preserves each old retained record by the same conjunction.
 
 257. Search and planning through exact execution traces
 
@@ -7423,7 +7440,22 @@ The success and failure ledgers are disjoint and exhaust every supported plan. T
 
 Serial plan composition preserves the shared state interface and reaches the composed goal. Admitted extension of state, transition, goal and plan support preserves earlier successful executions. All 1,536 concrete outputs and native composition and execution proofs pass. The scope remains the generated environment model.
 
-Fold sample-complexity law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold sample-complexity law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For initial state \(s\), goal list \(G\), supported plans \(\Pi\) and transition system \(P\), selection has the exact form
+\[
+ \pi\in\operatorname{Selected}\iff
+ \pi\in\Pi\land\exists\tau,\
+ \operatorname{run}(P,s,\pi)=\operatorname{ok}(\tau)
+ \land\operatorname{terminal}(s,\tau)\in G.
+\]
+Terminal evaluation obeys \(t(s,[])=s\) and \(t(s,x::r)=t(x,r)\).
+Run admission yields \(s\in P_{\rm states}\) and the typed execution for every selected plan. Filtering \(\Pi\) by this Boolean acceptance and its negation gives exhaustive disjoint success and failure ledgers. The other two ledgers are exactly
+\[
+ [(\pi,\operatorname{run}(P,s,\pi))\mid\pi\in\Pi],
+ \qquad[(\pi,|\pi|)\mid\pi\in\Pi].
+\]
+For paths \(s\xrightarrow{u}m\) and \(m\xrightarrow{v}z\), composition supplies the complete execution of \(u{+\!\!+}v\). If this concatenated plan belongs to \(\Pi\) and \(z\in G\), the selection equivalence admits it. Extension uses an admitted larger transition system, the same initial state, and retained transition, goal and plan rows to transport that successful execution.
 
 258. Reinforcement computation through generated interaction traces
 
@@ -7433,7 +7465,27 @@ Every registered policy has a complete evaluation record containing its retained
 
 Serial trace composition preserves the intermediate state and concatenates outcome records. Enlarged source supports preserve earlier admitted rows and trajectories. All 1,024 concrete outputs, covering 21 trajectories per model, and native component/composition proofs pass.
 
-Fold optimization-in-learning law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold optimization-in-learning law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+Write an interaction as \(r=(s,a,t,o)\). At current state \(x\), admission requires
+\[
+ s=x,\quad s,t\in S,\quad a\in A,\quad o\in O,\quad
+ r\in E,\quad(s,a)\in R_p,
+\]
+where \(R_p\) is the selected policy relation. Replay is the recursion
+\[
+ \operatorname{replay}_p(x,[])\iff x\in S,\qquad
+ \operatorname{replay}_p(x,r::u)\iff
+ \operatorname{admit}_p(x,r)\land\operatorname{replay}_p(t,u).
+\]
+Induction over the row list identifies this Boolean recursion with the base and next constructors of Trace. Retained trajectories are therefore exactly the supplied trajectories with a Trace from the initial state; the complementary filter supplies rejected trajectories. Policy evaluation is the ordered map \(p\mapsto(p,\operatorname{retained}(p))\) over all registered policies.
+
+For admitted traces \(u\) and \(v\) sharing the final/initial state, induction on \(u\) proves admission of \(u{+\!\!+}v\), and list mapping proves
+\[
+ \operatorname{labels}(u{+\!\!+}v)
+ =\operatorname{labels}(u){+\!\!+}\operatorname{labels}(v).
+\]
+The policy-name comparison retains \(n\) exactly when it is registered and no row \((b,n)\) occurs in the given comparison relation. Componentwise support extension preserves each conjunct of row admission and hence every previous Trace.
 
 259. Multi-agent computation and returning joint traces
 
@@ -7443,7 +7495,25 @@ Joint traces compose through a shared state interface. Executable replay is equi
 
 All 2,208 concrete support, observation and cycle outputs and native cycle and communication proofs pass. Game-theoretic correspondence remains downstream and requires exact preference relations.
 
-Fold computational-induction law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold computational-induction law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For a joint row \(r=(s,t,A_r,o)\), membership in the admitted relation is
+\[
+ r\in J\iff r\in J_0\land s,t\in S\land o\in O
+ \land\forall(a,u)\in A_r,\ a\in\mathcal A\land(a,u)\in U.
+\]
+The local observation list for agent \(a\) at state \(s\) is the original observation list filtered by those two coordinates. JointTrace has the constructors
+\[
+ s\in S\Rightarrow\operatorname{Trace}(s,[],s),\qquad
+ r\in J\land\operatorname{Trace}(r_t,u,z)
+ \Rightarrow\operatorname{Trace}(r_s,r::u,z).
+\]
+Induction on the first trace proves serial composition. Replay checks the current source equality, row membership and the recursive tail, so
+\[
+ \operatorname{replay}(s,u)=\mathrm{true}
+ \iff\operatorname{Trace}(s,u,\operatorname{final}(s,u)).
+\]
+Adding \(\operatorname{final}(s,u)=s\) proves the cycle-check equivalence with \(\operatorname{Trace}(s,u,s)\); filtering the supplied path list retains exactly these cycles. The communication run separately reconstructs its own admitted transition execution. Support inclusion transports joint traces by preserving each constructor's memberships, without adding an unrecorded action for any agent.
 
 260. Trace-bound adaptation with preserved constitutional identity
 
@@ -7453,7 +7523,27 @@ The performance relation remains an explicit exact relation. Membership establis
 
 Serial update composition preserves the complete intermediate trace. Admitted extension preserves earlier successful receipts when the initial process and constitutional and law identities remain fixed. All 640 concrete outputs and native composition and execution proofs pass. Adaptation cannot silently alter the constitutional engine or claim law.
 
-Fold search and planning law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold search and planning law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For model identities \(c,\ell\), initial process \(s\), update system \(P\) and request \((u,c',\ell')\), the identity guard is
+\[
+ I\iff c'=c\land\ell'=\ell.
+\]
+The update returns an identity error when \(I\) fails. Otherwise it forwards the exact run error or constructs
+\[
+ \operatorname{run}(P,s,u)=\operatorname{ok}(\tau)
+ \Longrightarrow
+ \operatorname{adapt}(u,c,\ell)=\operatorname{ok}(u,\tau,c,\ell).
+\]
+Conversely every successful receipt proves \(I\), the successful run, unchanged observations and both original identities. Run admission then reconstructs the actual update execution.
+
+For paths from \(s\) through \(m\) to \(z\), with action lists \(u,v\) and stored path prefixes \(\beta,\gamma\), serial composition gives the receipt
+\[
+ (u{+\!\!+}v,\;(\beta{+\!\!+}\gamma){+\!\!+}[z],\;c,\ell).
+\]
+Its performance predicate remains exactly
+\(\operatorname{improves}(b,w)=\mathrm{true}\iff(b,w)\in{\prec}\).
+An admitted extension retains the initial state and identities and preserves source transition rows; it consequently returns the identical earlier trace and observations.
 
 261. Learning limits from indistinguishable evidence
 
@@ -7463,7 +7553,22 @@ Every fixed learner produces the same target decision from those identical evide
 
 Source extension preserves this result when it retains the observed evidence and original target rows. All 64 concrete observed-row outputs and native same-decision and failed-requirement proofs pass. These limits remain relative to the exact evidence, hypothesis and target grammars.
 
-Fold reinforcement-computation law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold reinforcement-computation law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+Let
+\[
+ O_X(h)=[(x,y)\in R_h\mid x\in X].
+\]
+The paired construction supplies \(O_X(h_0)=O_X(h_1)\), a target \(z\notin X\), source rows \((z,y_i)\in R_{h_i}\), and \(y_0\ne y_1\). For any fixed learner \(L\), equality substitution gives
+\[
+ L(O_X(h_0),z)=L(O_X(h_1),z)=v.
+\]
+If \(v=y_0\), then \(v\ne y_1\); otherwise \(v\ne y_0\) already witnesses failure. This explicit equality decision constructs
+\[
+ L(O_X(h_0),z)\ne y_0\ \lor\
+ L(O_X(h_1),z)\ne y_1,
+\]
+with the corresponding source target row and unobserved-target evidence retained. For any deterministic preprocessing \(f\), congruence yields \(f(O_X(h_0))=f(O_X(h_1))\), so the same argument applies after preprocessing. Extension requires equality of the old and new observed lists on each side and retention of the target rows; these premises reconstruct the paired witness and its counterexample.
 
 262. Interpretability through exact verified decision certificates
 
@@ -7473,7 +7578,22 @@ Changing the actual trace, premise ledger or model description causes rejection;
 
 Serial composition produces a certificate for the complete composed path. Admitted source extension preserves verified certificates while retaining model identity, premises and prior transition and decision support. All 1,536 concrete outputs and native certificate and execution proofs pass. A narrative explanation or score cannot replace the exact trace.
 
-Fold multi-agent computation law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold multi-agent computation law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For certificate \(c=(d,s,u,\tau,P_c,y)\), model description \(d_m\), premises \(P_m\) and decision relation \(D\), verification is equivalent to
+\[
+ d=d_m\land
+ \operatorname{run}(M,s,u)=\operatorname{ok}(\tau)
+ \land P_c=P_m
+ \land(\operatorname{terminal}(s,\tau),y)\in D.
+\]
+The successful-run conjunct reconstructs every transition. If the actual run returns \(\tau'\ne\tau\), the certificate cannot satisfy that conjunct; unequal description or premise lists likewise refute their respective equality checks. Missing terminal/decision membership refutes the final conjunct.
+
+For counterfactual support \(C\), the ledger is
+\[
+ [((s,u),\operatorname{run}(M,s,u))\mid(s,u)\in C],
+\]
+including error outcomes. Serial path composition from \(s\) through \(m\) to \(z\) constructs the full trace \((\beta{+\!\!+}\gamma){+\!\!+}[z]\); with \((z,y)\in D\), the four verification conjuncts establish its certificate. Admitted extension preserves model identity and premises and transports the actual run and decision row, thereby preserving the original certificate.
 
 263. Complete classical learning reports
 
@@ -7483,19 +7603,54 @@ Evaluation passes exactly when every held target prediction matches its register
 
 Identical source training, hypothesis and target data yield identical reports, independently of proof witnesses. Source extension preserves earlier prediction and failure records and carries checks over enlarged support back to the earlier targets. All 64 report-field outputs and native inference and held-target proofs pass. Quantum learning operations remain entirely outside this branch.
 
-Fold adaptation law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold adaptation law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
 
-Fold computational limits-of-learning law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold computational limits-of-learning law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
 
-Fold interpretability and verification law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold interpretability and verification law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
 
-Fold classical-learning model law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold classical-learning model law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+With evidence \(E\), hypotheses \(H\), withheld inputs \(W\), filtered targets \(T_W\) and sealed predictor \(p\), the report is the explicit tuple
+\[
+ \bigl(\operatorname{infer}(E,H),\ T_W,\
+       [(x,p(x))\mid x\in W],\
+       \operatorname{all}_{t\in T_W}[p(t_x)=\operatorname{ok}(t_y)],\
+       [(\mathrm{examples},|E|),(\mathrm{hypotheses},|H|),
+        (\mathrm{withheld},|W|),(\mathrm{targets},|T_W|)]\bigr).
+\]
+Under the original unique-name and nonempty-support guards,
+\(\operatorname{infer}(E,H)=\operatorname{ok}([n_h\mid h\in H,\ E\subseteq R_h])\).
+The sealed hypothesis supplies both source membership and \(E\subseteq R_h\). The report's pass field is therefore equivalent to exact agreement on every \(t\in T_W\); complete target coverage supplies such a checked target for every \(x\in W\). Custody gives \((x,y)\notin E\) for all withheld \(x\).
+
+Equal training data, sealed hypothesis, withheld list and target list give equal report fields and hence equal reports; proof witnesses do not enter those computed fields. With unchanged predictions, extension preserves old prediction records and failed targets, while a successful enlarged evaluation implies the old target checks.
 
 264. Exact values for capability-closed prediction
 
 The prediction language has 15 registered opcodes. Its value representation retains structural empty-One identities, positive counts, positive numerator/denominator pairs, held labels, words, pairs and tables. Structural equality preserves the source fields; in particular, distinct ratio representations are not identified merely because their reduced fractions coincide.
 
 Native equality is proved equivalent to structural equality. Label admission retains the source whitespace boundary, and table admission requires positive support and distinct key hashes. Canonical serialization preserves the original dataclass fields. All 505 concrete equality, serialization and admission checks pass; all 14 freshly computed value hashes match pinned V3. These results cover the value layer; interpreter execution and document admission remain separate components.
+
+The exact value grammar is
+\[
+ V::=\operatorname{EmptyOne}(i)\mid\operatorname{Count}(n)
+ \mid\operatorname{Ratio}(n,d)\mid\operatorname{Label}(f,l)
+ \mid\operatorname{Word}([V])\mid\operatorname{Pair}(V,V)
+ \mid\operatorname{Table}([(V,V)]),
+\]
+where count fields are positive and both label fields pass the registered nonblank test. Structural comparison recursively checks matching constructors and matching fields:
+\[
+ \operatorname{equal}(a,b)=\mathrm{true}\iff a=b.
+\]
+In particular,
+\(\operatorname{Ratio}(n,d)=\operatorname{Ratio}(n',d')\iff n=n'\land d=d'\);
+cross-product equality alone does not establish structural identity. For words and tables, the recursive equality checks list length, order and every cell or pair.
+
+Canonical serialization recursively emits the corresponding registered field objects. Let \(H(v)\) be the canonical identity of that serialization. Table admission is exactly
+\[
+ E\ne[]\land\operatorname{distinct}([H(k)\mid(k,v)\in E]).
+\]
+This retains the source hash-key guard itself, without replacing it by an assumed injectivity theorem for hashes. Count admission proves \(n>0\); label admission preserves the original family and label strings and their nonblank evidence.
 
 265. Admission and exact generated operations
 
@@ -7505,6 +7660,22 @@ The register-consuming operations preserve words and pairs, admit tables only th
 
 All 644 operation cases agree with the pinned interpreter, including arity and type rejection, lookup, unreduced ratio inputs and exact arithmetic outputs. The native declarations and proofs have no axiom dependencies. Literal parsing, the execution loop and document loading remain distinct components of the complete prediction runtime.
 
+An instruction \((o,d,a)\) is admitted when its argument list is nonempty and, if \(o\) produces a value, \(d\) is nonblank. Program admission adds
+\[
+ \operatorname{nonblank}(id),\quad I\ne[],\quad
+ |\,[i\in I\mid i_o=\mathrm{emit}]\,|=1,\quad
+ \operatorname{lastOpcode}(I)=\mathrm{emit}.
+\]
+The executable preserves the guard order: destination before argument support, then program identity/support before terminal-emission checks.
+
+For positive ratio operands \(a/b,c/d\), the generated operations are
+\[
+ \operatorname{junction}=\operatorname{reduce}(ad+cb,bd),\quad
+ \operatorname{product}=\operatorname{reduce}(ac,bd),\quad
+ \operatorname{quotient}=\operatorname{reduce}(ad,bc).
+\]
+Positivity of every product and numerator supplies the reduction premises. If reduction of \((n,d)\) returns \((n',d')\), its proof establishes \(nd'=n'd\), preserving the represented ratio exactly. Lookup filters entries by structural key equality and accepts precisely a singleton image list. Table construction first requires a positive even list of values, pairs adjacent values, and applies the original table guard. Structural assertion succeeds for \(a=b\) and rejects \(a\ne b\), by the equality equivalence of the preceding section.
+
 266. Complete finite prediction execution and trace accounting
 
 Execution dispatches each of the 15 registered opcodes in sequence. Registered-input reads remain separate from held-register reads. Count and ratio literals retain the source decimal and positive-value checks, including the explicit ASCII-leading-zero rule. The retained host comparison profile identifies the Unicode decimal table used by the source runtime.
@@ -7513,13 +7684,49 @@ Each value-producing instruction writes a fresh register; attempting to overwrit
 
 Eight complete source comparisons preserve every returned field and hash, including an execution exercising all 15 opcodes, the original registered-count witness, Unicode decimal input and rejection of overwrites, unheld reads, missing inputs and invalid manifests. All 912 decimal and literal checks pass. The integrated execution definitions and trace-accounting proofs have zero axiom dependencies.
 
+The closed opcode list is
+\[
+ [\mathrm{input},\mathrm{emptyOne},\mathrm{label},\mathrm{count},
+ \mathrm{ratio},\mathrm{word},\mathrm{pair},\mathrm{table},\mathrm{lookup},
+ \mathrm{junction},\mathrm{product},\mathrm{quotient},\mathrm{same},
+ \mathrm{assertSame},\mathrm{emit}].
+\]
+For state \((R,e,T)\), dispatch computes output \(v\) and its argument values. Commit appends
+\(r=(k+1,o,[H(a_i)],H(v))\) to \(T\). Emission returns \((R,v,T{+\!\!+}[r])\); assertion returns \((R,e,T{+\!\!+}[r])\); a value-producing instruction returns
+\((R{+\!\!+}[(d,v)],e,T{+\!\!+}[r])\) exactly when \(d\) is unoccupied. An occupied destination is rejected.
+
+The loop's base returns its state unchanged. Its successor dispatches, commits one row and recurses over the remaining instructions. Thus induction gives
+\[
+ \operatorname{run}(s,k,I)=\operatorname{ok}(s')
+ \Longrightarrow |T_{s'}|=|T_s|+|I|.
+\]
+Decimal decoding obeys \(D(a,[])=a\) and
+\(D(a,c::u)=D(10a+\delta(c),u)\), with \(\delta\) obtained from the registered Unicode decimal ranges. Literal admission separately rejects empty input and ASCII leading zero, and requires a positive decoded result. Registered input reads consult the manifest; other value references consult held registers. Successful execution retains the program, manifest, output and complete trace identities computed from their canonical forms.
+
 267. Data-only prediction documents and the complete capability grammar
 
 The program loader admits only the registered schema, exact field sets, string argument traces and known opcodes. The value loader recursively preserves tagged structural empty-One, positive counts, ratios, held labels, words, pairs and tables. Recursive decoding follows the finite document structure without an imposed depth bound; table admission retains the original unique-key identity condition. All 317 program-document and 131 recursive value-document comparisons pass.
 
 The original eight binary axes generate exactly 256 candidates. Native enumeration covers every coordinate combination and preserves source order, identifiers, exact forms and rejection reasons. Exactly one candidate retains all eight requirements. The operational witness executes the original registered-count input and emission program; its completed output and closed opcode surface are proved directly. These grammar results accompany the native interpreter and trace proofs.
 
-Capability-closed exact Fold prediction form is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Capability-closed exact Fold prediction form is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For document fields \(F\) and required names \(N\), the implemented exact-key test is
+\[
+ (\forall(k,v)\in F,\ k\in N)\land
+ (\forall k\in N,\ \exists v,\ (k,v)\in F).
+\]
+The program loader requires \(N=[\mathrm{schema},\mathrm{program\_id},\mathrm{instructions}]\), schema identity \(\texttt{sft-v3-fold-program/1}\), and positive instruction support. Each instruction uses its three registered fields, a known opcode, a string destination and an argument list consisting entirely of strings, before instruction and program admission are applied.
+
+Recursive value preparation traverses children before assembling the parent result. A word gathers the decoded cells in order; a pair requires two object-valued cells and both decoded results; a table gathers decoded pair entries and then applies table admission. Counts require positive integer documents, with Boolean documents explicitly excluded. Each branch preserves its own exact field and host-type rejection.
+
+For the eight binary grammar axes,
+\[
+ \mathcal C=\prod_{j=1}^{8}[\mathrm{rejected},\mathrm{admitted}],
+ \quad|\mathcal C|=2^8=256,\quad
+ \operatorname{survives}(c)\iff\bigwedge_{j=1}^{8}c_j=\mathrm{admitted}.
+\]
+Complete nested enumeration establishes membership of every candidate; the conjunction identifies the unique all-admitted survivor. This classification is accompanied by the actual loader and execution derivations, not used in their place.
 
 268. Exact reference forms and bounded approximations
 
@@ -7529,7 +7736,20 @@ The error fractions reconstruct the corresponding exact numerator-to-denominator
 
 All 125 original calculation cases and 81 interval cases pass. The complete 256-candidate grammar and three original scientific-computation witnesses pass native verification with zero axiom dependencies. Approximate values remain downstream of the exact reference.
 
-Fold exact and approximate calculation law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold exact and approximate calculation law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+Let the reference and approximation cells be positive fractions \(x=a/b\) and \(y=c/d\). Cross multiplication determines the orientation:
+\[
+ cb<ad:\ x-y=\frac{ad-cb}{bd},\qquad
+ ad<cb:\ y-x=\frac{cb-ad}{bd}.
+\]
+If the stored reduced error is \(u/v\), the below case satisfies
+\[
+ ubd+cbv=adv,
+\]
+and the above case satisfies \(ubd+adv=cbv\). These are the native reconstruction identities; they avoid floating subtraction. When \(ad=cb\), the ledger retains \((\mathrm{One},\mathrm{equal})\), an equality marker rather than a positive error magnitude.
+
+The output interval is \((y,x)\) when \(cb\le ad\), otherwise \((x,y)\); the order test directly proves membership of both values in that interval. An admitted comparison report reconstructs its unchanged reference, approximation and Rows trace from index 1, with one row per reference cell. Appending a positive pair appends precisely its error row labelled \(1+|R|\), retaining the earlier list. Thus every row retains both original fractions and its exact position.
 
 269. Exact perturbations and registered stability
 
@@ -7539,13 +7759,50 @@ The amplification relation records the pair of input and output ledger forms. St
 
 All 864 paired-execution and ledger comparisons and three native classification checks pass. The complete 256-candidate grammar, original three witnesses and four controls pass fresh native verification with zero axiom dependencies.
 
+For registered perturbation \(p=(s,s',u,u')\), admission requires the two executions
+\[
+ \operatorname{run}(P,s,u)=\operatorname{ok}(\tau),\qquad
+ \operatorname{run}(P,s',u')=\operatorname{ok}(\tau').
+\]
+The value table's first matching records supply exact supports for the initial pair and for \(t=\operatorname{terminal}(s,\tau)\), \(t'=\operatorname{terminal}(s',\tau')\). Their admitted comparisons produce \(L_{\rm in}\) and \(L_{\rm out}\). Consequently a successful observation is exactly
+\[
+ (\tau,\tau',L_{\rm in},L_{\rm out})
+\]
+with the registered-perturbation, two-run and two-ledger premises recoverable from it.
+
+Let \(F(L)\) retain every row's cell identity, numerator, denominator and orientation. Classification uses
+\[
+ A(p)=(F(L_{\rm in}),F(L_{\rm out})),\qquad
+ \operatorname{stable}(p)\iff A(p)\in\mathcal R.
+\]
+Missing admission yields rejected; an admitted observation outside \(\mathcal R\) yields unstable. Enlarging perturbation support preserves old observations; enlarging \(\mathcal R\) preserves old stable memberships. An admitted transition-system extension preserves both runs and hence the identical observation when the value table is fixed.
+
 270. Local error transport and terminal provenance
 
 Every dependency edge retains its identity and original reference and approximation supports. Transport computes the original orientation-labelled error ledger for each edge and halts at the first inadmissible comparison. Reconstruction recovers every local ledger and its complete edge sequence. Path composition retains endpoint interfaces and all component identities; adjoining an admitted edge preserves the earlier records.
 
 The terminal ledger compares the retained initial and final supports directly. Paths with identical endpoints have identical terminal ledgers. A closed single-cell path retains the original equal marker, while all intermediate local ledgers remain available as cancellation provenance. All 686 source-derived local and terminal comparisons pass, including empty, mismatched and nonpositive support rejection. These native results have zero axiom dependencies. The generated-scale accumulated bound is established below.
 
-Fold numerical-stability law is complete: its native derivations,full256 grammar,original witnesses/controls and every program output field/hash agree with pinned V3.
+Fold numerical-stability law is complete: its native derivations, full 256-form grammar, original witnesses and controls, and every program output field and hash agree with pinned V3.
+
+For edge \(e=(id,R,A)\), let \(\mathcal E(R,A)\) be its exact comparison ledger. Transport is
+\[
+ \mathcal T([])=\operatorname{ok}([]),\qquad
+ \mathcal T(e::r)=
+ \begin{cases}
+ \operatorname{ok}((e,L)::K),&
+ \mathcal E(R,A)=\operatorname{ok}(L),\
+ \mathcal T(r)=\operatorname{ok}(K),\\
+ \operatorname{error},&\text{at the first failed computation}.
+ \end{cases}
+\]
+Induction on the edge list proves equivalence with the base and step constructors of Trace, and proves that projecting its retained edges returns the entire original edge list. Two successful traces concatenate their edge and local-ledger lists.
+
+Path independently requires each edge's approximation to be the next interface reference. A Propagation supplies this Path, the local Trace, and the terminal comparison
+\[
+ L_{\rm terminal}=\mathcal E(R_{\rm initial},A_{\rm final}).
+\]
+Equal endpoint supports therefore force equal terminal ledgers by determinism, regardless of route. For a closed positive single cell, the result is exactly \([(\mathrm{cell\!-\!1},\mathrm{One},\mathrm{equal})]\). This endpoint equality leaves every intermediate local ledger in the retained transport trace, preserving cancellation provenance.
 
 271. Generated accumulated bounds for finite exact traces
 
@@ -7554,6 +7811,29 @@ A positive common denominator is generated from the actual finite fraction trace
 The orientation-labelled local error rows determine exact positive differences; equal rows retain the original One marker. Internal coordinate differences count unmatched support, with an empty difference contributing no support to the sum. The triangle bound and induction over the finite trace establish that its terminal difference is bounded by the accumulated local differences. Exact endpoint scaling connects that bound to the original initial and terminal fractions. Cancellation does not erase the local provenance.
 
 All 340 generated accumulated-bound comparisons agree with independent exact rational calculations. Together with the 686 local and terminal source comparisons, the full 256-candidate grammar, three witnesses and four controls, the native derivations pass with zero axiom dependencies.
+
+For positive fractions \(p_i=a_i/b_i\), scale generation begins with \(D([])=1\), \(N([])=[]\). Adding a head \(p=a/b\) to an already generated tail \((D,N)\) gives
+\[
+ D'=bD,\qquad N'=aD::[bn\mid n\in N].
+\]
+The head satisfies \((aD)b=a(bD)\); each prior identity \(n_i b_i=a_iD\), multiplied by \(b\), establishes the rescaled identity. Thus every coordinate satisfies \(n_i b_i=a_iD'\), and positivity of all denominators proves positivity of the generated scale.
+
+Define
+\[
+ g(a,b)=
+ \begin{cases}b-a,&a\le b,\\a-b,&b<a,\end{cases}
+ \quad
+ A(n,[])=0,\quad A(n,m::r)=g(n,m)+A(m,r).
+\]
+The triangle inequality \(g(a,c)\le g(a,b)+g(b,c)\), followed by induction over the trace, proves
+\[
+ g(n_0,n_k)\le\sum_{i=0}^{k-1}g(n_i,n_{i+1}).
+\]
+For fractions \(p=a/b,q=c/d\) with generated coordinates \(n,m\), the coordinate identities give
+\[
+ g(n,m)\,bd=g(ad,cb)\,D.
+\]
+Together with the exact oriented-error reconstruction, this connects each nonzero local difference to its ledger magnitude and the endpoint difference to the original endpoint fractions. Equal neighbours contribute \(g(n,n)=0\) to accumulation while their stored ledger retains One with the equal orientation. The bound numerator and positive denominator are generated from the finite trace itself; no independent numerical scale is supplied.
 
 272. Finite discretization and refinement provenance
 

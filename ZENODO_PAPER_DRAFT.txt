@@ -4483,6 +4483,24 @@ For the registered self-encoding and complement domain, an answer-correct intern
 
 The identity proof preserves a consistent initial state. Complete traces compose at their actual accumulated proposition interface, with exact final-state reconstruction and the retained consistency condition. Original enumeration and self-description extension preserve prior records. All 256 original candidates and full native program fields and hashes agree with pinned V3, completing the Fold Incompleteness-Boundary Law.
 
+
+For initial proposition list A and proof steps L, the checker accepts the empty trace. At a successor step e it requires every premise in A and the exact tuple (rule identity,premises,conclusion) in the registered rules, then continues from A++[conclusion(e)]. Induction equates these executable checks with the retained AcceptedTrace constructors. A checked record additionally requires consistency of the final accumulated list F(A,L), namely
+
+\[
+ \forall p\in F(A,L),\quad \operatorname{denied}(p)\notin F(A,L).
+\]
+
+Thus a retained proposition and its denied form directly contradict a checked record. Identity requires precisely consistency of A. Induction on a first accepted trace proves serial acceptance at the actual intermediate list, while induction on its step list gives
+
+\[
+ F(A,L\mathbin{++}R)=F(F(A,L),R).
+\]
+
+The second checked record's consistency therefore proves consistency of the composite final state. Finite positional reconstruction supplies each proof's exact numbered name; successful registry lookup supplies its original step list.
+
+For an answer-correct predictor on the retained self-supported domain, choose the specific decoded self-code from SelfSupport. Any held answer there constructs and selects its complementary request, contradicting correctness by Section 154. Hence that code admits no held answer, and totality would contradict this explicit missing decision. If every returned answer is backed by a checked record and such records preserve the corresponding execution answer, these two premises establish the same correctness predicate; the identical missing-code argument excludes proof-backed totality.
+
+
 156. Declared relative answer interfaces
 
 An oracle interface retains its named query alphabet and declared query/answer relation. Each answer record retains the selected source identity and exact query and answer. Native provenance reconstruction proves that every record belongs to the selected declared relation; undeclared source identities and answer pairs are excluded. The relation is retained without imposing a new single-valuedness condition.
@@ -4490,6 +4508,19 @@ An oracle interface retains its named query alphabet and declared query/answer r
 Finite ordered ledgers retain nested queries and subsequent records. Validity at a nested call is equivalent to validity of its named outer record, nested ledger and continuation. The base computation retains its original native execution path and held initial state alongside the complete external ledger. Replay reproduces that exact base execution and every declared external source; terminal recognition preserves the original accept/reject classification.
 
 The identity path and empty external ledger supply the base. Serial composition preserves the intermediate state, concatenated actions and complete ordered answer record. Registry extensions retaining earlier interface selections preserve all prior nested certificates. These results retain the registered oracle boundary without unexplained computational power. All 256 original candidates and complete native program fields and hashes agree with pinned V3, completing the Fold Relative and Oracle-Computation Law.
+
+
+A record r is registered exactly when lookup of its source identity selects interface I, its query lies in I.queries, and (query,answer) lies in I.relation. The ordered ledger clauses and flattened records are
+
+\[
+ \operatorname{records}(\mathrm{done})=[],\qquad
+ \operatorname{records}(\mathrm{call}(r,N,R))=r::(\operatorname{records}(N)\mathbin{++}\operatorname{records}(R)).
+\]
+
+Validity of a call is equivalent to registration of r and validity of both N and R. Induction splits record membership into head, nested ledger or continuation, proving registration of every emitted record. An absent identity contradicts its selected lookup; an absent answer pair contradicts membership in that uniquely selected interface.
+
+Ledger append preserves the first record and its nesting while appending through its continuation. Induction gives records(append(L,K))=records(L)++records(K) and preserves validity. A relative trace is Valid(L) ∧ s∈S ∧ P(s,u,b,t). Native replay returns b++[t], and the membership induction supplies every external record's declared source. The identity uses the empty ledger and identity path. Serial composition combines ledger append with path composition, retaining actions u++v and predecessors b++c. Registry extensions that preserve successful interface selections preserve validity by induction at every nested call. Terminal decision labels transfer unchanged from the original decision certificate.
+
 
 157. Hypercomputation admissibility boundary
 
@@ -4499,6 +4530,26 @@ The claimed input domain is generated at arbitrary finite depth. An explicit cer
 
 These are admissibility conditions, preserving the source requirement for an executable law and depth-independent certificate. They introduce no unexplained computational power. Retained domain extensions preserve prior records. All 256 original candidates and complete native program fields and hashes agree with pinned V3, completing the Fold Hypercomputation Admissibility-Limit Law.
 
+
+For a disclosed record r, verification is the conjunction of admitted machine construction, run(request)=ok(observed), successful resourceLedger(observed,occupied), and validity of its declared external ledger. Expanding these four conjuncts reconstructs
+
+\[
+ observed=b\mathbin{++}[t],\quad P(initial,actions,b,t),\quad
+ \pi_2(timeTrace)=observed,\quad spaceSupport=occupied,\quad timeCount=|actions|+1.
+\]
+
+Every external answer is registered by the ledger induction. A different successful actual output contradicts equality of the two successful run results. An execution error contradicts the success constructor. An undeclared oracle identity contradicts external validity.
+
+For a generated family D_n, completeness means ∀n,∀r∈D_n, Verified(r). The explicit depth certificate supplies the base and successor implications
+
+\[
+ (\forall r\in D_0,\ V(r)),\qquad
+ \forall n,\ (\forall r\in D_n,\ V(r))\Longrightarrow(\forall r\in D_{n+1},\ V(r)).
+\]
+
+Induction on n proves completeness. A held r∈D_n with ¬V(r) therefore contradicts either completeness or such a certificate. If every member of a finite sample passes, that refuted r cannot belong to the sample, by direct instantiation. If D_n⊆E_n for each n, completeness of E restricts to completeness of D by membership inclusion. These equations preserve the exact scope of the finite samples, declared domains and supplied induction certificates.
+
+
 158. Exact generated input extent
 
 The canonical encoding retains an exact codeword and decoder reconstruction for every held source input. Complete position cells retain occupied-position identities together with every encoded symbol. Their full symbol projection reconstructs the codeword. The original resource ledger retains its unique, nonempty occupied-support boundary; native reconstruction gives the full trace and exact position count.
@@ -4506,6 +4557,25 @@ The canonical encoding retains an exact codeword and decoder reconstruction for 
 Two complete records of the same codeword have equal size. A representation correspondence retains both actual encoding-table rows and both exact codeword lengths; unrelated representations are not silently assigned one invariant size. Every instance in a certified family retains its actual input and encoding record.
 
 The singleton position supplies the base. Complete concatenated encodings have the exact sum of their recorded extents, and an admitted one-position extension increases the count by one. All 256 original Complexity candidates, the three original resource witnesses and complete native program fields and hashes agree with pinned V3, completing the Fold Input and Problem-Size Law.
+
+
+An exact extent for codeword w consists of cells C with π₂(C)=w and resourceLedger(w,π₁(C))=ok(L). Map-length induction gives |π₁(C)|=|C|=|π₂(C)|=|w|. Substituting the original ledger reconstruction yields
+
+\[
+ \pi_2(L.timeTrace)=w,\quad L.spaceSupport=\pi_1(C),\quad
+ L.timeCount=L.spaceCount=|w|.
+\]
+
+The ledger guard supplies distinct occupied positions and nonempty support. Two exact records for the same w therefore have equal time and space counts. For two different encodings of an input x, lookup membership retains the actual rows (x,w₁) and (x,w₂); the respective extent equations give |w₁| and |w₂| without identifying them. A certified family supplies its held input's row by instantiating the family witness.
+
+The singleton cell (position-1,held) gives both counts equal to one. For an admitted complete record of w₁++w₂, list-length induction gives
+
+\[
+ size(w_1\mathbin{++}w_2)=|w_1|+|w_2|=size(w_1)+size(w_2).
+\]
+
+Taking w₂ to be a singleton proves the admitted successor count increases by one. Exact finite encoding and decoder round-trip retain the original input reconstructed from each codeword.
+
 
 159. Time and retained-state resources
 

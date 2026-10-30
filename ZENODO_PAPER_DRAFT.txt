@@ -5163,13 +5163,108 @@ These equations retain the full finite observation trace as well as the exact su
 
 For equal nonempty finite supports of exact positive fractions, the numerical error ledger retains one ordered cell record per paired input. Equal values carry the structural One marker and the equal orientation; unequal values carry their exact positive difference and the held-below or held-above orientation. Native arithmetic proofs identify each normalized difference by its cross-multiplied rational value. Nonpositive values and unequal or empty supports retain the original rejection behavior. These results establish the error-ledger component of the numerical formalisation.
 
+
+For reference \(x=n_x/d_x>0\) and approximation \(y=n_y/d_y>0\), define the exact cross-products
+\[
+ A=n_y d_x,\qquad E=n_x d_y,\qquad D=d_xd_y>0.
+\]
+The source error operation is the following oriented positive-part record:
+\[
+ \operatorname{err}(x,y)=
+ \begin{cases}
+ (1,\text{equal}),&A=E,\\
+ (\operatorname{normalizePositive}(E-A,D),\text{held-below}),&A<E,\\
+ (\operatorname{normalizePositive}(A-E,D),\text{held-above}),&E<A.
+ \end{cases}
+\]
+The equal case deliberately retains the structural One marker. For either unequal branch, with positive difference numerator \(\Delta\) and normalized result \(n/d\), preservation of exact value is proved by
+\[
+ \Delta d=nD,\qquad n>0.
+\]
+Thus normalization retains the exact rational difference and the orientation separately. The ordered row operation starts at index \(1\), emits \((\text{cell-}i,\operatorname{err}(x_i,y_i))\), and recurses at \(i+1\). Its outer admission guard is
+\[
+ |X|=|Y|\ \land\ X\ne[],
+\]
+while each paired element must have the positive constructor. A zero or negative constructor rejects the scientific value; a length mismatch or empty reference rejects the support. These are distinct original error branches, not numerical tolerances.
+
+
 185. Complete numerical error-ledger reconstruction
 
 Successful numerical error-ledger execution is equivalent to a complete ordered certificate pairing each reference value with its approximation and exact oriented row. The certificate proves positivity of both input supports and every error value, equal support lengths, and one row per pair without omission. Conversely, every equal-length nonempty pair of positive supports constructs a successful ledger. Serial composition and successor extension preserve earlier rows while advancing the original cell labels. Independent finite expression comparisons exercise all 1,849 pairs of supports of widths up to two over six exact signed/zero/positive test values; their output and rejection records agree with native Lean execution.
 
+
+Let \(\mathcal R_i(X,Y,L)\) denote the retained ordered row certificate. Its constructors are
+\[
+ \mathcal R_i([],[],[]),\qquad
+ \frac{\mathcal R_{i+1}(X,Y,L)}
+ {\mathcal R_i(x::X,y::Y,(\text{cell-}i,\operatorname{err}(x,y))::L)}
+ \quad(x,y\text{ positive}).
+\]
+Structural induction on these constructors reproduces the executable row operation. Conversely, inspection of each successful executable branch constructs the corresponding certificate. Therefore
+\[
+ \operatorname{rowsFrom}(i,X,Y)=\operatorname{ok}L
+ \iff\mathcal R_i(X,Y,L),
+\]
+\[
+ \operatorname{exactErrorLedger}(X,Y)=\operatorname{ok}L
+ \iff X\ne[]\land\mathcal R_1(X,Y,L).
+\]
+Induction gives positivity of both supports and every error numerator, together with
+\[
+ |L|=|X|=|Y|.
+\]
+Each row retains its paired positive values, index label, and exact error operation. Conversely, the recursively generated positive-row list provides a certificate for any two equal-length positive supports; nonemptiness then gives outer ledger admission.
+
+For concatenated supports, the second certificate begins at the advanced cell index:
+\[
+ \mathcal R_i(X,Y,L)\land
+ \mathcal R_{i+|X|}(X',Y',L')
+ \ \Longrightarrow\
+ \mathcal R_i(X\mathbin{+\!\!+}X',Y\mathbin{+\!\!+}Y',L\mathbin{+\!\!+}L').
+\]
+Taking the second pair of supports to be singletons proves successor extension with label \(\text{cell-}(i+|X|)\). The finite comparison family uses \(1+6+6^2=43\) supports, including the empty support, so its complete ordered pair family has \(43^2=1,849\) cases. Rejected supports and signed or zero elements remain part of that comparison.
+
+
 186. Retained numerical update observations
 
 Every state in a generated update trace resolves to its registered numerical carrier and a complete exact error ledger. The observation checker and the retained certificate imply one another; the ordered projection reproduces the entire state trace, and every numerical value is traced to its registered carrier row. Connecting these records to the original transition execution gives exactly one observation for each action plus the initial state. Composition retains all intermediate records. An admitted successor step appends its exact observation while preserving the earlier trace. Missing carrier values or rejected error ledgers cannot produce an accepted observation trace.
+
+
+Let \(T\) be the registered state-to-value table and \(X\) the fixed reference support. The numerical observation recursion is
+\[
+ N(T,X,[])=\operatorname{some}[],
+\]
+\[
+ N(T,X,s::S)=\operatorname{some}((s,Y,L)::Q)
+\]
+exactly when
+\[
+ \operatorname{lookupFirst}(T,s)=\operatorname{some}Y,\qquad
+ \operatorname{exactErrorLedger}(X,Y)=\operatorname{ok}L,\qquad
+ N(T,X,S)=\operatorname{some}Q.
+\]
+Missing lookups, rejected ledgers, and failed suffix observations propagate failure. The corresponding inductive certificate retains these three witnesses at every row. Reconstruction and replay prove
+\[
+ N(T,X,S)=\operatorname{some}Q
+ \iff\operatorname{Records}(T,X,S,Q).
+\]
+Induction then yields
+\[
+ \operatorname{map}(\operatorname{fst},Q)=S,\qquad |Q|=|S|,
+\]
+and for every \((s,Y,L)\in Q\), the registered row \((s,Y)\in T\), nonempty reference, and full certificate \(\mathcal R_1(X,Y,L)\).
+
+If the original state execution satisfies \(\operatorname{run}(M,i,a)=\operatorname{ok}S\), its path theorem gives \(|S|=|a|+1\). Combining this equality with the observation count gives
+\[
+ |Q|=|a|+1.
+\]
+An admitted transition from the retained terminal state to \(s'\), its registered value \(Y'\), and accepted error ledger \(L'\) extend both executions:
+\[
+ S'=S\mathbin{+\!\!+}[s'],\qquad
+ Q'=Q\mathbin{+\!\!+}[(s',Y',L')].
+\]
+The earlier records remain intact. Concatenation of observation certificates follows directly by induction over the first certificate.
+
 
 187. Finite numerical boundary certificates
 
@@ -5179,6 +5274,45 @@ Projecting each original transition to its source and target connects executed p
 
 The complete 256-candidate numerical program, its original operational witnesses, controls and all recorded hashes agree with pinned V3 under fresh native execution. Together with the carrier, update and boundary derivations, these results complete the Fold Numerical-Algorithm Law.
 
+
+For generated carrier \(C\), held order relation \(\preceq\), and bounds \(l,u\), the enclosure is the complete filtered list
+\[
+ I(C,\preceq,l,u)=[v\in C:l\preceq v\land v\preceq u].
+\]
+Its membership theorem is exactly
+\[
+ v\in I(C,\preceq,l,u)
+ \iff v\in C\land l\preceq v\land v\preceq u.
+\]
+If the original lower- and upper-bound operations return \(L\) and \(U\) for held support \(H\), then \(l\in L\), \(u\in U\), and \(v\in H\cap C\) imply this enclosure: the lower-bound witness supplies \(l\preceq v\), and the upper-bound witness supplies \(v\preceq u\).
+
+A terminal certificate retains all six conditions
+\[
+ \operatorname{create}(M)=\operatorname{ok}M,\quad
+ \operatorname{isPartialOrder}(C,\preceq)=\operatorname{true},\quad
+ \operatorname{run}(M,i,a)=\operatorname{ok}S,\quad
+ N(T,X,S)=\operatorname{some}Q,
+\]
+\[
+ S=B\mathbin{+\!\!+}[t]\text{ for some }B,\qquad
+ t\in I(C,\preceq,l,u).
+\]
+Induction over the observation trace ending at \(t\) produces
+\[
+ Q=Q_0\mathbin{+\!\!+}[(t,Y,L)],\qquad
+ \operatorname{lookupFirst}(T,t)=\operatorname{some}Y,\qquad
+ X\ne[]\land\mathcal R_1(X,Y,L).
+\]
+The terminal bounds are \(l\preceq t\preceq u\), and the complete observation count remains \(|Q|=|a|+1\).
+
+Project each original transition \((s,a,s')\) to \((s,s')\), obtaining \(D_M\). Induction over an executed path gives reachability in \(D_M\). The registered stability equivalence is
+\[
+ \operatorname{stableUnderRegisteredPerturbations}(D_M,t,P)=\operatorname{true}
+ \iff\forall p\in P,\operatorname{Reaches}(D_M,p,t).
+\]
+Thus an explicit execution path from every registered perturbation constructs stability, and the retained terminal enclosure supplies the same two endpoint relations. The identity certificate uses the admitted initial state, its numerical record and enclosure. A successor certificate requires the actual next transition, accepted next record and next enclosure, and appends them to the prior trace; its derivation does not replace those required witnesses with a convergence assumption.
+
+
 188. Exact symbolic transformations within the frozen grammar
 
 The generated expression grammar contains positive exact values, held names and binary joins. Native evaluation preserves original binding uniqueness, literal admission and left-to-right error behavior. A successful result is equivalent to a complete evaluation derivation. Bound names retain their original raw Fraction values; the scientific normalization certificate separately carries the positive-binding boundary. Exact signed arithmetic is represented constructively, including cancellation and normalized positive differences.
@@ -5187,9 +5321,70 @@ A held tree occurrence is identified by its generated left/right address and sur
 
 All 256 original symbolic kernels, witnesses, controls and complete program fields and hashes agree with pinned V3. Independent evaluation of the source expressions agrees with Lean in all 7007 cases spanning 143 expressions and 49 environments, including invalid literals, missing and duplicate names, signed values and nested joins. These results complete the Fold Symbolic-Computation Law on its frozen grammar boundary.
 
+Let \(\rho\) be the original binding list. Successful evaluation has the exact characterization
+\[
+ \operatorname{eval}(\rho,e)=\operatorname{ok}v
+ \iff \operatorname{Distinct}(\operatorname{names}(\rho))
+       \land\operatorname{Evaluation}(\rho,e,v).
+\]
+The evaluation derivation has positive-literal, registered-name and binary-join rules:
+\[
+ \frac{}{\rho\vdash\operatorname{value}(p)\Downarrow p}\ (p>0),\qquad
+ \frac{\operatorname{lookupFirst}(\rho,n)=\operatorname{some}v}
+      {\rho\vdash\operatorname{name}(n)\Downarrow v},\qquad
+ \frac{\rho\vdash a\Downarrow u\quad\rho\vdash b\Downarrow v}
+      {\rho\vdash\operatorname{join}(a,b)\Downarrow\operatorname{add}(u,v)}.
+\]
+The executable operation checks binding uniqueness first and evaluates a join's left child before its right child; it propagates the first encountered error. The name rule retains its bound value without imposing the positive-literal restriction on that value.
+
+For a generated context \(C\), plugging and addressing satisfy
+\[
+ \operatorname{focus}(\operatorname{plug}(C,e),\operatorname{address}(C))
+ =\operatorname{some}e.
+\]
+Conversely, successful focus supplies a context with that address and reconstructs the entire original expression by plugging. Define successful-value equivalence by
+\[
+ e\sim_\rho f\iff
+ \forall v,\ \operatorname{eval}(\rho,e)=\operatorname{ok}v
+ \iff\operatorname{eval}(\rho,f)=\operatorname{ok}v.
+\]
+Induction on contexts, using the two join evaluations, proves
+\[
+ e\sim_\rho f\Longrightarrow
+ \operatorname{plug}(C,e)\sim_\rho\operatorname{plug}(C,f).
+\]
+Each admitted rewrite retains a registered rule, generated pattern and replacement, a generated context and the pattern/replacement equivalence. Contextual equivalence therefore proves each rewrite preserves successful values; induction on the complete rewrite trace preserves them at every source, target and terminal expression.
+
+Normality is the generated-expression condition together with absence of any admitted rewrite whose source is that expression. A normalization certificate is a retained trace ending at such a normal expression. Hence
+\[
+ \operatorname{Normalized}(\rho,R,e,T,f)
+ \land\operatorname{eval}(\rho,e)=\operatorname{ok}v
+ \Longrightarrow\operatorname{eval}(\rho,f)=\operatorname{ok}v.
+\]
+With the separately retained positive-binding condition, evaluation induction also gives \(v=\operatorname{positive}(p)\) for some exact positive fraction \(p\). Normality is evidence in this certificate; it is not inferred from an unproved termination assertion.
+
 189. Exact approximation-bound admission and source rows
 
 The inherited approximation operation is accepted exactly when the optimum cell count is positive and no greater than the candidate cell count. This equivalence preserves the original signed-integer input domain and its rejection behavior. Each successful part reconstructs the exact optimum-to-candidate ratio by cross multiplication; its numerator is positive and bounded by its denominator. A retained bound record identifies both original objective rows. Extending those rows preserves the candidate, optimum and exact part without changing the objective or introducing a tolerance. These results establish the bound component of the approximation formalisation.
+
+For the original signed integer inputs \(c,o\), successful approximation is characterized without restricting its input domain:
+\[
+ \operatorname{exactApproximation}(c,o)=\operatorname{ok}p
+ \iff \exists C,O\in\mathbb N,\ 
+ c=C\land o=O\land0<O\le C
+ \land p=\operatorname{normalizePart}(O,C).
+\]
+Here natural values are embedded in the original integer type, and the normalization carries the displayed positivity and bound witnesses. Negative inputs, zero optimum, or optimum greater than candidate retain the original rejection. For accepted \(p=n/d\), normalization proves
+\[
+ Od=nC,\qquad 0<n\le d,\qquad C>0.
+\]
+Thus the accepted part is exactly the optimum-to-candidate ratio.
+
+A bound record additionally retains objective rows \((k,C)\) and \((k_*,O)\), their membership in the original row list \(J\), and the accepted approximation result. These witnesses give
+\[
+ (k,C)\in J,\quad(k_*,O)\in J,\quad0<O\le C,\quad Od=nC.
+\]
+Appending rows to \(J\) transports these membership witnesses while leaving \(k,k_*,C,O,p\) unchanged. This construction preserves the original objective values and ratio.
 
 190. Approximation with complete objective and execution ledgers
 
@@ -5197,11 +5392,73 @@ The exact objective observation binds the feasible candidate and held optimum to
 
 The same candidate and optimum counts generate the original exact oriented error row. A result certificate retains original feasibility and preference admission, complete objective rows, the actual state path, every registered numerical observation and the exact terminal lookup. Native reconstruction proves that its error belongs to that candidate and reference. The resource ledger reproduces the entire state trace, supplied occupied support and exact counts, including the initial observation. Identity, serial continuation and successor preserve the recorded interfaces; the successor may carry a different candidate with the same reference. These finite certificates introduce no tolerance, metric or conventional approximation algorithm. All 256 original candidates, witnesses, controls and complete native program fields and hashes agree with pinned V3, completing the Fold Approximation-Algorithm Law.
 
+Let \(D\) be the original ledger of objective distinctions, and let \(f\) and \(g\) be the exact and approximate observations. The two filtered ledgers are
+\[
+ L=[(a,b)\in D:g(a)=g(b)],\qquad
+ K=[(a,b)\in D:g(a)\ne g(b)].
+\]
+Every member of \(D\) belongs to \(L\) or \(K\), and no pair belongs to both. Since \(D\) already records exact differences,
+\[
+ (a,b)\in L\Longrightarrow f(a)\ne f(b)\land g(a)=g(b).
+\]
+Taking \(g=f\) gives no loss. Equality of the approximate images remains equality under the admitted downstream observation composition, so lost distinctions remain lost; consequently any distinction kept after composition was kept before it. Extension preserves either decision when the original distinction remains present and both approximate images remain unchanged.
+
+For a retained bound record with optimum \(O\) and candidate \(C\), define exact positive reference and candidate values by normalizing \(O/1\) and \(C/1\). Their singleton numerical ledger is
+\[
+ \operatorname{exactErrorLedger}([O],[C])
+ =\operatorname{ok}[(\text{cell-1},\operatorname{err}(O,C))],
+\]
+where the displayed numbers denote those normalized positive constructors. The result certificate retains feasibility and preference admission, objective coverage and domain, the uneliminated optimum, both admitted observations, the original state path and all numerical records. In particular, its exact observation satisfies
+\[
+ f(k)=\operatorname{some}(\operatorname{toString}C),\qquad
+ f(k_*)=\operatorname{some}(\operatorname{toString}O).
+\]
+If its state trace is \(B\mathbin{+\!\!+}[t]\), terminal lookup appends precisely the candidate's value and error record to the prior observations. Therefore
+\[
+ \operatorname{map}(\operatorname{fst},Q)=B\mathbin{+\!\!+}[t],\qquad
+ |Q|=|a|+1.
+\]
+Its accepted resource ledger gives
+\[
+ \operatorname{map}(\operatorname{snd},\ell.\operatorname{timeTrace})
+ =B\mathbin{+\!\!+}[t],\quad
+ \ell.\operatorname{spaceSupport}=H,\quad
+ \ell.\operatorname{timeCount}=|a|+1,\quad
+ \ell.\operatorname{spaceCount}=|H|.
+\]
+Identity and concatenation follow from the original path and observation constructors. A changed-candidate successor additionally carries equality of the old and new reference values, the actual next transition, and the new terminal lookup; these witnesses give the new error row while retaining all previous observations.
+
 191. Generated program syntax and complete occurrence records
 
 The formation checker accepts exactly the generated value, name and binary join trees. Positive exact literal payloads and held names remain explicit. Rejection is equivalent to a constructive malformed derivation identifying an invalid literal, unsupported constructor or malformed child. Syntax membership imposes no binding environment: a well-formed name may remain unbound under execution.
 
 The tree ledger retains the root and every child occurrence with its complete left/right address and exact subtree payload. Membership is equivalent to successful focus at that address, in both directions; one address identifies one subtree. Every occurrence of an accepted tree is formed and has a registered constructor. An invalid occurrence rejects the entire tree. The literal base has its identity record. Joining trees preserves both complete ledgers with their address prefixes, and generated contexts compose by retaining the held subtree. All 256 original candidates, the three exact semantics witnesses, controls and complete native program fields and hashes agree with pinned V3, completing the Fold Program-Syntax Law.
+
+The formation recursion is
+\[
+ F(\operatorname{value}(p))=\operatorname{true}\ (p>0),\qquad
+ F(\operatorname{name}(n))=\operatorname{true},\qquad
+ F(\operatorname{join}(a,b))=F(a)\land F(b).
+\]
+Foreign, zero or negative literals and unsupported constructors return false. Induction on the expression and on the corresponding constructors proves both exact characterizations
+\[
+ F(e)=\operatorname{true}\iff\operatorname{Generated}(e),\qquad
+ F(e)=\operatorname{false}\iff\operatorname{Malformed}(e).
+\]
+A malformed join retains a malformed left or right child witness. Formation is independent of evaluation bindings: \(F(\operatorname{name}(n))=\operatorname{true}\), while evaluating that name in the empty environment returns the original unbound-name error.
+
+For a leaf \(e\), the occurrence ledger is \([([],e)]\). At a join it is
+\[
+ T(\operatorname{join}(a,b))
+ =[([],\operatorname{join}(a,b))]
+ \mathbin{+\!\!+}\operatorname{lift}_{L}(T(a))
+ \mathbin{+\!\!+}\operatorname{lift}_{R}(T(b)),
+\]
+where each lift prefixes the corresponding direction to every address. Induction proves the complete occurrence equivalence
+\[
+ (p,s)\in T(e)\iff\operatorname{focus}(e,p)=\operatorname{some}s.
+\]
+Determinacy of focus implies that two rows with the same address have the same subtree. For a formed expression, contextual decomposition makes every retained subtree formed; its constructor is therefore value, name or join. Conversely, a retained malformed subtree contradicts whole-tree formation and yields rejection. The literal base and both lifted child ledgers remain explicit, and plugging a formed expression into a generated context preserves formation.
 
 192. Complete name occurrences and registered scope
 

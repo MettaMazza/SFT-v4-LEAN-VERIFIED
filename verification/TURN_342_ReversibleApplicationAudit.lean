@@ -1,0 +1,18 @@
+import verification.TURN_342_ReversibleApplicationDraft
+#print axioms SFT.QuantumComputation.ReversiblePhase.subtractPrefix
+#print axioms SFT.QuantumComputation.ReversiblePhase.subtractFromSum
+#print axioms SFT.QuantumComputation.ReversiblePhase.restoreDifference
+#print axioms SFT.QuantumComputation.ReversiblePhase.remainderBeforeAddition
+#print axioms SFT.QuantumComputation.ReversiblePhase.fullCycleReturns
+#print axioms SFT.QuantumComputation.ReversiblePhase.inverseShift
+#print axioms SFT.QuantumComputation.ReversiblePhase.inverseIndex
+#print axioms SFT.QuantumComputation.ReversiblePhase.selectedLabelMember
+#print axioms SFT.QuantumComputation.ReversiblePhase.selectedIndexBound
+#print axioms SFT.QuantumComputation.ReversiblePhase.indexOfSelected
+#print axioms SFT.QuantumComputation.ReversiblePhase.phaseInverse
+#print axioms SFT.QuantumComputation.ReversiblePhase.branchPhaseInverse
+#print axioms SFT.QuantumComputation.ReversibleApplication.domainMatches
+#print axioms SFT.QuantumComputation.ReversibleApplication.transformBranches
+#print axioms SFT.QuantumComputation.ReversibleApplication.applyGate
+#print axioms SFT.QuantumComputation.ReversibleApplication.inverseWordImage
+#print axioms SFT.QuantumComputation.ReversibleApplication.transformedBranchesInverse

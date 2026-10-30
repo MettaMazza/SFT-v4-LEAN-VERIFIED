@@ -905,3 +905,8 @@ import SFT.Computation.InterpretabilityGrammar
 import SFT.Computation.InterpretabilityControls
 import SFT.Computation.InterpretabilityEvidence
 import SFT.Computation.Interpretability
+import SFT.Computation.ClassicalLearningWitnesses
+import SFT.Computation.ClassicalLearningGrammar
+import SFT.Computation.ClassicalLearningControls
+import SFT.Computation.ClassicalLearningEvidence
+import SFT.Computation.ClassicalLearning

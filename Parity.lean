@@ -529,3 +529,7 @@ def main : IO Unit := do
   for c in SFT.Computation.InterpretabilityGrammar.candidates do
     IO.println ("InterpretabilityGrammar\t" ++ SFT.Computation.InterpretabilityGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.InterpretabilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.InterpretabilityGrammar.exactForm c ++ "\t" ++ SFT.Computation.InterpretabilityGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.ClassicalLearningGrammar.candidates do
+    IO.println ("ClassicalLearningGrammar\t" ++ SFT.Computation.ClassicalLearningGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ClassicalLearningGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ClassicalLearningGrammar.exactForm c ++ "\t" ++ SFT.Computation.ClassicalLearningGrammar.decisionReason c)
+

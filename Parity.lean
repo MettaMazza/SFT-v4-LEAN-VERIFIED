@@ -493,3 +493,7 @@ def main : IO Unit := do
   for c in SFT.Computation.GeneralizationGrammar.candidates do
     IO.println ("GeneralizationGrammar\t" ++ SFT.Computation.GeneralizationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.GeneralizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.GeneralizationGrammar.exactForm c ++ "\t" ++ SFT.Computation.GeneralizationGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.SampleComplexityGrammar.candidates do
+    IO.println ("SampleComplexityGrammar\t" ++ SFT.Computation.SampleComplexityGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SampleComplexityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SampleComplexityGrammar.exactForm c ++ "\t" ++ SFT.Computation.SampleComplexityGrammar.decisionReason c)
+

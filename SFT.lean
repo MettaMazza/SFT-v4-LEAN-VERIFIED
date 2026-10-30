@@ -860,3 +860,8 @@ import SFT.Computation.GeneralizationGrammar
 import SFT.Computation.GeneralizationControls
 import SFT.Computation.GeneralizationEvidence
 import SFT.Computation.Generalization
+import SFT.Computation.SampleComplexityWitnesses
+import SFT.Computation.SampleComplexityGrammar
+import SFT.Computation.SampleComplexityControls
+import SFT.Computation.SampleComplexityEvidence
+import SFT.Computation.SampleComplexity

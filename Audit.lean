@@ -7403,3 +7403,17 @@ import SFT
 #print axioms SFT.Physics.CapabilityValues.equalEntriesMeaning
 #print axioms SFT.Physics.CapabilityValues.tableAdmission
 #print axioms SFT.Physics.CapabilityValues.duplicateKeysRejected
+#print axioms SFT.Physics.CapabilityAdmission.instructionExact
+#print axioms SFT.Physics.CapabilityAdmission.destinationRejected
+#print axioms SFT.Physics.CapabilityAdmission.argumentsRejected
+#print axioms SFT.Physics.CapabilityAdmission.programExact
+#print axioms SFT.Physics.CapabilityAdmission.supportRejected
+#print axioms SFT.Physics.CapabilityAdmission.emissionRejected
+#print axioms SFT.Physics.CapabilityOperations.resolveEmpty
+#print axioms SFT.Physics.CapabilityOperations.heldRegister
+#print axioms SFT.Physics.CapabilityOperations.wordExact
+#print axioms SFT.Physics.CapabilityOperations.pairExact
+#print axioms SFT.Physics.CapabilityOperations.emitExact
+#print axioms SFT.Physics.CapabilityOperations.assertSameExact
+#print axioms SFT.Physics.CapabilityOperations.assertDifferentRejected
+#print axioms SFT.Physics.CapabilityOperations.reductionValue

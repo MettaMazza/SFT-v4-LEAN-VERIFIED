@@ -912,3 +912,5 @@ import SFT.Computation.ClassicalLearningEvidence
 import SFT.Computation.ClassicalLearning
 import SFT.Physics.CapabilityPrediction
 import SFT.Physics.CapabilityValues
+import SFT.Physics.CapabilityAdmission
+import SFT.Physics.CapabilityOperations

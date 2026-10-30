@@ -1,0 +1,20 @@
+import SFT.Physics.CapabilityOperations
+#print axioms SFT.Physics.CapabilityOperations.emptyOne
+#print axioms SFT.Physics.CapabilityOperations.arity
+#print axioms SFT.Physics.CapabilityOperations.register
+#print axioms SFT.Physics.CapabilityOperations.resolve
+#print axioms SFT.Physics.CapabilityOperations.reduced
+#print axioms SFT.Physics.CapabilityOperations.arithmetic
+#print axioms SFT.Physics.CapabilityOperations.pairs
+#print axioms SFT.Physics.CapabilityOperations.lookup
+#print axioms SFT.Physics.CapabilityOperations.comparison
+#print axioms SFT.Physics.CapabilityOperations.ratioFields
+#print axioms SFT.Physics.CapabilityOperations.resolved
+#print axioms SFT.Physics.CapabilityOperations.resolveEmpty
+#print axioms SFT.Physics.CapabilityOperations.heldRegister
+#print axioms SFT.Physics.CapabilityOperations.wordExact
+#print axioms SFT.Physics.CapabilityOperations.pairExact
+#print axioms SFT.Physics.CapabilityOperations.emitExact
+#print axioms SFT.Physics.CapabilityOperations.assertSameExact
+#print axioms SFT.Physics.CapabilityOperations.assertDifferentRejected
+#print axioms SFT.Physics.CapabilityOperations.reductionValue

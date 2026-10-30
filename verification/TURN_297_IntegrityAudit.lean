@@ -1,0 +1,23 @@
+import SFT.Computation.Integrity
+#print axioms SFT.Computation.Integrity.supported
+#print axioms SFT.Computation.Integrity.verifies
+#print axioms SFT.Computation.Integrity.accepts
+#print axioms SFT.Computation.Integrity.accepted
+#print axioms SFT.Computation.Integrity.rejected
+#print axioms SFT.Computation.Integrity.falseAccepts
+#print axioms SFT.Computation.Integrity.supportedMeaning
+#print axioms SFT.Computation.Integrity.acceptanceMeaning
+#print axioms SFT.Computation.Integrity.acceptedMeaning
+#print axioms SFT.Computation.Integrity.integrity
+#print axioms SFT.Computation.Integrity.exactIntegrity
+#print axioms SFT.Computation.Integrity.rejectsUnauthorized
+#print axioms SFT.Computation.Integrity.failedIntegrityWitness
+#print axioms SFT.Computation.Integrity.traceProvenance
+#print axioms SFT.Computation.Integrity.traceAuthorized
+#print axioms SFT.Computation.Integrity.serial
+#print axioms SFT.Computation.Integrity.rejectedMeaning
+#print axioms SFT.Computation.Integrity.falseAcceptanceMeaning
+#print axioms SFT.Computation.Integrity.verdictExhaustion
+#print axioms SFT.Computation.Integrity.verdictDisjoint
+#print axioms SFT.Computation.Integrity.acceptanceExtension
+#print axioms SFT.Computation.Integrity.traceExtension

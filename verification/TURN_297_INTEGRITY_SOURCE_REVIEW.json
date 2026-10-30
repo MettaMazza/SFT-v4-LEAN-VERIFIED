@@ -1,0 +1,53 @@
+{
+  "claim_id": "SFT-COMP-SEC-INTEGRITY-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+    "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+    "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+    "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+    "sft/computation/cryptography_security/integrity/law.py": "e3757ec9a8fef24dec27b1ceafb349eaecfe40978b8191661184f477c226d079",
+    "claims/SFT-COMP-SEC-INTEGRITY-001/WHY_DERIVATION_CHECK.md": "75a8e38261d7fb916c8e6bcecfd0e93ecc29e00b56146b1494bf29a8132f49d0",
+    "claims/SFT-COMP-SEC-INTEGRITY-001/registration.json": "52371af18148e7a47b00e2f0aa26965bd5fd690a8c8829248f46330a5b480733",
+    "claims/SFT-COMP-SEC-INTEGRITY-001/execution.py": "83a7ba55a61499c9c18f320cf8736485798f0378e61c9fbb8403d063fea2c652",
+    "claims/SFT-COMP-SEC-INTEGRITY-001/independent_validator.py": "afb22e66bb193f387543e3f47c6ea2fdfcc0754a04d100cbc557c7a4372861cc",
+    "claims/SFT-COMP-SEC-INTEGRITY-001/certificate.json": "268e7cb530205e20c80689eabcdc573d7c4fc095d8f80d36d9456f4a95ad9d3e"
+  },
+  "components": {
+    "protected source records": "Record and Change retain message identity,original/changed content and exact change identity. Model preserves protected records,allowed transformations,adversarial change support and verification relation. supportedMeaning/acceptanceMeaning prove every accepted change is source-bound.",
+    "complete verdicts": "acceptedMeaning/rejectedMeaning/falseAcceptanceMeaning identify exact complete ledgers. verdictExhaustion/verdictDisjoint prove every supported change has exactly one accepted/rejected verdict.",
+    "computed integrity": "exactIntegrity proves the computed whole-ledger check equivalent to authorization of every accepted change. rejectsUnauthorized and failedIntegrityWitness establish exact rejection and concrete failure boundaries,without assuming the verifier is sound.",
+    "retained traces": "Trace.identity/next retains every actual accepted change and matching before/after record. traceProvenance,traceAuthorized and serial prove exact reconstruction,authorization under the checked integrity result and serial composition.",
+    "source extension and scope": "Extension,acceptanceExtension and traceExtension preserve original records,changes,verification rows and actual traces. No secrecy or authorship claim is imported.",
+    "grammar and controls": "Original security256 grammar,three operational witnesses,four controls and fresh candidate parity pass.1026 concrete outcomes plus native trace/authorization proofs pass. Full program 43455 running."
+  },
+  "dependencies": [
+    "SFT-COMP-SEC-SECRECY-001",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001"
+  ],
+  "dependency_status": {
+    "SFT-COMP-SEC-SECRECY-001": "in_progress",
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+    "SFT-MATH-DISCRETE-001": "complete",
+    "SFT-MATH-GRAPH-NETWORK-001": "complete",
+    "SFT-MATH-LOGIC-PROOF-001": "complete",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+    "SFT-INFO-ENCODING-DECODING-001": "complete",
+    "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+  },
+  "native_checks": {
+    "kernel_output_checks": 1026,
+    "axiom_dependencies": 0,
+    "audit": "verification/TURN_297_PARITY_REPORT.json"
+  },
+  "remaining": [
+    "Original fresh full program field/hash comparison43455; completion after Secrecy in dependency order."
+  ],
+  "status": "native_derivation_and_parity_pass_program_comparison_running"
+}

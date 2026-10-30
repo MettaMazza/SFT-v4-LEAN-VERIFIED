@@ -7355,9 +7355,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEC-INTEGRITY-001-54e959203614f553.json",
       "statement": "The forced detection of unauthorized record change kernel retains message identity; protected record; allowed transformations; adversarial changes; verification relation; accepted and rejected traces; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold integrity law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/Integrity.lean",
+        "SFT/Computation/IntegrityWitnesses.lean",
+        "SFT/Computation/IntegrityGrammar.lean",
+        "SFT/Computation/IntegrityControls.lean",
+        "SFT/Computation/IntegrityEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
       "registration_sha256": "52371af18148e7a47b00e2f0aa26965bd5fd690a8c8829248f46330a5b480733",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7402,7 +7408,11 @@
         "statement": "The forced detection of unauthorized record change kernel retains message identity; protected record; allowed transformations; adversarial changes; verification relation; accepted and rejected traces; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold integrity law"
-      }
+      },
+      "verified_scope": "Record and Change retain message identity,original/changed content and exact change identity. Model preserves protected records,allowed transformations,adversarial change support and verification relation. supportedMeaning/acceptanceMeaning prove every accepted change is source-bound.; acceptedMeaning/rejectedMeaning/falseAcceptanceMeaning identify exact complete ledgers. verdictExhaustion/verdictDisjoint prove every supported change has exactly one accepted/rejected verdict.; exactIntegrity proves the computed whole-ledger check equivalent to authorization of every accepted change. rejectsUnauthorized and failedIntegrityWitness establish exact rejection and concrete failure boundaries,without assuming the verifier is sound.; Trace.identity/next retains every actual accepted change and matching before/after record. traceProvenance,traceAuthorized and serial prove exact reconstruction,authorization under the checked integrity result and serial composition.; Extension,acceptanceExtension and traceExtension preserve original records,changes,verification rows and actual traces. No secrecy or authorship claim is imported.; Original security256 grammar,three operational witnesses,four controls and fresh candidate parity pass.1026 concrete outcomes plus native trace/authorization proofs pass. Full program 43455 running.",
+      "remaining": [
+        "Original fresh full program field/hash comparison43455; completion after Secrecy in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -189745,13 +189755,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T00:10:20.673847+00:00",
+  "updated_at": "2026-10-30T00:15:23.089311+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 2,
-    "pending": 2660,
+    "in_progress": 3,
+    "pending": 2659,
     "fully_reconstructed_claims": 119,
-    "axiom_free_exported_results": 6518,
-    "axiom_free_audited_definitions_and_theorems": 14335
+    "axiom_free_exported_results": 6556,
+    "axiom_free_audited_definitions_and_theorems": 14432
   }
 }

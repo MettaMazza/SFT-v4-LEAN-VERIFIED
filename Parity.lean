@@ -433,3 +433,7 @@ def main : IO Unit := do
   for c in SFT.Computation.SecrecyGrammar.candidates do
     IO.println ("SecrecyGrammar\t" ++ SFT.Computation.SecrecyGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SecrecyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SecrecyGrammar.exactForm c ++ "\t" ++ SFT.Computation.SecrecyGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.IntegrityGrammar.candidates do
+    IO.println ("IntegrityGrammar\t" ++ SFT.Computation.IntegrityGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.IntegrityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.IntegrityGrammar.exactForm c ++ "\t" ++ SFT.Computation.IntegrityGrammar.decisionReason c)
+

@@ -785,3 +785,8 @@ import SFT.Computation.SecrecyGrammar
 import SFT.Computation.SecrecyControls
 import SFT.Computation.SecrecyEvidence
 import SFT.Computation.Secrecy
+import SFT.Computation.IntegrityWitnesses
+import SFT.Computation.IntegrityGrammar
+import SFT.Computation.IntegrityControls
+import SFT.Computation.IntegrityEvidence
+import SFT.Computation.Integrity

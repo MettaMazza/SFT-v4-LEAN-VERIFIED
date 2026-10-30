@@ -536,3 +536,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.CapabilityGrammar.candidates do
     IO.println ("CapabilityGrammar\t" ++ SFT.Physics.CapabilityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CapabilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CapabilityGrammar.exactForm c ++ "\t" ++ SFT.Physics.CapabilityGrammar.decisionReason c)
+
+  for c in SFT.Computation.ExactApproximateGrammar.candidates do
+    IO.println ("ExactApproximateGrammar\t" ++ SFT.Computation.ExactApproximateGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ExactApproximateGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ExactApproximateGrammar.exactForm c ++ "\t" ++ SFT.Computation.ExactApproximateGrammar.decisionReason c)

@@ -919,3 +919,8 @@ import SFT.Physics.CapabilityExecution
 import SFT.Physics.CapabilityDocuments
 import SFT.Physics.CapabilityGrammar
 import SFT.Physics.CapabilityEvidence
+import SFT.Computation.ExactApproximate
+import SFT.Computation.ExactApproximateWitnesses
+import SFT.Computation.ExactApproximateGrammar
+import SFT.Computation.ExactApproximateControls
+import SFT.Computation.ExactApproximateEvidence

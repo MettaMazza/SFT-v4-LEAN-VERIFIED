@@ -9053,9 +9053,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SCI-EXACT-APPROXIMATE-001-d04dba138ab4ed09.json",
       "statement": "The forced separation of proof values and bounded approximations kernel retains exact reference forms; approximation forms; orientation-labelled difference; retained precision provenance; output interval; reconstruction boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold exact and approximate calculation law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/ExactApproximate.lean",
+        "SFT/Computation/ExactApproximateWitnesses.lean",
+        "SFT/Computation/ExactApproximateGrammar.lean",
+        "SFT/Computation/ExactApproximateControls.lean",
+        "SFT/Computation/ExactApproximateEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate fields and206 calculation/bounds cases; original full-program comparison running.",
       "registration_sha256": "25d9fad75df88860d326d26f5ba286c62afb70a6db48b3acad035d662d63ea87",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -9100,7 +9106,11 @@
         "statement": "The forced separation of proof values and bounded approximations kernel retains exact reference forms; approximation forms; orientation-labelled difference; retained precision provenance; output interval; reconstruction boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold exact and approximate calculation law"
-      }
+      },
+      "verified_scope": "compare retains original exact reference and approximation with actual exactErrorLedger output; reportReconstruction proves nonempty complete Rows certificate and reference retention. approximationCannotReplaceReference prevents altered approximation from replacing exact source.; equal marker remains original One; below/above proofs reconstruct exact numerator/denominator relations from retained positive error magnitude. No negative or floating proof values introduced.; outputInterval is derived from exact reference/approximation order; both enclosed. precisionProvenance retains cell identity,original positive fractions and exact error row for every result.; appendComparison preserves every earlier ledger row and appends the exact source error row for the new input pair.; Original256 grammar,three live scientific_computation witnesses,four controls and fresh candidate parity pass.125 source ledger outputs and81 derived interval cases pass. Full original program53428 running.",
+      "remaining": [
+        "Original full256 program comparison53428: all source registration,census,decision,closure/control fields and hashes."
+      ]
     },
     {
       "branch": "computation",
@@ -11058,7 +11068,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001-bf675d47eb873176.json",
       "statement": "Within the registered finite prediction grammar, a physical prediction can be target-inaccessible, exact, portable and completely traced in exactly one form: immutable registered Fold inputs pass through a data-only sequence of generated exact operations to one terminal emission, while every ambient host capability and unregistered operation is absent and any violation halts.",
       "title": "Capability-closed exact Fold prediction form",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Physics/CapabilityPrediction.lean",
         "SFT/Physics/CapabilityValues.lean",
@@ -11070,7 +11080,7 @@
         "SFT/Physics/CapabilityGrammar.lean",
         "SFT/Physics/CapabilityEvidence.lean"
       ],
-      "artifact_runtime_parity": "pending",
+      "artifact_runtime_parity": "PASS full256 actual identifier lookups and every original program field/hash.",
       "registration_sha256": "ade6538f6ecbe1412aabbab9b86ec1f37cec010df4711f7c8e1a964f8790ad75",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -11114,10 +11124,9 @@
         "status": "independently_replicated",
         "title": "Capability-closed exact Fold prediction form"
       },
-      "verified_scope": "Exact15 opcode surface; positive-count and held-label guards; recursive structural equality with equivalence proof; canonical dataclass representation; nonempty/unique-hash table admission.505 kernel checks and14 fresh value hashes match pinned V3. Instruction/program admission guards and all register-consuming operation branches are translated.858 admission cases and644 operation outputs match pinned Python; structural assertion and arithmetic normalization proofs are axiom-free. Exact literal/input dispatch,finite execution loop,single-assignment state and canonical program/input/output/trace identities are integrated.912 decimal/literal cases and8 complete program outputs match pinned source; every successful instruction appends one trace row and successful run length equals instruction count. Exact recursive document loading matches317 program and131 value cases. Complete256 grammar,original operational witness,unique survivor,registration/closure/control methods and all fresh candidate fields pass native verification.",
-      "remaining": [
-        "Original full256 program field/hash comparison process77841: registration,census trace hashes,every candidate decision proof hash,closure/control identities and unknown-ID rejection. All native derivations,document loaders and fresh candidate-field parity pass."
-      ]
+      "verified_scope": "CapabilityValues/Literals preserve source constructor fields,equality,positive-decimal and host admission;505 value cases,14 hashes,912 literal/decimal checks pass.; CapabilityOperations/Execution implement all15 operations,exact normalized arithmetic,single assignment,finite execution and every trace/program/input/output identity;trace extension and run length proved.644 operation cases and8 full executions match.; CapabilityDocuments preserves exact keys/types,opcodes,program termination and recursive tagged values;317 program and131 value cases pass.; CapabilityGrammar retains all256 candidates,order,IDs,forms,reasons,complete enumeration,unique survivor and every rejected coordinate.; CapabilityEvidence executes original registered-count witness and translates registration,census,identifier lookup,closure and four source controls. Full output/hash comparison77841 running.; Complete original256 candidates,two witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_325_CAPABILITY_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -189982,13 +189991,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T03:25:56.016494+00:00",
+  "updated_at": "2026-10-30T03:40:07.702236+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 1,
-    "pending": 2634,
-    "fully_reconstructed_claims": 146,
-    "axiom_free_exported_results": 7452,
-    "axiom_free_audited_definitions_and_theorems": 16862
+    "pending": 2633,
+    "fully_reconstructed_claims": 147,
+    "axiom_free_exported_results": 7487,
+    "axiom_free_audited_definitions_and_theorems": 16952
   }
 }

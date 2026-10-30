@@ -2233,3 +2233,11 @@ For every admitted state and reversible gate whose source domain equals the comp
 The output support is exactly the inverse gate's source domain. This equality is derived from the forward operation and gate admission. Applying the inverse gate with the source inverse-phase action therefore restores the complete original state, including branch order, word identities, phase labels and phase cycle. The round-trip theorem needs no additional inverse-domain assumption.
 
 The constructive proofs have zero axiom dependencies. The underlying operation definitions are unchanged from the implementation checked against 3,264 original V3 application and inverse-state cases. Joint composition, observation records and the other remaining reversible-model components are still being formalised.
+
+286. Complete joint-state composition
+
+Joint-state composition enumerates the literal Cartesian product of the two branch lists, preserving the original nested order. Each joint word contains the left word, the registered joint separator and the right word. Its phase is the cycle label at the sum of the two source indices modulo the common cycle length.
+
+The native proofs establish both exact output-word membership and the full product branch count. Every pair of input branches contributes its registered row. For admitted inputs with a shared phase cycle, all phase lookups succeed; final admission follows the original state constructor's distinct-word check. The source guard and its rejection behavior are preserved.
+
+The implementation matches V3 in 2,809 composition cases: 1,003 accepted results and 1,806 rejections. All 19 composition definitions and theorems have zero axiom dependencies. These results complete the joint-composition component of the ongoing reversible-model translation.

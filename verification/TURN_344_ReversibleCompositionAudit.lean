@@ -1,0 +1,20 @@
+import verification.TURN_344_ReversibleCompositionDraft
+#print axioms SFT.QuantumComputation.ReversibleComposition.jointWord
+#print axioms SFT.QuantumComputation.ReversibleComposition.jointBranch
+#print axioms SFT.QuantumComputation.ReversibleComposition.pairWith
+#print axioms SFT.QuantumComputation.ReversibleComposition.jointBranches
+#print axioms SFT.QuantumComputation.ReversibleComposition.compose
+#print axioms SFT.QuantumComputation.ReversibleComposition.pairCount
+#print axioms SFT.QuantumComputation.ReversibleComposition.jointBranchMeaning
+#print axioms SFT.QuantumComputation.ReversibleComposition.pairWords
+#print axioms SFT.QuantumComputation.ReversibleComposition.projectionAppend
+#print axioms SFT.QuantumComputation.ReversibleComposition.jointWords
+#print axioms SFT.QuantumComputation.ReversibleComposition.jointCount
+#print axioms SFT.QuantumComputation.ReversibleComposition.jointMembership
+#print axioms SFT.QuantumComputation.ReversibleComposition.compositionSource
+#print axioms SFT.QuantumComputation.ReversibleComposition.compositionCount
+#print axioms SFT.QuantumComputation.ReversibleComposition.compositionSupport
+#print axioms SFT.QuantumComputation.ReversibleComposition.jointBranchExists
+#print axioms SFT.QuantumComputation.ReversibleComposition.pairExists
+#print axioms SFT.QuantumComputation.ReversibleComposition.jointExists
+#print axioms SFT.QuantumComputation.ReversibleComposition.admittedCompositionDecision

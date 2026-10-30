@@ -815,3 +815,8 @@ import SFT.Computation.ProofKnowledgeGrammar
 import SFT.Computation.ProofKnowledgeControls
 import SFT.Computation.ProofKnowledgeEvidence
 import SFT.Computation.ProofKnowledge
+import SFT.Computation.ZeroKnowledgeWitnesses
+import SFT.Computation.ZeroKnowledgeGrammar
+import SFT.Computation.ZeroKnowledgeControls
+import SFT.Computation.ZeroKnowledgeEvidence
+import SFT.Computation.ZeroKnowledge

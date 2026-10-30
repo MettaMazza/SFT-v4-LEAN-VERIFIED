@@ -7080,7 +7080,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-DIST-LOCALITY-001-d75dcc0dc6937266.json",
       "statement": "The forced bounded dependency neighborhoods kernel retains network graph; process neighborhood; local inputs; communication radius trace; locally indistinguishable instances; output constraint; lower witness; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold locality law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Computation/Locality.lean",
         "SFT/Computation/LocalityWitnesses.lean",
@@ -7088,7 +7088,7 @@
         "SFT/Computation/LocalityControls.lean",
         "SFT/Computation/LocalityEvidence.lean"
       ],
-      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
+      "artifact_runtime_parity": "PASS full256 actual identifier lookups and every original program field/hash.",
       "registration_sha256": "e7075770eb73b229e1d87aeaf2f22eedcf59d34cfba11b3cfc59e778dea8812c",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7134,10 +7134,9 @@
         "status": "independently_replicated",
         "title": "Fold locality law"
       },
-      "verified_scope": "Network preserves registered processes and directed communication rows. exactNeighborhood proves computed membership iff a retained registered trace reaches the process within the stated radius; neighborhoodHeld excludes unsupported result identities.; Reach.identity/next retains every communication row; traceEndpoints,traceRows,serial and traceExtension prove endpoints,source rows,serial composition and successor preservation.; viewRow/viewProvenance retain process identity and actual local input observation. indistinguishableOutput/lowerWitness prove the observation-relative output boundary for locally identical instances with incompatible required outputs.; queryBoundary rejects a process outside the registered carrier. omittedRowRejected excludes any trace that uses an unregistered channel row. Radius is the trace length bound, not a fitted scientific parameter.; Complete256 grammar,three operational witnesses,four controls and fresh candidate parity PASS. Original full program comparison28996 running.",
-      "remaining": [
-        "Original fresh full program field/hash comparison28996; completion after Distributed Knowledge in dependency order."
-      ]
+      "verified_scope": "Network preserves registered processes and directed communication rows. exactNeighborhood proves computed membership iff a retained registered trace reaches the process within the stated radius; neighborhoodHeld excludes unsupported result identities.; Reach.identity/next retains every communication row; traceEndpoints,traceRows,serial and traceExtension prove endpoints,source rows,serial composition and successor preservation.; viewRow/viewProvenance retain process identity and actual local input observation. indistinguishableOutput/lowerWitness prove the observation-relative output boundary for locally identical instances with incompatible required outputs.; queryBoundary rejects a process outside the registered carrier. omittedRowRejected excludes any trace that uses an unregistered channel row. Radius is the trace length bound, not a fitted scientific parameter.; Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_293_LOCALITY_COMPLETION.json"
     },
     {
       "branch": "computation",
@@ -7288,9 +7287,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-SEC-SECRECY-001-73a1685ef3e59a0b.json",
       "statement": "The forced observation-relative message indistinguishability kernel retains message support; key or transformation support; ciphertext relation; adversary observation; closed message distinctions; disclosure boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
       "title": "Fold secrecy law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Computation/Secrecy.lean",
+        "SFT/Computation/SecrecyWitnesses.lean",
+        "SFT/Computation/SecrecyGrammar.lean",
+        "SFT/Computation/SecrecyControls.lean",
+        "SFT/Computation/SecrecyEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 candidate rows; full program comparison running.",
       "registration_sha256": "db53c51a2c0ba87156fc1c5b8e70cc20080641a496bc783c0f07095110638146",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -7335,7 +7340,11 @@
         "statement": "The forced observation-relative message indistinguishability kernel retains message support; key or transformation support; ciphertext relation; adversary observation; closed message distinctions; disclosure boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.",
         "status": "independently_replicated",
         "title": "Fold secrecy law"
-      }
+      },
+      "verified_scope": "Model and Row preserve held message/key support,source transformation rows,ciphertexts and exact adversary observation. admitted,supportedMeaning and possibleMeaning reconstruct every possible message from a specific supported transformation row.; pairRows/pairMeaning enumerate the complete supported ordered pair product. closedLedgerMeaning proves that its filtered ledger contains exactly every supported distinct-message pair with identical adversary observation. distinctionExhaustion/distinctionDisjoint partition closed and separated distinctions.; ambiguityWitness retains two distinct supported predecessor messages. noObservationRecovery proves that the registered observation alone cannot recover both distinct messages in a closed pair.; missingTransformation/missingKey reject unsupported records. downstreamObservationClosed proves deterministic processing preserves an already-closed observation distinction. disclosureBoundary shows explicitly additional distinguishing disclosure can change the result.; Extension preserves held support,transformation rows and earlier observation values. admissionExtension,closedExtension,possibleExtension preserve source records and previous closed distinctions.; Original security256 grammar,three native security partition witnesses,four controls and fresh parity pass.1729 concrete ledger/message/disclosure checks and native ambiguity/recovery proofs pass. Full program10445 running.",
+      "remaining": [
+        "Original fresh full program field/hash comparison10445; completion after One-Wayness in dependency order."
+      ]
     },
     {
       "branch": "computation",
@@ -189737,13 +189746,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T00:01:47.840236+00:00",
+  "updated_at": "2026-10-30T00:08:26.858703+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 3,
-    "pending": 2661,
-    "fully_reconstructed_claims": 117,
-    "axiom_free_exported_results": 6480,
-    "axiom_free_audited_definitions_and_theorems": 14237
+    "pending": 2660,
+    "fully_reconstructed_claims": 118,
+    "axiom_free_exported_results": 6518,
+    "axiom_free_audited_definitions_and_theorems": 14335
   }
 }

@@ -1,0 +1,24 @@
+import SFT.Computation.Secrecy
+#print axioms SFT.Computation.Secrecy.admitted
+#print axioms SFT.Computation.Secrecy.possibleMessages
+#print axioms SFT.Computation.Secrecy.possibleMeaning
+#print axioms SFT.Computation.Secrecy.closed
+#print axioms SFT.Computation.Secrecy.noObservationRecovery
+#print axioms SFT.Computation.Secrecy.ambiguityWitness
+#print axioms SFT.Computation.Secrecy.missingTransformation
+#print axioms SFT.Computation.Secrecy.missingKey
+#print axioms SFT.Computation.Secrecy.separated
+#print axioms SFT.Computation.Secrecy.distinctionExhaustion
+#print axioms SFT.Computation.Secrecy.distinctionDisjoint
+#print axioms SFT.Computation.Secrecy.admissionExtension
+#print axioms SFT.Computation.Secrecy.closedExtension
+#print axioms SFT.Computation.Secrecy.possibleExtension
+#print axioms SFT.Computation.Secrecy.supported
+#print axioms SFT.Computation.Secrecy.supportedMeaning
+#print axioms SFT.Computation.Secrecy.pairRows
+#print axioms SFT.Computation.Secrecy.pairMeaning
+#print axioms SFT.Computation.Secrecy.closedLedger
+#print axioms SFT.Computation.Secrecy.closedLedgerMeaning
+#print axioms SFT.Computation.Secrecy.downstreamObservationClosed
+#print axioms SFT.Computation.Secrecy.disclosedView
+#print axioms SFT.Computation.Secrecy.disclosureBoundary

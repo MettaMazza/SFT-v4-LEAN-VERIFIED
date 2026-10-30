@@ -780,3 +780,8 @@ import SFT.Computation.OneWaynessControls
 import SFT.Computation.OneWaynessEvidence
 import SFT.Computation.OneWayness
 import SFT.Computation.SecurityPartition
+import SFT.Computation.SecrecyWitnesses
+import SFT.Computation.SecrecyGrammar
+import SFT.Computation.SecrecyControls
+import SFT.Computation.SecrecyEvidence
+import SFT.Computation.Secrecy

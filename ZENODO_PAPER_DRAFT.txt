@@ -3081,3 +3081,11 @@ The count-taking operation first admits an integer count c≥2 and an integer ta
 For every positive integer level l=n+1, evaluation of the generated binary and pair counts yields the exact normalized fraction
   R(n+1)=N((n+3)²,4(n+2)²+(n+3)²).
 The charged numerator is positive because n+3>0, and the denominator is positive because it contains that positive charged term. This identity is proved uniformly in n, while the support construction fixes the terminal instance n=12. Thirteen audited declarations establish the original count-taking domain, its recursion, terminal instance and arbitrary positive-level running-share identity without axiom dependencies.
+
+343. Complete labelled electroweak channel supports
+
+Generate the finite positive position list P₀=[] and P_(n+1)=P_n++[n+1]. Induction gives |P_n|=n and x∈P_n iff 0<x≤n. Every previous position is at most n, so n+1 is fresh; induction therefore proves that P_n is duplicate-free. These are labels for the counted support positions.
+
+For finite lists X,Y, generate their complete product by concatenating [(x,y):y∈Y] for each x∈X in order. A pair belongs to this list exactly when its two coordinates belong to X and Y. Prepending each new first-coordinate block adds |Y| records, giving |X×Y|=|X|·|Y| by induction on X. Within a block, pair equality implies equality of second coordinates; between blocks, it implies equality of first coordinates. Thus distinct X and Y give a duplicate-free product.
+
+The charged support is the full product P₁₅×P₁₅, with 15·15=225 distinct records. The neutral support is P₄×(P₁₄×P₁₄), with 4·14·14=784 distinct records, retaining each of the four neutral-channel labels and both axis positions. The native proof identifies these list lengths with the charged/neutral pair returned by the original source-count calculation. The two supports therefore supply the previously derived 225/(225+784)=225/1009 share through complete labelled enumeration. Sixteen component declarations have zero axiom dependencies.

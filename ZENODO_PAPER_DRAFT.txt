@@ -5764,11 +5764,61 @@ For each input in the common finite support, the ledger retains both complete so
 
 Equal and unequal observation rows form exhaustive disjoint closed and retained distinction ledgers. Equivalence closes every observation row, while a retained distinction refutes equivalence. The complete underlying traces remain available in both cases. Identity, symmetry and serial equivalence composition preserve the declared observation relation. Support assembly and successor retain every earlier execution record; extending support requires agreement on its new inputs. A declared post-map preserves already equal observations. These results respect the original observation and input boundary. All 256 original candidates, witnesses, controls and complete native program fields and hashes agree with pinned V3, completing the Fold Program-Equivalence Law.
 
+Let \(S\) be the registered input-environment list and \(o\) its observation map on complete executions. For programs \(a,b\), each input row is
+\[
+ r_\rho=(\rho,\operatorname{run}(\rho,a),\operatorname{run}(\rho,b),
+                 o(\operatorname{run}(\rho,a)),o(\operatorname{run}(\rho,b))).
+\]
+The complete ledger is \([r_\rho:\rho\in S]\), retaining ordering and repetitions. Its checker recursively conjoins observation equality:
+\[
+ C([],o,a,b)=\operatorname{true},\qquad
+ C(\rho::S,o,a,b)=[o(\operatorname{run}(\rho,a))=o(\operatorname{run}(\rho,b))]
+                  \land C(S,o,a,b).
+\]
+Induction gives the exact equivalence
+\[
+ C(S,o,a,b)=\operatorname{true}
+ \iff\forall\rho\in S,\ o(\operatorname{run}(\rho,a))=o(\operatorname{run}(\rho,b)).
+\]
+A false decision reconstructs a member of \(S\) where those observations differ. Filtering ledger rows by equality and inequality yields exhaustive, disjoint closed and retained ledgers, respectively. Every row still reconstructs both complete execution judgments.
+
+Equality supplies identity, symmetry and transitive composition on the same \(S,o\). For support concatenation,
+\[
+ \operatorname{ledger}(S\mathbin{+\!\!+}T)
+ =\operatorname{ledger}(S)\mathbin{+\!\!+}\operatorname{ledger}(T).
+\]
+Agreement on both components therefore supplies agreement on the combined support. For any declared post-map \(h\), equality of \(o\)-observations implies equality of \(h\circ o\)-observations by congruence.
+
 201. Generated descent and terminal coverage
 
 Every recursive call of the registered expression evaluator follows a strict child of its generated syntax tree. Structural induction constructs accessibility, and the retained node count decreases at each call. The call relation preserves the original duplicate-binding guard and admits the right child only after successful left evaluation. Every expression and input reconstructs a complete execution ending in its exact value or original failure.
 
 For the original transition system, a retained descent certificate decreases on every transition. Each complete path has length bounded by its initial rank; native execution reconstructs both that bound and its exact state trace. Serial assembly and successor preserve the complete records and bound. A nonempty return cycle contradicts strict descent, and the registered loop provides an explicit counterexample to the existence of such a certificate. These results preserve the stated boundary: no total termination decider for the universal language is claimed. All 256 original candidates, witnesses, controls and complete native program fields and hashes agree with pinned V3, completing the Fold Termination Law.
+
+The evaluator's structural measure is
+\[
+ n(\operatorname{value}(v))=n(\operatorname{name}(x))
+ =n(\operatorname{outside}(t))=1,\qquad
+ n(\operatorname{join}(a,b))=n(a)+n(b)+1.
+\]
+Each child has strictly smaller measure. Structural induction constructs accessibility for the child relation. The actual call relation additionally requires distinct bindings, and a right call requires a successful left evaluation. Every actual call is a child step, so it also decreases \(n\); duplicate bindings admit no recursive call. Complete execution reconstruction gives
+\[
+ \forall\rho,e,\ \exists r,C,\
+ \operatorname{Execution}(\rho,e,r,\operatorname{frame}(\rho,e,C,r))
+ \land\operatorname{eval}(\rho,e)=r.
+\]
+
+For the original transition system \(M\), a rank certificate is the explicit property
+\[
+ \operatorname{Ranked}(M,\nu)
+ \iff\forall s,a,t,\ \operatorname{step}(M,s,a)=\operatorname{ok}t
+                 \Rightarrow\nu(t)<\nu(s).
+\]
+Path induction yields, for a path from \(s\) to \(t\) with action list \(A\),
+\[
+ \nu(t)\le\nu(s),\qquad |A|\le\nu(s),
+\]
+and \(|A|>0\) gives \(\nu(t)<\nu(s)\). The successor argument uses the next strict decrease and the bound on the remaining path. A nonempty return path would therefore imply \(\nu(s)<\nu(s)\), excluding every such rank certificate. The original loop supplies that counterexample. Serial and one-step path constructors retain the entire concatenated trace and the same initial-rank bound.
 
 202. Correctness against the registered specification
 
@@ -5776,11 +5826,61 @@ The specification retains its exact precondition, postcondition on complete exec
 
 Every input row retains its complete execution, specification decisions and termination declaration. Failure rows are exactly those carrying original runtime errors; their acceptability remains governed by the registered postcondition. Support assembly and successor preserve every earlier row. Specification consequence retains the same original execution under proved precondition and postcondition implications. Serial agreement connects original path certificates through their exact middle interface and retains both component traces. All 256 original candidates, witnesses, controls and complete native program fields and hashes agree with pinned V3, completing the Fold Program-Correctness Law.
 
+For precondition \(P\), postcondition \(Q\) on complete executions, program \(e\), and registered support \(S\), partial correctness is
+\[
+ \forall\rho\in S,\ P(\rho)=\operatorname{true}\Rightarrow
+ \forall r,T,\ \operatorname{Execution}(\rho,e,r,T)
+                  \Rightarrow Q(\rho,(r,T))=\operatorname{true}.
+\]
+Total correctness conjoins existence of such an execution for every admitted input. Here that existence is supplied constructively by the finite evaluator's complete execution theorem, including its original error outcomes.
+
+The certificate is
+\[
+ K([],P,Q,e)=\operatorname{true},
+\]
+\[
+ K(\rho::S,P,Q,e)
+ =(\text{if }P(\rho)\text{ then }Q(\rho,\operatorname{run}(\rho,e))
+                  \text{ else true})\land K(S,P,Q,e).
+\]
+Induction, together with uniqueness of complete execution, proves that \(K=\operatorname{true}\) is equivalent to the correctness judgment selected by the specification's partial or total mode. A false certificate constructs
+\[
+ \rho\in S,\qquad P(\rho)=\operatorname{true},\qquad
+ Q(\rho,\operatorname{run}(\rho,e))=\operatorname{false}.
+\]
+The row ledger retains the input, complete execution, both decisions and mode. Its failure filter selects exactly rows whose result is an original error; the postcondition determines whether such a row is acceptable.
+
+Consequence preserves an execution when the new precondition implies the old one on \(S\), and the old postcondition implies the new one for that same execution. Serial path agreement uses the first path's established middle condition as the second path's premise and reconstructs the concatenated action and state records.
+
 203. Generated formal specification relations
 
 A specification retains its generated input and output carriers and exact allowed relation under the original relation-admission guard. Membership proves both carrier identities. The complete observation certificate is true exactly when every observed row is allowed; falsification retains every observed row excluded from that relation. Refinement is allowed-row inclusion, preserving verified observations through identity and composition. Removing an allowed row produces an explicit falsification at the new boundary.
 
 Invariant checking covers every state of the retained source trace and follows from the admitted initial invariant and transition preservation. A finite liveness witness retains original input admission, a complete executable path and its visited registered goal. A terminal obligation retains the original halted execution and normal terminal state. Both reconstruct native execution, and serial extension preserves the earlier goal and component records. The generated relation supplies the postcondition of the existing correctness checker; every verified execution therefore reconstructs an allowed pair in the original input and output carriers. All 256 candidates, witnesses, controls and full native program fields and hashes agree with pinned V3, completing the Fold Formal-Specification Law.
+
+An admitted relation specification consists of input carrier \(I\), output carrier \(O\), and allowed rows \(R\), with the original generated-relation admission. It supplies
+\[
+ (i,o)\in R\Longrightarrow i\in I\land o\in O.
+\]
+For observed rows \(V\), the checker and falsification ledger are
+\[
+ C_R(V)=\bigwedge_{v\in V}[v\in R],\qquad
+ F_R(V)=[v\in V:v\notin R].
+\]
+Thus \(C_R(V)=\operatorname{true}\iff\forall v\in V,\ v\in R\), and membership in \(F_R(V)\) refutes acceptance. If \(R_1\subseteq R_2\), a certificate against \(R_1\) supplies one against \(R_2\). If a row is removed from \(R_2\) to obtain \(R_1\), its singleton observation remains accepted under \(R_2\) and is an explicit falsification under \(R_1\).
+
+For an invariant \(J\), trace checking is
+\[
+ \operatorname{invariantChecks}(J,T)=\operatorname{true}
+ \iff\forall s\in T,\ J(s)=\operatorname{true}.
+\]
+An admitted initial \(J\) and preservation across every successful original transition give this statement by path induction. Finite liveness retains initial-state admission and a path whose full state trace contains a registered goal. A terminal witness additionally retains a halted path and normal terminal state in the goals. Both reconstruct actual execution; extending an existing path preserves goals already in its retained prefix.
+
+For the original input and output observation maps \(\iota,\omega\), the induced postcondition is
+\[
+ Q(\rho,(r,T))=[(\iota(\rho),\omega(r,T))\in R].
+\]
+Applying the correctness certificate to an admitted input and its execution yields this exact allowed pair and hence both original carrier memberships.
 
 204. Retained program transformation traces
 
@@ -5788,11 +5888,55 @@ A generated transformation retains the registered rule identity, source syntax, 
 
 The recorded predecessor rows supply a reverse traversal of the complete transformation; a target without its record cannot recover distinct predecessors that share it. Resource evidence remains the original separate resource-ledger operation, retaining the initial observation, each rule event and occupied support. Semantic preservation alone asserts no resource improvement. The complete 256-member grammar, operational witnesses, controls and native program fields agree with pinned V3.
 
+A transformation row retains a rule \(q\) and context \(C\), with
+\[
+ \operatorname{source}(q,C)=\operatorname{plug}(C,q.\operatorname{source}),
+ \qquad
+ \operatorname{target}(q,C)=\operatorname{plug}(C,q.\operatorname{target}).
+\]
+Admission retains rule membership, generated context and endpoints, and successful-value equivalence of the rule endpoints for every environment in the registered support. Contextual equivalence gives the same relation for the entire source and target expressions. Induction over the retained transformation trace therefore gives
+\[
+ \operatorname{Trace}(R,S,e,L,f)\land\rho\in S
+ \Longrightarrow e\sim_\rho f.
+\]
+A successful source evaluation then supplies a complete target execution with that same value. Induction also retains admission of every row and generated syntax of both endpoints. Serial traces concatenate through their exact common expression.
+
+The reverse judgment walks recorded target-to-source rows. Induction on the forward trace constructs a reverse traversal returning to the original expression. Without the predecessor record, two distinct predecessors \(a\ne b\) sharing output \(z\) cannot both be recovered by one function:
+\[
+ \neg\exists g,\ g(z)=a\land g(z)=b.
+\]
+For initial identity \(i\), the resource event trace is \(i::[q.\operatorname{identity}:q\in L]\). Its accepted ledger satisfies
+\[
+ \ell.\operatorname{timeCount}=|L|+1,\qquad
+ \ell.\operatorname{spaceCount}=|H|,
+\]
+and reconstructs that entire event trace and supplied occupied support \(H\). No resource inequality follows merely from semantic preservation.
+
 205. Semantics-preserving compilation relations
 
 The generated compiler relation retains both frozen language grammar carriers and every allowed source-to-target row. Its finite coverage check is equivalent to every source form having a target. A complete compiler certificate checks that coverage and every relation row against the declared runtime interface. It therefore derives a total verified translation relation, with source and target grammar exclusion and rejection of failed semantic checks.
 
 Each observation row reconstructs both complete native executions. The result correspondence composes through an exact intermediate syntax and unchanged runtime input and observation interfaces. Identity and input-support extension preserve the certificate and complete observation records. Overhead is recorded by the original separate source and target resource ledgers, retaining every execution event and occupied support. All 256 grammar candidates and full native program outputs agree with pinned V3.
+
+Let \(R\subseteq I\times O\) be the admitted compiler relation. Its coverage check has the exact meaning
+\[
+ \operatorname{coverageCheck}(R)=\operatorname{true}
+ \iff\forall s\in I,\exists t,\ (s,t)\in R.
+\]
+The runtime interface retains input environments \(S\), source and target expression maps \(E_s,E_t\), and observation \(o\). Each row check is
+\[
+ \operatorname{checked}(s,t)
+ =C(S,o,E_s(s),E_t(t)),
+\]
+using the complete program-equivalence checker. The complete compiler check conjoins coverage with every admitted row check:
+\[
+ \operatorname{compilerCheck}
+ =\operatorname{coverageCheck}(R)
+   \land\bigwedge_{(s,t)\in R}\operatorname{checked}(s,t).
+\]
+Consequently it supplies, for every \(s\in I\), a target \(t\in O\) with both \((s,t)\in R\) and equal runtime observations for every input in \(S\). Every observation row reconstructs both complete native executions.
+
+Serial correspondence requires equal input supports, equal observation maps, and exact equality of the first target expression and second source expression at the intermediate form. Transitivity then gives the source-to-final-target equivalence. Support extension conjoins the new input checks and concatenates complete observation ledgers. Separate accepted resource records reconstruct each side's full labeled event list, its event count and its supplied space support; their values are retained independently.
 
 206. Machine-checkable program evidence
 
@@ -5800,9 +5944,58 @@ Program evidence retains the original proof-step grammar, registered premises an
 
 Mismatched identities, invalid proof traces and missing conclusions cannot pass the checker. Identity proofs retain an already-held conclusion; serial proofs preserve every step through the exact intermediate proposition state. The complete 256-member grammar and native program comparisons agree with pinned V3.
 
+A boundary \(B\) records source and program identities, program \(e\), specification \(\sigma\), input list \(S\), premises \(P\), rules \(R\), and conclusion \(c\). A proof object \(p\) supplies its identities and step list \(T\). The exact checker theorem is
+\[
+ \operatorname{check}(B,p)=\operatorname{true}\iff
+ p.\operatorname{sourceId}=B.\operatorname{sourceId}
+ \land p.\operatorname{programId}=B.\operatorname{programId}
+ \land\operatorname{AcceptedTrace}(R,P,T)
+ \land c\in\operatorname{afterSteps}(P,T).
+\]
+The registered interpretation \(\mu\) retains the proof obligations
+\[
+ \forall r\in R,\ 
+   (\forall a\in r.\operatorname{premises},\mu(a))
+       \Rightarrow\mu(r.\operatorname{conclusion}),\qquad
+ \forall a\in P,\mu(a),
+\]
+\[
+ \mu(c)\Longrightarrow\operatorname{Correct}(S,\sigma,e).
+\]
+Inference-trace induction transports these premise and rule witnesses to every proposition in the final state. Applying it to the retained conclusion gives \(\mu(c)\), hence the declared program correctness and its complete-support certificate. The interpretation's soundness witnesses are explicit premises of this construction.
+
+An identity mismatch contradicts the corresponding checker conjunct; an invalid trace or missing conclusion contradicts its own conjunct. With \(c\in P\), the empty proof is accepted. For two accepted traces, the second begins at \(\operatorname{afterSteps}(P,T_1)\); the final-state composition identity
+\[
+ \operatorname{afterSteps}(P,T_1\mathbin{+\!\!+}T_2)
+ =\operatorname{afterSteps}(\operatorname{afterSteps}(P,T_1),T_2)
+\]
+then constructs the combined proof while retaining every earlier step.
+
 207. Positive causal relation expansion
 
 Causal expansion retains the original edges and adds exactly endpoints joined through a held intermediate event. A positive path contains at least one original edge; reflexive edges are not inserted by convention. Native proofs show that every finite expansion round preserves original edges and introduces only original positive paths. A closed result containing the original edges is their least transitive closure. Its self-edge exclusion is equivalent to exclusion of positive cycles. These results establish the relation-level expansion and cycle boundary; the complete Concurrency entry is verified below.
+
+For held edge rows \(R\) and generated pair support \(U\), one expansion is the complete filtered list
+\[
+ E_U(R)=[(a,c)\in U:(a,c)\in R
+             \ \lor\ \exists b,\ (a,b)\in R\land(b,c)\in R].
+\]
+Its membership equivalence follows from the exact two-row linking predicate. Original supported edges persist; each new edge is the concatenation of two held paths. Define a positive path by an original-edge constructor and a path-concatenation constructor, with no empty-path constructor. Induction over expansion rounds proves
+\[
+ (a,b)\in R_n\Longrightarrow\operatorname{Path}(R_0,a,b).
+\]
+Original-edge containment persists whenever those edges belong to \(U\).
+
+If linked endpoint pairs are supported and a round adds no new members, its rows are transitive. More generally, any transitive relation \(T\) containing \(R_0\) contains every positive \(R_0\)-path, by induction on the path constructors. Combining that leastness result with round soundness gives, for a closed round containing the original edges,
+\[
+ (a,b)\in R_n\iff\operatorname{Path}(R_0,a,b).
+\]
+In particular,
+\[
+ \bigl(\forall a,\ (a,a)\notin R_n\bigr)
+ \iff\bigl(\forall a,\ \neg\operatorname{Path}(R_0,a,a)\bigr).
+\]
+This excludes exactly positive cycles. Reflexive edges arise only when justified by such a positive path; no reflexive closure is added by convention.
 
 208. Native causal fixed-point execution
 

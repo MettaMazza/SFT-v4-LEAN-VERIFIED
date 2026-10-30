@@ -1,0 +1,22 @@
+import SFT.Computation.RepresentationLearning
+#print axioms SFT.Computation.RepresentationLearning.valid
+#print axioms SFT.Computation.RepresentationLearning.tasks
+#print axioms SFT.Computation.RepresentationLearning.taskMeaning
+#print axioms SFT.Computation.RepresentationLearning.complexityLedger
+#print axioms SFT.Computation.RepresentationLearning.complexityMeaning
+#print axioms SFT.Computation.RepresentationLearning.commonWordCloses
+#print axioms SFT.Computation.RepresentationLearning.noRecoveryFromClosed
+#print axioms SFT.Computation.RepresentationLearning.extendTransformation
+#print axioms SFT.Computation.RepresentationLearning.extendTask
+#print axioms SFT.Computation.RepresentationLearning.retainedWord
+#print axioms SFT.Computation.RepresentationLearning.differentWordsRetained
+#print axioms SFT.Computation.RepresentationLearning.distinctionExhaustion
+#print axioms SFT.Computation.RepresentationLearning.commonWordTasks
+#print axioms SFT.Computation.RepresentationLearning.closedLedger
+#print axioms SFT.Computation.RepresentationLearning.closedLedgerExists
+#print axioms SFT.Computation.RepresentationLearning.closedLedgerMeaning
+#print axioms SFT.Computation.RepresentationLearning.retainedLedger
+#print axioms SFT.Computation.RepresentationLearning.retainedLedgerMeaning
+#print axioms SFT.Computation.RepresentationLearning.compose
+#print axioms SFT.Computation.RepresentationLearning.compositionRows
+#print axioms SFT.Computation.RepresentationLearning.compositionSources

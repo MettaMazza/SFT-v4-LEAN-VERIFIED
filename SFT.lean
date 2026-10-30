@@ -850,3 +850,8 @@ import SFT.Computation.ClassificationPredictionGrammar
 import SFT.Computation.ClassificationPredictionControls
 import SFT.Computation.ClassificationPredictionEvidence
 import SFT.Computation.ClassificationPrediction
+import SFT.Computation.RepresentationLearningWitnesses
+import SFT.Computation.RepresentationLearningGrammar
+import SFT.Computation.RepresentationLearningControls
+import SFT.Computation.RepresentationLearningEvidence
+import SFT.Computation.RepresentationLearning

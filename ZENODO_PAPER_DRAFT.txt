@@ -1952,13 +1952,55 @@ The nine binary probability coordinates give 2^9=512 kernels. The conjunction of
 
 82. Exact finite optimization and retained alternatives
 
-The optimization carrier is nonempty and canonical. Its feasibility relation retains the final verdict for every candidate key and must cover exactly the carrier's keys. The feasible selection preserves candidate order and contains precisely the candidates with true verdicts. A preference cell must join two distinct feasible forms. The undominated selection retains every feasible occurrence with no incoming preference cell; a native theorem supplies a retained feasible dominator for every excluded feasible form. No acyclicity or extra ordering assumption is imposed by the source procedure.
+The optimization carrier is nonempty and canonical. Its feasibility relation retains the final verdict for every candidate key and must cover exactly the carrier's keys. The feasible selection preserves candidate order and contains precisely the candidates with true verdicts. A preference cell must join two distinct feasible forms. The undominated selection retains every feasible occurrence with no incoming preference cell; a native theorem supplies a distinct feasible dominator for every excluded feasible form. No acyclicity or extra ordering assumption is imposed by the source procedure.
 
 A unique optimum is returned exactly when the complete held list is a singleton. Every other result retains the original equivalence-class tag and full list, including ties, incomparable alternatives and an empty result from a preference cycle. Constraints require membership in every supplied allowed set. Pareto dominance requires every criterion to admit the directed comparison and at least one to witness strict preference; self-comparisons cannot eliminate candidates. Native frontier membership and elimination-witness results establish complete selection and retention of incomparable forms, including the original empty-criteria behavior.
 
 The approximation certificate accepts the original signed-integer domain and rejects a nonpositive optimum or candidate count below that optimum. Every accepted result is the reduced positive optimum-count/candidate-count part. Native ratio and through-One results establish exactness without rounding, negative penalties or a tuning parameter. Shared-interface decomposition retains the source's complete-factorization condition; no additional decomposition algorithm is introduced.
 
 All 512 kernels in the original nine-dimensional grammar are retained, with native enumeration, criteria, uniqueness and coordinate-rejection proofs. All six original operational witness computations pass. Full native program execution matches every pinned registration, candidate, decision, closure, control and digest field and the unknown-identifier error. These results complete the finite optimization entry; complexity and particular objective-family laws retain their original placement in the algorithms and complexity branches.
+
+
+For canonical nonempty carrier C and verdict rows R, the key guard is keys(R)⊆C and C⊆keys(R). With v_R(x) the last verdict at x, feasibility is the ordered filter
+
+\[
+ F=[x\in C\mid v_R(x)=\operatorname{Some}(\mathrm{true})],\qquad
+ v_{R++[(x,b)]}(x)=\operatorname{Some}(b).
+\]
+
+A preference list P is admitted exactly when every (a,b)∈P has a,b∈F and a≠b. For nonempty F, its retained list U obeys
+
+\[
+ x\in U\iff x\in F\land\forall y,\ (y,x)\notin P.
+\]
+
+If x∈F but x∉U, the failed filter supplies a pair (y,x)∈P; preference admission then gives y∈F and y≠x. This witness need not itself be undominated: cyclic preferences retain their original possibility of U=[]. Classification returns unique(x) iff U=[x]; otherwise it returns the source retained-equivalence-class tag with U unchanged. Constraints [(name_i,A_i)] accept x iff x∈A_i for every supplied row.
+
+For criteria Q=[(name_i,P_i)], the source dominance predicate is
+
+\[
+ D_Q(a,b)\iff
+ [\forall i,\ (a,b)\in P_i\lor a=b]\land
+ [\exists i,\ (a,b)\in P_i].
+\]
+
+The Pareto filter separately excludes self-elimination and has the exact law
+
+\[
+ x\in\operatorname{Frontier}(F,Q)\iff
+ x\in F\land\forall y\in F,\ y\ne x\Rightarrow\neg D_Q(y,x).
+\]
+
+An excluded feasible x has a distinct feasible y satisfying D_Q(y,x), obtained from the source existential test. If each distinct competitor lacks the directed pair in at least one criterion, its universal dominance clause fails and x remains. For Q=[], the existential clause is false, so Frontier(F,[])=F.
+
+The signed-integer approximation call accepts exactly 0<o≤c. For accepted counts, put g=gcd(o,c), n=o/g and d=c/g. The normalized part satisfies
+
+\[
+ od=nc,\qquad 0<n\le d,\qquad\gcd(n,d)=1.
+\]
+
+Negative inputs, o=0 and o>c take the original error branch; no rounding or selected numerical tolerance enters the ratio. The nine binary grammar coordinates enumerate 2^9=512 candidates; their criteria conjunction accepts only the all-admitted tuple, with each substituted rejected coordinate falsifying its own conjunct.
+
 
 83. Generated trajectories and predecessor records
 
@@ -1967,6 +2009,51 @@ Finite dynamics admission requires a nonempty canonical state list, distinct ret
 Elapsed time retains the complete ordered adjacent-transition trace. Its length is one fewer than the number of retained states; every trace with at least two states has positive transition count. A singleton trajectory has empty-One duration and an empty trajectory is rejected. Fixed forms retain precisely the source rows with identical source and target, while predecessor records retain every source row mapped to the requested target, preserving order and multiplicity.
 
 Record-based reversibility requires inclusion of every original transition in a duplicate-free retained ledger. Native results show that each source predecessor remains recoverable from that ledger and that omission of any original transition fails the check. Extra retained rows remain governed by the original inclusion test; no stronger equality condition is imposed. First-return selection, registered-perturbation reachability and the complete dynamical program are included below.
+
+
+Let S be the state list, E the ordered transition list, and A(p) the ordered adjacent pairs of trajectory p. The admission predicates are
+
+\[
+ \begin{aligned}
+ \operatorname{Dynamics}(S,E)\iff{}&S\ne[]\land\operatorname{Distinct}(S)
+ \land\operatorname{Distinct}(E)\land\forall(a,b)\in E,\ a,b\in S,\\
+ \operatorname{Trajectory}_E(p)\iff{}&p\ne[]\land\forall e\in A(p),\ e\in E.
+ \end{aligned}
+\]
+
+Thus [x] is a valid trajectory for any x, since its adjacent-pair list is empty. The empty trajectory is rejected. For lists L,R and common interface x,
+
+\[
+ A(L++[x]++R)=A(L++[x])++A(x::R).
+\]
+
+Distributing universal membership over this append proves trajectory validity of the joined list iff both component trajectories are valid. This establishes composition without adding a state-carrier guard.
+
+The time operation retains the actual adjacent transition list:
+
+\[
+ \operatorname{Time}([x])=e,\qquad
+ \operatorname{Time}(x::y::R)=(x,y)::A(y::R),\qquad
+ |A(x::R)|=|R|.
+\]
+
+The final equation follows by induction on R: the empty tail gives zero and each cons contributes one adjacent pair. Hence a trajectory with at least two states has positive transition count. The source distinguishes the singleton marker e=["empty-One"] from a transition list; Time([]) returns its original error.
+
+Filtering E before projecting its first component gives
+
+\[
+ \operatorname{Fixed}(E)=[a:(a,b)\in E,\ a=b],\qquad
+ \operatorname{Pred}_E(t)=[a:(a,t)\text{ occurs in }E].
+\]
+
+Therefore x∈Fixed(E) iff (x,x)∈E, and x∈Pred_E(t) iff (x,t)∈E, while the lists retain source order and repeated occurrences. For a retained ledger L, the exact reversibility test is
+
+\[
+ \operatorname{Reversible}(E,L)\iff E\subseteq L\land\operatorname{Distinct}(L).
+\]
+
+If (x,t)∈E and the test passes, inclusion gives (x,t)∈L and hence x∈Pred_L(t). If an original edge is missing from L, inclusion is false and the test fails. Extra ledger rows are not excluded by this predicate.
+
 
 84. First returns and complete registered perturbation stability
 

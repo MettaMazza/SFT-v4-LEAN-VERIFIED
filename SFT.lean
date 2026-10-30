@@ -890,3 +890,8 @@ import SFT.Computation.MultiAgentGrammar
 import SFT.Computation.MultiAgentControls
 import SFT.Computation.MultiAgentEvidence
 import SFT.Computation.MultiAgent
+import SFT.Computation.AdaptationWitnesses
+import SFT.Computation.AdaptationGrammar
+import SFT.Computation.AdaptationControls
+import SFT.Computation.AdaptationEvidence
+import SFT.Computation.Adaptation

@@ -1071,3 +1071,7 @@ import SFT.QuantumComputation.Learning
 import SFT.QuantumComputation.LearningGrammar
 import SFT.QuantumComputation.LearningControls
 import SFT.QuantumComputation.LearningEvidence
+import SFT.QuantumComputation.ClassicalCorrespondence
+import SFT.QuantumComputation.ClassicalCorrespondenceGrammar
+import SFT.QuantumComputation.ClassicalCorrespondenceControls
+import SFT.QuantumComputation.ClassicalCorrespondenceEvidence

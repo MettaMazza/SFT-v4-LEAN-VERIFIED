@@ -11222,8 +11222,13 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001-e1712589e1aba3ce.json",
       "statement": "The forced classical and quantum operational correspondence kernel retains common generated descriptions; embedding of classical states; reversible classical submodel; branchwise quantum execution; measurement decoder; bidirectional result preservation; overhead ledger; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
       "title": "Full operational classical-quantum correspondence law",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/QuantumComputation/ClassicalCorrespondence.lean",
+        "SFT/QuantumComputation/ClassicalCorrespondenceGrammar.lean",
+        "SFT/QuantumComputation/ClassicalCorrespondenceControls.lean",
+        "SFT/QuantumComputation/ClassicalCorrespondenceEvidence.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "47b12a5ac0ded13dc8496586fb93ed1cdf70a915faedacb9985007823f7562b7",
       "v3_registration": {
@@ -11269,7 +11274,11 @@
         "statement": "The forced classical and quantum operational correspondence kernel retains common generated descriptions; embedding of classical states; reversible classical submodel; branchwise quantum execution; measurement decoder; bidirectional result preservation; overhead ledger; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
         "status": "independently_replicated",
         "title": "Full operational classical-quantum correspondence law"
-      }
+      },
+      "remaining": [
+        "Full original ClassicalCorrespondence program43500 comparison;record completion after Learning full comparison."
+      ],
+      "verified_scope": "WordTrace is exactly the original gate word-map lookup at every unchanged circuit location. projectBranch/liftWord and wordResultEquivalence prove exact projection and constructive lifting with the original phase operation.; operationalWordCorrespondence and decodedWordCorrespondence prove both directions for actual full circuit execution and original measurement decoder outputs.; phasePreservingSubmodel proves the unchanged-phase classical submodel when each original phase action is a complete-cycle shift;general correspondence does not erase the stored phase trace.; singletonEmbeddingAdmitted proves every held word/phase singleton meets exactly the original state constructor guards for a distinct nontrivial cycle. singletonResourceLedger proves one held branch at every location,one terminal branch and the unchanged gate/predecessor count.; Existing completeFrozenGrammar/interpretedInverse,Circuit.circuitInverseAndLedger and record reconstruction retain common generated descriptions,full inverse provenance and exact resources. Source boundary concerning phase-sensitive joint traces is preserved;word projection is not asserted to identify full states.; Complete256 grammar,8 original witnesses,4 original controls and all claim-specific fields/hashes translated. Registered build/audit/fresh candidate parity pass;full original ClassicalCorrespondence program43500 running."
     },
     {
       "branch": "quantum_computation",
@@ -190263,13 +190272,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T10:19:20.510156+00:00",
+  "updated_at": "2026-10-30T10:24:39.566961+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 2,
-    "pending": 2602,
+    "in_progress": 3,
+    "pending": 2601,
     "fully_reconstructed_claims": 177,
-    "axiom_free_exported_results": 8439,
-    "axiom_free_audited_definitions_and_theorems": 19268
+    "axiom_free_exported_results": 8458,
+    "axiom_free_audited_definitions_and_theorems": 19318
   }
 }

@@ -955,3 +955,8 @@ import SFT.Computation.SimulationWitnesses
 import SFT.Computation.SimulationGrammar
 import SFT.Computation.SimulationControls
 import SFT.Computation.SimulationEvidence
+import SFT.Computation.ComputationalDynamics
+import SFT.Computation.ComputationalDynamicsWitnesses
+import SFT.Computation.ComputationalDynamicsGrammar
+import SFT.Computation.ComputationalDynamicsControls
+import SFT.Computation.ComputationalDynamicsEvidence

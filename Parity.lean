@@ -557,3 +557,6 @@ def main : IO Unit := do
 
   for c in SFT.Computation.SimulationGrammar.candidates do
     IO.println ("SimulationGrammar\t" ++ SFT.Computation.SimulationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.SimulationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.SimulationGrammar.exactForm c ++ "\t" ++ SFT.Computation.SimulationGrammar.decisionReason c)
+
+  for c in SFT.Computation.ComputationalDynamicsGrammar.candidates do
+    IO.println ("ComputationalDynamicsGrammar\t" ++ SFT.Computation.ComputationalDynamicsGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.ComputationalDynamicsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.ComputationalDynamicsGrammar.exactForm c ++ "\t" ++ SFT.Computation.ComputationalDynamicsGrammar.decisionReason c)

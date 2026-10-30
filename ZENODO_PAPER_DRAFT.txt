@@ -147,6 +147,12 @@ Source claim: SFT-FOUNDATION-PART-001. Registered dependencies: structural One a
 
 10. Generated common-refinement pairing
 
+For generated fibre traces A and B, write A⊠B for the ordered list [(a,b): a∈A, b∈B], with A traversed first and B second. Held selections H_A⊆A and H_B⊆B lift to
+  L_A=H_A⊠B,  L_B=A⊠H_B.
+Every lifted cell belongs to A⊠B, since both its origins belong to the corresponding whole traces. If these two lifted lists have equal length n, the generated index pairing sends the i-th cell of L_A to the i-th cell of L_B for each 0≤i<n. Its inverse sends the i-th cell back. Thus g(f(x))=x and f(g(y))=y; injectivity follows by applying g to f(x)=f(x′), and onto coverage follows from y=f(g(y)). Unequal lengths cannot supply this complete index pairing.
+
+Identity uses f(x)=x, reversal exchanges f and g, and chaining uses f₂∘f₁ with inverse g₁∘g₂. Under a shared descendant trace D, the refinement map is (x,d)↦(f(x),d), with inverse (y,d)↦(g(y),d). Both inverse identities follow by substitution. In the one-of-two/two-of-four example, the selected lifts have lengths 1·4=2·2=4; the order pairing therefore covers both lifts completely.
+
 The common-refinement construction generates cells by traversing each source A label and then each source B label. The selected A lift retains all B descendants of each held A label; the selected B lift retains all A origins of each held B label. Every generated cell has source origins, and each pair of source origins occurs in the construction. The executable label formatting and order are preserved exactly.
 
 The registered generated-bijection procedure pairs finite host indices in order and checks equal trace lengths and bounds. Native proofs establish that the bounds always hold, that acceptance is equivalent to equal finite trace lengths, and that every index on both accepted sides occurs in the generated pairing. A constructive pairing supplies forward and inverse maps with both inverse identities; injectivity and onto coverage follow. Identity, reversal and chaining establish the registered pairing laws. Uniform refinement retains the shared descendant identity and preserves both inverse identities. For the concrete pair-cell procedure, equal selected-trace lengths remain equal after appending the same descendant trace by nested generation. This is proved structurally without assuming a multiplication law. The source one-of-two/two-of-four example accepts; the unequal source example rejects.
@@ -154,6 +160,12 @@ The registered generated-bijection procedure pairs finite host indices in order 
 Source claim: SFT-FOUNDATION-PART-EQUIVALENCE-001. Dependencies: One, Count and Part. The exact nine-domain product has 1,024 forms. A constructive product-membership proof establishes exhaustive enumeration. The source identifier-equality decision is proved equivalent to all nine witness requirements; exactly the registered witness survives. Eleven adverse relation cases are proved rejected. Complete selected-origin lifting is proved contained in the common refinement, and the accepted generated pairing is both one-to-one and onto on the lifted trace positions. The complete original program and its evidence records match the pinned V3 source outputs.
 
 11. Minimal Count extension in Fold
+
+Write B for the base Count stage and S(t) for its extension. Define u≼t when u is a generated prefix of t. A minimal nonidentity stage t satisfies
+  t≠B and ∀u≼t, (u≠B ⇒ u=t).
+Every t≠B is an extension and contains S(B) as a prefix. Substitution u=S(B) into minimality forces t=S(B). Conversely the only prefixes of S(B) are B and S(B), so S(B) satisfies the condition. Therefore
+  minimal_nonidentity(t) ⇔ t=S(B).
+Its generated positions are precisely lift(o) and ν, with lift(o)≠ν by freshness. The complete retained trace is [lift(o),ν]. A later stage S(S(t)) has a proper nonidentity prefix S(B), so cannot be minimal; B fails nonidentity itself.
 
 Fold classifies a generated Count stage as identity, first extension or later extension. Structural proofs identify those classes exactly with the base, its immediate successor and a successor of a successor. The generated-stage prefix relation retains each earlier stage under further extension. Every nonidentity finite trace contains the first extension. The first extension is nonidentity and every nonidentity prefix of it is itself; it is therefore minimal. Conversely, any minimal nonidentity stage must equal that first extension. Identity and every later finite extension are consequently excluded as minimal Fold stages.
 
@@ -166,6 +178,15 @@ The complete Fold program preserves all 288 original candidates and the One, Cou
 Source claim: SFT-FOUNDATION-FOLD-001. Dependencies: One, Count and Part.
 
 12. Complete finite Fold-word assembly and return
+
+Let a and b denote the two distinct held labels and ε the empty structural word. Define the ordered supports by
+  W₀=[ε],
+  W_(n+1)=concat_{w∈W_n}[w·a,w·b].
+A successor w·x retains its prefix w and final label x; removing that final label gives ρ(w·x)=w. If w·x=v·y then terminal-label equality gives x=y and prefix equality gives w=v. Together with a≠b this proves the two branches are disjoint and preserves uniqueness inductively.
+
+Induction on n proves
+  w∈W_n ⇔ length(w)=n and every label of w belongs to {a,b}.
+At n=0 the only such word is ε. At n+1, separating the final label yields a length-n prefix satisfying the induction hypothesis and one of the two admitted labels, hence exactly one generated branch. Conversely each generated branch has the asserted length and label membership. The host-record cardinalities obey |W₀|=1 and |W_(n+1)|=2|W_n|, hence |W_n|=2^n. This count follows from complete recursive generation, not a premise replacing it.
 
 The assembly construction begins with the structural empty One word. Each successor appends held-a and held-b, in that order, to every preceding word. The nonnegative extension index is the source host recursion input; the empty word is a structural form. Negative host extension inputs are rejected.
 
@@ -185,9 +206,18 @@ The source finite-set operations are represented constructively. Duplicate remov
 
 The finite assembly record representation includes predecessor–label–successor transitions and child–parent returns. Acceptance is equivalent to retention of every required transition and return, exclusion of ungenerated records, complete source coverage, correct word lengths, complete word support, word uniqueness and absence of extra words or rules. Canonical records satisfy these conditions. Missing required transitions, missing required returns and incorrect returns are rejected. Coverage remains the explicit source relation. Registration, census, decisions and closure are represented with the original source fields and ordering; candidate lookup uses the source identifier.
 
+For positive integers n,d, define the retained numerator recursively by c_d(n)=n when n≤d, and c_d(n)=c_d(n−d) when n>d. In the latter branch 0<n−d<n, so the recursion terminates. Induction along the removals establishes 0<c_d(n)≤d and n=c_d(n)+kd for a nonnegative host removal count k. If r,r′∈{1,…,d} represent the same residue modulo d, then their difference has magnitude below d and is divisible by d, hence r=r′. This proves uniqueness of the retained representative. It follows that c_d(n+d)=c_d(n) and c_d(kd)=d for every positive whole-turn count k. The terminal representative of a complete turn is d/d, the One.
+
 The exact casting operation acts on a positive count ratio n/d by removing one complete denominator while the numerator exceeds it. A structural recursion bound derived from n suffices for every positive d. A native removal-trace theorem proves termination and a unique retained numerator r with 0 < r ≤ d. Admitted numerators remain fixed; adding a complete denominator to a positive numerator does not change its retained value. Every positive whole number of complete turns retains d, representing the One. These results apply to all finite positive count pairs. The numerator-level result supplies the casting stage of the normalized primitive operations below.
 
 The Fraction admission map preserves the reduced numerator and denominator exactly. An admitted part maps back to the same Fraction, and admission yields that part if and only if the original Fraction is its reduced-pair representation. Zero, signed values and values above the One are rejected; every reduced positive pair through the One is admitted. For admitted a and b, the strict Take guard is the cross-product inequality between their count pairs. Its difference numerator is positive and strictly smaller than the product denominator; equal and reversed Take inputs are rejected. Self-junction followed by cast has a positive numerator no larger than its denominator, and a complete One is Fold-fixed. The normalized operations reduce their output count pairs to the canonical Fraction representation.
+
+For a positive pair (n,d), let g=gcd(n,d) and N(n,d)=(n/g,d/g). Divisibility by g gives positive integral quotients, and any common divisor of both quotients would enlarge the removed common factor; therefore gcd(n/g,d/g)=1. The identity (n/g)d=n(d/g) preserves the ratio exactly. For admitted parts a=n/d and b=m/e, the strict Take guard a>b is ne>md, and the retained difference is
+  Take(a,b)=N(ne−md,de).
+Because 0<ne−md<de for admitted inputs satisfying the guard, the result is a positive part below the One. Equality ne=md and reversal ne<md fail the guard. Self-junction and Fold retain their source order:
+  Junction(a,a)=N(2n,d),
+  Fold(a)=normalize(cast(Junction(a,a))).
+Unison is equivalent to ne=md, the exact input cross-product equality.
 
 Canonical Fraction construction divides the numerator and denominator by their greatest common divisor. Constructive proofs identify the native GCD computation, establish its divisibility and greatest-common-divisor properties, and show that the reduced quotient pair is coprime. Both quotients are positive, reduction preserves exact cross-product value, and an admitted input remains through the One. Normalization is stable on an already reduced part. The integer-pair constructor retains the source rejection messages for signed, zero and beyond-One inputs.
 
@@ -198,6 +228,10 @@ The Exact Operations grammar contains the complete 128-form product of domain, f
 The positive Fraction cast adapter rejects zero and signed inputs and returns the normalized cast result for every positive reduced input. The four original controls retain their predicates: reversed Take rejection, changed-source identity, casting two complete Ones to the One, and the four specified hostile carrier constructions. Their full output fields and hashes agree with the pinned source. The eight literal closure fields are preserved.
 
 The first Fold has the two positions already established by minimal Count extension. Every held selection is empty, one of the two singletons, or the whole pair. Its nonempty coordinate classes are precisely one-of-two and One. Every proper nonempty selection therefore normalizes to half-One. Exchanging the two positions is involutive and preserves the selection cardinality and exact coordinate.
+
+Let x=n/d be reduced and positive. Junction(x,x)=One implies 2n=d. Then gcd(n,d)=gcd(n,2n)=n, so reducedness forces n=1 and consequently d=2. Conversely x=1/2 has self-junction 1. Thus
+  Junction(x,x)=One ⇔ x=1/2.
+Complement gives 1−1/2=1/2, while Fold(1/2)=cast(1)=1. The complete One is Fold-fixed because Fold(1)=cast(2)=1.
 
 For every admitted reduced positive part, normalized self-junction is the One if and only if the part is half-One. The proof uses the full positive numerator/denominator domain: self-junction forces the denominator to be twice the numerator, while reducedness forces the numerator to be one. Half-One complements to itself and Folds to the One; the One is Fold-fixed. At half-One, complement and half-One phase translation have different values. These results formalize the registered complete-partition argument without a sampled rational search.
 
@@ -215,9 +249,25 @@ The exact orbit one-of-three to two-of-three and back to one-of-three is proved 
 
 Positive scaling of a count-pair representation scales its complete-One removal trace and retained numerator. Normalization commutes with casting, yielding an exact raw count-pair formula for Fold of every normalized part. These identities preserve the original operation while allowing its arbitrary-rational branch equations to be proved.
 
+Write C for casting to the positive rational circle (0,1] and F(x)=C(2x). Define phase T(x)=C(x+1/2). For 0<x≤1/2, T(x)=x+1/2; for 1/2<x≤1, T(x)=x−1/2. In both branches a second application returns x, so T(T(x))=x. Doubling either branch changes 2x by exactly one complete turn, hence F(T(x))=F(x).
+For any 0<y≤1, the two generated inverse images are
+  L(y)=y/2,  U(y)=(y+1)/2.
+They satisfy 0<L(y)≤1/2<U(y)≤1 and
+  F(L(y))=C(y)=y,  F(U(y))=C(y+1)=y.
+Conversely if F(x)=y, the first-half branch gives 2x=y and x=L(y); the second-half branch gives 2x−1=y and x=U(y). Therefore
+  F(x)=y ⇔ x=L(y) or x=U(y),
+with L(y)≠U(y). At y=1 the pair is (1/2,1), retaining the complete-turn representative at the endpoint.
+
 For a part in the first half-circle, half-One phase translation has the exact normalized coordinate (twice the numerator plus the denominator)/(twice the denominator). Doubling this translated coordinate adds one complete One before cast, so it shares the original Fold image. Applying this result to the generated lower preimage proves that the generated upper preimage also Folds to every admitted image. The upper lies strictly beyond the half-circle boundary, while the lower lies on or below it; hence the two generated preimages are distinct. This establishes validity and distinctness of the generated pair. Every preimage is one of these two forms: a first-half part is recovered as the lower preimage of its Fold image, while a second-half part translates to the first half and is recovered using phase involution. Thus, for every admitted p and y, Fold(p) = y if and only if p is y/2 or cast(y/2 plus half-One). Distinctness and this exhaustive equivalence establish the exact two-preimage law over the entire positive rational circle.
 
 The phase laws hold throughout the positive rational circle, including both half-circle branches and One. Complete-One removal is preserved under the affine half-One shift and under doubling. Consequently Fold(phase(x)) = Fold(x) and phase(phase(x)) = x for every admitted part x. The proofs retain the source normalization and cast order and remove the complete One introduced by two successive half-One translations.
+
+For positive n define D_n=[1/n,2/n,…,n/n], with each coordinate normalized. For 1≤i≤n,
+  F(i/(2n))=i/n,
+  F((i+n)/(2n))=C(i/n+1)=i/n.
+Every index 1≤j≤2n lies either at j=i or at j=i+n for exactly one such i, so the complete image has precisely the members of D_n. Cross multiplication gives i/n<j/n exactly when i<j. Thus D_n is strictly ordered, has n distinct entries and ends at n/n=One. Adjacent differences are
+  (i+1)/n−i/n=1/n.
+Sorting and removing duplicate image values therefore yields exactly D_n; at n=1 this is [One].
 
 For every positive n, the source uniform division is represented by the ordered normalized parts i/n with indices from one through n. The native enumeration retains every generated index. For every i from one through n, Fold maps both i/(2n) and (i+n)/(2n) to i/n. Conversely, every index in the even division belongs to one of these branches. Therefore a part occurs among the Fold images of the complete 2n-division if and only if it occurs in the n-division. Distinct indices give distinct normalized coordinates, and the terminal n/n coordinate is One. These arbitrary-count results establish the exact image membership before sorting and gap evaluation.
 
@@ -2605,6 +2655,8 @@ The complete rational mode ledger is also verified at arbitrary positive depth: 
 
 The quark-channel invariant entry is complete: both independent constructions yield 1/12 and 1/8, the cover guards give depths seven and five, and all 256 source forms, program fields, hashes and controls agree with fresh native execution. The original implementation-distinct validator accepts that output and rejects omitted enumeration, an additional survivor and a failed control.
 
+The terminal vacuum-density grammar retains all 4,096 forms from its twelve binary relation axes. Its complete candidate blocks, combined grammar, seven operational witnesses, controls and evidence modules compile; all 603 definitions and theorems in that component audit have zero axiom dependencies. This component result does not assert completion of the separately dependent full source entry.
+
 322. Complete prime-sector construction
 
 Using the least cover d=7 derived above, define
@@ -2665,3 +2717,13 @@ The orbit-number-theory entry is complete, including the general return/order id
 With that dependency closed, the prime-sector ladder and base proton/Planck hierarchy entries are also complete. The generated ceiling seven admits exactly sectors two, three, five and seven. Their mediator counts are three, eight, twenty-four and forty-eight, with couplings one-half, two-thirds, four-fifths and six-sevenths. The successor volume 81 has least binary cover seven; its support 128 has unique massive predecessor 127. The squared hierarchy is 2^127, with the unsquared exponent retained exactly as 127/2. Both entries reproduce their complete 256-case programs and pass their original independent validators.
 
 The cumulative ledger contains 189 completed V3 entries, 9,010 native theorems and 20,445 audited definitions and theorems, all with zero axiom dependencies. The base hierarchy completion does not assert completion of the separate terminal hierarchy entry.
+
+327. Exact positive-ratio composition
+
+Let N(a,b) denote division of a positive numerator and denominator by their greatest common divisor. Its normalized pair (u,v) satisfies av=ub. For an arbitrary reduced positive ratio x=(n,d), define its reciprocal y=N(d,n) and composition x·y=N(ny_n,dy_d). Value preservation for y gives dy_d=y_n n=ny_n. The composite therefore has equal positive raw numerator and denominator, and normalization gives (1,1). Every admitted positive ratio composed with its reciprocal returns the One, including ratios above the One.
+
+For positive counts a,b,c, the raw product of the views a/b and b/c is N(ab,bc)=(u,v). Value preservation gives abv=ubc. Associativity and commutativity place the common positive factor b on the same side; applying finite division by b and the identity (bk)/b=k gives av=uc. Thus this composite represents a/c exactly. For any positive m, the raw product of m/1 and 1/m is (m·1,1·m); commutativity makes the sides equal, and normalization yields (1,1). This reconstructs the One from m corresponding equal parts.
+
+These native component results have thirteen audited definitions and theorems with zero axiom dependencies. The full source entry additionally includes shorter separation, complement, local transport and finite-family cycle composition.
+
+The same telescoping law holds for actual composition after normalizing both input views. Let x=N(a,b), y=N(c,d), and z=compose(x,y). Value preservation gives ax_d=x_n b, cy_d=y_n d, and (x_n y_n)z_d=z_n(x_d y_d). Put e=x_d y_d>0. Multiplying and rearranging the first two identities gives (ac)e=(x_n y_n)(bd). Multiplication by z_d and substitution of the third identity therefore yield e(ac z_d)=e(z_n bd). Exact positive cancellation gives ac z_d=z_n bd. Specializing the second view to N(b,c) gives ab z_d=z_n bc; cancellation of b gives a z_d=z_n c. Thus normalization of either input and the composite preserves the telescoping relation itself.

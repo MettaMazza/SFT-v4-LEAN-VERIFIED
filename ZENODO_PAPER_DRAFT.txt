@@ -3466,3 +3466,34 @@ Generate the finite positive position list P₀=[] and P_(n+1)=P_n++[n+1]. Induc
 For finite lists X,Y, generate their complete product by concatenating [(x,y):y∈Y] for each x∈X in order. A pair belongs to this list exactly when its two coordinates belong to X and Y. Prepending each new first-coordinate block adds |Y| records, giving |X×Y|=|X|·|Y| by induction on X. Within a block, pair equality implies equality of second coordinates; between blocks, it implies equality of first coordinates. Thus distinct X and Y give a duplicate-free product.
 
 The charged support is the full product P₁₅×P₁₅, with 15·15=225 distinct records. The neutral support is P₄×(P₁₄×P₁₄), with 4·14·14=784 distinct records, retaining each of the four neutral-channel labels and both axis positions. The native proof identifies these list lengths with the charged/neutral pair returned by the original source-count calculation. The two supports therefore supply the previously derived 225/(225+784)=225/1009 share through complete labelled enumeration. Sixteen component declarations have zero axiom dependencies.
+
+344. General odd-denominator vacuum recurrence
+
+For any supplied denominator q > 1 with q mod 2 = 1, let r_k be the held rank obtained after k executions of the original binary Fold from unit rank r_0 = 1. The existing exact rank calculation gives
+
+\[
+ 0<r_k\le q,\qquad r_k\equiv 2^k\pmod q,\qquad
+ \gcd(r_k,q)=1.
+\]
+
+The first inequality follows from the positive held-rank transition. Reducedness follows from gcd(1,q) = 1 and coprimality of every binary power with odd q. Exact held-rank recovery identifies return with the binary order condition:
+
+\[
+ r_k=1\iff 2^k\bmod q=1\bmod q.
+\]
+
+If no positive return occurred through q steps, cancellation of the common binary factor would make all q+1 positions r_0,…,r_q distinct. They lie in the complete q-member positive rank carrier, contradicting its finite cardinality. Ascending search therefore supplies a first period p with
+
+\[
+ 0<p\le q,\qquad r_p=1,\qquad
+ \forall j,\ 0<j<p\Longrightarrow r_j\ne1.
+\]
+
+The executed transition then gives r_(p+k) = r_k. Repeated removal of a complete period yields
+
+\[
+ r_k=r_{k\bmod p}\qquad(k\ge0).
+\]
+
+Thus positivity and exact recurrence persist at every finite continuation, without a cutoff on denominators or Fold depth. Each generated odd successor q = 2n+3 satisfies q > 1 and q mod 2 = 1 by the exact remainder identity (3+2n) mod 2 = 3 mod 2 = 1, so the same first-return theorem applies for every supplied n. Five native theorems establish these statements with no axiom dependencies. The executable odd-denominator wrapper and its complete registered entry checks are separate from these general recurrence theorems.
+

@@ -895,3 +895,8 @@ import SFT.Computation.AdaptationGrammar
 import SFT.Computation.AdaptationControls
 import SFT.Computation.AdaptationEvidence
 import SFT.Computation.Adaptation
+import SFT.Computation.LearningLimitsWitnesses
+import SFT.Computation.LearningLimitsGrammar
+import SFT.Computation.LearningLimitsControls
+import SFT.Computation.LearningLimitsEvidence
+import SFT.Computation.LearningLimits

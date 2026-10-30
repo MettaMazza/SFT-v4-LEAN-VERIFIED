@@ -521,3 +521,7 @@ def main : IO Unit := do
   for c in SFT.Computation.AdaptationGrammar.candidates do
     IO.println ("AdaptationGrammar\t" ++ SFT.Computation.AdaptationGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.AdaptationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.AdaptationGrammar.exactForm c ++ "\t" ++ SFT.Computation.AdaptationGrammar.decisionReason c)
 
+
+  for c in SFT.Computation.LearningLimitsGrammar.candidates do
+    IO.println ("LearningLimitsGrammar\t" ++ SFT.Computation.LearningLimitsGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.LearningLimitsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.LearningLimitsGrammar.exactForm c ++ "\t" ++ SFT.Computation.LearningLimitsGrammar.decisionReason c)
+

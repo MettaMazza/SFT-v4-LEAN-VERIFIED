@@ -1095,3 +1095,8 @@ import SFT.Physics.ObservationExperiment
 import SFT.Physics.ObservationComparison
 import SFT.Physics.ObservationValidation
 import SFT.Physics.ObservationValidationProofs
+import SFT.Physics.VacuumSpectrum
+import SFT.Physics.VacuumFloorGrammar
+import SFT.Physics.VacuumFloorWitnesses
+import SFT.Physics.VacuumFloorControls
+import SFT.Physics.VacuumFloorEvidence

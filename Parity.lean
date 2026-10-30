@@ -644,3 +644,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.HostileGrammar.candidates do
     IO.println ("HostileGrammar\t" ++ SFT.Physics.HostileGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HostileGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HostileGrammar.exactForm c ++ "\t" ++ SFT.Physics.HostileGrammar.decisionReason c)
+
+  for c in SFT.Physics.ObservationGrammar.candidates do
+    IO.println ("ObservationGrammar\t" ++ SFT.Physics.ObservationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ObservationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ObservationGrammar.exactForm c ++ "\t" ++ SFT.Physics.ObservationGrammar.decisionReason c)

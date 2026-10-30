@@ -1,0 +1,293 @@
+[
+  {
+    "all_rows_required": true,
+    "claim_id": "SFT-PHYS-MEAS-OBSERVATION-CARRIER-001",
+    "expected_observation_label": "distinction-reference-comparison-record",
+    "experiment_id": "SFT-EXP-PHYS-MEAS-OBSERVATION-CARRIER-001",
+    "falsification_condition": "The claim is falsified within this registered standards boundary if any committed BIPM target row does not exhibit the predicted structural label, if any row is omitted, or if the tampered control is accepted.",
+    "frozen_relation": "The unique observation carrier is a source-bound phenomenon/reference pairing plus its held comparison record, executed without target access and with every row retained.",
+    "prediction_program": {
+      "instructions": [
+        {
+          "arguments": [
+            "registered-premise"
+          ],
+          "destination": "premise",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "physical-observation",
+            "distinction-reference-comparison-record"
+          ],
+          "destination": "prediction",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "premise",
+            "prediction"
+          ],
+          "destination": "bound-result",
+          "opcode": "pair"
+        },
+        {
+          "arguments": [
+            "prediction"
+          ],
+          "destination": "",
+          "opcode": "emit"
+        }
+      ],
+      "program_id": "SFT-EXP-PHYS-MEAS-OBSERVATION-CARRIER-001-prediction",
+      "schema": "sft-v3-fold-program/1"
+    },
+    "source_snapshot_hash": "sha256:5442eea2c680caf77a9d96879205a97f57c7c270b98a0bd0126c18fefe47e02c",
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/bipm-si-brochure-9-en.pdf",
+    "target_ids": [
+      "observation-carrier-1",
+      "observation-carrier-2"
+    ],
+    "target_inaccessible_before_seal": true,
+    "target_locators": [
+      [
+        "observation-carrier-1",
+        "BIPM-SI-BROCHURE-9-2026",
+        "SI Brochure section 2.1: defining the unit of a quantity"
+      ],
+      [
+        "observation-carrier-2",
+        "BIPM-SI-BROCHURE-9-2026",
+        "SI Brochure section 5.4: expressing values of quantities"
+      ]
+    ]
+  },
+  {
+    "comparisons": [
+      {
+        "observed": "distinction-reference-comparison-record",
+        "passed": true,
+        "predicted": "distinction-reference-comparison-record",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 2.1: defining the unit of a quantity",
+        "target_id": "observation-carrier-1"
+      },
+      {
+        "observed": "distinction-reference-comparison-record",
+        "passed": true,
+        "predicted": "distinction-reference-comparison-record",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 5.4: expressing values of quantities",
+        "target_id": "observation-carrier-2"
+      }
+    ],
+    "passed": true,
+    "tampered_control": {
+      "observed": "changed-external-observation",
+      "passed": true,
+      "predicted": "distinction-reference-comparison-record",
+      "target_id": "deliberately-tampered-unfavorable-control"
+    }
+  },
+  {
+    "comparisons": [
+      {
+        "observed": "distinction-reference-comparison-record",
+        "passed": true,
+        "predicted": "distinction-reference-comparison-record",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 2.1: defining the unit of a quantity",
+        "target_id": "observation-carrier-1"
+      },
+      {
+        "observed": "changed-external-observation",
+        "passed": false,
+        "predicted": "distinction-reference-comparison-record",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 5.4: expressing values of quantities",
+        "target_id": "observation-carrier-2"
+      }
+    ],
+    "passed": false,
+    "tampered_control": {
+      "observed": "changed-external-observation",
+      "passed": true,
+      "predicted": "distinction-reference-comparison-record",
+      "target_id": "deliberately-tampered-unfavorable-control"
+    }
+  },
+  {
+    "error": "KeyError: observation-carrier-2"
+  },
+  {
+    "comparisons": [
+      {
+        "observed": "distinction-reference-comparison-record",
+        "passed": false,
+        "predicted": "changed-external-observation",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 2.1: defining the unit of a quantity",
+        "target_id": "observation-carrier-1"
+      },
+      {
+        "observed": "distinction-reference-comparison-record",
+        "passed": false,
+        "predicted": "changed-external-observation",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 5.4: expressing values of quantities",
+        "target_id": "observation-carrier-2"
+      }
+    ],
+    "passed": false,
+    "tampered_control": {
+      "observed": "changed-external-observation",
+      "passed": false,
+      "predicted": "changed-external-observation",
+      "target_id": "deliberately-tampered-unfavorable-control"
+    }
+  },
+  {
+    "comparisons": [
+      {
+        "observed": "distinction-reference-comparison-record",
+        "passed": false,
+        "predicted": "changed-external-observation",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 2.1: defining the unit of a quantity",
+        "target_id": "observation-carrier-1"
+      },
+      {
+        "observed": "changed-external-observation",
+        "passed": true,
+        "predicted": "changed-external-observation",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 5.4: expressing values of quantities",
+        "target_id": "observation-carrier-2"
+      }
+    ],
+    "passed": false,
+    "tampered_control": {
+      "observed": "changed-external-observation",
+      "passed": false,
+      "predicted": "changed-external-observation",
+      "target_id": "deliberately-tampered-unfavorable-control"
+    }
+  },
+  {
+    "error": "KeyError: observation-carrier-2"
+  },
+  {
+    "comparisons": [
+      {
+        "observed": "distinction-reference-comparison-record",
+        "passed": false,
+        "predicted": "different",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 2.1: defining the unit of a quantity",
+        "target_id": "observation-carrier-1"
+      },
+      {
+        "observed": "distinction-reference-comparison-record",
+        "passed": false,
+        "predicted": "different",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 5.4: expressing values of quantities",
+        "target_id": "observation-carrier-2"
+      }
+    ],
+    "passed": false,
+    "tampered_control": {
+      "observed": "changed-external-observation",
+      "passed": true,
+      "predicted": "different",
+      "target_id": "deliberately-tampered-unfavorable-control"
+    }
+  },
+  {
+    "comparisons": [
+      {
+        "observed": "distinction-reference-comparison-record",
+        "passed": false,
+        "predicted": "different",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 2.1: defining the unit of a quantity",
+        "target_id": "observation-carrier-1"
+      },
+      {
+        "observed": "changed-external-observation",
+        "passed": false,
+        "predicted": "different",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 5.4: expressing values of quantities",
+        "target_id": "observation-carrier-2"
+      }
+    ],
+    "passed": false,
+    "tampered_control": {
+      "observed": "changed-external-observation",
+      "passed": true,
+      "predicted": "different",
+      "target_id": "deliberately-tampered-unfavorable-control"
+    }
+  },
+  {
+    "error": "KeyError: observation-carrier-2"
+  },
+  {
+    "comparisons": [
+      {
+        "observed": "distinction-reference-comparison-record",
+        "passed": false,
+        "predicted": "\u03bb",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 2.1: defining the unit of a quantity",
+        "target_id": "observation-carrier-1"
+      },
+      {
+        "observed": "distinction-reference-comparison-record",
+        "passed": false,
+        "predicted": "\u03bb",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 5.4: expressing values of quantities",
+        "target_id": "observation-carrier-2"
+      }
+    ],
+    "passed": false,
+    "tampered_control": {
+      "observed": "changed-external-observation",
+      "passed": true,
+      "predicted": "\u03bb",
+      "target_id": "deliberately-tampered-unfavorable-control"
+    }
+  },
+  {
+    "comparisons": [
+      {
+        "observed": "distinction-reference-comparison-record",
+        "passed": false,
+        "predicted": "\u03bb",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 2.1: defining the unit of a quantity",
+        "target_id": "observation-carrier-1"
+      },
+      {
+        "observed": "changed-external-observation",
+        "passed": false,
+        "predicted": "\u03bb",
+        "source_id": "BIPM-SI-BROCHURE-9-2026",
+        "source_locator": "SI Brochure section 5.4: expressing values of quantities",
+        "target_id": "observation-carrier-2"
+      }
+    ],
+    "passed": false,
+    "tampered_control": {
+      "observed": "changed-external-observation",
+      "passed": true,
+      "predicted": "\u03bb",
+      "target_id": "deliberately-tampered-unfavorable-control"
+    }
+  },
+  {
+    "error": "KeyError: observation-carrier-2"
+  }
+]

@@ -1087,3 +1087,9 @@ import SFT.Physics.TargetCustodyEvidence
 import SFT.Physics.HostilePackage
 import SFT.Physics.HostileGrammar
 import SFT.Physics.HostileEvidence
+import SFT.Physics.ObservationCarrier
+import SFT.Physics.ObservationPrediction
+import SFT.Physics.ObservationGrammar
+import SFT.Physics.ObservationEvidence
+import SFT.Physics.ObservationExperiment
+import SFT.Physics.ObservationComparison

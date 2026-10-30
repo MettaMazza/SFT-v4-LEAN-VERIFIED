@@ -1332,6 +1332,33 @@ Outgoing-list membership is equivalent to a retained edge from the held node to 
 
 Path extension appends the new target to the complete prior path and uses the shared-interface composition theorem, preserving its origin and every earlier transition. The resulting proof covers arbitrary finite admitted graphs, rather than only the enumerated execution cases. Search completeness is established by the closed-set argument below.
 
+
+For a graph G, define the complete witness predicate
+
+\[
+ \operatorname{PathWitness}_G(o,t)\iff
+ \exists A,\ \operatorname{Valid}_G(A\mathbin{+\!+}[t])
+ \land\operatorname{head}(A\mathbin{+\!+}[t])=o.
+\]
+
+The queue proof uses a property P closed under retained edges:
+
+\[
+ (u,v)\in E\land P(u)\Rightarrow P(v).
+\]
+
+If P holds for every queued node, a target hit establishes P(t). A visited skip preserves P on the shorter queue. A fresh expansion preserves it on the old remainder and every appended target by edge closure. Induction along the decreasing search measure therefore proves search success implies P(t).
+
+Choose P(v) to mean v = o or PathWitness_G(o,v). This holds initially even if o has not separately been admitted as a node. On the first traversed edge (o,v), accepted graph endpoints supply o ∈ V and v ∈ V; the identity path [o] therefore extends to [o,v]. Every later edge extends the complete prior witness. If o ≠ t, the alternative t = o is impossible, leaving a path witness. If o = t, the original identity check itself supplies o ∈ V and the singleton witness. Thus
+
+\[
+ \operatorname{Reachable}_G(o,t)=\mathrm{true}
+ \Longrightarrow\operatorname{PathWitness}_G(o,t)
+\]
+
+for every admitted graph and arbitrary queried endpoints.
+
+
 62. Reachability completeness and equivalence
 
 Every complete valid origin-to-target path is found by the original finite queue search. The proof preserves the invariant that every edge leaving a visited node ends either in visited or in the frontier. Removing an already visited queue head preserves that invariant. Expanding a new head preserves it because every unvisited outgoing target is appended, in the original edge order.
@@ -1340,6 +1367,39 @@ If search terminates unsuccessfully, the resulting exhausted finite node collect
 
 Combining completeness with soundness gives the exact equivalence, for every admitted finite graph: reachability returns true if and only if a complete valid path starts at the queried origin and ends at the queried target. Identity reachability holds exactly for carrier nodes. Complete path witnesses compose at their shared interface, yielding the original transitivity law for reachability.
 
+
+The visited/frontier invariant is
+
+\[
+ u\in S\land(u,v)\in E\Longrightarrow v\in S\lor v\in Q.
+\]
+
+If a queue head is skipped, it already belongs to S, so removing that occurrence from Q preserves coverage. If a fresh head is expanded, it is appended to S and every outgoing target not in the new S is appended to Q. The displayed invariant is therefore preserved in both recursive cases.
+
+Assuming the target is absent from S, unsuccessful search supplies a finite exhausted list X with
+
+\[
+ S\subseteq X,\qquad Q\subseteq X,\qquad t\notin X,\qquad
+ u\in X\land(u,v)\in E\Rightarrow v\in X.
+\]
+
+At the initial state, o ∈ Q ⊆ X. Induction over adjacent cells of any complete valid o-to-t path propagates membership in X from its first node to its last, forcing t ∈ X, a contradiction. Hence every path witness is found. Combining both directions gives
+
+\[
+ \operatorname{Reachable}_G(o,t)=\mathrm{true}
+ \iff\operatorname{PathWitness}_G(o,t).
+\]
+
+For admitted G, shared-interface path composition then proves
+
+\[
+ \operatorname{Reachable}_G(o,m)\land\operatorname{Reachable}_G(m,t)
+ \Rightarrow\operatorname{Reachable}_G(o,t),
+\]
+
+while Reachable_G(v,v) is equivalent to v ∈ V. No bound on path length enters either implication.
+
+
 63. Exact finite cycle traversal
 
 The cycle procedure retains the original outer node order and recursively scans every edge in its original order. Edges whose origin differs from the current node are skipped. An edge to a node already in the held path returns true immediately. Otherwise its target is appended to the held path and visited recursively; a false result resumes scanning the remaining edges. No branch or edge is removed.
@@ -1347,6 +1407,29 @@ The cycle procedure retains the original outer node order and recursively scans 
 Finite termination follows from an auxiliary list containing every edge target. Every target remains either in that unseen support or in the held path. A recursive call is made only for a target absent from the held path; that target therefore occurs in unseen support, and removing it strictly decreases the support length. Each local edge scan is structurally recursive on the remaining edge list. Neither argument introduces a depth cutoff.
 
 The native procedure satisfies its exact recursive equation. Empty edge sets and nodes without outgoing edges cannot yield a cycle, and a retained outgoing edge to a held-path member forces a true result. Fresh execution matches 3,084 graph-cycle decisions and 14,392 recursive visits across all directed relations on three nodes and additional malformed/repeated input stresses. General equivalence with complete nontrivial return paths is established below.
+
+
+Let Visit(u,H) denote recursive cycle exploration from node u with ordered held path H, and Scan(u,H,L) its scan of the remaining ordered edge list L. With e = (a,b), the exact source cases are
+
+\[
+ \begin{aligned}
+ \operatorname{Scan}(u,H,[])&=\mathrm{false},\\
+ \operatorname{Scan}(u,H,e::L)&=\operatorname{Scan}(u,H,L)&&\text{if }a\ne u,\\
+ &=\mathrm{true}&&\text{if }a=u\text{ and }b\in H,\\
+ &=\operatorname{Visit}(b,H\mathbin{+\!+}[b])\lor\operatorname{Scan}(u,H,L)
+ &&\text{otherwise}.
+ \end{aligned}
+\]
+
+The final disjunction short-circuits in the displayed order: the scan resumes only when the recursive visit returns false. Each Visit scans the entire original E, and the outer result is
+
+\[
+ \operatorname{CycleExists}(G)=
+ \operatorname{any}_{u\in V}\operatorname{Visit}(u,[u]),
+\]
+
+in original node order. For recursive calls, auxiliary coverage places every edge target in unseen U or H. Since a recursive target b is absent from H, it occurs in U; removing its occurrences gives |U'| < |U|. Local scan recursion instead shortens L. These two finite decreases establish termination while preserving every branch and the ordered held path. An empty E makes every scan false; a matching edge to H makes its scan true immediately.
+
 
 64. Cycle detection and complete return paths
 

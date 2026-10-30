@@ -2771,7 +2771,55 @@ The prefix-family predicate rejects empty families, empty words, repeated words 
 
 Fixed support retains the complete ordered Cartesian product at the specified width. The shorter support concatenates all products at positive widths below that width, in increasing width order. Native membership and count proofs establish the complete original enumeration and its strict multiplicity-count inequality whenever the raw helper accepts. The pigeonhole argument rules out a pairwise-distinct shorter assignment to every generated occurrence. For set-injective coding of distinct messages, the distinct-label requirement is inherited from the registered Information Quantity complete_word_support domain, rather than added to Compression's executable guard. A native bridge proves that this canonical support is exactly the Compression product and establishes the no-injective-short-code theorem on that domain. The broader raw helper accepts repeated labels; its list-count result is preserved, without treating repeated equal words as distinct messages. The native raw helper therefore preserves repeated alphabet labels and their output multiplicities without an additional distinctness guard.
 
-Compression and Redundancy retains all 1024 kernels and all five operational witnesses. Fresh native execution matches every original program field, including actual candidate lookups, controls and digests. The cumulative 11626 source-expression comparisons cover exact descriptions, errors, prefix families and complete fixed/short supports. These results complete the entry on its registered canonical support boundary, without a universal best compressor, fitted distribution or real-valued asymptotic rate.
+Compression and Redundancy retains all 1,024 kernels and all five operational witnesses. Fresh native execution matches every original program field, including actual candidate lookups, controls and digests. The cumulative 11,626 source-expression comparisons cover exact descriptions, errors, prefix families and complete fixed/short supports. These results complete the entry on its registered canonical support boundary, without a universal best compressor, fitted distribution or real-valued asymptotic rate.
+
+
+For a family W of words, the source tests proper prefixes by
+
+\[
+ \operatorname{properPrefix}(u,v)\iff |u|<|v|\land\operatorname{take}_{|u|}(v)=u.
+\]
+
+Prefix admission requires W≠[], every word nonempty, distinct words, and no proper-prefix relation between distinct members. Suppose two admitted parses begin with u and v and have equal concatenations, u++A=v++B. Cancelling equal leading cells recursively proves that either v=u++r or u=v++r. If r is nonempty, the shorter word is a proper prefix of the longer, contradicting admission; if r is empty, u=v. Cancel this common first word and apply induction to the remaining parses. A nonempty parse cannot equal an empty parse because its first word is nonempty. Thus for any two finite parses L,R over W,
+
+\[
+ \operatorname{concat}(L)=\operatorname{concat}(R)\ \Longrightarrow\ L=R.
+\]
+
+For an ordered label list A, define the complete word list recursively by
+
+\[
+ W_0=[\,[]\,],\qquad W_{n+1}=\operatorname{concat}_{a\in A}[a::w:w\in W_n].
+\]
+
+The raw fixed-support helper admits exactly |A|≥2 and a nonempty position list P, and returns W_{|P|}. It does not test distinctness of A. Every list occurrence is retained. With q=|A|, distributing list length over the outer concatenation gives |W_{n+1}|=q|W_n| and hence |W_n|=q^n. Membership is exactly word length n with every cell drawn from A.
+
+Define T_0=[] and T_{n+1}=T_n++W_{n+1}. Then
+
+\[
+ w\in T_n\iff 0<|w|\le n\land\forall c\in w,\ c\in A,
+ \qquad |T_n|=\sum_{j=1}^{n}q^j.
+\]
+
+The shorter nonempty support for a width-N source is T_{N-1}, preserving increasing width order. For q≥2, its strict count bound follows without omitting any generated word. At n=0, |T_0|=0<q=|W_1|. If |T_n|<|W_{n+1}|, then
+
+\[
+ |T_{n+1}|=|T_n|+|W_{n+1}|
+ <2|W_{n+1}|\le q|W_{n+1}|=|W_{n+2}|.
+\]
+
+Therefore every admitted raw fixed support satisfies |T_{N-1}|<|W_N|, including when repeated labels produce repeated equal words.
+
+For any duplicate-free list C contained in a finite list T, the removal induction gives |C|≤|T|: remove the head of C from T, use the head's membership to make T strictly shorter, and use C's distinctness to keep its tail contained in the remainder. If a proposed code f maps every generated full-support word into T_{N-1} and the full output list map(f,W_N) is duplicate-free, this yields
+
+\[
+ |W_N|=|\operatorname{map}(f,W_N)|\le|T_{N-1}|<|W_N|,
+\]
+
+a contradiction. This establishes the occurrence-list result on the raw helper's exact domain.
+
+For the registered complete_word_support domain, admission already supplies distinct alphabet labels. Induction through the Cartesian-product construction makes W_N duplicate-free: different leading labels separate blocks, and the tail induction separates words within each block. Injectivity of f on W_N then makes map(f,W_N) duplicate-free. The canonical bridge returns the identical W_N from the Compression helper, so the preceding contradiction proves the no-injective-short-code result on that inherited domain. The bridge adds no condition to the raw executable helper and preserves both source domains.
+
 
 100. Finite channel admission and exact confusability
 

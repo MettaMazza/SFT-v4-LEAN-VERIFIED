@@ -1,4 +1,4 @@
-## 172 / 2,781 V3 entries complete
+## 173 / 2,781 V3 entries complete
 
 **8,393 Lean theorems proved · 0 axiom dependencies · Communication complete.**
 
@@ -61,14 +61,14 @@ flowchart LR
 
 Entry completion means the entry’s actual pinned V3 content is formalised and its applicable checks pass. Entries are completed in registered dependency order. Missing work must identify a specific V3 source component; general host-library or unrelated platform tasks do not hold a scientific entry open.
 
-**8,393 proofs completed · 64,358 candidate records matched · 172 model entries complete · Communication complete.**
+**8,393 proofs completed · 64,358 candidate records matched · 173 model entries complete · Communication complete.**
 
 | Progress measure | Current result |
 | :--- | :--- |
 | Lean theorems proved | **8,393**, all with zero axiom dependencies |
 | Definitions and theorems audited | **19,129**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **64,358 / 64,358** across 176 represented source entries |
-| Complete model entries | **172 / 2,781** — [latest completion evidence](verification/TURN_360_QUANTUM_COMPLETION.json) |
+| Complete model entries | **173 / 2,781** — [latest completion evidence](verification/TURN_361_QUANTUM_COMPLETION.json) |
 
 | Source component | Verified work | Evidence |
 | :--- | :--- | :--- |
@@ -89,7 +89,7 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | **Form construction** | Exact finite productions, injective tuple encoding and acceptance of every generated form by the tuple/list/string validator | [Derivation](SFT/Foundation/FormConstruction.lean) |
 | **Source correspondence** | All 47,206 candidate records preserve source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_279_PARITY_REPORT.json) |
 
-**Completed source entries: 172 / 2,781.** 4 entries are in progress and 2,605 remain pending. Exact source-component evidence is recorded in COVERAGE.json.
+**Completed source entries: 173 / 2,781.** 3 entries are in progress and 2,605 remain pending. Exact source-component evidence is recorded in COVERAGE.json.
 
 [Read the current axiom audit →](verification/TURN_364_BUILD.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 19,129 axiom audits →](verification/TURN_364_ALL_DECLARATIONS_AUDIT.log)
 
@@ -235,7 +235,7 @@ Distributed Partial Order and Consensus: native carrier,closure,trace,compositio
 
 Agreement Impossibility: native contradiction for equal local observations with different required decisions,exact scheduler support,complete witness enumeration and retained successor proofs pass with zero axioms;1,024 kernel cases pass. Full-program comparison runs alongside the earlier batch.
 
-DistributedOrder, Consensus complete: original full-program comparisons PASS; dependency-ordered completed count 172 / 2,781.
+DistributedOrder, Consensus complete: original full-program comparisons PASS; dependency-ordered completed count 173 / 2,781.
 
 Replication/Consistency: native source-bound update traces,identity preservation,complete state classes,composition,successor and retained order-loss proofs pass with zero axioms.726 kernel outputs and two concrete replay orders pass. Full-program comparison runs concurrently with Agreement Impossibility.
 

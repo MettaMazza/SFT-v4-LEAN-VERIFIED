@@ -1047,3 +1047,7 @@ import SFT.QuantumComputation.Communication
 import SFT.QuantumComputation.CommunicationGrammar
 import SFT.QuantumComputation.CommunicationControls
 import SFT.QuantumComputation.CommunicationEvidence
+import SFT.QuantumComputation.Coding
+import SFT.QuantumComputation.CodingGrammar
+import SFT.QuantumComputation.CodingControls
+import SFT.QuantumComputation.CodingEvidence

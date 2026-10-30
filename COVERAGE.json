@@ -10483,14 +10483,14 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-QUANTUM-CIRCUIT-001-63e751cf9ab382cd.json",
       "statement": "The forced quantum circuits kernel retains generated wires; information units; reversible gates; causal circuit order; complete branchwise evaluation; inverse circuit; observation boundary; resource ledger; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
       "title": "Fold quantum circuit syntax and semantics law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/QuantumComputation/Circuit.lean",
         "SFT/QuantumComputation/CircuitGrammar.lean",
         "SFT/QuantumComputation/CircuitControls.lean",
         "SFT/QuantumComputation/CircuitEvidence.lean"
       ],
-      "artifact_runtime_parity": "pending",
+      "artifact_runtime_parity": "PASS all256 actual identifier lookups,all original program fields and hashes,unknown-ID rejection.",
       "registration_sha256": "4b71701383c3e7a1eb7fb339887039335f0b52dd93f37d5f63e651e104bbed36",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -10536,10 +10536,9 @@
         "status": "independently_replicated",
         "title": "Fold quantum circuit syntax and semantics law"
       },
-      "remaining": [
-        "Full original program13712 comparison;complete in dependency order after Gate."
-      ],
-      "verified_scope": "applicationAdmitted proves accepted original gate application preserves state admission; evaluationHasExactTrace derives the full causal Forward trace from successful executable evaluation and the original admission conditions.; circuitInverseAndLedger proves the exact reverse-order inverse,one predecessor state per gate,and unchanged complete branch count.; circuitPhaseCycle proves the original phase cycle persists through every gate;circuitObservationRecord proves the terminal record has the initial branch count and reconstructs the full terminal state with that same cycle.; Shared generated support,information units,pair-cell wires,gate semantics and serial evaluation unchanged;original3264 gate/phase,4165 serial-evaluation and8537 observation comparisons retained.; Exact complete256 grammar,8 witnesses,4 controls and every claim-specific program field preserved. Fresh registered build/zeroaxiom/parity PASS;full original program13712 running."
+      "remaining": [],
+      "verified_scope": "applicationAdmitted proves accepted original gate application preserves state admission; evaluationHasExactTrace derives the full causal Forward trace from successful executable evaluation and the original admission conditions.; circuitInverseAndLedger proves the exact reverse-order inverse,one predecessor state per gate,and unchanged complete branch count.; circuitPhaseCycle proves the original phase cycle persists through every gate;circuitObservationRecord proves the terminal record has the initial branch count and reconstructs the full terminal state with that same cycle.; Shared generated support,information units,pair-cell wires,gate semantics and serial evaluation unchanged;original3264 gate/phase,4165 serial-evaluation and8537 observation comparisons retained.; Exact complete256 grammar,8 witnesses,4 controls and every claim-specific program field preserved. Fresh registered build/zeroaxiom/parity PASS;full original program13712 running.",
+      "completion_evidence": "verification/TURN_357_QUANTUM_COMPLETION.json"
     },
     {
       "branch": "quantum_computation",
@@ -10823,8 +10822,13 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-QUANTUM-CODING-001-b79afc51951dfbeb.json",
       "statement": "The forced quantum coding kernel retains logical branch support; redundant joint words; reversible encoder; declared error actions; disjoint syndrome supports; decoder and reconstruction trace; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
       "title": "Fold quantum coding law",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/QuantumComputation/Coding.lean",
+        "SFT/QuantumComputation/CodingGrammar.lean",
+        "SFT/QuantumComputation/CodingControls.lean",
+        "SFT/QuantumComputation/CodingEvidence.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "0b366237f97a615862eee273cb0bd6fbd2199ffa5743290858d1fc57712b0eec",
       "v3_registration": {
@@ -10870,7 +10874,11 @@
         "statement": "The forced quantum coding kernel retains logical branch support; redundant joint words; reversible encoder; declared error actions; disjoint syndrome supports; decoder and reconstruction trace; branch support, phase, transformation, observation, composition and resources remain exact, finite, source-bound and free of imported amplitudes or postulates.",
         "status": "independently_replicated",
         "title": "Fold quantum coding law"
-      }
+      },
+      "remaining": [
+        "Full original program89079 comparison;complete in dependency order after Communication."
+      ],
+      "verified_scope": "declaredErrorSupportsDisjoint proves the original held and returned words cannot overlap under their declared bounded error actions.; everyDeclaredErrorReconstructed proves every mask in the actual generated error family decodes to its original logical label.; noDeclaredError proves the empty error action preserves the exact word;encoderReconstruction proves the original admitted encoder has the original decoder as a left inverse.; Shared encodeAdmission,heldCorrection,returnedCorrection and exhaustiveCorrection preserve original label/trace guards,redundant words,all masks,decoder domain and recovery at arbitrary generated depth. Original1322 fault-operation comparisons,including168 complete census rows at widths3/5/7,remain applicable. No error family or decoder restriction is added.; Exact complete256 grammar,8 witnesses,4 controls and every claim-specific program field preserved. Registered build/zeroaxiom/fresh parity PASS;full original program89079 running."
     },
     {
       "branch": "quantum_computation",
@@ -190218,13 +190226,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T08:34:16.107139+00:00",
+  "updated_at": "2026-10-30T08:38:16.479350+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 5,
-    "pending": 2608,
-    "fully_reconstructed_claims": 168,
-    "axiom_free_exported_results": 8345,
-    "axiom_free_audited_definitions_and_theorems": 18985
+    "pending": 2607,
+    "fully_reconstructed_claims": 169,
+    "axiom_free_exported_results": 8360,
+    "axiom_free_audited_definitions_and_theorems": 19031
   }
 }

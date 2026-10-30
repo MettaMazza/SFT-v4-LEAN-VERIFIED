@@ -780,17 +780,125 @@ The exhaustive check on an appended domain evaluates the original prefix first. 
 
 Every enlarged-carrier triple either consists entirely of old members or contains the added member in at least one position. For an accepted old table, closure keeps both intermediate old pair results in the old carrier. Preserving old operation cells therefore preserves the full composed old triple calculations. If the old table is associative, the enlarged table is associative exactly when every triple containing the added member passes its original association check. All seven new-coordinate combinations are included; no enumeration or scientific guard is removed.
 
+
+Write the old carrier list as C, the appended label as z, and C' = C ++ [z]. Write μ and μ' for the old and extended operations, with μ'(a,b) = μ(a,b) for a,b ∈ C. Each equality here denotes successful lookup as well as equality of the resulting label. The exhaustive Boolean check A satisfies
+
+\[
+ A(P,C\mathbin{+\!+}[z])=
+ \begin{cases}
+ \operatorname{error}(e),&A(P,C)=\operatorname{error}(e),\\
+ \operatorname{ok}(\mathrm{false}),&A(P,C)=\operatorname{ok}(\mathrm{false}),\\
+ P(z),&A(P,C)=\operatorname{ok}(\mathrm{true}).
+ \end{cases}
+\]
+
+If e is an old two-sided identity, preservation of old cells gives μ'(e,a) = a = μ'(a,e) for every a ∈ C. Thus
+
+\[
+ e\text{ is an identity on }C'
+ \iff \mu'(e,z)=z\ \land\ \mu'(z,e)=z.
+\]
+
+For old a,b,c, closure gives u = μ(a,b) ∈ C and v = μ(b,c) ∈ C. Consequently the intermediate and outer lookups are all preserved:
+
+\[
+ \mu'(\mu'(a,b),c)=\mu'(u,c)=\mu(u,c),\qquad
+ \mu'(a,\mu'(b,c))=\mu'(a,v)=\mu(a,v).
+\]
+
+The old associativity equality therefore transfers. Expanding each coordinate of C' gives the old block C×C×C and seven remaining blocks:
+
+\[
+ (z,C,C),\ (C,z,C),\ (C,C,z),\ (z,z,C),\
+ (z,C,z),\ (C,z,z),\ (z,z,z).
+\]
+
+Here each displayed triple denotes the corresponding Cartesian block of labels, retaining list enumeration. Under old associativity and closure, associativity on C' is therefore equivalent to
+
+\[
+ \forall a,b,c\in C',\quad
+ (a=z\lor b=z\lor c=z)\Longrightarrow
+ \mu'(\mu'(a,b),c)=\mu'(a,\mu'(b,c)).
+\]
+
+Every required lookup must succeed; an error is not an equality witness.
+
+
 47. Return mates under carrier extension
 
 The exhaustive mate filter preserves carrier order and propagates lookup errors. With old operation cells retained, each old member’s enlarged search consists of its original candidate search followed by the added candidate’s two-sided return test. An originally unique mate remains the only mate precisely when that last test returns false. A passing added candidate creates a second match, and an error propagates.
 
 Given prior successful return mates and preservation of old cells, successful return mates on the enlarged carrier are equivalent to three obligations: both identity equations hold for the added member; its return test fails for every old member; and its own exhaustive search over the enlarged carrier has exactly one mate. The original identity precheck and singleton requirement remain intact.
 
+
+Define R_e(a,b) as the checked predicate μ(a,b) = e and μ(b,a) = e, and let F_C(a) be the ordered list obtained by filtering C with this predicate. Primes denote the extended operation and carrier. For a ∈ C, preservation of old cells gives R'_e(a,b) = R_e(a,b) for every old b. Hence, after a successful old search,
+
+\[
+ F_{C'}(a)=
+ \begin{cases}
+ F_C(a)\mathbin{+\!+}[z],&R'_e(a,z)=\operatorname{ok}(\mathrm{true}),\\
+ F_C(a),&R'_e(a,z)=\operatorname{ok}(\mathrm{false}),\\
+ \operatorname{error}(u),&R'_e(a,z)=\operatorname{error}(u).
+ \end{cases}
+\]
+
+An old search error propagates before the appended test is reached. If F_C(a) = [m_a], the successful alternatives have lengths 2 and 1 respectively. Therefore
+
+\[
+ \exists m\;F_{C'}(a)=[m]
+ \iff R'_e(a,z)=\operatorname{ok}(\mathrm{false}),
+\]
+
+and in the successful case the retained mate is exactly m_a. This is a singleton-list condition, preserving the original enumeration and multiplicities. Combining this equation for every old a with the identity result of section 46 yields
+
+\[
+ \begin{aligned}
+ \operatorname{ReturnSuccess}(C',e)\iff{}&
+ [\mu'(e,z)=z\land\mu'(z,e)=z]\\
+ &\land[\forall a\in C,\ R'_e(a,z)=\operatorname{ok}(\mathrm{false})]\\
+ &\land[\exists m,\ F_{C'}(z)=[m]].
+ \end{aligned}
+\]
+
+This equivalence assumes prior successful return mates and preserved old cells. The last search still examines all of C', including the appended candidate.
+
+
 48. Operation maps under carrier extension
 
 The original map-admission checks split into dictionary cardinality, images for old members and the added member, and operation preservation for old and newly formed source pairs. All left, right and self pairs involving the added member remain required.
 
 When old source and target operation cells and old dictionary images are retained, source closure ensures that the old operation result also retains its image. Consequently the complete old preservation-cell calculation is unchanged. Old image coverage transfers when the enlarged target retains its old carrier. Given prior map success and these preservation conditions, enlarged map success is equivalent to the original dictionary-size guard, target membership of the added member’s image, and every new source-pair preservation check.
+
+
+Let C,D be the old source and target carriers, μ,ν their operations, and f the dictionary produced by the original mapping constructor. The extended objects are C' = C ++ [z], D', μ',ν',f'. The admission condition is
+
+\[
+ |f'|=|C'|,\qquad
+ \forall a\in C',\ f'(a)\in D',\qquad
+ \forall a,b\in C',\ f'(\mu'(a,b))=\nu'(f'(a),f'(b)).
+\]
+
+The size is the number of entries in the constructed dictionary, not the length of an unprocessed mapping input. All images and operation lookups in the displayed equations must exist. Suppose the old table was accepted, the old map passed, D ⊆ D', and the extended operations and images agree on their old domains. For a,b ∈ C, closure places r = μ(a,b) in C. Thus
+
+\[
+ \begin{aligned}
+ f'(\mu'(a,b))&=f'(r)=f(r)=f(\mu(a,b)),\\
+ \nu'(f'(a),f'(b))&=\nu'(f(a),f(b))=\nu(f(a),f(b)).
+ \end{aligned}
+\]
+
+The old map equality identifies the two final expressions, so all old pair checks transfer. Likewise f'(a) = f(a) ∈ D ⊆ D' transfers old image coverage. Splitting C'×C' leaves the old block and (C,z), (z,C), (z,z). Consequently the remaining necessary and sufficient checks are
+
+\[
+ \begin{aligned}
+ &|f'|=|C'|,\qquad f'(z)\in D',\\
+ &\forall a,b\in C',\ (a=z\lor b=z)\Longrightarrow
+ f'(\mu'(a,b))=\nu'(f'(a),f'(b)).
+ \end{aligned}
+\]
+
+This reduction preserves the original size guard, image coverage and every newly formed pair; it follows by transferring the old checks, not by dropping them.
+
 
 49. Concrete dictionary extension
 

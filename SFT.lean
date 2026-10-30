@@ -1007,3 +1007,7 @@ import SFT.QuantumComputation.StateComposition
 import SFT.QuantumComputation.StateCompositionGrammar
 import SFT.QuantumComputation.StateCompositionControls
 import SFT.QuantumComputation.StateCompositionEvidence
+import SFT.QuantumComputation.Superposition
+import SFT.QuantumComputation.SuperpositionGrammar
+import SFT.QuantumComputation.SuperpositionControls
+import SFT.QuantumComputation.SuperpositionEvidence

@@ -985,3 +985,17 @@ import SFT.Computation.MathematicalModellingWitnesses
 import SFT.Computation.MathematicalModellingGrammar
 import SFT.Computation.MathematicalModellingControls
 import SFT.Computation.MathematicalModellingEvidence
+import SFT.QuantumComputation.ReversibleModel
+import SFT.QuantumComputation.ReversiblePhase
+import SFT.QuantumComputation.ReversibleApplication
+import SFT.QuantumComputation.ReversibleComposition
+import SFT.QuantumComputation.ReversibleObservation
+import SFT.QuantumComputation.ReversibleFaults
+import SFT.QuantumComputation.ReversibleCorrection
+import SFT.QuantumComputation.ReversibleWitnesses
+import SFT.QuantumComputation.ReversibleGrammar
+import SFT.QuantumComputation.ReversibleControls
+import SFT.QuantumComputation.ReversibleEvidence
+import SFT.QuantumComputation.ReversibleSuccessor
+import SFT.QuantumComputation.ReversibleExecution
+import SFT.QuantumComputation.ReversibleInterpretation

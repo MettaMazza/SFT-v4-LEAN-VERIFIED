@@ -2674,6 +2674,39 @@ For one deterministic microstate, the exact partition is one class whose native 
 
 The general successor derivation, exact weighted class ledger and refinement containment/count results complete the original finite entropy statement. All 512 candidate kernels and all five operational witnesses are retained; fresh native program output matches the pinned census, actual lookup decisions, registration, closure, controls and digest fields. The retained 9805 independent input comparisons cover partition/closed pairs, raw unresolved pairs, refinement and normalized Fraction records, including the original invalid and duplicate input domains. Entropy and Uncertainty is complete at V3's declared finite boundary. Conventional scalar Shannon summaries remain subject to the separately declared source correspondence map.
 
+
+For a fresh state x∉S, let S'=S++[x] and O'=O++[(x,v)]. Last-row lookup gives f_{O'}(x)=v. Induction over the observation rows, using x≠s for every old state s, gives f_{O'}(s)=f_O(s). Consequently the ordered observation and fibre equations are
+
+\[
+ \operatorname{observedValues}(O',S')=\operatorname{observedValues}(O,S)\mathbin{++}[v],
+ \qquad F'_l=F_l\mathbin{++}\begin{cases}[x],&v=l,\\ \lbrack\rbrack,&v\ne l.\end{cases}
+\]
+
+Freshness preserves distinct support and distinct observation keys. The old key coverage extends in both directions by the same appended key x, so partition admission is preserved. The assigned fibre appends x; the others retain their complete ordered traces, including when v is a newly occurring label.
+
+The ordered successor pairs are described by E_x([])=[] and
+
+\[
+ E_x(y::R)=\bigl([(y,z):z\in R]\mathbin{++}[(y,x)]\bigr)\mathbin{++}E_x(R).
+\]
+
+Expanding the positional-pair recurrence and distributing the head map over R++[x] proves P(M++[x])=E_x(M) by induction. Splitting each concatenation in that induction also proves
+
+\[
+ p\in E_x(M)\iff p\in P(M)\ \lor\ \exists y\in M,\ p=(y,x).
+\]
+
+Thus each new pair appears at its original nested-loop position, alongside the preserved prior pairs. This formula applies directly to the changed fibre's unresolved-pair contents.
+
+For any returned successor record of label l with normalized part (a'_l,b'_l), the exact-part identity and the fibre equation give
+
+\[
+ \bigl(|F_l|+\mathbf1_{v=l}\bigr)b'_l=a'_l(|S|+1).
+\]
+
+All class weights therefore use the new total, including unchanged fibres. At the base S=[x], O=[(x,v)], key coverage and distinctness hold directly, and the partition is [(v,[x])]. Normalization of (1,1) gives numerator and denominator both 1, while P([x])=[] gives structural empty-One uncertainty. These base and successor equations retain the exact finite construction.
+
+
 98. Exact compression descriptions and reconstruction provenance
 
 A dictionary description is admitted precisely when its dictionary and token trace are nonempty, dictionary keys are unique and every retained token has a dictionary entry. The executable source allows empty dictionary blocks and empty string labels; the translation retains these domains. Reconstruction concatenates each referenced block in token order. The native lookup theorem connects each selected block to its unique retained dictionary row, and the provenance theorem identifies the supplying token and block for every reconstructed cell.
@@ -2681,6 +2714,56 @@ A dictionary description is admitted precisely when its dictionary and token tra
 Losslessness is equivalent to a nonempty source message and exact equality with the reconstructed message. An empty source message returns false without attempting reconstruction, preserving the source short circuit. Malformed descriptions retain the original reconstruction error, while a valid unequal reconstruction gives the original redundancy error. The redundancy trace retains a token/cell pair for each produced occurrence; projecting its cells recovers the exact source message, and its length equals the source length.
 
 The resource record retains the dictionary rows in order, every token cell in order, the reconstructed trace and their complete resource concatenation. Native count identities retain every dictionary row and token occurrence. One retained token reconstructs exactly its registered block; appending any valid token appends precisely its block to the message and one cell to the resource trace. These results establish the source token-successor clause. Independent comparisons cover 1720 reconstruction/resource cases and 6880 lossless/redundancy cases, including duplicate keys, missing tokens, empty blocks, repeated tokens and empty-message behavior. Prefix parsing and the complete fixed/short support boundary remain distinct components of the Compression and Redundancy entry.
+
+
+Write D for the ordered dictionary, T for the token list and B_D(t) for first-key lookup's block. Description admission is exactly
+
+\[
+ V(D,T)\iff D\ne[]\land\operatorname{Distinct}(\operatorname{keys}(D))
+ \land T\ne[]\land\forall t\in T,\ t\in\operatorname{keys}(D).
+\]
+
+Neither nonempty blocks nor nonempty string labels are added to this predicate. With C_D(T)=concat_{t∈T}B_D(t), reconstruction obeys
+
+\[
+ \operatorname{reconstruct}(D,T)=\operatorname{ok}(W)
+ \iff V(D,T)\land W=C_D(T).
+\]
+
+Admission supplies a dictionary row for each token; distinct keys make its first lookup equal that row's block. Membership in concatenation then proves both directions of the provenance statement
+
+\[
+ c\in W\iff\exists t,U,\ t\in T\land(t,U)\in D\land c\in U.
+\]
+
+The forward direction selects a supplying token block; the reverse direction uses unique-key lookup to insert that block's cell into the concatenation. Repeated tokens retain repeated output occurrences.
+
+The lossless result is true precisely when M≠[] and reconstruct(D,T)=ok(M). For M=[], the result is false immediately, including for an invalid description. For a nonempty message, reconstruction errors propagate; successful unequal reconstruction yields false. Redundancy returns the original exact-reconstruction error for a false result and propagates reconstruction errors otherwise.
+
+Define the ordered occurrence ledger
+
+\[
+ Q_D(T)=\operatorname{concat}_{t\in T}[(t,c):c\in B_D(t)].
+\]
+
+Projection commutes with concatenation, and projecting each block's pairs returns that block. Induction over T therefore proves map(second,Q_D(T))=C_D(T). For a lossless description this is M, and length preservation under mapping yields |Q_D(T)|=|M|. The ledger retains occurrences rather than merely the set of supplying tokens.
+
+The resource traces are
+
+\[
+ A(D)=[\,[\text{dictionary},t]\mathbin{++}U:(t,U)\in D\,],\qquad
+ H(T)=[\,[\text{token},t]:t\in T\,],\qquad R(D,T)=A(D)\mathbin{++}H(T).
+\]
+
+Their outer list lengths satisfy |A(D)|=|D|, |H(T)|=|T| and |R(D,T)|=|D|+|T|. These count retained resource rows, not character lengths. For a valid description and a dictionary row (t,U), appending t preserves admission and gives
+
+\[
+ C_D(T\mathbin{++}[t])=C_D(T)\mathbin{++}U,\qquad
+ R(D,T\mathbin{++}[t])=R(D,T)\mathbin{++}[[\text{token},t]].
+\]
+
+The decoding equality follows by distributing concatenation over appended token lists and using unique-key lookup. For the singleton token list [t], the same argument gives reconstruct(D,[t])=ok(U), including U=[]. This establishes the base and token-successor clauses without changing the executable domain.
+
 
 99. Prefix parsing and the complete-support shortening boundary
 

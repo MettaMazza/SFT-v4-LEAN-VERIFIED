@@ -913,3 +913,18 @@ def main : IO Unit := do
 
   for c in SFT.Physics.RadioactivityGrammar.candidates do
     IO.println ("RadioactivityGrammar\t" ++ SFT.Physics.RadioactivityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.RadioactivityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.RadioactivityGrammar.exactForm c ++ "\t" ++ SFT.Physics.RadioactivityGrammar.decisionReason c)
+
+  for c in SFT.Physics.NuclearReactionsGrammar.candidates do
+    IO.println ("NuclearReactionsGrammar\t" ++ SFT.Physics.NuclearReactionsGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NuclearReactionsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NuclearReactionsGrammar.exactForm c ++ "\t" ++ SFT.Physics.NuclearReactionsGrammar.decisionReason c)
+
+  for c in SFT.Physics.FissionGrammar.candidates do
+    IO.println ("FissionGrammar\t" ++ SFT.Physics.FissionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FissionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FissionGrammar.exactForm c ++ "\t" ++ SFT.Physics.FissionGrammar.decisionReason c)
+
+  for c in SFT.Physics.FusionGrammar.candidates do
+    IO.println ("FusionGrammar\t" ++ SFT.Physics.FusionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FusionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FusionGrammar.exactForm c ++ "\t" ++ SFT.Physics.FusionGrammar.decisionReason c)
+
+  for c in SFT.Physics.ColourCouplingGrammar.candidates do
+    IO.println ("ColourCouplingGrammar\t" ++ SFT.Physics.ColourCouplingGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ColourCouplingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ColourCouplingGrammar.exactForm c ++ "\t" ++ SFT.Physics.ColourCouplingGrammar.decisionReason c)
+
+  for c in SFT.Physics.PlanckTerminalGrammar.candidates do
+    IO.println ("PlanckTerminalGrammar\t" ++ SFT.Physics.PlanckTerminalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PlanckTerminalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PlanckTerminalGrammar.exactForm c ++ "\t" ++ SFT.Physics.PlanckTerminalGrammar.decisionReason c)

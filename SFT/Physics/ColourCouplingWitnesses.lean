@@ -1,0 +1,39 @@
+import SFT.Physics.ColourCouplingDerivation
+namespace SFT.Physics.ColourCouplingWitnesses
+open ColourCouplingDerivation
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+
+def exactCheck : Bool := match colourCoupling with
+ | .ok result => result.numerator == 2 && result.denominator == 3
+ | .error _ => false
+
+def reducedCheck : Bool := value.numerator == 2 && value.denominator == 3
+
+def independentCheck : Bool := match FoldFirstReturn.generatorPeriod with
+ | .error _ => false
+ | .ok generator => match binaryCount with
+   | .error _ => false
+   | .ok binary => generator == 3 && binary == 2
+
+def witnesses : List Witness := [⟨"exact-coupling","Complete Fold support over generator-three support is exactly two-thirds.",exactCheck⟩,⟨"reduced-ratio","The numerator and denominator share no further positive whole divisor.",reducedCheck⟩,⟨"threshold-independent","The ratio is constructed before the downstream reordering threshold.",independentCheck⟩]
+
+theorem exactCheckPassed : exactCheck = true := by
+ unfold exactCheck
+ rw [forcedFromFoldAndGenerator]
+ rfl
+
+theorem reducedCheckPassed : reducedCheck = true := rfl
+
+theorem independentCheckPassed : independentCheck = true := by
+ unfold independentCheck
+ rw [FoldFirstReturn.generatorPeriodThree,binaryCountTwo]
+ rfl
+
+theorem allWitnessesPass : witnesses.all Witness.passed = true := by
+ change (exactCheck && (reducedCheck && (independentCheck && true))) = true
+ rw [exactCheckPassed,reducedCheckPassed,independentCheckPassed]
+ rfl
+end SFT.Physics.ColourCouplingWitnesses

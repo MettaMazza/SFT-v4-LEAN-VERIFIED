@@ -17818,9 +17818,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-NUCLEAR-REACTIONS-001-a66b3922831670f9.json",
       "statement": "A nuclear reaction is a complete map between incident and outgoing composite words in which every material, energy, momentum and held conserved label is paired across the boundary.",
       "title": "Nuclear reaction and channel accounting",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/NuclearReactions.lean",
+        "SFT/Physics/NuclearReactionsGrammar.lean",
+        "SFT/Physics/NuclearReactionsEvidence.lean",
+        "SFT/Physics/NuclearReactionsExperiment.lean",
+        "SFT/Physics/NuclearReactionsValidation.lean",
+        "SFT/Physics/NuclearReactionsValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "e40507a94a842f81ba9960b9383146f7cf5e910c53d7fda7c008afe8ee7ddf46",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -17861,7 +17868,10 @@
         "statement": "A nuclear reaction is a complete map between incident and outgoing composite words in which every material, energy, momentum and held conserved label is paired across the boundary.",
         "status": "empirically_tested",
         "title": "Nuclear reaction and channel accounting"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete material, held-label, energy and momentum channel ledger with finite original input/output word endpoints or named boundaries; ordered carrier/provenance equality, all aggregate conservation, complete channel preimages and counts, and recurrence of every retained incident/product word.",
+      "completion_evidence": "verification/TURN_496_NUCLEARREACTIONS_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -17873,9 +17883,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-NUCLEAR-FISSION-001-3686041dfb9a9bfd.json",
       "statement": "Fission is a nuclear transition whose output support contains multiple separately recurrent composite words and named released carriers, with all labels conserved across the decomposition.",
       "title": "Fission decomposition",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/NuclearFission.lean",
+        "SFT/Physics/FissionGrammar.lean",
+        "SFT/Physics/FissionEvidence.lean",
+        "SFT/Physics/FissionExperiment.lean",
+        "SFT/Physics/FissionValidation.lean",
+        "SFT/Physics/FissionValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "ccbfdb8072de9698a646fe03731e6dc5bbc2ddcceda745fc988a9572d73c60eb",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -17916,7 +17933,10 @@
         "statement": "Fission is a nuclear transition whose output support contains multiple separately recurrent composite words and named released carriers, with all labels conserved across the decomposition.",
         "status": "empirically_tested",
         "title": "Fission decomposition"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Exact one-input decomposition into at least two separately recurrent original joint words, complete product list retained, exclusion of a single internal excitation and inherited complete material/label/energy/momentum carrier closure.",
+      "completion_evidence": "verification/TURN_496_FISSION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -17928,9 +17948,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-NUCLEAR-FUSION-001-30416752fa5273c2.json",
       "statement": "Fusion is a transition from multiple incident nuclear words to one more tightly boundary-closed recurrent product word plus the exact positive carriers released by the mass-energy relation.",
       "title": "Fusion composition",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/NuclearFusion.lean",
+        "SFT/Physics/FusionGrammar.lean",
+        "SFT/Physics/FusionEvidence.lean",
+        "SFT/Physics/FusionExperiment.lean",
+        "SFT/Physics/FusionValidation.lean",
+        "SFT/Physics/FusionValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "77ba1e578e6fb0840ad6b0ac4234743427f8389c90a753fd82b5f7a1b137e01a",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -17971,7 +17998,10 @@
         "statement": "Fusion is a transition from multiple incident nuclear words to one more tightly boundary-closed recurrent product word plus the exact positive carriers released by the mass-energy relation.",
         "status": "empirically_tested",
         "title": "Fusion composition"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete multiple-input/one-bound-product composition, full original input inertial sum paired with the separated binding support, strict positive reduction, exact original two-speed release and named carrier record, complete reaction carrier closure and retained product recurrence.",
+      "completion_evidence": "verification/TURN_496_FUSION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -27203,9 +27233,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001-5ac1c6ce8b4094ba.json",
       "statement": "The complete two-label Fold distinction transported over the generator-three carrier forces the exact positive coupling ratio two-thirds, with no measured or fitted interaction strength.",
       "title": "Exact colour-sector Fold coupling",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ColourCouplingDerivation.lean",
+        "SFT/Physics/ColourCouplingGrammar.lean",
+        "SFT/Physics/ColourCouplingWitnesses.lean",
+        "SFT/Physics/ColourCouplingControls.lean",
+        "SFT/Physics/ColourCouplingEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete128-form formal program, all fields/hashes/controls; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "fdaaa2b86b32cd2837b422e9943e8ef75474eed3df60b2b054074f778d2a3f16",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -27246,7 +27282,10 @@
         "statement": "The complete two-label Fold distinction transported over the generator-three carrier forces the exact positive coupling ratio two-thirds, with no measured or fitted interaction strength.",
         "status": "independently_replicated",
         "title": "Exact colour-sector Fold coupling"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Actual original binary_count and generator_period_three yield the positive reduced two-thirds carrier; both held labels retained distinctly, exact numerator/denominator, unique reduced normalization and unchanged ratio under every positive whole replication. Full seven-axis128 product and all original StructuralPhysicsProgram methods/controls compared to pinned V3; original independent validator passes all four cases.",
+      "completion_evidence": "verification/TURN_496_COLOURCOUPLING_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -36711,9 +36750,81 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-SCALE-PROTON-PLANCK-TERMINAL-003-affd1dc6754854b1.json",
       "statement": "The admitted lower hierarchy counts complete depth-seven massive support as 2^127 in the squared comparison domain. A proton is the hierarchy carrier that retains both colour labels over generator three and one terminal electromagnetic self-coupling. Transporting that exact 2/3 alpha share once and retaining its positive One-complement forces the terminal squared hierarchy before measurement.",
       "title": "Terminal charged-colour proton-to-Planck hierarchy",
-      "lean_status": "in_progress",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/PlanckHierarchy.lean",
+        "SFT/Physics/PlanckTerminalGrammarBase.lean",
+        "SFT/Physics/PlanckTerminalCensus0.lean",
+        "SFT/Physics/PlanckTerminalCensus1.lean",
+        "SFT/Physics/PlanckTerminalCensus2.lean",
+        "SFT/Physics/PlanckTerminalCensus3.lean",
+        "SFT/Physics/PlanckTerminalCensus4.lean",
+        "SFT/Physics/PlanckTerminalCensus5.lean",
+        "SFT/Physics/PlanckTerminalCensus6.lean",
+        "SFT/Physics/PlanckTerminalCensus7.lean",
+        "SFT/Physics/PlanckTerminalCensus8.lean",
+        "SFT/Physics/PlanckTerminalCensus9.lean",
+        "SFT/Physics/PlanckTerminalCensus10.lean",
+        "SFT/Physics/PlanckTerminalCensus11.lean",
+        "SFT/Physics/PlanckTerminalCensus12.lean",
+        "SFT/Physics/PlanckTerminalCensus13.lean",
+        "SFT/Physics/PlanckTerminalCensus14.lean",
+        "SFT/Physics/PlanckTerminalCensus15.lean",
+        "SFT/Physics/PlanckTerminalCensus16.lean",
+        "SFT/Physics/PlanckTerminalCensus17.lean",
+        "SFT/Physics/PlanckTerminalCensus18.lean",
+        "SFT/Physics/PlanckTerminalCensus19.lean",
+        "SFT/Physics/PlanckTerminalCensus20.lean",
+        "SFT/Physics/PlanckTerminalCensus21.lean",
+        "SFT/Physics/PlanckTerminalCensus22.lean",
+        "SFT/Physics/PlanckTerminalCensus23.lean",
+        "SFT/Physics/PlanckTerminalCensus24.lean",
+        "SFT/Physics/PlanckTerminalCensus25.lean",
+        "SFT/Physics/PlanckTerminalCensus26.lean",
+        "SFT/Physics/PlanckTerminalCensus27.lean",
+        "SFT/Physics/PlanckTerminalCensus28.lean",
+        "SFT/Physics/PlanckTerminalCensus29.lean",
+        "SFT/Physics/PlanckTerminalCensus30.lean",
+        "SFT/Physics/PlanckTerminalCensus31.lean",
+        "SFT/Physics/PlanckTerminalCensus32.lean",
+        "SFT/Physics/PlanckTerminalCensus33.lean",
+        "SFT/Physics/PlanckTerminalCensus34.lean",
+        "SFT/Physics/PlanckTerminalCensus35.lean",
+        "SFT/Physics/PlanckTerminalCensus36.lean",
+        "SFT/Physics/PlanckTerminalCensus37.lean",
+        "SFT/Physics/PlanckTerminalCensus38.lean",
+        "SFT/Physics/PlanckTerminalCensus39.lean",
+        "SFT/Physics/PlanckTerminalCensus40.lean",
+        "SFT/Physics/PlanckTerminalCensus41.lean",
+        "SFT/Physics/PlanckTerminalCensus42.lean",
+        "SFT/Physics/PlanckTerminalCensus43.lean",
+        "SFT/Physics/PlanckTerminalCensus44.lean",
+        "SFT/Physics/PlanckTerminalCensus45.lean",
+        "SFT/Physics/PlanckTerminalCensus46.lean",
+        "SFT/Physics/PlanckTerminalCensus47.lean",
+        "SFT/Physics/PlanckTerminalCensus48.lean",
+        "SFT/Physics/PlanckTerminalCensus49.lean",
+        "SFT/Physics/PlanckTerminalCensus50.lean",
+        "SFT/Physics/PlanckTerminalCensus51.lean",
+        "SFT/Physics/PlanckTerminalCensus52.lean",
+        "SFT/Physics/PlanckTerminalCensus53.lean",
+        "SFT/Physics/PlanckTerminalCensus54.lean",
+        "SFT/Physics/PlanckTerminalCensus55.lean",
+        "SFT/Physics/PlanckTerminalCensus56.lean",
+        "SFT/Physics/PlanckTerminalCensus57.lean",
+        "SFT/Physics/PlanckTerminalCensus58.lean",
+        "SFT/Physics/PlanckTerminalCensus59.lean",
+        "SFT/Physics/PlanckTerminalCensus60.lean",
+        "SFT/Physics/PlanckTerminalCensus61.lean",
+        "SFT/Physics/PlanckTerminalCensus62.lean",
+        "SFT/Physics/PlanckTerminalCensus63.lean",
+        "SFT/Physics/PlanckTerminalGrammar.lean",
+        "SFT/Physics/PlanckTerminalWitnesses.lean",
+        "SFT/Physics/PlanckTerminalControls.lean",
+        "SFT/Physics/PlanckTerminalEvidence.lean",
+        "SFT/Physics/PlanckColourCorrespondence.lean"
+      ],
+      "artifact_runtime_parity": "PASS complete native1024-form source program and original independent validator; existing source hashes verified unchanged.",
       "registration_sha256": "06490c51c79cbdbd2bad78a16c22874c2b8cff3398ca22f1f84fe41855c1962a",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -36754,11 +36865,9 @@
         "status": "independently_replicated",
         "title": "Terminal charged-colour proton-to-Planck hierarchy"
       },
-      "verified_scope": "All70current runtime modules compiled;238declarations audited zeroaxioms. Fresh complete1024candidate native program matches pinned V3 census, decisions, closure, controls, registration and hashes; original independent validator accepts full output and rejects omitted candidate, extra survivor and failed control.",
-      "remaining": [
-        "Complete the original registered SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001 dependency before registering this entry."
-      ],
-      "verification_evidence": "verification/TURN_490_PLANCK_STATUS.json"
+      "verified_scope": "Complete original terminal hierarchy derivation and1024-form program, all original controls and independent-validator cases; all70runtime sources unchanged from passing comparison,240current declarations freshly audited zeroaxioms, exact coupling correspondence proved; all registered dependencies complete.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_496_PLANCK_TERMINAL_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -191538,13 +191647,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-31T05:56:17.892403+00:00",
+  "updated_at": "2026-10-31T06:11:26.949069+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 1,
-    "pending": 2509,
-    "fully_reconstructed_claims": 271,
-    "axiom_free_exported_results": 12935,
-    "axiom_free_audited_definitions_and_theorems": 30743
+    "in_progress": 0,
+    "pending": 2505,
+    "fully_reconstructed_claims": 276,
+    "axiom_free_exported_results": 13237,
+    "axiom_free_audited_definitions_and_theorems": 31376
   }
 }

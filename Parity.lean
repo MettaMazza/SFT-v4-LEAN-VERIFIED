@@ -808,3 +808,24 @@ def main : IO Unit := do
 
   for c in SFT.Physics.SpeedRelationGrammar.candidates do
     IO.println ("SpeedRelationGrammar\t" ++ SFT.Physics.SpeedRelationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpeedRelationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpeedRelationGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpeedRelationGrammar.decisionReason c)
+
+  for c in SFT.Physics.SuperpositionGrammar.candidates do
+    IO.println ("SuperpositionGrammar\t" ++ SFT.Physics.SuperpositionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SuperpositionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SuperpositionGrammar.exactForm c ++ "\t" ++ SFT.Physics.SuperpositionGrammar.decisionReason c)
+
+  for c in SFT.Physics.InterferenceGrammar.candidates do
+    IO.println ("InterferenceGrammar\t" ++ SFT.Physics.InterferenceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.InterferenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.InterferenceGrammar.exactForm c ++ "\t" ++ SFT.Physics.InterferenceGrammar.decisionReason c)
+
+  for c in SFT.Physics.DiffractionGrammar.candidates do
+    IO.println ("DiffractionGrammar\t" ++ SFT.Physics.DiffractionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DiffractionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DiffractionGrammar.exactForm c ++ "\t" ++ SFT.Physics.DiffractionGrammar.decisionReason c)
+
+  for c in SFT.Physics.PolarizationGrammar.candidates do
+    IO.println ("PolarizationGrammar\t" ++ SFT.Physics.PolarizationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PolarizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PolarizationGrammar.exactForm c ++ "\t" ++ SFT.Physics.PolarizationGrammar.decisionReason c)
+
+  for c in SFT.Physics.DispersionGrammar.candidates do
+    IO.println ("DispersionGrammar\t" ++ SFT.Physics.DispersionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DispersionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DispersionGrammar.exactForm c ++ "\t" ++ SFT.Physics.DispersionGrammar.decisionReason c)
+
+  for c in SFT.Physics.ResonanceGrammar.candidates do
+    IO.println ("ResonanceGrammar\t" ++ SFT.Physics.ResonanceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ResonanceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ResonanceGrammar.exactForm c ++ "\t" ++ SFT.Physics.ResonanceGrammar.decisionReason c)
+
+  for c in SFT.Physics.EnergyMomentumGrammar.candidates do
+    IO.println ("EnergyMomentumGrammar\t" ++ SFT.Physics.EnergyMomentumGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.EnergyMomentumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.EnergyMomentumGrammar.exactForm c ++ "\t" ++ SFT.Physics.EnergyMomentumGrammar.decisionReason c)

@@ -1018,3 +1018,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.CosmicComponentTransportGrammar.candidates do
     IO.println ("CosmicComponentTransportGrammar\t" ++ SFT.Physics.CosmicComponentTransportGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmicComponentTransportGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmicComponentTransportGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmicComponentTransportGrammar.decisionReason c)
+
+  for c in SFT.Physics.VacuumDensityGrammar.candidates do
+    IO.println ("VacuumDensityGrammar\t" ++ SFT.Physics.VacuumDensityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumDensityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumDensityGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumDensityGrammar.decisionReason c)
+
+  for c in SFT.Physics.UnifiedConstantsGrammar.candidates do
+    IO.println ("UnifiedConstantsGrammar\t" ++ SFT.Physics.UnifiedConstantsGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.UnifiedConstantsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.UnifiedConstantsGrammar.exactForm c ++ "\t" ++ SFT.Physics.UnifiedConstantsGrammar.decisionReason c)

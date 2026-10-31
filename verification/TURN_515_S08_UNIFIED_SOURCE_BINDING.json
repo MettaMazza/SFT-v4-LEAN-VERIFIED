@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "step": "S08",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_path": "sft/physics/unified_constants_object_law_v1.py",
+  "source_sha256": "8e40ac999d99624dc357dc67e9fcffd0d905adf42b5610230615d607e0e2743a",
+  "source_operations": [
+    "positive_predecessor",
+    "positive_power",
+    "minimal_binary_cover"
+  ],
+  "lean_declarations": [
+    "SFT.Physics.UnifiedConstantsHelpers.positivePredecessor",
+    "SFT.Physics.UnifiedConstantsHelpers.positivePower",
+    "SFT.Physics.UnifiedConstantsHelpers.integerValue",
+    "SFT.Physics.UnifiedConstantsHelpers.CoverRun",
+    "SFT.Physics.UnifiedConstantsHelpers.successorBudget",
+    "SFT.Physics.UnifiedConstantsHelpers.coverBounded",
+    "SFT.Physics.UnifiedConstantsHelpers.minimalBinaryCover",
+    "SFT.Physics.UnifiedConstantsHelpers.runDepthLower",
+    "SFT.Physics.UnifiedConstantsHelpers.runCovers",
+    "SFT.Physics.UnifiedConstantsHelpers.runLeast",
+    "SFT.Physics.UnifiedConstantsHelpers.arbitraryBinaryCover",
+    "SFT.Physics.UnifiedConstantsHelpers.predecessorEveryAdmittedCount",
+    "SFT.Physics.UnifiedConstantsHelpers.powerEveryAdmittedPair",
+    "SFT.Physics.UnifiedConstantsHelpers.originalCover",
+    "SFT.Physics.UnifiedConstantsHelpers.nonbinaryArgumentRetained",
+    "SFT.Physics.UnifiedConstantsHelpers.booleanCarrierAccepted",
+    "SFT.Physics.UnifiedConstantsHelpers.booleanBinaryRejected"
+  ],
+  "lean_source_sha256": "cd0f09f7424ab07764275e77c8c7821a36d904075c2b079204b12ce3a426cac0",
+  "commands": [
+    "lean -o <retained build module> SFT/Physics/UnifiedConstantsHelpers.lean",
+    "lean work/AuditUnifiedFoundation515.lean",
+    "python3 work/check_unified_foundation515.py"
+  ],
+  "result": "Kernel build, empty axiom dependencies and264 original-source operation comparisons PASS",
+  "source_comparison": {
+    "status": "PASS",
+    "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "source_path": "sft/physics/unified_constants_object_law_v1.py",
+    "source_sha256": "8e40ac999d99624dc357dc67e9fcffd0d905adf42b5610230615d607e0e2743a",
+    "operation_cases": 264,
+    "foundation_fields": 16,
+    "generators": [
+      3,
+      4,
+      5,
+      8
+    ],
+    "checks": "Fresh Lean and original V3 outputs including all error messages, Boolean guards, binary cover argument, generators3 and4 plus accepted generators5 and8."
+  },
+  "whole_entry_registration": "Deferred until S15/S16; step completion only"
+}

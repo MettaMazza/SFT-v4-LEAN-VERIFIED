@@ -751,3 +751,18 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ConstraintOscillationGrammar.candidates do
     IO.println ("ConstraintOscillationGrammar\t" ++ SFT.Physics.ConstraintOscillationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ConstraintOscillationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ConstraintOscillationGrammar.exactForm c ++ "\t" ++ SFT.Physics.ConstraintOscillationGrammar.decisionReason c)
+
+  for c in SFT.Physics.SourceResponseGrammar.candidates do
+    IO.println ("SourceResponseGrammar\t" ++ SFT.Physics.SourceResponseGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SourceResponseGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SourceResponseGrammar.exactForm c ++ "\t" ++ SFT.Physics.SourceResponseGrammar.decisionReason c)
+
+  for c in SFT.Physics.GeometricDilutionGrammar.candidates do
+    IO.println ("GeometricDilutionGrammar\t" ++ SFT.Physics.GeometricDilutionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GeometricDilutionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GeometricDilutionGrammar.exactForm c ++ "\t" ++ SFT.Physics.GeometricDilutionGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravitationGrammar.candidates do
+    IO.println ("GravitationGrammar\t" ++ SFT.Physics.GravitationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravitationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravitationGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravitationGrammar.decisionReason c)
+
+  for c in SFT.Physics.ElectricDistinctionGrammar.candidates do
+    IO.println ("ElectricDistinctionGrammar\t" ++ SFT.Physics.ElectricDistinctionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ElectricDistinctionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ElectricDistinctionGrammar.exactForm c ++ "\t" ++ SFT.Physics.ElectricDistinctionGrammar.decisionReason c)
+
+  for c in SFT.Physics.ElectricPotentialGrammar.candidates do
+    IO.println ("ElectricPotentialGrammar\t" ++ SFT.Physics.ElectricPotentialGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ElectricPotentialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ElectricPotentialGrammar.exactForm c ++ "\t" ++ SFT.Physics.ElectricPotentialGrammar.decisionReason c)

@@ -1,0 +1,17 @@
+
+Stack overflow detected. Aborting.
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/check_hubble_native486.py", line 7, in <module>
+    out=subprocess.check_output([str(Path('work/native486/HubbleProgram').resolve()),source],cwd=Path.cwd(),text=True);actual=json.loads(out)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/dolltrading/Documents/Codex/2026-10-26/p/work/native486/HubbleProgram', 'sha256:10cf8943a4026234c1c170b2cc41441c6ca8678525deb7b05031ab6d9c5aeb42']' died with <Signals.SIGABRT: 6>.
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/fix_hubble_link487.py", line 10, in <module>
+    s=Path('work/native_hubble486.py').read_text();a=s.index("s=Path('work/check_hubble_program394.py')");exec(s[a:])
+  File "<string>", line 2, in <module>
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', 'work/check_hubble_native486.py']' returned non-zero exit status 1.

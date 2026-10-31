@@ -1,0 +1,7 @@
+import SFT.Physics.FieldMagneticOrientation
+#print axioms SFT.Physics.FieldMagneticOrientation.responseOrientation
+#print axioms SFT.Physics.FieldMagneticOrientation.oppositeInvolutive
+#print axioms SFT.Physics.FieldMagneticOrientation.reversingCharge
+#print axioms SFT.Physics.FieldMagneticOrientation.reversingMotion
+#print axioms SFT.Physics.FieldMagneticOrientation.reversingBoth
+#print axioms SFT.Physics.FieldMagneticOrientation.uniqueTwoReversalComposition

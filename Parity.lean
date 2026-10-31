@@ -1000,3 +1000,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.CosmoDistanceGrammar.candidates do
     IO.println ("CosmoDistanceGrammar\t" ++ SFT.Physics.CosmoDistanceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoDistanceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoDistanceGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoDistanceGrammar.decisionReason c)
+
+  for c in SFT.Physics.CosmoStructureGrowthGrammar.candidates do
+    IO.println ("CosmoStructureGrowthGrammar\t" ++ SFT.Physics.CosmoStructureGrowthGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoStructureGrowthGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoStructureGrowthGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoStructureGrowthGrammar.decisionReason c)
+
+  for c in SFT.Physics.CosmoBranchBoundaryGrammar.candidates do
+    IO.println ("CosmoBranchBoundaryGrammar\t" ++ SFT.Physics.CosmoBranchBoundaryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoBranchBoundaryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoBranchBoundaryGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoBranchBoundaryGrammar.decisionReason c)

@@ -991,3 +991,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.CosmoExpansionGrammar.candidates do
     IO.println ("CosmoExpansionGrammar\t" ++ SFT.Physics.CosmoExpansionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoExpansionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoExpansionGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoExpansionGrammar.decisionReason c)
+
+  for c in SFT.Physics.CosmoBackgroundGrammar.candidates do
+    IO.println ("CosmoBackgroundGrammar\t" ++ SFT.Physics.CosmoBackgroundGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoBackgroundGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoBackgroundGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoBackgroundGrammar.decisionReason c)
+
+  for c in SFT.Physics.CosmoLensingGrammar.candidates do
+    IO.println ("CosmoLensingGrammar\t" ++ SFT.Physics.CosmoLensingGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoLensingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoLensingGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoLensingGrammar.decisionReason c)
+
+  for c in SFT.Physics.CosmoDistanceGrammar.candidates do
+    IO.println ("CosmoDistanceGrammar\t" ++ SFT.Physics.CosmoDistanceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoDistanceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoDistanceGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoDistanceGrammar.decisionReason c)

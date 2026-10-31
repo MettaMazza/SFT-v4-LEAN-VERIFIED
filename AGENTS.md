@@ -35,3 +35,19 @@ Publication continuation clarification (user, 2026-10-29): Pressing Continue exp
 Long-running verification batch amendment (user,2026-10-29): While existing comparisons run,continue implementing subsequent derivations and batch their applicable checks. Preserve source dependency order when recording completions. Do not idle waiting for substantial computations; keep original live runs. This overrides the earlier rule forbidding subsequent implementation before current comparison completion.
 
 Batch cadence clarification (user, 2026-10-31): Do not end working turns merely because one manuscript section or scientific entry is finished. Work through substantial dependency-ordered batches, check related changes together using the existing tools, and consolidate manuscript, timeline and GitHub checkpoint updates. Continue recording each entry complete immediately when its actual source obligations pass. Preserve publication milestone stops and live computations.
+
+
+Current-evidence and compaction recovery amendment (user, 2026-10-31)
+This amendment takes precedence over historical status summaries and stale working copies of these instructions.
+
+Before describing an entry as unfinished, proposing to implement it, or resuming after compaction, inspect the actual current implementation and its relevant proof/build/audit/source-comparison evidence. Read the latest timeline continuation and verified publication receipt to locate that work. Historical reviews, handoff summaries, COVERAGE status labels, filenames and missing correspondence records are pointers, not evidence that the implementation is absent or incomplete. Search retained working copies as well as the canonical folder; relevant proofs may already exist under another module or entry.
+
+When the user says work was already done, or completion records disagree with retained evidence, reconcile the entire affected batch against pinned V3 before starting replacement derivations. Identify what is already implemented and verified, what only needs registration or dependency reconciliation, and any exact source obligation still missing. Inspect the relevant existing definitions and theorems rather than inferring absence from names or status fields. Reuse proved work; do not recreate it to obtain a new progress count.
+
+Preserve applicable passing evidence for unchanged source. Check its source/version applicability and rerun only checks affected by an actual change, missing evidence or a concrete failure. Do not restart a live process after compaction merely because its result is not in the summary: inspect the actual handle/process. Do not add a new verification framework or scientific completion criterion to perform this reconciliation.
+
+Correct stale completion records immediately when current evidence supports completion, in registered dependency order. Distinguish implementation/proof completion from pending entry registration and pending prerequisite reconciliation. A pending label must never be described as untouched work without checking the source.
+
+Always label progress counts consistently: original direct milestone inputs, their unfinished prerequisite entries, and the final integration entry are different counts. Do not switch between them without explaining the arithmetic. Report reuse and necessary reruns honestly; do not count repeated checks or previously completed entries as new derivations.
+
+At each continuation, pursue the current requested milestone and the latest user correction. Do not allow old plans or prose expansion to displace it. Record the exact reconciliation and next missing source component in TIMELINE.txt; keep development corrections out of the scientific paper. These requirements supplement, rather than replace, the existing 1:1 V3 scope, zero-axiom requirement, batch cadence and publication checkpoints.

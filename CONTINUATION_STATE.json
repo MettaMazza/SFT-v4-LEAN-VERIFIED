@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
-  "phase": "publication_review",
-  "goal_state": "active",
+  "phase": "publication_review_complete",
+  "goal_state": "paused",
   "active_step": "S18",
   "steps": [
     {
@@ -122,8 +122,8 @@
     {
       "id": "S18",
       "action": "Push and verify review edition, then pause for approval",
-      "state": "in_progress",
-      "completion_receipt": null
+      "state": "complete",
+      "completion_receipt": "verification/TURN_516_REVIEW_PUSH.json"
     }
   ],
   "rules": [
@@ -31483,7 +31483,7 @@
     {
       "root": "canonical",
       "path": "TIMELINE.txt",
-      "sha256": "b44eed98785d88e6711b158a70d3839758d0a31d384eae3761fd473fad90c5c0"
+      "sha256": "35d5c6c37cdd4183409f3513d5dca0abe0b120a8dde0092efa6261dca70e796f"
     },
     {
       "root": "canonical",
@@ -34618,7 +34618,7 @@
     {
       "root": "canonical",
       "path": "publication/RELEASE_INDEX.json",
-      "sha256": "d6bcd9bf73fa11c6ca6232686e79803730169d67a53bcf043173e3166746a520"
+      "sha256": "b4e22b35f472c3469dad09ecfae61b2f2f3042bd1e85f3a4bfd139aa182162d3"
     },
     {
       "root": "canonical",
@@ -34734,13 +34734,23 @@
       "root": "canonical",
       "path": "publication/editions/0.1/ZENODO_PREVIEW_SETTINGS.json",
       "sha256": "5f8ad8469a2779a3ab6881d484f7aabda0d15a9fb2249d3d4ada9b5784d27453"
+    },
+    {
+      "root": "canonical",
+      "path": "verification/TURN_516_REVIEW_PUSH.json",
+      "sha256": "e4d678e94c3b2fc01db105592eb052f0a60ebd06f1a9e2843609aba731d48fb4"
+    },
+    {
+      "root": "canonical",
+      "path": "verification/TURN_516_REVIEW_FREEZE.json",
+      "sha256": "2214213816ae6cdefdcf7de11c2b67928fc2d7f60c862041301e8af02473502e"
     }
   ],
   "roots": {
     "canonical": "directory containing this state file",
     "retained": "workspace/work/constants-recovery"
   },
-  "recorded_at": "2026-10-31T21:38:41.506701+00:00",
+  "recorded_at": "2026-10-31T21:44:36.487716+00:00",
   "audit": {
     "report": "ACCOUNTABILITY_AUDIT.txt",
     "source": "native Codex session/task/token/command/compaction records",
@@ -34758,7 +34768,7 @@
     "VacuumDensity and its ledger/scale proof modules",
     "GraphOperations reachability proofs; namespace differs from GraphPathCompleteness filename"
   ],
-  "publication_stop": "Finish full-manuscript derivation/source/Lean/timeline QA, push verified review edition, then pause for edition-specific approval. No Zenodo publication authorized.",
+  "publication_stop": "Unified Constants review edition0.2 is verified on GitHub. Await edition-specific Zenodo approval and explicit authorization to resume formalisation. Next count milestone500.",
   "resource_policy": {
     "authorized_by": "User explicitly requested M3 Ultra512GB capacity for speed",
     "observed_cpu_cores": 32,
@@ -34771,8 +34781,10 @@
     "common_native_stack_mib": 8192
   },
   "staged_checks": {
-    "bundle": "publication/REVIEW_BUNDLE.json",
+    "review_commit": "45a03e6d45713f82950186eb91deba22dab0df4b",
+    "review_branch": "review/unified-constants-v0.2",
     "publication_qa": "verification/TURN_516_PUBLICATION_QA.json",
-    "next": "Push frozen review tree, verify uploaded identities, record receipt and pause. No Zenodo publication."
+    "all_eighteen_steps_complete": true,
+    "next": "Pause. Do not publish Zenodo or continue scientific work without the required user instruction."
   }
 }

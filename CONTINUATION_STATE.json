@@ -3,7 +3,7 @@
   "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
   "phase": "scientific_execution",
   "goal_state": "active",
-  "active_step": "S03",
+  "active_step": "S04",
   "steps": [
     {
       "id": "S01",
@@ -32,13 +32,13 @@
     {
       "id": "S03",
       "action": "Close exact closed_partition/refine_partition entry",
-      "state": "in_progress",
-      "completion_receipt": null
+      "state": "complete",
+      "completion_receipt": "verification/TURN_515_COSMOSPATIALFLATNESS_COMPLETION.json"
     },
     {
       "id": "S04",
       "action": "Close ten-field cosmic budget entry",
-      "state": "open",
+      "state": "in_progress",
       "completion_receipt": null
     },
     {
@@ -135,10 +135,10 @@
   ],
   "live_jobs": [
     {
-      "session_id": 5317,
-      "command": "python3 -u work/build_flatbudget514.py",
-      "log": "work/flatbudget514_build.log",
-      "scope": "Single-worker Flatness/Budget build; do not restart a live grammar compiler."
+      "session_id": 47591,
+      "command": "python3 -u work/run_budget515.py",
+      "log": "work/budget515_run.log",
+      "scope": "S04 Complete Budget: repaired six pending native adapter modules compiled; whole declaration audit and fresh full2048 program plus complete empirical validator in parallel, followed by four original independent cases. No registration until all pass."
     }
   ],
   "snapshot": [
@@ -6399,6 +6399,36 @@
     },
     {
       "root": "canonical",
+      "path": "SFT/Physics/CosmoBranchBoundary.lean",
+      "sha256": "b85e9e7c3006861ea08240ee07923fce5e1bbb3f8913e6f619ee00a6411a84e9"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoBranchBoundaryEvidence.lean",
+      "sha256": "4ef49d597c9765fcd3e954aab085994c9eacfe5ddb65c689b8e02542487e4eef"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoBranchBoundaryExperiment.lean",
+      "sha256": "4e97cddb12f8bb3c062a5cade78181ca0cf7a626d06061ad910d0d2efbabeae9"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoBranchBoundaryGrammar.lean",
+      "sha256": "c191a38d79210b961312be69459a8ea2a3d3b04a8a855c17e531b63107864995"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoBranchBoundaryValidation.lean",
+      "sha256": "8fdb8d137e8e8ca2f32185067186d5a9b8890d0d71df192eeec44103ff7a8972"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoBranchBoundaryValidationProofs.lean",
+      "sha256": "eff3a84c092b51503327bb83fe4589173355dad9b837ac8d16e314fb93a191d6"
+    },
+    {
+      "root": "canonical",
       "path": "SFT/Physics/CosmoDistance.lean",
       "sha256": "0b6787bea80181d276148b34dc43b5b96dc24c8c4f55811eb8a44c33d5e34506"
     },
@@ -6516,6 +6546,416 @@
       "root": "canonical",
       "path": "SFT/Physics/CosmoRedshiftValidationProofs.lean",
       "sha256": "ad1aede85daec4a89d0e3acec85c5351cdfa7f8666055c5c96b4b2f1a0fd85bb"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatness.lean",
+      "sha256": "381b8b47570a9d953f398b941343aec956fe7d0e0bade48c97fd0779be5126eb"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus0.lean",
+      "sha256": "2dfd9ea4f6167fa566be8095a5ec36f1102ba1808acde28fb3251819fbf19e8c"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus1.lean",
+      "sha256": "057f54d7d0110da6754c859b6fd403d6f2df7373b1d891d0e79a6dd03ee776e0"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus10.lean",
+      "sha256": "4950c6f45c38e78de79dc6bf4120d1fc0b9197e37cf4e9a794863424958a2800"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus11.lean",
+      "sha256": "da9614fa8bdd4f3c78857757f63d882a81cb995da74bf9c8c628ecc2fbfc3ce3"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus12.lean",
+      "sha256": "99c058259ca50e284f0a6d8731f70114d12a8401f2ed3cdf67692e0cd7e8af24"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus13.lean",
+      "sha256": "b865c54292e89358ba8e7b1efb9a510d7c271ae250f14ab2e2fc96418c4f9295"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus14.lean",
+      "sha256": "0c186de150450ef620a123c2e33d8f17ee0d9fce2ae7c948e6933f4acdce37b6"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus15.lean",
+      "sha256": "d3486514e2f06f3189667394115ee32a9ebb2a4cd6ea6a411e62008a5158b5e9"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus16.lean",
+      "sha256": "6d2c5c4cbf1bac413c9f38162b3617d494363508a5c48a8e86c615c10b42db35"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus17.lean",
+      "sha256": "4be2afc0b5bb40d6c8b8c28e0261e205a33465400e95afa043934b71f98d6d2f"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus18.lean",
+      "sha256": "dc8d1ac8f5bd8b6eb012fd9b18be48f1814893386b09c6790d0e575526f5b872"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus19.lean",
+      "sha256": "8542b51d5938d98fff541bea88fabf25e195c5b8cb8be4395fa8190140311e8b"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus2.lean",
+      "sha256": "7dfd930204cb5e1bc1268bc6605742f6f52bfeb117b7698b28512b2d3ceea1d5"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus20.lean",
+      "sha256": "cf8528514ee60a4d5ec3dc0d25daa1a34c5fe3dcb392beb7edc20d9871fcdb40"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus21.lean",
+      "sha256": "056faf56271eba37060a61ec110367d59b4495967fd20a9aaf652503553592f3"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus22.lean",
+      "sha256": "4d36f095997540327402ab4a647f1ad484f6e2ff83778ec2afddd49fbee77fb5"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus23.lean",
+      "sha256": "99364f2cf7c8c71f232ed1472c3f074f9bc39902a3e649bc076c8b27bc60bcfa"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus24.lean",
+      "sha256": "a989ce836ecceaae0920c7d634a14a18dc83cd8d21096fb17347c04066efde2b"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus25.lean",
+      "sha256": "de8851700327aa02958cd86c098b045b2c2c4cabce92fb501088a5164db994d6"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus26.lean",
+      "sha256": "8aa2a0de7ba58bfae9e45b49353eb1364bedbb692c380347d91962e4a564f0d1"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus27.lean",
+      "sha256": "31847fd7f2bc55ee920ed1177b265bd65c28cd94a3875de786a72c27e31d89a4"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus28.lean",
+      "sha256": "5b6ec51614a7f6792d6f576feed6792112fe18fc8300652f4c754c955f7ecf2e"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus29.lean",
+      "sha256": "2f578d228917ec8c884c5e466030ed224395b7f4849cec4a569e0cedb50953ca"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus3.lean",
+      "sha256": "a79eb5160b216da57ff43b76b4b39d88119adb4ddc796fd53dad70e5daa06248"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus30.lean",
+      "sha256": "fd5559dfb361a9ab312f99c39d6ba60316c265083e97523ed58d765820637114"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus31.lean",
+      "sha256": "47ad39e3b0b665400d164b5b9f9c2e978c9e02014d61c0b290df6408e98a651c"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus32.lean",
+      "sha256": "a1cff9af11add47fa9774c6ea357441ecc64736bd3c68c32745fd1501910cb56"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus33.lean",
+      "sha256": "f7fcfb7c8649fe7e5d614cd3675dd4d5b92f61219b0441a670604a946e5f6ece"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus34.lean",
+      "sha256": "c950d6879881ad6b9a9adc4c86e74a8c38afbb8b7d8994576977c6dbb5ff3364"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus35.lean",
+      "sha256": "cfde4552a0138e065cd1c4a81c244d18ca6180e1c5434e77ad4cefdb93a60885"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus36.lean",
+      "sha256": "66efafa01b61c83369cfb4a111aa46dce321525a2ad7b31f378d0e11a5ed83ca"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus37.lean",
+      "sha256": "0a9fa4beab0d94a028ed4b8c504948db1d57ff6ab741d4f152f0c776eafa7af7"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus38.lean",
+      "sha256": "ec33d64e72eb24d7208f27f5b304d5840c8451261f7e1652d842b666fe0799c6"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus39.lean",
+      "sha256": "c3a2178a95bcaa66c5d8658207648608b1d07cdbb87c45172ee32673d5084ed3"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus4.lean",
+      "sha256": "b2dd9464a12d88a72d7bf17ff14d18defe0e1e229a8a34dc64dba80416f72870"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus40.lean",
+      "sha256": "3ac85b4f01a12d54581e40ad3cba20f3f9187d620bd33e66d98340be1634e713"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus41.lean",
+      "sha256": "d936f83cd4c8e6e19da3c0e076e48fc889d45fc827d1eaa760545a44a06e4e29"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus42.lean",
+      "sha256": "d35d896cadbcdea6c1ffbb148690eb03e5f1a50a6b4925da1215a2d106d62d8b"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus43.lean",
+      "sha256": "3bc21a00fac12915c4845b79e34dc1ecb13435ca01419541cfe9e72b88c47bbb"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus44.lean",
+      "sha256": "e425b7d4944e6c56a6b516912d48b53083e186a371b98708c567c0caf3afa3ff"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus45.lean",
+      "sha256": "909e81db6d0eaeddcab3b2958ecbbac3bcbcd2bc051e328310a6596c9f849b74"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus46.lean",
+      "sha256": "ab4314b4d5f7ed2bbefbd0ca5053d50e400eebb78a80900233b80cfec992eeef"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus47.lean",
+      "sha256": "544a2ad416d3fe227177df7ae469b1d183e7d34700632309c90baa051fa0dad9"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus48.lean",
+      "sha256": "86707405669f8d65817f8b91ad3b37f76e554db2d9be59dec35650e8b7e2dcf8"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus49.lean",
+      "sha256": "2212b94e8b3dc20b459d6710d3f6cf2daa0f5be046ad4986f3b9bae46b5b1dfb"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus5.lean",
+      "sha256": "05d4fee7b72b1bef4291902180d5938b90df0a0444943aa1e0f37311f15248da"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus50.lean",
+      "sha256": "8b4cb43936e7b470cd100c230732daa7e2a21e61f1bc28878ec90fbf63f04979"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus51.lean",
+      "sha256": "5d68c0a92fe0d5e505fd4b59ae2983fed1d490651fd6c1356a2be02b4395c993"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus52.lean",
+      "sha256": "160cf7b2213cd4673db42c44408969207d1c96810581555b91bcb8c9681ba606"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus53.lean",
+      "sha256": "7a821239c81078e64d10f0bdbc5fc27810a01bd404fb5205dceee2f8ef73ab12"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus54.lean",
+      "sha256": "3d94dc52c4dbf6a0a814fb69e7bafd8e3ab8c75bf03aa455be38e575e7e21c59"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus55.lean",
+      "sha256": "765342edcd210b521c28d952a31381191db7aec03a209e90ba781a5f311fc347"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus56.lean",
+      "sha256": "1bd0d99f603fa32091cc3091cfbf6af741e4b7ce0fa03bcbe55842cc3995e520"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus57.lean",
+      "sha256": "37c4ff449e782f2dc00a6e6e49ee57f2f1f70ee61303072752595c8cb71b9fcb"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus58.lean",
+      "sha256": "5b6aa1613663dc618cc33a0b134ef5bf617ab6ceb3b79aee97d943c883fa61ad"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus59.lean",
+      "sha256": "f3e1a1e8d601f2d1303c2e535a42fdace6d3b7c34d8b2032d11124f152e27e35"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus6.lean",
+      "sha256": "1315193f57d62c302364fa4d781c32cc332eaa181bc4be470e17e4c6fd845f32"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus60.lean",
+      "sha256": "7fb57c998b4e796373a4b4f9b71f1fba79d406c954d9a93ad1daa2a7402b408b"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus61.lean",
+      "sha256": "799a61a8413fff9c91f898649940ffe17d5bb95e00c3d30850d2023e02912926"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus62.lean",
+      "sha256": "dfe46d51a27d4ea7f8500bebb0c80648da18723990a35356c5823142c37e1f1c"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus63.lean",
+      "sha256": "b29e2638d757cb39e957267ccd392496d22013325688ae8a99d5f364ecc42bb7"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus7.lean",
+      "sha256": "7cbf78040664ffe1f15686474f573961989b06f348ad8c084197ed8e43b92072"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus8.lean",
+      "sha256": "a3edf52e6f5966d77804eb187dc5afd6e2d9b5b059fa6b40dfda653d2d873859"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus9.lean",
+      "sha256": "c75817662e75d237e0b9296ac313df4798ad4fddae1f5c89edac571eed93915b"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessComparison.lean",
+      "sha256": "dd41e3352aa6a2e4919f32139473d788be8976cdc96491a600b896a893b1b66e"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessControls.lean",
+      "sha256": "f9222ae7b351b6d26743c004da9d1d970747c4db9f2a0b87dbad24a3a67213ab"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessEvidence.lean",
+      "sha256": "ffcd119aafd4609e500e232cf491a3c711e567eba05e3fdf5dd868acb257627f"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessExperiment.lean",
+      "sha256": "bdf68094b851542314d76c7c8682083102689ffeb10c7bb420d484d4f1fc8801"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessGrammar.lean",
+      "sha256": "ddfe0a15a88bc8196722dfd653acd603e155c92500980d86949afcc0f490bad2"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessGrammarBase.lean",
+      "sha256": "411b8dc899d3978f54d0c1143ed6bb360515811823769a880d03b454b5e0ec98"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessIntervals.lean",
+      "sha256": "d8b75f89d518a3bda03bad3d07eff0a6333a5b3c805551994e20a7ec29fb427e"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessProofs.lean",
+      "sha256": "db3abdd434a95e22ba25387440aa808841b43ad246d3a288cc1f5d0154904d8b"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessValidation.lean",
+      "sha256": "da008cdf2305b863547c76fd16df547e3647b23f63075f51d66f0be013561784"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessValidationProofs.lean",
+      "sha256": "5a0827f3d31e05e1fbdf246a7d1a5c386752166507ef97cc4319be450a2416f5"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoSpatialFlatnessWitnesses.lean",
+      "sha256": "7239198d0214acf7dd03466c241ff79242490655c9b778961f19057f6acaae66"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoStructureGrowth.lean",
+      "sha256": "21c3baf34cb6b8c709633605350d27e436ca6716b27cee4d5627bada54de4856"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoStructureGrowthEvidence.lean",
+      "sha256": "d97fa4548cfd2b92f7698ce776f447a4001fc8a7a39b7ca0fd7faff866fc0166"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoStructureGrowthExperiment.lean",
+      "sha256": "a28ca8fc0942a545026bd9e1c137b9265a9c325ccf7b295825f6c6745249530c"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoStructureGrowthGrammar.lean",
+      "sha256": "f27201069e6e4c41dca840174ea94bac28c552ed785b7a8705300466e7f893d9"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoStructureGrowthValidation.lean",
+      "sha256": "147f2b1d1932c785fba0c747e79632abba7ee660da0346116b75cbc8e689d903"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Physics/CosmoStructureGrowthValidationProofs.lean",
+      "sha256": "d468efc4b33f8da0e49b241a644ba1e94e09cd41b853a3bb3e4ccabf7dca5f7c"
     },
     {
       "root": "canonical",
@@ -17314,6 +17754,36 @@
     },
     {
       "root": "retained",
+      "path": "SFT/Physics/CosmoBranchBoundary.lean",
+      "sha256": "b85e9e7c3006861ea08240ee07923fce5e1bbb3f8913e6f619ee00a6411a84e9"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoBranchBoundaryEvidence.lean",
+      "sha256": "4ef49d597c9765fcd3e954aab085994c9eacfe5ddb65c689b8e02542487e4eef"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoBranchBoundaryExperiment.lean",
+      "sha256": "4e97cddb12f8bb3c062a5cade78181ca0cf7a626d06061ad910d0d2efbabeae9"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoBranchBoundaryGrammar.lean",
+      "sha256": "c191a38d79210b961312be69459a8ea2a3d3b04a8a855c17e531b63107864995"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoBranchBoundaryValidation.lean",
+      "sha256": "8fdb8d137e8e8ca2f32185067186d5a9b8890d0d71df192eeec44103ff7a8972"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoBranchBoundaryValidationProofs.lean",
+      "sha256": "eff3a84c092b51503327bb83fe4589173355dad9b837ac8d16e314fb93a191d6"
+    },
+    {
+      "root": "retained",
       "path": "SFT/Physics/CosmoDistance.lean",
       "sha256": "0b6787bea80181d276148b34dc43b5b96dc24c8c4f55811eb8a44c33d5e34506"
     },
@@ -17434,8 +17904,413 @@
     },
     {
       "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatness.lean",
+      "sha256": "381b8b47570a9d953f398b941343aec956fe7d0e0bade48c97fd0779be5126eb"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus0.lean",
+      "sha256": "2dfd9ea4f6167fa566be8095a5ec36f1102ba1808acde28fb3251819fbf19e8c"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus1.lean",
+      "sha256": "057f54d7d0110da6754c859b6fd403d6f2df7373b1d891d0e79a6dd03ee776e0"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus10.lean",
+      "sha256": "4950c6f45c38e78de79dc6bf4120d1fc0b9197e37cf4e9a794863424958a2800"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus11.lean",
+      "sha256": "da9614fa8bdd4f3c78857757f63d882a81cb995da74bf9c8c628ecc2fbfc3ce3"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus12.lean",
+      "sha256": "99c058259ca50e284f0a6d8731f70114d12a8401f2ed3cdf67692e0cd7e8af24"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus13.lean",
+      "sha256": "b865c54292e89358ba8e7b1efb9a510d7c271ae250f14ab2e2fc96418c4f9295"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus14.lean",
+      "sha256": "0c186de150450ef620a123c2e33d8f17ee0d9fce2ae7c948e6933f4acdce37b6"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus15.lean",
+      "sha256": "d3486514e2f06f3189667394115ee32a9ebb2a4cd6ea6a411e62008a5158b5e9"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus16.lean",
+      "sha256": "6d2c5c4cbf1bac413c9f38162b3617d494363508a5c48a8e86c615c10b42db35"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus17.lean",
+      "sha256": "4be2afc0b5bb40d6c8b8c28e0261e205a33465400e95afa043934b71f98d6d2f"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus18.lean",
+      "sha256": "dc8d1ac8f5bd8b6eb012fd9b18be48f1814893386b09c6790d0e575526f5b872"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus19.lean",
+      "sha256": "8542b51d5938d98fff541bea88fabf25e195c5b8cb8be4395fa8190140311e8b"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus2.lean",
+      "sha256": "7dfd930204cb5e1bc1268bc6605742f6f52bfeb117b7698b28512b2d3ceea1d5"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus20.lean",
+      "sha256": "cf8528514ee60a4d5ec3dc0d25daa1a34c5fe3dcb392beb7edc20d9871fcdb40"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus21.lean",
+      "sha256": "056faf56271eba37060a61ec110367d59b4495967fd20a9aaf652503553592f3"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus22.lean",
+      "sha256": "4d36f095997540327402ab4a647f1ad484f6e2ff83778ec2afddd49fbee77fb5"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus23.lean",
+      "sha256": "99364f2cf7c8c71f232ed1472c3f074f9bc39902a3e649bc076c8b27bc60bcfa"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus24.lean",
+      "sha256": "a989ce836ecceaae0920c7d634a14a18dc83cd8d21096fb17347c04066efde2b"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus25.lean",
+      "sha256": "de8851700327aa02958cd86c098b045b2c2c4cabce92fb501088a5164db994d6"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus26.lean",
+      "sha256": "8aa2a0de7ba58bfae9e45b49353eb1364bedbb692c380347d91962e4a564f0d1"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus27.lean",
+      "sha256": "31847fd7f2bc55ee920ed1177b265bd65c28cd94a3875de786a72c27e31d89a4"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus28.lean",
+      "sha256": "5b6ec51614a7f6792d6f576feed6792112fe18fc8300652f4c754c955f7ecf2e"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus29.lean",
+      "sha256": "2f578d228917ec8c884c5e466030ed224395b7f4849cec4a569e0cedb50953ca"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus3.lean",
+      "sha256": "a79eb5160b216da57ff43b76b4b39d88119adb4ddc796fd53dad70e5daa06248"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus30.lean",
+      "sha256": "fd5559dfb361a9ab312f99c39d6ba60316c265083e97523ed58d765820637114"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus31.lean",
+      "sha256": "47ad39e3b0b665400d164b5b9f9c2e978c9e02014d61c0b290df6408e98a651c"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus32.lean",
+      "sha256": "a1cff9af11add47fa9774c6ea357441ecc64736bd3c68c32745fd1501910cb56"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus33.lean",
+      "sha256": "f7fcfb7c8649fe7e5d614cd3675dd4d5b92f61219b0441a670604a946e5f6ece"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus34.lean",
+      "sha256": "c950d6879881ad6b9a9adc4c86e74a8c38afbb8b7d8994576977c6dbb5ff3364"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus35.lean",
+      "sha256": "cfde4552a0138e065cd1c4a81c244d18ca6180e1c5434e77ad4cefdb93a60885"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus36.lean",
+      "sha256": "66efafa01b61c83369cfb4a111aa46dce321525a2ad7b31f378d0e11a5ed83ca"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus37.lean",
+      "sha256": "0a9fa4beab0d94a028ed4b8c504948db1d57ff6ab741d4f152f0c776eafa7af7"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus38.lean",
+      "sha256": "ec33d64e72eb24d7208f27f5b304d5840c8451261f7e1652d842b666fe0799c6"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus39.lean",
+      "sha256": "c3a2178a95bcaa66c5d8658207648608b1d07cdbb87c45172ee32673d5084ed3"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus4.lean",
+      "sha256": "b2dd9464a12d88a72d7bf17ff14d18defe0e1e229a8a34dc64dba80416f72870"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus40.lean",
+      "sha256": "3ac85b4f01a12d54581e40ad3cba20f3f9187d620bd33e66d98340be1634e713"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus41.lean",
+      "sha256": "d936f83cd4c8e6e19da3c0e076e48fc889d45fc827d1eaa760545a44a06e4e29"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus42.lean",
+      "sha256": "d35d896cadbcdea6c1ffbb148690eb03e5f1a50a6b4925da1215a2d106d62d8b"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus43.lean",
+      "sha256": "3bc21a00fac12915c4845b79e34dc1ecb13435ca01419541cfe9e72b88c47bbb"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus44.lean",
+      "sha256": "e425b7d4944e6c56a6b516912d48b53083e186a371b98708c567c0caf3afa3ff"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus45.lean",
+      "sha256": "909e81db6d0eaeddcab3b2958ecbbac3bcbcd2bc051e328310a6596c9f849b74"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus46.lean",
+      "sha256": "ab4314b4d5f7ed2bbefbd0ca5053d50e400eebb78a80900233b80cfec992eeef"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus47.lean",
+      "sha256": "544a2ad416d3fe227177df7ae469b1d183e7d34700632309c90baa051fa0dad9"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus48.lean",
+      "sha256": "86707405669f8d65817f8b91ad3b37f76e554db2d9be59dec35650e8b7e2dcf8"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus49.lean",
+      "sha256": "2212b94e8b3dc20b459d6710d3f6cf2daa0f5be046ad4986f3b9bae46b5b1dfb"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus5.lean",
+      "sha256": "05d4fee7b72b1bef4291902180d5938b90df0a0444943aa1e0f37311f15248da"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus50.lean",
+      "sha256": "8b4cb43936e7b470cd100c230732daa7e2a21e61f1bc28878ec90fbf63f04979"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus51.lean",
+      "sha256": "5d68c0a92fe0d5e505fd4b59ae2983fed1d490651fd6c1356a2be02b4395c993"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus52.lean",
+      "sha256": "160cf7b2213cd4673db42c44408969207d1c96810581555b91bcb8c9681ba606"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus53.lean",
+      "sha256": "7a821239c81078e64d10f0bdbc5fc27810a01bd404fb5205dceee2f8ef73ab12"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus54.lean",
+      "sha256": "3d94dc52c4dbf6a0a814fb69e7bafd8e3ab8c75bf03aa455be38e575e7e21c59"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus55.lean",
+      "sha256": "765342edcd210b521c28d952a31381191db7aec03a209e90ba781a5f311fc347"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus56.lean",
+      "sha256": "1bd0d99f603fa32091cc3091cfbf6af741e4b7ce0fa03bcbe55842cc3995e520"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus57.lean",
+      "sha256": "37c4ff449e782f2dc00a6e6e49ee57f2f1f70ee61303072752595c8cb71b9fcb"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus58.lean",
+      "sha256": "5b6aa1613663dc618cc33a0b134ef5bf617ab6ceb3b79aee97d943c883fa61ad"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus59.lean",
+      "sha256": "f3e1a1e8d601f2d1303c2e535a42fdace6d3b7c34d8b2032d11124f152e27e35"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus6.lean",
+      "sha256": "1315193f57d62c302364fa4d781c32cc332eaa181bc4be470e17e4c6fd845f32"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus60.lean",
+      "sha256": "7fb57c998b4e796373a4b4f9b71f1fba79d406c954d9a93ad1daa2a7402b408b"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus61.lean",
+      "sha256": "799a61a8413fff9c91f898649940ffe17d5bb95e00c3d30850d2023e02912926"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus62.lean",
+      "sha256": "dfe46d51a27d4ea7f8500bebb0c80648da18723990a35356c5823142c37e1f1c"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus63.lean",
+      "sha256": "b29e2638d757cb39e957267ccd392496d22013325688ae8a99d5f364ecc42bb7"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus7.lean",
+      "sha256": "7cbf78040664ffe1f15686474f573961989b06f348ad8c084197ed8e43b92072"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus8.lean",
+      "sha256": "a3edf52e6f5966d77804eb187dc5afd6e2d9b5b059fa6b40dfda653d2d873859"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus9.lean",
+      "sha256": "c75817662e75d237e0b9296ac313df4798ad4fddae1f5c89edac571eed93915b"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessComparison.lean",
+      "sha256": "dd41e3352aa6a2e4919f32139473d788be8976cdc96491a600b896a893b1b66e"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessControls.lean",
+      "sha256": "f9222ae7b351b6d26743c004da9d1d970747c4db9f2a0b87dbad24a3a67213ab"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessEvidence.lean",
+      "sha256": "ffcd119aafd4609e500e232cf491a3c711e567eba05e3fdf5dd868acb257627f"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessExperiment.lean",
+      "sha256": "bdf68094b851542314d76c7c8682083102689ffeb10c7bb420d484d4f1fc8801"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessGrammar.lean",
+      "sha256": "ddfe0a15a88bc8196722dfd653acd603e155c92500980d86949afcc0f490bad2"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessGrammarBase.lean",
+      "sha256": "411b8dc899d3978f54d0c1143ed6bb360515811823769a880d03b454b5e0ec98"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessIntervals.lean",
+      "sha256": "d8b75f89d518a3bda03bad3d07eff0a6333a5b3c805551994e20a7ec29fb427e"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessProofs.lean",
+      "sha256": "db3abdd434a95e22ba25387440aa808841b43ad246d3a288cc1f5d0154904d8b"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessValidation.lean",
+      "sha256": "da008cdf2305b863547c76fd16df547e3647b23f63075f51d66f0be013561784"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessValidationProofs.lean",
+      "sha256": "5a0827f3d31e05e1fbdf246a7d1a5c386752166507ef97cc4319be450a2416f5"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoSpatialFlatnessWitnesses.lean",
+      "sha256": "7239198d0214acf7dd03466c241ff79242490655c9b778961f19057f6acaae66"
+    },
+    {
+      "root": "retained",
       "path": "SFT/Physics/CosmoStructureGrowth.lean",
       "sha256": "21c3baf34cb6b8c709633605350d27e436ca6716b27cee4d5627bada54de4856"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoStructureGrowthEvidence.lean",
+      "sha256": "d97fa4548cfd2b92f7698ce776f447a4001fc8a7a39b7ca0fd7faff866fc0166"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoStructureGrowthExperiment.lean",
+      "sha256": "a28ca8fc0942a545026bd9e1c137b9265a9c325ccf7b295825f6c6745249530c"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoStructureGrowthGrammar.lean",
+      "sha256": "f27201069e6e4c41dca840174ea94bac28c552ed785b7a8705300466e7f893d9"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoStructureGrowthValidation.lean",
+      "sha256": "147f2b1d1932c785fba0c747e79632abba7ee660da0346116b75cbc8e689d903"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Physics/CosmoStructureGrowthValidationProofs.lean",
+      "sha256": "d468efc4b33f8da0e49b241a644ba1e94e09cd41b853a3bb3e4ccabf7dca5f7c"
     },
     {
       "root": "retained",
@@ -24296,133 +25171,13 @@
       "root": "retained",
       "path": "SFT/QuantumComputation/Superposition.lean",
       "sha256": "c584f27b6ae93c347b86968f16c40b64538f70ab78cca17ba7508bb8b9a12fb8"
-    },
-    {
-      "root": "canonical",
-      "path": "SFT/Physics/CosmoBranchBoundaryEvidence.lean",
-      "sha256": "4ef49d597c9765fcd3e954aab085994c9eacfe5ddb65c689b8e02542487e4eef"
-    },
-    {
-      "root": "canonical",
-      "path": "SFT/Physics/CosmoStructureGrowthValidationProofs.lean",
-      "sha256": "d468efc4b33f8da0e49b241a644ba1e94e09cd41b853a3bb3e4ccabf7dca5f7c"
-    },
-    {
-      "root": "canonical",
-      "path": "SFT/Physics/CosmoStructureGrowthExperiment.lean",
-      "sha256": "a28ca8fc0942a545026bd9e1c137b9265a9c325ccf7b295825f6c6745249530c"
-    },
-    {
-      "root": "canonical",
-      "path": "SFT/Physics/CosmoStructureGrowthGrammar.lean",
-      "sha256": "f27201069e6e4c41dca840174ea94bac28c552ed785b7a8705300466e7f893d9"
-    },
-    {
-      "root": "canonical",
-      "path": "SFT/Physics/CosmoBranchBoundary.lean",
-      "sha256": "b85e9e7c3006861ea08240ee07923fce5e1bbb3f8913e6f619ee00a6411a84e9"
-    },
-    {
-      "root": "canonical",
-      "path": "SFT/Physics/CosmoBranchBoundaryValidationProofs.lean",
-      "sha256": "eff3a84c092b51503327bb83fe4589173355dad9b837ac8d16e314fb93a191d6"
-    },
-    {
-      "root": "canonical",
-      "path": "SFT/Physics/CosmoStructureGrowth.lean",
-      "sha256": "21c3baf34cb6b8c709633605350d27e436ca6716b27cee4d5627bada54de4856"
-    },
-    {
-      "root": "canonical",
-      "path": "SFT/Physics/CosmoBranchBoundaryGrammar.lean",
-      "sha256": "c191a38d79210b961312be69459a8ea2a3d3b04a8a855c17e531b63107864995"
-    },
-    {
-      "root": "canonical",
-      "path": "SFT/Physics/CosmoBranchBoundaryValidation.lean",
-      "sha256": "8fdb8d137e8e8ca2f32185067186d5a9b8890d0d71df192eeec44103ff7a8972"
-    },
-    {
-      "root": "canonical",
-      "path": "SFT/Physics/CosmoStructureGrowthValidation.lean",
-      "sha256": "147f2b1d1932c785fba0c747e79632abba7ee660da0346116b75cbc8e689d903"
-    },
-    {
-      "root": "canonical",
-      "path": "SFT/Physics/CosmoStructureGrowthEvidence.lean",
-      "sha256": "d97fa4548cfd2b92f7698ce776f447a4001fc8a7a39b7ca0fd7faff866fc0166"
-    },
-    {
-      "root": "canonical",
-      "path": "SFT/Physics/CosmoBranchBoundaryExperiment.lean",
-      "sha256": "4e97cddb12f8bb3c062a5cade78181ca0cf7a626d06061ad910d0d2efbabeae9"
-    },
-    {
-      "root": "retained",
-      "path": "SFT/Physics/CosmoBranchBoundaryEvidence.lean",
-      "sha256": "4ef49d597c9765fcd3e954aab085994c9eacfe5ddb65c689b8e02542487e4eef"
-    },
-    {
-      "root": "retained",
-      "path": "SFT/Physics/CosmoStructureGrowthValidationProofs.lean",
-      "sha256": "d468efc4b33f8da0e49b241a644ba1e94e09cd41b853a3bb3e4ccabf7dca5f7c"
-    },
-    {
-      "root": "retained",
-      "path": "SFT/Physics/CosmoStructureGrowthExperiment.lean",
-      "sha256": "a28ca8fc0942a545026bd9e1c137b9265a9c325ccf7b295825f6c6745249530c"
-    },
-    {
-      "root": "retained",
-      "path": "SFT/Physics/CosmoSpatialFlatness.lean",
-      "sha256": "b1718b419f607d40a023811966633f834f78b8a9809d935e1cec3430cded8838"
-    },
-    {
-      "root": "retained",
-      "path": "SFT/Physics/CosmoStructureGrowthGrammar.lean",
-      "sha256": "f27201069e6e4c41dca840174ea94bac28c552ed785b7a8705300466e7f893d9"
-    },
-    {
-      "root": "retained",
-      "path": "SFT/Physics/CosmoBranchBoundary.lean",
-      "sha256": "b85e9e7c3006861ea08240ee07923fce5e1bbb3f8913e6f619ee00a6411a84e9"
-    },
-    {
-      "root": "retained",
-      "path": "SFT/Physics/CosmoBranchBoundaryValidationProofs.lean",
-      "sha256": "eff3a84c092b51503327bb83fe4589173355dad9b837ac8d16e314fb93a191d6"
-    },
-    {
-      "root": "retained",
-      "path": "SFT/Physics/CosmoBranchBoundaryGrammar.lean",
-      "sha256": "c191a38d79210b961312be69459a8ea2a3d3b04a8a855c17e531b63107864995"
-    },
-    {
-      "root": "retained",
-      "path": "SFT/Physics/CosmoBranchBoundaryValidation.lean",
-      "sha256": "8fdb8d137e8e8ca2f32185067186d5a9b8890d0d71df192eeec44103ff7a8972"
-    },
-    {
-      "root": "retained",
-      "path": "SFT/Physics/CosmoStructureGrowthValidation.lean",
-      "sha256": "147f2b1d1932c785fba0c747e79632abba7ee660da0346116b75cbc8e689d903"
-    },
-    {
-      "root": "retained",
-      "path": "SFT/Physics/CosmoStructureGrowthEvidence.lean",
-      "sha256": "d97fa4548cfd2b92f7698ce776f447a4001fc8a7a39b7ca0fd7faff866fc0166"
-    },
-    {
-      "root": "retained",
-      "path": "SFT/Physics/CosmoBranchBoundaryExperiment.lean",
-      "sha256": "4e97cddb12f8bb3c062a5cade78181ca0cf7a626d06061ad910d0d2efbabeae9"
     }
   ],
   "roots": {
     "canonical": "directory containing this state file",
     "retained": "workspace/work/constants-recovery"
   },
-  "recorded_at": "2026-10-31T16:58:55.395505+00:00",
+  "recorded_at": "2026-10-31T17:57:48.529628+00:00",
   "audit": {
     "report": "ACCOUNTABILITY_AUDIT.txt",
     "source": "native Codex session/task/token/command/compaction records",
@@ -24440,5 +25195,15 @@
     "VacuumDensity and its ledger/scale proof modules",
     "GraphOperations reachability proofs; namespace differs from GraphPathCompleteness filename"
   ],
-  "publication_stop": "Complete Unified Constants plus cumulative mathematical review bundle; verify GitHub upload; pause for edition-specific publication approval."
+  "publication_stop": "Complete Unified Constants plus cumulative mathematical review bundle; verify GitHub upload; pause for edition-specific publication approval.",
+  "resource_policy": {
+    "authorized_by": "User explicitly requested M3 Ultra512GB capacity for speed",
+    "observed_cpu_cores": 32,
+    "observed_ram_gib": 512,
+    "workers": 28,
+    "threads_per_worker": 1,
+    "compiler_memory_mib": 12288,
+    "census_heartbeat_limit": 100000000,
+    "native_verification_stack_kib": 1048576
+  }
 }

@@ -1,0 +1,400 @@
+import SFT.Physics.CosmoSpatialFlatness
+import SFT.Physics.CosmoSpatialFlatnessProofs
+import SFT.Physics.CosmoSpatialFlatnessIntervals
+import SFT.Physics.CosmoSpatialFlatnessWitnesses
+import SFT.Physics.CosmoSpatialFlatnessGrammarBase
+import SFT.Physics.CosmoSpatialFlatnessCensus0
+import SFT.Physics.CosmoSpatialFlatnessCensus1
+import SFT.Physics.CosmoSpatialFlatnessCensus2
+import SFT.Physics.CosmoSpatialFlatnessCensus3
+import SFT.Physics.CosmoSpatialFlatnessCensus4
+import SFT.Physics.CosmoSpatialFlatnessCensus5
+import SFT.Physics.CosmoSpatialFlatnessCensus6
+import SFT.Physics.CosmoSpatialFlatnessCensus7
+import SFT.Physics.CosmoSpatialFlatnessCensus8
+import SFT.Physics.CosmoSpatialFlatnessCensus9
+import SFT.Physics.CosmoSpatialFlatnessCensus10
+import SFT.Physics.CosmoSpatialFlatnessCensus11
+import SFT.Physics.CosmoSpatialFlatnessCensus12
+import SFT.Physics.CosmoSpatialFlatnessCensus13
+import SFT.Physics.CosmoSpatialFlatnessCensus14
+import SFT.Physics.CosmoSpatialFlatnessCensus15
+import SFT.Physics.CosmoSpatialFlatnessCensus16
+import SFT.Physics.CosmoSpatialFlatnessCensus17
+import SFT.Physics.CosmoSpatialFlatnessCensus18
+import SFT.Physics.CosmoSpatialFlatnessCensus19
+import SFT.Physics.CosmoSpatialFlatnessCensus20
+import SFT.Physics.CosmoSpatialFlatnessCensus21
+import SFT.Physics.CosmoSpatialFlatnessCensus22
+import SFT.Physics.CosmoSpatialFlatnessCensus23
+import SFT.Physics.CosmoSpatialFlatnessCensus24
+import SFT.Physics.CosmoSpatialFlatnessCensus25
+import SFT.Physics.CosmoSpatialFlatnessCensus26
+import SFT.Physics.CosmoSpatialFlatnessCensus27
+import SFT.Physics.CosmoSpatialFlatnessCensus28
+import SFT.Physics.CosmoSpatialFlatnessCensus29
+import SFT.Physics.CosmoSpatialFlatnessCensus30
+import SFT.Physics.CosmoSpatialFlatnessCensus31
+import SFT.Physics.CosmoSpatialFlatnessCensus32
+import SFT.Physics.CosmoSpatialFlatnessCensus33
+import SFT.Physics.CosmoSpatialFlatnessCensus34
+import SFT.Physics.CosmoSpatialFlatnessCensus35
+import SFT.Physics.CosmoSpatialFlatnessCensus36
+import SFT.Physics.CosmoSpatialFlatnessCensus37
+import SFT.Physics.CosmoSpatialFlatnessCensus38
+import SFT.Physics.CosmoSpatialFlatnessCensus39
+import SFT.Physics.CosmoSpatialFlatnessCensus40
+import SFT.Physics.CosmoSpatialFlatnessCensus41
+import SFT.Physics.CosmoSpatialFlatnessCensus42
+import SFT.Physics.CosmoSpatialFlatnessCensus43
+import SFT.Physics.CosmoSpatialFlatnessCensus44
+import SFT.Physics.CosmoSpatialFlatnessCensus45
+import SFT.Physics.CosmoSpatialFlatnessCensus46
+import SFT.Physics.CosmoSpatialFlatnessCensus47
+import SFT.Physics.CosmoSpatialFlatnessCensus48
+import SFT.Physics.CosmoSpatialFlatnessCensus49
+import SFT.Physics.CosmoSpatialFlatnessCensus50
+import SFT.Physics.CosmoSpatialFlatnessCensus51
+import SFT.Physics.CosmoSpatialFlatnessCensus52
+import SFT.Physics.CosmoSpatialFlatnessCensus53
+import SFT.Physics.CosmoSpatialFlatnessCensus54
+import SFT.Physics.CosmoSpatialFlatnessCensus55
+import SFT.Physics.CosmoSpatialFlatnessCensus56
+import SFT.Physics.CosmoSpatialFlatnessCensus57
+import SFT.Physics.CosmoSpatialFlatnessCensus58
+import SFT.Physics.CosmoSpatialFlatnessCensus59
+import SFT.Physics.CosmoSpatialFlatnessCensus60
+import SFT.Physics.CosmoSpatialFlatnessCensus61
+import SFT.Physics.CosmoSpatialFlatnessCensus62
+import SFT.Physics.CosmoSpatialFlatnessCensus63
+import SFT.Physics.CosmoSpatialFlatnessGrammar
+import SFT.Physics.CosmoSpatialFlatnessControls
+import SFT.Physics.CosmoSpatialFlatnessEvidence
+import SFT.Physics.CosmoSpatialFlatnessExperiment
+import SFT.Physics.CosmoSpatialFlatnessComparison
+import SFT.Physics.CosmoSpatialFlatnessValidation
+import SFT.Physics.CosmoSpatialFlatnessValidationProofs
+#print axioms SFT.Physics.CosmoSpatialFlatness.total
+#print axioms SFT.Physics.CosmoSpatialFlatness.positiveParts
+#print axioms SFT.Physics.CosmoSpatialFlatness.closedPartition
+#print axioms SFT.Physics.CosmoSpatialFlatness.fractionsOnly
+#print axioms SFT.Physics.CosmoSpatialFlatness.closedPartitionInput
+#print axioms SFT.Physics.CosmoSpatialFlatness.splitEquals
+#print axioms SFT.Physics.CosmoSpatialFlatness.refineAt
+#print axioms SFT.Physics.CosmoSpatialFlatness.refinePartition
+#print axioms SFT.Physics.CosmoSpatialFlatness.closedExactly
+#print axioms SFT.Physics.CosmoSpatialFlatness.emptyRejected
+#print axioms SFT.Physics.CosmoSpatialFlatness.positiveSplitAccepted
+#print axioms SFT.Physics.CosmoSpatialFlatness.refineRetainsPrefix
+#print axioms SFT.Physics.CosmoSpatialFlatness.PositivePart
+#print axioms SFT.Physics.CosmoSpatialFlatness.asRat
+#print axioms SFT.Physics.CosmoSpatialFlatness.naturalTotal
+#print axioms SFT.Physics.CosmoSpatialFlatness.addMul
+#print axioms SFT.Physics.CosmoSpatialFlatness.mulLeftComm
+#print axioms SFT.Physics.CosmoSpatialFlatness.addLeftComm
+#print axioms SFT.Physics.CosmoSpatialFlatness.exactIntegerAccumulation
+#print axioms SFT.Physics.CosmoSpatialFlatness.naturalTotalScaled
+#print axioms SFT.Physics.CosmoSpatialFlatness.totalAppend
+#print axioms SFT.Physics.CosmoSpatialFlatness.splitScaled
+#print axioms SFT.Physics.CosmoSpatialFlatness.splitPreservesNaturalClosure
+#print axioms SFT.Physics.CosmoSpatialFlatness.positiveMapped
+#print axioms SFT.Physics.CosmoSpatialFlatness.everyPositiveSplitPreservesClosure
+#print axioms SFT.Physics.CosmoSpatialFlatness.asRatPositive
+#print axioms SFT.Physics.CosmoSpatialFlatness.everyPositiveRatRepresented
+#print axioms SFT.Physics.CosmoSpatialFlatness.everyAdmittedFamilyRepresented
+#print axioms SFT.Physics.CosmoSpatialFlatness.closedMappedExactly
+#print axioms SFT.Physics.CosmoSpatialFlatness.mappedAppend
+#print axioms SFT.Physics.CosmoSpatialFlatness.mappedLength
+#print axioms SFT.Physics.CosmoSpatialFlatness.refinementPreservesClosedPartition
+#print axioms SFT.Physics.CosmoSpatialFlatness.PositiveRefinements
+#print axioms SFT.Physics.CosmoSpatialFlatness.allFiniteRefinementsPreserveAbsence
+#print axioms SFT.Physics.CosmoSpatialFlatnessIntervals.CurvatureRecord
+#print axioms SFT.Physics.CosmoSpatialFlatnessIntervals.containsAbsence
+#print axioms SFT.Physics.CosmoSpatialFlatnessIntervals.source
+#print axioms SFT.Physics.CosmoSpatialFlatnessIntervals.witnessCheck
+#print axioms SFT.Physics.CosmoSpatialFlatnessIntervals.completeIntervalContainsAbsence
+#print axioms SFT.Physics.CosmoSpatialFlatnessWitnesses.Witness
+#print axioms SFT.Physics.CosmoSpatialFlatnessWitnesses.base
+#print axioms SFT.Physics.CosmoSpatialFlatnessWitnesses.refined
+#print axioms SFT.Physics.CosmoSpatialFlatnessWitnesses.isAbsence
+#print axioms SFT.Physics.CosmoSpatialFlatnessWitnesses.check0
+#print axioms SFT.Physics.CosmoSpatialFlatnessWitnesses.check1
+#print axioms SFT.Physics.CosmoSpatialFlatnessWitnesses.check2
+#print axioms SFT.Physics.CosmoSpatialFlatnessWitnesses.witnesses
+#print axioms SFT.Physics.CosmoSpatialFlatnessWitnesses.check0Passed
+#print axioms SFT.Physics.CosmoSpatialFlatnessWitnesses.check1Passed
+#print axioms SFT.Physics.CosmoSpatialFlatnessWitnesses.check2Passed
+#print axioms SFT.Physics.CosmoSpatialFlatnessWitnesses.allWitnessesPass
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.Carrier
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.carrierName
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.Component
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.componentName
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.Normalization
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.normalizationName
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.Completeness
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.completenessName
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.Remainder
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.remainderName
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.Absence
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.absenceName
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.Refinement
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.refinementName
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.Scope
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.scopeName
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.Target
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.targetName
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.Provenance
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.provenanceName
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.Extension
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.extensionName
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.Candidate
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.sourceFields
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.candidateId
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.exactForm
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.survivorId
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.survives
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.criteriaDecision
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionReason
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.generationRule
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.grammarBoundary
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.candidates
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.survivor
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.generatedCardinality
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.candidatesComplete
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus0
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus0
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus1
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus1
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus2
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus2
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus3
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus3
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus4
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus4
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus5
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus5
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus6
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus6
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus7
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus7
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus8
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus8
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus9
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus9
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus10
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus10
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus11
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus11
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus12
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus12
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus13
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus13
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus14
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus14
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus15
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus15
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus16
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus16
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus17
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus17
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus18
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus18
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus19
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus19
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus20
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus20
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus21
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus21
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus22
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus22
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus23
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus23
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus24
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus24
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus25
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus25
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus26
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus26
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus27
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus27
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus28
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus28
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus29
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus29
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus30
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus30
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus31
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus31
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus32
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus32
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus33
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus33
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus34
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus34
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus35
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus35
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus36
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus36
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus37
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus37
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus38
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus38
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus39
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus39
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus40
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus40
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus41
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus41
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus42
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus42
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus43
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus43
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus44
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus44
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus45
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus45
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus46
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus46
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus47
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus47
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus48
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus48
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus49
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus49
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus50
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus50
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus51
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus51
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus52
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus52
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus53
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus53
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus54
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus54
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus55
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus55
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus56
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus56
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus57
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus57
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus58
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus58
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus59
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus59
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus60
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus60
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus61
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus61
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus62
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus62
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus63
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus63
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.sourceDecisionMatchesCriteria
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCriteriaSurvivor
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueSurvivor
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.survivorAccepted
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.ExactCriteria
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.acceptanceIffExactCriteria
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.carrier_rejected_rejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.component_rejected_rejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.normalization_rejected_rejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.completeness_rejected_rejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.remainder_rejected_rejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.absence_rejected_rejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.refinement_rejected_rejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.scope_rejected_rejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.target_rejected_rejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.provenance_rejected_rejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessGrammar.extension_rejected_rejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.exclusions
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.closureValue
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.falseCandidate
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.survivorIds
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.record
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.falsePremise
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.tamperedSource
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.tamperedArtifact
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.boundary
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.falsePremisePassed
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.boundaryPassed
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.controlRecords
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.resultData
+#print axioms SFT.Physics.CosmoSpatialFlatnessControls.runControls
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.candidateRecord
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.completenessRecord
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.registrationData
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.registration
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.generatedCandidateData
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.censusData
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.census
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.decisionData
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.decision
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.decideCandidate
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.closureData
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.closure
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.nativeDecisionPreservesSurvival
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.nativeDecisionPreservesReason
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.registrationHasNoAxioms
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.registrationHasNoFreeParameters
+#print axioms SFT.Physics.CosmoSpatialFlatnessEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.labelValue
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.nonblank
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.TargetRow
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.claimId
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.experimentId
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.expectedLabel
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.frozenRelation
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.sourcePath
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.snapshotHash
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.falsification
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.program
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.programValue
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.programDocument
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.targetRows
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.registration
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.registrationHash
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.sourceMatches
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.sourceMatchesOriginal
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.checkSource
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.envelope
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.targets
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.targetsValue
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.completeTargetCount
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.completeTargetLabels
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.changedSourceRejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.specDependencies
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.specDimensions
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.uniqueNames
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.specWitnesses
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.validateSpec
+#print axioms SFT.Physics.CosmoSpatialFlatnessExperiment.registeredSpecValid
+#print axioms SFT.Physics.CosmoSpatialFlatnessComparison.lookup
+#print axioms SFT.Physics.CosmoSpatialFlatnessComparison.releasedLabel
+#print axioms SFT.Physics.CosmoSpatialFlatnessComparison.compareRows
+#print axioms SFT.Physics.CosmoSpatialFlatnessComparison.completeRowsRetained
+#print axioms SFT.Physics.CosmoSpatialFlatnessComparison.comparisonValue
+#print axioms SFT.Physics.CosmoSpatialFlatnessComparison.controlValue
+#print axioms SFT.Physics.CosmoSpatialFlatnessComparison.accepted
+#print axioms SFT.Physics.CosmoSpatialFlatnessComparison.acceptanceRequiresAllRows
+#print axioms SFT.Physics.CosmoSpatialFlatnessComparison.missingRowRejects
+#print axioms SFT.Physics.CosmoSpatialFlatnessComparison.registeredComparisons
+#print axioms SFT.Physics.CosmoSpatialFlatnessComparison.message
+#print axioms SFT.Physics.CosmoSpatialFlatnessComparison.sourceIds
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.PredictionSeal
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.Snapshot
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.inputValues
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.sealPrediction
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.programFields
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.observation
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.certificate
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.isolation
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.custodyCertificate
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.receipt
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.Validation
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.validate
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.resealRejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.validateExternal
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.sourceMismatchRejects
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.sealBindsExecution
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.emptyPremiseRejected
+#print axioms SFT.Physics.CosmoSpatialFlatnessValidation.programDocumentRetained

@@ -1006,3 +1006,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.CosmoBranchBoundaryGrammar.candidates do
     IO.println ("CosmoBranchBoundaryGrammar\t" ++ SFT.Physics.CosmoBranchBoundaryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoBranchBoundaryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoBranchBoundaryGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoBranchBoundaryGrammar.decisionReason c)
+
+  for c in SFT.Physics.CosmoSpatialFlatnessGrammar.candidates do
+    IO.println ("CosmoSpatialFlatnessGrammar\t" ++ SFT.Physics.CosmoSpatialFlatnessGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoSpatialFlatnessGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoSpatialFlatnessGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoSpatialFlatnessGrammar.decisionReason c)

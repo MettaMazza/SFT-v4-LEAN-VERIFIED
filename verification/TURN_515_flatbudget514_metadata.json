@@ -1,0 +1,80 @@
+{
+  "CosmoSpatialFlatness": {
+    "claim_id": "SFT-PHYS-COSMO-SPATIAL-FLATNESS-001",
+    "experiment_id": "SFT-EXP-PHYS-COSMO-SPATIAL-FLATNESS-001",
+    "expected_observation_label": "sealed-empty-curvature-remainder-inside-complete-planck-bao-signed-interval",
+    "exact_result": "The empty-One curvature remainder is inside the complete Planck TT,TE,EE+lowE+lensing+BAO 68-percent interval reported in equation 47b.",
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/planck-2018-curvature-record.json",
+    "source_snapshot_hash": "sha256:97d4c8210c7de6cc8b406d96f3d0136ef3535a96e5a9874bcceca1c875185873",
+    "falsification_condition": "The complete registered curvature interval excludes structural absence; its orientation, central magnitude, uncertainty, confidence region or data combination is omitted; source custody changes; or a tampered comparison is accepted.",
+    "dependencies": [
+      "SFT-FOUNDATION-ONE-001",
+      "SFT-FOUNDATION-PART-001",
+      "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001",
+      "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001",
+      "SFT-PHYS-MEAS-TARGET-CUSTODY-001",
+      "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001",
+      "SFT-PHYS-MEAS-VALUE-RECORD-001",
+      "SFT-PHYS-MEAS-UNCERTAINTY-001"
+    ],
+    "target_rows": [
+      {
+        "target_id": "PLANCK-2018-BAO-CURVATURE-47B",
+        "source_id": "PLANCK-2018-VI-CURVATURE-47B",
+        "source_locator": "equation 47b central orientation/magnitude and complete 68-percent uncertainty",
+        "observed_label": "sealed-empty-curvature-remainder-inside-complete-planck-bao-signed-interval"
+      }
+    ],
+    "source_path": "sft/physics/spatial_flatness_law.py",
+    "validator_source_path": "sft/physics/spatial_flatness_validation.py",
+    "candidate_count": 2048
+  },
+  "CosmoCompleteBudget": {
+    "claim_id": "SFT-PHYS-COSMO-COMPLETE-BUDGET-001",
+    "experiment_id": "SFT-EXP-PHYS-COSMO-COMPLETE-BUDGET-001",
+    "expected_observation_label": "sealed-refined-four-part-budget-inside-all-complete-planck-bao-intervals",
+    "exact_result": "All four refined values 11/16, 5/16, 25/512 and 135/512 lie inside their complete Planck+BAO intervals; all four earlier leading values lie outside their respective intervals.",
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/planck-2018-bao-budget-record.json",
+    "source_snapshot_hash": "sha256:a8525585688e7ba818f8650fc0f8b73a449823d5e199a8be36e37b8e73a0e612",
+    "falsification_condition": "Any refined component lies outside its complete interval; any earlier leading component is falsely labelled as passing; any required source row or uncertainty is omitted; custody changes; or a tampered comparison is accepted.",
+    "dependencies": [
+      "SFT-PHYS-COSMO-DARK-BARYON-FRACTION-001",
+      "SFT-PHYS-COSMO-SPATIAL-FLATNESS-001",
+      "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001",
+      "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001",
+      "SFT-PHYS-MEAS-TARGET-CUSTODY-001",
+      "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001",
+      "SFT-PHYS-MEAS-VALUE-RECORD-001",
+      "SFT-PHYS-MEAS-UNCERTAINTY-001"
+    ],
+    "target_rows": [
+      {
+        "target_id": "PLANCK-BAO-VACUUM-FRACTION",
+        "source_id": "PLANCK-2018-BAO-BASELINE-BUDGET",
+        "source_locator": "complete direct vacuum interval",
+        "observed_label": "sealed-refined-four-part-budget-inside-all-complete-planck-bao-intervals"
+      },
+      {
+        "target_id": "PLANCK-BAO-MATTER-FRACTION",
+        "source_id": "PLANCK-2018-BAO-BASELINE-BUDGET",
+        "source_locator": "complete direct matter interval",
+        "observed_label": "sealed-refined-four-part-budget-inside-all-complete-planck-bao-intervals"
+      },
+      {
+        "target_id": "PLANCK-BAO-BARYON-FRACTION",
+        "source_id": "PLANCK-2018-BAO-BASELINE-BUDGET",
+        "source_locator": "physical baryon density divided by complete squared reduced-Hubble interval",
+        "observed_label": "sealed-refined-four-part-budget-inside-all-complete-planck-bao-intervals"
+      },
+      {
+        "target_id": "PLANCK-BAO-COLD-DARK-FRACTION",
+        "source_id": "PLANCK-2018-BAO-BASELINE-BUDGET",
+        "source_locator": "physical cold-dark density divided by complete squared reduced-Hubble interval",
+        "observed_label": "sealed-refined-four-part-budget-inside-all-complete-planck-bao-intervals"
+      }
+    ],
+    "source_path": "sft/physics/cosmic_budget_law.py",
+    "validator_source_path": "sft/physics/cosmic_budget_validation.py",
+    "candidate_count": 2048
+  }
+}

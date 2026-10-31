@@ -1,0 +1,20 @@
+import SFT.Physics.QuantumPhysicalContextuality
+import SFT.Physics.QuantumPhysicalDecoherence
+#print axioms SFT.Physics.QuantumPhysicalContextuality.Observation
+#print axioms SFT.Physics.QuantumPhysicalContextuality.fullRecord
+#print axioms SFT.Physics.QuantumPhysicalContextuality.contextAndPreparationHeld
+#print axioms SFT.Physics.QuantumPhysicalContextuality.everyOriginalBranchHeld
+#print axioms SFT.Physics.QuantumPhysicalContextuality.changedContextRecordExcludesErasedAssignment
+#print axioms SFT.Physics.QuantumPhysicalContextuality.noUniversalContextErasingAssignment
+#print axioms SFT.Physics.QuantumPhysicalContextuality.distinctCompleteContextsRemainRecorded
+#print axioms SFT.Physics.QuantumPhysicalDecoherence.Distribution
+#print axioms SFT.Physics.QuantumPhysicalDecoherence.globalRow
+#print axioms SFT.Physics.QuantumPhysicalDecoherence.recoverRow
+#print axioms SFT.Physics.QuantumPhysicalDecoherence.phaseRecordRecoversEntireBranch
+#print axioms SFT.Physics.QuantumPhysicalDecoherence.globalEncodingCannotMergeHeldBranches
+#print axioms SFT.Physics.QuantumPhysicalDecoherence.distinctPhaseRequiresDistinctEnvironment
+#print axioms SFT.Physics.QuantumPhysicalDecoherence.globalSupport
+#print axioms SFT.Physics.QuantumPhysicalDecoherence.fullSupportReconstructed
+#print axioms SFT.Physics.QuantumPhysicalDecoherence.reducedObservationForgetsOnlyEnvironment
+#print axioms SFT.Physics.QuantumPhysicalDecoherence.reducedPhaseDistinctionClosed
+#print axioms SFT.Physics.QuantumPhysicalDecoherence.originalPreparationGloballyRecoverable

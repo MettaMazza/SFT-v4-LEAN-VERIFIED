@@ -1,0 +1,49 @@
+import SFT.Physics.QuantumPhysicalTunnelling
+import SFT.Physics.QuantumPhysicalSpectra
+import SFT.Physics.QuantumPhysicalEntanglement
+import SFT.Physics.QuantumPhysicalBell
+#print axioms SFT.Physics.QuantumPhysicalTunnelling.traversal
+#print axioms SFT.Physics.QuantumPhysicalTunnelling.traversalExactly
+#print axioms SFT.Physics.QuantumPhysicalTunnelling.everyTraversalHasGeneratedPath
+#print axioms SFT.Physics.QuantumPhysicalTunnelling.coarseProjectionClosesTraversal
+#print axioms SFT.Physics.QuantumPhysicalTunnelling.completeSupportDoesNotDeletePath
+#print axioms SFT.Physics.QuantumPhysicalTunnelling.fullUnderlyingEvolutionReversible
+#print axioms SFT.Physics.QuantumPhysicalTunnelling.record
+#print axioms SFT.Physics.QuantumPhysicalTunnelling.preparationAndAllPathsRetained
+#print axioms SFT.Physics.QuantumPhysicalSpectra.closes
+#print axioms SFT.Physics.QuantumPhysicalSpectra.closureExactly
+#print axioms SFT.Physics.QuantumPhysicalSpectra.spectrum
+#print axioms SFT.Physics.QuantumPhysicalSpectra.generatedSpectrumExactly
+#print axioms SFT.Physics.QuantumPhysicalSpectra.fullRecurrenceAdmitted
+#print axioms SFT.Physics.QuantumPhysicalSpectra.emptyTraceExcluded
+#print axioms SFT.Physics.QuantumPhysicalSpectra.Transition
+#print axioms SFT.Physics.QuantumPhysicalSpectra.transitionBetweenClosedClasses
+#print axioms SFT.Physics.QuantumPhysicalSpectra.record
+#print axioms SFT.Physics.QuantumPhysicalSpectra.transitionRetainsPreparationAndBoundary
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.factorizes
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.crossClosed
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.productForcesCrossClosure
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.crossClosureGivesFullMarginalProduct
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.factorizationCriterion
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.entangled
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.missingCrossWordExcludesEveryIndependentProduct
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.entanglementExactlyNonclosed
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.jointLedger
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.jointSupport
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.completeBranchLedgerRetained
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.record
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.commonPreparationRetained
+#print axioms SFT.Physics.QuantumPhysicalEntanglement.originalIndependentCompositionSupport
+#print axioms SFT.Physics.QuantumPhysicalBell.Event
+#print axioms SFT.Physics.QuantumPhysicalBell.completeInput
+#print axioms SFT.Physics.QuantumPhysicalBell.localFactorization
+#print axioms SFT.Physics.QuantumPhysicalBell.omittedLeftDependenceExcludesFactorization
+#print axioms SFT.Physics.QuantumPhysicalBell.omittedRightDependenceExcludesFactorization
+#print axioms SFT.Physics.QuantumPhysicalBell.ledger
+#print axioms SFT.Physics.QuantumPhysicalBell.completeJointCensusRetained
+#print axioms SFT.Physics.QuantumPhysicalBell.everyGeneratedRecordPresent
+#print axioms SFT.Physics.QuantumPhysicalBell.completeInputRetainsSettings
+#print axioms SFT.Physics.QuantumPhysicalBell.fullDeterministicRecordRetained
+#print axioms SFT.Physics.QuantumPhysicalBell.physicalLedger
+#print axioms SFT.Physics.QuantumPhysicalBell.physicalSourceAndEveryBranchRetained
+#print axioms SFT.Physics.QuantumPhysicalBell.physicalOmissionExcludesLocalFactorization

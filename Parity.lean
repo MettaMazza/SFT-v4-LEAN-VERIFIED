@@ -847,3 +847,21 @@ def main : IO Unit := do
 
   for c in SFT.Physics.SpinGrammar.candidates do
     IO.println ("SpinGrammar\t" ++ SFT.Physics.SpinGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpinGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpinGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpinGrammar.decisionReason c)
+
+  for c in SFT.Physics.IndistinguishabilityGrammar.candidates do
+    IO.println ("IndistinguishabilityGrammar\t" ++ SFT.Physics.IndistinguishabilityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.IndistinguishabilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.IndistinguishabilityGrammar.exactForm c ++ "\t" ++ SFT.Physics.IndistinguishabilityGrammar.decisionReason c)
+
+  for c in SFT.Physics.ExclusionGrammar.candidates do
+    IO.println ("ExclusionGrammar\t" ++ SFT.Physics.ExclusionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ExclusionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ExclusionGrammar.exactForm c ++ "\t" ++ SFT.Physics.ExclusionGrammar.decisionReason c)
+
+  for c in SFT.Physics.TunnellingGrammar.candidates do
+    IO.println ("TunnellingGrammar\t" ++ SFT.Physics.TunnellingGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TunnellingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TunnellingGrammar.exactForm c ++ "\t" ++ SFT.Physics.TunnellingGrammar.decisionReason c)
+
+  for c in SFT.Physics.DiscreteSpectraGrammar.candidates do
+    IO.println ("DiscreteSpectraGrammar\t" ++ SFT.Physics.DiscreteSpectraGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DiscreteSpectraGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DiscreteSpectraGrammar.exactForm c ++ "\t" ++ SFT.Physics.DiscreteSpectraGrammar.decisionReason c)
+
+  for c in SFT.Physics.EntanglementGrammar.candidates do
+    IO.println ("EntanglementGrammar\t" ++ SFT.Physics.EntanglementGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.EntanglementGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.EntanglementGrammar.exactForm c ++ "\t" ++ SFT.Physics.EntanglementGrammar.decisionReason c)
+
+  for c in SFT.Physics.BellGrammar.candidates do
+    IO.println ("BellGrammar\t" ++ SFT.Physics.BellGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.BellGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.BellGrammar.exactForm c ++ "\t" ++ SFT.Physics.BellGrammar.decisionReason c)

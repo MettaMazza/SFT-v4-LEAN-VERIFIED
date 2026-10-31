@@ -1012,3 +1012,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.CosmoCompleteBudgetGrammar.candidates do
     IO.println ("CosmoCompleteBudgetGrammar\t" ++ SFT.Physics.CosmoCompleteBudgetGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoCompleteBudgetGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoCompleteBudgetGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoCompleteBudgetGrammar.decisionReason c)
+
+  for c in SFT.Physics.CommonScaleAxisGrammar.candidates do
+    IO.println ("CommonScaleAxisGrammar\t" ++ SFT.Physics.CommonScaleAxisGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CommonScaleAxisGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CommonScaleAxisGrammar.exactForm c ++ "\t" ++ SFT.Physics.CommonScaleAxisGrammar.decisionReason c)
+
+  for c in SFT.Physics.CosmicComponentTransportGrammar.candidates do
+    IO.println ("CosmicComponentTransportGrammar\t" ++ SFT.Physics.CosmicComponentTransportGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmicComponentTransportGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmicComponentTransportGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmicComponentTransportGrammar.decisionReason c)

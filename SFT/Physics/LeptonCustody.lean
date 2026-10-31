@@ -1,15 +1,11 @@
+import SFT.Physics.CustodyTypes
 import SFT.Physics.LeptonExperiment
 import SFT.Engine.DecisionGate
 namespace SFT.Physics.LeptonCustody
 open SFT.Host SFT.Host.Canonical LeptonPrediction LeptonExperiment
 set_option maxRecDepth 20000
 
-structure PredictionSeal where
- experiment : String
- predictionHash : String
- traceHash : String
- envelopeHash : String
- sealHash : String
+
 
 def sealValue (s : PredictionSeal) : Value := .object [
  ("experiment_id",.text s.experiment),("prediction_hash",.text s.predictionHash),

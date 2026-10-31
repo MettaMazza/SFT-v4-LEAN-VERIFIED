@@ -679,3 +679,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.VacuumOddGrammar.candidates do
     IO.println ("VacuumOddGrammar\t" ++ SFT.Physics.VacuumOddGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumOddGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumOddGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumOddGrammar.decisionReason c)
+
+  for c in SFT.Physics.QuantityGrammar.candidates do
+    IO.println ("QuantityGrammar\t" ++ SFT.Physics.QuantityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.QuantityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.QuantityGrammar.exactForm c ++ "\t" ++ SFT.Physics.QuantityGrammar.decisionReason c)
+
+  for c in SFT.Physics.DimensionGrammar.candidates do
+    IO.println ("DimensionGrammar\t" ++ SFT.Physics.DimensionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DimensionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DimensionGrammar.exactForm c ++ "\t" ++ SFT.Physics.DimensionGrammar.decisionReason c)
+
+  for c in SFT.Physics.UnitGrammar.candidates do
+    IO.println ("UnitGrammar\t" ++ SFT.Physics.UnitGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.UnitGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.UnitGrammar.exactForm c ++ "\t" ++ SFT.Physics.UnitGrammar.decisionReason c)

@@ -11548,7 +11548,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MEAS-OBSERVATION-CARRIER-001-8d7daef993773a07.json",
       "statement": "A physical observation is forced to retain a distinguishable phenomenon, a held reference condition and the exact comparison record; an answer without those three coordinates is not an admitted physical observation.",
       "title": "Physical observation and retained distinction",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Physics/ObservationCarrier.lean",
         "SFT/Physics/ObservationPrediction.lean",
@@ -11559,7 +11559,7 @@
         "SFT/Physics/ObservationValidation.lean",
         "SFT/Physics/ObservationValidationProofs.lean"
       ],
-      "artifact_runtime_parity": "pending",
+      "artifact_runtime_parity": "PASS: fresh full 256-candidate program, every field/hash/control and original blind empirical validator including all 1,979,202 source bytes. Full derivation proofs separately audited with zero axioms.",
       "registration_sha256": "9d4e458fb7e44b7e8dae6aadfd6a23cec8ca47ed33242e61d8c5115f56a68c1f",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -11603,10 +11603,9 @@
         "status": "empirically_tested",
         "title": "Physical observation and retained distinction"
       },
-      "remaining": [
-        "Fresh whole native blind-validator comparison against pinned empirical_validation,including actual1979202 BIPM source bytes (original30678/PID9503 remains live)."
-      ],
-      "verified_scope": "Original One pairing and arbitrary generated successor retain prior pairings and append exactly one pairing. Native comparison retains all source coordinates and accepts precisely equal predicted/released labels.; Original four-instruction predictor retains registered-premise-only input,one terminal emission of prediction and four trace rows on successful execution. No ambient input or target instruction is added.; Complete original eight-axis256 grammar,order/IDs/forms/reasons,unique survivor,all rejection coordinates,two original operational witnesses,empirical registration,census,actual decisions,closure,four controls and hashes are translated.; Exact original BIPM target rows,locators,expected label,source snapshot,experiment registration,envelope and fixed source spec validation are translated. Canonical label records retain the original source dataclass fields.; Released-row comparison retains all target IDs in order;missing-row failure and every-row acceptance are proved.12 exact original comparison/control cases and the experiment registration match pinned source execution;registered build,all-declaration zero-axiom audit and fresh candidate parity pass.; Complete original blind-validator pipeline is translated using native capability execution,exact prediction sealing,hostile-package admission,target custody and post-seal target opening. Native output retains all isolation/custody certificate and measurement receipt fields and actual hashes.; sourceMismatchRejects proves changed source bytes reject the whole validator;sealBindsExecution binds exact output/trace/envelope identities;emptyPremiseRejected and programDocumentRetained preserve source input and document boundaries. The original source-target byte hash remains checked natively.; All256 actual original program lookups,census/trace/decision hashes,closure,controls,registration and unknown-ID error match pinned V3. Native registered build and full declaration audit pass with zeroaxioms."
+      "remaining": [],
+      "verified_scope": "Original One pairing and arbitrary generated successor retain prior pairings and append exactly one pairing. Native comparison retains all source coordinates and accepts precisely equal predicted/released labels.; Original four-instruction predictor retains registered-premise-only input,one terminal emission of prediction and four trace rows on successful execution. No ambient input or target instruction is added.; Complete original eight-axis256 grammar,order/IDs/forms/reasons,unique survivor,all rejection coordinates,two original operational witnesses,empirical registration,census,actual decisions,closure,four controls and hashes are translated.; Exact original BIPM target rows,locators,expected label,source snapshot,experiment registration,envelope and fixed source spec validation are translated. Canonical label records retain the original source dataclass fields.; Released-row comparison retains all target IDs in order;missing-row failure and every-row acceptance are proved.12 exact original comparison/control cases and the experiment registration match pinned source execution;registered build,all-declaration zero-axiom audit and fresh candidate parity pass.; Complete original blind-validator pipeline is translated using native capability execution,exact prediction sealing,hostile-package admission,target custody and post-seal target opening. Native output retains all isolation/custody certificate and measurement receipt fields and actual hashes.; sourceMismatchRejects proves changed source bytes reject the whole validator;sealBindsExecution binds exact output/trace/envelope identities;emptyPremiseRejected and programDocumentRetained preserve source input and document boundaries. The original source-target byte hash remains checked natively.; All256 actual original program lookups,census/trace/decision hashes,closure,controls,registration and unknown-ID error match pinned V3. Native registered build and full declaration audit pass with zeroaxioms.",
+      "completion_evidence": "verification/TURN_480_MEASUREMENT_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -11618,9 +11617,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MEAS-QUANTITY-CARRIER-001-c98453b691e68a1b.json",
       "statement": "A physical quantity is forced as the equivalence class of observations comparable through one generated kind-preserving reference relation; its measured value is a separate record, not the quantity itself.",
       "title": "Physical quantity as reference-equivalence carrier",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/QuantityCarrier.lean",
+        "SFT/Physics/QuantityClasses.lean",
+        "SFT/Physics/QuantityGrammar.lean",
+        "SFT/Physics/QuantityEvidence.lean",
+        "SFT/Physics/QuantityExperiment.lean",
+        "SFT/Physics/QuantityValidation.lean",
+        "SFT/Physics/QuantityValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS: fresh full 256-candidate program, every field/hash/control and original blind empirical validator including all 1,979,202 source bytes. Full derivation proofs separately audited with zero axioms.",
       "registration_sha256": "abf07c1263218db7b0b83b19dd5b611a9b4406ab11bb493868fb035be83b5a76",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -11664,7 +11671,9 @@
         "statement": "A physical quantity is forced as the equivalence class of observations comparable through one generated kind-preserving reference relation; its measured value is a separate record, not the quantity itself.",
         "status": "empirically_tested",
         "title": "Physical quantity as reference-equivalence carrier"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_480_MEASUREMENT_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -11676,9 +11685,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001-a09e3abd01f98710.json",
       "statement": "A physical dimension is forced as the canonical generated composition path of independent quantity kinds; two descriptions share a dimension exactly when their paths reduce to the same held form.",
       "title": "Dimension composition and independence",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/DimensionComposition.lean",
+        "SFT/Physics/DimensionGrammar.lean",
+        "SFT/Physics/DimensionEvidence.lean",
+        "SFT/Physics/DimensionExperiment.lean",
+        "SFT/Physics/DimensionValidation.lean",
+        "SFT/Physics/DimensionValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS: fresh full 256-candidate program, every field/hash/control and original blind empirical validator including all 1,979,202 source bytes. Full derivation proofs separately audited with zero axioms.",
       "registration_sha256": "7e60006b78435aa49cc6f817f1b15cc42c02efe11cdc3ccc5857c14884b6ba04",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -11722,7 +11738,9 @@
         "statement": "A physical dimension is forced as the canonical generated composition path of independent quantity kinds; two descriptions share a dimension exactly when their paths reduce to the same held form.",
         "status": "empirically_tested",
         "title": "Dimension composition and independence"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_480_MEASUREMENT_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -11734,9 +11752,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MEAS-UNIT-COMPARISON-001-e9b8d7ccb1cd52ca.json",
       "statement": "A unit is forced as one held reference quantity used to compare quantities of the same dimension; lawful scale transport is witnessed by an exact positive part ratio and cannot change dimension.",
       "title": "Unit comparison and exact scale transport",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ReferenceTransport.lean",
+        "SFT/Physics/DimensionReferenceTransport.lean",
+        "SFT/Physics/UnitGrammar.lean",
+        "SFT/Physics/UnitEvidence.lean",
+        "SFT/Physics/UnitExperiment.lean",
+        "SFT/Physics/UnitValidation.lean",
+        "SFT/Physics/UnitValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS: fresh full 256-candidate program, every field/hash/control and original blind empirical validator including all 1,979,202 source bytes. Full derivation proofs separately audited with zero axioms.",
       "registration_sha256": "bd12eb54238231a1537482672e2254836356239cb2fec77e835744fa33fa9dfc",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -11780,7 +11806,9 @@
         "statement": "A unit is forced as one held reference quantity used to compare quantities of the same dimension; lawful scale transport is witnessed by an exact positive part ratio and cannot change dimension.",
         "status": "empirically_tested",
         "title": "Unit comparison and exact scale transport"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_480_MEASUREMENT_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -190543,13 +190571,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-30T21:24:05.576480+00:00",
+  "updated_at": "2026-10-31T00:02:38.281396+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 1,
-    "pending": 2588,
-    "fully_reconstructed_claims": 192,
-    "axiom_free_exported_results": 9303,
-    "axiom_free_audited_definitions_and_theorems": 20933
+    "in_progress": 0,
+    "pending": 2585,
+    "fully_reconstructed_claims": 196,
+    "axiom_free_exported_results": 9504,
+    "axiom_free_audited_definitions_and_theorems": 21386
   }
 }

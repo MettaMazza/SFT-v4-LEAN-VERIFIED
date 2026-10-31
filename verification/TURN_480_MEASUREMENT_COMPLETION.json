@@ -1,0 +1,126 @@
+{
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "entries": [
+    {
+      "claim_id": "SFT-PHYS-MEAS-OBSERVATION-CARRIER-001",
+      "status": "complete",
+      "modules": [
+        "SFT/Physics/ObservationCarrier.lean",
+        "SFT/Physics/ObservationPrediction.lean",
+        "SFT/Physics/ObservationGrammar.lean",
+        "SFT/Physics/ObservationEvidence.lean",
+        "SFT/Physics/ObservationExperiment.lean",
+        "SFT/Physics/ObservationComparison.lean",
+        "SFT/Physics/ObservationValidation.lean",
+        "SFT/Physics/ObservationValidationProofs.lean"
+      ],
+      "dependencies": {
+        "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001": "complete",
+        "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+        "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+        "SFT-INFO-SYMBOL-DISTINCTION-001": "complete",
+        "SFT-INFO-ENCODING-DECODING-001": "complete",
+        "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001": "complete",
+        "SFT-PHYS-MEAS-TARGET-CUSTODY-001": "complete",
+        "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001": "complete"
+      },
+      "audit_declarations": 150,
+      "theorems": 45,
+      "axiom_dependencies": [],
+      "program_comparison": "verification/TURN_480_observation_program480_report.json",
+      "empirical_comparison": "verification/TURN_480_observation_validation480_window_report.json",
+      "independent_validation": "Previously retained observation validation; fresh full program and empirical comparison repeated."
+    },
+    {
+      "claim_id": "SFT-PHYS-MEAS-QUANTITY-CARRIER-001",
+      "status": "complete",
+      "modules": [
+        "SFT/Physics/QuantityCarrier.lean",
+        "SFT/Physics/QuantityClasses.lean",
+        "SFT/Physics/QuantityGrammar.lean",
+        "SFT/Physics/QuantityEvidence.lean",
+        "SFT/Physics/QuantityExperiment.lean",
+        "SFT/Physics/QuantityValidation.lean",
+        "SFT/Physics/QuantityValidationProofs.lean"
+      ],
+      "dependencies": {
+        "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001": "complete",
+        "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+        "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+        "SFT-INFO-SYMBOL-DISTINCTION-001": "complete",
+        "SFT-INFO-ENCODING-DECODING-001": "complete",
+        "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001": "complete",
+        "SFT-PHYS-MEAS-TARGET-CUSTODY-001": "complete",
+        "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001": "complete",
+        "SFT-PHYS-MEAS-OBSERVATION-CARRIER-001": "complete"
+      },
+      "audit_declarations": 134,
+      "theorems": 44,
+      "axiom_dependencies": [],
+      "program_comparison": "verification/TURN_480_quantity_program480_report.json",
+      "empirical_comparison": "verification/TURN_480_quantity_validation480_window_report.json",
+      "independent_validation": "verification/TURN_480_quantity_independent480_report.json"
+    },
+    {
+      "claim_id": "SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001",
+      "status": "complete",
+      "modules": [
+        "SFT/Physics/DimensionComposition.lean",
+        "SFT/Physics/DimensionGrammar.lean",
+        "SFT/Physics/DimensionEvidence.lean",
+        "SFT/Physics/DimensionExperiment.lean",
+        "SFT/Physics/DimensionValidation.lean",
+        "SFT/Physics/DimensionValidationProofs.lean"
+      ],
+      "dependencies": {
+        "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001": "complete",
+        "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+        "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+        "SFT-INFO-SYMBOL-DISTINCTION-001": "complete",
+        "SFT-INFO-ENCODING-DECODING-001": "complete",
+        "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001": "complete",
+        "SFT-PHYS-MEAS-TARGET-CUSTODY-001": "complete",
+        "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001": "complete",
+        "SFT-PHYS-MEAS-QUANTITY-CARRIER-001": "complete"
+      },
+      "audit_declarations": 156,
+      "theorems": 61,
+      "axiom_dependencies": [],
+      "program_comparison": "verification/TURN_480_dimension_program479_report.json",
+      "empirical_comparison": "verification/TURN_480_dimension_validation480_window_report.json",
+      "independent_validation": "verification/TURN_480_dimension_independent479_report.json"
+    },
+    {
+      "claim_id": "SFT-PHYS-MEAS-UNIT-COMPARISON-001",
+      "status": "complete",
+      "modules": [
+        "SFT/Physics/ReferenceTransport.lean",
+        "SFT/Physics/DimensionReferenceTransport.lean",
+        "SFT/Physics/UnitGrammar.lean",
+        "SFT/Physics/UnitEvidence.lean",
+        "SFT/Physics/UnitExperiment.lean",
+        "SFT/Physics/UnitValidation.lean",
+        "SFT/Physics/UnitValidationProofs.lean"
+      ],
+      "dependencies": {
+        "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001": "complete",
+        "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+        "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+        "SFT-INFO-SYMBOL-DISTINCTION-001": "complete",
+        "SFT-INFO-ENCODING-DECODING-001": "complete",
+        "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001": "complete",
+        "SFT-PHYS-MEAS-TARGET-CUSTODY-001": "complete",
+        "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001": "complete",
+        "SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001": "complete"
+      },
+      "audit_declarations": 153,
+      "theorems": 52,
+      "axiom_dependencies": [],
+      "program_comparison": "verification/TURN_480_unit_program480_report.json",
+      "empirical_comparison": "verification/TURN_480_unit_validation480_window_report.json",
+      "independent_validation": "verification/TURN_480_unit_independent480_report.json"
+    }
+  ],
+  "completed_entries": 196,
+  "build_scope": "Targeted builds of all changed measurement modules; no new full-model build asserted."
+}

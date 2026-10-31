@@ -1,0 +1,31 @@
+import SFT.Physics.ReferenceRealization
+import SFT.Physics.MeasuredValueRecord
+#print axioms SFT.Physics.ReferenceRealization.Step
+#print axioms SFT.Physics.ReferenceRealization.Process
+#print axioms SFT.Physics.ReferenceRealization.result
+#print axioms SFT.Physics.ReferenceRealization.Row
+#print axioms SFT.Physics.ReferenceRealization.row
+#print axioms SFT.Physics.ReferenceRealization.trace
+#print axioms SFT.Physics.ReferenceRealization.records
+#print axioms SFT.Physics.ReferenceRealization.length
+#print axioms SFT.Physics.ReferenceRealization.mapAppendOne
+#print axioms SFT.Physics.ReferenceRealization.lengthAppendOne
+#print axioms SFT.Physics.ReferenceRealization.allRecordsRetained
+#print axioms SFT.Physics.ReferenceRealization.completeTraceLength
+#print axioms SFT.Physics.ReferenceRealization.positiveLength
+#print axioms SFT.Physics.ReferenceRealization.noNameOnlyRealization
+#print axioms SFT.Physics.ReferenceRealization.successorRetainsPrior
+#print axioms SFT.Physics.ReferenceRealization.successorComputesRatio
+#print axioms SFT.Physics.ReferenceRealization.realizedDimension
+#print axioms SFT.Physics.ReferenceRealization.realizedRatioPositive
+#print axioms SFT.Physics.ReferenceRealization.rowRetainsEndpoints
+#print axioms SFT.Physics.ReferenceRealization.rowRetainsSource
+#print axioms SFT.Physics.MeasuredValueRecord.Record
+#print axioms SFT.Physics.MeasuredValueRecord.replaceInscription
+#print axioms SFT.Physics.MeasuredValueRecord.referenceRetained
+#print axioms SFT.Physics.MeasuredValueRecord.provenanceRetained
+#print axioms SFT.Physics.MeasuredValueRecord.inscriptionRetained
+#print axioms SFT.Physics.MeasuredValueRecord.differentReferencesDistinct
+#print axioms SFT.Physics.MeasuredValueRecord.differentInscriptionsDistinct
+#print axioms SFT.Physics.MeasuredValueRecord.differentProvenanceDistinct
+#print axioms SFT.Physics.MeasuredValueRecord.exactReconstruction

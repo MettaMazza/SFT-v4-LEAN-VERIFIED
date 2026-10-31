@@ -1,0 +1,31 @@
+import SFT.Physics.CustodyTypes
+import SFT.Physics.TargetCustody
+#print axioms SFT.Physics.LeptonDecimal.spaceCodes
+#print axioms SFT.Physics.LeptonDecimal.trimCodes
+#print axioms SFT.Physics.LeptonDecimal.strip
+#print axioms SFT.Physics.LeptonPrediction.nonblank
+#print axioms SFT.Physics.LeptonCustody.PredictionSeal
+#print axioms SFT.Physics.TargetCustody.PredictionSeal
+#print axioms SFT.Physics.TargetCustody.insertTarget
+#print axioms SFT.Physics.TargetCustody.sortTargets
+#print axioms SFT.Physics.TargetCustody.targetIdentity
+#print axioms SFT.Physics.TargetCustody.Commitment
+#print axioms SFT.Physics.TargetCustody.commitmentValue
+#print axioms SFT.Physics.TargetCustody.Vault
+#print axioms SFT.Physics.TargetCustody.createVault
+#print axioms SFT.Physics.TargetCustody.constructorRetainsCommitment
+#print axioms SFT.Physics.TargetCustody.Release
+#print axioms SFT.Physics.TargetCustody.releasePayload
+#print axioms SFT.Physics.TargetCustody.releaseValue
+#print axioms SFT.Physics.TargetCustody.release
+#print axioms SFT.Physics.TargetCustody.sameNames
+#print axioms SFT.Physics.TargetCustody.violations
+#print axioms SFT.Physics.TargetCustody.verify
+#print axioms SFT.Physics.TargetCustody.identityFromRelease
+#print axioms SFT.Physics.TargetCustody.cannotReleaseTwice
+#print axioms SFT.Physics.TargetCustody.releasePreservesPackage
+#print axioms SFT.Physics.TargetCustody.successfulReleaseCannotRepeat
+#print axioms SFT.Physics.TargetCustody.releaseRequiresMatchingSeal
+#print axioms SFT.Physics.TargetCustody.verifyEmpty
+#print axioms SFT.Physics.TargetCustody.violationRowEmpty
+#print axioms SFT.Physics.TargetCustody.exchangeChecksExactly

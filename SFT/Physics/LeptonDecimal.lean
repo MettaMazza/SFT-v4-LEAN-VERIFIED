@@ -1,9 +1,10 @@
+import SFT.Physics.CustodyTypes
 import SFT.Physics.LeptonRefinement
 namespace SFT.Physics.LeptonDecimal
 open LeptonIntervals SFT.Host
 
 def decimalBases : List Nat := [48, 1632, 1776, 1984, 2406, 2534, 2662, 2790, 2918, 3046, 3174, 3302, 3430, 3558, 3664, 3792, 3872, 4160, 4240, 6112, 6160, 6470, 6608, 6784, 6800, 6992, 7088, 7232, 7248, 42528, 43216, 43264, 43472, 43504, 43600, 44016, 65296, 66720, 68912, 69734, 69872, 69942, 70096, 70384, 70736, 70864, 71248, 71360, 71472, 71904, 72016, 72784, 73040, 73120, 92768, 93008, 120782, 120792, 120802, 120812, 120822, 123200, 123632, 125264, 130032]
-def spaceCodes : List Nat := [9, 10, 11, 12, 13, 28, 29, 30, 31, 32, 133, 160, 5760, 8192, 8193, 8194, 8195, 8196, 8197, 8198, 8199, 8200, 8201, 8202, 8232, 8233, 8239, 8287, 12288]
+
 def intSpaceCodes : List Nat := [9, 10, 11, 12, 13, 32, 133, 160, 5760, 8192, 8193, 8194, 8195, 8196, 8197, 8198, 8199, 8200, 8201, 8202, 8232, 8233, 8239, 8287, 12288]
 
 def decimalDigit (c : Char) : Option Nat :=
@@ -11,10 +12,9 @@ def decimalDigit (c : Char) : Option Nat :=
  | none => none
  | some base => some (c.toNat-base)
 
-def trimCodes (codes : List Nat) (cs : List Char) : List Char :=
- ((cs.dropWhile (fun c => codes.contains c.toNat)).reverse.dropWhile (fun c => codes.contains c.toNat)).reverse
 
-def strip (cs : List Char) : List Char := trimCodes spaceCodes cs
+
+
 
 def digitsFrom : List Char → Nat → Option Nat
  | [],value => some value

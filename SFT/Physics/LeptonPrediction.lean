@@ -1,3 +1,4 @@
+import SFT.Physics.CustodyTypes
 import SFT.Physics.LeptonComparison
 namespace SFT.Physics.LeptonPrediction
 open SFT.Host SFT.Host.Canonical
@@ -48,7 +49,7 @@ def register (name : String) (registers : List (String × Held)) : Except String
  | none => .error "FoldLanguageHalt: instruction references an unheld register"
  | some value => .ok value
 
-def nonblank (text : String) : Bool := !(LeptonDecimal.strip (Text.chars text)).isEmpty
+
 
 def evaluate (inputs registers : List (String × Held)) : Instruction → Except String (Held × List Held)
  | .input _ name => match lookup name inputs with

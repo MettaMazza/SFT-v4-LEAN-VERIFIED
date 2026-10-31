@@ -1,5 +1,6 @@
-import SFT.Physics.LeptonCustody
+import SFT.Physics.CustodyTypes
 import SFT.Engine.EvidenceGates
+import SFT.Engine.RegistrationGate
 namespace SFT.Physics.TargetCustody
 open SFT.Host SFT.Host.Canonical
 abbrev PredictionSeal := SFT.Physics.LeptonCustody.PredictionSeal

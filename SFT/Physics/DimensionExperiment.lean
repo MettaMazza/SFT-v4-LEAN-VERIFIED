@@ -1,3 +1,4 @@
+import SFT.Host.SHA256Window
 import SFT.Physics.ObservationPrediction
 import SFT.Physics.DimensionEvidence
 set_option maxRecDepth 20000
@@ -32,7 +33,12 @@ def registration : Value := .object [
 def registrationHash : String := identity registration
 
 def sourceMatches (bytes : ByteArray) : Bool :=
- Text.equal (Text.append "sha256:" (SHA256.digest bytes)) snapshotHash
+ Text.equal (Text.append "sha256:" (SHA256Window.digest bytes)) snapshotHash
+
+theorem sourceMatchesOriginal (bytes : ByteArray) :
+ sourceMatches bytes = Text.equal (Text.append "sha256:" (SHA256.digest bytes)) snapshotHash := by
+ unfold sourceMatches
+ rw [SHA256Window.digestPreserved]
 
 def checkSource (bytes : ByteArray) : Except String Unit :=
  if sourceMatches bytes then .ok () else .error "ValueError: external measurement snapshot differs from registration"

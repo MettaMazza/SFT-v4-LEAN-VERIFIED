@@ -21,8 +21,14 @@ for i,proj in enumerate(['.1','.2.1','.2.2.1','.2.2.2.1','.2.2.2.2']):
 rows=[(literal(w.args[0]),literal(w.args[1])) for w in kw['witnesses'].elts];assert len(rows)==5
 s+='def witnesses : List Witness := ['+','.join('⟨'+q(n)+','+q(t)+',check'+str(i)+'⟩' for i,(n,t) in enumerate(rows))+']\n'
 for i in range(5):s+='theorem check'+str(i)+'Passed : check'+str(i)+'=true := by\n unfold check'+str(i)+'\n rw [allOriginalChecks]\n rfl\n'
-s+='theorem allWitnessesPass : witnesses.all Witness.passed=true := by\n change ('+' && '.join('check'+str(i) for i in range(5))+' && true)=true\n rw ['+','.join('check'+str(i)+'Passed' for i in range(5))+']\n rfl\nend SFT.Physics.UnifiedConstantsWitnesses\n';(r/'SFT/Physics/UnifiedConstantsWitnesses.lean').write_text(s)
+s+='theorem allWitnessesPass : witnesses.all Witness.passed=true := by\n unfold witnesses\n rw ['+','.join('check'+str(i)+'Passed' for i in range(5))+']\n rfl\nend SFT.Physics.UnifiedConstantsWitnesses\n';(r/'SFT/Physics/UnifiedConstantsWitnesses.lean').write_text(s)
 s=t[t.index("s='''import SFT.Physics.SpatialThreeGrammar"):].replace('SpatialThree','UnifiedConstants').replace('survivor with carrier :=','survivor with root :=');exec(compile(s,'original-unified-controls','exec'))
+p=r/'SFT/Physics/UnifiedConstantsControls.lean';c=p.read_text();a=c.index('theorem boundaryPassed');b=c.index('def controlRecords',a);c=c[:a]+'''theorem boundaryPassed : boundary.passed = true := by
+ unfold boundary record
+ rw [UnifiedConstantsWitnesses.allWitnessesPass]
+ rfl
+
+'''+c[b:];p.write_text(c)
 p=r/'SFT/Physics/UnifiedConstantsEvidence.lean';s=p.read_text();component=(r/'SFT/Physics/CosmicComponentTransportEvidence.lean').read_text();start=component.index('def indexBucketCount');end=component.index('\ndef ',component.index('def decideCandidate',start)+4)
 a=s.index('def decideCandidate');b=s.index('\ndef ',a+4)
 s=s[:a]+component[start:end].replace('CosmicComponentTransport','UnifiedConstants')+s[b:]

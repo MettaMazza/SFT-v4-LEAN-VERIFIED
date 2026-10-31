@@ -6,7 +6,7 @@ if out==r or r in out.parents:raise SystemExit('Output must be outside the repos
 out.mkdir(parents=True,exist_ok=True)
 files=[]
 for f in sorted(r.rglob('*')):
- if not f.is_file():continue
+ if not f.is_file() or f.name=='.DS_Store':continue
  rel=f.relative_to(r)
  if any(s in {'.lake','.git','__pycache__','_v3'} or s.startswith('._') for s in rel.parts):continue
  if rel.as_posix().startswith('verification/current/'):continue

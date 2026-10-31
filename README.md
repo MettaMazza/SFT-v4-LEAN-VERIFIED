@@ -3,7 +3,7 @@
 **17,849 Lean theorems proved · 0 axiom dependencies · Unified Constants complete: 26 exact readings across seven sectors.**
 
 <p align="center">
-  <img src="docs/assets/sft-banner.svg" alt="SFT — Structure comes first. The V3 model. Formalised in Lean. One-to-one." width="100%" />
+  <img src="docs/assets/sft-banner.svg" alt="SFT - Unified Constants complete. 308 V3 entries verified in Lean, with zero axiom dependencies." width="100%" />
 </p>
 
 <p align="center">
@@ -21,11 +21,15 @@
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
 
-## Unified Constants milestone - review package being prepared
+## Unified Constants milestone - review edition 0.2
 
-The Unified Constants entry is complete. The cumulative mathematical manuscript is updated; its typeset review PDF and publication package are being prepared for author review.
+**Smithian Fold Theory: A Zero-Axiom, Zero-Free-Parameter Unified Constants Object - Lean 4 Formal Verification**
 
-[Updated full manuscript](ZENODO_PAPER_DRAFT.txt) · [Unified Constants completion evidence](verification/TURN_515_UNIFIEDCONSTANTS_COMPLETION.json) · [Previous published edition0.1](https://doi.org/10.5281/zenodo.23782217)
+The exact fine-structure ratio opens the cumulative SFT paper. This milestone connects 26 terminal readings across seven sectors through one rooted constants object, with all 4,096 original alternatives verified.
+
+**[Read the review PDF](publication/SFT_REVIEW.pdf)** · [Full text](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Review guide](publication/REVIEW_GUIDE.txt) · [Release index](publication/RELEASE_INDEX.json)
+
+**Prepared for author review; not yet published on Zenodo.** The [previous published edition 0.1](https://doi.org/10.5281/zenodo.23782217) remains available. This edition includes the cumulative mathematical manuscript, timeline, source correspondence and full verification evidence. Publication requires approval of this review edition.
 
 # One model. Every derivation. Machine-checked.
 
@@ -89,7 +93,7 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 
 **Completed source entries: 308 / 2,781.** 0 entries are in progress and 2,473 remain pending. Exact source-component evidence is recorded in COVERAGE.json. Acceleration, inertia, momentum and force are complete in source dependency order. Their native derivations, full source-program comparisons and complete empirical checks are included in the registered totals.
 
-[Read the current axiom audit →](verification/TURN_505_REGISTERED_DECLARATIONS_AUDIT.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 38,713 axiom audits →](verification/TURN_505_REGISTERED_DECLARATIONS_AUDIT.log)
+[Read the current axiom audit →](verification/TURN_515_REGISTERED_DECLARATIONS_AUDIT.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 38,713 axiom audits →](verification/TURN_515_REGISTERED_DECLARATIONS_AUDIT.log)
 
 The translated forcing gate checks ordered identifiers, exactly one survivor, explicit reasons and canonical proof-hash identities. A general theorem proves that passing requires one survivor; Root’s tampered decisions are formally rejected. [Gate proofs](SFT/Engine/DecisionGate.lean) · [Root integration](SFT/Foundation/RootGate.lean) · [384-case comparison](verification/TURN_009_DECISION_GATE_REPORT.json)
 
@@ -135,7 +139,7 @@ lake env lean --run Parity.lean
 lake env lean --run RootParity.lean
 ```
 
-Every verification run rebuilds current Lean code, generates a fresh declaration audit and executes the current parity program. Committed TSVs and logs are historical evidence, never the verification input.
+The commands below reproduce their configured Lean build, declaration-audit and source-comparison checks. The present milestone retains applicable source-bound audits and comparisons and passed a focused integration import of all eight milestone entries. A whole-repository root rebuild was not completed because an older GeometryGrammar cache object was absent; no whole-root build result is claimed for this review edition.
 
 ```sh
 SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_current_parity.py
@@ -162,6 +166,13 @@ The scripts read pinned v3 source and artifacts without importing or executing v
 ---
 
 <p align="center"><strong>Smithian Fold Theory · Maria Smith</strong><br/><sub>V3 is the source. Lean is the proof language. Exact correspondence is the requirement.</sub></p>
+
+<details>
+<summary>Earlier verification checkpoints</summary>
+
+## Historical verification checkpoints
+
+The following records describe earlier checkpoints; their intermediate counts and running-process notes are historical. Current status is the 308-entry review summary above. Full chronology is retained in [TIMELINE.txt](TIMELINE.txt).
 
 Batch review: [all 21 existing entries](verification/TURN_114_BATCH_EXISTING_WORK.json). Run `python3 verification/batch_existing_work.py` for the existing global build/audit/parity and exact missing-method inventory. Interface presence alone does not establish derivation completion.
 
@@ -213,7 +224,7 @@ Encoding and Decoding is complete against pinned V3. [Source-component completio
 
 Information Quantity: exact complete word support, ordered position successor and support composition with21 new native proofs and1,769 passing input cases. Pair/profile/position-trace execution and complete512 grammar/program are verified.
 
-Information Quantity is complete against pinned V3. [Source-component completion evidence](verification/TURN_279_MIXING_COMPLETION.json).
+Information Quantity is complete against pinned V3. [Source-component completion evidence](verification/TURN_140_QUANTITY_COMPLETION.json).
 
 Entropy and Uncertainty: exact partition, structural empty-One uncertainty, class-ordered closed pairs and refinement/class-containment equivalence with22 new native proofs and7,781 passing input cases. Exact weighted ledger and pair monotonicity are verified; microstate successor and the complete512 program are verified.
 
@@ -231,131 +242,131 @@ Communication: exact source-bound delivery provenance, complete event/channel pr
 
 Distributed Partial Order and Consensus: native carrier,closure,trace,composition and successor results pass the zero-axiom audit. Batch checks cover all512 three-event relations and600 terminal decision cases. Both original full-program comparisons passed; both entries are complete.
 
-Agreement Impossibility: native contradiction for equal local observations with different required decisions,exact scheduler support,complete witness enumeration and retained successor proofs pass with zero axioms;1,024 kernel cases pass. Full-program comparison runs alongside the earlier batch.
+Agreement Impossibility: native contradiction for equal local observations with different required decisions,exact scheduler support,complete witness enumeration and retained successor proofs pass with zero axioms;1,024 kernel cases pass. Full-program comparison ran alongside the earlier batch.
 
-DistributedOrder, Consensus complete: original full-program comparisons PASS; dependency-ordered completed count 308 / 2,781.
+DistributedOrder and Consensus: their original full-program comparisons passed. Their completion is included in the current 308-entry aggregate above.
 
-Replication/Consistency: native source-bound update traces,identity preservation,complete state classes,composition,successor and retained order-loss proofs pass with zero axioms.726 kernel outputs and two concrete replay orders pass. Full-program comparison runs concurrently with Agreement Impossibility.
+Replication/Consistency: native source-bound update traces,identity preservation,complete state classes,composition,successor and retained order-loss proofs pass with zero axioms.726 kernel outputs and two concrete replay orders pass. Full-program comparison ran concurrently at that historical checkpoint with Agreement Impossibility.
 
-Fault Model: source-bound detection/recovery/uncorrectable classification,exact generated-support guarantee and retained recovery/composition proofs pass with zero axioms.3,328 kernel outputs pass; original full-program comparison runs concurrently.
+Fault Model: source-bound detection/recovery/uncorrectable classification,exact generated-support guarantee and retained recovery/composition proofs pass with zero axioms.3,328 kernel outputs pass; original full-program comparison ran concurrently at that historical checkpoint.
 
 AgreementImpossibility complete: original full-program comparisons PASS; 114 completed entries.
 
-Distributed Knowledge: exact local observation classes and finite common-knowledge closure proofs pass with zero axioms. 388 concrete checks pass; the full-program comparison is running.
+Distributed Knowledge: exact local observation classes and finite common-knowledge closure proofs pass with zero axioms. 388 concrete checks pass; the full-program comparison was running at that historical checkpoint.
 
 Replication complete: original full-program comparisons PASS; 115 completed entries.
 
-Locality: exact registered neighborhood/trace equivalence, local input views and indistinguishability lower witness pass with zero axioms. 834 kernel checks pass; full-program comparison runs concurrently.
+Locality: exact registered neighborhood/trace equivalence, local input views and indistinguishability lower witness pass with zero axioms. 834 kernel checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 FaultModel complete: original full-program comparisons PASS; 116 completed entries.
 
-Network Computation: registered local-machine transitions, messages, schedules, aggregate outputs and resource/fault provenance pass with zero axioms. A concrete two-process execution and eight output/boundary checks pass; full-program comparison runs concurrently.
+Network Computation: registered local-machine transitions, messages, schedules, aggregate outputs and resource/fault provenance pass with zero axioms. A concrete two-process execution and eight output/boundary checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 DistributedKnowledge complete: original full-program comparisons PASS; 117 completed entries.
 
-One-Wayness: exact inverse fibres, admitted adversary traces, complete bounded-success ledger and source security partition pass with zero axioms. 1,305 kernel checks pass; full-program comparison runs concurrently.
+One-Wayness: exact inverse fibres, admitted adversary traces, complete bounded-success ledger and source security partition pass with zero axioms. 1,305 kernel checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 Locality complete: original full-program comparisons PASS; 118 completed entries.
 
-Secrecy: exact possible-message provenance, complete closed-distinction ledger, no-observation-recovery and disclosure boundary proofs pass with zero axioms. 1,729 checks pass; full-program comparison runs concurrently.
+Secrecy: exact possible-message provenance, complete closed-distinction ledger, no-observation-recovery and disclosure boundary proofs pass with zero axioms. 1,729 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 NetworkComputation complete: original full-program comparisons PASS; 119 completed entries.
 
-Integrity: complete accepted/rejected/false-accept ledgers, computed authorization guarantee and retained serial traces pass with zero axioms. 1,026 checks pass; full-program comparison runs concurrently.
+Integrity: complete accepted/rejected/false-accept ledgers, computed authorization guarantee and retained serial traces pass with zero axioms. 1,026 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 OneWayness complete: original full-program comparisons PASS; 120 completed entries.
 
-Authentication: exact credential/challenge/response verification traces, complete impersonation ledger and computed authenticity boundary pass with zero axioms. 4,100 checks pass; full-program comparison runs concurrently.
+Authentication: exact credential/challenge/response verification traces, complete impersonation ledger and computed authenticity boundary pass with zero axioms. 4,100 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 Secrecy complete: original full-program comparisons PASS; 121 completed entries.
 
-Hashing: exact preimage/collision ledgers, constructive larger-domain collision witness, composition and domain separation pass with zero axioms. 36 concrete outputs and eight collision-witness instantiations pass; full-program comparison runs concurrently.
+Hashing: exact preimage/collision ledgers, constructive larger-domain collision witness, composition and domain separation pass with zero axioms. 36 concrete outputs and eight collision-witness instantiations pass; full-program comparison ran concurrently at that historical checkpoint.
 
 Integrity complete: original full-program comparisons PASS; 122 completed entries.
 
-Commitment: complete binding-collision and hiding ledgers, exact compatibility boundary and retained commit/opening phase traces pass with zero axioms. 2,313 checks pass; full-program comparison runs concurrently.
+Commitment: complete binding-collision and hiding ledgers, exact compatibility boundary and retained commit/opening phase traces pass with zero axioms. 2,313 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 Authentication complete: original full-program comparisons PASS; 123 completed entries.
 
-Signature: exact signing/verification,computed correctness,complete forgery ledger and retained traces pass with zero axioms. 2,048 concrete checks pass; full-program comparison runs concurrently.
+Signature: exact signing/verification,computed correctness,complete forgery ledger and retained traces pass with zero axioms. 2,048 concrete checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 Hashing complete: original full-program comparisons PASS; 124 completed entries.
 
-Proof of Knowledge: constructive extraction,computed registered-adversary knowledge,exact failure ledger and retained process traces pass with zero axioms. 1,024 checks pass; full-program comparison runs concurrently.
+Proof of Knowledge: constructive extraction,computed registered-adversary knowledge,exact failure ledger and retained process traces pass with zero axioms. 1,024 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
-Zero Knowledge: exact observation/simulation correspondence,computed coverage and acceptance,complete disjoint/exhaustive distinction ledgers and actual simulator traces passzeroaxioms. 3,584 checks pass; full-program comparison runs concurrently.
+Zero Knowledge: exact observation/simulation correspondence,computed coverage and acceptance,complete disjoint/exhaustive distinction ledgers and actual simulator traces passzeroaxioms. 3,584 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 Commitment complete: original full-program comparisons PASS; 125 completed entries.
 
-Multiparty Computation: exact input/view projections,complete leakage ledger,computed coalition privacy,registered security and actual communication traces passzeroaxioms. 768 concrete checks pass; full-program comparison runs concurrently.
+Multiparty Computation: exact input/view projections,complete leakage ledger,computed coalition privacy,registered security and actual communication traces passzeroaxioms. 768 concrete checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 Signature complete: original full-program comparisons PASS; 126 completed entries.
 
-Adversarial Computation: exact admission/resource boundaries,complete disjoint/exhaustive outcome ledgers,computed security and actual stopped traces passzeroaxioms. 2,048 checks pass; full-program comparison runs concurrently.
+Adversarial Computation: exact admission/resource boundaries,complete disjoint/exhaustive outcome ledgers,computed security and actual stopped traces passzeroaxioms. 2,048 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 ProofKnowledge complete: original full-program comparisons PASS; 127 completed entries.
 
-Security Definition: exact success/resource ledgers,distinct observation-closure and bounded-failure derivations,source-preserving reductions and composition passzeroaxioms. 1,024 checks pass; full-program comparison runs concurrently.
+Security Definition: exact success/resource ledgers,distinct observation-closure and bounded-failure derivations,source-preserving reductions and composition passzeroaxioms. 1,024 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 ZeroKnowledge complete: original full-program comparisons PASS; 128 completed entries.
 
-Post-Quantum Boundary: declared interfaces,exact query/resource ledgers,classical operational exclusions,certified reductions and migration passzeroaxioms. 770 checks pass; full-program comparison runs concurrently.
+Post-Quantum Boundary: declared interfaces,exact query/resource ledgers,classical operational exclusions,certified reductions and migration passzeroaxioms. 770 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 Multiparty complete: original full-program comparisons PASS; 129 completed entries.
 
-Inference: exact source executable,complete retained/eliminated and uncertainty ledgers,proof traces and evidence monotonicity passzeroaxioms. 194 checks pass; full-program comparison runs concurrently.
+Inference: exact source executable,complete retained/eliminated and uncertainty ledgers,proof traces and evidence monotonicity passzeroaxioms. 194 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 Adversarial complete: original full-program comparisons PASS; 130 completed entries.
 
-Classification and Prediction: sealed source predictions,target custody,exact matching/falsification ledgers and preserved prediction interfaces passzeroaxioms. 1,536 checks pass; full-program comparison runs concurrently.
+Classification and Prediction: sealed source predictions,target custody,exact matching/falsification ledgers and preserved prediction interfaces passzeroaxioms. 1,536 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 SecurityDefinition complete: original full-program comparisons PASS; 131 completed entries.
 
-Representation Learning: exact transformation/task traces,complexity and distinction ledgers,composition provenance and source extension passzeroaxioms. 518 checks pass; full-program comparison runs concurrently.
+Representation Learning: exact transformation/task traces,complexity and distinction ledgers,composition provenance and source extension passzeroaxioms. 518 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 PostQuantumBoundary complete: original full-program comparisons PASS; 132 completed entries.
 
-Generalization: complete withheld targets,exact pass/failure ledgers,target custody and exhaustive structural-family certificates passzeroaxioms. 64 checks pass; full-program comparison runs concurrently.
+Generalization: complete withheld targets,exact pass/failure ledgers,target custody and exhaustive structural-family certificates passzeroaxioms. 64 checks pass; full-program comparison ran concurrently at that historical checkpoint.
 
 Inference complete: original full-program comparisons PASS; 133 completed entries.
 
-Sample Complexity: exact teaching certificates,complete ambiguity closure and constructive distinguishing evidence pass zero axioms. 1,024 checks pass; original full-program comparison runs concurrently.
+Sample Complexity: exact teaching certificates,complete ambiguity closure and constructive distinguishing evidence pass zero axioms. 1,024 checks pass; original full-program comparison ran concurrently at that historical checkpoint.
 
 ClassificationPrediction complete: original full-program comparisons PASS; 134 completed entries.
 
-Optimization in learning: exact evidence-compatible selection,complete elimination witnesses,retained ties and replayable update traces pass zero axioms. 512 concrete outputs pass; original full-program comparison runs concurrently.
+Optimization in learning: exact evidence-compatible selection,complete elimination witnesses,retained ties and replayable update traces pass zero axioms. 512 concrete outputs pass; original full-program comparison ran concurrently at that historical checkpoint.
 
 RepresentationLearning complete: original full-program comparisons PASS; 135 completed entries.
 
-Computational induction: exact alternatives,minimality,successor tests,falsification and structurally certified continuation pass zero axioms. 1,026 concrete outputs pass; original full-program comparison runs concurrently.
+Computational induction: exact alternatives,minimality,successor tests,falsification and structurally certified continuation pass zero axioms. 1,026 concrete outputs pass; original full-program comparison ran concurrently at that historical checkpoint.
 
 Generalization complete: original full-program comparisons PASS; 136 completed entries.
 
-Search and Planning: exact goal-reaching plans,complete execution/failure/resource ledgers and serial composition pass zero axioms. 1,536 concrete outputs pass; original full-program comparison runs concurrently.
+Search and Planning: exact goal-reaching plans,complete execution/failure/resource ledgers and serial composition pass zero axioms. 1,536 concrete outputs pass; original full-program comparison ran concurrently at that historical checkpoint.
 
 SampleComplexity complete: original full-program comparisons PASS; 137 completed entries.
 
-Reinforcement Computation: exact policy-bound trajectories,outcome labels,complete evaluation ledgers and serial composition pass zero axioms. 1,024 concrete outputs pass; original full-program comparison runs concurrently.
+Reinforcement Computation: exact policy-bound trajectories,outcome labels,complete evaluation ledgers and serial composition pass zero axioms. 1,024 concrete outputs pass; original full-program comparison ran concurrently at that historical checkpoint.
 
 LearningOptimization complete: original full-program comparisons PASS; 138 completed entries.
 
-Multi-Agent Computation: exact joint rows,local observations,communication traces and cycle ledger pass zero axioms. 2,208 concrete outputs pass; original full-program comparison runs concurrently.
+Multi-Agent Computation: exact joint rows,local observations,communication traces and cycle ledger pass zero axioms. 2,208 concrete outputs pass; original full-program comparison ran concurrently at that historical checkpoint.
 
 ComputationalInduction complete: original full-program comparisons PASS; 139 completed entries.
 
-Adaptation: exact update traces,identity-preserving receipts,performance relation and failure boundary pass zero axioms. 640 concrete outputs pass; original full-program comparison runs concurrently.
+Adaptation: exact update traces,identity-preserving receipts,performance relation and failure boundary pass zero axioms. 640 concrete outputs pass; original full-program comparison ran concurrently at that historical checkpoint.
 
 SearchPlanning complete: original full-program comparisons PASS; 140 completed entries.
 
-Learning Limits: exact indistinguishable evidence,same learner decision and source-bound constructive counterexamples pass zero axioms. 64 concrete outputs pass; original full-program comparison runs concurrently.
+Learning Limits: exact indistinguishable evidence,same learner decision and source-bound constructive counterexamples pass zero axioms. 64 concrete outputs pass; original full-program comparison ran concurrently at that historical checkpoint.
 
 Reinforcement complete: original full-program comparisons PASS; 141 completed entries.
 
-Interpretability and Verification: exact decision certificates,complete traces,premise ledgers and actual tamper rejection pass zero axioms. 1,536 concrete outputs pass; original full-program comparison runs concurrently.
+Interpretability and Verification: exact decision certificates,complete traces,premise ledgers and actual tamper rejection pass zero axioms. 1,536 concrete outputs pass; original full-program comparison ran concurrently at that historical checkpoint.
 
 MultiAgent complete: original full-program comparisons PASS; 142 completed entries.
 
-Classical Learning: actual inference,sealed evaluation,complete prediction/resource ledgers and reproducible reports pass zero axioms. 64 concrete outputs pass; original full-program comparison runs concurrently.
+Classical Learning: actual inference,sealed evaluation,complete prediction/resource ledgers and reproducible reports pass zero axioms. 64 concrete outputs pass; original full-program comparison ran concurrently at that historical checkpoint.
 
 Adaptation complete: original full-program comparisons PASS; 143 completed entries.
 
@@ -393,4 +404,6 @@ ManyBody complete: original full-program comparisons PASS; 159 completed entries
 
 MathematicalModelling complete: original full-program comparisons PASS; 160 completed entries.
 
-Unified Constants publication checkpoint: six of the original seven direct inputs are complete. Terminal vacuum density and the Unified Constants Object remain unfinished; vacuum density still has the registered cosmic-budget, component-transport and common-scale-axis dependencies to complete. The review edition and pause follow verified completion of that block.
+Unified Constants milestone complete: all seven original direct sector inputs and the final Unified Constants Object are complete. The eight-entry milestone integration passes. Review edition 0.2 is unpublished and awaits author approval; the verified scientific checkpoint is 59172eee89576735796ec396f85e8527f0744130.
+
+</details>

@@ -1009,3 +1009,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.CosmoSpatialFlatnessGrammar.candidates do
     IO.println ("CosmoSpatialFlatnessGrammar\t" ++ SFT.Physics.CosmoSpatialFlatnessGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoSpatialFlatnessGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoSpatialFlatnessGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoSpatialFlatnessGrammar.decisionReason c)
+
+  for c in SFT.Physics.CosmoCompleteBudgetGrammar.candidates do
+    IO.println ("CosmoCompleteBudgetGrammar\t" ++ SFT.Physics.CosmoCompleteBudgetGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoCompleteBudgetGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoCompleteBudgetGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoCompleteBudgetGrammar.decisionReason c)

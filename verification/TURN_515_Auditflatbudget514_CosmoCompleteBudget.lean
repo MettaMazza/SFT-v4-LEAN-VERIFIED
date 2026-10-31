@@ -1,0 +1,383 @@
+import SFT.Physics.CosmoCompleteBudget
+import SFT.Physics.CosmoCompleteBudgetIntervals
+import SFT.Physics.CosmoCompleteBudgetWitnesses
+import SFT.Physics.CosmoCompleteBudgetGrammarBase
+import SFT.Physics.CosmoCompleteBudgetCensus0
+import SFT.Physics.CosmoCompleteBudgetCensus1
+import SFT.Physics.CosmoCompleteBudgetCensus2
+import SFT.Physics.CosmoCompleteBudgetCensus3
+import SFT.Physics.CosmoCompleteBudgetCensus4
+import SFT.Physics.CosmoCompleteBudgetCensus5
+import SFT.Physics.CosmoCompleteBudgetCensus6
+import SFT.Physics.CosmoCompleteBudgetCensus7
+import SFT.Physics.CosmoCompleteBudgetCensus8
+import SFT.Physics.CosmoCompleteBudgetCensus9
+import SFT.Physics.CosmoCompleteBudgetCensus10
+import SFT.Physics.CosmoCompleteBudgetCensus11
+import SFT.Physics.CosmoCompleteBudgetCensus12
+import SFT.Physics.CosmoCompleteBudgetCensus13
+import SFT.Physics.CosmoCompleteBudgetCensus14
+import SFT.Physics.CosmoCompleteBudgetCensus15
+import SFT.Physics.CosmoCompleteBudgetCensus16
+import SFT.Physics.CosmoCompleteBudgetCensus17
+import SFT.Physics.CosmoCompleteBudgetCensus18
+import SFT.Physics.CosmoCompleteBudgetCensus19
+import SFT.Physics.CosmoCompleteBudgetCensus20
+import SFT.Physics.CosmoCompleteBudgetCensus21
+import SFT.Physics.CosmoCompleteBudgetCensus22
+import SFT.Physics.CosmoCompleteBudgetCensus23
+import SFT.Physics.CosmoCompleteBudgetCensus24
+import SFT.Physics.CosmoCompleteBudgetCensus25
+import SFT.Physics.CosmoCompleteBudgetCensus26
+import SFT.Physics.CosmoCompleteBudgetCensus27
+import SFT.Physics.CosmoCompleteBudgetCensus28
+import SFT.Physics.CosmoCompleteBudgetCensus29
+import SFT.Physics.CosmoCompleteBudgetCensus30
+import SFT.Physics.CosmoCompleteBudgetCensus31
+import SFT.Physics.CosmoCompleteBudgetCensus32
+import SFT.Physics.CosmoCompleteBudgetCensus33
+import SFT.Physics.CosmoCompleteBudgetCensus34
+import SFT.Physics.CosmoCompleteBudgetCensus35
+import SFT.Physics.CosmoCompleteBudgetCensus36
+import SFT.Physics.CosmoCompleteBudgetCensus37
+import SFT.Physics.CosmoCompleteBudgetCensus38
+import SFT.Physics.CosmoCompleteBudgetCensus39
+import SFT.Physics.CosmoCompleteBudgetCensus40
+import SFT.Physics.CosmoCompleteBudgetCensus41
+import SFT.Physics.CosmoCompleteBudgetCensus42
+import SFT.Physics.CosmoCompleteBudgetCensus43
+import SFT.Physics.CosmoCompleteBudgetCensus44
+import SFT.Physics.CosmoCompleteBudgetCensus45
+import SFT.Physics.CosmoCompleteBudgetCensus46
+import SFT.Physics.CosmoCompleteBudgetCensus47
+import SFT.Physics.CosmoCompleteBudgetCensus48
+import SFT.Physics.CosmoCompleteBudgetCensus49
+import SFT.Physics.CosmoCompleteBudgetCensus50
+import SFT.Physics.CosmoCompleteBudgetCensus51
+import SFT.Physics.CosmoCompleteBudgetCensus52
+import SFT.Physics.CosmoCompleteBudgetCensus53
+import SFT.Physics.CosmoCompleteBudgetCensus54
+import SFT.Physics.CosmoCompleteBudgetCensus55
+import SFT.Physics.CosmoCompleteBudgetCensus56
+import SFT.Physics.CosmoCompleteBudgetCensus57
+import SFT.Physics.CosmoCompleteBudgetCensus58
+import SFT.Physics.CosmoCompleteBudgetCensus59
+import SFT.Physics.CosmoCompleteBudgetCensus60
+import SFT.Physics.CosmoCompleteBudgetCensus61
+import SFT.Physics.CosmoCompleteBudgetCensus62
+import SFT.Physics.CosmoCompleteBudgetCensus63
+import SFT.Physics.CosmoCompleteBudgetGrammar
+import SFT.Physics.CosmoCompleteBudgetControls
+import SFT.Physics.CosmoCompleteBudgetEvidence
+import SFT.Physics.CosmoCompleteBudgetExperiment
+import SFT.Physics.CosmoCompleteBudgetComparison
+import SFT.Physics.CosmoCompleteBudgetValidation
+import SFT.Physics.CosmoCompleteBudgetValidationProofs
+#print axioms SFT.Physics.CosmoCompleteBudget.Budget
+#print axioms SFT.Physics.CosmoCompleteBudget.cosmicBudgetStructure
+#print axioms SFT.Physics.CosmoCompleteBudget.pair
+#print axioms SFT.Physics.CosmoCompleteBudget.record
+#print axioms SFT.Physics.CosmoCompleteBudget.exactTenFields
+#print axioms SFT.Physics.CosmoCompleteBudget.supportPartition
+#print axioms SFT.Physics.CosmoCompleteBudget.globalClosure
+#print axioms SFT.Physics.CosmoCompleteBudget.matterClosure
+#print axioms SFT.Physics.CosmoCompleteBudget.globalClosurePassed
+#print axioms SFT.Physics.CosmoCompleteBudget.matterClosurePassed
+#print axioms SFT.Physics.CosmoCompleteBudget.boundaryPairs
+#print axioms SFT.Physics.CosmoCompleteBudget.boundaryPairsExactly
+#print axioms SFT.Physics.CosmoCompleteBudget.completeBoundaryCount
+#print axioms SFT.Physics.CosmoCompleteBudget.inheritedWithinMatter
+#print axioms SFT.Physics.CosmoCompleteBudgetIntervals.MeasuredRow
+#print axioms SFT.Physics.CosmoCompleteBudgetIntervals.BudgetRecord
+#print axioms SFT.Physics.CosmoCompleteBudgetIntervals.Intervals
+#print axioms SFT.Physics.CosmoCompleteBudgetIntervals.directInterval
+#print axioms SFT.Physics.CosmoCompleteBudgetIntervals.planckBudgetIntervals
+#print axioms SFT.Physics.CosmoCompleteBudgetIntervals.source
+#print axioms SFT.Physics.CosmoCompleteBudgetIntervals.comparisonChecks
+#print axioms SFT.Physics.CosmoCompleteBudgetIntervals.witnessChecks
+#print axioms SFT.Physics.CosmoCompleteBudgetIntervals.witnessCheck
+#print axioms SFT.Physics.CosmoCompleteBudgetIntervals.originalCompleteComparison
+#print axioms SFT.Physics.CosmoCompleteBudgetWitnesses.Witness
+#print axioms SFT.Physics.CosmoCompleteBudgetWitnesses.check0
+#print axioms SFT.Physics.CosmoCompleteBudgetWitnesses.check1
+#print axioms SFT.Physics.CosmoCompleteBudgetWitnesses.check2
+#print axioms SFT.Physics.CosmoCompleteBudgetWitnesses.check3
+#print axioms SFT.Physics.CosmoCompleteBudgetWitnesses.witnesses
+#print axioms SFT.Physics.CosmoCompleteBudgetWitnesses.check0Passed
+#print axioms SFT.Physics.CosmoCompleteBudgetWitnesses.check1Passed
+#print axioms SFT.Physics.CosmoCompleteBudgetWitnesses.check2Passed
+#print axioms SFT.Physics.CosmoCompleteBudgetWitnesses.check3Passed
+#print axioms SFT.Physics.CosmoCompleteBudgetWitnesses.allWitnessesPass
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.Support
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.supportName
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.Boundary
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.boundaryName
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.Pinning
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.pinningName
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.Free
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.freeName
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.Global
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.globalName
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.Internal
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.internalName
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.Composition
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.compositionName
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.Closure
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.closureName
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.Target
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.targetName
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.Provenance
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.provenanceName
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.Extension
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.extensionName
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.Candidate
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.sourceFields
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.candidateId
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.exactForm
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.survivorId
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.survives
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.criteriaDecision
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionReason
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.generationRule
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.grammarBoundary
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.candidates
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.survivor
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.generatedCardinality
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.candidatesComplete
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus0
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus0
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus1
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus1
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus2
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus2
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus3
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus3
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus4
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus4
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus5
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus5
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus6
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus6
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus7
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus7
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus8
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus8
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus9
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus9
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus10
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus10
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus11
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus11
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus12
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus12
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus13
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus13
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus14
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus14
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus15
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus15
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus16
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus16
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus17
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus17
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus18
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus18
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus19
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus19
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus20
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus20
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus21
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus21
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus22
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus22
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus23
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus23
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus24
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus24
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus25
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus25
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus26
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus26
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus27
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus27
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus28
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus28
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus29
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus29
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus30
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus30
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus31
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus31
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus32
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus32
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus33
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus33
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus34
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus34
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus35
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus35
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus36
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus36
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus37
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus37
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus38
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus38
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus39
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus39
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus40
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus40
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus41
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus41
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus42
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus42
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus43
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus43
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus44
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus44
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus45
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus45
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus46
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus46
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus47
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus47
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus48
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus48
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus49
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus49
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus50
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus50
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus51
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus51
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus52
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus52
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus53
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus53
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus54
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus54
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus55
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus55
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus56
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus56
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus57
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus57
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus58
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus58
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus59
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus59
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus60
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus60
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus61
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus61
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus62
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus62
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus63
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus63
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.sourceDecisionMatchesCriteria
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCriteriaSurvivor
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.uniqueSurvivor
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.survivorAccepted
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.ExactCriteria
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.acceptanceIffExactCriteria
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.support_rejected_rejected
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.boundary_rejected_rejected
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.pinning_rejected_rejected
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.free_rejected_rejected
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.global_rejected_rejected
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.internal_rejected_rejected
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.composition_rejected_rejected
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.closure_rejected_rejected
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.target_rejected_rejected
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.provenance_rejected_rejected
+#print axioms SFT.Physics.CosmoCompleteBudgetGrammar.extension_rejected_rejected
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.exclusions
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.closureValue
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.falseCandidate
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.survivorIds
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.record
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.falsePremise
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.tamperedSource
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.tamperedArtifact
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.boundary
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.falsePremisePassed
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.boundaryPassed
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.controlRecords
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.resultData
+#print axioms SFT.Physics.CosmoCompleteBudgetControls.runControls
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.candidateRecord
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.completenessRecord
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.registrationData
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.registration
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.generatedCandidateData
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.censusData
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.census
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.decisionData
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.decision
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.decideCandidate
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.closureData
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.closure
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.nativeDecisionPreservesSurvival
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.nativeDecisionPreservesReason
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.registrationHasNoAxioms
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.registrationHasNoFreeParameters
+#print axioms SFT.Physics.CosmoCompleteBudgetEvidence.lookupDependsOnlyOnIdentifier
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.labelValue
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.nonblank
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.TargetRow
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.claimId
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.experimentId
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.expectedLabel
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.frozenRelation
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.sourcePath
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.snapshotHash
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.falsification
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.program
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.programValue
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.programDocument
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.targetRows
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.registration
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.registrationHash
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.sourceMatches
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.sourceMatchesOriginal
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.checkSource
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.envelope
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.targets
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.targetsValue
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.completeTargetCount
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.completeTargetLabels
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.changedSourceRejected
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.specDependencies
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.specDimensions
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.uniqueNames
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.specWitnesses
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.validateSpec
+#print axioms SFT.Physics.CosmoCompleteBudgetExperiment.registeredSpecValid
+#print axioms SFT.Physics.CosmoCompleteBudgetComparison.lookup
+#print axioms SFT.Physics.CosmoCompleteBudgetComparison.releasedLabel
+#print axioms SFT.Physics.CosmoCompleteBudgetComparison.compareRows
+#print axioms SFT.Physics.CosmoCompleteBudgetComparison.completeRowsRetained
+#print axioms SFT.Physics.CosmoCompleteBudgetComparison.comparisonValue
+#print axioms SFT.Physics.CosmoCompleteBudgetComparison.controlValue
+#print axioms SFT.Physics.CosmoCompleteBudgetComparison.accepted
+#print axioms SFT.Physics.CosmoCompleteBudgetComparison.acceptanceRequiresAllRows
+#print axioms SFT.Physics.CosmoCompleteBudgetComparison.missingRowRejects
+#print axioms SFT.Physics.CosmoCompleteBudgetComparison.registeredComparisons
+#print axioms SFT.Physics.CosmoCompleteBudgetComparison.message
+#print axioms SFT.Physics.CosmoCompleteBudgetComparison.sourceIds
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.PredictionSeal
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.Snapshot
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.inputValues
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.sealPrediction
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.programFields
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.observation
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.certificate
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.isolation
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.custodyCertificate
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.receipt
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.Validation
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.validate
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.resealRejected
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.validateExternal
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.sourceMismatchRejects
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.sealBindsExecution
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.emptyPremiseRejected
+#print axioms SFT.Physics.CosmoCompleteBudgetValidation.programDocumentRetained

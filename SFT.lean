@@ -2074,3 +2074,13 @@ import SFT.Physics.PlanckTerminalWitnesses
 import SFT.Physics.PlanckTerminalControls
 import SFT.Physics.PlanckTerminalEvidence
 import SFT.Physics.PlanckColourCorrespondence
+import SFT.Physics.VacuumPolarization
+import SFT.Physics.VacuumPolarizationGrammar
+import SFT.Physics.VacuumPolarizationWitnesses
+import SFT.Physics.VacuumPolarizationControls
+import SFT.Physics.VacuumPolarizationEvidence
+import SFT.Physics.StrongRunning
+import SFT.Physics.StrongRunningGrammar
+import SFT.Physics.StrongRunningWitnesses
+import SFT.Physics.StrongRunningControls
+import SFT.Physics.StrongRunningEvidence

@@ -928,3 +928,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.PlanckTerminalGrammar.candidates do
     IO.println ("PlanckTerminalGrammar\t" ++ SFT.Physics.PlanckTerminalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PlanckTerminalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PlanckTerminalGrammar.exactForm c ++ "\t" ++ SFT.Physics.PlanckTerminalGrammar.decisionReason c)
+
+  for c in SFT.Physics.VacuumPolarizationGrammar.candidates do
+    IO.println ("VacuumPolarizationGrammar\t" ++ SFT.Physics.VacuumPolarizationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumPolarizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumPolarizationGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumPolarizationGrammar.decisionReason c)
+
+  for c in SFT.Physics.StrongRunningGrammar.candidates do
+    IO.println ("StrongRunningGrammar\t" ++ SFT.Physics.StrongRunningGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StrongRunningGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StrongRunningGrammar.exactForm c ++ "\t" ++ SFT.Physics.StrongRunningGrammar.decisionReason c)

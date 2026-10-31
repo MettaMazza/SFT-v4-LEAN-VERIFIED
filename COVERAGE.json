@@ -11820,9 +11820,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MEAS-REFERENCE-REALIZATION-001-fe8d21bca9c2c172.json",
       "statement": "A physical reference is forced to be operationally realized by a finite reproducible comparison process whose complete trace connects the definition to the observation; a name or assigned scalar alone is not a realization.",
       "title": "Reference realization and traceability",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ReferenceRealization.lean",
+        "SFT/Physics/RealizationGrammar.lean",
+        "SFT/Physics/RealizationEvidence.lean",
+        "SFT/Physics/RealizationExperiment.lean",
+        "SFT/Physics/RealizationValidation.lean",
+        "SFT/Physics/RealizationValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all methods/fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "22f846e33058358e5eb9e2e07a4d4a0e4fb036eaafcbb4f85b021c42a201c39f",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -11866,7 +11873,10 @@
         "statement": "A physical reference is forced to be operationally realized by a finite reproducible comparison process whose complete trace connects the definition to the observation; a name or assigned scalar alone is not a realization.",
         "status": "empirically_tested",
         "title": "Reference realization and traceability"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Finite operational comparison trace from held definition to observed record; every source identity, observation record, ratio and prefix retained.",
+      "completion_evidence": "verification/TURN_481_REALIZATION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -11878,9 +11888,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MEAS-VALUE-RECORD-001-461c2062551cbfd5.json",
       "statement": "A measured value is forced as a held external record containing the exact reference identity, reported numerical inscription and observation provenance; the inscription never enters the proof as an SFT scalar.",
       "title": "Measured-value record separated from proof value",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MeasuredValueRecord.lean",
+        "SFT/Physics/ValueRecordGrammar.lean",
+        "SFT/Physics/ValueRecordEvidence.lean",
+        "SFT/Physics/ValueRecordExperiment.lean",
+        "SFT/Physics/ValueRecordValidation.lean",
+        "SFT/Physics/ValueRecordValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all methods/fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "2afdd1315b8a0fe87df2dbb40faeb9b6ef79381b4f2eba84ac79fea157d13344",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -11924,7 +11941,10 @@
         "statement": "A measured value is forced as a held external record containing the exact reference identity, reported numerical inscription and observation provenance; the inscription never enters the proof as an SFT scalar.",
         "status": "empirically_tested",
         "title": "Measured-value record separated from proof value"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Exact reference identity, textual numerical inscription and observation provenance; field separation and reconstruction; no inscription-to-proof-scalar parser.",
+      "completion_evidence": "verification/TURN_481_VALUERECORD_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -11936,9 +11956,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MEAS-UNCERTAINTY-001-9aef08a488c0a15f.json",
       "statement": "Measurement uncertainty is forced as the explicitly retained support of observation/reference distinctions not closed by the measurement process; it is not an irrational proof value or permission to choose a favorable result.",
       "title": "Measurement uncertainty as retained admissible alternatives",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MeasurementUncertainty.lean",
+        "SFT/Physics/UncertaintyGrammar.lean",
+        "SFT/Physics/UncertaintyEvidence.lean",
+        "SFT/Physics/UncertaintyExperiment.lean",
+        "SFT/Physics/UncertaintyValidation.lean",
+        "SFT/Physics/UncertaintyValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all methods/fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "b758cdf64301ad70d49fa44f1f6e10b4ef680b8a521fb0cbd971fe6f0cb8842d",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -11982,7 +12009,10 @@
         "statement": "Measurement uncertainty is forced as the explicitly retained support of observation/reference distinctions not closed by the measurement process; it is not an irrational proof value or permission to choose a favorable result.",
         "status": "empirically_tested",
         "title": "Measurement uncertainty as retained admissible alternatives"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete ordered retention of every still-admissible source relation, with exact membership and unique retention; no favourable selection.",
+      "completion_evidence": "verification/TURN_481_UNCERTAINTY_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -11994,9 +12024,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MEAS-CALIBRATION-001-60c5b750220a91b6.json",
       "statement": "Calibration is forced as the finite compositional chain of exact reference comparisons connecting an instrument record to the realized unit, with every intermediate identity and uncertainty support retained.",
       "title": "Calibration chain and comparison closure",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/Calibration.lean",
+        "SFT/Physics/CalibrationGrammar.lean",
+        "SFT/Physics/CalibrationEvidence.lean",
+        "SFT/Physics/CalibrationExperiment.lean",
+        "SFT/Physics/CalibrationValidation.lean",
+        "SFT/Physics/CalibrationValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all methods/fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "bd6352c95c13157d3abb0b5d6d6b99b1645ad41d7155504207b5dbf4908e4287",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12040,7 +12077,10 @@
         "statement": "Calibration is forced as the finite compositional chain of exact reference comparisons connecting an instrument record to the realized unit, with every intermediate identity and uncertainty support retained.",
         "status": "empirically_tested",
         "title": "Calibration chain and comparison closure"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete exact comparison composition retaining every intermediate source record and uncertainty ledger, aligned one-to-one with the operational trace.",
+      "completion_evidence": "verification/TURN_481_CALIBRATION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -12052,9 +12092,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001-2e23d3f162cf6641.json",
       "statement": "A physical relation is dimensionally lawful exactly when every compared or joined path has the same canonical dimension form and every conversion is a reversible exact same-dimension reference map.",
       "title": "Dimensional consistency and lawful conversion",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/DimensionalConsistency.lean",
+        "SFT/Physics/ConsistencyGrammar.lean",
+        "SFT/Physics/ConsistencyEvidence.lean",
+        "SFT/Physics/ConsistencyExperiment.lean",
+        "SFT/Physics/ConsistencyValidation.lean",
+        "SFT/Physics/ConsistencyValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all methods/fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "65333948eb72399c35f470b6ada14358d4cfaefe2433d224ae15cf392de8ba6f",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12098,7 +12145,10 @@
         "statement": "A physical relation is dimensionally lawful exactly when every compared or joined path has the same canonical dimension form and every conversion is a reversible exact same-dimension reference map.",
         "status": "empirically_tested",
         "title": "Dimensional consistency and lawful conversion"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete finite canonical path comparison at every joined or compared pair; reversible positive exact same-dimension conversion and calibration endpoint lawfulness.",
+      "completion_evidence": "verification/TURN_481_CONSISTENCY_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -190571,13 +190621,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-31T00:02:38.281396+00:00",
+  "updated_at": "2026-10-31T00:25:55.753508+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2585,
-    "fully_reconstructed_claims": 196,
-    "axiom_free_exported_results": 9504,
-    "axiom_free_audited_definitions_and_theorems": 21386
+    "pending": 2580,
+    "fully_reconstructed_claims": 201,
+    "axiom_free_exported_results": 9665,
+    "axiom_free_audited_definitions_and_theorems": 21919
   }
 }

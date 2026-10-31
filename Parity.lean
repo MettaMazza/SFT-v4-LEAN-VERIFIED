@@ -688,3 +688,18 @@ def main : IO Unit := do
 
   for c in SFT.Physics.UnitGrammar.candidates do
     IO.println ("UnitGrammar\t" ++ SFT.Physics.UnitGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.UnitGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.UnitGrammar.exactForm c ++ "\t" ++ SFT.Physics.UnitGrammar.decisionReason c)
+
+  for c in SFT.Physics.RealizationGrammar.candidates do
+    IO.println ("RealizationGrammar\t" ++ SFT.Physics.RealizationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.RealizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.RealizationGrammar.exactForm c ++ "\t" ++ SFT.Physics.RealizationGrammar.decisionReason c)
+
+  for c in SFT.Physics.ValueRecordGrammar.candidates do
+    IO.println ("ValueRecordGrammar\t" ++ SFT.Physics.ValueRecordGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ValueRecordGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ValueRecordGrammar.exactForm c ++ "\t" ++ SFT.Physics.ValueRecordGrammar.decisionReason c)
+
+  for c in SFT.Physics.UncertaintyGrammar.candidates do
+    IO.println ("UncertaintyGrammar\t" ++ SFT.Physics.UncertaintyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.UncertaintyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.UncertaintyGrammar.exactForm c ++ "\t" ++ SFT.Physics.UncertaintyGrammar.decisionReason c)
+
+  for c in SFT.Physics.CalibrationGrammar.candidates do
+    IO.println ("CalibrationGrammar\t" ++ SFT.Physics.CalibrationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CalibrationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CalibrationGrammar.exactForm c ++ "\t" ++ SFT.Physics.CalibrationGrammar.decisionReason c)
+
+  for c in SFT.Physics.ConsistencyGrammar.candidates do
+    IO.println ("ConsistencyGrammar\t" ++ SFT.Physics.ConsistencyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ConsistencyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ConsistencyGrammar.exactForm c ++ "\t" ++ SFT.Physics.ConsistencyGrammar.decisionReason c)

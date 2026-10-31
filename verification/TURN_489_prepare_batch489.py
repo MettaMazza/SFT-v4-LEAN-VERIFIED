@@ -1,0 +1,12 @@
+from pathlib import Path
+import json,re,subprocess,os
+entries=[('Radiation','RADIATION','FieldRadiation'),('InteractionClasses','INTERACTION_CLASSES','FieldInteractionClasses'),('SourceContinuity','CONSERVED_SOURCE','FieldSourceContinuity'),('ActionReaction','ACTION_REACTION','FieldActionReaction')]
+s=Path('work/prepare_field488.py').read_text().replace('488','489');a=s.index('entries=');b=s.index(';metadata={}',a);s=s[:a]+'entries='+repr(entries)+s[b:];s=s.replace("'LOCALITY_CAUSALITY'}","'LOCALITY_CAUSALITY','RADIATION','INTERACTION_CLASSES','CONSERVED_SOURCE','ACTION_REACTION'}");Path('work/prepare_field489.py').write_text(s)
+s=Path('work/build_field488.py').read_text().replace('488','489');Path('work/build_field489.py').write_text(s)
+s=Path('work/run_field488.py').read_text().replace('488','489');s=s.replace("'SFT/Physics/FieldLocality']","'SFT/Physics/FieldLocality','SFT/Physics/FieldRadiation','SFT/Physics/FieldInteractionClasses','SFT/Physics/FieldSourceContinuity','SFT/Physics/FieldActionReaction']");Path('work/run_field489.py').write_text(s);Path('work/field489_initializer_bridge.c').write_bytes(Path('work/field488_initializer_bridge.c').read_bytes())
+r=Path('work/constants-recovery');env=dict(os.environ,LEAN_PATH=str((r/'.lake/build/lib/lean').resolve()));names=[]
+for _,_,m in entries:
+ p=subprocess.run(['/Users/dolltrading/.elan/bin/lean','-j1','-M2048','-o',str(r/'.lake/build/lib/lean/SFT/Physics'/f'{m}.olean'),str(r/'SFT/Physics'/f'{m}.lean')],env=env,capture_output=True,text=True);Path('work/'+m+'489_build.log').write_text(p.stdout+p.stderr);assert p.returncode==0,p.stdout+p.stderr
+ s=(r/'SFT/Physics'/f'{m}.lean').read_text();ns=re.search(r'^namespace (\S+)',s,re.M)[1];names +=[ns+'.'+n for _,n in re.findall(r'^(def|theorem|structure|inductive|abbrev) (\w+)',s,re.M)]
+a=Path('work/FieldBatch489Audit.lean');a.write_text('\n'.join('import SFT.Physics.'+m for _,_,m in entries)+'\n'+'\n'.join('#print axioms '+n for n in names));res=subprocess.run(['/Users/dolltrading/.elan/bin/lean','-j1','-M2048',str(a)],env=env,capture_output=True,text=True);Path('work/field489_component_audit.log').write_text(res.stdout+res.stderr);assert res.returncode==0,res.stdout+res.stderr;bad=[n for n in names if "'"+n+"' does not depend on any axioms" not in res.stdout];print('audit',len(names),'bad',bad);assert not bad
+subprocess.run(['python3','work/prepare_field489.py'],check=True)

@@ -1,0 +1,529 @@
+{
+  "PeriodFrequency": {
+    "claim_id": "SFT-PHYS-WAVE-PERIOD-FREQUENCY-001",
+    "title": "Period, recurrence and frequency",
+    "statement": "A wave period is the exact positive transition count closing one recurrence relative to a held clock recurrence; frequency is the exact count of closed recurrences per duration.",
+    "dependencies": [
+      "SFT-MATH-DYNAMICAL-SYSTEMS-001",
+      "SFT-INFO-CHANNEL-CAPACITY-001",
+      "SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001",
+      "SFT-PHYS-FIELD-RADIATION-001"
+    ],
+    "generation_rule": "Generate the complete carrier, recurrence/propagation relation, provenance, target-access, measurement-record, row, successor and extra-rule product.",
+    "grammar_boundary": "All finite wave forms constructed from generated recurrence, adjacent propagation, held phase/orientation, exact ratios and complete observation support without imported continuum equations.",
+    "dimensions": [
+      {
+        "key": "carrier",
+        "choices": [
+          {
+            "name": "answer-only-scalar",
+            "admitted": false,
+            "reason": "An answer-only scalar erases the generated physical carrier."
+          },
+          {
+            "name": "complete-fold-carrier",
+            "admitted": true,
+            "reason": "The complete Fold trace retains the observed physical distinction."
+          }
+        ]
+      },
+      {
+        "key": "relation",
+        "choices": [
+          {
+            "name": "imported-or-fitted-relation",
+            "admitted": false,
+            "reason": "An imported or fitted relation lets consensus or target data select the law."
+          },
+          {
+            "name": "closed-recurrence-count-ratio",
+            "admitted": true,
+            "reason": "Only a closed recurrence with a held reference retains phase return, duration and exact frequency without an irrational cycle scalar."
+          }
+        ]
+      },
+      {
+        "key": "provenance",
+        "choices": [
+          {
+            "name": "unbound-provenance",
+            "admitted": false,
+            "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+          },
+          {
+            "name": "source-bound-proof-trace",
+            "admitted": true,
+            "reason": "Every generated candidate and decision is bound to its exact source trace."
+          }
+        ]
+      },
+      {
+        "key": "prediction",
+        "choices": [
+          {
+            "name": "target-readable-prediction",
+            "admitted": false,
+            "reason": "A target-readable predictor can copy or optimize against the measurement."
+          },
+          {
+            "name": "capability-closed-prediction",
+            "admitted": true,
+            "reason": "The registered Fold instruction surface has no target or ambient host capability."
+          }
+        ]
+      },
+      {
+        "key": "record",
+        "choices": [
+          {
+            "name": "proof-measurement-conflation",
+            "admitted": false,
+            "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+          },
+          {
+            "name": "separate-measurement-record",
+            "admitted": true,
+            "reason": "External values remain source-bound records compared only after sealing."
+          }
+        ]
+      },
+      {
+        "key": "rows",
+        "choices": [
+          {
+            "name": "selected-favourable-rows",
+            "admitted": false,
+            "reason": "Selecting favorable rows cannot falsify the relation."
+          },
+          {
+            "name": "complete-registered-rows",
+            "admitted": true,
+            "reason": "Every favorable, unfavorable and tampered registered row is retained."
+          }
+        ]
+      },
+      {
+        "key": "generality",
+        "choices": [
+          {
+            "name": "finite-answer-lookup",
+            "admitted": false,
+            "reason": "An answer lookup has no successor certificate."
+          },
+          {
+            "name": "one-successor-closure",
+            "admitted": true,
+            "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+          }
+        ]
+      },
+      {
+        "key": "extension",
+        "choices": [
+          {
+            "name": "free-extra-rule",
+            "admitted": false,
+            "reason": "A free constant, scale or exception can select the measured answer."
+          },
+          {
+            "name": "no-extra-rule",
+            "admitted": true,
+            "reason": "No rule beyond the admitted dependencies and forced relation is present."
+          }
+        ]
+      }
+    ],
+    "exact_result": "Period and frequency are reciprocal exact positive recurrence ratios with complete phase and reference traces.",
+    "induction_base": "One recurrent source transition appears at one adjacent response cell with its source, phase and recurrence identity retained.",
+    "induction_step": "Appending one recurrence or propagation cell retains every earlier phase/response record and adds exactly one source-bound transition.",
+    "exclusions": [
+      "ungenerated continuum or completed infinite wave",
+      "irrational or floating phase as a proof value",
+      "imported wave equation, fitted medium law or target-selected result",
+      "target access or omitted adverse row"
+    ],
+    "operational_witnesses": [
+      [
+        "finite-recurrence",
+        "A finite recurrence returns to the named source state after a positive transition count.",
+        true
+      ],
+      [
+        "phase-orientation",
+        "Held traversal order distinguishes opposite phase progress with the same positive support.",
+        true
+      ]
+    ],
+    "experiment_id": "SFT-EXP-PHYS-WAVE-PERIOD-FREQUENCY-001",
+    "expected_observation_label": "periodic-recurrence-frequency",
+    "target_rows": [
+      {
+        "target_id": "period-frequency-1",
+        "source_id": "NIST-ASD-5.12",
+        "source_locator": "NIST ASD spectral lines carry frequencies/wavenumbers",
+        "observed_label": "periodic-recurrence-frequency"
+      },
+      {
+        "target_id": "period-frequency-2",
+        "source_id": "NIST-ASD-5.12",
+        "source_locator": "NIST ASD energy-level transitions define recurrent spectral distinctions",
+        "observed_label": "periodic-recurrence-frequency"
+      }
+    ],
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-asd-version-history.html",
+    "source_snapshot_hash": "sha256:a327a34eb1b85ef3f003e8c8f0dbcb0c3fc49f039ee4046546a924fc42118454",
+    "falsification_condition": "The wave law is falsified if any committed NIST spectral/transition row lacks the predicted recurrence or propagation structure, a row is omitted, or the tampered row is accepted."
+  },
+  "Propagation": {
+    "claim_id": "SFT-PHYS-WAVE-PROPAGATION-001",
+    "title": "Generated wave propagation",
+    "statement": "Wave propagation is forced as repeated transfer of one recurrence form through adjacent generated support while retaining source frequency, phase relation and carrier identity.",
+    "dependencies": [
+      "SFT-MATH-DYNAMICAL-SYSTEMS-001",
+      "SFT-INFO-CHANNEL-CAPACITY-001",
+      "SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001",
+      "SFT-PHYS-FIELD-RADIATION-001",
+      "SFT-PHYS-WAVE-PERIOD-FREQUENCY-001"
+    ],
+    "generation_rule": "Generate the complete carrier, recurrence/propagation relation, provenance, target-access, measurement-record, row, successor and extra-rule product.",
+    "grammar_boundary": "All finite wave forms constructed from generated recurrence, adjacent propagation, held phase/orientation, exact ratios and complete observation support without imported continuum equations.",
+    "dimensions": [
+      {
+        "key": "carrier",
+        "choices": [
+          {
+            "name": "answer-only-scalar",
+            "admitted": false,
+            "reason": "An answer-only scalar erases the generated physical carrier."
+          },
+          {
+            "name": "complete-fold-carrier",
+            "admitted": true,
+            "reason": "The complete Fold trace retains the observed physical distinction."
+          }
+        ]
+      },
+      {
+        "key": "relation",
+        "choices": [
+          {
+            "name": "imported-or-fitted-relation",
+            "admitted": false,
+            "reason": "An imported or fitted relation lets consensus or target data select the law."
+          },
+          {
+            "name": "adjacent-recurrence-transport",
+            "admitted": true,
+            "reason": "Adjacent source-bound transport preserves the same recurrence at each cell and supplies a complete causal path."
+          }
+        ]
+      },
+      {
+        "key": "provenance",
+        "choices": [
+          {
+            "name": "unbound-provenance",
+            "admitted": false,
+            "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+          },
+          {
+            "name": "source-bound-proof-trace",
+            "admitted": true,
+            "reason": "Every generated candidate and decision is bound to its exact source trace."
+          }
+        ]
+      },
+      {
+        "key": "prediction",
+        "choices": [
+          {
+            "name": "target-readable-prediction",
+            "admitted": false,
+            "reason": "A target-readable predictor can copy or optimize against the measurement."
+          },
+          {
+            "name": "capability-closed-prediction",
+            "admitted": true,
+            "reason": "The registered Fold instruction surface has no target or ambient host capability."
+          }
+        ]
+      },
+      {
+        "key": "record",
+        "choices": [
+          {
+            "name": "proof-measurement-conflation",
+            "admitted": false,
+            "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+          },
+          {
+            "name": "separate-measurement-record",
+            "admitted": true,
+            "reason": "External values remain source-bound records compared only after sealing."
+          }
+        ]
+      },
+      {
+        "key": "rows",
+        "choices": [
+          {
+            "name": "selected-favourable-rows",
+            "admitted": false,
+            "reason": "Selecting favorable rows cannot falsify the relation."
+          },
+          {
+            "name": "complete-registered-rows",
+            "admitted": true,
+            "reason": "Every favorable, unfavorable and tampered registered row is retained."
+          }
+        ]
+      },
+      {
+        "key": "generality",
+        "choices": [
+          {
+            "name": "finite-answer-lookup",
+            "admitted": false,
+            "reason": "An answer lookup has no successor certificate."
+          },
+          {
+            "name": "one-successor-closure",
+            "admitted": true,
+            "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+          }
+        ]
+      },
+      {
+        "key": "extension",
+        "choices": [
+          {
+            "name": "free-extra-rule",
+            "admitted": false,
+            "reason": "A free constant, scale or exception can select the measured answer."
+          },
+          {
+            "name": "no-extra-rule",
+            "admitted": true,
+            "reason": "No rule beyond the admitted dependencies and forced relation is present."
+          }
+        ]
+      }
+    ],
+    "exact_result": "A wave propagates by source-bound adjacent transport of a recurrent state relation across generated support.",
+    "induction_base": "One recurrent source transition appears at one adjacent response cell with its source, phase and recurrence identity retained.",
+    "induction_step": "Appending one recurrence or propagation cell retains every earlier phase/response record and adds exactly one source-bound transition.",
+    "exclusions": [
+      "ungenerated continuum or completed infinite wave",
+      "irrational or floating phase as a proof value",
+      "imported wave equation, fitted medium law or target-selected result",
+      "target access or omitted adverse row"
+    ],
+    "operational_witnesses": [
+      [
+        "finite-recurrence",
+        "A finite recurrence returns to the named source state after a positive transition count.",
+        true
+      ],
+      [
+        "phase-orientation",
+        "Held traversal order distinguishes opposite phase progress with the same positive support.",
+        true
+      ]
+    ],
+    "experiment_id": "SFT-EXP-PHYS-WAVE-PROPAGATION-001",
+    "expected_observation_label": "adjacent-wave-propagation",
+    "target_rows": [
+      {
+        "target_id": "propagation-1",
+        "source_id": "NIST-ASD-5.12",
+        "source_locator": "NIST ASD observed wavelengths",
+        "observed_label": "adjacent-wave-propagation"
+      },
+      {
+        "target_id": "propagation-2",
+        "source_id": "NIST-ASD-5.12",
+        "source_locator": "NIST ASD transitions and spectral-line classifications",
+        "observed_label": "adjacent-wave-propagation"
+      }
+    ],
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-asd-version-history.html",
+    "source_snapshot_hash": "sha256:a327a34eb1b85ef3f003e8c8f0dbcb0c3fc49f039ee4046546a924fc42118454",
+    "falsification_condition": "The wave law is falsified if any committed NIST spectral/transition row lacks the predicted recurrence or propagation structure, a row is omitted, or the tampered row is accepted."
+  },
+  "SpeedRelation": {
+    "claim_id": "SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001",
+    "title": "Propagation speed, wavelength and frequency relation",
+    "statement": "One recurrence transported through one spatial repeat forces propagation speed to equal exact wavelength support per period, equivalently wavelength composed with frequency.",
+    "dependencies": [
+      "SFT-MATH-DYNAMICAL-SYSTEMS-001",
+      "SFT-INFO-CHANNEL-CAPACITY-001",
+      "SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001",
+      "SFT-PHYS-FIELD-RADIATION-001",
+      "SFT-PHYS-WAVE-PROPAGATION-001"
+    ],
+    "generation_rule": "Generate the complete carrier, recurrence/propagation relation, provenance, target-access, measurement-record, row, successor and extra-rule product.",
+    "grammar_boundary": "All finite wave forms constructed from generated recurrence, adjacent propagation, held phase/orientation, exact ratios and complete observation support without imported continuum equations.",
+    "dimensions": [
+      {
+        "key": "carrier",
+        "choices": [
+          {
+            "name": "answer-only-scalar",
+            "admitted": false,
+            "reason": "An answer-only scalar erases the generated physical carrier."
+          },
+          {
+            "name": "complete-fold-carrier",
+            "admitted": true,
+            "reason": "The complete Fold trace retains the observed physical distinction."
+          }
+        ]
+      },
+      {
+        "key": "relation",
+        "choices": [
+          {
+            "name": "imported-or-fitted-relation",
+            "admitted": false,
+            "reason": "An imported or fitted relation lets consensus or target data select the law."
+          },
+          {
+            "name": "spatial-repeat-times-recurrence-rate",
+            "admitted": true,
+            "reason": "Complete cell counting pairs each temporal recurrence with one spatial repeat and uniquely closes the three carriers."
+          }
+        ]
+      },
+      {
+        "key": "provenance",
+        "choices": [
+          {
+            "name": "unbound-provenance",
+            "admitted": false,
+            "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+          },
+          {
+            "name": "source-bound-proof-trace",
+            "admitted": true,
+            "reason": "Every generated candidate and decision is bound to its exact source trace."
+          }
+        ]
+      },
+      {
+        "key": "prediction",
+        "choices": [
+          {
+            "name": "target-readable-prediction",
+            "admitted": false,
+            "reason": "A target-readable predictor can copy or optimize against the measurement."
+          },
+          {
+            "name": "capability-closed-prediction",
+            "admitted": true,
+            "reason": "The registered Fold instruction surface has no target or ambient host capability."
+          }
+        ]
+      },
+      {
+        "key": "record",
+        "choices": [
+          {
+            "name": "proof-measurement-conflation",
+            "admitted": false,
+            "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+          },
+          {
+            "name": "separate-measurement-record",
+            "admitted": true,
+            "reason": "External values remain source-bound records compared only after sealing."
+          }
+        ]
+      },
+      {
+        "key": "rows",
+        "choices": [
+          {
+            "name": "selected-favourable-rows",
+            "admitted": false,
+            "reason": "Selecting favorable rows cannot falsify the relation."
+          },
+          {
+            "name": "complete-registered-rows",
+            "admitted": true,
+            "reason": "Every favorable, unfavorable and tampered registered row is retained."
+          }
+        ]
+      },
+      {
+        "key": "generality",
+        "choices": [
+          {
+            "name": "finite-answer-lookup",
+            "admitted": false,
+            "reason": "An answer lookup has no successor certificate."
+          },
+          {
+            "name": "one-successor-closure",
+            "admitted": true,
+            "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+          }
+        ]
+      },
+      {
+        "key": "extension",
+        "choices": [
+          {
+            "name": "free-extra-rule",
+            "admitted": false,
+            "reason": "A free constant, scale or exception can select the measured answer."
+          },
+          {
+            "name": "no-extra-rule",
+            "admitted": true,
+            "reason": "No rule beyond the admitted dependencies and forced relation is present."
+          }
+        ]
+      }
+    ],
+    "exact_result": "Wave speed is exact wavelength/period, equivalently the exact product of wavelength and frequency.",
+    "induction_base": "One recurrent source transition appears at one adjacent response cell with its source, phase and recurrence identity retained.",
+    "induction_step": "Appending one recurrence or propagation cell retains every earlier phase/response record and adds exactly one source-bound transition.",
+    "exclusions": [
+      "ungenerated continuum or completed infinite wave",
+      "irrational or floating phase as a proof value",
+      "imported wave equation, fitted medium law or target-selected result",
+      "target access or omitted adverse row"
+    ],
+    "operational_witnesses": [
+      [
+        "finite-recurrence",
+        "A finite recurrence returns to the named source state after a positive transition count.",
+        true
+      ],
+      [
+        "phase-orientation",
+        "Held traversal order distinguishes opposite phase progress with the same positive support.",
+        true
+      ]
+    ],
+    "experiment_id": "SFT-EXP-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001",
+    "expected_observation_label": "speed-wavelength-frequency-closure",
+    "target_rows": [
+      {
+        "target_id": "speed-length-frequency-1",
+        "source_id": "NIST-ASD-5.12",
+        "source_locator": "NIST ASD wavelength and wavenumber columns",
+        "observed_label": "speed-wavelength-frequency-closure"
+      },
+      {
+        "target_id": "speed-length-frequency-2",
+        "source_id": "NIST-ASD-5.12",
+        "source_locator": "NIST ASD frequency conversions use CODATA relationships",
+        "observed_label": "speed-wavelength-frequency-closure"
+      }
+    ],
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-asd-version-history.html",
+    "source_snapshot_hash": "sha256:a327a34eb1b85ef3f003e8c8f0dbcb0c3fc49f039ee4046546a924fc42118454",
+    "falsification_condition": "The wave law is falsified if any committed NIST spectral/transition row lacks the predicted recurrence or propagation structure, a row is omitted, or the tampered row is accepted."
+  }
+}

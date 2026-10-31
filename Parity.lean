@@ -787,3 +787,24 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ElectroweakTerminalGrammar.candidates do
     IO.println ("ElectroweakTerminalGrammar\t" ++ SFT.Physics.ElectroweakTerminalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ElectroweakTerminalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ElectroweakTerminalGrammar.exactForm c ++ "\t" ++ SFT.Physics.ElectroweakTerminalGrammar.decisionReason c)
+
+  for c in SFT.Physics.RadiationGrammar.candidates do
+    IO.println ("RadiationGrammar\t" ++ SFT.Physics.RadiationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.RadiationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.RadiationGrammar.exactForm c ++ "\t" ++ SFT.Physics.RadiationGrammar.decisionReason c)
+
+  for c in SFT.Physics.InteractionClassesGrammar.candidates do
+    IO.println ("InteractionClassesGrammar\t" ++ SFT.Physics.InteractionClassesGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.InteractionClassesGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.InteractionClassesGrammar.exactForm c ++ "\t" ++ SFT.Physics.InteractionClassesGrammar.decisionReason c)
+
+  for c in SFT.Physics.SourceContinuityGrammar.candidates do
+    IO.println ("SourceContinuityGrammar\t" ++ SFT.Physics.SourceContinuityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SourceContinuityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SourceContinuityGrammar.exactForm c ++ "\t" ++ SFT.Physics.SourceContinuityGrammar.decisionReason c)
+
+  for c in SFT.Physics.ActionReactionGrammar.candidates do
+    IO.println ("ActionReactionGrammar\t" ++ SFT.Physics.ActionReactionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ActionReactionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ActionReactionGrammar.exactForm c ++ "\t" ++ SFT.Physics.ActionReactionGrammar.decisionReason c)
+
+  for c in SFT.Physics.PeriodFrequencyGrammar.candidates do
+    IO.println ("PeriodFrequencyGrammar\t" ++ SFT.Physics.PeriodFrequencyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PeriodFrequencyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PeriodFrequencyGrammar.exactForm c ++ "\t" ++ SFT.Physics.PeriodFrequencyGrammar.decisionReason c)
+
+  for c in SFT.Physics.PropagationGrammar.candidates do
+    IO.println ("PropagationGrammar\t" ++ SFT.Physics.PropagationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PropagationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PropagationGrammar.exactForm c ++ "\t" ++ SFT.Physics.PropagationGrammar.decisionReason c)
+
+  for c in SFT.Physics.SpeedRelationGrammar.candidates do
+    IO.println ("SpeedRelationGrammar\t" ++ SFT.Physics.SpeedRelationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpeedRelationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpeedRelationGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpeedRelationGrammar.decisionReason c)

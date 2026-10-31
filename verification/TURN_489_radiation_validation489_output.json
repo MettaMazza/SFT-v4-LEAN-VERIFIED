@@ -1,0 +1,58 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "NIST-ASD-5.12"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:24e4783356a97764242be0bbd05254e573a61a309cd852eded56e1a2769dbfbc",
+  "falsification_condition": "The field claim is falsified if any committed external row lacks the predicted source/response or propagation structure, any row is omitted, or the tampered unfavorable row is accepted.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:156e82d41707b0689780af93d39078fbbc296a63b0bfa284f217c01f7aaef710",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:483e67fc28b310f6327b01ab6515e544dc99ae7caebd9b0e0f3b7483398871c0",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-PHYS-FIELD-RADIATION-001-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:2993f2d82e39908c2768c205866d0510046cfe01fb9b592e587da0d3c34b0308",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:5ff2d3d745c6ed7a434cc53689c553983d7cb8a219660b62f4a1b260660114e8",
+    "prediction_seal_hash": "sha256:d50e971385b236cf25bb35756e51b6f0d06e62f23fe574f989091b7ff5d54b90",
+    "program_hash": "sha256:0d4f94633f325f164bc954b6b537c29e360a8ab6a87d9512a73334169b1615c8",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:dfee6116967327368281919561126234cc71a87d7b4c85e7b2f29e7e34a1785e",
+    "target_material_present": false,
+    "trace_hash": "sha256:8b528c2f21d603ce61301498a4aa0112577030825a988ef26c36f673880c3ba2"
+  },
+  "measurement_receipt_hash": "sha256:d3f19e10ee097433ca910e6ba85b57ca0d0554f8af18e136ac84ab4fa616f854",
+  "measurements": [
+    "radiation-1: predicted self-propagating-radiative-field; observed self-propagating-radiative-field; exact match True",
+    "radiation-2: predicted self-propagating-radiative-field; observed self-propagating-radiative-field; exact match True",
+    "deliberately tampered unfavorable control rejected"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:6efcc841939563fb99087ca168e48dddefcfa7d5f445d91052af2eb6aab57a22",
+    "custodian_id": "SFT-EXP-PHYS-FIELD-RADIATION-001-external-target-custodian",
+    "experiment_registration_hash": "sha256:24e4783356a97764242be0bbd05254e573a61a309cd852eded56e1a2769dbfbc",
+    "prediction_seal_hash": "sha256:d50e971385b236cf25bb35756e51b6f0d06e62f23fe574f989091b7ff5d54b90",
+    "registered_target_identity_hash": "sha256:dfee6116967327368281919561126234cc71a87d7b4c85e7b2f29e7e34a1785e",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:5c1bbbc39daec45d635faacf6917fb976faa4f95d04d9f7830a737113687b8bf"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "sha256:464f8785bf8c950fe40c3b4acd61da12c9521102a4fcc4b5ed881ee65599328d"
+}

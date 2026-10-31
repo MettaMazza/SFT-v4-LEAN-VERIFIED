@@ -934,3 +934,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.StrongRunningGrammar.candidates do
     IO.println ("StrongRunningGrammar\t" ++ SFT.Physics.StrongRunningGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StrongRunningGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StrongRunningGrammar.exactForm c ++ "\t" ++ SFT.Physics.StrongRunningGrammar.decisionReason c)
+
+  for c in SFT.Mathematics.SelfSimilarGrammar.candidates do
+    IO.println ("SelfSimilarGrammar\t" ++ SFT.Mathematics.SelfSimilarGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.SelfSimilarGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.SelfSimilarGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.SelfSimilarGrammar.decisionReason c)
+
+  for c in SFT.Physics.SpacetimeEventGrammar.candidates do
+    IO.println ("SpacetimeEventGrammar\t" ++ SFT.Physics.SpacetimeEventGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpacetimeEventGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpacetimeEventGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpacetimeEventGrammar.decisionReason c)

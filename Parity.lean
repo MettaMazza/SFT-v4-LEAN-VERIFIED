@@ -703,3 +703,15 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ConsistencyGrammar.candidates do
     IO.println ("ConsistencyGrammar\t" ++ SFT.Physics.ConsistencyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ConsistencyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ConsistencyGrammar.exactForm c ++ "\t" ++ SFT.Physics.ConsistencyGrammar.decisionReason c)
+
+  for c in SFT.Physics.EventGrammar.candidates do
+    IO.println ("EventGrammar\t" ++ SFT.Physics.EventGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.EventGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.EventGrammar.exactForm c ++ "\t" ++ SFT.Physics.EventGrammar.decisionReason c)
+
+  for c in SFT.Physics.DurationGrammar.candidates do
+    IO.println ("DurationGrammar\t" ++ SFT.Physics.DurationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DurationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DurationGrammar.exactForm c ++ "\t" ++ SFT.Physics.DurationGrammar.decisionReason c)
+
+  for c in SFT.Physics.DisplacementGrammar.candidates do
+    IO.println ("DisplacementGrammar\t" ++ SFT.Physics.DisplacementGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DisplacementGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DisplacementGrammar.exactForm c ++ "\t" ++ SFT.Physics.DisplacementGrammar.decisionReason c)
+
+  for c in SFT.Physics.VelocityGrammar.candidates do
+    IO.println ("VelocityGrammar\t" ++ SFT.Physics.VelocityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VelocityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VelocityGrammar.exactForm c ++ "\t" ++ SFT.Physics.VelocityGrammar.decisionReason c)

@@ -12160,9 +12160,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-EVENT-CHANGE-001-71e815aed3d0ecea.json",
       "statement": "A physical event is a complete observed Fold state, and physical change is the source-bound transition between two such states; neither an unobserved background coordinate nor an answer-only scalar is required.",
       "title": "Physical event and generated change",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MechanicalEvents.lean",
+        "SFT/Physics/EventGrammar.lean",
+        "SFT/Physics/EventEvidence.lean",
+        "SFT/Physics/EventExperiment.lean",
+        "SFT/Physics/EventValidation.lean",
+        "SFT/Physics/EventValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all methods/fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "1551689adb81a2ec4cb3542baa1be623dd6ac37cd8747dba829ad17e4cd01186",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12203,7 +12210,10 @@
         "statement": "A physical event is a complete observed Fold state, and physical change is the source-bound transition between two such states; neither an unobserved background coordinate nor an answer-only scalar is required.",
         "status": "empirically_tested",
         "title": "Physical event and generated change"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete observed source states and source-bound transition records; arbitrary finite paths retain all event, endpoint, action and source records and append exactly one transition.",
+      "completion_evidence": "verification/TURN_482_EVENT_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -12215,9 +12225,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-DURATION-001-90b0ed7f1d52601e.json",
       "statement": "Duration is forced as the exact positive ratio between generated transition count and a held reference recurrence; absence of a transition is structural Empty One, never numerical time zero.",
       "title": "Duration from ordered recurrence",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MechanicalDuration.lean",
+        "SFT/Physics/DurationGrammar.lean",
+        "SFT/Physics/DurationEvidence.lean",
+        "SFT/Physics/DurationExperiment.lean",
+        "SFT/Physics/DurationValidation.lean",
+        "SFT/Physics/DurationValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all methods/fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "2cf36ca5bb9a4b2c4752af7cbbdcf48b58d0b09b4ee5093495161d8919c0dd59",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12259,7 +12276,10 @@
         "statement": "Duration is forced as the exact positive ratio between generated transition count and a held reference recurrence; absence of a transition is structural Empty One, never numerical time zero.",
         "status": "empirically_tested",
         "title": "Duration from ordered recurrence"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Positive exact transition-count/reference-recurrence ratio with structural Empty One for absent transitions; reference closure, normalization, reference-unit One and telescoping.",
+      "completion_evidence": "verification/TURN_482_DURATION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -12271,9 +12291,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001-fc78abed974ceb73.json",
       "statement": "Mechanical location is a relation to generated reference support; displacement pairs two such relations and holds which endpoint retains the orientation rather than introducing negative length.",
       "title": "Location, separation and held displacement orientation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MechanicalLocation.lean",
+        "SFT/Physics/DisplacementGrammar.lean",
+        "SFT/Physics/DisplacementEvidence.lean",
+        "SFT/Physics/DisplacementExperiment.lean",
+        "SFT/Physics/DisplacementValidation.lean",
+        "SFT/Physics/DisplacementValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all methods/fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "305c9eaf53af4bc9dc094384f1e15b542a72d24937e4308f31beb7ba0581f320",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12315,7 +12342,10 @@
         "statement": "Mechanical location is a relation to generated reference support; displacement pairs two such relations and holds which endpoint retains the orientation rather than introducing negative length.",
         "status": "empirically_tested",
         "title": "Location, separation and held displacement orientation"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Reference-relative support and observation records, exact positive separation and held endpoint orientation; reversing orientation preserves magnitude, source pair and original records.",
+      "completion_evidence": "verification/TURN_482_DISPLACEMENT_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -12327,9 +12357,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-SPEED-VELOCITY-001-032489b9c3a0c264.json",
       "statement": "Speed is forced as exact generated separation per reference recurrence, while velocity additionally retains displacement orientation; no signed magnitude enters the proof.",
       "title": "Speed and oriented velocity",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MechanicalVelocity.lean",
+        "SFT/Physics/VelocityGrammar.lean",
+        "SFT/Physics/VelocityEvidence.lean",
+        "SFT/Physics/VelocityExperiment.lean",
+        "SFT/Physics/VelocityValidation.lean",
+        "SFT/Physics/VelocityValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all methods/fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "b76f9b7101b10a73118638f3126eeca7b9a2c9b004cc9cd9bfef820003525f20",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12371,7 +12408,10 @@
         "statement": "Speed is forced as exact generated separation per reference recurrence, while velocity additionally retains displacement orientation; no signed magnitude enters the proof.",
         "status": "empirically_tested",
         "title": "Speed and oriented velocity"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Exact positive separation/duration quotient computed from retained displacement and generated recurrence; orientation, source traces and dimension descriptions retained without signed magnitude or fitted scale.",
+      "completion_evidence": "verification/TURN_482_VELOCITY_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -190621,13 +190661,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-31T00:25:55.753508+00:00",
+  "updated_at": "2026-10-31T00:45:48.558944+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2580,
-    "fully_reconstructed_claims": 201,
-    "axiom_free_exported_results": 9665,
-    "axiom_free_audited_definitions_and_theorems": 21919
+    "pending": 2576,
+    "fully_reconstructed_claims": 205,
+    "axiom_free_exported_results": 9836,
+    "axiom_free_audited_definitions_and_theorems": 22402
   }
 }

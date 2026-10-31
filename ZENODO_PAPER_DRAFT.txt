@@ -8,7 +8,7 @@ Unpublished continuation; edition 0.1 remains the frozen published preprint
 
 Abstract
 
-Smithian Fold Theory (SFT) develops a structural theory of everything from its operational root, with zero added axioms and zero free scientific parameters. This cumulative preprint presents its native Lean formalisation, preserving the definitions, dependency order, derivations, complete candidate grammars, controls and empirical boundaries of the existing V3 model. The opening result is the exact terminal inverse fine-structure ratio, alpha^(-1) = 503846395469/3676744786. Its binary covers, typed structural blocks, finite direction-promotion ladder and exact rational assembly are derived before measurement; the corresponding Lean proofs have no axiom dependencies. The manuscript then develops the broader verified model, from the operational root, structural One, Count, Part and Fold through mathematics, information, computation and the completed physics results. This edition covers 201 completed entries of the 2,781-entry V3 census. The accompanying formalisation contains 9,665 audited theorems; the audit covers 21,919 declarations and reports zero axiom dependencies. Source correspondence, executable comparisons and chronological records accompany the manuscript. Successive versions will incorporate further completed derivations until the full model is formalised.
+Smithian Fold Theory (SFT) develops a structural theory of everything from its operational root, with zero added axioms and zero free scientific parameters. This cumulative preprint presents its native Lean formalisation, preserving the definitions, dependency order, derivations, complete candidate grammars, controls and empirical boundaries of the existing V3 model. The opening result is the exact terminal inverse fine-structure ratio, alpha^(-1) = 503846395469/3676744786. Its binary covers, typed structural blocks, finite direction-promotion ladder and exact rational assembly are derived before measurement; the corresponding Lean proofs have no axiom dependencies. The manuscript then develops the broader verified model, from the operational root, structural One, Count, Part and Fold through mathematics, information, computation and the completed physics results. This edition covers 205 completed entries of the 2,781-entry V3 census. The accompanying formalisation contains 9,836 audited theorems; the audit covers 22,402 declarations and reports zero axiom dependencies. Source correspondence, executable comparisons and chronological records accompany the manuscript. Successive versions will incorporate further completed derivations until the full model is formalised.
 
 1. Opening result: the fine-structure constant
 
@@ -9824,3 +9824,142 @@ Reference realization, measured-value records, uncertainty, calibration and dime
 The full blind empirical comparisons reproduce the original two-row BIPM protocol, retaining capability-closed prediction, prediction sealing, post-seal target opening, complete row comparison and changed-row rejection. Every field and hash matches its pinned record, including source, custody, isolation and receipt fields. All 1,979,202 snapshot bytes are hashed natively. As in Section 355, original host metadata and equal before/after protected-tree snapshots are supplied explicitly to the adapter.
 
 The complete measurement chain now runs from observation through quantity, canonical dimension, unit comparison, reference realization, measured record, uncertainty and calibration to dimensional consistency. The cumulative census contains 201 completed entries out of 2,781. There are 9,665 audited theorems and 21,919 audited definitions and theorems, all with zero axiom dependencies. Full candidate comparisons cover 70,758 records across 202 represented source entries. The five entries contribute 161 newly registered theorems and 533 newly audited definitions/theorems; the 37 realization, record, uncertainty and calibration component theorems reported earlier are not counted twice.
+
+363. Complete observed events and retained change
+
+The mechanics source follows the completed measurement chain. A physical event retains the complete observed source state; a change retains both endpoint observations and the source-bound action connecting them. The construction below is uniform in the held state carrier and uses the already defined observation record. It does not replace that carrier with a finite answer classifier or a reported numerical inscription.
+
+Write an observed event as E=(s,ρ), where s is the complete supplied carrier state and ρ is its held observation record. A transition from a to b holds source identity σ and action record A. Its retained row is
+\[
+ R(a\to b)=(a,b,σ,A).
+\]
+Both complete events remain present, including both observation records. Projecting a row recovers each of these coordinates. If either endpoint, source identity or action record differs, equality of the two rows would imply equality of that coordinate by projection, a contradiction. Reconstructing the row from its four projections returns the exact original row.
+
+An event path begins at one observed event and extends by one transition from its current endpoint. Its event sequence E(P), transition rows T(P) and source/action ledger H(P) satisfy
+\[
+ E([a])=[a],\quad T([a])=[],\quad H([a])=[],
+\]
+\[
+ E(P\mathbin{+\!+}[b\to c])=E(P)\mathbin{+\!+}[c],
+\]
+\[
+ T(P\mathbin{+\!+}[b\to c])=T(P)\mathbin{+\!+}[R(b\to c)],
+\]
+\[
+ H(P\mathbin{+\!+}[b\to c])=H(P)\mathbin{+\!+}[(σ_{bc},A_{bc})].
+\]
+The endpoint indices ensure that the appended transition starts at the previous endpoint. Let n(P)=|T(P)|. The append-one length identity proves n(P+[b→c])=n(P)+1. Induction on the path then proves
+\[
+ |E(P)|=n(P)+1,\qquad E(P)\ne[],\qquad
+ \mathrm{map}((σ,A),T(P))=H(P).
+\]
+Thus every extension preserves all earlier events and transitions, appends exactly one generated change, and retains every source/action record in order. Fifteen native theorems establish these base, successor, retention and distinguishability properties without axiom dependencies.
+
+364. Duration from generated recurrence
+
+A held reference recurrence contains its starting observation, returning observation and complete event path C. It retains the equality of the returning and starting carrier states, while the observation records remain separately held. Its generated transition count m=n(C) is positive. No absolute background time coordinate enters the construction.
+
+For a measured event path P, let n=n(P). The source distinction between absent change and positive duration is represented by separate constructors:
+\[
+ \Delta(P;C)=
+ \begin{cases}
+ \mathrm{EmptyOne},&n=0,\\
+ \mathrm{Positive}(N(n,m)),&n>0,
+ \end{cases}
+\]
+where N is the previously derived exact positive fraction normalization. The zero in the branch condition counts the absence of transitions; it is not a numerical physical duration. The positive constructor carries a fraction whose numerator is proved positive and whose denominator is nonzero.
+
+For one observed event there is no transition, so Δ([a];C)=EmptyOne. Conversely, if Δ(P;C)=EmptyOne, a positive transition count would put the result in the distinct positive constructor. Therefore
+\[
+ \Delta(P;C)=\mathrm{EmptyOne}\iff n(P)=0.
+\]
+Appending a transition gives n+1 and excludes the Empty One case. For n>0, writing N(n,m)=u/v, exact normalization proves
+\[
+ nv=um,\qquad u>0.
+\]
+The reference recurrence compared with itself gives N(m,m)=1/1: both normalized numerator and denominator are exactly 1.
+
+Changing the held reference from a recurrence of m transitions to one of k transitions composes the generated ratios. If z=N(n,m)\circ N(m,k), the exact telescoping theorem gives
+\[
+ z_{\mathrm{num}}\,k=n\,z_{\mathrm{den}}.
+\]
+The intermediate recurrence cancels in value while both source paths remain available. The event-count identity |E(P)|=n(P)+1 connects duration to the retained ordered path. Eleven native theorems establish absence, positive duration, exact normalization, reference return, reference-unit One and reference-change telescoping with zero axiom dependencies.
+
+365. Reference-relative location and held displacement orientation
+
+A location retains its reference identity, complete supplied support and observation record:
+\[
+ L=(r,S,ρ).
+\]
+Changing either the reference identity or the support distinguishes the location, because equality would preserve each projection. Rebuilding L from its three projections returns L exactly. This is a reference-relative record; no unobserved absolute position is added.
+
+A displacement holds two such locations, their admitted exact positive separation x and which endpoint holds the orientation:
+\[
+ d=(L_1,L_2,x,h),\qquad h\in\{\mathrm{first},\mathrm{second}\}.
+\]
+The separation is the supplied exact quantity relation, not a fitted coefficient. Both endpoint reference identities and both observation records remain held. Define opposite(first)=second and opposite(second)=first. The two finite cases establish opposite(opposite(h))=h and opposite(h)≠h.
+
+Reversing the comparison orientation is
+\[
+ \mathrm{reverse}(d)=(L_1,L_2,x,\mathrm{opposite}(h)).
+\]
+It preserves the positive magnitude and the entire source pair, changes the held orientation, and returns d when applied twice. Orientation reversal introduces no negative physical length.
+
+Relabelling the written endpoint order is a separate description operation:
+\[
+ \mathrm{swap}(d)=(L_2,L_1,x,\mathrm{opposite}(h)).
+\]
+Checking the two held-endpoint cases proves that this operation preserves the actual held location. It also preserves x and is involutive. The distinction between reversing a comparison and exchanging the written endpoint order keeps orientation and description identity explicit. Fourteen native theorems establish the record, positivity, retention and orientation properties without axiom dependencies.
+
+366. Exact speed and oriented velocity
+
+The source speed relation divides the retained exact separation by a positive generated duration. Velocity retains that rate together with the displacement orientation. For separation x=n_x/d_x and duration t=n_t/d_t, define
+\[
+ q=N(n_xd_t,d_xn_t).
+\]
+Both products are positive because x and t are admitted positive fractions. Normalization supplies the exact cross-product identity
+\[
+ (n_xd_t)q_{\mathrm{den}}=q_{\mathrm{num}}(d_xn_t),
+ \qquad q_{\mathrm{num}}>0.
+\]
+This constructs the quotient from the two retained quantity relations without an added numerical scale.
+
+The native velocity record retains the displacement, both endpoint events, the complete event path, the reference recurrence and the proof that the path contains a transition. Its speed is the quotient above with t=N(n(P),n(C)); its orientation is the held displacement endpoint. Reversing that orientation leaves the displacement magnitude, event path and reference recurrence unchanged. Hence
+\[
+ \mathrm{speed}(\mathrm{reverse}(v))=\mathrm{speed}(v),
+\]
+\[
+ \mathrm{orientation}(\mathrm{reverse}(v))
+ =\mathrm{opposite}(\mathrm{orientation}(v)),\qquad
+ \mathrm{reverse}(\mathrm{reverse}(v))=v.
+\]
+The duration trace and reference are retained by equality of the complete corresponding fields, rather than by equality of a reported number alone.
+
+The dimension description is the generated quotient of the separation and duration descriptions. For each kind k, if their numerator/denominator occurrence counts are (a,b) and (c,d), its counts are
+\[
+ C_k(D_{\mathrm{speed}})=(a+d,b+c).
+\]
+This is the exact quotient construction of Section 352, retaining both dimension carriers. Equality of two unreduced quotient descriptions implies equality of each supplied operand description; their canonical comparisons still use the proved reduction relation. Eleven native theorems establish the exact rate, positivity, orientation, retained records and dimension-description properties with zero axiom dependencies.
+
+367. Completed initial mechanics chain
+
+The event/change, duration, location/displacement and speed/velocity entries are complete against the pinned V3 model. Their general structural derivations are given in Sections 363–366. Each original eight-axis grammar contains all 256 forms, retaining carrier, relation, provenance, prediction access, measured record, row retention, finite generality and extra-rule coordinates. The admitted relation is respectively state-bound-event-transition, transition-to-reference-recurrence-ratio, reference-separation-with-held-orientation and separation-per-recurrence-with-orientation. The full conjunction admits one tuple and gives a rejected coordinate for every other tuple.
+
+The original operational witnesses remain executable: extending [event-a] to [event-a,event-b] retains its first event, and changing the held orientation of the pair (orientation,1) preserves its magnitude coordinate. Each program reproduces every candidate lookup, census and decision hash, registration, closure, control and unknown-identifier rejection. The original independent validator accepts the native output and rejects an omitted candidate, an extra survivor and a failed control.
+
+The four full blind empirical validators reproduce the pinned CODATA protocol. They retain each original pair of target rows, the sealed prediction, post-seal source opening, complete row comparison and changed-row control. Every output field and hash agrees with V3, including execution, custody, isolation and receipt fields. The complete 40,801-byte CODATA snapshot is hashed natively. Original host metadata and equal before/after protected-tree snapshots are explicit adapter inputs, as in the preceding measurement comparisons.
+
+The registered formalisation contains 205 completed entries out of 2,781, with 9,836 audited theorems and 22,402 audited definitions and theorems, all with zero axiom dependencies. Complete candidate comparisons cover 71,782 records across 206 represented entries. This four-entry batch adds 171 registered theorems and 483 audited definitions and theorems; 51 of these theorems establish the event, duration, displacement and velocity constructions of Sections 363–366.
+
+368. Canonical identity under the proved byte-hash equivalence
+
+For a held canonical value v, source identity is computed as
+\[
+ I(v)=\texttt{sha256:}\;\Vert\;
+ H(\operatorname{UTF8}(\operatorname{render}(v))),
+\]
+where rendering retains the original canonical ordering and serialization. Section 360 establishes equality of the original and block-window digest for every byte array. Substitution at the exact rendered byte array therefore proves
+\[
+ \forall v,\quad I_{\mathrm{window}}(v)=I(v).
+\]
+The corresponding isolated native identity theorem has zero axiom dependencies. It preserves all canonical data constructors, ordering and rendering; the scientific computations and complete candidate grammars are unchanged. This implementation equivalence is separate from the full source-output comparisons required for entry completion.

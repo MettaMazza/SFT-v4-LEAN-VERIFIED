@@ -21,15 +21,15 @@
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
 
-## Unified Constants milestone - review edition 0.2
+## Unified Constants milestone - published edition 0.2
 
 **Smithian Fold Theory: A Zero-Axiom, Zero-Free-Parameter Unified Constants Object - Lean 4 Formal Verification**
 
 The exact fine-structure ratio opens the cumulative SFT paper. This milestone connects 26 terminal readings across seven sectors through one rooted constants object, with all 4,096 original alternatives verified.
 
-**[Read the review PDF](publication/SFT_REVIEW.pdf)** · [Full text](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Review guide](publication/REVIEW_GUIDE.txt) · [Release index](publication/RELEASE_INDEX.json)
+**[Read the published paper](https://zenodo.org/records/23846751/files/SFT_PAPER.pdf)** · [Full text](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Review guide](publication/REVIEW_GUIDE.txt) · [Release index](publication/RELEASE_INDEX.json)
 
-**Prepared for author review; not yet published on Zenodo.** The [previous published edition 0.1](https://doi.org/10.5281/zenodo.23782217) remains available. This edition includes the cumulative mathematical manuscript, timeline, source correspondence and full verification evidence. Publication requires approval of this review edition.
+**[Published on Zenodo: edition 0.2](https://doi.org/10.5281/zenodo.23846751).** The [previous published edition 0.1](https://doi.org/10.5281/zenodo.23782217) remains available. This edition includes the cumulative mathematical manuscript, timeline, source correspondence and full verification evidence. The next review milestone is 500 completed entries, then every 250; the full cumulative paper is updated and checked before each review pause.
 
 # One model. Every derivation. Machine-checked.
 
@@ -157,7 +157,7 @@ The scripts read pinned v3 source and artifacts without importing or executing v
 
 | | |
 | :--- | :--- |
-| **[Scientific manuscript](ZENODO_PAPER_DRAFT.txt)** | The accompanying Zenodo paper draft. Unpublished. |
+| **[Scientific manuscript](ZENODO_PAPER_DRAFT.txt)** | The editable source of the published cumulative preprint. |
 | **[Chronological timeline](TIMELINE.txt)** | Exact steps, checks, outcomes and continuation points. |
 | **[Full coverage ledger](COVERAGE.json)** | Every registered entry, original statement and tracked status. |
 | **[Proof audit](Audit.lean)** | The exported results and their Lean axiom checks. |
@@ -404,6 +404,6 @@ ManyBody complete: original full-program comparisons PASS; 159 completed entries
 
 MathematicalModelling complete: original full-program comparisons PASS; 160 completed entries.
 
-Unified Constants milestone complete: all seven original direct sector inputs and the final Unified Constants Object are complete. The eight-entry milestone integration passes. Review edition 0.2 is unpublished and awaits author approval; the verified scientific checkpoint is 59172eee89576735796ec396f85e8527f0744130.
+Unified Constants milestone complete: all seven original direct sector inputs and the final Unified Constants Object are complete. The eight-entry milestone integration passes. Edition 0.2 is published at https://doi.org/10.5281/zenodo.23846751; the verified scientific checkpoint is 59172eee89576735796ec396f85e8527f0744130.
 
 </details>

@@ -901,3 +901,15 @@ def main : IO Unit := do
 
   for c in SFT.Physics.DecayGrammar.candidates do
     IO.println ("DecayGrammar\t" ++ SFT.Physics.DecayGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DecayGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DecayGrammar.exactForm c ++ "\t" ++ SFT.Physics.DecayGrammar.decisionReason c)
+
+  for c in SFT.Physics.StateMixingGrammar.candidates do
+    IO.println ("StateMixingGrammar\t" ++ SFT.Physics.StateMixingGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StateMixingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StateMixingGrammar.exactForm c ++ "\t" ++ SFT.Physics.StateMixingGrammar.decisionReason c)
+
+  for c in SFT.Physics.NuclearBindingGrammar.candidates do
+    IO.println ("NuclearBindingGrammar\t" ++ SFT.Physics.NuclearBindingGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NuclearBindingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NuclearBindingGrammar.exactForm c ++ "\t" ++ SFT.Physics.NuclearBindingGrammar.decisionReason c)
+
+  for c in SFT.Physics.NuclearLevelsGrammar.candidates do
+    IO.println ("NuclearLevelsGrammar\t" ++ SFT.Physics.NuclearLevelsGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NuclearLevelsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NuclearLevelsGrammar.exactForm c ++ "\t" ++ SFT.Physics.NuclearLevelsGrammar.decisionReason c)
+
+  for c in SFT.Physics.RadioactivityGrammar.candidates do
+    IO.println ("RadioactivityGrammar\t" ++ SFT.Physics.RadioactivityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.RadioactivityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.RadioactivityGrammar.exactForm c ++ "\t" ++ SFT.Physics.RadioactivityGrammar.decisionReason c)

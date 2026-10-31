@@ -1,0 +1,50 @@
+import SFT.Physics.MatterMixing
+import SFT.Physics.NuclearBinding
+import SFT.Physics.NuclearLevels
+import SFT.Physics.NuclearRadioactivity
+#print axioms SFT.Physics.MatterMixing.overlap
+#print axioms SFT.Physics.MatterMixing.overlapExactly
+#print axioms SFT.Physics.MatterMixing.count
+#print axioms SFT.Physics.MatterMixing.overlapBound
+#print axioms SFT.Physics.MatterMixing.finiteSpinPreservesConstituents
+#print axioms SFT.Physics.MatterMixing.fullCycleRestoresOverlap
+#print axioms SFT.Physics.MatterMixing.fullCycleRestoresCount
+#print axioms SFT.Physics.MatterMixing.exactPhaseResidueDeterminesOverlap
+#print axioms SFT.Physics.MatterMixing.nonalignedWitness
+#print axioms SFT.Physics.MatterMixing.changedOverlapHasChangedReading
+#print axioms SFT.Physics.NuclearBinding.Composition
+#print axioms SFT.Physics.NuclearBinding.reduction
+#print axioms SFT.Physics.NuclearBinding.conversion
+#print axioms SFT.Physics.NuclearBinding.releasedEnergy
+#print axioms SFT.Physics.NuclearBinding.releasedRecord
+#print axioms SFT.Physics.NuclearBinding.exactPositiveReduction
+#print axioms SFT.Physics.NuclearBinding.completeMassBalance
+#print axioms SFT.Physics.NuclearBinding.reductionStrictlyPositive
+#print axioms SFT.Physics.NuclearBinding.uniqueReduction
+#print axioms SFT.Physics.NuclearBinding.exactReleasedEnergy
+#print axioms SFT.Physics.NuclearBinding.releaseDestinationAndTraceRetained
+#print axioms SFT.Physics.NuclearBinding.boundRecurrenceRetained
+#print axioms SFT.Physics.NuclearLevels.Level
+#print axioms SFT.Physics.NuclearLevels.equivalent
+#print axioms SFT.Physics.NuclearLevels.census
+#print axioms SFT.Physics.NuclearLevels.exactCensusMembership
+#print axioms SFT.Physics.NuclearLevels.censusHasNoEquivalentDuplicates
+#print axioms SFT.Physics.NuclearLevels.nameDoesNotSelectClass
+#print axioms SFT.Physics.NuclearLevels.conversion
+#print axioms SFT.Physics.NuclearLevels.energy
+#print axioms SFT.Physics.NuclearLevels.difference
+#print axioms SFT.Physics.NuclearLevels.emittedDifference
+#print axioms SFT.Physics.NuclearLevels.absorbedDifference
+#print axioms SFT.Physics.NuclearLevels.emissionExactlyClosesCarriers
+#print axioms SFT.Physics.NuclearLevels.unchangedLevelNoTransfer
+#print axioms SFT.Physics.NuclearLevels.finiteRecurrenceRetained
+#print axioms SFT.Physics.NuclearRadioactivity.Support
+#print axioms SFT.Physics.NuclearRadioactivity.selected
+#print axioms SFT.Physics.NuclearRadioactivity.forcedObservedTransition
+#print axioms SFT.Physics.NuclearRadioactivity.everyTerminalBranchHasSource
+#print axioms SFT.Physics.NuclearRadioactivity.completePathSupportRetained
+#print axioms SFT.Physics.NuclearRadioactivity.exactEventSelection
+#print axioms SFT.Physics.NuclearRadioactivity.eventWeight
+#print axioms SFT.Physics.NuclearRadioactivity.exactCompletePathWeight
+#print axioms SFT.Physics.NuclearRadioactivity.onlyCompletePathWeight
+#print axioms SFT.Physics.NuclearRadioactivity.allGatePredecessorsRetained

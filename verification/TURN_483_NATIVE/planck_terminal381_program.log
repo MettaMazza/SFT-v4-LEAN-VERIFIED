@@ -1,0 +1,9 @@
+excessive memory consumption detected at 'interpreter' (potential solution: increase memory consumption threshold)
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/check_planck_terminal381.py", line 7, in <module>
+    out=subprocess.check_output(['/Users/dolltrading/.elan/bin/lean','-j','1','-M','2048','--run',str(Path('work/constants-recovery/PlanckTerminalProgram.lean').resolve()),source],cwd=Path.cwd(),text=True);actual=json.loads(out)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/dolltrading/.elan/bin/lean', '-j', '1', '-M', '2048', '--run', '/Users/dolltrading/Documents/Codex/2026-10-26/p/work/constants-recovery/PlanckTerminalProgram.lean', 'sha256:5eca6d00fe54b7afbabb728a9dab3716786ae87790266d141e993221dddce0d6']' returned non-zero exit status 1.

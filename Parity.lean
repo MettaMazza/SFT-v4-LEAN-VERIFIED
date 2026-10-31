@@ -715,3 +715,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.VelocityGrammar.candidates do
     IO.println ("VelocityGrammar\t" ++ SFT.Physics.VelocityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VelocityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VelocityGrammar.exactForm c ++ "\t" ++ SFT.Physics.VelocityGrammar.decisionReason c)
+
+  for c in SFT.Physics.DarkBaryonGrammar.candidates do
+    IO.println ("DarkBaryonGrammar\t" ++ SFT.Physics.DarkBaryonGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DarkBaryonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DarkBaryonGrammar.exactForm c ++ "\t" ++ SFT.Physics.DarkBaryonGrammar.decisionReason c)

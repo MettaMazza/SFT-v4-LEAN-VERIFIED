@@ -12479,9 +12479,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-INERTIA-001-b87863a7c28e6cf7.json",
       "statement": "When no external transfer trace enters a closed state path, the complete motion carrier is forced to recur unchanged; change without a source would erase provenance.",
       "title": "Inertial persistence",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MechanicalInertia.lean",
+        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/InertiaGrammar.lean",
+        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/InertiaEvidence.lean",
+        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/InertiaExperiment.lean",
+        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/InertiaValidation.lean",
+        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/InertiaValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program and full40801-byte original empirical validator, every field/hash and four independent-validator cases.",
       "registration_sha256": "6a4b012893b3384e354e42e5291084b9446c03a3a2cc6acba2749a1a80a1df5b",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12523,7 +12530,12 @@
         "statement": "When no external transfer trace enters a closed state path, the complete motion carrier is forced to recur unchanged; change without a source would erase provenance.",
         "status": "empirically_tested",
         "title": "Inertial persistence"
-      }
+      },
+      "verified_scope": "The source provenance rule is represented by retained and source-bound transferred continuations. Native induction proves unchanged complete motion carrier along every finite source-free path, uniqueness of an admitted successor, and source necessity for a changed carrier. This includes exact speed and orientation retention.",
+      "remaining": [
+        "Register after upstream source entry completion: SFT-PHYS-MECH-ACCELERATION-001"
+      ],
+      "verification_evidence": "verification/TURN_483_MECHANICS_BATCH/STATUS.json"
     },
     {
       "branch": "physics",
@@ -12535,9 +12547,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-MOMENTUM-001-9c67363fe5ef6783.json",
       "statement": "Momentum is forced as the complete pair-cell composition of inertia content with oriented velocity, because each inertial part must retain its motion label.",
       "title": "Momentum carrier and transfer",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MechanicalMomentum.lean",
+        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MomentumGrammar.lean",
+        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MomentumEvidence.lean",
+        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MomentumExperiment.lean",
+        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MomentumValidation.lean",
+        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MomentumValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program and full40801-byte original empirical validator, every field/hash and four independent-validator cases.",
       "registration_sha256": "878dc3b94cb8a1c586dec16ee26155b94725e892b079058cb934d195042595d0",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12579,7 +12598,12 @@
         "statement": "Momentum is forced as the complete pair-cell composition of inertia content with oriented velocity, because each inertial part must retain its motion label.",
         "status": "empirically_tested",
         "title": "Momentum carrier and transfer"
-      }
+      },
+      "verified_scope": "Complete ordered inertial-part/motion pairs preserve every input occurrence and full velocity record. Native proofs establish count, membership, both source-coordinate recovery, append composition, exact positive normalized content/speed product and retained orientation.",
+      "remaining": [
+        "Register after upstream source entry completion: SFT-PHYS-MECH-INERTIA-001"
+      ],
+      "verification_evidence": "verification/TURN_483_MECHANICS_BATCH/STATUS.json"
     },
     {
       "branch": "physics",
@@ -33788,9 +33812,20 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-COSMO-DARK-BARYON-FRACTION-001-d8a5088d10154314.json",
       "statement": "Generator three over the forced three-space supplies volume 27. Its least complete binary cover has depth five and support 32, forcing leading baryon/dark shares 5/32 and 27/32 and ratio 27/5. The unique period-five orbit floor 31 deepens the same depth once, forcing 279/52.",
       "title": "Generation-cover dark-to-baryon fraction",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/CosmicRatios.lean",
+        "SFT/Physics/CosmicIntervals.lean",
+        "SFT/Physics/DarkBaryonGrammar.lean",
+        "SFT/Physics/DarkBaryonWitnesses.lean",
+        "SFT/Physics/DarkBaryonControls.lean",
+        "SFT/Physics/DarkBaryonEvidence.lean",
+        "SFT/Physics/DarkBaryonExperiment.lean",
+        "SFT/Physics/DarkBaryonComparison.lean",
+        "SFT/Physics/DarkBaryonValidation.lean",
+        "SFT/Physics/DarkBaryonValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS: fresh full1024-form native program, all fields/hashes/controls; full original743-byte empirical validator and four pinned independent cases.",
       "registration_sha256": "6d8a0df381cc32897898245cb1aeafceef0e21c57eb16e11d83a80cad730de2d",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -33833,7 +33868,10 @@
         "statement": "Generator three over the forced three-space supplies volume 27. Its least complete binary cover has depth five and support 32, forcing leading baryon/dark shares 5/32 and 27/32 and ratio 27/5. The unique period-five orbit floor 31 deepens the same depth once, forcing 279/52.",
         "status": "independently_replicated",
         "title": "Generation-cover dark-to-baryon fraction"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Original generated volume27, least binary cover depth5/tower32, baryon and dark shares5/32 and27/32, leading27/5, floor31, complete least first-return trace and refined279/52; full1024-form program, original controls and complete743-byte blind empirical validator.",
+      "completion_evidence": "verification/TURN_483_DARK_BARYON_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -190661,13 +190699,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-31T00:45:48.558944+00:00",
+  "updated_at": "2026-10-31T01:12:47.344985+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2576,
-    "fully_reconstructed_claims": 205,
-    "axiom_free_exported_results": 9836,
-    "axiom_free_audited_definitions_and_theorems": 22402
+    "in_progress": 2,
+    "pending": 2573,
+    "fully_reconstructed_claims": 206,
+    "axiom_free_exported_results": 9886,
+    "axiom_free_audited_definitions_and_theorems": 22560
   }
 }

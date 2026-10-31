@@ -973,3 +973,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.GravityCurvatureGrammar.candidates do
     IO.println ("GravityCurvatureGrammar\t" ++ SFT.Physics.GravityCurvatureGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityCurvatureGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityCurvatureGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityCurvatureGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravityGeodesicGrammar.candidates do
+    IO.println ("GravityGeodesicGrammar\t" ++ SFT.Physics.GravityGeodesicGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityGeodesicGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityGeodesicGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityGeodesicGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravityFieldSourceGrammar.candidates do
+    IO.println ("GravityFieldSourceGrammar\t" ++ SFT.Physics.GravityFieldSourceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityFieldSourceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityFieldSourceGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityFieldSourceGrammar.decisionReason c)

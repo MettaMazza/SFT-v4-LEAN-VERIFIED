@@ -2339,3 +2339,17 @@ import SFT.Physics.GravityCurvatureEvidence
 import SFT.Physics.GravityCurvatureExperiment
 import SFT.Physics.GravityCurvatureValidation
 import SFT.Physics.GravityCurvatureValidationProofs
+import SFT.Physics.GravityGeodesic
+import SFT.Physics.GravityGeodesicSelection
+import SFT.Physics.GravityGeodesicBridge
+import SFT.Physics.GravityGeodesicGrammar
+import SFT.Physics.GravityGeodesicEvidence
+import SFT.Physics.GravityGeodesicExperiment
+import SFT.Physics.GravityGeodesicValidation
+import SFT.Physics.GravityGeodesicValidationProofs
+import SFT.Physics.GravityFieldSource
+import SFT.Physics.GravityFieldSourceGrammar
+import SFT.Physics.GravityFieldSourceEvidence
+import SFT.Physics.GravityFieldSourceExperiment
+import SFT.Physics.GravityFieldSourceValidation
+import SFT.Physics.GravityFieldSourceValidationProofs

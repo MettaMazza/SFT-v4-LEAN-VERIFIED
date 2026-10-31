@@ -883,3 +883,21 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ParticleAntiparticleGrammar.candidates do
     IO.println ("ParticleAntiparticleGrammar\t" ++ SFT.Physics.ParticleAntiparticleGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ParticleAntiparticleGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ParticleAntiparticleGrammar.exactForm c ++ "\t" ++ SFT.Physics.ParticleAntiparticleGrammar.decisionReason c)
+
+  for c in SFT.Physics.FermionBosonGrammar.candidates do
+    IO.println ("FermionBosonGrammar\t" ++ SFT.Physics.FermionBosonGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FermionBosonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FermionBosonGrammar.exactForm c ++ "\t" ++ SFT.Physics.FermionBosonGrammar.decisionReason c)
+
+  for c in SFT.Physics.ConservedLabelsGrammar.candidates do
+    IO.println ("ConservedLabelsGrammar\t" ++ SFT.Physics.ConservedLabelsGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ConservedLabelsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ConservedLabelsGrammar.exactForm c ++ "\t" ++ SFT.Physics.ConservedLabelsGrammar.decisionReason c)
+
+  for c in SFT.Physics.ParticleSpectrumGrammar.candidates do
+    IO.println ("ParticleSpectrumGrammar\t" ++ SFT.Physics.ParticleSpectrumGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ParticleSpectrumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ParticleSpectrumGrammar.exactForm c ++ "\t" ++ SFT.Physics.ParticleSpectrumGrammar.decisionReason c)
+
+  for c in SFT.Physics.CompositeHadronsGrammar.candidates do
+    IO.println ("CompositeHadronsGrammar\t" ++ SFT.Physics.CompositeHadronsGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CompositeHadronsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CompositeHadronsGrammar.exactForm c ++ "\t" ++ SFT.Physics.CompositeHadronsGrammar.decisionReason c)
+
+  for c in SFT.Physics.ScatteringGrammar.candidates do
+    IO.println ("ScatteringGrammar\t" ++ SFT.Physics.ScatteringGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ScatteringGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ScatteringGrammar.exactForm c ++ "\t" ++ SFT.Physics.ScatteringGrammar.decisionReason c)
+
+  for c in SFT.Physics.DecayGrammar.candidates do
+    IO.println ("DecayGrammar\t" ++ SFT.Physics.DecayGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DecayGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DecayGrammar.exactForm c ++ "\t" ++ SFT.Physics.DecayGrammar.decisionReason c)

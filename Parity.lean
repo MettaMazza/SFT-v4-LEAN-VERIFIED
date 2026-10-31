@@ -718,3 +718,15 @@ def main : IO Unit := do
 
   for c in SFT.Physics.DarkBaryonGrammar.candidates do
     IO.println ("DarkBaryonGrammar\t" ++ SFT.Physics.DarkBaryonGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DarkBaryonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DarkBaryonGrammar.exactForm c ++ "\t" ++ SFT.Physics.DarkBaryonGrammar.decisionReason c)
+
+  for c in SFT.Physics.AccelerationGrammar.candidates do
+    IO.println ("AccelerationGrammar\t" ++ SFT.Physics.AccelerationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AccelerationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AccelerationGrammar.exactForm c ++ "\t" ++ SFT.Physics.AccelerationGrammar.decisionReason c)
+
+  for c in SFT.Physics.InertiaGrammar.candidates do
+    IO.println ("InertiaGrammar\t" ++ SFT.Physics.InertiaGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.InertiaGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.InertiaGrammar.exactForm c ++ "\t" ++ SFT.Physics.InertiaGrammar.decisionReason c)
+
+  for c in SFT.Physics.MomentumGrammar.candidates do
+    IO.println ("MomentumGrammar\t" ++ SFT.Physics.MomentumGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MomentumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MomentumGrammar.exactForm c ++ "\t" ++ SFT.Physics.MomentumGrammar.decisionReason c)
+
+  for c in SFT.Physics.ForceGrammar.candidates do
+    IO.println ("ForceGrammar\t" ++ SFT.Physics.ForceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ForceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ForceGrammar.exactForm c ++ "\t" ++ SFT.Physics.ForceGrammar.decisionReason c)

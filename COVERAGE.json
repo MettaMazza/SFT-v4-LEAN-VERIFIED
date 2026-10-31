@@ -12423,9 +12423,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-ACCELERATION-001-3726d5e4e02d4b6a.json",
       "statement": "Acceleration is forced as the exact oriented change between two velocity carriers per generated recurrence interval.",
       "title": "Change of velocity and acceleration",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Mathematics/FoldScalar.lean",
+        "SFT/Physics/MechanicalAcceleration.lean",
+        "SFT/Physics/AccelerationGrammar.lean",
+        "SFT/Physics/AccelerationEvidence.lean",
+        "SFT/Physics/AccelerationExperiment.lean",
+        "SFT/Physics/AccelerationValidation.lean",
+        "SFT/Physics/AccelerationValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "056d8fa7b8ba29616aeaa784eafbf7b53f99a2538896d505f18784e7d8e3bcc8",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12467,7 +12475,10 @@
         "statement": "Acceleration is forced as the exact oriented change between two velocity carriers per generated recurrence interval.",
         "status": "empirically_tested",
         "title": "Change of velocity and acceleration"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete observed before/after velocity carriers are endpoints of the actual retained interval path. Their exact held scalar difference uses original V3 positive-rational oriented arithmetic and is divided by the generated positive recurrence duration. Empty change is structural Empty One. Universal arithmetic identities, exact recurrence ratio, retained orientation, endpoints and provenance are proved.",
+      "completion_evidence": "verification/TURN_484_ACCELERATION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -12479,16 +12490,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-INERTIA-001-b87863a7c28e6cf7.json",
       "statement": "When no external transfer trace enters a closed state path, the complete motion carrier is forced to recur unchanged; change without a source would erase provenance.",
       "title": "Inertial persistence",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
-        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MechanicalInertia.lean",
-        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/InertiaGrammar.lean",
-        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/InertiaEvidence.lean",
-        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/InertiaExperiment.lean",
-        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/InertiaValidation.lean",
-        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/InertiaValidationProofs.lean"
+        "SFT/Physics/MechanicalInertia.lean",
+        "SFT/Physics/InertiaGrammar.lean",
+        "SFT/Physics/InertiaEvidence.lean",
+        "SFT/Physics/InertiaExperiment.lean",
+        "SFT/Physics/InertiaValidation.lean",
+        "SFT/Physics/InertiaValidationProofs.lean"
       ],
-      "artifact_runtime_parity": "PASS fresh complete256-form program and full40801-byte original empirical validator, every field/hash and four independent-validator cases.",
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "6a4b012893b3384e354e42e5291084b9446c03a3a2cc6acba2749a1a80a1df5b",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12531,11 +12542,9 @@
         "status": "empirically_tested",
         "title": "Inertial persistence"
       },
-      "verified_scope": "The source provenance rule is represented by retained and source-bound transferred continuations. Native induction proves unchanged complete motion carrier along every finite source-free path, uniqueness of an admitted successor, and source necessity for a changed carrier. This includes exact speed and orientation retention.",
-      "remaining": [
-        "Register after upstream source entry completion: SFT-PHYS-MECH-ACCELERATION-001"
-      ],
-      "verification_evidence": "verification/TURN_483_MECHANICS_BATCH/STATUS.json"
+      "verified_scope": "Original provenance rule retains the prior complete carrier when no source-bound transfer is present, and retains the supplied transferred carrier otherwise. Native induction proves closed-path persistence, admitted continuation uniqueness and source necessity for any change; complete speed, orientation and transfer ledgers are retained.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_484_INERTIA_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -12547,16 +12556,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-MOMENTUM-001-9c67363fe5ef6783.json",
       "statement": "Momentum is forced as the complete pair-cell composition of inertia content with oriented velocity, because each inertial part must retain its motion label.",
       "title": "Momentum carrier and transfer",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
-        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MechanicalMomentum.lean",
-        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MomentumGrammar.lean",
-        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MomentumEvidence.lean",
-        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MomentumExperiment.lean",
-        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MomentumValidation.lean",
-        "verification/TURN_483_MECHANICS_BATCH/SFT/Physics/MomentumValidationProofs.lean"
+        "SFT/Physics/MechanicalMomentum.lean",
+        "SFT/Physics/MomentumGrammar.lean",
+        "SFT/Physics/MomentumEvidence.lean",
+        "SFT/Physics/MomentumExperiment.lean",
+        "SFT/Physics/MomentumValidation.lean",
+        "SFT/Physics/MomentumValidationProofs.lean"
       ],
-      "artifact_runtime_parity": "PASS fresh complete256-form program and full40801-byte original empirical validator, every field/hash and four independent-validator cases.",
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "878dc3b94cb8a1c586dec16ee26155b94725e892b079058cb934d195042595d0",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12599,11 +12608,9 @@
         "status": "empirically_tested",
         "title": "Momentum carrier and transfer"
       },
-      "verified_scope": "Complete ordered inertial-part/motion pairs preserve every input occurrence and full velocity record. Native proofs establish count, membership, both source-coordinate recovery, append composition, exact positive normalized content/speed product and retained orientation.",
-      "remaining": [
-        "Register after upstream source entry completion: SFT-PHYS-MECH-INERTIA-001"
-      ],
-      "verification_evidence": "verification/TURN_483_MECHANICS_BATCH/STATUS.json"
+      "verified_scope": "Complete ordered pair cells attach the full motion carrier to every inertial occurrence, preserving membership, count, order, both coordinates and append composition. The exact positive content/speed product and held orientation are retained.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_484_MOMENTUM_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -12615,9 +12622,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-FORCE-001-55c476d418d54f6b.json",
       "statement": "Force is forced as exact momentum transfer per generated duration; it is an interaction trace, not an independent primitive or fitted coefficient.",
       "title": "Force as constrained momentum transfer",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MechanicalForce.lean",
+        "SFT/Physics/ForceGrammar.lean",
+        "SFT/Physics/ForceEvidence.lean",
+        "SFT/Physics/ForceExperiment.lean",
+        "SFT/Physics/ForceValidation.lean",
+        "SFT/Physics/ForceValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "2eda91ba5c7dcb5cc95bd1beef986ccada51d52ea564a1f97832a5cb6855d29b",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12659,7 +12673,10 @@
         "statement": "Force is forced as exact momentum transfer per generated duration; it is an interaction trace, not an independent primitive or fitted coefficient.",
         "status": "empirically_tested",
         "title": "Force as constrained momentum transfer"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete observed before/after momentum carriers are endpoints of the retained source-bound transfer interval. The exact held momentum difference uses original V3 oriented scalar arithmetic and is divided by generated positive duration. Universal scalar identities, recurrence ratio, empty unchanged transfer and complete endpoint/provenance retention are proved.",
+      "completion_evidence": "verification/TURN_484_FORCE_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -190699,13 +190716,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-31T01:12:47.344985+00:00",
+  "updated_at": "2026-10-31T01:27:07.874172+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 2,
-    "pending": 2573,
-    "fully_reconstructed_claims": 206,
-    "axiom_free_exported_results": 9886,
-    "axiom_free_audited_definitions_and_theorems": 22560
+    "in_progress": 0,
+    "pending": 2571,
+    "fully_reconstructed_claims": 210,
+    "axiom_free_exported_results": 10071,
+    "axiom_free_audited_definitions_and_theorems": 23078
   }
 }

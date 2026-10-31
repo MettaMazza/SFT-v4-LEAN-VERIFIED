@@ -1,0 +1,887 @@
+{
+  "Magnetic": {
+    "claim_id": "SFT-PHYS-FIELD-MAGNETIC-001",
+    "title": "Magnetic response to oriented change",
+    "statement": "Magnetic response is forced when an electric source label is transported with held orientation: the response is transverse to the source-motion path and reverses with either held orientation.",
+    "dependencies": [
+      "SFT-MATH-GEOMETRY-TOPOLOGY-001",
+      "SFT-MATH-DYNAMICAL-SYSTEMS-001",
+      "SFT-INFO-CONSERVATION-LOSS-001",
+      "SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001",
+      "SFT-PHYS-MECH-CONSERVATION-001",
+      "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"
+    ],
+    "generation_rule": "Generate every field carrier, source-response relation, provenance, target access, measurement record, row policy, successor and extra-rule form.",
+    "grammar_boundary": "All finite source/response and propagation relations generated from Fold support, exact reference ratios, held orientation and closed transfer without an imported field equation.",
+    "dimensions": [
+      {
+        "key": "carrier",
+        "choices": [
+          {
+            "name": "answer-only-scalar",
+            "admitted": false,
+            "reason": "An answer-only scalar erases the generated physical carrier."
+          },
+          {
+            "name": "complete-fold-carrier",
+            "admitted": true,
+            "reason": "The complete Fold trace retains the observed physical distinction."
+          }
+        ]
+      },
+      {
+        "key": "relation",
+        "choices": [
+          {
+            "name": "imported-or-fitted-relation",
+            "admitted": false,
+            "reason": "An imported or fitted relation lets consensus or target data select the law."
+          },
+          {
+            "name": "oriented-charge-motion-transverse-response",
+            "admitted": true,
+            "reason": "The joint electric/source-motion composition retains both reversals and uniquely supplies the observed transverse interaction class."
+          }
+        ]
+      },
+      {
+        "key": "provenance",
+        "choices": [
+          {
+            "name": "unbound-provenance",
+            "admitted": false,
+            "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+          },
+          {
+            "name": "source-bound-proof-trace",
+            "admitted": true,
+            "reason": "Every generated candidate and decision is bound to its exact source trace."
+          }
+        ]
+      },
+      {
+        "key": "prediction",
+        "choices": [
+          {
+            "name": "target-readable-prediction",
+            "admitted": false,
+            "reason": "A target-readable predictor can copy or optimize against the measurement."
+          },
+          {
+            "name": "capability-closed-prediction",
+            "admitted": true,
+            "reason": "The registered Fold instruction surface has no target or ambient host capability."
+          }
+        ]
+      },
+      {
+        "key": "record",
+        "choices": [
+          {
+            "name": "proof-measurement-conflation",
+            "admitted": false,
+            "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+          },
+          {
+            "name": "separate-measurement-record",
+            "admitted": true,
+            "reason": "External values remain source-bound records compared only after sealing."
+          }
+        ]
+      },
+      {
+        "key": "rows",
+        "choices": [
+          {
+            "name": "selected-favourable-rows",
+            "admitted": false,
+            "reason": "Selecting favorable rows cannot falsify the relation."
+          },
+          {
+            "name": "complete-registered-rows",
+            "admitted": true,
+            "reason": "Every favorable, unfavorable and tampered registered row is retained."
+          }
+        ]
+      },
+      {
+        "key": "generality",
+        "choices": [
+          {
+            "name": "finite-answer-lookup",
+            "admitted": false,
+            "reason": "An answer lookup has no successor certificate."
+          },
+          {
+            "name": "one-successor-closure",
+            "admitted": true,
+            "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+          }
+        ]
+      },
+      {
+        "key": "extension",
+        "choices": [
+          {
+            "name": "free-extra-rule",
+            "admitted": false,
+            "reason": "A free constant, scale or exception can select the measured answer."
+          },
+          {
+            "name": "no-extra-rule",
+            "admitted": true,
+            "reason": "No rule beyond the admitted dependencies and forced relation is present."
+          }
+        ]
+      }
+    ],
+    "exact_result": "Magnetic field response is the transverse held relation generated by oriented electric-source transport.",
+    "induction_base": "One localized source distinction generates one named response relation on one accessible observation cell.",
+    "induction_step": "Adding one generated source or observation cell appends its source-bound response and preserves all prior response, locality and transfer records.",
+    "exclusions": [
+      "action at an ungenerated distance without a propagation trace",
+      "negative or floating proof magnitude",
+      "imported field equations, fitted couplings or target-selected constants",
+      "target access and selected favorable measurements"
+    ],
+    "operational_witnesses": [
+      [
+        "source-response-pair",
+        "A source and response retain distinct identities joined by one trace.",
+        true
+      ],
+      [
+        "closed-transfer",
+        "Every transferred field carrier has a named source and destination.",
+        true
+      ]
+    ],
+    "experiment_id": "SFT-EXP-PHYS-FIELD-MAGNETIC-001",
+    "expected_observation_label": "oriented-electric-transport-magnetic-response",
+    "target_rows": [
+      {
+        "target_id": "magnetic-1",
+        "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+        "source_locator": "CODATA atomic unit of magnetic flux density",
+        "observed_label": "oriented-electric-transport-magnetic-response"
+      },
+      {
+        "target_id": "magnetic-2",
+        "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+        "source_locator": "CODATA magnetic moment and gyromagnetic rows",
+        "observed_label": "oriented-electric-transport-magnetic-response"
+      }
+    ],
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+    "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+    "falsification_condition": "The field claim is falsified if any committed external row lacks the predicted source/response or propagation structure, any row is omitted, or the tampered unfavorable row is accepted."
+  },
+  "Induction": {
+    "claim_id": "SFT-PHYS-FIELD-INDUCTION-001",
+    "title": "Induction from changing linked support",
+    "statement": "A change in magnetic support linked through a closed generated path forces an oriented electric work-transfer trace around that path, preserving complete source-change provenance.",
+    "dependencies": [
+      "SFT-MATH-GEOMETRY-TOPOLOGY-001",
+      "SFT-MATH-DYNAMICAL-SYSTEMS-001",
+      "SFT-INFO-CONSERVATION-LOSS-001",
+      "SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001",
+      "SFT-PHYS-MECH-CONSERVATION-001",
+      "SFT-PHYS-FIELD-MAGNETIC-001"
+    ],
+    "generation_rule": "Generate every field carrier, source-response relation, provenance, target access, measurement record, row policy, successor and extra-rule form.",
+    "grammar_boundary": "All finite source/response and propagation relations generated from Fold support, exact reference ratios, held orientation and closed transfer without an imported field equation.",
+    "dimensions": [
+      {
+        "key": "carrier",
+        "choices": [
+          {
+            "name": "answer-only-scalar",
+            "admitted": false,
+            "reason": "An answer-only scalar erases the generated physical carrier."
+          },
+          {
+            "name": "complete-fold-carrier",
+            "admitted": true,
+            "reason": "The complete Fold trace retains the observed physical distinction."
+          }
+        ]
+      },
+      {
+        "key": "relation",
+        "choices": [
+          {
+            "name": "imported-or-fitted-relation",
+            "admitted": false,
+            "reason": "An imported or fitted relation lets consensus or target data select the law."
+          },
+          {
+            "name": "linked-support-change-to-cyclic-transfer",
+            "admitted": true,
+            "reason": "Only the complete linked-path response retains changing flux support, cyclic orientation and induced work without an added source."
+          }
+        ]
+      },
+      {
+        "key": "provenance",
+        "choices": [
+          {
+            "name": "unbound-provenance",
+            "admitted": false,
+            "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+          },
+          {
+            "name": "source-bound-proof-trace",
+            "admitted": true,
+            "reason": "Every generated candidate and decision is bound to its exact source trace."
+          }
+        ]
+      },
+      {
+        "key": "prediction",
+        "choices": [
+          {
+            "name": "target-readable-prediction",
+            "admitted": false,
+            "reason": "A target-readable predictor can copy or optimize against the measurement."
+          },
+          {
+            "name": "capability-closed-prediction",
+            "admitted": true,
+            "reason": "The registered Fold instruction surface has no target or ambient host capability."
+          }
+        ]
+      },
+      {
+        "key": "record",
+        "choices": [
+          {
+            "name": "proof-measurement-conflation",
+            "admitted": false,
+            "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+          },
+          {
+            "name": "separate-measurement-record",
+            "admitted": true,
+            "reason": "External values remain source-bound records compared only after sealing."
+          }
+        ]
+      },
+      {
+        "key": "rows",
+        "choices": [
+          {
+            "name": "selected-favourable-rows",
+            "admitted": false,
+            "reason": "Selecting favorable rows cannot falsify the relation."
+          },
+          {
+            "name": "complete-registered-rows",
+            "admitted": true,
+            "reason": "Every favorable, unfavorable and tampered registered row is retained."
+          }
+        ]
+      },
+      {
+        "key": "generality",
+        "choices": [
+          {
+            "name": "finite-answer-lookup",
+            "admitted": false,
+            "reason": "An answer lookup has no successor certificate."
+          },
+          {
+            "name": "one-successor-closure",
+            "admitted": true,
+            "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+          }
+        ]
+      },
+      {
+        "key": "extension",
+        "choices": [
+          {
+            "name": "free-extra-rule",
+            "admitted": false,
+            "reason": "A free constant, scale or exception can select the measured answer."
+          },
+          {
+            "name": "no-extra-rule",
+            "admitted": true,
+            "reason": "No rule beyond the admitted dependencies and forced relation is present."
+          }
+        ]
+      }
+    ],
+    "exact_result": "Induction maps exact change of linked magnetic support to held cyclic electric work transfer on the complete boundary path.",
+    "induction_base": "One localized source distinction generates one named response relation on one accessible observation cell.",
+    "induction_step": "Adding one generated source or observation cell appends its source-bound response and preserves all prior response, locality and transfer records.",
+    "exclusions": [
+      "action at an ungenerated distance without a propagation trace",
+      "negative or floating proof magnitude",
+      "imported field equations, fitted couplings or target-selected constants",
+      "target access and selected favorable measurements"
+    ],
+    "operational_witnesses": [
+      [
+        "source-response-pair",
+        "A source and response retain distinct identities joined by one trace.",
+        true
+      ],
+      [
+        "closed-transfer",
+        "Every transferred field carrier has a named source and destination.",
+        true
+      ]
+    ],
+    "experiment_id": "SFT-EXP-PHYS-FIELD-INDUCTION-001",
+    "expected_observation_label": "changing-linked-support-induction",
+    "target_rows": [
+      {
+        "target_id": "induction-1",
+        "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+        "source_locator": "CODATA magnetic flux quantum",
+        "observed_label": "changing-linked-support-induction"
+      },
+      {
+        "target_id": "induction-2",
+        "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+        "source_locator": "CODATA Josephson and flux-density relationships",
+        "observed_label": "changing-linked-support-induction"
+      }
+    ],
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+    "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+    "falsification_condition": "The field claim is falsified if any committed external row lacks the predicted source/response or propagation structure, any row is omitted, or the tampered unfavorable row is accepted."
+  },
+  "Electromagnetic": {
+    "claim_id": "SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001",
+    "title": "Electric-magnetic compositional closure",
+    "statement": "Electric and magnetic responses are forced as two observation projections of one conserved oriented source/propagation structure, because each changing projection generates the other on a closed trace.",
+    "dependencies": [
+      "SFT-MATH-GEOMETRY-TOPOLOGY-001",
+      "SFT-MATH-DYNAMICAL-SYSTEMS-001",
+      "SFT-INFO-CONSERVATION-LOSS-001",
+      "SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001",
+      "SFT-PHYS-MECH-CONSERVATION-001",
+      "SFT-PHYS-FIELD-INDUCTION-001"
+    ],
+    "generation_rule": "Generate every field carrier, source-response relation, provenance, target access, measurement record, row policy, successor and extra-rule form.",
+    "grammar_boundary": "All finite source/response and propagation relations generated from Fold support, exact reference ratios, held orientation and closed transfer without an imported field equation.",
+    "dimensions": [
+      {
+        "key": "carrier",
+        "choices": [
+          {
+            "name": "answer-only-scalar",
+            "admitted": false,
+            "reason": "An answer-only scalar erases the generated physical carrier."
+          },
+          {
+            "name": "complete-fold-carrier",
+            "admitted": true,
+            "reason": "The complete Fold trace retains the observed physical distinction."
+          }
+        ]
+      },
+      {
+        "key": "relation",
+        "choices": [
+          {
+            "name": "imported-or-fitted-relation",
+            "admitted": false,
+            "reason": "An imported or fitted relation lets consensus or target data select the law."
+          },
+          {
+            "name": "joint-electric-magnetic-propagation",
+            "admitted": true,
+            "reason": "Mutual induction and common source provenance close the two response families into one compositional field carrier."
+          }
+        ]
+      },
+      {
+        "key": "provenance",
+        "choices": [
+          {
+            "name": "unbound-provenance",
+            "admitted": false,
+            "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+          },
+          {
+            "name": "source-bound-proof-trace",
+            "admitted": true,
+            "reason": "Every generated candidate and decision is bound to its exact source trace."
+          }
+        ]
+      },
+      {
+        "key": "prediction",
+        "choices": [
+          {
+            "name": "target-readable-prediction",
+            "admitted": false,
+            "reason": "A target-readable predictor can copy or optimize against the measurement."
+          },
+          {
+            "name": "capability-closed-prediction",
+            "admitted": true,
+            "reason": "The registered Fold instruction surface has no target or ambient host capability."
+          }
+        ]
+      },
+      {
+        "key": "record",
+        "choices": [
+          {
+            "name": "proof-measurement-conflation",
+            "admitted": false,
+            "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+          },
+          {
+            "name": "separate-measurement-record",
+            "admitted": true,
+            "reason": "External values remain source-bound records compared only after sealing."
+          }
+        ]
+      },
+      {
+        "key": "rows",
+        "choices": [
+          {
+            "name": "selected-favourable-rows",
+            "admitted": false,
+            "reason": "Selecting favorable rows cannot falsify the relation."
+          },
+          {
+            "name": "complete-registered-rows",
+            "admitted": true,
+            "reason": "Every favorable, unfavorable and tampered registered row is retained."
+          }
+        ]
+      },
+      {
+        "key": "generality",
+        "choices": [
+          {
+            "name": "finite-answer-lookup",
+            "admitted": false,
+            "reason": "An answer lookup has no successor certificate."
+          },
+          {
+            "name": "one-successor-closure",
+            "admitted": true,
+            "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+          }
+        ]
+      },
+      {
+        "key": "extension",
+        "choices": [
+          {
+            "name": "free-extra-rule",
+            "admitted": false,
+            "reason": "A free constant, scale or exception can select the measured answer."
+          },
+          {
+            "name": "no-extra-rule",
+            "admitted": true,
+            "reason": "No rule beyond the admitted dependencies and forced relation is present."
+          }
+        ]
+      }
+    ],
+    "exact_result": "Electromagnetism is the closed joint carrier of electric and magnetic response projections with common source, orientation and propagation trace.",
+    "induction_base": "One localized source distinction generates one named response relation on one accessible observation cell.",
+    "induction_step": "Adding one generated source or observation cell appends its source-bound response and preserves all prior response, locality and transfer records.",
+    "exclusions": [
+      "action at an ungenerated distance without a propagation trace",
+      "negative or floating proof magnitude",
+      "imported field equations, fitted couplings or target-selected constants",
+      "target access and selected favorable measurements"
+    ],
+    "operational_witnesses": [
+      [
+        "source-response-pair",
+        "A source and response retain distinct identities joined by one trace.",
+        true
+      ],
+      [
+        "closed-transfer",
+        "Every transferred field carrier has a named source and destination.",
+        true
+      ]
+    ],
+    "experiment_id": "SFT-EXP-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001",
+    "expected_observation_label": "joint-electromagnetic-field-composition",
+    "target_rows": [
+      {
+        "target_id": "electromagnetic-composition-1",
+        "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+        "source_locator": "CODATA vacuum electric permittivity and magnetic permeability",
+        "observed_label": "joint-electromagnetic-field-composition"
+      },
+      {
+        "target_id": "electromagnetic-composition-2",
+        "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+        "source_locator": "CODATA characteristic impedance and speed relationships",
+        "observed_label": "joint-electromagnetic-field-composition"
+      }
+    ],
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+    "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+    "falsification_condition": "The field claim is falsified if any committed external row lacks the predicted source/response or propagation structure, any row is omitted, or the tampered unfavorable row is accepted."
+  },
+  "GaugeEquivalence": {
+    "claim_id": "SFT-PHYS-FIELD-GAUGE-EQUIVALENCE-001",
+    "title": "Gauge-equivalent descriptions and retained observables",
+    "statement": "Two field descriptions are physically equivalent when their complete observation and transfer traces are identical; unobserved internal label-path differences remain held descriptive redundancy.",
+    "dependencies": [
+      "SFT-MATH-GEOMETRY-TOPOLOGY-001",
+      "SFT-MATH-DYNAMICAL-SYSTEMS-001",
+      "SFT-INFO-CONSERVATION-LOSS-001",
+      "SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001",
+      "SFT-PHYS-MECH-CONSERVATION-001",
+      "SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001"
+    ],
+    "generation_rule": "Generate every field carrier, source-response relation, provenance, target access, measurement record, row policy, successor and extra-rule form.",
+    "grammar_boundary": "All finite source/response and propagation relations generated from Fold support, exact reference ratios, held orientation and closed transfer without an imported field equation.",
+    "dimensions": [
+      {
+        "key": "carrier",
+        "choices": [
+          {
+            "name": "answer-only-scalar",
+            "admitted": false,
+            "reason": "An answer-only scalar erases the generated physical carrier."
+          },
+          {
+            "name": "complete-fold-carrier",
+            "admitted": true,
+            "reason": "The complete Fold trace retains the observed physical distinction."
+          }
+        ]
+      },
+      {
+        "key": "relation",
+        "choices": [
+          {
+            "name": "imported-or-fitted-relation",
+            "admitted": false,
+            "reason": "An imported or fitted relation lets consensus or target data select the law."
+          },
+          {
+            "name": "observable-trace-equivalence",
+            "admitted": true,
+            "reason": "Exact equality of all observation/transfer traces preserves physical content while quotienting only unobserved descriptive paths."
+          }
+        ]
+      },
+      {
+        "key": "provenance",
+        "choices": [
+          {
+            "name": "unbound-provenance",
+            "admitted": false,
+            "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+          },
+          {
+            "name": "source-bound-proof-trace",
+            "admitted": true,
+            "reason": "Every generated candidate and decision is bound to its exact source trace."
+          }
+        ]
+      },
+      {
+        "key": "prediction",
+        "choices": [
+          {
+            "name": "target-readable-prediction",
+            "admitted": false,
+            "reason": "A target-readable predictor can copy or optimize against the measurement."
+          },
+          {
+            "name": "capability-closed-prediction",
+            "admitted": true,
+            "reason": "The registered Fold instruction surface has no target or ambient host capability."
+          }
+        ]
+      },
+      {
+        "key": "record",
+        "choices": [
+          {
+            "name": "proof-measurement-conflation",
+            "admitted": false,
+            "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+          },
+          {
+            "name": "separate-measurement-record",
+            "admitted": true,
+            "reason": "External values remain source-bound records compared only after sealing."
+          }
+        ]
+      },
+      {
+        "key": "rows",
+        "choices": [
+          {
+            "name": "selected-favourable-rows",
+            "admitted": false,
+            "reason": "Selecting favorable rows cannot falsify the relation."
+          },
+          {
+            "name": "complete-registered-rows",
+            "admitted": true,
+            "reason": "Every favorable, unfavorable and tampered registered row is retained."
+          }
+        ]
+      },
+      {
+        "key": "generality",
+        "choices": [
+          {
+            "name": "finite-answer-lookup",
+            "admitted": false,
+            "reason": "An answer lookup has no successor certificate."
+          },
+          {
+            "name": "one-successor-closure",
+            "admitted": true,
+            "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+          }
+        ]
+      },
+      {
+        "key": "extension",
+        "choices": [
+          {
+            "name": "free-extra-rule",
+            "admitted": false,
+            "reason": "A free constant, scale or exception can select the measured answer."
+          },
+          {
+            "name": "no-extra-rule",
+            "admitted": true,
+            "reason": "No rule beyond the admitted dependencies and forced relation is present."
+          }
+        ]
+      }
+    ],
+    "exact_result": "Gauge equivalence is canonical equality of complete observable field traces under changes confined to held unobserved description labels.",
+    "induction_base": "One localized source distinction generates one named response relation on one accessible observation cell.",
+    "induction_step": "Adding one generated source or observation cell appends its source-bound response and preserves all prior response, locality and transfer records.",
+    "exclusions": [
+      "action at an ungenerated distance without a propagation trace",
+      "negative or floating proof magnitude",
+      "imported field equations, fitted couplings or target-selected constants",
+      "target access and selected favorable measurements"
+    ],
+    "operational_witnesses": [
+      [
+        "source-response-pair",
+        "A source and response retain distinct identities joined by one trace.",
+        true
+      ],
+      [
+        "closed-transfer",
+        "Every transferred field carrier has a named source and destination.",
+        true
+      ]
+    ],
+    "experiment_id": "SFT-EXP-PHYS-FIELD-GAUGE-EQUIVALENCE-001",
+    "expected_observation_label": "observable-equivalence-with-held-gauge-redundancy",
+    "target_rows": [
+      {
+        "target_id": "gauge-equivalence-1",
+        "source_id": "PDG-2025-SUMMARY-TABLES",
+        "source_locator": "PDG gauge and boson summary-table categories",
+        "observed_label": "observable-equivalence-with-held-gauge-redundancy"
+      },
+      {
+        "target_id": "gauge-equivalence-2",
+        "source_id": "PDG-2025-SUMMARY-TABLES",
+        "source_locator": "PDG interaction summaries preserve observable particle properties",
+        "observed_label": "observable-equivalence-with-held-gauge-redundancy"
+      }
+    ],
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/pdg-2025-summary-tables.html",
+    "source_snapshot_hash": "sha256:ae10b6a7c6fefb8a6d90d35dc341d3ae8284a1e3cf2c94c656ae2e8957df4d56",
+    "falsification_condition": "The field claim is falsified if any committed external row lacks the predicted source/response or propagation structure, any row is omitted, or the tampered unfavorable row is accepted."
+  },
+  "Locality": {
+    "claim_id": "SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001",
+    "title": "Local propagation and causal accessibility",
+    "statement": "A field response can change only through a generated adjacent transition path from its source; responses outside the completed propagation trace are inaccessible at that event.",
+    "dependencies": [
+      "SFT-MATH-GEOMETRY-TOPOLOGY-001",
+      "SFT-MATH-DYNAMICAL-SYSTEMS-001",
+      "SFT-INFO-CONSERVATION-LOSS-001",
+      "SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001",
+      "SFT-PHYS-MECH-CONSERVATION-001",
+      "SFT-PHYS-FIELD-GAUGE-EQUIVALENCE-001"
+    ],
+    "generation_rule": "Generate every field carrier, source-response relation, provenance, target access, measurement record, row policy, successor and extra-rule form.",
+    "grammar_boundary": "All finite source/response and propagation relations generated from Fold support, exact reference ratios, held orientation and closed transfer without an imported field equation.",
+    "dimensions": [
+      {
+        "key": "carrier",
+        "choices": [
+          {
+            "name": "answer-only-scalar",
+            "admitted": false,
+            "reason": "An answer-only scalar erases the generated physical carrier."
+          },
+          {
+            "name": "complete-fold-carrier",
+            "admitted": true,
+            "reason": "The complete Fold trace retains the observed physical distinction."
+          }
+        ]
+      },
+      {
+        "key": "relation",
+        "choices": [
+          {
+            "name": "imported-or-fitted-relation",
+            "admitted": false,
+            "reason": "An imported or fitted relation lets consensus or target data select the law."
+          },
+          {
+            "name": "adjacent-source-bound-propagation",
+            "admitted": true,
+            "reason": "Adjacent transition closure retains a causal path to every response and forbids an unrecorded predecessor from selecting a remote change."
+          }
+        ]
+      },
+      {
+        "key": "provenance",
+        "choices": [
+          {
+            "name": "unbound-provenance",
+            "admitted": false,
+            "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+          },
+          {
+            "name": "source-bound-proof-trace",
+            "admitted": true,
+            "reason": "Every generated candidate and decision is bound to its exact source trace."
+          }
+        ]
+      },
+      {
+        "key": "prediction",
+        "choices": [
+          {
+            "name": "target-readable-prediction",
+            "admitted": false,
+            "reason": "A target-readable predictor can copy or optimize against the measurement."
+          },
+          {
+            "name": "capability-closed-prediction",
+            "admitted": true,
+            "reason": "The registered Fold instruction surface has no target or ambient host capability."
+          }
+        ]
+      },
+      {
+        "key": "record",
+        "choices": [
+          {
+            "name": "proof-measurement-conflation",
+            "admitted": false,
+            "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+          },
+          {
+            "name": "separate-measurement-record",
+            "admitted": true,
+            "reason": "External values remain source-bound records compared only after sealing."
+          }
+        ]
+      },
+      {
+        "key": "rows",
+        "choices": [
+          {
+            "name": "selected-favourable-rows",
+            "admitted": false,
+            "reason": "Selecting favorable rows cannot falsify the relation."
+          },
+          {
+            "name": "complete-registered-rows",
+            "admitted": true,
+            "reason": "Every favorable, unfavorable and tampered registered row is retained."
+          }
+        ]
+      },
+      {
+        "key": "generality",
+        "choices": [
+          {
+            "name": "finite-answer-lookup",
+            "admitted": false,
+            "reason": "An answer lookup has no successor certificate."
+          },
+          {
+            "name": "one-successor-closure",
+            "admitted": true,
+            "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+          }
+        ]
+      },
+      {
+        "key": "extension",
+        "choices": [
+          {
+            "name": "free-extra-rule",
+            "admitted": false,
+            "reason": "A free constant, scale or exception can select the measured answer."
+          },
+          {
+            "name": "no-extra-rule",
+            "admitted": true,
+            "reason": "No rule beyond the admitted dependencies and forced relation is present."
+          }
+        ]
+      }
+    ],
+    "exact_result": "Physical locality is source-bound propagation through generated adjacent support; causal accessibility is exactly the completed reachable path set.",
+    "induction_base": "One localized source distinction generates one named response relation on one accessible observation cell.",
+    "induction_step": "Adding one generated source or observation cell appends its source-bound response and preserves all prior response, locality and transfer records.",
+    "exclusions": [
+      "action at an ungenerated distance without a propagation trace",
+      "negative or floating proof magnitude",
+      "imported field equations, fitted couplings or target-selected constants",
+      "target access and selected favorable measurements"
+    ],
+    "operational_witnesses": [
+      [
+        "source-response-pair",
+        "A source and response retain distinct identities joined by one trace.",
+        true
+      ],
+      [
+        "closed-transfer",
+        "Every transferred field carrier has a named source and destination.",
+        true
+      ]
+    ],
+    "experiment_id": "SFT-EXP-PHYS-FIELD-LOCALITY-CAUSALITY-001",
+    "expected_observation_label": "local-causal-propagation-support",
+    "target_rows": [
+      {
+        "target_id": "locality-causality-1",
+        "source_id": "GWOSC-V2-CATALOGS-2026-07-23",
+        "source_locator": "GWOSC detector strain records have source-linked arrival events",
+        "observed_label": "local-causal-propagation-support"
+      },
+      {
+        "target_id": "locality-causality-2",
+        "source_id": "GWOSC-V2-CATALOGS-2026-07-23",
+        "source_locator": "GWOSC multi-detector event records retain timing and detector identity",
+        "observed_label": "local-causal-propagation-support"
+      }
+    ],
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/gwosc-v2-catalogs.json",
+    "source_snapshot_hash": "sha256:fcd8eef741cb536010539f3e42e6bb5d3a5e0fb7a120289fe95b8a1711f59e0c",
+    "falsification_condition": "The field claim is falsified if any committed external row lacks the predicted source/response or propagation structure, any row is omitted, or the tampered unfavorable row is accepted."
+  }
+}

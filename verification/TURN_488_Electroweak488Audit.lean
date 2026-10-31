@@ -1,0 +1,355 @@
+import SFT.Physics.ElectroweakTerminalSupport
+import SFT.Physics.ElectroweakTerminalRatio
+import SFT.Physics.ElectroweakTerminalDomain
+import SFT.Physics.ElectroweakChannels
+import SFT.Physics.ElectroweakTerminalGrammarBase
+import SFT.Physics.ElectroweakTerminalCensus0
+import SFT.Physics.ElectroweakTerminalCensus1
+import SFT.Physics.ElectroweakTerminalCensus2
+import SFT.Physics.ElectroweakTerminalCensus3
+import SFT.Physics.ElectroweakTerminalCensus4
+import SFT.Physics.ElectroweakTerminalCensus5
+import SFT.Physics.ElectroweakTerminalCensus6
+import SFT.Physics.ElectroweakTerminalCensus7
+import SFT.Physics.ElectroweakTerminalCensus8
+import SFT.Physics.ElectroweakTerminalCensus9
+import SFT.Physics.ElectroweakTerminalCensus10
+import SFT.Physics.ElectroweakTerminalCensus11
+import SFT.Physics.ElectroweakTerminalCensus12
+import SFT.Physics.ElectroweakTerminalCensus13
+import SFT.Physics.ElectroweakTerminalCensus14
+import SFT.Physics.ElectroweakTerminalCensus15
+import SFT.Physics.ElectroweakTerminalCensus16
+import SFT.Physics.ElectroweakTerminalCensus17
+import SFT.Physics.ElectroweakTerminalCensus18
+import SFT.Physics.ElectroweakTerminalCensus19
+import SFT.Physics.ElectroweakTerminalCensus20
+import SFT.Physics.ElectroweakTerminalCensus21
+import SFT.Physics.ElectroweakTerminalCensus22
+import SFT.Physics.ElectroweakTerminalCensus23
+import SFT.Physics.ElectroweakTerminalCensus24
+import SFT.Physics.ElectroweakTerminalCensus25
+import SFT.Physics.ElectroweakTerminalCensus26
+import SFT.Physics.ElectroweakTerminalCensus27
+import SFT.Physics.ElectroweakTerminalCensus28
+import SFT.Physics.ElectroweakTerminalCensus29
+import SFT.Physics.ElectroweakTerminalCensus30
+import SFT.Physics.ElectroweakTerminalCensus31
+import SFT.Physics.ElectroweakTerminalCensus32
+import SFT.Physics.ElectroweakTerminalCensus33
+import SFT.Physics.ElectroweakTerminalCensus34
+import SFT.Physics.ElectroweakTerminalCensus35
+import SFT.Physics.ElectroweakTerminalCensus36
+import SFT.Physics.ElectroweakTerminalCensus37
+import SFT.Physics.ElectroweakTerminalCensus38
+import SFT.Physics.ElectroweakTerminalCensus39
+import SFT.Physics.ElectroweakTerminalCensus40
+import SFT.Physics.ElectroweakTerminalCensus41
+import SFT.Physics.ElectroweakTerminalCensus42
+import SFT.Physics.ElectroweakTerminalCensus43
+import SFT.Physics.ElectroweakTerminalCensus44
+import SFT.Physics.ElectroweakTerminalCensus45
+import SFT.Physics.ElectroweakTerminalCensus46
+import SFT.Physics.ElectroweakTerminalCensus47
+import SFT.Physics.ElectroweakTerminalCensus48
+import SFT.Physics.ElectroweakTerminalCensus49
+import SFT.Physics.ElectroweakTerminalCensus50
+import SFT.Physics.ElectroweakTerminalCensus51
+import SFT.Physics.ElectroweakTerminalCensus52
+import SFT.Physics.ElectroweakTerminalCensus53
+import SFT.Physics.ElectroweakTerminalCensus54
+import SFT.Physics.ElectroweakTerminalCensus55
+import SFT.Physics.ElectroweakTerminalCensus56
+import SFT.Physics.ElectroweakTerminalCensus57
+import SFT.Physics.ElectroweakTerminalCensus58
+import SFT.Physics.ElectroweakTerminalCensus59
+import SFT.Physics.ElectroweakTerminalCensus60
+import SFT.Physics.ElectroweakTerminalCensus61
+import SFT.Physics.ElectroweakTerminalCensus62
+import SFT.Physics.ElectroweakTerminalCensus63
+import SFT.Physics.ElectroweakTerminalGrammar
+import SFT.Physics.ElectroweakTerminalWitnesses
+import SFT.Physics.ElectroweakTerminalControls
+import SFT.Physics.ElectroweakTerminalEvidence
+#print axioms SFT.Physics.ElectroweakTerminalSupport.promotionCount
+#print axioms SFT.Physics.ElectroweakTerminalSupport.promotionCountExact
+#print axioms SFT.Physics.ElectroweakTerminalSupport.binarySupport
+#print axioms SFT.Physics.ElectroweakTerminalSupport.binarySupportExact
+#print axioms SFT.Physics.ElectroweakTerminalSupport.predecessorSteps
+#print axioms SFT.Physics.ElectroweakTerminalSupport.predecessorStepsExact
+#print axioms SFT.Physics.ElectroweakTerminalSupport.runningLevel
+#print axioms SFT.Physics.ElectroweakTerminalSupport.runningLevelExact
+#print axioms SFT.Physics.ElectroweakTerminalSupport.supportWords
+#print axioms SFT.Physics.ElectroweakTerminalSupport.completeSupportCardinality
+#print axioms SFT.Physics.ElectroweakTerminalSupport.supportMatchesPower
+#print axioms SFT.Physics.ElectroweakTerminalSupport.channelCounts
+#print axioms SFT.Physics.ElectroweakTerminalSupport.channelCountsExact
+#print axioms SFT.Physics.ElectroweakTerminalSupport.returnDivisor
+#print axioms SFT.Physics.ElectroweakTerminalSupport.returnDivisorExact
+#print axioms SFT.Physics.ElectroweakTerminalSupport.countsAsSquares
+#print axioms SFT.Physics.ElectroweakTerminalRatio.runningShare
+#print axioms SFT.Physics.ElectroweakTerminalRatio.terminalAlpha
+#print axioms SFT.Physics.ElectroweakTerminalRatio.selfReturn
+#print axioms SFT.Physics.ElectroweakTerminalRatio.sinSquared
+#print axioms SFT.Physics.ElectroweakTerminalRatio.cosSquared
+#print axioms SFT.Physics.ElectroweakTerminalRatio.runningShareExact
+#print axioms SFT.Physics.ElectroweakTerminalRatio.terminalAlphaExact
+#print axioms SFT.Physics.ElectroweakTerminalRatio.selfReturnExact
+#print axioms SFT.Physics.ElectroweakTerminalRatio.sinSquaredExact
+#print axioms SFT.Physics.ElectroweakTerminalRatio.cosSquaredExact
+#print axioms SFT.Physics.ElectroweakTerminalRatio.completeShare
+#print axioms SFT.Physics.ElectroweakTerminalRatio.completeShareOne
+#print axioms SFT.Physics.ElectroweakTerminalRatio.booleanRejected
+#print axioms SFT.Physics.ElectroweakTerminalRatio.zeroRejected
+#print axioms SFT.Physics.ElectroweakTerminalRatio.negativeRejected
+#print axioms SFT.Physics.ElectroweakTerminalDomain.takeCount
+#print axioms SFT.Physics.ElectroweakTerminalDomain.takeDepth
+#print axioms SFT.Physics.ElectroweakTerminalDomain.positiveTake
+#print axioms SFT.Physics.ElectroweakTerminalDomain.validInputs
+#print axioms SFT.Physics.ElectroweakTerminalDomain.retainedPositive
+#print axioms SFT.Physics.ElectroweakTerminalDomain.exhaustedPredecessor
+#print axioms SFT.Physics.ElectroweakTerminalDomain.booleanCountRejected
+#print axioms SFT.Physics.ElectroweakTerminalDomain.zeroCountRejected
+#print axioms SFT.Physics.ElectroweakTerminalDomain.oneCountRejected
+#print axioms SFT.Physics.ElectroweakTerminalDomain.booleanDepthRejected
+#print axioms SFT.Physics.ElectroweakTerminalDomain.zeroDepthRejected
+#print axioms SFT.Physics.ElectroweakTerminalDomain.originalLevel
+#print axioms SFT.Physics.ElectroweakTerminalDomain.runningShareAllPositive
+#print axioms SFT.Physics.ElectroweakChannels.positions
+#print axioms SFT.Physics.ElectroweakChannels.positionsCount
+#print axioms SFT.Physics.ElectroweakChannels.positionBound
+#print axioms SFT.Physics.ElectroweakChannels.allPositions
+#print axioms SFT.Physics.ElectroweakChannels.positionsUnique
+#print axioms SFT.Physics.ElectroweakChannels.product
+#print axioms SFT.Physics.ElectroweakChannels.productCount
+#print axioms SFT.Physics.ElectroweakChannels.productMember
+#print axioms SFT.Physics.ElectroweakChannels.productUnique
+#print axioms SFT.Physics.ElectroweakChannels.charged
+#print axioms SFT.Physics.ElectroweakChannels.neutral
+#print axioms SFT.Physics.ElectroweakChannels.chargedCount
+#print axioms SFT.Physics.ElectroweakChannels.neutralCount
+#print axioms SFT.Physics.ElectroweakChannels.chargedUnique
+#print axioms SFT.Physics.ElectroweakChannels.neutralUnique
+#print axioms SFT.Physics.ElectroweakChannels.sourceChannelCounts
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.Carrier
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.carrierName
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.Terminal
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.terminalName
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.Support
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.supportName
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.Relation
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.relationName
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.Correction
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.correctionName
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.Sign
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.signName
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.Enumeration
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.enumerationName
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.Minimality
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.minimalityName
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.Measurement
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.measurementName
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.Extension
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.extensionName
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.Candidate
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.sourceFields
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.candidateId
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.exactForm
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.survivorId
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.survives
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.criteriaDecision
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionReason
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.generationRule
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.grammarBoundary
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.candidates
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.survivor
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.generatedCardinality
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.candidatesComplete
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus0
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus0
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus1
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus1
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus2
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus2
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus3
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus3
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus4
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus4
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus5
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus5
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus6
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus6
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus7
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus7
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus8
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus8
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus9
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus9
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus10
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus10
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus11
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus11
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus12
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus12
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus13
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus13
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus14
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus14
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus15
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus15
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus16
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus16
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus17
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus17
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus18
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus18
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus19
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus19
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus20
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus20
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus21
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus21
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus22
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus22
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus23
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus23
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus24
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus24
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus25
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus25
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus26
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus26
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus27
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus27
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus28
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus28
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus29
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus29
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus30
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus30
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus31
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus31
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus32
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus32
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus33
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus33
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus34
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus34
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus35
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus35
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus36
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus36
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus37
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus37
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus38
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus38
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus39
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus39
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus40
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus40
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus41
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus41
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus42
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus42
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus43
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus43
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus44
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus44
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus45
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus45
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus46
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus46
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus47
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus47
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus48
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus48
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus49
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus49
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus50
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus50
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus51
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus51
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus52
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus52
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus53
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus53
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus54
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus54
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus55
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus55
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus56
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus56
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus57
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus57
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus58
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus58
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus59
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus59
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus60
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus60
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus61
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus61
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus62
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus62
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.decisionCensus63
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCensus63
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.sourceDecisionMatchesCriteria
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueCriteriaSurvivor
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.uniqueSurvivor
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.survivorAccepted
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.ExactCriteria
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.acceptanceIffExactCriteria
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.carrier_rejected_rejected
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.terminal_rejected_rejected
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.support_rejected_rejected
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.relation_rejected_rejected
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.correction_rejected_rejected
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.sign_rejected_rejected
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.enumeration_rejected_rejected
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.minimality_rejected_rejected
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.measurement_rejected_rejected
+#print axioms SFT.Physics.ElectroweakTerminalGrammar.extension_rejected_rejected
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.Witness
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.check0
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.check1
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.check2
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.check3
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.check4
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.witnesses
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.check0Passed
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.check1Passed
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.check2Passed
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.check3Passed
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.check4Passed
+#print axioms SFT.Physics.ElectroweakTerminalWitnesses.allWitnessesPass
+#print axioms SFT.Physics.ElectroweakTerminalControls.exclusions
+#print axioms SFT.Physics.ElectroweakTerminalControls.closureValue
+#print axioms SFT.Physics.ElectroweakTerminalControls.falseCandidate
+#print axioms SFT.Physics.ElectroweakTerminalControls.survivorIds
+#print axioms SFT.Physics.ElectroweakTerminalControls.record
+#print axioms SFT.Physics.ElectroweakTerminalControls.falsePremise
+#print axioms SFT.Physics.ElectroweakTerminalControls.tamperedSource
+#print axioms SFT.Physics.ElectroweakTerminalControls.tamperedArtifact
+#print axioms SFT.Physics.ElectroweakTerminalControls.boundary
+#print axioms SFT.Physics.ElectroweakTerminalControls.falsePremisePassed
+#print axioms SFT.Physics.ElectroweakTerminalControls.boundaryPassed
+#print axioms SFT.Physics.ElectroweakTerminalControls.controlRecords
+#print axioms SFT.Physics.ElectroweakTerminalControls.resultData
+#print axioms SFT.Physics.ElectroweakTerminalControls.runControls
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.candidateRecord
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.completenessRecord
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.registrationData
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.registration
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.generatedCandidateData
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.censusData
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.census
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.decisionData
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.decision
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.decideCandidate
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.closureData
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.closure
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.nativeDecisionPreservesSurvival
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.nativeDecisionPreservesReason
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.registrationHasNoAxioms
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.registrationHasNoFreeParameters
+#print axioms SFT.Physics.ElectroweakTerminalEvidence.lookupDependsOnlyOnIdentifier

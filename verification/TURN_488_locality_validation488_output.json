@@ -1,0 +1,58 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "GWOSC-V2-CATALOGS-2026-07-23"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:efa749ffe05b2907234debcf7d6c1ade9c459bec8340e3c7240b7b0eb3437cfd",
+  "falsification_condition": "The field claim is falsified if any committed external row lacks the predicted source/response or propagation structure, any row is omitted, or the tampered unfavorable row is accepted.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:6c5c1fe4f69a4951323a87c76e4cea3115a609a0375a32de71b88391cab53f87",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:3d8e8e96f4e2f1b5ba605175328d2ea4b6ae3ca780c286e1fe77282dd8d3721b",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-PHYS-FIELD-LOCALITY-CAUSALITY-001-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:b0a29921bbce54974c021b33aed336f9d4ff849a4760c3baa75df66858d0e2db",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:7aa520095e53cdc9da2f849a55e600a6a5d862609eafb1d5794fe2a41229ca6b",
+    "prediction_seal_hash": "sha256:43c56aefab5d7fd529fb6adaf62d25b66dd82b71e2da86ece2cbff42fb5e98d8",
+    "program_hash": "sha256:8214f8bb35ddb367a8e236cb89abba675fdfa9f764ab280b591ae6b625a2c77f",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:b1964a13c934a1b94ee735400d755be1a8a077dc55a00b606112d9e912360a41",
+    "target_material_present": false,
+    "trace_hash": "sha256:20796e93f857c7f878b4abe2f8873ba6f8ec7c1f9d4db0d6135388d0e1698271"
+  },
+  "measurement_receipt_hash": "sha256:713e96c9f9759572b2395152be7e442ad6e837b706a099679c5b40afbd1c29e6",
+  "measurements": [
+    "locality-causality-1: predicted local-causal-propagation-support; observed local-causal-propagation-support; exact match True",
+    "locality-causality-2: predicted local-causal-propagation-support; observed local-causal-propagation-support; exact match True",
+    "deliberately tampered unfavorable control rejected"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:437722dcd5eabbc3e24ebc3e0632994318cd831f8cd939131fff4005f03a198a",
+    "custodian_id": "SFT-EXP-PHYS-FIELD-LOCALITY-CAUSALITY-001-external-target-custodian",
+    "experiment_registration_hash": "sha256:efa749ffe05b2907234debcf7d6c1ade9c459bec8340e3c7240b7b0eb3437cfd",
+    "prediction_seal_hash": "sha256:43c56aefab5d7fd529fb6adaf62d25b66dd82b71e2da86ece2cbff42fb5e98d8",
+    "registered_target_identity_hash": "sha256:b1964a13c934a1b94ee735400d755be1a8a077dc55a00b606112d9e912360a41",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:70d573d02a3ae3ab2cdc07261cf7646bac21b896489884f693f8de32df97e5d7"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "sha256:876e6dc3ea8dc91935e7cf0a20c1b3d71ac56629b5ae6f92daa8aeeabade7761"
+}

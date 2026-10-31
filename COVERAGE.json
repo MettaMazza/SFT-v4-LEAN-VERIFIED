@@ -13475,11 +13475,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-FIELD-MAGNETIC-001-74b71a149a6537d5.json",
       "statement": "Magnetic response is forced when an electric source label is transported with held orientation: the response is transverse to the source-motion path and reverses with either held orientation.",
       "title": "Magnetic response to oriented change",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
-        "verification/TURN_487_MAGNETIC_STAGE/SFT/Physics/FieldMagneticOrientation.lean"
+        "SFT/Physics/FieldMagneticOrientation.lean",
+        "SFT/Physics/FieldMagnetic.lean",
+        "SFT/Physics/MagneticGrammar.lean",
+        "SFT/Physics/MagneticEvidence.lean",
+        "SFT/Physics/MagneticExperiment.lean",
+        "SFT/Physics/MagneticValidation.lean",
+        "SFT/Physics/MagneticValidationProofs.lean"
       ],
-      "artifact_runtime_parity": "pending",
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "2d93e608324358de2d5131448d105bcd72a78eddf298aa562dcc641d2d15a22b",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -13521,12 +13527,9 @@
         "status": "empirically_tested",
         "title": "Magnetic response to oriented change"
       },
-      "verified_scope": "Staged held-orientation product: both individual reversal laws, simultaneous reversal invariance, and uniqueness under the original unit-orientation convention and both reversal constraints; six zero-axiom declarations. This does not assert transverse geometry or full-entry completion.",
-      "remaining": [
-        "field_laws.py MAGNETIC: connect the transverse held response to the complete electric-source/motion and propagation carrier.",
-        "Translate and check the complete256-form original program, controls and full original empirical method."
-      ],
-      "verification_evidence": "verification/TURN_487_MAGNETIC_STAGE/magnetic487_orientation_audit.log"
+      "verified_scope": "Original relational transverse role bound to complete electric charge and source-motion records, both held reversal laws, invariant positive charge magnitude and unchanged propagation, full response-ledger transport retention. Transverse is the source-defined response role; no imported metric or cross-product law is asserted.",
+      "remaining": [],
+      "completion_evidence": "verification/TURN_488_MAGNETIC_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -13538,9 +13541,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-FIELD-INDUCTION-001-b76cd4b60c0f7e29.json",
       "statement": "A change in magnetic support linked through a closed generated path forces an oriented electric work-transfer trace around that path, preserving complete source-change provenance.",
       "title": "Induction from changing linked support",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/FieldInduction.lean",
+        "SFT/Physics/InductionGrammar.lean",
+        "SFT/Physics/InductionEvidence.lean",
+        "SFT/Physics/InductionExperiment.lean",
+        "SFT/Physics/InductionValidation.lean",
+        "SFT/Physics/InductionValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "ad138e69a735567bbe339b02dee7814e202dd21d3f0328fd8a6084ef502f18bf",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -13581,7 +13591,10 @@
         "statement": "A change in magnetic support linked through a closed generated path forces an oriented electric work-transfer trace around that path, preserving complete source-change provenance.",
         "status": "empirically_tested",
         "title": "Induction from changing linked support"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete linked magnetic before/after records, original closed boundary recurrence and every observed full work transfer; exact boundary recovery, no omitted or additional path record, retained source-change provenance, induced electric charge from the linked source and exact work-normalized potential.",
+      "completion_evidence": "verification/TURN_488_INDUCTION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -13593,9 +13606,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001-4f454fc66603a589.json",
       "statement": "Electric and magnetic responses are forced as two observation projections of one conserved oriented source/propagation structure, because each changing projection generates the other on a closed trace.",
       "title": "Electric-magnetic compositional closure",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/FieldElectromagnetic.lean",
+        "SFT/Physics/ElectromagneticGrammar.lean",
+        "SFT/Physics/ElectromagneticEvidence.lean",
+        "SFT/Physics/ElectromagneticExperiment.lean",
+        "SFT/Physics/ElectromagneticValidation.lean",
+        "SFT/Physics/ElectromagneticValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "7a9b912d4e938543bb17d99e7cc25b526acb9d8ee2fc8a89180ea7e208d885e8",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -13636,7 +13656,10 @@
         "statement": "Electric and magnetic responses are forced as two observation projections of one conserved oriented source/propagation structure, because each changing projection generates the other on a closed trace.",
         "status": "empirically_tested",
         "title": "Electric-magnetic compositional closure"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Joint source-bound electric/magnetic carrier with exact common charge and linked magnetic observation, full common propagation, two retained response legs per source row, complete projection recovery, source preservation through induction and electric-source transport to the transverse held role.",
+      "completion_evidence": "verification/TURN_488_ELECTROMAGNETIC_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -13648,9 +13671,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-FIELD-GAUGE-EQUIVALENCE-001-c9be792f2d288ae0.json",
       "statement": "Two field descriptions are physically equivalent when their complete observation and transfer traces are identical; unobserved internal label-path differences remain held descriptive redundancy.",
       "title": "Gauge-equivalent descriptions and retained observables",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/FieldGaugeEquivalence.lean",
+        "SFT/Physics/GaugeEquivalenceGrammar.lean",
+        "SFT/Physics/GaugeEquivalenceEvidence.lean",
+        "SFT/Physics/GaugeEquivalenceExperiment.lean",
+        "SFT/Physics/GaugeEquivalenceValidation.lean",
+        "SFT/Physics/GaugeEquivalenceValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "eac33289fdc0d035880f864918dc26f280f754a988c0e20821aedf50c96d83cd",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -13691,7 +13721,10 @@
         "statement": "Two field descriptions are physically equivalent when their complete observation and transfer traces are identical; unobserved internal label-path differences remain held descriptive redundancy.",
         "status": "empirically_tested",
         "title": "Gauge-equivalent descriptions and retained observables"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Canonical equivalence of complete source, ordered observation and transfer records under changes confined to unobserved description labels; constructive equivalence relation, necessary and sufficient record equality, preservation under arbitrary relabeling and exclusion of changed observable or transfer traces.",
+      "completion_evidence": "verification/TURN_488_GAUGEEQUIVALENCE_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -13703,9 +13736,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001-ddcd093c9d9e17b1.json",
       "statement": "A field response can change only through a generated adjacent transition path from its source; responses outside the completed propagation trace are inaccessible at that event.",
       "title": "Local propagation and causal accessibility",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/FieldLocality.lean",
+        "SFT/Physics/LocalityGrammar.lean",
+        "SFT/Physics/LocalityEvidence.lean",
+        "SFT/Physics/LocalityExperiment.lean",
+        "SFT/Physics/LocalityValidation.lean",
+        "SFT/Physics/LocalityValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "4729ba8287b099d44e495b32a1eea518252aaf5ccf2c3b5f012e7cbbfff3e386",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -13746,7 +13786,10 @@
         "statement": "A field response can change only through a generated adjacent transition path from its source; responses outside the completed propagation trace are inaccessible at that event.",
         "status": "empirically_tested",
         "title": "Local propagation and causal accessibility"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Generated adjacent source-bound propagation with complete event/action trace; every recorded transition satisfies the generated adjacency relation, each noninitial destination retains a predecessor, concatenation preserves the full trace, and completed-accessibility enumeration has neither omitted nor added destinations.",
+      "completion_evidence": "verification/TURN_488_LOCALITY_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -13758,7 +13801,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-FIELD-RADIATION-001-9fa1ed9f5907e60d.json",
       "statement": "Radiation is forced when a changing field carrier closes into a self-propagating joint electric-magnetic recurrence that transports energy after local source contact ends.",
       "title": "Radiative transport and source detachment",
-      "lean_status": "pending",
+      "lean_status": "in_progress",
       "lean_modules": [],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "03afa80e1138dcc6a6296a176c2cdcc0ebaae98417403b1462096f2d1f2189bc",
@@ -13801,7 +13844,11 @@
         "statement": "Radiation is forced when a changing field carrier closes into a self-propagating joint electric-magnetic recurrence that transports energy after local source contact ends.",
         "status": "empirically_tested",
         "title": "Radiative transport and source detachment"
-      }
+      },
+      "verified_scope": "Staged detached-carrier observation ledger retains full source, energy, momentum, recurrence and polarization; thirteen zero-axiom declarations. No complete radiation claim.",
+      "remaining": [
+        "Connect the detached carrier to the complete joint electromagnetic recurrence and frequency record from the pinned source; complete256candidate program,controls and empirical method."
+      ]
     },
     {
       "branch": "physics",
@@ -36112,9 +36159,83 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-ELECTROWEAK-TERMINAL-ON-SHELL-003-263cf79e79ed1d7b.json",
       "statement": "The four-rung terminal alpha object generates complete binary support sixteen. Holding the three generator directions leaves running level thirteen. At that level the charged squared support is fifteen squared and the four neutral pair channels carry fourteen squared each, forcing 225/1009. The sole terminal self-return crosses the complete support successor seventeen once, adding exact alpha/17 and forcing the terminal on-shell share before measurement.",
       "title": "Terminal exact on-shell electroweak Fold share",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ElectroweakTerminalSupport.lean",
+        "SFT/Physics/ElectroweakTerminalRatio.lean",
+        "SFT/Physics/ElectroweakTerminalDomain.lean",
+        "SFT/Physics/ElectroweakChannels.lean",
+        "SFT/Physics/ElectroweakTerminalGrammarBase.lean",
+        "SFT/Physics/ElectroweakTerminalCensus0.lean",
+        "SFT/Physics/ElectroweakTerminalCensus1.lean",
+        "SFT/Physics/ElectroweakTerminalCensus2.lean",
+        "SFT/Physics/ElectroweakTerminalCensus3.lean",
+        "SFT/Physics/ElectroweakTerminalCensus4.lean",
+        "SFT/Physics/ElectroweakTerminalCensus5.lean",
+        "SFT/Physics/ElectroweakTerminalCensus6.lean",
+        "SFT/Physics/ElectroweakTerminalCensus7.lean",
+        "SFT/Physics/ElectroweakTerminalCensus8.lean",
+        "SFT/Physics/ElectroweakTerminalCensus9.lean",
+        "SFT/Physics/ElectroweakTerminalCensus10.lean",
+        "SFT/Physics/ElectroweakTerminalCensus11.lean",
+        "SFT/Physics/ElectroweakTerminalCensus12.lean",
+        "SFT/Physics/ElectroweakTerminalCensus13.lean",
+        "SFT/Physics/ElectroweakTerminalCensus14.lean",
+        "SFT/Physics/ElectroweakTerminalCensus15.lean",
+        "SFT/Physics/ElectroweakTerminalCensus16.lean",
+        "SFT/Physics/ElectroweakTerminalCensus17.lean",
+        "SFT/Physics/ElectroweakTerminalCensus18.lean",
+        "SFT/Physics/ElectroweakTerminalCensus19.lean",
+        "SFT/Physics/ElectroweakTerminalCensus20.lean",
+        "SFT/Physics/ElectroweakTerminalCensus21.lean",
+        "SFT/Physics/ElectroweakTerminalCensus22.lean",
+        "SFT/Physics/ElectroweakTerminalCensus23.lean",
+        "SFT/Physics/ElectroweakTerminalCensus24.lean",
+        "SFT/Physics/ElectroweakTerminalCensus25.lean",
+        "SFT/Physics/ElectroweakTerminalCensus26.lean",
+        "SFT/Physics/ElectroweakTerminalCensus27.lean",
+        "SFT/Physics/ElectroweakTerminalCensus28.lean",
+        "SFT/Physics/ElectroweakTerminalCensus29.lean",
+        "SFT/Physics/ElectroweakTerminalCensus30.lean",
+        "SFT/Physics/ElectroweakTerminalCensus31.lean",
+        "SFT/Physics/ElectroweakTerminalCensus32.lean",
+        "SFT/Physics/ElectroweakTerminalCensus33.lean",
+        "SFT/Physics/ElectroweakTerminalCensus34.lean",
+        "SFT/Physics/ElectroweakTerminalCensus35.lean",
+        "SFT/Physics/ElectroweakTerminalCensus36.lean",
+        "SFT/Physics/ElectroweakTerminalCensus37.lean",
+        "SFT/Physics/ElectroweakTerminalCensus38.lean",
+        "SFT/Physics/ElectroweakTerminalCensus39.lean",
+        "SFT/Physics/ElectroweakTerminalCensus40.lean",
+        "SFT/Physics/ElectroweakTerminalCensus41.lean",
+        "SFT/Physics/ElectroweakTerminalCensus42.lean",
+        "SFT/Physics/ElectroweakTerminalCensus43.lean",
+        "SFT/Physics/ElectroweakTerminalCensus44.lean",
+        "SFT/Physics/ElectroweakTerminalCensus45.lean",
+        "SFT/Physics/ElectroweakTerminalCensus46.lean",
+        "SFT/Physics/ElectroweakTerminalCensus47.lean",
+        "SFT/Physics/ElectroweakTerminalCensus48.lean",
+        "SFT/Physics/ElectroweakTerminalCensus49.lean",
+        "SFT/Physics/ElectroweakTerminalCensus50.lean",
+        "SFT/Physics/ElectroweakTerminalCensus51.lean",
+        "SFT/Physics/ElectroweakTerminalCensus52.lean",
+        "SFT/Physics/ElectroweakTerminalCensus53.lean",
+        "SFT/Physics/ElectroweakTerminalCensus54.lean",
+        "SFT/Physics/ElectroweakTerminalCensus55.lean",
+        "SFT/Physics/ElectroweakTerminalCensus56.lean",
+        "SFT/Physics/ElectroweakTerminalCensus57.lean",
+        "SFT/Physics/ElectroweakTerminalCensus58.lean",
+        "SFT/Physics/ElectroweakTerminalCensus59.lean",
+        "SFT/Physics/ElectroweakTerminalCensus60.lean",
+        "SFT/Physics/ElectroweakTerminalCensus61.lean",
+        "SFT/Physics/ElectroweakTerminalCensus62.lean",
+        "SFT/Physics/ElectroweakTerminalCensus63.lean",
+        "SFT/Physics/ElectroweakTerminalGrammar.lean",
+        "SFT/Physics/ElectroweakTerminalWitnesses.lean",
+        "SFT/Physics/ElectroweakTerminalControls.lean",
+        "SFT/Physics/ElectroweakTerminalEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS: full fresh1024candidate program and four original independent cases.",
       "registration_sha256": "c4858ca4011853c85919342cbcce76cb8496cf47c2884da0a9fb15d33b853bbc",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -36154,7 +36275,10 @@
         "statement": "The four-rung terminal alpha object generates complete binary support sixteen. Holding the three generator directions leaves running level thirteen. At that level the charged squared support is fifteen squared and the four neutral pair channels carry fourteen squared each, forcing 225/1009. The sole terminal self-return crosses the complete support successor seventeen once, adding exact alpha/17 and forcing the terminal on-shell share before measurement.",
         "status": "independently_replicated",
         "title": "Terminal exact on-shell electroweak Fold share"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete terminal four-rung alpha support16, positive removal of three directions giving13, complete charged225/neutral784 channels, exact running225/1009 plus sole alpha/17 self-return; sin-squared1930922298157999/8642477221479757 and positive complementary share; all original input domains,1024candidate forms,controls and full fresh program comparisons. Formal entry, no empirical input or additional empirical gate.",
+      "completion_evidence": "verification/TURN_488_ELECTROWEAK_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -190988,13 +191112,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-31T02:51:48.820867+00:00",
+  "updated_at": "2026-10-31T03:12:21.560045+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 1,
-    "pending": 2557,
-    "fully_reconstructed_claims": 223,
-    "axiom_free_exported_results": 10927,
-    "axiom_free_audited_definitions_and_theorems": 24974
+    "pending": 2551,
+    "fully_reconstructed_claims": 229,
+    "axiom_free_exported_results": 11335,
+    "axiom_free_audited_definitions_and_theorems": 25848
   }
 }

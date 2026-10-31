@@ -769,3 +769,21 @@ def main : IO Unit := do
 
   for c in SFT.Physics.HubbleGrammar.candidates do
     IO.println ("HubbleGrammar\t" ++ SFT.Physics.HubbleGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HubbleGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HubbleGrammar.exactForm c ++ "\t" ++ SFT.Physics.HubbleGrammar.decisionReason c)
+
+  for c in SFT.Physics.MagneticGrammar.candidates do
+    IO.println ("MagneticGrammar\t" ++ SFT.Physics.MagneticGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MagneticGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MagneticGrammar.exactForm c ++ "\t" ++ SFT.Physics.MagneticGrammar.decisionReason c)
+
+  for c in SFT.Physics.InductionGrammar.candidates do
+    IO.println ("InductionGrammar\t" ++ SFT.Physics.InductionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.InductionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.InductionGrammar.exactForm c ++ "\t" ++ SFT.Physics.InductionGrammar.decisionReason c)
+
+  for c in SFT.Physics.ElectromagneticGrammar.candidates do
+    IO.println ("ElectromagneticGrammar\t" ++ SFT.Physics.ElectromagneticGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ElectromagneticGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ElectromagneticGrammar.exactForm c ++ "\t" ++ SFT.Physics.ElectromagneticGrammar.decisionReason c)
+
+  for c in SFT.Physics.GaugeEquivalenceGrammar.candidates do
+    IO.println ("GaugeEquivalenceGrammar\t" ++ SFT.Physics.GaugeEquivalenceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GaugeEquivalenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GaugeEquivalenceGrammar.exactForm c ++ "\t" ++ SFT.Physics.GaugeEquivalenceGrammar.decisionReason c)
+
+  for c in SFT.Physics.LocalityGrammar.candidates do
+    IO.println ("LocalityGrammar\t" ++ SFT.Physics.LocalityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.LocalityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.LocalityGrammar.exactForm c ++ "\t" ++ SFT.Physics.LocalityGrammar.decisionReason c)
+
+  for c in SFT.Physics.ElectroweakTerminalGrammar.candidates do
+    IO.println ("ElectroweakTerminalGrammar\t" ++ SFT.Physics.ElectroweakTerminalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ElectroweakTerminalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ElectroweakTerminalGrammar.exactForm c ++ "\t" ++ SFT.Physics.ElectroweakTerminalGrammar.decisionReason c)

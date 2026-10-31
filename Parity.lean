@@ -952,3 +952,15 @@ def main : IO Unit := do
 
   for c in SFT.Physics.BoundaryMeasurementGrammar.candidates do
     IO.println ("BoundaryMeasurementGrammar\t" ++ SFT.Physics.BoundaryMeasurementGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.BoundaryMeasurementGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.BoundaryMeasurementGrammar.exactForm c ++ "\t" ++ SFT.Physics.BoundaryMeasurementGrammar.decisionReason c)
+
+  for c in SFT.Physics.SpacetimeInertialGrammar.candidates do
+    IO.println ("SpacetimeInertialGrammar\t" ++ SFT.Physics.SpacetimeInertialGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpacetimeInertialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpacetimeInertialGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpacetimeInertialGrammar.decisionReason c)
+
+  for c in SFT.Physics.RunningConvergenceGrammar.candidates do
+    IO.println ("RunningConvergenceGrammar\t" ++ SFT.Physics.RunningConvergenceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.RunningConvergenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.RunningConvergenceGrammar.exactForm c ++ "\t" ++ SFT.Physics.RunningConvergenceGrammar.decisionReason c)
+
+  for c in SFT.Physics.SpacetimeLimitSpeedGrammar.candidates do
+    IO.println ("SpacetimeLimitSpeedGrammar\t" ++ SFT.Physics.SpacetimeLimitSpeedGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpacetimeLimitSpeedGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpacetimeLimitSpeedGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpacetimeLimitSpeedGrammar.decisionReason c)
+
+  for c in SFT.Physics.SpacetimeClockRateGrammar.candidates do
+    IO.println ("SpacetimeClockRateGrammar\t" ++ SFT.Physics.SpacetimeClockRateGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpacetimeClockRateGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpacetimeClockRateGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpacetimeClockRateGrammar.decisionReason c)

@@ -1,0 +1,55 @@
+def sameRat (x y : Rat) : Bool := (@decide (x.num=y.num) (Int.decEq x.num y.num)) && x.den==y.den
+
+def supportObservation : Except String (List Nat) := ([1,2,3,4] : List Nat).mapM (fun n => generatedScaleSupport (.integer (.ofNat n)))
+def couplingObservation : Except String Rat := generatorIndexedCoupling (.integer 2) (.integer 3)
+def gapObservation : Except String Rat := generatorPairGap (.integer 2) (.integer 3) (.integer 3)
+def successorObservation : Except String Bool := do
+ let sectors ← PrimeSectorLadder.primeSectorLadder
+ let takes ← sectors.flatMapM fun p => ([1,2,3,4] : List Nat).mapM fun n => couplingSuccessorTake (.integer (.ofNat p)) (.integer (.ofNat n))
+ pure (takes.all (fun q => @decide (1 ≤ q.num) (Int.decLe 1 q.num)))
+def convergenceObservation : Except String Bool := do
+ let c ← formalCertificate
+ pure (c.convergenceWitnesses.all (fun w => w.gapBelowTolerance && w.binarySupportReachesRequiredBound))
+def physicalObservation : Bool :=
+ carrierTranslationRecord.singleCommonFoldAxis && !carrierTranslationRecord.universalImportedEnergySignRequired && !carrierTranslationRecord.measurementSelectsOrientation
+
+def sectorDomainIsForced (choice : SectorDomain) : Bool :=
+ match PrimeSectorLadder.primeSectorLadder with
+ | .error _ => false
+ | .ok observed => observed == (match choice with | .c0 => [2,3,5,7] | .c1 => [2,3] | .c2 => [2,3,5,7,11])
+def scaleGenerationIsForced (choice : ScaleGeneration) : Bool :=
+ match supportObservation with
+ | .error _ => false
+ | .ok observed => observed == (match choice with | .c0 => [1,2,4,8] | .c1 => [1,2,3,4] | .c2 => [1,1,1,1])
+def couplingFormIsForced (choice : CouplingForm) : Bool :=
+ match couplingObservation with
+ | .error _ => false
+ | .ok observed => sameRat observed (match choice with
+   | .c0 => LeptonIntervals.normalize 5 6 (by decide)
+   | .c1 => LeptonIntervals.normalize 1 2 (by decide)
+   | .c2 => LeptonIntervals.normalize 127 128 (by decide))
+def successorLawIsForced : SuccessorLaw → Bool
+ | .c0 => match successorObservation with | .ok b => b | .error _ => false
+ | .c1 => false
+ | .c2 => false
+def pairGapLawIsForced (choice : PairGapLaw) : Bool :=
+ match gapObservation with
+ | .error _ => false
+ | .ok observed => sameRat observed (match choice with
+   | .c0 => LeptonIntervals.normalize 1 42 (by decide)
+   | .c1 => LeptonIntervals.normalize 1 6 (by decide)
+   | .c2 => LeptonIntervals.normalize 1 128 (by decide))
+def convergenceLawIsForced : ConvergenceLaw → Bool
+ | .c0 => match convergenceObservation with | .ok b => b | .error _ => false
+ | .c1 => false
+ | .c2 => false
+def physicalTranslationIsForced : PhysicalTranslation → Bool
+ | .c0 => physicalObservation
+ | .c1 => false
+ | .c2 => false
+def targetBoundaryIsForced : TargetBoundary → Bool
+ | .c0 => true
+ | .c1 => false
+def extensionIsForced : Extension → Bool
+ | .c0 => true
+ | .c1 => false

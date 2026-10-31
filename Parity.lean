@@ -829,3 +829,21 @@ def main : IO Unit := do
 
   for c in SFT.Physics.EnergyMomentumGrammar.candidates do
     IO.println ("EnergyMomentumGrammar\t" ++ SFT.Physics.EnergyMomentumGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.EnergyMomentumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.EnergyMomentumGrammar.exactForm c ++ "\t" ++ SFT.Physics.EnergyMomentumGrammar.decisionReason c)
+
+  for c in SFT.Physics.PhysicalStateGrammar.candidates do
+    IO.println ("PhysicalStateGrammar\t" ++ SFT.Physics.PhysicalStateGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PhysicalStateGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PhysicalStateGrammar.exactForm c ++ "\t" ++ SFT.Physics.PhysicalStateGrammar.decisionReason c)
+
+  for c in SFT.Physics.EvolutionGrammar.candidates do
+    IO.println ("EvolutionGrammar\t" ++ SFT.Physics.EvolutionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.EvolutionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.EvolutionGrammar.exactForm c ++ "\t" ++ SFT.Physics.EvolutionGrammar.decisionReason c)
+
+  for c in SFT.Physics.ObservableGrammar.candidates do
+    IO.println ("ObservableGrammar\t" ++ SFT.Physics.ObservableGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ObservableGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ObservableGrammar.exactForm c ++ "\t" ++ SFT.Physics.ObservableGrammar.decisionReason c)
+
+  for c in SFT.Physics.WeightGrammar.candidates do
+    IO.println ("WeightGrammar\t" ++ SFT.Physics.WeightGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.WeightGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.WeightGrammar.exactForm c ++ "\t" ++ SFT.Physics.WeightGrammar.decisionReason c)
+
+  for c in SFT.Physics.IncompatibilityGrammar.candidates do
+    IO.println ("IncompatibilityGrammar\t" ++ SFT.Physics.IncompatibilityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.IncompatibilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.IncompatibilityGrammar.exactForm c ++ "\t" ++ SFT.Physics.IncompatibilityGrammar.decisionReason c)
+
+  for c in SFT.Physics.SpinGrammar.candidates do
+    IO.println ("SpinGrammar\t" ++ SFT.Physics.SpinGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpinGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpinGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpinGrammar.decisionReason c)

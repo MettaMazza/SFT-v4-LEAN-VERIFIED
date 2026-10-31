@@ -1,0 +1,20 @@
+import SFT.Physics.QuantumPhysicalIdentity
+import SFT.Physics.QuantumPhysicalExclusion
+#print axioms SFT.Physics.QuantumPhysicalIdentity.Pair
+#print axioms SFT.Physics.QuantumPhysicalIdentity.exchange
+#print axioms SFT.Physics.QuantumPhysicalIdentity.exchangeTwice
+#print axioms SFT.Physics.QuantumPhysicalIdentity.indistinguishable
+#print axioms SFT.Physics.QuantumPhysicalIdentity.ledger
+#print axioms SFT.Physics.QuantumPhysicalIdentity.fullLedgerPreserved
+#print axioms SFT.Physics.QuantumPhysicalIdentity.exchangedIdentityPreserved
+#print axioms SFT.Physics.QuantumPhysicalIdentity.changedObservableDistinguishes
+#print axioms SFT.Physics.QuantumPhysicalIdentity.observationExtensionExactly
+#print axioms SFT.Physics.QuantumPhysicalIdentity.bothConstituentsRetained
+#print axioms SFT.Physics.QuantumPhysicalIdentity.fullLedgerExactly
+#print axioms SFT.Physics.QuantumPhysicalExclusion.Occupant
+#print axioms SFT.Physics.QuantumPhysicalExclusion.alternating
+#print axioms SFT.Physics.QuantumPhysicalExclusion.oppositeNeverSame
+#print axioms SFT.Physics.QuantumPhysicalExclusion.fixedExchangeExcluded
+#print axioms SFT.Physics.QuantumPhysicalExclusion.identicalSameCellFixed
+#print axioms SFT.Physics.QuantumPhysicalExclusion.identicalSameCellExcluded
+#print axioms SFT.Physics.QuantumPhysicalExclusion.admittedSameWordRequiresDistinctCell

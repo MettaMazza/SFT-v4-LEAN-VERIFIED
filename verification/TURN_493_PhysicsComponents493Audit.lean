@@ -1,0 +1,44 @@
+import SFT.Physics.QuantumPhysicalClassicalLimit
+import SFT.Physics.QuantumPhysicalNoSignalling
+import SFT.Physics.MatterMassEnergy
+import SFT.Physics.MatterAntiparticle
+#print axioms SFT.Physics.QuantumPhysicalClassicalLimit.distinguishes
+#print axioms SFT.Physics.QuantumPhysicalClassicalLimit.differentClassesHaveDifferentEnvironment
+#print axioms SFT.Physics.QuantumPhysicalClassicalLimit.everyEnvironmentalFibreHasOnePredecessorClass
+#print axioms SFT.Physics.QuantumPhysicalClassicalLimit.jointObservation
+#print axioms SFT.Physics.QuantumPhysicalClassicalLimit.closedCrossClassMerging
+#print axioms SFT.Physics.QuantumPhysicalClassicalLimit.classicalLedger
+#print axioms SFT.Physics.QuantumPhysicalClassicalLimit.completeOriginalSupportRetained
+#print axioms SFT.Physics.QuantumPhysicalClassicalLimit.fullPhaseRecordSurvivesClassicalProjection
+#print axioms SFT.Physics.QuantumPhysicalNoSignalling.relabel
+#print axioms SFT.Physics.QuantumPhysicalNoSignalling.completeRemoteRelabellingReversible
+#print axioms SFT.Physics.QuantumPhysicalNoSignalling.entireLocalProjectionUnchanged
+#print axioms SFT.Physics.QuantumPhysicalNoSignalling.localCount
+#print axioms SFT.Physics.QuantumPhysicalNoSignalling.exactLocalFibreCountUnchanged
+#print axioms SFT.Physics.QuantumPhysicalNoSignalling.completeSupportCountUnchanged
+#print axioms SFT.Physics.QuantumPhysicalNoSignalling.exactLocalWeightDataUnchanged
+#print axioms SFT.Physics.QuantumPhysicalNoSignalling.changedArrivalRequiresGeneratedPredecessor
+#print axioms SFT.Physics.QuantumPhysicalNoSignalling.noResponseOutsideCompletedCausalSupport
+#print axioms SFT.Physics.MatterMassEnergy.Conversion
+#print axioms SFT.Physics.MatterMassEnergy.value
+#print axioms SFT.Physics.MatterMassEnergy.record
+#print axioms SFT.Physics.MatterMassEnergy.twoPropagationTransfersRetained
+#print axioms SFT.Physics.MatterMassEnergy.fullInertialSourceRetained
+#print axioms SFT.Physics.MatterMassEnergy.exactMassSpeedSquare
+#print axioms SFT.Physics.MatterMassEnergy.positiveEnergy
+#print axioms SFT.Physics.MatterMassEnergy.forcedEnergyUnique
+#print axioms SFT.Physics.MatterMassEnergy.conversionDimension
+#print axioms SFT.Physics.MatterMassEnergy.regroup
+#print axioms SFT.Physics.MatterMassEnergy.exactEnergyDimension
+#print axioms SFT.Physics.MatterMassEnergy.agreesWithTransferredWorkDimension
+#print axioms SFT.Physics.MatterAntiparticle.Constituent
+#print axioms SFT.Physics.MatterAntiparticle.reverseLabels
+#print axioms SFT.Physics.MatterAntiparticle.reverse
+#print axioms SFT.Physics.MatterAntiparticle.labelReversalTwice
+#print axioms SFT.Physics.MatterAntiparticle.constituentReversalTwice
+#print axioms SFT.Physics.MatterAntiparticle.identicalPositiveInertialSupport
+#print axioms SFT.Physics.MatterAntiparticle.sameWordSpinAndTransitionGrammar
+#print axioms SFT.Physics.MatterAntiparticle.everyOrientedLabelReversed
+#print axioms SFT.Physics.MatterAntiparticle.allLabelIdentitiesRetained
+#print axioms SFT.Physics.MatterAntiparticle.noLabelAddedOrDeleted
+#print axioms SFT.Physics.MatterAntiparticle.reversedHeldLabelIsDistinct

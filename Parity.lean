@@ -865,3 +865,21 @@ def main : IO Unit := do
 
   for c in SFT.Physics.BellGrammar.candidates do
     IO.println ("BellGrammar\t" ++ SFT.Physics.BellGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.BellGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.BellGrammar.exactForm c ++ "\t" ++ SFT.Physics.BellGrammar.decisionReason c)
+
+  for c in SFT.Physics.ContextualityGrammar.candidates do
+    IO.println ("ContextualityGrammar\t" ++ SFT.Physics.ContextualityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ContextualityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ContextualityGrammar.exactForm c ++ "\t" ++ SFT.Physics.ContextualityGrammar.decisionReason c)
+
+  for c in SFT.Physics.DecoherenceGrammar.candidates do
+    IO.println ("DecoherenceGrammar\t" ++ SFT.Physics.DecoherenceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DecoherenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DecoherenceGrammar.exactForm c ++ "\t" ++ SFT.Physics.DecoherenceGrammar.decisionReason c)
+
+  for c in SFT.Physics.ClassicalLimitGrammar.candidates do
+    IO.println ("ClassicalLimitGrammar\t" ++ SFT.Physics.ClassicalLimitGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ClassicalLimitGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ClassicalLimitGrammar.exactForm c ++ "\t" ++ SFT.Physics.ClassicalLimitGrammar.decisionReason c)
+
+  for c in SFT.Physics.NoSignallingGrammar.candidates do
+    IO.println ("NoSignallingGrammar\t" ++ SFT.Physics.NoSignallingGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NoSignallingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NoSignallingGrammar.exactForm c ++ "\t" ++ SFT.Physics.NoSignallingGrammar.decisionReason c)
+
+  for c in SFT.Physics.MassEnergyGrammar.candidates do
+    IO.println ("MassEnergyGrammar\t" ++ SFT.Physics.MassEnergyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MassEnergyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MassEnergyGrammar.exactForm c ++ "\t" ++ SFT.Physics.MassEnergyGrammar.decisionReason c)
+
+  for c in SFT.Physics.ParticleAntiparticleGrammar.candidates do
+    IO.println ("ParticleAntiparticleGrammar\t" ++ SFT.Physics.ParticleAntiparticleGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ParticleAntiparticleGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ParticleAntiparticleGrammar.exactForm c ++ "\t" ++ SFT.Physics.ParticleAntiparticleGrammar.decisionReason c)

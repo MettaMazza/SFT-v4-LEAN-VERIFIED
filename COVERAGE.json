@@ -12821,9 +12821,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-ANGULAR-MOTION-001-f38ac92829c84d31.json",
       "statement": "Angular motion is forced by recurrence on a closed ordered path; phase is the exact generated position within that recurrence and orientation is held by traversal order.",
       "title": "Angular motion and cyclic orientation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MechanicalAngularMotion.lean",
+        "SFT/Physics/AngularMotionGrammar.lean",
+        "SFT/Physics/AngularMotionEvidence.lean",
+        "SFT/Physics/AngularMotionExperiment.lean",
+        "SFT/Physics/AngularMotionValidation.lean",
+        "SFT/Physics/AngularMotionValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "e347596f305d7c1324bece1d779259737d1565e1cb87e8b985a788f60e343ed7",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12865,7 +12872,10 @@
         "statement": "Angular motion is forced by recurrence on a closed ordered path; phase is the exact generated position within that recurrence and orientation is held by traversal order.",
         "status": "empirically_tested",
         "title": "Angular motion and cyclic orientation"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete closed ordered recurrence, every position encoded by a full initial/remaining path decomposition, exact phase parts with structural Empty One origin, terminal whole recurrence, held traversal orientation and observed phase-change/duration relation; original source-domain traces retained.",
+      "completion_evidence": "verification/TURN_486_ANGULARMOTION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -12877,9 +12887,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-ANGULAR-MOMENTUM-001-b82a7f81b1904737.json",
       "statement": "Angular momentum is forced as oriented separation composed with linear momentum on a closed path; torque is its source-bound change per duration.",
       "title": "Angular momentum and torque",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MechanicalAngularMomentum.lean",
+        "SFT/Physics/AngularMomentumGrammar.lean",
+        "SFT/Physics/AngularMomentumEvidence.lean",
+        "SFT/Physics/AngularMomentumExperiment.lean",
+        "SFT/Physics/AngularMomentumValidation.lean",
+        "SFT/Physics/AngularMomentumValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "6523e994ee8366c942d2ad049912fac01eff785a82cae5505d21454335394411",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12921,7 +12938,10 @@
         "statement": "Angular momentum is forced as oriented separation composed with linear momentum on a closed path; torque is its source-bound change per duration.",
         "status": "empirically_tested",
         "title": "Angular momentum and torque"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete oriented lever-separation/linear-momentum composition on its retained closed ordered path, with an explicit decomposition containing the actual momentum trajectory; source-bound full-carrier torque change per generated duration.",
+      "completion_evidence": "verification/TURN_486_ANGULARMOMENTUM_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -12933,9 +12953,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-COMPOSITE-CENTRE-001-ac98f7c19cb0a90e.json",
       "statement": "The centre relation of a composite is forced by complete inertial-content weighting of every part's separation, divided by complete inertial support; no constituent may be omitted.",
       "title": "Composite motion and centre relation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MechanicalCompositeCentre.lean",
+        "SFT/Physics/CompositeCentreGrammar.lean",
+        "SFT/Physics/CompositeCentreEvidence.lean",
+        "SFT/Physics/CompositeCentreExperiment.lean",
+        "SFT/Physics/CompositeCentreValidation.lean",
+        "SFT/Physics/CompositeCentreValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "772f84753a8276d1184fa095ff166ec34aee8aff62d53cb156d8849df3922abe",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12977,7 +13004,10 @@
         "statement": "The centre relation of a composite is forced by complete inertial-content weighting of every part's separation, divided by complete inertial support; no constituent may be omitted.",
         "status": "empirically_tested",
         "title": "Composite motion and centre relation"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete inertia-weighted constituent separation divided by all inertial support, using pinned scalar multiplication/addition/division; every constituent and momentum retained, positive mass closure and exact product/sum/quotient identities; full-carrier invariance under regrouping.",
+      "completion_evidence": "verification/TURN_486_COMPOSITECENTRE_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -12989,9 +13019,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-CONSERVATION-001-7d02feaf423abbf0.json",
       "statement": "For a closed generated interaction network, every lost mechanical carrier at one node is forced to be held at another; complete internal transfer therefore preserves total momentum and energy support.",
       "title": "Mechanical conservation under closed transfer",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MechanicalConservation.lean",
+        "SFT/Physics/ConservationGrammar.lean",
+        "SFT/Physics/ConservationEvidence.lean",
+        "SFT/Physics/ConservationExperiment.lean",
+        "SFT/Physics/ConservationValidation.lean",
+        "SFT/Physics/ConservationValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "a6d0608913680d61f993f2140627d1cb866daf985eb191547c6d841c627c1f87",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -13033,7 +13070,10 @@
         "statement": "For a closed generated interaction network, every lost mechanical carrier at one node is forced to be held at another; complete internal transfer therefore preserves total momentum and energy support.",
         "status": "empirically_tested",
         "title": "Mechanical conservation under closed transfer"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete closed source/destination ledger on full momentum and energy carriers; inverse finite occurrence correspondence, exact retained carrier support and every aggregate preserved without omission, with source identities and actions retained.",
+      "completion_evidence": "verification/TURN_486_CONSERVATION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -13045,9 +13085,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001-ad7387e41663cd1f.json",
       "statement": "A reversible constraint maps displacement orientation to a source-bound restoring transfer; finite repeated reversal forces a recurrence whose period is an exact transition count relative to the reference recurrence.",
       "title": "Constrained motion, restoration and oscillation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MechanicalConstraintOscillation.lean",
+        "SFT/Physics/ConstraintOscillationGrammar.lean",
+        "SFT/Physics/ConstraintOscillationEvidence.lean",
+        "SFT/Physics/ConstraintOscillationExperiment.lean",
+        "SFT/Physics/ConstraintOscillationValidation.lean",
+        "SFT/Physics/ConstraintOscillationValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "fc55a563469cfa99c91f41a375ded0ad6a8ac897aefa8fa87d668b464a3f52ee",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -13089,7 +13136,10 @@
         "statement": "A reversible constraint maps displacement orientation to a source-bound restoring transfer; finite repeated reversal forces a recurrence whose period is an exact transition count relative to the reference recurrence.",
         "status": "empirically_tested",
         "title": "Constrained motion, restoration and oscillation"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Source-bound held-orientation restoration, two-reversal full-carrier recurrence and arbitrary finite even restoration paths; exact generated recurrence period, retained observations/actions, positive duration and phase on the complete recurrence.",
+      "completion_evidence": "verification/TURN_486_CONSTRAINTOSCILLATION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -190737,13 +190787,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-31T01:42:06.739271+00:00",
+  "updated_at": "2026-10-31T02:12:14.040194+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2569,
-    "fully_reconstructed_claims": 212,
-    "axiom_free_exported_results": 10156,
-    "axiom_free_audited_definitions_and_theorems": 23322
+    "pending": 2564,
+    "fully_reconstructed_claims": 217,
+    "axiom_free_exported_results": 10433,
+    "axiom_free_audited_definitions_and_theorems": 24009
   }
 }

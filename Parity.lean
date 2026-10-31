@@ -736,3 +736,18 @@ def main : IO Unit := do
 
   for c in SFT.Physics.PowerGrammar.candidates do
     IO.println ("PowerGrammar\t" ++ SFT.Physics.PowerGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PowerGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PowerGrammar.exactForm c ++ "\t" ++ SFT.Physics.PowerGrammar.decisionReason c)
+
+  for c in SFT.Physics.AngularMotionGrammar.candidates do
+    IO.println ("AngularMotionGrammar\t" ++ SFT.Physics.AngularMotionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AngularMotionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AngularMotionGrammar.exactForm c ++ "\t" ++ SFT.Physics.AngularMotionGrammar.decisionReason c)
+
+  for c in SFT.Physics.AngularMomentumGrammar.candidates do
+    IO.println ("AngularMomentumGrammar\t" ++ SFT.Physics.AngularMomentumGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AngularMomentumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AngularMomentumGrammar.exactForm c ++ "\t" ++ SFT.Physics.AngularMomentumGrammar.decisionReason c)
+
+  for c in SFT.Physics.CompositeCentreGrammar.candidates do
+    IO.println ("CompositeCentreGrammar\t" ++ SFT.Physics.CompositeCentreGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CompositeCentreGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CompositeCentreGrammar.exactForm c ++ "\t" ++ SFT.Physics.CompositeCentreGrammar.decisionReason c)
+
+  for c in SFT.Physics.ConservationGrammar.candidates do
+    IO.println ("ConservationGrammar\t" ++ SFT.Physics.ConservationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ConservationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ConservationGrammar.exactForm c ++ "\t" ++ SFT.Physics.ConservationGrammar.decisionReason c)
+
+  for c in SFT.Physics.ConstraintOscillationGrammar.candidates do
+    IO.println ("ConstraintOscillationGrammar\t" ++ SFT.Physics.ConstraintOscillationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ConstraintOscillationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ConstraintOscillationGrammar.exactForm c ++ "\t" ++ SFT.Physics.ConstraintOscillationGrammar.decisionReason c)

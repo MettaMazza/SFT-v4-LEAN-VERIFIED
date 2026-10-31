@@ -1,0 +1,6 @@
+import SFT.Physics.GravityGeodesicSelection
+#print axioms SFT.Physics.GravityGeodesicSelection.select
+#print axioms SFT.Physics.GravityGeodesicSelection.everyReachableSupportHasSelectedPath
+#print axioms SFT.Physics.GravityGeodesicSelection.selectedPathIsGenerated
+#print axioms SFT.Physics.GravityGeodesicSelection.selectedPathIsShortest
+#print axioms SFT.Physics.GravityGeodesicSelection.absentExactlyWhenNoGeneratedPath

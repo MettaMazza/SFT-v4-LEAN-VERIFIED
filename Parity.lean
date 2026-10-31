@@ -964,3 +964,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.SpacetimeClockRateGrammar.candidates do
     IO.println ("SpacetimeClockRateGrammar\t" ++ SFT.Physics.SpacetimeClockRateGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpacetimeClockRateGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpacetimeClockRateGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpacetimeClockRateGrammar.decisionReason c)
+
+  for c in SFT.Physics.SpacetimeLengthRelationGrammar.candidates do
+    IO.println ("SpacetimeLengthRelationGrammar\t" ++ SFT.Physics.SpacetimeLengthRelationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpacetimeLengthRelationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpacetimeLengthRelationGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpacetimeLengthRelationGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravityEquivalenceGrammar.candidates do
+    IO.println ("GravityEquivalenceGrammar\t" ++ SFT.Physics.GravityEquivalenceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityEquivalenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityEquivalenceGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityEquivalenceGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravityCurvatureGrammar.candidates do
+    IO.println ("GravityCurvatureGrammar\t" ++ SFT.Physics.GravityCurvatureGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityCurvatureGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityCurvatureGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityCurvatureGrammar.decisionReason c)

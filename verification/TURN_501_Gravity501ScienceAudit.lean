@@ -1,0 +1,49 @@
+import SFT.Physics.SpacetimeLengthRelation
+import SFT.Physics.GravityEquivalence
+import SFT.Physics.GravityCurvature
+import SFT.Physics.GravityGeodesic
+#print axioms SFT.Physics.SpacetimeLengthRelation.Slice
+#print axioms SFT.Physics.SpacetimeLengthRelation.supportCount
+#print axioms SFT.Physics.SpacetimeLengthRelation.relativeExtent
+#print axioms SFT.Physics.SpacetimeLengthRelation.exactExtentRatio
+#print axioms SFT.Physics.SpacetimeLengthRelation.everyHeldSupportIsSimultaneous
+#print axioms SFT.Physics.SpacetimeLengthRelation.everySimultaneousSupportIsRetained
+#print axioms SFT.Physics.SpacetimeLengthRelation.sliceMembershipExactly
+#print axioms SFT.Physics.SpacetimeLengthRelation.preservesBoundary
+#print axioms SFT.Physics.SpacetimeLengthRelation.extentClockPairing
+#print axioms SFT.Physics.SpacetimeLengthRelation.distinctSlicesCannotShareASupport
+#print axioms SFT.Physics.SpacetimeLengthRelation.sameSliceComparedWithItself
+#print axioms SFT.Physics.SpacetimeLengthRelation.completeSlicePreserved
+#print axioms SFT.Physics.GravityEquivalence.UniversalFreeResponse
+#print axioms SFT.Physics.GravityEquivalence.completeTraceEquivalence
+#print axioms SFT.Physics.GravityEquivalence.everyLocalReadoutAgrees
+#print axioms SFT.Physics.GravityEquivalence.constituentLabelCannotDistinguish
+#print axioms SFT.Physics.GravityEquivalence.fromCommonPath
+#print axioms SFT.Physics.GravityEquivalence.freeResponseConstructed
+#print axioms SFT.Physics.GravityEquivalence.changedReadoutExcludesUniversalEquivalence
+#print axioms SFT.Physics.GravityEquivalence.successor
+#print axioms SFT.Physics.GravityEquivalence.extend
+#print axioms SFT.Physics.GravityEquivalence.everyFiniteExtension
+#print axioms SFT.Physics.GravityCurvature.Edge
+#print axioms SFT.Physics.GravityCurvature.Path
+#print axioms SFT.Physics.GravityCurvature.transport
+#print axioms SFT.Physics.GravityCurvature.sources
+#print axioms SFT.Physics.GravityCurvature.nonclosing
+#print axioms SFT.Physics.GravityCurvature.emptyTransport
+#print axioms SFT.Physics.GravityCurvature.successorRetainsEverySource
+#print axioms SFT.Physics.GravityCurvature.successorTransportExact
+#print axioms SFT.Physics.GravityCurvature.onePathCannotWitnessCurvature
+#print axioms SFT.Physics.GravityCurvature.nonclosingIsPathDistinction
+#print axioms SFT.Physics.GravityCurvature.pathIndependentCannotWitnessCurvature
+#print axioms SFT.Physics.GravityCurvature.injectiveOrientationNamesPreserveNonclosure
+#print axioms SFT.Physics.GravityGeodesic.LocalStep
+#print axioms SFT.Physics.GravityGeodesic.FreePath
+#print axioms SFT.Physics.GravityGeodesic.transitions
+#print axioms SFT.Physics.GravityGeodesic.sourcePath
+#print axioms SFT.Physics.GravityGeodesic.forces
+#print axioms SFT.Physics.GravityGeodesic.recurrenceSteps
+#print axioms SFT.Physics.GravityGeodesic.everyTransitionUnforced
+#print axioms SFT.Physics.GravityGeodesic.completeRecurrencePreserved
+#print axioms SFT.Physics.GravityGeodesic.Minimal
+#print axioms SFT.Physics.GravityGeodesic.minimalTransitionCountUnique
+#print axioms SFT.Physics.GravityGeodesic.shorterPathExcludesMinimality

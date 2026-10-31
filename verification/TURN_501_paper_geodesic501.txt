@@ -1,0 +1,13 @@
+
+457. Complete inertial recurrence along an unforced curved path
+
+A local free step retains its source-curved adjacent event relation, incoming word w, outgoing word w′ and the established inertial recurrence T. The local condition is w′=T(w), and its list of extra force carriers is empty. Concatenation requires the next incoming word to equal the previous outgoing word; thus it preserves the entire propagating word rather than merely a transition count.
+
+For the retained event path, N=0 and the word is unchanged. Appending one local step gives
+
+N(p·e)=N(p)+1,
+w_final(p·e)=T(w_final(p)).
+
+Induction therefore yields w_final(p)=T^N(p)(w_initial). Likewise, the complete extra-force list satisfies F(empty)=[] and F(p·e)=F(p)++F(e); since every local F(e)=[], F(p)=[] for every finite free path. Projecting the local steps to their adjacent source-curved relations retains a complete GravityCurvature path with the same event endpoints.
+
+A minimal free path p between the fixed endpoint events from the held initial word satisfies N(p)≤N(q) for every competing complete free path q in that source relation, retaining its own resulting word. If both p and q satisfy this condition, the two inequalities give N(p)=N(q). Conversely, a competing q with N(q)<N(p) excludes p from the minimal class. These statements retain the distinction between equality of the forced minimum transition count and identity of entire path records.

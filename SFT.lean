@@ -1412,3 +1412,15 @@ import SFT.Physics.ForceEvidence
 import SFT.Physics.ForceExperiment
 import SFT.Physics.ForceValidation
 import SFT.Physics.ForceValidationProofs
+import SFT.Physics.MechanicalWorkEnergy
+import SFT.Physics.WorkEnergyGrammar
+import SFT.Physics.WorkEnergyEvidence
+import SFT.Physics.WorkEnergyExperiment
+import SFT.Physics.WorkEnergyValidation
+import SFT.Physics.WorkEnergyValidationProofs
+import SFT.Physics.MechanicalPower
+import SFT.Physics.PowerGrammar
+import SFT.Physics.PowerEvidence
+import SFT.Physics.PowerExperiment
+import SFT.Physics.PowerValidation
+import SFT.Physics.PowerValidationProofs

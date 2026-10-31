@@ -730,3 +730,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ForceGrammar.candidates do
     IO.println ("ForceGrammar\t" ++ SFT.Physics.ForceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ForceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ForceGrammar.exactForm c ++ "\t" ++ SFT.Physics.ForceGrammar.decisionReason c)
+
+  for c in SFT.Physics.WorkEnergyGrammar.candidates do
+    IO.println ("WorkEnergyGrammar\t" ++ SFT.Physics.WorkEnergyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.WorkEnergyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.WorkEnergyGrammar.exactForm c ++ "\t" ++ SFT.Physics.WorkEnergyGrammar.decisionReason c)
+
+  for c in SFT.Physics.PowerGrammar.candidates do
+    IO.println ("PowerGrammar\t" ++ SFT.Physics.PowerGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PowerGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PowerGrammar.exactForm c ++ "\t" ++ SFT.Physics.PowerGrammar.decisionReason c)

@@ -12688,9 +12688,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-WORK-ENERGY-001-2907d13e9cf20829.json",
       "statement": "Mechanical work is forced as the complete composition of transferred force with oriented displacement, and energy is the retained capacity/change record transported through that interaction.",
       "title": "Work, kinetic change and energy carrier",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Mathematics/FoldScalar.lean",
+        "SFT/Physics/MechanicalWorkEnergy.lean",
+        "SFT/Physics/WorkEnergyGrammar.lean",
+        "SFT/Physics/WorkEnergyEvidence.lean",
+        "SFT/Physics/WorkEnergyExperiment.lean",
+        "SFT/Physics/WorkEnergyValidation.lean",
+        "SFT/Physics/WorkEnergyValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "83b42cf599ee99a8d8d22c6c37280599117c300b679f2f049dc553d63e374866",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12732,7 +12740,10 @@
         "statement": "Mechanical work is forced as the complete composition of transferred force with oriented displacement, and energy is the retained capacity/change record transported through that interaction.",
         "status": "empirically_tested",
         "title": "Work, kinetic change and energy carrier"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete force/displacement composition using original oriented scalar multiplication; the full source-bound transfer ledger is paired with the held displacement, preserving every row and both carriers. Exact positive product, Empty One boundary, retained energy-change record and native energy-dimension closure are proved.",
+      "completion_evidence": "verification/TURN_485_WORKENERGY_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -12744,9 +12755,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-MECH-POWER-001-986113fa723ac582.json",
       "statement": "Power is forced as exact energy transfer per recurrence duration, retaining both the transferred energy record and its ordered interval.",
       "title": "Power as ordered energy transfer",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/MechanicalPower.lean",
+        "SFT/Physics/PowerGrammar.lean",
+        "SFT/Physics/PowerEvidence.lean",
+        "SFT/Physics/PowerExperiment.lean",
+        "SFT/Physics/PowerValidation.lean",
+        "SFT/Physics/PowerValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "58d0a07e8a9f0120d6d4713d58d1e83da0ce9fb3aa2a2da071fd8c1ef88b59e1",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -12788,7 +12806,10 @@
         "statement": "Power is forced as exact energy transfer per recurrence duration, retaining both the transferred energy record and its ordered interval.",
         "status": "empirically_tested",
         "title": "Power as ordered energy transfer"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Exact retained mechanical energy transfer divided by its own generated positive interaction duration. Full work/force/displacement provenance and held orientation are retained, with universal positive quotient and recurrence identities and structural Empty One for absent transfer.",
+      "completion_evidence": "verification/TURN_485_POWER_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -190716,13 +190737,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-31T01:27:07.874172+00:00",
+  "updated_at": "2026-10-31T01:42:06.739271+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2571,
-    "fully_reconstructed_claims": 210,
-    "axiom_free_exported_results": 10071,
-    "axiom_free_audited_definitions_and_theorems": 23078
+    "pending": 2569,
+    "fully_reconstructed_claims": 212,
+    "axiom_free_exported_results": 10156,
+    "axiom_free_audited_definitions_and_theorems": 23322
   }
 }

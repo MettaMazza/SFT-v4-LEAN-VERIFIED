@@ -171,4 +171,50 @@ theorem divisionPreservesEmpty (t : PositiveFraction) : dividePositive .emptyOne
 theorem quotientPositive (x t : PositiveFraction) : 0 < (quotientMagnitude x t).numerator :=
   (quotientMagnitude x t).positive
 
+-- Pinned values.py multiply_scalar: equal held orientations compose forward.
+def productOrientation : Orientation → Orientation → Orientation
+  | .forward, .forward => .forward
+  | .counter, .counter => .forward
+  | .forward, .counter => .counter
+  | .counter, .forward => .counter
+
+def multiply (left right : Scalar) : Scalar :=
+  match left with
+  | .emptyOne => .emptyOne
+  | .positive a x => match right with
+    | .emptyOne => .emptyOne
+    | .positive b y =>
+      .positive (productOrientation a b) (SFT.Mathematics.ExactRatioRelations.compose x y)
+
+theorem productEmptyLeft (s : Scalar) : multiply .emptyOne s = .emptyOne := rfl
+
+theorem productEmptyRight (s : Scalar) : multiply s .emptyOne = .emptyOne := by cases s <;> rfl
+
+theorem equalOrientationProduct (o : Orientation) (x y : PositiveFraction) :
+    multiply (.positive o x) (.positive o y) =
+    .positive .forward (SFT.Mathematics.ExactRatioRelations.compose x y) := by cases o <;> rfl
+
+theorem oppositeOrientationProduct (o : Orientation) (x y : PositiveFraction) :
+    multiply (.positive o x) (.positive (opposite o) y) =
+    .positive .counter (SFT.Mathematics.ExactRatioRelations.compose x y) := by cases o <;> rfl
+
+theorem productMagnitudeExact (x y : PositiveFraction) :
+    (x.numerator*y.numerator)*(SFT.Mathematics.ExactRatioRelations.compose x y).denominator =
+    (SFT.Mathematics.ExactRatioRelations.compose x y).numerator*(x.denominator*y.denominator) :=
+  SFT.Mathematics.ExactRatioRelations.composeValue x y
+
+theorem reverseProductLeft (a b : Scalar) : multiply (reverse a) b = reverse (multiply a b) := by
+  cases a with
+  | emptyOne => rfl
+  | positive o x => cases b with
+    | emptyOne => rfl
+    | positive p y => cases o <;> cases p <;> rfl
+
+theorem reverseProductBoth (a b : Scalar) : multiply (reverse a) (reverse b) = multiply a b := by
+  cases a with
+  | emptyOne => rfl
+  | positive o x => cases b with
+    | emptyOne => rfl
+    | positive p y => cases o <;> cases p <;> rfl
+
 end SFT.Mathematics.FoldScalar

@@ -940,3 +940,15 @@ def main : IO Unit := do
 
   for c in SFT.Physics.SpacetimeEventGrammar.candidates do
     IO.println ("SpacetimeEventGrammar\t" ++ SFT.Physics.SpacetimeEventGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpacetimeEventGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpacetimeEventGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpacetimeEventGrammar.decisionReason c)
+
+  for c in SFT.Physics.SpacetimeIntervalGrammar.candidates do
+    IO.println ("SpacetimeIntervalGrammar\t" ++ SFT.Physics.SpacetimeIntervalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpacetimeIntervalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpacetimeIntervalGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpacetimeIntervalGrammar.decisionReason c)
+
+  for c in SFT.Physics.SpacetimeCausalOrderGrammar.candidates do
+    IO.println ("SpacetimeCausalOrderGrammar\t" ++ SFT.Physics.SpacetimeCausalOrderGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SpacetimeCausalOrderGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SpacetimeCausalOrderGrammar.exactForm c ++ "\t" ++ SFT.Physics.SpacetimeCausalOrderGrammar.decisionReason c)
+
+  for c in SFT.Physics.SectorInventoryGrammar.candidates do
+    IO.println ("SectorInventoryGrammar\t" ++ SFT.Physics.SectorInventoryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SectorInventoryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SectorInventoryGrammar.exactForm c ++ "\t" ++ SFT.Physics.SectorInventoryGrammar.decisionReason c)
+
+  for c in SFT.Physics.BoundaryMeasurementGrammar.candidates do
+    IO.println ("BoundaryMeasurementGrammar\t" ++ SFT.Physics.BoundaryMeasurementGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.BoundaryMeasurementGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.BoundaryMeasurementGrammar.exactForm c ++ "\t" ++ SFT.Physics.BoundaryMeasurementGrammar.decisionReason c)

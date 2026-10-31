@@ -1,0 +1,323 @@
+import SFT.Physics.BoundaryGrowthDiscriminator
+import SFT.Physics.BoundaryMeasurementGrammarBase
+import SFT.Physics.BoundaryMeasurementCensus0
+import SFT.Physics.BoundaryMeasurementCensus1
+import SFT.Physics.BoundaryMeasurementCensus2
+import SFT.Physics.BoundaryMeasurementCensus3
+import SFT.Physics.BoundaryMeasurementCensus4
+import SFT.Physics.BoundaryMeasurementCensus5
+import SFT.Physics.BoundaryMeasurementCensus6
+import SFT.Physics.BoundaryMeasurementCensus7
+import SFT.Physics.BoundaryMeasurementCensus8
+import SFT.Physics.BoundaryMeasurementCensus9
+import SFT.Physics.BoundaryMeasurementCensus10
+import SFT.Physics.BoundaryMeasurementCensus11
+import SFT.Physics.BoundaryMeasurementCensus12
+import SFT.Physics.BoundaryMeasurementCensus13
+import SFT.Physics.BoundaryMeasurementCensus14
+import SFT.Physics.BoundaryMeasurementCensus15
+import SFT.Physics.BoundaryMeasurementCensus16
+import SFT.Physics.BoundaryMeasurementCensus17
+import SFT.Physics.BoundaryMeasurementCensus18
+import SFT.Physics.BoundaryMeasurementCensus19
+import SFT.Physics.BoundaryMeasurementCensus20
+import SFT.Physics.BoundaryMeasurementCensus21
+import SFT.Physics.BoundaryMeasurementCensus22
+import SFT.Physics.BoundaryMeasurementCensus23
+import SFT.Physics.BoundaryMeasurementCensus24
+import SFT.Physics.BoundaryMeasurementCensus25
+import SFT.Physics.BoundaryMeasurementCensus26
+import SFT.Physics.BoundaryMeasurementCensus27
+import SFT.Physics.BoundaryMeasurementCensus28
+import SFT.Physics.BoundaryMeasurementCensus29
+import SFT.Physics.BoundaryMeasurementCensus30
+import SFT.Physics.BoundaryMeasurementCensus31
+import SFT.Physics.BoundaryMeasurementCensus32
+import SFT.Physics.BoundaryMeasurementCensus33
+import SFT.Physics.BoundaryMeasurementCensus34
+import SFT.Physics.BoundaryMeasurementCensus35
+import SFT.Physics.BoundaryMeasurementCensus36
+import SFT.Physics.BoundaryMeasurementCensus37
+import SFT.Physics.BoundaryMeasurementCensus38
+import SFT.Physics.BoundaryMeasurementCensus39
+import SFT.Physics.BoundaryMeasurementCensus40
+import SFT.Physics.BoundaryMeasurementCensus41
+import SFT.Physics.BoundaryMeasurementCensus42
+import SFT.Physics.BoundaryMeasurementCensus43
+import SFT.Physics.BoundaryMeasurementCensus44
+import SFT.Physics.BoundaryMeasurementCensus45
+import SFT.Physics.BoundaryMeasurementCensus46
+import SFT.Physics.BoundaryMeasurementCensus47
+import SFT.Physics.BoundaryMeasurementCensus48
+import SFT.Physics.BoundaryMeasurementCensus49
+import SFT.Physics.BoundaryMeasurementCensus50
+import SFT.Physics.BoundaryMeasurementCensus51
+import SFT.Physics.BoundaryMeasurementCensus52
+import SFT.Physics.BoundaryMeasurementCensus53
+import SFT.Physics.BoundaryMeasurementCensus54
+import SFT.Physics.BoundaryMeasurementCensus55
+import SFT.Physics.BoundaryMeasurementCensus56
+import SFT.Physics.BoundaryMeasurementCensus57
+import SFT.Physics.BoundaryMeasurementCensus58
+import SFT.Physics.BoundaryMeasurementCensus59
+import SFT.Physics.BoundaryMeasurementCensus60
+import SFT.Physics.BoundaryMeasurementCensus61
+import SFT.Physics.BoundaryMeasurementCensus62
+import SFT.Physics.BoundaryMeasurementCensus63
+import SFT.Physics.BoundaryMeasurementGrammar
+import SFT.Physics.BoundaryMeasurementWitnesses
+import SFT.Physics.BoundaryMeasurementControls
+import SFT.Physics.BoundaryMeasurementEvidence
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.successorBudget
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.exactPowerLowerBound
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.strictExcessBound
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.derivedStrictExcess
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.anyPositiveUpperDenominator
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.strictExcessSuccessor
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.everyLaterPowerExcluded
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.completeDerivedTailExcluded
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.inInterval
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.allCompatible
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.syntheticCubic
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.syntheticInterval
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.allAtOrBeyondExcluded
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.everyCompatibleExponentBelowBound
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.fullIntervalCensus
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.sourceStopScan
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.censusAfterExcessEmpty
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.stopScanRetainsCompleteFamily
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.compatiblePositiveExponents
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.originalCubicScan
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.originalIntervalScan
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.firstExcess
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.firstExcessStopsAbove
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.monotonicStopCertificate
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.originalStopIndex
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.originalStopCertificate
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.positivePowerSuccessor
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.originalMethodAlwaysCloses
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.checkedFractions
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.checkedCompatible
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.checkedStopCertificate
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.allFractionInputsRetainOriginalGuards
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.originalCheckedCubic
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.originalCheckedInterval
+#print axioms SFT.Physics.BoundaryGrowthDiscriminator.originalCheckedStop
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.Source
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.sourceName
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.Distance
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.distanceName
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.Response
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.responseName
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.Scale
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.scaleName
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.Candidates
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.candidatesName
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.Selection
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.selectionName
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.Stopping
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.stoppingName
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.Target
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.targetName
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.Record
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.recordName
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.Extension
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.extensionName
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.Candidate
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.sourceFields
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.candidateId
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.exactForm
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.survivorId
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.survives
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.criteriaDecision
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionReason
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.generationRule
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.grammarBoundary
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.candidates
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.survivor
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.generatedCardinality
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.candidatesComplete
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus0
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus0
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus1
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus1
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus2
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus2
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus3
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus3
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus4
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus4
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus5
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus5
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus6
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus6
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus7
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus7
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus8
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus8
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus9
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus9
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus10
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus10
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus11
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus11
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus12
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus12
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus13
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus13
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus14
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus14
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus15
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus15
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus16
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus16
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus17
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus17
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus18
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus18
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus19
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus19
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus20
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus20
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus21
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus21
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus22
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus22
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus23
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus23
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus24
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus24
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus25
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus25
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus26
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus26
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus27
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus27
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus28
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus28
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus29
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus29
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus30
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus30
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus31
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus31
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus32
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus32
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus33
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus33
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus34
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus34
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus35
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus35
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus36
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus36
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus37
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus37
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus38
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus38
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus39
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus39
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus40
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus40
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus41
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus41
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus42
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus42
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus43
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus43
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus44
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus44
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus45
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus45
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus46
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus46
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus47
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus47
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus48
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus48
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus49
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus49
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus50
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus50
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus51
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus51
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus52
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus52
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus53
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus53
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus54
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus54
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus55
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus55
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus56
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus56
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus57
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus57
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus58
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus58
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus59
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus59
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus60
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus60
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus61
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus61
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus62
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus62
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.decisionCensus63
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus63
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.sourceDecisionMatchesCriteria
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueCriteriaSurvivor
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.uniqueSurvivor
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.survivorAccepted
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.ExactCriteria
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.acceptanceIffExactCriteria
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.source_rejected_rejected
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.distance_rejected_rejected
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.response_rejected_rejected
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.scale_rejected_rejected
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.candidates_rejected_rejected
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.selection_rejected_rejected
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.stopping_rejected_rejected
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.target_rejected_rejected
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.record_rejected_rejected
+#print axioms SFT.Physics.BoundaryMeasurementGrammar.extension_rejected_rejected
+#print axioms SFT.Physics.BoundaryMeasurementWitnesses.Witness
+#print axioms SFT.Physics.BoundaryMeasurementWitnesses.check0
+#print axioms SFT.Physics.BoundaryMeasurementWitnesses.check0Passed
+#print axioms SFT.Physics.BoundaryMeasurementWitnesses.check1
+#print axioms SFT.Physics.BoundaryMeasurementWitnesses.check1Passed
+#print axioms SFT.Physics.BoundaryMeasurementWitnesses.check2
+#print axioms SFT.Physics.BoundaryMeasurementWitnesses.check2Passed
+#print axioms SFT.Physics.BoundaryMeasurementWitnesses.witnesses
+#print axioms SFT.Physics.BoundaryMeasurementWitnesses.allWitnessesPass
+#print axioms SFT.Physics.BoundaryMeasurementControls.exclusions
+#print axioms SFT.Physics.BoundaryMeasurementControls.closureValue
+#print axioms SFT.Physics.BoundaryMeasurementControls.falseCandidate
+#print axioms SFT.Physics.BoundaryMeasurementControls.survivorIds
+#print axioms SFT.Physics.BoundaryMeasurementControls.record
+#print axioms SFT.Physics.BoundaryMeasurementControls.falsePremise
+#print axioms SFT.Physics.BoundaryMeasurementControls.tamperedSource
+#print axioms SFT.Physics.BoundaryMeasurementControls.tamperedArtifact
+#print axioms SFT.Physics.BoundaryMeasurementControls.boundary
+#print axioms SFT.Physics.BoundaryMeasurementControls.falsePremisePassed
+#print axioms SFT.Physics.BoundaryMeasurementControls.boundaryPassed
+#print axioms SFT.Physics.BoundaryMeasurementControls.controlRecords
+#print axioms SFT.Physics.BoundaryMeasurementControls.resultData
+#print axioms SFT.Physics.BoundaryMeasurementControls.runControls
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.candidateRecord
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.completenessRecord
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.registrationData
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.registration
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.generatedCandidateData
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.censusData
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.census
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.decisionData
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.decision
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.decideCandidate
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.closureData
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.closure
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.nativeDecisionPreservesSurvival
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.nativeDecisionPreservesReason
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.registrationHasNoAxioms
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.registrationHasNoFreeParameters
+#print axioms SFT.Physics.BoundaryMeasurementEvidence.lookupDependsOnlyOnIdentifier

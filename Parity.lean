@@ -979,3 +979,15 @@ def main : IO Unit := do
 
   for c in SFT.Physics.GravityFieldSourceGrammar.candidates do
     IO.println ("GravityFieldSourceGrammar\t" ++ SFT.Physics.GravityFieldSourceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityFieldSourceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityFieldSourceGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityFieldSourceGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravityWaveGrammar.candidates do
+    IO.println ("GravityWaveGrammar\t" ++ SFT.Physics.GravityWaveGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityWaveGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityWaveGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityWaveGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravityHorizonGrammar.candidates do
+    IO.println ("GravityHorizonGrammar\t" ++ SFT.Physics.GravityHorizonGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityHorizonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityHorizonGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityHorizonGrammar.decisionReason c)
+
+  for c in SFT.Physics.CosmoRedshiftGrammar.candidates do
+    IO.println ("CosmoRedshiftGrammar\t" ++ SFT.Physics.CosmoRedshiftGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoRedshiftGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoRedshiftGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoRedshiftGrammar.decisionReason c)
+
+  for c in SFT.Physics.CosmoExpansionGrammar.candidates do
+    IO.println ("CosmoExpansionGrammar\t" ++ SFT.Physics.CosmoExpansionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CosmoExpansionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CosmoExpansionGrammar.exactForm c ++ "\t" ++ SFT.Physics.CosmoExpansionGrammar.decisionReason c)

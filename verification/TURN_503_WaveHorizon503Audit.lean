@@ -1,0 +1,29 @@
+import SFT.Physics.GravityWave
+import SFT.Physics.GravityHorizon
+#print axioms SFT.Physics.GravityWave.Carrier
+#print axioms SFT.Physics.GravityWave.energy
+#print axioms SFT.Physics.GravityWave.speed
+#print axioms SFT.Physics.GravityWave.completeSourceRecurs
+#print axioms SFT.Physics.GravityWave.everyNonnormalDirectionRetained
+#print axioms SFT.Physics.GravityWave.transverseRankTwo
+#print axioms SFT.Physics.GravityWave.polarizationNotLongitudinal
+#print axioms SFT.Physics.GravityWave.elementaryPropagation
+#print axioms SFT.Physics.GravityWave.exactLimitingRatio
+#print axioms SFT.Physics.GravityWave.positiveEnergy
+#print axioms SFT.Physics.GravityWave.detached
+#print axioms SFT.Physics.GravityWave.completeDetachedRecords
+#print axioms SFT.Physics.GravityWave.completeEnergyMomentumPolarization
+#print axioms SFT.Physics.GravityWave.noContinuingContact
+#print axioms SFT.Physics.GravityWave.causalSourcePath
+#print axioms SFT.Physics.GravityWave.completePathProvenance
+#print axioms SFT.Physics.GravityHorizon.exposed
+#print axioms SFT.Physics.GravityHorizon.confined
+#print axioms SFT.Physics.GravityHorizon.exactOperationalBoundary
+#print axioms SFT.Physics.GravityHorizon.confinedExactlyNoOutwardTrace
+#print axioms SFT.Physics.GravityHorizon.everyEventClassified
+#print axioms SFT.Physics.GravityHorizon.boundaryClassesDisjoint
+#print axioms SFT.Physics.GravityHorizon.everyOutwardContinuationRemainsConfined
+#print axioms SFT.Physics.GravityHorizon.noTransferWithoutGeneratedTrace
+#print axioms SFT.Physics.GravityHorizon.observerRetained
+#print axioms SFT.Physics.GravityHorizon.completeCensus
+#print axioms SFT.Physics.GravityHorizon.noEventOmitted

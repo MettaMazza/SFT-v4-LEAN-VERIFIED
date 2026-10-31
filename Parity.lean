@@ -766,3 +766,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ElectricPotentialGrammar.candidates do
     IO.println ("ElectricPotentialGrammar\t" ++ SFT.Physics.ElectricPotentialGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ElectricPotentialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ElectricPotentialGrammar.exactForm c ++ "\t" ++ SFT.Physics.ElectricPotentialGrammar.decisionReason c)
+
+  for c in SFT.Physics.HubbleGrammar.candidates do
+    IO.println ("HubbleGrammar\t" ++ SFT.Physics.HubbleGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HubbleGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HubbleGrammar.exactForm c ++ "\t" ++ SFT.Physics.HubbleGrammar.decisionReason c)

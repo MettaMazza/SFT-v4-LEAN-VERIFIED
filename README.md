@@ -21,15 +21,15 @@
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
 
-## Unified Constants milestone - published edition 0.2
+## Unified Constants milestone - corrected edition 0.2.1
 
 **Smithian Fold Theory: A Zero-Axiom, Zero-Free-Parameter Unified Constants Object - Lean 4 Formal Verification**
 
 The exact fine-structure ratio opens the cumulative SFT paper. This milestone connects 26 terminal readings across seven sectors through one rooted constants object, with all 4,096 original alternatives verified.
 
-**[Read the published paper](https://zenodo.org/records/23846751/files/SFT_PAPER.pdf)** · [Full text](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Review guide](publication/REVIEW_GUIDE.txt) · [Release index](publication/RELEASE_INDEX.json)
+**[Read the corrected paper](https://zenodo.org/records/23849998/files/SFT_PAPER.pdf)** · [Full text](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Review guide](publication/REVIEW_GUIDE.txt) · [Release index](publication/RELEASE_INDEX.json)
 
-**[Published on Zenodo: edition 0.2](https://doi.org/10.5281/zenodo.23846751).** The [previous published edition 0.1](https://doi.org/10.5281/zenodo.23782217) remains available. This edition includes the cumulative mathematical manuscript, timeline, source correspondence and full verification evidence. The next review milestone is 500 completed entries, then every 250; the full cumulative paper is updated and checked before each review pause.
+**[Corrected edition 0.2.1 is published on Zenodo](https://doi.org/10.5281/zenodo.23849998).** [Published edition 0.2](https://doi.org/10.5281/zenodo.23846751) remains available. The [previous published edition 0.1](https://doi.org/10.5281/zenodo.23782217) remains available. This edition includes the cumulative mathematical manuscript, timeline, source correspondence and full verification evidence. The next review milestone is 500 completed entries, then every 250; the full cumulative paper is updated and checked before each review pause.
 
 # One model. Every derivation. Machine-checked.
 
@@ -404,6 +404,6 @@ ManyBody complete: original full-program comparisons PASS; 159 completed entries
 
 MathematicalModelling complete: original full-program comparisons PASS; 160 completed entries.
 
-Unified Constants milestone complete: all seven original direct sector inputs and the final Unified Constants Object are complete. The eight-entry milestone integration passes. Edition 0.2 is published at https://doi.org/10.5281/zenodo.23846751; the verified scientific checkpoint is 59172eee89576735796ec396f85e8527f0744130.
+Unified Constants milestone complete: all seven original direct sector inputs and the final Unified Constants Object are complete. The eight-entry milestone integration passes. Corrected edition 0.2.1 makes grammar derivation, completeness and closure explicit; the verified scientific checkpoint is 59172eee89576735796ec396f85e8527f0744130.
 
 </details>

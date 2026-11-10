@@ -1105,3 +1105,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.FlowConservationGrammar.candidates do
     IO.println ("FlowConservationGrammar\t" ++ SFT.Physics.FlowConservationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FlowConservationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FlowConservationGrammar.exactForm c ++ "\t" ++ SFT.Physics.FlowConservationGrammar.decisionReason c)
+
+  for c in SFT.Physics.InviscidGrammar.candidates do
+    IO.println ("InviscidGrammar\t" ++ SFT.Physics.InviscidGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.InviscidGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.InviscidGrammar.exactForm c ++ "\t" ++ SFT.Physics.InviscidGrammar.decisionReason c)
+
+  for c in SFT.Physics.ViscosityGrammar.candidates do
+    IO.println ("ViscosityGrammar\t" ++ SFT.Physics.ViscosityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ViscosityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ViscosityGrammar.exactForm c ++ "\t" ++ SFT.Physics.ViscosityGrammar.decisionReason c)

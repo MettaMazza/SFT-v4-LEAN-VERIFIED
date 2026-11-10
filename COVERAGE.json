@@ -19347,9 +19347,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-FLUID-INVISCID-001-952a9eb1da2d4670.json",
       "statement": "Inviscid flow is the boundary where adjacent cells exchange normal pressure carriers but retain their tangential motion labels without intercellular transfer.",
       "title": "Inviscid flow correspondence",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/CollectiveInviscid.lean",
+        "SFT/Physics/InviscidGrammar.lean",
+        "SFT/Physics/InviscidEvidence.lean",
+        "SFT/Physics/InviscidExperiment.lean",
+        "SFT/Physics/InviscidValidation.lean",
+        "SFT/Physics/InviscidValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "f12c28ec6968292c97073f76cacd2329b843460f1e31bc9bb6e35e5af4e28a38",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -19391,7 +19398,10 @@
         "statement": "Inviscid flow is the boundary where adjacent cells exchange normal pressure carriers but retain their tangential motion labels without intercellular transfer.",
         "status": "empirically_tested",
         "title": "Inviscid flow correspondence"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Exhaustive normal/tangential channel classification; normal-only admission equivalence, no tangential transfer, adjacent normal exchange, complete carrier ledger and exact normal-pressure update retaining tangential motion/source identity; original grammar, controls and full empirical validator.",
+      "completion_evidence": "verification/TURN_539_INVISCID_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -19403,9 +19413,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-FLUID-VISCOSITY-001-070b3ca4b4303c21.json",
       "statement": "Viscosity is the exact tangential momentum transferred between adjacent velocity-labelled cell classes per interface support and recurrence difference.",
       "title": "Viscous momentum transport",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/CollectiveViscosity.lean",
+        "SFT/Physics/ViscosityGrammar.lean",
+        "SFT/Physics/ViscosityEvidence.lean",
+        "SFT/Physics/ViscosityExperiment.lean",
+        "SFT/Physics/ViscosityValidation.lean",
+        "SFT/Physics/ViscosityValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "968a96e8edc68745e150658831df56525b81967ae8e0f860c48c408944f1e30c",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -19447,7 +19464,10 @@
         "statement": "Viscosity is the exact tangential momentum transferred between adjacent velocity-labelled cell classes per interface support and recurrence difference.",
         "status": "empirically_tested",
         "title": "Viscous momentum transport"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Exact adjacent tangential momentum transfer on complete interface support and velocity-labelled recurrence records with a common clock; derived support and recurrence ratios, exact oriented response quotient, absent-difference boundary, paired transfer carrier and unique coefficient; original full grammar and validators.",
+      "completion_evidence": "verification/TURN_540_VISCOSITY_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -193454,13 +193474,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-10T19:21:40.117919+00:00",
+  "updated_at": "2026-11-10T19:35:26.653462+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2446,
-    "fully_reconstructed_claims": 335,
-    "axiom_free_exported_results": 18769,
-    "axiom_free_audited_definitions_and_theorems": 41594
+    "pending": 2444,
+    "fully_reconstructed_claims": 337,
+    "axiom_free_exported_results": 18844,
+    "axiom_free_audited_definitions_and_theorems": 41821
   }
 }

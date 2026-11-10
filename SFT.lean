@@ -3643,3 +3643,15 @@ import SFT.Physics.FlowConservationEvidence
 import SFT.Physics.FlowConservationExperiment
 import SFT.Physics.FlowConservationValidation
 import SFT.Physics.FlowConservationValidationProofs
+import SFT.Physics.CollectiveInviscid
+import SFT.Physics.InviscidGrammar
+import SFT.Physics.InviscidEvidence
+import SFT.Physics.InviscidExperiment
+import SFT.Physics.InviscidValidation
+import SFT.Physics.InviscidValidationProofs
+import SFT.Physics.CollectiveViscosity
+import SFT.Physics.ViscosityGrammar
+import SFT.Physics.ViscosityEvidence
+import SFT.Physics.ViscosityExperiment
+import SFT.Physics.ViscosityValidation
+import SFT.Physics.ViscosityValidationProofs

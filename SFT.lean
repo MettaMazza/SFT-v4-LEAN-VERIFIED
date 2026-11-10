@@ -3681,3 +3681,15 @@ import SFT.Physics.PlasmaMHDEvidence
 import SFT.Physics.PlasmaMHDExperiment
 import SFT.Physics.PlasmaMHDValidation
 import SFT.Physics.PlasmaMHDValidationProofs
+import SFT.Physics.CollectiveLattice
+import SFT.Physics.LatticeGrammar
+import SFT.Physics.LatticeEvidence
+import SFT.Physics.LatticeExperiment
+import SFT.Physics.LatticeValidation
+import SFT.Physics.LatticeValidationProofs
+import SFT.Physics.CollectiveBand
+import SFT.Physics.BandGrammar
+import SFT.Physics.BandEvidence
+import SFT.Physics.BandExperiment
+import SFT.Physics.BandValidation
+import SFT.Physics.BandValidationProofs

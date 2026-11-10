@@ -19745,9 +19745,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-CONDENSED-LATTICE-001-9e62f34c6fca4826.json",
       "statement": "A lattice is a finite adjacency network whose local constituent word and neighbor relation recur under generated translations; excitation is a source-bound departure propagated through that recurrence.",
       "title": "Lattice order and excitation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/CollectiveLattice.lean",
+        "SFT/Physics/LatticeGrammar.lean",
+        "SFT/Physics/LatticeEvidence.lean",
+        "SFT/Physics/LatticeExperiment.lean",
+        "SFT/Physics/LatticeValidation.lean",
+        "SFT/Physics/LatticeValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "fac101c5268b27c45062c81a7cc0af96fd9347e626dd12d7a12011513e9eefe9",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -19789,7 +19796,10 @@
         "statement": "A lattice is a finite adjacency network whose local constituent word and neighbor relation recur under generated translations; excitation is a source-bound departure propagated through that recurrence.",
         "status": "empirically_tested",
         "title": "Lattice order and excitation"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete finite generated cell network with constituent-word and neighbor recurrence under generated translations; arbitrary finite iteration preserves support, words and both directions of adjacency; complete retained translation trace and source-bound propagated excitation; original grammar, controls and empirical validator.",
+      "completion_evidence": "verification/TURN_545_LATTICE_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -19801,9 +19811,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-CONDENSED-BAND-001-2c38da1478ea6ad1.json",
       "statement": "Band support is the complete set of phase-compatible constituent recurrences on a translation-recurrent network; gaps are observation classes with no compatible generated path.",
       "title": "Band support and transport",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/CollectiveBand.lean",
+        "SFT/Physics/BandGrammar.lean",
+        "SFT/Physics/BandEvidence.lean",
+        "SFT/Physics/BandExperiment.lean",
+        "SFT/Physics/BandValidation.lean",
+        "SFT/Physics/BandValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "7a38c794de5be47848592980e46e0a408fe1c8e95b5ebe864d19fae3f372a030",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -19845,7 +19862,10 @@
         "statement": "Band support is the complete set of phase-compatible constituent recurrences on a translation-recurrent network; gaps are observation classes with no compatible generated path.",
         "status": "empirically_tested",
         "title": "Band support and transport"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete generated finite word/path census through the declared lattice boundary, exact graph-valid and phase-return support, all compatible paths included, observation-class gaps iff no compatible generated path, full phase-cycle admission and no outside-boundary claim; original grammar, controls and validator.",
+      "completion_evidence": "verification/TURN_546_BAND_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -193516,13 +193536,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-10T20:02:48.970945+00:00",
+  "updated_at": "2026-11-10T20:13:34.222088+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2440,
-    "fully_reconstructed_claims": 341,
-    "axiom_free_exported_results": 19000,
-    "axiom_free_audited_definitions_and_theorems": 42293
+    "pending": 2438,
+    "fully_reconstructed_claims": 343,
+    "axiom_free_exported_results": 19074,
+    "axiom_free_audited_definitions_and_theorems": 42518
   }
 }

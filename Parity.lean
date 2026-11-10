@@ -1123,3 +1123,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.PlasmaMHDGrammar.candidates do
     IO.println ("PlasmaMHDGrammar\t" ++ SFT.Physics.PlasmaMHDGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PlasmaMHDGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PlasmaMHDGrammar.exactForm c ++ "\t" ++ SFT.Physics.PlasmaMHDGrammar.decisionReason c)
+
+  for c in SFT.Physics.LatticeGrammar.candidates do
+    IO.println ("LatticeGrammar\t" ++ SFT.Physics.LatticeGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.LatticeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.LatticeGrammar.exactForm c ++ "\t" ++ SFT.Physics.LatticeGrammar.decisionReason c)
+
+  for c in SFT.Physics.BandGrammar.candidates do
+    IO.println ("BandGrammar\t" ++ SFT.Physics.BandGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.BandGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.BandGrammar.exactForm c ++ "\t" ++ SFT.Physics.BandGrammar.decisionReason c)

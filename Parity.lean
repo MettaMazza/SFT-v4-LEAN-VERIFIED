@@ -1120,3 +1120,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.PlasmaOscillationGrammar.candidates do
     IO.println ("PlasmaOscillationGrammar\t" ++ SFT.Physics.PlasmaOscillationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PlasmaOscillationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PlasmaOscillationGrammar.exactForm c ++ "\t" ++ SFT.Physics.PlasmaOscillationGrammar.decisionReason c)
+
+  for c in SFT.Physics.PlasmaMHDGrammar.candidates do
+    IO.println ("PlasmaMHDGrammar\t" ++ SFT.Physics.PlasmaMHDGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PlasmaMHDGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PlasmaMHDGrammar.exactForm c ++ "\t" ++ SFT.Physics.PlasmaMHDGrammar.decisionReason c)

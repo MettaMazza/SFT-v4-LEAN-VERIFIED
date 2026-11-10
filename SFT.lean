@@ -3675,3 +3675,9 @@ import SFT.Physics.PlasmaOscillationEvidence
 import SFT.Physics.PlasmaOscillationExperiment
 import SFT.Physics.PlasmaOscillationValidation
 import SFT.Physics.PlasmaOscillationValidationProofs
+import SFT.Physics.CollectiveMagnetofluid
+import SFT.Physics.PlasmaMHDGrammar
+import SFT.Physics.PlasmaMHDEvidence
+import SFT.Physics.PlasmaMHDExperiment
+import SFT.Physics.PlasmaMHDValidation
+import SFT.Physics.PlasmaMHDValidationProofs

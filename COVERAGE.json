@@ -19679,9 +19679,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-PLASMA-MHD-001-6cca90cf9ab0c0a7.json",
       "statement": "Magnetofluid behavior is the compositional closure of conserved fluid flow with oriented charge transport and magnetic source-response on the same generated cell network.",
       "title": "Magnetofluid composition",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/CollectiveMagnetofluid.lean",
+        "SFT/Physics/PlasmaMHDGrammar.lean",
+        "SFT/Physics/PlasmaMHDEvidence.lean",
+        "SFT/Physics/PlasmaMHDExperiment.lean",
+        "SFT/Physics/PlasmaMHDValidation.lean",
+        "SFT/Physics/PlasmaMHDValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "bb666119204baf8dedd82d4db0e212e09be622b7bfe345d32c75d28b75806bab",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -19723,7 +19730,10 @@
         "statement": "Magnetofluid behavior is the compositional closure of conserved fluid flow with oriented charge transport and magnetic source-response on the same generated cell network.",
         "status": "empirically_tested",
         "title": "Magnetofluid composition"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Joint fluid and held-charge carrier process on one generated cell network; complete transfer correspondence in both directions, preserved source/action records, common magnetic charge, projected fluid/charge conservation and exact shared boundary balance; original grammar, controls and validator.",
+      "completion_evidence": "verification/TURN_544_PLASMAMHD_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -193506,13 +193516,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-10T19:57:10.522977+00:00",
+  "updated_at": "2026-11-10T20:02:48.970945+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2441,
-    "fully_reconstructed_claims": 340,
-    "axiom_free_exported_results": 18962,
-    "axiom_free_audited_definitions_and_theorems": 42182
+    "pending": 2440,
+    "fully_reconstructed_claims": 341,
+    "axiom_free_exported_results": 19000,
+    "axiom_free_audited_definitions_and_theorems": 42293
   }
 }

@@ -1057,3 +1057,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.PhaseEquilibriumGrammar.candidates do
     IO.println ("PhaseEquilibriumGrammar\t" ++ SFT.Physics.PhaseEquilibriumGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PhaseEquilibriumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PhaseEquilibriumGrammar.exactForm c ++ "\t" ++ SFT.Physics.PhaseEquilibriumGrammar.decisionReason c)
+
+  for c in SFT.Physics.KineticTransportGrammar.candidates do
+    IO.println ("KineticTransportGrammar\t" ++ SFT.Physics.KineticTransportGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.KineticTransportGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.KineticTransportGrammar.exactForm c ++ "\t" ++ SFT.Physics.KineticTransportGrammar.decisionReason c)
+
+  for c in SFT.Physics.FluctuationGrammar.candidates do
+    IO.println ("FluctuationGrammar\t" ++ SFT.Physics.FluctuationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FluctuationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FluctuationGrammar.exactForm c ++ "\t" ++ SFT.Physics.FluctuationGrammar.decisionReason c)
+
+  for c in SFT.Physics.IrreversibilityGrammar.candidates do
+    IO.println ("IrreversibilityGrammar\t" ++ SFT.Physics.IrreversibilityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.IrreversibilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.IrreversibilityGrammar.exactForm c ++ "\t" ++ SFT.Physics.IrreversibilityGrammar.decisionReason c)

@@ -15429,9 +15429,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-KINETIC-TRANSPORT-001-5beda8e6f719d7fb.json",
       "statement": "Kinetic transport is the exact propagation of held motion and energy labels between generated cells; collision mixing is their closed local permutation subject to conserved transfer records.",
       "title": "Kinetic transport and collision mixing",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoKineticTransport.lean",
+        "SFT/Physics/KineticTransportGrammar.lean",
+        "SFT/Physics/KineticTransportEvidence.lean",
+        "SFT/Physics/KineticTransportExperiment.lean",
+        "SFT/Physics/KineticTransportValidation.lean",
+        "SFT/Physics/KineticTransportValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "52e90afa29cf166922bf13e985b52aebdfbf6a588225f2cf5241d8e82bb9ea2f",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -15473,7 +15480,10 @@
         "statement": "Kinetic transport is the exact propagation of held motion and energy labels between generated cells; collision mixing is their closed local permutation subject to conserved transfer records.",
         "status": "empirically_tested",
         "title": "Kinetic transport and collision mixing"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Adjacent finite carrier propagation with complete transfer ledger; local collision permutation preserves every complete record and occurrence count; original exhaustive generated permutations and closed-observation provenance; full grammar and empirical checks.",
+      "completion_evidence": "verification/TURN_530_KINETICTRANSPORT_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -15485,9 +15495,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-FLUCTUATION-001-30e0865edeacf61b.json",
       "statement": "A thermal fluctuation is a finite departure of an observed fibre count or transfer count from its recurrence class; complete deterministic support fixes every departure and return path.",
       "title": "Finite fluctuation and recurrence",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoFluctuation.lean",
+        "SFT/Physics/FluctuationGrammar.lean",
+        "SFT/Physics/FluctuationEvidence.lean",
+        "SFT/Physics/FluctuationExperiment.lean",
+        "SFT/Physics/FluctuationValidation.lean",
+        "SFT/Physics/FluctuationValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "2b0d9003a82fc4f04674c459d8b43303999099a5039431f1ebaef606553247d2",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -15529,7 +15546,10 @@
         "statement": "A thermal fluctuation is a finite departure of an observed fibre count or transfer count from its recurrence class; complete deterministic support fixes every departure and return path.",
         "status": "empirically_tested",
         "title": "Finite fluctuation and recurrence"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Deterministic finite Fold trace and observed fibre/transfer counts, complete row retention, exact source-conditioned census weight, recurrence restores counts and weight and closes the departure; native first-return proof, original grammar and validator.",
+      "completion_evidence": "verification/TURN_531_FLUCTUATION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -15541,9 +15561,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-IRREVERSIBILITY-001-2097ca97413226b1.json",
       "statement": "Macroscopic irreversibility occurs when observation merges distinct microscopic histories; the complete Fold evolution remains reversible exactly when their fibre labels are retained.",
       "title": "Macroscopic irreversibility with retained microtrace",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoIrreversibility.lean",
+        "SFT/Physics/IrreversibilityGrammar.lean",
+        "SFT/Physics/IrreversibilityEvidence.lean",
+        "SFT/Physics/IrreversibilityExperiment.lean",
+        "SFT/Physics/IrreversibilityValidation.lean",
+        "SFT/Physics/IrreversibilityValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "c2cd734456d47f8b6025d9a0ef52a0843ec6addbb01ca6ff0f1a76b56d76c8e1",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -15585,7 +15612,10 @@
         "statement": "Macroscopic irreversibility occurs when observation merges distinct microscopic histories; the complete Fold evolution remains reversible exactly when their fibre labels are retained.",
         "status": "empirically_tested",
         "title": "Macroscopic irreversibility with retained microtrace"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Merged microscopic histories cannot both be decoded from macro projection; retained labels must separate merged histories; complete retained record explicitly reconstructs the predecessor; original finite injectivity/singleton-fibre criterion and reverse-record proofs, grammar and validator.",
+      "completion_evidence": "verification/TURN_532_IRREVERSIBILITY_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -193317,13 +193347,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-10T18:25:03.810255+00:00",
+  "updated_at": "2026-11-10T18:35:06.796224+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2462,
-    "fully_reconstructed_claims": 319,
-    "axiom_free_exported_results": 18292,
-    "axiom_free_audited_definitions_and_theorems": 40009
+    "pending": 2459,
+    "fully_reconstructed_claims": 322,
+    "axiom_free_exported_results": 18409,
+    "axiom_free_audited_definitions_and_theorems": 40357
   }
 }

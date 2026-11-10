@@ -14899,9 +14899,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-HEAT-WORK-001-de7c30a2d5ab28ca.json",
       "statement": "Heat is energy transfer whose microscopic carrier label is closed by the receiving macro-observation; work is energy transfer whose organized source-to-response label remains observable.",
       "title": "Heat and work as distinct energy-transfer traces",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoHeatWork.lean",
+        "SFT/Physics/ThermoHeatWorkClasses.lean",
+        "SFT/Physics/HeatWorkGrammar.lean",
+        "SFT/Physics/HeatWorkEvidence.lean",
+        "SFT/Physics/HeatWorkExperiment.lean",
+        "SFT/Physics/HeatWorkValidation.lean",
+        "SFT/Physics/HeatWorkValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "00eaf89c9a58416f0a1a8559013f4c6d5170ca71a05e2f516497e9298d7b98df",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -14943,7 +14951,10 @@
         "statement": "Heat is energy transfer whose microscopic carrier label is closed by the receiving macro-observation; work is energy transfer whose organized source-to-response label remains observable.",
         "status": "empirically_tested",
         "title": "Heat and work as distinct energy-transfer traces"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete closed/retained receiving-observation distinction for original energy-transfer labels; exact classification, disjointness, receiver-fibre closure, retained distinguishability, no reconstruction of a closed distinction and full energy provenance.",
+      "completion_evidence": "verification/TURN_522_HEATWORK_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -14955,9 +14966,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-FIRST-LAW-001-7362f8e65ebb689e.json",
       "statement": "For a closed support, every change of retained internal energy is forced to pair exactly with boundary-crossing heat and work transfer records.",
       "title": "Closed energy accounting",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoFirstLaw.lean",
+        "SFT/Physics/ThermoFirstLawBalance.lean",
+        "SFT/Physics/FirstLawGrammar.lean",
+        "SFT/Physics/FirstLawEvidence.lean",
+        "SFT/Physics/FirstLawExperiment.lean",
+        "SFT/Physics/FirstLawValidation.lean",
+        "SFT/Physics/FirstLawValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "551e006f503fa94ce17e185e516c8c2a6363a8b189ecf303e7490fadd35383cb",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -14999,7 +15018,10 @@
         "statement": "For a closed support, every change of retained internal energy is forced to pair exactly with boundary-crossing heat and work transfer records.",
         "status": "empirically_tested",
         "title": "Closed energy accounting"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete per-transfer named-boundary accounting: incoming energy, outgoing reversed orientation, internal paired cancellation and no external contribution; constructive induction equates the full internal change ledger with the ordered boundary-crossing ledger, preserving every original carrier and observation independence.",
+      "completion_evidence": "verification/TURN_523_FIRSTLAW_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -15011,9 +15033,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-ENTROPY-001-3ff19937b6ea84cc.json",
       "statement": "Thermodynamic entropy is forced as the exact information required to distinguish the generated microscopic predecessors merged by a macro-observation, conditioned on every retained macro-label.",
       "title": "Thermodynamic entropy from unresolved support",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoEntropy.lean",
+        "SFT/Physics/EntropyGrammar.lean",
+        "SFT/Physics/EntropyEvidence.lean",
+        "SFT/Physics/EntropyExperiment.lean",
+        "SFT/Physics/EntropyValidation.lean",
+        "SFT/Physics/EntropyValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "a5c049b5248c37ebdd875d76686eb28d4c1344d4f9c38975398e0f900ef763bd",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -15055,7 +15084,10 @@
         "statement": "Thermodynamic entropy is forced as the exact information required to distinguish the generated microscopic predecessors merged by a macro-observation, conditioned on every retained macro-label.",
         "status": "empirically_tested",
         "title": "Thermodynamic entropy from unresolved support"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Exact entropy conditioned on the retained macro-observation fibre: all microscopic predecessors, complete unresolved-pair ledger, exact positive class weight and retained observation label; certainty iff singleton; original One/successor proofs, full grammar, controls and blind validator.",
+      "completion_evidence": "verification/TURN_524_ENTROPY_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -193235,13 +193267,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-10T17:26:20.368262+00:00",
+  "updated_at": "2026-11-10T18:02:21.084866+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2470,
-    "fully_reconstructed_claims": 311,
-    "axiom_free_exported_results": 17982,
-    "axiom_free_audited_definitions_and_theorems": 39087
+    "pending": 2467,
+    "fully_reconstructed_claims": 314,
+    "axiom_free_exported_results": 18097,
+    "axiom_free_audited_definitions_and_theorems": 39435
   }
 }

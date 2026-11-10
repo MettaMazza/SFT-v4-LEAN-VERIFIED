@@ -1033,3 +1033,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.EquilibriumGrammar.candidates do
     IO.println ("EquilibriumGrammar\t" ++ SFT.Physics.EquilibriumGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.EquilibriumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.EquilibriumGrammar.exactForm c ++ "\t" ++ SFT.Physics.EquilibriumGrammar.decisionReason c)
+
+  for c in SFT.Physics.HeatWorkGrammar.candidates do
+    IO.println ("HeatWorkGrammar\t" ++ SFT.Physics.HeatWorkGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HeatWorkGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HeatWorkGrammar.exactForm c ++ "\t" ++ SFT.Physics.HeatWorkGrammar.decisionReason c)
+
+  for c in SFT.Physics.FirstLawGrammar.candidates do
+    IO.println ("FirstLawGrammar\t" ++ SFT.Physics.FirstLawGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FirstLawGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FirstLawGrammar.exactForm c ++ "\t" ++ SFT.Physics.FirstLawGrammar.decisionReason c)
+
+  for c in SFT.Physics.EntropyGrammar.candidates do
+    IO.println ("EntropyGrammar\t" ++ SFT.Physics.EntropyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.EntropyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.EntropyGrammar.exactForm c ++ "\t" ++ SFT.Physics.EntropyGrammar.decisionReason c)

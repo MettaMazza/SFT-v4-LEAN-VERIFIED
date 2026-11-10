@@ -15614,4 +15614,13 @@ A(b,v)=\operatorname{ok}(b)=\operatorname{ok}(r).
 \]
 Constructor injectivity gives a=r and b=r, hence a=b. Distinct returning complete carriers therefore cannot merge into one result. These are consequences of the retained recurrence equality, independent of path length and of any particular scalar observation.
 
+The same result extends through every finite sequence of admitted recurrence paths. Define the execution by
+\[
+H(s,[])=\operatorname{ok}(s),\qquad
+H(s,w::W)=\begin{cases}H(s',W)&A(s,w)=\operatorname{ok}(s'),\\
+\operatorname{error}(e)&A(s,w)=\operatorname{error}(e).
+\end{cases}
+\]
+If every member of W belongs to the complete band support for the retained state s, then H(s,W)=ok(s). The empty sequence is immediate. At the successor, bandExactly gives A(s,w)=ok(s); substitution reduces the execution to H(s,W), and the induction hypothesis closes the step. Consequently a successful resulting carrier r satisfies r=s and R(r)=R(s) for every reading R. This is induction over arbitrary finite recurrence histories, with the existing phase action executed at every step. Native declarations: runRecurrences, completeRecurrenceHistoryReturns and completeRecurrenceHistoryPreservesReading. The latter two are the corresponding return and reading-preservation theorems, with empty axiom dependencies. Evidence: verification/TURN_549_superconductivity549_recurrence_report.json. Timeline: Turn 549.
+
 Original sources: sft/physics/collective_matter_laws.py, BAND and SUPERCONDUCTIVITY; sft/mathematics/dyn_001_012_laws_v1.py, DEF["003"] exact return and DEF["011"] predecessor merging, at pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native verification: SFT/Physics/SuperconductivityRecurrenceProofs.lean, returningCarrierPreservesEveryReading, returningCarriersCannotMerge and accessibleRecurrencePreservesEveryReading; the latter uses CollectiveBand.bandExactly directly. The three declarations have empty Lean axiom dependencies. Evidence: verification/TURN_548_superconductivity548_recurrence_report.json and its axiom log. Timeline: Turn 548 recurrence connection.

@@ -1,0 +1,7 @@
+import SFT.Physics.SuperconductivityRecurrenceProofs
+#print axioms SFT.Physics.SuperconductivityRecurrenceProofs.returningCarrierPreservesEveryReading
+#print axioms SFT.Physics.SuperconductivityRecurrenceProofs.returningCarriersCannotMerge
+#print axioms SFT.Physics.SuperconductivityRecurrenceProofs.accessibleRecurrencePreservesEveryReading
+#print axioms SFT.Physics.SuperconductivityRecurrenceProofs.runRecurrences
+#print axioms SFT.Physics.SuperconductivityRecurrenceProofs.completeRecurrenceHistoryReturns
+#print axioms SFT.Physics.SuperconductivityRecurrenceProofs.completeRecurrenceHistoryPreservesReading

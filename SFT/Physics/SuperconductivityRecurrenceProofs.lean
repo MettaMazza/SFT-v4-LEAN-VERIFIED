@@ -32,4 +32,36 @@ theorem accessibleRecurrencePreservesEveryReading {Reading : Type}
  returningCarrierPreservesEveryReading _ _ _ reading
  (((CollectiveBand.bandExactly boundary path).mp held).2.2) executed
 
+-- Execute the retained phase action at each successive recurrence.
+def runRecurrences (state : State) : List (List String) → Except String State
+ | [] => .ok state
+ | path :: rest => match phaseAction state path with
+   | .error message => .error message
+   | .ok next => runRecurrences next rest
+
+theorem completeRecurrenceHistoryReturns (boundary : CollectiveBand.Boundary)
+ (paths : List (List String))
+ (allHeld : ∀ path, path ∈ paths → path ∈ CollectiveBand.support boundary) :
+ runRecurrences boundary.preparation.state paths = .ok boundary.preparation.state := by
+ induction paths with
+ | nil => rfl
+ | cons path rest ih =>
+   have held := allHeld path (.head _)
+   have returns := ((CollectiveBand.bandExactly boundary path).mp held).2.2
+   change (match phaseAction boundary.preparation.state path with
+     | .error message => .error message
+     | .ok next => runRecurrences next rest) = (Except.ok boundary.preparation.state : Except String State)
+   rw [returns]
+   exact ih (fun item member => allHeld item (.tail _ member))
+
+theorem completeRecurrenceHistoryPreservesReading {Reading : Type}
+ (boundary : CollectiveBand.Boundary) (paths : List (List String))
+ (allHeld : ∀ path, path ∈ paths → path ∈ CollectiveBand.support boundary)
+ (result : State) (reading : State → Reading)
+ (executed : runRecurrences boundary.preparation.state paths = .ok result) :
+ reading result = reading boundary.preparation.state := by
+ have same : result = boundary.preparation.state :=
+   Except.ok.inj (executed.symm.trans (completeRecurrenceHistoryReturns boundary paths allHeld))
+ exact congrArg reading same
+
 end SFT.Physics.SuperconductivityRecurrenceProofs

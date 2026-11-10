@@ -3506,3 +3506,17 @@ import SFT.Physics.MicroMacroEvidence
 import SFT.Physics.MicroMacroExperiment
 import SFT.Physics.MicroMacroValidation
 import SFT.Physics.MicroMacroValidationProofs
+import SFT.Physics.ThermoTemperature
+import SFT.Physics.ThermoTemperatureOrder
+import SFT.Physics.TemperatureGrammar
+import SFT.Physics.TemperatureEvidence
+import SFT.Physics.TemperatureExperiment
+import SFT.Physics.TemperatureValidation
+import SFT.Physics.TemperatureValidationProofs
+import SFT.Physics.ThermoEquilibrium
+import SFT.Physics.ThermoEquilibriumExchange
+import SFT.Physics.EquilibriumGrammar
+import SFT.Physics.EquilibriumEvidence
+import SFT.Physics.EquilibriumExperiment
+import SFT.Physics.EquilibriumValidation
+import SFT.Physics.EquilibriumValidationProofs

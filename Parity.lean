@@ -1129,3 +1129,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.BandGrammar.candidates do
     IO.println ("BandGrammar\t" ++ SFT.Physics.BandGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.BandGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.BandGrammar.exactForm c ++ "\t" ++ SFT.Physics.BandGrammar.decisionReason c)
+
+  for c in SFT.Physics.PhaseOrderGrammar.candidates do
+    IO.println ("PhaseOrderGrammar\t" ++ SFT.Physics.PhaseOrderGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PhaseOrderGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PhaseOrderGrammar.exactForm c ++ "\t" ++ SFT.Physics.PhaseOrderGrammar.decisionReason c)

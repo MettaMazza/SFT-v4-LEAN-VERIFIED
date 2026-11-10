@@ -3693,3 +3693,9 @@ import SFT.Physics.BandEvidence
 import SFT.Physics.BandExperiment
 import SFT.Physics.BandValidation
 import SFT.Physics.BandValidationProofs
+import SFT.Physics.CollectivePhaseOrder
+import SFT.Physics.PhaseOrderGrammar
+import SFT.Physics.PhaseOrderEvidence
+import SFT.Physics.PhaseOrderExperiment
+import SFT.Physics.PhaseOrderValidation
+import SFT.Physics.PhaseOrderValidationProofs

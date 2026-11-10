@@ -3500,3 +3500,9 @@ import SFT.Physics.UnifiedConstantsCensus127
 import SFT.Physics.UnifiedConstantsGrammar
 import SFT.Physics.UnifiedConstantsControls
 import SFT.Physics.UnifiedConstantsEvidence
+import SFT.Physics.ThermoMicroMacro
+import SFT.Physics.MicroMacroGrammar
+import SFT.Physics.MicroMacroEvidence
+import SFT.Physics.MicroMacroExperiment
+import SFT.Physics.MicroMacroValidation
+import SFT.Physics.MicroMacroValidationProofs

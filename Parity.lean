@@ -1024,3 +1024,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.UnifiedConstantsGrammar.candidates do
     IO.println ("UnifiedConstantsGrammar\t" ++ SFT.Physics.UnifiedConstantsGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.UnifiedConstantsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.UnifiedConstantsGrammar.exactForm c ++ "\t" ++ SFT.Physics.UnifiedConstantsGrammar.decisionReason c)
+
+  for c in SFT.Physics.MicroMacroGrammar.candidates do
+    IO.println ("MicroMacroGrammar\t" ++ SFT.Physics.MicroMacroGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MicroMacroGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MicroMacroGrammar.exactForm c ++ "\t" ++ SFT.Physics.MicroMacroGrammar.decisionReason c)

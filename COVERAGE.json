@@ -14700,9 +14700,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-MICRO-MACRO-001-8b653cd127559fdf.json",
       "statement": "A thermodynamic macrostate is forced as one exact observation class of a completely generated finite microstate support; its unresolved multiplicity is retained as the class fibre.",
       "title": "Microstate-to-macrostate observation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoMicroMacro.lean",
+        "SFT/Physics/MicroMacroGrammar.lean",
+        "SFT/Physics/MicroMacroEvidence.lean",
+        "SFT/Physics/MicroMacroExperiment.lean",
+        "SFT/Physics/MicroMacroValidation.lean",
+        "SFT/Physics/MicroMacroValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "8bdcd94169e80f2d99a28b35d8b38f9f3fb4f577636475410e87f82b9ac7bb17",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -14743,7 +14750,10 @@
         "statement": "A thermodynamic macrostate is forced as one exact observation class of a completely generated finite microstate support; its unresolved multiplicity is retained as the class fibre.",
         "status": "empirically_tested",
         "title": "Microstate-to-macrostate observation"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Exact total disjoint observation partition over complete finite microstate support; each predecessor belongs to one unique retained fibre, with exact multiplicity, unresolved-pair provenance, One/successor closure and closed source/destination accounting. Reuses the existing EntropyPartition, EntropyLedger, EntropyExtension and MechanicalConservation proofs.",
+      "completion_evidence": "verification/TURN_519_MICROMACRO_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -193203,13 +193213,13 @@
       }
     }
   ],
-  "updated_at": "2026-10-31T20:14:16.075148+00:00",
+  "updated_at": "2026-11-10T16:57:35.201296+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2473,
-    "fully_reconstructed_claims": 308,
-    "axiom_free_exported_results": 17849,
-    "axiom_free_audited_definitions_and_theorems": 38713
+    "pending": 2472,
+    "fully_reconstructed_claims": 309,
+    "axiom_free_exported_results": 17884,
+    "axiom_free_audited_definitions_and_theorems": 38822
   }
 }

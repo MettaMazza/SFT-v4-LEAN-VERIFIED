@@ -1,0 +1,58 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "IAPWS-RELEASES-2026-07-23"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:52edfdcdf6f412f711deb5bfa824797edf0b8740b92426fa7e9fba3c2f94279f",
+  "falsification_condition": "The thermal law is falsified if any committed external row lacks the sealed finite-state, transfer or ordering structure, if a row is omitted, or if the tampered row is accepted.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:d2cf21b388b4be7a199c2e51e029b05c24f0dc1c18e7650c48411854b3adb77a",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:c6d7f275d3da5cccf23f01e514c579e137d32b03647c875df087be92ea5b78a0",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-PHYS-THERMO-MICRO-MACRO-001-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:8cdad3fd45370485db9e697aefdd7cdb28083d5ad2e6b11190089541040b196c",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:1e445b6abe1a4fc35ef730dfbceca31d2488bcc467768dc94333b6a17eba2885",
+    "prediction_seal_hash": "sha256:7b4ae789d5743863f93f01fb4c1b2e2c761cfff702734dcbd87bd4035938e68b",
+    "program_hash": "sha256:f916a391c9554d028970d157f0681a7eb1a4f83aee8091f49a80b357489da166",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:a1a9cfad23844844e1767f10acbbdd00b8faf263b25c76aef06620963a184a5c",
+    "target_material_present": false,
+    "trace_hash": "sha256:0c332cf2afd39b24fc17bc8dcd2976a1e81c6c1d2f984fd8fc0703a4d3883f76"
+  },
+  "measurement_receipt_hash": "sha256:0f08337dd7fb1c68c028ebfc42bf541e8f206203bf5b2caea9a84988e326f317",
+  "measurements": [
+    "micro-macro-1: predicted finite-micro-macro-observation; observed finite-micro-macro-observation; exact match True",
+    "micro-macro-2: predicted finite-micro-macro-observation; observed finite-micro-macro-observation; exact match True",
+    "deliberately tampered unfavorable control rejected"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:8ac9f4fd32e6f375d7bd6ea266dd1054e2db986b4236a5e08406ccdb5fea0000",
+    "custodian_id": "SFT-EXP-PHYS-THERMO-MICRO-MACRO-001-external-target-custodian",
+    "experiment_registration_hash": "sha256:52edfdcdf6f412f711deb5bfa824797edf0b8740b92426fa7e9fba3c2f94279f",
+    "prediction_seal_hash": "sha256:7b4ae789d5743863f93f01fb4c1b2e2c761cfff702734dcbd87bd4035938e68b",
+    "registered_target_identity_hash": "sha256:a1a9cfad23844844e1767f10acbbdd00b8faf263b25c76aef06620963a184a5c",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:e04e9640ad16ba4b77f6690404492fc4f3ca347086f8c9b0490d9992c5680ca9"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "sha256:e7f1e49e23b80ac82398be5887164473e3f9785f1c45a5d378c206d8c43eea2a"
+}

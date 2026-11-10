@@ -1,9 +1,9 @@
-## 317 / 2,781 V3 entries complete
+## 319 / 2,781 V3 entries complete
 
-**18,212 Lean theorems proved · 0 axiom dependencies · Unified Constants complete: 26 exact readings across seven sectors.**
+**18,292 Lean theorems proved · 0 axiom dependencies · Unified Constants complete: 26 exact readings across seven sectors.**
 
 <p align="center">
-  <img src="docs/assets/sft-banner.svg" alt="SFT - Unified Constants complete. 317 V3 entries verified in Lean, with zero axiom dependencies." width="100%" />
+  <img src="docs/assets/sft-banner.svg" alt="SFT - Unified Constants complete. 319 V3 entries verified in Lean, with zero axiom dependencies." width="100%" />
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 
 <p align="center">
   <img alt="Lean 4.35.0" src="https://img.shields.io/badge/Lean-4.35.0-163747?style=flat-square&amp;labelColor=0b1825" />
-  <img alt="18,212 audited results" src="https://img.shields.io/badge/Audited_results-18,212-163747?style=flat-square&amp;labelColor=0b1825" />
+  <img alt="18,292 audited results" src="https://img.shields.io/badge/Audited_results-18,292-163747?style=flat-square&amp;labelColor=0b1825" />
   <img alt="0 axiom dependencies in audited results" src="https://img.shields.io/badge/Axiom_dependencies-0-147d72?style=flat-square&amp;labelColor=0b1825" />
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
@@ -61,14 +61,14 @@ flowchart LR
 
 Entry completion means the entry’s actual pinned V3 content is formalised and its applicable checks pass. Entries are completed in registered dependency order. Missing work must identify a specific V3 source component; general host-library or unrelated platform tasks do not hold a scientific entry open.
 
-**18,212 proofs completed · 144,658 candidate records matched · 317 model entries complete · Unified Constants milestone complete.**
+**18,292 proofs completed · 145,170 candidate records matched · 319 model entries complete · Unified Constants milestone complete.**
 
 | Progress measure | Current result |
 | :--- | :--- |
-| Lean theorems proved | **18,212**, all with zero axiom dependencies |
-| Definitions and theorems audited | **39,775**, all with zero axiom dependencies |
-| Candidate records matched to v3 | **144,658 / 144,658** across 317 completed source entries |
-| Complete model entries | **317 / 2,781** — [latest completion evidence](verification/TURN_527_STATISTICALWEIGHT_COMPLETION.json) |
+| Lean theorems proved | **18,292**, all with zero axiom dependencies |
+| Definitions and theorems audited | **40,009**, all with zero axiom dependencies |
+| Candidate records matched to v3 | **145,170 / 145,170** across 319 completed source entries |
+| Complete model entries | **319 / 2,781** — [latest completion evidence](verification/TURN_529_PHASEEQUILIBRIUM_COMPLETION.json) |
 
 | Source component | Verified work | Evidence |
 | :--- | :--- | :--- |
@@ -91,9 +91,9 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | **Form construction** | Exact finite productions, injective tuple encoding and acceptance of every generated form by the tuple/list/string validator | [Derivation](SFT/Foundation/FormConstruction.lean) |
 | **Source correspondence** | The retained 47,206-record checkpoint preserves source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_279_PARITY_REPORT.json) |
 
-**Completed source entries: 317 / 2,781.** 0 entries are in progress and 2,464 remain pending. Exact source-component evidence is recorded in COVERAGE.json. Acceleration, inertia, momentum and force are complete in source dependency order. Their native derivations, full source-program comparisons and complete empirical checks are included in the registered totals.
+**Completed source entries: 319 / 2,781.** 0 entries are in progress and 2,462 remain pending. Exact source-component evidence is recorded in COVERAGE.json. Acceleration, inertia, momentum and force are complete in source dependency order. Their native derivations, full source-program comparisons and complete empirical checks are included in the registered totals.
 
-[Read the current axiom audit →](verification/TURN_515_REGISTERED_DECLARATIONS_AUDIT.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 39,775 axiom audits →](verification/TURN_515_REGISTERED_DECLARATIONS_AUDIT.log)
+[Read the current axiom audit →](verification/TURN_515_REGISTERED_DECLARATIONS_AUDIT.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 40,009 axiom audits →](verification/TURN_515_REGISTERED_DECLARATIONS_AUDIT.log)
 
 The translated forcing gate checks ordered identifiers, exactly one survivor, explicit reasons and canonical proof-hash identities. A general theorem proves that passing requires one survivor; Root’s tampered decisions are formally rejected. [Gate proofs](SFT/Engine/DecisionGate.lean) · [Root integration](SFT/Foundation/RootGate.lean) · [384-case comparison](verification/TURN_009_DECISION_GATE_REPORT.json)
 
@@ -176,7 +176,7 @@ The following records describe earlier checkpoints; their intermediate counts an
 
 Batch review: [all 21 existing entries](verification/TURN_114_BATCH_EXISTING_WORK.json). Run `python3 verification/batch_existing_work.py` for the existing global build/audit/parity and exact missing-method inventory. Interface presence alone does not establish derivation completion.
 
-Full-program comparisons are retained in the [batch source review](verification/TURN_115_SOURCE_REVIEW.json) and subsequent entry-specific completion checkpoints. Current registered comparisons cover **144,658 candidate records across 317 source entries**, including registration, census, closure, controls and hashes. The [mechanics batch](verification/TURN_483_MECHANICS_BATCH/STATUS.json) is now included in the registered totals. `verification/batch_program_outputs.py` reproduces its configured driver list; later completion checkpoints retain their additional source-specific drivers and reports.
+Full-program comparisons are retained in the [batch source review](verification/TURN_115_SOURCE_REVIEW.json) and subsequent entry-specific completion checkpoints. Current registered comparisons cover **145,170 candidate records across 319 source entries**, including registration, census, closure, controls and hashes. The [mechanics batch](verification/TURN_483_MECHANICS_BATCH/STATUS.json) is now included in the registered totals. `verification/batch_program_outputs.py` reproduces its configured driver list; later completion checkpoints retain their additional source-specific drivers and reports.
 
 Part Equivalence checkpoint: all **1,024** fresh native lookup decisions and complete source program outputs match pinned V3. [Program comparison](verification/TURN_116_PART_EQUIVALENCE_PROGRAM_REPORT.json).
 

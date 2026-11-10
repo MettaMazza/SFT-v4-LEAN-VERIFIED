@@ -15297,9 +15297,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-STATE-RELATION-001-a99aa79962f17d2a.json",
       "statement": "A thermodynamic state relation is the minimal closed dependency among independently observed support content, boundary response, thermal order and energy carriers after redundant coordinates are removed.",
       "title": "Thermodynamic state relation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoStateRelation.lean",
+        "SFT/Physics/StateRelationGrammar.lean",
+        "SFT/Physics/StateRelationEvidence.lean",
+        "SFT/Physics/StateRelationExperiment.lean",
+        "SFT/Physics/StateRelationValidation.lean",
+        "SFT/Physics/StateRelationValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "1e58ddf985bbb0b5568cea1977cac21595dd56c328f747def0549ce514c8f39c",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -15341,7 +15348,10 @@
         "statement": "A thermodynamic state relation is the minimal closed dependency among independently observed support content, boundary response, thermal order and energy carriers after redundant coordinates are removed.",
         "status": "empirically_tested",
         "title": "Thermodynamic state relation"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete four-carrier relation generated from the registered finite domain; least complete relation and pointwise uniqueness; missing/extra row exclusion; exact removal and reconstruction of dependent coordinates; complete carrier equality and singleton/successor relation proofs; original grammar and empirical validator.",
+      "completion_evidence": "verification/TURN_528_STATERELATION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -15353,9 +15363,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001-4f21021472d3fa83.json",
       "statement": "Distinct macroscopic phase classes coexist when their exchange boundary preserves a common thermal order and reciprocal transfer balance; a phase transition changes the selected observation fibre while retaining total provenance.",
       "title": "Phase coexistence and transition",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoPhaseEquilibrium.lean",
+        "SFT/Physics/PhaseEquilibriumGrammar.lean",
+        "SFT/Physics/PhaseEquilibriumEvidence.lean",
+        "SFT/Physics/PhaseEquilibriumExperiment.lean",
+        "SFT/Physics/PhaseEquilibriumValidation.lean",
+        "SFT/Physics/PhaseEquilibriumValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "c276aaed67a9d880f296d72ffd912e5e3762473db67d5892fb0cf7c23f9f396e",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -15397,7 +15414,10 @@
         "statement": "Distinct macroscopic phase classes coexist when their exchange boundary preserves a common thermal order and reciprocal transfer balance; a phase transition changes the selected observation fibre while retaining total provenance.",
         "status": "empirically_tested",
         "title": "Phase coexistence and transition"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Distinct computed macro-fibres with common computed thermal order and reciprocal transfer balance; exact coexistence criterion, persistence and reversal; selected-fibre transition with full carrier and source-identity provenance; original grammar, controls and validator.",
+      "completion_evidence": "verification/TURN_529_PHASEEQUILIBRIUM_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -193297,13 +193317,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-10T18:15:48.946751+00:00",
+  "updated_at": "2026-11-10T18:25:03.810255+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2464,
-    "fully_reconstructed_claims": 317,
-    "axiom_free_exported_results": 18212,
-    "axiom_free_audited_definitions_and_theorems": 39775
+    "pending": 2462,
+    "fully_reconstructed_claims": 319,
+    "axiom_free_exported_results": 18292,
+    "axiom_free_audited_definitions_and_theorems": 40009
   }
 }

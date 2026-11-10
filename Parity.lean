@@ -1051,3 +1051,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.StatisticalWeightGrammar.candidates do
     IO.println ("StatisticalWeightGrammar\t" ++ SFT.Physics.StatisticalWeightGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StatisticalWeightGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StatisticalWeightGrammar.exactForm c ++ "\t" ++ SFT.Physics.StatisticalWeightGrammar.decisionReason c)
+
+  for c in SFT.Physics.StateRelationGrammar.candidates do
+    IO.println ("StateRelationGrammar\t" ++ SFT.Physics.StateRelationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StateRelationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StateRelationGrammar.exactForm c ++ "\t" ++ SFT.Physics.StateRelationGrammar.decisionReason c)
+
+  for c in SFT.Physics.PhaseEquilibriumGrammar.candidates do
+    IO.println ("PhaseEquilibriumGrammar\t" ++ SFT.Physics.PhaseEquilibriumGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PhaseEquilibriumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PhaseEquilibriumGrammar.exactForm c ++ "\t" ++ SFT.Physics.PhaseEquilibriumGrammar.decisionReason c)

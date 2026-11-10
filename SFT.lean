@@ -3558,3 +3558,15 @@ import SFT.Physics.StatisticalWeightEvidence
 import SFT.Physics.StatisticalWeightExperiment
 import SFT.Physics.StatisticalWeightValidation
 import SFT.Physics.StatisticalWeightValidationProofs
+import SFT.Physics.ThermoStateRelation
+import SFT.Physics.StateRelationGrammar
+import SFT.Physics.StateRelationEvidence
+import SFT.Physics.StateRelationExperiment
+import SFT.Physics.StateRelationValidation
+import SFT.Physics.StateRelationValidationProofs
+import SFT.Physics.ThermoPhaseEquilibrium
+import SFT.Physics.PhaseEquilibriumGrammar
+import SFT.Physics.PhaseEquilibriumEvidence
+import SFT.Physics.PhaseEquilibriumExperiment
+import SFT.Physics.PhaseEquilibriumValidation
+import SFT.Physics.PhaseEquilibriumValidationProofs

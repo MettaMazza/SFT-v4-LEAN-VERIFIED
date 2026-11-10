@@ -1111,3 +1111,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ViscosityGrammar.candidates do
     IO.println ("ViscosityGrammar\t" ++ SFT.Physics.ViscosityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ViscosityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ViscosityGrammar.exactForm c ++ "\t" ++ SFT.Physics.ViscosityGrammar.decisionReason c)
+
+  for c in SFT.Physics.TurbulenceGrammar.candidates do
+    IO.println ("TurbulenceGrammar\t" ++ SFT.Physics.TurbulenceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TurbulenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TurbulenceGrammar.exactForm c ++ "\t" ++ SFT.Physics.TurbulenceGrammar.decisionReason c)
+
+  for c in SFT.Physics.PlasmaCollectiveGrammar.candidates do
+    IO.println ("PlasmaCollectiveGrammar\t" ++ SFT.Physics.PlasmaCollectiveGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PlasmaCollectiveGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PlasmaCollectiveGrammar.exactForm c ++ "\t" ++ SFT.Physics.PlasmaCollectiveGrammar.decisionReason c)
+
+  for c in SFT.Physics.PlasmaOscillationGrammar.candidates do
+    IO.println ("PlasmaOscillationGrammar\t" ++ SFT.Physics.PlasmaOscillationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PlasmaOscillationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PlasmaOscillationGrammar.exactForm c ++ "\t" ++ SFT.Physics.PlasmaOscillationGrammar.decisionReason c)

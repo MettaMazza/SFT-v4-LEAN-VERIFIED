@@ -1,0 +1,15 @@
+PlasmaOscillation program exit 1 seconds 11.2
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/run_collective543.py", line 32, in <module>
+    start=time.monotonic();res=subprocess.run(['python3','work/'+stem.lower()+'_'+check+'543.py'],env=env,text=True,capture_output=True);Path('work/'+stem.lower()+'_'+check+'543.log').write_text(res.stdout+res.stderr);print(stem,check,'exit',res.returncode,'seconds',round(time.monotonic()-start,2),flush=True);assert res.returncode==0,res.stdout+res.stderr
+AssertionError: 
+Stack overflow detected. Aborting.
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/plasmaoscillation_program543.py", line 9, in <module>
+    out=subprocess.check_output([str(Path('work/PlasmaOscillationProgram543').resolve()),source],env=env,text=True);actual=json.loads(out)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/dolltrading/Documents/Codex/2026-10-26/p/work/PlasmaOscillationProgram543', 'sha256:32e35ac55e76c5661d80eeaf2b1cb3ab1f8caaac3e3a1c29bcaea6e6798d39d7']' died with <Signals.SIGABRT: 6>.
+

@@ -19479,9 +19479,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-FLUID-TURBULENCE-001-fabb7a737b98b1cd.json",
       "statement": "Finite turbulence is nonperiodic multi-scale recurrence on a complete flow network, with conserved carriers transferred among generated support refinements; cascade claims close only at the enumerated scale boundary.",
       "title": "Finite turbulence and cascade boundary",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/CollectiveTurbulence.lean",
+        "SFT/Physics/TurbulenceGrammar.lean",
+        "SFT/Physics/TurbulenceEvidence.lean",
+        "SFT/Physics/TurbulenceExperiment.lean",
+        "SFT/Physics/TurbulenceValidation.lean",
+        "SFT/Physics/TurbulenceValidationProofs.lean",
+        "SFT/Physics/TurbulenceScaleProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "db6e09432492a70feadc06ea9a72958ccfdf702e7ca5a13948613330c503cab8",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -19523,7 +19531,10 @@
         "statement": "Finite turbulence is nonperiodic multi-scale recurrence on a complete flow network, with conserved carriers transferred among generated support refinements; cascade claims close only at the enumerated scale boundary.",
         "status": "empirically_tested",
         "title": "Finite turbulence and cascade boundary"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete finite scale observation refinements with exact class containment and conserved adjacent flow carriers; exhaustive cascade membership and no ungenerated cascade records; deterministic generated Fold histories with retained rows and exact first-recurrence census; original full grammar, controls and validators.",
+      "completion_evidence": "verification/TURN_541_TURBULENCE_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -19535,9 +19546,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-PLASMA-COLLECTIVE-001-c10a601659f4bc15.json",
       "statement": "A plasma is a mobile two-orientation charge-carrier network whose long-range source-response support couples local constituent motion into collective field recurrence.",
       "title": "Plasma collective response",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/CollectivePlasma.lean",
+        "SFT/Physics/PlasmaCollectiveGrammar.lean",
+        "SFT/Physics/PlasmaCollectiveEvidence.lean",
+        "SFT/Physics/PlasmaCollectiveExperiment.lean",
+        "SFT/Physics/PlasmaCollectiveValidation.lean",
+        "SFT/Physics/PlasmaCollectiveValidationProofs.lean",
+        "SFT/Physics/PlasmaMeasured.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "e2b69f4e042f8b8c389a1bf3c146c18b9f8503e9f119b436316a5ac4f6ee1be5",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -19579,7 +19598,10 @@
         "statement": "A plasma is a mobile two-orientation charge-carrier network whose long-range source-response support couples local constituent motion into collective field recurrence.",
         "status": "empirically_tested",
         "title": "Plasma collective response"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Complete mobile two-orientation charge network bound to original electromagnetic source-response carriers, complete coupling/transfer correspondence and shared field recurrence; conserved charge and held orientations; exact source CODATA elementary-charge times molar-count measured binding.",
+      "completion_evidence": "verification/TURN_542_PLASMACOLLECTIVE_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -19591,9 +19613,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-PLASMA-OSCILLATION-001-2888b7efaca20d0c.json",
       "statement": "Displacing held charge orientations creates a restoring field recurrence; phase-mixed mobile responses redistribute until distant observation classes close the source distinction, producing screening.",
       "title": "Plasma oscillation and screening",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/CollectivePlasmaOscillation.lean",
+        "SFT/Physics/PlasmaOscillationGrammar.lean",
+        "SFT/Physics/PlasmaOscillationEvidence.lean",
+        "SFT/Physics/PlasmaOscillationExperiment.lean",
+        "SFT/Physics/PlasmaOscillationValidation.lean",
+        "SFT/Physics/PlasmaOscillationValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "71d8f987c1a49cf6f14f9f708646bea2340fa79a4f3c7e3d926d2a1e999a3d4b",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -19635,7 +19664,10 @@
         "statement": "Displacing held charge orientations creates a restoring field recurrence; phase-mixed mobile responses redistribute until distant observation classes close the source distinction, producing screening.",
         "status": "empirically_tested",
         "title": "Plasma oscillation and screening"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Source-bound held-charge displacement and restoring field recurrence retaining both transfer steps, exact return and conserved charge; screening iff complete observation closes the source distinction, retaining original support and the distinct-observation exclusion; original grammar and empirical checks.",
+      "completion_evidence": "verification/TURN_543_PLASMAOSCILLATION_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -193474,13 +193506,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-10T19:35:26.653462+00:00",
+  "updated_at": "2026-11-10T19:57:10.522977+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2444,
-    "fully_reconstructed_claims": 337,
-    "axiom_free_exported_results": 18844,
-    "axiom_free_audited_definitions_and_theorems": 41821
+    "pending": 2441,
+    "fully_reconstructed_claims": 340,
+    "axiom_free_exported_results": 18962,
+    "axiom_free_audited_definitions_and_theorems": 42182
   }
 }

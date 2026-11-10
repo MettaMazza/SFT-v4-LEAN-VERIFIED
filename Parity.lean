@@ -1042,3 +1042,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.EntropyGrammar.candidates do
     IO.println ("EntropyGrammar\t" ++ SFT.Physics.EntropyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.EntropyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.EntropyGrammar.exactForm c ++ "\t" ++ SFT.Physics.EntropyGrammar.decisionReason c)
+
+  for c in SFT.Physics.SecondLawGrammar.candidates do
+    IO.println ("SecondLawGrammar\t" ++ SFT.Physics.SecondLawGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SecondLawGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SecondLawGrammar.exactForm c ++ "\t" ++ SFT.Physics.SecondLawGrammar.decisionReason c)
+
+  for c in SFT.Physics.ThirdLawGrammar.candidates do
+    IO.println ("ThirdLawGrammar\t" ++ SFT.Physics.ThirdLawGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ThirdLawGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ThirdLawGrammar.exactForm c ++ "\t" ++ SFT.Physics.ThirdLawGrammar.decisionReason c)
+
+  for c in SFT.Physics.StatisticalWeightGrammar.candidates do
+    IO.println ("StatisticalWeightGrammar\t" ++ SFT.Physics.StatisticalWeightGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StatisticalWeightGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StatisticalWeightGrammar.exactForm c ++ "\t" ++ SFT.Physics.StatisticalWeightGrammar.decisionReason c)

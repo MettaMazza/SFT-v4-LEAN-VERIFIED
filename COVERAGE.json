@@ -15099,9 +15099,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-SECOND-LAW-001-65d57af5d78d0fd2.json",
       "statement": "A closed macroscopic process is thermally oriented toward observation classes with no smaller unresolved predecessor support unless the distinctions required for exact reversal are retained externally.",
       "title": "Irreversible observation and entropy orientation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoSecondLaw.lean",
+        "SFT/Physics/SecondLawGrammar.lean",
+        "SFT/Physics/SecondLawEvidence.lean",
+        "SFT/Physics/SecondLawExperiment.lean",
+        "SFT/Physics/SecondLawValidation.lean",
+        "SFT/Physics/SecondLawValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "8b2b731039014ab07989a08feb1cf319f75920d09ffb00faf5200e7040a8e498",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -15143,7 +15150,10 @@
         "statement": "A closed macroscopic process is thermally oriented toward observation classes with no smaller unresolved predecessor support unless the distinctions required for exact reversal are retained externally.",
         "status": "empirically_tested",
         "title": "Irreversible observation and entropy orientation"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Source-bound observation composition; every prior fibre is contained in a later fibre with no smaller count; unresolved pair count cannot decrease; closed distinctions persist; reversal requires complete retained predecessor records; original grammar, controls and empirical validator.",
+      "completion_evidence": "verification/TURN_525_SECONDLAW_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -15155,9 +15165,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-THIRD-LAW-001-35ac14f08f2fe755.json",
       "statement": "No positive finite transition sequence can erase the final generated recurrence distinction of a material support; complete recurrence closure is therefore a limiting boundary rather than a reachable destructive state.",
       "title": "Finite unattainability boundary",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoThirdLaw.lean",
+        "SFT/Physics/ThirdLawGrammar.lean",
+        "SFT/Physics/ThirdLawEvidence.lean",
+        "SFT/Physics/ThirdLawExperiment.lean",
+        "SFT/Physics/ThirdLawValidation.lean",
+        "SFT/Physics/ThirdLawValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "25b25d74bd7fe8d16de84ae2b2c912b12f39b61b2db4e6796e581ce3dbf1f9d5",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -15199,7 +15216,10 @@
         "statement": "No positive finite transition sequence can erase the final generated recurrence distinction of a material support; complete recurrence closure is therefore a limiting boundary rather than a reachable destructive state.",
         "status": "empirically_tested",
         "title": "Finite unattainability boundary"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Exact finite Fold iteration preserves positive admitted parts; every retained transition carrier remains positive; source trace persists; first return closes at the retained source rather than deleting it; inherited positive support and recurrence predecessor proofs, original grammar and validator.",
+      "completion_evidence": "verification/TURN_526_THIRDLAW_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -15211,9 +15231,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-STATISTICAL-WEIGHT-001-a1bccdb47bbc54ac.json",
       "statement": "The statistical weight of a macro-observation is the exact positive count of its generated microstate fibre relative to the complete accessible support count.",
       "title": "Exact finite statistical weight",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoStatisticalWeight.lean",
+        "SFT/Physics/StatisticalWeightGrammar.lean",
+        "SFT/Physics/StatisticalWeightEvidence.lean",
+        "SFT/Physics/StatisticalWeightExperiment.lean",
+        "SFT/Physics/StatisticalWeightValidation.lean",
+        "SFT/Physics/StatisticalWeightValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "592d1021c62bbff3751cb5a4d85318fc0c536b7f1d2f4935ad22804baaddac5c",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -15255,7 +15282,10 @@
         "statement": "The statistical weight of a macro-observation is the exact positive count of its generated microstate fibre relative to the complete accessible support count.",
         "status": "empirically_tested",
         "title": "Exact finite statistical weight"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Exact positive reduced fibre-count/support-count ratio, through-One bound, canonical numerator and denominator uniquely fixed by both counts, complete fibre provenance and original singleton/successor ratio proofs; full grammar, controls and empirical validator.",
+      "completion_evidence": "verification/TURN_527_STATISTICALWEIGHT_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -193267,13 +193297,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-10T18:02:21.084866+00:00",
+  "updated_at": "2026-11-10T18:15:48.946751+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2467,
-    "fully_reconstructed_claims": 314,
-    "axiom_free_exported_results": 18097,
-    "axiom_free_audited_definitions_and_theorems": 39435
+    "pending": 2464,
+    "fully_reconstructed_claims": 317,
+    "axiom_free_exported_results": 18212,
+    "axiom_free_audited_definitions_and_theorems": 39775
   }
 }

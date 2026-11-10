@@ -1,0 +1,19 @@
+CollectiveCoarseGrain built
+CoarseGrainGrammar built
+CoarseGrainEvidence built
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/build_collective535.py", line 5, in <module>
+    cmd=['/Users/dolltrading/.elan/bin/lean','-j1','-M12288','-o',str(r/'.lake/build/lib/lean/SFT/Physics'/(m+'.olean')),'-c',str(r/'.lake/build/ir/SFT/Physics'/(m+'.c')),'SFT/Physics/'+m+'.lean'];p=subprocess.run(cmd,cwd=r,env=env,text=True,capture_output=True);(w/('build535_'+m+'.log')).write_text(p.stdout+p.stderr);reports.append(dict(module=m,command=cmd,exit=p.returncode));assert p.returncode==0,p.stdout+p.stderr
+AssertionError: SFT/Physics/CoarseGrainExperiment.lean:73:47: error(lean.unknownIdentifier): Unknown identifier `CoarseGrainEvidence.onePairWitness`
+SFT/Physics/CoarseGrainExperiment.lean:73:85: error(lean.unknownIdentifier): Unknown identifier `CoarseGrainEvidence.successorWitness`
+SFT/Physics/CoarseGrainExperiment.lean:95:0: error: Not a definitional equality: the left-hand side
+  validateSpec
+is not definitionally equal to the right-hand side
+  Except.ok ()
+SFT/Physics/CoarseGrainExperiment.lean:95:55: error: Type mismatch
+  rfl
+has type
+  ?m.7 = ?m.7
+but is expected to have type
+  validateSpec = Except.ok ()
+

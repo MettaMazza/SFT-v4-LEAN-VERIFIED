@@ -1093,3 +1093,15 @@ def main : IO Unit := do
 
   for c in SFT.Physics.MolarThermalGrammar.candidates do
     IO.println ("MolarThermalGrammar\t" ++ SFT.Physics.MolarThermalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MolarThermalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MolarThermalGrammar.exactForm c ++ "\t" ++ SFT.Physics.MolarThermalGrammar.decisionReason c)
+
+  for c in SFT.Physics.CoarseGrainGrammar.candidates do
+    IO.println ("CoarseGrainGrammar\t" ++ SFT.Physics.CoarseGrainGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CoarseGrainGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CoarseGrainGrammar.exactForm c ++ "\t" ++ SFT.Physics.CoarseGrainGrammar.decisionReason c)
+
+  for c in SFT.Physics.DensityGrammar.candidates do
+    IO.println ("DensityGrammar\t" ++ SFT.Physics.DensityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DensityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DensityGrammar.exactForm c ++ "\t" ++ SFT.Physics.DensityGrammar.decisionReason c)
+
+  for c in SFT.Physics.PressureStressGrammar.candidates do
+    IO.println ("PressureStressGrammar\t" ++ SFT.Physics.PressureStressGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PressureStressGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PressureStressGrammar.exactForm c ++ "\t" ++ SFT.Physics.PressureStressGrammar.decisionReason c)
+
+  for c in SFT.Physics.FlowConservationGrammar.candidates do
+    IO.println ("FlowConservationGrammar\t" ++ SFT.Physics.FlowConservationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FlowConservationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FlowConservationGrammar.exactForm c ++ "\t" ++ SFT.Physics.FlowConservationGrammar.decisionReason c)

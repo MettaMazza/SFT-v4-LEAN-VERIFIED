@@ -1,0 +1,282 @@
+[
+  {
+    "stem": "Density",
+    "module": "DensityMeasured",
+    "claim_id": "SFT-PHYS-FLUID-DENSITY-001",
+    "law": {
+      "claim_id": "SFT-PHYS-FLUID-DENSITY-001",
+      "title": "Density as exact content-to-support relation",
+      "statement": "Density is the exact positive material-content count or inertial carrier divided by the generated spatial support count of the same observation region.",
+      "dependencies": [
+        "SFT-MATH-GRAPH-NETWORK-001",
+        "SFT-MATH-DYNAMICAL-SYSTEMS-001",
+        "SFT-PHYS-FIELD-CONSERVED-SOURCE-001",
+        "SFT-PHYS-THERMO-KINETIC-TRANSPORT-001",
+        "SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001",
+        "SFT-PHYS-THERMO-RESPONSE-001",
+        "SFT-PHYS-CONTINUUM-COARSE-GRAIN-001"
+      ],
+      "generation_rule": "Generate the complete cell support, carrier content, adjacency/transfer, observation scale, provenance, target-access, successor and extra-rule product.",
+      "grammar_boundary": "All finite collective forms generated from exact cells, adjacency, content/support ratios, local transfer, recurrence and observation quotients without importing a continuum field equation or fitted constitutive law.",
+      "dimensions": [
+        {
+          "key": "carrier",
+          "choices": [
+            {
+              "name": "answer-only-scalar",
+              "admitted": false,
+              "reason": "An answer-only scalar erases the generated physical carrier."
+            },
+            {
+              "name": "complete-fold-carrier",
+              "admitted": true,
+              "reason": "The complete Fold trace retains the observed physical distinction."
+            }
+          ]
+        },
+        {
+          "key": "relation",
+          "choices": [
+            {
+              "name": "imported-or-fitted-relation",
+              "admitted": false,
+              "reason": "An imported or fitted relation lets consensus or target data select the law."
+            },
+            {
+              "name": "content-over-generated-support",
+              "admitted": true,
+              "reason": "Complete paired counting uniquely normalizes content to support without a free cell scale in the declared observation."
+            }
+          ]
+        },
+        {
+          "key": "provenance",
+          "choices": [
+            {
+              "name": "unbound-provenance",
+              "admitted": false,
+              "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+            },
+            {
+              "name": "source-bound-proof-trace",
+              "admitted": true,
+              "reason": "Every generated candidate and decision is bound to its exact source trace."
+            }
+          ]
+        },
+        {
+          "key": "prediction",
+          "choices": [
+            {
+              "name": "target-readable-prediction",
+              "admitted": false,
+              "reason": "A target-readable predictor can copy or optimize against the measurement."
+            },
+            {
+              "name": "capability-closed-prediction",
+              "admitted": true,
+              "reason": "The registered Fold instruction surface has no target or ambient host capability."
+            }
+          ]
+        },
+        {
+          "key": "record",
+          "choices": [
+            {
+              "name": "proof-measurement-conflation",
+              "admitted": false,
+              "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+            },
+            {
+              "name": "separate-measurement-record",
+              "admitted": true,
+              "reason": "External values remain source-bound records compared only after sealing."
+            }
+          ]
+        },
+        {
+          "key": "rows",
+          "choices": [
+            {
+              "name": "selected-favourable-rows",
+              "admitted": false,
+              "reason": "Selecting favorable rows cannot falsify the relation."
+            },
+            {
+              "name": "complete-registered-rows",
+              "admitted": true,
+              "reason": "Every favorable, unfavorable and tampered registered row is retained."
+            }
+          ]
+        },
+        {
+          "key": "generality",
+          "choices": [
+            {
+              "name": "finite-answer-lookup",
+              "admitted": false,
+              "reason": "An answer lookup has no successor certificate."
+            },
+            {
+              "name": "one-successor-closure",
+              "admitted": true,
+              "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+            }
+          ]
+        },
+        {
+          "key": "extension",
+          "choices": [
+            {
+              "name": "free-extra-rule",
+              "admitted": false,
+              "reason": "A free constant, scale or exception can select the measured answer."
+            },
+            {
+              "name": "no-extra-rule",
+              "admitted": true,
+              "reason": "No rule beyond the admitted dependencies and forced relation is present."
+            }
+          ]
+        }
+      ],
+      "exact_result": "Fluid density is an exact content-to-support ratio on a complete generated region.",
+      "induction_base": "One generated cell carries one exact content record, boundary adjacency and local transfer state.",
+      "induction_step": "Adding one cell preserves every prior content, adjacency, boundary and transfer trace and appends exactly its source-bound local relations.",
+      "exclusions": [
+        "ungenerated continuum, infinitesimal cell or completed infinity",
+        "floating, irrational, imaginary or signed proof magnitude",
+        "imported differential equation, fitted coefficient or target-selected phase",
+        "target access, omitted cell/transport row or unrecorded boundary transfer"
+      ],
+      "operational_witnesses": [
+        [
+          "finite-cell-support",
+          "Every collective state has complete generated cell support.",
+          true
+        ],
+        [
+          "local-transfer",
+          "Every content change pairs with a named adjacent or boundary transfer.",
+          true
+        ]
+      ],
+      "experiment_id": "SFT-EXP-PHYS-FLUID-DENSITY-001",
+      "expected_observation_label": "exact-fluid-density",
+      "target_rows": [
+        {
+          "target_id": "fluid-density-1",
+          "source_id": "IAPWS-RELEASES-2026-07-23",
+          "source_locator": "IAPWS density and specific-volume formulations",
+          "observed_label": "exact-fluid-density"
+        },
+        {
+          "target_id": "fluid-density-2",
+          "source_id": "IAPWS-RELEASES-2026-07-23",
+          "source_locator": "IAPWS water and steam property releases",
+          "observed_label": "exact-fluid-density"
+        }
+      ],
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/iapws-releases.html",
+      "source_snapshot_hash": "sha256:d43b4241bc11f390633b03b041fe2b03f9a4f243348fa0f78b639cb8ec162c51",
+      "falsification_condition": "The collective-matter law is falsified if a committed external row lacks the sealed support/transfer/ordering structure, a row is omitted, or the tampered row is accepted."
+    },
+    "value_spec": {
+      "relation_id": "molar-mass-content-count-product",
+      "experiment_id": "SFT-EXP-PHYS-FLUID-DENSITY-001",
+      "claim_id": "SFT-PHYS-FLUID-DENSITY-001",
+      "relation_statement": "One atomic mass carrier composed with the molar constituent count predicts molar mass content.",
+      "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "inputs": [
+        {
+          "key": "atomic_mass",
+          "quantity": "atomic mass constant",
+          "unit": "kg"
+        },
+        {
+          "key": "count",
+          "quantity": "Avogadro constant",
+          "unit": "mol^-1"
+        }
+      ],
+      "steps": [
+        {
+          "output": "molar_mass",
+          "operation": "product",
+          "left": "atomic_mass",
+          "right": "count"
+        }
+      ],
+      "output_key": "molar_mass",
+      "target": {
+        "key": "target_molar_mass",
+        "quantity": "molar mass constant",
+        "unit": "kg mol^-1"
+      },
+      "falsification_condition": "The sealed exact mass/count interval does not overlap the released CODATA molar-mass interval or the displaced control is accepted."
+    },
+    "instructions": [
+      [
+        "input",
+        "atomic_mass__lower",
+        [
+          "atomic_mass__lower"
+        ]
+      ],
+      [
+        "input",
+        "atomic_mass__upper",
+        [
+          "atomic_mass__upper"
+        ]
+      ],
+      [
+        "input",
+        "count__lower",
+        [
+          "count__lower"
+        ]
+      ],
+      [
+        "input",
+        "count__upper",
+        [
+          "count__upper"
+        ]
+      ],
+      [
+        "product",
+        "molar_mass__lower",
+        [
+          "atomic_mass__lower",
+          "count__lower"
+        ]
+      ],
+      [
+        "product",
+        "molar_mass__upper",
+        [
+          "atomic_mass__upper",
+          "count__upper"
+        ]
+      ],
+      [
+        "pair",
+        "predicted_interval",
+        [
+          "molar_mass__lower",
+          "molar_mass__upper"
+        ]
+      ],
+      [
+        "emit",
+        "",
+        [
+          "predicted_interval"
+        ]
+      ]
+    ]
+  }
+]

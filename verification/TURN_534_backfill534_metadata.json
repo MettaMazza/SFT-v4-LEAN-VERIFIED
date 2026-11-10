@@ -1,0 +1,2227 @@
+[
+  {
+    "stem": "MolarPlanck",
+    "module": "BackfillMolarPlanck",
+    "claim_id": "SFT-PHYS-VALIDATION-METROLOGY-MOLAR-PLANCK-001",
+    "law": {
+      "claim_id": "SFT-PHYS-VALIDATION-METROLOGY-MOLAR-PLANCK-001",
+      "title": "Exact molar Planck measured-value correspondence",
+      "statement": "The molar Planck carrier is predicted by exact composition of the Planck carrier with the counted molar carrier.",
+      "dependencies": [
+        "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001",
+        "SFT-PHYS-MEAS-TARGET-CUSTODY-001",
+        "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001",
+        "SFT-PHYS-MEAS-VALUE-RECORD-001",
+        "SFT-PHYS-MEAS-UNCERTAINTY-001",
+        "SFT-PHYS-MEAS-UNIT-COMPARISON-001"
+      ],
+      "generation_rule": "Generate the complete exact-relation, input-provenance, target-access, interval, comparison, row, successor and extra-rule product.",
+      "grammar_boundary": "All exact positive interval predictions formed from registered measured inputs, one already forced relation, capability-closed arithmetic and a post-seal external target.",
+      "dimensions": [
+        {
+          "key": "carrier",
+          "choices": [
+            {
+              "name": "answer-only-scalar",
+              "admitted": false,
+              "reason": "An answer-only scalar erases the generated physical carrier."
+            },
+            {
+              "name": "complete-fold-carrier",
+              "admitted": true,
+              "reason": "The complete Fold trace retains the observed physical distinction."
+            }
+          ]
+        },
+        {
+          "key": "relation",
+          "choices": [
+            {
+              "name": "imported-or-fitted-relation",
+              "admitted": false,
+              "reason": "An imported or fitted relation lets consensus or target data select the law."
+            },
+            {
+              "name": "exact-positive-interval-relation",
+              "admitted": true,
+              "reason": "The already forced law uniquely composes registered positive input intervals into the withheld target quantity without fitting."
+            }
+          ]
+        },
+        {
+          "key": "provenance",
+          "choices": [
+            {
+              "name": "unbound-provenance",
+              "admitted": false,
+              "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+            },
+            {
+              "name": "source-bound-proof-trace",
+              "admitted": true,
+              "reason": "Every generated candidate and decision is bound to its exact source trace."
+            }
+          ]
+        },
+        {
+          "key": "prediction",
+          "choices": [
+            {
+              "name": "target-readable-prediction",
+              "admitted": false,
+              "reason": "A target-readable predictor can copy or optimize against the measurement."
+            },
+            {
+              "name": "capability-closed-prediction",
+              "admitted": true,
+              "reason": "The registered Fold instruction surface has no target or ambient host capability."
+            }
+          ]
+        },
+        {
+          "key": "record",
+          "choices": [
+            {
+              "name": "proof-measurement-conflation",
+              "admitted": false,
+              "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+            },
+            {
+              "name": "separate-measurement-record",
+              "admitted": true,
+              "reason": "External values remain source-bound records compared only after sealing."
+            }
+          ]
+        },
+        {
+          "key": "rows",
+          "choices": [
+            {
+              "name": "selected-favourable-rows",
+              "admitted": false,
+              "reason": "Selecting favorable rows cannot falsify the relation."
+            },
+            {
+              "name": "complete-registered-rows",
+              "admitted": true,
+              "reason": "Every favorable, unfavorable and tampered registered row is retained."
+            }
+          ]
+        },
+        {
+          "key": "generality",
+          "choices": [
+            {
+              "name": "finite-answer-lookup",
+              "admitted": false,
+              "reason": "An answer lookup has no successor certificate."
+            },
+            {
+              "name": "one-successor-closure",
+              "admitted": true,
+              "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+            }
+          ]
+        },
+        {
+          "key": "extension",
+          "choices": [
+            {
+              "name": "free-extra-rule",
+              "admitted": false,
+              "reason": "A free constant, scale or exception can select the measured answer."
+            },
+            {
+              "name": "no-extra-rule",
+              "admitted": true,
+              "reason": "No rule beyond the admitted dependencies and forced relation is present."
+            }
+          ]
+        }
+      ],
+      "exact_result": "Planck constant composed with Avogadro count predicts the CODATA molar Planck interval.",
+      "induction_base": "One registered relation composes one complete set of positive measurement carriers into one target interval.",
+      "induction_step": "Adding a measured input endpoint or relation step preserves every prior provenance and arithmetic trace and appends one source-bound exact operation.",
+      "exclusions": [
+        "floating, irrational, imaginary, signed or numerical-null proof values",
+        "fitted coefficients, target-selected relations or unregistered constants",
+        "target access before prediction seal",
+        "omitted input uncertainty, external row or adverse control"
+      ],
+      "operational_witnesses": [
+        [
+          "exact-rational-runtime",
+          "Every external finite decimal becomes an exact positive rational interval.",
+          true
+        ],
+        [
+          "target-withheld-runtime",
+          "The target vault releases only after a matching prediction seal.",
+          true
+        ]
+      ],
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-METROLOGY-MOLAR-PLANCK-001",
+      "expected_observation_label": "exact-measured-interval-overlap",
+      "target_rows": [
+        {
+          "target_id": "metrology-molar-planck-numeric-target",
+          "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+          "source_locator": "named CODATA fixed-width quantity row",
+          "observed_label": "exact-measured-interval-overlap"
+        }
+      ],
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "value_spec": {
+      "relation_id": "molar-planck-product",
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-METROLOGY-MOLAR-PLANCK-001",
+      "claim_id": "SFT-PHYS-VALIDATION-METROLOGY-MOLAR-PLANCK-001",
+      "relation_statement": "h composed with the Avogadro count yields the molar Planck carrier.",
+      "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "inputs": [
+        {
+          "key": "planck",
+          "quantity": "Planck constant",
+          "unit": "J Hz^-1"
+        },
+        {
+          "key": "avogadro",
+          "quantity": "Avogadro constant",
+          "unit": "mol^-1"
+        }
+      ],
+      "steps": [
+        {
+          "output": "molar_planck",
+          "operation": "product",
+          "left": "planck",
+          "right": "avogadro"
+        }
+      ],
+      "output_key": "molar_planck",
+      "target": {
+        "key": "target_molar_planck",
+        "quantity": "molar Planck constant",
+        "unit": "J Hz^-1 mol^-1"
+      },
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "instructions": [
+      [
+        "input",
+        "planck__lower",
+        [
+          "planck__lower"
+        ]
+      ],
+      [
+        "input",
+        "planck__upper",
+        [
+          "planck__upper"
+        ]
+      ],
+      [
+        "input",
+        "avogadro__lower",
+        [
+          "avogadro__lower"
+        ]
+      ],
+      [
+        "input",
+        "avogadro__upper",
+        [
+          "avogadro__upper"
+        ]
+      ],
+      [
+        "product",
+        "molar_planck__lower",
+        [
+          "planck__lower",
+          "avogadro__lower"
+        ]
+      ],
+      [
+        "product",
+        "molar_planck__upper",
+        [
+          "planck__upper",
+          "avogadro__upper"
+        ]
+      ],
+      [
+        "pair",
+        "predicted_interval",
+        [
+          "molar_planck__lower",
+          "molar_planck__upper"
+        ]
+      ],
+      [
+        "emit",
+        "",
+        [
+          "predicted_interval"
+        ]
+      ]
+    ]
+  },
+  {
+    "stem": "MeasuredMomentum",
+    "module": "BackfillMeasuredMomentum",
+    "claim_id": "SFT-PHYS-VALIDATION-MECHANICS-MOMENTUM-001",
+    "law": {
+      "claim_id": "SFT-PHYS-VALIDATION-MECHANICS-MOMENTUM-001",
+      "title": "Exact momentum measured-value correspondence",
+      "statement": "The atomic momentum carrier is predicted by exact composition of inertial content with propagation speed.",
+      "dependencies": [
+        "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001",
+        "SFT-PHYS-MEAS-TARGET-CUSTODY-001",
+        "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001",
+        "SFT-PHYS-MEAS-VALUE-RECORD-001",
+        "SFT-PHYS-MEAS-UNCERTAINTY-001",
+        "SFT-PHYS-MECH-MOMENTUM-001"
+      ],
+      "generation_rule": "Generate the complete exact-relation, input-provenance, target-access, interval, comparison, row, successor and extra-rule product.",
+      "grammar_boundary": "All exact positive interval predictions formed from registered measured inputs, one already forced relation, capability-closed arithmetic and a post-seal external target.",
+      "dimensions": [
+        {
+          "key": "carrier",
+          "choices": [
+            {
+              "name": "answer-only-scalar",
+              "admitted": false,
+              "reason": "An answer-only scalar erases the generated physical carrier."
+            },
+            {
+              "name": "complete-fold-carrier",
+              "admitted": true,
+              "reason": "The complete Fold trace retains the observed physical distinction."
+            }
+          ]
+        },
+        {
+          "key": "relation",
+          "choices": [
+            {
+              "name": "imported-or-fitted-relation",
+              "admitted": false,
+              "reason": "An imported or fitted relation lets consensus or target data select the law."
+            },
+            {
+              "name": "exact-positive-interval-relation",
+              "admitted": true,
+              "reason": "The already forced law uniquely composes registered positive input intervals into the withheld target quantity without fitting."
+            }
+          ]
+        },
+        {
+          "key": "provenance",
+          "choices": [
+            {
+              "name": "unbound-provenance",
+              "admitted": false,
+              "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+            },
+            {
+              "name": "source-bound-proof-trace",
+              "admitted": true,
+              "reason": "Every generated candidate and decision is bound to its exact source trace."
+            }
+          ]
+        },
+        {
+          "key": "prediction",
+          "choices": [
+            {
+              "name": "target-readable-prediction",
+              "admitted": false,
+              "reason": "A target-readable predictor can copy or optimize against the measurement."
+            },
+            {
+              "name": "capability-closed-prediction",
+              "admitted": true,
+              "reason": "The registered Fold instruction surface has no target or ambient host capability."
+            }
+          ]
+        },
+        {
+          "key": "record",
+          "choices": [
+            {
+              "name": "proof-measurement-conflation",
+              "admitted": false,
+              "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+            },
+            {
+              "name": "separate-measurement-record",
+              "admitted": true,
+              "reason": "External values remain source-bound records compared only after sealing."
+            }
+          ]
+        },
+        {
+          "key": "rows",
+          "choices": [
+            {
+              "name": "selected-favourable-rows",
+              "admitted": false,
+              "reason": "Selecting favorable rows cannot falsify the relation."
+            },
+            {
+              "name": "complete-registered-rows",
+              "admitted": true,
+              "reason": "Every favorable, unfavorable and tampered registered row is retained."
+            }
+          ]
+        },
+        {
+          "key": "generality",
+          "choices": [
+            {
+              "name": "finite-answer-lookup",
+              "admitted": false,
+              "reason": "An answer lookup has no successor certificate."
+            },
+            {
+              "name": "one-successor-closure",
+              "admitted": true,
+              "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+            }
+          ]
+        },
+        {
+          "key": "extension",
+          "choices": [
+            {
+              "name": "free-extra-rule",
+              "admitted": false,
+              "reason": "A free constant, scale or exception can select the measured answer."
+            },
+            {
+              "name": "no-extra-rule",
+              "admitted": true,
+              "reason": "No rule beyond the admitted dependencies and forced relation is present."
+            }
+          ]
+        }
+      ],
+      "exact_result": "Atomic mass composed with atomic velocity predicts the CODATA atomic momentum interval.",
+      "induction_base": "One registered relation composes one complete set of positive measurement carriers into one target interval.",
+      "induction_step": "Adding a measured input endpoint or relation step preserves every prior provenance and arithmetic trace and appends one source-bound exact operation.",
+      "exclusions": [
+        "floating, irrational, imaginary, signed or numerical-null proof values",
+        "fitted coefficients, target-selected relations or unregistered constants",
+        "target access before prediction seal",
+        "omitted input uncertainty, external row or adverse control"
+      ],
+      "operational_witnesses": [
+        [
+          "exact-rational-runtime",
+          "Every external finite decimal becomes an exact positive rational interval.",
+          true
+        ],
+        [
+          "target-withheld-runtime",
+          "The target vault releases only after a matching prediction seal.",
+          true
+        ]
+      ],
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-MECHANICS-MOMENTUM-001",
+      "expected_observation_label": "exact-measured-interval-overlap",
+      "target_rows": [
+        {
+          "target_id": "mechanics-momentum-numeric-target",
+          "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+          "source_locator": "named CODATA fixed-width quantity row",
+          "observed_label": "exact-measured-interval-overlap"
+        }
+      ],
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "value_spec": {
+      "relation_id": "momentum-mass-speed-product",
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-MECHANICS-MOMENTUM-001",
+      "claim_id": "SFT-PHYS-VALIDATION-MECHANICS-MOMENTUM-001",
+      "relation_statement": "Inertial content composed with speed yields momentum.",
+      "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "inputs": [
+        {
+          "key": "mass",
+          "quantity": "atomic unit of mass",
+          "unit": "kg"
+        },
+        {
+          "key": "speed",
+          "quantity": "atomic unit of velocity",
+          "unit": "m s^-1"
+        }
+      ],
+      "steps": [
+        {
+          "output": "momentum",
+          "operation": "product",
+          "left": "mass",
+          "right": "speed"
+        }
+      ],
+      "output_key": "momentum",
+      "target": {
+        "key": "target_momentum",
+        "quantity": "atomic unit of momentum",
+        "unit": "kg m s^-1"
+      },
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "instructions": [
+      [
+        "input",
+        "mass__lower",
+        [
+          "mass__lower"
+        ]
+      ],
+      [
+        "input",
+        "mass__upper",
+        [
+          "mass__upper"
+        ]
+      ],
+      [
+        "input",
+        "speed__lower",
+        [
+          "speed__lower"
+        ]
+      ],
+      [
+        "input",
+        "speed__upper",
+        [
+          "speed__upper"
+        ]
+      ],
+      [
+        "product",
+        "momentum__lower",
+        [
+          "mass__lower",
+          "speed__lower"
+        ]
+      ],
+      [
+        "product",
+        "momentum__upper",
+        [
+          "mass__upper",
+          "speed__upper"
+        ]
+      ],
+      [
+        "pair",
+        "predicted_interval",
+        [
+          "momentum__lower",
+          "momentum__upper"
+        ]
+      ],
+      [
+        "emit",
+        "",
+        [
+          "predicted_interval"
+        ]
+      ]
+    ]
+  },
+  {
+    "stem": "MeasuredForce",
+    "module": "BackfillMeasuredForce",
+    "claim_id": "SFT-PHYS-VALIDATION-MECHANICS-FORCE-001",
+    "law": {
+      "claim_id": "SFT-PHYS-VALIDATION-MECHANICS-FORCE-001",
+      "title": "Exact force measured-value correspondence",
+      "statement": "The atomic force carrier is predicted by exact work-energy transfer per spatial support interval.",
+      "dependencies": [
+        "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001",
+        "SFT-PHYS-MEAS-TARGET-CUSTODY-001",
+        "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001",
+        "SFT-PHYS-MEAS-VALUE-RECORD-001",
+        "SFT-PHYS-MEAS-UNCERTAINTY-001",
+        "SFT-PHYS-MECH-FORCE-001"
+      ],
+      "generation_rule": "Generate the complete exact-relation, input-provenance, target-access, interval, comparison, row, successor and extra-rule product.",
+      "grammar_boundary": "All exact positive interval predictions formed from registered measured inputs, one already forced relation, capability-closed arithmetic and a post-seal external target.",
+      "dimensions": [
+        {
+          "key": "carrier",
+          "choices": [
+            {
+              "name": "answer-only-scalar",
+              "admitted": false,
+              "reason": "An answer-only scalar erases the generated physical carrier."
+            },
+            {
+              "name": "complete-fold-carrier",
+              "admitted": true,
+              "reason": "The complete Fold trace retains the observed physical distinction."
+            }
+          ]
+        },
+        {
+          "key": "relation",
+          "choices": [
+            {
+              "name": "imported-or-fitted-relation",
+              "admitted": false,
+              "reason": "An imported or fitted relation lets consensus or target data select the law."
+            },
+            {
+              "name": "exact-positive-interval-relation",
+              "admitted": true,
+              "reason": "The already forced law uniquely composes registered positive input intervals into the withheld target quantity without fitting."
+            }
+          ]
+        },
+        {
+          "key": "provenance",
+          "choices": [
+            {
+              "name": "unbound-provenance",
+              "admitted": false,
+              "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+            },
+            {
+              "name": "source-bound-proof-trace",
+              "admitted": true,
+              "reason": "Every generated candidate and decision is bound to its exact source trace."
+            }
+          ]
+        },
+        {
+          "key": "prediction",
+          "choices": [
+            {
+              "name": "target-readable-prediction",
+              "admitted": false,
+              "reason": "A target-readable predictor can copy or optimize against the measurement."
+            },
+            {
+              "name": "capability-closed-prediction",
+              "admitted": true,
+              "reason": "The registered Fold instruction surface has no target or ambient host capability."
+            }
+          ]
+        },
+        {
+          "key": "record",
+          "choices": [
+            {
+              "name": "proof-measurement-conflation",
+              "admitted": false,
+              "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+            },
+            {
+              "name": "separate-measurement-record",
+              "admitted": true,
+              "reason": "External values remain source-bound records compared only after sealing."
+            }
+          ]
+        },
+        {
+          "key": "rows",
+          "choices": [
+            {
+              "name": "selected-favourable-rows",
+              "admitted": false,
+              "reason": "Selecting favorable rows cannot falsify the relation."
+            },
+            {
+              "name": "complete-registered-rows",
+              "admitted": true,
+              "reason": "Every favorable, unfavorable and tampered registered row is retained."
+            }
+          ]
+        },
+        {
+          "key": "generality",
+          "choices": [
+            {
+              "name": "finite-answer-lookup",
+              "admitted": false,
+              "reason": "An answer lookup has no successor certificate."
+            },
+            {
+              "name": "one-successor-closure",
+              "admitted": true,
+              "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+            }
+          ]
+        },
+        {
+          "key": "extension",
+          "choices": [
+            {
+              "name": "free-extra-rule",
+              "admitted": false,
+              "reason": "A free constant, scale or exception can select the measured answer."
+            },
+            {
+              "name": "no-extra-rule",
+              "admitted": true,
+              "reason": "No rule beyond the admitted dependencies and forced relation is present."
+            }
+          ]
+        }
+      ],
+      "exact_result": "Atomic energy divided by atomic length predicts the CODATA atomic-force interval.",
+      "induction_base": "One registered relation composes one complete set of positive measurement carriers into one target interval.",
+      "induction_step": "Adding a measured input endpoint or relation step preserves every prior provenance and arithmetic trace and appends one source-bound exact operation.",
+      "exclusions": [
+        "floating, irrational, imaginary, signed or numerical-null proof values",
+        "fitted coefficients, target-selected relations or unregistered constants",
+        "target access before prediction seal",
+        "omitted input uncertainty, external row or adverse control"
+      ],
+      "operational_witnesses": [
+        [
+          "exact-rational-runtime",
+          "Every external finite decimal becomes an exact positive rational interval.",
+          true
+        ],
+        [
+          "target-withheld-runtime",
+          "The target vault releases only after a matching prediction seal.",
+          true
+        ]
+      ],
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-MECHANICS-FORCE-001",
+      "expected_observation_label": "exact-measured-interval-overlap",
+      "target_rows": [
+        {
+          "target_id": "mechanics-force-numeric-target",
+          "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+          "source_locator": "named CODATA fixed-width quantity row",
+          "observed_label": "exact-measured-interval-overlap"
+        }
+      ],
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "value_spec": {
+      "relation_id": "force-energy-length-quotient",
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-MECHANICS-FORCE-001",
+      "claim_id": "SFT-PHYS-VALIDATION-MECHANICS-FORCE-001",
+      "relation_statement": "Work-energy transfer per spatial interval yields force.",
+      "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "inputs": [
+        {
+          "key": "energy",
+          "quantity": "atomic unit of energy",
+          "unit": "J"
+        },
+        {
+          "key": "length",
+          "quantity": "atomic unit of length",
+          "unit": "m"
+        }
+      ],
+      "steps": [
+        {
+          "output": "force",
+          "operation": "quotient",
+          "left": "energy",
+          "right": "length"
+        }
+      ],
+      "output_key": "force",
+      "target": {
+        "key": "target_force",
+        "quantity": "atomic unit of force",
+        "unit": "N"
+      },
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "instructions": [
+      [
+        "input",
+        "energy__lower",
+        [
+          "energy__lower"
+        ]
+      ],
+      [
+        "input",
+        "energy__upper",
+        [
+          "energy__upper"
+        ]
+      ],
+      [
+        "input",
+        "length__lower",
+        [
+          "length__lower"
+        ]
+      ],
+      [
+        "input",
+        "length__upper",
+        [
+          "length__upper"
+        ]
+      ],
+      [
+        "quotient",
+        "force__lower",
+        [
+          "energy__lower",
+          "length__upper"
+        ]
+      ],
+      [
+        "quotient",
+        "force__upper",
+        [
+          "energy__upper",
+          "length__lower"
+        ]
+      ],
+      [
+        "pair",
+        "predicted_interval",
+        [
+          "force__lower",
+          "force__upper"
+        ]
+      ],
+      [
+        "emit",
+        "",
+        [
+          "predicted_interval"
+        ]
+      ]
+    ]
+  },
+  {
+    "stem": "MeasuredPotential",
+    "module": "BackfillMeasuredPotential",
+    "claim_id": "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-POTENTIAL-001",
+    "law": {
+      "claim_id": "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-POTENTIAL-001",
+      "title": "Exact electric-potential measured-value correspondence",
+      "statement": "The atomic electric-potential carrier is predicted by exact energy transfer per elementary held-charge carrier.",
+      "dependencies": [
+        "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001",
+        "SFT-PHYS-MEAS-TARGET-CUSTODY-001",
+        "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001",
+        "SFT-PHYS-MEAS-VALUE-RECORD-001",
+        "SFT-PHYS-MEAS-UNCERTAINTY-001",
+        "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"
+      ],
+      "generation_rule": "Generate the complete exact-relation, input-provenance, target-access, interval, comparison, row, successor and extra-rule product.",
+      "grammar_boundary": "All exact positive interval predictions formed from registered measured inputs, one already forced relation, capability-closed arithmetic and a post-seal external target.",
+      "dimensions": [
+        {
+          "key": "carrier",
+          "choices": [
+            {
+              "name": "answer-only-scalar",
+              "admitted": false,
+              "reason": "An answer-only scalar erases the generated physical carrier."
+            },
+            {
+              "name": "complete-fold-carrier",
+              "admitted": true,
+              "reason": "The complete Fold trace retains the observed physical distinction."
+            }
+          ]
+        },
+        {
+          "key": "relation",
+          "choices": [
+            {
+              "name": "imported-or-fitted-relation",
+              "admitted": false,
+              "reason": "An imported or fitted relation lets consensus or target data select the law."
+            },
+            {
+              "name": "exact-positive-interval-relation",
+              "admitted": true,
+              "reason": "The already forced law uniquely composes registered positive input intervals into the withheld target quantity without fitting."
+            }
+          ]
+        },
+        {
+          "key": "provenance",
+          "choices": [
+            {
+              "name": "unbound-provenance",
+              "admitted": false,
+              "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+            },
+            {
+              "name": "source-bound-proof-trace",
+              "admitted": true,
+              "reason": "Every generated candidate and decision is bound to its exact source trace."
+            }
+          ]
+        },
+        {
+          "key": "prediction",
+          "choices": [
+            {
+              "name": "target-readable-prediction",
+              "admitted": false,
+              "reason": "A target-readable predictor can copy or optimize against the measurement."
+            },
+            {
+              "name": "capability-closed-prediction",
+              "admitted": true,
+              "reason": "The registered Fold instruction surface has no target or ambient host capability."
+            }
+          ]
+        },
+        {
+          "key": "record",
+          "choices": [
+            {
+              "name": "proof-measurement-conflation",
+              "admitted": false,
+              "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+            },
+            {
+              "name": "separate-measurement-record",
+              "admitted": true,
+              "reason": "External values remain source-bound records compared only after sealing."
+            }
+          ]
+        },
+        {
+          "key": "rows",
+          "choices": [
+            {
+              "name": "selected-favourable-rows",
+              "admitted": false,
+              "reason": "Selecting favorable rows cannot falsify the relation."
+            },
+            {
+              "name": "complete-registered-rows",
+              "admitted": true,
+              "reason": "Every favorable, unfavorable and tampered registered row is retained."
+            }
+          ]
+        },
+        {
+          "key": "generality",
+          "choices": [
+            {
+              "name": "finite-answer-lookup",
+              "admitted": false,
+              "reason": "An answer lookup has no successor certificate."
+            },
+            {
+              "name": "one-successor-closure",
+              "admitted": true,
+              "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+            }
+          ]
+        },
+        {
+          "key": "extension",
+          "choices": [
+            {
+              "name": "free-extra-rule",
+              "admitted": false,
+              "reason": "A free constant, scale or exception can select the measured answer."
+            },
+            {
+              "name": "no-extra-rule",
+              "admitted": true,
+              "reason": "No rule beyond the admitted dependencies and forced relation is present."
+            }
+          ]
+        }
+      ],
+      "exact_result": "Atomic energy divided by elementary charge predicts the CODATA atomic electric-potential interval.",
+      "induction_base": "One registered relation composes one complete set of positive measurement carriers into one target interval.",
+      "induction_step": "Adding a measured input endpoint or relation step preserves every prior provenance and arithmetic trace and appends one source-bound exact operation.",
+      "exclusions": [
+        "floating, irrational, imaginary, signed or numerical-null proof values",
+        "fitted coefficients, target-selected relations or unregistered constants",
+        "target access before prediction seal",
+        "omitted input uncertainty, external row or adverse control"
+      ],
+      "operational_witnesses": [
+        [
+          "exact-rational-runtime",
+          "Every external finite decimal becomes an exact positive rational interval.",
+          true
+        ],
+        [
+          "target-withheld-runtime",
+          "The target vault releases only after a matching prediction seal.",
+          true
+        ]
+      ],
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-FIELD-ELECTRIC-POTENTIAL-001",
+      "expected_observation_label": "exact-measured-interval-overlap",
+      "target_rows": [
+        {
+          "target_id": "field-electric-potential-numeric-target",
+          "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+          "source_locator": "named CODATA fixed-width quantity row",
+          "observed_label": "exact-measured-interval-overlap"
+        }
+      ],
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "value_spec": {
+      "relation_id": "potential-energy-charge-quotient",
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-FIELD-ELECTRIC-POTENTIAL-001",
+      "claim_id": "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-POTENTIAL-001",
+      "relation_statement": "Energy transfer per held charge yields electric potential.",
+      "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "inputs": [
+        {
+          "key": "energy",
+          "quantity": "atomic unit of energy",
+          "unit": "J"
+        },
+        {
+          "key": "charge",
+          "quantity": "elementary charge",
+          "unit": "C"
+        }
+      ],
+      "steps": [
+        {
+          "output": "potential",
+          "operation": "quotient",
+          "left": "energy",
+          "right": "charge"
+        }
+      ],
+      "output_key": "potential",
+      "target": {
+        "key": "target_potential",
+        "quantity": "atomic unit of electric potential",
+        "unit": "V"
+      },
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "instructions": [
+      [
+        "input",
+        "energy__lower",
+        [
+          "energy__lower"
+        ]
+      ],
+      [
+        "input",
+        "energy__upper",
+        [
+          "energy__upper"
+        ]
+      ],
+      [
+        "input",
+        "charge__lower",
+        [
+          "charge__lower"
+        ]
+      ],
+      [
+        "input",
+        "charge__upper",
+        [
+          "charge__upper"
+        ]
+      ],
+      [
+        "quotient",
+        "potential__lower",
+        [
+          "energy__lower",
+          "charge__upper"
+        ]
+      ],
+      [
+        "quotient",
+        "potential__upper",
+        [
+          "energy__upper",
+          "charge__lower"
+        ]
+      ],
+      [
+        "pair",
+        "predicted_interval",
+        [
+          "potential__lower",
+          "potential__upper"
+        ]
+      ],
+      [
+        "emit",
+        "",
+        [
+          "predicted_interval"
+        ]
+      ]
+    ]
+  },
+  {
+    "stem": "MeasuredField",
+    "module": "BackfillMeasuredField",
+    "claim_id": "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001",
+    "law": {
+      "claim_id": "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001",
+      "title": "Exact electric-field measured-value correspondence",
+      "statement": "The atomic electric-field response is predicted by exact potential change per atomic spatial support interval.",
+      "dependencies": [
+        "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001",
+        "SFT-PHYS-MEAS-TARGET-CUSTODY-001",
+        "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001",
+        "SFT-PHYS-MEAS-VALUE-RECORD-001",
+        "SFT-PHYS-MEAS-UNCERTAINTY-001",
+        "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"
+      ],
+      "generation_rule": "Generate the complete exact-relation, input-provenance, target-access, interval, comparison, row, successor and extra-rule product.",
+      "grammar_boundary": "All exact positive interval predictions formed from registered measured inputs, one already forced relation, capability-closed arithmetic and a post-seal external target.",
+      "dimensions": [
+        {
+          "key": "carrier",
+          "choices": [
+            {
+              "name": "answer-only-scalar",
+              "admitted": false,
+              "reason": "An answer-only scalar erases the generated physical carrier."
+            },
+            {
+              "name": "complete-fold-carrier",
+              "admitted": true,
+              "reason": "The complete Fold trace retains the observed physical distinction."
+            }
+          ]
+        },
+        {
+          "key": "relation",
+          "choices": [
+            {
+              "name": "imported-or-fitted-relation",
+              "admitted": false,
+              "reason": "An imported or fitted relation lets consensus or target data select the law."
+            },
+            {
+              "name": "exact-positive-interval-relation",
+              "admitted": true,
+              "reason": "The already forced law uniquely composes registered positive input intervals into the withheld target quantity without fitting."
+            }
+          ]
+        },
+        {
+          "key": "provenance",
+          "choices": [
+            {
+              "name": "unbound-provenance",
+              "admitted": false,
+              "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+            },
+            {
+              "name": "source-bound-proof-trace",
+              "admitted": true,
+              "reason": "Every generated candidate and decision is bound to its exact source trace."
+            }
+          ]
+        },
+        {
+          "key": "prediction",
+          "choices": [
+            {
+              "name": "target-readable-prediction",
+              "admitted": false,
+              "reason": "A target-readable predictor can copy or optimize against the measurement."
+            },
+            {
+              "name": "capability-closed-prediction",
+              "admitted": true,
+              "reason": "The registered Fold instruction surface has no target or ambient host capability."
+            }
+          ]
+        },
+        {
+          "key": "record",
+          "choices": [
+            {
+              "name": "proof-measurement-conflation",
+              "admitted": false,
+              "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+            },
+            {
+              "name": "separate-measurement-record",
+              "admitted": true,
+              "reason": "External values remain source-bound records compared only after sealing."
+            }
+          ]
+        },
+        {
+          "key": "rows",
+          "choices": [
+            {
+              "name": "selected-favourable-rows",
+              "admitted": false,
+              "reason": "Selecting favorable rows cannot falsify the relation."
+            },
+            {
+              "name": "complete-registered-rows",
+              "admitted": true,
+              "reason": "Every favorable, unfavorable and tampered registered row is retained."
+            }
+          ]
+        },
+        {
+          "key": "generality",
+          "choices": [
+            {
+              "name": "finite-answer-lookup",
+              "admitted": false,
+              "reason": "An answer lookup has no successor certificate."
+            },
+            {
+              "name": "one-successor-closure",
+              "admitted": true,
+              "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+            }
+          ]
+        },
+        {
+          "key": "extension",
+          "choices": [
+            {
+              "name": "free-extra-rule",
+              "admitted": false,
+              "reason": "A free constant, scale or exception can select the measured answer."
+            },
+            {
+              "name": "no-extra-rule",
+              "admitted": true,
+              "reason": "No rule beyond the admitted dependencies and forced relation is present."
+            }
+          ]
+        }
+      ],
+      "exact_result": "Atomic electric potential divided by atomic length predicts the CODATA atomic electric-field interval.",
+      "induction_base": "One registered relation composes one complete set of positive measurement carriers into one target interval.",
+      "induction_step": "Adding a measured input endpoint or relation step preserves every prior provenance and arithmetic trace and appends one source-bound exact operation.",
+      "exclusions": [
+        "floating, irrational, imaginary, signed or numerical-null proof values",
+        "fitted coefficients, target-selected relations or unregistered constants",
+        "target access before prediction seal",
+        "omitted input uncertainty, external row or adverse control"
+      ],
+      "operational_witnesses": [
+        [
+          "exact-rational-runtime",
+          "Every external finite decimal becomes an exact positive rational interval.",
+          true
+        ],
+        [
+          "target-withheld-runtime",
+          "The target vault releases only after a matching prediction seal.",
+          true
+        ]
+      ],
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001",
+      "expected_observation_label": "exact-measured-interval-overlap",
+      "target_rows": [
+        {
+          "target_id": "field-electric-strength-numeric-target",
+          "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+          "source_locator": "named CODATA fixed-width quantity row",
+          "observed_label": "exact-measured-interval-overlap"
+        }
+      ],
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "value_spec": {
+      "relation_id": "electric-field-potential-length-quotient",
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001",
+      "claim_id": "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001",
+      "relation_statement": "Potential change per spatial interval yields electric-field response.",
+      "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "inputs": [
+        {
+          "key": "potential",
+          "quantity": "atomic unit of electric potential",
+          "unit": "V"
+        },
+        {
+          "key": "length",
+          "quantity": "atomic unit of length",
+          "unit": "m"
+        }
+      ],
+      "steps": [
+        {
+          "output": "field",
+          "operation": "quotient",
+          "left": "potential",
+          "right": "length"
+        }
+      ],
+      "output_key": "field",
+      "target": {
+        "key": "target_field",
+        "quantity": "atomic unit of electric field",
+        "unit": "V m^-1"
+      },
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "instructions": [
+      [
+        "input",
+        "potential__lower",
+        [
+          "potential__lower"
+        ]
+      ],
+      [
+        "input",
+        "potential__upper",
+        [
+          "potential__upper"
+        ]
+      ],
+      [
+        "input",
+        "length__lower",
+        [
+          "length__lower"
+        ]
+      ],
+      [
+        "input",
+        "length__upper",
+        [
+          "length__upper"
+        ]
+      ],
+      [
+        "quotient",
+        "field__lower",
+        [
+          "potential__lower",
+          "length__upper"
+        ]
+      ],
+      [
+        "quotient",
+        "field__upper",
+        [
+          "potential__upper",
+          "length__lower"
+        ]
+      ],
+      [
+        "pair",
+        "predicted_interval",
+        [
+          "field__lower",
+          "field__upper"
+        ]
+      ],
+      [
+        "emit",
+        "",
+        [
+          "predicted_interval"
+        ]
+      ]
+    ]
+  },
+  {
+    "stem": "MeasuredFrequency",
+    "module": "BackfillMeasuredFrequency",
+    "claim_id": "SFT-PHYS-VALIDATION-WAVE-FREQUENCY-001",
+    "law": {
+      "claim_id": "SFT-PHYS-VALIDATION-WAVE-FREQUENCY-001",
+      "title": "Exact wave frequency measured-value correspondence",
+      "statement": "A registered inverse-length recurrence transported at the limiting propagation speed predicts its recurrence frequency.",
+      "dependencies": [
+        "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001",
+        "SFT-PHYS-MEAS-TARGET-CUSTODY-001",
+        "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001",
+        "SFT-PHYS-MEAS-VALUE-RECORD-001",
+        "SFT-PHYS-MEAS-UNCERTAINTY-001",
+        "SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001"
+      ],
+      "generation_rule": "Generate the complete exact-relation, input-provenance, target-access, interval, comparison, row, successor and extra-rule product.",
+      "grammar_boundary": "All exact positive interval predictions formed from registered measured inputs, one already forced relation, capability-closed arithmetic and a post-seal external target.",
+      "dimensions": [
+        {
+          "key": "carrier",
+          "choices": [
+            {
+              "name": "answer-only-scalar",
+              "admitted": false,
+              "reason": "An answer-only scalar erases the generated physical carrier."
+            },
+            {
+              "name": "complete-fold-carrier",
+              "admitted": true,
+              "reason": "The complete Fold trace retains the observed physical distinction."
+            }
+          ]
+        },
+        {
+          "key": "relation",
+          "choices": [
+            {
+              "name": "imported-or-fitted-relation",
+              "admitted": false,
+              "reason": "An imported or fitted relation lets consensus or target data select the law."
+            },
+            {
+              "name": "exact-positive-interval-relation",
+              "admitted": true,
+              "reason": "The already forced law uniquely composes registered positive input intervals into the withheld target quantity without fitting."
+            }
+          ]
+        },
+        {
+          "key": "provenance",
+          "choices": [
+            {
+              "name": "unbound-provenance",
+              "admitted": false,
+              "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+            },
+            {
+              "name": "source-bound-proof-trace",
+              "admitted": true,
+              "reason": "Every generated candidate and decision is bound to its exact source trace."
+            }
+          ]
+        },
+        {
+          "key": "prediction",
+          "choices": [
+            {
+              "name": "target-readable-prediction",
+              "admitted": false,
+              "reason": "A target-readable predictor can copy or optimize against the measurement."
+            },
+            {
+              "name": "capability-closed-prediction",
+              "admitted": true,
+              "reason": "The registered Fold instruction surface has no target or ambient host capability."
+            }
+          ]
+        },
+        {
+          "key": "record",
+          "choices": [
+            {
+              "name": "proof-measurement-conflation",
+              "admitted": false,
+              "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+            },
+            {
+              "name": "separate-measurement-record",
+              "admitted": true,
+              "reason": "External values remain source-bound records compared only after sealing."
+            }
+          ]
+        },
+        {
+          "key": "rows",
+          "choices": [
+            {
+              "name": "selected-favourable-rows",
+              "admitted": false,
+              "reason": "Selecting favorable rows cannot falsify the relation."
+            },
+            {
+              "name": "complete-registered-rows",
+              "admitted": true,
+              "reason": "Every favorable, unfavorable and tampered registered row is retained."
+            }
+          ]
+        },
+        {
+          "key": "generality",
+          "choices": [
+            {
+              "name": "finite-answer-lookup",
+              "admitted": false,
+              "reason": "An answer lookup has no successor certificate."
+            },
+            {
+              "name": "one-successor-closure",
+              "admitted": true,
+              "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+            }
+          ]
+        },
+        {
+          "key": "extension",
+          "choices": [
+            {
+              "name": "free-extra-rule",
+              "admitted": false,
+              "reason": "A free constant, scale or exception can select the measured answer."
+            },
+            {
+              "name": "no-extra-rule",
+              "admitted": true,
+              "reason": "No rule beyond the admitted dependencies and forced relation is present."
+            }
+          ]
+        }
+      ],
+      "exact_result": "Rydberg inverse length composed with limiting speed predicts the CODATA Rydberg-frequency interval.",
+      "induction_base": "One registered relation composes one complete set of positive measurement carriers into one target interval.",
+      "induction_step": "Adding a measured input endpoint or relation step preserves every prior provenance and arithmetic trace and appends one source-bound exact operation.",
+      "exclusions": [
+        "floating, irrational, imaginary, signed or numerical-null proof values",
+        "fitted coefficients, target-selected relations or unregistered constants",
+        "target access before prediction seal",
+        "omitted input uncertainty, external row or adverse control"
+      ],
+      "operational_witnesses": [
+        [
+          "exact-rational-runtime",
+          "Every external finite decimal becomes an exact positive rational interval.",
+          true
+        ],
+        [
+          "target-withheld-runtime",
+          "The target vault releases only after a matching prediction seal.",
+          true
+        ]
+      ],
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-WAVE-FREQUENCY-001",
+      "expected_observation_label": "exact-measured-interval-overlap",
+      "target_rows": [
+        {
+          "target_id": "wave-frequency-numeric-target",
+          "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+          "source_locator": "named CODATA fixed-width quantity row",
+          "observed_label": "exact-measured-interval-overlap"
+        }
+      ],
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "value_spec": {
+      "relation_id": "frequency-inverse-length-speed-product",
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-WAVE-FREQUENCY-001",
+      "claim_id": "SFT-PHYS-VALIDATION-WAVE-FREQUENCY-001",
+      "relation_statement": "Inverse wavelength composed with propagation speed yields recurrence frequency.",
+      "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "inputs": [
+        {
+          "key": "inverse_length",
+          "quantity": "Rydberg constant",
+          "unit": "m^-1"
+        },
+        {
+          "key": "speed",
+          "quantity": "speed of light in vacuum",
+          "unit": "m s^-1"
+        }
+      ],
+      "steps": [
+        {
+          "output": "frequency",
+          "operation": "product",
+          "left": "inverse_length",
+          "right": "speed"
+        }
+      ],
+      "output_key": "frequency",
+      "target": {
+        "key": "target_frequency",
+        "quantity": "Rydberg constant times c in Hz",
+        "unit": "Hz"
+      },
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "instructions": [
+      [
+        "input",
+        "inverse_length__lower",
+        [
+          "inverse_length__lower"
+        ]
+      ],
+      [
+        "input",
+        "inverse_length__upper",
+        [
+          "inverse_length__upper"
+        ]
+      ],
+      [
+        "input",
+        "speed__lower",
+        [
+          "speed__lower"
+        ]
+      ],
+      [
+        "input",
+        "speed__upper",
+        [
+          "speed__upper"
+        ]
+      ],
+      [
+        "product",
+        "frequency__lower",
+        [
+          "inverse_length__lower",
+          "speed__lower"
+        ]
+      ],
+      [
+        "product",
+        "frequency__upper",
+        [
+          "inverse_length__upper",
+          "speed__upper"
+        ]
+      ],
+      [
+        "pair",
+        "predicted_interval",
+        [
+          "frequency__lower",
+          "frequency__upper"
+        ]
+      ],
+      [
+        "emit",
+        "",
+        [
+          "predicted_interval"
+        ]
+      ]
+    ]
+  },
+  {
+    "stem": "MeasuredWaveEnergy",
+    "module": "BackfillMeasuredWaveEnergy",
+    "claim_id": "SFT-PHYS-VALIDATION-WAVE-ENERGY-001",
+    "law": {
+      "claim_id": "SFT-PHYS-VALIDATION-WAVE-ENERGY-001",
+      "title": "Exact wave energy measured-value correspondence",
+      "statement": "A recurrence frequency composed with the Planck transfer carrier predicts its transported energy.",
+      "dependencies": [
+        "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001",
+        "SFT-PHYS-MEAS-TARGET-CUSTODY-001",
+        "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001",
+        "SFT-PHYS-MEAS-VALUE-RECORD-001",
+        "SFT-PHYS-MEAS-UNCERTAINTY-001",
+        "SFT-PHYS-WAVE-ENERGY-MOMENTUM-001"
+      ],
+      "generation_rule": "Generate the complete exact-relation, input-provenance, target-access, interval, comparison, row, successor and extra-rule product.",
+      "grammar_boundary": "All exact positive interval predictions formed from registered measured inputs, one already forced relation, capability-closed arithmetic and a post-seal external target.",
+      "dimensions": [
+        {
+          "key": "carrier",
+          "choices": [
+            {
+              "name": "answer-only-scalar",
+              "admitted": false,
+              "reason": "An answer-only scalar erases the generated physical carrier."
+            },
+            {
+              "name": "complete-fold-carrier",
+              "admitted": true,
+              "reason": "The complete Fold trace retains the observed physical distinction."
+            }
+          ]
+        },
+        {
+          "key": "relation",
+          "choices": [
+            {
+              "name": "imported-or-fitted-relation",
+              "admitted": false,
+              "reason": "An imported or fitted relation lets consensus or target data select the law."
+            },
+            {
+              "name": "exact-positive-interval-relation",
+              "admitted": true,
+              "reason": "The already forced law uniquely composes registered positive input intervals into the withheld target quantity without fitting."
+            }
+          ]
+        },
+        {
+          "key": "provenance",
+          "choices": [
+            {
+              "name": "unbound-provenance",
+              "admitted": false,
+              "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+            },
+            {
+              "name": "source-bound-proof-trace",
+              "admitted": true,
+              "reason": "Every generated candidate and decision is bound to its exact source trace."
+            }
+          ]
+        },
+        {
+          "key": "prediction",
+          "choices": [
+            {
+              "name": "target-readable-prediction",
+              "admitted": false,
+              "reason": "A target-readable predictor can copy or optimize against the measurement."
+            },
+            {
+              "name": "capability-closed-prediction",
+              "admitted": true,
+              "reason": "The registered Fold instruction surface has no target or ambient host capability."
+            }
+          ]
+        },
+        {
+          "key": "record",
+          "choices": [
+            {
+              "name": "proof-measurement-conflation",
+              "admitted": false,
+              "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+            },
+            {
+              "name": "separate-measurement-record",
+              "admitted": true,
+              "reason": "External values remain source-bound records compared only after sealing."
+            }
+          ]
+        },
+        {
+          "key": "rows",
+          "choices": [
+            {
+              "name": "selected-favourable-rows",
+              "admitted": false,
+              "reason": "Selecting favorable rows cannot falsify the relation."
+            },
+            {
+              "name": "complete-registered-rows",
+              "admitted": true,
+              "reason": "Every favorable, unfavorable and tampered registered row is retained."
+            }
+          ]
+        },
+        {
+          "key": "generality",
+          "choices": [
+            {
+              "name": "finite-answer-lookup",
+              "admitted": false,
+              "reason": "An answer lookup has no successor certificate."
+            },
+            {
+              "name": "one-successor-closure",
+              "admitted": true,
+              "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+            }
+          ]
+        },
+        {
+          "key": "extension",
+          "choices": [
+            {
+              "name": "free-extra-rule",
+              "admitted": false,
+              "reason": "A free constant, scale or exception can select the measured answer."
+            },
+            {
+              "name": "no-extra-rule",
+              "admitted": true,
+              "reason": "No rule beyond the admitted dependencies and forced relation is present."
+            }
+          ]
+        }
+      ],
+      "exact_result": "Rydberg inverse length, Planck carrier and limiting speed predict the CODATA Rydberg-energy interval.",
+      "induction_base": "One registered relation composes one complete set of positive measurement carriers into one target interval.",
+      "induction_step": "Adding a measured input endpoint or relation step preserves every prior provenance and arithmetic trace and appends one source-bound exact operation.",
+      "exclusions": [
+        "floating, irrational, imaginary, signed or numerical-null proof values",
+        "fitted coefficients, target-selected relations or unregistered constants",
+        "target access before prediction seal",
+        "omitted input uncertainty, external row or adverse control"
+      ],
+      "operational_witnesses": [
+        [
+          "exact-rational-runtime",
+          "Every external finite decimal becomes an exact positive rational interval.",
+          true
+        ],
+        [
+          "target-withheld-runtime",
+          "The target vault releases only after a matching prediction seal.",
+          true
+        ]
+      ],
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-WAVE-ENERGY-001",
+      "expected_observation_label": "exact-measured-interval-overlap",
+      "target_rows": [
+        {
+          "target_id": "wave-energy-numeric-target",
+          "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+          "source_locator": "named CODATA fixed-width quantity row",
+          "observed_label": "exact-measured-interval-overlap"
+        }
+      ],
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "value_spec": {
+      "relation_id": "energy-inverse-length-planck-speed-product",
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-WAVE-ENERGY-001",
+      "claim_id": "SFT-PHYS-VALIDATION-WAVE-ENERGY-001",
+      "relation_statement": "Inverse wavelength composed with limiting speed and the Planck carrier yields wave energy.",
+      "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "inputs": [
+        {
+          "key": "inverse_length",
+          "quantity": "Rydberg constant",
+          "unit": "m^-1"
+        },
+        {
+          "key": "planck",
+          "quantity": "Planck constant",
+          "unit": "J Hz^-1"
+        },
+        {
+          "key": "speed",
+          "quantity": "speed of light in vacuum",
+          "unit": "m s^-1"
+        }
+      ],
+      "steps": [
+        {
+          "output": "frequency",
+          "operation": "product",
+          "left": "inverse_length",
+          "right": "speed"
+        },
+        {
+          "output": "energy",
+          "operation": "product",
+          "left": "frequency",
+          "right": "planck"
+        }
+      ],
+      "output_key": "energy",
+      "target": {
+        "key": "target_energy",
+        "quantity": "Rydberg constant times hc in J",
+        "unit": "J"
+      },
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "instructions": [
+      [
+        "input",
+        "inverse_length__lower",
+        [
+          "inverse_length__lower"
+        ]
+      ],
+      [
+        "input",
+        "inverse_length__upper",
+        [
+          "inverse_length__upper"
+        ]
+      ],
+      [
+        "input",
+        "planck__lower",
+        [
+          "planck__lower"
+        ]
+      ],
+      [
+        "input",
+        "planck__upper",
+        [
+          "planck__upper"
+        ]
+      ],
+      [
+        "input",
+        "speed__lower",
+        [
+          "speed__lower"
+        ]
+      ],
+      [
+        "input",
+        "speed__upper",
+        [
+          "speed__upper"
+        ]
+      ],
+      [
+        "product",
+        "frequency__lower",
+        [
+          "inverse_length__lower",
+          "speed__lower"
+        ]
+      ],
+      [
+        "product",
+        "frequency__upper",
+        [
+          "inverse_length__upper",
+          "speed__upper"
+        ]
+      ],
+      [
+        "product",
+        "energy__lower",
+        [
+          "frequency__lower",
+          "planck__lower"
+        ]
+      ],
+      [
+        "product",
+        "energy__upper",
+        [
+          "frequency__upper",
+          "planck__upper"
+        ]
+      ],
+      [
+        "pair",
+        "predicted_interval",
+        [
+          "energy__lower",
+          "energy__upper"
+        ]
+      ],
+      [
+        "emit",
+        "",
+        [
+          "predicted_interval"
+        ]
+      ]
+    ]
+  },
+  {
+    "stem": "MolarThermal",
+    "module": "BackfillMolarThermal",
+    "claim_id": "SFT-PHYS-VALIDATION-THERMO-MOLAR-ENERGY-001",
+    "law": {
+      "claim_id": "SFT-PHYS-VALIDATION-THERMO-MOLAR-ENERGY-001",
+      "title": "Exact molar thermal measured-value correspondence",
+      "statement": "The molar thermal-energy carrier is predicted by exact composition of the per-constituent thermal carrier with the counted molar carrier.",
+      "dependencies": [
+        "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001",
+        "SFT-PHYS-MEAS-TARGET-CUSTODY-001",
+        "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001",
+        "SFT-PHYS-MEAS-VALUE-RECORD-001",
+        "SFT-PHYS-MEAS-UNCERTAINTY-001",
+        "SFT-PHYS-THERMO-TEMPERATURE-001"
+      ],
+      "generation_rule": "Generate the complete exact-relation, input-provenance, target-access, interval, comparison, row, successor and extra-rule product.",
+      "grammar_boundary": "All exact positive interval predictions formed from registered measured inputs, one already forced relation, capability-closed arithmetic and a post-seal external target.",
+      "dimensions": [
+        {
+          "key": "carrier",
+          "choices": [
+            {
+              "name": "answer-only-scalar",
+              "admitted": false,
+              "reason": "An answer-only scalar erases the generated physical carrier."
+            },
+            {
+              "name": "complete-fold-carrier",
+              "admitted": true,
+              "reason": "The complete Fold trace retains the observed physical distinction."
+            }
+          ]
+        },
+        {
+          "key": "relation",
+          "choices": [
+            {
+              "name": "imported-or-fitted-relation",
+              "admitted": false,
+              "reason": "An imported or fitted relation lets consensus or target data select the law."
+            },
+            {
+              "name": "exact-positive-interval-relation",
+              "admitted": true,
+              "reason": "The already forced law uniquely composes registered positive input intervals into the withheld target quantity without fitting."
+            }
+          ]
+        },
+        {
+          "key": "provenance",
+          "choices": [
+            {
+              "name": "unbound-provenance",
+              "admitted": false,
+              "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+            },
+            {
+              "name": "source-bound-proof-trace",
+              "admitted": true,
+              "reason": "Every generated candidate and decision is bound to its exact source trace."
+            }
+          ]
+        },
+        {
+          "key": "prediction",
+          "choices": [
+            {
+              "name": "target-readable-prediction",
+              "admitted": false,
+              "reason": "A target-readable predictor can copy or optimize against the measurement."
+            },
+            {
+              "name": "capability-closed-prediction",
+              "admitted": true,
+              "reason": "The registered Fold instruction surface has no target or ambient host capability."
+            }
+          ]
+        },
+        {
+          "key": "record",
+          "choices": [
+            {
+              "name": "proof-measurement-conflation",
+              "admitted": false,
+              "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+            },
+            {
+              "name": "separate-measurement-record",
+              "admitted": true,
+              "reason": "External values remain source-bound records compared only after sealing."
+            }
+          ]
+        },
+        {
+          "key": "rows",
+          "choices": [
+            {
+              "name": "selected-favourable-rows",
+              "admitted": false,
+              "reason": "Selecting favorable rows cannot falsify the relation."
+            },
+            {
+              "name": "complete-registered-rows",
+              "admitted": true,
+              "reason": "Every favorable, unfavorable and tampered registered row is retained."
+            }
+          ]
+        },
+        {
+          "key": "generality",
+          "choices": [
+            {
+              "name": "finite-answer-lookup",
+              "admitted": false,
+              "reason": "An answer lookup has no successor certificate."
+            },
+            {
+              "name": "one-successor-closure",
+              "admitted": true,
+              "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+            }
+          ]
+        },
+        {
+          "key": "extension",
+          "choices": [
+            {
+              "name": "free-extra-rule",
+              "admitted": false,
+              "reason": "A free constant, scale or exception can select the measured answer."
+            },
+            {
+              "name": "no-extra-rule",
+              "admitted": true,
+              "reason": "No rule beyond the admitted dependencies and forced relation is present."
+            }
+          ]
+        }
+      ],
+      "exact_result": "Boltzmann carrier composed with Avogadro count predicts the CODATA molar gas-constant interval.",
+      "induction_base": "One registered relation composes one complete set of positive measurement carriers into one target interval.",
+      "induction_step": "Adding a measured input endpoint or relation step preserves every prior provenance and arithmetic trace and appends one source-bound exact operation.",
+      "exclusions": [
+        "floating, irrational, imaginary, signed or numerical-null proof values",
+        "fitted coefficients, target-selected relations or unregistered constants",
+        "target access before prediction seal",
+        "omitted input uncertainty, external row or adverse control"
+      ],
+      "operational_witnesses": [
+        [
+          "exact-rational-runtime",
+          "Every external finite decimal becomes an exact positive rational interval.",
+          true
+        ],
+        [
+          "target-withheld-runtime",
+          "The target vault releases only after a matching prediction seal.",
+          true
+        ]
+      ],
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-THERMO-MOLAR-ENERGY-001",
+      "expected_observation_label": "exact-measured-interval-overlap",
+      "target_rows": [
+        {
+          "target_id": "thermo-molar-energy-numeric-target",
+          "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+          "source_locator": "named CODATA fixed-width quantity row",
+          "observed_label": "exact-measured-interval-overlap"
+        }
+      ],
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "value_spec": {
+      "relation_id": "molar-thermal-product",
+      "experiment_id": "SFT-EXP-PHYS-VALIDATION-THERMO-MOLAR-ENERGY-001",
+      "claim_id": "SFT-PHYS-VALIDATION-THERMO-MOLAR-ENERGY-001",
+      "relation_statement": "Per-constituent thermal energy composed with the molar count yields molar thermal energy.",
+      "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+      "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "inputs": [
+        {
+          "key": "boltzmann",
+          "quantity": "Boltzmann constant",
+          "unit": "J K^-1"
+        },
+        {
+          "key": "avogadro",
+          "quantity": "Avogadro constant",
+          "unit": "mol^-1"
+        }
+      ],
+      "steps": [
+        {
+          "output": "molar_thermal",
+          "operation": "product",
+          "left": "boltzmann",
+          "right": "avogadro"
+        }
+      ],
+      "output_key": "molar_thermal",
+      "target": {
+        "key": "target_molar_thermal",
+        "quantity": "molar gas constant",
+        "unit": "J mol^-1 K^-1"
+      },
+      "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+    },
+    "instructions": [
+      [
+        "input",
+        "boltzmann__lower",
+        [
+          "boltzmann__lower"
+        ]
+      ],
+      [
+        "input",
+        "boltzmann__upper",
+        [
+          "boltzmann__upper"
+        ]
+      ],
+      [
+        "input",
+        "avogadro__lower",
+        [
+          "avogadro__lower"
+        ]
+      ],
+      [
+        "input",
+        "avogadro__upper",
+        [
+          "avogadro__upper"
+        ]
+      ],
+      [
+        "product",
+        "molar_thermal__lower",
+        [
+          "boltzmann__lower",
+          "avogadro__lower"
+        ]
+      ],
+      [
+        "product",
+        "molar_thermal__upper",
+        [
+          "boltzmann__upper",
+          "avogadro__upper"
+        ]
+      ],
+      [
+        "pair",
+        "predicted_interval",
+        [
+          "molar_thermal__lower",
+          "molar_thermal__upper"
+        ]
+      ],
+      [
+        "emit",
+        "",
+        [
+          "predicted_interval"
+        ]
+      ]
+    ]
+  }
+]

@@ -1069,3 +1069,27 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ThermalResponseGrammar.candidates do
     IO.println ("ThermalResponseGrammar\t" ++ SFT.Physics.ThermalResponseGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ThermalResponseGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ThermalResponseGrammar.exactForm c ++ "\t" ++ SFT.Physics.ThermalResponseGrammar.decisionReason c)
+
+  for c in SFT.Physics.MolarPlanckGrammar.candidates do
+    IO.println ("MolarPlanckGrammar\t" ++ SFT.Physics.MolarPlanckGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MolarPlanckGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MolarPlanckGrammar.exactForm c ++ "\t" ++ SFT.Physics.MolarPlanckGrammar.decisionReason c)
+
+  for c in SFT.Physics.MeasuredMomentumGrammar.candidates do
+    IO.println ("MeasuredMomentumGrammar\t" ++ SFT.Physics.MeasuredMomentumGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MeasuredMomentumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MeasuredMomentumGrammar.exactForm c ++ "\t" ++ SFT.Physics.MeasuredMomentumGrammar.decisionReason c)
+
+  for c in SFT.Physics.MeasuredForceGrammar.candidates do
+    IO.println ("MeasuredForceGrammar\t" ++ SFT.Physics.MeasuredForceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MeasuredForceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MeasuredForceGrammar.exactForm c ++ "\t" ++ SFT.Physics.MeasuredForceGrammar.decisionReason c)
+
+  for c in SFT.Physics.MeasuredPotentialGrammar.candidates do
+    IO.println ("MeasuredPotentialGrammar\t" ++ SFT.Physics.MeasuredPotentialGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MeasuredPotentialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MeasuredPotentialGrammar.exactForm c ++ "\t" ++ SFT.Physics.MeasuredPotentialGrammar.decisionReason c)
+
+  for c in SFT.Physics.MeasuredFieldGrammar.candidates do
+    IO.println ("MeasuredFieldGrammar\t" ++ SFT.Physics.MeasuredFieldGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MeasuredFieldGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MeasuredFieldGrammar.exactForm c ++ "\t" ++ SFT.Physics.MeasuredFieldGrammar.decisionReason c)
+
+  for c in SFT.Physics.MeasuredFrequencyGrammar.candidates do
+    IO.println ("MeasuredFrequencyGrammar\t" ++ SFT.Physics.MeasuredFrequencyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MeasuredFrequencyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MeasuredFrequencyGrammar.exactForm c ++ "\t" ++ SFT.Physics.MeasuredFrequencyGrammar.decisionReason c)
+
+  for c in SFT.Physics.MeasuredWaveEnergyGrammar.candidates do
+    IO.println ("MeasuredWaveEnergyGrammar\t" ++ SFT.Physics.MeasuredWaveEnergyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MeasuredWaveEnergyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MeasuredWaveEnergyGrammar.exactForm c ++ "\t" ++ SFT.Physics.MeasuredWaveEnergyGrammar.decisionReason c)
+
+  for c in SFT.Physics.MolarThermalGrammar.candidates do
+    IO.println ("MolarThermalGrammar\t" ++ SFT.Physics.MolarThermalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MolarThermalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MolarThermalGrammar.exactForm c ++ "\t" ++ SFT.Physics.MolarThermalGrammar.decisionReason c)

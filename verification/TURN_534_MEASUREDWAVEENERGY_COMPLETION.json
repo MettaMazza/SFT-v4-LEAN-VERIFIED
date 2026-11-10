@@ -1,0 +1,491 @@
+{
+  "status": "complete",
+  "claim_id": "SFT-PHYS-VALIDATION-WAVE-ENERGY-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/physics/measured_value_backfill_laws.py": "3a8773aea1211b9cbeff4d14fc1b83b85ec7569554a679bc1ce2f017a0556e59",
+    "sft/physics/measured_value.py": "d7feeb8ff673b8cffe3b29e7ec5629130aef4b9b7a2fcc740598369c29db4c66",
+    "sft/physics/generated_empirical_law.py": "65703f059b0a6059af6f06aff9e11f1fcef19a1b10d2a8fa4b675418c8ca8071"
+  },
+  "lean_source_sha256": {
+    "SFT/Physics/BackfillMeasuredWaveEnergy.lean": "9847754446866f4b876a74a610eb75070ef99f8a2cef619050149a25cf6a9422",
+    "SFT/Physics/MeasuredWaveEnergyGrammar.lean": "1dd559f64de78cb324193067dd71d7dfaa0cbe85b1759516db80994998f3df41",
+    "SFT/Physics/MeasuredWaveEnergyEvidence.lean": "b8ed3088318fb7ccfcac937a4d35ef2da76daddca2966f6a96341e157dbbb254"
+  },
+  "source_operations": {
+    "relation_id": "energy-inverse-length-planck-speed-product",
+    "experiment_id": "SFT-EXP-PHYS-VALIDATION-WAVE-ENERGY-001",
+    "claim_id": "SFT-PHYS-VALIDATION-WAVE-ENERGY-001",
+    "relation_statement": "Inverse wavelength composed with limiting speed and the Planck carrier yields wave energy.",
+    "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+    "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+    "inputs": [
+      {
+        "key": "inverse_length",
+        "quantity": "Rydberg constant",
+        "unit": "m^-1"
+      },
+      {
+        "key": "planck",
+        "quantity": "Planck constant",
+        "unit": "J Hz^-1"
+      },
+      {
+        "key": "speed",
+        "quantity": "speed of light in vacuum",
+        "unit": "m s^-1"
+      }
+    ],
+    "steps": [
+      {
+        "output": "frequency",
+        "operation": "product",
+        "left": "inverse_length",
+        "right": "speed"
+      },
+      {
+        "output": "energy",
+        "operation": "product",
+        "left": "frequency",
+        "right": "planck"
+      }
+    ],
+    "output_key": "energy",
+    "target": {
+      "key": "target_energy",
+      "quantity": "Rydberg constant times hc in J",
+      "unit": "J"
+    },
+    "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+  },
+  "exact_program_instructions": [
+    [
+      "input",
+      "inverse_length__lower",
+      [
+        "inverse_length__lower"
+      ]
+    ],
+    [
+      "input",
+      "inverse_length__upper",
+      [
+        "inverse_length__upper"
+      ]
+    ],
+    [
+      "input",
+      "planck__lower",
+      [
+        "planck__lower"
+      ]
+    ],
+    [
+      "input",
+      "planck__upper",
+      [
+        "planck__upper"
+      ]
+    ],
+    [
+      "input",
+      "speed__lower",
+      [
+        "speed__lower"
+      ]
+    ],
+    [
+      "input",
+      "speed__upper",
+      [
+        "speed__upper"
+      ]
+    ],
+    [
+      "product",
+      "frequency__lower",
+      [
+        "inverse_length__lower",
+        "speed__lower"
+      ]
+    ],
+    [
+      "product",
+      "frequency__upper",
+      [
+        "inverse_length__upper",
+        "speed__upper"
+      ]
+    ],
+    [
+      "product",
+      "energy__lower",
+      [
+        "frequency__lower",
+        "planck__lower"
+      ]
+    ],
+    [
+      "product",
+      "energy__upper",
+      [
+        "frequency__upper",
+        "planck__upper"
+      ]
+    ],
+    [
+      "pair",
+      "predicted_interval",
+      [
+        "energy__lower",
+        "energy__upper"
+      ]
+    ],
+    [
+      "emit",
+      "",
+      [
+        "predicted_interval"
+      ]
+    ]
+  ],
+  "derivation": "Exact source-specialized positive-interval energy-inverse-length-planck-speed-product program, original inputs/units/guards, complete native execution and retained trace, sealed target custody, original numeric comparison and displaced interval control; full original 256-form grammar, decisions, closure, registration and independent controls.",
+  "reused_native_operations": [
+    "CapabilityOperations.arithmetic",
+    "CapabilityOperations.reductionValue",
+    "CapabilityExecution.runTraceLength",
+    "CapabilityExecution.newRegisterHeld",
+    "EvolutionMeasuredSource.loadRows",
+    "EvolutionMeasuredSource.overlap"
+  ],
+  "dependencies": {
+    "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001": "complete",
+    "SFT-PHYS-MEAS-TARGET-CUSTODY-001": "complete",
+    "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001": "complete",
+    "SFT-PHYS-MEAS-VALUE-RECORD-001": "complete",
+    "SFT-PHYS-MEAS-UNCERTAINTY-001": "complete",
+    "SFT-PHYS-WAVE-ENERGY-MOMENTUM-001": "complete"
+  },
+  "candidate_rows": 256,
+  "full_native_program_comparison": "PASS",
+  "full_native_empirical_comparison": "PASS: all original fields and hashes",
+  "independent_validator_cases": [
+    {
+      "case": "original",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-WAVE-ENERGY-001",
+          "survivor": "complete-fold-carrier__exact-positive-interval-relation__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+        },
+        "passed": true,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredWaveEnergy-534"
+      }
+    },
+    {
+      "case": "omitted_candidate",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-WAVE-ENERGY-001",
+          "survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredWaveEnergy-534"
+      }
+    },
+    {
+      "case": "additional_survivor",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-WAVE-ENERGY-001",
+          "survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredWaveEnergy-534"
+      }
+    },
+    {
+      "case": "failed_control",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-WAVE-ENERGY-001",
+          "survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredWaveEnergy-534"
+      }
+    }
+  ],
+  "axiom_dependencies": [],
+  "audited_declarations": [
+    "SFT.Physics.BackfillMeasuredWaveEnergy.Snapshot",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.PredictionSeal",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.experimentId",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.claimId",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.snapshotHash",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.sourceId",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.relationId",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.relationStatement",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.falsification",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.targetId",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.targetQuantity",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.program",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.programFields",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.registration",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.registrationHash",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.inputs",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.envelope",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.sealPrediction",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.isolation",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.custodyCertificate",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.measurementReceipt",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.measurement",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.sourceMatches",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.validate",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.resealRejected",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.sourceMismatchRejected",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.sealBindsExactInputs",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.Carrier",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.carrierName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.Relation",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.relationName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.Provenance",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.provenanceName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.Prediction",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.predictionName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.Record",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.recordName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.Rows",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.rowsName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.Generality",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.generalityName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.Extension",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.extensionName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.Candidate",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.sourceFields",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.candidateId",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.exactForm",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.survivorId",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.survives",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.criteriaDecision",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.decisionReason",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.generationRule",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.grammarBoundary",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.candidates",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.survivor",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.generatedCardinality",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.candidatesComplete",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.uniqueSurvivor",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.survivorAccepted",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.ExactCriteria",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.carrier_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.relation_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.provenance_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.prediction_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.record_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.rows_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.generality_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.extension_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.witnesses",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.claimId",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.dependencies",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.candidateRecord",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.completenessRecord",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.registrationData",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.registration",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.generatedCandidateData",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.censusData",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.census",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.decisionData",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.decideCandidate",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.closureValue",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.exclusions",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.closureData",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.closure",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.control",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.runControls",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.registrationNoAxioms",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.registrationNoFreeParameters",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.decisionSurvival"
+  ],
+  "added_registered_theorems": [
+    "SFT.Physics.BackfillMeasuredWaveEnergy.resealRejected",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.sourceMismatchRejected",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.sealBindsExactInputs",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.generatedCardinality",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.candidatesComplete",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.uniqueSurvivor",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.survivorAccepted",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.carrier_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.relation_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.provenance_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.prediction_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.record_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.rows_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.generality_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.extension_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.registrationNoAxioms",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.registrationNoFreeParameters",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.decisionSurvival"
+  ],
+  "added_audited_definitions_and_theorems": [
+    "SFT.Physics.BackfillMeasuredWaveEnergy.experimentId",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.claimId",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.snapshotHash",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.sourceId",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.relationId",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.relationStatement",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.falsification",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.targetId",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.targetQuantity",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.program",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.programFields",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.registration",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.registrationHash",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.inputs",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.envelope",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.sealPrediction",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.isolation",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.custodyCertificate",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.measurementReceipt",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.measurement",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.sourceMatches",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.validate",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.resealRejected",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.sourceMismatchRejected",
+    "SFT.Physics.BackfillMeasuredWaveEnergy.sealBindsExactInputs",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.carrierName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.relationName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.provenanceName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.predictionName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.recordName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.rowsName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.generalityName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.extensionName",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.sourceFields",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.candidateId",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.exactForm",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.survivorId",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.survives",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.criteriaDecision",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.decisionReason",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.generationRule",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.grammarBoundary",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.candidates",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.survivor",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.generatedCardinality",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.candidatesComplete",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.uniqueSurvivor",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.survivorAccepted",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.ExactCriteria",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.carrier_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.relation_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.provenance_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.prediction_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.record_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.rows_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.generality_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyGrammar.extension_rejected_rejected",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.witnesses",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.claimId",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.dependencies",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.candidateRecord",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.completenessRecord",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.registrationData",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.registration",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.generatedCandidateData",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.censusData",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.census",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.decisionData",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.decideCandidate",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.closureValue",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.exclusions",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.closureData",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.closure",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.control",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.runControls",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.registrationNoAxioms",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.registrationNoFreeParameters",
+    "SFT.Physics.MeasuredWaveEnergyEvidence.decisionSurvival"
+  ],
+  "checks": [
+    {
+      "path": "verification/TURN_534_BackfillMeasuredWaveEnergy534_report.json",
+      "sha256": "79e18a040964572b83b5120cd716322560e98d4ff667c37b9b19e6aed9e3bc10"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredWaveEnergy534_output.json",
+      "sha256": "9475a042fccc171ef275ccd06baa79b9fc9b2de8e588e40ff869dc8261406a0a"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredWaveEnergyAudit534.log",
+      "sha256": "668a28e3e0b14fe68551d184ae41269edb132273bc10e6e807ce3324beae684e"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredWaveEnergyAudit534.lean",
+      "sha256": "e9e34f8e1ec69ebb0ce9c6f2d42e1d126e0942a63fe782e0bcdecedc943b5428"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredWaveEnergy534_commands.json",
+      "sha256": "d369517500c84a13d71a9e1f6c303dbbcbfa385aaa854edca13328f0a39315cd"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredWaveEnergyProgram534_report.json",
+      "sha256": "075b62c519e61e03c666f8e474d08bb99bc25bf519f2340eeece34fcbe3b73f7"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredWaveEnergyProgram534_commands.json",
+      "sha256": "2ece2d961fc0797965d5c1240851ac1ad748a35b04305e0a1f528a3e939f11e8"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredWaveEnergyGrammarAudit534.log",
+      "sha256": "6d475d37b5fba4b39b1ea571da8c62751fb1fd6d107d1001fa029eff53307a09"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredWaveEnergyGrammarAudit534.lean",
+      "sha256": "dcce0af951ef414b3783ca49165a3b7898f6759fdc92692a73dc406f713c3438"
+    },
+    {
+      "path": "verification/TURN_534_measuredwaveenergy_program534_output.json",
+      "sha256": "a70838ae24f17231e4ff6f0fdde22f1efe74cf36e8b88db215c8d5aac9168309"
+    },
+    {
+      "path": "verification/TURN_534_measuredwaveenergy_program534_report.json",
+      "sha256": "aea68ab35e5c73ea1c6c0dd31e7372f87f4712c971c9e0f207343a21fff594ac"
+    },
+    {
+      "path": "verification/TURN_534_measuredwaveenergy_program534.py",
+      "sha256": "20a876413d9158882fcc55512e4f1f85c7b828150fd5795214fbb4de82b5ac7d"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredWaveEnergyIndependent534.py",
+      "sha256": "bdb629128783fd52a68d5adf609be299fca062fc0133c05d8178864ef0f3993d"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredWaveEnergyProgram534.lean",
+      "sha256": "973dd200ae4f2307106d7d184dd462501ccf2dccf718fb4af3190fc022b125ef"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredWaveEnergyValidation534.lean",
+      "sha256": "c4407a57cf63f59e8781e6985886ca6d484837a553a479a12066aa4f33fda535"
+    }
+  ],
+  "remaining": []
+}

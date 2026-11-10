@@ -1,0 +1,450 @@
+{
+  "status": "complete",
+  "claim_id": "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/physics/measured_value_backfill_laws.py": "3a8773aea1211b9cbeff4d14fc1b83b85ec7569554a679bc1ce2f017a0556e59",
+    "sft/physics/measured_value.py": "d7feeb8ff673b8cffe3b29e7ec5629130aef4b9b7a2fcc740598369c29db4c66",
+    "sft/physics/generated_empirical_law.py": "65703f059b0a6059af6f06aff9e11f1fcef19a1b10d2a8fa4b675418c8ca8071"
+  },
+  "lean_source_sha256": {
+    "SFT/Physics/BackfillMeasuredField.lean": "8e7bb6d411ec8a1da78c688425f6c9a5b81e779bdca33e53d8c68541536438d8",
+    "SFT/Physics/MeasuredFieldGrammar.lean": "241cfdf5af77d853ea09db7d593e3013b1c425636c9e53663c0a03ebae2b55c1",
+    "SFT/Physics/MeasuredFieldEvidence.lean": "537fdf0029091541f90bc047441909ae1262632aa24197741e74ee5d1f20aaeb"
+  },
+  "source_operations": {
+    "relation_id": "electric-field-potential-length-quotient",
+    "experiment_id": "SFT-EXP-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001",
+    "claim_id": "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001",
+    "relation_statement": "Potential change per spatial interval yields electric-field response.",
+    "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+    "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+    "inputs": [
+      {
+        "key": "potential",
+        "quantity": "atomic unit of electric potential",
+        "unit": "V"
+      },
+      {
+        "key": "length",
+        "quantity": "atomic unit of length",
+        "unit": "m"
+      }
+    ],
+    "steps": [
+      {
+        "output": "field",
+        "operation": "quotient",
+        "left": "potential",
+        "right": "length"
+      }
+    ],
+    "output_key": "field",
+    "target": {
+      "key": "target_field",
+      "quantity": "atomic unit of electric field",
+      "unit": "V m^-1"
+    },
+    "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+  },
+  "exact_program_instructions": [
+    [
+      "input",
+      "potential__lower",
+      [
+        "potential__lower"
+      ]
+    ],
+    [
+      "input",
+      "potential__upper",
+      [
+        "potential__upper"
+      ]
+    ],
+    [
+      "input",
+      "length__lower",
+      [
+        "length__lower"
+      ]
+    ],
+    [
+      "input",
+      "length__upper",
+      [
+        "length__upper"
+      ]
+    ],
+    [
+      "quotient",
+      "field__lower",
+      [
+        "potential__lower",
+        "length__upper"
+      ]
+    ],
+    [
+      "quotient",
+      "field__upper",
+      [
+        "potential__upper",
+        "length__lower"
+      ]
+    ],
+    [
+      "pair",
+      "predicted_interval",
+      [
+        "field__lower",
+        "field__upper"
+      ]
+    ],
+    [
+      "emit",
+      "",
+      [
+        "predicted_interval"
+      ]
+    ]
+  ],
+  "derivation": "Exact source-specialized positive-interval electric-field-potential-length-quotient program, original inputs/units/guards, complete native execution and retained trace, sealed target custody, original numeric comparison and displaced interval control; full original 256-form grammar, decisions, closure, registration and independent controls.",
+  "reused_native_operations": [
+    "CapabilityOperations.arithmetic",
+    "CapabilityOperations.reductionValue",
+    "CapabilityExecution.runTraceLength",
+    "CapabilityExecution.newRegisterHeld",
+    "EvolutionMeasuredSource.loadRows",
+    "EvolutionMeasuredSource.overlap"
+  ],
+  "dependencies": {
+    "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001": "complete",
+    "SFT-PHYS-MEAS-TARGET-CUSTODY-001": "complete",
+    "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001": "complete",
+    "SFT-PHYS-MEAS-VALUE-RECORD-001": "complete",
+    "SFT-PHYS-MEAS-UNCERTAINTY-001": "complete",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001": "complete"
+  },
+  "candidate_rows": 256,
+  "full_native_program_comparison": "PASS",
+  "full_native_empirical_comparison": "PASS: all original fields and hashes",
+  "independent_validator_cases": [
+    {
+      "case": "original",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001",
+          "survivor": "complete-fold-carrier__exact-positive-interval-relation__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+        },
+        "passed": true,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredField-534"
+      }
+    },
+    {
+      "case": "omitted_candidate",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001",
+          "survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredField-534"
+      }
+    },
+    {
+      "case": "additional_survivor",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001",
+          "survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredField-534"
+      }
+    },
+    {
+      "case": "failed_control",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001",
+          "survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredField-534"
+      }
+    }
+  ],
+  "axiom_dependencies": [],
+  "audited_declarations": [
+    "SFT.Physics.BackfillMeasuredField.Snapshot",
+    "SFT.Physics.BackfillMeasuredField.PredictionSeal",
+    "SFT.Physics.BackfillMeasuredField.experimentId",
+    "SFT.Physics.BackfillMeasuredField.claimId",
+    "SFT.Physics.BackfillMeasuredField.snapshotHash",
+    "SFT.Physics.BackfillMeasuredField.sourceId",
+    "SFT.Physics.BackfillMeasuredField.relationId",
+    "SFT.Physics.BackfillMeasuredField.relationStatement",
+    "SFT.Physics.BackfillMeasuredField.falsification",
+    "SFT.Physics.BackfillMeasuredField.targetId",
+    "SFT.Physics.BackfillMeasuredField.targetQuantity",
+    "SFT.Physics.BackfillMeasuredField.program",
+    "SFT.Physics.BackfillMeasuredField.programFields",
+    "SFT.Physics.BackfillMeasuredField.registration",
+    "SFT.Physics.BackfillMeasuredField.registrationHash",
+    "SFT.Physics.BackfillMeasuredField.inputs",
+    "SFT.Physics.BackfillMeasuredField.envelope",
+    "SFT.Physics.BackfillMeasuredField.sealPrediction",
+    "SFT.Physics.BackfillMeasuredField.isolation",
+    "SFT.Physics.BackfillMeasuredField.custodyCertificate",
+    "SFT.Physics.BackfillMeasuredField.measurementReceipt",
+    "SFT.Physics.BackfillMeasuredField.measurement",
+    "SFT.Physics.BackfillMeasuredField.sourceMatches",
+    "SFT.Physics.BackfillMeasuredField.validate",
+    "SFT.Physics.BackfillMeasuredField.resealRejected",
+    "SFT.Physics.BackfillMeasuredField.sourceMismatchRejected",
+    "SFT.Physics.BackfillMeasuredField.sealBindsExactInputs",
+    "SFT.Physics.MeasuredFieldGrammar.Carrier",
+    "SFT.Physics.MeasuredFieldGrammar.carrierName",
+    "SFT.Physics.MeasuredFieldGrammar.Relation",
+    "SFT.Physics.MeasuredFieldGrammar.relationName",
+    "SFT.Physics.MeasuredFieldGrammar.Provenance",
+    "SFT.Physics.MeasuredFieldGrammar.provenanceName",
+    "SFT.Physics.MeasuredFieldGrammar.Prediction",
+    "SFT.Physics.MeasuredFieldGrammar.predictionName",
+    "SFT.Physics.MeasuredFieldGrammar.Record",
+    "SFT.Physics.MeasuredFieldGrammar.recordName",
+    "SFT.Physics.MeasuredFieldGrammar.Rows",
+    "SFT.Physics.MeasuredFieldGrammar.rowsName",
+    "SFT.Physics.MeasuredFieldGrammar.Generality",
+    "SFT.Physics.MeasuredFieldGrammar.generalityName",
+    "SFT.Physics.MeasuredFieldGrammar.Extension",
+    "SFT.Physics.MeasuredFieldGrammar.extensionName",
+    "SFT.Physics.MeasuredFieldGrammar.Candidate",
+    "SFT.Physics.MeasuredFieldGrammar.sourceFields",
+    "SFT.Physics.MeasuredFieldGrammar.candidateId",
+    "SFT.Physics.MeasuredFieldGrammar.exactForm",
+    "SFT.Physics.MeasuredFieldGrammar.survivorId",
+    "SFT.Physics.MeasuredFieldGrammar.survives",
+    "SFT.Physics.MeasuredFieldGrammar.criteriaDecision",
+    "SFT.Physics.MeasuredFieldGrammar.decisionReason",
+    "SFT.Physics.MeasuredFieldGrammar.generationRule",
+    "SFT.Physics.MeasuredFieldGrammar.grammarBoundary",
+    "SFT.Physics.MeasuredFieldGrammar.candidates",
+    "SFT.Physics.MeasuredFieldGrammar.survivor",
+    "SFT.Physics.MeasuredFieldGrammar.generatedCardinality",
+    "SFT.Physics.MeasuredFieldGrammar.candidatesComplete",
+    "SFT.Physics.MeasuredFieldGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.MeasuredFieldGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.MeasuredFieldGrammar.uniqueSurvivor",
+    "SFT.Physics.MeasuredFieldGrammar.survivorAccepted",
+    "SFT.Physics.MeasuredFieldGrammar.ExactCriteria",
+    "SFT.Physics.MeasuredFieldGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.MeasuredFieldGrammar.carrier_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.relation_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.provenance_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.prediction_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.record_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.rows_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.generality_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.extension_rejected_rejected",
+    "SFT.Physics.MeasuredFieldEvidence.witnesses",
+    "SFT.Physics.MeasuredFieldEvidence.claimId",
+    "SFT.Physics.MeasuredFieldEvidence.dependencies",
+    "SFT.Physics.MeasuredFieldEvidence.candidateRecord",
+    "SFT.Physics.MeasuredFieldEvidence.completenessRecord",
+    "SFT.Physics.MeasuredFieldEvidence.registrationData",
+    "SFT.Physics.MeasuredFieldEvidence.registration",
+    "SFT.Physics.MeasuredFieldEvidence.generatedCandidateData",
+    "SFT.Physics.MeasuredFieldEvidence.censusData",
+    "SFT.Physics.MeasuredFieldEvidence.census",
+    "SFT.Physics.MeasuredFieldEvidence.decisionData",
+    "SFT.Physics.MeasuredFieldEvidence.decideCandidate",
+    "SFT.Physics.MeasuredFieldEvidence.closureValue",
+    "SFT.Physics.MeasuredFieldEvidence.exclusions",
+    "SFT.Physics.MeasuredFieldEvidence.closureData",
+    "SFT.Physics.MeasuredFieldEvidence.closure",
+    "SFT.Physics.MeasuredFieldEvidence.control",
+    "SFT.Physics.MeasuredFieldEvidence.runControls",
+    "SFT.Physics.MeasuredFieldEvidence.registrationNoAxioms",
+    "SFT.Physics.MeasuredFieldEvidence.registrationNoFreeParameters",
+    "SFT.Physics.MeasuredFieldEvidence.decisionSurvival"
+  ],
+  "added_registered_theorems": [
+    "SFT.Physics.BackfillMeasuredField.resealRejected",
+    "SFT.Physics.BackfillMeasuredField.sourceMismatchRejected",
+    "SFT.Physics.BackfillMeasuredField.sealBindsExactInputs",
+    "SFT.Physics.MeasuredFieldGrammar.generatedCardinality",
+    "SFT.Physics.MeasuredFieldGrammar.candidatesComplete",
+    "SFT.Physics.MeasuredFieldGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.MeasuredFieldGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.MeasuredFieldGrammar.uniqueSurvivor",
+    "SFT.Physics.MeasuredFieldGrammar.survivorAccepted",
+    "SFT.Physics.MeasuredFieldGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.MeasuredFieldGrammar.carrier_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.relation_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.provenance_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.prediction_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.record_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.rows_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.generality_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.extension_rejected_rejected",
+    "SFT.Physics.MeasuredFieldEvidence.registrationNoAxioms",
+    "SFT.Physics.MeasuredFieldEvidence.registrationNoFreeParameters",
+    "SFT.Physics.MeasuredFieldEvidence.decisionSurvival"
+  ],
+  "added_audited_definitions_and_theorems": [
+    "SFT.Physics.BackfillMeasuredField.experimentId",
+    "SFT.Physics.BackfillMeasuredField.claimId",
+    "SFT.Physics.BackfillMeasuredField.snapshotHash",
+    "SFT.Physics.BackfillMeasuredField.sourceId",
+    "SFT.Physics.BackfillMeasuredField.relationId",
+    "SFT.Physics.BackfillMeasuredField.relationStatement",
+    "SFT.Physics.BackfillMeasuredField.falsification",
+    "SFT.Physics.BackfillMeasuredField.targetId",
+    "SFT.Physics.BackfillMeasuredField.targetQuantity",
+    "SFT.Physics.BackfillMeasuredField.program",
+    "SFT.Physics.BackfillMeasuredField.programFields",
+    "SFT.Physics.BackfillMeasuredField.registration",
+    "SFT.Physics.BackfillMeasuredField.registrationHash",
+    "SFT.Physics.BackfillMeasuredField.inputs",
+    "SFT.Physics.BackfillMeasuredField.envelope",
+    "SFT.Physics.BackfillMeasuredField.sealPrediction",
+    "SFT.Physics.BackfillMeasuredField.isolation",
+    "SFT.Physics.BackfillMeasuredField.custodyCertificate",
+    "SFT.Physics.BackfillMeasuredField.measurementReceipt",
+    "SFT.Physics.BackfillMeasuredField.measurement",
+    "SFT.Physics.BackfillMeasuredField.sourceMatches",
+    "SFT.Physics.BackfillMeasuredField.validate",
+    "SFT.Physics.BackfillMeasuredField.resealRejected",
+    "SFT.Physics.BackfillMeasuredField.sourceMismatchRejected",
+    "SFT.Physics.BackfillMeasuredField.sealBindsExactInputs",
+    "SFT.Physics.MeasuredFieldGrammar.carrierName",
+    "SFT.Physics.MeasuredFieldGrammar.relationName",
+    "SFT.Physics.MeasuredFieldGrammar.provenanceName",
+    "SFT.Physics.MeasuredFieldGrammar.predictionName",
+    "SFT.Physics.MeasuredFieldGrammar.recordName",
+    "SFT.Physics.MeasuredFieldGrammar.rowsName",
+    "SFT.Physics.MeasuredFieldGrammar.generalityName",
+    "SFT.Physics.MeasuredFieldGrammar.extensionName",
+    "SFT.Physics.MeasuredFieldGrammar.sourceFields",
+    "SFT.Physics.MeasuredFieldGrammar.candidateId",
+    "SFT.Physics.MeasuredFieldGrammar.exactForm",
+    "SFT.Physics.MeasuredFieldGrammar.survivorId",
+    "SFT.Physics.MeasuredFieldGrammar.survives",
+    "SFT.Physics.MeasuredFieldGrammar.criteriaDecision",
+    "SFT.Physics.MeasuredFieldGrammar.decisionReason",
+    "SFT.Physics.MeasuredFieldGrammar.generationRule",
+    "SFT.Physics.MeasuredFieldGrammar.grammarBoundary",
+    "SFT.Physics.MeasuredFieldGrammar.candidates",
+    "SFT.Physics.MeasuredFieldGrammar.survivor",
+    "SFT.Physics.MeasuredFieldGrammar.generatedCardinality",
+    "SFT.Physics.MeasuredFieldGrammar.candidatesComplete",
+    "SFT.Physics.MeasuredFieldGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.MeasuredFieldGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.MeasuredFieldGrammar.uniqueSurvivor",
+    "SFT.Physics.MeasuredFieldGrammar.survivorAccepted",
+    "SFT.Physics.MeasuredFieldGrammar.ExactCriteria",
+    "SFT.Physics.MeasuredFieldGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.MeasuredFieldGrammar.carrier_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.relation_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.provenance_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.prediction_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.record_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.rows_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.generality_rejected_rejected",
+    "SFT.Physics.MeasuredFieldGrammar.extension_rejected_rejected",
+    "SFT.Physics.MeasuredFieldEvidence.witnesses",
+    "SFT.Physics.MeasuredFieldEvidence.claimId",
+    "SFT.Physics.MeasuredFieldEvidence.dependencies",
+    "SFT.Physics.MeasuredFieldEvidence.candidateRecord",
+    "SFT.Physics.MeasuredFieldEvidence.completenessRecord",
+    "SFT.Physics.MeasuredFieldEvidence.registrationData",
+    "SFT.Physics.MeasuredFieldEvidence.registration",
+    "SFT.Physics.MeasuredFieldEvidence.generatedCandidateData",
+    "SFT.Physics.MeasuredFieldEvidence.censusData",
+    "SFT.Physics.MeasuredFieldEvidence.census",
+    "SFT.Physics.MeasuredFieldEvidence.decisionData",
+    "SFT.Physics.MeasuredFieldEvidence.decideCandidate",
+    "SFT.Physics.MeasuredFieldEvidence.closureValue",
+    "SFT.Physics.MeasuredFieldEvidence.exclusions",
+    "SFT.Physics.MeasuredFieldEvidence.closureData",
+    "SFT.Physics.MeasuredFieldEvidence.closure",
+    "SFT.Physics.MeasuredFieldEvidence.control",
+    "SFT.Physics.MeasuredFieldEvidence.runControls",
+    "SFT.Physics.MeasuredFieldEvidence.registrationNoAxioms",
+    "SFT.Physics.MeasuredFieldEvidence.registrationNoFreeParameters",
+    "SFT.Physics.MeasuredFieldEvidence.decisionSurvival"
+  ],
+  "checks": [
+    {
+      "path": "verification/TURN_534_BackfillMeasuredField534_report.json",
+      "sha256": "9245401cfc5ca766875fd0fb3862a11f1b63c88b38d877992213b4b1d9ce4372"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredField534_output.json",
+      "sha256": "f205b899f30ee7baf9944d520d8264f799f201a3eb5be9818018acff42df9468"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredFieldAudit534.log",
+      "sha256": "7134262c359174c3e2c69890fc4eca639d38e896bc3ee8042f195e6f4c9c1572"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredFieldAudit534.lean",
+      "sha256": "23d15b6df1c50638b2007f34b6bb6d770156dbd836cbdd67d971f68ec919cab3"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredField534_commands.json",
+      "sha256": "548d6f6e2b833430905721c7a0f5f68e3ef6a3fe4b63bc620014515d92e2d749"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredFieldProgram534_report.json",
+      "sha256": "13badd7899c7804b40ddbf69a67752df5b22b6c088ce8e2b1cc0836eb2c4b347"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredFieldProgram534_commands.json",
+      "sha256": "1f606f1adbb001885cf8327fd40cb2c4be6c4cf83adedceab8d23c6d3e1eb4d7"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredFieldGrammarAudit534.log",
+      "sha256": "0f8d0a570976f92e2d932e474b1c0bb5a48fedf44fb94931dfc712ce8bb3df81"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredFieldGrammarAudit534.lean",
+      "sha256": "2f68f09aba62a842dc45358301f769093865750657e4add3f48920745a31a338"
+    },
+    {
+      "path": "verification/TURN_534_measuredfield_program534_output.json",
+      "sha256": "27524d34d80605450447635077cfc04260a123bbdc031da7e10cb4385907c28b"
+    },
+    {
+      "path": "verification/TURN_534_measuredfield_program534_report.json",
+      "sha256": "8bf9d55e394b6f362c676a3e3cead200253260c6aab6079bbc7c3d5a3e1c3f72"
+    },
+    {
+      "path": "verification/TURN_534_measuredfield_program534.py",
+      "sha256": "97954e0cf2aef09a825a73086b00b3e2614ecf32440ee1e4f3a8b7e44f5ce4c6"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredFieldIndependent534.py",
+      "sha256": "d4a0aa7642c195d83b089e425aecf0412e8a29a69ffd8bc5f388aac7cef62240"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredFieldProgram534.lean",
+      "sha256": "2e5d0d5713b31724fd5fdd68e3462fcd0310e8a149e05de76e86bc172e2c583b"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredFieldValidation534.lean",
+      "sha256": "697603481cf7b249deec3bb832ae62442a41ca3dbcfbdb6d5ab5635f7946e8a6"
+    }
+  ],
+  "remaining": []
+}

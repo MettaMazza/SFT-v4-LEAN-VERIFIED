@@ -1,0 +1,450 @@
+{
+  "status": "complete",
+  "claim_id": "SFT-PHYS-VALIDATION-MECHANICS-MOMENTUM-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/physics/measured_value_backfill_laws.py": "3a8773aea1211b9cbeff4d14fc1b83b85ec7569554a679bc1ce2f017a0556e59",
+    "sft/physics/measured_value.py": "d7feeb8ff673b8cffe3b29e7ec5629130aef4b9b7a2fcc740598369c29db4c66",
+    "sft/physics/generated_empirical_law.py": "65703f059b0a6059af6f06aff9e11f1fcef19a1b10d2a8fa4b675418c8ca8071"
+  },
+  "lean_source_sha256": {
+    "SFT/Physics/BackfillMeasuredMomentum.lean": "382e01d641de62385a6722cf424c39e29a53e368827a05eceb8f02683f164b09",
+    "SFT/Physics/MeasuredMomentumGrammar.lean": "1236916c8dc9c314b8d9f9ca6393c47569709a79636afaf801685f5fe5984359",
+    "SFT/Physics/MeasuredMomentumEvidence.lean": "58c774b6b11c83e8829adce917b1b9bd393f582e882ccd742d2c881b47867e08"
+  },
+  "source_operations": {
+    "relation_id": "momentum-mass-speed-product",
+    "experiment_id": "SFT-EXP-PHYS-VALIDATION-MECHANICS-MOMENTUM-001",
+    "claim_id": "SFT-PHYS-VALIDATION-MECHANICS-MOMENTUM-001",
+    "relation_statement": "Inertial content composed with speed yields momentum.",
+    "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+    "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+    "inputs": [
+      {
+        "key": "mass",
+        "quantity": "atomic unit of mass",
+        "unit": "kg"
+      },
+      {
+        "key": "speed",
+        "quantity": "atomic unit of velocity",
+        "unit": "m s^-1"
+      }
+    ],
+    "steps": [
+      {
+        "output": "momentum",
+        "operation": "product",
+        "left": "mass",
+        "right": "speed"
+      }
+    ],
+    "output_key": "momentum",
+    "target": {
+      "key": "target_momentum",
+      "quantity": "atomic unit of momentum",
+      "unit": "kg m s^-1"
+    },
+    "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+  },
+  "exact_program_instructions": [
+    [
+      "input",
+      "mass__lower",
+      [
+        "mass__lower"
+      ]
+    ],
+    [
+      "input",
+      "mass__upper",
+      [
+        "mass__upper"
+      ]
+    ],
+    [
+      "input",
+      "speed__lower",
+      [
+        "speed__lower"
+      ]
+    ],
+    [
+      "input",
+      "speed__upper",
+      [
+        "speed__upper"
+      ]
+    ],
+    [
+      "product",
+      "momentum__lower",
+      [
+        "mass__lower",
+        "speed__lower"
+      ]
+    ],
+    [
+      "product",
+      "momentum__upper",
+      [
+        "mass__upper",
+        "speed__upper"
+      ]
+    ],
+    [
+      "pair",
+      "predicted_interval",
+      [
+        "momentum__lower",
+        "momentum__upper"
+      ]
+    ],
+    [
+      "emit",
+      "",
+      [
+        "predicted_interval"
+      ]
+    ]
+  ],
+  "derivation": "Exact source-specialized positive-interval momentum-mass-speed-product program, original inputs/units/guards, complete native execution and retained trace, sealed target custody, original numeric comparison and displaced interval control; full original 256-form grammar, decisions, closure, registration and independent controls.",
+  "reused_native_operations": [
+    "CapabilityOperations.arithmetic",
+    "CapabilityOperations.reductionValue",
+    "CapabilityExecution.runTraceLength",
+    "CapabilityExecution.newRegisterHeld",
+    "EvolutionMeasuredSource.loadRows",
+    "EvolutionMeasuredSource.overlap"
+  ],
+  "dependencies": {
+    "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001": "complete",
+    "SFT-PHYS-MEAS-TARGET-CUSTODY-001": "complete",
+    "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001": "complete",
+    "SFT-PHYS-MEAS-VALUE-RECORD-001": "complete",
+    "SFT-PHYS-MEAS-UNCERTAINTY-001": "complete",
+    "SFT-PHYS-MECH-MOMENTUM-001": "complete"
+  },
+  "candidate_rows": 256,
+  "full_native_program_comparison": "PASS",
+  "full_native_empirical_comparison": "PASS: all original fields and hashes",
+  "independent_validator_cases": [
+    {
+      "case": "original",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-MECHANICS-MOMENTUM-001",
+          "survivor": "complete-fold-carrier__exact-positive-interval-relation__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+        },
+        "passed": true,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredMomentum-534"
+      }
+    },
+    {
+      "case": "omitted_candidate",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-MECHANICS-MOMENTUM-001",
+          "survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredMomentum-534"
+      }
+    },
+    {
+      "case": "additional_survivor",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-MECHANICS-MOMENTUM-001",
+          "survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredMomentum-534"
+      }
+    },
+    {
+      "case": "failed_control",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-MECHANICS-MOMENTUM-001",
+          "survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredMomentum-534"
+      }
+    }
+  ],
+  "axiom_dependencies": [],
+  "audited_declarations": [
+    "SFT.Physics.BackfillMeasuredMomentum.Snapshot",
+    "SFT.Physics.BackfillMeasuredMomentum.PredictionSeal",
+    "SFT.Physics.BackfillMeasuredMomentum.experimentId",
+    "SFT.Physics.BackfillMeasuredMomentum.claimId",
+    "SFT.Physics.BackfillMeasuredMomentum.snapshotHash",
+    "SFT.Physics.BackfillMeasuredMomentum.sourceId",
+    "SFT.Physics.BackfillMeasuredMomentum.relationId",
+    "SFT.Physics.BackfillMeasuredMomentum.relationStatement",
+    "SFT.Physics.BackfillMeasuredMomentum.falsification",
+    "SFT.Physics.BackfillMeasuredMomentum.targetId",
+    "SFT.Physics.BackfillMeasuredMomentum.targetQuantity",
+    "SFT.Physics.BackfillMeasuredMomentum.program",
+    "SFT.Physics.BackfillMeasuredMomentum.programFields",
+    "SFT.Physics.BackfillMeasuredMomentum.registration",
+    "SFT.Physics.BackfillMeasuredMomentum.registrationHash",
+    "SFT.Physics.BackfillMeasuredMomentum.inputs",
+    "SFT.Physics.BackfillMeasuredMomentum.envelope",
+    "SFT.Physics.BackfillMeasuredMomentum.sealPrediction",
+    "SFT.Physics.BackfillMeasuredMomentum.isolation",
+    "SFT.Physics.BackfillMeasuredMomentum.custodyCertificate",
+    "SFT.Physics.BackfillMeasuredMomentum.measurementReceipt",
+    "SFT.Physics.BackfillMeasuredMomentum.measurement",
+    "SFT.Physics.BackfillMeasuredMomentum.sourceMatches",
+    "SFT.Physics.BackfillMeasuredMomentum.validate",
+    "SFT.Physics.BackfillMeasuredMomentum.resealRejected",
+    "SFT.Physics.BackfillMeasuredMomentum.sourceMismatchRejected",
+    "SFT.Physics.BackfillMeasuredMomentum.sealBindsExactInputs",
+    "SFT.Physics.MeasuredMomentumGrammar.Carrier",
+    "SFT.Physics.MeasuredMomentumGrammar.carrierName",
+    "SFT.Physics.MeasuredMomentumGrammar.Relation",
+    "SFT.Physics.MeasuredMomentumGrammar.relationName",
+    "SFT.Physics.MeasuredMomentumGrammar.Provenance",
+    "SFT.Physics.MeasuredMomentumGrammar.provenanceName",
+    "SFT.Physics.MeasuredMomentumGrammar.Prediction",
+    "SFT.Physics.MeasuredMomentumGrammar.predictionName",
+    "SFT.Physics.MeasuredMomentumGrammar.Record",
+    "SFT.Physics.MeasuredMomentumGrammar.recordName",
+    "SFT.Physics.MeasuredMomentumGrammar.Rows",
+    "SFT.Physics.MeasuredMomentumGrammar.rowsName",
+    "SFT.Physics.MeasuredMomentumGrammar.Generality",
+    "SFT.Physics.MeasuredMomentumGrammar.generalityName",
+    "SFT.Physics.MeasuredMomentumGrammar.Extension",
+    "SFT.Physics.MeasuredMomentumGrammar.extensionName",
+    "SFT.Physics.MeasuredMomentumGrammar.Candidate",
+    "SFT.Physics.MeasuredMomentumGrammar.sourceFields",
+    "SFT.Physics.MeasuredMomentumGrammar.candidateId",
+    "SFT.Physics.MeasuredMomentumGrammar.exactForm",
+    "SFT.Physics.MeasuredMomentumGrammar.survivorId",
+    "SFT.Physics.MeasuredMomentumGrammar.survives",
+    "SFT.Physics.MeasuredMomentumGrammar.criteriaDecision",
+    "SFT.Physics.MeasuredMomentumGrammar.decisionReason",
+    "SFT.Physics.MeasuredMomentumGrammar.generationRule",
+    "SFT.Physics.MeasuredMomentumGrammar.grammarBoundary",
+    "SFT.Physics.MeasuredMomentumGrammar.candidates",
+    "SFT.Physics.MeasuredMomentumGrammar.survivor",
+    "SFT.Physics.MeasuredMomentumGrammar.generatedCardinality",
+    "SFT.Physics.MeasuredMomentumGrammar.candidatesComplete",
+    "SFT.Physics.MeasuredMomentumGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.MeasuredMomentumGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.MeasuredMomentumGrammar.uniqueSurvivor",
+    "SFT.Physics.MeasuredMomentumGrammar.survivorAccepted",
+    "SFT.Physics.MeasuredMomentumGrammar.ExactCriteria",
+    "SFT.Physics.MeasuredMomentumGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.MeasuredMomentumGrammar.carrier_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.relation_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.provenance_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.prediction_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.record_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.rows_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.generality_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.extension_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumEvidence.witnesses",
+    "SFT.Physics.MeasuredMomentumEvidence.claimId",
+    "SFT.Physics.MeasuredMomentumEvidence.dependencies",
+    "SFT.Physics.MeasuredMomentumEvidence.candidateRecord",
+    "SFT.Physics.MeasuredMomentumEvidence.completenessRecord",
+    "SFT.Physics.MeasuredMomentumEvidence.registrationData",
+    "SFT.Physics.MeasuredMomentumEvidence.registration",
+    "SFT.Physics.MeasuredMomentumEvidence.generatedCandidateData",
+    "SFT.Physics.MeasuredMomentumEvidence.censusData",
+    "SFT.Physics.MeasuredMomentumEvidence.census",
+    "SFT.Physics.MeasuredMomentumEvidence.decisionData",
+    "SFT.Physics.MeasuredMomentumEvidence.decideCandidate",
+    "SFT.Physics.MeasuredMomentumEvidence.closureValue",
+    "SFT.Physics.MeasuredMomentumEvidence.exclusions",
+    "SFT.Physics.MeasuredMomentumEvidence.closureData",
+    "SFT.Physics.MeasuredMomentumEvidence.closure",
+    "SFT.Physics.MeasuredMomentumEvidence.control",
+    "SFT.Physics.MeasuredMomentumEvidence.runControls",
+    "SFT.Physics.MeasuredMomentumEvidence.registrationNoAxioms",
+    "SFT.Physics.MeasuredMomentumEvidence.registrationNoFreeParameters",
+    "SFT.Physics.MeasuredMomentumEvidence.decisionSurvival"
+  ],
+  "added_registered_theorems": [
+    "SFT.Physics.BackfillMeasuredMomentum.resealRejected",
+    "SFT.Physics.BackfillMeasuredMomentum.sourceMismatchRejected",
+    "SFT.Physics.BackfillMeasuredMomentum.sealBindsExactInputs",
+    "SFT.Physics.MeasuredMomentumGrammar.generatedCardinality",
+    "SFT.Physics.MeasuredMomentumGrammar.candidatesComplete",
+    "SFT.Physics.MeasuredMomentumGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.MeasuredMomentumGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.MeasuredMomentumGrammar.uniqueSurvivor",
+    "SFT.Physics.MeasuredMomentumGrammar.survivorAccepted",
+    "SFT.Physics.MeasuredMomentumGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.MeasuredMomentumGrammar.carrier_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.relation_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.provenance_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.prediction_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.record_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.rows_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.generality_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.extension_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumEvidence.registrationNoAxioms",
+    "SFT.Physics.MeasuredMomentumEvidence.registrationNoFreeParameters",
+    "SFT.Physics.MeasuredMomentumEvidence.decisionSurvival"
+  ],
+  "added_audited_definitions_and_theorems": [
+    "SFT.Physics.BackfillMeasuredMomentum.experimentId",
+    "SFT.Physics.BackfillMeasuredMomentum.claimId",
+    "SFT.Physics.BackfillMeasuredMomentum.snapshotHash",
+    "SFT.Physics.BackfillMeasuredMomentum.sourceId",
+    "SFT.Physics.BackfillMeasuredMomentum.relationId",
+    "SFT.Physics.BackfillMeasuredMomentum.relationStatement",
+    "SFT.Physics.BackfillMeasuredMomentum.falsification",
+    "SFT.Physics.BackfillMeasuredMomentum.targetId",
+    "SFT.Physics.BackfillMeasuredMomentum.targetQuantity",
+    "SFT.Physics.BackfillMeasuredMomentum.program",
+    "SFT.Physics.BackfillMeasuredMomentum.programFields",
+    "SFT.Physics.BackfillMeasuredMomentum.registration",
+    "SFT.Physics.BackfillMeasuredMomentum.registrationHash",
+    "SFT.Physics.BackfillMeasuredMomentum.inputs",
+    "SFT.Physics.BackfillMeasuredMomentum.envelope",
+    "SFT.Physics.BackfillMeasuredMomentum.sealPrediction",
+    "SFT.Physics.BackfillMeasuredMomentum.isolation",
+    "SFT.Physics.BackfillMeasuredMomentum.custodyCertificate",
+    "SFT.Physics.BackfillMeasuredMomentum.measurementReceipt",
+    "SFT.Physics.BackfillMeasuredMomentum.measurement",
+    "SFT.Physics.BackfillMeasuredMomentum.sourceMatches",
+    "SFT.Physics.BackfillMeasuredMomentum.validate",
+    "SFT.Physics.BackfillMeasuredMomentum.resealRejected",
+    "SFT.Physics.BackfillMeasuredMomentum.sourceMismatchRejected",
+    "SFT.Physics.BackfillMeasuredMomentum.sealBindsExactInputs",
+    "SFT.Physics.MeasuredMomentumGrammar.carrierName",
+    "SFT.Physics.MeasuredMomentumGrammar.relationName",
+    "SFT.Physics.MeasuredMomentumGrammar.provenanceName",
+    "SFT.Physics.MeasuredMomentumGrammar.predictionName",
+    "SFT.Physics.MeasuredMomentumGrammar.recordName",
+    "SFT.Physics.MeasuredMomentumGrammar.rowsName",
+    "SFT.Physics.MeasuredMomentumGrammar.generalityName",
+    "SFT.Physics.MeasuredMomentumGrammar.extensionName",
+    "SFT.Physics.MeasuredMomentumGrammar.sourceFields",
+    "SFT.Physics.MeasuredMomentumGrammar.candidateId",
+    "SFT.Physics.MeasuredMomentumGrammar.exactForm",
+    "SFT.Physics.MeasuredMomentumGrammar.survivorId",
+    "SFT.Physics.MeasuredMomentumGrammar.survives",
+    "SFT.Physics.MeasuredMomentumGrammar.criteriaDecision",
+    "SFT.Physics.MeasuredMomentumGrammar.decisionReason",
+    "SFT.Physics.MeasuredMomentumGrammar.generationRule",
+    "SFT.Physics.MeasuredMomentumGrammar.grammarBoundary",
+    "SFT.Physics.MeasuredMomentumGrammar.candidates",
+    "SFT.Physics.MeasuredMomentumGrammar.survivor",
+    "SFT.Physics.MeasuredMomentumGrammar.generatedCardinality",
+    "SFT.Physics.MeasuredMomentumGrammar.candidatesComplete",
+    "SFT.Physics.MeasuredMomentumGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.MeasuredMomentumGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.MeasuredMomentumGrammar.uniqueSurvivor",
+    "SFT.Physics.MeasuredMomentumGrammar.survivorAccepted",
+    "SFT.Physics.MeasuredMomentumGrammar.ExactCriteria",
+    "SFT.Physics.MeasuredMomentumGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.MeasuredMomentumGrammar.carrier_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.relation_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.provenance_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.prediction_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.record_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.rows_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.generality_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumGrammar.extension_rejected_rejected",
+    "SFT.Physics.MeasuredMomentumEvidence.witnesses",
+    "SFT.Physics.MeasuredMomentumEvidence.claimId",
+    "SFT.Physics.MeasuredMomentumEvidence.dependencies",
+    "SFT.Physics.MeasuredMomentumEvidence.candidateRecord",
+    "SFT.Physics.MeasuredMomentumEvidence.completenessRecord",
+    "SFT.Physics.MeasuredMomentumEvidence.registrationData",
+    "SFT.Physics.MeasuredMomentumEvidence.registration",
+    "SFT.Physics.MeasuredMomentumEvidence.generatedCandidateData",
+    "SFT.Physics.MeasuredMomentumEvidence.censusData",
+    "SFT.Physics.MeasuredMomentumEvidence.census",
+    "SFT.Physics.MeasuredMomentumEvidence.decisionData",
+    "SFT.Physics.MeasuredMomentumEvidence.decideCandidate",
+    "SFT.Physics.MeasuredMomentumEvidence.closureValue",
+    "SFT.Physics.MeasuredMomentumEvidence.exclusions",
+    "SFT.Physics.MeasuredMomentumEvidence.closureData",
+    "SFT.Physics.MeasuredMomentumEvidence.closure",
+    "SFT.Physics.MeasuredMomentumEvidence.control",
+    "SFT.Physics.MeasuredMomentumEvidence.runControls",
+    "SFT.Physics.MeasuredMomentumEvidence.registrationNoAxioms",
+    "SFT.Physics.MeasuredMomentumEvidence.registrationNoFreeParameters",
+    "SFT.Physics.MeasuredMomentumEvidence.decisionSurvival"
+  ],
+  "checks": [
+    {
+      "path": "verification/TURN_534_BackfillMeasuredMomentum534_report.json",
+      "sha256": "b4558eae5bd7bde7f1d768262d7bfb00c0c53e4b9425fa52243e9e529eff5c72"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredMomentum534_output.json",
+      "sha256": "50535e11357e2024967053a63845f84c10a4ff3e9020411fb0d29a8291804c10"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredMomentumAudit534.log",
+      "sha256": "121486706cb76cd568e72a78f41b66949fb64fbd6217ae0618a146cbe1638ab3"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredMomentumAudit534.lean",
+      "sha256": "611577e3d99ffd9853ea381f2978965b0484d024f83f85203213503e91584438"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredMomentum534_commands.json",
+      "sha256": "446e966a1fb6059ddb45ea6bac307f9c3c52189f18bac777349b9cc4d4086b1b"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredMomentumProgram534_report.json",
+      "sha256": "dbe979b7ca3311545d34a8adb8c731d8f73b2c64d4374d6255634234f67a0fc6"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredMomentumProgram534_commands.json",
+      "sha256": "28d1eaf61f7015bee5fc68a43ec3b21cdeaa3238510fc015bcd5daff81bad8ac"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredMomentumGrammarAudit534.log",
+      "sha256": "7463b22680a72a668a8fd9a9ee3e1d2704af6d48cc15c186fe86849719b4d49f"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredMomentumGrammarAudit534.lean",
+      "sha256": "7169897082115a89a93a9e396b115bb20808a86d03c214d46a045600d1ce0418"
+    },
+    {
+      "path": "verification/TURN_534_measuredmomentum_program534_output.json",
+      "sha256": "23be936ed5ed69c5f6f8c10519f0c1feb32bd479334022b139a3e3f2ca8de4b3"
+    },
+    {
+      "path": "verification/TURN_534_measuredmomentum_program534_report.json",
+      "sha256": "9e1f15bf627b65a25799f9c7270653e24a35c0d0f09ef3a0d1d1910c1a472fa6"
+    },
+    {
+      "path": "verification/TURN_534_measuredmomentum_program534.py",
+      "sha256": "a40d41d0f92530132ba8b02e90ad0019a746d08aa1462ae66cbe7ad77f61ed0f"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredMomentumIndependent534.py",
+      "sha256": "f360491ba9839c2044f3fefb78c1b84135ad66260aeeb0454e572d087e6b5363"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredMomentumProgram534.lean",
+      "sha256": "4657cc3d4a42d9b53f59478d088ec552098cf16b0347809fc04c2942544b383f"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredMomentumValidation534.lean",
+      "sha256": "361596bda8c14c8298b4cbfdb373ffd2a7c147927c08e19864afd2aa5764cd1e"
+    }
+  ],
+  "remaining": []
+}

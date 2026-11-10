@@ -1,0 +1,450 @@
+{
+  "status": "complete",
+  "claim_id": "SFT-PHYS-VALIDATION-WAVE-FREQUENCY-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_sha256": {
+    "sft/physics/measured_value_backfill_laws.py": "3a8773aea1211b9cbeff4d14fc1b83b85ec7569554a679bc1ce2f017a0556e59",
+    "sft/physics/measured_value.py": "d7feeb8ff673b8cffe3b29e7ec5629130aef4b9b7a2fcc740598369c29db4c66",
+    "sft/physics/generated_empirical_law.py": "65703f059b0a6059af6f06aff9e11f1fcef19a1b10d2a8fa4b675418c8ca8071"
+  },
+  "lean_source_sha256": {
+    "SFT/Physics/BackfillMeasuredFrequency.lean": "df71e23c5e9962c646900de2a557013d3c16a84705cfd1cfd094cd0f177725f3",
+    "SFT/Physics/MeasuredFrequencyGrammar.lean": "9b38fec10dd5ee16608c6781bfecc27c7088b45d0bf01c7b4e457d09f47bb979",
+    "SFT/Physics/MeasuredFrequencyEvidence.lean": "92c73f35fc7e2493b065c9702038e87157e932c630224bce5677907c2937b8ea"
+  },
+  "source_operations": {
+    "relation_id": "frequency-inverse-length-speed-product",
+    "experiment_id": "SFT-EXP-PHYS-VALIDATION-WAVE-FREQUENCY-001",
+    "claim_id": "SFT-PHYS-VALIDATION-WAVE-FREQUENCY-001",
+    "relation_statement": "Inverse wavelength composed with propagation speed yields recurrence frequency.",
+    "source_id": "NIST-CODATA-2022-ALL-CONSTANTS",
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+    "source_snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+    "inputs": [
+      {
+        "key": "inverse_length",
+        "quantity": "Rydberg constant",
+        "unit": "m^-1"
+      },
+      {
+        "key": "speed",
+        "quantity": "speed of light in vacuum",
+        "unit": "m s^-1"
+      }
+    ],
+    "steps": [
+      {
+        "output": "frequency",
+        "operation": "product",
+        "left": "inverse_length",
+        "right": "speed"
+      }
+    ],
+    "output_key": "frequency",
+    "target": {
+      "key": "target_frequency",
+      "quantity": "Rydberg constant times c in Hz",
+      "unit": "Hz"
+    },
+    "falsification_condition": "The sealed exact predicted interval fails to overlap the independently released CODATA target interval, any registered input is missing, or the displaced unfavorable interval is accepted."
+  },
+  "exact_program_instructions": [
+    [
+      "input",
+      "inverse_length__lower",
+      [
+        "inverse_length__lower"
+      ]
+    ],
+    [
+      "input",
+      "inverse_length__upper",
+      [
+        "inverse_length__upper"
+      ]
+    ],
+    [
+      "input",
+      "speed__lower",
+      [
+        "speed__lower"
+      ]
+    ],
+    [
+      "input",
+      "speed__upper",
+      [
+        "speed__upper"
+      ]
+    ],
+    [
+      "product",
+      "frequency__lower",
+      [
+        "inverse_length__lower",
+        "speed__lower"
+      ]
+    ],
+    [
+      "product",
+      "frequency__upper",
+      [
+        "inverse_length__upper",
+        "speed__upper"
+      ]
+    ],
+    [
+      "pair",
+      "predicted_interval",
+      [
+        "frequency__lower",
+        "frequency__upper"
+      ]
+    ],
+    [
+      "emit",
+      "",
+      [
+        "predicted_interval"
+      ]
+    ]
+  ],
+  "derivation": "Exact source-specialized positive-interval frequency-inverse-length-speed-product program, original inputs/units/guards, complete native execution and retained trace, sealed target custody, original numeric comparison and displaced interval control; full original 256-form grammar, decisions, closure, registration and independent controls.",
+  "reused_native_operations": [
+    "CapabilityOperations.arithmetic",
+    "CapabilityOperations.reductionValue",
+    "CapabilityExecution.runTraceLength",
+    "CapabilityExecution.newRegisterHeld",
+    "EvolutionMeasuredSource.loadRows",
+    "EvolutionMeasuredSource.overlap"
+  ],
+  "dependencies": {
+    "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001": "complete",
+    "SFT-PHYS-MEAS-TARGET-CUSTODY-001": "complete",
+    "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001": "complete",
+    "SFT-PHYS-MEAS-VALUE-RECORD-001": "complete",
+    "SFT-PHYS-MEAS-UNCERTAINTY-001": "complete",
+    "SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001": "complete"
+  },
+  "candidate_rows": 256,
+  "full_native_program_comparison": "PASS",
+  "full_native_empirical_comparison": "PASS: all original fields and hashes",
+  "independent_validator_cases": [
+    {
+      "case": "original",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-WAVE-FREQUENCY-001",
+          "survivor": "complete-fold-carrier__exact-positive-interval-relation__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+        },
+        "passed": true,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredFrequency-534"
+      }
+    },
+    {
+      "case": "omitted_candidate",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-WAVE-FREQUENCY-001",
+          "survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredFrequency-534"
+      }
+    },
+    {
+      "case": "additional_survivor",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-WAVE-FREQUENCY-001",
+          "survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredFrequency-534"
+      }
+    },
+    {
+      "case": "failed_control",
+      "result": {
+        "certificate": {
+          "candidate_count": 256,
+          "claim_id": "SFT-PHYS-VALIDATION-WAVE-FREQUENCY-001",
+          "survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-MeasuredFrequency-534"
+      }
+    }
+  ],
+  "axiom_dependencies": [],
+  "audited_declarations": [
+    "SFT.Physics.BackfillMeasuredFrequency.Snapshot",
+    "SFT.Physics.BackfillMeasuredFrequency.PredictionSeal",
+    "SFT.Physics.BackfillMeasuredFrequency.experimentId",
+    "SFT.Physics.BackfillMeasuredFrequency.claimId",
+    "SFT.Physics.BackfillMeasuredFrequency.snapshotHash",
+    "SFT.Physics.BackfillMeasuredFrequency.sourceId",
+    "SFT.Physics.BackfillMeasuredFrequency.relationId",
+    "SFT.Physics.BackfillMeasuredFrequency.relationStatement",
+    "SFT.Physics.BackfillMeasuredFrequency.falsification",
+    "SFT.Physics.BackfillMeasuredFrequency.targetId",
+    "SFT.Physics.BackfillMeasuredFrequency.targetQuantity",
+    "SFT.Physics.BackfillMeasuredFrequency.program",
+    "SFT.Physics.BackfillMeasuredFrequency.programFields",
+    "SFT.Physics.BackfillMeasuredFrequency.registration",
+    "SFT.Physics.BackfillMeasuredFrequency.registrationHash",
+    "SFT.Physics.BackfillMeasuredFrequency.inputs",
+    "SFT.Physics.BackfillMeasuredFrequency.envelope",
+    "SFT.Physics.BackfillMeasuredFrequency.sealPrediction",
+    "SFT.Physics.BackfillMeasuredFrequency.isolation",
+    "SFT.Physics.BackfillMeasuredFrequency.custodyCertificate",
+    "SFT.Physics.BackfillMeasuredFrequency.measurementReceipt",
+    "SFT.Physics.BackfillMeasuredFrequency.measurement",
+    "SFT.Physics.BackfillMeasuredFrequency.sourceMatches",
+    "SFT.Physics.BackfillMeasuredFrequency.validate",
+    "SFT.Physics.BackfillMeasuredFrequency.resealRejected",
+    "SFT.Physics.BackfillMeasuredFrequency.sourceMismatchRejected",
+    "SFT.Physics.BackfillMeasuredFrequency.sealBindsExactInputs",
+    "SFT.Physics.MeasuredFrequencyGrammar.Carrier",
+    "SFT.Physics.MeasuredFrequencyGrammar.carrierName",
+    "SFT.Physics.MeasuredFrequencyGrammar.Relation",
+    "SFT.Physics.MeasuredFrequencyGrammar.relationName",
+    "SFT.Physics.MeasuredFrequencyGrammar.Provenance",
+    "SFT.Physics.MeasuredFrequencyGrammar.provenanceName",
+    "SFT.Physics.MeasuredFrequencyGrammar.Prediction",
+    "SFT.Physics.MeasuredFrequencyGrammar.predictionName",
+    "SFT.Physics.MeasuredFrequencyGrammar.Record",
+    "SFT.Physics.MeasuredFrequencyGrammar.recordName",
+    "SFT.Physics.MeasuredFrequencyGrammar.Rows",
+    "SFT.Physics.MeasuredFrequencyGrammar.rowsName",
+    "SFT.Physics.MeasuredFrequencyGrammar.Generality",
+    "SFT.Physics.MeasuredFrequencyGrammar.generalityName",
+    "SFT.Physics.MeasuredFrequencyGrammar.Extension",
+    "SFT.Physics.MeasuredFrequencyGrammar.extensionName",
+    "SFT.Physics.MeasuredFrequencyGrammar.Candidate",
+    "SFT.Physics.MeasuredFrequencyGrammar.sourceFields",
+    "SFT.Physics.MeasuredFrequencyGrammar.candidateId",
+    "SFT.Physics.MeasuredFrequencyGrammar.exactForm",
+    "SFT.Physics.MeasuredFrequencyGrammar.survivorId",
+    "SFT.Physics.MeasuredFrequencyGrammar.survives",
+    "SFT.Physics.MeasuredFrequencyGrammar.criteriaDecision",
+    "SFT.Physics.MeasuredFrequencyGrammar.decisionReason",
+    "SFT.Physics.MeasuredFrequencyGrammar.generationRule",
+    "SFT.Physics.MeasuredFrequencyGrammar.grammarBoundary",
+    "SFT.Physics.MeasuredFrequencyGrammar.candidates",
+    "SFT.Physics.MeasuredFrequencyGrammar.survivor",
+    "SFT.Physics.MeasuredFrequencyGrammar.generatedCardinality",
+    "SFT.Physics.MeasuredFrequencyGrammar.candidatesComplete",
+    "SFT.Physics.MeasuredFrequencyGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.MeasuredFrequencyGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.MeasuredFrequencyGrammar.uniqueSurvivor",
+    "SFT.Physics.MeasuredFrequencyGrammar.survivorAccepted",
+    "SFT.Physics.MeasuredFrequencyGrammar.ExactCriteria",
+    "SFT.Physics.MeasuredFrequencyGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.MeasuredFrequencyGrammar.carrier_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.relation_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.provenance_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.prediction_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.record_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.rows_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.generality_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.extension_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyEvidence.witnesses",
+    "SFT.Physics.MeasuredFrequencyEvidence.claimId",
+    "SFT.Physics.MeasuredFrequencyEvidence.dependencies",
+    "SFT.Physics.MeasuredFrequencyEvidence.candidateRecord",
+    "SFT.Physics.MeasuredFrequencyEvidence.completenessRecord",
+    "SFT.Physics.MeasuredFrequencyEvidence.registrationData",
+    "SFT.Physics.MeasuredFrequencyEvidence.registration",
+    "SFT.Physics.MeasuredFrequencyEvidence.generatedCandidateData",
+    "SFT.Physics.MeasuredFrequencyEvidence.censusData",
+    "SFT.Physics.MeasuredFrequencyEvidence.census",
+    "SFT.Physics.MeasuredFrequencyEvidence.decisionData",
+    "SFT.Physics.MeasuredFrequencyEvidence.decideCandidate",
+    "SFT.Physics.MeasuredFrequencyEvidence.closureValue",
+    "SFT.Physics.MeasuredFrequencyEvidence.exclusions",
+    "SFT.Physics.MeasuredFrequencyEvidence.closureData",
+    "SFT.Physics.MeasuredFrequencyEvidence.closure",
+    "SFT.Physics.MeasuredFrequencyEvidence.control",
+    "SFT.Physics.MeasuredFrequencyEvidence.runControls",
+    "SFT.Physics.MeasuredFrequencyEvidence.registrationNoAxioms",
+    "SFT.Physics.MeasuredFrequencyEvidence.registrationNoFreeParameters",
+    "SFT.Physics.MeasuredFrequencyEvidence.decisionSurvival"
+  ],
+  "added_registered_theorems": [
+    "SFT.Physics.BackfillMeasuredFrequency.resealRejected",
+    "SFT.Physics.BackfillMeasuredFrequency.sourceMismatchRejected",
+    "SFT.Physics.BackfillMeasuredFrequency.sealBindsExactInputs",
+    "SFT.Physics.MeasuredFrequencyGrammar.generatedCardinality",
+    "SFT.Physics.MeasuredFrequencyGrammar.candidatesComplete",
+    "SFT.Physics.MeasuredFrequencyGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.MeasuredFrequencyGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.MeasuredFrequencyGrammar.uniqueSurvivor",
+    "SFT.Physics.MeasuredFrequencyGrammar.survivorAccepted",
+    "SFT.Physics.MeasuredFrequencyGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.MeasuredFrequencyGrammar.carrier_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.relation_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.provenance_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.prediction_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.record_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.rows_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.generality_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.extension_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyEvidence.registrationNoAxioms",
+    "SFT.Physics.MeasuredFrequencyEvidence.registrationNoFreeParameters",
+    "SFT.Physics.MeasuredFrequencyEvidence.decisionSurvival"
+  ],
+  "added_audited_definitions_and_theorems": [
+    "SFT.Physics.BackfillMeasuredFrequency.experimentId",
+    "SFT.Physics.BackfillMeasuredFrequency.claimId",
+    "SFT.Physics.BackfillMeasuredFrequency.snapshotHash",
+    "SFT.Physics.BackfillMeasuredFrequency.sourceId",
+    "SFT.Physics.BackfillMeasuredFrequency.relationId",
+    "SFT.Physics.BackfillMeasuredFrequency.relationStatement",
+    "SFT.Physics.BackfillMeasuredFrequency.falsification",
+    "SFT.Physics.BackfillMeasuredFrequency.targetId",
+    "SFT.Physics.BackfillMeasuredFrequency.targetQuantity",
+    "SFT.Physics.BackfillMeasuredFrequency.program",
+    "SFT.Physics.BackfillMeasuredFrequency.programFields",
+    "SFT.Physics.BackfillMeasuredFrequency.registration",
+    "SFT.Physics.BackfillMeasuredFrequency.registrationHash",
+    "SFT.Physics.BackfillMeasuredFrequency.inputs",
+    "SFT.Physics.BackfillMeasuredFrequency.envelope",
+    "SFT.Physics.BackfillMeasuredFrequency.sealPrediction",
+    "SFT.Physics.BackfillMeasuredFrequency.isolation",
+    "SFT.Physics.BackfillMeasuredFrequency.custodyCertificate",
+    "SFT.Physics.BackfillMeasuredFrequency.measurementReceipt",
+    "SFT.Physics.BackfillMeasuredFrequency.measurement",
+    "SFT.Physics.BackfillMeasuredFrequency.sourceMatches",
+    "SFT.Physics.BackfillMeasuredFrequency.validate",
+    "SFT.Physics.BackfillMeasuredFrequency.resealRejected",
+    "SFT.Physics.BackfillMeasuredFrequency.sourceMismatchRejected",
+    "SFT.Physics.BackfillMeasuredFrequency.sealBindsExactInputs",
+    "SFT.Physics.MeasuredFrequencyGrammar.carrierName",
+    "SFT.Physics.MeasuredFrequencyGrammar.relationName",
+    "SFT.Physics.MeasuredFrequencyGrammar.provenanceName",
+    "SFT.Physics.MeasuredFrequencyGrammar.predictionName",
+    "SFT.Physics.MeasuredFrequencyGrammar.recordName",
+    "SFT.Physics.MeasuredFrequencyGrammar.rowsName",
+    "SFT.Physics.MeasuredFrequencyGrammar.generalityName",
+    "SFT.Physics.MeasuredFrequencyGrammar.extensionName",
+    "SFT.Physics.MeasuredFrequencyGrammar.sourceFields",
+    "SFT.Physics.MeasuredFrequencyGrammar.candidateId",
+    "SFT.Physics.MeasuredFrequencyGrammar.exactForm",
+    "SFT.Physics.MeasuredFrequencyGrammar.survivorId",
+    "SFT.Physics.MeasuredFrequencyGrammar.survives",
+    "SFT.Physics.MeasuredFrequencyGrammar.criteriaDecision",
+    "SFT.Physics.MeasuredFrequencyGrammar.decisionReason",
+    "SFT.Physics.MeasuredFrequencyGrammar.generationRule",
+    "SFT.Physics.MeasuredFrequencyGrammar.grammarBoundary",
+    "SFT.Physics.MeasuredFrequencyGrammar.candidates",
+    "SFT.Physics.MeasuredFrequencyGrammar.survivor",
+    "SFT.Physics.MeasuredFrequencyGrammar.generatedCardinality",
+    "SFT.Physics.MeasuredFrequencyGrammar.candidatesComplete",
+    "SFT.Physics.MeasuredFrequencyGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.MeasuredFrequencyGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.MeasuredFrequencyGrammar.uniqueSurvivor",
+    "SFT.Physics.MeasuredFrequencyGrammar.survivorAccepted",
+    "SFT.Physics.MeasuredFrequencyGrammar.ExactCriteria",
+    "SFT.Physics.MeasuredFrequencyGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.MeasuredFrequencyGrammar.carrier_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.relation_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.provenance_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.prediction_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.record_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.rows_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.generality_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyGrammar.extension_rejected_rejected",
+    "SFT.Physics.MeasuredFrequencyEvidence.witnesses",
+    "SFT.Physics.MeasuredFrequencyEvidence.claimId",
+    "SFT.Physics.MeasuredFrequencyEvidence.dependencies",
+    "SFT.Physics.MeasuredFrequencyEvidence.candidateRecord",
+    "SFT.Physics.MeasuredFrequencyEvidence.completenessRecord",
+    "SFT.Physics.MeasuredFrequencyEvidence.registrationData",
+    "SFT.Physics.MeasuredFrequencyEvidence.registration",
+    "SFT.Physics.MeasuredFrequencyEvidence.generatedCandidateData",
+    "SFT.Physics.MeasuredFrequencyEvidence.censusData",
+    "SFT.Physics.MeasuredFrequencyEvidence.census",
+    "SFT.Physics.MeasuredFrequencyEvidence.decisionData",
+    "SFT.Physics.MeasuredFrequencyEvidence.decideCandidate",
+    "SFT.Physics.MeasuredFrequencyEvidence.closureValue",
+    "SFT.Physics.MeasuredFrequencyEvidence.exclusions",
+    "SFT.Physics.MeasuredFrequencyEvidence.closureData",
+    "SFT.Physics.MeasuredFrequencyEvidence.closure",
+    "SFT.Physics.MeasuredFrequencyEvidence.control",
+    "SFT.Physics.MeasuredFrequencyEvidence.runControls",
+    "SFT.Physics.MeasuredFrequencyEvidence.registrationNoAxioms",
+    "SFT.Physics.MeasuredFrequencyEvidence.registrationNoFreeParameters",
+    "SFT.Physics.MeasuredFrequencyEvidence.decisionSurvival"
+  ],
+  "checks": [
+    {
+      "path": "verification/TURN_534_BackfillMeasuredFrequency534_report.json",
+      "sha256": "99bbe3fdf0c9f3eaedcad38ea6dd0e0632c2b031a04d70db5390822f49363e3a"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredFrequency534_output.json",
+      "sha256": "16c0a3a9a4a478f95fa3826ea3671f6415bbecb91079b85364859c797d2d094b"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredFrequencyAudit534.log",
+      "sha256": "5e6870803d664b51dbd98e9f0e47abec09bb5309a58b384dfd4c0e88a8141b79"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredFrequencyAudit534.lean",
+      "sha256": "3e922b48b708c19c7599653fa70a101884b3b55ae50099148e1ca9eaa5e3d999"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredFrequency534_commands.json",
+      "sha256": "d2a6657d690980f7760d89d7238d156dd487bf92b3eef1e7f3d383f8e563ec89"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredFrequencyProgram534_report.json",
+      "sha256": "35a3c7e0df700eacf688d36737919aa509db588fbc13e1efd0c8deca5eab2d5d"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredFrequencyProgram534_commands.json",
+      "sha256": "9c5e6275e67a7fb55c27f106b79335a083ed16d02f2d42a3c7acb71f473de5f1"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredFrequencyGrammarAudit534.log",
+      "sha256": "6f7502dfc8fd6c9085b35e654ce361ffffb88e15558bc15e29616e8bde1e8c74"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredFrequencyGrammarAudit534.lean",
+      "sha256": "dddcbf7fb327a813d412eb26383a558a8cfc96eaec50ad6ba02f492ddd1b7536"
+    },
+    {
+      "path": "verification/TURN_534_measuredfrequency_program534_output.json",
+      "sha256": "9dbdacb2303054fa75054c72adea209195c5be060c0dc3acd823fc0745e320f0"
+    },
+    {
+      "path": "verification/TURN_534_measuredfrequency_program534_report.json",
+      "sha256": "2adfda25407c28429c45818295625210522f72fe05cc07e2fcaaeb291a2f2395"
+    },
+    {
+      "path": "verification/TURN_534_measuredfrequency_program534.py",
+      "sha256": "13c70f8e0a3f7a51ba77a79a763d0b350317f8c0826a0ce6b4e51c1f566775cb"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredFrequencyIndependent534.py",
+      "sha256": "bcb29610c67ffa22c00d398b60921f3baf1ed3ffb767a04b8be62bd2c40b220e"
+    },
+    {
+      "path": "verification/TURN_534_MeasuredFrequencyProgram534.lean",
+      "sha256": "7d296f0ce6ef70fb43f941811c49ea4e4e70504425c0d736ad1d3c829f04b5eb"
+    },
+    {
+      "path": "verification/TURN_534_BackfillMeasuredFrequencyValidation534.lean",
+      "sha256": "d231017cea2a94697890b583851b2deedfb78bf07fd00e7d3928c3e29d579c25"
+    }
+  ],
+  "remaining": []
+}

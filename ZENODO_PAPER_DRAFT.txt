@@ -15597,3 +15597,21 @@ Write F(A) for the existing complete macro-fibre view of region A and Sym(A,B) f
 The source-recorded transition retains its before and after events, the actual change record, F(A) distinct from F(B), and a changed symmetry class. Substituting the fibre equality from Stable into the retained fibre distinction yields a contradiction, proving that such a transition excludes the unchanged observation. Its one-step trace is [before,after], and its source-record list is exactly [(sourceIdentity,actionRecord)]. The existing phase-equilibrium results supply the coexistence criterion, exclusion under changed selected fibre and reciprocal carrier conservation. Thus the transition retains its scientific conditions and physical provenance together.
 
 Original source: sft/physics/collective_matter_laws.py, PHASE_ORDER and collective_law; claims/SFT-PHYS-CONDENSED-PHASE-ORDER-001/WHY_DERIVATION_CHECK.md at V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native verification: SFT/Physics/CollectivePhaseOrder.lean, inducedGraph, everyMemberSharesLabel, exactConnectedSupport, exactOrderedFraction, positiveOrderedFraction, orderedFractionThroughOne, identitySymmetry, symmetryClassReflexive, symmetryClassTransitive, changedSymmetryWitness, transitionExcludesStableObservation, transitionRetainsBothChanges, exactTransitionTrace and transitionSourceRetained. PhaseOrderGrammar/Evidence/Experiment/Validation preserve all 256 source candidates, elimination decisions, controls, closure and the original two-row NIST-SRD procedure. Receipt: verification/TURN_547_PHASEORDER_COMPLETION.json. Timeline: Turn 547 and its continuation reconciliation.
+
+
+505. Exact carrier recurrence preserves readings and excludes predecessor merging
+
+The complete phase-return condition retained by the band construction is equality of the resulting carrier to its original state. Let A(s,w) be the native phase action for state s and generated path w. For every admitted path, the band membership equivalence establishes A(s,w)=ok(s). If executing that same action gives ok(r), injectivity of the successful-result constructor yields
+\[
+\operatorname{ok}(r)=A(s,w)=\operatorname{ok}(s)\quad\Longrightarrow\quad r=s.
+\]
+Consequently every reading R of the complete carrier satisfies R(r)=R(s), by substitution. This conclusion concerns the returned complete carrier and requires no independently fitted reading-preservation law.
+
+V3 identifies dissipative correspondence with predecessor merging and retained fibre loss. Exact returns exclude such a merger of returning carriers. Suppose paths u and v return states a and b respectively, and both executions have the same resulting state r. Then
+\[
+A(a,u)=\operatorname{ok}(a)=\operatorname{ok}(r),\qquad
+A(b,v)=\operatorname{ok}(b)=\operatorname{ok}(r).
+\]
+Constructor injectivity gives a=r and b=r, hence a=b. Distinct returning complete carriers therefore cannot merge into one result. These are consequences of the retained recurrence equality, independent of path length and of any particular scalar observation.
+
+Original sources: sft/physics/collective_matter_laws.py, BAND and SUPERCONDUCTIVITY; sft/mathematics/dyn_001_012_laws_v1.py, DEF["003"] exact return and DEF["011"] predecessor merging, at pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native verification: SFT/Physics/SuperconductivityRecurrenceProofs.lean, returningCarrierPreservesEveryReading, returningCarriersCannotMerge and accessibleRecurrencePreservesEveryReading; the latter uses CollectiveBand.bandExactly directly. The three declarations have empty Lean axiom dependencies. Evidence: verification/TURN_548_superconductivity548_recurrence_report.json and its axiom log. Timeline: Turn 548 recurrence connection.

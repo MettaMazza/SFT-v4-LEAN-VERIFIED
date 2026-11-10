@@ -3588,3 +3588,9 @@ import SFT.Physics.IrreversibilityEvidence
 import SFT.Physics.IrreversibilityExperiment
 import SFT.Physics.IrreversibilityValidation
 import SFT.Physics.IrreversibilityValidationProofs
+import SFT.Physics.ThermoResponse
+import SFT.Physics.ThermalResponseGrammar
+import SFT.Physics.ThermalResponseEvidence
+import SFT.Physics.ThermalResponseExperiment
+import SFT.Physics.ThermalResponseValidation
+import SFT.Physics.ThermalResponseValidationProofs

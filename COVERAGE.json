@@ -15627,9 +15627,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-THERMO-RESPONSE-001-9152359409657ab6.json",
       "statement": "Thermal response is the exact change of one registered observation carrier per exact change of its source carrier, conditioned on the same held support and recurrence class.",
       "title": "Susceptibility, response and transport correspondence",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/ThermoResponse.lean",
+        "SFT/Physics/ThermalResponseGrammar.lean",
+        "SFT/Physics/ThermalResponseEvidence.lean",
+        "SFT/Physics/ThermalResponseExperiment.lean",
+        "SFT/Physics/ThermalResponseValidation.lean",
+        "SFT/Physics/ThermalResponseValidationProofs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256-form program, all fields/hashes/controls and full original empirical validator; pinned independent validator accepts original and rejects omitted candidate, extra survivor, failed control.",
       "registration_sha256": "1de28be77a13dc9dee5f36077b6b6d58bac7b9cb6d1d0c5feb3dd5f1d13ac947",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -15671,7 +15678,10 @@
         "statement": "Thermal response is the exact change of one registered observation carrier per exact change of its source carrier, conditioned on the same held support and recurrence class.",
         "status": "empirically_tested",
         "title": "Susceptibility, response and transport correspondence"
-      }
+      },
+      "remaining": [],
+      "verified_scope": "Four retained source/response readings on one held support and generated recurrence; exact scalar changes and quotient, empty-source boundary, unchanged response, exact oriented rational magnitude and unique output; original grammar, controls and empirical validator.",
+      "completion_evidence": "verification/TURN_533_THERMALRESPONSE_COMPLETION.json"
     },
     {
       "branch": "physics",
@@ -193347,13 +193357,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-10T18:35:06.796224+00:00",
+  "updated_at": "2026-11-10T18:43:38.212217+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2459,
-    "fully_reconstructed_claims": 322,
-    "axiom_free_exported_results": 18409,
-    "axiom_free_audited_definitions_and_theorems": 40357
+    "pending": 2458,
+    "fully_reconstructed_claims": 323,
+    "axiom_free_exported_results": 18450,
+    "axiom_free_audited_definitions_and_theorems": 40475
   }
 }

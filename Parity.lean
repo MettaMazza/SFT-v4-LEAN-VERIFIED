@@ -1066,3 +1066,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.IrreversibilityGrammar.candidates do
     IO.println ("IrreversibilityGrammar\t" ++ SFT.Physics.IrreversibilityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.IrreversibilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.IrreversibilityGrammar.exactForm c ++ "\t" ++ SFT.Physics.IrreversibilityGrammar.decisionReason c)
+
+  for c in SFT.Physics.ThermalResponseGrammar.candidates do
+    IO.println ("ThermalResponseGrammar\t" ++ SFT.Physics.ThermalResponseGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ThermalResponseGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ThermalResponseGrammar.exactForm c ++ "\t" ++ SFT.Physics.ThermalResponseGrammar.decisionReason c)

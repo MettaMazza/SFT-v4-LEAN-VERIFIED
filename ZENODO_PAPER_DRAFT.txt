@@ -15740,3 +15740,28 @@ R(a)=D(E(a))=D(E(b))=R(b),
 contradicting the retained distinction. This establishes the erasure control for the full identity record.
 
 Original source: sft/chemistry/catalog.py, ENTITY_BOUNDARY, ENTITY_DIMENSIONS and CHEMISTRY_SPECS[0], at commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native derivation: SFT/Chemistry/EntityIdentity.lean, recordExactly, identityExactly, leastRequiredIdentity, noExtraIdentityRule, priorCoordinatesExact, extensionRetainsDistinctions, finiteExtensionRetainsCoordinate and erasedIdentityCannotRecover. Native source grammar: EntityGrammar.lean; source registration, closure and controls: EntityEvidence.lean. The 89 current declarations have empty axiom dependencies. Staged source and audit: verification/TURN_554_STAGED and verification/TURN_554_ENTITY_PROGRESS.json. Timeline: Turn 554. The chemical entry's empirical correspondence is not included in the completed-entry total until its separate source-derived IUPAC method is integrated and checked.
+
+
+510. Source-derived chemical correspondence and sealed comparison
+
+Chemical Entity's external comparison reconstructs its label from the registered IUPAC record. The chemistry specification retains the source identity and expected consequence separately from the released definition. The validator first checks the observation-registry schema and unique target identities. It then checks the registered source identity, exact snapshot digest, term code and current status.
+
+For the required ordered feature records (f_i,n_i), f_i is a nonblank fragment and n_i its nonblank normalized feature. Each record contains exactly these two fields. Let D be the complete definition text joined in its registered order and fold the source's Unicode casefold operation. Admission requires
+\[
+\forall i,\quad \operatorname{fold}(f_i)\text{ occurs in }\operatorname{fold}(D).
+\]
+The external label is then assembled from every normalized feature in that order:
+\[
+L=n_1\mathbin{\Vert}\texttt{\_\_}\mathbin{\Vert}\cdots\mathbin{\Vert}n_k.
+\]
+For the molecular-entity record M03986, the four retained features establish the singular carrier, constitution/isotope distinction, separate distinguishability and context-bounded precision. An extraction identity binds the target identity, term code, full ordered feature records, reconstructed label and snapshot digest.
+
+The prediction program receives only the registered sealed premise and emits the chemical consequence declared before target release. The custody nonce binds the registration digest and the observation-registry digest. After execution and prediction sealing, the existing protected-package audit and target-release verification operate on this same prediction. Every comparison retains its target and source identities, locator, snapshot digest, extraction digest, predicted label and observed label. The exact comparison is
+\[
+P_i\iff L_{\mathrm{predicted}}=L_i,
+\qquad P=\left(\bigwedge_i P_i\right)\land
+\left(L_{\mathrm{predicted}}\ne L_{\mathrm{predicted}}\mathbin{\Vert}\texttt{\_\_tampered}\right).
+\]
+The receipt binds all comparisons and the adverse control, the registry digest, derivation seal, prediction seal and complete execution trace. The current native result matches every field and hash of V3's registered empirical validation. Separate comparisons with the original extraction function cover the admitted record, casefold-preserving changes and rejection of altered schema, duplicated or absent targets, changed source or term identity, invalid or absent fragments and changed snapshot bytes.
+
+Original source: sft/chemistry/generated_law.py, EmpiricalChemistrySpec.validate, prediction_program_document, experiment_registration_record, _source_derived_targets and BlindExternalChemistryValidator.validate; sft/chemistry/catalog.py, CHEMISTRY_SPECS[0], at V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native verification: SourceText.lean, SourceExtraction.lean, EntityExperiment.lean and EntityValidation.lean in verification/TURN_555_STAGED/SFT/Chemistry. The complete current entry audit covers 150 declarations with empty axiom dependencies. Source comparison records: verification/TURN_555_extraction555_report.json and verification/TURN_555_entity_validation555_report.json. Timeline: Turn 555.

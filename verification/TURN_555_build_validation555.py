@@ -1,0 +1,13 @@
+from pathlib import Path
+import subprocess,os,re,json
+r=Path('work/constants-recovery').resolve();env=dict(os.environ,LEAN_PATH=str(r/'.lake/build/lib/lean'))
+for m in ['EntityExperiment','EntityValidation']:
+ p=subprocess.run(['/Users/dolltrading/.elan/bin/lean','-j1','-M12288','-o',str(r/'.lake/build/lib/lean/SFT/Chemistry'/(m+'.olean')),'SFT/Chemistry/'+m+'.lean'],cwd=r,env=env,capture_output=True,text=True);Path('work/build555_'+m+'.log').write_text(p.stdout+p.stderr);assert p.returncode==0,p.stdout+p.stderr
+modules=['EntityIdentity','EntityGrammar','EntityEvidence','SourceText','SourceExtraction','EntityExperiment','EntityValidation'];names=[];ths=[];defs=[]
+for m in modules:
+ s=(r/'SFT/Chemistry'/(m+'.lean')).read_text()
+ for kind,n in re.findall(r'^(def|theorem|structure|inductive|abbrev) (\w+)',s,re.M):
+  name='SFT.Chemistry.'+m+'.'+n;names.append(name)
+  if kind=='theorem':ths.append(name)
+  if kind in ['def','theorem']:defs.append(name)
+p=Path('work/AuditEntity555.lean');p.write_text('\n'.join('import SFT.Chemistry.'+m for m in modules)+'\n'+'\n'.join('#print axioms '+n for n in names)+'\n');o=subprocess.run(['/Users/dolltrading/.elan/bin/lean',str(p)],env=env,text=True,capture_output=True);Path('work/entity555_audit.log').write_text(o.stdout+o.stderr);assert o.returncode==0,o.stdout+o.stderr;assert all("'"+n+"' does not depend on any axioms" in o.stdout for n in names),o.stdout;Path('work/entity555_audit_config.json').write_text(json.dumps(dict(modules=modules,declarations=names,theorems=ths,definitions_and_theorems=defs),indent=2));print('PASS',len(names),'zero-axiom declarations')

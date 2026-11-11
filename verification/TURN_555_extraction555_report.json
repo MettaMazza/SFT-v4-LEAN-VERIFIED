@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "original",
+      "result": {
+        "ok": [
+          {
+            "target_id": "chemical-entity-iupac-m03986",
+            "source_id": "IUPAC-GOLD-BOOK-M03986-2026",
+            "source_locator": "https://goldbook.iupac.org/terms/view/M03986/json :: term M03986, current definition",
+            "observed_label": "singular-carrier__constitution-and-isotope-retained__separately-distinguishable__context-bounded-precision",
+            "snapshot_hash": "sha256:6b0f6e183ef109d6f3483bcd1d70ca73a6d57e496f9ca32da23964bca652de8e",
+            "extraction_hash": "sha256:02fe57871809a766ef6b0951ad82c8265a3065104353ad479ea29db8dc7165a0"
+          }
+        ]
+      }
+    },
+    {
+      "case": "schema",
+      "result": {
+        "error": "Chemistry observation registry schema is invalid"
+      }
+    },
+    {
+      "case": "duplicate",
+      "result": {
+        "error": "Chemistry observation registry contains duplicate target identities"
+      }
+    },
+    {
+      "case": "absent",
+      "result": {
+        "error": "registered Chemistry target is absent from the source-derived registry"
+      }
+    },
+    {
+      "case": "source",
+      "result": {
+        "error": "Chemistry observation source identity differs from registration"
+      }
+    },
+    {
+      "case": "term",
+      "result": {
+        "error": "IUPAC term identity or status differs from observation registration"
+      }
+    },
+    {
+      "case": "feature",
+      "result": {
+        "error": "source-derived Chemistry feature extraction is invalid"
+      }
+    },
+    {
+      "case": "fragment",
+      "result": {
+        "error": "source-derived Chemistry target is not reproduced by the official definition"
+      }
+    },
+    {
+      "case": "snapshot",
+      "result": {
+        "error": "official Chemistry snapshot differs from registration"
+      }
+    },
+    {
+      "case": "casefold",
+      "result": {
+        "ok": [
+          {
+            "target_id": "chemical-entity-iupac-m03986",
+            "source_id": "IUPAC-GOLD-BOOK-M03986-2026",
+            "source_locator": "https://goldbook.iupac.org/terms/view/M03986/json :: term M03986, current definition",
+            "observed_label": "singular-carrier__constitution-and-isotope-retained__separately-distinguishable__context-bounded-precision",
+            "snapshot_hash": "sha256:6b0f6e183ef109d6f3483bcd1d70ca73a6d57e496f9ca32da23964bca652de8e",
+            "extraction_hash": "sha256:ff1d667a9d19c251d82bb20a3ddba69367e7a99b7a7b6a4e3af42adaf6b16314"
+          }
+        ]
+      }
+    }
+  ],
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_function": "sft/chemistry/generated_law.py:_source_derived_targets",
+  "comparison": "Fresh Lean execution against exact pinned Python function body"
+}

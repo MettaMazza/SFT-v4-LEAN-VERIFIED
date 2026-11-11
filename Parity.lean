@@ -1429,3 +1429,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.PhaseGrammar.candidates do
     IO.println ("PhaseGrammar\t" ++ SFT.Materials.PhaseGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PhaseGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PhaseGrammar.exactForm c ++ "\t" ++ SFT.Materials.PhaseGrammar.decisionReason c)
+
+  for c in SFT.Materials.MicrostructureGrammar.candidates do
+    IO.println ("MicrostructureGrammar\t" ++ SFT.Materials.MicrostructureGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.MicrostructureGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.MicrostructureGrammar.exactForm c ++ "\t" ++ SFT.Materials.MicrostructureGrammar.decisionReason c)

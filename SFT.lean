@@ -4547,3 +4547,19 @@ import SFT.Materials.PhaseEvidence
 import SFT.Materials.PhaseExperiment
 
 import SFT.Materials.PhaseValidation
+
+import SFT.Materials.Microstructure
+
+import SFT.Materials.MicrostructureRetention
+
+import SFT.Materials.MicrostructureBinding
+
+import SFT.Materials.MicrostructureSource
+
+import SFT.Materials.MicrostructureGrammar
+
+import SFT.Materials.MicrostructureEvidence
+
+import SFT.Materials.MicrostructureExperiment
+
+import SFT.Materials.MicrostructureValidation

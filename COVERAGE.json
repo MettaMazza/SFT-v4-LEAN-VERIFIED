@@ -22162,9 +22162,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-STOICH-LIMITING-001-cc930de298924d97.json",
       "statement": "The limiting support is the complete tied least set of exact available-amount to primitive-required-count ratios; it bounds reaction progress before any unavailable carrier would be required.",
       "title": "Limiting-component and complete-consumption boundary",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/LimitingProgress.lean",
+        "SFT/Chemistry/LimitingGrammar.lean",
+        "SFT/Chemistry/LimitingEvidence.lean",
+        "SFT/Chemistry/LimitingExperiment.lean",
+        "SFT/Chemistry/LimitingValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full 256-form program, original empirical output, retained source-extraction evidence and original independent-validator controls.",
       "registration_sha256": "c254c892ea099deac7b12cfbae58543054901cd1a7bc9901f90e1786e208d173",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -22221,7 +22227,10 @@
         "statement": "The limiting support is the complete tied least set of exact available-amount to primitive-required-count ratios; it bounds reaction progress before any unavailable carrier would be required.",
         "status": "empirically_tested",
         "title": "Limiting-component and complete-consumption boundary"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_568_LIMITING_COMPLETION.json",
+      "verified_scope": "Exact positive available/required ratios; complete minimum with all tied positive positions; source empty/length guards; nonempty limiting support, exact consumption and retained excess boundaries, and finite extension.; Original exhaustive eight-axis256 candidates and exact decisions/unique survivor.; Original chemistry registration, census, closure and controls.; Distinct frozen derivation and empirical labels, original prediction and reference registration.; Original generated_law.py GoldBook source extraction/custody/isolation and every validation output field/hash."
     },
     {
       "branch": "chemistry",
@@ -22233,9 +22242,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-STOICH-YIELD-001-86bc873a5b4b7126.json",
       "statement": "Chemical yield is the exact positive Fold part of a retained element-or-compound product amount relative to its registered expected support after a specified reaction or separation.",
       "title": "Reaction yield as retained product share",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/ProductYield.lean",
+        "SFT/Chemistry/YieldGrammar.lean",
+        "SFT/Chemistry/YieldEvidence.lean",
+        "SFT/Chemistry/YieldExperiment.lean",
+        "SFT/Chemistry/YieldValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full 256-form program, original empirical output, retained source-extraction evidence and original independent-validator controls.",
       "registration_sha256": "989b542e52a0c105a6b8999699e6019cd5b09f9fcc2c80c577bcf27acde23294",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -22292,7 +22307,10 @@
         "statement": "Chemical yield is the exact positive Fold part of a retained element-or-compound product amount relative to its registered expected support after a specified reaction or separation.",
         "status": "empirically_tested",
         "title": "Reaction yield as retained product share"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_568_YIELD_COMPLETION.json",
+      "verified_scope": "Exact original positive product-share identity; retained product/process/reference and complete observation history; exact positive aggregate and empty outcome separation; induction across finite observation extensions.; Original exhaustive eight-axis256 candidates and exact decisions/unique survivor.; Original chemistry registration, census, closure and controls.; Distinct frozen derivation and empirical labels, original prediction and reference registration.; Original generated_law.py GoldBook source extraction/custody/isolation and every validation output field/hash."
     },
     {
       "branch": "chemistry",
@@ -193762,13 +193780,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T04:13:23.233779+00:00",
+  "updated_at": "2026-11-11T04:25:19.510317+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2414,
-    "fully_reconstructed_claims": 367,
-    "axiom_free_exported_results": 20041,
-    "axiom_free_audited_definitions_and_theorems": 45400
+    "pending": 2412,
+    "fully_reconstructed_claims": 369,
+    "axiom_free_exported_results": 20123,
+    "axiom_free_audited_definitions_and_theorems": 45643
   }
 }

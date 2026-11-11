@@ -3823,3 +3823,13 @@ import SFT.Chemistry.CoefficientGrammar
 import SFT.Chemistry.CoefficientEvidence
 import SFT.Chemistry.CoefficientExperiment
 import SFT.Chemistry.CoefficientValidation
+import SFT.Chemistry.LimitingProgress
+import SFT.Chemistry.LimitingGrammar
+import SFT.Chemistry.LimitingEvidence
+import SFT.Chemistry.LimitingExperiment
+import SFT.Chemistry.LimitingValidation
+import SFT.Chemistry.ProductYield
+import SFT.Chemistry.YieldGrammar
+import SFT.Chemistry.YieldEvidence
+import SFT.Chemistry.YieldExperiment
+import SFT.Chemistry.YieldValidation

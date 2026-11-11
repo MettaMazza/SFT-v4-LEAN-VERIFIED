@@ -1201,3 +1201,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.CoefficientGrammar.candidates do
     IO.println ("CoefficientGrammar\t" ++ SFT.Chemistry.CoefficientGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.CoefficientGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.CoefficientGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.CoefficientGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.LimitingGrammar.candidates do
+    IO.println ("LimitingGrammar\t" ++ SFT.Chemistry.LimitingGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.LimitingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.LimitingGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.LimitingGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.YieldGrammar.candidates do
+    IO.println ("YieldGrammar\t" ++ SFT.Chemistry.YieldGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.YieldGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.YieldGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.YieldGrammar.decisionReason c)

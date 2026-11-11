@@ -1423,3 +1423,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.SpecimenGrammar.candidates do
     IO.println ("SpecimenGrammar\t" ++ SFT.Materials.SpecimenGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SpecimenGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SpecimenGrammar.exactForm c ++ "\t" ++ SFT.Materials.SpecimenGrammar.decisionReason c)
+
+  for c in SFT.Materials.CompositionGrammar.candidates do
+    IO.println ("CompositionGrammar\t" ++ SFT.Materials.CompositionGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.CompositionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.CompositionGrammar.exactForm c ++ "\t" ++ SFT.Materials.CompositionGrammar.decisionReason c)

@@ -4521,3 +4521,15 @@ import SFT.Materials.SpecimenEvidence
 import SFT.Materials.SpecimenExperiment
 
 import SFT.Materials.SpecimenValidation
+
+import SFT.Materials.Composition
+
+import SFT.Materials.CompositionSource
+
+import SFT.Materials.CompositionGrammar
+
+import SFT.Materials.CompositionEvidence
+
+import SFT.Materials.CompositionExperiment
+
+import SFT.Materials.CompositionValidation

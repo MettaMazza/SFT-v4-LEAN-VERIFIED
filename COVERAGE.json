@@ -29422,9 +29422,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-MEAS-COMPOSITION-001-12f436cc0234aa79.json",
       "statement": "Material composition is the exact part-to-whole record of every retained component on one declared amount or support basis.",
       "title": "Material composition record",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/Composition.lean",
+        "SFT/Materials/CompositionSource.lean",
+        "SFT/Materials/CompositionGrammar.lean",
+        "SFT/Materials/CompositionEvidence.lean",
+        "SFT/Materials/CompositionExperiment.lean",
+        "SFT/Materials/CompositionValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "d2d9130526dba94b2c0c727c490f12752b324ce0b470d8bd153978b43a50d5e9",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -29488,7 +29495,10 @@
         "status": "empirically_tested",
         "subbranch": "measurement_identity",
         "title": "Material composition record"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_657_COMPOSITION_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[2]: exact complete component support on one declared basis, uncertainty and source/history retention; reuse ExactComposition closure and finite-refinement proofs, bind actual parent list and retained observation extension.; _dimensions: full eight-axis256-form product, original elimination decisions and unique preservation survivor.; Original program methods, registration and three structural witnesses computed from original obligation labels.; Exact two-fragment NIST Materials Division binding, ordered extraction receipts and original preceding global source guard.; Complete fixed-spec validation, original registration, four-instruction program and prediction envelope.; Original source guard, custody, isolation, comparison and tampered-label validation; unchanged shared preseal evidence retained."
     },
     {
       "branch": "materials",
@@ -194474,13 +194484,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T21:59:59.045797+00:00",
+  "updated_at": "2026-11-11T22:15:27.708013+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2340,
-    "fully_reconstructed_claims": 441,
-    "axiom_free_exported_results": 23214,
-    "axiom_free_audited_definitions_and_theorems": 54651
+    "pending": 2339,
+    "fully_reconstructed_claims": 442,
+    "axiom_free_exported_results": 23247,
+    "axiom_free_audited_definitions_and_theorems": 54765
   }
 }

@@ -3854,3 +3854,13 @@ import SFT.Chemistry.CovalentGrammar
 import SFT.Chemistry.CovalentEvidence
 import SFT.Chemistry.CovalentExperiment
 import SFT.Chemistry.CovalentValidation
+import SFT.Chemistry.IonicPairing
+import SFT.Chemistry.IonicGrammar
+import SFT.Chemistry.IonicEvidence
+import SFT.Chemistry.IonicExperiment
+import SFT.Chemistry.IonicValidation
+import SFT.Chemistry.MetallicNetwork
+import SFT.Chemistry.MetallicGrammar
+import SFT.Chemistry.MetallicEvidence
+import SFT.Chemistry.MetallicExperiment
+import SFT.Chemistry.MetallicValidation

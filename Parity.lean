@@ -1219,3 +1219,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.CovalentGrammar.candidates do
     IO.println ("CovalentGrammar\t" ++ SFT.Chemistry.CovalentGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.CovalentGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.CovalentGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.CovalentGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.IonicGrammar.candidates do
+    IO.println ("IonicGrammar\t" ++ SFT.Chemistry.IonicGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.IonicGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.IonicGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.IonicGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.MetallicGrammar.candidates do
+    IO.println ("MetallicGrammar\t" ++ SFT.Chemistry.MetallicGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.MetallicGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.MetallicGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.MetallicGrammar.decisionReason c)

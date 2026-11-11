@@ -16495,3 +16495,54 @@ Every prior method, condition, uncertainty and source remains attached to its or
 This is the exact common-identity correspondence specified by V3. The source's excluded universal inverse formula is not inserted between the two observational payloads. Its eight original axes enumerate all 256 alternatives, retaining the original decisions and controls. The sealed IUPAC B00702 comparison preserves the registered empirical relationship among bond length, dissociation energy and order, including the source's stated falsification boundary.
 
 Pinned V3 source: sft/chemistry/bonding_molecular_batch_1.py, BOND_LENGTH_STRENGTH_BOUNDARY, BOND_LENGTH_STRENGTH_DIMENSIONS and BONDING_MOLECULAR_BATCH_1_SPECS[5]. Lean verification: SFT/Chemistry/BondLengthStrength.lean (commonBondIdentity, distanceCentresRetained, positiveDistance, positiveDissociation, openingRetainsDissociationTrace, sourceAndMethodsRetained, everyPriorObservationRetained, newObservationRetained, completeRecordAppend, measurementAppendPreservesLaw, observationPayloadsDoNotSelect); reused BondClosure.openedRecord and MechanicalLocation; LengthGrammar.lean, LengthEvidence.lean, LengthExperiment.lean and LengthValidation.lean. Chronological record: TIMELINE.txt, Turn575.
+
+
+541. Molecular identity: connected neutral carriers and retained composition
+
+Write the molecular record as M=(O,L,B,Q), where O is the ordered list of atomic occurrence identities, L the corresponding element labels, B the retained bonds and Q the open net-charge fibres. The original constructor requires |O|≥2, |O|=|L|, distinct nonblank occurrence identities, nonblank element labels and B≠∅. Each bond joins distinct registered occurrences. Sorting its two endpoints gives its undirected identity; two bonds with that same identity are rejected.
+
+Starting from the first occurrence o₀, the source connectivity procedure repeatedly adds the opposite endpoint of every bond incident to the reached set. Thus
+
+  R₀={o₀},
+  Rₙ₊₁=Rₙ ∪ {v : ∃u∈Rₙ, (u,v)∈B or (v,u)∈B}.
+
+At closure R*, the returned condition is R*=set(O). The Lean proof connectedFixedPointEquivalent connects the existing sweep-history construction to path reachability and proves both inclusions of this equality. This also preserves the standalone helper's treatment of endpoints outside O: a reachable outside endpoint prevents equality. Accepted molecular records additionally require Q=∅. Their ordered occurrence, element and bond records are returned unchanged.
+
+The source base is O=[atom-occurrence-one,atom-occurrence-two], L=[E,E], B=[(atom-occurrence-one,atom-occurrence-two)], Q=∅. The empty path reaches the first occurrence and the retained bond reaches the second. The originalDiatomicConnected and originalDiatomicAdmitted proofs establish this base directly. The composition signature is
+
+  C(M)=[(ℓ,Σᵢ 1[Lᵢ=ℓ]) : ℓ∈sorted(set(L))],
+  C(M₀)=[(E,2)].
+
+For a generated occurrence x attached to an existing anchor a, append x to O, its element e to L, and (a,x) to B. Every old path remains a path in the enlarged graph. A path from o₀ to a followed by the new bond reaches x. All edge endpoints belong to the enlarged occurrence list, so no outside endpoint can be reached. Consequently connectivity is preserved. Q remains empty, and every earlier occurrence and bond is retained. Element multiplicity satisfies
+
+  count(ℓ,L++[e])=count(ℓ,L)+1[ℓ=e].
+
+These are the source's base and successor constructions; the proofs reuse the established graph retention and path-extension results.
+
+Pinned V3 source (76f1b34e9e9682989adcbb088797b4ae4ce4fcf1): sft/chemistry/molecular_structure_derivation.py, MolecularCarrier, _connected, composition_signature, _DIATOMIC and MOLECULAR_STRUCTURE_BLUEPRINTS[0]. Lean verification: SFT/Chemistry/MolecularCarrier.lean, acceptedConditions, completeRecordRetained, connectedFixedPointEquivalent, adjacentOccurrencePreservesConnectivity, originalDiatomicAdmitted, originalDiatomicComposition, appendRetainsCharge, appendRetainsIdentities, appendRetainsBonds and appendCountsElement; existing MetallicNetwork and graph path proofs. Chronological record: TIMELINE.txt, Turn576. These declarations pass the empty-axiom audit recorded with the entry's verification evidence.
+
+
+542. Molecular geometry: complete relative pair support
+
+Let O=[o₁,…,oₙ] be the occurrence list of an admitted molecular carrier. The source generates every two-occurrence combination and normalizes its endpoint order. Its required support is
+
+  P(O)={norm(oᵢ,oⱼ) : i<j},
+  norm(a,b)=(min(a,b),max(a,b)).
+
+A geometry relation retains its two distinct nonblank occurrence identities and a held orientation label. For a list G of such records, only relations whose two endpoints belong to O contribute to the observed set:
+
+  A(O,G)={norm(g.left,g.right) : g∈G, g.left∈O, g.right∈O}.
+
+The exact complete_geometry test is
+
+  |G|=|A(O,G)| and A(O,G)=P(O).
+
+The first equality excludes repeated undirected relations and rows outside the carrier from a complete record; the set equality requires every generated pair. Lean's completeMeaning proves both directions of this test as equality of cardinalities together with the two set inclusions. uniqueMeaning connects the finite set representation to membership without changing the source's duplicate elimination.
+
+The first two-occurrence molecular carrier has one required pair and one retained relative-orientation relation. firstMoleculeHasOneCompleteRelation proves that its source test returns true. For a generated new occurrence x,
+
+  P(O++[x])=P(O) ∪ {norm(o,x) : o∈O}.
+
+The pairSuccessor and requiredSuccessor proofs establish this construction for every finite occurrence list. Thus each added occurrence introduces every required new pair; it does not replace a previous pair. Appending its relation records retains every earlier orientation record, as proved by priorOrientationsRetained. The relation representation stores held relative orientation and endpoint identities; absolute host coordinates are absent. Relabelling a held orientation preserves the endpoints and the original relation-admission guards, while the complete record continues to retain the resulting orientation itself. Measured coordinate values do not select the pair support.
+
+Pinned V3 source (76f1b34e9e9682989adcbb088797b4ae4ce4fcf1): sft/chemistry/molecular_structure_derivation.py, GeometryRelation, complete_geometry, _GEOMETRY and MOLECULAR_STRUCTURE_BLUEPRINTS[1]. Lean verification: SFT/Chemistry/MolecularGeometry.lean, admit, pairs, required, observed, completeGeometry, sameSetMeaning, completeMeaning, pairSuccessor, uniqueMeaning, requiredSuccessor, firstMoleculeHasOneCompleteRelation, priorOrientationsRetained, relabelRetainsEndpoints, relabelRetainsAdmission and completeOrientationRecord. Chronological record: TIMELINE.txt, Turn577.

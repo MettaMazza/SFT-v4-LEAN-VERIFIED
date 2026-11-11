@@ -25667,9 +25667,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-CAT-PATHWAY-001-088dfaddc5b0a7b9.json",
       "statement": "A catalytic pathway is the condition-bound complete step trace sharing overall reaction endpoints with an uncatalysed path, ordered by activation support and closing the catalyst cycle.",
       "title": "Catalytic alternative-path relation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/CatalyticPathway.lean",
+        "SFT/Chemistry/PathwayGrammar.lean",
+        "SFT/Chemistry/PathwayEvidence.lean",
+        "SFT/Chemistry/PathwayExperiment.lean",
+        "SFT/Chemistry/PathwayValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh native256-form complete program,24 reused constructor cases, all empirical fields/hashes and original independent controls.",
       "registration_sha256": "f26204bf5497aff70f33f28eacaecc9b61a49e2db2802e64c1bccafd5bdcff8e",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -25747,7 +25753,10 @@
         "statement": "A catalytic pathway is the condition-bound complete step trace sharing overall reaction endpoints with an uncatalysed path, ordered by activation support and closing the catalyst cycle.",
         "status": "empirically_tested",
         "title": "Catalytic alternative-path relation"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_616_PATHWAY_COMPLETION.json",
+      "verified_scope": "Complete common-endpoint and same-reaction mechanism binding, full per-step energy trace and held conditions/reference; derived least activation support and exact strict comparison with tie/higher rejection; complete balanced intermediates, retained exact catalyst cycle; complete chemical/energy/activation successor traces and closed-extension endpoint preservation.; Original eight binary axes, all256 alternatives, exact original decisions and unique survivor.; Original census, registration, witnesses, controls and closure.; Original sealed prediction and authority references; unchanged catalysis seal reused.; Original full multi-source empirical fields/hashes and independent adverse controls."
     },
     {
       "branch": "chemistry",
@@ -25759,9 +25768,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-CAT-SELECTIVITY-001-0210a8962416f13c.json",
       "statement": "Catalytic selectivity is the exact maximal product-recurrence class over all generated competing products at one reactant, catalyst, condition and observation boundary; ties remain a cofavored class.",
       "title": "Catalytic selectivity among generated products",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/CatalyticSelectivity.lean",
+        "SFT/Chemistry/SelectivityGrammar.lean",
+        "SFT/Chemistry/SelectivityEvidence.lean",
+        "SFT/Chemistry/SelectivityExperiment.lean",
+        "SFT/Chemistry/SelectivityValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh native256-form complete program,18 constructor cases, all empirical fields/hashes and original independent controls.",
       "registration_sha256": "e9f04e711486bb02f60b1fc4d22c6b23b2173bb14b265b205802c9d99d769124",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -25840,7 +25855,10 @@
         "statement": "Catalytic selectivity is the exact maximal product-recurrence class over all generated competing products at one reactant, catalyst, condition and observation boundary; ties remain a cofavored class.",
         "status": "empirically_tested",
         "title": "Catalytic selectivity among generated products"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_617_SELECTIVITY_COMPLETION.json",
+      "verified_scope": "Exact NetworkWitness constructor domain; complete generated product event history tied to accepted catalytic paths, common reactants/catalyst/conditions/method/boundary and positive consumption; maximal class membership/existence, all ties, strict winner uniqueness and lower-product exclusion; shared consumption ordering; complete event extension, prior count preservation and actual updated class.; Original eight binary axes, all256 alternatives, exact decisions and unique survivor.; Original census, registration, operational witnesses, controls and closure.; Original sealed prediction and authority references; unchanged catalysis seal reused.; Original complete multi-source empirical fields/hashes and independent adverse controls."
     },
     {
       "branch": "chemistry",
@@ -194131,13 +194149,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T14:07:34.644784+00:00",
+  "updated_at": "2026-11-11T14:20:18.256931+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2375,
-    "fully_reconstructed_claims": 406,
-    "axiom_free_exported_results": 21590,
-    "axiom_free_audited_definitions_and_theorems": 50186
+    "pending": 2373,
+    "fully_reconstructed_claims": 408,
+    "axiom_free_exported_results": 21674,
+    "axiom_free_audited_definitions_and_theorems": 50422
   }
 }

@@ -1318,3 +1318,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.SolubilityGrammar.candidates do
     IO.println ("SolubilityGrammar\t" ++ SFT.Chemistry.SolubilityGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.SolubilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.SolubilityGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.SolubilityGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.PathwayGrammar.candidates do
+    IO.println ("PathwayGrammar\t" ++ SFT.Chemistry.PathwayGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.PathwayGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.PathwayGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.PathwayGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.SelectivityGrammar.candidates do
+    IO.println ("SelectivityGrammar\t" ++ SFT.Chemistry.SelectivityGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.SelectivityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.SelectivityGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.SelectivityGrammar.decisionReason c)

@@ -4127,3 +4127,23 @@ import SFT.Chemistry.SolubilityEvidence
 import SFT.Chemistry.SolubilityExperiment
 
 import SFT.Chemistry.SolubilityValidation
+
+import SFT.Chemistry.CatalyticPathway
+
+import SFT.Chemistry.PathwayGrammar
+
+import SFT.Chemistry.PathwayEvidence
+
+import SFT.Chemistry.PathwayExperiment
+
+import SFT.Chemistry.PathwayValidation
+
+import SFT.Chemistry.CatalyticSelectivity
+
+import SFT.Chemistry.SelectivityGrammar
+
+import SFT.Chemistry.SelectivityEvidence
+
+import SFT.Chemistry.SelectivityExperiment
+
+import SFT.Chemistry.SelectivityValidation

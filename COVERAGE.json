@@ -22082,9 +22082,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-STOICH-COEFFICIENT-001-26cbd66986ff38ff.json",
       "statement": "Stoichiometric coefficients are the unique primitive vector of positive generated species multiplicities balancing every element map, with reactant/product direction held structurally and nonparticipants omitted.",
       "title": "Positive stoichiometric coefficient and reaction balance",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/StoichiometricPrimitive.lean",
+        "SFT/Chemistry/CoefficientGrammar.lean",
+        "SFT/Chemistry/CoefficientEvidence.lean",
+        "SFT/Chemistry/CoefficientExperiment.lean",
+        "SFT/Chemistry/CoefficientValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full 256-form program, original empirical output, retained source-extraction evidence and original independent-validator controls.",
       "registration_sha256": "6b5be32a9c4c432efee0030170abbc476e0dc53b5d547202becd3192d22936ba",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -22141,7 +22147,10 @@
         "statement": "Stoichiometric coefficients are the unique primitive vector of positive generated species multiplicities balancing every element map, with reactant/product direction held structurally and nonparticipants omitted.",
         "status": "empirically_tested",
         "title": "Positive stoichiometric coefficient and reaction balance"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_567_COEFFICIENT_COMPLETION.json",
+      "verified_scope": "Exact original balance-guarded gcd fold; positive gcd division, reconstruction, balance and formula preservation, common-rescaling invariance, primitive admission and rejection of unbalanced extensions.; Original exhaustive eight-axis256 candidates and exact decisions/unique survivor.; Original chemistry registration, census, closure and controls.; Distinct frozen derivation and empirical labels, original prediction and reference registration.; Original generated_law.py GoldBook source extraction/custody/isolation and every validation output field/hash."
     },
     {
       "branch": "chemistry",
@@ -193753,13 +193762,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T03:59:24.350576+00:00",
+  "updated_at": "2026-11-11T04:13:23.233779+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2415,
-    "fully_reconstructed_claims": 366,
-    "axiom_free_exported_results": 19995,
-    "axiom_free_audited_definitions_and_theorems": 45275
+    "pending": 2414,
+    "fully_reconstructed_claims": 367,
+    "axiom_free_exported_results": 20041,
+    "axiom_free_audited_definitions_and_theorems": 45400
   }
 }

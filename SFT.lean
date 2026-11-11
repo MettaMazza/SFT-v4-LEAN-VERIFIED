@@ -3818,3 +3818,8 @@ import SFT.Chemistry.ConservationGrammar
 import SFT.Chemistry.ConservationEvidence
 import SFT.Chemistry.ConservationExperiment
 import SFT.Chemistry.ConservationValidation
+import SFT.Chemistry.StoichiometricPrimitive
+import SFT.Chemistry.CoefficientGrammar
+import SFT.Chemistry.CoefficientEvidence
+import SFT.Chemistry.CoefficientExperiment
+import SFT.Chemistry.CoefficientValidation

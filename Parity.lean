@@ -1198,3 +1198,6 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.ConservationGrammar.candidates do
     IO.println ("ConservationGrammar\t" ++ SFT.Chemistry.ConservationGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.ConservationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.ConservationGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.ConservationGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.CoefficientGrammar.candidates do
+    IO.println ("CoefficientGrammar\t" ++ SFT.Chemistry.CoefficientGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.CoefficientGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.CoefficientGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.CoefficientGrammar.decisionReason c)

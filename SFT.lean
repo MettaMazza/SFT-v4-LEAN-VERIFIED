@@ -3788,3 +3788,13 @@ import SFT.Chemistry.PeriodicRecurrenceGrammar
 import SFT.Chemistry.PeriodicRecurrenceEvidence
 import SFT.Chemistry.PeriodicRecurrenceExperiment
 import SFT.Chemistry.PeriodicRecurrenceValidation
+import SFT.Chemistry.GroupPeriodCoordinates
+import SFT.Chemistry.GroupPeriodGrammar
+import SFT.Chemistry.GroupPeriodEvidence
+import SFT.Chemistry.GroupPeriodExperiment
+import SFT.Chemistry.GroupPeriodValidation
+import SFT.Chemistry.ValenceMaximum
+import SFT.Chemistry.ValenceGrammar
+import SFT.Chemistry.ValenceEvidence
+import SFT.Chemistry.ValenceExperiment
+import SFT.Chemistry.ValenceValidation

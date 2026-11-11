@@ -1,0 +1,23 @@
+import SFT.Chemistry.ValenceMaximum
+#print axioms SFT.Chemistry.ValenceMaximum.Kind
+#print axioms SFT.Chemistry.ValenceMaximum.Carrier
+#print axioms SFT.Chemistry.ValenceMaximum.Boundary
+#print axioms SFT.Chemistry.ValenceMaximum.Trace
+#print axioms SFT.Chemistry.ValenceMaximum.count
+#print axioms SFT.Chemistry.ValenceMaximum.select
+#print axioms SFT.Chemistry.ValenceMaximum.maximum
+#print axioms SFT.Chemistry.ValenceMaximum.countPositive
+#print axioms SFT.Chemistry.ValenceMaximum.selectionExactly
+#print axioms SFT.Chemistry.ValenceMaximum.selectPriorBound
+#print axioms SFT.Chemistry.ValenceMaximum.selectFreshBound
+#print axioms SFT.Chemistry.ValenceMaximum.maximumHeld
+#print axioms SFT.Chemistry.ValenceMaximum.maximumBounds
+#print axioms SFT.Chemistry.ValenceMaximum.maximumAppend
+#print axioms SFT.Chemistry.ValenceMaximum.maximumUniqueCount
+#print axioms SFT.Chemistry.ValenceMaximum.typicalNonmaximumRejected
+#print axioms SFT.Chemistry.ValenceMaximum.Census
+#print axioms SFT.Chemistry.ValenceMaximum.valence
+#print axioms SFT.Chemistry.ValenceMaximum.extend
+#print axioms SFT.Chemistry.ValenceMaximum.appendMaximum
+#print axioms SFT.Chemistry.ValenceMaximum.extensionRetainsBoundary
+#print axioms SFT.Chemistry.ValenceMaximum.extensionRetainsPrior

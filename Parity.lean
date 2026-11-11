@@ -1180,3 +1180,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.PeriodicRecurrenceGrammar.candidates do
     IO.println ("PeriodicRecurrenceGrammar\t" ++ SFT.Chemistry.PeriodicRecurrenceGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.PeriodicRecurrenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.PeriodicRecurrenceGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.PeriodicRecurrenceGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.GroupPeriodGrammar.candidates do
+    IO.println ("GroupPeriodGrammar\t" ++ SFT.Chemistry.GroupPeriodGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.GroupPeriodGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.GroupPeriodGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.GroupPeriodGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.ValenceGrammar.candidates do
+    IO.println ("ValenceGrammar\t" ++ SFT.Chemistry.ValenceGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.ValenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.ValenceGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.ValenceGrammar.decisionReason c)

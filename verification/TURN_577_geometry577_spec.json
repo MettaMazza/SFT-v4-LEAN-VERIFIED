@@ -1,0 +1,199 @@
+{
+  "claim_id": "SFT-CHEM-MOL-GEOMETRY-001",
+  "title": "Molecular geometry from held adjacency and orientation",
+  "statement": "Molecular geometry is the complete relative adjacency-and-orientation form of one identified finite molecular carrier, invariant under a global rigid host-frame relabelling and separate from measured coordinate values.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-GEOMETRY-TOPOLOGY-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-QUANTUM-ENTANGLEMENT-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+    "SFT-CHEM-MEAS-FORMULA-001",
+    "SFT-CHEM-STOICH-COMPOSITION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-CHEMICAL-BOND-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-BOND-METALLIC-001",
+    "SFT-CHEM-BOND-ORDER-001",
+    "SFT-CHEM-BOND-LENGTH-STRENGTH-001",
+    "SFT-CHEM-MOL-MOLECULE-001"
+  ],
+  "generation_rule": "Generate the literal product of the registered geometry carrier, adjacency, orientation, completeness, equivalence, measurement, record and extension choices.",
+  "grammar_boundary": "Every finite admitted molecular carrier with a complete pairwise relative-orientation record, interpreted up to one global rigid relabelling and retained with its source and observation conditions.",
+  "dimensions": [
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "geometry-without-molecule",
+          "admitted": false,
+          "reason": "A shape detached from an identified carrier is not molecular geometry."
+        },
+        {
+          "name": "identified-molecular-carrier",
+          "admitted": true,
+          "reason": "The geometry remains bound to one molecule."
+        }
+      ]
+    },
+    {
+      "key": "adjacency",
+      "choices": [
+        {
+          "name": "atom-list-only",
+          "admitted": false,
+          "reason": "An atom list omits which occurrences are joined."
+        },
+        {
+          "name": "complete-atom-adjacency",
+          "admitted": true,
+          "reason": "Every bond relation remains held."
+        }
+      ]
+    },
+    {
+      "key": "orientation",
+      "choices": [
+        {
+          "name": "distance-only-record",
+          "admitted": false,
+          "reason": "Distances alone can omit handed or ordered orientation."
+        },
+        {
+          "name": "held-relative-orientation",
+          "admitted": true,
+          "reason": "Each generated atom pair has a retained orientation relation."
+        }
+      ]
+    },
+    {
+      "key": "completeness",
+      "choices": [
+        {
+          "name": "selected-coordinate-subset",
+          "admitted": false,
+          "reason": "A favorable subset cannot establish the whole geometry."
+        },
+        {
+          "name": "complete-pair-support",
+          "admitted": true,
+          "reason": "Every generated unordered occurrence pair is recorded exactly once."
+        }
+      ]
+    },
+    {
+      "key": "equivalence",
+      "choices": [
+        {
+          "name": "absolute-host-frame",
+          "admitted": false,
+          "reason": "A host coordinate frame cannot define chemical identity."
+        },
+        {
+          "name": "rigid-relabel-equivalence",
+          "admitted": true,
+          "reason": "One global translation/rotation/relabel leaves the relative form unchanged."
+        }
+      ]
+    },
+    {
+      "key": "measurement",
+      "choices": [
+        {
+          "name": "coordinate-as-proof-premise",
+          "admitted": false,
+          "reason": "A measured coordinate cannot select the law."
+        },
+        {
+          "name": "source-bounded-geometry-record",
+          "admitted": true,
+          "reason": "Coordinates and uncertainties remain post-seal empirical records."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "shape-name-only",
+          "admitted": false,
+          "reason": "A shape name cannot reproduce the relations."
+        },
+        {
+          "name": "adjacency-orientation-source-trace",
+          "admitted": true,
+          "reason": "Carrier, pairs, orientations, method and conditions remain held."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "free-angle-fit",
+          "admitted": false,
+          "reason": "A fitted angle can force a target geometry."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Complete relative support supplies the geometric form."
+        }
+      ]
+    }
+  ],
+  "exact_result": "identified-molecular-carrier__complete-atom-adjacency__held-relative-orientation__complete-pair-support__rigid-relabel-equivalence",
+  "induction_base": "A two-occurrence molecule has one complete relative-orientation relation.",
+  "induction_step": "Appending one atomic occurrence adds every new occurrence-pair relation while preserving the complete prior adjacency and orientation trace.",
+  "exclusions": [
+    "no chemical dictionary, coordinate archive, fitted force field, measured geometry or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no application or opaque prediction result",
+    "no claim that topology alone predicts every measured coordinate or energy",
+    "external content remains inaccessible until after the consequence is sealed",
+    "Every finite admitted molecular carrier with a complete pairwise relative-orientation record, interpreted up to one global rigid relabelling and retained with its source and observation conditions."
+  ],
+  "operational_witnesses": [
+    [
+      "complete-pairs",
+      "three atomic occurrences require and retain three pair relations",
+      true
+    ],
+    [
+      "host-frame",
+      "no absolute host coordinate enters the witness",
+      true
+    ],
+    [
+      "measurement-boundary",
+      "no measured decimal selects the relative form",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-MOL-GEOMETRY-001",
+  "expected_observation_label": "identified-molecular-carrier__complete-atom-adjacency__held-relative-orientation__source-bounded-geometry-record",
+  "target_rows": [
+    {
+      "target_id": "molecular-geometry-iupac-s06061",
+      "source_id": "IUPAC-GOLD-BOOK-S06061-2026",
+      "source_locator": "https://goldbook.iupac.org/terms/view/S06061/json :: current definition and notes",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/S06061.json",
+      "snapshot_hash": "sha256:65cc9feaea028f9ab7bd7ed349276522555ebcc66d2f079dc94d55fe9dc7230b"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_molecular_structure_batch_2.json",
+  "falsification_condition": "The claim fails if the authoritative geometry record lacks identified atoms, relational spatial organization or source-bounded coordinates, or if a changed row is accepted."
+}

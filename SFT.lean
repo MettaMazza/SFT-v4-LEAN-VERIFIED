@@ -3874,3 +3874,15 @@ import SFT.Chemistry.LengthGrammar
 import SFT.Chemistry.LengthEvidence
 import SFT.Chemistry.LengthExperiment
 import SFT.Chemistry.LengthValidation
+import SFT.Chemistry.MolecularCarrier
+import SFT.Chemistry.MolecularSeal
+import SFT.Chemistry.MolecularSealInputs
+import SFT.Chemistry.MoleculeGrammar
+import SFT.Chemistry.MoleculeEvidence
+import SFT.Chemistry.MoleculeExperiment
+import SFT.Chemistry.MoleculeValidation
+import SFT.Chemistry.MolecularGeometry
+import SFT.Chemistry.GeometryGrammar
+import SFT.Chemistry.GeometryEvidence
+import SFT.Chemistry.GeometryExperiment
+import SFT.Chemistry.GeometryValidation

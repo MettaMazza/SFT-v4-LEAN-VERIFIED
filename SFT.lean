@@ -3919,3 +3919,13 @@ import SFT.Chemistry.ProtonGrammar
 import SFT.Chemistry.ProtonEvidence
 import SFT.Chemistry.ProtonExperiment
 import SFT.Chemistry.ProtonValidation
+import SFT.Chemistry.LewisPair
+import SFT.Chemistry.LewisGrammar
+import SFT.Chemistry.LewisEvidence
+import SFT.Chemistry.LewisExperiment
+import SFT.Chemistry.LewisValidation
+import SFT.Chemistry.Amphoteric
+import SFT.Chemistry.AmphotericGrammar
+import SFT.Chemistry.AmphotericEvidence
+import SFT.Chemistry.AmphotericExperiment
+import SFT.Chemistry.AmphotericValidation

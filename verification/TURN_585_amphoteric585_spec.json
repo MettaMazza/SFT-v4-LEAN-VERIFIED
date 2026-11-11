@@ -1,0 +1,196 @@
+{
+  "claim_id": "SFT-CHEM-AB-AMPHOTERIC-001",
+  "title": "Amphoteric dual-role relation",
+  "statement": "An amphoteric species is the same retained chemical carrier appearing in two separately held contexts, once in a valid acid role and once in a valid base role.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001"
+  ],
+  "generation_rule": "Generate the literal product of the registered amphoteric species, acid context, base context, context separation, duality, identity, record and extension choices.",
+  "grammar_boundary": "Every finite chemical carrier for which two separately registered contexts contain a valid donor transition and a valid acceptor transition involving that same retained species identity.",
+  "dimensions": [
+    {
+      "key": "species",
+      "choices": [
+        {
+          "name": "two-unrelated-species",
+          "admitted": false,
+          "reason": "Dual behavior must belong to one retained carrier identity."
+        },
+        {
+          "name": "same-species-identity",
+          "admitted": true,
+          "reason": "The same species appears in both contexts."
+        }
+      ]
+    },
+    {
+      "key": "acid-context",
+      "choices": [
+        {
+          "name": "acid-label-without-event",
+          "admitted": false,
+          "reason": "A label does not establish donation."
+        },
+        {
+          "name": "valid-donor-event",
+          "admitted": true,
+          "reason": "One context contains a conserved carrier donation."
+        }
+      ]
+    },
+    {
+      "key": "base-context",
+      "choices": [
+        {
+          "name": "base-label-without-event",
+          "admitted": false,
+          "reason": "A label does not establish acceptance."
+        },
+        {
+          "name": "valid-acceptor-event",
+          "admitted": true,
+          "reason": "Another context contains a conserved carrier acceptance."
+        }
+      ]
+    },
+    {
+      "key": "context",
+      "choices": [
+        {
+          "name": "roles-conflated",
+          "admitted": false,
+          "reason": "Conflation can assert incompatible events simultaneously."
+        },
+        {
+          "name": "contexts-separately-held",
+          "admitted": true,
+          "reason": "Each surrounding reaction identity remains explicit."
+        }
+      ]
+    },
+    {
+      "key": "duality",
+      "choices": [
+        {
+          "name": "one-role-only",
+          "admitted": false,
+          "reason": "One role does not close amphoteric behavior."
+        },
+        {
+          "name": "both-roles-realized",
+          "admitted": true,
+          "reason": "Donor and acceptor witnesses both exist."
+        }
+      ]
+    },
+    {
+      "key": "identity",
+      "choices": [
+        {
+          "name": "species-changed-between-roles",
+          "admitted": false,
+          "reason": "A changed carrier does not establish dual capacity."
+        },
+        {
+          "name": "species-identity-retained",
+          "admitted": true,
+          "reason": "The same carrier is compared before each event."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "amphoteric-label-only",
+          "admitted": false,
+          "reason": "A label cannot reproduce both contexts."
+        },
+        {
+          "name": "dual-event-context-trace",
+          "admitted": true,
+          "reason": "Species, events and contexts remain held."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "free-dual-role-exception",
+          "admitted": false,
+          "reason": "An exception can admit any species."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Two valid opposite-role contexts determine the class."
+        }
+      ]
+    }
+  ],
+  "exact_result": "same-species-identity__valid-donor-event__valid-acceptor-event__contexts-separately-held__both-roles-realized",
+  "induction_base": "One retained species with one donor event and one acceptor event in distinct contexts supplies the first amphoteric record.",
+  "induction_step": "Appending one context preserves the species identity and prior role traces; amphoteric closure persists only while both opposite roles remain realized.",
+  "exclusions": [
+    "no acid/base dictionary, pH scale, equilibrium equation, dissociation constant, measured value or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no unpaired creation, copying or loss of a proton or electron carrier",
+    "no claim that structural closure alone fixes every solution-dependent strength or capacity value",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite chemical carrier for which two separately registered contexts contain a valid donor transition and a valid acceptor transition involving that same retained species identity."
+  ],
+  "operational_witnesses": [
+    [
+      "acid-role",
+      "the same species is donor in one event",
+      true
+    ],
+    [
+      "base-role",
+      "the same species is acceptor in another event",
+      true
+    ],
+    [
+      "context-separation",
+      "the opposite-role endpoints remain distinct",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-AB-AMPHOTERIC-001",
+  "expected_observation_label": "same-species-acid-role__same-species-base-role__context-dependent-dual-response__both-traces-retained",
+  "target_rows": [
+    {
+      "target_id": "amphoteric-iupac-a00306",
+      "source_id": "IUPAC-GOLD-BOOK-A00306-2026",
+      "source_locator": "official IUPAC source set anchored at A00306",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/A00306.json",
+      "snapshot_hash": "sha256:70ab5021338400d9f02cbecc5c45b9f4271792e919d880aafff81684739022ab"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_acid_base_batch_1.json",
+  "falsification_condition": "The claim fails if the authoritative amphoteric record lacks acid and base behavior by one species under retained contexts, or if a changed row is accepted."
+}

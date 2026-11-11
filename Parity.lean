@@ -1255,3 +1255,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.ProtonGrammar.candidates do
     IO.println ("ProtonGrammar\t" ++ SFT.Chemistry.ProtonGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.ProtonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.ProtonGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.ProtonGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.LewisGrammar.candidates do
+    IO.println ("LewisGrammar\t" ++ SFT.Chemistry.LewisGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.LewisGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.LewisGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.LewisGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.AmphotericGrammar.candidates do
+    IO.println ("AmphotericGrammar\t" ++ SFT.Chemistry.AmphotericGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AmphotericGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AmphotericGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AmphotericGrammar.decisionReason c)

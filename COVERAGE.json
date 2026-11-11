@@ -23706,9 +23706,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-AB-LEWIS-001-ef68becb2c22b1c5.json",
       "statement": "A Lewis acid/base relation joins a distinct electron-pair donor and acceptor through the same two exclusion-preserving electron occurrences, with both identities retained.",
       "title": "Electron-pair donor-acceptor relation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/LewisPair.lean",
+        "SFT/Chemistry/LewisGrammar.lean",
+        "SFT/Chemistry/LewisEvidence.lean",
+        "SFT/Chemistry/LewisExperiment.lean",
+        "SFT/Chemistry/LewisValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full 256-form program, original empirical output, retained source-extraction evidence and original independent-validator controls.",
       "registration_sha256": "e9a0cbba67304f6d8157ab2eac5292e18bb5e5bc6306b117a4b1ea1d6d6e6687",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -23769,7 +23775,10 @@
         "statement": "A Lewis acid/base relation joins a distinct electron-pair donor and acceptor through the same two exclusion-preserving electron occurrences, with both identities retained.",
         "status": "empirically_tested",
         "title": "Electron-pair donor-acceptor relation"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_584_LEWIS_COMPLETION.json",
+      "verified_scope": "Original LewisPairRelation executable guard, declared two-electron relation, admitted distinctness/exclusion, both conserved identities, donor/acceptor support, exact base and independent-append induction.; Original eight axes, full256 alternatives and exact source decisions/unique survivor.; Original registration,census,closure and controls.; Original sealed prediction and reference binding.; Original multi-document empirical source extraction and all output fields/hashes."
     },
     {
       "branch": "chemistry",
@@ -23781,9 +23790,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-AB-AMPHOTERIC-001-94649424e1a4c49a.json",
       "statement": "An amphoteric species is the same retained chemical carrier appearing in two separately held contexts, once in a valid acid role and once in a valid base role.",
       "title": "Amphoteric dual-role relation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/Amphoteric.lean",
+        "SFT/Chemistry/AmphotericGrammar.lean",
+        "SFT/Chemistry/AmphotericEvidence.lean",
+        "SFT/Chemistry/AmphotericExperiment.lean",
+        "SFT/Chemistry/AmphotericValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full 256-form program, original empirical output, retained source-extraction evidence and original independent-validator controls.",
       "registration_sha256": "883fcb0d382b852953c11a7e444eeadd40884feb2a4315089486a70fe2c54601",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -23845,7 +23860,10 @@
         "statement": "An amphoteric species is the same retained chemical carrier appearing in two separately held contexts, once in a valid acid role and once in a valid base role.",
         "status": "empirically_tested",
         "title": "Amphoteric dual-role relation"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_585_AMPHOTERIC_COMPLETION.json",
+      "verified_scope": "Exact AmphotericRecord admission with admitted CarrierTransfer arguments; both species roles derived from guard, distinct contexts, retained event conservation, source base and arbitrary-context extension preserving both witnesses.; Original eight binary axes, all256 alternatives, exact decisions and unique survivor.; Original registration,census,closure and controls.; Original sealed prediction and reference binding.; Original A00306 empirical extraction, custody/isolation, adverse control and all output hashes."
     },
     {
       "branch": "chemistry",
@@ -193930,13 +193948,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T08:47:35.835583+00:00",
+  "updated_at": "2026-11-11T08:59:43.549588+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2396,
-    "fully_reconstructed_claims": 385,
-    "axiom_free_exported_results": 20750,
-    "axiom_free_audited_definitions_and_theorems": 47607
+    "pending": 2394,
+    "fully_reconstructed_claims": 387,
+    "axiom_free_exported_results": 20817,
+    "axiom_free_audited_definitions_and_theorems": 47841
   }
 }

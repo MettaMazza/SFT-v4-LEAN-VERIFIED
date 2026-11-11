@@ -1306,3 +1306,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.DirectionGrammar.candidates do
     IO.println ("DirectionGrammar\t" ++ SFT.Chemistry.DirectionGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.DirectionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.DirectionGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.DirectionGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.PhaseGrammar.candidates do
+    IO.println ("PhaseGrammar\t" ++ SFT.Chemistry.PhaseGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.PhaseGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.PhaseGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.PhaseGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.PhotoGrammar.candidates do
+    IO.println ("PhotoGrammar\t" ++ SFT.Chemistry.PhotoGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.PhotoGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.PhotoGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.PhotoGrammar.decisionReason c)

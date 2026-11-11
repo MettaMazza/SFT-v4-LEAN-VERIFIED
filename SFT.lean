@@ -4083,3 +4083,23 @@ import SFT.Chemistry.DirectionEvidence
 import SFT.Chemistry.DirectionExperiment
 
 import SFT.Chemistry.DirectionValidation
+
+import SFT.Chemistry.ChemicalPhase
+
+import SFT.Chemistry.PhaseGrammar
+
+import SFT.Chemistry.PhaseEvidence
+
+import SFT.Chemistry.PhaseExperiment
+
+import SFT.Chemistry.PhaseValidation
+
+import SFT.Chemistry.Photochemistry
+
+import SFT.Chemistry.PhotoGrammar
+
+import SFT.Chemistry.PhotoEvidence
+
+import SFT.Chemistry.PhotoExperiment
+
+import SFT.Chemistry.PhotoValidation

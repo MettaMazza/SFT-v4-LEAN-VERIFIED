@@ -4103,3 +4103,17 @@ import SFT.Chemistry.PhotoEvidence
 import SFT.Chemistry.PhotoExperiment
 
 import SFT.Chemistry.PhotoValidation
+
+import SFT.Chemistry.CatalystCycle
+
+import SFT.Chemistry.CatalystGrammar
+
+import SFT.Chemistry.CatalystEvidence
+
+import SFT.Chemistry.CatalystExperiment
+
+import SFT.Chemistry.CatalystValidation
+
+import SFT.Chemistry.CatalystSeal
+
+import SFT.Chemistry.CatalystSealInputs

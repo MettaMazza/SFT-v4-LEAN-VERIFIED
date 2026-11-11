@@ -25556,9 +25556,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-CAT-CATALYST-001-937aa5f579196ccd.json",
       "statement": "A catalyst is a retained chemical carrier that opens an alternative closed reaction path and returns with exact identity while the net reaction endpoints are unchanged.",
       "title": "Catalyst identity conserved through a reaction cycle",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/CatalystCycle.lean",
+        "SFT/Chemistry/CatalystGrammar.lean",
+        "SFT/Chemistry/CatalystEvidence.lean",
+        "SFT/Chemistry/CatalystExperiment.lean",
+        "SFT/Chemistry/CatalystValidation.lean",
+        "SFT/Chemistry/CatalystSeal.lean",
+        "SFT/Chemistry/CatalystSealInputs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh native256-form complete program,24 constructor cases, all empirical fields/hashes and original independent controls.",
       "registration_sha256": "3adaf52e0a62309c4b4d33a54322151c563ba1e05bf75fea8673410aa20eb79a",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -25635,7 +25643,10 @@
         "statement": "A catalyst is a retained chemical carrier that opens an alternative closed reaction path and returns with exact identity while the net reaction endpoints are unchanged.",
         "status": "empirically_tested",
         "title": "Catalyst identity conserved through a reaction cycle"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_614_CATALYST_COMPLETION.json",
+      "verified_scope": "Exact CycleWitness guard; positive complete chemical-step cycle and exact carrier return; complete net endpoint cancellation and elemental carrier accounting; original/alternative common-endpoint path assembly; reversed admitted steps and full reversed cycle/count; actual same-reaction recurrence extension at the same positive interval/conditions, strict increased cross-rate support and normalized quotient; complete base/successor cycle records.; Original eight binary axes and all256 alternatives, exact decisions and unique survivor.; Original census, registration, operational witnesses, controls and closure.; Original sealed prediction and authority references.; Original full multi-source empirical fields/hashes and adverse controls.; Distinct original eight-prediction seal, derivation-byte and payload hashes, strict unopened-source flags.; Exact pinned catalysis/interfaces derivation bytes and complete seal."
     },
     {
       "branch": "chemistry",
@@ -194111,13 +194122,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T13:41:31.980089+00:00",
+  "updated_at": "2026-11-11T13:56:23.248038+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2377,
-    "fully_reconstructed_claims": 404,
-    "axiom_free_exported_results": 21507,
-    "axiom_free_audited_definitions_and_theorems": 49935
+    "pending": 2376,
+    "fully_reconstructed_claims": 405,
+    "axiom_free_exported_results": 21552,
+    "axiom_free_audited_definitions_and_theorems": 50072
   }
 }

@@ -3813,3 +3813,8 @@ import SFT.Chemistry.CompositionGrammar
 import SFT.Chemistry.CompositionEvidence
 import SFT.Chemistry.CompositionExperiment
 import SFT.Chemistry.CompositionValidation
+import SFT.Chemistry.ReactionTotals
+import SFT.Chemistry.ConservationGrammar
+import SFT.Chemistry.ConservationEvidence
+import SFT.Chemistry.ConservationExperiment
+import SFT.Chemistry.ConservationValidation

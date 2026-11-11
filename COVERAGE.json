@@ -22002,9 +22002,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-STOICH-CONSERVATION-001-4bbc2d9ff0b0af55.json",
       "statement": "A chemical reaction is closed only when complete held reactant/product words have exactly equal positive multiplicity totals for every retained elemental identity, including named boundary carriers.",
       "title": "Conservation of elemental identity through reaction",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/ReactionTotals.lean",
+        "SFT/Chemistry/ConservationGrammar.lean",
+        "SFT/Chemistry/ConservationEvidence.lean",
+        "SFT/Chemistry/ConservationExperiment.lean",
+        "SFT/Chemistry/ConservationValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full 256-form program, original empirical output, retained source-extraction evidence and original independent-validator controls.",
       "registration_sha256": "e7eb8625b86de3459414b8e0581b295bb51fbedca62088c6acfa90027ab5e891",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -22061,7 +22067,10 @@
         "statement": "A chemical reaction is closed only when complete held reactant/product words have exactly equal positive multiplicity totals for every retained elemental identity, including named boundary carriers.",
         "status": "empirically_tested",
         "title": "Conservation of elemental identity through reaction"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_566_CONSERVATION_COMPLETION.json",
+      "verified_scope": "Exact positive species/element guards, held sides, source-ordered per-side dictionary accumulation, proved complete element-total balance equivalence, paired base/successor and complete prior formula/identity retention.; Original exhaustive eight-axis256 candidates and exact decisions/unique survivor.; Original chemistry registration, census, closure and controls.; Distinct frozen derivation and empirical labels, original prediction and reference registration.; Original generated_law.py GoldBook source extraction/custody/isolation and every validation output field/hash."
     },
     {
       "branch": "chemistry",
@@ -193744,13 +193753,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T03:49:30.411651+00:00",
+  "updated_at": "2026-11-11T03:59:24.350576+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2416,
-    "fully_reconstructed_claims": 365,
-    "axiom_free_exported_results": 19956,
-    "axiom_free_audited_definitions_and_theorems": 45148
+    "pending": 2415,
+    "fully_reconstructed_claims": 366,
+    "axiom_free_exported_results": 19995,
+    "axiom_free_audited_definitions_and_theorems": 45275
   }
 }

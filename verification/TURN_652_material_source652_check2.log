@@ -1,0 +1,19 @@
+MaterialSource652.lean:14:124: error: Application type mismatch: The argument
+  []
+has type
+  List ?m.79
+but is expected to have type
+  MaterialValidation.Snapshot
+in the application
+  MaterialValidation.validate MaterialSource.originalSeal files "sealed-material-check" "Darwin" "CPython" []
+MaterialSource652.lean:10:30: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HAppend String String System.FilePath
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+SFT-MAT-MEAS-MATERIAL-001
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/check_material_source652.py", line 27, in <module>
+    ns={};src=(w/'run_material651.py').read_text();exec(src[:src.index('modules=')],ns);ir=ns['ir'];env=ns['env'];toolchain=ns['toolchain'];subprocess.run(['/Users/dolltrading/.elan/bin/lean','-j1','-c','MaterialSource652.c','MaterialSource652.lean'],cwd=r,env=env,check=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/dolltrading/.elan/bin/lean', '-j1', '-c', 'MaterialSource652.c', 'MaterialSource652.lean']' returned non-zero exit status 1.

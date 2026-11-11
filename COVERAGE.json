@@ -28406,9 +28406,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-FIELD-INVERSE-SQUARE-001-fd630f1572c8e211.json",
       "statement": "For one conserved source distributed without preference over every equivalent cell of the forced rank-two boundary, increasing source distance by an exact positive ratio r increases complete boundary support by r paired with r and therefore forces response per cell to be the source divided by r squared. The exponent is derived before and independently of measurement.",
       "title": "Inverse-square dilution from rank-two boundary support",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/InverseSquare.lean",
+        "SFT/Physics/InverseSquareWitnesses.lean",
+        "SFT/Physics/InverseSquareGrammar.lean",
+        "SFT/Physics/InverseSquareControls.lean",
+        "SFT/Physics/InverseSquareEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh native complete program, original independent controls; formal entry has no empirical validator",
       "registration_sha256": "58f22b87c521e962e88a0b3afeb552e71dc45dee300fe4211627df1cd122a9e8",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -28452,7 +28458,10 @@
         "statement": "For one conserved source distributed without preference over every equivalent cell of the forced rank-two boundary, increasing source distance by an exact positive ratio r increases complete boundary support by r paired with r and therefore forces response per cell to be the source divided by r squared. The exponent is derived before and independently of measurement.",
         "status": "independently_replicated",
         "title": "Inverse-square dilution from rank-two boundary support"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_646_INVERSE_SQUARE_COMPLETION.json",
+      "verified_scope": "inverse_square_response, boundary_growth and repeated_positive_product: exact source-first guards, positive source and above-One distance, rational quotient; arbitrary positive source/growth conservation, unique response and complete rank-two pair-boundary share using existing BoundarySupport, BoundaryGrowth and FieldGeometricDilution proofs.; INVERSE_SQUARE_SPEC.witnesses: exact double/triple distance and rational source-times-growth witnesses, evaluated by the translated operations.; INVERSE_SQUARE_SPEC.axes: complete eleven-axis product, ten binary and one four-choice profile, all4096 alternatives, exact criteria/decision correspondence and unique survivor.; StructuralPhysicsProgram controls, original source/tampered artifact/boundary predicates, original closure result, exclusions and operational witnesses.; StructuralPhysicsProgram registration, census, candidate lookup, decisions, closure, full hashes and unknown-ID rejection."
     },
     {
       "branch": "physics",
@@ -28464,9 +28473,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-VALIDATION-INVERSE-SQUARE-001-e70905b63729a3bf.json",
       "statement": "After the Fold structure independently forces and seals positive integer exponent two, the Williams, Faller and Hill Coulomb-law experiment reports q = (2.7 +/- 3.1) x 10^-16 in the tested form 1/r^(2+q).  Converting only the reported finite interval to exact positive rational exponent bounds and enumerating every positive integer inside them leaves two as the sole compatible exponent.",
       "title": "Post-seal experimental agreement of the inverse-square exponent",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/InverseSquareInterval.lean",
+        "SFT/Physics/InverseSquareIntervalSource.lean",
+        "SFT/Physics/InverseSquareIntervalGrammar.lean",
+        "SFT/Physics/InverseSquareIntervalEvidence.lean",
+        "SFT/Physics/InverseSquareIntervalExperiment.lean",
+        "SFT/Physics/InverseSquareIntervalValidation.lean",
+        "SFT/Physics/InverseSquareIntervalExternal.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh native complete program, original independent controls and full original empirical output",
       "registration_sha256": "7e454665f20b2c2b92a4a8663b92c06fa4d0fccdf06259fe4c864d907bd3856d",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -28511,7 +28528,10 @@
         "statement": "After the Fold structure independently forces and seals positive integer exponent two, the Williams, Faller and Hill Coulomb-law experiment reports q = (2.7 +/- 3.1) x 10^-16 in the tested form 1/r^(2+q). Converting only the reported finite interval to exact positive rational exponent bounds and enumerating every positive integer inside them leaves two as the sole compatible exponent.",
         "status": "empirically_tested",
         "title": "Post-seal experimental agreement of the inverse-square exponent"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_646_INVERSE_SQUARE_INTERVAL_COMPLETION.json",
+      "verified_scope": "positive_integer_exponents_in_interval: exact Fraction and positive-order guards; complete positive-successor enumeration, soundness/completeness for every positive integer, above-upper closure and exact reported endpoints/singleton.; InverseSquareExternalValidator.validate: reconstructed exact endpoint fields, source identity and DOI checks before interval test; original singleton condition, error precedence and early rejection before blind validation.; InverseSquareExternalValidator.validate composition: accepted record delegates to original BlindExternalMeasurementValidator; failed record returns before blind comparison.; empirical_dimensions and SPEC: all eight binary axes, all256 candidates, complete enumeration, exact elimination decisions and unique survivor.; GeneratedEmpiricalPhysicsProgram: exact executable registration, all census/decision/closure/control fields and hashes; three SPEC witnesses evaluated from native interval operations.; Original SPEC validation, source snapshot hash and identity, prediction program, complete target row, original experiment registration and envelope.; BlindExternalMeasurementValidator: original source-byte check, sealed prediction, custody, hostile audit, all rows, tampered control and full returned empirical object."
     },
     {
       "branch": "physics",
@@ -29183,9 +29203,20 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-MEAS-MATERIAL-001-a603da455a0d64fb.json",
       "statement": "A material is the least complete constituent-and-relation carrier whose composition, bonding organization and declared observation boundary remain distinguishable.",
       "title": "Material system and retained identity",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/MaterialIdentity.lean",
+        "SFT/Materials/MaterialRetention.lean",
+        "SFT/Materials/MaterialCarrier.lean",
+        "SFT/Materials/MaterialCarrierRetention.lean",
+        "SFT/Materials/MaterialGrammar.lean",
+        "SFT/Materials/MaterialEvidence.lean",
+        "SFT/Materials/SourceText.lean",
+        "SFT/Materials/MaterialSource.lean",
+        "SFT/Materials/MaterialExperiment.lean",
+        "SFT/Materials/MaterialValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS original256 native program/independent controls; exact baseline source rejection; full archived post-source output/hash comparison from actual referenced fragments",
       "registration_sha256": "7e704a3beeb21174a4ce3afac6fd3d21a31e34fa935aaa4a4bb2e8db889c4add",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -29249,6 +29280,15 @@
         "status": "empirically_tested",
         "subbranch": "measurement_identity",
         "title": "Material system and retained identity"
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_652_MATERIAL_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[0] retained constituent identity, bonding and observation records; exact coordinate equality/minimality and predecessor recovery.; _blueprint finite extension histories; all earlier constituent, bonding and observation membership, complete history recovery.; MATERIALS_OBLIGATIONS[0] composition-bearing constituent records; actual SubstanceIdentity constituent conversion; no uniform-composition restriction; identity minimality, positive support and finite closure.; Complete identity-and-composition pair retention, exact history recovery, source-bound constituent conversion, heterogeneous extension and boundary separation.; _dimensions and blueprint_candidate_ids: original eight binary axes and complete256 product; original decisions and unique survivor.; GeneratedEmpiricalMaterialsProgram.registration and inherited original census/decision/control/closure methods, exact three structural witnesses.; source_corpus: exact tag regexp semantics, HTML character references, existing Unicode casefold and whitespace split/join.; validate_pre_source_seal; original84 prediction set and21504 census; original33-source byte guards; exact UTF8-ignore decoding, required fragment extraction/digest and guard failure stopping before release.; Original fixed Material spec, complete registration fields, verified pre-source seal hash, four-instruction prediction document and envelope.; BlindMaterialsAuthorityValidator.validate original order, all capability/custody/isolation/receipt fields, exact source comparison and tampered control. Full pinned-byte baseline rejects unchanged original mismatched Wulffman snapshot; independently tested post-source continuation reproduces every archived observation field/hash from actual referenced fragments.",
+      "empirical_replay_scope": {
+        "formalisation": "complete original Material entry, full256 grammar, controls and exact source operations",
+        "empirical_replay": "full current pinned-byte validator reproduces original Wulffman hash rejection before release; post-source comparison from actual referenced source fragments independently matches every archived observation field/hash",
+        "not_claimed": "fresh successful full33-snapshot empirical replay",
+        "source_data_unchanged": true
       }
     },
     {
@@ -194391,13 +194431,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T20:07:47.027688+00:00",
+  "updated_at": "2026-11-11T20:47:37.401205+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2347,
-    "fully_reconstructed_claims": 434,
-    "axiom_free_exported_results": 22884,
-    "axiom_free_audited_definitions_and_theorems": 53726
+    "pending": 2344,
+    "fully_reconstructed_claims": 437,
+    "axiom_free_exported_results": 23048,
+    "axiom_free_audited_definitions_and_theorems": 54151
   }
 }

@@ -1402,3 +1402,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.NuclearSequenceGrammar.candidates do
     IO.println ("NuclearSequenceGrammar\t" ++ SFT.Physics.NuclearSequenceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NuclearSequenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NuclearSequenceGrammar.exactForm c ++ "\t" ++ SFT.Physics.NuclearSequenceGrammar.decisionReason c)
+
+  for c in SFT.Materials.MaterialGrammar.candidates do
+    IO.println ("MaterialGrammar\t" ++ SFT.Materials.MaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.MaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.MaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.MaterialGrammar.decisionReason c)
+
+  for c in SFT.Physics.InverseSquareGrammar.candidates do
+    IO.println ("InverseSquareGrammar\t" ++ SFT.Physics.InverseSquareGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.InverseSquareGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.InverseSquareGrammar.exactForm c ++ "\t" ++ SFT.Physics.InverseSquareGrammar.decisionReason c)
+
+  for c in SFT.Physics.InverseSquareIntervalGrammar.candidates do
+    IO.println ("InverseSquareIntervalGrammar\t" ++ SFT.Physics.InverseSquareIntervalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.InverseSquareIntervalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.InverseSquareIntervalGrammar.exactForm c ++ "\t" ++ SFT.Physics.InverseSquareIntervalGrammar.decisionReason c)

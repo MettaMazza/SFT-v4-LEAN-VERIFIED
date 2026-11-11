@@ -1,0 +1,6 @@
+from pathlib import Path
+import json,subprocess,os
+r=Path('work/constants-recovery').resolve();cases=[bytes([i]) for i in range(256)]+[s.encode('utf8') for s in ['a','é','⩽','😀','\U0010ffff','\x00','aé😀z']]+[bytes(x) for x in [[0xc0,0xaf],[0xed,0xa0,0x80],[0xf4,0x90,0x80,0x80],[0xe2,0x82],[0xe2,65,0xa1],[0xf0,0x90,65,0x80],[0xc2,0xc2,0x80],[0xff,65,0x80,66]]]
+q=lambda s:json.dumps(s,ensure_ascii=False)
+s='import SFT.Materials.MaterialSource\nopen SFT.Host.Canonical\ndef main : IO Unit := do\n IO.println (render (.array [\n'+',\n'.join('.text (String.ofList (SFT.Materials.MaterialSource.decodeIgnore '+str(len(b))+' ['+','.join(str(x) for x in b)+']))' for b in cases)+'] ))\n';(r/'MaterialUTF8652.lean').write_text(s)
+p=subprocess.run(['/Users/dolltrading/.elan/bin/lean','-j1','--run','MaterialUTF8652.lean'],cwd=r,env=dict(os.environ,LEAN_PATH=str(r/'.lake/build/lib/lean')),text=True,capture_output=True);Path('work/material_utf8652_output.log').write_text(p.stdout+p.stderr);assert p.returncode==0,p.stdout+p.stderr;actual=json.loads(p.stdout);assert actual==[b.decode('utf8','ignore') for b in cases];Path('work/material_utf8652_report.json').write_text(json.dumps({'status':'PASS','cases':len(cases),'operation':'UTF-8 errors=ignore, including all single bytes and malformed multibyte sequences'},indent=2));print('PASS',len(cases))

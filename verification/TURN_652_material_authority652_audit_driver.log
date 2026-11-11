@@ -1,0 +1,71 @@
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/audit_material_authority652.py", line 11, in <module>
+    p=Path('work/AuditMaterialAuthority652.lean');p.write_text('\n'.join('import SFT.Materials.'+m for m in modules)+'\n'+'\n'.join('#print axioms '+n for n in names)+'\n');o=subprocess.run(['/Users/dolltrading/.elan/bin/lean',str(p)],env=env,text=True,capture_output=True);Path('work/material_authority652_audit.log').write_text(o.stdout+o.stderr);assert o.returncode==0,o.stdout+o.stderr;assert all("'"+n+"' does not depend on any axioms" in o.stdout for n in names),o.stdout;Path('work/material_authority652_audit_config.json').write_text(json.dumps(dict(modules=modules,declarations=names,theorems=ths,definitions_and_theorems=defs),indent=2));print('PASS',len(names),'zero-axiom declarations')
+AssertionError: 'SFT.Materials.SourceText.entityTable' does not depend on any axioms
+'SFT.Materials.SourceText.invalidRefs' does not depend on any axioms
+'SFT.Materials.SourceText.invalidPoints' does not depend on any axioms
+'SFT.Materials.SourceText.stripTags' does not depend on any axioms
+'SFT.Materials.SourceText.decimal' does not depend on any axioms
+'SFT.Materials.SourceText.hexadecimal' does not depend on any axioms
+'SFT.Materials.SourceText.digit' does not depend on any axioms
+'SFT.Materials.SourceText.numberValue' does not depend on any axioms
+'SFT.Materials.SourceText.numericReplacement' does not depend on any axioms
+'SFT.Materials.SourceText.namedChar' does not depend on any axioms
+'SFT.Materials.SourceText.namedReplacement' does not depend on any axioms
+'SFT.Materials.SourceText.characterReference' does not depend on any axioms
+'SFT.Materials.SourceText.unescapeChars' does not depend on any axioms
+'SFT.Materials.SourceText.collapseSpace' does not depend on any axioms
+'SFT.Materials.SourceText.corpus' does not depend on any axioms
+'SFT.Materials.MaterialSource.Snapshot' does not depend on any axioms
+'SFT.Materials.MaterialSource.Source' does not depend on any axioms
+'SFT.Materials.MaterialSource.Requirement' does not depend on any axioms
+'SFT.Materials.MaterialSource.sources' does not depend on any axioms
+'SFT.Materials.MaterialSource.requirements' does not depend on any axioms
+'SFT.Materials.MaterialSource.expectedLabel' does not depend on any axioms
+'SFT.Materials.MaterialSource.targetId' does not depend on any axioms
+'SFT.Materials.MaterialSource.preSourcePath' does not depend on any axioms
+'SFT.Materials.MaterialSource.predictionSet' does not depend on any axioms
+'SFT.Materials.MaterialSource.claimCount' does not depend on any axioms
+'SFT.Materials.MaterialSource.originalSeal' does not depend on any axioms
+'SFT.Materials.MaterialSource.field' depends on axioms: [propext]
+'SFT.Materials.MaterialSource.string' depends on axioms: [propext]
+'SFT.Materials.MaterialSource.isFalse' depends on axioms: [propext]
+'SFT.Materials.MaterialSource.integerEqual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SFT.Materials.MaterialSource.bytesHash' does not depend on any axioms
+'SFT.Materials.MaterialSource.readSnapshot' does not depend on any axioms
+'SFT.Materials.MaterialSource.validatePreSeal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SFT.Materials.MaterialSource.validateSources' depends on axioms: [propext]
+'SFT.Materials.MaterialSource.continuation' does not depend on any axioms
+'SFT.Materials.MaterialSource.decodeIgnore' does not depend on any axioms
+'SFT.Materials.MaterialSource.corpus' does not depend on any axioms
+'SFT.Materials.MaterialSource.extractTarget' depends on axioms: [propext]
+'SFT.Materials.MaterialSource.originalSourceIdentity' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.claimId' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.experimentId' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.expectedLabel' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.frozenRelation' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.falsification' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.targetId' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.sourceIds' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.labelValue' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.program' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.programFields' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.programDocument' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.registration' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.envelope' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.validateSpec' does not depend on any axioms
+'SFT.Materials.MaterialExperiment.registeredSpecValid' does not depend on any axioms
+'SFT.Materials.MaterialValidation.PredictionSeal' does not depend on any axioms
+'SFT.Materials.MaterialValidation.Snapshot' does not depend on any axioms
+'SFT.Materials.MaterialValidation.inputValues' does not depend on any axioms
+'SFT.Materials.MaterialValidation.sealPrediction' does not depend on any axioms
+'SFT.Materials.MaterialValidation.observation' does not depend on any axioms
+'SFT.Materials.MaterialValidation.certificate' does not depend on any axioms
+'SFT.Materials.MaterialValidation.isolation' does not depend on any axioms
+'SFT.Materials.MaterialValidation.custodyCertificate' does not depend on any axioms
+'SFT.Materials.MaterialValidation.comparison' does not depend on any axioms
+'SFT.Materials.MaterialValidation.control' does not depend on any axioms
+'SFT.Materials.MaterialValidation.Validation' does not depend on any axioms
+'SFT.Materials.MaterialValidation.validate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SFT.Materials.MaterialValidation.resealRejected' does not depend on any axioms
+

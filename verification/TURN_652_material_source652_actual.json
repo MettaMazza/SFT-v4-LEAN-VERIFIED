@@ -1,0 +1,78 @@
+{
+  "extraction": {
+    "error": "Materials source snapshot changed: NIST-WULFFMAN-CRYSTALLOGRAPHY-2026-07-24"
+  },
+  "registration": {
+    "all_source_rows_required": true,
+    "claim_id": "SFT-MAT-MEAS-MATERIAL-001",
+    "expected_observation_label": "complete-constituent-carrier__composition-and-bonding-retained__material-boundary-held__declared-scale-identity__complete-state-transition-boundary-trace__root-bound-forward-forcing__positive-finite-successor-closure__no-extra-rule",
+    "experiment_id": "SFT-EXP-MAT-MEAS-MATERIAL-001",
+    "falsification_condition": "The claim fails if a complete registered material system and retained identity observation lacks any sealed carrier, relation, organization or boundary feature, any required row is omitted, or a tampered row is accepted.",
+    "frozen_relation": "complete-constituent-carrier__composition-and-bonding-retained__material-boundary-held__declared-scale-identity__complete-state-transition-boundary-trace__root-bound-forward-forcing__positive-finite-successor-closure__no-extra-rule",
+    "pre_source_seal_hash": "sha256:da97a6cb6a001964a069b45a5a3698e7ea90f334a08d69c62bd09c46d8112035",
+    "pre_source_seal_path": "experiments/sealed_predictions/materials_complete_branch_pre_source.json",
+    "prediction_program": {
+      "instructions": [
+        {
+          "arguments": [
+            "registered-premise"
+          ],
+          "destination": "premise",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "materials-observation",
+            "complete-constituent-carrier__composition-and-bonding-retained__material-boundary-held__declared-scale-identity__complete-state-transition-boundary-trace__root-bound-forward-forcing__positive-finite-successor-closure__no-extra-rule"
+          ],
+          "destination": "prediction",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "premise",
+            "prediction"
+          ],
+          "destination": "bound-result",
+          "opcode": "pair"
+        },
+        {
+          "arguments": [
+            "prediction"
+          ],
+          "destination": "",
+          "opcode": "emit"
+        }
+      ],
+      "program_id": "SFT-EXP-MAT-MEAS-MATERIAL-001-prediction",
+      "schema": "sft-v3-fold-program/1"
+    },
+    "required_fragments": [
+      [
+        "NIST-REFERENCE-MATERIALS-2026-07-24",
+        "material is thoroughly measured and characterized"
+      ],
+      [
+        "NIST-REFERENCE-MATERIALS-2026-07-24",
+        "values of material\u2019s properties"
+      ]
+    ],
+    "source_content_absent_until_after_complete_branch_seal": true,
+    "source_references": [
+      [
+        "NIST-REFERENCE-MATERIALS-2026-07-24",
+        "https://www.nist.gov/reference-materials",
+        "experiments/external_sources/materials/snapshots/nist-reference-materials.html",
+        "sha256:2ff393988c4880068ca103e365b0f1e6aed5a02a493b33507f6684a2d9271db9"
+      ]
+    ],
+    "target_id": "sft-mat-meas-material-001-authority-correspondence",
+    "target_inaccessible_before_prediction_seal": true
+  },
+  "seal": {
+    "ok": "sha256:da97a6cb6a001964a069b45a5a3698e7ea90f334a08d69c62bd09c46d8112035"
+  },
+  "validation": {
+    "error": "Materials source snapshot changed: NIST-WULFFMAN-CRYSTALLOGRAPHY-2026-07-24"
+  }
+}

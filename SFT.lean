@@ -4423,3 +4423,47 @@ import SFT.Physics.NuclearSequenceExperiment
 import SFT.Physics.NuclearSequenceValidation
 
 import SFT.Physics.NuclearSequenceExternal
+
+import SFT.Materials.MaterialIdentity
+
+import SFT.Materials.MaterialRetention
+
+import SFT.Materials.MaterialCarrier
+
+import SFT.Materials.MaterialCarrierRetention
+
+import SFT.Materials.MaterialGrammar
+
+import SFT.Materials.MaterialEvidence
+
+import SFT.Materials.SourceText
+
+import SFT.Materials.MaterialSource
+
+import SFT.Materials.MaterialExperiment
+
+import SFT.Materials.MaterialValidation
+
+import SFT.Physics.InverseSquare
+
+import SFT.Physics.InverseSquareWitnesses
+
+import SFT.Physics.InverseSquareGrammar
+
+import SFT.Physics.InverseSquareControls
+
+import SFT.Physics.InverseSquareEvidence
+
+import SFT.Physics.InverseSquareInterval
+
+import SFT.Physics.InverseSquareIntervalSource
+
+import SFT.Physics.InverseSquareIntervalGrammar
+
+import SFT.Physics.InverseSquareIntervalEvidence
+
+import SFT.Physics.InverseSquareIntervalExperiment
+
+import SFT.Physics.InverseSquareIntervalValidation
+
+import SFT.Physics.InverseSquareIntervalExternal

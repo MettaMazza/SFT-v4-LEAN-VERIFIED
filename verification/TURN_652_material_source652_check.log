@@ -1,0 +1,11 @@
+MaterialSource652.lean:12:4: error: unexpected token 'seal'; expected '(', ':=', 'rec', '|', identifier or term
+MaterialSource652.lean:12:9: error: unexpected token ':='; expected identifier
+MaterialSource652.lean:16:21: error: unexpected token ')'; expected identifier
+MaterialSource652.lean:17:29: error: unexpected token 'with'; expected identifier
+SFT-MAT-MEAS-MATERIAL-001
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/check_material_source652.py", line 27, in <module>
+    ns={};src=(w/'run_material651.py').read_text();exec(src[:src.index('modules=')],ns);ir=ns['ir'];env=ns['env'];toolchain=ns['toolchain'];subprocess.run(['/Users/dolltrading/.elan/bin/lean','-j1','-c','MaterialSource652.c','MaterialSource652.lean'],cwd=r,env=env,check=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/dolltrading/.elan/bin/lean', '-j1', '-c', 'MaterialSource652.c', 'MaterialSource652.lean']' returned non-zero exit status 1.

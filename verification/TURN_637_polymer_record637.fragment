@@ -1,0 +1,92 @@
+
+-- Select the first retained atom constructively from positive unit support.
+theorem firstRepeatHasAtom {unit : Functional.Group} {Word Cell : Type}
+ (c : Incidence unit Word Cell) : ∃ atom, atom∈(repeatGraph c.first).nodes := by
+ cases shape : unit.fragment.carrier.occurrences with
+ | nil => exact False.elim (unit.positive shape)
+ | cons first rest =>
+   refine ⟨c.first.embedding.image first,?_⟩
+   apply memMap
+   exact shape.symm ▸ List.Mem.head rest
+
+theorem connectedAssembly {unit : Functional.Group} {Word Cell : Type}
+ (c : Incidence unit Word Cell)
+ (connected : MolecularCarrier.connected unit.fragment.carrier.occurrences unit.fragment.carrier.bonds=true) :
+ MolecularCarrier.connected (atomicGraph c).nodes (atomicGraph c).edges=true := by
+ obtain ⟨origin,held⟩ := firstRepeatHasAtom c
+ exact atomicConnected c connected origin held
+
+theorem positiveConnections {unit : Functional.Group} {Word Cell : Type}
+ (c : Incidence unit Word Cell) : 0<c.connections.length := by
+ cases shape : c.connections with
+ | nil =>
+   have order := c.completeOrder
+   rw [shape] at order
+   cases middleShape : c.middle with
+   | nil => rw [middleShape] at order; cases order
+   | cons first rest => rw [middleShape] at order; cases order
+ | cons first rest => exact Nat.zero_lt_succ _
+
+-- Global connectedness is the source boundary. Unit connectedness is a
+-- sufficient construction theorem above, not an additional record guard.
+structure Chain (unit : Functional.Group) (Word Cell : Type) where
+ repeatIdentity : SFT.Physics.CapabilityValues.HeldLabel
+ identityFamily : repeatIdentity.family="repeat-unit"
+ incidence : Incidence unit Word Cell
+ connected : MolecularCarrier.connected (atomicGraph incidence).nodes (atomicGraph incidence).edges=true
+
+def constructChain {unit : Functional.Group} {Word Cell : Type}
+ (identity : SFT.Physics.CapabilityValues.HeldLabel) (family : identity.family="repeat-unit")
+ (incidence : Incidence unit Word Cell)
+ (connected : MolecularCarrier.connected unit.fragment.carrier.occurrences unit.fragment.carrier.bonds=true) :
+ Chain unit Word Cell := ⟨identity,family,incidence,connectedAssembly incidence connected⟩
+
+def sourceRecord {unit : Functional.Group} {Word Cell : Type} (chain : Chain unit Word Cell) : Raw :=
+ ⟨chain.repeatIdentity,⟨extent chain.incidence,positiveExtent chain.incidence⟩,
+  ⟨chain.incidence.connections.length,positiveConnections chain.incidence⟩⟩
+
+theorem sourceRecordAdmitted {unit : Functional.Group} {Word Cell : Type} (chain : Chain unit Word Cell) :
+ admit (sourceRecord chain)=.ok (sourceRecord chain) := by
+ unfold admit sourceRecord
+ rw [ite_eq_left chain.identityFamily]
+
+theorem sourceCountsRetained {unit : Functional.Group} {Word Cell : Type} (chain : Chain unit Word Cell) :
+ (sourceRecord chain).occurrences.value=extent chain.incidence ∧
+ (sourceRecord chain).connections.value=chain.incidence.connections.length := ⟨rfl,rfl⟩
+
+theorem sourceEndsRetained {unit : Functional.Group} {Word Cell : Type} (chain : Chain unit Word Cell) :
+ copies chain.incidence=chain.incidence.first::chain.incidence.middle++[chain.incidence.last] := rfl
+
+def baseChain {unit : Functional.Group} {Word Cell : Type}
+ (identity : SFT.Physics.CapabilityValues.HeldLabel) (family : identity.family="repeat-unit")
+ (bond : Connection unit Word Cell) (fresh : ¬bond.right.identity∈[bond.left.identity])
+ (connected : MolecularCarrier.connected unit.fragment.carrier.occurrences unit.fragment.carrier.bonds=true) :
+ Chain unit Word Cell := constructChain identity family (base bond fresh) connected
+
+def appendChain {unit : Functional.Group} {Word Cell : Type} (chain : Chain unit Word Cell)
+ (next : Occurrence unit) (bond : Connection unit Word Cell)
+ (fresh : ¬next.identity∈names (copies chain.incidence))
+ (left : bond.left=chain.incidence.last) (right : bond.right=next)
+ (connected : MolecularCarrier.connected unit.fragment.carrier.occurrences unit.fragment.carrier.bonds=true) :
+ Chain unit Word Cell := constructChain chain.repeatIdentity chain.identityFamily
+  (append chain.incidence next bond fresh left right) connected
+
+theorem baseSourceCounts {unit : Functional.Group} {Word Cell : Type}
+ (identity : SFT.Physics.CapabilityValues.HeldLabel) (family : identity.family="repeat-unit")
+ (bond : Connection unit Word Cell) (fresh : ¬bond.right.identity∈[bond.left.identity])
+ (connected : MolecularCarrier.connected unit.fragment.carrier.occurrences unit.fragment.carrier.bonds=true) :
+ (sourceRecord (baseChain identity family bond fresh connected)).occurrences.value=2 ∧
+ (sourceRecord (baseChain identity family bond fresh connected)).connections.value=1 := ⟨rfl,rfl⟩
+
+theorem appendSourceCounts {unit : Functional.Group} {Word Cell : Type} (chain : Chain unit Word Cell)
+ (next : Occurrence unit) (bond : Connection unit Word Cell)
+ (fresh : ¬next.identity∈names (copies chain.incidence))
+ (left : bond.left=chain.incidence.last) (right : bond.right=next)
+ (connected : MolecularCarrier.connected unit.fragment.carrier.occurrences unit.fragment.carrier.bonds=true) :
+ (sourceRecord (appendChain chain next bond fresh left right connected)).occurrences.value=
+  (sourceRecord chain).occurrences.value+1 ∧
+ (sourceRecord (appendChain chain next bond fresh left right connected)).connections.value=
+  (sourceRecord chain).connections.value+1 := by
+ refine ⟨successorExtent chain.incidence next bond fresh left right,?_⟩
+ exact SFT.Foundation.CommonRefinement.appendLength _ _
+

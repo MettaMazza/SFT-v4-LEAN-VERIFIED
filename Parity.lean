@@ -1354,3 +1354,6 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.ReactionFamilyGrammar.candidates do
     IO.println ("ReactionFamilyGrammar\t" ++ SFT.Chemistry.ReactionFamilyGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.ReactionFamilyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.ReactionFamilyGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.ReactionFamilyGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.PolymerChainGrammar.candidates do
+    IO.println ("PolymerChainGrammar\t" ++ SFT.Chemistry.PolymerChainGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.PolymerChainGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.PolymerChainGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.PolymerChainGrammar.decisionReason c)

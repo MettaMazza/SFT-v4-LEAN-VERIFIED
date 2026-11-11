@@ -4251,3 +4251,13 @@ import SFT.Chemistry.ReactionFamilyEvidence
 import SFT.Chemistry.ReactionFamilyExperiment
 
 import SFT.Chemistry.ReactionFamilyValidation
+
+import SFT.Chemistry.PolymerChain
+
+import SFT.Chemistry.PolymerChainGrammar
+
+import SFT.Chemistry.PolymerChainEvidence
+
+import SFT.Chemistry.PolymerChainExperiment
+
+import SFT.Chemistry.PolymerChainValidation

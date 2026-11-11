@@ -3849,3 +3849,8 @@ import SFT.Chemistry.BondGrammar
 import SFT.Chemistry.BondEvidence
 import SFT.Chemistry.BondExperiment
 import SFT.Chemistry.BondValidation
+import SFT.Chemistry.CovalentSharing
+import SFT.Chemistry.CovalentGrammar
+import SFT.Chemistry.CovalentEvidence
+import SFT.Chemistry.CovalentExperiment
+import SFT.Chemistry.CovalentValidation

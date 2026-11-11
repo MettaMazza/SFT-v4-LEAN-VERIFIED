@@ -4039,3 +4039,13 @@ import SFT.Chemistry.RateEvidence
 import SFT.Chemistry.RateExperiment
 
 import SFT.Chemistry.RateValidation
+
+import SFT.Chemistry.KineticOrder
+
+import SFT.Chemistry.KineticOrderGrammar
+
+import SFT.Chemistry.KineticOrderEvidence
+
+import SFT.Chemistry.KineticOrderExperiment
+
+import SFT.Chemistry.KineticOrderValidation

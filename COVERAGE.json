@@ -24875,9 +24875,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-KIN-ORDER-001-37abcdd1d68e0f50.json",
       "statement": "Kinetic order is the exact condition-bound multiplicity of a named reactant coordinate in the complete intervention-to-rate dependency trace; independence is Empty rather than numerical zero.",
       "title": "Kinetic order and dependency multiplicity",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/KineticOrder.lean",
+        "SFT/Chemistry/KineticOrderGrammar.lean",
+        "SFT/Chemistry/KineticOrderEvidence.lean",
+        "SFT/Chemistry/KineticOrderExperiment.lean",
+        "SFT/Chemistry/KineticOrderValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh native256-form complete program,15 constructor cases, all empirical fields/hashes and original independent controls.",
       "registration_sha256": "604e652e183ff85c5049f2702772a0627d5e78e1c6b7feac80d76df38f1b68ed",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -24948,7 +24954,10 @@
         "statement": "Kinetic order is the exact condition-bound multiplicity of a named reactant coordinate in the complete intervention-to-rate dependency trace; independence is Empty rather than numerical zero.",
         "status": "empirically_tested",
         "title": "Kinetic order and dependency multiplicity"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_607_ORDER_COMPLETION.json",
+      "verified_scope": "Exact reactant/dependency-family admission preserving Empty and repeated labels; structural Empty/positive multiplicity, complete ordered occurrence count; complete source intervention bindings to before/after species amounts, same reaction/boundary/conditions; source-membership and coordinate proofs; singleton base and unchanged/new-occurrence successor cases retaining the full census.; Original eight-axis256-form enumeration, exact elimination decisions and unique survivor.; Original census, registration, witnesses, controls and closure.; Original sealed prediction and source references.; Original multi-source empirical extraction, features, hashes, custody, isolation and adverse target control."
     },
     {
       "branch": "chemistry",
@@ -194055,13 +194064,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T12:42:33.411628+00:00",
+  "updated_at": "2026-11-11T12:54:12.423279+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2383,
-    "fully_reconstructed_claims": 398,
-    "axiom_free_exported_results": 21270,
-    "axiom_free_audited_definitions_and_theorems": 49207
+    "pending": 2382,
+    "fully_reconstructed_claims": 399,
+    "axiom_free_exported_results": 21304,
+    "axiom_free_audited_definitions_and_theorems": 49319
   }
 }

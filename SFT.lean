@@ -3746,3 +3746,13 @@ import SFT.Chemistry.NomenclatureGrammar
 import SFT.Chemistry.NomenclatureEvidence
 import SFT.Chemistry.NomenclatureExperiment
 import SFT.Chemistry.NomenclatureValidation
+import SFT.Chemistry.UncertaintyRecord
+import SFT.Chemistry.UncertaintyGrammar
+import SFT.Chemistry.UncertaintyEvidence
+import SFT.Chemistry.UncertaintyExperiment
+import SFT.Chemistry.UncertaintyValidation
+import SFT.Chemistry.TraceabilityChain
+import SFT.Chemistry.TraceabilityGrammar
+import SFT.Chemistry.TraceabilityEvidence
+import SFT.Chemistry.TraceabilityExperiment
+import SFT.Chemistry.TraceabilityValidation

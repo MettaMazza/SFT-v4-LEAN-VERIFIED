@@ -20976,9 +20976,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-MEAS-UNCERTAINTY-001-50c9951b09bb5491.json",
       "statement": "Chemical target uncertainty is a source-bound Fold record of unresolved measurement alternatives with a preregistered upper limit fixed by intended use and attached to the exact result identity.",
       "title": "Chemical measurement uncertainty and retained alternatives",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/UncertaintyRecord.lean",
+        "SFT/Chemistry/UncertaintyGrammar.lean",
+        "SFT/Chemistry/UncertaintyEvidence.lean",
+        "SFT/Chemistry/UncertaintyExperiment.lean",
+        "SFT/Chemistry/UncertaintyValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full256-form program, original empirical output, ten extraction cases and original independent-validator controls.",
       "registration_sha256": "a826dc4063d667905e16a14ef47976b3ff899682a804e78104159cb2575a4891",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -21028,7 +21034,10 @@
         "statement": "Chemical target uncertainty is a source-bound Fold record of unresolved measurement alternatives with a preregistered upper limit fixed by intended use and attached to the exact result identity.",
         "status": "empirically_tested",
         "title": "Chemical measurement uncertainty and retained alternatives"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_559_UNCERTAINTY_COMPLETION.json",
+      "verified_scope": "Source-bound chemical measurement records; exact compatible-alternative retention reused from MeasurementUncertainty; unchanged registered result/source/method/use/upper-limit boundary; complete row retention and finite histories; rejection of post-release bound or result changes.; Original eight binary axes: exhaustive256 candidates, exact source decisions and unique survivor.; Original complete chemistry registration, census, source controls and closure.; Exact chemistry source-reference specification, sealed prediction instructions and registration.; Original source extraction, isolation, custody and every empirical comparison field and hash."
     },
     {
       "branch": "chemistry",
@@ -21040,9 +21049,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-MEAS-TRACEABILITY-001-74157ee587b7b0d4.json",
       "statement": "Chemical traceability is the complete Fold predecessor chain binding a property value to an identified reference material while retaining uncertainty, material identity and its certificate record at every link.",
       "title": "Chemical reference traceability and complete record",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/TraceabilityChain.lean",
+        "SFT/Chemistry/TraceabilityGrammar.lean",
+        "SFT/Chemistry/TraceabilityEvidence.lean",
+        "SFT/Chemistry/TraceabilityExperiment.lean",
+        "SFT/Chemistry/TraceabilityValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full256-form program, original empirical output, ten extraction cases and original independent-validator controls.",
       "registration_sha256": "9a49761be1ac932a236cd74e1f718ee8412c1c1d352b470646edb32f4ade4c5f",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -21094,7 +21109,10 @@
         "statement": "Chemical traceability is the complete Fold predecessor chain binding a property value to an identified reference material while retaining uncertainty, material identity and its certificate record at every link.",
         "status": "empirically_tested",
         "title": "Chemical reference traceability and complete record"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_559_TRACEABILITY_COMPLETION.json",
+      "verified_scope": "Certified positive-finite chemical property chains; typed exact predecessor and subject binding; registered link incidence; complete record, material, sample, value, uncertainty and certificate retention; property preservation and identified admitted physical reference realization.; Original eight binary axes: exhaustive256 candidates, exact source decisions and unique survivor.; Original complete chemistry registration, census, source controls and closure.; Exact chemistry source-reference specification, sealed prediction instructions and registration.; Original source extraction, isolation, custody and every empirical comparison field and hash."
     },
     {
       "branch": "chemistry",
@@ -193625,13 +193643,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T02:08:36.660365+00:00",
+  "updated_at": "2026-11-11T02:17:20.602220+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2429,
-    "fully_reconstructed_claims": 352,
-    "axiom_free_exported_results": 19455,
-    "axiom_free_audited_definitions_and_theorems": 43615
+    "pending": 2427,
+    "fully_reconstructed_claims": 354,
+    "axiom_free_exported_results": 19538,
+    "axiom_free_audited_definitions_and_theorems": 43849
   }
 }

@@ -3699,3 +3699,12 @@ import SFT.Physics.PhaseOrderEvidence
 import SFT.Physics.PhaseOrderExperiment
 import SFT.Physics.PhaseOrderValidation
 import SFT.Physics.PhaseOrderValidationProofs
+import SFT.Physics.CollectiveSuperconductivity
+import SFT.Physics.SuperconductivityLabelClosure
+import SFT.Physics.SuperconductivityRecurrenceProofs
+import SFT.Physics.SuperconductivityJointHistory
+import SFT.Physics.SuperconductivityGrammar
+import SFT.Physics.SuperconductivityEvidence
+import SFT.Physics.SuperconductivityExperiment
+import SFT.Physics.SuperconductivityValidation
+import SFT.Physics.SuperconductivityValidationProofs

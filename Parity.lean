@@ -1132,3 +1132,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.PhaseOrderGrammar.candidates do
     IO.println ("PhaseOrderGrammar\t" ++ SFT.Physics.PhaseOrderGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PhaseOrderGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PhaseOrderGrammar.exactForm c ++ "\t" ++ SFT.Physics.PhaseOrderGrammar.decisionReason c)
+
+  for c in SFT.Physics.SuperconductivityGrammar.candidates do
+    IO.println ("SuperconductivityGrammar\t" ++ SFT.Physics.SuperconductivityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SuperconductivityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SuperconductivityGrammar.exactForm c ++ "\t" ++ SFT.Physics.SuperconductivityGrammar.decisionReason c)

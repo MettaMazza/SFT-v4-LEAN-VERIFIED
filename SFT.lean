@@ -3864,3 +3864,13 @@ import SFT.Chemistry.MetallicGrammar
 import SFT.Chemistry.MetallicEvidence
 import SFT.Chemistry.MetallicExperiment
 import SFT.Chemistry.MetallicValidation
+import SFT.Chemistry.BondOrderDegree
+import SFT.Chemistry.OrderGrammar
+import SFT.Chemistry.OrderEvidence
+import SFT.Chemistry.OrderExperiment
+import SFT.Chemistry.OrderValidation
+import SFT.Chemistry.BondLengthStrength
+import SFT.Chemistry.LengthGrammar
+import SFT.Chemistry.LengthEvidence
+import SFT.Chemistry.LengthExperiment
+import SFT.Chemistry.LengthValidation

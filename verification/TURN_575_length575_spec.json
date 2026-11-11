@@ -1,0 +1,198 @@
+{
+  "claim_id": "SFT-CHEM-BOND-LENGTH-STRENGTH-001",
+  "title": "Bond length, energy and identity correspondence",
+  "statement": "Bond length and strength are separate source-bounded records paired by one specific bond identity: inter-centre distance and positive dissociation transfer under retained methods and conditions; no universal formula is imported.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-GEOMETRY-TOPOLOGY-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-QUANTUM-ENTANGLEMENT-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-CONDENSED-LATTICE-001",
+    "SFT-PHYS-CONDENSED-BAND-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-VALENCE-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-COMPOSITION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-CHEMICAL-BOND-001",
+    "SFT-CHEM-BOND-ORDER-001"
+  ],
+  "generation_rule": "Generate the literal product of the registered length/strength carrier, length, strength, conditions, correspondence, measurement, record and extension choices.",
+  "grammar_boundary": "Every identified bond with one source/method-bounded inter-centre distance record and one separately source/condition-bounded positive dissociation-transfer record, joined only by common bond identity.",
+  "dimensions": [
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "generic-bond-type-only",
+          "admitted": false,
+          "reason": "A type average can erase the specific molecular carrier."
+        },
+        {
+          "name": "specific-identified-bond",
+          "admitted": true,
+          "reason": "Both records bind to the same bond identity."
+        }
+      ]
+    },
+    {
+      "key": "length",
+      "choices": [
+        {
+          "name": "context-free-distance",
+          "admitted": false,
+          "reason": "Measured bond length depends on method and state."
+        },
+        {
+          "name": "method-bounded-centre-distance",
+          "admitted": true,
+          "reason": "Centres, method, state and uncertainty remain held."
+        }
+      ]
+    },
+    {
+      "key": "strength",
+      "choices": [
+        {
+          "name": "qualitative-strong-weak-label",
+          "admitted": false,
+          "reason": "A qualitative label cannot reproduce dissociation."
+        },
+        {
+          "name": "positive-dissociation-transfer",
+          "admitted": true,
+          "reason": "Strength is the registered carrier required to open the bond."
+        }
+      ]
+    },
+    {
+      "key": "conditions",
+      "choices": [
+        {
+          "name": "conditions-erased",
+          "admitted": false,
+          "reason": "Phase, state and cleavage path affect measured records."
+        },
+        {
+          "name": "measurement-conditions-retained",
+          "admitted": true,
+          "reason": "Every condition remains part of identity."
+        }
+      ]
+    },
+    {
+      "key": "correspondence",
+      "choices": [
+        {
+          "name": "universal-inverse-equation",
+          "admitted": false,
+          "reason": "A categorical relation does not force one universal formula."
+        },
+        {
+          "name": "common-bond-identity-pairing",
+          "admitted": true,
+          "reason": "Length and strength correspond by shared bond carrier only."
+        }
+      ]
+    },
+    {
+      "key": "measurement",
+      "choices": [
+        {
+          "name": "decimal-as-proof-scalar",
+          "admitted": false,
+          "reason": "Measured decimals cannot enter derivation."
+        },
+        {
+          "name": "separate-source-bound-records",
+          "admitted": true,
+          "reason": "External values remain post-seal records."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "paired-values-without-provenance",
+          "admitted": false,
+          "reason": "A pair without methods cannot be compared."
+        },
+        {
+          "name": "bond-length-strength-source-trace",
+          "admitted": true,
+          "reason": "Identity, values, methods and uncertainties remain held."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "free-length-strength-fit",
+          "admitted": false,
+          "reason": "A fitted curve can force measured examples."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "No relation beyond identity pairing is asserted."
+        }
+      ]
+    }
+  ],
+  "exact_result": "specific-identified-bond__method-bounded-centre-distance__positive-dissociation-transfer__common-bond-identity-pairing",
+  "induction_base": "One identified bond with one method-bounded distance and one condition-bounded dissociation record supplies the first correspondence pair.",
+  "induction_step": "Appending one measurement retains bond identity, method, conditions and uncertainty without changing the derived structural law or fitting a universal curve.",
+  "exclusions": [
+    "no IUPAC bond definition, orbital equation, electronegativity scale, measured value or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no application result or opaque predictor",
+    "no universal bond-length/strength formula inferred from a categorical correspondence",
+    "official target content opens only through post-seal custody",
+    "Every identified bond with one source/method-bounded inter-centre distance record and one separately source/condition-bounded positive dissociation-transfer record, joined only by common bond identity."
+  ],
+  "operational_witnesses": [
+    [
+      "identity-pair",
+      "length and strength records bind to one bond carrier",
+      true
+    ],
+    [
+      "measurement-boundary",
+      "decimal values remain external records",
+      true
+    ],
+    [
+      "universal-fit-control",
+      "no inverse formula is asserted",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-BOND-LENGTH-STRENGTH-001",
+  "expected_observation_label": "bond-length__bond-dissociation-energy__bond-order-empirical-relationship",
+  "target_rows": [
+    {
+      "target_id": "bond-length-strength-iupac-b00702",
+      "source_id": "IUPAC-GOLD-BOOK-B00702-2026",
+      "source_locator": "https://goldbook.iupac.org/terms/view/B00702/json :: term B00702, current definition",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/B00702.json",
+      "snapshot_hash": "sha256:f53dadb6357406a52d41d9d4be1f7698d4db3b8954b04f798ba823b18c40c821"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_bonding_molecular_batch_1.json",
+  "falsification_condition": "The claim fails if IUPAC lacks the registered empirical relationship among bond length, dissociation energy and order, or if a changed row is accepted; it does not fail merely because no universal monotone formula exists."
+}

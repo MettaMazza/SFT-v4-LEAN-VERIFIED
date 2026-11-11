@@ -1,0 +1,199 @@
+{
+  "claim_id": "SFT-CHEM-BOND-ORDER-001",
+  "title": "Bond order as retained joining multiplicity",
+  "statement": "Bond order is the exact positive rational degree of complete joining-channel support for one identified bond relative to one localized electron-pair joining unit, with the observation partition retained.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-GEOMETRY-TOPOLOGY-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-QUANTUM-ENTANGLEMENT-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-CONDENSED-LATTICE-001",
+    "SFT-PHYS-CONDENSED-BAND-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-VALENCE-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-COMPOSITION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-BOND-METALLIC-001"
+  ],
+  "generation_rule": "Generate the literal product of the registered bond-order carrier, support, reference, quantity, delocalization, method, record and extension choices.",
+  "grammar_boundary": "Every finite identified bond with complete joining-channel support, measured relative to one localized electron-pair joining unit using exact positive counts or rational support parts.",
+  "dimensions": [
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "index-without-bond",
+          "admitted": false,
+          "reason": "A number detached from a bond has no meaning."
+        },
+        {
+          "name": "identified-bond-carrier",
+          "admitted": true,
+          "reason": "The index remains bound to one joining support."
+        }
+      ]
+    },
+    {
+      "key": "support",
+      "choices": [
+        {
+          "name": "selected-channel-count",
+          "admitted": false,
+          "reason": "Omitting channels can force the degree."
+        },
+        {
+          "name": "complete-joining-channel-support",
+          "admitted": true,
+          "reason": "Every registered bonding channel is included."
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "choices": [
+        {
+          "name": "arbitrary-scale",
+          "admitted": false,
+          "reason": "A free scale can select any order."
+        },
+        {
+          "name": "single-localized-pair-reference",
+          "admitted": true,
+          "reason": "One localized pair supplies the admitted comparison unit."
+        }
+      ]
+    },
+    {
+      "key": "quantity",
+      "choices": [
+        {
+          "name": "floating-index",
+          "admitted": false,
+          "reason": "Floating arithmetic cannot certify the exact support ratio."
+        },
+        {
+          "name": "exact-positive-rational-degree",
+          "admitted": true,
+          "reason": "Counts and parts remain exact."
+        }
+      ]
+    },
+    {
+      "key": "delocalization",
+      "choices": [
+        {
+          "name": "integer-only-order",
+          "admitted": false,
+          "reason": "Delocalized support can distribute a joining unit across links."
+        },
+        {
+          "name": "rational-support-sharing-retained",
+          "admitted": true,
+          "reason": "Exact parts preserve fractional link support without irrational values."
+        }
+      ]
+    },
+    {
+      "key": "method",
+      "choices": [
+        {
+          "name": "one-partition-as-absolute",
+          "admitted": false,
+          "reason": "Different observational partitions can report different indices."
+        },
+        {
+          "name": "partition-bound-index",
+          "admitted": true,
+          "reason": "The measurement/partition method remains part of the record."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "order-answer-only",
+          "admitted": false,
+          "reason": "An index alone cannot reproduce support."
+        },
+        {
+          "name": "bond-channel-reference-trace",
+          "admitted": true,
+          "reason": "Bond, channels, reference and partition remain held."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "free-order-correction",
+          "admitted": false,
+          "reason": "A correction can force a conventional integer."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Complete support/reference ratio determines the index."
+        }
+      ]
+    }
+  ],
+  "exact_result": "identified-bond-carrier__complete-joining-channel-support__single-localized-pair-reference__exact-positive-rational-degree",
+  "induction_base": "One localized electron-pair joining channel supplies the One reference bond order.",
+  "induction_step": "Appending or exactly sharing one generated channel updates the positive rational support/reference degree while retaining every prior channel and partition record.",
+  "exclusions": [
+    "no IUPAC bond definition, orbital equation, electronegativity scale, measured value or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no application result or opaque predictor",
+    "no universal bond-length/strength formula inferred from a categorical correspondence",
+    "official target content opens only through post-seal custody",
+    "Every finite identified bond with complete joining-channel support, measured relative to one localized electron-pair joining unit using exact positive counts or rational support parts."
+  ],
+  "operational_witnesses": [
+    [
+      "one-reference",
+      "one localized channel has exact One degree",
+      true
+    ],
+    [
+      "multiplicity",
+      "two retained channels have positive counted multiplicity",
+      true
+    ],
+    [
+      "float-control",
+      "no floating index participates",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-BOND-ORDER-001",
+  "expected_observation_label": "bonding-degree-index__single-bond-reference__localized-electron-pair",
+  "target_rows": [
+    {
+      "target_id": "bond-order-iupac-b00707",
+      "source_id": "IUPAC-GOLD-BOOK-B00707-2026",
+      "source_locator": "https://goldbook.iupac.org/terms/view/B00707/json :: term B00707, current definition",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/B00707.json",
+      "snapshot_hash": "sha256:f8056279c1ae14cc144d184f01797de9aa2d8fb69ed868b9753ba2e63255dccf"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_bonding_molecular_batch_1.json",
+  "falsification_condition": "The claim fails if IUPAC lacks a bonding-degree index, single-bond reference or localized electron-pair reference, or if a changed row is accepted."
+}

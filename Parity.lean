@@ -1213,3 +1213,6 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.SolutionGrammar.candidates do
     IO.println ("SolutionGrammar\t" ++ SFT.Chemistry.SolutionGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.SolutionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.SolutionGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.SolutionGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.BondGrammar.candidates do
+    IO.println ("BondGrammar\t" ++ SFT.Chemistry.BondGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.BondGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.BondGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.BondGrammar.decisionReason c)

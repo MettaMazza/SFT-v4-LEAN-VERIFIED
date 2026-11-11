@@ -3843,3 +3843,9 @@ import SFT.Chemistry.SolutionGrammar
 import SFT.Chemistry.SolutionEvidence
 import SFT.Chemistry.SolutionExperiment
 import SFT.Chemistry.SolutionValidation
+import SFT.Chemistry.ExtendedExtraction
+import SFT.Chemistry.BondClosure
+import SFT.Chemistry.BondGrammar
+import SFT.Chemistry.BondEvidence
+import SFT.Chemistry.BondExperiment
+import SFT.Chemistry.BondValidation

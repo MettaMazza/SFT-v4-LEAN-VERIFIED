@@ -3726,3 +3726,13 @@ import SFT.Chemistry.SpeciesGrammar
 import SFT.Chemistry.SpeciesEvidence
 import SFT.Chemistry.SpeciesExperiment
 import SFT.Chemistry.SpeciesValidation
+import SFT.Chemistry.SubstanceIdentity
+import SFT.Chemistry.SubstanceGrammar
+import SFT.Chemistry.SubstanceEvidence
+import SFT.Chemistry.SubstanceExperiment
+import SFT.Chemistry.SubstanceValidation
+import SFT.Chemistry.AmountCount
+import SFT.Chemistry.AmountGrammar
+import SFT.Chemistry.AmountEvidence
+import SFT.Chemistry.AmountExperiment
+import SFT.Chemistry.AmountValidation

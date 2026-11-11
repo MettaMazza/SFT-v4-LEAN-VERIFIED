@@ -4497,3 +4497,13 @@ import SFT.Chemistry.SmithiumEvidence
 import SFT.Chemistry.SmithiumExperiment
 
 import SFT.Chemistry.SmithiumValidation
+
+import SFT.Chemistry.PeriodicEndpoint
+
+import SFT.Chemistry.PeriodicEndpointGrammar
+
+import SFT.Chemistry.PeriodicEndpointEvidence
+
+import SFT.Chemistry.PeriodicEndpointExperiment
+
+import SFT.Chemistry.PeriodicEndpointValidation

@@ -1,0 +1,48 @@
+{
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "sft/chemistry/redox_derivation.py:AFFINITY_DIMENSIONS comparison, ties, record; REDOX_BLUEPRINTS[0] base and extension",
+    "publications/successors/chemistry/FROM_FOLD_TO_CHEMISTRY_PAPER_001_V1_4_1.md:section43"
+  ],
+  "declarations": [
+    "SFT.Chemistry.AffinityRecurrenceBinding.endpoint",
+    "SFT.Chemistry.AffinityRecurrenceBinding.physicalObservations",
+    "SFT.Chemistry.AffinityRecurrenceBinding.physicalLedger",
+    "SFT.Chemistry.AffinityRecurrenceBinding.completeVisitsExactly",
+    "SFT.Chemistry.AffinityRecurrenceBinding.bind",
+    "SFT.Chemistry.AffinityRecurrenceBinding.boundTraceExactly",
+    "SFT.Chemistry.AffinityRecurrenceBinding.sourceComparisonUnchanged",
+    "SFT.Chemistry.AffinityRecurrenceBinding.completeObservationTie",
+    "SFT.Chemistry.AffinityRecurrenceBinding.appendVisits"
+  ],
+  "axiom_dependencies": [],
+  "reused_proofs": [
+    "QuantumPhysicalIdentity.fullLedgerExactly",
+    "AffinityTraceBinding.exactTieClass",
+    "ExactTraceArithmetic.mapAppend"
+  ],
+  "proved": "For the supplied finite list of registered HeldLabel observations, the generated complete endpoint visit ledgers agree exactly when exchanging the endpoints leaves every observation unchanged. Under the existing cycle check, this is exactly the affinity tie class. Source comparison and support are retained unchanged.",
+  "hypotheses": "The finite observation list is supplied to the theorem. The theorem does not construct that list from the underlying physical source, or determine an unequal-pair preference.",
+  "registered_complete": false,
+  "completed_entries": 388,
+  "source_reference_trace": {
+    "command": "git grep -n preferred_endpoint PIN -- *.py *.lean",
+    "exit": 0,
+    "matches": [
+      "sft/chemistry/redox_derivation.py:23 field",
+      "sft/chemistry/redox_derivation.py:30 membership guard",
+      "sft/chemistry/redox_derivation.py:230 operational witness"
+    ],
+    "scope": "Direct references only; does not rule out equivalent derivations under other representations."
+  },
+  "remaining": "Identify the source-derived complete observation list and its unequal-pair comparison; bind those actual inputs to this proved trace/closure assembly without inventing a ranking rule.",
+  "sha256": {
+    "verification/TURN_594_STAGED/AffinityRecurrenceBinding.lean": "accbb367d206eb7b5c94dcce7583272f3af62a85988c48e78d11ca95ab42860d",
+    "verification/TURN_594_build_affinity_recurrence594.py": "61025010fc61c1a24450f6732a537ce86996e197970ae84688e69e50675031f1",
+    "verification/TURN_594_audit_affinity594.py": "76d03c8fc411672f36d771518c5250ea7c6dbca14d36e7253cdcd5cfc9689847",
+    "verification/TURN_594_affinity594_recurrence_binding_build_report.json": "b4a24ffd046594546b72399c9fe525a92096326473fdc935e3cb17dbb6a39483",
+    "verification/TURN_594_affinity594_audit_config.json": "f049d21d7dc1479ec8f7ac2e5110e44dbc93d4946cc44db60fae4ff278af384e",
+    "verification/TURN_594_affinity594_audit.log": "2146d6a3d55bbd3b1ebee26195ae70e70d10ce3d73eb71f4b1f5d570aeaf93ca",
+    "verification/TURN_594_build594_AffinityRecurrenceBinding.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

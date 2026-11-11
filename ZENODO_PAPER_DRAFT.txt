@@ -16996,3 +16996,31 @@ For a covalent record J, its existing interaction trace has the complete action 
 Thus the retained physical observation and full shared-support recurrence refer to the same prepared state. The observation operation preserves the supplied classification and all source branches; the affinity relation additionally uses the complete registered endpoint comparisons described above.
 
 Original source: pinned sft/quantum_computation/operations.py, observe; sft/chemistry/redox_derivation.py, AFFINITY_BOUNDARY and AFFINITY_DIMENSIONS. Existing Lean derivations reused: ReversibleObservation.recordMembership, completeRecord and recordCount; QuantumPhysicalObservable.everySourceClassRecorded and fullStateReconstructed; CovalentSharing.boundSourceRecurs. Native binding: verification/TURN_592_STAGED/AffinityPhysicalObservation.lean, retainedExactly, everyBranchHasEndpoint, endpointSource, classUnique, classEqualityExactly, completeBranchSequence, completeBranchCount and sharedRecurrenceAndCompleteObservation. All nine declarations have empty axiom dependencies. Evidence: verification/TURN_592_PHYSICAL_OBSERVATION.json. Timeline: Turn592.
+
+Complete registered visit ledger and exact ties
+
+Let O=[o_1,...,o_n] be the complete supplied finite register of held-label observations of the shared support, and let a,b name its endpoints. The generated endpoint ledger is
+\[
+L_O(a)=[o_1(a),\ldots,o_n(a)].
+\]
+The support label is retained separately and identically at both endpoints. For each registered observation define its action on an ordered pair by F_i(x,y)=o_i(x). Exchanging (a,b) therefore changes the full physical observation ledger from L_O(a) to L_O(b). The existing fullLedgerExactly theorem establishes
+\[
+L_O(a)=L_O(b)\iff\forall i\in\{1,\ldots,n\},\ F_i(b,a)=F_i(a,b).
+\]
+physicalLedger proves the ledger projection by induction on O. completeVisitsExactly applies fullLedgerExactly and reverses the equality orientation, establishing the exact stored-trace equivalence with all registered observations retained.
+
+For the original comparison c, bind constructs its two endpoint ledgers using c.first_atom and c.second_atom and the same c.shared_support. It leaves c, including its held preferred endpoint, unchanged. Combining the resulting boundTraceExactly equivalence with exactTieClass gives, for both endpoints present in the census and the source cycle-exclusion check satisfied,
+\[
+a\preceq b\ \land\ b\preceq a
+\iff L_O(a)=L_O(b)
+\iff \forall i,\ F_i(b,a)=F_i(a,b).
+\]
+The finite register is an explicit input of this theorem. Its conclusion connects the complete supplied observations to the exact tie class; it does not choose an ordering for unequal ledgers. That orientation remains in the source comparison record.
+
+Appending a registered observation o retains all previous visits in order:
+\[
+L_{O\mathbin{+\!+}[o]}(a)=L_O(a)\mathbin{+\!+}[o(a)].
+\]
+appendVisits derives this identity from mapAppend. No rank, selected subset of visits or numerical affinity scale replaces the full ledger.
+
+Pinned source: sft/chemistry/redox_derivation.py, AFFINITY_DIMENSIONS and REDOX_BLUEPRINTS[0]; original chemistry paper section43. Lean: verification/TURN_594_STAGED/AffinityRecurrenceBinding.lean, endpoint, physicalObservations, physicalLedger, completeVisitsExactly, bind, boundTraceExactly, sourceComparisonUnchanged, completeObservationTie and appendVisits. Reused proof: SFT.Physics.QuantumPhysicalIdentity.fullLedgerExactly. All nine declarations have empty axiom dependencies. Evidence: verification/TURN_594_RECURRENCE_BINDING.json. Timeline: Turn594.

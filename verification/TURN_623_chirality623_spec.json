@@ -1,0 +1,214 @@
+{
+  "claim_id": "SFT-CHEM-STEREO-CHIRALITY-001",
+  "title": "Chirality and non-superposable held orientation",
+  "statement": "Chirality is the retained distinction between a complete oriented molecular carrier and its exact reflection when exhaustive identity-preserving proper superposition admits no equivalence.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete carrier preservation, exact equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite complete three-dimensional chemical structure with named atoms, adjacency, orientation and exhaustive identity-preserving proper maps.",
+  "dimensions": [
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "formula-only",
+          "admitted": false,
+          "reason": "A formula has no spatial orientation."
+        },
+        {
+          "name": "complete-three-dimensional-object",
+          "admitted": true,
+          "reason": "The full oriented carrier is retained."
+        }
+      ]
+    },
+    {
+      "key": "reflection",
+      "choices": [
+        {
+          "name": "mirror-image-not-generated",
+          "admitted": false,
+          "reason": "Chirality cannot be decided."
+        },
+        {
+          "name": "exact-mirror-image-generated",
+          "admitted": true,
+          "reason": "Reflection is constructed from the same carrier."
+        }
+      ]
+    },
+    {
+      "key": "composition",
+      "choices": [
+        {
+          "name": "mirror-composition-changed",
+          "admitted": false,
+          "reason": "The comparison is not reflective identity."
+        },
+        {
+          "name": "composition-preserved",
+          "admitted": true,
+          "reason": "All atomic identities are retained."
+        }
+      ]
+    },
+    {
+      "key": "adjacency",
+      "choices": [
+        {
+          "name": "mirror-adjacency-changed",
+          "admitted": false,
+          "reason": "The comparison changes constitution."
+        },
+        {
+          "name": "adjacency-preserved",
+          "admitted": true,
+          "reason": "Only orientation is reversed."
+        }
+      ]
+    },
+    {
+      "key": "superposition",
+      "choices": [
+        {
+          "name": "visual-guess",
+          "admitted": false,
+          "reason": "A guess cannot establish equivalence."
+        },
+        {
+          "name": "all-proper-finite-relabelings-enumerated",
+          "admitted": true,
+          "reason": "Every identity-preserving orientation map is tested."
+        }
+      ]
+    },
+    {
+      "key": "result",
+      "choices": [
+        {
+          "name": "arbitrary-handedness-name",
+          "admitted": false,
+          "reason": "A name cannot force distinction."
+        },
+        {
+          "name": "no-proper-superposition",
+          "admitted": true,
+          "reason": "The reflected carrier remains distinct."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "chirality-label-only",
+          "admitted": false,
+          "reason": "The result cannot be reproduced."
+        },
+        {
+          "name": "orientation-and-map-trace",
+          "admitted": true,
+          "reason": "Every attempted map is retained."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-chirality-rule",
+          "admitted": false,
+          "reason": "An extra rule can classify anything."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Reflection and exhaustive equivalence decide the class."
+        }
+      ]
+    }
+  ],
+  "exact_result": "complete-three-dimensional-object__exact-mirror-image-generated__composition-preserved__adjacency-preserved__no-proper-superposition",
+  "induction_base": "One oriented structure and its non-superposable reflection supply the first chiral pair.",
+  "induction_step": "Appending a uniquely labelled oriented branch preserves all prior failed maps and extends the exhaustive map census.",
+  "exclusions": [
+    "no stereochemical dictionary, organic reaction taxonomy, polymer table, biomolecular database, measured target or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no atom, bond, orientation, repeat unit, chain or observation distinction may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite complete three-dimensional chemical structure with named atoms, adjacency, orientation and exhaustive identity-preserving proper maps."
+  ],
+  "operational_witnesses": [
+    [
+      "composition",
+      "composition support is retained",
+      true
+    ],
+    [
+      "adjacency",
+      "adjacency is retained",
+      true
+    ],
+    [
+      "orientation",
+      "orientation fibre is held",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-STEREO-CHIRALITY-001",
+  "expected_observation_label": "object-not-superposable-on-mirror-image__chirality-retained__reflection-distinction__observation-boundary-held",
+  "target_rows": [
+    {
+      "target_id": "chirality-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-CHIRALITY-COMPOSITE-2026",
+      "source_locator": "authority source set anchored at C01058",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/C01058.json",
+      "snapshot_hash": "sha256:a787109fa5a2c606b0628013669773016b0245479ed6387584ba027d43e5f01b"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_stereochemistry_organic_polymer_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence lacks reflection, non-superposability, retained chirality or an observation boundary, or if a tampered row is accepted."
+}

@@ -17975,3 +17975,32 @@ InterfaceTransferGrammar retains all eight original axes and all 256 alternative
 Pinned V3: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1; sft/chemistry/catalysis_interfaces_derivation.py, InterfaceWitness, TRANSFER and CATALYSIS_INTERFACE_BLUEPRINTS[7]; catalysis_interfaces_batch_1.py; claims/SFT-CHEM-INTERFACE-TRANSFER-001/execution.py. Lean: SFT/Chemistry/InterfacialTransfer.lean and InterfaceTransferGrammar/Evidence/Experiment/Validation. Reused proofs: SurfaceAdsorption.phaseIdentitiesDiffer and changeConserves, with the actual arrivalAt/departureAt constructions; ExactRatioRelations.ratioValue. Timeline: Turn622.
 
 All 144 current entry declarations have empty Lean axiom dependencies. The complete native program, empirical validator and original independent controls match V3; this entry is registered complete.
+
+
+Chirality: source constructor and exhaustive map trace
+
+The OrientedStructure constructor retains a nonempty composition word C, a nonempty adjacency word A and a held label o in the molecular-orientation family. Its acceptance condition is
+\[
+|C|>0\ \land\ |A|>0\ \land\ \operatorname{family}(o)=\text{molecular-orientation}.
+\]
+The constructor does not discard repeated composition or adjacency entries and does not impose an additional endpoint-range test. Chirality.admit translates that exact guard. emptyCompositionRejected, emptyAdjacencyRejected and nonemptyAccepted prove the corresponding rejection and admission cases.
+
+The proper-map comparison uses the existing exhaustive finite relabelling construction. For a nonempty word N of distinct occurrence names, let P(N) be arrangementsCore N and let b(p) denote the complete comparison for order p. The retained map trace is
+\[
+T(N,b)=[(p,b(p)):p\in P(N)].
+\]
+The existing everyArrangementPermutesCarrier and everyPermutationGenerated proofs give both directions of the enumeration correspondence:
+\[
+p\in P(N)\ \Longleftrightarrow\ p\text{ is a permutation of }N.
+\]
+Chirality.exhaustiveSuperposition therefore establishes
+\[
+\operatorname{any}_{p\in P(N)} b(p)=\mathrm{true}
+\ \Longleftrightarrow\ \exists p\text{ permuting }N,\ b(p)=\mathrm{true}.
+\]
+Its noSuperpositionExactly theorem establishes the complementary statement for every such order, retaining failed comparisons in the trace. These statements quantify over the supplied comparison b; the reflection-specific comparison and the uniquely labelled branch extension are separate source obligations and are not asserted by this enumeration theorem.
+
+The source's eight binary grammar coordinates generate all 256 alternatives. ChiralityGrammar, ChiralityEvidence, ChiralityExperiment and ChiralityValidation preserve the source decisions, witnesses, controls and empirical binding. StereoSeal and StereoSealInputs retain the original eight-prediction stereochemistry/organic/polymer seal. Fresh native outputs match all 256 V3 decisions, closure, controls, registration and empirical output fields. All 130 declarations audited in this construction have empty Lean axiom dependencies.
+
+Pinned V3: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1; sft/chemistry/stereochemistry_organic_polymer_derivation.py, OrientedStructure, CHIRAL and STEREOCHEMISTRY_ORGANIC_POLYMER_BLUEPRINTS[0]; stereochemistry_organic_polymer_batch_1.py; claims/SFT-CHEM-STEREO-CHIRALITY-001/execution.py. Lean: SFT/Chemistry/Chirality.lean, MolecularIsomer.completeRelabellingSearch, MolecularIsomer.retainedOrientationExcludesEveryRelabelling, ArrangementCompleteness, and ChiralityGrammar/Evidence/Experiment/Validation. Timeline: Turn623. This section records the displayed constructor and enumeration results; entry completion is not claimed here.
+

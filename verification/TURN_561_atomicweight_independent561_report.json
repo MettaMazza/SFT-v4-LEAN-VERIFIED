@@ -1,0 +1,58 @@
+[
+  {
+    "case": "original",
+    "expected": true,
+    "actual": {
+      "certificate": {
+        "candidate_count": 256,
+        "claim_id": "SFT-CHEM-ELEM-ATOMIC-WEIGHT-001",
+        "survivor": "exact-ratio-carrier__average-atomic-mass__isotope-support-retained__isotope-mass-pairs__reference-unit-comparison__source-bounded-population__measurement-interval-retained__no-extra-rule"
+      },
+      "passed": true,
+      "recomputed_from_declared_inputs": true,
+      "validated_seal_hash": "native-atomicweight-561"
+    }
+  },
+  {
+    "case": "omitted_candidate",
+    "expected": false,
+    "actual": {
+      "certificate": {
+        "candidate_count": 256,
+        "claim_id": "SFT-CHEM-ELEM-ATOMIC-WEIGHT-001",
+        "survivor": null
+      },
+      "passed": false,
+      "recomputed_from_declared_inputs": true,
+      "validated_seal_hash": "native-atomicweight-561"
+    }
+  },
+  {
+    "case": "additional_survivor",
+    "expected": false,
+    "actual": {
+      "certificate": {
+        "candidate_count": 256,
+        "claim_id": "SFT-CHEM-ELEM-ATOMIC-WEIGHT-001",
+        "survivor": null
+      },
+      "passed": false,
+      "recomputed_from_declared_inputs": true,
+      "validated_seal_hash": "native-atomicweight-561"
+    }
+  },
+  {
+    "case": "failed_control",
+    "expected": false,
+    "actual": {
+      "certificate": {
+        "candidate_count": 256,
+        "claim_id": "SFT-CHEM-ELEM-ATOMIC-WEIGHT-001",
+        "survivor": null
+      },
+      "passed": false,
+      "recomputed_from_declared_inputs": true,
+      "validated_seal_hash": "native-atomicweight-561"
+    }
+  }
+]

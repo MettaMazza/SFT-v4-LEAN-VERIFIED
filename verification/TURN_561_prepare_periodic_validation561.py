@@ -1,0 +1,2 @@
+from pathlib import Path
+p=Path('work/constants-recovery/SFT/Chemistry/PeriodicOrderValidation.lean');s=p.read_text();s='import SFT.Chemistry.PeriodicExtraction\n'+s;s=s.replace('List SourceExtraction.Snapshot','List PeriodicExtraction.Snapshot').replace('resolveAll registry references snapshots','PeriodicExtraction.resolveAll registry references snapshots').replace('exact-source-derived-held-label-equality','exact-mixed-source-derived-held-label-equality');p.write_text(s)

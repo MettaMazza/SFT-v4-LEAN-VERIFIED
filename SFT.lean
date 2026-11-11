@@ -3771,3 +3771,15 @@ import SFT.Chemistry.IsotopeGrammar
 import SFT.Chemistry.IsotopeEvidence
 import SFT.Chemistry.IsotopeExperiment
 import SFT.Chemistry.IsotopeValidation
+import SFT.Chemistry.AtomicWeightPopulation
+import SFT.Chemistry.AtomicWeightGrammar
+import SFT.Chemistry.AtomicWeightEvidence
+import SFT.Chemistry.AtomicWeightExperiment
+import SFT.Chemistry.AtomicWeightValidation
+import SFT.Chemistry.PeriodicPDF
+import SFT.Chemistry.PeriodicExtraction
+import SFT.Chemistry.PeriodicOrderTrace
+import SFT.Chemistry.PeriodicOrderGrammar
+import SFT.Chemistry.PeriodicOrderEvidence
+import SFT.Chemistry.PeriodicOrderExperiment
+import SFT.Chemistry.PeriodicOrderValidation

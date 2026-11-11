@@ -1,0 +1,11 @@
+from pathlib import Path
+import ast,zlib,re,json,subprocess,os
+w=Path('work');raw=subprocess.check_output(['git','-C','/Volumes/One Touch/ernos-labs-sft-platform','show','76f1b34e9e9682989adcbb088797b4ae4ce4fcf1:sft/chemistry/generated_periodic_law.py'],text=True);t=ast.parse(raw);ns={'re':re,'zlib':zlib};exec(compile(ast.Module(body=[n for n in t.body if getattr(n,'name',None)=='_pdf_literal_strings'],type_ignores=[]),'pinned_parser','exec'),ns)
+cases=[b'',b'no literals',b'(one)(two)',b'(nested (two) end)',b'(escaped \\(two\\))',b'(a\\nb\\rc\\td\\be\\ff)',b'(\\101\\12\\7)',b'(\\1234)',b'(unfinished',b'(last\\',b'(\\777)',bytes([40,160,233,41]),b'((a)(b)) tail (c)']
+expected=[];calls=[]
+for i,stream in enumerate(cases):
+ p=(w/'periodic561_io'/('case'+str(i)+'.bin')).resolve();p.write_bytes(stream)
+ try:value=list(ns['_pdf_literal_strings'](b'stream\n'+zlib.compress(stream)+b'\nendstream'));expected.append(value)
+ except ValueError:expected.append('error')
+ calls.append(' let b ← IO.FS.readBinFile '+json.dumps(str(p))+'\n match PeriodicPDF.strings [b] with\n | .error _ => IO.println "error"\n | .ok ss => IO.println (render (.array (ss.map Value.text)))\n')
+s='import SFT.Chemistry.PeriodicPDF\nimport SFT.Host.Canonical\nopen SFT.Chemistry SFT.Host.Canonical\ndef main : IO Unit := do\n'+''.join(calls);r=(w/'constants-recovery').resolve();(r/'PDFParserChecks561.lean').write_text(s);env=dict(os.environ,LEAN_PATH=str(r/'.lake/build/lib/lean'));out=subprocess.run(['/Users/dolltrading/.elan/bin/lean','--run','PDFParserChecks561.lean'],cwd=r,env=env,capture_output=True,text=True);(w/'pdf_parser561_output.log').write_text(out.stdout+out.stderr);assert out.returncode==0,out.stdout+out.stderr;actual=[json.loads(x) if x!='error' else 'error' for x in out.stdout.splitlines()];assert actual==expected,(actual,expected);(w/'pdf_parser561_report.json').write_text(json.dumps({'status':'PASS','cases':len(cases),'native_literal_parser_matches_pinned_v3':True,'covers':['empty','absent','consecutive literals','nested delimiters','escaped delimiters','named escapes','one/two/three octal digits','octal length cap','unterminated literal','terminal backslash','out-of-byte-range octal rejection','Latin-1','multiple nested literals']},indent=2));print('PASS',len(cases),'native PDF parser cases')

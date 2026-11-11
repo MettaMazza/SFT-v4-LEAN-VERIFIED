@@ -21358,9 +21358,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ELEM-ATOMIC-WEIGHT-001-56247bdb02421bb7.json",
       "statement": "Relative atomic mass is the exact source-bounded Fold ratio of a finite atom population's retained average mass to a separately registered unified atomic-mass reference, with isotope support and measurement uncertainty preserved.",
       "title": "Atomic-weight record and isotopic composition boundary",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/AtomicWeightPopulation.lean",
+        "SFT/Chemistry/AtomicWeightGrammar.lean",
+        "SFT/Chemistry/AtomicWeightEvidence.lean",
+        "SFT/Chemistry/AtomicWeightExperiment.lean",
+        "SFT/Chemistry/AtomicWeightValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full256-form program, original empirical output, ten extraction cases and original independent-validator controls.",
       "registration_sha256": "3dce391e4e3b8525889af385289ba18b02d4d4c4cd70e72342ff15a7a63a9db5",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -21417,7 +21423,10 @@
         "statement": "Relative atomic mass is the exact source-bounded Fold ratio of a finite atom population's retained average mass to a separately registered unified atomic-mass reference, with isotope support and measurement uncertainty preserved.",
         "status": "empirically_tested",
         "title": "Atomic-weight record and isotopic composition boundary"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_561_ATOMICWEIGHT_COMPLETION.json",
+      "verified_scope": "Exact registered isotope/abundance/mass pairs, positive weighted sum and average, separately registered reference-unit quotient, original source/uncertainty boundary, forced accumulation and finite-history pair retention.; Original eight binary axes, complete256 alternatives and exact decisions/sole survivor.; Original source registration, complete census, controls and closure.; Exact source specification, sealed prediction and source references.; Full original empirical extraction, isolation/custody and all comparison fields/hashes."
     },
     {
       "branch": "chemistry",
@@ -21429,9 +21438,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ELEM-PERIODIC-ORDER-001-b7092fdbc3d12a01.json",
       "statement": "Chemical elements possess one invariant exact total order: the generated positive proton-count order, with the complete element class retained at each coordinate.",
       "title": "Periodic ordering by retained nuclear identity",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/PeriodicPDF.lean",
+        "SFT/Chemistry/PeriodicExtraction.lean",
+        "SFT/Chemistry/PeriodicOrderTrace.lean",
+        "SFT/Chemistry/PeriodicOrderGrammar.lean",
+        "SFT/Chemistry/PeriodicOrderEvidence.lean",
+        "SFT/Chemistry/PeriodicOrderExperiment.lean",
+        "SFT/Chemistry/PeriodicOrderValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full256-form native program, complete mixed-source empirical output/all hashes, native official PDF parser comparison,13 lexical cases and original independent-validator controls.",
       "registration_sha256": "642cb05b0cb0bad490d0474de7e86c74b7de6ce4b6d6be93aceeb6788813707e",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -21487,7 +21504,10 @@
         "statement": "Chemical elements possess one invariant exact total order: the generated positive proton-count order, with the complete element class retained at each coordinate.",
         "status": "empirically_tested",
         "title": "Periodic ordering by retained nuclear identity"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_561_PERIODICORDER_COMPLETION.json",
+      "verified_scope": "Complete element/isotope/source records at nuclear-count coordinates; exact total order on element classes, one-count successor, forced sequence coordinate and layout independence.; Original exhaustive eight-axis256 alternatives with exact decisions/sole survivor.; Original chemistry registration, census, controls and closure.; Distinct frozen derivation and observation labels, original sealed prediction and reference registration.; Original literal-string parser over decompressed PDF streams, nesting, escapes, octal/Latin-1, whitespace normalization and joined digits; original regex/zlib adapter binds streams to same pinned bytes.; Original mixed-source registry guards, snapshot identity, PDF required-fragment extraction and source-kind-bound extraction hashes.; Original mixed-source empirical custody/isolation, comparison identity and all output fields/hashes."
     },
     {
       "branch": "chemistry",
@@ -193670,13 +193690,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T02:28:45.447861+00:00",
+  "updated_at": "2026-11-11T02:43:34.114166+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2424,
-    "fully_reconstructed_claims": 357,
-    "axiom_free_exported_results": 19657,
-    "axiom_free_audited_definitions_and_theorems": 44202
+    "pending": 2422,
+    "fully_reconstructed_claims": 359,
+    "axiom_free_exported_results": 19734,
+    "axiom_free_audited_definitions_and_theorems": 44455
   }
 }

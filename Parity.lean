@@ -1171,3 +1171,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.IsotopeGrammar.candidates do
     IO.println ("IsotopeGrammar\t" ++ SFT.Chemistry.IsotopeGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.IsotopeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.IsotopeGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.IsotopeGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.AtomicWeightGrammar.candidates do
+    IO.println ("AtomicWeightGrammar\t" ++ SFT.Chemistry.AtomicWeightGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AtomicWeightGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AtomicWeightGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AtomicWeightGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.PeriodicOrderGrammar.candidates do
+    IO.println ("PeriodicOrderGrammar\t" ++ SFT.Chemistry.PeriodicOrderGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.PeriodicOrderGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.PeriodicOrderGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.PeriodicOrderGrammar.decisionReason c)

@@ -1,0 +1,215 @@
+{
+  "claim_id": "SFT-CHEM-POLYMER-CHAIN-001",
+  "title": "Polymer chain from repeated monomer identity",
+  "statement": "A polymer chain is one finite connected macromolecular carrier formed by covalently ordered occurrences of a retained repeat-unit identity with exact positive extent and explicit ends.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001",
+    "SFT-CHEM-ORGANIC-FUNCTIONAL-GROUP-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete carrier preservation, exact equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite connected molecular incidence path containing repeated complete low-mass unit traces, covalent connections and explicit terminal boundaries.",
+  "dimensions": [
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "unconnected-monomer-mixture",
+          "admitted": false,
+          "reason": "No chain exists."
+        },
+        {
+          "name": "connected-macromolecular-carrier",
+          "admitted": true,
+          "reason": "All repeat occurrences form one carrier."
+        }
+      ]
+    },
+    {
+      "key": "repeat",
+      "choices": [
+        {
+          "name": "anonymous-segments",
+          "admitted": false,
+          "reason": "Repeat identity is lost."
+        },
+        {
+          "name": "repeated-low-mass-unit-identity",
+          "admitted": true,
+          "reason": "A complete unit trace recurs."
+        }
+      ]
+    },
+    {
+      "key": "connection",
+      "choices": [
+        {
+          "name": "noncovalent-coincidence",
+          "admitted": false,
+          "reason": "The sequence is not a polymer chain."
+        },
+        {
+          "name": "covalent-sequence-connections",
+          "admitted": true,
+          "reason": "Successive occurrences are chemically joined."
+        }
+      ]
+    },
+    {
+      "key": "order",
+      "choices": [
+        {
+          "name": "occurrence-order-erased",
+          "admitted": false,
+          "reason": "Chain topology is lost."
+        },
+        {
+          "name": "ordered-chain-incidence",
+          "admitted": true,
+          "reason": "Every neighbor relation is held."
+        }
+      ]
+    },
+    {
+      "key": "extent",
+      "choices": [
+        {
+          "name": "fixed-universal-length",
+          "admitted": false,
+          "reason": "Length is population- and synthesis-bound."
+        },
+        {
+          "name": "positive-finite-repeat-count",
+          "admitted": true,
+          "reason": "Every realized chain has an exact count."
+        }
+      ]
+    },
+    {
+      "key": "ends",
+      "choices": [
+        {
+          "name": "infinite-chain-assumed",
+          "admitted": false,
+          "reason": "A finite carrier needs a boundary."
+        },
+        {
+          "name": "chain-end-boundary-retained",
+          "admitted": true,
+          "reason": "Terminal identities remain explicit."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "polymer-name-only",
+          "admitted": false,
+          "reason": "The chain cannot be reconstructed."
+        },
+        {
+          "name": "repeat-connection-end-trace",
+          "admitted": true,
+          "reason": "Every occurrence and bond is retained."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-polymer-rule",
+          "admitted": false,
+          "reason": "A threshold can arbitrarily select chains."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Connected repeat recurrence supplies the class."
+        }
+      ]
+    }
+  ],
+  "exact_result": "connected-macromolecular-carrier__repeated-low-mass-unit-identity__covalent-sequence-connections__ordered-chain-incidence__positive-finite-repeat-count",
+  "induction_base": "Two connected occurrences of one repeat identity supply the first nontrivial chain.",
+  "induction_step": "Appending one covalently connected occurrence preserves prior order and moves one retained terminal boundary.",
+  "exclusions": [
+    "no stereochemical dictionary, organic reaction taxonomy, polymer table, biomolecular database, measured target or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no atom, bond, orientation, repeat unit, chain or observation distinction may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite connected molecular incidence path containing repeated complete low-mass unit traces, covalent connections and explicit terminal boundaries."
+  ],
+  "operational_witnesses": [
+    [
+      "repeat",
+      "repeat identity is held",
+      true
+    ],
+    [
+      "extent",
+      "repeat count is positive",
+      true
+    ],
+    [
+      "connections",
+      "chain connections are positive",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-POLYMER-CHAIN-001",
+  "expected_observation_label": "high-relative-molecular-mass-molecule__repeated-low-mass-units__covalent-sequence__chain-end-boundary",
+  "target_rows": [
+    {
+      "target_id": "polymer-chain-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-POLYMER-CHAIN-COMPOSITE-2026",
+      "source_locator": "authority source set anchored at M03667",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/M03667.json",
+      "snapshot_hash": "sha256:b38c6c106e35763169204b065edaabf18df22bf97f4ea9094db3b8b72383e85a"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_stereochemistry_organic_polymer_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence lacks a macromolecular carrier, repeated units, covalent sequence or chain boundary, or if a tampered row is accepted."
+}

@@ -1,0 +1,214 @@
+{
+  "claim_id": "SFT-CHEM-ORGANIC-FUNCTIONAL-GROUP-001",
+  "title": "Functional-group recurrence and reaction role",
+  "statement": "A functional group is a retained atom-or-group subcarrier whose complete local structure recurs across molecular embeddings and carries a characteristic generated reaction role within a declared context.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete carrier preservation, exact equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite molecular carrier with complete named substructures, boundary bonds and generated source-bound reaction traces.",
+  "dimensions": [
+    {
+      "key": "support",
+      "choices": [
+        {
+          "name": "whole-molecule-only",
+          "admitted": false,
+          "reason": "No recurrent substructure is identified."
+        },
+        {
+          "name": "named-atom-or-group-support",
+          "admitted": true,
+          "reason": "The participating subcarrier is retained."
+        }
+      ]
+    },
+    {
+      "key": "embedding",
+      "choices": [
+        {
+          "name": "isolated-fragment",
+          "admitted": false,
+          "reason": "A functional group acts in a molecule."
+        },
+        {
+          "name": "molecular-embedding-held",
+          "admitted": true,
+          "reason": "Boundary bonds and context remain explicit."
+        }
+      ]
+    },
+    {
+      "key": "recurrence",
+      "choices": [
+        {
+          "name": "one-molecule-only",
+          "admitted": false,
+          "reason": "No group class is established."
+        },
+        {
+          "name": "recurs-across-molecules",
+          "admitted": true,
+          "reason": "The same complete subtrace appears in multiple carriers."
+        }
+      ]
+    },
+    {
+      "key": "reaction",
+      "choices": [
+        {
+          "name": "shape-without-transition-role",
+          "admitted": false,
+          "reason": "Function requires chemical behavior."
+        },
+        {
+          "name": "characteristic-reaction-role",
+          "admitted": true,
+          "reason": "The subcarrier maps through a generated reaction family."
+        }
+      ]
+    },
+    {
+      "key": "identity",
+      "choices": [
+        {
+          "name": "context-erases-group",
+          "admitted": false,
+          "reason": "The group cannot be followed."
+        },
+        {
+          "name": "group-identity-retained",
+          "admitted": true,
+          "reason": "Atoms and boundary bonds remain held."
+        }
+      ]
+    },
+    {
+      "key": "context",
+      "choices": [
+        {
+          "name": "universal-context-free-response",
+          "admitted": false,
+          "reason": "Neighboring structure can modify response."
+        },
+        {
+          "name": "molecular-context-bounded",
+          "admitted": true,
+          "reason": "The observation domain is explicit."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "group-name-only",
+          "admitted": false,
+          "reason": "Recurrence cannot be reproduced."
+        },
+        {
+          "name": "substructure-and-reaction-trace",
+          "admitted": true,
+          "reason": "Every embedding and transition is retained."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-functional-taxonomy",
+          "admitted": false,
+          "reason": "An imported list selects the group."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Recurrent structure and reaction role supply the class."
+        }
+      ]
+    }
+  ],
+  "exact_result": "named-atom-or-group-support__molecular-embedding-held__recurs-across-molecules__characteristic-reaction-role__group-identity-retained",
+  "induction_base": "One recurrent substructure with one retained reaction role supplies the first functional group.",
+  "induction_step": "Appending a molecular embedding preserves the group trace and adds its context-bound reaction occurrence.",
+  "exclusions": [
+    "no stereochemical dictionary, organic reaction taxonomy, polymer table, biomolecular database, measured target or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no atom, bond, orientation, repeat unit, chain or observation distinction may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite molecular carrier with complete named substructures, boundary bonds and generated source-bound reaction traces."
+  ],
+  "operational_witnesses": [
+    [
+      "support",
+      "subcarrier has positive support",
+      true
+    ],
+    [
+      "embedding",
+      "boundary adjacency exists",
+      true
+    ],
+    [
+      "reaction",
+      "role remains separately held",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-ORGANIC-FUNCTIONAL-GROUP-001",
+  "expected_observation_label": "atom-or-group-with-characteristic-properties__recurs-across-molecules__reaction-role-retained__molecular-context-bounded",
+  "target_rows": [
+    {
+      "target_id": "functional-group-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-FUNCTIONAL-GROUP-COMPOSITE-2026",
+      "source_locator": "authority source set anchored at F02555",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/F02555.json",
+      "snapshot_hash": "sha256:1fc0f254f488921a762c25454615ea9ec4f40d54736be524fa9f4ff8d79869d1"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_stereochemistry_organic_polymer_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence lacks an atom/group, characteristic behavior, recurrence, reaction role or context boundary, or if a tampered row is accepted."
+}

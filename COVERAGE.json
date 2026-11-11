@@ -27208,9 +27208,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ANALYTICAL-SAMPLE-001-1fd5c56d3970342f.json",
       "statement": "An analytical sample is a declared material portion whose complete resolved component support is partitioned by held roles into the analyte and retained matrix, together with its source-to-sample map.",
       "title": "Analytical sample, analyte and matrix distinction",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/AnalyticalSample.lean",
+        "SFT/Chemistry/AnalyticalSampleGrammar.lean",
+        "SFT/Chemistry/AnalyticalSampleEvidence.lean",
+        "SFT/Chemistry/AnalyticalSampleExperiment.lean",
+        "SFT/Chemistry/AnalyticalSampleValidation.lean",
+        "SFT/Chemistry/AnalyticalSeal.lean",
+        "SFT/Chemistry/AnalyticalSealInputs.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh639 native256/full program and empirical output; original independent adverse controls.",
       "registration_sha256": "d313d056eb9ffce9efaaa265ce8634383f4cf6fbd453d786e5876b2bb88dd978",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -27294,7 +27302,10 @@
         "statement": "An analytical sample is a declared material portion whose complete resolved component support is partitioned by held roles into the analyte and retained matrix, together with its source-to-sample map.",
         "status": "empirically_tested",
         "title": "Analytical sample, analyte and matrix distinction"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_639_ANALYTICAL_SAMPLE_COMPLETION.json",
+      "verified_scope": "Exact AnalyticalTrace family and nonempty component/observation guards, independent support lengths and repeated labels retained; complete held analyte/matrix partition, exhaustive and disjoint membership, no invented rows; source-origin and component-response maps with complete coverage; two-component base; general portion with at least one analyte and all non-analyte support, append preserving every row, role and sampling boundary.; Original eight binary axes, all256 candidates, exact decisions, complete enumeration and unique survivor.; Original registration, full census, operational witnesses, controls and closure.; Original sealed prediction, source references and empirical boundary.; Complete original multi-source empirical result and all hashes.; Original analytical_spectroscopic batch validate_pre_source_seal: derivation hash, payload hash, ordered predictions and strict false source-access flags.; Pinned original derivation bytes and pre-source seal payload, validated before native execution."
     },
     {
       "branch": "chemistry",
@@ -27306,9 +27317,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ANALYTICAL-CALIBRATION-001-94e195edc3e188f5.json",
       "statement": "Calibration is the complete traceable comparison of held reference input/response pairs with a sample response inside an explicit finite method domain, retaining uncertainty and every row.",
       "title": "Analytical calibration and traceable comparison",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/AnalyticalCalibration.lean",
+        "SFT/Chemistry/AnalyticalCalibrationGrammar.lean",
+        "SFT/Chemistry/AnalyticalCalibrationEvidence.lean",
+        "SFT/Chemistry/AnalyticalCalibrationExperiment.lean",
+        "SFT/Chemistry/AnalyticalCalibrationValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh639 native256/full program and empirical output; original independent adverse controls.",
       "registration_sha256": "050a8bfa72cc2cb05ac0f0b05c7743390d36220dee5e5f024caea1a348ef5e16",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -27393,7 +27410,10 @@
         "statement": "Calibration is the complete traceable comparison of held reference input/response pairs with a sample response inside an explicit finite method domain, retaining uncertainty and every row.",
         "status": "empirically_tested",
         "title": "Analytical calibration and traceable comparison"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_639_ANALYTICAL_CALIBRATION_COMPLETION.json",
+      "verified_scope": "Bound reference inputs with complete existing traceability chains, responses and uncertainty; source sample portion and response; complete ordered reference/sample comparison trace with both coverage directions and count equality; shared observation organisation/method/domain; concrete finite observed response support containing exactly reference and sample responses; all admissible uncertainty alternatives retained; one-reference base; append preserves every prior comparison and extends exact reference input/response support.; Original eight binary axes, all256 candidates, exact decisions, complete enumeration and unique survivor.; Original registration, full census, operational witnesses, controls and closure.; Original analytical batch sealed prediction, source references and empirical boundary.; Complete original multi-source empirical result and all hashes."
     },
     {
       "branch": "chemistry",
@@ -194268,13 +194288,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T17:26:01.593387+00:00",
+  "updated_at": "2026-11-11T17:37:29.497420+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2360,
-    "fully_reconstructed_claims": 421,
-    "axiom_free_exported_results": 22338,
-    "axiom_free_audited_definitions_and_theorems": 52189
+    "pending": 2358,
+    "fully_reconstructed_claims": 423,
+    "axiom_free_exported_results": 22425,
+    "axiom_free_audited_definitions_and_theorems": 52446
   }
 }

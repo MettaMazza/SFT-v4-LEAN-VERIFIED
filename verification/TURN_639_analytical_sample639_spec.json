@@ -1,0 +1,218 @@
+{
+  "claim_id": "SFT-CHEM-ANALYTICAL-SAMPLE-001",
+  "title": "Analytical sample, analyte and matrix distinction",
+  "statement": "An analytical sample is a declared material portion whose complete resolved component support is partitioned by held roles into the analyte and retained matrix, together with its source-to-sample map.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001",
+    "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+    "SFT-CHEM-MEAS-UNCERTAINTY-001",
+    "SFT-CHEM-MEAS-TRACEABILITY-001",
+    "SFT-CHEM-BIOMOLECULAR-BOUNDARY-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete distinction preservation, exact recurrence/equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite declared material portion with complete resolved components, one or more analyte roles and retained non-analyte support.",
+  "dimensions": [
+    {
+      "key": "portion",
+      "choices": [
+        {
+          "name": "unbounded-material-name",
+          "admitted": false,
+          "reason": "No sampled carrier is identified."
+        },
+        {
+          "name": "declared-material-portion",
+          "admitted": true,
+          "reason": "The inspected material occurrence is retained."
+        }
+      ]
+    },
+    {
+      "key": "components",
+      "choices": [
+        {
+          "name": "component-support-erased",
+          "admitted": false,
+          "reason": "The portion cannot be compositionally audited."
+        },
+        {
+          "name": "complete-resolved-component-support",
+          "admitted": true,
+          "reason": "Every resolved component remains present."
+        }
+      ]
+    },
+    {
+      "key": "analyte",
+      "choices": [
+        {
+          "name": "analyte-not-designated",
+          "admitted": false,
+          "reason": "No measurand-bearing component is selected."
+        },
+        {
+          "name": "analyte-role-held",
+          "admitted": true,
+          "reason": "The component under determination is explicit."
+        }
+      ]
+    },
+    {
+      "key": "matrix",
+      "choices": [
+        {
+          "name": "non-analyte-components-discarded",
+          "admitted": false,
+          "reason": "Interference support is hidden."
+        },
+        {
+          "name": "matrix-support-held",
+          "admitted": true,
+          "reason": "All other resolved components remain recorded."
+        }
+      ]
+    },
+    {
+      "key": "sampling",
+      "choices": [
+        {
+          "name": "sample-equals-whole-source",
+          "admitted": false,
+          "reason": "A portion need not reproduce the source whole."
+        },
+        {
+          "name": "source-to-sample-map-held",
+          "admitted": true,
+          "reason": "The sampling relation is explicit."
+        }
+      ]
+    },
+    {
+      "key": "observation",
+      "choices": [
+        {
+          "name": "response-without-component-map",
+          "admitted": false,
+          "reason": "A response cannot be assigned."
+        },
+        {
+          "name": "component-response-map-held",
+          "admitted": true,
+          "reason": "Response and carrier identities remain linked."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "result-only",
+          "admitted": false,
+          "reason": "The sample distinction cannot be reproduced."
+        },
+        {
+          "name": "sample-analyte-matrix-trace",
+          "admitted": true,
+          "reason": "All distinctions and maps are retained."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-sample-rule",
+          "admitted": false,
+          "reason": "A discretionary rule can select any portion."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Complete bounded support supplies the partition."
+        }
+      ]
+    }
+  ],
+  "exact_result": "declared-material-portion__complete-resolved-component-support__analyte-role-held__matrix-support-held__source-to-sample-map-held",
+  "induction_base": "One bounded two-component portion with one analyte and one matrix component supplies the first partition.",
+  "induction_step": "Appending a resolved component retains the prior partition and records its analyte or matrix role without erasure.",
+  "exclusions": [
+    "no analytical glossary, calibration curve, spectral database, measured line, fitted profile, target source or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no sample, component, response, transition, reference or unfavorable observation may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite declared material portion with complete resolved components, one or more analyte roles and retained non-analyte support."
+  ],
+  "operational_witnesses": [
+    [
+      "sample",
+      "sample carrier exists",
+      true
+    ],
+    [
+      "components",
+      "two component roles are retained",
+      true
+    ],
+    [
+      "observation",
+      "positive response support exists",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-ANALYTICAL-SAMPLE-001",
+  "expected_observation_label": "sample-is-declared-material-portion__analyte-is-component-under-determination__matrix-is-other-sample-components__sampling-boundary-held",
+  "target_rows": [
+    {
+      "target_id": "analytical-sample-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-ANALYTICAL-SAMPLE-COMPOSITE-2026",
+      "source_locator": "authority source set anchored at S05451",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/S05451.json",
+      "snapshot_hash": "sha256:f2d630c6a9a8ec0ab1304a6e9e3acf1bc495b9b3f2d5f3958375aa0c3fafa184"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_analytical_spectroscopic_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence lacks sample portion, analyte, matrix or sampling boundary, or if a tampered row is accepted."
+}

@@ -1,0 +1,219 @@
+{
+  "claim_id": "SFT-CHEM-ANALYTICAL-CALIBRATION-001",
+  "title": "Analytical calibration and traceable comparison",
+  "statement": "Calibration is the complete traceable comparison of held reference input/response pairs with a sample response inside an explicit finite method domain, retaining uncertainty and every row.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001",
+    "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+    "SFT-CHEM-MEAS-UNCERTAINTY-001",
+    "SFT-CHEM-MEAS-TRACEABILITY-001",
+    "SFT-CHEM-BIOMOLECULAR-BOUNDARY-001",
+    "SFT-CHEM-ANALYTICAL-SAMPLE-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete distinction preservation, exact recurrence/equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite registered reference-response set and sample response sharing one declared observation organization.",
+  "dimensions": [
+    {
+      "key": "reference",
+      "choices": [
+        {
+          "name": "unknown-reference-input",
+          "admitted": false,
+          "reason": "Comparison has no fixed support."
+        },
+        {
+          "name": "traceable-reference-input",
+          "admitted": true,
+          "reason": "Reference identity and provenance are held."
+        }
+      ]
+    },
+    {
+      "key": "response",
+      "choices": [
+        {
+          "name": "reference-response-erased",
+          "admitted": false,
+          "reason": "The comparison cannot be reconstructed."
+        },
+        {
+          "name": "reference-response-pair-held",
+          "admitted": true,
+          "reason": "Each input retains its observed response."
+        }
+      ]
+    },
+    {
+      "key": "ordering",
+      "choices": [
+        {
+          "name": "unordered-fit",
+          "admitted": false,
+          "reason": "A fit can conceal incompatible rows."
+        },
+        {
+          "name": "exact-generated-comparison-order",
+          "admitted": true,
+          "reason": "All reference comparisons are enumerated."
+        }
+      ]
+    },
+    {
+      "key": "sample",
+      "choices": [
+        {
+          "name": "sample-outside-reference-map",
+          "admitted": false,
+          "reason": "No calibrated comparison is possible."
+        },
+        {
+          "name": "sample-compared-with-reference-map",
+          "admitted": true,
+          "reason": "The same response organization is used."
+        }
+      ]
+    },
+    {
+      "key": "range",
+      "choices": [
+        {
+          "name": "universal-unbounded-map",
+          "admitted": false,
+          "reason": "Calibration support is finite and method-bound."
+        },
+        {
+          "name": "declared-calibration-domain",
+          "admitted": true,
+          "reason": "Its valid support is explicit."
+        }
+      ]
+    },
+    {
+      "key": "uncertainty",
+      "choices": [
+        {
+          "name": "uncertainty-erased",
+          "admitted": false,
+          "reason": "Alternatives are falsely collapsed."
+        },
+        {
+          "name": "reference-and-sample-uncertainty-held",
+          "admitted": true,
+          "reason": "Every admissible interval remains."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "calibrated-answer-only",
+          "admitted": false,
+          "reason": "Traceability is lost."
+        },
+        {
+          "name": "reference-map-and-result-trace",
+          "admitted": true,
+          "reason": "Inputs, responses and comparison are retained."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-calibration-parameter",
+          "admitted": false,
+          "reason": "A fitted value can select the answer."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "The complete registered comparison fixes the result."
+        }
+      ]
+    }
+  ],
+  "exact_result": "traceable-reference-input__reference-response-pair-held__exact-generated-comparison-order__sample-compared-with-reference-map__declared-calibration-domain",
+  "induction_base": "One traceable reference-response pair and one sample response supply the first comparison.",
+  "induction_step": "Appending a reference pair preserves every earlier comparison and extends the declared calibration support.",
+  "exclusions": [
+    "no analytical glossary, calibration curve, spectral database, measured line, fitted profile, target source or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no sample, component, response, transition, reference or unfavorable observation may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite registered reference-response set and sample response sharing one declared observation organization."
+  ],
+  "operational_witnesses": [
+    [
+      "reference",
+      "sample identity remains",
+      true
+    ],
+    [
+      "response",
+      "positive observations are retained",
+      true
+    ],
+    [
+      "uncertainty",
+      "alternatives remain held",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-ANALYTICAL-CALIBRATION-001",
+  "expected_observation_label": "calibration-relates-response-to-reference-values__traceability-chain-retained__calibration-domain-explicit__uncertainty-method-bounded",
+  "target_rows": [
+    {
+      "target_id": "analytical-calibration-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-ANALYTICAL-CALIBRATION-COMPOSITE-2026",
+      "source_locator": "authority source set anchored at C00775",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/C00775.json",
+      "snapshot_hash": "sha256:9a50ffb4e909ae78ac6ccf2cfa69db372a7ff659db4fb88b48e89e79322b69c0"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_analytical_spectroscopic_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence lacks response/reference relation, traceability, domain or uncertainty/method boundary, or if a tampered row is accepted."
+}

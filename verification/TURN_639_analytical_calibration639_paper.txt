@@ -1,0 +1,22 @@
+Analytical calibration: complete traceable reference comparison
+
+Each reference row retains its input record x_i, response y_i, source provenance and uncertainty, together with the existing traceability chain from its realized anchor. completeReferenceChain proves that certificate subjects reproduce the complete retained record chain. allReferenceCertificatesHeld proves that every certificate is either the anchor certificate or belongs to the registered ledger; traceabilityRetainsInput preserves the property identity along the chain. The anchor's operational realization is retained by referenceRealizationHeld.
+
+For sample response s, common observation organization O, method M and declared boundary D, the complete calibration comparison is constructed in retained reference order:
+\[K(R,s,O,M,D)=[(r_i,s,O,M,D)]_{r_i\in R}.\]
+completeComparison and noInventedComparison prove the two directions of correspondence between reference rows and generated comparisons. comparisonCount gives |K|=|R|. comparisonInputBound and sampleResponseBound preserve each input/response association and the complete sample response record. allComparisonsShareOrganization proves that every generated comparison uses the declared organization, method and boundary. No response-transfer formula or fitted curve is introduced.
+
+The observed response domain is also constructed explicitly:
+\[O_R=[y_i]_{r_i\in R}\mathbin{+\!+}[s],\qquad |O_R|=|R|+1.\]
+sampleInsideSupport and referenceInsideSupport prove that the sample and every reference response lie in this finite domain. supportContainsOnlyRecordedResponses proves the converse: each member comes from a registered reference or the sample. The method/domain record is held alongside this concrete finite observation support.
+
+The finite calibration support is the complete list of held input/response pairs
+\[S(R)=[(x_i,y_i)]_{r_i\in R}.\]
+everyReferenceInSupport and supportNoInventedPair establish exact coverage. The one-reference base generates one comparison. Appending reference row r gives
+\[K(R\mathbin{+\!+}[r],s,O,M,D)=K(R,s,O,M,D)\mathbin{+\!+}[(r,s,O,M,D)],\]
+\[S(R\mathbin{+\!+}[r])=S(R)\mathbin{+\!+}[(x_r,y_r)].\]
+appendComparisonOrder and supportExtension prove these equations. Every prior comparison remains present, and the finite reference support grows by the newly retained pair; the sample and method records remain held.
+
+Uncertainty accompanies all three relevant records: reference input, reference response and sample response. comparisonUncertaintyRetained proves exact record preservation. admissibleReferenceAlternativesRetained and admissibleSampleAlternativesRetained reuse the established uncertainty retention theorem: every supplied decision still marked admissible remains in its associated alternative support. No favorable subset replaces the complete retained comparison.
+
+The original eight binary coordinates generate256 candidates; the exhaustive grammar and unique-survivor proofs accompany these traceability, finite-support and append derivations. Native program, empirical and independent-control evidence is recorded in the completion receipt. Source: pinned V3 analytical_spectroscopic_derivation.py, blueprint[1] and CALIBRATION; analytical_spectroscopic_batch_1.py; claims/SFT-CHEM-ANALYTICAL-CALIBRATION-001/execution.py. Lean: SFT/Chemistry/AnalyticalCalibration.lean and AnalyticalCalibrationGrammar/Evidence/Experiment/Validation, reusing TraceabilityChain and UncertaintyRecord. Timeline: Turn639 calibration batch. Evidence: TURN_639_ANALYTICAL_CALIBRATION_COMPLETION.json.

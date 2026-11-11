@@ -1363,3 +1363,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.BiomolecularGrammar.candidates do
     IO.println ("BiomolecularGrammar\t" ++ SFT.Chemistry.BiomolecularGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.BiomolecularGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.BiomolecularGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.BiomolecularGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.AnalyticalSampleGrammar.candidates do
+    IO.println ("AnalyticalSampleGrammar\t" ++ SFT.Chemistry.AnalyticalSampleGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AnalyticalSampleGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AnalyticalSampleGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AnalyticalSampleGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.AnalyticalCalibrationGrammar.candidates do
+    IO.println ("AnalyticalCalibrationGrammar\t" ++ SFT.Chemistry.AnalyticalCalibrationGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AnalyticalCalibrationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AnalyticalCalibrationGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AnalyticalCalibrationGrammar.decisionReason c)

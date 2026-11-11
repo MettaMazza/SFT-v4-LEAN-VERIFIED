@@ -3896,3 +3896,13 @@ import SFT.Chemistry.IntermolecularGrammar
 import SFT.Chemistry.IntermolecularEvidence
 import SFT.Chemistry.IntermolecularExperiment
 import SFT.Chemistry.IntermolecularValidation
+import SFT.Chemistry.SupramolecularRelease
+import SFT.Chemistry.SupramolecularGrammar
+import SFT.Chemistry.SupramolecularEvidence
+import SFT.Chemistry.SupramolecularExperiment
+import SFT.Chemistry.SupramolecularValidation
+import SFT.Chemistry.MolecularNetwork
+import SFT.Chemistry.NetworkGrammar
+import SFT.Chemistry.NetworkEvidence
+import SFT.Chemistry.NetworkExperiment
+import SFT.Chemistry.NetworkValidation

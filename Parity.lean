@@ -1243,3 +1243,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.IntermolecularGrammar.candidates do
     IO.println ("IntermolecularGrammar\t" ++ SFT.Chemistry.IntermolecularGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.IntermolecularGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.IntermolecularGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.IntermolecularGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.SupramolecularGrammar.candidates do
+    IO.println ("SupramolecularGrammar\t" ++ SFT.Chemistry.SupramolecularGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.SupramolecularGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.SupramolecularGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.SupramolecularGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.NetworkGrammar.candidates do
+    IO.println ("NetworkGrammar\t" ++ SFT.Chemistry.NetworkGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.NetworkGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.NetworkGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.NetworkGrammar.decisionReason c)

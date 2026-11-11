@@ -1,0 +1,201 @@
+{
+  "claim_id": "SFT-CHEM-MOL-NETWORK-001",
+  "title": "Molecular network and connected chemical whole",
+  "statement": "A molecular network is one finite maximal connected component of named molecular nodes and registered interaction edges with complete reachability and provenance.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-GEOMETRY-TOPOLOGY-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-QUANTUM-ENTANGLEMENT-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+    "SFT-CHEM-MEAS-FORMULA-001",
+    "SFT-CHEM-STOICH-COMPOSITION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-CHEMICAL-BOND-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-BOND-METALLIC-001",
+    "SFT-CHEM-BOND-ORDER-001",
+    "SFT-CHEM-BOND-LENGTH-STRENGTH-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-MOL-SUPRAMOLECULAR-001"
+  ],
+  "generation_rule": "Generate the literal product of the registered molecular-network nodes, edges, connectivity, paths, boundary, composition, record and extension choices.",
+  "grammar_boundary": "Every finite generated set of molecular nodes and registered interaction edges whose maximal declared component is connected, with complete node, edge, path and boundary provenance.",
+  "dimensions": [
+    {
+      "key": "nodes",
+      "choices": [
+        {
+          "name": "anonymous-node-count",
+          "admitted": false,
+          "reason": "A count cannot recover molecular identities."
+        },
+        {
+          "name": "finite-molecular-node-set",
+          "admitted": true,
+          "reason": "Every molecular carrier is a named node."
+        }
+      ]
+    },
+    {
+      "key": "edges",
+      "choices": [
+        {
+          "name": "implicit-relatedness",
+          "admitted": false,
+          "reason": "An implicit relation cannot be audited."
+        },
+        {
+          "name": "registered-interaction-edges",
+          "admitted": true,
+          "reason": "Every joining channel supplies one explicit edge."
+        }
+      ]
+    },
+    {
+      "key": "connectivity",
+      "choices": [
+        {
+          "name": "disconnected-union-called-one",
+          "admitted": false,
+          "reason": "Disconnected components are not one connected whole."
+        },
+        {
+          "name": "connected-maximal-component",
+          "admitted": true,
+          "reason": "Every node is reachable inside the declared boundary."
+        }
+      ]
+    },
+    {
+      "key": "paths",
+      "choices": [
+        {
+          "name": "selected-path-only",
+          "admitted": false,
+          "reason": "One favorable path cannot establish network connectivity."
+        },
+        {
+          "name": "complete-reachability-census",
+          "admitted": true,
+          "reason": "Reachability is checked from the generated node/edge set."
+        }
+      ]
+    },
+    {
+      "key": "boundary",
+      "choices": [
+        {
+          "name": "unbounded-network-name",
+          "admitted": false,
+          "reason": "An unbounded name does not enumerate a finite object."
+        },
+        {
+          "name": "finite-maximal-boundary",
+          "admitted": true,
+          "reason": "The declared component boundary is complete."
+        }
+      ]
+    },
+    {
+      "key": "composition",
+      "choices": [
+        {
+          "name": "network-erases-molecules",
+          "admitted": false,
+          "reason": "Nodes remain chemical carriers, not anonymous points."
+        },
+        {
+          "name": "node-identities-retained",
+          "admitted": true,
+          "reason": "Every molecular composition and identity persists."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "network-answer-only",
+          "admitted": false,
+          "reason": "A connectivity answer cannot reproduce the network."
+        },
+        {
+          "name": "complete-network-trace",
+          "admitted": true,
+          "reason": "Nodes, edges, paths and components remain held."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "free-connectivity-edge",
+          "admitted": false,
+          "reason": "Adding an ungenerated edge can force connectedness."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Only registered support determines the connected whole."
+        }
+      ]
+    }
+  ],
+  "exact_result": "finite-molecular-node-set__registered-interaction-edges__connected-maximal-component__complete-reachability-census__finite-maximal-boundary",
+  "induction_base": "Two named molecular nodes joined by one registered interaction edge supply the first connected molecular network.",
+  "induction_step": "Appending one node by at least one generated edge preserves reachability, prior node identities, edge provenance and the finite maximal boundary.",
+  "exclusions": [
+    "no chemical dictionary, coordinate archive, fitted force field, measured geometry or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no application or opaque prediction result",
+    "no claim that topology alone predicts every measured coordinate or energy",
+    "external content remains inaccessible until after the consequence is sealed",
+    "Every finite generated set of molecular nodes and registered interaction edges whose maximal declared component is connected, with complete node, edge, path and boundary provenance."
+  ],
+  "operational_witnesses": [
+    [
+      "three-node-network",
+      "two registered edges connect all three named molecular nodes",
+      true
+    ],
+    [
+      "node-retention",
+      "the complete node identity tuple remains held",
+      true
+    ],
+    [
+      "free-edge-control",
+      "no unregistered edge is needed for connectivity",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-MOL-NETWORK-001",
+  "expected_observation_label": "finite-molecular-node-set__registered-interaction-edges__connected-maximal-component__complete-network-trace",
+  "target_rows": [
+    {
+      "target_id": "molecular-network-iupac-n04112",
+      "source_id": "IUPAC-GOLD-BOOK-N04112-2026",
+      "source_locator": "https://goldbook.iupac.org/terms/view/N04112/json :: current definition and notes",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/N04112.json",
+      "snapshot_hash": "sha256:a146d63f8340f0cf5043e1f9fe2f1cfa8e5fa7c3bf27b8a409e665f40ae2c046"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_molecular_structure_batch_2.json",
+  "falsification_condition": "The claim fails if the official molecular-network record lacks molecular nodes, interaction links or connected organization, or if a changed row is accepted."
+}

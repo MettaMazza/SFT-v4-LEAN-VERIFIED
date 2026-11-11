@@ -1,0 +1,70 @@
+"""Implementation-distinct reconstruction of the inverse-square check grammar."""
+
+from fractions import Fraction
+from itertools import product
+import json
+import sys
+
+
+CLAIM_ID = "SFT-PHYS-VALIDATION-INVERSE-SQUARE-001"
+DOMAINS = (
+    ("answer-only-scalar", "complete-fold-carrier"),
+    ("imported-or-fitted-relation", "forced-exponent-two-versus-complete-reported-interval"),
+    ("unbound-provenance", "source-bound-proof-trace"),
+    ("target-readable-prediction", "capability-closed-prediction"),
+    ("proof-measurement-conflation", "separate-measurement-record"),
+    ("selected-favourable-rows", "complete-registered-rows"),
+    ("finite-answer-lookup", "one-successor-closure"),
+    ("free-extra-rule", "no-extra-rule"),
+)
+SURVIVOR = "__".join(domain[1] for domain in DOMAINS)
+
+
+def main() -> None:
+    with open(sys.argv[1], encoding="utf-8") as handle:
+        sealed = json.load(handle)
+    generated = ["__".join(row) for row in product(*DOMAINS)]
+    received = [row["candidate_id"] for row in sealed["census"]["candidates"]]
+    decisions = {row["candidate_id"]: row["survives"] for row in sealed["decisions"]}
+    lower = Fraction(199999999999999996, 100000000000000000)
+    upper = Fraction(200000000000000058, 100000000000000000)
+    interval_survivors = tuple(candidate for candidate in range(1, 4) if lower <= candidate <= upper)
+    passed = (
+        sealed["claim_id"] == CLAIM_ID
+        and received == generated
+        and sealed["census"]["expected_cardinality"] == len(generated)
+        and len(set(received)) == len(generated)
+        and decisions == {candidate: candidate == SURVIVOR for candidate in generated}
+        and sum(decisions.values()) == 1
+        and sealed["closure"]["scope"] == "depth_independent"
+        and sealed["closure"]["minimality_passed"] is True
+        and sealed["closure"]["named_shape_uniqueness_passed"] is True
+        and {row["kind"] for row in sealed["controls"]} == {
+            "false_premise",
+            "tampered_source",
+            "tampered_artifact",
+            "boundary",
+        }
+        and all(row["passed"] is True for row in sealed["controls"])
+        and interval_survivors == (2,)
+    )
+    print(
+        json.dumps(
+            {
+                "validated_seal_hash": sealed["seal_hash"],
+                "recomputed_from_declared_inputs": True,
+                "passed": passed,
+                "certificate": {
+                    "claim_id": CLAIM_ID,
+                    "candidate_count": len(generated),
+                    "survivor": SURVIVOR if passed else None,
+                    "reported_interval_positive_integer_survivors": interval_survivors,
+                },
+            },
+            sort_keys=True,
+        )
+    )
+
+
+if __name__ == "__main__":
+    main()

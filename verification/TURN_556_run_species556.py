@@ -1,0 +1,8 @@
+from pathlib import Path
+source=Path('work/run_collective553.py').read_text();exec(source[:source.index('for stem,key,component in entries:')])
+program='SpeciesProgram556';s=(r/'UnitProgram480.lean').read_text().replace('SFT.Physics','SFT.Chemistry').replace('UnitGrammar','SpeciesGrammar').replace('UnitEvidence','SpeciesEvidence');(r/(program+'.lean')).write_text(s)
+subprocess.run(['/Users/dolltrading/.elan/bin/lean','-j1','-c',program+'.c',program+'.lean'],cwd=r,env=env,check=True)
+objs=list(dict.fromkeys(common+['SFT/Physics/MatterExchange','SFT/Physics/MatterConservedLabels']+['SFT/Chemistry/'+m for m in ['EntityIdentity','SpeciesClass','SpeciesGrammar','SpeciesEvidence']]))
+objs=[x for x in objs if (ir/(x+'.c.o.export')).exists()]
+subprocess.run([str(toolchain/'bin/clang'),*flags,str(r/(program+'.c')),*[str(ir/(m+'.c.o.export')) for m in objs],str(Path('work/field533_initializer_bridge.o').resolve()),str(Path('work/LeastCommonReturn533.o').resolve()),'/Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/lib/libsft__v4_SFT.a',*libs,'-Wl,-stack_size,0x10000000','-o',str(r.parent/program)],env=env,check=True)
+s=Path('work/unit_program480.py').read_text().replace('SFT-PHYS-MEAS-UNIT-COMPARISON-001','SFT-CHEM-MEAS-CHEMICAL-SPECIES-001').replace('unit_program480','species_program556').replace('UnitProgram480','SpeciesProgram556').replace('All SpeciesProgram556 method output fields; full engine admission integration remains separate','All current Species program methods: registration, full census, decision lookup, closure and controls.');Path('work/species_program556.py').write_text(s);subprocess.run(['python3','work/species_program556.py'],check=True)

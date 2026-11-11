@@ -20533,9 +20533,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-MEAS-CHEMICAL-ENTITY-001-83fa734a24884224.json",
       "statement": "A chemical entity is the least singular Fold carrier that remains separately distinguishable after constitution, isotopic identity and the observation context's required precision are retained.",
       "title": "Chemical entity and retained identity",
-      "lean_status": "in_progress",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/EntityIdentity.lean",
+        "SFT/Chemistry/EntityGrammar.lean",
+        "SFT/Chemistry/EntityEvidence.lean",
+        "SFT/Chemistry/SourceText.lean",
+        "SFT/Chemistry/SourceExtraction.lean",
+        "SFT/Chemistry/EntityExperiment.lean",
+        "SFT/Chemistry/EntityValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full256-form program, original empirical output, ten extraction cases and original independent-validator controls.",
       "registration_sha256": "0bc246126f83ce955a72fa5b8f3c44f31ea6c9cb41bb0f90763fa62ab6af8ab7",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -20585,12 +20593,9 @@
         "status": "empirically_tested",
         "title": "Chemical entity and retained identity"
       },
-      "remaining": [
-        "Finish the original full256-form program comparison already running in session85540, work/entity_program554.log, without restarting it.",
-        "Run the pinned original independent validator on fresh program output: original accepted, omitted candidate/additional survivor/failed control rejected.",
-        "Register Chemical Entity, update completion count and source correspondence immediately after those comparisons pass; then continue Chemical Species in dependency order."
-      ],
-      "verification_evidence": "verification/TURN_555_ENTITY_PROGRESS.json"
+      "remaining": [],
+      "completion_evidence": "verification/TURN_556_ENTITY_COMPLETION.json",
+      "verified_scope": "Pinned chemical-entity constitution/isotope/context record; least required identity; single and arbitrary finite extensions; no erased required identity can be recovered.; Original eight-axis256 candidate product, exact decisions and sole survivor.; Original chemistry registration, full census, elimination reasons, controls and closure.; Source Python Unicode casefold and whitespace predicates required by feature matching; complete nonidentity table retained.; Exact registry and duplicate checks, source identity and snapshot digest, current term identity, ordered feature shape, nonblank fields, fragment matching, reconstructed labels and extraction hashes.; Pinned chemistry specification validation, chemical prediction instructions, source-reference registration and envelope.; Original chemistry execution, isolation, custody nonce, release, complete comparison fields, tampered-label control, certificates and receipt."
     },
     {
       "branch": "chemistry",
@@ -20602,9 +20607,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-MEAS-CHEMICAL-SPECIES-001-865ccab10650d67f.json",
       "statement": "A chemical species is the least Fold quotient whose support is an ensemble of chemically identical entities sharing accessible state support at one declared experimental timescale.",
       "title": "Chemical species and observation-equivalence class",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/SpeciesClass.lean",
+        "SFT/Chemistry/SpeciesGrammar.lean",
+        "SFT/Chemistry/SpeciesEvidence.lean",
+        "SFT/Chemistry/SpeciesExperiment.lean",
+        "SFT/Chemistry/SpeciesValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full256-form program, original empirical output, ten extraction cases and original independent-validator controls.",
       "registration_sha256": "b47fe972b12f1308aa1e275ad1dc8a749a9a27496db1f841c5d0801110948ed6",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -20654,7 +20665,10 @@
         "statement": "A chemical species is the least Fold quotient whose support is an ensemble of chemically identical entities sharing accessible state support at one declared experimental timescale.",
         "status": "empirically_tested",
         "title": "Chemical species and observation-equivalence class"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_556_SPECIES_COMPLETION.json",
+      "verified_scope": "Exact equivalence of chemical identity, accessible support membership and experimental timescale; complete class support, coverage, representative independence, overlap closure, least retained quotient, singleton base, successor retention and mixed/timescale rejection.; Original eight-axis256 candidate product, exact decisions and sole survivor.; Original chemistry registration, full census, elimination reasons, controls and closure.; Source Python Unicode casefold and whitespace predicates required by feature matching; complete nonidentity table retained.; Exact registry and duplicate checks, source identity and snapshot digest, current term identity, ordered feature shape, nonblank fields, fragment matching, reconstructed labels and extraction hashes.; Pinned chemistry specification validation, chemical prediction instructions, source-reference registration and envelope.; Original chemistry execution, isolation, custody nonce, release, complete comparison fields, tampered-label control, certificates and receipt."
     },
     {
       "branch": "chemistry",
@@ -193575,13 +193589,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T01:28:14.724442+00:00",
+  "updated_at": "2026-11-11T01:37:05.455306+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 1,
-    "pending": 2434,
-    "fully_reconstructed_claims": 346,
-    "axiom_free_exported_results": 19217,
-    "axiom_free_audited_definitions_and_theorems": 42898
+    "in_progress": 0,
+    "pending": 2433,
+    "fully_reconstructed_claims": 348,
+    "axiom_free_exported_results": 19294,
+    "axiom_free_audited_definitions_and_theorems": 43142
   }
 }

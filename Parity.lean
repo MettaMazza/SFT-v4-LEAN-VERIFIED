@@ -1138,3 +1138,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.TopologicalGrammar.candidates do
     IO.println ("TopologicalGrammar\t" ++ SFT.Physics.TopologicalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TopologicalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TopologicalGrammar.exactForm c ++ "\t" ++ SFT.Physics.TopologicalGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.EntityGrammar.candidates do
+    IO.println ("EntityGrammar\t" ++ SFT.Chemistry.EntityGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.EntityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.EntityGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.EntityGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.SpeciesGrammar.candidates do
+    IO.println ("SpeciesGrammar\t" ++ SFT.Chemistry.SpeciesGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.SpeciesGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.SpeciesGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.SpeciesGrammar.decisionReason c)

@@ -3714,3 +3714,15 @@ import SFT.Physics.TopologicalEvidence
 import SFT.Physics.TopologicalExperiment
 import SFT.Physics.TopologicalValidation
 import SFT.Physics.TopologicalValidationProofs
+import SFT.Chemistry.EntityIdentity
+import SFT.Chemistry.EntityGrammar
+import SFT.Chemistry.EntityEvidence
+import SFT.Chemistry.SourceText
+import SFT.Chemistry.SourceExtraction
+import SFT.Chemistry.EntityExperiment
+import SFT.Chemistry.EntityValidation
+import SFT.Chemistry.SpeciesClass
+import SFT.Chemistry.SpeciesGrammar
+import SFT.Chemistry.SpeciesEvidence
+import SFT.Chemistry.SpeciesExperiment
+import SFT.Chemistry.SpeciesValidation

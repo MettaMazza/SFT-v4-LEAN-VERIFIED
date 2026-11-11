@@ -4325,3 +4325,23 @@ import SFT.Chemistry.MassSpectralEvidence
 import SFT.Chemistry.MassSpectralExperiment
 
 import SFT.Chemistry.MassSpectralValidation
+
+import SFT.Chemistry.Infrared
+
+import SFT.Chemistry.InfraredGrammar
+
+import SFT.Chemistry.InfraredEvidence
+
+import SFT.Chemistry.InfraredExperiment
+
+import SFT.Chemistry.InfraredValidation
+
+import SFT.Chemistry.UVVis
+
+import SFT.Chemistry.UVVisGrammar
+
+import SFT.Chemistry.UVVisEvidence
+
+import SFT.Chemistry.UVVisExperiment
+
+import SFT.Chemistry.UVVisValidation

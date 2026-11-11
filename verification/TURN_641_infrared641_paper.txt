@@ -1,0 +1,29 @@
+
+Infrared recurrence and molecular distinction
+
+The retained molecule consists of its admitted bonded carrier and complete relative-orientation record. Each internal state retains its recurrence, displacement record, interaction trace and source record. A transition retains both molecular states, the incident recurrence, counted response and provenance. Its endpoints belong to the declared molecular-state support. This preserves the original source's paired-transition domain and observation boundary.
+
+Let R be the complete ordered list of registered transitions. For a transition t, write d_-(t) and d_+(t) for its predecessor and successor interaction traces. The coupling decision is exact:
+    c(t) = true if and only if d_-(t) ≠ d_+(t).
+The visible support and retained non-coupled support are
+    V(R) = [t in R | d_-(t) ≠ d_+(t)],
+    U(R) = [t in R | d_-(t) = d_+(t)].
+Equality decidability gives the two exhaustive cases for every registered transition. Their supports are disjoint: membership in both would assert equality and its negation. Thus an unchanged interaction is excluded from visible support but remains recorded in U(R) and in the complete decision trace [(t,c(t)) | t in R].
+
+The incident recurrence is a positive-length return path. Relative to a retained reference recurrence with k completed changes, a transition whose incident path has n completed changes has the exact recurrence frequency
+    ν(t) = k/n,  k > 0, n > 0.
+If its normalized representation is a/b, the normalization proof yields k b = a n. This construction reuses the existing positive recurrence-ratio derivation. A molecular internal recurrence retains its return equality: its terminal carrier equals its initial carrier.
+
+For counted response q(t), the complete pattern is
+    P(R) = [(ν(t),q(t)) | t in V(R)].
+The forward correspondence proof shows that every coupled registered transition contributes its pair. The reverse proof shows that every pattern pair comes from such a transition. No isolated line substitutes for the complete pattern: the comparison evaluates equality of the full ordered list of normalized frequency numerators, denominators and counted responses. Its Boolean result is proved equivalent to equality of those complete signatures; it does not assert that one shared line determines molecular identity.
+
+The base contains one predecessor/successor pair. When its interaction changes, filtering the singleton retains that row and mapping yields exactly [(ν(t),q(t))]. Extending the state support by s and retaining the full appended transition list A gives
+    V(R ++ A) = V(R) ++ V(A),
+    U(R ++ A) = U(R) ++ U(A),
+    P(R ++ A) = P(R) ++ [(ν(t),q(t)) | t in V(A)].
+These equations follow by induction on the earlier transition list and preservation of ordered mapping over concatenation. Every supplied newly coupled transition is retained; prior visible and non-coupled records are preserved. Each appended transition's endpoints remain bound to the extended state support. The method and conditions remain unchanged.
+
+The original eight binary axes enumerate 256 alternatives, preserving the incident-support, complete-molecule, paired-transition, coupling, whole-pattern, identity-comparison, observation-boundary and no-extra-rule distinctions. The original operational witnesses, elimination decisions, controls and empirical validator accompany the native derivation.
+
+Original source: pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/chemistry/analytical_spectroscopic_derivation.py, INFRARED and ANALYTICAL_SPECTROSCOPIC_BLUEPRINTS[4]; sft/chemistry/analytical_spectroscopic_batch_1.py; claims/SFT-CHEM-SPEC-INFRARED-001/execution.py and independent_validator.py. Native verification: SFT/Chemistry/Infrared.lean, coupledExactly, unchangedExcluded, visibleExactly, noncoupledExactly, completeDecision, separatedDecisions, frequencyExact, patternComplete, visibleAppend, noncoupledAppend, appendPattern, priorNoncoupledRetained, allNewCoupledRetained, firstCoupledLine, wholePatternExactly, recurrenceReturns, decisionTraceComplete and appendBoundary. Prerequisites: SFT/Chemistry/MolecularGeometry.lean, completeMeaning; SFT/Physics/MechanicalDuration.lean and SFT/Mathematics/ExactRatioRelations.lean. Native entry bindings: InfraredGrammar.lean, InfraredEvidence.lean, InfraredExperiment.lean and InfraredValidation.lean. Chronological implementation and verification reference: TIMELINE.txt, Turn641 infrared batch.

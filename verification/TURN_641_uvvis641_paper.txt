@@ -1,0 +1,30 @@
+
+Electronic absorption and molecular-state distinction
+
+The retained chemical carrier is either an admitted molecular carrier or an ionic state whose existing charge construction establishes non-neutrality. Each electronic state keeps its identity, positive exact energy reading, electronic record and source record. Write E_i = a_i/b_i and E_j = a_j/b_j, with positive denominators. The absorption ordering is the exact comparison
+    H(i,j) ⇔ a_i b_j < a_j b_i.
+The Boolean implementation is proved equivalent to this inequality. No state can be higher than itself because a_i b_i < a_i b_i is false. If H(i,j) holds, H(j,i) is false by asymmetry of strict order. Energy values and responses are retained source records; no fitted band rule determines the transition selection.
+
+For the complete declared state support S, enumerate its ordered Cartesian pairs
+    Q(S) = [(i,j) | i in S, j in S],
+then retain the absorption transitions
+    T(S) = [(i,j) in Q(S) | H(i,j)].
+The forward membership proof extracts both original state occurrences from the nested enumeration. The converse inserts any two retained states into that enumeration. Combining this equivalence with the exact filter gives
+    (i,j) in T(S) ⇔ i in S and j in S and H(i,j).
+This establishes complete transition enumeration, including rejection of the self and reversed cases, directly from the held state order.
+
+For every retained pair, the registered response R(i,j) contains its exact wavelength reading, positive counted response, incident recurrence and source record. The complete carrier-state-response pattern is
+    P(S) = [((i,j),R(i,j)) | (i,j) in T(S)].
+The two correspondence directions prove that every ordered pair contributes its registered response and every pattern row originates in such a pair. Full endpoint records remain attached to each response. The original method and conditions remain part of the spectrum.
+
+For the base S = [i,j] with H(i,j), the Cartesian construction lists (i,i), (i,j), (j,i), (j,j). Self-order rejection removes the first and fourth pairs; strict-order asymmetry removes the third. Hence
+    T([i,j]) = [(i,j)],
+    P([i,j]) = [((i,j),R(i,j))].
+For an appended state k, the exact membership law is
+    (i,j) in T(S ++ [k])
+      ⇔ (i in S or i = k) and (j in S or j = k) and H(i,j).
+Consequently all earlier ordered pairs retain their identical response records, and every newly available ordered pair involving k is enumerated. The appended state leaves the registered response map, method and conditions unchanged.
+
+The original eight binary axes enumerate 256 alternatives, retaining incident radiation, the molecular-or-ionic carrier, both electronic states, absorption direction, the complete wavelength-response pattern, carrier-state binding, observation conditions and absence of an extra selection rule. Original registration, elimination decisions, controls, sealed prediction and empirical-validator behavior accompany the construction.
+
+Original source: pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/chemistry/analytical_spectroscopic_derivation.py, UVVIS and ANALYTICAL_SPECTROSCOPIC_BLUEPRINTS[5]; sft/chemistry/analytical_spectroscopic_batch_1.py; claims/SFT-CHEM-SPEC-UVVIS-001/execution.py and independent_validator.py. Native verification: SFT/Chemistry/UVVis.lean, higherExactly, pairsComplete, transitionsComplete, noSelfTransition, noReverseAbsorption, everyOrderedResponse, noInventedResponse, appendedTransitionExactly, priorPairRetained, successorResponseUnchanged, successorBoundary, firstOrderedPair and firstResponse; UVVisGrammar.lean, UVVisEvidence.lean, UVVisExperiment.lean and UVVisValidation.lean. Existing molecular and ionic admission: MolecularCarrier.lean and IonTransfer.lean. Chronological reference: TIMELINE.txt, Turn641 ultraviolet-visible batch.

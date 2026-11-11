@@ -1,0 +1,198 @@
+{
+  "claim_id": "SFT-CHEM-ELECTRONEGATIVITY-001",
+  "title": "Electronegativity ordering",
+  "statement": "Electronegativity order is the transitive preorder of complete pairwise endpoint recurrence for identical shared electron support; equal traces remain an exact equivalence class rather than receiving an arbitrary rank.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001"
+  ],
+  "generation_rule": "Generate the literal product of carrier, support, comparison, orientation, tie, extension, record and extra-rule choices.",
+  "grammar_boundary": "Every finite pairwise comparison of two named atomic occurrences joined by one shared electron-labelled support, with the complete recurrence trace determining endpoint preference or an explicitly retained tie.",
+  "dimensions": [
+    {
+      "key": "carriers",
+      "choices": [
+        {
+          "name": "anonymous-element-values",
+          "admitted": false,
+          "reason": "Values erase endpoint identity."
+        },
+        {
+          "name": "two-named-atomic-occurrences",
+          "admitted": true,
+          "reason": "Both compared atoms remain held."
+        }
+      ]
+    },
+    {
+      "key": "support",
+      "choices": [
+        {
+          "name": "free-affinity-scalar",
+          "admitted": false,
+          "reason": "A scalar imports the ordering."
+        },
+        {
+          "name": "one-shared-electron-support",
+          "admitted": true,
+          "reason": "The same shared support is compared at both endpoints."
+        }
+      ]
+    },
+    {
+      "key": "comparison",
+      "choices": [
+        {
+          "name": "name-selected-order",
+          "admitted": false,
+          "reason": "Names cannot select preference."
+        },
+        {
+          "name": "complete-endpoint-recurrence-comparison",
+          "admitted": true,
+          "reason": "All registered support visits are compared."
+        }
+      ]
+    },
+    {
+      "key": "orientation",
+      "choices": [
+        {
+          "name": "signed-difference",
+          "admitted": false,
+          "reason": "A signed magnitude violates the proof domain."
+        },
+        {
+          "name": "held-preferred-endpoint",
+          "admitted": true,
+          "reason": "Preference is a held label."
+        }
+      ]
+    },
+    {
+      "key": "ties",
+      "choices": [
+        {
+          "name": "forced-strict-order",
+          "admitted": false,
+          "reason": "Equal complete traces cannot be ordered uniquely."
+        },
+        {
+          "name": "trace-equivalence-class",
+          "admitted": true,
+          "reason": "Ties remain one exact affinity class."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "pairwise-cycle-admitted",
+          "admitted": false,
+          "reason": "A cycle destroys lawful ordering."
+        },
+        {
+          "name": "transitive-preorder-closure",
+          "admitted": true,
+          "reason": "All pairwise records close transitively."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "rank-answer-only",
+          "admitted": false,
+          "reason": "A rank cannot reconstruct comparisons."
+        },
+        {
+          "name": "complete-comparison-trace",
+          "admitted": true,
+          "reason": "Every endpoint and support record remains auditable."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-scale-constant",
+          "admitted": false,
+          "reason": "A scale constant can tune any ordering."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Complete recurrence comparison supplies the relation."
+        }
+      ]
+    }
+  ],
+  "exact_result": "two-named-atomic-occurrences__one-shared-electron-support__complete-endpoint-recurrence-comparison__held-preferred-endpoint__transitive-preorder-closure",
+  "induction_base": "One pair of atoms and one shared support comparison supplies the first affinity relation.",
+  "induction_step": "Appending a pairwise comparison preserves all earlier traces and extends only by transitive closure; identical traces remain tied.",
+  "exclusions": [
+    "no electronegativity scale, oxidation-state table, electrode potential, external definition, measured value or V2 result may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no electron carrier may be created, copied, silently erased or assigned to two endpoints",
+    "no qualitative structural law is represented as a parameter-free prediction of a measured decimal scale",
+    "external target content remains inaccessible until the complete prediction is sealed",
+    "Every finite pairwise comparison of two named atomic occurrences joined by one shared electron-labelled support, with the complete recurrence trace determining endpoint preference or an explicitly retained tie."
+  ],
+  "operational_witnesses": [
+    [
+      "endpoints",
+      "the comparison retains two distinct atoms",
+      true
+    ],
+    [
+      "support",
+      "one shared support is compared",
+      true
+    ],
+    [
+      "orientation",
+      "preference names an endpoint",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-ELECTRONEGATIVITY-001",
+  "expected_observation_label": "atomic-attraction-for-shared-electrons__pairwise-affinity-order__ties-retained__scale-values-source-bounded",
+  "target_rows": [
+    {
+      "target_id": "electronegativity-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-ELECTRONEGATIVITY-COMPOSITE-2026",
+      "source_locator": "official IUPAC source set anchored at E01990",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/E01990.json",
+      "snapshot_hash": "sha256:bc2888f84a2a3efc53f89738797c88528af75cd0564295e2a1d4138cd1c778e3"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_redox_batch_1.json",
+  "falsification_condition": "The claim fails if the authority record lacks atomic attraction for shared electrons or permits a scale value to replace the retained comparison relation, or if a changed row is accepted."
+}

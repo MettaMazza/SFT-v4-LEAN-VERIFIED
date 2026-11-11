@@ -23960,9 +23960,18 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ELECTRONEGATIVITY-001-a22665b562002fc2.json",
       "statement": "Electronegativity order is the transitive preorder of complete pairwise endpoint recurrence for identical shared electron support; equal traces remain an exact equivalence class rather than receiving an arbitrary rank.",
       "title": "Electronegativity ordering",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Chemistry/AffinityComparison.lean",
+        "SFT/Chemistry/AffinityClosure.lean",
+        "SFT/Chemistry/AffinityGrammar.lean",
+        "SFT/Chemistry/AffinityEvidence.lean",
+        "SFT/Chemistry/RedoxSeal.lean",
+        "SFT/Chemistry/RedoxSealInputs.lean",
+        "SFT/Chemistry/AffinityExperiment.lean",
+        "SFT/Chemistry/AffinityValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS original full256-candidate program, all empirical fields/hashes and independent controls; source derivation correspondence remains explicitly open.",
       "registration_sha256": "2d0f895328bf4ff21e276c8835d7328996d86022043ac781598f056a81d396b7",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -24026,7 +24035,11 @@
         "statement": "Electronegativity order is the transitive preorder of complete pairwise endpoint recurrence for identical shared electron support; equal traces remain an exact equivalence class rather than receiving an arbitrary rank.",
         "status": "empirically_tested",
         "title": "Electronegativity ordering"
-      }
+      },
+      "verification_evidence": "verification/TURN_587_AFFINITY_PROGRESS.json",
+      "remaining": [
+        "Bind the source preferred_endpoint record to the complete endpoint recurrence comparison and original exact-trace tie criterion. AffinityComparison.admit currently proves membership in the two endpoints; AffinityClosure proves least preorder closure from recorded comparisons. Neither is recorded as the missing recurrence-to-preference derivation."
+      ]
     },
     {
       "branch": "chemistry",
@@ -193957,11 +193970,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T09:10:35.015660+00:00",
+  "updated_at": "2026-11-11T09:34:21.078917+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2393,
+    "in_progress": 1,
+    "pending": 2392,
     "fully_reconstructed_claims": 388,
     "axiom_free_exported_results": 20860,
     "axiom_free_audited_definitions_and_theorems": 47966

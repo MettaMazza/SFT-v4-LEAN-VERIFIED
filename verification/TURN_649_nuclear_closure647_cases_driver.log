@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/check_nuclear_closure647.py", line 16, in <module>
+    r=Path('work/constants-recovery').resolve();(r/'NuclearClosureCases647.lean').write_text(s);p=subprocess.run(['/Users/dolltrading/.elan/bin/lean','-j1','--run','NuclearClosureCases647.lean'],cwd=r,env=dict(os.environ,LEAN_PATH=str(r/'.lake/build/lib/lean')),capture_output=True,text=True);Path('work/nuclear_closure647_cases.log').write_text(p.stdout+p.stderr);assert p.returncode==0,p.stdout+p.stderr;assert p.stdout.splitlines()==expected;Path('work/nuclear_closure647_cases_report.json').write_text(json.dumps(dict(status='PASS',source_commit=pin,operation_comparisons=len(expected),source_execution='Actual pinned predecessor, binary count, colour coupling, threshold and all three closure operations; established generator value reused'),indent=2));print('PASS',len(expected),'operation comparisons')
+AssertionError: NuclearClosureCases647.lean:507:48: error: maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+

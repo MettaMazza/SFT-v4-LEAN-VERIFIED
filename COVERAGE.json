@@ -28723,9 +28723,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-NUCLEAR-CLOSURE-SEQUENCE-001-eb48cd3f1935f253.json",
       "statement": "Complete weak compositions across three spatial directions with two exclusion labels force the base filled-shell counts. The independently sealed two-thirds colour coupling reaches its first whole spin-orbit gap at angular count three and forces the reordered closure sequence 2, 8, 20, 28, 50, 82, 126, 184 with a depth-independent successor law.",
       "title": "Complete Fold nuclear-closure sequence",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/NuclearClosure.lean",
+        "SFT/Physics/NuclearCompositions.lean",
+        "SFT/Physics/NuclearRecurrence.lean",
+        "SFT/Physics/NuclearClosureWitnesses.lean",
+        "SFT/Physics/NuclearClosureGrammar.lean",
+        "SFT/Physics/NuclearClosureControls.lean",
+        "SFT/Physics/NuclearClosureEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh native complete program, original independent controls; formal entry has no empirical validator",
       "registration_sha256": "f8a5387acec13ad51931af02bbd4389084cd250a8aa6044d1ad0fb3406c67eba",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -28770,7 +28778,10 @@
         "statement": "Complete weak compositions across three spatial directions with two exclusion labels force the base filled-shell counts. The independently sealed two-thirds colour coupling reaches its first whole spin-orbit gap at angular count three and forces the reordered closure sequence 2, 8, 20, 28, 50, 82, 126, 184 with a depth-independent successor law.",
         "status": "independently_replicated",
         "title": "Complete Fold nuclear-closure sequence"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_649_NUCLEAR_CLOSURE_COMPLETION.json",
+      "verified_scope": "spin_orbit_threshold, oscillator_closure, nuclear_closure, nuclear_closure_prefix: exact positive-domain guards, reused forced2/3 coupling and two labels, least whole gap3, exact guarded division and arbitrary-positive-rank recurrence.; NUCLEAR_CLOSURE_SPEC complete three-direction weak compositions, both labels exactly once, soundness/completeness/distinctness, filled-shell count and exact binding to oscillator_closure at every positive rank.; NUCLEAR_CLOSURE_SPEC depth-independent successor: exact native-operation equality, strict growth at every rank, next closures126 after82 and184 after126 with all intermediate ranks excluded.; NUCLEAR_CLOSURE_SPEC original threshold, eight-value prefix and no-intermediate witnesses evaluated from translated operations.; NUCLEAR_CLOSURE_SPEC all ten original binary axes, all1024 alternatives, exact decisions and unique survivor.; StructuralPhysicsProgram original false-premise, tampered survivor, identity and boundary controls, original closure and evaluated witnesses.; StructuralPhysicsProgram complete registration, census, candidate lookup, decisions, closure, controls and original hashes/unknown-ID error."
     },
     {
       "branch": "physics",
@@ -194351,13 +194362,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T19:21:52.584846+00:00",
+  "updated_at": "2026-11-11T19:38:30.852578+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2351,
-    "fully_reconstructed_claims": 430,
-    "axiom_free_exported_results": 22706,
-    "axiom_free_audited_definitions_and_theorems": 53265
+    "pending": 2350,
+    "fully_reconstructed_claims": 431,
+    "axiom_free_exported_results": 22774,
+    "axiom_free_audited_definitions_and_theorems": 53395
   }
 }

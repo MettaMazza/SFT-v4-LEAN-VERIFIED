@@ -1,0 +1,10 @@
+SFT/Physics/NuclearClosure.lean:74:27: error: unsolved goals
+n : Nat
+after : 3 < n + 1
+⊢ (do
+      let previous ← oscillatorClosure (CountInput.integer (Int.ofNat n))
+      let binary ← Except.ok 2
+      Except.ok (previous + binary * (n + 1))) =
+    do
+    let prior ← oscillatorClosure (CountInput.integer (Int.ofNat n))
+    Except.ok (prior + 2 * (n + 1))

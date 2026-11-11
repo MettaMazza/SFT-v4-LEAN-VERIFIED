@@ -4375,3 +4375,17 @@ import SFT.Physics.AtomicOrbitCapacityGrammar
 import SFT.Physics.AtomicOrbitCapacityControls
 
 import SFT.Physics.AtomicOrbitCapacityEvidence
+
+import SFT.Physics.NuclearClosure
+
+import SFT.Physics.NuclearCompositions
+
+import SFT.Physics.NuclearRecurrence
+
+import SFT.Physics.NuclearClosureWitnesses
+
+import SFT.Physics.NuclearClosureGrammar
+
+import SFT.Physics.NuclearClosureControls
+
+import SFT.Physics.NuclearClosureEvidence

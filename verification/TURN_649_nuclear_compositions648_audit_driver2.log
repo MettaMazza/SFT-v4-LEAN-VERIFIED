@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/audit_nuclear_compositions648.py", line 11, in <module>
+    p=Path('work/AuditNuclearCompositions648.lean');p.write_text('\n'.join('import SFT.Physics.'+m for m in modules)+'\n'+'\n'.join('#print axioms '+n for n in names)+'\n');o=subprocess.run(['/Users/dolltrading/.elan/bin/lean',str(p)],env=env,text=True,capture_output=True);Path('work/nuclear_compositions648_audit.log').write_text(o.stdout+o.stderr);assert o.returncode==0,o.stdout+o.stderr;assert all("'"+n+"' does not depend on any axioms" in o.stdout for n in names),o.stdout;Path('work/nuclear_compositions648_audit_config.json').write_text(json.dumps(dict(modules=modules,declarations=names,theorems=ths,definitions_and_theorems=defs),indent=2));print('PASS',len(names),'zero-axiom declarations')
+AssertionError: 'SFT.Physics.NuclearCompositions.Pair' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.Triple' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.pairs' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.triples' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.filled' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.labelled' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.pairCount' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.shellCount' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.labelledCount' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.totalCount' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.exactQuotient' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.pairSound' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.pairComplete' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.tripleSound' does not depend on any axioms
+'SFT.Physics.NuclearCompositions.tripleComplete' does not depend on any axioms
+work/AuditNuclearCompositions648.lean:17:14: error(lean.unknownIdentifier): Unknown constant `SFT.Physics.NuclearCompositions.filledSound`
+work/AuditNuclearCompositions648.lean:18:14: error(lean.unknownIdentifier): Unknown constant `SFT.Physics.NuclearCompositions.filledComplete`
+work/AuditNuclearCompositions648.lean:19:14: error(lean.unknownIdentifier): Unknown constant `SFT.Physics.NuclearCompositions.pairsDistinct`
+work/AuditNuclearCompositions648.lean:20:14: error(lean.unknownIdentifier): Unknown constant `SFT.Physics.NuclearCompositions.triplesDistinct`
+work/AuditNuclearCompositions648.lean:21:14: error(lean.unknownIdentifier): Unknown constant `SFT.Physics.NuclearCompositions.filledDistinct`
+work/AuditNuclearCompositions648.lean:22:14: error(lean.unknownIdentifier): Unknown constant `SFT.Physics.NuclearCompositions.exactDivisibility`
+work/AuditNuclearCompositions648.lean:23:14: error(lean.unknownIdentifier): Unknown constant `SFT.Physics.NuclearCompositions.oscillatorCountsCompleteSupport`
+

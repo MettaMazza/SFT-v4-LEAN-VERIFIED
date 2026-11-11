@@ -1390,3 +1390,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.AtomicOrbitCapacityGrammar.candidates do
     IO.println ("AtomicOrbitCapacityGrammar\t" ++ SFT.Physics.AtomicOrbitCapacityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AtomicOrbitCapacityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AtomicOrbitCapacityGrammar.exactForm c ++ "\t" ++ SFT.Physics.AtomicOrbitCapacityGrammar.decisionReason c)
+
+  for c in SFT.Physics.NuclearClosureGrammar.candidates do
+    IO.println ("NuclearClosureGrammar\t" ++ SFT.Physics.NuclearClosureGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NuclearClosureGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NuclearClosureGrammar.exactForm c ++ "\t" ++ SFT.Physics.NuclearClosureGrammar.decisionReason c)

@@ -4019,3 +4019,23 @@ import SFT.Chemistry.IntermediateEvidence
 import SFT.Chemistry.IntermediateExperiment
 
 import SFT.Chemistry.IntermediateValidation
+
+import SFT.Chemistry.ReactionActivation
+
+import SFT.Chemistry.ActivationGrammar
+
+import SFT.Chemistry.ActivationEvidence
+
+import SFT.Chemistry.ActivationExperiment
+
+import SFT.Chemistry.ActivationValidation
+
+import SFT.Chemistry.ReactionRate
+
+import SFT.Chemistry.RateGrammar
+
+import SFT.Chemistry.RateEvidence
+
+import SFT.Chemistry.RateExperiment
+
+import SFT.Chemistry.RateValidation

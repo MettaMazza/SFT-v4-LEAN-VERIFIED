@@ -24688,9 +24688,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-KIN-ACTIVATION-001-bd0c43a9f211959e.json",
       "statement": "Activation support is the least source-bound addition required for a generated reaction path to reach its highest transition boundary relative to the reactant boundary.",
       "title": "Activation barrier and transition boundary",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/ReactionActivation.lean",
+        "SFT/Chemistry/ActivationGrammar.lean",
+        "SFT/Chemistry/ActivationEvidence.lean",
+        "SFT/Chemistry/ActivationExperiment.lean",
+        "SFT/Chemistry/ActivationValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh native256-form complete program,128 constructor cases, all empirical fields/hashes and original independent controls.",
       "registration_sha256": "f09f46e1f9304bcf4abab5e7abfd722dd8602deac0006555d4a43296281b4167",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -24761,7 +24767,10 @@
         "statement": "Activation support is the least source-bound addition required for a generated reaction path to reach its highest transition boundary relative to the reactant boundary.",
         "status": "empirically_tested",
         "title": "Activation barrier and transition boundary"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_605_ACTIVATION_COMPLETION.json",
+      "verified_scope": "Exact positive-support/three-boundary-family-set constructor, preserving all family permutations; complete generated path and source support occurrence records on one exact reference; attained highest support, upper bounds and uniqueness; reactant-relative increment, exact crossing, leastness and rejection of all smaller additions; terminal product and unique transition binding; reference shift cancellation, one-crossing base and exact append update.; Original eight-axis256-form complete enumeration, exact decisions and sole survivor.; Original full census, registration, witnesses, controls and closure.; Original sealed prediction and source references.; Original multi-source empirical extraction, features, hashes, custody, isolation and adverse target control."
     },
     {
       "branch": "chemistry",
@@ -24773,9 +24782,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-KIN-RATE-001-c4c4e2acabcfc3b4.json",
       "statement": "Reaction rate is the exact positive count of completed instances of one registered reaction per positive reference recurrence and retained observation boundary, with conditions source-bound.",
       "title": "Reaction rate from counted transitions",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/ReactionRate.lean",
+        "SFT/Chemistry/RateGrammar.lean",
+        "SFT/Chemistry/RateEvidence.lean",
+        "SFT/Chemistry/RateExperiment.lean",
+        "SFT/Chemistry/RateValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh native256-form complete program,18 constructor cases, all empirical fields/hashes and original independent controls.",
       "registration_sha256": "a6bc76854161b044ffb1194e8dfdfe16bb635109210e10b6681375ba70e4d50e",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -24845,7 +24860,10 @@
         "statement": "Reaction rate is the exact positive count of completed instances of one registered reaction per positive reference recurrence and retained observation boundary, with conditions source-bound.",
         "status": "empirically_tested",
         "title": "Reaction rate from counted transitions"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_606_RATE_COMPLETION.json",
+      "verified_scope": "Exact positive-event/positive-recurrence constructor and observation-family guard; exact normalized rate quotient and positivity; complete event/recurrence lists bound to counts, common registered reaction, species amounts and source conditions; one-event/one-recurrence base; event and recurrence successors preserving complete prior records and exact quotient.; Original eight-axis256-form exhaustive enumeration, exact source decisions and unique survivor.; Original full census, registration, witnesses, controls and closure.; Original sealed prediction and source references.; Original multi-source empirical extraction, features, hashes, custody, isolation and adverse target control."
     },
     {
       "branch": "chemistry",
@@ -194037,13 +194055,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T12:31:42.736130+00:00",
+  "updated_at": "2026-11-11T12:42:33.411628+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2385,
-    "fully_reconstructed_claims": 396,
-    "axiom_free_exported_results": 21191,
-    "axiom_free_audited_definitions_and_theorems": 48971
+    "pending": 2383,
+    "fully_reconstructed_claims": 398,
+    "axiom_free_exported_results": 21270,
+    "axiom_free_audited_definitions_and_theorems": 49207
   }
 }

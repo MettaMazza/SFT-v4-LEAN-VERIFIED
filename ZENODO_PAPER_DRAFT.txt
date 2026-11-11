@@ -16887,3 +16887,47 @@ Lean verification: SFT/Chemistry/AffinityRecordClosure.lean, edgeTargetsHeldPref
 
 For the original constructor, admission entails p=a or p=b. AffinityComparison.preferredIsEndpoint proves this directly from the executable guard. The orientation-preservation theorem then derives e(c).2=p by considering these two cases; neither case introduces a numerical affinity scale. The source fields and constructor remain those of pinned redox_derivation.py:AffinityComparison. Lean references: AffinityComparison.preferredIsEndpoint and AffinityRecordClosure.edgeTargetsHeldPreference. Chronological source review: TIMELINE.txt, Turn589.
 
+553. Observation equivalence and orientation of comparable classes
+
+The symbol-distinction dependency supplies a complete source-bound observation map O. For a retained canonical symbol s, observed_label(O,s) returns its unique held class label ℓ. Validation checks that every alphabet symbol occurs exactly once, no outside symbol occurs and every observation label is held. The existing validatedLookup theorem supplies the unique lookup on every registered symbol; observedUnique excludes a second label for that same source occurrence.
+
+For endpoints a and b with successful observations O(a)=ℓa and O(b)=ℓb, the original distinguishability operation gives
+
+  distinguishable(O,a,b) = (ℓa ≠ ℓb).
+
+Consequently
+
+  a and b share an observation class ⇔ ℓa=ℓb
+    ⇔ distinguishable(O,a,b)=false.
+
+sourceClassExactly proves this equivalence using the existing labelledDistinction theorem. exactFibre identifies the same relation with membership in the original observation_classes fibre. The complete pair ledger partitions every generated symbol pair into retained or closed distinctions; sourcePairCensus reuses validatedLedger and ledgerExhausts to retain both parts of that census. Thus the equivalence construction does not discard tied alternatives.
+
+For a finite endpoint record list C, generate tie edges between every pair whose observed labels agree:
+
+  T(C) = {(a.atom,b.atom) : a∈C, b∈C, ℓa=ℓb}.
+
+Equality is symmetric, so a closed source distinction supplies both a→b and b→a. In the reflexive-transitive closure of T(C) together with the retained comparison edges, these two paths prove mutual reachability. sourceEquivalentTied constructs both paths. A strict comparison requires a forward path and absence of the reverse path; equivalentCannotBeStrict therefore excludes strict ordering of this tied pair.
+
+Now let R be the registered relation on observation classes accepted by the original finite-order operation, and let the compared classes satisfy its exact pairwise comparability check:
+
+  partial_order(K,R)=true,
+  (ℓa,ℓb)∈R or (ℓb,ℓa)∈R.
+
+The existing partialOrderMeaning theorem derives reflexivity, antisymmetry, transitivity and endpoint membership from the executable check. endpointsBelong derives ℓa,ℓb∈K from the admitted comparison; this membership is not imposed as an additional hypothesis. Global totality is unnecessary: the proof uses comparability of this pair only.
+
+There are three outcomes:
+
+  tied          ⇔ ℓa=ℓb,
+  first         ⇔ ℓa≠ℓb and (ℓb,ℓa)∈R,
+  second        ⇔ ℓa≠ℓb and (ℓa,ℓb)∈R.
+
+Equality selects the tie. Otherwise, testing the forward cell selects the second endpoint when that cell exists; if it does not, pairwise comparability supplies the reverse cell and selects the first endpoint. decisionSound proves these cases. Two different directional outcomes would supply both relation cells, so antisymmetry would force ℓa=ℓb, contradicting the unequal-class condition. A directional outcome and a tie likewise contradict one another. decisionUnique proves uniqueness, and decisionExactly combines existence and uniqueness with the executable decision.
+
+Combining this result with sourceClassExactly gives
+
+  outcome=tied ⇔ distinguishable(O,a,b)=false.
+
+The decision reads only the observed classes and their registered relation cells. Changing the endpoint display names changes none of these inputs; namesDoNotSelect proves that the outcome is unchanged. No numerical affinity scale, lexical ranking or additional total-order rule is introduced by this construction.
+
+Pinned V3 dependencies (76f1b34e9e9682989adcbb088797b4ae4ce4fcf1): sft/information_science/symbols_distinguishability/law.py, validate_observation, observed_label, distinguishable, observation_classes and distinction_ledger; sft/mathematics/order_lattice/law.py, is_partial_order and comparable. These dependencies are explicitly registered by sft/chemistry/redox_derivation.py, REDOX_BLUEPRINTS[0]. Existing Lean proofs reused: SymbolObservation.validatedLookup, observedUnique and labelledDistinction; SymbolClasses.collectedFibre; SymbolLedger.validatedLedger and ledgerExhausts; OrderOperations.partialOrderMeaning and comparableIff. Conditional assembly proofs: AffinityObservationBinding.sourceClassExactly, exactFibre, sourceEquivalentTied, equivalentCannotBeStrict and sourcePairCensus; AffinityClassOrder.endpointsBelong, decisionSound, decisionUnique, decisionExactly, tiedExactlySourceClass and namesDoNotSelect. The displayed hypotheses specify the observation and class-relation inputs of these theorems. All 22 audited declarations have empty axiom dependencies. Chronological record: TIMELINE.txt, Turn590; source correspondence and retained assembly: verification/TURN_590_DEPENDENCY_BINDING.json and verification/TURN_590_STAGED/.
+

@@ -1,0 +1,196 @@
+{
+  "claim_id": "SFT-CHEM-AB-BUFFER-001",
+  "title": "Buffer response and conjugate-pair retention",
+  "statement": "A buffer is a finite positive reservoir of both members of a conjugate pair whose complementary paths consume added proton support or supply proton support to added base while retaining pair identity and finite capacity.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001"
+  ],
+  "generation_rule": "Generate the literal product of the registered buffer components, support, acid response, base response, retention, capacity, record and extension choices.",
+  "grammar_boundary": "Every finite reservoir containing positive support of both members of a conjugate pair and two complementary response paths that consume added proton support or supply proton support to an added base within capacity.",
+  "dimensions": [
+    {
+      "key": "components",
+      "choices": [
+        {
+          "name": "single-unpaired-species",
+          "admitted": false,
+          "reason": "One species cannot supply both complementary responses."
+        },
+        {
+          "name": "conjugate-pair-reservoir",
+          "admitted": true,
+          "reason": "Both conjugate identities are present."
+        }
+      ]
+    },
+    {
+      "key": "support",
+      "choices": [
+        {
+          "name": "one-component-absent",
+          "admitted": false,
+          "reason": "An absent member leaves one response unavailable."
+        },
+        {
+          "name": "positive-support-of-both",
+          "admitted": true,
+          "reason": "Each conjugate member has a positive finite count."
+        }
+      ]
+    },
+    {
+      "key": "acid-response",
+      "choices": [
+        {
+          "name": "added-proton-unanswered",
+          "admitted": false,
+          "reason": "No response permits the proton distinction to remain open."
+        },
+        {
+          "name": "base-member-accepts-proton",
+          "admitted": true,
+          "reason": "The deprotonated member consumes added proton support."
+        }
+      ]
+    },
+    {
+      "key": "base-response",
+      "choices": [
+        {
+          "name": "added-base-unanswered",
+          "admitted": false,
+          "reason": "No response permits proton removal without paired change."
+        },
+        {
+          "name": "acid-member-supplies-proton",
+          "admitted": true,
+          "reason": "The protonated member supplies a proton to the added base."
+        }
+      ]
+    },
+    {
+      "key": "retention",
+      "choices": [
+        {
+          "name": "reservoir-identity-erased",
+          "admitted": false,
+          "reason": "A response without conjugate tracking cannot be reversed."
+        },
+        {
+          "name": "conjugate-pair-retained",
+          "admitted": true,
+          "reason": "Each response converts one member into the other."
+        }
+      ]
+    },
+    {
+      "key": "capacity",
+      "choices": [
+        {
+          "name": "unlimited-buffer-claim",
+          "admitted": false,
+          "reason": "A finite reservoir cannot have unlimited capacity."
+        },
+        {
+          "name": "finite-source-bounded-capacity",
+          "admitted": true,
+          "reason": "Capacity is limited by retained positive component support."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "pH-answer-only",
+          "admitted": false,
+          "reason": "A pH value cannot reconstruct composition and response."
+        },
+        {
+          "name": "pair-count-response-trace",
+          "admitted": true,
+          "reason": "Components, counts and both response paths remain held."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "free-equilibrium-fit",
+          "admitted": false,
+          "reason": "A fitted equation can force a measured response."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Complementary finite conjugate support supplies the structural law."
+        }
+      ]
+    }
+  ],
+  "exact_result": "conjugate-pair-reservoir__positive-support-of-both__base-member-accepts-proton__acid-member-supplies-proton__conjugate-pair-retained",
+  "induction_base": "One positive unit of each conjugate member with both complementary response paths supplies the first finite buffer.",
+  "induction_step": "Appending positive units extends the finite capacity while every response still converts one conjugate member into the other and retains the full composition trace.",
+  "exclusions": [
+    "no acid/base dictionary, pH scale, equilibrium equation, dissociation constant, measured value or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no unpaired creation, copying or loss of a proton or electron carrier",
+    "no claim that structural closure alone fixes every solution-dependent strength or capacity value",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite reservoir containing positive support of both members of a conjugate pair and two complementary response paths that consume added proton support or supply proton support to an added base within capacity."
+  ],
+  "operational_witnesses": [
+    [
+      "pair-support",
+      "both conjugate components have positive support",
+      true
+    ],
+    [
+      "two-responses",
+      "both acid and base perturbation responses are registered",
+      true
+    ],
+    [
+      "finite-capacity",
+      "the reservoir uses explicit positive counts",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-AB-BUFFER-001",
+  "expected_observation_label": "weak-acid-conjugate-base-pair__responds-to-added-acid-or-base__composition-change-limited__source-bounded-capacity",
+  "target_rows": [
+    {
+      "target_id": "buffer-iupac-didac-e15",
+      "source_id": "IUPAC-DIDAC-E15-2026",
+      "source_locator": "official IUPAC source set anchored at IUPAC-DIDAC-E15",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/iupac-didac-buffer-e15-extract.html",
+      "snapshot_hash": "sha256:570a91d1a7de35b22a8469c117f10af9e4bed3012ae61f54362fe45534b3d01e"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_acid_base_batch_1.json",
+  "falsification_condition": "The claim fails if the authoritative buffer record lacks a weak acid/conjugate base pair, response to added acid/base or finite composition-dependent capacity, or if a changed row is accepted."
+}

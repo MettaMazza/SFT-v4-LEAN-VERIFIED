@@ -23875,9 +23875,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-AB-BUFFER-001-b76553aa9e22f857.json",
       "statement": "A buffer is a finite positive reservoir of both members of a conjugate pair whose complementary paths consume added proton support or supply proton support to added base while retaining pair identity and finite capacity.",
       "title": "Buffer response and conjugate-pair retention",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/BufferReservoir.lean",
+        "SFT/Chemistry/BufferGrammar.lean",
+        "SFT/Chemistry/BufferEvidence.lean",
+        "SFT/Chemistry/BufferExperiment.lean",
+        "SFT/Chemistry/BufferValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full 256-form program, original empirical output, retained source-extraction evidence and original independent-validator controls.",
       "registration_sha256": "356e2f08c1c7bd1c343c2e81d14d90245e8b1f77e91c231220b701fcb73e0d9d",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -23939,7 +23945,10 @@
         "statement": "A buffer is a finite positive reservoir of both members of a conjugate pair whose complementary paths consume added proton support or supply proton support to added base while retaining pair identity and finite capacity.",
         "status": "empirically_tested",
         "title": "Buffer response and conjugate-pair retention"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_586_BUFFER_COMPLETION.json",
+      "verified_scope": "Original positive-support BufferReservoir and exact response modes; one-unit consumption induction derives finite bound and attainable capacity; both conjugate conversions and complete traces, pair/composition conservation, base and capacity extension.; Original eight axes, all256 alternatives, exact source decisions and unique survivor.; Original registration,census,closure and controls.; Original sealed prediction and registered reference.; Original official HTML corpus from pinned bytes via unchanged source IO extraction; native multi-source binding,custody/isolation and all empirical output fields/hashes."
     },
     {
       "branch": "chemistry",
@@ -193948,13 +193957,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T08:59:43.549588+00:00",
+  "updated_at": "2026-11-11T09:10:35.015660+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2394,
-    "fully_reconstructed_claims": 387,
-    "axiom_free_exported_results": 20817,
-    "axiom_free_audited_definitions_and_theorems": 47841
+    "pending": 2393,
+    "fully_reconstructed_claims": 388,
+    "axiom_free_exported_results": 20860,
+    "axiom_free_audited_definitions_and_theorems": 47966
   }
 }

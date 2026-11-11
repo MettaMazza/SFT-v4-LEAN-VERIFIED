@@ -3929,3 +3929,8 @@ import SFT.Chemistry.AmphotericGrammar
 import SFT.Chemistry.AmphotericEvidence
 import SFT.Chemistry.AmphotericExperiment
 import SFT.Chemistry.AmphotericValidation
+import SFT.Chemistry.BufferReservoir
+import SFT.Chemistry.BufferGrammar
+import SFT.Chemistry.BufferEvidence
+import SFT.Chemistry.BufferExperiment
+import SFT.Chemistry.BufferValidation

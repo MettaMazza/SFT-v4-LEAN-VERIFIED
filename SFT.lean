@@ -4049,3 +4049,13 @@ import SFT.Chemistry.KineticOrderEvidence
 import SFT.Chemistry.KineticOrderExperiment
 
 import SFT.Chemistry.KineticOrderValidation
+
+import SFT.Chemistry.ChemicalEquilibrium
+
+import SFT.Chemistry.EquilibriumGrammar
+
+import SFT.Chemistry.EquilibriumEvidence
+
+import SFT.Chemistry.EquilibriumExperiment
+
+import SFT.Chemistry.EquilibriumValidation

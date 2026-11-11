@@ -1297,3 +1297,6 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.KineticOrderGrammar.candidates do
     IO.println ("KineticOrderGrammar\t" ++ SFT.Chemistry.KineticOrderGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.KineticOrderGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.KineticOrderGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.KineticOrderGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.EquilibriumGrammar.candidates do
+    IO.println ("EquilibriumGrammar\t" ++ SFT.Chemistry.EquilibriumGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.EquilibriumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.EquilibriumGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.EquilibriumGrammar.decisionReason c)

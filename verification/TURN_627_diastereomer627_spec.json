@@ -1,0 +1,216 @@
+{
+  "claim_id": "SFT-CHEM-STEREO-DIASTEREOMER-001",
+  "title": "Diastereomer distinction",
+  "statement": "Diastereomers are paired non-superposable stereoisomers of equal composition and connectivity that are not related as exact mirror images.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001",
+    "SFT-CHEM-STEREO-CHIRALITY-001",
+    "SFT-CHEM-STEREO-ENANTIOMER-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete carrier preservation, exact equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite equal-constitution oriented molecular pair with exhaustive identity, reflection and proper-superposition classifications.",
+  "dimensions": [
+    {
+      "key": "members",
+      "choices": [
+        {
+          "name": "one-structure-only",
+          "admitted": false,
+          "reason": "No pair exists."
+        },
+        {
+          "name": "paired-stereoisomers",
+          "admitted": true,
+          "reason": "Two oriented structures are retained."
+        }
+      ]
+    },
+    {
+      "key": "constitution",
+      "choices": [
+        {
+          "name": "different-composition-or-connectivity",
+          "admitted": false,
+          "reason": "They are not stereoisomers."
+        },
+        {
+          "name": "same-composition-and-connectivity",
+          "admitted": true,
+          "reason": "Constitution is held equal."
+        }
+      ]
+    },
+    {
+      "key": "superposition",
+      "choices": [
+        {
+          "name": "superposable-pair",
+          "admitted": false,
+          "reason": "No stereochemical distinction remains."
+        },
+        {
+          "name": "non-superposable-pair",
+          "admitted": true,
+          "reason": "Their configurations differ."
+        }
+      ]
+    },
+    {
+      "key": "mirror",
+      "choices": [
+        {
+          "name": "exact-mirror-pair",
+          "admitted": false,
+          "reason": "That pair is enantiomeric."
+        },
+        {
+          "name": "not-mirror-related",
+          "admitted": true,
+          "reason": "Reflection does not identify the second member."
+        }
+      ]
+    },
+    {
+      "key": "configuration",
+      "choices": [
+        {
+          "name": "all-centres-erased",
+          "admitted": false,
+          "reason": "The difference is unreproducible."
+        },
+        {
+          "name": "complete-relative-configurations-held",
+          "admitted": true,
+          "reason": "Every oriented centre is retained."
+        }
+      ]
+    },
+    {
+      "key": "properties",
+      "choices": [
+        {
+          "name": "properties-forced-equal",
+          "admitted": false,
+          "reason": "Non-mirror structures need not share response."
+        },
+        {
+          "name": "property-distinction-open",
+          "admitted": true,
+          "reason": "Measured response remains source-bound."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "diastereomer-label-only",
+          "admitted": false,
+          "reason": "The exclusions cannot be checked."
+        },
+        {
+          "name": "complete-pair-classification-trace",
+          "admitted": true,
+          "reason": "Identity, mirror and map tests are retained."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-diastereomer-rule",
+          "admitted": false,
+          "reason": "A taxonomy can select the answer."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Stereoisomer identity minus mirror relation supplies the class."
+        }
+      ]
+    }
+  ],
+  "exact_result": "paired-stereoisomers__same-composition-and-connectivity__non-superposable-pair__not-mirror-related__complete-relative-configurations-held",
+  "induction_base": "One non-superposable non-mirror stereoisomer pair supplies the first diastereomer class.",
+  "induction_step": "Appending matched constitutional support preserves equal constitution while extending configuration, reflection and map tests.",
+  "exclusions": [
+    "no stereochemical dictionary, organic reaction taxonomy, polymer table, biomolecular database, measured target or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no atom, bond, orientation, repeat unit, chain or observation distinction may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite equal-constitution oriented molecular pair with exhaustive identity, reflection and proper-superposition classifications."
+  ],
+  "operational_witnesses": [
+    [
+      "constitution",
+      "complete structure exists",
+      true
+    ],
+    [
+      "classification",
+      "mirror and identity tests remain separate",
+      true
+    ],
+    [
+      "properties",
+      "empirical response remains open",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-STEREO-DIASTEREOMER-001",
+  "expected_observation_label": "stereoisomers__not-mirror-images__distinct-configurations__property-distinction-possible",
+  "target_rows": [
+    {
+      "target_id": "diastereomer-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-DIASTEREOMER-COMPOSITE-2026",
+      "source_locator": "authority source set anchored at D01679",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/D01679.json",
+      "snapshot_hash": "sha256:4fa09c83930088c3eeea3fd428d370918e6bf98c361673287c0fc8ef9d394078"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_stereochemistry_organic_polymer_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence lacks stereoisomer identity, non-mirror relation, configurational distinction or possible property distinction, or if a tampered row is accepted."
+}

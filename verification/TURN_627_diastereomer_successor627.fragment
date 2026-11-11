@@ -1,0 +1,65 @@
+-- Apply the same added constitution in a common named carrier frame;
+-- the two independently retained orientation words need not be reflections.
+def extendLeft (p : Pair) (fresh element : String) (word : OrientationWord) (links : List String) :=
+ appendMolecularBranch p.left fresh element word links
+
+def extendRight (p : Pair) (fresh element : String) (word : OrientationWord) (links : List String) :=
+ appendMolecularBranch p.right fresh element word links
+
+theorem matchedCarrierExtension (p : Pair) (same : p.left.carrier=p.right.carrier)
+ (fresh element : String) (leftWord rightWord : OrientationWord) (links : List String) :
+ (extendLeft p fresh element leftWord links).carrier=(extendRight p fresh element rightWord links).carrier := by
+ change MolecularCarrier.Raw.mk (p.left.carrier.occurrences++[fresh]) (p.left.carrier.elements++[element])
+  (p.left.carrier.bonds++links.map (fun n => (n,fresh))) p.left.carrier.openChargeFibres=
+  MolecularCarrier.Raw.mk (p.right.carrier.occurrences++[fresh]) (p.right.carrier.elements++[element])
+  (p.right.carrier.bonds++links.map (fun n => (n,fresh))) p.right.carrier.openChargeFibres
+ rw [same]
+
+theorem matchedCompositionCounts (p : Pair)
+ (same : ∀ label, MolecularCarrier.labelCount label p.left.carrier.elements=
+  MolecularCarrier.labelCount label p.right.carrier.elements)
+ (fresh element : String) (leftWord rightWord : OrientationWord) (links : List String) :
+ ∀ label, MolecularCarrier.labelCount label (extendLeft p fresh element leftWord links).carrier.elements=
+  MolecularCarrier.labelCount label (extendRight p fresh element rightWord links).carrier.elements :=
+ MolecularIsomer.matchedExtensionPreservesMultiplicity _ _ [element] same
+
+theorem leftConfigurationRetained (p : Pair) (fresh element name : String)
+ (word : OrientationWord) (links : List String) (different : name≠fresh) :
+ wordAt name (extendLeft p fresh element word links).orientations=wordAt name p.left.orientations :=
+ branchRetainsOldOrientation p.left fresh element name word links different
+
+theorem rightConfigurationRetained (p : Pair) (fresh element name : String)
+ (word : OrientationWord) (links : List String) (different : name≠fresh) :
+ wordAt name (extendRight p fresh element word links).orientations=wordAt name p.right.orientations :=
+ branchRetainsOldOrientation p.right fresh element name word links different
+
+theorem extendedReflectionRetained (p : Pair) (fresh element : String)
+ (word : OrientationWord) (links : List String) :
+ mirrorMolecule (extendLeft p fresh element word links)=
+ appendMolecularBranch (mirrorMolecule p.left) fresh element (reflectWord word) links :=
+ molecularBranchReflection p.left fresh element word links
+
+def extendedTests (p : Pair) (fresh element : String) (leftWord rightWord : OrientationWord)
+ (links : List String) :=
+ (arrangementsCore (extendRight p fresh element rightWord links).carrier.occurrences).map
+  (fun order => (order,
+   properMatches (extendLeft p fresh element leftWord links) (extendRight p fresh element rightWord links) order,
+   properMatches (mirrorMolecule (extendLeft p fresh element leftWord links))
+    (extendRight p fresh element rightWord links) order))
+
+theorem extendedCensusCoversEveryPermutation (p : Pair) (fresh element : String)
+ (leftWord rightWord : OrientationWord) (links order : List String)
+ (unique : distinct p.right.carrier.occurrences=true) (freshName : ¬fresh∈p.right.carrier.occurrences)
+ (perm : List.Perm order (p.right.carrier.occurrences++[fresh])) :
+ (order,properMatches (extendLeft p fresh element leftWord links) (extendRight p fresh element rightWord links) order,
+  properMatches (mirrorMolecule (extendLeft p fresh element leftWord links))
+   (extendRight p fresh element rightWord links) order)∈extendedTests p fresh element leftWord rightWord links := by
+ apply SFT.Foundation.Count.TraceDerivation.memMap
+ apply everyPermutationGenerated (p.right.carrier.occurrences++[fresh])
+ · intro empty
+   have held : fresh∈p.right.carrier.occurrences++[fresh] :=
+    SFT.Foundation.Count.TraceDerivation.memAppendRight _ _ _ (.head [])
+   rw [empty] at held
+   cases held
+ · exact appendFreshDistinct _ _ unique freshName
+ · exact perm

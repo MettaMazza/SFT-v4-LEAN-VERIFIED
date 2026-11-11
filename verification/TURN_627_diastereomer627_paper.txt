@@ -1,0 +1,33 @@
+
+Diastereomer distinction: complete identity and mirror exclusion
+
+Diastereomer.Pair retains two independently named oriented carriers together with the existing exhaustive constitution comparison. The constitution witness gives equal composition signatures and an actual generated map preserving the full elemental and bond structure. Their original names and orientation records remain separate.
+
+Let H(A,B) be hasProperSuperposition for the complete atom, bond and orientation test, and let R(A) be the explicit source reflection. The decision is
+\[
+D(A,B)=\neg H(A,B)\land\neg H(R(A),B).
+\]
+The first test excludes identical stereochemical forms; the second excludes an enantiomeric mirror relation. superposableExcluded and mirrorRelatedExcluded prove these exclusions from the actual executable tests.
+
+For nonempty distinct right-hand occurrence support N_B, noProperExactly translates absence of a successful search result into failure of every permutation. exactClassification therefore proves
+\[
+D(A,B)=\mathrm{true}\quad\Longleftrightarrow\quad
+\bigl[\forall p\in\operatorname{Perm}(N_B),\ P_{\rm proper}(A,B,p)=\mathrm{false}\bigr]
+\land
+\bigl[\forall p\in\operatorname{Perm}(N_B),\ P_{\rm proper}(R(A),B,p)=\mathrm{false}\bigr].
+\]
+The two universally quantified tests remain distinct. classificationTrace retains each order with its constitution, direct-configuration and reflected-configuration results. It does not collapse the trace to a class name.
+
+The generated base retains two atom identities and their bond. Its left orientations are (f_1,EmptyOne,EmptyOne) at both occurrences; its right orientations retain f_1 at the first and f_2 at the second. baseSameConstitution establishes the unchanged constitution. baseClassified and baseAllIdentityAndMirrorMapsFail prove rejection of every direct and reflected proper map, supplying the first non-superposable non-mirror pair.
+
+For matched appended support in a common named carrier frame, extendLeft and extendRight append the same atom label and links while retaining their independently specified orientation words. matchedCarrierExtension proves equality of the extended underlying carriers from equality of the original underlying carriers. Independently, matchedCompositionCounts proves, for every elemental label q,
+\[
+n_q(C_A)=n_q(C_B)\Longrightarrow n_q(C_A\mathbin{+\!+}[e])=n_q(C_B\mathbin{+\!+}[e]).
+\]
+leftConfigurationRetained and rightConfigurationRetained preserve the old named orientation lookups. extendedReflectionRetained proves reflection/extension commutation. extendedCensusCoversEveryPermutation proves that extendedTests includes every permutation of the expanded occurrence support together with both its direct and reflected results. These extension statements specify their common-frame and count-equality premises explicitly; exactClassification above retains independently named carriers.
+
+Observation retains the pair, conditions, method, source and both measured responses. responsesDoNotSelectClass proves that substituting recorded responses leaves the structural classification unchanged. The source's open empirical-property boundary therefore remains separate from identity and mirror exclusion.
+
+All original eight binary axes and all 256 alternatives are represented in DiastereomerGrammar/Evidence/Experiment/Validation. Fresh native and empirical outputs and the original independent adverse controls match V3. A separate execution comparison fixes the left first-fibre configuration and enumerates all 26 nonempty three-axis Fold words at each right-hand occurrence, with equal and unequal atomic labels: all 1,352 outcomes match V3's executed canonical identity and mirror operations (1,348 diastereomer outcomes and four exclusions). The current 136 audited declarations have empty Lean axiom dependencies.
+
+Pinned V3: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1; sft/chemistry/stereochemistry_organic_polymer_derivation.py, DIASTEREOMER and STEREOCHEMISTRY_ORGANIC_POLYMER_BLUEPRINTS[2]; stereochemistry_organic_polymer_batch_1.py; claims/SFT-CHEM-STEREO-DIASTEREOMER-001/execution.py. Equivalent explicit reflection/classification operations: coordination_isomerism_law_v1.py, _canonical and _mirror. Lean: SFT/Chemistry/Diastereomer.lean, declarations named above; reused Chirality/Enantiomer reflection and proper-map proofs, MolecularIsomer constitution enumeration and count extension. Timeline: Turn627. Evidence: TURN_627_diastereomer627_audit_config.json and TURN_627_diastereomer_configurations627_report.json.

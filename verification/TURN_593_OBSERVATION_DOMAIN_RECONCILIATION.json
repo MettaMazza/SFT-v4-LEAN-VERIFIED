@@ -1,0 +1,26 @@
+{
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "recovery": {
+    "session_id": 2372,
+    "exit_code": 2,
+    "terminal": true,
+    "changes": [
+      "ZENODO_PAPER_DRAFT.txt",
+      "TIMELINE.txt",
+      "SFT/Physics/HubbleComparison.lean",
+      "retained/SFT/Chemistry/AffinityPhysicalObservation.lean"
+    ],
+    "interpretation": "identity differences only; no proof failure; Hubble source previously inspected and excluded"
+  },
+  "actual_declarations": {
+    "AffinityObservationBinding.Endpoint": "Requires observedLabel observation symbol=.ok label. Does not require validateObservation, canonicalAlphabet, symbolHeld or a nonempty-label proof.",
+    "AffinityDerivedClassOrder": "Uses Endpoint observation, not the validateObservation guard. Its existing class-order proofs therefore do not impose that additional guard.",
+    "SymbolObservation.observedLabel": "Requires exactly one lookup result; the returned String may be empty.",
+    "SymbolObservation.validateObservation": "Has the separate nonempty-label guard. Used by endpointExists and sourcePairCensus with explicit validity hypotheses."
+  },
+  "correction": "The physical/symbol validator domain distinction does not establish a domain restriction in the staged derived class-order theorems. Do not reconstruct those proofs or treat this validator guard as an affinity completion obstacle.",
+  "retained_result": "TURN_592 native physical record reconstruction and shared-state recurrence remain valid independent results.",
+  "remaining_source_obligation": "AFFINITY_DIMENSIONS comparison and ties: connect complete registered endpoint recurrence comparison to the actual relation and exact trace-equivalence class. The existing Endpoint.source establishes one observed-label lookup; it is not a proof that the lookup represents all endpoint recurrence observations.",
+  "completed_entries": 388,
+  "new_proof_declarations": 0
+}

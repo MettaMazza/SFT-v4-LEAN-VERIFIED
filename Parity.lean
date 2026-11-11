@@ -1393,3 +1393,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.NuclearClosureGrammar.candidates do
     IO.println ("NuclearClosureGrammar\t" ++ SFT.Physics.NuclearClosureGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NuclearClosureGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NuclearClosureGrammar.exactForm c ++ "\t" ++ SFT.Physics.NuclearClosureGrammar.decisionReason c)
+
+  for c in SFT.Physics.AtomicBoundaryGrammar.candidates do
+    IO.println ("AtomicBoundaryGrammar\t" ++ SFT.Physics.AtomicBoundaryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AtomicBoundaryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AtomicBoundaryGrammar.exactForm c ++ "\t" ++ SFT.Physics.AtomicBoundaryGrammar.decisionReason c)
+
+  for c in SFT.Physics.AlphaIntervalGrammar.candidates do
+    IO.println ("AlphaIntervalGrammar\t" ++ SFT.Physics.AlphaIntervalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AlphaIntervalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AlphaIntervalGrammar.exactForm c ++ "\t" ++ SFT.Physics.AlphaIntervalGrammar.decisionReason c)
+
+  for c in SFT.Physics.NuclearSequenceGrammar.candidates do
+    IO.println ("NuclearSequenceGrammar\t" ++ SFT.Physics.NuclearSequenceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NuclearSequenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NuclearSequenceGrammar.exactForm c ++ "\t" ++ SFT.Physics.NuclearSequenceGrammar.decisionReason c)

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/audit_nuclear_sequence650.py", line 11, in <module>
+    p=Path('work/AuditNuclearSequenceSource648.lean');p.write_text('\n'.join('import SFT.Physics.'+m for m in modules)+'\n'+'\n'.join('#print axioms '+n for n in names)+'\n');o=subprocess.run(['/Users/dolltrading/.elan/bin/lean',str(p)],env=env,text=True,capture_output=True);Path('work/nuclear_sequence650_audit.log').write_text(o.stdout+o.stderr);assert o.returncode==0,o.stdout+o.stderr;assert all("'"+n+"' does not depend on any axioms" in o.stdout for n in names),o.stdout;Path('work/nuclear_sequence650_audit_config.json').write_text(json.dumps(dict(modules=modules,declarations=names,theorems=ths,definitions_and_theorems=defs),indent=2));print('PASS',len(names),'zero-axiom declarations')
+AssertionError: 'SFT.Physics.NuclearSequenceSource.Coordinate' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.Record' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.sourceId' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.invalidSequence' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.positiveCoordinates' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.magicSequence' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.orderedEqual' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.orderedEqualSelf' depends on axioms: [propext]
+'SFT.Physics.NuclearSequenceSource.orderedEqualExact' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.precheck' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.registered' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.registeredSequence' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.registeredPasses' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.validateWith' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.registeredDelegates' does not depend on any axioms
+'SFT.Physics.NuclearSequenceSource.failedRecordStops' does not depend on any axioms
+

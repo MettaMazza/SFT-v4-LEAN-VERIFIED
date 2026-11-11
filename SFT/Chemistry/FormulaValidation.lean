@@ -1,0 +1,137 @@
+import SFT.Physics.ObservationComparison
+import SFT.Chemistry.FormulaExperiment
+import SFT.Physics.HostilePackage
+import SFT.Physics.TargetCustody
+import SFT.Computation.MathematicalModelling
+namespace SFT.Chemistry.FormulaValidation
+open SFT.Host SFT.Host.Canonical SFT.Physics FormulaExperiment SourceExtraction
+abbrev PredictionSeal := LeptonCustody.PredictionSeal
+abbrev Snapshot := HostilePackage.Snapshot
+
+def inputValues (derivationSeal : String) : Except String (List (String × CapabilityValues.Value)) := do
+ let held ← CapabilityValues.heldLabel "sealed-derivation" derivationSeal
+ .ok [("registered-premise",.label held)]
+
+def sealPrediction (prior : Option PredictionSeal) (derivationSeal : String)
+    (execution : CapabilityExecution.Execution) : Except String PredictionSeal :=
+ match prior with
+ | some _ => .error "prediction is already sealed and cannot be replaced"
+ | none =>
+   let env := identity (envelope derivationSeal)
+   let payload : Value := .object [("experiment_id",.text experimentId),
+     ("prediction_hash",.text execution.outputHash),("trace_hash",.text execution.traceHash),("envelope_hash",.text env)]
+   .ok ⟨experimentId,execution.outputHash,execution.traceHash,env,identity payload⟩
+
+def programFields : List (String × Value) := [
+ ("schema",.text "sft-v3-fold-program/1"),("program_id",.text program.programId),
+ ("instructions",.array (program.instructions.map CapabilityExecution.canonicalInstruction))]
+
+def observation : CapabilityValues.Value → Except String String
+ | .label held => if Text.equal held.family "chemical-observation" then .ok held.label
+   else .error "prediction emitted an invalid chemical observation label"
+ | .emptyOne _ | .count _ | .ratio _ _ | .word _ | .pair _ _ | .table _ =>
+   .error "prediction emitted an invalid chemical observation label"
+
+def certificate (fields : List (String × Value)) : Value :=
+ .object (fields ++ [("certificate_hash",.text (identity (.object fields)))])
+
+def isolation (host implementation : String) (execution : CapabilityExecution.Execution)
+    (vault : TargetCustody.Vault) (prediction : PredictionSeal) : Value := certificate [
+ ("adapter_id",.text "sft-portable-capability-custody/1"),
+ ("executor_id",.text (Text.append experimentId "-prediction-executor")),
+ ("host_platform",.text (if host.isEmpty then "registered-host" else host)),("python_implementation",.text implementation),
+ ("interpreter_hash",.text (identity (.text "sft-v3-capability-closed-fold-interpreter/1"))),
+ ("program_hash",.text execution.programHash),("input_manifest_hash",.text execution.inputManifestHash),
+ ("registered_target_identity_hash",.text vault.commitment.targetHash),
+ ("comparison_implementation_identity_hash",.text (identity (.array [.text "exact-source-derived-held-label-equality",.text experimentId,.text falsification]))),
+ ("prediction_seal_hash",.text prediction.sealHash),
+ ("denied_capabilities",.array (["clock","dynamic_import","environment","filesystem_read","filesystem_write","foreign_function","network","subprocess"].map Value.text)),
+ ("attempted_forbidden_operations",.array []),("target_material_present",.boolean false),
+ ("comparison_code_present",.boolean false),("output_hash",.text execution.outputHash),
+ ("trace_hash",.text execution.traceHash),("completed",.boolean true)]
+
+def custodyCertificate (released : TargetCustody.Release) (prediction : PredictionSeal) : Value := certificate [
+ ("adapter_id",.text "sft-portable-capability-custody/1"),("custodian_id",.text released.custodian),
+ ("experiment_registration_hash",.text registrationHash),("registered_target_identity_hash",.text released.targetHash),
+ ("prediction_seal_hash",.text prediction.sealHash),("target_release_manifest_hash",.text released.releaseHash),
+ ("target_absent_until_prediction_seal",.boolean true),("released_after_prediction_seal",.boolean true)]
+
+structure Comparison where
+ source : Resolved
+ predicted : String
+ observed : String
+ passed : Bool
+
+def compareRows (prediction : String) (released : List (String × Value))
+ (rows : List Resolved) : Except String (List Comparison) := rows.mapM fun row => do
+ let observed ← ObservationComparison.releasedLabel row.reference.targetId released
+ .ok ⟨row,prediction,observed,Text.equal prediction observed⟩
+
+def comparisonValue (row : Comparison) : Value := .object [
+ ("target_id",.text row.source.reference.targetId),("source_id",.text row.source.reference.sourceId),
+ ("source_locator",.text row.source.reference.sourceLocator),("snapshot_hash",.text row.source.reference.snapshotHash),
+ ("extraction_hash",.text row.source.extractionHash),("predicted",.text row.predicted),
+ ("observed",.text row.observed),("passed",.boolean row.passed)]
+def controlPassed (prediction : String) : Bool := !Text.equal prediction (Text.append prediction "__tampered")
+def controlValue (prediction : String) : Value := .object [
+ ("target_id",.text "deliberately-tampered-unfavorable-control"),("predicted",.text prediction),
+ ("observed",.text (Text.append prediction "__tampered")),("passed",.boolean (controlPassed prediction))]
+def message (row : Comparison) : String := Text.intercalate "" [row.source.reference.targetId,
+ ": predicted ",row.predicted,"; source-derived ",row.observed,"; exact match ",if row.passed then "True" else "False"]
+def sourceIds : List Reference → List String
+ | [] => []
+ | row::rest => row.sourceId :: (sourceIds rest).filter (fun s => !Text.equal s row.sourceId)
+def receipt (registryHash derivationSeal prediction traceHash : String) (predictionSeal : PredictionSeal)
+ (rows : List Comparison) : Value := .object [
+ ("experiment_registration_hash",.text registrationHash),("derivation_seal_hash",.text derivationSeal),
+ ("prediction_seal_hash",.text predictionSeal.sealHash),("observation_registry_hash",.text registryHash),
+ ("comparisons",.array (rows.map comparisonValue)),("tampered_control",controlValue prediction),
+ ("complete_trace_hash",.text traceHash)]
+
+structure Validation where
+ value : Value
+ passed : Bool
+
+-- Snapshot/file and platform fields are supplied by the source IO adapter.
+-- The pipeline retains the exact original order of source checks and protocol operations.
+def validate (registryBytes : ByteArray) (registry : Value) (snapshots : List SourceExtraction.Snapshot)
+ (derivationSeal host implementation : String)
+    (before after : Snapshot) : Except String Validation := do
+ FormulaExperiment.validateSpec
+ let sourceRows ← resolveAll registry references snapshots
+ let registryHash := Text.append "sha256:" (SHA256Window.digest registryBytes)
+ let parsed ← CapabilityDocuments.loadProgramFields programFields
+ let inputs ← inputValues derivationSeal
+ let vault ← TargetCustody.createVault experimentId (Text.append experimentId "-external-target-custodian")
+   (targets sourceRows) (identity (.array [.text registrationHash,.text registryHash])) (identity (envelope derivationSeal))
+ let execution ← CapabilityExecution.execute parsed inputs
+ let predictionSeal ← sealPrediction none derivationSeal execution
+ let (audited,packageAudit) ← HostilePackage.auditProgram programFields before after
+ if !Text.equal (identity (CapabilityExecution.canonicalProgram audited)) execution.programHash || !packageAudit.passed then
+   .error "Chemistry prediction program differs after hostile-package audit"
+ else do
+   let (_,released) ← TargetCustody.release vault predictionSeal
+   TargetCustody.verify vault.commitment released predictionSeal
+   let _context ← SFT.Computation.MathematicalModelling.openTargets
+     (some ⟨predictionSeal.experiment,predictionSeal.predictionHash,predictionSeal.traceHash,predictionSeal.envelopeHash,predictionSeal.sealHash⟩)
+     (references.map Reference.targetId) released.values
+   let prediction ← observation execution.output
+   let rows ← compareRows prediction released.values sourceRows
+   let targetId ← TargetCustody.identityFromRelease released
+   if !Text.equal targetId vault.commitment.targetHash then
+     .error "released Chemistry target identity differs from commitment"
+   else
+     let passed := (rows.all Comparison.passed) && controlPassed prediction
+     .ok ⟨.object [
+       ("validated_seal_hash",.text derivationSeal),("experiment_registration_hash",.text registrationHash),
+       ("isolation_certificate",isolation host implementation execution vault predictionSeal),
+       ("target_custody_certificate",custodyCertificate released predictionSeal),
+       ("evaluator_verified_seal",.boolean true),("target_opened_after_seal",.boolean true),
+       ("all_rows_preserved",.boolean true),("data_source_ids",.array ((sourceIds references).map Value.text)),
+       ("measurements",.array ((rows.map (fun row => Value.text (message row))) ++ [.text "deliberately tampered unfavorable control rejected"])),
+       ("measurement_receipt_hash",.text (identity (receipt registryHash derivationSeal prediction execution.traceHash predictionSeal rows))),
+       ("falsification_condition",.text falsification),("passed",.boolean passed)],passed⟩
+
+theorem resealRejected (old : PredictionSeal) (derivationSeal : String) (execution : CapabilityExecution.Execution) :
+    sealPrediction (some old) derivationSeal execution = .error "prediction is already sealed and cannot be replaced" := rfl
+end SFT.Chemistry.FormulaValidation

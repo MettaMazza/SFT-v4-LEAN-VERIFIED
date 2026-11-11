@@ -3736,3 +3736,13 @@ import SFT.Chemistry.AmountGrammar
 import SFT.Chemistry.AmountEvidence
 import SFT.Chemistry.AmountExperiment
 import SFT.Chemistry.AmountValidation
+import SFT.Chemistry.FormulaComposition
+import SFT.Chemistry.FormulaGrammar
+import SFT.Chemistry.FormulaEvidence
+import SFT.Chemistry.FormulaExperiment
+import SFT.Chemistry.FormulaValidation
+import SFT.Chemistry.NomenclatureWord
+import SFT.Chemistry.NomenclatureGrammar
+import SFT.Chemistry.NomenclatureEvidence
+import SFT.Chemistry.NomenclatureExperiment
+import SFT.Chemistry.NomenclatureValidation

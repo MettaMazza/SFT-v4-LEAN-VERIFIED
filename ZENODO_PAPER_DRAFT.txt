@@ -16885,3 +16885,5 @@ extensionRetainsOrder carries every previous path into the extended closure. ext
 
 Lean verification: SFT/Chemistry/AffinityRecordClosure.lean, edgeTargetsHeldPreference, edgeRetainsEndpoints, completeRelation, recordedComparisonIncluded, noExtraOrder, extensionRelation, extensionRetainsOrder, extensionRetainsFullRecord, initialComparison and originalOrientation. All 13 audited declarations have empty axiom dependencies. Source: pinned redox_derivation.py, AffinityComparison and REDOX_BLUEPRINTS[0]. Timeline: Turn588; correspondence: verification/TURN_588_AFFINITY_RECORD_BINDING.json.
 
+For the original constructor, admission entails p=a or p=b. AffinityComparison.preferredIsEndpoint proves this directly from the executable guard. The orientation-preservation theorem then derives e(c).2=p by considering these two cases; neither case introduces a numerical affinity scale. The source fields and constructor remain those of pinned redox_derivation.py:AffinityComparison. Lean references: AffinityComparison.preferredIsEndpoint and AffinityRecordClosure.edgeTargetsHeldPreference. Chronological source review: TIMELINE.txt, Turn589.
+

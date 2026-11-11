@@ -1,0 +1,18 @@
+Analytical selectivity and retained interference
+
+An observation retains the analyte component and response a, every declared interferent component and response b_i, their source records, and one method-and-condition boundary. Each component is bound to the declared analytical portion. The comparison uses exact equality of complete response records; its Boolean decision is proved equivalent to the mathematical distinction:
+\[d_i=\mathrm{true}\quad\Longleftrightarrow\quad a\ne b_i.\]
+exactDistinguishability establishes this equivalence for the exact response representation. No numerical tolerance or fitted threshold enters the comparison.
+
+The complete comparison trace contains one record for every declared interferent, retaining both component/response records, its decision and the method/conditions. everyComparisonHeld and noInventedComparison establish both directions of correspondence; completeComparisonCount proves that its length equals the declared interferent count. Selectivity is
+\[S=\bigwedge_i d_i,\qquad S=\mathrm{true}\Longleftrightarrow\forall i,\ a\ne b_i.\]
+selectiveExactly proves this universal condition over the complete finite declared support. Interference is the retained support
+\[I=\{i:a=b_i\}.\]
+interferenceExactly proves exact membership. failedComparisonRetained proves that a merged response remains in both the complete comparison trace and the interference record. mergedResponseRejectsSelectivity proves that any such declared row prevents the selective result.
+
+The base has one analyte and one declared interferent; baseDecision reduces its result to their exact distinction. Appending another interferent b preserves the prior trace and gives
+\[T'=T\mathbin{+\!+}[\operatorname{compare}(a,b)],\qquad
+ S'=\mathrm{true}\Longleftrightarrow S=\mathrm{true}\ \land\ a\ne b.\]
+appendComparisons and appendSelectivityExactly prove these statements. priorComparisonRetained and priorInterferenceRetained preserve favorable and unfavorable rows alike. appendPreservesBoundary retains the analyte, method and conditions; each comparison carries that same boundary rather than asserting a response independent of method.
+
+The original eight binary coordinates generate256 alternatives. The complete candidate and unique-survivor proofs accompany the exact response and interference derivation. Source: pinned V3 analytical_spectroscopic_derivation.py, SELECTIVITY and blueprint[2]; analytical_spectroscopic_batch_1.py; claims/SFT-CHEM-ANALYTICAL-SELECTIVITY-001/execution.py and independent_validator.py. Lean: SFT/Chemistry/AnalyticalSelectivity.lean and AnalyticalSelectivityGrammar/Evidence/Experiment/Validation, with the existing AnalyticalSeal. Timeline: Turn640. Completion evidence: TURN_640_ANALYTICAL_SELECTIVITY_COMPLETION.json. All134 audited declarations have no Lean axiom dependencies; full native program, empirical and independent-control comparisons pass.

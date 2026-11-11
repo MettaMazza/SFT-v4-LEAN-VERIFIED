@@ -1,0 +1,219 @@
+{
+  "claim_id": "SFT-CHEM-SPEC-MASS-001",
+  "title": "Mass-spectral composition correspondence",
+  "statement": "A mass-spectral record is the complete map from generated ionized carriers to retained mass/charge response classes and counted abundances, including precursor-fragment relations and observation conditions.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001",
+    "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+    "SFT-CHEM-MEAS-UNCERTAINTY-001",
+    "SFT-CHEM-MEAS-TRACEABILITY-001",
+    "SFT-CHEM-BIOMOLECULAR-BOUNDARY-001",
+    "SFT-CHEM-ANALYTICAL-SAMPLE-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete distinction preservation, exact recurrence/equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite generated ionized-carrier support with complete composition, isotope, mass/charge, response and precursor-fragment records.",
+  "dimensions": [
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "neutral-sample-label-only",
+          "admitted": false,
+          "reason": "No detected carrier class is generated."
+        },
+        {
+          "name": "generated-ionized-carriers",
+          "admitted": true,
+          "reason": "Each detected carrier occurrence is explicit."
+        }
+      ]
+    },
+    {
+      "key": "identity",
+      "choices": [
+        {
+          "name": "carrier-composition-erased",
+          "admitted": false,
+          "reason": "Composition correspondence is impossible."
+        },
+        {
+          "name": "composition-and-isotope-support-held",
+          "admitted": true,
+          "reason": "Constituent identities are retained."
+        }
+      ]
+    },
+    {
+      "key": "partition",
+      "choices": [
+        {
+          "name": "undifferentiated-response",
+          "admitted": false,
+          "reason": "Distinct carrier classes merge."
+        },
+        {
+          "name": "mass-charge-classes-held",
+          "admitted": true,
+          "reason": "Each response class keeps mass and charge organization."
+        }
+      ]
+    },
+    {
+      "key": "response",
+      "choices": [
+        {
+          "name": "peak-position-only",
+          "admitted": false,
+          "reason": "Multiplicity support is lost."
+        },
+        {
+          "name": "class-position-and-abundance-held",
+          "admitted": true,
+          "reason": "Location and counted response remain paired."
+        }
+      ]
+    },
+    {
+      "key": "fragments",
+      "choices": [
+        {
+          "name": "fragment-origin-erased",
+          "admitted": false,
+          "reason": "Products cannot be related to precursors."
+        },
+        {
+          "name": "precursor-fragment-map-held",
+          "admitted": true,
+          "reason": "Generated decomposition paths persist."
+        }
+      ]
+    },
+    {
+      "key": "conditions",
+      "choices": [
+        {
+          "name": "universal-spectrum",
+          "admitted": false,
+          "reason": "Carrier production is method-bound."
+        },
+        {
+          "name": "ionization-and-instrument-boundary",
+          "admitted": true,
+          "reason": "Source and observation conditions are explicit."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "spectrum-image-only",
+          "admitted": false,
+          "reason": "The composition map cannot be checked."
+        },
+        {
+          "name": "complete-carrier-response-trace",
+          "admitted": true,
+          "reason": "Every class, count and map is retained."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-peak-assignment",
+          "admitted": false,
+          "reason": "A library guess can select composition."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Generated carriers and exact class equality decide correspondence."
+        }
+      ]
+    }
+  ],
+  "exact_result": "generated-ionized-carriers__composition-and-isotope-support-held__mass-charge-classes-held__class-position-and-abundance-held__precursor-fragment-map-held",
+  "induction_base": "One generated ion carrier and its resolved response class supply the first mass-spectral correspondence.",
+  "induction_step": "Appending a carrier or fragment preserves earlier class records and adds its exact mass/charge and origin map.",
+  "exclusions": [
+    "no analytical glossary, calibration curve, spectral database, measured line, fitted profile, target source or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no sample, component, response, transition, reference or unfavorable observation may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite generated ionized-carrier support with complete composition, isotope, mass/charge, response and precursor-fragment records."
+  ],
+  "operational_witnesses": [
+    [
+      "carrier",
+      "chemical carrier is retained",
+      true
+    ],
+    [
+      "classes",
+      "positive response classes exist",
+      true
+    ],
+    [
+      "conditions",
+      "observation boundary is explicit",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-SPEC-MASS-001",
+  "expected_observation_label": "ions-separated-by-mass-to-charge__mass-spectrum-retains-relative-abundance__composition-fragment-correspondence__ionization-method-bounded",
+  "target_rows": [
+    {
+      "target_id": "mass-spectroscopy-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-MASS-SPECTROSCOPY-COMPOSITE-2026",
+      "source_locator": "authority source set anchored at M03749",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/M03749.json",
+      "snapshot_hash": "sha256:bb7b4631fab65d61fd3c0f8b6257ae91bc87da91ceea23a961f4c824f20b4e56"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_analytical_spectroscopic_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence lacks ion mass/charge separation, abundance, composition/fragment correspondence or method boundary, or if a tampered row is accepted."
+}

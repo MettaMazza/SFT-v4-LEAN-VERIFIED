@@ -4305,3 +4305,23 @@ import SFT.Chemistry.AnalyticalCalibrationEvidence
 import SFT.Chemistry.AnalyticalCalibrationExperiment
 
 import SFT.Chemistry.AnalyticalCalibrationValidation
+
+import SFT.Chemistry.AnalyticalSelectivity
+
+import SFT.Chemistry.AnalyticalSelectivityGrammar
+
+import SFT.Chemistry.AnalyticalSelectivityEvidence
+
+import SFT.Chemistry.AnalyticalSelectivityExperiment
+
+import SFT.Chemistry.AnalyticalSelectivityValidation
+
+import SFT.Chemistry.MassSpectral
+
+import SFT.Chemistry.MassSpectralGrammar
+
+import SFT.Chemistry.MassSpectralEvidence
+
+import SFT.Chemistry.MassSpectralExperiment
+
+import SFT.Chemistry.MassSpectralValidation

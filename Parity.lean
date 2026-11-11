@@ -1369,3 +1369,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.AnalyticalCalibrationGrammar.candidates do
     IO.println ("AnalyticalCalibrationGrammar\t" ++ SFT.Chemistry.AnalyticalCalibrationGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AnalyticalCalibrationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AnalyticalCalibrationGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AnalyticalCalibrationGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.AnalyticalSelectivityGrammar.candidates do
+    IO.println ("AnalyticalSelectivityGrammar\t" ++ SFT.Chemistry.AnalyticalSelectivityGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AnalyticalSelectivityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AnalyticalSelectivityGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AnalyticalSelectivityGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.MassSpectralGrammar.candidates do
+    IO.println ("MassSpectralGrammar\t" ++ SFT.Chemistry.MassSpectralGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.MassSpectralGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.MassSpectralGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.MassSpectralGrammar.decisionReason c)

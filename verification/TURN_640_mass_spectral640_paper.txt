@@ -1,0 +1,27 @@
+
+Mass-spectral composition correspondence
+
+For each generated ion carrier, retain its complete atomic composition and isotope records, its charge orientation and positive charge magnitude q, and its source-bound positive mass m. The isotope-to-atom map equals the carrier's entire constituent list; consequently every constituent has its retained isotope record and every isotope record belongs to that carrier. The ion state supplies the charge: charge(state) = charged(orientation,q), so its non-neutrality follows from the existing charge construction.
+
+Write m = a/b and the normalized charge magnitude as q = c/d, with all four counts positive. Its mass-to-charge position is the normalized positive quotient
+    x = m/q = (a d)/(b c).
+Normalization preserves the exact equality
+    (a d) denominator(x) = numerator(x) (b c).
+For two response rows i and j, equality of their response classes is decided by
+    numerator(x_i) denominator(x_j)
+      = numerator(x_j) denominator(x_i).
+Thus the decision retains exact rational class identity. Each row also retains its positive counted abundance n_i and source record. The complete response trace is the ordered map [(x_i,n_i)] of all carrier rows. Forward and reverse membership proofs establish both retention of every input row's response and provenance of every resulting response.
+
+For a represented class anchored at row a, its total count is
+    N_a(R) = sum over i in R of [x_a = x_i] n_i.
+The empty sum is zero. Appending row j gives the derived recurrence
+    N_a(R ++ [j]) = N_a(R) + [x_a = x_j] n_j.
+Hence a matching class increases by its recorded abundance, while every nonmatching class remains unchanged. Since an anchor row belongs to its own class and has positive abundance, N_a(R) is positive whenever a is represented. For any two represented classes, their relative abundance is therefore the exact positive ratio N_a(R)/N_b(R); normalization preserves this ratio by cross multiplication.
+
+A spectrum retains the complete carrier rows, precursor-fragment origin records, ionization method, conditions and instrument record. Each origin record binds both complete endpoint records to the carrier support. The one-carrier base has exactly one response pair. Carrier extension preserves the entire earlier trace and appends the new pair. Fragment extension additionally appends its origin record, with the precursor already retained. In both cases
+    trace(R ++ [j]) = trace(R) ++ [(x_j,n_j)].
+Every earlier origin remains present after fragment extension. A decomposition path is either one retained precursor-fragment link or a retained path followed by a link whose precursor equals the preceding endpoint. Induction on these constructors proves that every path step belongs to the origin ledger and that extending the ledger preserves the exact earlier path record. Fragment extension preserves the method, conditions and instrument record unchanged.
+
+The original eight binary grammar axes generate 2^8 = 256 alternatives. Their original elimination decisions, operational witnesses, controls, registration and closure accompany this derivation. The source's empirical correspondence retains mass/charge separation, relative abundance, composition-fragment correspondence and the ionization-method boundary.
+
+Original source: pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/chemistry/analytical_spectroscopic_derivation.py, ANALYTICAL_SPECTROSCOPIC_BLUEPRINTS[3] and MASS; sft/chemistry/analytical_spectroscopic_batch_1.py; claims/SFT-CHEM-SPEC-MASS-001/execution.py and independent_validator.py. Native verification: SFT/Chemistry/MassSpectral.lean, generatedIon, completeConstituentIsotopes, everyIsotopeBound, massChargeExact, classExactly, everyResponseRetained, responseCoverage, countAppend, sameClassAddsAbundance, otherClassUnchanged, representedClassPositive, relativeAbundanceExact, baseTrace, appendCarrierTrace, appendFragmentTrace, liftedPathExact, everyPathStepHeld, priorOriginRetained and fragmentBoundaryRetained; MassSpectralGrammar.lean, MassSpectralEvidence.lean, MassSpectralExperiment.lean and MassSpectralValidation.lean. Corresponding chronological record: TIMELINE.txt, Turn640 mass-spectral completion batch.

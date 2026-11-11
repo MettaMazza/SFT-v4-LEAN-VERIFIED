@@ -1,0 +1,220 @@
+{
+  "claim_id": "SFT-CHEM-ANALYTICAL-SELECTIVITY-001",
+  "title": "Analytical selectivity and interference boundary",
+  "statement": "Analytical selectivity is exact distinguishability of the analyte response from every declared interferent response within a retained method-and-condition boundary; merged responses are recorded as interference.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001",
+    "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+    "SFT-CHEM-MEAS-UNCERTAINTY-001",
+    "SFT-CHEM-MEAS-TRACEABILITY-001",
+    "SFT-CHEM-BIOMOLECULAR-BOUNDARY-001",
+    "SFT-CHEM-ANALYTICAL-SAMPLE-001",
+    "SFT-CHEM-ANALYTICAL-CALIBRATION-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete distinction preservation, exact recurrence/equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite analyte/interferent response support under one registered method and condition class.",
+  "dimensions": [
+    {
+      "key": "target",
+      "choices": [
+        {
+          "name": "response-without-analyte",
+          "admitted": false,
+          "reason": "Selectivity has no target."
+        },
+        {
+          "name": "analyte-response-held",
+          "admitted": true,
+          "reason": "The target component and response are paired."
+        }
+      ]
+    },
+    {
+      "key": "alternatives",
+      "choices": [
+        {
+          "name": "other-components-erased",
+          "admitted": false,
+          "reason": "Competing support is hidden."
+        },
+        {
+          "name": "declared-interferent-support",
+          "admitted": true,
+          "reason": "Every tested alternative remains."
+        }
+      ]
+    },
+    {
+      "key": "comparison",
+      "choices": [
+        {
+          "name": "single-response-only",
+          "admitted": false,
+          "reason": "No discrimination is tested."
+        },
+        {
+          "name": "all-analyte-interferent-responses-compared",
+          "admitted": true,
+          "reason": "Every declared response is compared."
+        }
+      ]
+    },
+    {
+      "key": "decision",
+      "choices": [
+        {
+          "name": "name-based-assignment",
+          "admitted": false,
+          "reason": "A name cannot prove attribution."
+        },
+        {
+          "name": "distinguishable-analyte-response",
+          "admitted": true,
+          "reason": "The target response remains separable."
+        }
+      ]
+    },
+    {
+      "key": "interference",
+      "choices": [
+        {
+          "name": "failed-alternatives-deleted",
+          "admitted": false,
+          "reason": "Unfavorable rows disappear."
+        },
+        {
+          "name": "interference-boundary-retained",
+          "admitted": true,
+          "reason": "Responses that merge remain explicit."
+        }
+      ]
+    },
+    {
+      "key": "conditions",
+      "choices": [
+        {
+          "name": "universal-selectivity",
+          "admitted": false,
+          "reason": "Response depends on method and conditions."
+        },
+        {
+          "name": "method-and-condition-bounded",
+          "admitted": true,
+          "reason": "The comparison domain is held."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "selectivity-scalar-only",
+          "admitted": false,
+          "reason": "The tested alternatives cannot be audited."
+        },
+        {
+          "name": "complete-response-comparison-trace",
+          "admitted": true,
+          "reason": "All favorable and unfavorable rows persist."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-selectivity-threshold",
+          "admitted": false,
+          "reason": "An arbitrary threshold can force success."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Exact distinguishability decides the class."
+        }
+      ]
+    }
+  ],
+  "exact_result": "analyte-response-held__declared-interferent-support__all-analyte-interferent-responses-compared__distinguishable-analyte-response__interference-boundary-retained",
+  "induction_base": "One analyte and one declared interferent response supply the first discrimination test.",
+  "induction_step": "Appending an interferent preserves every prior comparison and adds its exact distinguishability result.",
+  "exclusions": [
+    "no analytical glossary, calibration curve, spectral database, measured line, fitted profile, target source or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no sample, component, response, transition, reference or unfavorable observation may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite analyte/interferent response support under one registered method and condition class."
+  ],
+  "operational_witnesses": [
+    [
+      "analyte",
+      "analyte component exists",
+      true
+    ],
+    [
+      "interferent",
+      "matrix support exists",
+      true
+    ],
+    [
+      "record",
+      "both observations remain",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-ANALYTICAL-SELECTIVITY-001",
+  "expected_observation_label": "analyte-response-distinguished-amid-components__interference-retained__selectivity-not-universal__method-condition-boundary-held",
+  "target_rows": [
+    {
+      "target_id": "analytical-selectivity-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-ANALYTICAL-SELECTIVITY-COMPOSITE-2026",
+      "source_locator": "authority source set anchored at S05564",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/S05564.json",
+      "snapshot_hash": "sha256:24cfb5654b5ba14eb99cc4dfe0c01efa7a251be91937a33000f362ba8a9730f6"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_analytical_spectroscopic_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence lacks analyte discrimination, interference, non-universality or method/condition boundary, or if a tampered row is accepted."
+}

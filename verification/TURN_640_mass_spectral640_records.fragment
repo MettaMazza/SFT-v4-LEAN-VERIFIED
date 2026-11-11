@@ -1,0 +1,141 @@
+
+theorem representedClassPositive (rows : List Row) (row : Row) (held : row∈rows) :
+ 0<classCount row rows := by
+ induction held with
+ | head =>
+   change 0<(if sameClass row row then row.abundance.value else 0)+_
+   rw [ownClass]
+   change 0<row.abundance.value+_
+   exact Nat.lt_of_lt_of_le row.abundance.positive (Nat.le_add_right _ _)
+ | tail first held ih => exact Nat.lt_of_lt_of_le ih (Nat.le_add_left _ _)
+
+def relativeAbundance (rows : List Row) (a b : Row) (ha : a∈rows) (hb : b∈rows) : PositiveFraction :=
+ normalizePositive (classCount a rows) (classCount b rows)
+  (representedClassPositive rows a ha) (representedClassPositive rows b hb)
+
+theorem relativeAbundanceExact (rows : List Row) (a b : Row) (ha : a∈rows) (hb : b∈rows) :
+ classCount a rows*(relativeAbundance rows a b ha hb).denominator=
+ (relativeAbundance rows a b ha hb).numerator*classCount b rows := normalizedValuePreserved _ _ _ _
+
+structure NamedRow where
+ identity : SFT.Physics.CapabilityValues.HeldLabel
+ row : Row
+
+structure Origin where
+ precursor : NamedRow
+ fragment : NamedRow
+ sourceRecord : SFT.Host.Canonical.Value
+
+structure Spectrum where
+ carriers : List NamedRow
+ origins : List Origin
+ completeOrigins : ∀ origin∈origins, origin.precursor∈carriers ∧ origin.fragment∈carriers
+ ionizationMethod : SFT.Physics.CapabilityValues.HeldLabel
+ conditions : SFT.Host.Canonical.Value
+ instrument : SFT.Host.Canonical.Value
+
+def rows (spectrum : Spectrum) := spectrum.carriers.map NamedRow.row
+def trace (spectrum : Spectrum) := responseTrace (rows spectrum)
+
+def base (carrier : NamedRow) (method : SFT.Physics.CapabilityValues.HeldLabel)
+ (conditions instrument : SFT.Host.Canonical.Value) : Spectrum :=
+ ⟨[carrier],[],fun _ impossible => nomatch impossible,method,conditions,instrument⟩
+
+def appendCarrier (spectrum : Spectrum) (carrier : NamedRow) : Spectrum where
+ carriers := spectrum.carriers++[carrier]
+ origins := spectrum.origins
+ completeOrigins := fun origin held =>
+  ⟨memAppendLeft _ _ _ (spectrum.completeOrigins origin held).1,
+   memAppendLeft _ _ _ (spectrum.completeOrigins origin held).2⟩
+ ionizationMethod := spectrum.ionizationMethod
+ conditions := spectrum.conditions
+ instrument := spectrum.instrument
+
+def appendFragment (spectrum : Spectrum) (origin : Origin) (held : origin.precursor∈spectrum.carriers) : Spectrum where
+ carriers := spectrum.carriers++[origin.fragment]
+ origins := spectrum.origins++[origin]
+ completeOrigins := by
+  intro link member
+  cases memAppendCases link spectrum.origins [origin] member with
+  | inl old => exact ⟨memAppendLeft _ _ _ (spectrum.completeOrigins link old).1,
+    memAppendLeft _ _ _ (spectrum.completeOrigins link old).2⟩
+  | inr new => cases new with
+    | head => exact ⟨memAppendLeft _ _ _ held,memAppendRight _ _ _ (.head [])⟩
+    | tail _ impossible => cases impossible
+ ionizationMethod := spectrum.ionizationMethod
+ conditions := spectrum.conditions
+ instrument := spectrum.instrument
+
+-- Decomposition paths retain full source-bound endpoint records, not merely
+-- equal display names; every step belongs to the declared origin ledger.
+inductive DecompositionPath (origins : List Origin) : NamedRow → NamedRow → Type where
+ | first (origin : Origin) (held : origin∈origins) : DecompositionPath origins origin.precursor origin.fragment
+ | next {first middle : NamedRow} (history : DecompositionPath origins first middle)
+   (origin : Origin) (held : origin∈origins) (bound : origin.precursor=middle) :
+   DecompositionPath origins first origin.fragment
+
+def pathRecords {origins : List Origin} {first last : NamedRow} :
+ DecompositionPath origins first last → List Origin
+ | .first origin _ => [origin]
+ | .next history origin _ _ => pathRecords history++[origin]
+
+def liftPath {origins : List Origin} {first last : NamedRow}
+ (history : DecompositionPath origins first last) (added : List Origin) :
+ DecompositionPath (origins++added) first last :=
+ match history with
+ | .first origin held => .first origin (memAppendLeft _ _ _ held)
+ | .next prior origin held bound => .next (liftPath prior added) origin (memAppendLeft _ _ _ held) bound
+
+theorem liftedPathExact {origins : List Origin} {first last : NamedRow}
+ (history : DecompositionPath origins first last) (added : List Origin) :
+ pathRecords (liftPath history added)=pathRecords history := by
+ induction history with
+ | first origin held => rfl
+ | next prior origin held bound ih => exact congrArg (fun rows => rows++[origin]) ih
+
+theorem everyPathStepHeld {origins : List Origin} {first last : NamedRow}
+ (history : DecompositionPath origins first last) (origin : Origin) (member : origin∈pathRecords history) :
+ origin∈origins := by
+ induction history with
+ | first link held =>
+   cases member with
+   | head => exact held
+   | tail _ impossible => cases impossible
+ | next prior link held bound ih =>
+   cases memAppendCases origin _ [link] member with
+   | inl old => exact ih old
+   | inr new => cases new with
+     | head => exact held
+     | tail _ impossible => cases impossible
+
+theorem baseTrace (carrier : NamedRow) (method : SFT.Physics.CapabilityValues.HeldLabel)
+ (conditions instrument : SFT.Host.Canonical.Value) :
+ trace (base carrier method conditions instrument)=[(position carrier.row.ion,carrier.row.abundance.value)] := rfl
+
+theorem appendCarrierRows (spectrum : Spectrum) (carrier : NamedRow) :
+ rows (appendCarrier spectrum carrier)=rows spectrum++[carrier.row] :=
+ SFT.Mathematics.ExactTraceArithmetic.mapAppend NamedRow.row spectrum.carriers [carrier]
+
+theorem appendFragmentRows (spectrum : Spectrum) (origin : Origin) (held : origin.precursor∈spectrum.carriers) :
+ rows (appendFragment spectrum origin held)=rows spectrum++[origin.fragment.row] :=
+ SFT.Mathematics.ExactTraceArithmetic.mapAppend NamedRow.row spectrum.carriers [origin.fragment]
+
+theorem appendCarrierTrace (spectrum : Spectrum) (carrier : NamedRow) :
+ trace (appendCarrier spectrum carrier)=trace spectrum++[(position carrier.row.ion,carrier.row.abundance.value)] := by
+ unfold trace
+ rw [appendCarrierRows,responseTraceAppend]
+
+theorem appendFragmentTrace (spectrum : Spectrum) (origin : Origin) (held : origin.precursor∈spectrum.carriers) :
+ trace (appendFragment spectrum origin held)=trace spectrum++[(position origin.fragment.row.ion,origin.fragment.row.abundance.value)] := by
+ unfold trace
+ rw [appendFragmentRows,responseTraceAppend]
+
+theorem priorOriginRetained (spectrum : Spectrum) (origin prior : Origin)
+ (held : origin.precursor∈spectrum.carriers) (member : prior∈spectrum.origins) :
+ prior∈(appendFragment spectrum origin held).origins := memAppendLeft _ _ _ member
+
+theorem fragmentBoundaryRetained (spectrum : Spectrum) (origin : Origin) (held : origin.precursor∈spectrum.carriers) :
+ (appendFragment spectrum origin held).ionizationMethod=spectrum.ionizationMethod ∧
+ (appendFragment spectrum origin held).conditions=spectrum.conditions ∧
+ (appendFragment spectrum origin held).instrument=spectrum.instrument := ⟨rfl,rfl,rfl⟩
+

@@ -27425,9 +27425,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ANALYTICAL-SELECTIVITY-001-6e86b8d37deaba11.json",
       "statement": "Analytical selectivity is exact distinguishability of the analyte response from every declared interferent response within a retained method-and-condition boundary; merged responses are recorded as interference.",
       "title": "Analytical selectivity and interference boundary",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/AnalyticalSelectivity.lean",
+        "SFT/Chemistry/AnalyticalSelectivityGrammar.lean",
+        "SFT/Chemistry/AnalyticalSelectivityEvidence.lean",
+        "SFT/Chemistry/AnalyticalSelectivityExperiment.lean",
+        "SFT/Chemistry/AnalyticalSelectivityValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh640 native256/full program and empirical output; original independent adverse controls.",
       "registration_sha256": "176d612a7149becce0dbd8714d64fa0cabbb9e0c0c592fdd22ef4d2d78f3a14c",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -27513,7 +27519,10 @@
         "statement": "Analytical selectivity is exact distinguishability of the analyte response from every declared interferent response within a retained method-and-condition boundary; merged responses are recorded as interference.",
         "status": "empirically_tested",
         "title": "Analytical selectivity and interference boundary"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_640_ANALYTICAL_SELECTIVITY_COMPLETION.json",
+      "verified_scope": "Source-bound analyte and complete declared interferent response support; exact response inequality Boolean proved iff mathematical distinction; selectivity iff every declared response differs; merged responses retained exactly as interference and reject selectivity; complete comparison trace with both coverage directions and count equality; one-interferent base, append preserving every prior comparison and interference, exact successor condition and method/conditions.; Original eight binary axes, all256 candidates, exact decisions, complete enumeration and unique survivor.; Original registration, full census, operational witnesses, controls and closure.; Original analytical batch sealed prediction, source references and empirical boundary.; Complete original multi-source empirical result and all hashes."
     },
     {
       "branch": "chemistry",
@@ -27525,9 +27534,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-SPEC-MASS-001-dd28b321a35b48d8.json",
       "statement": "A mass-spectral record is the complete map from generated ionized carriers to retained mass/charge response classes and counted abundances, including precursor-fragment relations and observation conditions.",
       "title": "Mass-spectral composition correspondence",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/MassSpectral.lean",
+        "SFT/Chemistry/MassSpectralGrammar.lean",
+        "SFT/Chemistry/MassSpectralEvidence.lean",
+        "SFT/Chemistry/MassSpectralExperiment.lean",
+        "SFT/Chemistry/MassSpectralValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh640 native256/full program and empirical output; original independent adverse controls.",
       "registration_sha256": "e550a721415813ca3cc8e26ecab0a5a4eace428a5af99d70f966c9ef92631fad",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -27612,7 +27627,10 @@
         "statement": "A mass-spectral record is the complete map from generated ionized carriers to retained mass/charge response classes and counted abundances, including precursor-fragment relations and observation conditions.",
         "status": "empirically_tested",
         "title": "Mass-spectral composition correspondence"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_640_MASS_SPECTRAL_COMPLETION.json",
+      "verified_scope": "Generated charged carrier and complete constituent isotope binding; exact positive mass-to-charge quotient and rational response-class decision; complete response map and counted class abundance with exact append recurrence; represented-class positivity and relative abundance; one-carrier base, carrier/fragment extension, complete precursor-fragment endpoints, retained origin paths and observation boundary.; Original eight binary axes, all256 candidates, exact decisions, complete enumeration and unique survivor.; Original registration, full census, operational witnesses, controls and closure.; Original analytical batch sealed prediction, source references and empirical boundary.; Complete original multi-source empirical result and all hashes."
     },
     {
       "branch": "chemistry",
@@ -194288,13 +194306,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T17:37:29.497420+00:00",
+  "updated_at": "2026-11-11T17:56:23.489008+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2358,
-    "fully_reconstructed_claims": 423,
-    "axiom_free_exported_results": 22425,
-    "axiom_free_audited_definitions_and_theorems": 52446
+    "pending": 2356,
+    "fully_reconstructed_claims": 425,
+    "axiom_free_exported_results": 22511,
+    "axiom_free_audited_definitions_and_theorems": 52697
   }
 }

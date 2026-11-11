@@ -1300,3 +1300,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.EquilibriumGrammar.candidates do
     IO.println ("EquilibriumGrammar\t" ++ SFT.Chemistry.EquilibriumGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.EquilibriumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.EquilibriumGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.EquilibriumGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.ThermochemistryGrammar.candidates do
+    IO.println ("ThermochemistryGrammar\t" ++ SFT.Chemistry.ThermochemistryGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.ThermochemistryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.ThermochemistryGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.ThermochemistryGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.DirectionGrammar.candidates do
+    IO.println ("DirectionGrammar\t" ++ SFT.Chemistry.DirectionGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.DirectionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.DirectionGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.DirectionGrammar.decisionReason c)

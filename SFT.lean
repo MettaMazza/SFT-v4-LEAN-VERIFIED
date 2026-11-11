@@ -4059,3 +4059,27 @@ import SFT.Chemistry.EquilibriumEvidence
 import SFT.Chemistry.EquilibriumExperiment
 
 import SFT.Chemistry.EquilibriumValidation
+
+import SFT.Chemistry.ReactionThermochemistry
+
+import SFT.Chemistry.ThermochemistryGrammar
+
+import SFT.Chemistry.ThermochemistryEvidence
+
+import SFT.Chemistry.ThermochemistryExperiment
+
+import SFT.Chemistry.ThermochemistryValidation
+
+import SFT.Chemistry.ThermochemistrySeal
+
+import SFT.Chemistry.ThermochemistrySealInputs
+
+import SFT.Chemistry.ReactionDirection
+
+import SFT.Chemistry.DirectionGrammar
+
+import SFT.Chemistry.DirectionEvidence
+
+import SFT.Chemistry.DirectionExperiment
+
+import SFT.Chemistry.DirectionValidation

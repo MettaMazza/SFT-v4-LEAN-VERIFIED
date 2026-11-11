@@ -119,4 +119,50 @@ theorem boundaryPairExactly (n k : Nat) (side : Held) :
  Orientation.boundaryPair k side ∈ orientations n ↔ k<n :=
  ⟨boundaryStepEarlier n k side,everyPredecessorPair n k side⟩
 
+theorem orientationsDistinct (n : Nat) : (orientations n).Nodup := by
+ induction n with
+ | zero => exact .cons (fun _ h => by cases h) .nil
+ | succ n ih =>
+   apply List.Pairwise.cons
+   · intro o member eq
+     cases member with
+     | head => cases eq
+     | tail _ old =>
+       cases eq
+       exact Nat.lt_irrefl n (boundaryStepEarlier n n .first old)
+   · apply List.Pairwise.cons
+     · intro o member eq
+       cases eq
+       exact Nat.lt_irrefl n (boundaryStepEarlier n n .second member)
+     · exact ih
+
+theorem stateHasOrientation (os : List Orientation) (state : Orientation × Held)
+ (member : state∈states os) : state.1∈os := by
+ induction os with
+ | nil => cases member
+ | cons o rest ih =>
+   cases member with
+   | head => exact .head _
+   | tail _ h =>
+     cases h with
+     | head => exact .head _
+     | tail _ prior => exact .tail _ (ih prior)
+
+theorem statesDistinct (os : List Orientation) (distinct : os.Nodup) : (states os).Nodup := by
+ induction distinct with
+ | nil => exact .nil
+ | @cons o rest fresh distinct ih =>
+   apply List.Pairwise.cons
+   · intro state member eq
+     cases member with
+     | head => cases eq
+     | tail _ old => exact fresh state.1 (stateHasOrientation rest state old) (congrArg Prod.fst eq)
+   · apply List.Pairwise.cons
+     · intro state member eq
+       exact fresh state.1 (stateHasOrientation rest state member) (congrArg Prod.fst eq)
+     · exact ih
+
+theorem generatedStatesDistinct (n : Nat) : (states (orientations n)).Nodup :=
+ statesDistinct _ (orientationsDistinct n)
+
 end SFT.Physics.AtomicOrbitCapacity

@@ -4167,3 +4167,33 @@ import SFT.Chemistry.AutocatalysisEvidence
 import SFT.Chemistry.AutocatalysisExperiment
 
 import SFT.Chemistry.AutocatalysisValidation
+
+import SFT.Chemistry.SurfaceAdsorption
+
+import SFT.Chemistry.AdsorptionGrammar
+
+import SFT.Chemistry.AdsorptionEvidence
+
+import SFT.Chemistry.AdsorptionExperiment
+
+import SFT.Chemistry.AdsorptionValidation
+
+import SFT.Chemistry.ColloidalDispersion
+
+import SFT.Chemistry.ColloidGrammar
+
+import SFT.Chemistry.ColloidEvidence
+
+import SFT.Chemistry.ColloidExperiment
+
+import SFT.Chemistry.ColloidValidation
+
+import SFT.Chemistry.InterfacialTransfer
+
+import SFT.Chemistry.InterfaceTransferGrammar
+
+import SFT.Chemistry.InterfaceTransferEvidence
+
+import SFT.Chemistry.InterfaceTransferExperiment
+
+import SFT.Chemistry.InterfaceTransferValidation

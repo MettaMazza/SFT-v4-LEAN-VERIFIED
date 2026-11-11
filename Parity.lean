@@ -1330,3 +1330,12 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.AutocatalysisGrammar.candidates do
     IO.println ("AutocatalysisGrammar\t" ++ SFT.Chemistry.AutocatalysisGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AutocatalysisGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AutocatalysisGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AutocatalysisGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.AdsorptionGrammar.candidates do
+    IO.println ("AdsorptionGrammar\t" ++ SFT.Chemistry.AdsorptionGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AdsorptionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AdsorptionGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AdsorptionGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.ColloidGrammar.candidates do
+    IO.println ("ColloidGrammar\t" ++ SFT.Chemistry.ColloidGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.ColloidGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.ColloidGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.ColloidGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.InterfaceTransferGrammar.candidates do
+    IO.println ("InterfaceTransferGrammar\t" ++ SFT.Chemistry.InterfaceTransferGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.InterfaceTransferGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.InterfaceTransferGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.InterfaceTransferGrammar.decisionReason c)

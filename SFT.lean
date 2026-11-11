@@ -3906,3 +3906,16 @@ import SFT.Chemistry.NetworkGrammar
 import SFT.Chemistry.NetworkEvidence
 import SFT.Chemistry.NetworkExperiment
 import SFT.Chemistry.NetworkValidation
+import SFT.Chemistry.ConjugatePair
+import SFT.Chemistry.AcidbaseGrammar
+import SFT.Chemistry.AcidbaseEvidence
+import SFT.Chemistry.AcidbaseSeal
+import SFT.Chemistry.AcidbaseSealInputs
+import SFT.Chemistry.MultiSourceExtraction
+import SFT.Chemistry.AcidbaseExperiment
+import SFT.Chemistry.AcidbaseValidation
+import SFT.Chemistry.ProtonTransfer
+import SFT.Chemistry.ProtonGrammar
+import SFT.Chemistry.ProtonEvidence
+import SFT.Chemistry.ProtonExperiment
+import SFT.Chemistry.ProtonValidation

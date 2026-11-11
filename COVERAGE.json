@@ -23538,9 +23538,18 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-AB-ACID-BASE-001-318ea7b4fdc414c3.json",
       "statement": "A conjugate acid/base relation is a pair of retained chemical identities differing by exactly one named proton carrier: the protonated member donates it and the deprotonated member accepts it.",
       "title": "Conjugate acid-base partition",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/ConjugatePair.lean",
+        "SFT/Chemistry/AcidbaseGrammar.lean",
+        "SFT/Chemistry/AcidbaseEvidence.lean",
+        "SFT/Chemistry/AcidbaseSeal.lean",
+        "SFT/Chemistry/AcidbaseSealInputs.lean",
+        "SFT/Chemistry/MultiSourceExtraction.lean",
+        "SFT/Chemistry/AcidbaseExperiment.lean",
+        "SFT/Chemistry/AcidbaseValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full 256-form program, original empirical output, retained source-extraction evidence and original independent-validator controls.",
       "registration_sha256": "b2d00843aaa01e12fab18554ce7860b94dfecad08f15124847c0407c685ba5ff",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -23599,7 +23608,10 @@
         "statement": "A conjugate acid/base relation is a pair of retained chemical identities differing by exactly one named proton carrier: the protonated member donates it and the deprotonated member accepts it.",
         "status": "empirically_tested",
         "title": "Conjugate acid-base partition"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_582_ACIDBASE_COMPLETION.json",
+      "verified_scope": "Exact V3 ConjugatePair admission and original pair; one named proton difference over arbitrary common composition; matched-composition induction, reversible uptake, donor/acceptor orientation and complete history.; Original eight binary axes, all256 alternatives, exact decisions and unique survivor.; Original registration, census, closure and controls.; Original pre-source derivation digest, payload, ordered five predictions and withheld-source flags, without molecular dependency aliases.; Exact pinned acid/base derivation bytes and original pre-source seal.; Original multi-document extraction, support digests, primary binding, corpus feature checks and receipt hash. JSON decoding and official HTML corpus supplied by source IO adapter; this entry uses all three original Gold Book JSON documents.; Original frozen prediction, registration, reference and capability program.; Original multi-source authority validation, custody/isolation, original unfavorable control and all empirical output fields/hashes."
     },
     {
       "branch": "chemistry",
@@ -23611,9 +23623,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-AB-PROTON-TRANSFER-001-ddcb09522d19aa88.json",
       "statement": "Proton transfer moves one named proton carrier from one registered donor occurrence to one distinct acceptor occurrence while conserving carrier identity and both endpoint records.",
       "title": "Proton-transfer acid-base relation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/ProtonTransfer.lean",
+        "SFT/Chemistry/ProtonGrammar.lean",
+        "SFT/Chemistry/ProtonEvidence.lean",
+        "SFT/Chemistry/ProtonExperiment.lean",
+        "SFT/Chemistry/ProtonValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full 256-form program, original empirical output, retained source-extraction evidence and original independent-validator controls.",
       "registration_sha256": "c9c61ed7ff434198da4393a2aaa17a60163fad7e535bf8ce0096f512d802b860",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -23673,7 +23691,10 @@
         "statement": "Proton transfer moves one named proton carrier from one registered donor occurrence to one distinct acceptor occurrence while conserving carrier identity and both endpoint records.",
         "status": "empirically_tested",
         "title": "Proton-transfer acid-base relation"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_583_PROTON_COMPLETION.json",
+      "verified_scope": "Exact original CarrierTransfer constructor; source proton witness; physical flow binding reuses existing full-label conservation; complete endpoint retention, base and independent-append induction.; Original eight axes and complete256 alternatives, exact source elimination decisions and unique survivor.; Original registration,census,closure and controls.; Original sealed prediction and source registration.; Original P04915 multi-source empirical extraction, custody/isolation, unfavorable control and all output hashes."
     },
     {
       "branch": "chemistry",
@@ -193909,13 +193930,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T07:27:46.718803+00:00",
+  "updated_at": "2026-11-11T08:47:35.835583+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2398,
-    "fully_reconstructed_claims": 383,
-    "axiom_free_exported_results": 20675,
-    "axiom_free_audited_definitions_and_theorems": 47353
+    "pending": 2396,
+    "fully_reconstructed_claims": 385,
+    "axiom_free_exported_results": 20750,
+    "axiom_free_audited_definitions_and_theorems": 47607
   }
 }

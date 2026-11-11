@@ -1,0 +1,193 @@
+{
+  "claim_id": "SFT-CHEM-AB-ACID-BASE-001",
+  "title": "Conjugate acid-base partition",
+  "statement": "A conjugate acid/base relation is a pair of retained chemical identities differing by exactly one named proton carrier: the protonated member donates it and the deprotonated member accepts it.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001"
+  ],
+  "generation_rule": "Generate the literal product of the registered conjugate pair, carrier, acid role, base role, difference, orientation, record and extension choices.",
+  "grammar_boundary": "Every finite generated pair of chemical carriers related by exactly one retained proton occurrence, with the protonated member able to donate that occurrence and the deprotonated member able to accept it.",
+  "dimensions": [
+    {
+      "key": "pair",
+      "choices": [
+        {
+          "name": "one-species-label",
+          "admitted": false,
+          "reason": "A conjugate relation compares two carrier identities."
+        },
+        {
+          "name": "two-conjugate-identities",
+          "admitted": true,
+          "reason": "Both protonated and deprotonated carriers remain held."
+        }
+      ]
+    },
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "anonymous-hydrogen-count",
+          "admitted": false,
+          "reason": "A count cannot trace the transferred occurrence."
+        },
+        {
+          "name": "one-held-proton-occurrence",
+          "admitted": true,
+          "reason": "The distinguishing proton remains a named conserved carrier."
+        }
+      ]
+    },
+    {
+      "key": "acid-role",
+      "choices": [
+        {
+          "name": "acid-by-name",
+          "admitted": false,
+          "reason": "A name cannot establish a transition."
+        },
+        {
+          "name": "proton-donor-role",
+          "admitted": true,
+          "reason": "The protonated carrier supplies the held proton to an acceptor."
+        }
+      ]
+    },
+    {
+      "key": "base-role",
+      "choices": [
+        {
+          "name": "base-by-name",
+          "admitted": false,
+          "reason": "A name cannot establish a transition."
+        },
+        {
+          "name": "proton-acceptor-role",
+          "admitted": true,
+          "reason": "The deprotonated carrier accepts the held proton."
+        }
+      ]
+    },
+    {
+      "key": "difference",
+      "choices": [
+        {
+          "name": "unbounded-composition-change",
+          "admitted": false,
+          "reason": "Additional changes destroy conjugacy."
+        },
+        {
+          "name": "differ-by-one-proton",
+          "admitted": true,
+          "reason": "All other retained composition is identical."
+        }
+      ]
+    },
+    {
+      "key": "orientation",
+      "choices": [
+        {
+          "name": "signed-acidity-scalar",
+          "admitted": false,
+          "reason": "A signed scalar is not a carrier trace."
+        },
+        {
+          "name": "held-donor-acceptor-orientation",
+          "admitted": true,
+          "reason": "Roles are structural orientations on one transfer."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "acid-base-answer-only",
+          "admitted": false,
+          "reason": "An answer cannot reconstruct conjugacy."
+        },
+        {
+          "name": "pair-and-proton-trace",
+          "admitted": true,
+          "reason": "Both identities, the proton and transition remain held."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "free-acid-base-exception",
+          "admitted": false,
+          "reason": "An exception can label arbitrary species."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "One-proton conjugacy and roles determine the relation."
+        }
+      ]
+    }
+  ],
+  "exact_result": "two-conjugate-identities__one-held-proton-occurrence__proton-donor-role__proton-acceptor-role__differ-by-one-proton",
+  "induction_base": "One retained carrier pair differing by one named proton supplies the first conjugate acid/base relation.",
+  "induction_step": "Appending matched retained composition to both members preserves their one-proton difference and donor/acceptor orientation.",
+  "exclusions": [
+    "no acid/base dictionary, pH scale, equilibrium equation, dissociation constant, measured value or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no unpaired creation, copying or loss of a proton or electron carrier",
+    "no claim that structural closure alone fixes every solution-dependent strength or capacity value",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite generated pair of chemical carriers related by exactly one retained proton occurrence, with the protonated member able to donate that occurrence and the deprotonated member able to accept it."
+  ],
+  "operational_witnesses": [
+    [
+      "pair",
+      "the two conjugate identities remain distinct",
+      true
+    ],
+    [
+      "proton",
+      "the distinguishing carrier is explicitly proton-labelled",
+      true
+    ],
+    [
+      "one-difference",
+      "no additional difference is introduced",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-AB-ACID-BASE-001",
+  "expected_observation_label": "proton-donor-acid__proton-acceptor-base__conjugates-differ-by-one-proton__paired-relation",
+  "target_rows": [
+    {
+      "target_id": "conjugate-acid-base-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-ACID-BASE-COMPOSITE-2026",
+      "source_locator": "official IUPAC source set anchored at C01266",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/C01266.json",
+      "snapshot_hash": "sha256:1ac0d6138e316d6230d10b2e7f99d4837175fcb640e824a8cb2249100221a504"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_acid_base_batch_1.json",
+  "falsification_condition": "The claim fails if the authoritative conjugate acid/base record lacks proton donation, proton acceptance or a one-proton conjugate relation, or if a changed row is accepted."
+}

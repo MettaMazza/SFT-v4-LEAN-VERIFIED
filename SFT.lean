@@ -4117,3 +4117,13 @@ import SFT.Chemistry.CatalystValidation
 import SFT.Chemistry.CatalystSeal
 
 import SFT.Chemistry.CatalystSealInputs
+
+import SFT.Chemistry.SolutionEquilibrium
+
+import SFT.Chemistry.SolubilityGrammar
+
+import SFT.Chemistry.SolubilityEvidence
+
+import SFT.Chemistry.SolubilityExperiment
+
+import SFT.Chemistry.SolubilityValidation

@@ -2,7 +2,7 @@ Smithian Fold Theory: A Zero-Axiom, Zero-Free-Parameter Unified Constants Object
 
 Smithian Fold Theory: the cumulative theory-of-everything manuscript
 Maria Smith
-Unpublished working draft toward the 500-entry milestone | 11 November 2026
+Unpublished cumulative working draft toward the 500-entry milestone | 11 November 2026
 Previous published edition 0.2: DOI 10.5281/zenodo.23846751
 Latest published edition 0.2.1 (308 entries): DOI 10.5281/zenodo.23849998
 
@@ -16866,3 +16866,22 @@ For an appended collection of comparison edges E, every prior edge remains in R+
 retainedClosure proves this inclusion; applying it in both directions gives retainedTie. Thus all previously established comparison paths and mutual classes remain represented on extension. executableClosure connects these inductive derivations with the existing complete finite search implementation, through DynamicsStability.perturbationReachabilityIff.
 
 Pinned V3 source (76f1b34e9e9682989adcbb088797b4ae4ce4fcf1): sft/chemistry/redox_derivation.py, AFFINITY_DIMENSIONS, transitive-preorder-closure and REDOX_BLUEPRINTS[0]. Lean verification: SFT/Chemistry/AffinityClosure.lean, reflexive, transitive, leastClosure, uniqueLeastClosure, tieReflexive, tieSymmetric, tieTransitive, retainedClosure, retainedTie and executableClosure; reused SFT/Mathematics/DynamicsStability.lean, Reaches and perturbationReachabilityIff. Chronological record: TIMELINE.txt, Turn587. These statements establish the closure construction from R; they do not assert a numerical electronegativity scale.
+The retained comparison records connect directly to this closure. For a record c=(a,b,s,p), where s is the shared electron support and the admitted orientation satisfies p=a or p=b, define
+
+  e(c)=(b,a) if p=a; otherwise e(c)=(a,b),
+  R(C)=map(e,C).
+
+The target of e(c) is exactly p in both cases. completeRelation proves the bidirectional correspondence
+
+  (x,y)∈R(C) ⇔ ∃c∈C, e(c)=(x,y).
+
+Thus every projected edge comes from a retained record and every retained record contributes its edge. recordedComparisonIncluded derives e(c).1 R(C)* p for each c∈C. Applying leastClosure with this membership equivalence proves noExtraOrder: any reflexive-transitive relation containing the original record orientations contains R(C)*. No additional comparison is selected by the projection.
+
+For a further record d, mapping over append gives
+
+  R(C++[d])=R(C)++[e(d)].
+
+extensionRetainsOrder carries every previous path into the extended closure. extensionRetainsFullRecord retains c itself, including both named endpoints and its unchanged shared-support field, rather than retaining only an anonymous rank. initialComparison supplies the one-record base; originalOrientation evaluates the pinned source witness to the edge atom-a → atom-b.
+
+Lean verification: SFT/Chemistry/AffinityRecordClosure.lean, edgeTargetsHeldPreference, edgeRetainsEndpoints, completeRelation, recordedComparisonIncluded, noExtraOrder, extensionRelation, extensionRetainsOrder, extensionRetainsFullRecord, initialComparison and originalOrientation. All 13 audited declarations have empty axiom dependencies. Source: pinned redox_derivation.py, AffinityComparison and REDOX_BLUEPRINTS[0]. Timeline: Turn588; correspondence: verification/TURN_588_AFFINITY_RECORD_BINDING.json.
+

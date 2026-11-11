@@ -1,0 +1,50 @@
+{
+  "claim_id": "SFT-CHEM-ELECTRONEGATIVITY-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "registered_complete": false,
+  "source_component": "sft/chemistry/redox_derivation.py:AffinityComparison and REDOX_BLUEPRINTS[0] pairwise-record base, transitive closure and append step",
+  "lean_declarations": [
+    "SFT.Chemistry.AffinityRecordClosure.edge",
+    "SFT.Chemistry.AffinityRecordClosure.relation",
+    "SFT.Chemistry.AffinityRecordClosure.edgeTargetsHeldPreference",
+    "SFT.Chemistry.AffinityRecordClosure.edgeRetainsEndpoints",
+    "SFT.Chemistry.AffinityRecordClosure.completeRelation",
+    "SFT.Chemistry.AffinityRecordClosure.order",
+    "SFT.Chemistry.AffinityRecordClosure.recordedComparisonIncluded",
+    "SFT.Chemistry.AffinityRecordClosure.noExtraOrder",
+    "SFT.Chemistry.AffinityRecordClosure.extensionRelation",
+    "SFT.Chemistry.AffinityRecordClosure.extensionRetainsOrder",
+    "SFT.Chemistry.AffinityRecordClosure.extensionRetainsFullRecord",
+    "SFT.Chemistry.AffinityRecordClosure.initialComparison",
+    "SFT.Chemistry.AffinityRecordClosure.originalOrientation"
+  ],
+  "axiom_dependencies": [],
+  "new_result": "Exact directed-relation projection from original comparison records, complete edge-membership equivalence, recorded orientation preservation, least closure and full-record/order retention on append.",
+  "executed_commands": [
+    "python3 work/build_affinity_record588.py",
+    "python3 work/audit_affinity588.py"
+  ],
+  "outcomes": {
+    "native_lean_build": 0,
+    "c_object_build": 0,
+    "audit_declarations": 13
+  },
+  "reused_evidence": "verification/TURN_587_AFFINITY_PROGRESS.json",
+  "remaining": "Identify and bind the original complete endpoint recurrence comparison to preferred_endpoint, and its recurrence-equivalence criterion to tie closure. The new record-to-closure connection does not assert this additional identification.",
+  "inspected_equivalent_bodies": [
+    "SFT/Chemistry/PeriodicRecurrenceTrace.lean:completeTraceExactly",
+    "SFT/Chemistry/CovalentSharing.lean:boundSourceRecurs",
+    "SFT/Chemistry/BondClosure.lean:sourceInteractionReturns",
+    "SFT/Physics/FieldElectricPotential.lean:potentialDifference",
+    "sft/mathematics/order_001_012_laws_v1.py:preorder,DEF[001]"
+  ],
+  "source_digests": {
+    "SFT/Chemistry/AffinityRecordClosure.lean": "b87cfa0c5308013f2826c102977d64603f23433b330c98b9aa4601ad62d05e4d",
+    "verification/TURN_588_audit_affinity588.py": "624d49859274f885c56673ba7c028beb56e2152372471af55e22ec49cb0d284e",
+    "verification/TURN_588_build588_AffinityRecordClosure.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verification/TURN_588_affinity588_record_closure_build_report.json": "d67b42db73e97161a6ebb2582b642476463b884b0740df80c393f838cefea642",
+    "verification/TURN_588_affinity588_audit.log": "e9bb4204bce8a3e50ce1cc36fbc1d627df016aa384635b224ff03389fdd0e5b8",
+    "verification/TURN_588_affinity588_audit_config.json": "273da6853a0971c9d8f4f0079038b84ff6d5ce29ad6dd87819188c13794adea6",
+    "verification/TURN_588_build_affinity_record588.py": "c73d958aeadaed5dc91f2a1a5c92b255f2e6f01accab0258d8548765b0dc3a00"
+  }
+}

@@ -3945,3 +3945,13 @@ import SFT.Chemistry.RedoxSeal
 import SFT.Chemistry.RedoxSealInputs
 import SFT.Chemistry.AffinityExperiment
 import SFT.Chemistry.AffinityValidation
+
+import SFT.Chemistry.BondPolarity
+
+import SFT.Chemistry.PolarityGrammar
+
+import SFT.Chemistry.PolarityEvidence
+
+import SFT.Chemistry.PolarityExperiment
+
+import SFT.Chemistry.PolarityValidation

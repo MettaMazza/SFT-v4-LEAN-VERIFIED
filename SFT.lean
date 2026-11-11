@@ -4231,3 +4231,13 @@ import SFT.Chemistry.DiastereomerEvidence
 import SFT.Chemistry.DiastereomerExperiment
 
 import SFT.Chemistry.DiastereomerValidation
+
+import SFT.Chemistry.Functional
+
+import SFT.Chemistry.FunctionalGrammar
+
+import SFT.Chemistry.FunctionalEvidence
+
+import SFT.Chemistry.FunctionalExperiment
+
+import SFT.Chemistry.FunctionalValidation

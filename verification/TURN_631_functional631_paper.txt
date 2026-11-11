@@ -1,0 +1,22 @@
+
+Functional-group recurrence: local role and complete occurrence history
+
+The reaction-identity dependency retains reactants, products, conserved carriers and changed-relation labels. A functional occurrence binds every group atom to an actual placement in that generated reaction; its retained role comes from the reaction's change ledger. The local role comparison is
+\[
+R(o)=(\ell_o,s_o^{\mathrm{before}},s_o^{\mathrm{after}}).
+\]
+roleTraceExactlyLocalChange proves that R(a)=R(b) holds exactly when these three retained local fields agree. No equality of the complete reaction, molecular carrier, embedding map, source record or context is required. independentReactionsSameLocalRole and independentEmbeddingsSameLocalRole prove equality of this role trace for a shared local change despite independently retained surrounding records. The embedding's atom correspondence and reaction placement ledger remain fully checked; equality of a role name alone cannot replace the complete local change.
+
+For a recurrence record r with first occurrence o_1, second occurrence o_2 and further finite history T, everyOccurrenceRetainsRole derives
+\[
+\forall o\in[o_1,o_2]\mathbin{+\!+}T,\quad R(o)=R(o_1).
+\]
+The proof splits membership into the first occurrence, the second occurrence and the retained remainder. It uses reflexivity, the recorded second-to-first correspondence and the complete remainder correspondence respectively. everyOccurrenceHasGeneratedChange also derives, for every member, membership of its local change in its own reaction's original changed-relations ledger and the inequality of its before/after states.
+
+The successor is append-only:
+\[
+H(r')=H(r)\mathbin{+\!+}[o],\qquad R(o)=R(o_1).
+\]
+Its role invariant follows by splitting membership into the old list or the new singleton. extensionRetainsBoundary proves that each old occurrence survives with exactly its original boundary bonds, context and source record. Together with the full embedding and atom-flow proofs above, this establishes the source successor: an added molecular embedding retains the group trace and adds its context-bound reaction occurrence. It makes no context-free claim about equal empirical responses.
+
+Functional-group recurrence is complete as source entry417. The original eight binary axes and all256 candidates, operational witnesses, source control, adverse cases, closure, registration and empirical bindings match pinned V3. The137 audited Lean declarations use no axioms. Source: sft/chemistry/stereochemistry_organic_polymer_derivation.py, STEREOCHEMISTRY_ORGANIC_POLYMER_BLUEPRINTS[3], and reaction_kinetics_derivation.py, ReactionTrace and reaction-identity dependency. Lean: SFT/Chemistry/Functional.lean, roleTraceExactlyLocalChange, independentReactionsSameLocalRole, independentEmbeddingsSameLocalRole, everyOccurrenceRetainsRole, everyOccurrenceHasGeneratedChange and extensionRetainsBoundary; original FunctionalGrammar/Evidence/Experiment/Validation. Timeline: Turns630–631. Evidence: TURN_631_FUNCTIONAL_COMPLETION.json, TURN_631_functional631_audit.log and retained Turn630 native, empirical and independent-validator reports.

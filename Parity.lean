@@ -1348,3 +1348,6 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.DiastereomerGrammar.candidates do
     IO.println ("DiastereomerGrammar\t" ++ SFT.Chemistry.DiastereomerGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.DiastereomerGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.DiastereomerGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.DiastereomerGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.FunctionalGrammar.candidates do
+    IO.println ("FunctionalGrammar\t" ++ SFT.Chemistry.FunctionalGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.FunctionalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.FunctionalGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.FunctionalGrammar.decisionReason c)

@@ -143,4 +143,44 @@ theorem baseOccurrences (g : Group) (first second : Occurrence g)
  (same : roleTrace first.role=roleTrace second.role) :
  occurrences (base g first second different same)=[first,second] := rfl
 
+
+theorem roleTraceExactlyLocalChange (a b : ReactionRole) :
+ roleTrace a=roleTrace b ↔ a.change.label=b.change.label ∧
+ a.change.before=b.change.before ∧ a.change.after=b.change.after := by
+ constructor
+ · intro h
+   exact ⟨congrArg Prod.fst h,congrArg (fun p => p.2.1) h,congrArg (fun p => p.2.2) h⟩
+ · intro h
+   unfold roleTrace
+   rw [h.1,h.2.1,h.2.2]
+
+theorem independentReactionsSameLocalRole (a b : ReactionRole)
+ (same : a.change=b.change) : roleTrace a=roleTrace b := by
+ unfold roleTrace
+ rw [same]
+
+theorem independentEmbeddingsSameLocalRole {g : Group} (a b : Occurrence g)
+ (same : a.role.change=b.role.change) : roleTrace a.role=roleTrace b.role :=
+ independentReactionsSameLocalRole a.role b.role same
+
+theorem everyOccurrenceRetainsRole (r : Recurrence) (o : Occurrence r.group)
+ (held : o∈occurrences r) : roleTrace o.role=roleTrace r.first.role := by
+ cases held with
+ | head => rfl
+ | tail _ held => cases held with
+   | head => exact r.sameRole.symm
+   | tail _ held => exact r.allRoles o held
+
+theorem everyOccurrenceHasGeneratedChange (r : Recurrence) (o : Occurrence r.group)
+ (held : o∈occurrences r) :
+ o.role.change.label∈o.role.reaction.trace.raw.changedRelations ∧
+ o.role.change.before≠o.role.change.after ∧ roleTrace o.role=roleTrace r.first.role :=
+ ⟨roleRegistered o.role,roleActuallyChanges o.role,everyOccurrenceRetainsRole r o held⟩
+
+theorem extensionRetainsBoundary (r : Recurrence) (next old : Occurrence r.group)
+ (same : roleTrace next.role=roleTrace r.first.role) (held : old∈occurrences r) :
+ ∃ occurrence∈occurrences (extend r next same),
+ boundary occurrence.embedding=boundary old.embedding ∧ occurrence.context=old.context ∧ occurrence.source=old.source :=
+ ⟨old,retainsOccurrence r next old same held,rfl,rfl,rfl⟩
+
 end SFT.Chemistry.Functional

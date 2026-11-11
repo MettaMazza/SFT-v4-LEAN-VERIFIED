@@ -1,0 +1,24 @@
+
+Complete analytical result and falsification record
+
+A complete result retains the declared measurand and purpose, the calibrated sample with its reference chains, the sample's analyte/interferent comparison, method and conditions, all observations, uncertainty and resolution, controls and an explicit falsification condition. The selectivity observation is typed over the very material portion retained by calibration; its condition record is bound to the result's condition record. The earlier sample partition, traceability-chain and selectivity proofs therefore apply to these retained records without replacing them by a reported scalar.
+
+Write O for the complete raw-observation list and D for the complete derived-observation list. Each observation carries its response, uncertainty record, provenance and resolution. Each derived row d retains its input observations I_d, registered operation f_d, result r_d and operation record, with the exact binding
+    response(r_d) = f_d([response(x) | x in I_d]).
+Its inputs belong to the retained observation support
+    S(O,D) = O ++ [result(d) | d in D].
+This support includes prior derived results as well as raw observations, so successive registered transformations remain representable. Every raw observation belongs to S. Every derived result belongs to S. Conversely every member of S is either an original raw row or the result of a retained derived row. Thus each recorded transformation's input provenance remains available and its output equals the recorded operation applied to its complete input response list.
+
+Controls retain their identity, outcome, tampering status, observation and source record. For control c define
+    A(c) = (passed(c) = false) or (tampered(c) = true).
+The adverse-control trace is [c in C | A(c)]. Exact filter membership establishes both provenance and the adverse predicate. A failed control belongs to that trace regardless of its tampering flag; a tampered control belongs regardless of its pass flag. The full control list C remains present separately, so favorable outcomes are retained as well.
+
+Appending a raw observation extends O and preserves all earlier members of S, including derived results and their provenance. Appending a derived row whose inputs already belong to S gives
+    S(O,D ++ [d]) = S(O,D) ++ [result(d)].
+This follows from mapping over concatenation and associativity. The provenance proof carries every earlier input forward and includes every input of the new transformation. Appending control c gives
+    adverse(C ++ [c]) = adverse(C) ++ filter(A,[c]),
+while retaining every original control. The measurand, calibration and falsification condition remain unchanged. Every admissible uncertainty alternative remains retained by the existing exact uncertainty-support theorem.
+
+For the first record, O contains one declared measurement, D is empty and C contains one unfavorable control. The observation projection is exactly the singleton measurement. Since A(c) holds, its adverse-control projection is exactly [c]. These base identities and the append equations establish complete retention through finite observation, transformation and control extensions.
+
+The original eight binary axes enumerate 256 alternatives and preserve the original decisions, operational witnesses, registration, closure, controls, sealed prediction and empirical-validator behavior. Original source: pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/chemistry/analytical_spectroscopic_derivation.py, COMPLETE_RECORD and ANALYTICAL_SPECTROSCOPIC_BLUEPRINTS[7]; sft/chemistry/analytical_spectroscopic_batch_1.py; claims/SFT-CHEM-ANALYTICAL-COMPLETE-RECORD-001/execution.py and independent_validator.py. Native verification: SFT/Chemistry/AnalyticalRecord.lean, everyRawRetained, everyDerivedRetained, everyObservationAccounted, derivedInputsRetained, derivedResultExact, adverseExactly, failedControlRetained, tamperedControlRetained, rawSuccessorRetainsOld, newRawRetained, derivedSuccessor, controlSuccessor, priorControlRetained, uncertaintyRetained, sourceBoundaryRetained, baseMeasurement and baseUnfavorable; AnalyticalRecordGrammar.lean, AnalyticalRecordEvidence.lean, AnalyticalRecordExperiment.lean and AnalyticalRecordValidation.lean. Retained dependency proofs: AnalyticalSample.lean, AnalyticalCalibration.lean, AnalyticalSelectivity.lean, TraceabilityChain.lean and UncertaintyRecord.lean. Chronological reference: TIMELINE.txt, Turn642 complete analytical-record batch.

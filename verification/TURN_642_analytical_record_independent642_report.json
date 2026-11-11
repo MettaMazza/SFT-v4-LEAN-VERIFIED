@@ -1,0 +1,58 @@
+[
+  {
+    "case": "original",
+    "expected": true,
+    "actual": {
+      "certificate": {
+        "candidate_count": 256,
+        "claim_id": "SFT-CHEM-ANALYTICAL-COMPLETE-RECORD-001",
+        "survivor": "measurand-and-purpose-held__sample-analyte-matrix-record__method-and-condition-record__calibration-and-reference-chain__all-raw-and-derived-rows-held__uncertainty-and-resolution-held__failed-tampered-and-falsification-record__no-extra-rule"
+      },
+      "passed": true,
+      "recomputed_from_declared_inputs": true,
+      "validated_seal_hash": "native-analytical_record-642"
+    }
+  },
+  {
+    "case": "omitted_candidate",
+    "expected": false,
+    "actual": {
+      "certificate": {
+        "candidate_count": 256,
+        "claim_id": "SFT-CHEM-ANALYTICAL-COMPLETE-RECORD-001",
+        "survivor": null
+      },
+      "passed": false,
+      "recomputed_from_declared_inputs": true,
+      "validated_seal_hash": "native-analytical_record-642"
+    }
+  },
+  {
+    "case": "additional_survivor",
+    "expected": false,
+    "actual": {
+      "certificate": {
+        "candidate_count": 256,
+        "claim_id": "SFT-CHEM-ANALYTICAL-COMPLETE-RECORD-001",
+        "survivor": null
+      },
+      "passed": false,
+      "recomputed_from_declared_inputs": true,
+      "validated_seal_hash": "native-analytical_record-642"
+    }
+  },
+  {
+    "case": "failed_control",
+    "expected": false,
+    "actual": {
+      "certificate": {
+        "candidate_count": 256,
+        "claim_id": "SFT-CHEM-ANALYTICAL-COMPLETE-RECORD-001",
+        "survivor": null
+      },
+      "passed": false,
+      "recomputed_from_declared_inputs": true,
+      "validated_seal_hash": "native-analytical_record-642"
+    }
+  }
+]

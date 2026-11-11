@@ -1,0 +1,221 @@
+{
+  "claim_id": "SFT-CHEM-ANALYTICAL-COMPLETE-RECORD-001",
+  "title": "Complete analytical result and falsification record",
+  "statement": "A complete analytical result retains the measurand, sample/analyte/matrix, method, conditions, reference chain, every raw and derived observation, uncertainty, failed and tampered controls, and an explicit falsification condition.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001",
+    "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+    "SFT-CHEM-MEAS-UNCERTAINTY-001",
+    "SFT-CHEM-MEAS-TRACEABILITY-001",
+    "SFT-CHEM-BIOMOLECULAR-BOUNDARY-001",
+    "SFT-CHEM-ANALYTICAL-SAMPLE-001",
+    "SFT-CHEM-ANALYTICAL-CALIBRATION-001",
+    "SFT-CHEM-ANALYTICAL-SELECTIVITY-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete distinction preservation, exact recurrence/equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite analytical execution with registered question, material, method, reference, observations, transformations, uncertainty and controls.",
+  "dimensions": [
+    {
+      "key": "question",
+      "choices": [
+        {
+          "name": "unstated-measurand",
+          "admitted": false,
+          "reason": "The result has no declared target."
+        },
+        {
+          "name": "measurand-and-purpose-held",
+          "admitted": true,
+          "reason": "The analytical question is explicit."
+        }
+      ]
+    },
+    {
+      "key": "sample",
+      "choices": [
+        {
+          "name": "sample-identity-erased",
+          "admitted": false,
+          "reason": "The result cannot be located."
+        },
+        {
+          "name": "sample-analyte-matrix-record",
+          "admitted": true,
+          "reason": "Material support is retained."
+        }
+      ]
+    },
+    {
+      "key": "method",
+      "choices": [
+        {
+          "name": "method-erased",
+          "admitted": false,
+          "reason": "The transformation cannot be reproduced."
+        },
+        {
+          "name": "method-and-condition-record",
+          "admitted": true,
+          "reason": "Every operational boundary is held."
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "choices": [
+        {
+          "name": "reference-erased",
+          "admitted": false,
+          "reason": "Traceability is lost."
+        },
+        {
+          "name": "calibration-and-reference-chain",
+          "admitted": true,
+          "reason": "Comparison provenance remains."
+        }
+      ]
+    },
+    {
+      "key": "observation",
+      "choices": [
+        {
+          "name": "accepted-values-only",
+          "admitted": false,
+          "reason": "Unfavorable evidence disappears."
+        },
+        {
+          "name": "all-raw-and-derived-rows-held",
+          "admitted": true,
+          "reason": "Every observation enters the record."
+        }
+      ]
+    },
+    {
+      "key": "uncertainty",
+      "choices": [
+        {
+          "name": "single-value-certainty",
+          "admitted": false,
+          "reason": "Admissible alternatives are hidden."
+        },
+        {
+          "name": "uncertainty-and-resolution-held",
+          "admitted": true,
+          "reason": "The distinction boundary remains."
+        }
+      ]
+    },
+    {
+      "key": "falsification",
+      "choices": [
+        {
+          "name": "success-only-report",
+          "admitted": false,
+          "reason": "The claim cannot fail publicly."
+        },
+        {
+          "name": "failed-tampered-and-falsification-record",
+          "admitted": true,
+          "reason": "Controls and failure conditions persist."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-reporting-omission",
+          "admitted": false,
+          "reason": "Discretion can hide a contradiction."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Completeness is decided by the registered record grammar."
+        }
+      ]
+    }
+  ],
+  "exact_result": "measurand-and-purpose-held__sample-analyte-matrix-record__method-and-condition-record__calibration-and-reference-chain__all-raw-and-derived-rows-held__uncertainty-and-resolution-held__failed-tampered-and-falsification-record",
+  "induction_base": "One declared measurement with its complete support and one unfavorable control supplies the first record.",
+  "induction_step": "Appending an observation or control preserves every earlier row and extends provenance, uncertainty and falsification support.",
+  "exclusions": [
+    "no analytical glossary, calibration curve, spectral database, measured line, fitted profile, target source or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no sample, component, response, transition, reference or unfavorable observation may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite analytical execution with registered question, material, method, reference, observations, transformations, uncertainty and controls."
+  ],
+  "operational_witnesses": [
+    [
+      "question",
+      "sample is named",
+      true
+    ],
+    [
+      "rows",
+      "all observation rows remain",
+      true
+    ],
+    [
+      "control",
+      "falsification is required",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-ANALYTICAL-COMPLETE-RECORD-001",
+  "expected_observation_label": "analytical-result-identifies-measurand-sample-and-method__traceability-and-uncertainty-retained__all-results-and-controls-preserved__falsification-condition-explicit",
+  "target_rows": [
+    {
+      "target_id": "complete-analytical-record-authority-composite",
+      "source_id": "IUPAC-NIST-COMPLETE-ANALYTICAL-RECORD-COMPOSITE-2026",
+      "source_locator": "authority source set anchored at M03796",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/M03796.json",
+      "snapshot_hash": "sha256:f27104514cc2af6ad31064e74244121a076fc3c795f3f636e4f7f8face60e9a1"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_analytical_spectroscopic_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence lacks result identity, traceability/uncertainty, retained controls or explicit falsification boundary, or if a tampered row is accepted."
+}

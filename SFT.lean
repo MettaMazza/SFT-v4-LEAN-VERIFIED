@@ -4345,3 +4345,23 @@ import SFT.Chemistry.UVVisEvidence
 import SFT.Chemistry.UVVisExperiment
 
 import SFT.Chemistry.UVVisValidation
+
+import SFT.Chemistry.RotVib
+
+import SFT.Chemistry.RotVibGrammar
+
+import SFT.Chemistry.RotVibEvidence
+
+import SFT.Chemistry.RotVibExperiment
+
+import SFT.Chemistry.RotVibValidation
+
+import SFT.Chemistry.AnalyticalRecord
+
+import SFT.Chemistry.AnalyticalRecordGrammar
+
+import SFT.Chemistry.AnalyticalRecordEvidence
+
+import SFT.Chemistry.AnalyticalRecordExperiment
+
+import SFT.Chemistry.AnalyticalRecordValidation

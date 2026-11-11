@@ -1381,3 +1381,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.UVVisGrammar.candidates do
     IO.println ("UVVisGrammar\t" ++ SFT.Chemistry.UVVisGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.UVVisGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.UVVisGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.UVVisGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.RotVibGrammar.candidates do
+    IO.println ("RotVibGrammar\t" ++ SFT.Chemistry.RotVibGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.RotVibGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.RotVibGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.RotVibGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.AnalyticalRecordGrammar.candidates do
+    IO.println ("AnalyticalRecordGrammar\t" ++ SFT.Chemistry.AnalyticalRecordGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AnalyticalRecordGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AnalyticalRecordGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AnalyticalRecordGrammar.decisionReason c)

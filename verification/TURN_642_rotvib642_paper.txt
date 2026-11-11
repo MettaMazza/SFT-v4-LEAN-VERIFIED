@@ -1,0 +1,27 @@
+
+Rotational-vibrational molecular spectra
+
+Retain the complete molecular carrier and relative geometry established by the molecular-geometry construction. A rotational class contains a positive-length orientation recurrence whose initial geometry equals that retained geometry. Its return equality therefore implies that its terminal geometry equals the same geometry. A vibrational class retains the existing infrared internal recurrence, relative-displacement and interaction records. Its recurrence likewise returns to its initial carrier.
+
+For rotational support R and vibrational support V, construct the joint support by nested enumeration:
+    C(R,V) = [(r,v) | r in R, v in V].
+The forward membership proof extracts both source coordinates from the enumeration. The converse inserts any retained rotational and vibrational pair. Consequently
+    (r,v) in C(R,V) ⇔ r in R and v in V.
+The base with one class of each kind gives C([r],[v]) = [(r,v)]. The coordinates remain separately recoverable from every joint state; neither motion is discarded or identified with the other.
+
+Appending a rotational class r_new gives the ordered equality
+    C(R ++ [r_new],V) = C(R,V) ++ [(r_new,v) | v in V].
+Appending a vibrational class v_new gives the exact membership rule
+    (r,v) in C(R,V ++ [v_new])
+      ⇔ r in R and (v in V or v = v_new).
+Both follow from the full Cartesian enumeration and concatenation membership. Thus every newly available joint state is present while the earlier coordinates remain retained.
+
+Each registered allowed transition keeps its predecessor and successor joint states, recurrence, counted response, allowance record and provenance. Both endpoints belong to C(R,V), so the membership equivalence binds all four rotational/vibrational coordinates to their original supports. With reference recurrence length k and transition recurrence length n, its exact frequency is ν = k/n. Positivity follows from the retained positive-length paths; normalization gives k denominator(ν) = numerator(ν) n.
+
+For the complete registered transition list T, the response pattern is
+    P(T) = [(t,ν(t),q(t)) | t in T].
+Every transition contributes its full row, frequency and count; conversely every pattern item comes from a registered transition. For an extension with additional recurrence classes and complete additional transition records A, endpoint membership is lifted to the enlarged joint support and
+    P(T ++ A) = P(T) ++ [(t,ν(t),q(t)) | t in A].
+The method, conditions, population and resolution records remain unchanged. No independent rotor or oscillator equation selects the organization: the construction retains and composes the source recurrence classes and their allowed transition trace.
+
+The eight original binary grammar axes yield all 256 alternatives, with the original decisions, controls, operational witnesses, sealed prediction and empirical comparison. Original source: pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/chemistry/analytical_spectroscopic_derivation.py, ROTVIB and ANALYTICAL_SPECTROSCOPIC_BLUEPRINTS[6]; sft/chemistry/analytical_spectroscopic_batch_1.py; claims/SFT-CHEM-SPEC-ROT-VIB-001/execution.py and independent_validator.py. Native verification: SFT/Chemistry/RotVib.lean, compositionComplete, rotationReturnsGeometry, vibrationReturns, appendRotation, appendVibrationComplete, frequencyExact, everyTransitionRetained, noInventedTransition, bothCoordinatesHeld, extensionPattern, singletonComposition and extensionBoundary; RotVibGrammar.lean, RotVibEvidence.lean, RotVibExperiment.lean and RotVibValidation.lean. Earlier molecular and vibrational derivations: MolecularGeometry.lean and Infrared.lean. Chronological reference: TIMELINE.txt, Turn642 rotational-vibrational batch.

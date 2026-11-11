@@ -3955,3 +3955,13 @@ import SFT.Chemistry.PolarityEvidence
 import SFT.Chemistry.PolarityExperiment
 
 import SFT.Chemistry.PolarityValidation
+
+import SFT.Chemistry.OxidationAssignment
+
+import SFT.Chemistry.OxidationGrammar
+
+import SFT.Chemistry.OxidationEvidence
+
+import SFT.Chemistry.OxidationExperiment
+
+import SFT.Chemistry.OxidationValidation

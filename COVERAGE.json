@@ -24141,9 +24141,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-REDOX-OXIDATION-STATE-001-dc3f55fe12799330.json",
       "statement": "Oxidation state is a complete source-bound ionic-approximation accounting: each bond-electron occurrence is assigned exactly once by endpoint affinity, with magnitude positive and orientation separately held.",
       "title": "Oxidation-state accounting",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/OxidationAssignment.lean",
+        "SFT/Chemistry/OxidationGrammar.lean",
+        "SFT/Chemistry/OxidationEvidence.lean",
+        "SFT/Chemistry/OxidationExperiment.lean",
+        "SFT/Chemistry/OxidationValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh native256-form complete program,48 constructor cases, all empirical fields/hashes and original independent controls.",
       "registration_sha256": "962d9e5e793bcaaf6cce97d4a9c5908721e760ccec5053b5bb4289b0a69a792f",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -24209,7 +24215,10 @@
         "statement": "Oxidation state is a complete source-bound ionic-approximation accounting: each bond-electron occurrence is assigned exactly once by endpoint affinity, with magnitude positive and orientation separately held.",
         "status": "empirically_tested",
         "title": "Oxidation-state accounting"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_599_OXIDATION_COMPLETION.json",
+      "verified_scope": "Exact OxidationAssignment constructor, positive count and held orientation; declared ionic-approximation pair assignment by unequal affinity or equal division; endpoint inclusion; exact full carrier sequence and counts; each distinct occurrence once; bond retention; complete base/successor and source-trace reconstruction; reuse IonTransfer accounting.; Original eight binary axes and all256 alternatives, exhaustive enumeration, exact source decisions and unique survivor.; Original registration, full census, closure, exclusions, witnesses and controls.; Exact sealed prediction, source identities and original empirical boundary.; Original multi-source authority extraction, ordered fragments, custody/isolation and full empirical fields/hashes."
     },
     {
       "branch": "chemistry",
@@ -193981,13 +193990,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T11:40:43.287340+00:00",
+  "updated_at": "2026-11-11T11:49:02.374964+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2391,
-    "fully_reconstructed_claims": 390,
-    "axiom_free_exported_results": 20964,
-    "axiom_free_audited_definitions_and_theorems": 48253
+    "pending": 2390,
+    "fully_reconstructed_claims": 391,
+    "axiom_free_exported_results": 21002,
+    "axiom_free_audited_definitions_and_theorems": 48370
   }
 }

@@ -1270,3 +1270,6 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.PolarityGrammar.candidates do
     IO.println ("PolarityGrammar\t" ++ SFT.Chemistry.PolarityGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.PolarityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.PolarityGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.PolarityGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.OxidationGrammar.candidates do
+    IO.println ("OxidationGrammar\t" ++ SFT.Chemistry.OxidationGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.OxidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.OxidationGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.OxidationGrammar.decisionReason c)

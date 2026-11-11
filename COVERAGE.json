@@ -26583,9 +26583,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-STEREO-DIASTEREOMER-001-54222fa195d500b1.json",
       "statement": "Diastereomers are paired non-superposable stereoisomers of equal composition and connectivity that are not related as exact mirror images.",
       "title": "Diastereomer distinction",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/Diastereomer.lean",
+        "SFT/Chemistry/DiastereomerGrammar.lean",
+        "SFT/Chemistry/DiastereomerEvidence.lean",
+        "SFT/Chemistry/DiastereomerExperiment.lean",
+        "SFT/Chemistry/DiastereomerValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh256 native candidate decisions and all program/empirical fields; original independent controls. Reused unchanged Chirality constructor/derivation evidence.",
       "registration_sha256": "d4a05878d4e9d23d42d4c27b4ae88e4e216ee7a269273e7d9ca702873eb284ee",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -26667,7 +26673,10 @@
         "statement": "Diastereomers are paired non-superposable stereoisomers of equal composition and connectivity that are not related as exact mirror images.",
         "status": "empirically_tested",
         "title": "Diastereomer distinction"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_629_DIASTEREOMER_COMPLETION.json",
+      "verified_scope": "Independent-name equal-constitution pair; exact exhaustive direct and mirror exclusion; constructive non-mirror base; original observation boundary. CompleteConstitutionMap extracted from source candidate witness on admitted equal-width supports; full element and bidirectional bond transport, counts, endpoint membership and permutation preserved by extendCompleteConstitutionMap. Complete extended identity/mirror census. Mathematical successor is the complete structural witness, not a claimed general Boolean canonical-sort invariance theorem.; Original eight binary axes and all256 alternatives with exact elimination decisions.; Original complete census, registration, operational witnesses, controls and closure.; Original sealed prediction and source references, reusing unchanged StereoSeal.; Original complete multi-source empirical outputs and all hashes."
     },
     {
       "branch": "chemistry",
@@ -194214,13 +194223,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T15:42:03.802357+00:00",
+  "updated_at": "2026-11-11T16:14:51.070881+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2366,
-    "fully_reconstructed_claims": 415,
-    "axiom_free_exported_results": 22017,
-    "axiom_free_audited_definitions_and_theorems": 51350
+    "pending": 2365,
+    "fully_reconstructed_claims": 416,
+    "axiom_free_exported_results": 22080,
+    "axiom_free_audited_definitions_and_theorems": 51504
   }
 }

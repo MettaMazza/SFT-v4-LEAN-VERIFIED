@@ -4221,3 +4221,13 @@ import SFT.Chemistry.EnantiomerEvidence
 import SFT.Chemistry.EnantiomerExperiment
 
 import SFT.Chemistry.EnantiomerValidation
+
+import SFT.Chemistry.Diastereomer
+
+import SFT.Chemistry.DiastereomerGrammar
+
+import SFT.Chemistry.DiastereomerEvidence
+
+import SFT.Chemistry.DiastereomerExperiment
+
+import SFT.Chemistry.DiastereomerValidation

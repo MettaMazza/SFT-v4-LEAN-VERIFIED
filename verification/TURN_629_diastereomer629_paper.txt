@@ -1,0 +1,26 @@
+
+Diastereomer successor: complete element and bond correspondence
+
+Let A and B be the admitted equal-width oriented molecular supports compared by the source. The equal positive-width check is an explicit guard of forced_coordination_isomer_relation. A constitutional witness f is a permutation of B indexed by A, satisfying element preservation E_A(u)=E_B(f(u)), equal elemental multiplicities, and two-way undirected bond correspondence:
+\[
+(u,v)\in R_A\Longrightarrow(f(u),f(v))\in R_B,\qquad
+(x,y)\in R_B\Longrightarrow\exists(u,v)\in R_A:\{f(u),f(v)\}=\{x,y\}.
+\]
+Here bond membership is undirected; the Lean BondMatch disjunction retains both endpoint orders. pairCompleteConstitutionTransport extracts this witness from the original exhaustive constitution test. CompleteConstitutionMap retains the element test, both list-width identities, full map permutation, all elemental counts, endpoint membership and both bond directions.
+
+For fresh names a and b, a shared new elemental label e, and retained left attachment support L, construct
+\[
+A'=A\mathbin{+\!+}[a],\quad B'=B\mathbin{+\!+}[b],\quad
+f'=f\mathbin{+\!+}[a\mapsto b],
+\]
+\[
+R'_A=R_A\mathbin{+\!+}\{(u,a):u\in L\},\quad
+R'_B=R_B\mathbin{+\!+}\{(f(u),b):u\in L\}.
+\]
+transportedElements proves the complete source element test after extension. On each old u, freshness leaves its lookup and mapped lookup unchanged, so E'_A(u)=E_A(u)=E_B(f(u))=E'_B(f'(u)). At the new occurrence, E'_A(a)=e=E'_B(b)=E'_B(f'(a)). transportedForwardBonds and transportedReverseBonds split every bond into its old or appended case and prove both directions. extendedEndpoints proves that every appended bond remains on the expanded support. transportedComposition adds the same indicator [q=e] to each elemental count. transportedOrder appends the new mapped occurrence to the original permutation. The equal-width equations extend by adding one on both sides.
+
+extendCompleteConstitutionMap assembles these results into another CompleteConstitutionMap. It is a closed mathematical constructor for matched constitution extension, with independently named supports and independently retained orientation words. It does not require every appended configuration to remain diastereomeric: the source successor extends the identity and mirror tests. transportedTests records both, and transportedCensusComplete proves that every permutation of the expanded right support occurs in that census. Original configuration lookups and reflection-extension commutation are retained by the branch proofs cited above.
+
+The original eight grammar axes and all256 alternatives, elimination decisions, operational witnesses, controls, closure and empirical bindings are retained. The native candidate program and complete empirical outputs agree with pinned V3, and the independent validator rejects the three original adverse cases. Fifty-four additional fresh source comparisons execute extend_coordination_form and _canonical(include_orientation=False), comparing them with the Lean extended-carrier constitution test: all nonempty attachment subsets of a reversed two-atom map, new names in three lexical positions on each side, and repeated or new elemental labels agree. These executed comparisons are separate from the general element-and-bond transport proofs.
+
+Diastereomer distinction is complete as source entry416. All171 audited declarations have no Lean axiom dependencies. Pinned V3: sft/chemistry/stereochemistry_organic_polymer_derivation.py, STEREOCHEMISTRY_ORGANIC_POLYMER_BLUEPRINTS[2]; coordination_isomerism_law_v1.py, forced_coordination_isomer_relation, extend_coordination_form, _canonical, _mirror; original execution and empirical bindings. Lean: SFT/Chemistry/Diastereomer.lean, CompleteConstitutionMap, pairCompleteConstitutionTransport, transportedElements, extendedEndpoints, extendCompleteConstitutionMap, transportedCensusComplete and the preceding transport results. Timeline: Turns627–629. Verification: TURN_629_DIASTEREOMER_COMPLETION.json, TURN_629_diastereomer629_audit.log, TURN_629_diastereomer_extension629_report.json and retained Turn627 full-program/empirical/independent reports.

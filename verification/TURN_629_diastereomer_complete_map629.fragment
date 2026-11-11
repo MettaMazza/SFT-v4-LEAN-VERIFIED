@@ -1,0 +1,48 @@
+
+structure CompleteConstitutionMap extends ConstitutionMap where
+ elements : MolecularIsomer.respectsElements left.carrier right.carrier order=true
+ leftWidth : left.carrier.occurrences.length=left.carrier.elements.length
+ rightWidth : right.carrier.occurrences.length=right.carrier.elements.length
+
+def extendCompleteConstitutionMap (m : CompleteConstitutionMap) (fresh target element : String)
+ (lo ro : OrientationWord) (links : List String)
+ (leftFresh : ¬fresh∈m.left.carrier.occurrences) (rightFresh : ¬target∈m.right.carrier.occurrences)
+ (linksHeld : ∀ anchor∈links, anchor∈m.left.carrier.occurrences) : CompleteConstitutionMap where
+ toConstitutionMap := extendConstitutionMap m.toConstitutionMap fresh target element lo ro links leftFresh linksHeld
+ elements := transportedElements m.toConstitutionMap fresh target element lo ro links
+  leftFresh rightFresh m.leftWidth m.rightWidth m.elements
+ leftWidth := by
+  change (m.left.carrier.occurrences++[fresh]).length=(m.left.carrier.elements++[element]).length
+  rw [SFT.Foundation.CommonRefinement.appendLength,SFT.Foundation.CommonRefinement.appendLength,m.leftWidth]
+  rfl
+ rightWidth := by
+  change (m.right.carrier.occurrences++[target]).length=(m.right.carrier.elements++[element]).length
+  rw [SFT.Foundation.CommonRefinement.appendLength,SFT.Foundation.CommonRefinement.appendLength,m.rightWidth]
+  rfl
+
+theorem pairCompleteConstitutionTransport (p : Pair)
+ (leftAdmitted : MolecularCarrier.admit p.left.carrier=.ok p.left.carrier)
+ (rightAdmitted : MolecularCarrier.admit p.right.carrier=.ok p.right.carrier)
+ (sameSize : p.left.carrier.occurrences.length=p.right.carrier.occurrences.length) :
+ ∃ m : CompleteConstitutionMap, m.left=p.left ∧ m.right=p.right := by
+ obtain ⟨order,generated,matched⟩ := constitutionWitness p
+ have ls := admittedMoleculeShape p.left leftAdmitted
+ have rs := admittedMoleculeShape p.right rightAdmitted
+ have perm := everyArrangementPermutesCarrier p.right.carrier.occurrences rs.2.1 order generated
+ have width := sameSize.trans (mapPermutationLength perm).symm
+ exact ⟨⟨sourceConstitutionMap p.left p.right order ls.2.1 rs.2.1 ls.2.2 rs.2.2 width perm
+  (MolecularCarrier.allConstituentEndpoints ⟨p.left.carrier,leftAdmitted⟩) matched,
+  ((MolecularIsomer.candidateMeaning _ _ _).mp matched).1,ls.2.2,rs.2.2⟩,rfl,rfl⟩
+
+def transportedTests (m : CompleteConstitutionMap) :=
+ (arrangementsCore m.right.carrier.occurrences).map
+  (fun order => (order,properMatches m.left m.right order,
+   properMatches (mirrorMolecule m.left) m.right order))
+
+theorem transportedCensusComplete (m : CompleteConstitutionMap)
+ (nonempty : m.right.carrier.occurrences≠[]) (unique : distinct m.right.carrier.occurrences=true)
+ (order : List String) (perm : List.Perm order m.right.carrier.occurrences) :
+ (order,properMatches m.left m.right order,properMatches (mirrorMolecule m.left) m.right order)
+ ∈ transportedTests m := by
+ apply SFT.Foundation.Count.TraceDerivation.memMap
+ exact everyPermutationGenerated m.right.carrier.occurrences nonempty unique order perm

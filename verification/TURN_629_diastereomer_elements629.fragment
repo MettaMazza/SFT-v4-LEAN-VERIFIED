@@ -1,0 +1,65 @@
+
+theorem transportedElements (m : ConstitutionMap) (fresh target element : String)
+ (lo ro : OrientationWord) (links : List String)
+ (leftFresh : ¬fresh∈m.left.carrier.occurrences) (rightFresh : ¬target∈m.right.carrier.occurrences)
+ (leftWidth : m.left.carrier.occurrences.length=m.left.carrier.elements.length)
+ (rightWidth : m.right.carrier.occurrences.length=m.right.carrier.elements.length)
+ (elements : MolecularIsomer.respectsElements m.left.carrier m.right.carrier m.order=true) :
+ MolecularIsomer.respectsElements (extendedLeftCarrier m fresh element lo links).carrier
+  (extendedRightCarrier m target element ro links).carrier (m.order++[target])=true := by
+ apply (allTrueIffMembers _ _).mpr
+ intro name held
+ change decide (MolecularIsomer.lookup name
+  ((m.left.carrier.occurrences++[fresh]).zip (m.left.carrier.elements++[element]))=
+   MolecularIsomer.lookup (extendedName m fresh target name)
+    ((m.right.carrier.occurrences++[target]).zip (m.right.carrier.elements++[element])))=true
+ cases SFT.Foundation.Count.TraceDerivation.memAppendCases name m.left.carrier.occurrences [fresh] held with
+ | inl old =>
+   have different : name≠fresh := fun h => leftFresh (h ▸ old)
+   have mappedHeld := transportedTargetHeld m name old
+   have mappedDifferent : mappedName m name≠target := fun h => rightFresh (h ▸ mappedHeld)
+   rw [extendedOldName _ _ _ _ different,zipAppendPair _ _ leftWidth,zipAppendPair _ _ rightWidth,
+    lookupFreshAppendOther _ _ _ _ different,lookupFreshAppendOther _ _ _ _ mappedDifferent]
+   exact SFT.Mathematics.AlgebraOperations.allTrueAtMember _ _ elements name old
+ | inr added =>
+   cases added with
+   | head =>
+     rw [extendedFreshName _ _ _ leftFresh,lookupLastFreshValue _ _ _ _ leftWidth leftFresh,
+      lookupLastFreshValue _ _ _ _ rightWidth rightFresh]
+     exact decide_eq_true rfl
+   | tail _ impossible => cases impossible
+
+theorem extendedEndpoints (m : ConstitutionMap) (fresh element : String)
+ (word : OrientationWord) (links : List String)
+ (linksHeld : ∀ anchor∈links, anchor∈m.left.carrier.occurrences) :
+ ∀ edge∈(extendedLeftCarrier m fresh element word links).carrier.bonds,
+ edge.1∈(extendedLeftCarrier m fresh element word links).carrier.occurrences ∧
+ edge.2∈(extendedLeftCarrier m fresh element word links).carrier.occurrences := by
+ intro edge held
+ cases SFT.Foundation.Count.TraceDerivation.memAppendCases edge m.left.carrier.bonds
+  (links.map (fun n => (n,fresh))) held with
+ | inl old =>
+   have ends := m.endpoints edge old
+   exact ⟨SFT.Foundation.Count.TraceDerivation.memAppendLeft _ _ _ ends.1,
+    SFT.Foundation.Count.TraceDerivation.memAppendLeft _ _ _ ends.2⟩
+ | inr added =>
+   obtain ⟨anchor,anchorHeld,equal⟩ := SFT.Foundation.Count.TraceDerivation.memMapPreimage _ _ _ added
+   cases equal
+   exact ⟨SFT.Foundation.Count.TraceDerivation.memAppendLeft _ _ _ (linksHeld anchor anchorHeld),
+    SFT.Foundation.Count.TraceDerivation.memAppendRight _ _ _ (.head [])⟩
+
+def extendConstitutionMap (m : ConstitutionMap) (fresh target element : String)
+ (lo ro : OrientationWord) (links : List String)
+ (leftFresh : ¬fresh∈m.left.carrier.occurrences)
+ (linksHeld : ∀ anchor∈links, anchor∈m.left.carrier.occurrences) : ConstitutionMap where
+ left := extendedLeftCarrier m fresh element lo links
+ right := extendedRightCarrier m target element ro links
+ order := m.order++[target]
+ orderPermutation := transportedOrder m target
+ width := by
+  change (m.left.carrier.occurrences++[fresh]).length=(m.order++[target]).length
+  rw [SFT.Mathematics.CommonRefinement.appendLength,SFT.Mathematics.CommonRefinement.appendLength,m.width]
+ counts := transportedComposition m fresh target element lo ro links
+ endpoints := extendedEndpoints m fresh element lo links linksHeld
+ forwardBonds := transportedForwardBonds m fresh target element lo ro links leftFresh linksHeld
+ reverseBonds := transportedReverseBonds m fresh target element lo ro links leftFresh linksHeld

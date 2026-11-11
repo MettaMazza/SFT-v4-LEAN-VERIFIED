@@ -18627,3 +18627,17 @@ For a complete finite pair boundary, the existing equal-share construction also 
 The complete pair support, both coordinate-successor proofs, no-missing-response theorem and unique conserved allocation connect the rational response to the retained finite boundary construction. The original exact witnesses give F(1,2)=1/4, F(1,3)=1/9 and F(5/7,4/3)·G(4/3)=5/7.
 
 Original source: pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/physics/structural_constants.py, boundary_rank_two, repeated_positive_product, boundary_growth, inverse_square_response and INVERSE_SQUARE_SPEC. Native verification: SFT/Physics/BoundarySupport.lean, completeBoundaryRank, pairCellMembership, pairLeftSuccessor, pairRightSuccessor and scaledPairCount; BoundaryGrowth.lean, growthAdmitted and exactGrowthValue; FieldGeometricDilution.lean, allBoundaryCellsRetained, noMissingResponse and shareUnique; InverseSquare.lean, responseAdmitted, responseBoundary, sourceGuardFirst, exactDivision, recomposes, conservedAtEveryScale, uniqueConservedResponse, allPairCellsRetained and squareShare; InverseSquareWitnesses.lean, doubleCheckPassed, tripleCheckPassed and conservationCheckPassed. Chronological derivation record: TIMELINE.txt, Turn643 inverse-square core.
+
+
+Post-seal inverse-square exponent interval: complete positive-integer enumeration
+
+The inverse-square structural derivation seals exponent two before the experimental record is opened. The registered Williams, Faller and Hill report gives q = (2.7 ± 3.1) × 10⁻¹⁶ in 1/r^(2+q). Its exact exponent endpoints are
+    L = 199999999999999996 / 100000000000000000,
+    U = 200000000000000058 / 100000000000000000.
+For any exact positive rational endpoints L=a/b and U=c/d with L≤U, the source checker starts at the positive integer 1 and advances by one. A candidate n survives precisely when
+    a ≤ nb  and  nd ≤ c.
+The native recursion retains n exactly under these inequalities and stops as soon as nd>c. Since d>0, for every m≥n, md≥nd>c; no later candidate can survive. The implementation uses c+1 successor positions as a termination bound: any surviving n obeys n≤nd≤c, so this bound excludes no admissible candidate. Induction on the recursion proves both directions
+    n ∈ E(L,U)  ⇔  0<n ∧ a≤nb ∧ nd≤c.
+For the reported endpoints, 1<L≤2≤U<3. Thus E(L,U)=[2]; the lower and upper controls reject 1 and 3 respectively. This is the original post-seal experimental agreement test: measurement does not select the structural exponent, and interval agreement is not asserted to prove an exact physical value. Non-fraction arguments and nonpositive or reversed intervals retain the original rejection rules.
+
+Original source: pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/physics/inverse_square_validation.py, positive_integer_exponents_in_interval, REPORTED_LOWER, REPORTED_UPPER and SPEC. Native verification: SFT/Physics/InverseSquareInterval.lean, scanSound, scanComplete, laterAbove, exponentsExactly, reportedCensus, reportedChecked, oneBelow and threeAbove. Chronological derivation record: TIMELINE.txt, Turn644 inverse-square interval core.

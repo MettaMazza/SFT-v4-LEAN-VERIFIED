@@ -1,0 +1,215 @@
+{
+  "claim_id": "SFT-CHEM-POLYMER-DISTRIBUTION-001",
+  "title": "Polymer population and retained chain-length distribution",
+  "statement": "A polymer distribution is the complete source-bound census of resolved chain carriers by repeat count and positive multiplicity, with number and mass weightings retained separately.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001",
+    "SFT-CHEM-POLYMER-CHAIN-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete carrier preservation, exact equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite observed polymer sample with complete chain identities, repeat counts, positive multiplicities, weighting rule, sample and method boundary.",
+  "dimensions": [
+    {
+      "key": "population",
+      "choices": [
+        {
+          "name": "single-representative-chain",
+          "admitted": false,
+          "reason": "A sample distribution is erased."
+        },
+        {
+          "name": "all-observed-chain-carriers",
+          "admitted": true,
+          "reason": "Every resolved chain enters the census."
+        }
+      ]
+    },
+    {
+      "key": "length",
+      "choices": [
+        {
+          "name": "mean-only",
+          "admitted": false,
+          "reason": "A mean loses alternatives."
+        },
+        {
+          "name": "exact-chain-length-counts",
+          "admitted": true,
+          "reason": "Every carrier retains its repeat count."
+        }
+      ]
+    },
+    {
+      "key": "multiplicity",
+      "choices": [
+        {
+          "name": "duplicate-chains-collapsed",
+          "admitted": false,
+          "reason": "Population frequency is lost."
+        },
+        {
+          "name": "positive-chain-multiplicities",
+          "admitted": true,
+          "reason": "Repeated lengths retain exact counts."
+        }
+      ]
+    },
+    {
+      "key": "measure",
+      "choices": [
+        {
+          "name": "one-universal-average",
+          "admitted": false,
+          "reason": "Different summaries retain different information."
+        },
+        {
+          "name": "number-and-mass-support-separated",
+          "admitted": true,
+          "reason": "Weighting rule is explicit."
+        }
+      ]
+    },
+    {
+      "key": "distribution",
+      "choices": [
+        {
+          "name": "answer-scalar-only",
+          "admitted": false,
+          "reason": "The population cannot be reconstructed."
+        },
+        {
+          "name": "complete-molar-mass-distribution",
+          "admitted": true,
+          "reason": "All length/multiplicity pairs remain."
+        }
+      ]
+    },
+    {
+      "key": "method",
+      "choices": [
+        {
+          "name": "method-free-census",
+          "admitted": false,
+          "reason": "Resolution changes the observed population."
+        },
+        {
+          "name": "method-and-sample-bounded",
+          "admitted": true,
+          "reason": "Sampling and measurement boundaries are held."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "distribution-name-only",
+          "admitted": false,
+          "reason": "The census cannot be audited."
+        },
+        {
+          "name": "chain-population-trace",
+          "admitted": true,
+          "reason": "Every counted carrier and weight is retained."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-distribution-fit",
+          "admitted": false,
+          "reason": "A fitted shape can hide unfavorable chains."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Complete population counting supplies the distribution."
+        }
+      ]
+    }
+  ],
+  "exact_result": "all-observed-chain-carriers__exact-chain-length-counts__positive-chain-multiplicities__number-and-mass-support-separated__complete-molar-mass-distribution",
+  "induction_base": "One finite sample with at least two resolved chain counts supplies the first distribution.",
+  "induction_step": "Appending a chain increments exactly one retained length class or adds a new class without changing earlier multiplicities.",
+  "exclusions": [
+    "no stereochemical dictionary, organic reaction taxonomy, polymer table, biomolecular database, measured target or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no atom, bond, orientation, repeat unit, chain or observation distinction may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite observed polymer sample with complete chain identities, repeat counts, positive multiplicities, weighting rule, sample and method boundary."
+  ],
+  "operational_witnesses": [
+    [
+      "population",
+      "sample multiplicity is positive",
+      true
+    ],
+    [
+      "length",
+      "chain connections are counted",
+      true
+    ],
+    [
+      "weight",
+      "number and mass rules remain separate",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-POLYMER-DISTRIBUTION-001",
+  "expected_observation_label": "polymer-sample-many-chain-lengths__molar-mass-distribution__number-and-mass-fractions-retained__method-bounded",
+  "target_rows": [
+    {
+      "target_id": "polymer-distribution-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-POLYMER-DISTRIBUTION-COMPOSITE-2026",
+      "source_locator": "authority source set anchored at 12215",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/12215.json",
+      "snapshot_hash": "sha256:98c415c9e851b41083ffc7ee3b9e1ba2d2b9e81bc6e05bb0dce170dd9733e91a"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_stereochemistry_organic_polymer_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence lacks chain-length diversity, molar-mass distribution, distinct weightings or method boundary, or if a tampered row is accepted."
+}

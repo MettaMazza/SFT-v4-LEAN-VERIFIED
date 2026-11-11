@@ -26999,9 +26999,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-POLYMER-DISTRIBUTION-001-ad81bf1f69ee772b.json",
       "statement": "A polymer distribution is the complete source-bound census of resolved chain carriers by repeat count and positive multiplicity, with number and mass weightings retained separately.",
       "title": "Polymer population and retained chain-length distribution",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/PolymerDistribution.lean",
+        "SFT/Chemistry/PolymerDistributionGrammar.lean",
+        "SFT/Chemistry/PolymerDistributionEvidence.lean",
+        "SFT/Chemistry/PolymerDistributionExperiment.lean",
+        "SFT/Chemistry/PolymerDistributionValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh637 native256/full program and empirical output; original independent adverse controls.",
       "registration_sha256": "a2c447109c575758f749de86e87c3f1114829515c4f5aa302b6f5a3b504ae180",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -27082,7 +27088,10 @@
         "statement": "A polymer distribution is the complete source-bound census of resolved chain carriers by repeat count and positive multiplicity, with number and mass weightings retained separately.",
         "status": "empirically_tested",
         "title": "Polymer population and retained chain-length distribution"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_637_POLYMER_DISTRIBUTION_COMPLETION.json",
+      "verified_scope": "Complete finite source census with explicit empty, singleton and nonempty representations; complete chain records, derived repeat counts, positive multiplicities, observed molar mass and observation records; two-row base without distinct-length restriction; exact length census with both coverage directions; unique finite tally, class positivity and absence, one-chain/class successor and unchanged other classes; separate number/mass contributions and exact positive rational fractions; complete history, sample and method retained.; All eight original binary axes, all256 candidates, exact source decisions, complete enumeration and unique survivor.; Exact source registration, complete census, operational witnesses, original controls and closure.; Original sealed predictions, source custody and empirical boundary using unchanged StereoSeal.; Complete original multi-source empirical result and hash correspondence."
     },
     {
       "branch": "chemistry",
@@ -194250,13 +194259,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T17:09:44.257847+00:00",
+  "updated_at": "2026-11-11T17:17:00.187520+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2362,
-    "fully_reconstructed_claims": 419,
-    "axiom_free_exported_results": 22240,
-    "axiom_free_audited_definitions_and_theorems": 51924
+    "pending": 2361,
+    "fully_reconstructed_claims": 420,
+    "axiom_free_exported_results": 22294,
+    "axiom_free_audited_definitions_and_theorems": 52065
   }
 }

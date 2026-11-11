@@ -4261,3 +4261,13 @@ import SFT.Chemistry.PolymerChainEvidence
 import SFT.Chemistry.PolymerChainExperiment
 
 import SFT.Chemistry.PolymerChainValidation
+
+import SFT.Chemistry.PolymerDistribution
+
+import SFT.Chemistry.PolymerDistributionGrammar
+
+import SFT.Chemistry.PolymerDistributionEvidence
+
+import SFT.Chemistry.PolymerDistributionExperiment
+
+import SFT.Chemistry.PolymerDistributionValidation

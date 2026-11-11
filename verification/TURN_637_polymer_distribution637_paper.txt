@@ -1,0 +1,19 @@
+Polymer distribution: complete census and separate weights
+
+A resolved row retains a complete chain C_i, its exact repeat count l_i, positive multiplicity n_i, an exact observed molar mass M_i and its observation record. The repeat count is obtained from the chain incidence:
+\[l_i=|V(C_i)|.\]
+The population retains every row in order together with its sample and method records. Its two-row base retains both resolved counts, including repeated equal lengths; appending a row preserves the full prior census and both measurement boundaries. A Census stores any finite observation list. positiveSample retains every row and both boundaries when positive weighted readouts are available; an empty resolved census remains Empty. A singleton census is preserved, without imposing a distinct-length admission rule. Every length/multiplicity pair comes from a retained row, and every retained row contributes its pair (everyLengthRetained and completeLengthCensus).
+
+The multiplicity of length l is finite counting over the complete census:
+\[N_l(R)=\sum_{i:l_i=l} n_i.\]
+The recursion starts with the empty counting identity and adds n_i precisely when l_i=l. tallyForced proves uniqueness of the operation satisfying these equations. representedClassPositive proves that each represented length has a positive count. The exported multiplicityAt result represents an absent class by Empty (none), never by a zero-valued PositiveCount; absentClassEmpty and representedClassPresent establish both cases.
+
+For appended row (l_*,n_*), the exact update is
+\[N_l(R\mathbin{+\!+}[r_*])=N_l(R)+\begin{cases}n_*&l=l_*\\0&l\ne l_* .\end{cases}\]
+appendedClassIncrement and otherClassUnchanged prove the two branches. With n_*=1, oneChainIncrement gives the source's single-chain successor. A new length therefore creates a positive class; an existing length increases its retained count. No fitted distribution shape replaces the census.
+
+Number and mass weightings retain different information:
+\[a_i=n_i,\qquad b_i=n_iM_i,\qquad A=\sum_i a_i,\qquad B=\sum_i b_i,\qquad x_i=a_i/A,\qquad w_i=b_i/B.\]
+numberWeightExact and massContributionExact identify the exact positive rational contributions. totalSuccessor and totalSuccessorExact prove accumulation by exact addition, while numberFractionExact and massFractionExact prove division by their respective positive totals. Molar masses remain source-bound observations: changing M_i does not change l_i or a_i (measuredMassDoesNotChangeLength and measuredMassDoesNotChangeNumberWeight). The observation, sample and method records remain explicit.
+
+Source: pinned V3 sft/chemistry/stereochemistry_organic_polymer_derivation.py, blueprint[6], its eight-coordinate POLYMER_DISTRIBUTION grammar and base/successor statements; stereochemistry_organic_polymer_batch_1.py and claims/SFT-CHEM-POLYMER-DISTRIBUTION-001/execution.py. Lean: SFT/Chemistry/PolymerDistribution.lean, declarations named above; PolymerDistributionGrammar, PolymerDistributionEvidence, PolymerDistributionExperiment and PolymerDistributionValidation. Timeline: Turn637 distribution batch. Completion evidence: TURN_637_POLYMER_DISTRIBUTION_COMPLETION.json. Exact source-domain and verification outcomes are recorded in that receipt.

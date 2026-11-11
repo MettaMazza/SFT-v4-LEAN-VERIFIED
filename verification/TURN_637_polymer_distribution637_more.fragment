@@ -1,0 +1,61 @@
+
+def base {Word Cell : Type} (first second : Row Word Cell)
+ (different : length first≠length second) (sample method : SFT.Host.Canonical.Value) :
+ Population Word Cell := ⟨first,second,different,[],sample,method⟩
+
+theorem baseRows {Word Cell : Type} (first second : Row Word Cell)
+ (different : length first≠length second) (sample method : SFT.Host.Canonical.Value) :
+ rows (base first second different sample method)=[first,second] := rfl
+
+theorem actualChainLength {Word Cell : Type} (row : Row Word Cell) :
+ length row=(PolymerChain.sourceRecord row.chain).occurrences.value := rfl
+
+theorem positiveLength {Word Cell : Type} (row : Row Word Cell) : 0<length row :=
+ PolymerChain.positiveExtent row.chain.incidence
+
+theorem totalPositive {Word Cell : Type} (weight : Row Word Cell → PositiveFraction)
+ (p : Population Word Cell) : 0<(total weight p).numerator := (total weight p).positive
+
+theorem measuredMassDoesNotChangeLength {Word Cell : Type} (row : Row Word Cell)
+ (mass : PositiveFraction) : length {row with molarMass:=mass}=length row := rfl
+
+theorem measuredMassDoesNotChangeNumberWeight {Word Cell : Type} (row : Row Word Cell)
+ (mass : PositiveFraction) : numberWeight {row with molarMass:=mass}=numberWeight row := rfl
+
+theorem tallyForced {Word Cell : Type} (target : Nat) (proposed : List (Row Word Cell) → Nat)
+ (empty : proposed []=0)
+ (step : ∀ row rest, proposed (row::rest)=
+  (if length row=target then row.multiplicity.value else 0)+proposed rest)
+ (rs : List (Row Word Cell)) : proposed rs=tally target rs := by
+ induction rs with
+ | nil => exact empty
+ | cons first rest ih => exact (step first rest).trans (congrArg (fun n => _+n) ih)
+
+theorem representedClassPresent {Word Cell : Type} (p : Population Word Cell) (row : Row Word Cell)
+ (held : row∈rows p) :
+ ∃ count, multiplicityAt p (length row)=some count ∧ count.value=tally (length row) (rows p) := by
+ have positive := representedClassPositive (rows p) row held
+ refine ⟨⟨tally (length row) (rows p),positive⟩,?_,rfl⟩
+ unfold multiplicityAt
+ rw [dif_pos positive]
+
+theorem absentClassEmpty {Word Cell : Type} (p : Population Word Cell) (target : Nat)
+ (absent : ∀ row∈rows p, length row≠target) : multiplicityAt p target=none := by
+ unfold multiplicityAt
+ have empty := noInventedClass target (rows p) absent
+ have notPositive : ¬0<tally target (rows p) := by rw [empty]; exact Nat.not_lt_zero 0
+ rw [dif_neg notPositive]
+
+
+theorem numberWeightExact {Word Cell : Type} (row : Row Word Cell) :
+ row.multiplicity.value*(numberWeight row).denominator=(numberWeight row).numerator*1 :=
+ normalizedValuePreserved _ _ _ _
+
+theorem totalSuccessorExact {Word Cell : Type} (weight : Row Word Cell → PositiveFraction)
+ (p : Population Word Cell) (row : Row Word Cell) :
+ (leftCross (total weight p) (weight row)+rightCross (total weight p) (weight row))*
+ (total weight (append p row)).denominator=
+ (total weight (append p row)).numerator*denominator (total weight p) (weight row) := by
+ rw [totalSuccessor]
+ exact sumExact _ _
+

@@ -1,0 +1,37 @@
+
+-- The complete observed census is retained even when there are no resolved
+-- rows. Positive weighted readouts are constructed only for nonempty data.
+structure Census (Word Cell : Type) where
+ observations : List (Row Word Cell)
+ sample : SFT.Host.Canonical.Value
+ method : SFT.Host.Canonical.Value
+
+def positiveSample {Word Cell : Type} (census : Census Word Cell) : Option (Population Word Cell) :=
+ match census.observations with
+ | [] => none
+ | first::rest => some ⟨first,rest,census.sample,census.method⟩
+
+def completeCensus {Word Cell : Type} (p : Population Word Cell) : Census Word Cell :=
+ ⟨rows p,p.sample,p.method⟩
+
+theorem positiveSampleRoundTrip {Word Cell : Type} (p : Population Word Cell) :
+ positiveSample (completeCensus p)=some p := by cases p; rfl
+
+theorem positiveSampleRetainsEveryRow {Word Cell : Type} (census : Census Word Cell)
+ (p : Population Word Cell) (accepted : positiveSample census=some p) :
+ rows p=census.observations ∧ p.sample=census.sample ∧ p.method=census.method := by
+ unfold positiveSample at accepted
+ cases shape : census.observations with
+ | nil => rw [shape] at accepted; cases accepted
+ | cons first rest =>
+   rw [shape] at accepted
+   cases Option.some.inj accepted
+   exact ⟨rfl,rfl,rfl⟩
+
+theorem noResolvedRows {Word Cell : Type} (sample method : SFT.Host.Canonical.Value) :
+ positiveSample (⟨[],sample,method⟩ : Census Word Cell)=none := rfl
+
+theorem singletonRetained {Word Cell : Type} (row : Row Word Cell)
+ (sample method : SFT.Host.Canonical.Value) :
+ positiveSample (⟨[row],sample,method⟩ : Census Word Cell)=some ⟨row,[],sample,method⟩ := rfl
+

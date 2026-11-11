@@ -1,0 +1,215 @@
+{
+  "claim_id": "SFT-CHEM-ORGANIC-REACTION-FAMILY-001",
+  "title": "Organic reaction-family compositional law",
+  "statement": "An organic reaction family is the equivalence class of complete balanced reactant-product maps sharing one minimal bond-change pattern and role correspondence without assuming a common mechanism.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001",
+    "SFT-CHEM-ORGANIC-FUNCTIONAL-GROUP-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete carrier preservation, exact equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite generated set of balanced organic reactant-product atom maps with complete bond changes, functional roles, conditions and separate mechanism records.",
+  "dimensions": [
+    {
+      "key": "members",
+      "choices": [
+        {
+          "name": "one-reaction-only",
+          "admitted": false,
+          "reason": "No family is formed."
+        },
+        {
+          "name": "multiple-generated-reactions",
+          "admitted": true,
+          "reason": "The declared support has more than one member."
+        }
+      ]
+    },
+    {
+      "key": "encoding",
+      "choices": [
+        {
+          "name": "reaction-names-only",
+          "admitted": false,
+          "reason": "Names do not establish common structure."
+        },
+        {
+          "name": "complete-reactant-product-maps",
+          "admitted": true,
+          "reason": "Every atom and bond transition is retained."
+        }
+      ]
+    },
+    {
+      "key": "pattern",
+      "choices": [
+        {
+          "name": "unrelated-bond-changes",
+          "admitted": false,
+          "reason": "No shared family relation exists."
+        },
+        {
+          "name": "shared-bond-change-pattern",
+          "admitted": true,
+          "reason": "The same minimal transition trace recurs."
+        }
+      ]
+    },
+    {
+      "key": "roles",
+      "choices": [
+        {
+          "name": "reactant-product-roles-erased",
+          "admitted": false,
+          "reason": "Pattern orientation is ambiguous."
+        },
+        {
+          "name": "reactant-product-role-correspondence",
+          "admitted": true,
+          "reason": "Input and output positions remain held."
+        }
+      ]
+    },
+    {
+      "key": "composition",
+      "choices": [
+        {
+          "name": "carrier-balance-erased",
+          "admitted": false,
+          "reason": "The transformations cannot close."
+        },
+        {
+          "name": "elemental-carriers-balanced",
+          "admitted": true,
+          "reason": "Every family member preserves carriers."
+        }
+      ]
+    },
+    {
+      "key": "mechanism",
+      "choices": [
+        {
+          "name": "mechanism-assumed-from-pattern",
+          "admitted": false,
+          "reason": "Equal net changes need not share a mechanism."
+        },
+        {
+          "name": "mechanism-not-assumed",
+          "admitted": true,
+          "reason": "Mechanistic evidence remains separate."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "family-label-only",
+          "admitted": false,
+          "reason": "Membership cannot be audited."
+        },
+        {
+          "name": "member-and-pattern-trace",
+          "admitted": true,
+          "reason": "Every map and equivalence decision is retained."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-reaction-taxonomy",
+          "admitted": false,
+          "reason": "An imported list can force membership."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Minimal recurring transition structure supplies the family."
+        }
+      ]
+    }
+  ],
+  "exact_result": "multiple-generated-reactions__complete-reactant-product-maps__shared-bond-change-pattern__reactant-product-role-correspondence__elemental-carriers-balanced",
+  "induction_base": "Two balanced reactions with one equal minimal bond-change trace supply the first family.",
+  "induction_step": "Appending a matching reaction preserves the common trace; a nonmatching trace opens a distinct class.",
+  "exclusions": [
+    "no stereochemical dictionary, organic reaction taxonomy, polymer table, biomolecular database, measured target or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no atom, bond, orientation, repeat unit, chain or observation distinction may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite generated set of balanced organic reactant-product atom maps with complete bond changes, functional roles, conditions and separate mechanism records."
+  ],
+  "operational_witnesses": [
+    [
+      "maps",
+      "atomic support is positive",
+      true
+    ],
+    [
+      "roles",
+      "orientation separates input and output",
+      true
+    ],
+    [
+      "mechanism",
+      "net pattern does not assert mechanism",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-ORGANIC-REACTION-FAMILY-001",
+  "expected_observation_label": "shared-bond-change-pattern__reactant-product-role-correspondence__mechanism-not-assumed__conditions-source-bounded",
+  "target_rows": [
+    {
+      "target_id": "organic-reaction-family-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-ORGANIC-REACTION-FAMILY-COMPOSITE-2026",
+      "source_locator": "authority source set anchored at R05164",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/R05164.json",
+      "snapshot_hash": "sha256:e7253285c30faeb217a73b62d4ca4cea7636a626c1306e2eebe8b71960abf6eb"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_stereochemistry_organic_polymer_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence lacks shared reaction pattern, reactant/product roles, separation from mechanism or condition boundary, or if a tampered row is accepted."
+}

@@ -3985,3 +3985,27 @@ import SFT.Chemistry.CellEvidence
 import SFT.Chemistry.CellExperiment
 
 import SFT.Chemistry.CellValidation
+
+import SFT.Chemistry.ReactionIdentity
+
+import SFT.Chemistry.ReactionGrammar
+
+import SFT.Chemistry.ReactionEvidence
+
+import SFT.Chemistry.ReactionExperiment
+
+import SFT.Chemistry.ReactionValidation
+
+import SFT.Chemistry.ReactionSeal
+
+import SFT.Chemistry.ReactionSealInputs
+
+import SFT.Chemistry.ReactionMechanism
+
+import SFT.Chemistry.MechanismGrammar
+
+import SFT.Chemistry.MechanismEvidence
+
+import SFT.Chemistry.MechanismExperiment
+
+import SFT.Chemistry.MechanismValidation

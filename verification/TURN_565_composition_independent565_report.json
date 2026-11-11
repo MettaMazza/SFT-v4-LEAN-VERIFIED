@@ -1,0 +1,58 @@
+[
+  {
+    "case": "original",
+    "expected": true,
+    "actual": {
+      "certificate": {
+        "candidate_count": 256,
+        "claim_id": "SFT-CHEM-STOICH-COMPOSITION-001",
+        "survivor": "complete-chemical-carrier__distinct-constituent-identities__exact-positive-rational-parts__parts-exhaust-the-One__absent-component-omitted__constituent-identity-retained__identity-part-source-trace__no-extra-rule"
+      },
+      "passed": true,
+      "recomputed_from_declared_inputs": true,
+      "validated_seal_hash": "native-composition-565"
+    }
+  },
+  {
+    "case": "omitted_candidate",
+    "expected": false,
+    "actual": {
+      "certificate": {
+        "candidate_count": 256,
+        "claim_id": "SFT-CHEM-STOICH-COMPOSITION-001",
+        "survivor": null
+      },
+      "passed": false,
+      "recomputed_from_declared_inputs": true,
+      "validated_seal_hash": "native-composition-565"
+    }
+  },
+  {
+    "case": "additional_survivor",
+    "expected": false,
+    "actual": {
+      "certificate": {
+        "candidate_count": 256,
+        "claim_id": "SFT-CHEM-STOICH-COMPOSITION-001",
+        "survivor": null
+      },
+      "passed": false,
+      "recomputed_from_declared_inputs": true,
+      "validated_seal_hash": "native-composition-565"
+    }
+  },
+  {
+    "case": "failed_control",
+    "expected": false,
+    "actual": {
+      "certificate": {
+        "candidate_count": 256,
+        "claim_id": "SFT-CHEM-STOICH-COMPOSITION-001",
+        "survivor": null
+      },
+      "passed": false,
+      "recomputed_from_declared_inputs": true,
+      "validated_seal_hash": "native-composition-565"
+    }
+  }
+]

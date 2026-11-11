@@ -3808,3 +3808,8 @@ import SFT.Chemistry.PeriodicBoundaryGrammar
 import SFT.Chemistry.PeriodicBoundaryEvidence
 import SFT.Chemistry.PeriodicBoundaryExperiment
 import SFT.Chemistry.PeriodicBoundaryValidation
+import SFT.Chemistry.ExactComposition
+import SFT.Chemistry.CompositionGrammar
+import SFT.Chemistry.CompositionEvidence
+import SFT.Chemistry.CompositionExperiment
+import SFT.Chemistry.CompositionValidation

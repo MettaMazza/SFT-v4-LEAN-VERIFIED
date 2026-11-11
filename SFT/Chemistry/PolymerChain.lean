@@ -356,4 +356,227 @@ theorem rawSuccessorPreservesAdmission (r : Raw) (held : admit r=.ok r) :
    rw [ite_eq_left family]
  · cases held
 
+theorem reversedEdgeHeld (edges : List Edge) (edge : Edge)
+ (held : edge∈MetallicNetwork.symmetricEdges edges) :
+ (edge.2,edge.1)∈MetallicNetwork.symmetricEdges edges := by
+ cases memAppendCases edge edges (edges.map (fun e : Edge => (e.2,e.1))) held with
+ | inl original => exact memAppendRight _ _ _ (memMap _ _ _ original)
+ | inr reversed =>
+   obtain ⟨original,member,equal⟩ := memMapPreimage _ _ _ reversed
+   cases equal
+   exact memAppendLeft _ _ _ member
+
+theorem reverseSourcePath (network : GeneratedGraph)
+ (symmetric : ∀ edge∈network.edges, (edge.2,edge.1)∈network.edges)
+ (origin target : String) (path : PathWitness network origin target) : PathWitness network target origin := by
+ obtain ⟨initialPath,valid,starts⟩ := path
+ induction initialPath generalizing origin with
+ | nil =>
+   have same : target=origin := Option.some.inj starts
+   cases same
+   exact identityPathWitness network target (((pathMeaning _ _).mp valid).2.1 target (.head []))
+ | cons first rest ih =>
+   have same : first=origin := Option.some.inj starts
+   cases same
+   cases rest with
+   | nil =>
+     have data := (pathMeaning _ _).mp valid
+     exact extendPathWitness network target target first
+      (identityPathWitness network target (data.2.1 target (.tail _ (.head []))))
+      (symmetric (first,target) (data.2.2 _ (.head []))) (data.2.1 first (.head _))
+   | cons second rest =>
+     have data := (pathMeaning _ _).mp valid
+     have tailValid : pathIsValid network ((second::rest)++[target])=true :=
+      (pathMeaning _ _).mpr ⟨rfl,fun n h => data.2.1 n (.tail _ h),fun e h => data.2.2 e (.tail _ h)⟩
+     have tailReverse := ih second tailValid rfl
+     exact extendPathWitness network target second first tailReverse
+      (symmetric (first,second) (data.2.2 _ (.head _))) (data.2.1 first (.head _))
+
+def mapEdge (f : String → String) (e : Edge) : Edge := (f e.1,f e.2)
+def mappedGraph (f : String → String) (network : GeneratedGraph) : GeneratedGraph :=
+ ⟨network.nodes.map f,network.edges.map (mapEdge f)⟩
+
+theorem mapAdjacent (f : String → String) (path : List String) :
+ adjacentPairs (path.map f)=(adjacentPairs path).map (mapEdge f) := by
+ induction path with
+ | nil => rfl
+ | cons first rest ih =>
+   cases rest with
+   | nil => rfl
+   | cons second rest => exact congrArg (List.cons (f first,f second)) ih
+
+theorem mappedPathValid (f : String → String) (network : GeneratedGraph) (path : List String)
+ (valid : pathIsValid network path=true) : pathIsValid (mappedGraph f network) (path.map f)=true := by
+ have data := (pathMeaning _ _).mp valid
+ apply (pathMeaning _ _).mpr
+ refine ⟨?_,?_,?_⟩
+ · cases path with
+   | nil => cases data.1
+   | cons first rest => rfl
+ · intro node held
+   obtain ⟨original,member,equal⟩ := memMapPreimage _ _ _ held
+   exact equal ▸ memMap f original network.nodes (data.2.1 original member)
+ · intro edge held
+   rw [mapAdjacent] at held
+   obtain ⟨original,member,equal⟩ := memMapPreimage _ _ _ held
+   exact equal ▸ memMap (mapEdge f) original network.edges (data.2.2 original member)
+
+theorem mappedPathWitness (f : String → String) (network : GeneratedGraph) (a b : String)
+ (path : PathWitness network a b) : PathWitness (mappedGraph f network) (f a) (f b) := by
+ obtain ⟨initialPath,valid,starts⟩ := path
+ refine ⟨initialPath.map f,?_,?_⟩
+ · have mapped := mappedPathValid f network (initialPath++[b]) valid
+   rw [SFT.Mathematics.ExactTraceArithmetic.mapAppend] at mapped
+   exact mapped
+ · cases initialPath with
+   | nil =>
+     have same : b=a := Option.some.inj starts
+     cases same
+     rfl
+   | cons first rest =>
+     have same : first=a := Option.some.inj starts
+     cases same
+     rfl
+
+theorem mappedSymmetricEdges (f : String → String) (edges : List Edge) :
+ (MetallicNetwork.symmetricEdges edges).map (mapEdge f)=
+ MetallicNetwork.symmetricEdges (edges.map (mapEdge f)) := by
+ unfold MetallicNetwork.symmetricEdges
+ rw [SFT.Mathematics.ExactTraceArithmetic.mapAppend]
+ rw [Diastereomer.sourceMapCompose,Diastereomer.sourceMapCompose]
+ rfl
+
+
+-- The source's connected low-mass unit trace supplies paths before embedding;
+-- no connectedness of an arbitrary surrounding molecule is substituted here.
+theorem connectedUnitPaths (unit : Functional.Group)
+ (connected : MolecularCarrier.connected unit.fragment.carrier.occurrences unit.fragment.carrier.bonds=true)
+ (a b : String) (ha : a∈unit.fragment.carrier.occurrences) (hb : b∈unit.fragment.carrier.occurrences) :
+ PathWitness (MetallicNetwork.graph unit.fragment.carrier.occurrences unit.fragment.carrier.bonds) a b := by
+ have rooted : ∀ first rest, unit.fragment.carrier.occurrences=first::rest →
+  PathWitness (MetallicNetwork.graph unit.fragment.carrier.occurrences unit.fragment.carrier.bonds) a b := by
+  intro first rest shape
+  have checked := connected
+  rw [shape] at checked
+  have paths := MolecularCarrier.connectedPaths first rest unit.fragment.carrier.bonds checked
+  have pa := paths a (shape ▸ ha)
+  have pb := paths b (shape ▸ hb)
+  have joined := composePathWitnesses _ a first b
+   (reverseSourcePath _ (fun e h => reversedEdgeHeld _ e h) first a pa) pb
+  apply retainedPathWitness (MolecularCarrier.helperGraph unit.fragment.carrier.occurrences unit.fragment.carrier.bonds) (MetallicNetwork.graph unit.fragment.carrier.occurrences unit.fragment.carrier.bonds) (MolecularCarrier.helperNodesKnown _ _ unit.endpoints)
+   (fun _ h => h) a b
+  rw [shape]
+  exact joined
+ cases shape : unit.fragment.carrier.occurrences with
+ | nil => exact False.elim (unit.positive shape)
+ | cons first rest => exact shape ▸ rooted first rest shape
+
+theorem repeatPathsFromConnectedUnit {unit : Functional.Group} (o : Occurrence unit)
+ (connected : MolecularCarrier.connected unit.fragment.carrier.occurrences unit.fragment.carrier.bonds=true)
+ (x y : String) (hx : x∈(repeatGraph o).nodes) (hy : y∈(repeatGraph o).nodes) :
+ PathWitness (repeatGraph o) x y := by
+ obtain ⟨a,ha,ea⟩ := memMapPreimage o.embedding.image x unit.fragment.carrier.occurrences hx
+ obtain ⟨b,hb,eb⟩ := memMapPreimage o.embedding.image y unit.fragment.carrier.occurrences hy
+ have mapped := mappedPathWitness o.embedding.image _ a b (connectedUnitPaths unit connected a b ha hb)
+ have same : mappedGraph o.embedding.image
+  (MetallicNetwork.graph unit.fragment.carrier.occurrences unit.fragment.carrier.bonds)=repeatGraph o := by
+  unfold mappedGraph MetallicNetwork.graph repeatGraph repeatEdges Functional.imageSupport
+  rw [mappedSymmetricEdges]
+  rfl
+ rw [same,ea,eb] at mapped
+ exact mapped
+
+theorem allAtomsReachableFromConnectedUnit {unit : Functional.Group} {Word Cell : Type}
+ (c : Incidence unit Word Cell)
+ (connected : MolecularCarrier.connected unit.fragment.carrier.occurrences unit.fragment.carrier.bonds=true)
+ (origin : String) (originHeld : origin∈(repeatGraph c.first).nodes) :
+ ∀ atom∈(atomicGraph c).nodes, reachable (atomicGraph c) origin atom=true :=
+ allAtomsReachableFromFirst c origin originHeld (fun o _ x hx y hy => repeatPathsFromConnectedUnit o connected x y hx hy)
+
+
+theorem repeatEndpoints {unit : Functional.Group} (o : Occurrence unit)
+ (edge : Edge) (held : edge∈(repeatGraph o).edges) :
+ edge.1∈(repeatGraph o).nodes ∧ edge.2∈(repeatGraph o).nodes := by
+ have direct : ∀ e∈repeatEdges o, e.1∈(repeatGraph o).nodes ∧ e.2∈(repeatGraph o).nodes := by
+  intro e h
+  obtain ⟨original,member,equal⟩ := memMapPreimage _ _ _ h
+  cases equal
+  have covered := unit.endpoints original member
+  exact ⟨memMap _ _ _ covered.1,memMap _ _ _ covered.2⟩
+ cases memAppendCases edge (repeatEdges o) ((repeatEdges o).map (fun e : Edge => (e.2,e.1))) held with
+ | inl original => exact direct edge original
+ | inr reversed =>
+  obtain ⟨original,member,equal⟩ := memMapPreimage _ _ _ reversed
+  cases equal
+  exact ⟨(direct original member).2,(direct original member).1⟩
+
+theorem atomicEndpoints {unit : Functional.Group} {Word Cell : Type}
+ (c : Incidence unit Word Cell) (edge : Edge) (held : edge∈(atomicGraph c).edges) :
+ edge.1∈(atomicGraph c).nodes ∧ edge.2∈(atomicGraph c).nodes := by
+ cases memAppendCases edge _ _ held with
+ | inl internal =>
+  obtain ⟨o,member,inside⟩ := SFT.Foundation.CommonRefinement.memFlatMapOrigin _ _ _ internal
+  have covered := repeatEndpoints o edge inside
+  exact ⟨repeatNodeRetained c o member _ covered.1,repeatNodeRetained c o member _ covered.2⟩
+ | inr connection =>
+  have direct : ∀ e∈c.connections.map (fun bond =>
+   (bond.covalent.bond.support.raw.left,bond.covalent.bond.support.raw.right)),
+   e.1∈(atomicGraph c).nodes ∧ e.2∈(atomicGraph c).nodes := by
+   intro e h
+   obtain ⟨bond,member,equal⟩ := memMapPreimage _ _ _ h
+   cases equal
+   have copiesHeld := c.allCopies bond member
+   exact ⟨repeatNodeRetained c bond.left copiesHeld.1 _ bond.leftAtomHeld,
+    repeatNodeRetained c bond.right copiesHeld.2 _ bond.rightAtomHeld⟩
+  cases memAppendCases edge _ _ connection with
+  | inl original => exact direct edge original
+  | inr reversed =>
+   obtain ⟨original,member,equal⟩ := memMapPreimage _ _ _ reversed
+   cases equal
+   exact ⟨(direct original member).2,(direct original member).1⟩
+
+
+theorem atomicEdgesSymmetric {unit : Functional.Group} {Word Cell : Type}
+ (c : Incidence unit Word Cell) (edge : Edge) (held : edge∈(atomicGraph c).edges) :
+ (edge.2,edge.1)∈(atomicGraph c).edges := by
+ cases memAppendCases edge _ _ held with
+ | inl internal =>
+  obtain ⟨o,member,inside⟩ := SFT.Foundation.CommonRefinement.memFlatMapOrigin _ _ _ internal
+  exact repeatEdgeRetained c o member _ (reversedEdgeHeld _ edge inside)
+ | inr connection => exact memAppendRight _ _ _ (reversedEdgeHeld _ edge connection)
+
+theorem atomicConnected {unit : Functional.Group} {Word Cell : Type}
+ (c : Incidence unit Word Cell)
+ (connected : MolecularCarrier.connected unit.fragment.carrier.occurrences unit.fragment.carrier.bonds=true)
+ (origin : String) (originHeld : origin∈(repeatGraph c.first).nodes) :
+ MolecularCarrier.connected (atomicGraph c).nodes (atomicGraph c).edges=true := by
+ have reaches := allAtomsReachableFromConnectedUnit c connected origin originHeld
+ have paths : ∀ atom∈(atomicGraph c).nodes, PathWitness (atomicGraph c) origin atom :=
+  fun atom held => reachableHasPath _ _ _ (atomicEndpoints c) (reaches atom held)
+ have nonempty : (atomicGraph c).nodes≠[] := by
+  intro empty
+  have held := repeatNodeRetained c c.first (.head _) origin originHeld
+  rw [empty] at held
+  cases held
+ have result : ∀ first rest, (atomicGraph c).nodes=first::rest →
+  MolecularCarrier.connected (first::rest) (atomicGraph c).edges=true := by
+  intro first rest shape
+  apply MolecularCarrier.connectedFromPaths
+  · intro target member
+    have firstHeld : first∈(atomicGraph c).nodes := shape.symm ▸ List.Mem.head rest
+    have targetHeld : target∈(atomicGraph c).nodes := shape.symm ▸ member
+    have path := composePathWitnesses _ first origin target
+     (reverseSourcePath _ (atomicEdgesSymmetric c) origin first (paths first firstHeld))
+     (paths target targetHeld)
+    apply retainedPathWitness (atomicGraph c) (MolecularCarrier.helperGraph (first::rest) (atomicGraph c).edges)
+     (fun n h => memAppendLeft _ _ _ (shape ▸ h))
+     (fun e h => memAppendLeft _ _ _ h) first target path
+  · intro target path
+    apply MolecularCarrier.helperNodesKnown (first::rest) (atomicGraph c).edges
+     (fun e h => ⟨shape ▸ (atomicEndpoints c e h).1,shape ▸ (atomicEndpoints c e h).2⟩)
+     target (pathWitnessTarget _ _ _ path)
+ cases shape : (atomicGraph c).nodes with
+ | nil => exact False.elim (nonempty shape)
+ | cons first rest => exact result first rest shape
+
 end SFT.Chemistry.PolymerChain

@@ -18317,3 +18317,22 @@ atomPathsAcrossNeighbor constructs this witness using the existing graph path-ex
 The source RepeatingCarrier constructor separately retains a repeat-unit HeldLabel and independent positive occurrence and connection counts. Its exact guard is identity.family="repeat-unit"; no path-count equation is imposed on this standalone constructor. Raw/admit preserve that domain, including positive count pairs that are not path counts. originalRaw reproduces the source unit-a witness with counts3 and2. sourcePositiveExtent and sourcePositiveConnections retain the original positive-count proofs. incrementRaw preserves the identity and increases each count by one, with rawSuccessorPreservesAdmission proving the retained source guard. The structured chain constructor above separately establishes its exact path incidence and extent equations.
 
 Source: pinned V3 stereochemistry_organic_polymer_derivation.py, RepeatingCarrier, _REPEAT and STEREOCHEMISTRY_ORGANIC_POLYMER_BLUEPRINTS[5]. Lean: SFT/Chemistry/PolymerChain.lean, declarations named above and the existing MolecularCarrier/GraphOperations path proofs. Timeline: Turn634. All154 audited declarations have empty axiom dependencies. Twenty-seven fresh constructor comparisons against V3 agree across three identity families and independent positive count pairs; unchanged Turn633 native256/empirical/independent checks are retained. Evidence: TURN_634_POLYMER_CHAIN_PROGRESS.json, TURN_634_polymer_chain634_audit.log and TURN_634_polymer_chain_operations634_report.json.
+
+
+Connected repeat traces and the atomic connectivity test
+
+Let U=(V_U,E_U) be the retained low-mass unit trace with the source molecular connectivity test C(U)=true. For a,b in V_U, connectedUnitPaths obtains rooted paths q_a and q_b from MolecularCarrier.connectedPaths. Symmetry of the bond relation permits reversal, giving
+\[p_U(a,b)=q_a^{-1};q_b.\]
+The helper graph includes bond endpoints in its node list; unit.endpoints and helperNodesKnown prove that all of these nodes already belong to V_U. Thus this construction stays inside the retained unit support.
+
+For occurrence embedding e_o, mappedPathWitness maps every node and edge of p_U. mapAdjacent establishes that mapping commutes with adjacent-pair construction; mappedSymmetricEdges establishes that it commutes with bond reversal. Consequently
+\[p_o(e_o(a),e_o(b))=e_o(p_U(a,b)).\]
+repeatPathsFromConnectedUnit supplies these witnesses to allAtomsReachableFromFirst, discharging its separate within-repeat path input from C(U)=true. allAtomsReachableFromConnectedUnit proves reachability of all assembled atoms from any retained atom of the first repeat.
+
+repeatEndpoints and atomicEndpoints establish
+\[(x,y)\in E_A\Longrightarrow x\in V_A\;\land\;y\in V_A.\]
+The internal bonds and joining bonds are symmetric (atomicEdgesSymmetric). If r is the chosen first-repeat atom and a is the first atom in the assembled node list, then the path to any b is p(r,a)^{-1};p(r,b). Endpoint coverage excludes nodes outside the retained carrier. atomicConnected applies connectedFromPaths to obtain the original executable molecular test
+\[\operatorname{MolecularCarrier.connected}(V_A,E_A)=\mathrm{true}.\]
+This construction retains the positive unit support and its connectivity premise explicitly; it does not modify the independent positive counts accepted by RepeatingCarrier.
+
+Source: pinned V3 sft/chemistry/stereochemistry_organic_polymer_derivation.py, polymer-chain blueprint and repeated complete low-mass unit traces; existing molecular connectivity dependency. Lean: SFT/Chemistry/PolymerChain.lean, connectedUnitPaths, repeatPathsFromConnectedUnit, allAtomsReachableFromConnectedUnit, repeatEndpoints, atomicEndpoints, atomicEdgesSymmetric and atomicConnected. Timeline: Turn636. Verification: TURN_636_polymer_chain636_full_build.log and TURN_636_polymer_chain636_audit.log; all169 audited declarations have no axiom dependencies.

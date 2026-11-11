@@ -1,0 +1,22 @@
+import SFT.Physics.AtomicOrbitCapacity
+#print axioms SFT.Physics.AtomicOrbitCapacity.binaryCount
+#print axioms SFT.Physics.AtomicOrbitCapacity.boundaryCount
+#print axioms SFT.Physics.AtomicOrbitCapacity.orientationCount
+#print axioms SFT.Physics.AtomicOrbitCapacity.orbitCapacity
+#print axioms SFT.Physics.AtomicOrbitCapacity.exactOrientations
+#print axioms SFT.Physics.AtomicOrbitCapacity.exactCapacity
+#print axioms SFT.Physics.AtomicOrbitCapacity.Orientation
+#print axioms SFT.Physics.AtomicOrbitCapacity.orientations
+#print axioms SFT.Physics.AtomicOrbitCapacity.states
+#print axioms SFT.Physics.AtomicOrbitCapacity.orientationLength
+#print axioms SFT.Physics.AtomicOrbitCapacity.statesLength
+#print axioms SFT.Physics.AtomicOrbitCapacity.generatedCapacity
+#print axioms SFT.Physics.AtomicOrbitCapacity.capacitySuccessor
+#print axioms SFT.Physics.AtomicOrbitCapacity.baseCapacity
+#print axioms SFT.Physics.AtomicOrbitCapacity.priorOrientationRetained
+#print axioms SFT.Physics.AtomicOrbitCapacity.everyOrientationHasBothLabels
+#print axioms SFT.Physics.AtomicOrbitCapacity.duplicateSameLabelExcluded
+#print axioms SFT.Physics.AtomicOrbitCapacity.boundaryStepEarlier
+#print axioms SFT.Physics.AtomicOrbitCapacity.centralRetained
+#print axioms SFT.Physics.AtomicOrbitCapacity.everyPredecessorPair
+#print axioms SFT.Physics.AtomicOrbitCapacity.boundaryPairExactly

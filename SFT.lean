@@ -3783,3 +3783,8 @@ import SFT.Chemistry.PeriodicOrderGrammar
 import SFT.Chemistry.PeriodicOrderEvidence
 import SFT.Chemistry.PeriodicOrderExperiment
 import SFT.Chemistry.PeriodicOrderValidation
+import SFT.Chemistry.PeriodicRecurrenceTrace
+import SFT.Chemistry.PeriodicRecurrenceGrammar
+import SFT.Chemistry.PeriodicRecurrenceEvidence
+import SFT.Chemistry.PeriodicRecurrenceExperiment
+import SFT.Chemistry.PeriodicRecurrenceValidation

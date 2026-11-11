@@ -1177,3 +1177,6 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.PeriodicOrderGrammar.candidates do
     IO.println ("PeriodicOrderGrammar\t" ++ SFT.Chemistry.PeriodicOrderGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.PeriodicOrderGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.PeriodicOrderGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.PeriodicOrderGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.PeriodicRecurrenceGrammar.candidates do
+    IO.println ("PeriodicRecurrenceGrammar\t" ++ SFT.Chemistry.PeriodicRecurrenceGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.PeriodicRecurrenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.PeriodicRecurrenceGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.PeriodicRecurrenceGrammar.decisionReason c)

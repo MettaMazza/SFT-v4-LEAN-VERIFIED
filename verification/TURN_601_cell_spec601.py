@@ -1,0 +1,15 @@
+from pathlib import Path
+import ast,json,subprocess,dataclasses,itertools
+r=Path('/Volumes/One Touch/SFT v4 Full model LEAN');pin='76f1b34e9e9682989adcbb088797b4ae4ce4fcf1';repo='/Volumes/One Touch/ernos-labs-sft-platform'
+def raw(path):return subprocess.check_output(['git','-C',repo,'show',pin+':'+path],text=True)
+namespace={'dataclass':dataclasses.dataclass,'combinations':itertools.combinations,'permutations':itertools.permutations}
+for source,names in [('sft/physics/generated_empirical_law.py',{'LawChoice','LawDimension','dimension'}),('sft/chemistry/generated_law.py',{'ChemistryTargetReference','EmpiricalChemistrySpec'})]:
+ tree=ast.parse(raw(source));nodes=[n for n in tree.body if getattr(n,'name',None) in names];exec(compile(ast.Module(body=nodes,type_ignores=[]),source,'exec'),namespace)
+namespace['SOURCES']={x['source_id']:x for x in json.loads(raw('experiments/external_sources/chemistry/authoritative_sources.json'))['sources']}
+exec(raw('sft/engine/exact.py'),namespace)
+from acidbase_spec582 import namespace as acidbase_namespace
+namespace['BASE_DEPENDENCIES']=acidbase_namespace['BASE_DEPENDENCIES']
+source='sft/chemistry/redox_derivation.py';tree=ast.parse(raw(source));nodes=[n for n in tree.body if not isinstance(n,(ast.Import,ast.ImportFrom)) or isinstance(n,ast.ImportFrom) and n.module=='__future__'];exec(compile(ast.Module(body=nodes,type_ignores=[]),source,'exec'),namespace)
+source='sft/chemistry/redox_batch_1.py';tree=ast.parse(raw(source));names={'DERIVATION_PATH','DERIVATION_HASH','PRE_SOURCE_SEAL_PATH','PRE_SOURCE_PAYLOAD_HASH','OBSERVATION_REGISTRY_PATH','DEPENDENCY_AMENDMENT_PATH','DEPENDENCY_ALIAS_MAP','SOURCE_RECORDS','_target','_resolved_dependencies','_bind'};nodes=[n for n in tree.body if getattr(n,'name',None) in names or isinstance(n,ast.Assign) and getattr(n.targets[0],'id',None) in names];exec(compile(ast.Module(body=nodes,type_ignores=[]),source,'exec'),namespace)
+spec=namespace['_bind'](namespace['REDOX_BLUEPRINTS'][4]);spec.validate();values=dataclasses.asdict(spec);cid=spec.claim_id;q=lambda x:json.dumps(x,ensure_ascii=False)
+dims=[[d.key,'',d.choices[0].name,d.choices[0].reason,d.choices[1].name,d.choices[1].reason] for d in spec.dimensions];kw={k:ast.parse(repr(v),mode='eval').body for k,v in values.items()}

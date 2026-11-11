@@ -3965,3 +3965,23 @@ import SFT.Chemistry.OxidationEvidence
 import SFT.Chemistry.OxidationExperiment
 
 import SFT.Chemistry.OxidationValidation
+
+import SFT.Chemistry.RedoxTransfer
+
+import SFT.Chemistry.RedoxGrammar
+
+import SFT.Chemistry.RedoxEvidence
+
+import SFT.Chemistry.RedoxExperiment
+
+import SFT.Chemistry.RedoxValidation
+
+import SFT.Chemistry.ElectrochemicalCell
+
+import SFT.Chemistry.CellGrammar
+
+import SFT.Chemistry.CellEvidence
+
+import SFT.Chemistry.CellExperiment
+
+import SFT.Chemistry.CellValidation

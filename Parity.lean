@@ -1273,3 +1273,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.OxidationGrammar.candidates do
     IO.println ("OxidationGrammar\t" ++ SFT.Chemistry.OxidationGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.OxidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.OxidationGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.OxidationGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.RedoxGrammar.candidates do
+    IO.println ("RedoxGrammar\t" ++ SFT.Chemistry.RedoxGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.RedoxGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.RedoxGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.RedoxGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.CellGrammar.candidates do
+    IO.println ("CellGrammar\t" ++ SFT.Chemistry.CellGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.CellGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.CellGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.CellGrammar.decisionReason c)

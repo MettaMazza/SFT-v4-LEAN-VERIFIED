@@ -1,0 +1,32 @@
+import SFT.Physics.SuperconductivityLabelClosure
+import SFT.Physics.SuperconductivityRecurrenceProofs
+import SFT.Physics.CollectiveSuperconductivity
+#print axioms SFT.Physics.SuperconductivityLabelClosure.motionMap
+#print axioms SFT.Physics.SuperconductivityLabelClosure.collectiveMap
+#print axioms SFT.Physics.SuperconductivityLabelClosure.MotionRecord
+#print axioms SFT.Physics.SuperconductivityLabelClosure.motionLabel
+#print axioms SFT.Physics.SuperconductivityLabelClosure.collectiveLabel
+#print axioms SFT.Physics.SuperconductivityLabelClosure.compatible
+#print axioms SFT.Physics.SuperconductivityLabelClosure.closedMotionDistinctions
+#print axioms SFT.Physics.SuperconductivityLabelClosure.closedMotionExactly
+#print axioms SFT.Physics.SuperconductivityLabelClosure.emptyClosureIffMotionDistinctionsRetained
+#print axioms SFT.Physics.SuperconductivityLabelClosure.closedMotionCannotBeDecoded
+#print axioms SFT.Physics.SuperconductivityLabelClosure.completeTransfersRemainConserved
+#print axioms SFT.Physics.SuperconductivityLabelClosure.identityRecord
+#print axioms SFT.Physics.SuperconductivityLabelClosure.noTransferIdentityAdmitted
+#print axioms SFT.Physics.SuperconductivityRecurrenceProofs.returningCarrierPreservesEveryReading
+#print axioms SFT.Physics.SuperconductivityRecurrenceProofs.returningCarriersCannotMerge
+#print axioms SFT.Physics.SuperconductivityRecurrenceProofs.accessibleRecurrencePreservesEveryReading
+#print axioms SFT.Physics.SuperconductivityRecurrenceProofs.runRecurrences
+#print axioms SFT.Physics.SuperconductivityRecurrenceProofs.completeRecurrenceHistoryReturns
+#print axioms SFT.Physics.SuperconductivityRecurrenceProofs.completeRecurrenceHistoryPreservesReading
+#print axioms SFT.Physics.CollectiveSuperconductivity.Transport
+#print axioms SFT.Physics.CollectiveSuperconductivity.closed
+#print axioms SFT.Physics.CollectiveSuperconductivity.completeTransitionCensus
+#print axioms SFT.Physics.CollectiveSuperconductivity.everyRecordedPathReturns
+#print axioms SFT.Physics.CollectiveSuperconductivity.noUnregisteredPath
+#print axioms SFT.Physics.CollectiveSuperconductivity.everyTransferAdjacent
+#print axioms SFT.Physics.CollectiveSuperconductivity.closureExactly
+#print axioms SFT.Physics.CollectiveSuperconductivity.closedTransportExcludesLostMotion
+#print axioms SFT.Physics.CollectiveSuperconductivity.completeCarrierConserved
+#print axioms SFT.Physics.CollectiveSuperconductivity.finiteCoherentHistoryReturns

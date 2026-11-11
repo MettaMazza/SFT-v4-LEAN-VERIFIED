@@ -15624,3 +15624,24 @@ H(s,w::W)=\begin{cases}H(s',W)&A(s,w)=\operatorname{ok}(s'),\\
 If every member of W belongs to the complete band support for the retained state s, then H(s,W)=ok(s). The empty sequence is immediate. At the successor, bandExactly gives A(s,w)=ok(s); substitution reduces the execution to H(s,W), and the induction hypothesis closes the step. Consequently a successful resulting carrier r satisfies r=s and R(r)=R(s) for every reading R. This is induction over arbitrary finite recurrence histories, with the existing phase action executed at every step. Native declarations: runRecurrences, completeRecurrenceHistoryReturns and completeRecurrenceHistoryPreservesReading. The latter two are the corresponding return and reading-preservation theorems, with empty axiom dependencies. Evidence: verification/TURN_549_superconductivity549_recurrence_report.json. Timeline: Turn 549.
 
 Original sources: sft/physics/collective_matter_laws.py, BAND and SUPERCONDUCTIVITY; sft/mathematics/dyn_001_012_laws_v1.py, DEF["003"] exact return and DEF["011"] predecessor merging, at pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native verification: SFT/Physics/SuperconductivityRecurrenceProofs.lean, returningCarrierPreservesEveryReading, returningCarriersCannotMerge and accessibleRecurrencePreservesEveryReading; the latter uses CollectiveBand.bandExactly directly. The three declarations have empty Lean axiom dependencies. Evidence: verification/TURN_548_superconductivity548_recurrence_report.json and its axiom log. Timeline: Turn 548 recurrence connection.
+
+
+506. Complete motion-distinction loss ledger
+
+A source carrier record retains its identity, motion label and collective label. Both label maps are projections of the same complete source-record list, rather than independently supplied functions. The original observation validator requires each projection to cover the complete source support exactly once. A transfer retains a carrier from that source list, while a closed identity history may retain its carrier without any transfer.
+
+Let S be the retained source support, M its motion projection, C its collective projection and O the receiving observation. The existing distinction ledger enumerates every unordered source pair and retains in its closed list precisely those pairs with equal receiving observations. Selecting different motion labels within one collective class gives
+\[
+D=\{(a,b)\in\operatorname{Pairs}(S):O(a)=O(b),\ M(a)\ne M(b),\ C(a)=C(b)\}.
+\]
+Complete filter membership establishes both directions of this equation. Consequently,
+\[
+D=\varnothing\quad\Longleftrightarrow\quad
+\forall(a,b)\in\operatorname{Pairs}(S),\quad
+C(a)=C(b)\land O(a)=O(b)\Longrightarrow M(a)=M(b).
+\]
+For the forward direction, an unequal motion pair satisfying the antecedent would be a member of the empty list. Conversely, any first member of a nonempty list contradicts the stated motion equality. This condition concerns loss of a held distinction at the receiving observation; it does not require equality of scalar momentum readings at adjacent endpoints.
+
+A closed pair cannot have both original motion labels reconstructed by one decoder of its receiving observation. If d(O(a))=M(a) and d(O(b))=M(b), the equality O(a)=O(b) gives M(a)=M(b), contradicting membership in D. Independently, the complete transfer ledger retains the existing exact outgoing/incoming carrier identity. For the one-carrier identity boundary with no transfers, Pairs(S) is empty and therefore D is empty; no transfer is required merely to retain the initial carrier.
+
+Original sources: sft/physics/thermodynamics_laws.py, HEAT_WORK and KINETIC_TRANSPORT; sft/information_science/conservation_loss_transformation and sft/information_science/coarse_001_012_laws_v1.py, the complete closed-pair ledger and sufficient-record criterion; sft/physics/mechanics_laws.py, INERTIA and MOMENTUM, at pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native verification: SuperconductivityLabelClosure.motionMap, collectiveMap, closedMotionExactly, emptyClosureIffMotionDistinctionsRetained, closedMotionCannotBeDecoded, completeTransfersRemainConserved and noTransferIdentityAdmitted; reused ThermoHeatWork.closedMeaning and completeEnergyProvenance. Source file and audit evidence: verification/TURN_551_STAGED/SFT/Physics/SuperconductivityLabelClosure.lean and verification/TURN_551_superconductivity551_combined_report.json. Timeline: Turn 551.

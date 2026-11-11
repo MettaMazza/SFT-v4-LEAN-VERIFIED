@@ -1,0 +1,42 @@
+
+Enantiomer pairs, symmetric proper-map exclusion and observation context
+
+The source constructs both complete members of a reflected pair. For an oriented molecular carrier M, generate produces P=(M,R(M)); MirrorPair retains both records and their exact reflection relation. Because reflection preserves the whole underlying carrier,
+\[
+C(R(M))=C(M),\qquad E(R(M))=E(M).
+\]
+completeConstitution, equalComposition and equalConnectivity establish these identities directly. For every occurrence name a, opposedConfiguration proves
+\[
+O_{R(M)}(a)=R(O_M(a)),
+\]
+including exact retention of an absent record. Reflecting twice recovers the original carrier, so reverseReflection constructs the opposite ordering of the same pair.
+
+The enantiomer classification applies the established chirality decision to the first member. classificationExactlyAllProperMapsFail proves, for the complete nonempty distinct occurrence support N,
+\[
+\operatorname{classify}(P)=\mathrm{true}
+\Longleftrightarrow
+\forall p\in\operatorname{Perm}(N),\ P_{\rm proper}(M,R(M),p)=\mathrm{false}.
+\]
+comparisonTrace retains every generated order and its actual atom, bond and orientation comparison. No selected map or visual judgment replaces that complete census.
+
+Pair reversal is proved at each comparison. The orientation involution gives
+\[
+R(a)=b\ \Longleftrightarrow\ a=R(b).
+\]
+wordReflectionTransfer proves the corresponding executable equality; optionalReflectionTransfer preserves the same relation when a record is absent. Applying it to every named orientation yields properReflectionTransfer. Since the reflected pair has the same complete constitution on both sides, pairedTestsSymmetric derives
+\[
+P_{\rm proper}(R(M),M,p)=P_{\rm proper}(M,R(M),p)
+\]
+for every tested order p. classifiedPairSymmetric then proves that reversing a classified pair preserves the enantiomer classification. basePairClassified supplies the generated non-superposable base pair from the already proved Chirality base.
+
+For a matched appended branch (x,e,w,L), appendMatched retains
+\[
+P^+=\bigl(M\oplus(x,e,w,L),\ R(M)\oplus(x,e,R(w),L)\bigr).
+\]
+The reflection/append commutation theorem establishes its exact mirror relation. matchedExtensionConstitution preserves equal composition and connectivity, while matchedExtensionEveryOldMap and the existing complete permutation census extend the comparisons without selecting a favored map. New classifications are evaluated from the complete extended records.
+
+Observation retains the pair, resolving environment, measurement method, conditions, source and both response records separately. environmentDoesNotSelectPair and environmentDoesNotChangeClassification prove that changing the observation-environment field does not alter the molecular pair or its structural classification. The source does not assert a universal measured property difference from pairing alone; the complete responses remain tied to their recorded observation context.
+
+All eight original binary grammar axes and all 256 alternatives are retained in EnantiomerGrammar/Evidence/Experiment/Validation. Fresh native registration, candidate decisions, closure, controls and empirical output fields match the pinned V3 entry; the original independent validator accepts the original and rejects the omitted-candidate, additional-survivor and failed-control variants. All 138 current entry declarations have empty Lean axiom dependencies.
+
+Pinned V3: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1; sft/chemistry/stereochemistry_organic_polymer_derivation.py, ENANTIOMER and STEREOCHEMISTRY_ORGANIC_POLYMER_BLUEPRINTS[1]; stereochemistry_organic_polymer_batch_1.py; claims/SFT-CHEM-STEREO-ENANTIOMER-001/execution.py. Lean: SFT/Chemistry/Enantiomer.lean, declarations named above, and EnantiomerGrammar/Evidence/Experiment/Validation; reused Chirality reflection, equality, complete-map and branch-census proofs. Timeline: Turn626. Completion evidence: verification/TURN_626_ENANTIOMER_COMPLETION.json.

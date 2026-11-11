@@ -1342,3 +1342,6 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.ChiralityGrammar.candidates do
     IO.println ("ChiralityGrammar\t" ++ SFT.Chemistry.ChiralityGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.ChiralityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.ChiralityGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.ChiralityGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.EnantiomerGrammar.candidates do
+    IO.println ("EnantiomerGrammar\t" ++ SFT.Chemistry.EnantiomerGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.EnantiomerGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.EnantiomerGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.EnantiomerGrammar.decisionReason c)

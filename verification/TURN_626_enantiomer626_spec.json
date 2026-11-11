@@ -1,0 +1,215 @@
+{
+  "claim_id": "SFT-CHEM-STEREO-ENANTIOMER-001",
+  "title": "Enantiomer pair and chiral observation boundary",
+  "statement": "Enantiomers are the paired complete stereoisomer carriers related by exact reflection and by no identity-preserving proper superposition, with opposed configurations retained.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001",
+    "SFT-CHEM-STEREO-CHIRALITY-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete carrier preservation, exact equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite pair of equal-composition, equal-connectivity oriented molecular carriers with exhaustive mirror and proper-superposition tests.",
+  "dimensions": [
+    {
+      "key": "members",
+      "choices": [
+        {
+          "name": "one-structure-only",
+          "admitted": false,
+          "reason": "No pair exists."
+        },
+        {
+          "name": "paired-stereoisomers",
+          "admitted": true,
+          "reason": "Two complete structures are retained."
+        }
+      ]
+    },
+    {
+      "key": "constitution",
+      "choices": [
+        {
+          "name": "different-connectivity",
+          "admitted": false,
+          "reason": "They are constitutional isomers."
+        },
+        {
+          "name": "same-composition-and-connectivity",
+          "admitted": true,
+          "reason": "Only orientation may differ."
+        }
+      ]
+    },
+    {
+      "key": "mirror",
+      "choices": [
+        {
+          "name": "unrelated-orientations",
+          "admitted": false,
+          "reason": "The pair is not enantiomeric."
+        },
+        {
+          "name": "exact-mirror-relation",
+          "admitted": true,
+          "reason": "One is the reflection of the other."
+        }
+      ]
+    },
+    {
+      "key": "superposition",
+      "choices": [
+        {
+          "name": "superposable-pair",
+          "admitted": false,
+          "reason": "The reflected structures are identical."
+        },
+        {
+          "name": "non-superposable-pair",
+          "admitted": true,
+          "reason": "No proper map equates them."
+        }
+      ]
+    },
+    {
+      "key": "orientation",
+      "choices": [
+        {
+          "name": "orientation-erased",
+          "admitted": false,
+          "reason": "Opposed configurations merge."
+        },
+        {
+          "name": "opposed-configurations-held",
+          "admitted": true,
+          "reason": "Each member keeps its fibre label."
+        }
+      ]
+    },
+    {
+      "key": "environment",
+      "choices": [
+        {
+          "name": "universal-property-difference",
+          "admitted": false,
+          "reason": "Response depends on observation context."
+        },
+        {
+          "name": "chiral-observation-boundary",
+          "admitted": true,
+          "reason": "The resolving environment is explicit."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "pair-name-only",
+          "admitted": false,
+          "reason": "The mirror test cannot be checked."
+        },
+        {
+          "name": "paired-map-and-observation-trace",
+          "admitted": true,
+          "reason": "All comparisons are retained."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-enantiomer-rule",
+          "admitted": false,
+          "reason": "A discretionary label can force the pair."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Mirror relation plus failed superposition supplies the law."
+        }
+      ]
+    }
+  ],
+  "exact_result": "paired-stereoisomers__same-composition-and-connectivity__exact-mirror-relation__non-superposable-pair__opposed-configurations-held",
+  "induction_base": "One non-superposable mirror-related pair supplies the first enantiomer class.",
+  "induction_step": "Appending matched reflected structure preserves constitution and extends every proper-map test symmetrically.",
+  "exclusions": [
+    "no stereochemical dictionary, organic reaction taxonomy, polymer table, biomolecular database, measured target or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no atom, bond, orientation, repeat unit, chain or observation distinction may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite pair of equal-composition, equal-connectivity oriented molecular carriers with exhaustive mirror and proper-superposition tests."
+  ],
+  "operational_witnesses": [
+    [
+      "pair",
+      "orientation is explicit",
+      true
+    ],
+    [
+      "structure",
+      "composition and adjacency are present",
+      true
+    ],
+    [
+      "boundary",
+      "environment remains a held coordinate",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-STEREO-ENANTIOMER-001",
+  "expected_observation_label": "molecular-entities-mirror-images__non-superposable__opposed-configurations__chiral-observation-bounded",
+  "target_rows": [
+    {
+      "target_id": "enantiomer-iupac-composite",
+      "source_id": "IUPAC-GOLD-BOOK-ENANTIOMER-COMPOSITE-2026",
+      "source_locator": "authority source set anchored at E02069",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/E02069.json",
+      "snapshot_hash": "sha256:833912292d5eba7d3528d2a31a748a95f4cd4d28b92e896f6e1b5d9ef914935d"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_stereochemistry_organic_polymer_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence lacks molecular mirror relation, non-superposability, opposed configuration or chiral observation boundary, or if a tampered row is accepted."
+}

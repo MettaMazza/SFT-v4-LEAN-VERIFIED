@@ -1264,3 +1264,6 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.BufferGrammar.candidates do
     IO.println ("BufferGrammar\t" ++ SFT.Chemistry.BufferGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.BufferGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.BufferGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.BufferGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.AffinityGrammar.candidates do
+    IO.println ("AffinityGrammar\t" ++ SFT.Chemistry.AffinityGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AffinityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AffinityGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AffinityGrammar.decisionReason c)

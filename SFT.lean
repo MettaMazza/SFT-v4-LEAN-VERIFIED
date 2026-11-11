@@ -3934,3 +3934,14 @@ import SFT.Chemistry.BufferGrammar
 import SFT.Chemistry.BufferEvidence
 import SFT.Chemistry.BufferExperiment
 import SFT.Chemistry.BufferValidation
+import SFT.Chemistry.AffinityComparison
+import SFT.Chemistry.AffinityClosure
+import SFT.Chemistry.AffinityTraceBinding
+import SFT.Chemistry.AffinityRecordClosure
+import SFT.Chemistry.AffinityRecurrenceBinding
+import SFT.Chemistry.AffinityGrammar
+import SFT.Chemistry.AffinityEvidence
+import SFT.Chemistry.RedoxSeal
+import SFT.Chemistry.RedoxSealInputs
+import SFT.Chemistry.AffinityExperiment
+import SFT.Chemistry.AffinityValidation

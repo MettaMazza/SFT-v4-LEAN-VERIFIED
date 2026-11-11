@@ -23178,9 +23178,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-MOL-ISOMER-001-93b049013df4a30b.json",
       "statement": "Isomers have exactly equal retained composition but inequivalent complete connectivity or orientation signatures after every identity-preserving finite relabelling.",
       "title": "Isomer distinction under equal composition",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/MolecularIsomer.lean",
+        "SFT/Chemistry/IsomerGrammar.lean",
+        "SFT/Chemistry/IsomerEvidence.lean",
+        "SFT/Chemistry/IsomerExperiment.lean",
+        "SFT/Chemistry/IsomerValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full 256-form program, original empirical output, retained source-extraction evidence and original independent-validator controls.",
       "registration_sha256": "14a66be71808b9229ccaa50a4086d5fd6cda02fea4747f53b53af957a7d403e5",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -23247,7 +23253,10 @@
         "statement": "Isomers have exactly equal retained composition but inequivalent complete connectivity or orientation signatures after every identity-preserving finite relabelling.",
         "status": "empirically_tested",
         "title": "Isomer distinction under equal composition"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_578_ISOMER_COMPLETION.json",
+      "verified_scope": "Exact composition guard, identity-preserving mapping over every permutation, complete normalized bond-set comparison; exhaustive search equivalence via existing permutation completeness, full24-order chain/branch proof, original relabelled-chain control, matched multiplicity extension and retained unmatched-bond rejection.; All eight original binary axes,256 alternatives, exact source labels/decisions and unique survivor.; Original registration, census, closure and controls.; Original frozen derivation and empirical label, sealed prediction and registered IUPAC reference.; Original pre-source validation followed by exact notes-aware extraction, custody, isolation, all output fields and hashes."
     },
     {
       "branch": "chemistry",
@@ -23259,9 +23268,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-MOL-INTERMOLECULAR-001-1ec50ca6ddec341f.json",
       "statement": "An intermolecular interaction is a registered response channel between already complete molecular carriers that retains each constituent molecular identity and supports collective recurrence.",
       "title": "Intermolecular interaction and residual joining",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/MolecularAssembly.lean",
+        "SFT/Chemistry/IntermolecularGrammar.lean",
+        "SFT/Chemistry/IntermolecularEvidence.lean",
+        "SFT/Chemistry/IntermolecularExperiment.lean",
+        "SFT/Chemistry/IntermolecularValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full 256-form program, original empirical output, retained source-extraction evidence and original independent-validator controls.",
       "registration_sha256": "3611e42df83b63f0872f614c15f5b3a0e971d2488b90b7009e9dc035509d9004",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -23327,7 +23342,10 @@
         "statement": "An intermolecular interaction is a registered response channel between already complete molecular carriers that retains each constituent molecular identity and supports collective recurrence.",
         "status": "empirically_tested",
         "title": "Intermolecular interaction and residual joining"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_579_INTERMOLECULAR_COMPLETION.json",
+      "verified_scope": "Original MolecularAssembly constructor and interaction_count: multi-carrier distinctness, endpoint and channel-family guards, exact declared-boundary connectivity, positive count; original pair admission, retained identities/channels, complete successor connectivity and source-bound collective recurrence.; Original eight binary axes, full256 alternatives, exact decisions and unique survivor.; Original source registration, census, closure and controls.; Original frozen derivation and observation labels, sealed prediction and registered IUPAC reference.; Original pre-source validation followed by notes-aware extraction, custody, isolation and all empirical output fields/hashes."
     },
     {
       "branch": "chemistry",
@@ -193873,13 +193891,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T06:46:53.545106+00:00",
+  "updated_at": "2026-11-11T07:09:43.464042+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2402,
-    "fully_reconstructed_claims": 379,
-    "axiom_free_exported_results": 20514,
-    "axiom_free_audited_definitions_and_theorems": 46875
+    "pending": 2400,
+    "fully_reconstructed_claims": 381,
+    "axiom_free_exported_results": 20600,
+    "axiom_free_audited_definitions_and_theorems": 47124
   }
 }

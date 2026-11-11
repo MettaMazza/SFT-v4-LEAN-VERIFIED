@@ -1237,3 +1237,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.GeometryGrammar.candidates do
     IO.println ("GeometryGrammar\t" ++ SFT.Chemistry.GeometryGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.GeometryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.GeometryGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.GeometryGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.IsomerGrammar.candidates do
+    IO.println ("IsomerGrammar\t" ++ SFT.Chemistry.IsomerGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.IsomerGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.IsomerGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.IsomerGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.IntermolecularGrammar.candidates do
+    IO.println ("IntermolecularGrammar\t" ++ SFT.Chemistry.IntermolecularGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.IntermolecularGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.IntermolecularGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.IntermolecularGrammar.decisionReason c)

@@ -3886,3 +3886,13 @@ import SFT.Chemistry.GeometryGrammar
 import SFT.Chemistry.GeometryEvidence
 import SFT.Chemistry.GeometryExperiment
 import SFT.Chemistry.GeometryValidation
+import SFT.Chemistry.MolecularIsomer
+import SFT.Chemistry.IsomerGrammar
+import SFT.Chemistry.IsomerEvidence
+import SFT.Chemistry.IsomerExperiment
+import SFT.Chemistry.IsomerValidation
+import SFT.Chemistry.MolecularAssembly
+import SFT.Chemistry.IntermolecularGrammar
+import SFT.Chemistry.IntermolecularEvidence
+import SFT.Chemistry.IntermolecularExperiment
+import SFT.Chemistry.IntermolecularValidation

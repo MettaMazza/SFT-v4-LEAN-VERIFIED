@@ -1,0 +1,184 @@
+{
+  "claim_id": "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+  "title": "Chemical entity and retained identity",
+  "statement": "A chemical entity is the least singular Fold carrier that remains separately distinguishable after constitution, isotopic identity and the observation context's required precision are retained.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-ENCODING-DECODING-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-MEAS-OBSERVATION-CARRIER-001",
+    "SFT-PHYS-MEAS-QUANTITY-CARRIER-001",
+    "SFT-PHYS-MEAS-VALUE-RECORD-001",
+    "SFT-PHYS-MEAS-UNCERTAINTY-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001"
+  ],
+  "generation_rule": "Generate the literal product of the registered entity carrier, constitution, isotope, distinction, precision, record, provenance and extension choices.",
+  "grammar_boundary": "Every finite singular chemical carrier formed from admitted distinctions and any generated positive-finite extension of its constitution, isotope, state or contextual precision record.",
+  "dimensions": [
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "ensemble-without-member",
+          "admitted": false,
+          "reason": "An ensemble alone does not identify one chemical entity."
+        },
+        {
+          "name": "singular-carrier",
+          "admitted": true,
+          "reason": "One entity is one retained carrier before any ensemble quotient."
+        }
+      ]
+    },
+    {
+      "key": "constitution",
+      "choices": [
+        {
+          "name": "constitution-erased",
+          "admitted": false,
+          "reason": "Erasing constitution merges chemically distinct carriers."
+        },
+        {
+          "name": "constitution-retained",
+          "admitted": true,
+          "reason": "Constitution is a required chemical identity coordinate."
+        }
+      ]
+    },
+    {
+      "key": "isotope",
+      "choices": [
+        {
+          "name": "isotope-erased",
+          "admitted": false,
+          "reason": "Erasing isotopic identity merges distinguishable entities."
+        },
+        {
+          "name": "isotope-retained",
+          "admitted": true,
+          "reason": "Isotopic distinction remains available whenever the observation resolves it."
+        }
+      ]
+    },
+    {
+      "key": "distinction",
+      "choices": [
+        {
+          "name": "indistinguishable-answer-label",
+          "admitted": false,
+          "reason": "An answer label without a retained distinction cannot identify an entity."
+        },
+        {
+          "name": "separately-distinguishable",
+          "admitted": true,
+          "reason": "The carrier must remain separately distinguishable at the registered observation boundary."
+        }
+      ]
+    },
+    {
+      "key": "precision",
+      "choices": [
+        {
+          "name": "unbounded-or-fixed-precision",
+          "admitted": false,
+          "reason": "A fixed universal precision either loses a required distinction or adds an unforced one."
+        },
+        {
+          "name": "context-bounded-precision",
+          "admitted": true,
+          "reason": "Only distinctions required by the declared observation context are retained."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "result-without-observation-record",
+          "admitted": false,
+          "reason": "Without an observation record the identity boundary cannot be audited."
+        },
+        {
+          "name": "held-observation-record",
+          "admitted": true,
+          "reason": "The observation class and retained coordinates remain held."
+        }
+      ]
+    },
+    {
+      "key": "provenance",
+      "choices": [
+        {
+          "name": "unbound-provenance",
+          "admitted": false,
+          "reason": "Unbound identity cannot be traced to the Fold dependency spine."
+        },
+        {
+          "name": "source-bound-proof-trace",
+          "admitted": true,
+          "reason": "The derivation and later correspondence retain separate source identities."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "free-extra-identity-rule",
+          "admitted": false,
+          "reason": "An extra identity rule can arbitrarily split or merge entities."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Generated distinctions alone determine the identity carrier."
+        }
+      ]
+    }
+  ],
+  "exact_result": "singular-carrier__constitution-and-isotope-retained__separately-distinguishable__context-bounded-precision",
+  "induction_base": "One registered chemical carrier retains one constitution/isotope/context identity record.",
+  "induction_step": "Adding one generated identity coordinate preserves the singular carrier and every earlier distinction without installing a new equivalence rule.",
+  "exclusions": [
+    "no IUPAC definition, conventional chemistry model or target content may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no application result or opaque predictor",
+    "external target content is absent from this specification and opens only through post-seal custody",
+    "Every finite singular chemical carrier formed from admitted distinctions and any generated positive-finite extension of its constitution, isotope, state or contextual precision record."
+  ],
+  "operational_witnesses": [
+    [
+      "entity-distinction",
+      "constitutionally distinct carriers remain distinct",
+      true
+    ],
+    [
+      "entity-context",
+      "context may require an additional retained state coordinate",
+      true
+    ],
+    [
+      "entity-collapse-control",
+      "erased identity coordinate is rejected",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-MEAS-CHEMICAL-ENTITY-001",
+  "expected_observation_label": "singular-carrier__constitution-and-isotope-retained__separately-distinguishable__context-bounded-precision",
+  "target_rows": [
+    {
+      "target_id": "chemical-entity-iupac-m03986",
+      "source_id": "IUPAC-GOLD-BOOK-M03986-2026",
+      "source_locator": "https://goldbook.iupac.org/terms/view/M03986/json :: term M03986, current definition",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/goldbook-terms/M03986.json",
+      "snapshot_hash": "sha256:6b0f6e183ef109d6f3483bcd1d70ca73a6d57e496f9ca32da23964bca652de8e"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations.json",
+  "falsification_condition": "The claim fails if the current source-derived IUPAC entity record lacks singular distinguishability, constitution/isotope identity or contextual precision, or if any altered row is accepted."
+}

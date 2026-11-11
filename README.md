@@ -91,7 +91,7 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | **Form construction** | Exact finite productions, injective tuple encoding and acceptance of every generated form by the tuple/list/string validator | [Derivation](SFT/Foundation/FormConstruction.lean) |
 | **Source correspondence** | The retained 47,206-record checkpoint preserves source order, identifiers, exact forms, decisions and reasons; Root census, closure, decisions and all four control records match stored fields and hashes | [Correspondence map](reference/CORRESPONDENCE.json) · [Parity report](verification/TURN_279_PARITY_REPORT.json) |
 
-**Completed source entries: 346 / 2,781.** 0 entries are in progress and 2,435 remain pending. Exact source-component evidence is recorded in COVERAGE.json. Acceleration, inertia, momentum and force are complete in source dependency order. Their native derivations, full source-program comparisons and complete empirical checks are included in the registered totals.
+**Completed source entries: 346 / 2,781.** 1 entry is in progress and 2,434 remain pending. Exact source-component evidence is recorded in COVERAGE.json. Acceleration, inertia, momentum and force are complete in source dependency order. Their native derivations, full source-program comparisons and complete empirical checks are included in the registered totals.
 
 [Read the current axiom audit →](verification/TURN_515_REGISTERED_DECLARATIONS_AUDIT.log) · [Inspect complete coverage →](COVERAGE.json) · [Root evidence/hash checks →](verification/TURN_013_EVIDENCE_REPORT.json) · [All 42,898 axiom audits →](verification/TURN_515_REGISTERED_DECLARATIONS_AUDIT.log)
 

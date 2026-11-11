@@ -18641,3 +18641,16 @@ The native recursion retains n exactly under these inequalities and stops as soo
 For the reported endpoints, 1<L≤2≤U<3. Thus E(L,U)=[2]; the lower and upper controls reject 1 and 3 respectively. This is the original post-seal experimental agreement test: measurement does not select the structural exponent, and interval agreement is not asserted to prove an exact physical value. Non-fraction arguments and nonpositive or reversed intervals retain the original rejection rules.
 
 Original source: pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/physics/inverse_square_validation.py, positive_integer_exponents_in_interval, REPORTED_LOWER, REPORTED_UPPER and SPEC. Native verification: SFT/Physics/InverseSquareInterval.lean, scanSound, scanComplete, laterAbove, exponentsExactly, reportedCensus, reportedChecked, oneBelow and threeAbove. Chronological derivation record: TIMELINE.txt, Turn644 inverse-square interval core.
+
+
+Source-record binding of the post-seal interval comparison
+
+The external checker reconstructs the exact lower and upper fractions from the registered JSON record before checking its source identity and DOI. For a parsed record R with endpoints L and U, its acceptance precheck is
+    source_id(R) = APS-WILLIAMS-FALLER-HILL-1971-COULOMB,
+    lower_case(doi(R)) = 10.1103/physrevlett.26.721,
+    E(L,U) = [2].
+The identity check precedes the DOI check; the complete interval census follows both. A failed precheck returns its source error before the blind validation pipeline is called. The registered record passes and delegates to that original pipeline. There, the source-byte hash, sealed prediction, withheld target custody, complete comparison rows and tampered controls retain their original ordering and identities.
+
+The eight registered grammar axes are physical carrier, relation, provenance, prediction, measurement record, complete rows, successor generality and absence of an extra rule. Each axis has two source-defined alternatives, so the complete product contains 2⁸=256 candidates. Candidate completeness proves membership for every constructor combination. Exhaustive decision correspondence and the unique-survivor proof retain every combination and every original rejection decision. The three operational witnesses evaluate the actual interval enumeration and its lower/upper inequalities.
+
+Original source: sft/physics/inverse_square_validation.py, InverseSquareExternalValidator.validate and SPEC; sft/physics/generated_empirical_law.py, empirical_dimensions, GeneratedEmpiricalPhysicsProgram and BlindExternalMeasurementValidator; pinned commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native verification: SFT/Physics/InverseSquareIntervalSource.lean, registeredPasses, changedSourceRejected, changedDoiRejected, registeredDelegates and failedRecordStops; InverseSquareIntervalExternal.lean, originalDelegates and invalidRecordRejected; InverseSquareIntervalGrammar.lean, candidatesComplete, sourceDecisionMatchesCriteria and uniqueSurvivor; InverseSquareIntervalEvidence.lean, witness0Passed, witness1Passed and witness2Passed; InverseSquareIntervalExperiment.lean and InverseSquareIntervalValidation.lean. Chronological record: TIMELINE.txt, Turn645 interval source binding.

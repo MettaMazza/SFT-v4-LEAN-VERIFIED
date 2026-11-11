@@ -1,0 +1,40 @@
+
+Chirality: retained branch extension and closure
+
+The successor appends one fresh occurrence x with a uniquely held new label e, orientation word w and its retained links L to old occurrences. For M=(N,C,E,Q,O), comprising occurrence names, elemental labels, bonds, charge fibres and named orientation records, appendMolecularBranch implements
+\[
+M^+=(N\mathbin{+\!+}[x],\ C\mathbin{+\!+}[e],\ E\mathbin{+\!+}[(a,x):a\in L],\ Q,\ O\mathbin{+\!+}[(x,w)]).
+\]
+Every old atom, bond and orientation record remains present. For one link, singleBranchUsesExistingAppend identifies this carrier exactly with MolecularCarrier.appendOccurrence. The original charge record is retained. molecularBranchReflection proves that reflection commutes with this successor, replacing w by R(w) and reflecting all previous orientations while leaving the other fields fixed.
+
+The source's uniquely labelled extension has x absent from the old occurrence names and e absent from the old elemental labels. These are the freshness conditions of the appended input. No observed numerical constant or fitted coefficient selects the new label. Consider any accepted proper map p between the extended carrier and its reflection. Element preservation requires the new occurrence's target to carry e. Since every old target carries an old label and e is absent from that word, the target must be x:
+\[
+P(M^+,R(M^+),p)=\mathrm{true}\ \Longrightarrow\ p(x)=x.
+\]
+uniqueBranchLabelForcesFixedName establishes this implication by the actual complete element lookup. fixedLastMappingSplits then derives the order decomposition p=q\mathbin{+\!+}[x]. fixedBranchMapRestrictsPermutation proves that q is a permutation of the original occurrence word. Thus the fixed position is derived from the unique label, rather than imposed on the tested map census.
+
+For each old name a, extendedMappingAtOldName proves equality of the extended and original map lookups. branchRetainsOldOrientation proves the same retention for the orientation record. Consequently, alignedBranchElementsRestrict and alignedBranchOrientationRestricts derive both original comparisons from an accepted extended comparison.
+
+Bond preservation needs both incidence directions. Each new edge has x as an endpoint; an old edge and its old mapped image cannot contain x. branchEdgeSetRestricts therefore removes the newly added edges without removing any old edge. alignedBranchForwardBondsRestrict and alignedBranchReverseBondsRestrict establish
+\[
+\operatorname{map}_{q}(E)\subseteq E',\qquad E'\subseteq\operatorname{map}_{q}(E),
+\]
+for the two original carriers. Both directions use the source's normalized undirected edges and its complete edge-set comparison. An accepted extended mapping cannot conceal an old missing or additional bond in the appended branch.
+
+Combining the complete identity, bidirectional adjacency and orientation restrictions, uniqueBranchProperRestriction establishes
+\[
+P(M^+,M'^+,p)=\mathrm{true}
+\Longrightarrow
+\exists q\in\operatorname{Perm}(N'),\ P(M,M',q)=\mathrm{true}.
+\]
+Apply this to M'=R(M). If M is chiral, every original proper map fails by chiralityExactlyAllProperMapsFail. The successful restricted map would contradict that result. Hence uniqueBranchPreservesChirality proves
+\[
+\chi(M)=\mathrm{true}\ \Longrightarrow\ \chi(M^+)=\mathrm{true}.
+\]
+The theorem quantifies over the original carrier, all source-fresh labels, every held orientation word and the supplied branch links. admittedMoleculeShape derives nonempty distinct occurrence support and equal name/element widths from the existing molecular admission checks; allConstituentEndpoints supplies complete bond-endpoint coverage. admittedUniqueBranchPreservesChirality binds the closure result to these admitted source carriers directly, without separately assuming the retained-domain properties.
+
+The original OrientedStructure witness is also preserved exactly: composition counts (2,1), adjacency ((1,2)), and held molecular-orientation label right. originalRawAccepted verifies its original admission; originalWitnesses derives the three original operational checks. These constructor witnesses accompany the general proper-map and successor proofs rather than replacing them.
+
+A fresh execution comparison extends every pair of the 26 nonempty three-axis Fold orientation words on a two-occurrence carrier, with equal and unequal original labels, by a uniquely labelled third occurrence attached to the first, second or both old occurrences. All 4,056 Lean reflection/classification outputs match V3's executed extend_coordination_form, _mirror and exhaustive _canonical operations. The previously checked complete 256-candidate native program, empirical validator, original adverse controls and 32 constructor cases remain unchanged. The current 222 audited declarations have empty Lean axiom dependencies. Chirality is registered complete.
+
+Pinned V3: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1; sft/chemistry/stereochemistry_organic_polymer_derivation.py, OrientedStructure, CHIRAL and STEREOCHEMISTRY_ORGANIC_POLYMER_BLUEPRINTS[0]; molecular_structure_derivation.py, molecular admission and identity-preserving maps; coordination_isomerism_law_v1.py, extend_coordination_form, _mirror and _canonical. Lean: SFT/Chemistry/Chirality.lean, declarations named above; MolecularCarrier.appendOccurrence, acceptedConditions and allConstituentEndpoints; MolecularIsomer.candidateMeaning and ArrangementCompleteness. Timeline: Turns623–625. Evidence: TURN_625_CHIRALITY_COMPLETION.json, TURN_625_chirality625_audit_config.json and TURN_625_chirality_reflection625_report.json.

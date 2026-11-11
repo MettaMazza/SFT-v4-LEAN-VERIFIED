@@ -1,0 +1,91 @@
+theorem lookupLastFreshValue (names values : List String) (fresh value : String)
+ (size : names.length=values.length) (absent : ¬fresh∈names) :
+ MolecularIsomer.lookup fresh ((names++[fresh]).zip (values++[value]))=value := by
+ induction names generalizing values with
+ | nil =>
+   cases values with
+   | nil => change (if fresh=fresh then value else "")=value; rw [ite_eq_left rfl]
+   | cons a rest => cases size
+ | cons a rest ih =>
+   cases values with
+   | nil => cases size
+   | cons b tail =>
+     have different : fresh≠a := by intro h; cases h; exact absent (.head _)
+     change (if fresh=a then b else MolecularIsomer.lookup fresh
+      ((rest++[fresh]).zip (tail++[value])))=value
+     rw [ite_eq_right different]
+     exact ih tail (Nat.succ.inj size) (fun h => absent (.tail _ h))
+
+theorem uniqueBranchLabelForcesFixedName (left right : OrientedMolecule)
+ (fresh element : String) (lo ro : OrientationWord) (ll rl order : List String)
+ (leftFresh : ¬fresh∈left.carrier.occurrences) (rightFresh : ¬fresh∈right.carrier.occurrences)
+ (leftWidth : left.carrier.occurrences.length=left.carrier.elements.length)
+ (rightWidth : right.carrier.occurrences.length=right.carrier.elements.length)
+ (uniqueLabel : ¬element∈right.carrier.elements)
+ (lengths : left.carrier.occurrences.length=right.carrier.occurrences.length)
+ (perm : List.Perm order (right.carrier.occurrences++[fresh]))
+ (matched : MolecularIsomer.respectsElements (appendMolecularBranch left fresh element lo ll).carrier
+  (appendMolecularBranch right fresh element ro rl).carrier order=true) :
+ MolecularIsomer.lookup fresh (MolecularIsomer.mapping
+  (appendMolecularBranch left fresh element lo ll).carrier order)=fresh := by
+ let target := MolecularIsomer.lookup fresh (MolecularIsomer.mapping
+  (appendMolecularBranch left fresh element lo ll).carrier order)
+ have size : (left.carrier.occurrences++[fresh]).length=order.length := by
+   rw [SFT.Foundation.CommonRefinement.appendLength]
+   rw [perm.length_eq,SFT.Foundation.CommonRefinement.appendLength,lengths]
+ have freshHeld : fresh∈left.carrier.occurrences++[fresh] :=
+  SFT.Foundation.Count.TraceDerivation.memAppendRight _ _ _ (.head [])
+ have targetHeld := permutationMember perm _
+  (lookupZippedMember (left.carrier.occurrences++[fresh]) order size fresh freshHeld)
+ have passed := SFT.Mathematics.AlgebraOperations.allTrueAtMember _ _ matched fresh freshHeld
+ have equal := of_decide_eq_true passed
+ change MolecularIsomer.lookup fresh
+  ((left.carrier.occurrences++[fresh]).zip (left.carrier.elements++[element]))=
+  MolecularIsomer.lookup target
+  ((right.carrier.occurrences++[fresh]).zip (right.carrier.elements++[element])) at equal
+ rw [lookupLastFreshValue _ _ _ _ leftWidth leftFresh] at equal
+ cases SFT.Foundation.Count.TraceDerivation.memAppendCases target right.carrier.occurrences [fresh] targetHeld with
+ | inl old =>
+   have different : target≠fresh := fun h => rightFresh (h ▸ old)
+   rw [zipAppendPair _ _ rightWidth,lookupFreshAppendOther _ _ _ _ different] at equal
+   have valueHeld := lookupZippedMember right.carrier.occurrences right.carrier.elements rightWidth target old
+   exact False.elim (uniqueLabel (equal ▸ valueHeld))
+ | inr added =>
+   cases added with
+   | head => rfl
+   | tail _ impossible => cases impossible
+
+theorem fixedLastMappingSplits (names order : List String) (fresh : String)
+ (absent : ¬fresh∈names) (size : (names++[fresh]).length=order.length)
+ (fixed : MolecularIsomer.lookup fresh ((names++[fresh]).zip order)=fresh) :
+ ∃ old, order=old++[fresh] := by
+ induction names generalizing order with
+ | nil =>
+   cases order with
+   | nil => cases size
+   | cons first rest =>
+     cases rest with
+     | nil =>
+       change (if fresh=fresh then first else "")=fresh at fixed
+       rw [ite_eq_left rfl] at fixed
+       exact ⟨[],congrArg (fun x => [x]) fixed⟩
+     | cons next tail => cases size
+ | cons name names ih =>
+   cases order with
+   | nil => cases size
+   | cons first rest =>
+     have different : fresh≠name := by intro h; cases h; exact absent (.head _)
+     change (if fresh=name then first else MolecularIsomer.lookup fresh ((names++[fresh]).zip rest))=fresh at fixed
+     rw [ite_eq_right different] at fixed
+     obtain ⟨old,equal⟩ := ih rest (fun h => absent (.tail _ h)) (Nat.succ.inj size) fixed
+     exact ⟨first::old,congrArg (List.cons first) equal⟩
+
+theorem fixedBranchMapRestrictsPermutation (nodes order : List String) (fresh : String)
+ (unique : distinct nodes=true) (absent : ¬fresh∈nodes)
+ (perm : List.Perm (order++[fresh]) (nodes++[fresh])) : List.Perm order nodes := by
+ have distinctExtended := permutationDistinct perm.symm (appendFreshDistinct nodes fresh unique absent)
+ have headDistinct := permutationDistinct (appendFreshPermutation order fresh) distinctExtended
+ have absentOld := (absentIff order fresh).mp ((distinctCons fresh order).mp headDistinct).1
+ have reduced := everyExtendedMapRestricts nodes fresh absent (order++[fresh]) perm
+ rw [appendFreshRemoved order fresh absentOld] at reduced
+ exact reduced

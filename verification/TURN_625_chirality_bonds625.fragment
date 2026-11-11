@@ -1,0 +1,81 @@
+theorem singleBranchUsesExistingAppend (m : OrientedMolecule) (fresh element anchor : String)
+ (orientation : OrientationWord) :
+ (appendMolecularBranch m fresh element orientation [anchor]).carrier=
+ MolecularCarrier.appendOccurrence m.carrier fresh element anchor := rfl
+
+def avoids (name : String) (edge : Edge) : Prop := edge.1≠name ∧ edge.2≠name
+
+theorem normalizedAvoids (name : String) (edge : Edge) :
+ avoids name (MolecularCarrier.normalizedEdge edge) ↔ avoids name edge := by
+ unfold MolecularCarrier.normalizedEdge
+ split
+ · exact ⟨fun h => h,fun h => h⟩
+ · exact ⟨fun h => ⟨h.2,h.1⟩,fun h => ⟨h.2,h.1⟩⟩
+
+theorem edgeSetWitness (m : MolecularCarrier.Raw) (edge : Edge) :
+ edge∈MolecularIsomer.edgeSet m ↔
+ ∃ original∈m.bonds, MolecularCarrier.normalizedEdge original=edge := by
+ constructor
+ · intro held
+   exact SFT.Foundation.Count.TraceDerivation.memMapPreimage _ _ _
+    ((MolecularGeometry.uniqueMeaning _ _).mp held)
+ · intro witness
+   obtain ⟨original,held,equal⟩ := witness
+   exact (MolecularGeometry.uniqueMeaning _ _).mpr
+    (equal ▸ SFT.Foundation.Count.TraceDerivation.memMap _ _ _ held)
+
+theorem branchEdgeSetRestricts (m : OrientedMolecule) (fresh element : String)
+ (orientation : OrientationWord) (links : List String) (edge : Edge) (away : avoids fresh edge) :
+ edge∈MolecularIsomer.edgeSet (appendMolecularBranch m fresh element orientation links).carrier ↔
+ edge∈MolecularIsomer.edgeSet m.carrier := by
+ constructor
+ · intro held
+   obtain ⟨original,member,equal⟩ := (edgeSetWitness _ _).mp held
+   cases SFT.Foundation.Count.TraceDerivation.memAppendCases original m.carrier.bonds
+    (links.map (fun old => (old,fresh))) member with
+   | inl old => exact (edgeSetWitness _ _).mpr ⟨original,old,equal⟩
+   | inr added =>
+     obtain ⟨anchor,_,same⟩ := SFT.Foundation.Count.TraceDerivation.memMapPreimage _ _ _ added
+     cases same
+     have noFresh := (normalizedAvoids fresh (anchor,fresh)).mp (equal ▸ away)
+     exact False.elim (noFresh.2 rfl)
+ · intro held
+   obtain ⟨original,member,equal⟩ := (edgeSetWitness _ _).mp held
+   exact (edgeSetWitness _ _).mpr
+    ⟨original,SFT.Foundation.Count.TraceDerivation.memAppendLeft _ _ _ member,equal⟩
+
+theorem edgeSetEndpoints (m : MolecularCarrier.Raw)
+ (covered : ∀ edge∈m.bonds, edge.1∈m.occurrences ∧ edge.2∈m.occurrences)
+ (edge : Edge) (held : edge∈MolecularIsomer.edgeSet m) :
+ edge.1∈m.occurrences ∧ edge.2∈m.occurrences := by
+ obtain ⟨original,member,equal⟩ := (edgeSetWitness _ _).mp held
+ have endpoints := covered original member
+ rw [←equal]
+ unfold MolecularCarrier.normalizedEdge
+ split
+ · exact endpoints
+ · exact ⟨endpoints.2,endpoints.1⟩
+
+theorem branchOldEdgesAvoidFresh (m : MolecularCarrier.Raw) (fresh : String)
+ (covered : ∀ edge∈m.bonds, edge.1∈m.occurrences ∧ edge.2∈m.occurrences)
+ (absent : ¬fresh∈m.occurrences) (edge : Edge) (held : edge∈MolecularIsomer.edgeSet m) :
+ avoids fresh edge := by
+ have endpoints := edgeSetEndpoints m covered edge held
+ exact ⟨fun h => absent (h ▸ endpoints.1),fun h => absent (h ▸ endpoints.2)⟩
+
+theorem mappedOldEdgeAvoidsFresh (left right : OrientedMolecule) (fresh : String)
+ (covered : ∀ edge∈left.carrier.bonds,
+  edge.1∈left.carrier.occurrences ∧ edge.2∈left.carrier.occurrences)
+ (rightFresh : ¬fresh∈right.carrier.occurrences)
+ (lengths : left.carrier.occurrences.length=right.carrier.occurrences.length)
+ (order : List String) (perm : List.Perm order right.carrier.occurrences)
+ (edge : Edge) (held : edge∈MolecularIsomer.edgeSet left.carrier) :
+ avoids fresh (MolecularCarrier.normalizedEdge
+  (MolecularIsomer.lookup edge.1 (MolecularIsomer.mapping left.carrier order),
+   MolecularIsomer.lookup edge.2 (MolecularIsomer.mapping left.carrier order))) := by
+ have endpoints := edgeSetEndpoints left.carrier covered edge held
+ have size := lengths.trans perm.length_eq.symm
+ have first := permutationMember perm _ (lookupZippedMember _ _ size _ endpoints.1)
+ have second := permutationMember perm _ (lookupZippedMember _ _ size _ endpoints.2)
+ apply (normalizedAvoids fresh _).mpr
+ exact ⟨fun h => rightFresh (h ▸ first),fun h => rightFresh (h ▸ second)⟩

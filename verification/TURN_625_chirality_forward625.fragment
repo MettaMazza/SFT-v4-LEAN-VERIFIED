@@ -1,0 +1,44 @@
+theorem alignedBranchOldMappedEdgeRetained (left : OrientedMolecule)
+ (fresh element : String) (orientation : OrientationWord) (links order : List String)
+ (covered : ∀ edge∈left.carrier.bonds,
+  edge.1∈left.carrier.occurrences ∧ edge.2∈left.carrier.occurrences)
+ (absent : ¬fresh∈left.carrier.occurrences)
+ (size : left.carrier.occurrences.length=order.length)
+ (edge : Edge) (held : edge∈MolecularIsomer.edgeSet left.carrier) :
+ MolecularCarrier.normalizedEdge
+  (MolecularIsomer.lookup edge.1 (MolecularIsomer.mapping left.carrier order),
+   MolecularIsomer.lookup edge.2 (MolecularIsomer.mapping left.carrier order))∈
+ MolecularIsomer.mappedEdges (appendMolecularBranch left fresh element orientation links).carrier (order++[fresh]) := by
+ have endpoints := edgeSetEndpoints left.carrier covered edge held
+ have first : edge.1≠fresh := fun h => absent (h ▸ endpoints.1)
+ have second : edge.2≠fresh := fun h => absent (h ▸ endpoints.2)
+ have kept := (branchEdgeSetRestricts left fresh element orientation links edge ⟨first,second⟩).mpr held
+ apply (MolecularGeometry.uniqueMeaning _ _).mpr
+ have mapped := SFT.Foundation.Count.TraceDerivation.memMap
+  (fun e => MolecularCarrier.normalizedEdge
+   (MolecularIsomer.lookup e.1 (MolecularIsomer.mapping
+    (appendMolecularBranch left fresh element orientation links).carrier (order++[fresh])),
+    MolecularIsomer.lookup e.2 (MolecularIsomer.mapping
+    (appendMolecularBranch left fresh element orientation links).carrier (order++[fresh])))) edge _ kept
+ rw [extendedMappingAtOldName _ _ _ _ _ _ _ size first,
+  extendedMappingAtOldName _ _ _ _ _ _ _ size second] at mapped
+ exact mapped
+
+theorem alignedBranchForwardBondsRestrict (left right : OrientedMolecule)
+ (fresh element : String) (lo ro : OrientationWord) (ll rl order : List String)
+ (covered : ∀ edge∈left.carrier.bonds,
+  edge.1∈left.carrier.occurrences ∧ edge.2∈left.carrier.occurrences)
+ (leftFresh : ¬fresh∈left.carrier.occurrences) (rightFresh : ¬fresh∈right.carrier.occurrences)
+ (lengths : left.carrier.occurrences.length=right.carrier.occurrences.length)
+ (perm : List.Perm order right.carrier.occurrences)
+ (matched : properMatches (appendMolecularBranch left fresh element lo ll)
+  (appendMolecularBranch right fresh element ro rl) (order++[fresh])=true) :
+ ∀ edge∈MolecularIsomer.mappedEdges left.carrier order, edge∈MolecularIsomer.edgeSet right.carrier := by
+ intro edge held
+ obtain ⟨original,member,equal⟩ := SFT.Foundation.Count.TraceDerivation.memMapPreimage _ _ _
+  ((MolecularGeometry.uniqueMeaning _ _).mp held)
+ have avoid := mappedOldEdgeAvoidsFresh left right fresh covered rightFresh lengths order perm original member
+ have extended := alignedBranchOldMappedEdgeRetained left fresh element lo ll order covered leftFresh
+  (lengths.trans perm.length_eq.symm) original member
+ have target := (properMatchRetainsConstitution _ _ _ matched).2.1 _ extended
+ exact equal ▸ (branchEdgeSetRestricts right fresh element ro rl _ avoid).mp target

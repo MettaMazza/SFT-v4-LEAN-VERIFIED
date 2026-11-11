@@ -1339,3 +1339,6 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.InterfaceTransferGrammar.candidates do
     IO.println ("InterfaceTransferGrammar\t" ++ SFT.Chemistry.InterfaceTransferGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.InterfaceTransferGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.InterfaceTransferGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.InterfaceTransferGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.ChiralityGrammar.candidates do
+    IO.println ("ChiralityGrammar\t" ++ SFT.Chemistry.ChiralityGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.ChiralityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.ChiralityGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.ChiralityGrammar.decisionReason c)

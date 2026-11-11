@@ -1,0 +1,131 @@
+-- Append one named oriented branch, retaining the complete previous records.
+def appendMolecularBranch (m : OrientedMolecule) (fresh element : String)
+ (orientation : OrientationWord) (links : List String) : OrientedMolecule :=
+ ⟨{m.carrier with occurrences := m.carrier.occurrences++[fresh],
+    elements := m.carrier.elements++[element],
+    bonds := m.carrier.bonds++links.map (fun old => (old,fresh))},
+   m.orientations++[(fresh,orientation)]⟩
+
+theorem molecularBranchReflection (m : OrientedMolecule) (fresh element : String)
+ (orientation : OrientationWord) (links : List String) :
+ mirrorMolecule (appendMolecularBranch m fresh element orientation links)=
+ appendMolecularBranch (mirrorMolecule m) fresh element (reflectWord orientation) links := by
+ unfold mirrorMolecule appendMolecularBranch
+ rw [SFT.Mathematics.ExactTraceArithmetic.mapAppend]
+ rfl
+
+theorem branchRetainsOldAtom (m : OrientedMolecule) (fresh element name : String)
+ (orientation : OrientationWord) (links : List String) (held : name∈m.carrier.occurrences) :
+ name∈(appendMolecularBranch m fresh element orientation links).carrier.occurrences :=
+ SFT.Foundation.Count.TraceDerivation.memAppendLeft _ _ _ held
+
+theorem branchRetainsOldBond (m : OrientedMolecule) (fresh element : String)
+ (orientation : OrientationWord) (links : List String) (edge : Edge) (held : edge∈m.carrier.bonds) :
+ edge∈(appendMolecularBranch m fresh element orientation links).carrier.bonds :=
+ SFT.Foundation.Count.TraceDerivation.memAppendLeft _ _ _ held
+
+theorem wordAtFreshAppendOther (rows : List (String × OrientationWord))
+ (name fresh : String) (word : OrientationWord) (different : name≠fresh) :
+ wordAt name (rows++[(fresh,word)])=wordAt name rows := by
+ induction rows with
+ | nil => change (if name=fresh then some word else none)=none; rw [ite_eq_right different]
+ | cons row rows ih =>
+   change (if name=row.1 then some row.2 else wordAt name (rows++[(fresh,word)]))=
+    (if name=row.1 then some row.2 else wordAt name rows)
+   by_cases equal : name=row.1
+   · rw [ite_eq_left equal,ite_eq_left equal]
+   · rw [ite_eq_right equal,ite_eq_right equal,ih]
+
+theorem branchRetainsOldOrientation (m : OrientedMolecule) (fresh element name : String)
+ (orientation : OrientationWord) (links : List String) (different : name≠fresh) :
+ wordAt name (appendMolecularBranch m fresh element orientation links).orientations=
+ wordAt name m.orientations := wordAtFreshAppendOther _ _ _ _ different
+
+theorem lookupFreshAppendOther (rows : List (String × String)) (name fresh target : String)
+ (different : name≠fresh) :
+ MolecularIsomer.lookup name (rows++[(fresh,target)])=MolecularIsomer.lookup name rows := by
+ induction rows with
+ | nil => change (if name=fresh then target else "")=""; rw [ite_eq_right different]
+ | cons row rows ih =>
+   change (if name=row.1 then row.2 else MolecularIsomer.lookup name (rows++[(fresh,target)]))=
+    (if name=row.1 then row.2 else MolecularIsomer.lookup name rows)
+   by_cases equal : name=row.1
+   · rw [ite_eq_left equal,ite_eq_left equal]
+   · rw [ite_eq_right equal,ite_eq_right equal,ih]
+
+theorem zipAppendPair (names values : List String) (sameLength : names.length=values.length)
+ (name value : String) :
+ (names++[name]).zip (values++[value])=names.zip values++[(name,value)] := by
+ induction names generalizing values with
+ | nil =>
+   cases values with
+   | nil => rfl
+   | cons a rest => cases sameLength
+ | cons a rest ih =>
+   cases values with
+   | nil => cases sameLength
+   | cons b tail =>
+     change (a,b)::((rest++[name]).zip (tail++[value]))=(a,b)::(rest.zip tail++[(name,value)])
+     exact congrArg (List.cons (a,b)) (ih tail (Nat.succ.inj sameLength))
+
+theorem lookupZippedMember (names targets : List String)
+ (sameLength : names.length=targets.length) (name : String) (held : name∈names) :
+ MolecularIsomer.lookup name (names.zip targets)∈targets := by
+ induction names generalizing targets with
+ | nil => cases held
+ | cons a rest ih =>
+   cases targets with
+   | nil => cases sameLength
+   | cons b tail =>
+     change (if name=a then b else MolecularIsomer.lookup name (rest.zip tail))∈b::tail
+     by_cases equal : name=a
+     · rw [ite_eq_left equal]; exact .head _
+     · rw [ite_eq_right equal]
+       apply List.Mem.tail
+       apply ih tail (Nat.succ.inj sameLength)
+       cases held with
+       | head => exact False.elim (equal rfl)
+       | tail _ h => exact h
+
+theorem extendedMappingAtOldName (m : OrientedMolecule) (fresh element name : String)
+ (orientation : OrientationWord) (links order : List String)
+ (sameLength : m.carrier.occurrences.length=order.length) (different : name≠fresh) :
+ MolecularIsomer.lookup name
+  (MolecularIsomer.mapping (appendMolecularBranch m fresh element orientation links).carrier (order++[fresh]))=
+ MolecularIsomer.lookup name (MolecularIsomer.mapping m.carrier order) := by
+ change MolecularIsomer.lookup name ((m.carrier.occurrences++[fresh]).zip (order++[fresh]))=
+  MolecularIsomer.lookup name (m.carrier.occurrences.zip order)
+ rw [zipAppendPair _ _ sameLength,lookupFreshAppendOther _ _ _ _ different]
+
+theorem alignedBranchOrientationRestricts (left right : OrientedMolecule)
+ (fresh element : String) (lo ro : OrientationWord) (ll rl order : List String)
+ (leftFresh : ¬fresh∈left.carrier.occurrences) (rightFresh : ¬fresh∈right.carrier.occurrences)
+ (lengths : left.carrier.occurrences.length=right.carrier.occurrences.length)
+ (perm : List.Perm order right.carrier.occurrences)
+ (matched : orientationMatches (appendMolecularBranch left fresh element lo ll)
+  (appendMolecularBranch right fresh element ro rl) (order++[fresh])=true) :
+ orientationMatches left right order=true := by
+ apply (allTrueIffMembers _ _).mpr
+ intro name held
+ have nameDifferent : name≠fresh := by intro same; cases same; exact leftFresh held
+ have size : left.carrier.occurrences.length=order.length := lengths.trans perm.length_eq.symm
+ have targetHeld := lookupZippedMember left.carrier.occurrences order size name held
+ have targetOriginal := permutationMember perm _ targetHeld
+ have targetDifferent : MolecularIsomer.lookup name (MolecularIsomer.mapping left.carrier order)≠fresh := by
+   intro same
+   rw [same] at targetOriginal
+   exact rightFresh targetOriginal
+ have passed := SFT.Mathematics.AlgebraOperations.allTrueAtMember _ _ matched name
+  (branchRetainsOldAtom left fresh element name lo ll held)
+ change (match wordAt name (appendMolecularBranch left fresh element lo ll).orientations,
+  wordAt (MolecularIsomer.lookup name (MolecularIsomer.mapping
+   (appendMolecularBranch left fresh element lo ll).carrier (order++[fresh])))
+   (appendMolecularBranch right fresh element ro rl).orientations with
+  | some a,some b => wordEqual a b
+  | none,none => false
+  | none,some _ => false
+  | some _,none => false)=true at passed
+ rw [extendedMappingAtOldName _ _ _ _ _ _ _ size nameDifferent,
+  branchRetainsOldOrientation _ _ _ _ _ _ nameDifferent,
+  branchRetainsOldOrientation _ _ _ _ _ _ targetDifferent] at passed
+ exact passed

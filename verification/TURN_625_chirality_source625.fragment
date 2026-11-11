@@ -1,0 +1,42 @@
+def originalRaw : Raw :=
+ ⟨[⟨2,by decide⟩,⟨1,by decide⟩],[(⟨1,by decide⟩,⟨2,by decide⟩)],
+  ⟨"molecular-orientation","right",rfl,rfl⟩⟩
+
+theorem originalRawAccepted : admit originalRaw=.ok originalRaw := rfl
+
+theorem originalWitnesses : originalRaw.composition.length=2 ∧
+ originalRaw.adjacency.length=1 ∧ originalRaw.orientation.family="molecular-orientation" := ⟨rfl,rfl,rfl⟩
+
+theorem admittedMoleculeShape (m : OrientedMolecule)
+ (accepted : MolecularCarrier.admit m.carrier=.ok m.carrier) :
+ m.carrier.occurrences≠[] ∧ distinct m.carrier.occurrences=true ∧
+ m.carrier.occurrences.length=m.carrier.elements.length := by
+ have conditions := MolecularCarrier.acceptedConditions _ _ accepted
+ have p1 := (SFT.Foundation.CountRepresentation.orFalse _ _).mp conditions.1
+ have p2 := (SFT.Foundation.CountRepresentation.orFalse _ _).mp p1.1
+ have p3 := (SFT.Foundation.CountRepresentation.orFalse _ _).mp p2.1
+ have p4 := (SFT.Foundation.CountRepresentation.orFalse _ _).mp p3.1
+ refine ⟨?_,?_,?_⟩
+ · intro empty
+   have connected := conditions.2.2.1
+   unfold MolecularCarrier.connected at connected
+   rw [empty] at connected
+   cases connected
+ · cases h : distinct m.carrier.occurrences with
+   | true => rfl
+   | false => rw [h] at p3; cases p3.2
+ · by_cases same : m.carrier.occurrences.length=m.carrier.elements.length
+   · exact same
+   · have impossible := p4.2
+     rw [decide_eq_true same] at impossible
+     cases impossible
+
+theorem admittedUniqueBranchPreservesChirality (m : OrientedMolecule)
+ (accepted : MolecularCarrier.admit m.carrier=.ok m.carrier)
+ (fresh element : String) (orientation : OrientationWord) (links : List String)
+ (freshName : ¬fresh∈m.carrier.occurrences) (freshLabel : ¬element∈m.carrier.elements)
+ (original : chiral m=true) : chiral (appendMolecularBranch m fresh element orientation links)=true := by
+ have shape := admittedMoleculeShape m accepted
+ exact uniqueBranchPreservesChirality m fresh element orientation links
+  shape.1 shape.2.1 freshName freshLabel shape.2.2
+  (MolecularCarrier.allConstituentEndpoints ⟨m.carrier,accepted⟩) original

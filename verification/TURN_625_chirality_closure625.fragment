@@ -1,0 +1,67 @@
+theorem uniqueBranchProperRestriction (left right : OrientedMolecule)
+ (fresh element : String) (lo ro : OrientationWord) (ll rl order : List String)
+ (leftFresh : ¬fresh∈left.carrier.occurrences) (rightFresh : ¬fresh∈right.carrier.occurrences)
+ (leftWidth : left.carrier.occurrences.length=left.carrier.elements.length)
+ (rightWidth : right.carrier.occurrences.length=right.carrier.elements.length)
+ (leftCovered : ∀ edge∈left.carrier.bonds,
+  edge.1∈left.carrier.occurrences ∧ edge.2∈left.carrier.occurrences)
+ (rightCovered : ∀ edge∈right.carrier.bonds,
+  edge.1∈right.carrier.occurrences ∧ edge.2∈right.carrier.occurrences)
+ (uniqueLabel : ¬element∈right.carrier.elements)
+ (uniqueNames : distinct right.carrier.occurrences=true)
+ (lengths : left.carrier.occurrences.length=right.carrier.occurrences.length)
+ (perm : List.Perm order (right.carrier.occurrences++[fresh]))
+ (matched : properMatches (appendMolecularBranch left fresh element lo ll)
+  (appendMolecularBranch right fresh element ro rl) order=true) :
+ ∃ old, List.Perm old right.carrier.occurrences ∧ properMatches left right old=true := by
+ have fixed := uniqueBranchLabelForcesFixedName left right fresh element lo ro ll rl order
+  leftFresh rightFresh leftWidth rightWidth uniqueLabel lengths perm
+  (properMatchRetainsConstitution _ _ _ matched).1
+ have size : (left.carrier.occurrences++[fresh]).length=order.length := by
+   rw [SFT.Foundation.CommonRefinement.appendLength,perm.length_eq,
+    SFT.Foundation.CommonRefinement.appendLength,lengths]
+ obtain ⟨old,equal⟩ := fixedLastMappingSplits left.carrier.occurrences order fresh leftFresh size fixed
+ subst order
+ have oldPerm := fixedBranchMapRestrictsPermutation right.carrier.occurrences old fresh uniqueNames rightFresh perm
+ refine ⟨old,oldPerm,?_⟩
+ apply (SFT.Mathematics.GeometryTopology.andTrue _ _).mpr
+ constructor
+ · apply (MolecularIsomer.candidateMeaning _ _ _).mpr
+   exact ⟨alignedBranchElementsRestrict left right fresh element lo ro ll rl old leftFresh rightFresh
+     leftWidth rightWidth lengths oldPerm (properMatchRetainsConstitution _ _ _ matched).1,
+    alignedBranchForwardBondsRestrict left right fresh element lo ro ll rl old leftCovered leftFresh rightFresh
+     lengths oldPerm matched,
+    alignedBranchReverseBondsRestrict left right fresh element lo ro ll rl old leftCovered rightCovered
+     leftFresh rightFresh lengths oldPerm matched⟩
+ · exact alignedBranchOrientationRestricts left right fresh element lo ro ll rl old
+    leftFresh rightFresh lengths oldPerm (properMatchRetainsOrientation _ _ _ matched)
+
+theorem uniqueBranchPreservesChirality (m : OrientedMolecule) (fresh element : String)
+ (orientation : OrientationWord) (links : List String)
+ (nonempty : m.carrier.occurrences≠[]) (uniqueNames : distinct m.carrier.occurrences=true)
+ (freshName : ¬fresh∈m.carrier.occurrences) (freshLabel : ¬element∈m.carrier.elements)
+ (width : m.carrier.occurrences.length=m.carrier.elements.length)
+ (covered : ∀ edge∈m.carrier.bonds,
+  edge.1∈m.carrier.occurrences ∧ edge.2∈m.carrier.occurrences)
+ (original : chiral m=true) :
+ chiral (appendMolecularBranch m fresh element orientation links)=true := by
+ have noOld := (chiralityExactlyAllProperMapsFail m nonempty uniqueNames).mp original
+ apply (chiralityExactlyAllProperMapsFail (appendMolecularBranch m fresh element orientation links)
+  (by
+    intro empty
+    have held : fresh∈m.carrier.occurrences++[fresh] :=
+      SFT.Foundation.Count.TraceDerivation.memAppendRight _ _ _ (.head [])
+    rw [empty] at held
+    cases held)
+  (appendFreshDistinct m.carrier.occurrences fresh uniqueNames freshName)).mpr
+ intro order perm
+ rw [molecularBranchReflection]
+ cases matched : properMatches (appendMolecularBranch m fresh element orientation links)
+  (appendMolecularBranch (mirrorMolecule m) fresh element (reflectWord orientation) links) order with
+ | false => rfl
+ | true =>
+   obtain ⟨old,oldPerm,oldMatch⟩ := uniqueBranchProperRestriction m (mirrorMolecule m)
+    fresh element orientation (reflectWord orientation) links links order
+    freshName freshName width width covered covered freshLabel uniqueNames rfl perm matched
+   rw [noOld old oldPerm] at oldMatch
+   cases oldMatch

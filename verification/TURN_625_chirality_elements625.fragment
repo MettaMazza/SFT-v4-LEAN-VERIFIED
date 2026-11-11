@@ -1,0 +1,70 @@
+theorem alignedBranchElementsRestrict (left right : OrientedMolecule)
+ (fresh element : String) (lo ro : OrientationWord) (ll rl order : List String)
+ (leftFresh : ¬fresh∈left.carrier.occurrences) (rightFresh : ¬fresh∈right.carrier.occurrences)
+ (leftWidth : left.carrier.occurrences.length=left.carrier.elements.length)
+ (rightWidth : right.carrier.occurrences.length=right.carrier.elements.length)
+ (lengths : left.carrier.occurrences.length=right.carrier.occurrences.length)
+ (perm : List.Perm order right.carrier.occurrences)
+ (matched : MolecularIsomer.respectsElements (appendMolecularBranch left fresh element lo ll).carrier
+  (appendMolecularBranch right fresh element ro rl).carrier (order++[fresh])=true) :
+ MolecularIsomer.respectsElements left.carrier right.carrier order=true := by
+ apply (allTrueIffMembers _ _).mpr
+ intro name held
+ have nameDifferent : name≠fresh := by intro same; cases same; exact leftFresh held
+ have size : left.carrier.occurrences.length=order.length := lengths.trans perm.length_eq.symm
+ have targetOriginal := permutationMember perm _
+  (lookupZippedMember left.carrier.occurrences order size name held)
+ have targetDifferent : MolecularIsomer.lookup name (MolecularIsomer.mapping left.carrier order)≠fresh := by
+   intro same
+   change MolecularIsomer.lookup name (MolecularIsomer.mapping left.carrier order)∈right.carrier.occurrences at targetOriginal
+   rw [same] at targetOriginal
+   exact rightFresh targetOriginal
+ have passed := SFT.Mathematics.AlgebraOperations.allTrueAtMember _ _ matched name
+  (branchRetainsOldAtom left fresh element name lo ll held)
+ change decide (MolecularIsomer.lookup name
+  ((left.carrier.occurrences++[fresh]).zip (left.carrier.elements++[element]))=
+  MolecularIsomer.lookup (MolecularIsomer.lookup name
+   (MolecularIsomer.mapping (appendMolecularBranch left fresh element lo ll).carrier (order++[fresh])))
+   ((right.carrier.occurrences++[fresh]).zip (right.carrier.elements++[element])))=true at passed
+ rw [extendedMappingAtOldName _ _ _ _ _ _ _ size nameDifferent,
+  zipAppendPair _ _ leftWidth,zipAppendPair _ _ rightWidth,
+  lookupFreshAppendOther _ _ _ _ nameDifferent,
+  lookupFreshAppendOther _ _ _ _ targetDifferent] at passed
+ exact passed
+
+theorem alignedOrientationFailurePreserved (left right : OrientedMolecule)
+ (fresh element : String) (lo ro : OrientationWord) (ll rl order : List String)
+ (leftFresh : ¬fresh∈left.carrier.occurrences) (rightFresh : ¬fresh∈right.carrier.occurrences)
+ (lengths : left.carrier.occurrences.length=right.carrier.occurrences.length)
+ (perm : List.Perm order right.carrier.occurrences)
+ (failed : orientationMatches left right order=false) :
+ properMatches (appendMolecularBranch left fresh element lo ll)
+  (appendMolecularBranch right fresh element ro rl) (order++[fresh])=false := by
+ cases h : properMatches (appendMolecularBranch left fresh element lo ll)
+  (appendMolecularBranch right fresh element ro rl) (order++[fresh]) with
+ | false => rfl
+ | true =>
+   have original := alignedBranchOrientationRestricts left right fresh element lo ro ll rl order
+    leftFresh rightFresh lengths perm (properMatchRetainsOrientation _ _ _ h)
+   rw [failed] at original
+   cases original
+
+theorem alignedElementFailurePreserved (left right : OrientedMolecule)
+ (fresh element : String) (lo ro : OrientationWord) (ll rl order : List String)
+ (leftFresh : ¬fresh∈left.carrier.occurrences) (rightFresh : ¬fresh∈right.carrier.occurrences)
+ (leftWidth : left.carrier.occurrences.length=left.carrier.elements.length)
+ (rightWidth : right.carrier.occurrences.length=right.carrier.elements.length)
+ (lengths : left.carrier.occurrences.length=right.carrier.occurrences.length)
+ (perm : List.Perm order right.carrier.occurrences)
+ (failed : MolecularIsomer.respectsElements left.carrier right.carrier order=false) :
+ properMatches (appendMolecularBranch left fresh element lo ll)
+  (appendMolecularBranch right fresh element ro rl) (order++[fresh])=false := by
+ cases h : properMatches (appendMolecularBranch left fresh element lo ll)
+  (appendMolecularBranch right fresh element ro rl) (order++[fresh]) with
+ | false => rfl
+ | true =>
+   have original := alignedBranchElementsRestrict left right fresh element lo ro ll rl order
+    leftFresh rightFresh leftWidth rightWidth lengths perm
+    (properMatchRetainsConstitution _ _ _ h).1
+   rw [failed] at original
+   cases original

@@ -3833,3 +3833,13 @@ import SFT.Chemistry.YieldGrammar
 import SFT.Chemistry.YieldEvidence
 import SFT.Chemistry.YieldExperiment
 import SFT.Chemistry.YieldValidation
+import SFT.Chemistry.MixtureSupport
+import SFT.Chemistry.MixtureGrammar
+import SFT.Chemistry.MixtureEvidence
+import SFT.Chemistry.MixtureExperiment
+import SFT.Chemistry.MixtureValidation
+import SFT.Chemistry.SolutionSupport
+import SFT.Chemistry.SolutionGrammar
+import SFT.Chemistry.SolutionEvidence
+import SFT.Chemistry.SolutionExperiment
+import SFT.Chemistry.SolutionValidation

@@ -4533,3 +4533,17 @@ import SFT.Materials.CompositionEvidence
 import SFT.Materials.CompositionExperiment
 
 import SFT.Materials.CompositionValidation
+
+import SFT.Materials.Phase
+
+import SFT.Materials.PhaseExtension
+
+import SFT.Materials.PhaseSource
+
+import SFT.Materials.PhaseGrammar
+
+import SFT.Materials.PhaseEvidence
+
+import SFT.Materials.PhaseExperiment
+
+import SFT.Materials.PhaseValidation

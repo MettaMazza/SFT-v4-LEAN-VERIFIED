@@ -1426,3 +1426,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.CompositionGrammar.candidates do
     IO.println ("CompositionGrammar\t" ++ SFT.Materials.CompositionGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.CompositionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.CompositionGrammar.exactForm c ++ "\t" ++ SFT.Materials.CompositionGrammar.decisionReason c)
+
+  for c in SFT.Materials.PhaseGrammar.candidates do
+    IO.println ("PhaseGrammar\t" ++ SFT.Materials.PhaseGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PhaseGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PhaseGrammar.exactForm c ++ "\t" ++ SFT.Materials.PhaseGrammar.decisionReason c)

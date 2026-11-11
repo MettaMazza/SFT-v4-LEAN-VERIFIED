@@ -21124,9 +21124,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ELEM-ELEMENT-001-be03c5e39699037a.json",
       "statement": "A chemical element is the complete Fold class of generated atoms sharing one held nuclear proton count; isotope mass refinements preserve that identity, while pure-substance use remains a separate correspondence.",
       "title": "Chemical element identity",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/ElementIdentity.lean",
+        "SFT/Chemistry/ElementGrammar.lean",
+        "SFT/Chemistry/ElementEvidence.lean",
+        "SFT/Chemistry/ElementExperiment.lean",
+        "SFT/Chemistry/ElementValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full256-form program, original empirical output, ten extraction cases and original independent-validator controls.",
       "registration_sha256": "40a3ba3323cc91f6781efdb31f8f10cf0190e25d8a6b617fa5acbd2b5b83b14d",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -21180,7 +21186,10 @@
         "statement": "A chemical element is the complete Fold class of generated atoms sharing one held nuclear proton count; isotope mass refinements preserve that identity, while pure-substance use remains a separate correspondence.",
         "status": "empirically_tested",
         "title": "Chemical element identity"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_560_ELEMENT_COMPLETION.json",
+      "verified_scope": "Complete generated atom class by nuclear proton count; mass refinement and electron invariance; positive nuclear carrier, all-atom quantified membership, separate substance correspondence and finite construction/history preservation.; Original complete eight-axis256 product, exact decisions and sole survivor.; Original chemistry registration, census, controls and closure.; Exact source-reference specification, sealed chemical prediction and registration.; Original isolation/custody/source-extraction and all empirical output fields/hashes."
     },
     {
       "branch": "chemistry",
@@ -21192,9 +21201,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ELEM-ATOMIC-NUMBER-001-c63df67479dff616.json",
       "statement": "Atomic number is the exact generated positive-finite count of protons in an atom's nucleus and therefore the unique order coordinate of its chemical-element class.",
       "title": "Atomic-number ordering and element distinction",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/AtomicNumberOrder.lean",
+        "SFT/Chemistry/AtomicNumberGrammar.lean",
+        "SFT/Chemistry/AtomicNumberEvidence.lean",
+        "SFT/Chemistry/AtomicNumberExperiment.lean",
+        "SFT/Chemistry/AtomicNumberValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full256-form program, original empirical output, ten extraction cases and original independent-validator controls.",
       "registration_sha256": "e0a42e420a62b092c373f485ae006f5f79a04769f45ca5d21f08dfc70fdb7090",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -21249,7 +21264,10 @@
         "statement": "Atomic number is the exact generated positive-finite count of protons in an atom's nucleus and therefore the unique order coordinate of its chemical-element class.",
         "status": "empirically_tested",
         "title": "Atomic-number ordering and element distinction"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_560_ATOMICNUMBER_COMPLETION.json",
+      "verified_scope": "Generated nuclear proton count from singleton and successor; every nucleus generated; exact positive total order, count/class equivalence, isotope/charge invariance, unique count recurrence and exclusion of offsets or multipliers.; Original complete eight-axis256 product, exact decisions and sole survivor.; Original chemistry registration, census, controls and closure.; Exact source-reference specification, sealed chemical prediction and registration.; Original isolation/custody/source-extraction and all empirical output fields/hashes."
     },
     {
       "branch": "chemistry",
@@ -21261,9 +21279,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ELEM-ISOTOPE-001-7cad83d03dcae499.json",
       "statement": "Isotopes are the generated Fold family of nuclide carriers sharing one atomic number while retaining different exact mass-number coordinates.",
       "title": "Isotope identity within an element",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/IsotopeFamily.lean",
+        "SFT/Chemistry/IsotopeGrammar.lean",
+        "SFT/Chemistry/IsotopeEvidence.lean",
+        "SFT/Chemistry/IsotopeExperiment.lean",
+        "SFT/Chemistry/IsotopeValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh full256-form program, original empirical output, ten extraction cases and original independent-validator controls.",
       "registration_sha256": "3bfd5f3ce1f6b7ee0c0dc52340849f1370e2ca52fe2f71f92f0551715fb0f211",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -21319,7 +21343,10 @@
         "statement": "Isotopes are the generated Fold family of nuclide carriers sharing one atomic number while retaining different exact mass-number coordinates.",
         "status": "empirically_tested",
         "title": "Isotope identity within an element"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_560_ISOTOPE_COMPLETION.json",
+      "verified_scope": "Complete proton/mass/complementary nuclear records; shared element with distinct mass coordinates, explicit two-nuclide base, complete distinct-mass successor, mixed-element rejection, observation boundary and arbitrary finite histories.; Original exhaustive eight binary axes,256 candidates and exact elimination/sole survivor.; Original source registration, full census, controls and closure.; Exact source specification and registered sealed prediction.; Complete original empirical isolation/custody/source extraction and comparison fields/hashes."
     },
     {
       "branch": "chemistry",
@@ -193643,13 +193670,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T02:17:20.602220+00:00",
+  "updated_at": "2026-11-11T02:28:45.447861+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2427,
-    "fully_reconstructed_claims": 354,
-    "axiom_free_exported_results": 19538,
-    "axiom_free_audited_definitions_and_theorems": 43849
+    "pending": 2424,
+    "fully_reconstructed_claims": 357,
+    "axiom_free_exported_results": 19657,
+    "axiom_free_audited_definitions_and_theorems": 44202
   }
 }

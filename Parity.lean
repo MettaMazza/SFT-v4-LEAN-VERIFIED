@@ -1162,3 +1162,12 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.TraceabilityGrammar.candidates do
     IO.println ("TraceabilityGrammar\t" ++ SFT.Chemistry.TraceabilityGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.TraceabilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.TraceabilityGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.TraceabilityGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.ElementGrammar.candidates do
+    IO.println ("ElementGrammar\t" ++ SFT.Chemistry.ElementGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.ElementGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.ElementGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.ElementGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.AtomicNumberGrammar.candidates do
+    IO.println ("AtomicNumberGrammar\t" ++ SFT.Chemistry.AtomicNumberGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AtomicNumberGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AtomicNumberGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AtomicNumberGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.IsotopeGrammar.candidates do
+    IO.println ("IsotopeGrammar\t" ++ SFT.Chemistry.IsotopeGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.IsotopeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.IsotopeGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.IsotopeGrammar.decisionReason c)

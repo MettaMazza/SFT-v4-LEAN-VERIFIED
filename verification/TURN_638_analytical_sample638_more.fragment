@@ -1,0 +1,28 @@
+
+def base (sample source : HeldLabel) (family : sample.family="analytical-sample")
+ (analyte other : Component) (analyteRole : isAnalyte analyte=true)
+ (matrixRole : isMatrix other=true) (sampling : SFT.Host.Canonical.Value) : Portion :=
+ ⟨sample,family,source,[analyte,other],⟨analyte,.head _,analyteRole⟩,sampling⟩
+
+theorem basePartition (sample source : HeldLabel) (family : sample.family="analytical-sample")
+ (analyte other : Component) (analyteRole : isAnalyte analyte=true)
+ (matrixRole : isMatrix other=true) (sampling : SFT.Host.Canonical.Value) :
+ analyte∈analytes (base sample source family analyte other analyteRole matrixRole sampling).rows ∧
+ other∈matrix (base sample source family analyte other analyteRole matrixRole sampling).rows :=
+ ⟨(analyteExactly _ _).mpr ⟨.head _,analyteRole⟩,
+  (matrixExactly _ _).mpr ⟨.tail _ (.head _),matrixRole⟩⟩
+
+theorem partitionHasNoInventedRows (rows : List Component) (row : Component)
+ (held : row∈analytes rows ∨ row∈matrix rows) : row∈rows := by
+ cases held with
+ | inl analyte => exact ((analyteExactly _ _).mp analyte).1
+ | inr other => exact ((matrixExactly _ _).mp other).1
+
+theorem appendSourceMap (portion : Portion) (row : Component) :
+ sourceMap (append portion row)=sourceMap portion++[(row.identity,row.sourceOrigin)] :=
+ SFT.Mathematics.ExactTraceArithmetic.mapAppend (fun r : Component => (r.identity,r.sourceOrigin)) portion.rows [row]
+
+theorem appendResponseMap (portion : Portion) (row : Component) :
+ responseMap (append portion row)=responseMap portion++[(row.identity,row.responses)] :=
+ SFT.Mathematics.ExactTraceArithmetic.mapAppend (fun r : Component => (r.identity,r.responses)) portion.rows [row]
+

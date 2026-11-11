@@ -4271,3 +4271,13 @@ import SFT.Chemistry.PolymerDistributionEvidence
 import SFT.Chemistry.PolymerDistributionExperiment
 
 import SFT.Chemistry.PolymerDistributionValidation
+
+import SFT.Chemistry.Biomolecular
+
+import SFT.Chemistry.BiomolecularGrammar
+
+import SFT.Chemistry.BiomolecularEvidence
+
+import SFT.Chemistry.BiomolecularExperiment
+
+import SFT.Chemistry.BiomolecularValidation

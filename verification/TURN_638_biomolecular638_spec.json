@@ -1,0 +1,216 @@
+{
+  "claim_id": "SFT-CHEM-BIOMOLECULAR-BOUNDARY-001",
+  "title": "Chemistry-to-biology molecular handoff boundary",
+  "statement": "The chemistry-to-biology boundary passes only a complete source-bound molecular identity, structure and chemical state; biological function is a separately retained downstream relation and cannot select the chemical law.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-LOGIC-PROOF-001",
+    "SFT-INFO-SYMBOL-DISTINCTION-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001",
+    "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001",
+    "SFT-PHYS-QUANTUM-EXCLUSION-001",
+    "SFT-PHYS-MATTER-CONSERVED-LABELS-001",
+    "SFT-PHYS-THERMO-EQUILIBRIUM-001",
+    "SFT-CHEM-ELEM-ION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-IONIC-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-INTERMOLECULAR-001",
+    "SFT-CHEM-AB-ACID-BASE-001",
+    "SFT-CHEM-AB-PROTON-TRANSFER-001",
+    "SFT-CHEM-AB-LEWIS-001",
+    "SFT-CHEM-AB-AMPHOTERIC-001",
+    "SFT-CHEM-AB-BUFFER-001",
+    "SFT-CHEM-ELECTRONEGATIVITY-001",
+    "SFT-CHEM-BOND-POLARITY-001",
+    "SFT-CHEM-REDOX-OXIDATION-STATE-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTROCHEM-CELL-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-KIN-ACTIVATION-001",
+    "SFT-CHEM-KIN-RATE-001",
+    "SFT-CHEM-EQ-CHEMICAL-001",
+    "SFT-CHEM-THERMO-REACTION-001",
+    "SFT-CHEM-THERMO-DIRECTION-001",
+    "SFT-CHEM-PHASE-CHEMICAL-001",
+    "SFT-CHEM-MOL-GEOMETRY-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-NET-REACTION-001",
+    "SFT-CHEM-POLYMER-CHAIN-001",
+    "SFT-CHEM-ORGANIC-REACTION-FAMILY-001"
+  ],
+  "generation_rule": "Generate the literal product of the eight registered binary coordinates; decide every form by complete carrier preservation, exact equivalence enumeration, minimality and absence of an extra rule.",
+  "grammar_boundary": "Every finite chemical molecular carrier used by a downstream biological process, with complete composition, structure, state, conditions and separately registered function relation.",
+  "dimensions": [
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "biological-function-without-molecule",
+          "admitted": false,
+          "reason": "Chemistry requires a molecular carrier."
+        },
+        {
+          "name": "chemical-molecular-identity-retained",
+          "admitted": true,
+          "reason": "Composition and structure remain complete."
+        }
+      ]
+    },
+    {
+      "key": "composition",
+      "choices": [
+        {
+          "name": "composition-erased-at-handoff",
+          "admitted": false,
+          "reason": "The object cannot be traced chemically."
+        },
+        {
+          "name": "composition-preserved",
+          "admitted": true,
+          "reason": "All elemental carriers remain held."
+        }
+      ]
+    },
+    {
+      "key": "structure",
+      "choices": [
+        {
+          "name": "structure-erased-at-handoff",
+          "admitted": false,
+          "reason": "Biological recognition loses its substrate."
+        },
+        {
+          "name": "molecular-structure-preserved",
+          "admitted": true,
+          "reason": "Bonding and orientation remain explicit."
+        }
+      ]
+    },
+    {
+      "key": "state",
+      "choices": [
+        {
+          "name": "timeless-molecule",
+          "admitted": false,
+          "reason": "Function acts on physical chemical states."
+        },
+        {
+          "name": "chemical-state-boundary-held",
+          "admitted": true,
+          "reason": "Phase, conformation and conditions are retained."
+        }
+      ]
+    },
+    {
+      "key": "function",
+      "choices": [
+        {
+          "name": "function-as-chemical-identity",
+          "admitted": false,
+          "reason": "Different functions need not change chemical identity."
+        },
+        {
+          "name": "biological-function-separately-held",
+          "admitted": true,
+          "reason": "Function is a downstream relational label."
+        }
+      ]
+    },
+    {
+      "key": "boundary",
+      "choices": [
+        {
+          "name": "biology-imported-into-chemistry",
+          "admitted": false,
+          "reason": "A downstream law cannot select chemistry."
+        },
+        {
+          "name": "chemistry-to-biology-handoff",
+          "admitted": true,
+          "reason": "Only the complete carrier crosses branches."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "biomolecule-name-only",
+          "admitted": false,
+          "reason": "The handoff cannot be audited."
+        },
+        {
+          "name": "composition-structure-state-function-trace",
+          "admitted": true,
+          "reason": "Chemical and biological records remain distinct."
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "choices": [
+        {
+          "name": "free-life-criterion",
+          "admitted": false,
+          "reason": "A life label can select any molecule."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "Complete molecular identity plus downstream function supplies the boundary."
+        }
+      ]
+    }
+  ],
+  "exact_result": "chemical-molecular-identity-retained__composition-preserved__molecular-structure-preserved__chemical-state-boundary-held__biological-function-separately-held",
+  "induction_base": "One complete molecule plus one separately held biological relation supplies the first handoff.",
+  "induction_step": "Appending a chemical distinction extends the molecular record; appending a biological relation leaves chemical identity unchanged unless its structure changes.",
+  "exclusions": [
+    "no stereochemical dictionary, organic reaction taxonomy, polymer table, biomolecular database, measured target or V2 answer may select a candidate",
+    "no numerical zero, negative, irrational, imaginary or floating proof quantity",
+    "no free, fitted, learned or target-derived parameter",
+    "no atom, bond, orientation, repeat unit, chain or observation distinction may be created, copied or silently erased",
+    "absence is an Empty structural form rather than numerical zero",
+    "external target content remains inaccessible until the prediction is sealed",
+    "Every finite chemical molecular carrier used by a downstream biological process, with complete composition, structure, state, conditions and separately registered function relation."
+  ],
+  "operational_witnesses": [
+    [
+      "chemistry",
+      "composition and structure exist",
+      true
+    ],
+    [
+      "state",
+      "orientation remains held",
+      true
+    ],
+    [
+      "boundary",
+      "function cannot select molecular identity",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-BIOMOLECULAR-BOUNDARY-001",
+  "expected_observation_label": "chemical-molecular-identity-retained__biological-function-not-chemical-identity__structure-composition-handoff__biology-boundary-explicit",
+  "target_rows": [
+    {
+      "target_id": "biomolecular-boundary-authority-composite",
+      "source_id": "EMBL-EBI-CHEBI-BIOMOLECULAR-BOUNDARY-2026",
+      "source_locator": "authority source set anchored at EBI-CHEBI-STRUCTURE-ROLE",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/ebi-chebi-structure-role-extract.html",
+      "snapshot_hash": "sha256:d862deab28de555e80751d9fce3fecf4ac4de970d17d9a4c1481dc6976731f24"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/observations_stereochemistry_organic_polymer_batch_1.json",
+  "falsification_condition": "The claim fails if authority evidence cannot separate chemical molecular identity from biological function at an explicit handoff boundary, or if a tampered row is accepted."
+}

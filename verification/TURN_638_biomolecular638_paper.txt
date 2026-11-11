@@ -1,0 +1,19 @@
+Chemistry-to-biology handoff
+
+A chemical record C retains an admitted oriented molecule M, its phase, conformation and complete condition trace, and its source record. The molecular composition is computed from the retained elemental occurrences. A biological relation R separately retains process, role, context and provenance. The handoff is the pair
+\[H=(C,[R_0,R_1,\ldots,R_k]).\]
+The base is one complete molecular record and one separately held relation. No biological role is an input to molecular admission. handoffConnected and handoffCompleteEndpoints reuse the molecular derivation to establish one connected carrier with every bond endpoint present.
+
+Appending a biological relation is
+\[\operatorname{addRelation}(H,R)=(C,[R_0,\ldots,R_k,R]).\]
+relationDoesNotChangeChemistry proves equality of the entire chemical record before and after this update. Its composition, oriented structure, phase, conformation, conditions and provenance are therefore preserved. For any chemical readout f,
+\[f(\pi_C(\operatorname{addRelation}(H,R)))=f(\pi_C(H)).\]
+finiteRelationsPreserveChemistry proves the same statement for every finite sequence of relation additions by induction; finiteRelationsRetainPrior preserves each earlier relation. Different chemical records remain different when biological relations are appended. Thus the downstream relation cannot collapse or select the upstream chemical identity through the handoff.
+
+Appending a chemical condition q instead extends the retained condition trace Q to Q++[q]. conditionRetained proves that every prior coordinate persists. This operation preserves the molecular structure and relation ledger. It commutes with adding a biological relation because the two updates modify separate retained records.
+
+For a structure-changing chemical extension, appendChemicalBranch uses the existing oriented molecular branch construction and retains the source admission of the resulting molecule. Its atom, element and bond records satisfy
+\[V'=V\mathbin{+\!+}[v],\qquad A'=A\mathbin{+\!+}[a],\qquad E'=E\mathbin{+\!+}\{(u,v):u\in L\}.\]
+chemicalBranchRetainsAtom, chemicalBranchRetainsBond and chemicalBranchRetainsOrientation reuse the established branch proofs. The structural change is explicit chemical data, not an inferred consequence of a biological label.
+
+Source: pinned V3 sft/chemistry/stereochemistry_organic_polymer_derivation.py, blueprint[7], BIOMOLECULAR coordinates and base/successor; stereochemistry_organic_polymer_batch_1.py and claims/SFT-CHEM-BIOMOLECULAR-BOUNDARY-001/execution.py. Lean: SFT/Chemistry/Biomolecular.lean, declarations above; BiomolecularGrammar/Evidence/Experiment/Validation. Timeline: Turn638. Completion and verification evidence: TURN_638_BIOMOLECULAR_COMPLETION.json.

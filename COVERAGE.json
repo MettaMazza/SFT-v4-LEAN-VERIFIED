@@ -27103,9 +27103,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-BIOMOLECULAR-BOUNDARY-001-dfed7cd5d124ff39.json",
       "statement": "The chemistry-to-biology boundary passes only a complete source-bound molecular identity, structure and chemical state; biological function is a separately retained downstream relation and cannot select the chemical law.",
       "title": "Chemistry-to-biology molecular handoff boundary",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/Biomolecular.lean",
+        "SFT/Chemistry/BiomolecularGrammar.lean",
+        "SFT/Chemistry/BiomolecularEvidence.lean",
+        "SFT/Chemistry/BiomolecularExperiment.lean",
+        "SFT/Chemistry/BiomolecularValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh638 native256/full program and empirical output; original independent adverse controls.",
       "registration_sha256": "d1424464458e4e0691adb42b6e5109731dcd9858f6188f112680c6759508f4bb",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -27187,7 +27193,10 @@
         "statement": "The chemistry-to-biology boundary passes only a complete source-bound molecular identity, structure and chemical state; biological function is a separately retained downstream relation and cannot select the chemical law.",
         "status": "empirically_tested",
         "title": "Chemistry-to-biology molecular handoff boundary"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_638_BIOMOLECULAR_COMPLETION.json",
+      "verified_scope": "Complete admitted oriented molecule, computed composition, phase/conformation/conditions and source record; separately typed biological process/role/context/source relations; one-molecule one-relation base; relation append and finite induction preserve complete chemical record and every prior relation; source molecular connectivity and endpoint coverage reused; chemical condition extension preserves prior coordinates and commutes with biological append; actual structural branch construction reuses source molecular admission and atom/bond/orientation preservation.; All eight original binary axes, all256 candidates, exact decisions, complete enumeration and unique survivor; internal Lean molecularStructure field preserves original structure source key.; Original registration, complete census, operational witnesses, controls and closure.; Original sealed prediction, source custody and empirical boundary; unchanged StereoSeal.; Complete original multi-source empirical result and all hashes, including source HTML extraction."
     },
     {
       "branch": "chemistry",
@@ -194259,13 +194268,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T17:17:00.187520+00:00",
+  "updated_at": "2026-11-11T17:26:01.593387+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2361,
-    "fully_reconstructed_claims": 420,
-    "axiom_free_exported_results": 22294,
-    "axiom_free_audited_definitions_and_theorems": 52065
+    "pending": 2360,
+    "fully_reconstructed_claims": 421,
+    "axiom_free_exported_results": 22338,
+    "axiom_free_audited_definitions_and_theorems": 52189
   }
 }

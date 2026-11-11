@@ -1,0 +1,114 @@
+-- The explicit orientation reflection is also used by pinned
+-- coordination_isomerism_law_v1._mirror: EmptyOne is retained and the
+-- two held Fold fibre labels are exchanged. Other labels are retained.
+inductive OrientationCell where
+ | emptyOne
+ | held (label : HeldLabel)
+ deriving DecidableEq
+
+def reflectLabel (x : HeldLabel) : HeldLabel :=
+ if x.label="fibre-one" then ⟨x.family,"fibre-two",x.familyHeld,rfl⟩
+ else if x.label="fibre-two" then ⟨x.family,"fibre-one",x.familyHeld,rfl⟩
+ else x
+
+def reflectCell : OrientationCell → OrientationCell
+ | .emptyOne => .emptyOne
+ | .held x => .held (reflectLabel x)
+
+theorem reflectLabelFamily (x : HeldLabel) : (reflectLabel x).family=x.family := by
+ unfold reflectLabel
+ split <;> first | rfl | (split <;> rfl)
+
+theorem reflectLabelTwice (x : HeldLabel) : reflectLabel (reflectLabel x)=x := by
+ cases x with
+ | mk family label hf hl =>
+   by_cases first : label="fibre-one"
+   · cases first; rfl
+   · by_cases second : label="fibre-two"
+     · cases second; rfl
+     · unfold reflectLabel
+       rw [if_neg first,if_neg second,if_neg first,if_neg second]
+
+theorem reflectCellTwice (x : OrientationCell) : reflectCell (reflectCell x)=x := by
+ cases x with
+ | emptyOne => rfl
+ | held x => exact congrArg OrientationCell.held (reflectLabelTwice x)
+
+abbrev OrientationWord := OrientationCell × OrientationCell × OrientationCell
+
+def reflectWord (w : OrientationWord) : OrientationWord :=
+ (reflectCell w.1,reflectCell w.2.1,reflectCell w.2.2)
+
+theorem reflectWordTwice (w : OrientationWord) : reflectWord (reflectWord w)=w := by
+ cases w with
+ | mk a rest =>
+   cases rest with
+   | mk b c =>
+     change (reflectCell (reflectCell a),reflectCell (reflectCell b),reflectCell (reflectCell c))=(a,b,c)
+     rw [reflectCellTwice,reflectCellTwice,reflectCellTwice]
+
+-- Full constituent fields of the source reflection; admission of a molecular
+-- object is separate from this operation and is not replaced by a new guard.
+structure OrientedForm where
+ composition : List HeldLabel
+ attachments : List HeldLabel
+ orientations : List OrientationWord
+ adjacency : List (PositiveCount × PositiveCount)
+ deriving DecidableEq
+
+def reflectForm (f : OrientedForm) : OrientedForm :=
+ {f with orientations := f.orientations.map reflectWord}
+
+theorem reflectionRetainsComposition (f : OrientedForm) :
+ (reflectForm f).composition=f.composition := rfl
+
+theorem reflectionRetainsAttachments (f : OrientedForm) :
+ (reflectForm f).attachments=f.attachments := rfl
+
+theorem reflectionRetainsAdjacency (f : OrientedForm) :
+ (reflectForm f).adjacency=f.adjacency := rfl
+
+theorem reflectionRetainsSupport (f : OrientedForm) :
+ (reflectForm f).orientations.length=f.orientations.length :=
+ SFT.Foundation.CommonRefinement.mapLength reflectWord _
+
+theorem reflectedWordsTwice (ws : List OrientationWord) :
+ (ws.map reflectWord).map reflectWord=ws := by
+ induction ws with
+ | nil => rfl
+ | cons w ws ih =>
+   change reflectWord (reflectWord w)::((ws.map reflectWord).map reflectWord)=w::ws
+   rw [reflectWordTwice,ih]
+
+theorem reflectionTwice (f : OrientedForm) : reflectForm (reflectForm f)=f := by
+ cases f with
+ | mk c a o e =>
+   change OrientedForm.mk c a ((o.map reflectWord).map reflectWord) e=OrientedForm.mk c a o e
+   rw [reflectedWordsTwice]
+
+def appendBranch (f : OrientedForm) (c a : HeldLabel) (o : OrientationWord)
+ (newEdges : List (PositiveCount × PositiveCount)) : OrientedForm :=
+ ⟨f.composition++[c],f.attachments++[a],f.orientations++[o],f.adjacency++newEdges⟩
+
+theorem reflectionCommutesWithBranch (f : OrientedForm) (c a : HeldLabel)
+ (o : OrientationWord) (newEdges : List (PositiveCount × PositiveCount)) :
+ reflectForm (appendBranch f c a o newEdges)=
+ appendBranch (reflectForm f) c a (reflectWord o) newEdges := by
+ unfold reflectForm appendBranch
+ rw [SFT.Mathematics.ExactTraceArithmetic.mapAppend]
+ rfl
+
+-- An exact, nonempty reflected base orientation is built from the source fibres.
+def firstFibre : HeldLabel := ⟨"fold-orientation-fibre","fibre-one",rfl,rfl⟩
+def secondFibre : HeldLabel := ⟨"fold-orientation-fibre","fibre-two",rfl,rfl⟩
+def baseOrientation : OrientationWord := (.held firstFibre,.emptyOne,.emptyOne)
+
+theorem baseReflection : reflectWord baseOrientation=
+ (.held secondFibre,.emptyOne,.emptyOne) := rfl
+
+theorem baseOrientationDistinguished : baseOrientation≠reflectWord baseOrientation := by
+ intro h
+ have cell := congrArg (fun w : OrientationWord => w.1) h
+ have label := OrientationCell.held.inj cell
+ have impossible := congrArg HeldLabel.label label
+ exact (by decide : "fibre-one"≠"fibre-two") impossible

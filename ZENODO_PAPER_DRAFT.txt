@@ -17998,9 +17998,59 @@ Chirality.exhaustiveSuperposition therefore establishes
 \operatorname{any}_{p\in P(N)} b(p)=\mathrm{true}
 \ \Longleftrightarrow\ \exists p\text{ permuting }N,\ b(p)=\mathrm{true}.
 \]
-Its noSuperpositionExactly theorem establishes the complementary statement for every such order, retaining failed comparisons in the trace. These statements quantify over the supplied comparison b; the reflection-specific comparison and the uniquely labelled branch extension are separate source obligations and are not asserted by this enumeration theorem.
+Its noSuperpositionExactly theorem establishes the complementary statement for every such order, retaining failed comparisons in the trace. These statements quantify over the supplied comparison b; the concrete reflection comparison and branch census are developed in the following subsection; they are not asserted by this abstract enumeration theorem.
 
 The source's eight binary grammar coordinates generate all 256 alternatives. ChiralityGrammar, ChiralityEvidence, ChiralityExperiment and ChiralityValidation preserve the source decisions, witnesses, controls and empirical binding. StereoSeal and StereoSealInputs retain the original eight-prediction stereochemistry/organic/polymer seal. Fresh native outputs match all 256 V3 decisions, closure, controls, registration and empirical output fields. All 130 declarations audited in this construction have empty Lean axiom dependencies.
 
 Pinned V3: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1; sft/chemistry/stereochemistry_organic_polymer_derivation.py, OrientedStructure, CHIRAL and STEREOCHEMISTRY_ORGANIC_POLYMER_BLUEPRINTS[0]; stereochemistry_organic_polymer_batch_1.py; claims/SFT-CHEM-STEREO-CHIRALITY-001/execution.py. Lean: SFT/Chemistry/Chirality.lean, MolecularIsomer.completeRelabellingSearch, MolecularIsomer.retainedOrientationExcludesEveryRelabelling, ArrangementCompleteness, and ChiralityGrammar/Evidence/Experiment/Validation. Timeline: Turn623. This section records the displayed constructor and enumeration results; entry completion is not claimed here.
+
+
+
+Chirality: constructive reflection and the complete proper-map comparison
+
+The held orientation operation is explicit in V3's coordination-isomer source. Empty cells remain empty; the two Fold fibre labels exchange, and their family remains unchanged:
+\[
+R(\varnothing)=\varnothing,\qquad R(f_1)=f_2,\qquad R(f_2)=f_1.
+\]
+For a three-axis word w=(w_1,w_2,w_3), reflection acts componentwise. reflectLabelTwice, reflectCellTwice and reflectWordTwice establish R(R(w))=w. The direct helper also retains any other held label, exactly as V3's fallback branch does; its source coordination constructor separately admits only the two fibre labels or EmptyOne. That constructor is not substituted for OrientedStructure's original domain.
+
+Write a complete reflection form as F=(C,A,O,E), with composition C, attachment labels A, ordered orientation words O and adjacency E. Then
+\[
+R(F)=(C,A,[R(w):w\in O],E),\qquad R(R(F))=F.
+\]
+reflectionRetainsComposition, reflectionRetainsAttachments, reflectionRetainsAdjacency and reflectionRetainsSupport establish preservation of all unreflected fields and orientation support. reflectionTwice proves involution of the entire form.
+
+For molecular occurrence names N, each candidate order p determines the existing identity-preserving mapping zip(N,p). properMatches compares both the complete element-and-bond signature from MolecularIsomer and every retained orientation word at its mapped occurrence. Missing orientation records reject the comparison; equality compares the retained family and label of every cell. cellEqualMeaning and wordEqualMeaning prove that these executable comparisons coincide with exact equality. Thus
+\[
+P(M,M',p)=I(M,M',p)\land O(M,M',p),
+\]
+where I retains all elemental identities and both directions of edge-set equality, and O retains every mapped orientation. properMatchRetainsConstitution and properMatchRetainsOrientation derive these properties from an accepted comparison.
+
+mirrorMolecule retains the whole molecular carrier and reflects each named orientation record. mirroredLookup connects the transformed table to pointwise reflection, and mirrorMoleculeTwice proves exact recovery of the original record. The executable chirality decision is
+\[
+\chi(M)=\neg\operatorname{any}_{p\in\operatorname{Perm}(N)}P(M,R(M),p).
+\]
+For every nonempty distinct occurrence-name word N, chiralityExactlyAllProperMapsFail proves
+\[
+\chi(M)=\mathrm{true}\quad\Longleftrightarrow\quad
+\forall p\in\operatorname{Perm}(N),\ P(M,R(M),p)=\mathrm{false}.
+\]
+The comparison is the explicit atom, bond and orientation operation above, replacing the supplied comparison symbol used in the enumeration statement. The generated two-occurrence base retains one bond, distinct elemental labels and complete held orientation words (f_1,EmptyOne,EmptyOne). baseOrders enumerates both possible relabellings. baseChiral and baseEveryProperMapFails verify their rejection against the reflected words (f_2,EmptyOne,EmptyOne).
+
+Reflection also commutes with retained branch attachment. For a new composition label c, attachment label a, orientation word w and new edges B,
+\[
+R(F\oplus(c,a,w,B))=R(F)\oplus(c,a,R(w),B).
+\]
+reflectionCommutesWithBranch proves this equation by the complete orientation-word append operation; all old composition, attachments and edges are retained.
+
+For a fresh named occurrence x not in N, restriction removes x from an extended permutation. everyExtendedMapRestricts and everyGeneratedExtensionRestrictsToOldCensus prove
+\[
+p\in\operatorname{Perm}(N\mathbin{+\!+}[x])
+\Longrightarrow p\setminus x\in\operatorname{Perm}(N).
+\]
+everyOldMapHasGeneratedExtension proves the converse coverage direction: for every old order q, the order x::q is present in the generated extended census. The retained map census therefore contains an extension of every old map and no restriction outside the old census. These results establish census coverage; preservation of a failed complete molecular comparison requires its corresponding restriction argument.
+
+Source comparison executed V3's actual _canonical and _mirror operations for every pair of nonempty three-axis Fold words at two occurrences, with equal and unequal elemental labels, identical held attachment labels and the retained bond: 1,352 comparisons agreed, comprising 1,326 chiral and 26 achiral cases. This executable comparison accompanies the general reflection and enumeration proofs; it is not substituted for the arbitrary-branch comparison argument. All 183 declarations in the current Chirality audit have empty Lean axiom dependencies.
+
+Pinned V3: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1; stereochemistry_organic_polymer_derivation.py CHIRAL and blueprint[0]; molecular_structure_derivation.py geometry/isomer constructions; coordination_isomerism_law_v1.py _cell, _mirror and _canonical. Lean: SFT/Chemistry/Chirality.lean, declarations named above; MolecularIsomer.candidateMeaning and ArrangementCompleteness enumeration/restriction proofs. Evidence: verification/TURN_624_chirality_reflection624_report.json and TURN_624_chirality624_audit_config.json. Timeline: Turn624.
 

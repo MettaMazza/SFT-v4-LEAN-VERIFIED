@@ -1,0 +1,49 @@
+-- The unique new occurrence extends the complete map census. Restriction is
+-- deletion of that occurrence, not selection of a favored old mapping.
+theorem appendFreshPermutation (nodes : List String) (fresh : String) :
+ List.Perm (nodes++[fresh]) (fresh::nodes) := by
+ induction nodes with
+ | nil => exact List.Perm.refl _
+ | cons n ns ih => exact (List.Perm.cons n ih).trans (List.Perm.swap fresh n ns)
+
+theorem appendFreshDistinct (nodes : List String) (fresh : String)
+ (unique : distinct nodes=true) (absent : ¬fresh∈nodes) : distinct (nodes++[fresh])=true :=
+ permutationDistinct (appendFreshPermutation nodes fresh).symm
+  ((distinctCons fresh nodes).mpr ⟨(absentIff nodes fresh).mpr absent,unique⟩)
+
+theorem appendFreshRemoved (nodes : List String) (fresh : String)
+ (absent : ¬fresh∈nodes) : remainder (nodes++[fresh]) fresh=nodes := by
+ induction nodes with
+ | nil => change (if fresh=fresh then [] else [fresh])=[]; rw [ite_eq_left rfl]
+ | cons n ns ih =>
+   have unequal : n≠fresh := by intro same; cases same; exact absent (.head _)
+   have tailAbsent : ¬fresh∈ns := fun h => absent (.tail _ h)
+   change (if n=fresh then remainder (ns++[fresh]) fresh else n::remainder (ns++[fresh]) fresh)=n::ns
+   rw [ite_eq_right unequal,ih tailAbsent]
+
+theorem everyExtendedMapRestricts (nodes : List String) (fresh : String)
+ (absent : ¬fresh∈nodes) (order : List String)
+ (perm : List.Perm order (nodes++[fresh])) : List.Perm (remainder order fresh) nodes := by
+ have reduced := remainderPermutationPreserved perm fresh
+ rw [appendFreshRemoved nodes fresh absent] at reduced
+ exact reduced
+
+theorem everyOldMapHasGeneratedExtension (nodes : List String) (fresh : String)
+ (unique : distinct nodes=true) (absent : ¬fresh∈nodes)
+ (order : List String) (perm : List.Perm order nodes) :
+ fresh::order ∈ arrangementsCore (nodes++[fresh]) := by
+ apply everyPermutationGenerated (nodes++[fresh])
+ · intro empty
+   have held : fresh∈nodes++[fresh] := SFT.Foundation.Count.TraceDerivation.memAppendRight _ _ _ (.head [])
+   rw [empty] at held
+   cases held
+ · exact appendFreshDistinct nodes fresh unique absent
+ · exact (List.Perm.cons fresh perm).trans (appendFreshPermutation nodes fresh).symm
+
+theorem everyGeneratedExtensionRestrictsToOldCensus (nodes : List String) (fresh : String)
+ (nonempty : nodes≠[]) (unique : distinct nodes=true) (absent : ¬fresh∈nodes)
+ (order : List String) (held : order∈arrangementsCore (nodes++[fresh])) :
+ remainder order fresh∈arrangementsCore nodes :=
+ everyPermutationGenerated nodes nonempty unique _
+  (everyExtendedMapRestricts nodes fresh absent order
+   (everyArrangementPermutesCarrier _ (appendFreshDistinct nodes fresh unique absent) _ held))

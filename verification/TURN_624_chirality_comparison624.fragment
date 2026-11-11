@@ -1,0 +1,100 @@
+-- Molecular geometry supplies occurrence names, identity-preserving atom/bond
+-- maps and held relative orientation. No visual/coordinate tolerance is used.
+structure OrientedMolecule where
+ carrier : MolecularCarrier.Raw
+ orientations : List (String × OrientationWord)
+
+def wordAt (name : String) : List (String × OrientationWord) → Option OrientationWord
+ | [] => none
+ | row::rest => if name=row.1 then some row.2 else wordAt name rest
+
+def mirrorMolecule (m : OrientedMolecule) : OrientedMolecule :=
+ ⟨m.carrier,m.orientations.map (fun row => (row.1,reflectWord row.2))⟩
+
+def orientationMatches (left right : OrientedMolecule) (order : List String) : Bool :=
+ left.carrier.occurrences.all (fun name =>
+  match wordAt name left.orientations,
+    wordAt (MolecularIsomer.lookup name (MolecularIsomer.mapping left.carrier order)) right.orientations with
+  | some a,some b => decide (a=b)
+  | _,_ => false)
+
+def properMatches (left right : OrientedMolecule) (order : List String) : Bool :=
+ MolecularIsomer.candidateMatches left.carrier right.carrier order && orientationMatches left right order
+
+def hasProperSuperposition (left right : OrientedMolecule) : Bool :=
+ decide (MolecularCarrier.compositionSignature left.carrier=MolecularCarrier.compositionSignature right.carrier) &&
+ superposable right.carrier.occurrences (properMatches left right)
+
+def chiral (m : OrientedMolecule) : Bool := !hasProperSuperposition m (mirrorMolecule m)
+
+theorem properMatchRetainsConstitution (left right : OrientedMolecule) (order : List String)
+ (h : properMatches left right order=true) :
+ MolecularIsomer.respectsElements left.carrier right.carrier order=true ∧
+ (∀ edge ∈ MolecularIsomer.mappedEdges left.carrier order, edge ∈ MolecularIsomer.edgeSet right.carrier) ∧
+ (∀ edge ∈ MolecularIsomer.edgeSet right.carrier, edge ∈ MolecularIsomer.mappedEdges left.carrier order) :=
+ (MolecularIsomer.candidateMeaning _ _ _).mp
+  ((SFT.Mathematics.GeometryTopology.andTrue _ _).mp h).1
+
+theorem properMatchRetainsOrientation (left right : OrientedMolecule) (order : List String)
+ (h : properMatches left right order=true) : orientationMatches left right order=true :=
+ ((SFT.Mathematics.GeometryTopology.andTrue _ _).mp h).2
+
+theorem mirrorRetainsMolecularCarrier (m : OrientedMolecule) :
+ (mirrorMolecule m).carrier=m.carrier := rfl
+
+theorem mirroredLookup (name : String) (rows : List (String × OrientationWord)) :
+ wordAt name (rows.map (fun row => (row.1,reflectWord row.2)))=
+ (wordAt name rows).map reflectWord := by
+ induction rows with
+ | nil => rfl
+ | cons row rows ih =>
+   unfold wordAt
+   split
+   · rfl
+   · exact ih
+
+theorem mirroredRowsTwice (rows : List (String × OrientationWord)) :
+ (rows.map (fun row => (row.1,reflectWord row.2))).map (fun row => (row.1,reflectWord row.2))=rows := by
+ induction rows with
+ | nil => rfl
+ | cons row rows ih =>
+   change (row.1,reflectWord (reflectWord row.2))::
+    ((rows.map (fun row => (row.1,reflectWord row.2))).map (fun row => (row.1,reflectWord row.2)))=row::rows
+   rw [reflectWordTwice,ih]
+
+theorem mirrorMoleculeTwice (m : OrientedMolecule) : mirrorMolecule (mirrorMolecule m)=m := by
+ cases m with
+ | mk carrier rows =>
+   change OrientedMolecule.mk carrier
+    ((rows.map (fun row => (row.1,reflectWord row.2))).map (fun row => (row.1,reflectWord row.2)))=
+    OrientedMolecule.mk carrier rows
+   rw [mirroredRowsTwice]
+
+theorem chiralityExactlyAllProperMapsFail (m : OrientedMolecule)
+ (nonempty : m.carrier.occurrences≠[]) (unique : distinct m.carrier.occurrences=true) :
+ chiral m=true ↔ ∀ order, List.Perm order m.carrier.occurrences →
+ properMatches m (mirrorMolecule m) order=false := by
+ have same : decide (MolecularCarrier.compositionSignature m.carrier=
+  MolecularCarrier.compositionSignature (mirrorMolecule m).carrier)=true := decide_eq_true rfl
+ unfold chiral hasProperSuperposition
+ rw [same]
+ change (!superposable m.carrier.occurrences (properMatches m (mirrorMolecule m)))=true ↔ _
+ constructor
+ · intro h
+   apply (noSuperpositionExactly _ nonempty unique _).mp
+   cases v : superposable m.carrier.occurrences (properMatches m (mirrorMolecule m))
+   · rfl
+   · rw [v] at h; cases h
+ · intro h
+   rw [(noSuperpositionExactly _ nonempty unique _).mpr h]
+   rfl
+
+def baseMolecule : OrientedMolecule :=
+ ⟨⟨["a","b"],["first","second"],[("a","b")],[]⟩,
+ [("a",baseOrientation),("b",baseOrientation)]⟩
+
+theorem baseChiral : chiral baseMolecule=true := by decide
+
+theorem baseEveryProperMapFails : ∀ order, List.Perm order baseMolecule.carrier.occurrences →
+ properMatches baseMolecule (mirrorMolecule baseMolecule) order=false :=
+ (chiralityExactlyAllProperMapsFail baseMolecule (by intro h; cases h) (by decide)).mp baseChiral

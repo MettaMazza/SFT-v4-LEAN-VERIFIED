@@ -133,7 +133,13 @@
     "No step completion without exact source-operation mapping and source-bound applicable check receipts.",
     "Do not infer incompleteness from a missing identifier, filename, prose summary or registration label."
   ],
-  "live_jobs": [],
+  "live_jobs": [
+    {
+      "session_id": 2372,
+      "kind": "read-only current_step recovery scan",
+      "status": "live at last poll"
+    }
+  ],
   "snapshot": [
     {
       "root": "canonical",
@@ -35393,7 +35399,7 @@
     {
       "root": "canonical",
       "path": "TIMELINE.txt",
-      "sha256": "fadd90f953bd9acaca2e2f596da00d54a3d321be7384cc1c46213e0df36a4138"
+      "sha256": "767d9022e688ecc9ce91737217c8c797b507bb1b9e53ddbcd37f57bba510f502"
     },
     {
       "root": "canonical",
@@ -52044,13 +52050,58 @@
       "root": "retained",
       "path": "SFT/Chemistry/AffinityDerivedClassOrder.lean",
       "sha256": "5297dc9155f148f48e3cca9cee51f38c89f53e772013882e26d5ff173c2a8bd2"
+    },
+    {
+      "root": "canonical",
+      "path": "verification/TURN_592_STAGED/AffinityPhysicalObservation.lean",
+      "sha256": "81400472fede6b385f27f4da405d2915594f01f47e909e06362872d01c7c4164"
+    },
+    {
+      "root": "canonical",
+      "path": "verification/TURN_592_build_affinity_physical592.py",
+      "sha256": "1554c7d7ffb3499b50a892d55f83eaf223f6a8a49c9eb5d06feac45a381d5072"
+    },
+    {
+      "root": "canonical",
+      "path": "verification/TURN_592_audit_affinity592.py",
+      "sha256": "5b1c6137e42ec5af2178b92ac962dede1c811e21b717a969ca6e2d0f0dae504d"
+    },
+    {
+      "root": "canonical",
+      "path": "verification/TURN_592_affinity592_physical_observation_build_report.json",
+      "sha256": "82071ffb8a6acd024e688c0e99d182b6d40013e39bd39d160146cae953e4c2ef"
+    },
+    {
+      "root": "canonical",
+      "path": "verification/TURN_592_affinity592_audit_config.json",
+      "sha256": "d2fce6cf6c5dc96dc56f76d51499c6bf3a159c6b71b335ce8c3a1a94d9a5d9bd"
+    },
+    {
+      "root": "canonical",
+      "path": "verification/TURN_592_affinity592_audit.log",
+      "sha256": "d3532b40ee1074317113a3966b4a11df0a33b1cc23ccfff2021af6ad8ffcf5a0"
+    },
+    {
+      "root": "canonical",
+      "path": "verification/TURN_592_build592_AffinityPhysicalObservation.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "canonical",
+      "path": "verification/TURN_592_PHYSICAL_OBSERVATION.json",
+      "sha256": "8af23fe36682e6345856b85c5b2dad28564d17517a696cd34310cd7c4421f4d1"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Chemistry/AffinityPhysicalObservation.lean",
+      "sha256": "81400472fede6b385f27f4da405d2915594f01f47e909e06362872d01c7c4164"
     }
   ],
   "roots": {
     "canonical": "directory containing this state file",
     "retained": "workspace/work/constants-recovery"
   },
-  "recorded_at": "2026-11-11T10:19:06.004204+00:00",
+  "recorded_at": "2026-11-11T10:48:44.865849+00:00",
   "audit": {
     "report": "ACCOUNTABILITY_AUDIT.txt",
     "source": "native Codex session/task/token/command/compaction records",
@@ -52222,7 +52273,19 @@
     "affinity591": {
       "receipt": "verification/TURN_591_DERIVED_CLASS_ORDER.json",
       "registered_complete": false,
-      "remaining": "Complete correspondence between the retained physical shared-support recurrence records and the registered observation classification used by the assembly. Do not require an additional prediction of the example endpoint name, which the source base supplies as its comparison record."
+      "remaining": "Complete correspondence between the retained physical shared-support recurrence records and the registered observation classification used by the assembly. Do not require an additional prediction of the example endpoint name, which the source base supplies as its comparison record.",
+      "github": {
+        "commit": "2b715a5dbc58cb8891c302f11001ef555d217599",
+        "tree": "78df64538cd259056ad5007fc904c09eca43a3b0",
+        "files_verified": 11,
+        "complete": 388
+      }
+    },
+    "affinity592": {
+      "receipt": "verification/TURN_592_PHYSICAL_OBSERVATION.json",
+      "registered_complete": false,
+      "declarations": 9,
+      "remaining": "Connect the complete registered endpoint recurrence observations to the affinity comparison/tie relation. The new measurement binding retains all physical branches but is not by itself this endpoint comparison."
     }
   },
   "publication_milestones": [
@@ -52240,7 +52303,7 @@
   ],
   "next_publication_milestone": 500,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "Continue exact physical shared-support recurrence-to-observation correspondence. Reuse TURN_591_DERIVED_CLASS_ORDER: class order now derived from retained comparisons and source observation ties, not independently supplied. Original record direction proved. Do not repeat constructor checks or require a separate predictor of the source example endpoint. Preserve all passing audits and parity. Next review500.",
+  "authorized_action": "Continue the original affinity endpoint recurrence/comparison binding. Reuse TURN_592_PHYSICAL_OBSERVATION for exact physical Word-key observation domain, complete branch records and same covalent prepared-state recurrence. Do not impose SymbolObservation nonempty-label guards on physical observations. Reuse TURN_591 class-order proofs. Do not repeat constructor checks or add an endpoint predictor. Preserve live recovery handle2372; next review500.",
   "scientific_cursor": {
     "completed": "SFT-CHEM-AB-BUFFER-001",
     "next": "SFT-CHEM-ELECTRONEGATIVITY-001",
@@ -52255,14 +52318,16 @@
     "log": "video/verification-film/lake-build-repaired.log",
     "scope": "User-requested video source check; no scientific cursor advancement",
     "repair": "Restored exact public staged verification/TURN_377_NATIVE_BATCH/SFT/Physics/HubbleComparison.lean to canonical import path; SHA256 827c59567319b52dbc4be40f3323649b30e58b9ebf4685f4adda34635afeca0a",
-    "status": "qwen3_media_complete_build_not_confirmed",
+    "status": "story_revision_rendering",
     "report": "video/verification-film/VERIFICATION_STATUS.json",
-    "next_action": "Qwen3 voice revision delivered. Retain the pinned385-entry film and current scientific cursor; no new publication or scientific restart is authorized by the voice revision.",
+    "next_action": "Finish local Qwen3 story-led film, verify media and package. Preserve the scientific cursor and publication state.",
     "model": "mlx-community/Qwen3-TTS-12Hz-0.6B-CustomVoice-8bit",
     "model_revision": "049ef77fe8816b536193c0c25f9a214d17921282",
     "voice": "Ryan",
     "inference": "local MLX on Apple M3 Ultra",
-    "video_directory": "video/verification-film/qwen3-2026",
-    "previous_build_observation": "Recorded PID32177 absent; session90714 unavailable; retained log ends at988/3973 without final outcome. No restart in this voice-only turn."
+    "video_directory": "video/verification-film/qwen3-assertive",
+    "previous_build_observation": "Recorded PID32177 absent; session90714 unavailable; retained log ends at988/3973 without final outcome. No restart in this voice-only turn.",
+    "media_session_id": 78974,
+    "media_log": "/tmp/sft-assertive-film/story-render.log"
   }
 }

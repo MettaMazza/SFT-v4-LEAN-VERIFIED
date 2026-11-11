@@ -16970,3 +16970,29 @@ The decision reads only the observed classes and their registered relation cells
 
 Pinned V3 dependencies (76f1b34e9e9682989adcbb088797b4ae4ce4fcf1): sft/information_science/symbols_distinguishability/law.py, validate_observation, observed_label, distinguishable, observation_classes and distinction_ledger; sft/mathematics/order_lattice/law.py, is_partial_order and comparable. These dependencies are explicitly registered by sft/chemistry/redox_derivation.py, REDOX_BLUEPRINTS[0]. Existing Lean proofs reused: SymbolObservation.validatedLookup, observedUnique and labelledDistinction; SymbolClasses.collectedFibre; SymbolLedger.validatedLedger and ledgerExhausts; OrderOperations.partialOrderMeaning and comparableIff. Conditional assembly proofs: AffinityObservationBinding.sourceClassExactly, exactFibre, sourceEquivalentTied, equivalentCannotBeStrict and sourcePairCensus; AffinityClassOrder.endpointsBelong, decisionSound, decisionUnique, decisionExactly, tiedExactlySourceClass and namesDoNotSelect. The displayed hypotheses specify the observation and class-relation inputs of these theorems. All 22 audited declarations have empty axiom dependencies. Chronological record: TIMELINE.txt, Turn590; source correspondence and retained assembly: verification/TURN_590_DEPENDENCY_BINDING.json and verification/TURN_590_STAGED/.
 
+
+Physical shared-support observation records
+
+For a prepared physical state S, let B be its ordered branch sequence, P its phase cycle, O its complete word-to-class observation and k its selected class. The source observation operation constructs
+\[
+R=[(w,p,O(w))\mid(w,p)\in B],\qquad B_k=[(w,p)\in B\mid O(w)=k].
+\]
+The original admission checks require O to classify the complete support exactly once and B_k to be nonempty. The class label remains a String in this operation; no extra nonempty-label test is imposed. For every retained endpoint branch b and label l,
+\[
+(b,l)\in R\iff b\in B\land O(b.word)=l.
+\]
+Every source branch therefore has a retained endpoint record. Functional lookup proves that two records of the same word have the same class label. For any two retained records a,b, their labels agree exactly when their original observation lookups agree. These statements follow from recordMembership and totalObservationRelation; they retain the original physical observation domain directly.
+
+Projecting the full record onto its branch coordinates reconstructs the ordered source sequence, including branches outside the selected class:
+\[
+\operatorname{map}(\operatorname{fst},R)=B,\qquad |R|=|B|,
+\qquad(\operatorname{map}(\operatorname{fst},R),P_{selected})=S.
+\]
+For a covalent record J, its existing interaction trace has the complete action t=concat(J.interactionTrace). The established recurrence gives phaseAction(S,t)=S. Taking the measurement on this same prepared state yields the conjunction
+\[
+\operatorname{phaseAction}(S,t)=S\quad\land\quad\operatorname{map}(\operatorname{fst},R)=B
+\quad\land\quad(\operatorname{map}(\operatorname{fst},R),P_{selected})=S.
+\]
+Thus the retained physical observation and full shared-support recurrence refer to the same prepared state. The observation operation preserves the supplied classification and all source branches; the affinity relation additionally uses the complete registered endpoint comparisons described above.
+
+Original source: pinned sft/quantum_computation/operations.py, observe; sft/chemistry/redox_derivation.py, AFFINITY_BOUNDARY and AFFINITY_DIMENSIONS. Existing Lean derivations reused: ReversibleObservation.recordMembership, completeRecord and recordCount; QuantumPhysicalObservable.everySourceClassRecorded and fullStateReconstructed; CovalentSharing.boundSourceRecurs. Native binding: verification/TURN_592_STAGED/AffinityPhysicalObservation.lean, retainedExactly, everyBranchHasEndpoint, endpointSource, classUnique, classEqualityExactly, completeBranchSequence, completeBranchCount and sharedRecurrenceAndCompleteObservation. All nine declarations have empty axiom dependencies. Evidence: verification/TURN_592_PHYSICAL_OBSERVATION.json. Timeline: Turn592.

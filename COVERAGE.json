@@ -24594,9 +24594,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-RXN-INTERMEDIATE-001-d53d9a103971aa8e.json",
       "statement": "A reaction intermediate is a named internal species produced by one mechanism step and consumed by a later step, canceling from net endpoints while remaining in the complete path trace.",
       "title": "Reaction intermediate and retained path identity",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/ReactionIntermediate.lean",
+        "SFT/Chemistry/IntermediateGrammar.lean",
+        "SFT/Chemistry/IntermediateEvidence.lean",
+        "SFT/Chemistry/IntermediateExperiment.lean",
+        "SFT/Chemistry/IntermediateValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh native256-form complete program,48 constructor cases, all empirical fields/hashes and original independent controls.",
       "registration_sha256": "dd1fd6f92ce92f26ca5629e69125673b0604144eb2e1dc88a5de35466ee1ac9a",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -24667,7 +24673,10 @@
         "statement": "A reaction intermediate is a named internal species produced by one mechanism step and consumed by a later step, canceling from net endpoints while remaining in the complete path trace.",
         "status": "empirically_tested",
         "title": "Reaction intermediate and retained path identity"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_604_INTERMEDIATE_COMPLETION.json",
+      "verified_scope": "Exact three-field constructor; source-bound ordered producing/consuming occurrences, strict positional precedence, complete pair identity, internal pair cancellation, retained full mechanism and exact net endpoint balance, two-step base and append successor preserving the full trace.; Original eight-axis256-form complete enumeration, exact decisions and sole survivor.; Original full census, registration, witnesses, controls and closure.; Original sealed prediction and source references.; Original multi-source empirical extraction, features, hashes, custody, isolation and adverse target control."
     },
     {
       "branch": "chemistry",
@@ -194028,13 +194037,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T12:23:21.587821+00:00",
+  "updated_at": "2026-11-11T12:31:42.736130+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2386,
-    "fully_reconstructed_claims": 395,
-    "axiom_free_exported_results": 21153,
-    "axiom_free_audited_definitions_and_theorems": 48851
+    "pending": 2385,
+    "fully_reconstructed_claims": 396,
+    "axiom_free_exported_results": 21191,
+    "axiom_free_audited_definitions_and_theorems": 48971
   }
 }

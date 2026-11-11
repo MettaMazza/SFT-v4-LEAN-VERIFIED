@@ -4009,3 +4009,13 @@ import SFT.Chemistry.MechanismEvidence
 import SFT.Chemistry.MechanismExperiment
 
 import SFT.Chemistry.MechanismValidation
+
+import SFT.Chemistry.ReactionIntermediate
+
+import SFT.Chemistry.IntermediateGrammar
+
+import SFT.Chemistry.IntermediateEvidence
+
+import SFT.Chemistry.IntermediateExperiment
+
+import SFT.Chemistry.IntermediateValidation

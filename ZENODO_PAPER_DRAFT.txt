@@ -18173,3 +18173,17 @@ All original eight binary axes and all 256 alternatives are represented in Diast
 
 Pinned V3: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1; sft/chemistry/stereochemistry_organic_polymer_derivation.py, DIASTEREOMER and STEREOCHEMISTRY_ORGANIC_POLYMER_BLUEPRINTS[2]; stereochemistry_organic_polymer_batch_1.py; claims/SFT-CHEM-STEREO-DIASTEREOMER-001/execution.py. Equivalent explicit reflection/classification operations: coordination_isomerism_law_v1.py, _canonical and _mirror. Lean: SFT/Chemistry/Diastereomer.lean, declarations named above; reused Chirality/Enantiomer reflection and proper-map proofs, MolecularIsomer constitution enumeration and count extension. Timeline: Turn627. Evidence: TURN_627_diastereomer627_audit_config.json and TURN_627_diastereomer_configurations627_report.json.
 
+
+Diastereomer constitutional transport across independent occurrence names
+
+Let f be an enumerated constitutional map from occurrence support A to B. For a raw bond (u,v) and target bond (x,y), BondMatch is the disjunction
+\[ (f(u)=x \land f(v)=y) \lor (f(u)=y \land f(v)=x). \]
+sourceForwardBonds and sourceReverseBonds derive both bond incidences directly from the accepted MolecularIsomer.candidateMatches test. normalizedMappedBond splits the original edge-normalization operations and recovers unordered endpoint equality; no orientation of a bond is discarded from the comparison.
+
+For distinct occurrence names, equal name/element-list widths, an equal-width permutation witness, and the original respectsElements test, sourceElementCounts derives every elemental multiplicity equality. The derivation reconstructs the elemental list from its named lookups, transports those lookups through the witness, and applies permutation invariance of label counts. Thus for each label q, n_q(A)=n_q(B). sourceConstitutionMap combines these derived counts with both bond directions. pairConstitutionTransport obtains this witness from Pair.constitution for admitted carriers, with equal support size retained explicitly as a premise.
+
+For fresh occurrences a and b and retained left attachment list L, the extension uses f(L) on the right. Its map is f'=zip(A++[a],order++[b]). extendedOldName and extendedFreshName establish f'(u)=f(u) on old occurrences and f'(a)=b. Hence each new bond (u,a) corresponds to (f(u),b). transportedForwardBonds and transportedReverseBonds prove the entire old-plus-new incidence correspondence. transportedComposition proves
+\[ n_q(A+[e])=n_q(A)+[q=e]=n_q(B)+[q=e]=n_q(B+[e]). \]
+transportedOrder preserves the full permutation witness. These statements allow independent occurrence names and independent retained orientation words.
+
+Source: pinned V3 sft/chemistry/stereochemistry_organic_polymer_derivation.py, STEREOCHEMISTRY_ORGANIC_POLYMER_BLUEPRINTS[2], successor statement; existing MolecularIsomer map operations. Lean: SFT/Chemistry/Diastereomer.lean, declarations named above. Timeline: Turn628. The163 audited declarations have no Lean axiom dependencies; verification/TURN_628_diastereomer628_audit.log records the audit.

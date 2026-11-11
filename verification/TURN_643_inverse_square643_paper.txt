@@ -1,0 +1,27 @@
+
+Conserved response on the forced rank-two boundary
+
+The boundary-rank derivation retains the two nonnormal directions of the forced three-direction spatial carrier. Complete boundary cells are their ordered pairs. For coordinate supports L and R, pair membership is equivalent to membership of both coordinates, and the number of pairs is |L| |R|. Extending either coordinate retains all earlier pairs and adds its pairs with every member of the other coordinate. At equal generated scale n, the complete count is n². The one-cell base is the single pair, carrying the unchanged source.
+
+For exact positive rational distance ratio r > 1, the existing guarded boundary-growth operation applies repeated positive multiplication at the derived rank two:
+    G(r) = r · r.
+Its normalized representation satisfies
+    numerator(G) denominator(r)² = numerator(r)² denominator(G).
+This is the exact rational extension of complete pair-cell growth; no measured exponent is supplied.
+
+The inverse-square operation first validates the source S as an exact positive rational and then applies the original above-One distance guard. It returns the positive quotient
+    F(S,r) = S/G(r) = S/(r · r).
+Let S = a/b and G = c/d. The quotient's normalized value f obeys
+    (a d) denominator(f) = numerator(f) (b c).
+Multiplication by the generated boundary growth reconstructs the original source. In cross-product form,
+    numerator(f) c b = a denominator(f) d,
+which is the preceding quotient identity with its finite products reassociated. Uniqueness of normalized positive ratios therefore establishes
+    f · G = S.
+The proof applies to every positive source and generated exact positive growth value. If a candidate share x satisfies the same conserved cross-product equation, both x and f represent the same positive ratio (a d)/(b c); uniqueness gives x = f. Conservation and equivalent allocation therefore leave no alternative share.
+
+For a complete finite pair boundary, the existing equal-share construction also retains every cell exactly as an output row. Its conservation equation at equal coordinate count n is
+    numerator(S) denominator(share)
+      = numerator(share) denominator(S) n².
+The complete pair support, both coordinate-successor proofs, no-missing-response theorem and unique conserved allocation connect the rational response to the retained finite boundary construction. The original exact witnesses give F(1,2)=1/4, F(1,3)=1/9 and F(5/7,4/3)·G(4/3)=5/7.
+
+Original source: pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/physics/structural_constants.py, boundary_rank_two, repeated_positive_product, boundary_growth, inverse_square_response and INVERSE_SQUARE_SPEC. Native verification: SFT/Physics/BoundarySupport.lean, completeBoundaryRank, pairCellMembership, pairLeftSuccessor, pairRightSuccessor and scaledPairCount; BoundaryGrowth.lean, growthAdmitted and exactGrowthValue; FieldGeometricDilution.lean, allBoundaryCellsRetained, noMissingResponse and shareUnique; InverseSquare.lean, responseAdmitted, responseBoundary, sourceGuardFirst, exactDivision, recomposes, conservedAtEveryScale, uniqueConservedResponse, allPairCellsRetained and squareShare; InverseSquareWitnesses.lean, doubleCheckPassed, tripleCheckPassed and conservationCheckPassed. Chronological derivation record: TIMELINE.txt, Turn643 inverse-square core.

@@ -1,0 +1,27 @@
+import SFT.Physics.InverseSquare
+namespace SFT.Physics.InverseSquareWitnesses
+open SFT.Foundation.ExactOperations SFT.Physics.InverseSquare SFT.Physics.BoundaryGrowth
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+
+def one : PositiveFraction := normalizePositive 1 1 (by decide) (by decide)
+def originalSource : PositiveFraction := normalizePositive 5 7 (by decide) (by decide)
+def originalDistance : PositiveFraction := normalizePositive 4 3 (by decide) (by decide)
+def doubleCheck : Bool := match response (.fraction (asFraction one)) (.fraction (asFraction two)) with
+ | .error _ => false
+ | .ok value => (value.numerator,value.denominator)==(1,4)
+def tripleCheck : Bool := match response (.fraction (asFraction one)) (.fraction (asFraction three)) with
+ | .error _ => false
+ | .ok value => (value.numerator,value.denominator)==(1,9)
+def conservationCheck : Bool := match response (.fraction (asFraction originalSource)) (.fraction (asFraction originalDistance)) with
+ | .error _ => false
+ | .ok value => let recomposed := BoundaryGrowth.multiply value (BoundaryGrowth.multiply originalDistance originalDistance)
+                (recomposed.numerator,recomposed.denominator)==(5,7)
+def witnesses : List Witness := [WITNESS_ROWS]
+theorem doubleCheckPassed : doubleCheck=true := rfl
+theorem tripleCheckPassed : tripleCheck=true := rfl
+theorem conservationCheckPassed : conservationCheck=true := rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := rfl
+end SFT.Physics.InverseSquareWitnesses

@@ -1387,3 +1387,6 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.AnalyticalRecordGrammar.candidates do
     IO.println ("AnalyticalRecordGrammar\t" ++ SFT.Chemistry.AnalyticalRecordGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AnalyticalRecordGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AnalyticalRecordGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AnalyticalRecordGrammar.decisionReason c)
+
+  for c in SFT.Physics.AtomicOrbitCapacityGrammar.candidates do
+    IO.println ("AtomicOrbitCapacityGrammar\t" ++ SFT.Physics.AtomicOrbitCapacityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AtomicOrbitCapacityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AtomicOrbitCapacityGrammar.exactForm c ++ "\t" ++ SFT.Physics.AtomicOrbitCapacityGrammar.decisionReason c)

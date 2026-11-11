@@ -28594,9 +28594,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-ATOMIC-CELL-ORBIT-CAPACITY-001-1f3ba9a0a82d5ea4.json",
       "statement": "At positive orbit rank r, three-space supplies one central orientation and the rank-two boundary supplies one held pair for every predecessor step. Two exclusion-distinct Fold labels occupy each orientation, forcing capacity 2(1+2(r-1)) and the sequence 2, 6, 10, 14, 18 without observation.",
       "title": "Atomic orbit-cell capacity from three-space boundary orientation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/AtomicOrbitCapacity.lean",
+        "SFT/Physics/AtomicOrbitCapacityWitnesses.lean",
+        "SFT/Physics/AtomicOrbitCapacityGrammar.lean",
+        "SFT/Physics/AtomicOrbitCapacityControls.lean",
+        "SFT/Physics/AtomicOrbitCapacityEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh native complete program, original independent controls; formal entry has no empirical validator",
       "registration_sha256": "2d9364486eea7120451581cd2f7dc1e3e1674091df21eef63d3791f5bcfad5ef",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -28638,7 +28644,10 @@
         "statement": "At positive orbit rank r, three-space supplies one central orientation and the rank-two boundary supplies one held pair for every predecessor step. Two exclusion-distinct Fold labels occupy each orientation, forcing capacity 2(1+2(r-1)) and the sequence 2, 6, 10, 14, 18 without observation.",
         "status": "independently_replicated",
         "title": "Atomic orbit-cell capacity from three-space boundary orientation"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_648_ATOMIC_ORBIT_COMPLETION.json",
+      "verified_scope": "binary_count, boundary_count, orientation_count, orbit_capacity and CELL_CAPACITY_SPEC: source guards, reused forced generator predecessor, central and complete predecessor boundary pairs, exact support membership, duplicate-free orientation and label states, source exclusion binding, arbitrary-rank count2(1+2(r-1)) and successor+4.; CELL_CAPACITY_SPEC witnesses: original first-five capacities, successor range1..11 and complete support range1..11, evaluated using translated operations and derived binary count.; CELL_CAPACITY_SPEC ten binary axes and all1024 original alternatives, exact decision correspondence and sole preserving candidate.; StructuralPhysicsProgram original false premise, source identity, survivor-set and boundary controls, exact closure and evaluated witnesses.; Original registration, full census, candidate lookups, every decision, closure and control hashes; original unknown-ID error."
     },
     {
       "branch": "physics",
@@ -194342,13 +194351,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T18:15:12.816116+00:00",
+  "updated_at": "2026-11-11T19:21:52.584846+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2352,
-    "fully_reconstructed_claims": 429,
-    "axiom_free_exported_results": 22660,
-    "axiom_free_audited_definitions_and_theorems": 53161
+    "pending": 2351,
+    "fully_reconstructed_claims": 430,
+    "axiom_free_exported_results": 22706,
+    "axiom_free_audited_definitions_and_theorems": 53265
   }
 }

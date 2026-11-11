@@ -4365,3 +4365,13 @@ import SFT.Chemistry.AnalyticalRecordEvidence
 import SFT.Chemistry.AnalyticalRecordExperiment
 
 import SFT.Chemistry.AnalyticalRecordValidation
+
+import SFT.Physics.AtomicOrbitCapacity
+
+import SFT.Physics.AtomicOrbitCapacityWitnesses
+
+import SFT.Physics.AtomicOrbitCapacityGrammar
+
+import SFT.Physics.AtomicOrbitCapacityControls
+
+import SFT.Physics.AtomicOrbitCapacityEvidence

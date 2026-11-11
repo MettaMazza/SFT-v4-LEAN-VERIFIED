@@ -1,0 +1,121 @@
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/audit_atomic_orbit647.py", line 11, in <module>
+    p=Path('work/AuditAtomicOrbit647.lean');p.write_text('\n'.join('import SFT.Physics.'+m for m in modules)+'\n'+'\n'.join('#print axioms '+n for n in names)+'\n');o=subprocess.run(['/Users/dolltrading/.elan/bin/lean',str(p)],env=env,text=True,capture_output=True);Path('work/atomic_orbit647_audit.log').write_text(o.stdout+o.stderr);assert o.returncode==0,o.stdout+o.stderr;assert all("'"+n+"' does not depend on any axioms" in o.stdout for n in names),o.stdout;Path('work/atomic_orbit647_audit_config.json').write_text(json.dumps(dict(modules=modules,declarations=names,theorems=ths,definitions_and_theorems=defs),indent=2));print('PASS',len(names),'zero-axiom declarations')
+AssertionError: 'SFT.Physics.AtomicOrbitCapacity.binaryCount' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.boundaryCount' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.orientationCount' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.orbitCapacity' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.exactOrientations' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.exactCapacity' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.Orientation' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.orientations' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.states' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.orientationLength' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.statesLength' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.generatedCapacity' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.capacitySuccessor' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.baseCapacity' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.priorOrientationRetained' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.everyOrientationHasBothLabels' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.duplicateSameLabelExcluded' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.boundaryStepEarlier' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.centralRetained' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.everyPredecessorPair' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.boundaryPairExactly' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.orientationsDistinct' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.stateHasOrientation' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.statesDistinct' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacity.generatedStatesDistinct' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityWitnesses.Witness' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityWitnesses.capacity' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityWitnesses.orientationsAt' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityWitnesses.firstFive' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityWitnesses.successorCheck' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityWitnesses.supportCheck' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityWitnesses.witnesses' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityWitnesses.firstFivePassed' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityWitnesses.successorCheckPassed' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityWitnesses.supportCheckPassed' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityWitnesses.allWitnessesPass' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityGrammar.Carrier' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.carrierName' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.Central' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.centralName' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.Successor' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.successorName' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.Boundary' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.boundaryName' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.Label' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.labelName' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.Exclusion' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.exclusionName' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.Capacity' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.capacityName' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.Generality' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.generalityName' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.Target' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.targetName' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.Extension' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.extensionName' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.Candidate' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.sourceFields' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.candidateId' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.exactForm' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.survivorId' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.survives' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.criteriaDecision' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.decisionReason' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.generationRule' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.grammarBoundary' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.candidates' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.survivor' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.generatedCardinality' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.candidatesComplete' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.sourceDecisionMatchesCriteria' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.uniqueCriteriaSurvivor' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.uniqueSurvivor' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.survivorAccepted' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.ExactCriteria' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.acceptanceIffExactCriteria' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.carrier_rejected_rejected' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.central_rejected_rejected' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.successor_rejected_rejected' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.boundary_rejected_rejected' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.label_rejected_rejected' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.exclusion_rejected_rejected' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.capacity_rejected_rejected' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.generality_rejected_rejected' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.target_rejected_rejected' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityGrammar.extension_rejected_rejected' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityControls.exclusions' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityControls.closureValue' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityControls.falseCandidate' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityControls.survivorIds' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityControls.record' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityControls.falsePremise' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityControls.tamperedSource' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityControls.tamperedArtifact' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityControls.boundary' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityControls.falsePremisePassed' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityControls.boundaryPassed' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityControls.controlRecords' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityControls.resultData' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityControls.runControls' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityEvidence.candidateRecord' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.completenessRecord' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.registrationData' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.registration' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.generatedCandidateData' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.censusData' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.census' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.decisionData' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.decision' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.decideCandidate' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.closureData' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityEvidence.closure' depends on axioms: [propext]
+'SFT.Physics.AtomicOrbitCapacityEvidence.nativeDecisionPreservesSurvival' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.nativeDecisionPreservesReason' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.registrationHasNoAxioms' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.registrationHasNoFreeParameters' does not depend on any axioms
+'SFT.Physics.AtomicOrbitCapacityEvidence.lookupDependsOnlyOnIdentifier' does not depend on any axioms
+

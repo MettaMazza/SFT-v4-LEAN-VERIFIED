@@ -20,3 +20,7 @@ import SFT.Physics.AtomicOrbitCapacity
 #print axioms SFT.Physics.AtomicOrbitCapacity.centralRetained
 #print axioms SFT.Physics.AtomicOrbitCapacity.everyPredecessorPair
 #print axioms SFT.Physics.AtomicOrbitCapacity.boundaryPairExactly
+#print axioms SFT.Physics.AtomicOrbitCapacity.orientationsDistinct
+#print axioms SFT.Physics.AtomicOrbitCapacity.stateHasOrientation
+#print axioms SFT.Physics.AtomicOrbitCapacity.statesDistinct
+#print axioms SFT.Physics.AtomicOrbitCapacity.generatedStatesDistinct

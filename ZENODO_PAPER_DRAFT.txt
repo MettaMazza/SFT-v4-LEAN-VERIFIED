@@ -18790,3 +18790,22 @@ Original source: the same pinned atomic_constants_validation.py, iaea_magic_sequ
 Verification of SFT-PHYS-VALIDATION-INVERSE-FINE-STRUCTURE-001: the complete 256-candidate source program, original controls and empirical-validator output agree with pinned V3. All 136 audited declarations have empty axiom dependencies. Source correspondence and the full derivation appear in the post-seal exact CODATA interval section; chronological completion record: TIMELINE.txt, Turn650 alpha entry completion and nuclear full batch.
 
 Verification of SFT-PHYS-VALIDATION-NUCLEAR-CLOSURES-001: the complete 256-candidate source program, original controls and empirical-validator output agree with pinned V3. All 134 audited declarations have empty axiom dependencies. Source correspondence and the full derivation appear in the ordered IAEA nuclear-sequence source comparison section; chronological completion record: TIMELINE.txt, Turn650 nuclear validation completion.
+
+Material identity and retained extension records
+
+The material-system obligation requires the constituent carrier, composition and bonding organization, and declared observation boundary to remain distinguishable. The retained-record argument makes explicit why erasing one required distinction cannot provide the same identity. Write R=(C,B,d,O), where C is the retained sequence of chemical constitution/isotope/context records, B the named bonding records, d the declared boundary, and O the observation/reference pairs. For this record,
+    R=R' iff C=C' and B=B' and d=d' and O=O'.
+Consequently any identification relation preserving all four coordinates implies record equality. Conversely, equality of the four coordinates suffices: the record introduces no additional identity test. If an encoding e collapses two unequal records and a recovery map q reconstructs both, then
+    R=q(e(R))=q(e(R'))=R',
+contradicting their retained distinction.
+
+A constituent, relation or observation extension appends its record to the corresponding sequence and holds the other coordinates fixed. With E_x the extension and P_x removal of its final appended coordinate,
+    P_x(E_x(R))=R.
+Thus E_x(R)=E_x(R') implies R=R'. For a finite extension history h=[x_1,...,x_n], define E_h by successive extension and P_h by removing those extensions in reverse order. The induction is
+    P_[](E_[](R))=R,
+    P_(x::h)(E_(x::h)(R))=P_x(P_h(E_h(E_x(R))))=P_x(E_x(R))=R.
+It follows that arbitrary finite histories retain every earlier constituent, bonding and observation record, keep d fixed, preserve nonempty constituent support, and cannot merge initially distinct records. Each retained constituent carries its complete chemical constitution, isotope and context; the proof does not impose uniform composition across different constituents.
+
+The separate original candidate grammar has eight binary preservation coordinates: carrier, relation, organization, observation, record, provenance, generality and extension. Its literal Cartesian product contains 2^8=256 alternatives. Acceptance requires the admitted value on every coordinate; therefore the all-admitted tuple is the unique survivor. Exhaustion and each rejected-coordinate elimination are proved for the original product. The native program reproduces every pinned candidate, decision, control, closure, registration field and hash, and the original independent validator accepts the result and rejects the three adverse cases.
+
+Original sources: pinned sft/materials/obligations.py, MATERIALS_OBLIGATIONS[0]; sft/materials/derivation.py, _dimensions, _blueprint and blueprint_candidate_ids; sft/materials/generated_law.py, GeneratedEmpiricalMaterialsProgram. Native verification: SFT/Materials/MaterialIdentity.lean, identityExactly, leastRequiredIdentity, priorExact, finiteExtensionInjective and erasedIdentityCannotRecover; MaterialRetention.lean, historyRecovery, finiteConstituentRetention, finiteBondRetention, finiteObservationRetention and completeConstituentIdentity; MaterialGrammar.lean, candidatesComplete, uniqueSurvivor and acceptanceIffExactCriteria; MaterialEvidence.lean, original program records. These four modules contain107 audited declarations with empty axiom dependencies. Chronological record: TIMELINE.txt, Turn651 material retained-record translation.

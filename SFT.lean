@@ -3798,3 +3798,13 @@ import SFT.Chemistry.ValenceGrammar
 import SFT.Chemistry.ValenceEvidence
 import SFT.Chemistry.ValenceExperiment
 import SFT.Chemistry.ValenceValidation
+import SFT.Chemistry.IonTransfer
+import SFT.Chemistry.IonGrammar
+import SFT.Chemistry.IonEvidence
+import SFT.Chemistry.IonExperiment
+import SFT.Chemistry.IonValidation
+import SFT.Chemistry.PeriodicRelease
+import SFT.Chemistry.PeriodicBoundaryGrammar
+import SFT.Chemistry.PeriodicBoundaryEvidence
+import SFT.Chemistry.PeriodicBoundaryExperiment
+import SFT.Chemistry.PeriodicBoundaryValidation

@@ -1186,3 +1186,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.ValenceGrammar.candidates do
     IO.println ("ValenceGrammar\t" ++ SFT.Chemistry.ValenceGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.ValenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.ValenceGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.ValenceGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.IonGrammar.candidates do
+    IO.println ("IonGrammar\t" ++ SFT.Chemistry.IonGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.IonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.IonGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.IonGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.PeriodicBoundaryGrammar.candidates do
+    IO.println ("PeriodicBoundaryGrammar\t" ++ SFT.Chemistry.PeriodicBoundaryGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.PeriodicBoundaryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.PeriodicBoundaryGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.PeriodicBoundaryGrammar.decisionReason c)

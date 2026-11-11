@@ -3708,3 +3708,9 @@ import SFT.Physics.SuperconductivityEvidence
 import SFT.Physics.SuperconductivityExperiment
 import SFT.Physics.SuperconductivityValidation
 import SFT.Physics.SuperconductivityValidationProofs
+import SFT.Physics.CollectiveTopological
+import SFT.Physics.TopologicalGrammar
+import SFT.Physics.TopologicalEvidence
+import SFT.Physics.TopologicalExperiment
+import SFT.Physics.TopologicalValidation
+import SFT.Physics.TopologicalValidationProofs

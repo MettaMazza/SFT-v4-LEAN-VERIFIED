@@ -1135,3 +1135,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.SuperconductivityGrammar.candidates do
     IO.println ("SuperconductivityGrammar\t" ++ SFT.Physics.SuperconductivityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SuperconductivityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SuperconductivityGrammar.exactForm c ++ "\t" ++ SFT.Physics.SuperconductivityGrammar.decisionReason c)
+
+  for c in SFT.Physics.TopologicalGrammar.candidates do
+    IO.println ("TopologicalGrammar\t" ++ SFT.Physics.TopologicalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TopologicalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TopologicalGrammar.exactForm c ++ "\t" ++ SFT.Physics.TopologicalGrammar.decisionReason c)

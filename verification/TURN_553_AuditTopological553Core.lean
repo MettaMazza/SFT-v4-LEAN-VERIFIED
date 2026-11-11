@@ -1,0 +1,27 @@
+import SFT.Physics.CollectiveTopological
+#print axioms SFT.Physics.CollectiveTopological.Complex
+#print axioms SFT.Physics.CollectiveTopological.endpoints
+#print axioms SFT.Physics.CollectiveTopological.Elementary
+#print axioms SFT.Physics.CollectiveTopological.elementaryReverse
+#print axioms SFT.Physics.CollectiveTopological.elementarySourceValid
+#print axioms SFT.Physics.CollectiveTopological.elementaryTargetValid
+#print axioms SFT.Physics.CollectiveTopological.elementaryBoundary
+#print axioms SFT.Physics.CollectiveTopological.Trace
+#print axioms SFT.Physics.CollectiveTopological.traceSourceValid
+#print axioms SFT.Physics.CollectiveTopological.traceTargetValid
+#print axioms SFT.Physics.CollectiveTopological.traceCompose
+#print axioms SFT.Physics.CollectiveTopological.traceReverse
+#print axioms SFT.Physics.CollectiveTopological.traceBoundary
+#print axioms SFT.Physics.CollectiveTopological.sameClass
+#print axioms SFT.Physics.CollectiveTopological.completeClassInvariant
+#print axioms SFT.Physics.CollectiveTopological.differentClassRetained
+#print axioms SFT.Physics.CollectiveTopological.noBoundaryChangingTrace
+#print axioms SFT.Physics.CollectiveTopological.leastGeneratedRelation
+#print axioms SFT.Physics.CollectiveTopological.recordedBoundary
+#print axioms SFT.Physics.CollectiveTopological.boundaryCorrespondence
+#print axioms SFT.Physics.CollectiveTopological.squareFace
+#print axioms SFT.Physics.CollectiveTopological.squareLeftSupported
+#print axioms SFT.Physics.CollectiveTopological.squareRightSupported
+#print axioms SFT.Physics.CollectiveTopological.squareEndpoints
+#print axioms SFT.Physics.CollectiveTopological.registeredSquareDeformation
+#print axioms SFT.Physics.CollectiveTopological.registeredSquareClass

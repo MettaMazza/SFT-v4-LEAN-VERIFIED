@@ -29333,9 +29333,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-MEAS-SPECIMEN-001-be89f08f9db698b3.json",
       "statement": "A specimen is a source-bound finite part of a material with an explicit sampling map, retained preparation history and declared representativeness boundary.",
       "title": "Specimen and sampling relation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/Specimen.lean",
+        "SFT/Materials/SpecimenAdmission.lean",
+        "SFT/Materials/SpecimenSource.lean",
+        "SFT/Materials/SpecimenGrammar.lean",
+        "SFT/Materials/SpecimenEvidence.lean",
+        "SFT/Materials/SpecimenExperiment.lean",
+        "SFT/Materials/SpecimenValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "b4b78d7a93d77a9ae2419b9c18dd7b57ef1b2a7562cc66f846d8a2ba453b3eb8",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -29399,7 +29407,10 @@
         "status": "empirically_tested",
         "subbranch": "measurement_identity",
         "title": "Specimen and sampling relation"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_656_SPECIMEN_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[1], source-bound finite specimen; explicit sampling map, retained preparation history and declared representativeness; finite preparation induction and recovery.; _blueprint positive finite base and successor: nonempty sampled carrier, membership in parent, finite append retention, origin retention through material extension and recovery of earlier distinctions.; _dimensions: full eight-axis256-form product, original elimination decisions and unique preservation survivor.; Original program methods, registration and three structural witnesses computed from original obligation labels.; Exact two-fragment NIST binding, ordered extraction receipts and original preceding global source guard.; Complete fixed-spec validation, original registration, four-instruction program and prediction envelope.; Original source guard, custody, isolation, comparison and tampered-label validation; unchanged shared preseal evidence retained."
     },
     {
       "branch": "materials",
@@ -194463,13 +194474,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T21:41:16.084771+00:00",
+  "updated_at": "2026-11-11T21:59:59.045797+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2341,
-    "fully_reconstructed_claims": 440,
-    "axiom_free_exported_results": 23164,
-    "axiom_free_audited_definitions_and_theorems": 54514
+    "pending": 2340,
+    "fully_reconstructed_claims": 441,
+    "axiom_free_exported_results": 23214,
+    "axiom_free_audited_definitions_and_theorems": 54651
   }
 }

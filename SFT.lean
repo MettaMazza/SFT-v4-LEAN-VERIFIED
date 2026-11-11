@@ -4507,3 +4507,17 @@ import SFT.Chemistry.PeriodicEndpointEvidence
 import SFT.Chemistry.PeriodicEndpointExperiment
 
 import SFT.Chemistry.PeriodicEndpointValidation
+
+import SFT.Materials.Specimen
+
+import SFT.Materials.SpecimenAdmission
+
+import SFT.Materials.SpecimenSource
+
+import SFT.Materials.SpecimenGrammar
+
+import SFT.Materials.SpecimenEvidence
+
+import SFT.Materials.SpecimenExperiment
+
+import SFT.Materials.SpecimenValidation

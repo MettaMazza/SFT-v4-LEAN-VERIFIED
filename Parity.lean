@@ -1420,3 +1420,6 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.PeriodicEndpointGrammar.candidates do
     IO.println ("PeriodicEndpointGrammar\t" ++ SFT.Chemistry.PeriodicEndpointGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.PeriodicEndpointGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.PeriodicEndpointGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.PeriodicEndpointGrammar.decisionReason c)
+
+  for c in SFT.Materials.SpecimenGrammar.candidates do
+    IO.println ("SpecimenGrammar\t" ++ SFT.Materials.SpecimenGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SpecimenGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SpecimenGrammar.exactForm c ++ "\t" ++ SFT.Materials.SpecimenGrammar.decisionReason c)

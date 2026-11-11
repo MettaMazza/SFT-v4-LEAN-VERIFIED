@@ -4147,3 +4147,23 @@ import SFT.Chemistry.SelectivityEvidence
 import SFT.Chemistry.SelectivityExperiment
 
 import SFT.Chemistry.SelectivityValidation
+
+import SFT.Chemistry.ReactionNetwork
+
+import SFT.Chemistry.ReactionNetGrammar
+
+import SFT.Chemistry.ReactionNetEvidence
+
+import SFT.Chemistry.ReactionNetExperiment
+
+import SFT.Chemistry.ReactionNetValidation
+
+import SFT.Chemistry.AutocatalyticClosure
+
+import SFT.Chemistry.AutocatalysisGrammar
+
+import SFT.Chemistry.AutocatalysisEvidence
+
+import SFT.Chemistry.AutocatalysisExperiment
+
+import SFT.Chemistry.AutocatalysisValidation

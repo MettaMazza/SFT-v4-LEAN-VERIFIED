@@ -1324,3 +1324,9 @@ def main : IO Unit := do
 
   for c in SFT.Chemistry.SelectivityGrammar.candidates do
     IO.println ("SelectivityGrammar\t" ++ SFT.Chemistry.SelectivityGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.SelectivityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.SelectivityGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.SelectivityGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.ReactionNetGrammar.candidates do
+    IO.println ("ReactionNetGrammar\t" ++ SFT.Chemistry.ReactionNetGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.ReactionNetGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.ReactionNetGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.ReactionNetGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.AutocatalysisGrammar.candidates do
+    IO.println ("AutocatalysisGrammar\t" ++ SFT.Chemistry.AutocatalysisGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.AutocatalysisGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.AutocatalysisGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.AutocatalysisGrammar.decisionReason c)

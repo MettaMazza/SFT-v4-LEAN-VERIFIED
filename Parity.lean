@@ -1411,3 +1411,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.InverseSquareIntervalGrammar.candidates do
     IO.println ("InverseSquareIntervalGrammar\t" ++ SFT.Physics.InverseSquareIntervalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.InverseSquareIntervalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.InverseSquareIntervalGrammar.exactForm c ++ "\t" ++ SFT.Physics.InverseSquareIntervalGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.GBlockGrammar.candidates do
+    IO.println ("GBlockGrammar\t" ++ SFT.Chemistry.GBlockGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.GBlockGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.GBlockGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.GBlockGrammar.decisionReason c)
+
+  for c in SFT.Chemistry.SmithiumGrammar.candidates do
+    IO.println ("SmithiumGrammar\t" ++ SFT.Chemistry.SmithiumGrammar.candidateId c ++ "\t" ++ (if SFT.Chemistry.SmithiumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Chemistry.SmithiumGrammar.exactForm c ++ "\t" ++ SFT.Chemistry.SmithiumGrammar.decisionReason c)

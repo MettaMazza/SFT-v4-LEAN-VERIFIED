@@ -1,0 +1,49 @@
+
+G-block derivation: ordered support, conserved filling and closed predictions
+
+The ordering is explicit. For cells a=(p,o) and b=(p',o'), write a≺b when p+o<p'+o', or when p+o=p'+o' and p<p'. Within one cover c, the principal indices are an ascending subsequence of 0,…,c−1; retaining only the positive valid cells preserves that order. Mapping p to (p,c−p) gives equal joint sums and preserves the principal comparison. On extending C_B to C_(B+1), every old sum is at most B and every appended sum equals B+1. Hence every earlier cell precedes every appended cell. Induction proves that the complete traversal is pairwise ordered by ≺ for every B. Together with exhaustive support and uniqueness, this specifies the source traversal without an imported orbital list.
+
+Original source: sft/chemistry/gblock_predictions.py, generated_subshell_order and G_BLOCK_SPEC.induction_step. Lean verification: GBlockTraversal.generatedTraversalAscending, coverAscending and fixedCoverAscending, together with GBlockOrder.completeSupport and generatedOrderUnique. Timeline: Turn655 G-block completion registration.
+
+For a cell with capacity q and remaining count R, let u=q if R>q and u=R otherwise. Then u≤R and u+(R−u)=R. Every successfully constructed occupied row retains exactly (p,o,u,q), with p,o,u,q positive, o≤p and u≤q. At exhaustion R−u=0, the emitted row has total u=R. Otherwise induction gives occupation total R−u for the later rows; prepending the current row gives u+(R−u)=R. Thus every successful fill_configuration(N) has total occupation N, over its original accepted domain. This proves conservation by the actual source recursion rather than by checking selected atoms.
+
+Original source: OccupiedSubshell.__post_init__ and fill_configuration in sft/chemistry/gblock_predictions.py. Lean verification: GBlockFilling.acceptedRowExact, chosenOccupationWithinRemaining, successfulFillConserves and configurationConserves. Timeline: Turn655 G-block completion registration.
+
+The capacity derivation supplies q(o)=2[1+2(o−1)], giving 2,6,10,14,18 for the first five orbit ranks. Let N_j denote cumulative filled capacity through the jth generated cell. The defining recurrence is N_(j+1)=N_j+q(o_(j+1)). Its complete initial calculation through the first g cell is:
+
+Cell (principal, orbit) | Added capacity | Cumulative filled count
+(1,1) | 2 | 2
+(2,1) | 2 | 4
+(2,2) | 6 | 10
+(3,1) | 2 | 12
+(3,2) | 6 | 18
+(4,1) | 2 | 20
+(3,3) | 10 | 30
+(4,2) | 6 | 36
+(5,1) | 2 | 38
+(4,3) | 10 | 48
+(5,2) | 6 | 54
+(6,1) | 2 | 56
+(4,4) | 14 | 70
+(5,3) | 10 | 80
+(6,2) | 6 | 86
+(7,1) | 2 | 88
+(5,4) | 14 | 102
+(6,3) | 10 | 112
+(7,2) | 6 | 118
+(8,1) | 2 | 120
+(5,5) | 18 | 138
+
+The source selects noble closures at (1,1) and each orbit-rank-two cell, yielding 2,10,18,36,54,86,118. After the 118 core, the next cell (8,1) has capacity two: its occupation is one at 119 and two at 120. The following cell is (5,5), whose first occupation is therefore 121. Its capacity 18 is a subshell width; the cumulative filled count 138 in the last table row is not a claim that atomic coordinate 138 is admitted. The separate, already-derived atomic existence boundary remains 137.
+
+The seven closed Lean equalities establish the five widths, the complete seven-closure list, first 8s at 119, first 5g at 121, and the individual occupations at 119,120 and121. They evaluate the translated source operations, which reuse the upstream capacity and endpoint derivations. GBlockFirstOccupation.firstScanExact additionally proves that every preceding scanned atom has empty occupation at the queried coordinate.
+
+Original sources: sft/physics/atomic_constants.py, orbit_capacity and atomic_endpoint; sft/chemistry/gblock_predictions.py, noble_closures, first_occupied_coordinate and G_BLOCK_SPEC. Lean verification: AtomicOrbitCapacity.exactCapacity; AtomicBoundary.atomicEndpoint; GBlockWitnesses.firstFiveWidths, noblePrefix, firstEightS, firstFiveG, eightSFirst, eightSFull and fiveGFirst. Timeline: Turn655 G-block completion registration.
+
+The original grammar has eight binary axes: carrier, capacity, order, coordinate, provenance, target custody, evidence status and extension. The complete product contains 2^8=256 forms. Every constructor combination is generated; acceptance is equivalent to all eight source-preserving choices. Changing any one to its rejected form eliminates that candidate. The surviving form binds the positive coordinates to the derived capacities, complete ordered walk, first 5g at 121, retained dependency trace, post-seal target access, explicit observation status and absence of an added rule. This classification accompanies the preceding derivation proofs.
+
+The three operational witnesses compute the first five capacities, noble prefix and two first-opening coordinates. The fixed experiment validates these computed witnesses before opening the registered IUPAC snapshot. Its four instructions read the sealed premise, construct the prediction label, retain the premise/prediction pair and emit the prediction. Source-byte identity, native PDF literal extraction, normalized fragments and ordered features determine the released comparison target. The prediction is sealed before target release; the exact-label comparison and deliberately changed-label control retain the original custody, isolation and receipt fields. The complete empirical output and every associated hash agree with pinned V3. The known prefix is validated; the future g-block coordinate retains V3's standing unobserved prediction status.
+
+Original sources: gblock_predictions.py, prediction_dimensions and G_BLOCK_SPEC; generated_law.py, EmpiricalChemistrySpec.validate, experiment_registration_record and prediction_program_document; generated_periodic_law.py, source_derived_periodic_targets and BlindPeriodicChemistryValidator.validate. Lean verification: GBlockGrammar.candidatesComplete, acceptanceIffExactCriteria and uniqueSurvivor; GBlockEvidence.witness0Passed, witness1Passed, witness2Passed and original program methods; GBlockExperiment.fixedSpecAdmitted and targetContentAbsent; GBlockValidation.validate, using the established PeriodicPDF and PeriodicExtraction operations. Timeline: Turn655 G-block completion registration.
+
+Verification of SFT-CHEM-PRED-G-BLOCK-001: 165 declarations have empty axiom dependencies, including 57 theorems. The complete 256-candidate program, original independent accepted and three adverse cases, 266 operation comparisons, and full empirical output comparison establish the recorded source correspondence. Completion receipt: verification/TURN_655_GBLOCK_COMPLETION.json.

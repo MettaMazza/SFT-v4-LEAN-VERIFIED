@@ -1,0 +1,27 @@
+
+Smithium: the nuclear and electronic assemblies at coordinate 126
+
+The already-derived nuclear closure prefix is (2,8,20,28,50,82,126,184). The source selects its seventh and eighth entries, giving proton coordinate Z=126 and neutron coordinate N=184. Their sum is A=Z+N=126+184=310. These coordinates come from the nuclear recurrence established earlier in this manuscript; this assembly does not select an island-of-stability coordinate from an external table.
+
+The G-block traversal retains the complete 118 electronic core. Its next cell is (8,1), with capacity two, followed by (5,5), with capacity eighteen. At Z=126, the remaining occupation after the core is 126−118=8. Filling the next cell consumes two carriers, leaving 8−2=6 for the g cell. Thus the active configuration is ((8,1,2),(5,5,6)), conventionally written 8s²5g⁶. Both queried occupations must contain exactly one returned count; the original source rejects the assembly if either query fails that guard.
+
+The active valence count is v=2+6=8. The source constructs its positive oxidation-count prediction by the integer range 2,…,v, so the complete emitted sequence is (2,3,4,5,6,7,8). In the Lean list encoding, the indices 0,…,v−2 are each shifted by two. Host indices are not emitted as scientific zero values. The resulting six-field record is therefore:
+
+proton = 126;
+neutron = 184;
+mass = 310;
+configuration = ((8,1,2),(5,5,6));
+valence = 8;
+predicted_positive_oxidation_counts = (2,3,4,5,6,7,8).
+
+The native equality for this record evaluates the source assembly from the existing nuclear-closure and occupation operations. Separate equalities establish the selected proton and neutron coordinates, the retained 8s pair and the six g carriers. Fresh execution of the pinned Python function and current Lean assembly agrees on every returned field.
+
+Original sources: sft/chemistry/gblock_predictions.py, smithium_record and SMITHIUM_SPEC; sft/physics/atomic_constants.py, nuclear_closure_prefix. Lean verification: SFT/Chemistry/Smithium.lean, smithiumRecord, nuclearProton, nuclearNeutron, retainedEightSPair, fiveGSix and exactRecord; reused NuclearClosure.exactFirstEight and GBlockOperations.subshellOccupation. Timeline: Turn655 Smithium completion registration.
+
+The original eight-axis grammar again enumerates every one of its 256 forms. Here the order axis binds the sealed joint-cover fill walk, and the coordinate axis binds the next nuclear double closure to the same electronic coordinate. The remaining axes preserve the positive carrier, admitted capacities, complete dependency trace, sealed target custody, separation of known and future status, and absence of an extra rule. Complete enumeration and exact acceptance establish the unique source-preserving candidate. Three computed witnesses check the nuclear triple (126,184,310), the two electronic occupations, and the valence/oxidation sequence.
+
+The registered external target concerns the official observed table boundary through 118. Its source PDF is opened only in the post-seal comparison, with the original byte identity, extraction fragments and ordered features retained. The full validation output preserves the experiment registration, prediction seal, custody, isolation, exact comparison and changed-label control. Agreement with that target validates the recorded observation boundary; Smithium itself remains the source's unobserved standing prediction.
+
+Original sources: gblock_predictions.py, prediction_dimensions and SMITHIUM_SPEC; generated_law.py, GeneratedEmpiricalChemistryProgram and experiment registration; generated_periodic_law.py, BlindPeriodicChemistryValidator.validate. Lean verification: SmithiumGrammar.candidatesComplete, acceptanceIffExactCriteria and uniqueSurvivor; SmithiumEvidence.witness0Passed, witness1Passed and witness2Passed; SmithiumExperiment.fixedSpecAdmitted and targetContentAbsent; SmithiumValidation.validate. Timeline: Turn655 Smithium completion registration.
+
+Verification of SFT-CHEM-PRED-SMITHIUM-001: 121 declarations, including 30 theorems, have empty axiom dependencies. The complete 256-form program, original independent accepted and three adverse cases, six-field source execution and full empirical output/hash comparison establish the entry's recorded correspondence. Completion receipt: verification/TURN_655_SMITHIUM_COMPLETION.json.

@@ -4467,3 +4467,33 @@ import SFT.Physics.InverseSquareIntervalExperiment
 import SFT.Physics.InverseSquareIntervalValidation
 
 import SFT.Physics.InverseSquareIntervalExternal
+
+import SFT.Chemistry.GBlockOperations
+
+import SFT.Chemistry.GBlockOrder
+
+import SFT.Chemistry.GBlockFirstOccupation
+
+import SFT.Chemistry.GBlockTraversal
+
+import SFT.Chemistry.GBlockFilling
+
+import SFT.Chemistry.GBlockWitnesses
+
+import SFT.Chemistry.GBlockGrammar
+
+import SFT.Chemistry.GBlockEvidence
+
+import SFT.Chemistry.GBlockExperiment
+
+import SFT.Chemistry.GBlockValidation
+
+import SFT.Chemistry.Smithium
+
+import SFT.Chemistry.SmithiumGrammar
+
+import SFT.Chemistry.SmithiumEvidence
+
+import SFT.Chemistry.SmithiumExperiment
+
+import SFT.Chemistry.SmithiumValidation

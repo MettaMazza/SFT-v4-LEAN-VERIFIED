@@ -29014,9 +29014,20 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-PRED-G-BLOCK-001-5e21d5cb1ad97582.json",
       "statement": "The admitted Fold orbit capacities ordered by increasing joint principal/orbit cover, with principal rank breaking a cover tie, generate noble closures 2, 10, 18, 36, 54, 86 and 118; fill 8s at 119-120; and open the 5g block at 121. The known prefix is externally checked and the g-block placement remains a sealed unobserved prediction.",
       "title": "Generated g-block structural prediction",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/GBlockOperations.lean",
+        "SFT/Chemistry/GBlockOrder.lean",
+        "SFT/Chemistry/GBlockFirstOccupation.lean",
+        "SFT/Chemistry/GBlockTraversal.lean",
+        "SFT/Chemistry/GBlockFilling.lean",
+        "SFT/Chemistry/GBlockWitnesses.lean",
+        "SFT/Chemistry/GBlockGrammar.lean",
+        "SFT/Chemistry/GBlockEvidence.lean",
+        "SFT/Chemistry/GBlockExperiment.lean",
+        "SFT/Chemistry/GBlockValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls;266 exact operations; full source PDF parser and empirical output fields/hashes.",
       "registration_sha256": "1a4f6e4dce68c17380616788f8c2ac1b75f6a7ebd262fa954e6be29e6783f864",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -29063,7 +29074,10 @@
         "statement": "The admitted Fold orbit capacities ordered by increasing joint principal/orbit cover, with principal rank breaking a cover tie, generate noble closures 2, 10, 18, 36, 54, 86 and 118; fill 8s at 119-120; and open the 5g block at 121. The known prefix is externally checked and the g-block placement remains a sealed unobserved prediction.",
         "status": "empirically_tested",
         "title": "Generated g-block structural prediction"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_655_GBLOCK_COMPLETION.json",
+      "verified_scope": "OccupiedSubshell guards; generated_subshell_order; fill_configuration; subshell_occupation; noble_closures; first_occupied_coordinate. Exact positive integer/boolean domain, endpoint support and error behavior.; generated_subshell_order: complete positive (principal,orbit) support, exact joint-cover exhaustion, unique principal indices and disjoint cover increments for every bound.; generated_subshell_order: increasing joint sum and increasing principal rank on equal sums; pairwise proof for every complete generated bound.; OccupiedSubshell source guards and returned fields; fill_configuration: exact accepted row identity, positivity/bounds and conserved total occupation under every successful fill.; first_occupied_coordinate: first successful occupation, with exact empty occupation for every preceding scanned atom.; G_BLOCK_SPEC exact operational witnesses: first five widths; seven noble closures; first8s119 and first5g121; 8s occupancies119/120 and first5g occupancy121.; prediction_dimensions and G_BLOCK_SPEC: original eight binary axes, complete256 product, source decision relation, unique survivor and every axis rejection.; GeneratedEmpiricalChemistryProgram.registration and inherited GeneratedEmpiricalPhysicsProgram methods: registration, complete census, decisions, closure, original controls; actual three operational witnesses.; EmpiricalChemistrySpec.validate; experiment_registration_record; prediction_program_document: fixed source spec validated with computed witnesses, original target metadata, four instructions, envelope and registered hashes.; BlindPeriodicChemistryValidator.validate: existing PeriodicPDF/PeriodicExtraction source-byte guards and exact parser, original source target, capability execution, seal, custody, hostile audit, isolation, comparison and tampered control."
     },
     {
       "branch": "chemistry",
@@ -29075,9 +29089,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-PRED-SMITHIUM-001-8028271d2d1e27a0.json",
       "statement": "The independently sealed nuclear recurrence places the next proton/neutron double closure at 126/184. The generated electronic walk gives element 126 the active configuration 8s2 5g6, mass coordinate 310, eight valence carriers and structurally admissible positive oxidation counts +2 through +8.",
       "title": "Smithium element-126 standing prediction",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/Smithium.lean",
+        "SFT/Chemistry/SmithiumGrammar.lean",
+        "SFT/Chemistry/SmithiumEvidence.lean",
+        "SFT/Chemistry/SmithiumExperiment.lean",
+        "SFT/Chemistry/SmithiumValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls;six exact returned fields; full source PDF parser and empirical output fields/hashes.",
       "registration_sha256": "40e28fcea33951f541988734a2fa866e0b7f50812b7b64d43f007127d3f14a8b",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -29127,7 +29147,10 @@
         "statement": "The independently sealed nuclear recurrence places the next proton/neutron double closure at 126/184. The generated electronic walk gives element 126 the active configuration 8s2 5g6, mass coordinate 310, eight valence carriers and structurally admissible positive oxidation counts +2 through +8.",
         "status": "empirically_tested",
         "title": "Smithium element-126 standing prediction"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_655_SMITHIUM_COMPLETION.json",
+      "verified_scope": "smithium_record: exact six-field assembly from nuclear_closure_prefix8 indices6/7, subshell_occupation126 at8s and5g, original single-occupation guards, mass/valence sums and positive oxidation range2..8; exact source equality proved.; prediction_dimensions and SMITHIUM_SPEC: original eight binary axes, complete256 product, source decisions and unique survivor.; GeneratedEmpiricalChemistryProgram: original registration/census/decisions/closure/controls; three original witnesses computed from the actual Smithium record.; EmpiricalChemistrySpec.validate; original experiment registration, prediction document, target identity, seal envelope and source status.; BlindPeriodicChemistryValidator.validate: exact original PDF target extraction, source guards, capability/custody/isolation/hostile audit, full comparison and tampered control."
     },
     {
       "branch": "chemistry",
@@ -194431,13 +194454,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-11T20:47:37.401205+00:00",
+  "updated_at": "2026-11-11T21:32:58.254330+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2344,
-    "fully_reconstructed_claims": 437,
-    "axiom_free_exported_results": 23048,
-    "axiom_free_audited_definitions_and_theorems": 54151
+    "pending": 2342,
+    "fully_reconstructed_claims": 439,
+    "axiom_free_exported_results": 23135,
+    "axiom_free_audited_definitions_and_theorems": 54409
   }
 }

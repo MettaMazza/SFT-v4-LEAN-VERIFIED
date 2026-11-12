@@ -32008,9 +32008,19 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-SEMI-JUNCTION-001-ab3ac6d4d7277124.json",
       "statement": "Joining opposed doped regions forces interfacial carrier transfer until a retained depletion/space-charge organization balances transport and field response at declared conditions.",
       "title": "p-n junction and depletion organization",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Materials/JunctionSource.lean",
+        "SFT/Materials/JunctionGrammar.lean",
+        "SFT/Materials/JunctionEvidence.lean",
+        "SFT/Materials/JunctionExperiment.lean",
+        "SFT/Materials/JunctionValidation.lean",
+        "SFT/Materials/JunctionTransfer.lean",
+        "SFT/Materials/JunctionCoupling.lean",
+        "SFT/Materials/JunctionObservation.lean",
+        "SFT/Materials/JunctionPreservation.lean"
+      ],
+      "artifact_runtime_parity": "verified_original_program_outputs",
       "registration_sha256": "7518e2c2e3f218d57ec65894ce5801e291f062a031ed308115c4b66c59aa6a77",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -32073,7 +32083,14 @@
         "status": "empirically_tested",
         "subbranch": "electronic_semiconductor",
         "title": "p-n junction and depletion organization"
-      }
+      },
+      "source_correspondence": "reference/JUNCTION_SOURCE_CORRESPONDENCE.json",
+      "verified_component_declarations": 147,
+      "full_entry_complete": false,
+      "remaining_source_binding": [
+        "Source-bound native composition of the exact SEMI-JUNCTION scientific statement, preserving its opposed-doped carrier, interfacial transfer, space-charge/field organization and declared equilibrium/bias boundary. Existing component theorems are not registered as that complete implication."
+      ],
+      "evidence_boundary": "Original program comparisons passed; source guard preserves prior snapshot rejection. No successful fresh whole-corpus source-guard replay asserted."
     },
     {
       "branch": "materials",
@@ -194802,11 +194819,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T14:06:03.409693+00:00",
+  "updated_at": "2026-11-12T16:18:03.305446+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2311,
+    "in_progress": 1,
+    "pending": 2310,
     "fully_reconstructed_claims": 470,
     "axiom_free_exported_results": 24440,
     "axiom_free_audited_definitions_and_theorems": 58291

@@ -4783,3 +4783,15 @@ import SFT.Materials.PointDefectEvidence
 import SFT.Materials.PointDefectExperiment
 
 import SFT.Materials.PointDefectValidation
+
+import SFT.Materials.Vacancy
+
+import SFT.Materials.VacancySource
+
+import SFT.Materials.VacancyGrammar
+
+import SFT.Materials.VacancyEvidence
+
+import SFT.Materials.VacancyExperiment
+
+import SFT.Materials.VacancyValidation

@@ -30874,9 +30874,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-DEFECT-VACANCY-001-ec38624192bccb93.json",
       "statement": "A vacancy is a retained reference site carrying structural occupant absence, never deletion of the site or a numerical-zero material amount.",
       "title": "Vacancy as structural absence",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/Vacancy.lean",
+        "SFT/Materials/VacancySource.lean",
+        "SFT/Materials/VacancyGrammar.lean",
+        "SFT/Materials/VacancyEvidence.lean",
+        "SFT/Materials/VacancyExperiment.lean",
+        "SFT/Materials/VacancyValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "cc562a5c94644c62009159e57f8fda567ab2e6408f54c394fe87fbb596f7625d",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -30939,7 +30946,10 @@
         "status": "empirically_tested",
         "subbranch": "defects_microstructure",
         "title": "Vacancy as structural absence"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_685_VACANCY_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[18] typed structural occupant absence at a retained reference site. Exact vacancy characterization, original site/reference/provenance/boundary retained, absence distinct from occupied content, complete ledger site identities and length unchanged, repeated vacancy idempotent. Structural absence is not site deletion or an amount value.; Original DEFECT-VACANCY source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -194669,13 +194679,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T09:14:28.621327+00:00",
+  "updated_at": "2026-11-12T09:18:43.038721+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2324,
-    "fully_reconstructed_claims": 457,
-    "axiom_free_exported_results": 23963,
-    "axiom_free_audited_definitions_and_theorems": 56756
+    "pending": 2323,
+    "fully_reconstructed_claims": 458,
+    "axiom_free_exported_results": 23997,
+    "axiom_free_audited_definitions_and_theorems": 56869
   }
 }

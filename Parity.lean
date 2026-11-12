@@ -1471,3 +1471,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.PointDefectGrammar.candidates do
     IO.println ("PointDefectGrammar\t" ++ SFT.Materials.PointDefectGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PointDefectGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PointDefectGrammar.exactForm c ++ "\t" ++ SFT.Materials.PointDefectGrammar.decisionReason c)
+
+  for c in SFT.Materials.VacancyGrammar.candidates do
+    IO.println ("VacancyGrammar\t" ++ SFT.Materials.VacancyGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.VacancyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.VacancyGrammar.exactForm c ++ "\t" ++ SFT.Materials.VacancyGrammar.decisionReason c)

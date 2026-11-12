@@ -19657,6 +19657,15 @@ The original 256-form preservation grammar, three operational witnesses, control
 Original source: sft/materials/obligations.py, SEMI-PN-TYPE (index 30); sft/materials/derivation.py, generated_law.py and claims/SFT-MAT-SEMI-PN-TYPE-001/execution.py, pinned to commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/CarrierMajority.lean, occupationExactly, absenceExactly, imbalanceExhausted, majorityClassesExclusive, completeDopedSupportClassification, occupationFromActualDifference, absenceFromActualDifference and swappingDifferenceReversesMajority; full support differences from DopingSupport. Source/program verification: PNTypeSource, PNTypeGrammar, PNTypeEvidence, PNTypeExperiment and PNTypeValidation. Evidence: verification/TURN_697_PN_TYPE_COMPLETION.json. Chronology: TIMELINE.txt, Turn697.
 
 
+Junction preservation grammar and exact enumeration
+
+The junction source constructs eight ordered binary choices: carrier, relation, organization, observation, record, provenance, generality and extension. Write each domain as G_i={rejected_i, retained_i}. Its generated domain is G=G_1×⋯×G_8, so |G|=∏_{i=1}^8 2=256. The native typed constructors represent exactly these two source alternatives on each axis; candidatesComplete proves that every tuple occurs in the generated list.
+
+For x=(x_1,…,x_8), the source preservation predicate is P(x)=∧_{i=1}^8(x_i=retained_i). Consequently P(x) implies x=(retained_1,…,retained_8), coordinate by coordinate, and that tuple satisfies P. sourceDecisionMatchesCriteria connects this predicate to the original executable decision; uniqueCriteriaSurvivor and uniqueSurvivor establish uniqueness. These equations describe the source's preservation classification; the transfer and field derivations are given separately below.
+
+Pinned V3 source: sft/materials/derivation.py, _dimensions, _blueprint and blueprint_candidate_ids; sft/materials/obligations.py, SEMI-JUNCTION; commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/JunctionGrammar.lean, generatedCardinality, candidatesComplete, sourceDecisionMatchesCriteria, uniqueCriteriaSurvivor and uniqueSurvivor. Verification: verification/TURN_698_JUNCTION_STAGED.json. Chronology: TIMELINE.txt, Turns698 and713.
+
+
 Junction transfer, depletion and balance identities
 
 For every retained cross-interface transfer t, retain its source s, destination d, charge q, source identity and action record. The paired space-charge description holds (s, reverse(q)) and (d,q). Charge reversal preserves the positive magnitude and exchanges the held orientation. Every depletion row is exactly the image of an original transfer whose source lies inside the selected region and whose destination lies outside it; the converse inclusion is proved as well. Original interface compatibility retains both endpoints on the generated lattice.

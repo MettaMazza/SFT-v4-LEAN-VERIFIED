@@ -1,0 +1,24 @@
+import SFT.Materials.QuasicrystallineOrder
+#print axioms SFT.Materials.QuasicrystallineOrder.Organization
+#print axioms SFT.Materials.QuasicrystallineOrder.laterSites
+#print axioms SFT.Materials.QuasicrystallineOrder.sites
+#print axioms SFT.Materials.QuasicrystallineOrder.coherentRecurrence
+#print axioms SFT.Materials.QuasicrystallineOrder.MaterialFamily
+#print axioms SFT.Materials.QuasicrystallineOrder.TranslationPeriod
+#print axioms SFT.Materials.QuasicrystallineOrder.noFiniteTranslation
+#print axioms SFT.Materials.QuasicrystallineOrder.quasicrystalline
+#print axioms SFT.Materials.QuasicrystallineOrder.periodRetainsEveryGeneratedWord
+#print axioms SFT.Materials.QuasicrystallineOrder.periodRetainsEveryGeneratedAdjacency
+#print axioms SFT.Materials.QuasicrystallineOrder.periodActionAtEveryDepth
+#print axioms SFT.Materials.QuasicrystallineOrder.noPeriodExactly
+#print axioms SFT.Materials.QuasicrystallineOrder.siteSuccessor
+#print axioms SFT.Materials.QuasicrystallineOrder.finiteCarrierCount
+#print axioms SFT.Materials.QuasicrystallineOrder.appendedSiteHeld
+#print axioms SFT.Materials.QuasicrystallineOrder.recurrentExactlyEverySite
+#print axioms SFT.Materials.QuasicrystallineOrder.coherentPeakEveryDepth
+#print axioms SFT.Materials.QuasicrystallineOrder.exactMergedSupportEveryDepth
+#print axioms SFT.Materials.QuasicrystallineOrder.completeProbeTraceCount
+#print axioms SFT.Materials.QuasicrystallineOrder.successorPreservesPaths
+#print axioms SFT.Materials.QuasicrystallineOrder.sourceCharacterization
+#print axioms SFT.Materials.QuasicrystallineOrder.quasicrystalHasCoherentPeaks
+#print axioms SFT.Materials.QuasicrystallineOrder.fivefoldOutsidePeriodicClosure

@@ -4747,3 +4747,15 @@ import SFT.Materials.ReciprocalEvidence
 import SFT.Materials.ReciprocalExperiment
 
 import SFT.Materials.ReciprocalValidation
+
+import SFT.Materials.QuasicrystallineOrder
+
+import SFT.Materials.QuasicrystalSource
+
+import SFT.Materials.QuasicrystalGrammar
+
+import SFT.Materials.QuasicrystalEvidence
+
+import SFT.Materials.QuasicrystalExperiment
+
+import SFT.Materials.QuasicrystalValidation

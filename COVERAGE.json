@@ -30609,9 +30609,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-CRYST-QUASICRYSTAL-001-c397a36d1bb97f5b.json",
       "statement": "Quasicrystalline order is long-range coherent recurrence with sharp reciprocal support and no finite translation period; fivefold order is thereby admitted only outside periodic-lattice closure.",
       "title": "Quasicrystalline aperiodic order",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/QuasicrystallineOrder.lean",
+        "SFT/Materials/QuasicrystalSource.lean",
+        "SFT/Materials/QuasicrystalGrammar.lean",
+        "SFT/Materials/QuasicrystalEvidence.lean",
+        "SFT/Materials/QuasicrystalExperiment.lean",
+        "SFT/Materials/QuasicrystalValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "5398aaba4dce9e8de246a813314373e9be281da081a580ffa6844bbc03cbd643",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -30676,7 +30683,10 @@
         "status": "empirically_tested",
         "subbranch": "crystal_quasicrystal",
         "title": "Quasicrystalline aperiodic order"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_682_QUASICRYSTAL_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[15] relational characterization: complete finite carrier successors and all-depth phase return, using existing ReciprocalSupport; absence of any nontrivial depth-compatible source lattice translation record with exact site/word/adjacency retention; exact characterization, all-depth positive coherent merged support, complete path provenance, and original fivefold periodic-closure exclusion. No inference from absence of rational fixed scale to absence of a spatial period.; Original CRYST-QUASICRYSTAL source fragments and unchanged global guard.; Original eight binary axes, all256 alternatives, original decisions and unique survivor.; Exactly the original three operational witnesses, controls, proof records and program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior and unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -194639,13 +194649,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T08:40:03.811986+00:00",
+  "updated_at": "2026-11-12T09:00:32.396175+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2327,
-    "fully_reconstructed_claims": 454,
-    "axiom_free_exported_results": 23859,
-    "axiom_free_audited_definitions_and_theorems": 56410
+    "pending": 2326,
+    "fully_reconstructed_claims": 455,
+    "axiom_free_exported_results": 23898,
+    "axiom_free_audited_definitions_and_theorems": 56530
   }
 }

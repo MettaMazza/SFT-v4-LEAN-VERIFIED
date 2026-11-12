@@ -4909,3 +4909,15 @@ import SFT.Materials.DualityEvidence
 import SFT.Materials.DualityExperiment
 
 import SFT.Materials.DualityValidation
+
+import SFT.Materials.ModeOccupation
+
+import SFT.Materials.OccupationSource
+
+import SFT.Materials.OccupationGrammar
+
+import SFT.Materials.OccupationEvidence
+
+import SFT.Materials.OccupationExperiment
+
+import SFT.Materials.OccupationValidation

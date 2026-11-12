@@ -1501,3 +1501,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.DualityGrammar.candidates do
     IO.println ("DualityGrammar\t" ++ SFT.Materials.DualityGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.DualityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.DualityGrammar.exactForm c ++ "\t" ++ SFT.Materials.DualityGrammar.decisionReason c)
+
+  for c in SFT.Materials.OccupationGrammar.candidates do
+    IO.println ("OccupationGrammar\t" ++ SFT.Materials.OccupationGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.OccupationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.OccupationGrammar.exactForm c ++ "\t" ++ SFT.Materials.OccupationGrammar.decisionReason c)

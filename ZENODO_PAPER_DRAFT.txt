@@ -19136,3 +19136,14 @@ Let Tₙ be the existing generated lattice translation. For a site trace P=[(n,x
 The executable comparison checks multiplicities on V_P++V and E_Q++E. Outside these lists both multiplicities vanish, so this finite comparison is equivalent to the quantified equalities. The identity traces [(0,x):x∈V] and [(0,e):e∈E] reconstruct V and E by list induction. Two presentations reconstructing the same graph agree in every multiplicity: μ(x,V_A)=μ(x,V)=μ(x,V_B), with the analogous relation equation. This is reconstruction invariance; minimum-cell selection is a separate statement.
 
 Pinned V3: sft/materials/obligations.py, Primitive unit-cell identity; sft/physics/collective_matter_laws.py, LATTICE; registered discrete/graph dependencies. Lean: SFT/Materials/UnitCellReconstruction.lean, reconstructedSitesOnce, reconstructedRelationsOnce, reconstructionCheckMeaning, identityCheckPasses, presentationIndependent; GraphExtension.graphConstructorMeaning supplies the original graph guards. Chronology: TIMELINE.txt, Turn664.
+
+
+Minimum selection for a finite reconstruction family
+
+For a trace t, let B(t) be its distinct retained seed sites and s(t)=|B(t)|. The seed guard requires every site seed and adjacency seed to belong to the original graph. Together with the exact multiplicity check, this defines admissibility A(t). Given a finite reconstruction family F, retain all minima M(F)={t∈F:A(t) ∧ ∀u∈F, A(u)⇒s(t)≤s(u)}. The implementation filters by this predicate and proves the displayed membership equivalence. It retains all equal-size minima rather than choosing a preferred basis by list order.
+
+If a,b∈M(F), the defining bounds give s(a)≤s(b) and s(b)≤s(a), hence s(a)=s(b). If an admissible a∈F has s(a)<s(b), then b cannot be minimal: its required s(b)≤s(a) contradicts the strict inequality. If F and G contain exactly the same traces, the quantified comparison ranges agree, so M(F) and M(G) contain exactly the same traces. Thus ordering the same family cannot select a different minimum set.
+
+Existence is constructive for every finite family containing an admissible witness. Filter to admissible traces. For a nonempty list, induction compares the first size with a minimum of the remaining list. In either natural-number order case, the smaller candidate is no larger than every list member. It therefore belongs to M(F). This proves minimum selection on F; the generation of the complete same-lattice family and its basis correspondence are separate from this selection theorem.
+
+Pinned source obligation: sft/materials/obligations.py, Primitive unit-cell identity, minimal-cell-carrier and basis-choice-canonicalized. Lean component: SFT/Materials/UnitCellMinimum.lean, minimalCheckMeaning, minimumMembership, minimumSizeUnique, largerReconstructionExcluded, sameFamilySameMinima and minimumExists. Chronology: TIMELINE.txt, Turn665.

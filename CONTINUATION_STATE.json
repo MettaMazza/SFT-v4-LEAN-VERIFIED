@@ -54759,7 +54759,7 @@
   ],
   "next_publication_milestone": 500,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "Continue UnitCell minimum complete labelled-cell selection and complete original basis correspondence. Preserve verification/TURN_664_UNIT_CELL_RECONSTRUCTION.json (26 zero-axiom declarations, actual translation/multiplicity operations, finite check equivalence, identity reconstruction and presentation invariance) and663 original-program checks. No full-entry completion claimed; count447. Do not replace minimum-cell proof with reconstruction/candidate checks. No source obstruction established. Next milestone500.",
+  "authorized_action": "Continue exact UnitCell source-family construction and basis correspondence. UnitCellMinimum proves all-minimum selection/existence/order invariance on finite admissible families,16 zero-axiom declarations. Crucially supplied finite F is not yet connected to complete original same-lattice cell domain; do not mark full completion or reinterpret finite F as exhaustive. Preserve664 reconstruction26 and663 program112 checks unchanged. Count447. No scientific obstruction established. Next500.",
   "scientific_cursor": {
     "completed": "SFT-MAT-CRYST-LATTICE-001",
     "next": "SFT-MAT-CRYST-UNIT-CELL-001",
@@ -55956,5 +55956,38 @@
     ],
     "axiom_dependencies": [],
     "remaining": "Minimum complete labelled cell selection and complete original basis correspondence."
+  },
+  "checkpoint664": {
+    "commit": "4b063b1ba34a7e79c45d7e225894ac81a8a9a249",
+    "tree": "5439c7d5e6103dfda52243245ed2c3abdb973b3b",
+    "verified_files": 10,
+    "verified_main_head": true
+  },
+  "unitcell665": {
+    "scope": "Minimum selection on a finite family of reconstruction traces; not full UnitCell completion",
+    "source_obligation": "sft/materials/obligations.py:MATERIALS_OBLIGATIONS[8], minimal-cell-carrier and basis-choice-canonicalized",
+    "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "module": "SFT/Materials/UnitCellMinimum.lean",
+    "sha256": "3b02fc8fe00f540f506f0ef10f8880505ba5423df2bb00c150bc0975574050fb",
+    "declarations": [
+      "SFT.Materials.UnitCellMinimum.seedSites",
+      "SFT.Materials.UnitCellMinimum.size",
+      "SFT.Materials.UnitCellMinimum.sourceSeedCheck",
+      "SFT.Materials.UnitCellMinimum.admissible",
+      "SFT.Materials.UnitCellMinimum.admissibleCheck",
+      "SFT.Materials.UnitCellMinimum.admissibleCheckMeaning",
+      "SFT.Materials.UnitCellMinimum.minimalCheck",
+      "SFT.Materials.UnitCellMinimum.minima",
+      "SFT.Materials.UnitCellMinimum.alternativeCheckMeaning",
+      "SFT.Materials.UnitCellMinimum.minimalCheckMeaning",
+      "SFT.Materials.UnitCellMinimum.minimumMembership",
+      "SFT.Materials.UnitCellMinimum.minimumSizeUnique",
+      "SFT.Materials.UnitCellMinimum.largerReconstructionExcluded",
+      "SFT.Materials.UnitCellMinimum.sameFamilySameMinima",
+      "SFT.Materials.UnitCellMinimum.leastInNonemptyFamily",
+      "SFT.Materials.UnitCellMinimum.minimumExists"
+    ],
+    "axiom_dependencies": [],
+    "remaining": "Connect a complete original same-lattice cell family to this selection, including its source generation and basis equivalence. A supplied finite family is not proof of complete source-domain coverage."
   }
 }

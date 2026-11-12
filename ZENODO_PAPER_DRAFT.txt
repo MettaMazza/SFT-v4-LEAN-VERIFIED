@@ -19720,6 +19720,19 @@ The propagation trace is retained from the same field carrier. These identities 
 Original source: sft/materials/obligations.py SEMI-JUNCTION; sft/physics/collective_matter_laws.py BAND, LATTICE, PLASMA_MHD, PLASMA_OSCILLATION and PLASMA_COLLECTIVE; sft/physics/field_laws.py ELECTRIC_DISTINCTION and ELECTRIC_POTENTIAL, pinned to 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/JunctionCoupling.lean, everyDepletionTransferHasSourceField, noForeignInterfaceField, depletionAndFieldShareCharge, responseUsesActualSourceWork, depletionReversesActualSourceResponse, sourcePropagationRetained and exactResponseNormalization. Reused CollectivePlasma.everyMobileCarrierCoupled, FieldElectricPotential.reversedChargeReversesResponse and normalizationExact. Evidence: verification/TURN_699_JUNCTION_FIELD_BINDING.json. Chronology: TIMELINE.txt, Turn699.
 
 
+Exact ordered junction transport and field-source pairing
+
+Let C be the complete ordered coupling list and T its transfer projection, so map(t,C)=T. Let P test the derived opposed endpoint-support classes, C_pn=filter(c↦P(t(c)),C), and T_pn=filter(P,T). The source's shared-carrier restriction obeys the exact list equality
+  map(t,C_pn) = T_pn.
+To derive it, induct on C. The empty list gives empty lists on both sides. For a head c, P(t(c)) has two cases: rejection removes that occurrence on both sides and uses the tail equality; admission prepends exactly t(c) on both sides. Thus no occurrence is added, dropped or reordered by taking the transfer projection after selecting the junction couplings.
+
+For each coupling c, its retained common-charge relation gives q_field(c)=q_transfer(t(c)). Induction on the selected coupling list substitutes this identity at the head and retains the tail equality. Composing with the transfer-projection identity yields
+  map(q_field,C_pn) = map(q_transfer,T_pn).
+These are ordered-list identities, preserving repeated occurrences as well as support membership. They establish the complete transport/field carrier pairing using the same selected couplings and their existing source records.
+
+Pinned V3 sources: sft/materials/obligations.py, SEMI-JUNCTION; sft/materials/derivation.py, _blueprint; sft/physics/collective_matter_laws.py, PLASMA_COLLECTIVE and PLASMA_MHD; sft/mathematics/graph_network/law.py, complete ingress/egress pairing, commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/JunctionCoupling.lean, dopedTransferProjectionExact and dopedFieldSourceProjectionExact; existing CollectivePlasma.Plasma.complete and Coupling.commonCharge. Evidence: verification/TURN_775_JUNCTION_ORDERED_PAIRING.json and verification/TURN_775_JUNCTION_AUDIT.json. Chronology: TIMELINE.txt, Turn775.
+
+
 Reconstructing the transferred force from its field response
 
 The electric field is the force response per held charge carrier. For the same recorded interaction c, let F be its force and q its transported charge. The common-charge equality identifies this q with the field's source charge. Write the positive magnitudes as f=a/b and q=u/v, with b,u,v positive, and retain their held orientations separately. Charge normalization and recomposition give

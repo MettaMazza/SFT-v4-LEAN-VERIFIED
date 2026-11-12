@@ -54754,7 +54754,7 @@
   ],
   "next_publication_milestone": 500,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "Formalise the original SEMI-JUNCTION transport/field balance at its declared conditions over V3's finite generated-carrier domain. Preserve verified support selection, charge correspondence and history. Do not require a terminal equilibrium, convergence, or equivalence to the translator-defined JunctionObservation.closed; that screening predicate must not dictate the source interpretation. Establish the actual source-bound balance representation and proof without assuming it or adding a scientific law. Preserve Turn750 force reconstruction proof and its empty-axiom audit; do not rerun unchanged component checks. It establishes F=(F/q)q for the actual coupling, not completion of the declared equilibrium/bias balance correspondence.",
+  "authorized_action": "Formalise the original SEMI-JUNCTION transport/field balance at its declared conditions over V3's finite generated-carrier domain. Preserve verified support selection, charge correspondence and history. Do not require a terminal equilibrium, convergence, or equivalence to the translator-defined JunctionObservation.closed; that screening predicate must not dictate the source interpretation. Establish the actual source-bound balance representation and proof without assuming it or adding a scientific law. Preserve Turn750 force reconstruction proof and its empty-axiom audit; do not rerun unchanged component checks. It establishes F=(F/q)q for the actual coupling, not completion of the declared equilibrium/bias balance correspondence. Preserve Turn775 exact ordered junction transfer/field-charge projections; these are verified and must not be rederived. They do not alone register the full equilibrium/bias correspondence.",
   "scientific_cursor": {
     "completed": "SFT-MAT-SEMI-PN-TYPE-001",
     "next": "SFT-MAT-SEMI-JUNCTION-001",
@@ -57592,5 +57592,43 @@
     "scientific_edits": 0,
     "completion_increment": 0,
     "scope": "Do not repeat this proposal or make it a completion criterion. Preserve verified work; direct original source correspondence must justify changes."
+  },
+  "junction_ordered_pairing775": {
+    "entry": "SFT-MAT-SEMI-JUNCTION-001",
+    "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "source_hashes": {
+      "sft/materials/obligations.py": "734ef283b182e596ba569eeb06b2fd9153a20921dab4f85b7abdcd8359d60bc9",
+      "sft/materials/derivation.py": "2791bfa9272633c65fcf5f019ea19c08f6870b172e955973564238483f62b26e",
+      "sft/physics/collective_matter_laws.py": "07c6c7e7723db3463697047ea00a6f013211a9ee4942b4a2e10b07effc94d1a8",
+      "sft/mathematics/graph_network/law.py": "c4b12d0f60c8a2dbdd19e09093dfc1770420b85484563da88ee6bdf8b8b98a2e"
+    },
+    "source_operations": [
+      "sft/materials/obligations.py:SEMI-JUNCTION cross-interface-carrier-transfer and space-charge-and-field-retained",
+      "sft/materials/derivation.py:_blueprint preservation under finite successors",
+      "sft/physics/collective_matter_laws.py:PLASMA_COLLECTIVE and PLASMA_MHD shared carrier/transfer records",
+      "sft/mathematics/graph_network/law.py:SPEC laws network balance preserves token identity"
+    ],
+    "lean": [
+      "SFT.Materials.JunctionCoupling.dopedTransferProjectionExact",
+      "SFT.Materials.JunctionCoupling.dopedFieldSourceProjectionExact"
+    ],
+    "meaning": "Restriction to opposed derived endpoint supports preserves the exact ordered transfer projection and the exact ordered field-source/transport-charge projection. Equality includes multiplicity. No definitions, domains or premises were changed.",
+    "new_theorems": 2,
+    "build_command": "python3 work/build_rotation677.py JunctionCoupling JunctionObservation JunctionPreservation",
+    "build_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "lake_build_command": "lake build SFT.Materials.JunctionCoupling SFT.Materials.JunctionObservation SFT.Materials.JunctionPreservation",
+    "lake_exit_code": 0,
+    "audit_command": "python3 work/audit_junction775.py",
+    "audit_declarations": 46,
+    "audit_theorems": 32,
+    "axiom_dependencies": [],
+    "lean_sha256": "ec0c8a952b1cef0356713a54b5640b484cb874dcc9dac206c48cafba1062c210",
+    "entry_complete": false,
+    "completed_entries": 470,
+    "scope": "Exact complete transport/field carrier correspondence; not a claim that equilibrium/bias balance correspondence is fully established."
   }
 }

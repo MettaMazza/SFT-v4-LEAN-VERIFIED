@@ -160,4 +160,45 @@ theorem fieldReconstructsActualForce
           ← SFT.Foundation.FractionReduction.mulAssoc recovered.numerator magnitude.denominator (q.denominator*q.numerator),
           Nat.mul_comm (recovered.numerator*magnitude.denominator) (q.denominator*q.numerator)]
 
+
+-- The opposed-support restriction preserves the complete ordered pairing,
+-- including every occurrence, not just membership of its transfer support.
+theorem dopedTransferProjectionExact
+ (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
+ (p : CollectivePlasma.Plasma Part Support State ClockState Clock) :
+ (dopedInterfaceCouplings before after p).map CollectivePlasma.Coupling.transfer =
+ JunctionTransfer.dopedInterfaceTransfers before after p.flow.transfers := by
+ unfold dopedInterfaceCouplings JunctionTransfer.dopedInterfaceTransfers
+ rw [← p.complete]
+ have restrict (cs : List (CollectivePlasma.Coupling Part Support State ClockState Clock)) :
+   (cs.filter (fun c => JunctionTransfer.opposedDopedEndpoints before after c.transfer)).map
+     CollectivePlasma.Coupling.transfer =
+   (cs.map CollectivePlasma.Coupling.transfer).filter
+     (JunctionTransfer.opposedDopedEndpoints before after) := by
+  induction cs with
+  | nil => rfl
+  | cons c cs ih =>
+    cases h : JunctionTransfer.opposedDopedEndpoints before after c.transfer <;>
+      simp only [List.filter,List.map,h]
+    · exact ih
+    · exact congrArg (List.cons c.transfer) ih
+ exact restrict p.couplings
+
+theorem dopedFieldSourceProjectionExact
+ (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
+ (p : CollectivePlasma.Plasma Part Support State ClockState Clock) :
+ (dopedInterfaceCouplings before after p).map (fun c => c.field.electric.charge) =
+ (JunctionTransfer.dopedInterfaceTransfers before after p.flow.transfers).map Transfer.carrier := by
+ rw [← dopedTransferProjectionExact before after p]
+ have paired (cs : List (CollectivePlasma.Coupling Part Support State ClockState Clock)) :
+   cs.map (fun c => c.field.electric.charge) =
+     (cs.map CollectivePlasma.Coupling.transfer).map Transfer.carrier := by
+  induction cs with
+  | nil => rfl
+  | cons c cs ih =>
+    change c.field.electric.charge :: _ = c.transfer.carrier :: _
+    rw [c.commonCharge]
+    exact congrArg (List.cons c.field.electric.charge) ih
+ exact paired (dopedInterfaceCouplings before after p)
+
 end SFT.Materials.JunctionCoupling

@@ -19691,3 +19691,18 @@ Reversing the source charge reverses this normalized response exactly. For posit
 The propagation trace is retained from the same field carrier. These identities connect junction transfer, depletion and field response through the existing source-bound coupling, rather than choosing the field reading independently.
 
 Original source: sft/materials/obligations.py SEMI-JUNCTION; sft/physics/collective_matter_laws.py BAND, LATTICE, PLASMA_MHD, PLASMA_OSCILLATION and PLASMA_COLLECTIVE; sft/physics/field_laws.py ELECTRIC_DISTINCTION and ELECTRIC_POTENTIAL, pinned to 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/JunctionCoupling.lean, everyDepletionTransferHasSourceField, noForeignInterfaceField, depletionAndFieldShareCharge, responseUsesActualSourceWork, depletionReversesActualSourceResponse, sourcePropagationRetained and exactResponseNormalization. Reused CollectivePlasma.everyMobileCarrierCoupled, FieldElectricPotential.reversedChargeReversesResponse and normalizationExact. Evidence: verification/TURN_699_JUNCTION_FIELD_BINDING.json. Chronology: TIMELINE.txt, Turn699.
+
+
+Junction endpoint observation closure and retained restoring history
+
+Let C_I be the complete interface coupling list obtained above, and let O be the declared observation map on the generated cell network. Retain the endpoint observations of every actual transfer, without removing the transfer record:
+  R_I = [(t(c), O(source(t(c))), O(destination(t(c)))) : c in C_I].
+At this declared observation, closure means that each transfer's two endpoints belong to the same complete observation fibre. Provided both endpoints belong to the generated network, the complete-fibre theorem gives the equivalence
+  closed(C_I,O) iff for every c in C_I, O(source(t(c))) = O(destination(t(c))).
+The forward implication takes the shared fibre label; the reverse implication uses the unique complete fibre of the retained source endpoint. Complete coupling projection then transfers this conclusion to every outward transfer in the original network. Conversely, a single actual coupling with unequal endpoint observations excludes closure. The charge-transfer carrier and its paired depletion charges remain present even when the declared observation identifies their endpoint classes. This is observation closure; the earlier exact opposed-response equation separately expresses transport/field balance.
+
+For an existing source-bound restoring record r, its displacement path retains both reversal events. The established return theorem gives
+  displacement_last(r) = displacement_work(r.coupling).
+For every retained induction step, the electric response carries exactly the charge of the same coupling's transfer, which is also the destination charge in its depletion record. The theorem therefore joins the displacement return and retained junction charge without replacing the path with a chosen terminal or deleting intermediate events.
+
+Pinned V3 sources: sft/materials/obligations.py SEMI-JUNCTION and sft/physics/collective_matter_laws.py PLASMA_OSCILLATION, through the registered BAND dependency chain, commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/JunctionObservation.lean, endpointObservations, closureExactly, everyDepletionEndpointClosed, distinctEndpointPreventsClosure, closedTransferRetainsDepletion and actualRestoringPathRetainsJunctionCharge; reused CollectivePlasmaOscillation.screeningExactlyClosedObservation, returnedDisplacement and recurrenceRetainsCharge. Evidence: verification/TURN_700_JUNCTION_OBSERVATION_BINDING.json. Chronology: TIMELINE.txt, Turn700.

@@ -1,0 +1,8 @@
+import SFT.Materials.JunctionObservation
+#print axioms SFT.Materials.JunctionObservation.endpointObservations
+#print axioms SFT.Materials.JunctionObservation.closed
+#print axioms SFT.Materials.JunctionObservation.closureExactly
+#print axioms SFT.Materials.JunctionObservation.everyDepletionEndpointClosed
+#print axioms SFT.Materials.JunctionObservation.distinctEndpointPreventsClosure
+#print axioms SFT.Materials.JunctionObservation.closedTransferRetainsDepletion
+#print axioms SFT.Materials.JunctionObservation.actualRestoringPathRetainsJunctionCharge

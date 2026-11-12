@@ -4921,3 +4921,15 @@ import SFT.Materials.OccupationEvidence
 import SFT.Materials.OccupationExperiment
 
 import SFT.Materials.OccupationValidation
+
+import SFT.Materials.DopingSupport
+
+import SFT.Materials.DopingSource
+
+import SFT.Materials.DopingGrammar
+
+import SFT.Materials.DopingEvidence
+
+import SFT.Materials.DopingExperiment
+
+import SFT.Materials.DopingValidation

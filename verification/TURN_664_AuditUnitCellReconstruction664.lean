@@ -1,0 +1,27 @@
+import SFT.Materials.UnitCellReconstruction
+#print axioms SFT.Materials.UnitCellReconstruction.Trace
+#print axioms SFT.Materials.UnitCellReconstruction.sites
+#print axioms SFT.Materials.UnitCellReconstruction.relations
+#print axioms SFT.Materials.UnitCellReconstruction.occurrence
+#print axioms SFT.Materials.UnitCellReconstruction.reconstructsOnce
+#print axioms SFT.Materials.UnitCellReconstruction.siteGenerated
+#print axioms SFT.Materials.UnitCellReconstruction.relationGenerated
+#print axioms SFT.Materials.UnitCellReconstruction.wordRetained
+#print axioms SFT.Materials.UnitCellReconstruction.occurrenceAbsent
+#print axioms SFT.Materials.UnitCellReconstruction.occurrenceMember
+#print axioms SFT.Materials.UnitCellReconstruction.occurrenceDistinct
+#print axioms SFT.Materials.UnitCellReconstruction.everySiteOnce
+#print axioms SFT.Materials.UnitCellReconstruction.everyRelationOnce
+#print axioms SFT.Materials.UnitCellReconstruction.presentationIndependent
+#print axioms SFT.Materials.UnitCellReconstruction.latticeMultiplicity
+#print axioms SFT.Materials.UnitCellReconstruction.reconstructedSitesOnce
+#print axioms SFT.Materials.UnitCellReconstruction.reconstructedRelationsOnce
+#print axioms SFT.Materials.UnitCellReconstruction.identityTrace
+#print axioms SFT.Materials.UnitCellReconstruction.identitySites
+#print axioms SFT.Materials.UnitCellReconstruction.identityRelations
+#print axioms SFT.Materials.UnitCellReconstruction.identityReconstructs
+#print axioms SFT.Materials.UnitCellReconstruction.sameMultiplicity
+#print axioms SFT.Materials.UnitCellReconstruction.multiplicityCheckMeaning
+#print axioms SFT.Materials.UnitCellReconstruction.reconstructionCheck
+#print axioms SFT.Materials.UnitCellReconstruction.reconstructionCheckMeaning
+#print axioms SFT.Materials.UnitCellReconstruction.identityCheckPasses

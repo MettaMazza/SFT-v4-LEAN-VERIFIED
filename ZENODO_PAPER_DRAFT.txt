@@ -19127,3 +19127,12 @@ For SFT-MAT-CRYST-UNIT-CELL-001, the original candidate coordinates are minimal-
 UnitCellSource retains the required NIST fragments “unit cell” and “the entire crystal is generated”, their ordered receipt identities, and the original source guard. UnitCellExperiment and UnitCellValidation preserve the original sealed prediction and source-comparison operations. This executable comparison is separate from the geometrical statement defining the least complete labelled cell and its unique reconstruction.
 
 Source: pinned claims/SFT-MAT-CRYST-UNIT-CELL-001/execution.py; sft/materials/obligations.py (entry8), derivation.py, generated_law.py and external_bindings.py. Lean: SFT/Materials/UnitCellGrammar.lean, UnitCellEvidence.lean, UnitCellSource.lean, UnitCellExperiment.lean and UnitCellValidation.lean. Corresponding chronology: TIMELINE.txt, Turn663.
+
+
+Unit-cell reconstruction multiplicities
+
+Let Tₙ be the existing generated lattice translation. For a site trace P=[(n,x)], define V_P=[Tₙ(x):(n,x)∈P]. For a relation trace Q=[(n,(a,b))], define E_Q=[(Tₙ(a),Tₙ(b)):(n,(a,b))∈Q]. Existing translation induction retains generated support, local words w(Tₙ(x))=w(x), and adjacency. Define μ(x,[])=0 and μ(x,y::L)=1_{x=y}+μ(x,L). Reconstruction compares μ(x,V_P)=μ(x,V) and μ(e,E_Q)=μ(e,E) for every site and relation. The original graph constructor proves V and E duplicate-free. Induction then gives μ(x,V)=1 for x∈V and μ(e,E)=1 for e∈E; substituting the reconstruction equalities proves each reconstructed site and relation appears once.
+
+The executable comparison checks multiplicities on V_P++V and E_Q++E. Outside these lists both multiplicities vanish, so this finite comparison is equivalent to the quantified equalities. The identity traces [(0,x):x∈V] and [(0,e):e∈E] reconstruct V and E by list induction. Two presentations reconstructing the same graph agree in every multiplicity: μ(x,V_A)=μ(x,V)=μ(x,V_B), with the analogous relation equation. This is reconstruction invariance; minimum-cell selection is a separate statement.
+
+Pinned V3: sft/materials/obligations.py, Primitive unit-cell identity; sft/physics/collective_matter_laws.py, LATTICE; registered discrete/graph dependencies. Lean: SFT/Materials/UnitCellReconstruction.lean, reconstructedSitesOnce, reconstructedRelationsOnce, reconstructionCheckMeaning, identityCheckPasses, presentationIndependent; GraphExtension.graphConstructorMeaning supplies the original graph guards. Chronology: TIMELINE.txt, Turn664.

@@ -1,0 +1,27 @@
+{
+  "claim_id": "SFT-MAT-SEMI-JUNCTION-001",
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "method": "Independent read-only review of actual source and native declarations; no builds or implementation changes.",
+  "source_requirement": "Transport/field balance under the original declared equilibrium/bias conditions and finite generated-carrier domain.",
+  "not_established_requirements": [
+    "Universal initial-state evolution",
+    "Terminal fixed point or self-edge",
+    "Unconditional convergence",
+    "Equivalence specifically to the translator-defined JunctionObservation.closed predicate"
+  ],
+  "current_evidence": [
+    "Support-derived selection of actual transfers and matching charge/field couplings",
+    "Endpoint fibre equivalence and conditional closure consequences",
+    "Finite history preservation of the same selected couplings"
+  ],
+  "source_locations": [
+    "sft/materials/obligations.py:94",
+    "sft/materials/derivation.py:265-296",
+    "sft/mathematics/dynamical_systems/law.py:28-68",
+    "sft/physics/collective_matter_laws.py:85-88"
+  ],
+  "finding": "No source-bound derivation completing the junction balance was established by the review. Existing endpoint closure may remain a screening component; its definition must not constrain the interpretation or formalisation of the original junction balance statement.",
+  "external_blocker_established": false,
+  "entry_complete": false,
+  "new_proofs": 0
+}

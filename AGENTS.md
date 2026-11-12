@@ -105,3 +105,7 @@ The numerical-layer correction is now verified and pushed at90876167995483512456
 
 Continuation execution clarification — 2026-11-12T16:33:46.838742+00:00
 An already documented inactivity-to-blocking episode must not be recounted as a new episode or used to replace the requested implementation. Preserve the native-record evidence and its existing count. On resumption, record the actual declarations inspected and their arguments, not a claim inferred from names. If an entry-specific composition remains unresolved, retain the exact open connection without introducing an additional equation, assumed outcome, or generic helper to create apparent progress. No unchanged completion count or repeated report authorizes blocked status.
+
+
+Source representation before correspondence — 2026-11-12T20:02:07.426722+00:00
+An existing translator-defined predicate is not a scientific completion requirement. If its correspondence to V3 is unestablished, do not demand that V3 prove equivalence to it. Retain independently useful verified components, but determine the correct representation from the source. In particular JunctionObservation.closed is an endpoint-fibre screening predicate; neither its name nor its existing proofs makes it the required definition of equilibrium/bias balance. No terminal-state or universal-convergence criterion is authorized.

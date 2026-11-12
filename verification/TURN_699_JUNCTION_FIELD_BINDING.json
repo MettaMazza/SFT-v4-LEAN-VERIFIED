@@ -1,0 +1,38 @@
+{
+  "status": "verified_field_binding_entry_not_registered",
+  "claim_id": "SFT-MAT-SEMI-JUNCTION-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_route": [
+    "sft/materials/obligations.py SEMI-JUNCTION",
+    "sft/physics/collective_matter_laws.py BAND -> LATTICE -> PLASMA_MHD -> PLASMA_OSCILLATION -> PLASMA_COLLECTIVE",
+    "sft/physics/field_laws.py ELECTRIC_DISTINCTION and ELECTRIC_POTENTIAL"
+  ],
+  "lean_module": "SFT/Materials/JunctionCoupling.lean",
+  "lean_source_sha256": "944274ba56ebaaa92825f9ab61539b77b5713f15f3234a2c6746e42c4bdb02bd",
+  "declarations": [
+    "SFT.Materials.JunctionCoupling.crosses",
+    "SFT.Materials.JunctionCoupling.interfaceCouplings",
+    "SFT.Materials.JunctionCoupling.crossingExactly",
+    "SFT.Materials.JunctionCoupling.everyDepletionTransferHasSourceField",
+    "SFT.Materials.JunctionCoupling.noForeignInterfaceField",
+    "SFT.Materials.JunctionCoupling.retainedResponse",
+    "SFT.Materials.JunctionCoupling.depletionAndFieldShareCharge",
+    "SFT.Materials.JunctionCoupling.depletedOrientationComesFromSameField",
+    "SFT.Materials.JunctionCoupling.responseUsesActualSourceWork",
+    "SFT.Materials.JunctionCoupling.depletionReversesActualSourceResponse",
+    "SFT.Materials.JunctionCoupling.sourcePropagationRetained",
+    "SFT.Materials.JunctionCoupling.exactResponseNormalization"
+  ],
+  "axiom_dependencies": [],
+  "verified_component": "Every retained outward junction transfer has its actual source-bound field coupling, with the same transported charge; no foreign coupling; depletion charge is the reversed orientation of that source; response normalization uses the actual coupling work and retains propagation.",
+  "commands": [
+    "python3 work/build_rotation677.py JunctionCoupling",
+    "python3 work/audit_junctioncoupling_math699.py"
+  ],
+  "results": [
+    "exit0",
+    "12 declarations empty axiom dependencies"
+  ],
+  "reused_evidence": "verification/TURN_698_JUNCTION_STAGED.json",
+  "remaining": "Bind the original equilibrium/bias state evolution to the retained coupled junction record; do not infer physical closure merely from arbitrary supplied readings and a successful abstract basin check. This is remaining translation work, not a finding that V3 lacks it."
+}

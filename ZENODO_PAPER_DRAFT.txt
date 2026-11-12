@@ -19674,3 +19674,20 @@ Given the generated state carrier S, held transition relation R and retained res
 Membership is proved equivalent to all three displayed conditions. No balanced fixed state is omitted. For a terminal selected from E, the original successful complete registered-perturbation check is equivalent to a retained transition derivation from every registered start to that balanced terminal. This conditional statement retains both the actual transition witness and the balance identity.
 
 Source: sft/materials/obligations.py SEMI-JUNCTION, sft/mathematics/dynamical_systems/law.py and sft/mathematics/calculator/values.py, commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/JunctionTransfer.lean, depletionExactly, exactDepletionTransportBalance and balancedExactly; SFT/Materials/JunctionTerminal.lean, terminalExactly and checkedBasinReachesBalancedTerminal. Reused MaterialInterface, FieldSourceContinuity, FieldElectricDistinction, FoldScalar and DynamicsStability proofs. Component evidence: verification/TURN_698_JUNCTION_STAGED.json. Chronology: TIMELINE.txt, Turn698.
+
+
+Junction field correspondence from the retained charge-transfer carrier
+
+The band dependency passes through the already derived collective charge coupling. Its complete coupling list C projects to the same transfer list N:
+  map(transfer,C) = N.
+For a declared region I, retain precisely those couplings whose transfer starts inside I and ends outside it. Every outward transfer has a coupling in this selection, and every selected coupling projects back to an outward transfer. Thus depletion and field response share the actual generated transfer carrier.
+
+For each coupling c, its common-charge identity is
+  c.transfer.charge = c.field.electric.charge.
+The depletion source retains the opposite orientation of this same charge, with unchanged magnitude. The source field response is computed from its actual work-force record,
+  E(c) = normalizeCharge(force(c.work), charge(c.transfer)).
+Reversing the source charge reverses this normalized response exactly. For positive magnitude x=n/d and charge magnitude q=a/b, the retained response ratio is x/q=(n b)/(d a); its normalized numerator u and denominator v satisfy
+  (n b)v = u(d a).
+The propagation trace is retained from the same field carrier. These identities connect junction transfer, depletion and field response through the existing source-bound coupling, rather than choosing the field reading independently.
+
+Original source: sft/materials/obligations.py SEMI-JUNCTION; sft/physics/collective_matter_laws.py BAND, LATTICE, PLASMA_MHD, PLASMA_OSCILLATION and PLASMA_COLLECTIVE; sft/physics/field_laws.py ELECTRIC_DISTINCTION and ELECTRIC_POTENTIAL, pinned to 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/JunctionCoupling.lean, everyDepletionTransferHasSourceField, noForeignInterfaceField, depletionAndFieldShareCharge, responseUsesActualSourceWork, depletionReversesActualSourceResponse, sourcePropagationRetained and exactResponseNormalization. Reused CollectivePlasma.everyMobileCarrierCoupled, FieldElectricPotential.reversedChargeReversesResponse and normalizationExact. Evidence: verification/TURN_699_JUNCTION_FIELD_BINDING.json. Chronology: TIMELINE.txt, Turn699.

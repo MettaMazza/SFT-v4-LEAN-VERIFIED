@@ -1,0 +1,13 @@
+import SFT.Materials.JunctionCoupling
+#print axioms SFT.Materials.JunctionCoupling.crosses
+#print axioms SFT.Materials.JunctionCoupling.interfaceCouplings
+#print axioms SFT.Materials.JunctionCoupling.crossingExactly
+#print axioms SFT.Materials.JunctionCoupling.everyDepletionTransferHasSourceField
+#print axioms SFT.Materials.JunctionCoupling.noForeignInterfaceField
+#print axioms SFT.Materials.JunctionCoupling.retainedResponse
+#print axioms SFT.Materials.JunctionCoupling.depletionAndFieldShareCharge
+#print axioms SFT.Materials.JunctionCoupling.depletedOrientationComesFromSameField
+#print axioms SFT.Materials.JunctionCoupling.responseUsesActualSourceWork
+#print axioms SFT.Materials.JunctionCoupling.depletionReversesActualSourceResponse
+#print axioms SFT.Materials.JunctionCoupling.sourcePropagationRetained
+#print axioms SFT.Materials.JunctionCoupling.exactResponseNormalization

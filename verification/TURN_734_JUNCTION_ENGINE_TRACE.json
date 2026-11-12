@@ -1,0 +1,111 @@
+{
+  "pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "functions": [
+    {
+      "file": "sft/materials/derivation.py",
+      "definition": "_blueprint",
+      "line": 260,
+      "end_line": 300,
+      "calls": [
+        "'__'.join",
+        "MaterialsBlueprint",
+        "_dimensions",
+        "_exclusions",
+        "_structural_witnesses",
+        "row.claim_id.removeprefix",
+        "row.claim_id.removeprefix('SFT-MAT-').removesuffix",
+        "row.title.lower"
+      ],
+      "source_sha256": "2791bfa9272633c65fcf5f019ea19c08f6870b172e955973564238483f62b26e"
+    },
+    {
+      "file": "sft/physics/generated_empirical_law.py",
+      "definition": "decide_candidate",
+      "line": 212,
+      "end_line": 221,
+      "calls": [
+        "CandidateDecision",
+        "candidate_rows",
+        "decision_reason",
+        "next",
+        "sha256_identity",
+        "survivor_id"
+      ],
+      "source_sha256": "65703f059b0a6059af6f06aff9e11f1fcef19a1b10d2a8fa4b675418c8ca8071"
+    },
+    {
+      "file": "sft/physics/generated_empirical_law.py",
+      "definition": "closure_evidence",
+      "line": 223,
+      "end_line": 240,
+      "calls": [
+        "ClosureEvidence",
+        "sha256_identity",
+        "survivor_id",
+        "tuple"
+      ],
+      "source_sha256": "65703f059b0a6059af6f06aff9e11f1fcef19a1b10d2a8fa4b675418c8ca8071"
+    },
+    {
+      "file": "sft/engine/engine.py",
+      "definition": "_registration_violations",
+      "line": 229,
+      "end_line": 269,
+      "calls": [
+        "', '.join",
+        "getattr",
+        "is_sha256_identity",
+        "isinstance",
+        "len",
+        "self.authority.contains",
+        "set",
+        "sorted",
+        "tuple",
+        "value.strip",
+        "violations.append"
+      ],
+      "source_sha256": "cc150b5556b62f3d67e91ad9d008811abb429b2a3d547159a565b53cfab7e525"
+    },
+    {
+      "file": "sft/engine/engine.py",
+      "definition": "_closure_violations",
+      "line": 313,
+      "end_line": 329,
+      "calls": [
+        "closure.exact_boundary.strip",
+        "is_sha256_identity",
+        "isinstance",
+        "tuple",
+        "violations.append"
+      ],
+      "source_sha256": "cc150b5556b62f3d67e91ad9d008811abb429b2a3d547159a565b53cfab7e525"
+    },
+    {
+      "file": "sft/engine/authority.py",
+      "definition": "contains",
+      "line": 18,
+      "end_line": 20,
+      "calls": [
+        "bool",
+        "self.admitted_receipts.get"
+      ],
+      "source_sha256": "2e37aff4374ef7507d9e4d1a261c82d34b503eb65d0be711ba56aa4c2d1a9597"
+    },
+    {
+      "file": "sft/engine/authority.py",
+      "definition": "admit",
+      "line": 22,
+      "end_line": 38,
+      "calls": [
+        "ValueError",
+        "any",
+        "asdict",
+        "payload.pop",
+        "self.admitted_receipts.get",
+        "sha256_identity"
+      ],
+      "source_sha256": "2e37aff4374ef7507d9e4d1a261c82d34b503eb65d0be711ba56aa4c2d1a9597"
+    }
+  ],
+  "scope": "Pinned source equality and direct AST calls; not a proof of absence throughout V3."
+}

@@ -19664,6 +19664,21 @@ For each of the two retained regions r, use its actual supports B_r before dopin
 Pinned source: sft/materials/obligations.py, SEMI-DOPING, SEMI-PN-TYPE and SEMI-JUNCTION. Lean: SFT/Materials/DopingSupport.lean, gainedExactly and lostExactly; SFT/Materials/CarrierMajority.lean, occupationFromActualDifference and absenceFromActualDifference. Existing proof evidence: verification/TURN_696_DOPING_COMPLETION.json and verification/TURN_697_PN_TYPE_COMPLETION.json. Source/argument trace: verification/TURN_733_JUNCTION_CARRIER_TRACE.json. Chronology: TIMELINE.txt, Turns696,697 and733.
 
 
+Support-derived interfacial selection and field correspondence
+
+Let o(x)=orientation(B_x,A_x) be the majority orientation derived above from the actual before/after supports at endpoint x. For a retained transfer t=(s,d,q,provenance), define P(t) by
+  P(t) ⇔ [o(s)=first ∧ o(d)=second] ∨ [o(s)=second ∧ o(d)=first].
+The complete endpoint case distinction gives exactly these two accepted combinations. Equal orientations and absent majority orientations return false. Both directions across opposed regions are retained. For the actual ordered transfer network T, define
+  T_pn = filter(P,T),     Q_pn = map(spaceCharge,T_pn).
+Filter and map membership then give, in both directions,
+  r∈Q_pn ⇔ ∃t∈T, P(t) ∧ spaceCharge(t)=r.
+The filter retains occurrence order and repeated transfer records. For T=p.flow.transfers, the complete coupling projection yields a coupling c∈p.couplings with c.transfer=t for each t∈T_pn. Its existing common-charge equality gives
+  destinationCharge(spaceCharge(t)) = c.field.electric.charge.
+Thus the opposed-support selection, transfer record, paired space charge and field charge refer to the same retained transfer. This construction selects from the actual transfer network; it does not replace the source's transition generation or declared equilibrium/bias condition.
+
+Pinned V3 source: sft/materials/obligations.py, SEMI-DOPING, SEMI-PN-TYPE and SEMI-JUNCTION; collective charge/field composition in sft/physics/collective_matter_laws.py. Lean: SFT/Materials/JunctionTransfer.lean, opposedDopedEndpointsExactly and dopedSpaceChargeExactly; SFT/Materials/JunctionCoupling.lean, everyDopedInterfaceTransferHasSourceField. Reused CarrierMajority.orientation and CollectivePlasma.everyMobileCarrierCoupled. Verification: verification/TURN_735_JUNCTION_DOPED_BINDING.json and TURN_735_JUNCTION_AUDIT.json. Chronology: TIMELINE.txt, Turn735.
+
+
 Junction preservation grammar and exact enumeration
 
 The junction source constructs eight ordered binary choices: carrier, relation, organization, observation, record, provenance, generality and extension. Write each domain as G_i={rejected_i, retained_i}. Its generated domain is G=G_1×⋯×G_8, so |G|=∏_{i=1}^8 2=256. The native typed constructors represent exactly these two source alternatives on each axis; candidatesComplete proves that every tuple occurs in the generated list.

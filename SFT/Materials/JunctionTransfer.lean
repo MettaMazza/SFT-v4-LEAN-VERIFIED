@@ -1,3 +1,4 @@
+import SFT.Materials.CarrierMajority
 import SFT.Materials.MaterialInterface
 import SFT.Physics.FieldSourceContinuity
 import SFT.Physics.FieldElectricDistinction
@@ -56,5 +57,70 @@ theorem exactDepletionTransportBalance (inside : String → Bool)
  FieldSourceContinuity.departuresInside inside network + (FieldSourceContinuity.inward inside network).length =
  FieldSourceContinuity.arrivalsInside inside network + (FieldSourceContinuity.outward inside network).length :=
  FieldSourceContinuity.exactInteriorBoundaryBalance inside network
+
+-- SEMI-JUNCTION's opposed-doped-region carrier uses the already derived
+-- SEMI-PN-TYPE orientations of actual prior/result supports at each endpoint.
+-- Both transfer directions are retained; balanced support supplies neither class.
+def opposedDopedEndpoints (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
+ (transfer : Transfer String FieldElectricDistinction.Charge) : Bool :=
+ match CarrierMajority.orientation (before transfer.source) (after transfer.source) with
+ | none => false
+ | some sourceOrientation =>
+   match CarrierMajority.orientation (before transfer.destination) (after transfer.destination) with
+   | none => false
+   | some destinationOrientation =>
+     match sourceOrientation with
+     | .first => match destinationOrientation with | .first => false | .second => true
+     | .second => match destinationOrientation with | .first => true | .second => false
+
+theorem opposedDopedEndpointsExactly
+ (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
+ (transfer : Transfer String FieldElectricDistinction.Charge) :
+ opposedDopedEndpoints before after transfer = true ↔
+ (CarrierMajority.orientation (before transfer.source) (after transfer.source) = some .first ∧
+  CarrierMajority.orientation (before transfer.destination) (after transfer.destination) = some .second) ∨
+ (CarrierMajority.orientation (before transfer.source) (after transfer.source) = some .second ∧
+  CarrierMajority.orientation (before transfer.destination) (after transfer.destination) = some .first) := by
+ unfold opposedDopedEndpoints
+ cases a : CarrierMajority.orientation (before transfer.source) (after transfer.source) with
+ | none =>
+   cases b : CarrierMajority.orientation (before transfer.destination) (after transfer.destination) with
+   | none => exact ⟨(fun h => by cases h),(fun h => by cases h with | inl h => cases h.1 | inr h => cases h.1)⟩
+   | some y => cases y <;> exact ⟨(fun h => by cases h),(fun h => by cases h with | inl h => cases h.1 | inr h => cases h.1)⟩
+ | some x =>
+   cases b : CarrierMajority.orientation (before transfer.destination) (after transfer.destination) with
+   | none => cases x <;> exact ⟨(fun h => by cases h),(fun h => by cases h with | inl h => cases h.2 | inr h => cases h.2)⟩
+   | some y =>
+     cases x <;> cases y
+     · exact ⟨(fun h => by cases h),(fun h => by cases h with | inl h => cases h.2 | inr h => cases h.1)⟩
+     · exact ⟨fun _ => .inl ⟨rfl,rfl⟩,fun _ => rfl⟩
+     · exact ⟨fun _ => .inr ⟨rfl,rfl⟩,fun _ => rfl⟩
+     · exact ⟨(fun h => by cases h),(fun h => by cases h with | inl h => cases h.1 | inr h => cases h.2)⟩
+
+def dopedInterfaceTransfers
+ (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
+ (network : Network String FieldElectricDistinction.Charge) :=
+ network.filter (opposedDopedEndpoints before after)
+
+def dopedSpaceCharge
+ (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
+ (network : Network String FieldElectricDistinction.Charge) :=
+ (dopedInterfaceTransfers before after network).map spaceCharge
+
+theorem dopedSpaceChargeExactly
+ (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
+ (network : Network String FieldElectricDistinction.Charge) (record) :
+ record ∈ dopedSpaceCharge before after network ↔
+ ∃ transfer, transfer ∈ network ∧ opposedDopedEndpoints before after transfer = true ∧
+ spaceCharge transfer = record := by
+ constructor
+ · intro h
+   obtain ⟨transfer,held,same⟩ := SFT.Foundation.Count.TraceDerivation.memMapPreimage spaceCharge record _ h
+   have parts := (SFT.Mathematics.DiscreteObjects.filterMemberIff _ _ _).mp held
+   exact ⟨transfer,parts.1,parts.2,same⟩
+ · intro ⟨transfer,held,opposed,same⟩
+   cases same
+   exact SFT.Foundation.Count.TraceDerivation.memMap spaceCharge transfer _
+    ((SFT.Mathematics.DiscreteObjects.filterMemberIff _ _ _).mpr ⟨held,opposed⟩)
 
 end SFT.Materials.JunctionTransfer

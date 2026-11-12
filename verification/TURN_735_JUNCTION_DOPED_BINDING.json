@@ -1,0 +1,32 @@
+{
+  "claim_id": "SFT-MAT-SEMI-JUNCTION-001",
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source": "sft/materials/obligations.py: SEMI-DOPING, SEMI-PN-TYPE, SEMI-JUNCTION",
+  "source_sha256": "734ef283b182e596ba569eeb06b2fd9153a20921dab4f85b7abdcd8359d60bc9",
+  "scope": "Compute opposed endpoint selection from actual before/after support differences, retain both transfer directions, map selected transfers to paired space charge, bind every selected transfer to its existing field coupling.",
+  "declarations": [
+    "SFT.Materials.JunctionTransfer.opposedDopedEndpoints",
+    "SFT.Materials.JunctionTransfer.opposedDopedEndpointsExactly",
+    "SFT.Materials.JunctionTransfer.dopedInterfaceTransfers",
+    "SFT.Materials.JunctionTransfer.dopedSpaceCharge",
+    "SFT.Materials.JunctionTransfer.dopedSpaceChargeExactly",
+    "SFT.Materials.JunctionCoupling.everyDopedInterfaceTransferHasSourceField"
+  ],
+  "reused": [
+    "CarrierMajority.orientation",
+    "CollectivePlasma.everyMobileCarrierCoupled",
+    "JunctionCoupling.depletionAndFieldShareCharge"
+  ],
+  "build_command": "python3 work/build_rotation677.py JunctionTransfer JunctionCoupling JunctionObservation JunctionPreservation",
+  "build_exit_code": 0,
+  "audit_command": "python3 work/audit_junction735.py",
+  "audit_exit_code": 0,
+  "audit": "verification/TURN_735_JUNCTION_AUDIT.json",
+  "audited_declarations": 41,
+  "audited_theorems": 29,
+  "new_declarations": 6,
+  "new_theorems": 3,
+  "axiom_dependencies": [],
+  "entry_complete": false,
+  "scope_boundary": "This selection does not prove that joining regions generates a transfer or establishes the declared equilibrium/bias condition."
+}

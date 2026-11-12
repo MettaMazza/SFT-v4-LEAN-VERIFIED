@@ -4771,3 +4771,15 @@ import SFT.Materials.PhononEvidence
 import SFT.Materials.PhononExperiment
 
 import SFT.Materials.PhononValidation
+
+import SFT.Materials.PointDefect
+
+import SFT.Materials.PointDefectSource
+
+import SFT.Materials.PointDefectGrammar
+
+import SFT.Materials.PointDefectEvidence
+
+import SFT.Materials.PointDefectExperiment
+
+import SFT.Materials.PointDefectValidation

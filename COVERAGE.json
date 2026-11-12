@@ -30787,9 +30787,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-DEFECT-POINT-001-7fac1bb37f212cd0.json",
       "statement": "A point defect is the least localized retained difference between an actual site record and its declared reference-lattice word.",
       "title": "Point-defect identity",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/PointDefect.lean",
+        "SFT/Materials/PointDefectSource.lean",
+        "SFT/Materials/PointDefectGrammar.lean",
+        "SFT/Materials/PointDefectEvidence.lean",
+        "SFT/Materials/PointDefectExperiment.lean",
+        "SFT/Materials/PointDefectValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "7b51cf5aeade9ca76e43c50efba5104f66e0207d594c560de73de246efbda8b6",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -30852,7 +30859,10 @@
         "status": "empirically_tested",
         "subbranch": "defects_microstructure",
         "title": "Point-defect identity"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_684_POINT_DEFECT_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[17] least localized actual/reference word difference. Reuses actual CollectiveLattice.Excitation: held site, changed/reference word and provenance. Proves exact changed-site iff, other sites unchanged, complete singleton support, least support/no empty support, reference and actual retained, and faithful representation on every held site of every actual carrier with one localized difference.; Original DEFECT-POINT source fragments and unchanged global guard.; Original eight binary axes, full256 alternatives, original elimination and unique survivor.; Exactly three original witnesses, original controls/proof records and all program methods.; Original fixed-spec validation with all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior with unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -194659,13 +194669,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T09:06:35.508284+00:00",
+  "updated_at": "2026-11-12T09:14:28.621327+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2325,
-    "fully_reconstructed_claims": 456,
-    "axiom_free_exported_results": 23929,
-    "axiom_free_audited_definitions_and_theorems": 56640
+    "pending": 2324,
+    "fully_reconstructed_claims": 457,
+    "axiom_free_exported_results": 23963,
+    "axiom_free_audited_definitions_and_theorems": 56756
   }
 }

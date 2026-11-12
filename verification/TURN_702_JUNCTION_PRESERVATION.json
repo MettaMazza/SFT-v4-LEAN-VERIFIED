@@ -1,0 +1,30 @@
+{
+  "entry": "SFT-MAT-SEMI-JUNCTION-001",
+  "status": "verified_base_successor_components_not_entry_completion",
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_operation": "sft/materials/derivation.py:_blueprint induction_base and induction_step; original complete state-transition-boundary trace",
+  "module": "SFT/Materials/JunctionPreservation.lean",
+  "declarations": [
+    "SFT.Materials.JunctionPreservation.Coupling",
+    "SFT.Materials.JunctionPreservation.records",
+    "SFT.Materials.JunctionPreservation.base",
+    "SFT.Materials.JunctionPreservation.appendExactly",
+    "SFT.Materials.JunctionPreservation.successorExactly",
+    "SFT.Materials.JunctionPreservation.earlierRowsRetained",
+    "SFT.Materials.JunctionPreservation.everyRowHasActualTransferAndField",
+    "SFT.Materials.JunctionPreservation.everyCrossingRecorded"
+  ],
+  "axioms": "8 named declarations empty",
+  "checks": [
+    {
+      "command": "python3 work/build_rotation677.py JunctionPreservation",
+      "exit": 0
+    },
+    {
+      "command": "python3 work/audit_junctionpreservation_math702.py",
+      "exit": 0
+    }
+  ],
+  "sha256": "ece217bc5038740bb56607238e6334b304babf6b6421f4bf40f5fd723b6afd17",
+  "remaining": "Source-specific conditional junction equilibrium implication: connect retained opposed-region transport and field response to balance at declared conditions without assuming balance, inventing convergence, or substituting observation equality."
+}

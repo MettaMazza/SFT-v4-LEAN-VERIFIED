@@ -19706,3 +19706,16 @@ For an existing source-bound restoring record r, its displacement path retains b
 For every retained induction step, the electric response carries exactly the charge of the same coupling's transfer, which is also the destination charge in its depletion record. The theorem therefore joins the displacement return and retained junction charge without replacing the path with a chosen terminal or deleting intermediate events.
 
 Pinned V3 sources: sft/materials/obligations.py SEMI-JUNCTION and sft/physics/collective_matter_laws.py PLASMA_OSCILLATION, through the registered BAND dependency chain, commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/JunctionObservation.lean, endpointObservations, closureExactly, everyDepletionEndpointClosed, distinctEndpointPreventsClosure, closedTransferRetainsDepletion and actualRestoringPathRetainsJunctionCharge; reused CollectivePlasmaOscillation.screeningExactlyClosedObservation, returnedDisplacement and recurrenceRetainsCharge. Evidence: verification/TURN_700_JUNCTION_OBSERVATION_BINDING.json. Chronology: TIMELINE.txt, Turn700.
+
+
+Complete junction transition-history preservation
+
+Let H be the ordered finite history of source-bound charge/field couplings, and let I be the declared region. Define the retained junction record by
+  J_I(H) = map(retainedResponse, filter(crosses_I,H)).
+Each retainedResponse contains the paired depletion charges, both field projections and the actual propagation trace. For a single coupling c, the record is [retainedResponse(c)] exactly when its source is inside I and destination outside I; otherwise the record is empty. For any two finite histories A and B,
+  J_I(A ++ B) = J_I(A) ++ J_I(B).
+The proof follows the complete ordered history: the empty base is immediate; at each head coupling, the inside/outside test either retains that coupling's full response record or leaves the tail unchanged. Both cases preserve the induction identity. In particular, appending one actual transfer preserves every earlier record, including multiplicity and order, and appends precisely its qualifying depletion/field row.
+
+Every output row is proved to arise from an actual coupling in the input history whose transfer crosses the region. Its destination depletion charge equals the electric field's source charge. Conversely, every crossing coupling contributes its complete response row. Thus the original positive finite successor condition preserves actual charge, field and propagation records, rather than only a classification label.
+
+Source: sft/materials/derivation.py, _blueprint induction_base and induction_step, and the SEMI-JUNCTION complete-state-transition-boundary-trace coordinate, pinned to 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/JunctionPreservation.lean, base, appendExactly, successorExactly, earlierRowsRetained, everyRowHasActualTransferAndField and everyCrossingRecorded. Evidence: verification/TURN_702_JUNCTION_PRESERVATION.json. Chronology: TIMELINE.txt, Turn702.

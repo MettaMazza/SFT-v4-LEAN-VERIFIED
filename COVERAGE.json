@@ -31396,9 +31396,18 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-MICRO-NUCLEATION-GROWTH-001-b314993b37eafa71.json",
       "statement": "A nucleus is the least generated cluster whose interior recurrence persists against its complete boundary relation; growth appends compatible cells while retaining phase and transfer provenance.",
       "title": "Nucleation and phase growth",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/NucleationBoundary.lean",
+        "SFT/Materials/NucleationCritical.lean",
+        "SFT/Materials/NucleationGrowth.lean",
+        "SFT/Materials/NucleationSource.lean",
+        "SFT/Materials/NucleationGrammar.lean",
+        "SFT/Materials/NucleationEvidence.lean",
+        "SFT/Materials/NucleationExperiment.lean",
+        "SFT/Materials/NucleationValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "719ab86addb960083695c35e563e3fbb0de4435fb2d3dafa23b523a8f7be32db",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -31461,7 +31470,10 @@
         "status": "empirically_tested",
         "subbranch": "defects_microstructure",
         "title": "Nucleation and phase growth"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_691_NUCLEATION_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[24]: complete cluster boundary and recurrence ledger; persistence iff phase labels and interior fibres recur across every row, changed-row exclusion, full boundary transfer accounting.; MATERIALS_OBLIGATIONS[24]: constructive finite least-size witness, exact full family of least persistent clusters, all equal-sized least clusters retained with no arbitrary scientific selection.; MATERIALS_OBLIGATIONS[24]: compatible fresh-cell growth, full phase/condition/support and history retention, exact growth count and complete transfer provenance/balance.; Original MICRO-NUCLEATION-GROWTH source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -194729,13 +194741,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T13:17:19.926793+00:00",
+  "updated_at": "2026-11-12T13:27:48.742022+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2318,
-    "fully_reconstructed_claims": 463,
-    "axiom_free_exported_results": 24187,
-    "axiom_free_audited_definitions_and_theorems": 57469
+    "pending": 2317,
+    "fully_reconstructed_claims": 464,
+    "axiom_free_exported_results": 24236,
+    "axiom_free_audited_definitions_and_theorems": 57604
   }
 }

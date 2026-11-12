@@ -4855,3 +4855,19 @@ import SFT.Materials.DiffusionEvidence
 import SFT.Materials.DiffusionExperiment
 
 import SFT.Materials.DiffusionValidation
+
+import SFT.Materials.NucleationBoundary
+
+import SFT.Materials.NucleationCritical
+
+import SFT.Materials.NucleationGrowth
+
+import SFT.Materials.NucleationSource
+
+import SFT.Materials.NucleationGrammar
+
+import SFT.Materials.NucleationEvidence
+
+import SFT.Materials.NucleationExperiment
+
+import SFT.Materials.NucleationValidation

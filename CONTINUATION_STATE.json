@@ -54759,7 +54759,7 @@
   ],
   "next_publication_milestone": 500,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "Connect opposed doped-region carrier construction, actual interfacial transfer, retained space-charge/field organization and original equilibrium/bias observation boundary to the exact SEMI-JUNCTION statement. Reuse existing source-bound proofs. Do not require equality of independently supplied transport and field magnitudes: that numerical representation was introduced by the assistant, not established from this entry source. Do not substitute conservation accounting alone for the full original conditional structural statement.",
+  "authorized_action": "Translate the original SEMI-JUNCTION source statement and its actual dependency derivation 1:1. Resolve the quantifiers and declared-condition representation from the pinned source and existing proof bodies; no author clarification is a prerequisite. Preserve verified correction checkpoint908761679954835124564435705c621a99609d6c. Do not introduce independently supplied magnitude equality, a fixed-terminal/basin test, or another generic helper. Do not count classification or bookkeeping alone as the full scientific derivation.",
   "scientific_cursor": {
     "completed": "SFT-MAT-SEMI-PN-TYPE-001",
     "next": "SFT-MAT-SEMI-JUNCTION-001",
@@ -56402,17 +56402,17 @@
     "verified_at": "2026-11-12T02:38:42.803Z"
   },
   "latest_authorization_reconciliation": {
-    "at": "2026-11-12T16:02:54.869797+00:00",
+    "at": "2026-11-12T16:27:35.938187+00:00",
     "scientific_work_authorized": true,
-    "reason": "User explicitly resumed and client set active."
+    "reason": "User explicitly resumed and client active status confirmed."
   },
   "last_verified_checkpoint": {
-    "commit": "b1b6c3d786bb25b4a84513f9e84cee4222880101",
-    "tree": "5e1099a811fd5ee7768940f007b6ec85f5f08838",
-    "files": 6,
-    "withdrawn_file_verified": true,
-    "main_verified": true,
-    "completed_entries": 470
+    "commit": "e630c82b7760a6b37760221a938d3b016be7508f",
+    "tree": "7b09f10485ace7837b889f34ad47d2712e7db24c",
+    "verifiedFiles": 6,
+    "completedEntries": 470,
+    "inProgress": 1,
+    "pending": 2310
   },
   "staged_next_entry": {
     "module": "work/constants-recovery/SFT/Materials/CrystalSystems.lean",
@@ -57042,5 +57042,49 @@
     "entry_complete": false,
     "completion_count": 470,
     "remaining": "Native composition matching the full original SEMI-JUNCTION conditional structural statement, without the removed numerical equation or terminal/basin requirement. Existing observation closure takes closed as a hypothesis; it does not derive closure from opposed doped regions."
+  },
+  "junction_clarification721": {
+    "status": "withdrawn_as_prerequisite",
+    "reason": "User reaffirmed existing 1:1 scope; resolve quantification from original source and existing dependency work, not a new author-supplied interpretation.",
+    "author_input_required": false
+  },
+  "inactivity_rule": {
+    "inactivity_alone_justifies_blocked": false,
+    "three_turns_alone_justify_blocked": false,
+    "unestablished_source_correspondence_is_external_blocker": false,
+    "guidance": "AGENTS.md: Inactivity is never a blocking justification"
+  },
+  "junction_network_binding732": {
+    "claim_id": "SFT-MAT-SEMI-JUNCTION-001",
+    "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "source_path": "sft/physics/collective_matter_laws.py",
+    "source_sha256": "07c6c7e7723db3463697047ea00a6f013211a9ee4942b4a2e10b07effc94d1a8",
+    "source_components": [
+      "collective_law complete generated cell support and named adjacent transfer",
+      "PLASMA_MHD same generated cell network and shared boundary records",
+      "PLASMA_OSCILLATION observation closure"
+    ],
+    "change": "Bind JunctionObservation to p.flow.cells instead of a separately supplied unrelated NetworkObservation. Derive endpoint membership from existing generated-graph adjacency.",
+    "lean_declarations": [
+      "SFT.Materials.JunctionObservation.endpointObservations",
+      "SFT.Materials.JunctionObservation.closed",
+      "SFT.Materials.JunctionObservation.closureExactly",
+      "SFT.Materials.JunctionObservation.everyDepletionEndpointClosed",
+      "SFT.Materials.JunctionObservation.distinctEndpointPreventsClosure",
+      "SFT.Materials.JunctionObservation.closedTransferRetainsDepletion"
+    ],
+    "reused_proofs": [
+      "SFT.Physics.CollectivePlasma.couplingIsAdjacent",
+      "SFT.Mathematics.GraphOperations.acceptedGraphEndpoints",
+      "SFT.Physics.CollectivePlasmaOscillation.screeningExactlyClosedObservation"
+    ],
+    "build": {
+      "command": "python3 work/build_rotation677.py JunctionObservation JunctionPreservation",
+      "exit_code": 0
+    },
+    "audit": "verification/TURN_732_JUNCTION_AUDIT.json",
+    "new_helper_modules": 0,
+    "entry_complete": false,
+    "completed_entries": 470
   }
 }

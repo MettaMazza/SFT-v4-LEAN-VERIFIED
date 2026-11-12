@@ -1,0 +1,33 @@
+{
+  "claim_id": "SFT-MAT-SEMI-JUNCTION-001",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_path": "sft/physics/collective_matter_laws.py",
+  "source_sha256": "07c6c7e7723db3463697047ea00a6f013211a9ee4942b4a2e10b07effc94d1a8",
+  "source_components": [
+    "collective_law complete generated cell support and named adjacent transfer",
+    "PLASMA_MHD same generated cell network and shared boundary records",
+    "PLASMA_OSCILLATION observation closure"
+  ],
+  "change": "Bind JunctionObservation to p.flow.cells instead of a separately supplied unrelated NetworkObservation. Derive endpoint membership from existing generated-graph adjacency.",
+  "lean_declarations": [
+    "SFT.Materials.JunctionObservation.endpointObservations",
+    "SFT.Materials.JunctionObservation.closed",
+    "SFT.Materials.JunctionObservation.closureExactly",
+    "SFT.Materials.JunctionObservation.everyDepletionEndpointClosed",
+    "SFT.Materials.JunctionObservation.distinctEndpointPreventsClosure",
+    "SFT.Materials.JunctionObservation.closedTransferRetainsDepletion"
+  ],
+  "reused_proofs": [
+    "SFT.Physics.CollectivePlasma.couplingIsAdjacent",
+    "SFT.Mathematics.GraphOperations.acceptedGraphEndpoints",
+    "SFT.Physics.CollectivePlasmaOscillation.screeningExactlyClosedObservation"
+  ],
+  "build": {
+    "command": "python3 work/build_rotation677.py JunctionObservation JunctionPreservation",
+    "exit_code": 0
+  },
+  "audit": "verification/TURN_732_JUNCTION_AUDIT.json",
+  "new_helper_modules": 0,
+  "entry_complete": false,
+  "completed_entries": 470
+}

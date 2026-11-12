@@ -30430,9 +30430,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-CRYST-BRAVAIS-001-c04968088f5382d0.json",
       "statement": "Complete rank-three translation lattices modulo basis and centering equivalence form fourteen Bravais classes.",
       "title": "Three-dimensional Bravais classification",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/BravaisClasses.lean",
+        "SFT/Materials/BravaisProofs.lean",
+        "SFT/Materials/BravaisSource.lean",
+        "SFT/Materials/BravaisGrammar.lean",
+        "SFT/Materials/BravaisEvidence.lean",
+        "SFT/Materials/BravaisExperiment.lean",
+        "SFT/Materials/BravaisValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "0077bd5f50afa69f81797619fcf5e6f6adfb51c7bb66c4f06a4c62aaf53f265f",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -30497,7 +30505,10 @@
         "status": "empirically_tested",
         "subbranch": "crystal_quasicrystal",
         "title": "Three-dimensional Bravais classification"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_679_BRAVAIS_COMPLETION.json",
+      "verified_scope": "structural_counts.py CENTERING_CLASSES; original seven-system canonical centering map; arbitrary-string centering membership preserving unknown-system KeyError; complete ordered7x5 forms; exact14 returned rows; original count and duplicate guards.; Lookup output corresponds to an actual canonical row; unmatched system propagates original KeyError; exact21 rejected centering forms and14+21=35 partition.; Original CRYST-BRAVAIS source fragments, ordered extraction and unchanged global guard.; Original eight binary axes, all256 candidates, original elimination decisions and unique survivor.; Original four operational witnesses including actual bravais_census length14, controls and program methods.; Original fixed-spec validation including all four witnesses, registration and sealed prediction.; Original source, custody, isolation, comparison and adverse-label behavior, unchanged global guard/preseal."
     },
     {
       "branch": "materials",
@@ -194618,13 +194629,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T08:23:55.338175+00:00",
+  "updated_at": "2026-11-12T08:31:11.898371+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2329,
-    "fully_reconstructed_claims": 452,
-    "axiom_free_exported_results": 23792,
-    "axiom_free_audited_definitions_and_theorems": 56171
+    "pending": 2328,
+    "fully_reconstructed_claims": 453,
+    "axiom_free_exported_results": 23825,
+    "axiom_free_audited_definitions_and_theorems": 56292
   }
 }

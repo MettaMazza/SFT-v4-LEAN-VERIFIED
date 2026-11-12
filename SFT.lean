@@ -4721,3 +4721,17 @@ import SFT.Materials.SystemsEvidence
 import SFT.Materials.SystemsExperiment
 
 import SFT.Materials.SystemsValidation
+
+import SFT.Materials.BravaisClasses
+
+import SFT.Materials.BravaisProofs
+
+import SFT.Materials.BravaisSource
+
+import SFT.Materials.BravaisGrammar
+
+import SFT.Materials.BravaisEvidence
+
+import SFT.Materials.BravaisExperiment
+
+import SFT.Materials.BravaisValidation

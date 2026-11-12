@@ -1456,3 +1456,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.SystemsGrammar.candidates do
     IO.println ("SystemsGrammar\t" ++ SFT.Materials.SystemsGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SystemsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SystemsGrammar.exactForm c ++ "\t" ++ SFT.Materials.SystemsGrammar.decisionReason c)
+
+  for c in SFT.Materials.BravaisGrammar.candidates do
+    IO.println ("BravaisGrammar\t" ++ SFT.Materials.BravaisGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.BravaisGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.BravaisGrammar.exactForm c ++ "\t" ++ SFT.Materials.BravaisGrammar.decisionReason c)

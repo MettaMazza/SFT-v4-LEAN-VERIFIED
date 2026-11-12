@@ -110,4 +110,52 @@ theorem everyDopedInterfaceTransferHasSourceField
    rw [same] at charge
    exact charge
 
+-- Reconstruct force from the field and the very same transported charge.
+-- V3 field_laws.ELECTRIC_POTENTIAL and calculator/values.py scalar division.
+def reconstructedTransferForce
+ (c : CollectivePlasma.Coupling Part Support State ClockState Clock) :=
+ SFT.Mathematics.FoldScalar.multiply (FieldElectricPotential.field c.field.electric)
+  (.positive (MechanicalAcceleration.scalarOrientation c.transfer.carrier.held)
+   c.transfer.carrier.amount)
+
+theorem fieldReconstructsActualForce
+ (c : CollectivePlasma.Coupling Part Support State ClockState Clock) :
+ match MechanicalForce.value c.field.electric.work.force with
+ | .emptyOne => reconstructedTransferForce c = .emptyOne
+ | .positive orientation magnitude =>
+   ∃ recovered, reconstructedTransferForce c = .positive orientation recovered ∧
+    magnitude.numerator * recovered.denominator = recovered.numerator * magnitude.denominator := by
+ unfold reconstructedTransferForce FieldElectricPotential.field
+ rw [← c.commonCharge]
+ cases force : MechanicalForce.value c.field.electric.work.force with
+ | emptyOne => rfl
+ | positive orientation magnitude =>
+   let q := c.transfer.carrier.amount
+   let recovered := SFT.Mathematics.ExactRatioRelations.compose
+    (SFT.Mathematics.FoldScalar.quotientMagnitude magnitude q) q
+   refine ⟨recovered,?_,?_⟩
+   · change SFT.Mathematics.FoldScalar.Scalar.positive
+      (SFT.Mathematics.FoldScalar.productOrientation
+       (SFT.Mathematics.FoldScalar.productOrientation orientation
+        (MechanicalAcceleration.scalarOrientation c.transfer.carrier.held))
+       (MechanicalAcceleration.scalarOrientation c.transfer.carrier.held)) recovered = _
+     cases orientation <;> cases c.transfer.carrier.held <;> rfl
+   · have h := SFT.Mathematics.ExactRatioRelations.composeRepresents
+      (SFT.Mathematics.FoldScalar.quotientMagnitude magnitude q) q
+      (magnitude.numerator*q.denominator) (magnitude.denominator*q.numerator)
+      q.numerator q.denominator (SFT.Mathematics.FoldScalar.quotientExact magnitude q) rfl
+     apply SFT.Mathematics.ExactRatioRelations.cancelPositive (q.denominator*q.numerator)
+      _ _ (Nat.mul_pos (Nat.pos_of_ne_zero q.denominatorNonzero) q.positive)
+     calc
+      (q.denominator*q.numerator)*(magnitude.numerator*recovered.denominator) =
+       ((magnitude.numerator*q.denominator)*q.numerator)*recovered.denominator := by
+        rw [← SFT.Foundation.FractionReduction.mulAssoc, Nat.mul_comm (q.denominator*q.numerator) magnitude.numerator,
+          ← SFT.Foundation.FractionReduction.mulAssoc magnitude.numerator q.denominator q.numerator]
+      _ = recovered.numerator*((magnitude.denominator*q.numerator)*q.denominator) := h
+      _ = (q.denominator*q.numerator)*(recovered.numerator*magnitude.denominator) := by
+        rw [SFT.Foundation.FractionReduction.mulAssoc magnitude.denominator q.numerator q.denominator,
+          Nat.mul_comm q.numerator q.denominator,
+          ← SFT.Foundation.FractionReduction.mulAssoc recovered.numerator magnitude.denominator (q.denominator*q.numerator),
+          Nat.mul_comm (recovered.numerator*magnitude.denominator) (q.denominator*q.numerator)]
+
 end SFT.Materials.JunctionCoupling

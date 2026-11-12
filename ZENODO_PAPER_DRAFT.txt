@@ -19720,6 +19720,20 @@ The propagation trace is retained from the same field carrier. These identities 
 Original source: sft/materials/obligations.py SEMI-JUNCTION; sft/physics/collective_matter_laws.py BAND, LATTICE, PLASMA_MHD, PLASMA_OSCILLATION and PLASMA_COLLECTIVE; sft/physics/field_laws.py ELECTRIC_DISTINCTION and ELECTRIC_POTENTIAL, pinned to 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/JunctionCoupling.lean, everyDepletionTransferHasSourceField, noForeignInterfaceField, depletionAndFieldShareCharge, responseUsesActualSourceWork, depletionReversesActualSourceResponse, sourcePropagationRetained and exactResponseNormalization. Reused CollectivePlasma.everyMobileCarrierCoupled, FieldElectricPotential.reversedChargeReversesResponse and normalizationExact. Evidence: verification/TURN_699_JUNCTION_FIELD_BINDING.json. Chronology: TIMELINE.txt, Turn699.
 
 
+Reconstructing the transferred force from its field response
+
+The electric field is the force response per held charge carrier. For the same recorded interaction c, let F be its force and q its transported charge. The common-charge equality identifies this q with the field's source charge. Write the positive magnitudes as f=a/b and q=u/v, with b,u,v positive, and retain their held orientations separately. Charge normalization and recomposition give
+  e = f/q = (a v)/(b u),
+  f_recovered = e q = ((a v)u)/((b u)v) = a/b.
+The native rational operations normalize their numerator/denominator pairs. Their exact cross-product laws therefore give, for the normalized recovered pair (A,B),
+  (a v u) B = A (b u v).
+Associativity and commutativity regroup this as
+  (v u)(a B) = (v u)(A b).
+Since v u is positive, cancellation proves a B=A b. Multiplying by the same held charge twice restores the original force orientation: each charge orientation is its own inverse under the two-orientation composition. The proof covers both charge orientations and both force orientations exhaustively. For structural empty-One force, normalization and multiplication both retain empty-One. Thus the reconstructed force has precisely the original force's orientation and rational magnitude, using the actual coupling's charge rather than an independently chosen magnitude.
+
+Pinned V3: sft/physics/field_laws.py, ELECTRIC_POTENTIAL; sft/mathematics/calculator/values.py, multiply_scalar, reciprocal_scalar and divide_scalar, commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/JunctionCoupling.lean, reconstructedTransferForce and fieldReconstructsActualForce; reused FoldScalar.quotientExact, ExactRatioRelations.composeRepresents and cancelPositive, and FractionReduction.mulAssoc. Evidence: verification/TURN_750_JUNCTION_FORCE_RECONSTRUCTION.json and TURN_750_JUNCTION_AUDIT.json. Chronology: TIMELINE.txt, Turn750.
+
+
 Junction endpoint observation closure and retained restoring history
 
 Let C_pn=filter(c↦P(t(c)),p.couplings), where P is the support-derived opposed-endpoint test, and let O=p.flow.cells.observation be the declared observation map of the same generated network that carries those transfers. Retain the endpoint observations of every actual transfer, without removing the transfer record:

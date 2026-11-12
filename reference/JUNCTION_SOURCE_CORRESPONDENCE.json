@@ -36,7 +36,7 @@
     "JunctionPreservation"
   ],
   "component_audit": [
-    "verification/TURN_742_JUNCTION_AUDIT.json"
+    "verification/TURN_750_JUNCTION_AUDIT.json"
   ],
   "active_declaration_list": "verification/JUNCTION_ACTIVE_DECLARATIONS.json",
   "program_output_evidence": "verification/TURN_729_RETAINED_JUNCTION_PARITY.json",
@@ -58,5 +58,35 @@
   "carrier_argument_inspection": "verification/TURN_733_JUNCTION_CARRIER_TRACE.json",
   "doped_carrier_binding": "verification/TURN_735_JUNCTION_DOPED_BINDING.json",
   "history_observation_binding": "verification/TURN_742_JUNCTION_HISTORY_OBSERVATION_BINDING.json",
-  "independent_review": "verification/TURN_745_JUNCTION_INDEPENDENT_REVIEW.json"
+  "independent_review": "verification/TURN_745_JUNCTION_INDEPENDENT_REVIEW.json",
+  "force_reconstruction": {
+    "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "source_hashes": {
+      "sft/physics/field_laws.py": "00faa07218945fbe552f1c323ca0a5bc0cf55aa7eb6cb9b221673ea2153d5a37",
+      "sft/mathematics/calculator/values.py": "820323016205f322f58b32460dc601d0c1f586aa6352c1bb4742e4f502b681c5"
+    },
+    "source_operations": [
+      "field_laws.ELECTRIC_POTENTIAL",
+      "values.multiply_scalar",
+      "values.reciprocal_scalar",
+      "values.divide_scalar"
+    ],
+    "lean": [
+      "SFT.Materials.JunctionCoupling.reconstructedTransferForce",
+      "SFT.Materials.JunctionCoupling.fieldReconstructsActualForce"
+    ],
+    "meaning": "The field response multiplied by its own transported held charge reconstructs the original force orientation and exact rational magnitude; structural empty-One is preserved.",
+    "build_command": "python3 work/build_rotation677.py JunctionCoupling JunctionObservation JunctionPreservation",
+    "build_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "audit_command": "python3 work/audit_junction750.py",
+    "declarations": 44,
+    "theorems": 30,
+    "axiom_dependencies": [],
+    "entry_complete": false,
+    "scope": "Source-bound force/charge normalization identity. Does not register junction balance at declared equilibrium/bias conditions as complete."
+  }
 }

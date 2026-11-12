@@ -4871,3 +4871,15 @@ import SFT.Materials.NucleationEvidence
 import SFT.Materials.NucleationExperiment
 
 import SFT.Materials.NucleationValidation
+
+import SFT.Materials.BandGapSupport
+
+import SFT.Materials.BandGapSource
+
+import SFT.Materials.BandGapGrammar
+
+import SFT.Materials.BandGapEvidence
+
+import SFT.Materials.BandGapExperiment
+
+import SFT.Materials.BandGapValidation

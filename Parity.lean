@@ -1492,3 +1492,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.NucleationGrammar.candidates do
     IO.println ("NucleationGrammar\t" ++ SFT.Materials.NucleationGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.NucleationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.NucleationGrammar.exactForm c ++ "\t" ++ SFT.Materials.NucleationGrammar.decisionReason c)
+
+  for c in SFT.Materials.BandGapGrammar.candidates do
+    IO.println ("BandGapGrammar\t" ++ SFT.Materials.BandGapGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.BandGapGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.BandGapGrammar.exactForm c ++ "\t" ++ SFT.Materials.BandGapGrammar.decisionReason c)

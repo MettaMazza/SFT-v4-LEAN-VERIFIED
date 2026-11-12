@@ -1,0 +1,17 @@
+{
+  "pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_hashes": {
+    "sft/chemistry/electrode_potential_law_v1.py": "ca3b67badbb313e135e9231fb4a0db6a17bd3558775407d8aa0efc6285935896",
+    "sft/chemistry/cell_potential_composition_law_v1.py": "04cd27e4a5b4e2f1e9f9fdb4927cbc458ef3194c096486fcca16190a55aff886",
+    "sft/chemistry/concentration_potential_law_v1.py": "2a4bc0d26396b7153cae23014bfc98c3708b0206aedea9a66e0157a5d2fa4bfc",
+    "sft/chemistry/electrochemical_work_law_v1.py": "2f2b1901ca92f2f5e518fc3ee018440aa6df0e9d3dd4464e1975987cfff5b97f",
+    "sft/chemistry/coupled_transport_law_v1.py": "cedac50a811711d11e73ce61a1587e228d7da4c1d74a6c376a93c84198cbc537",
+    "sft/chemistry/ionic_mobility_transference_law_v1.py": "f3be3f92e53b2a1ac6e4f641b4a40f5b2c5940aed212c60f2057ea88e04c2b21"
+  },
+  "review_kind": "Independent read-only investigation of alternative work/potential and counted-transport constructions",
+  "finding": "The inspected operations compute exact ratios, oriented differences, work products and counted responses from their chemical or three-carrier inputs. No adapter from junction supports and transfer/field records to those input accounts was established. Do not introduce these additional accounts as junction premises.",
+  "parent_check": "Read concentration_potential_law_v1.py in full: direction and layer count are input fields; shift divides supplied layers by transferred carriers; generated_activity_support doubles once per supplied layer. This does not construct the layer account from a doped-support pair. Also inspected retainedResponse dependencies: electricProjection already retains the complete electric interaction. No evidenced missing-force-record defect.",
+  "scope": "Bounded source investigation, not a proof that V3 lacks the junction derivation.",
+  "new_proofs": 0,
+  "completion_change": 0
+}

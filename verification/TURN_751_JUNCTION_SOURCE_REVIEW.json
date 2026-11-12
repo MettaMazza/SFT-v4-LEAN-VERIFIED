@@ -1,0 +1,21 @@
+{
+  "source": "sft/chemistry/overpotential_polarization_law_v1.py",
+  "pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "sha256": "8804cd260c74a7b6567e524ac515f340570b0a2f61613ace52c17d375781d4a2",
+  "inspected_operations": [
+    "PolarizationPoint.__post_init__",
+    "polarization_curve",
+    "_p",
+    "_w"
+  ],
+  "finding": "The equilibrium branch requires empty potential distance and net current in the supplied point. Non-equilibrium branches require supplied positive magnitudes. polarization_curve retains common electrode/reference/condition and consecutive ordinals. This source does not itself construct these points from the junction transfer network. No junction mapping has been established by this inspection.",
+  "scope": "Specific alternative source inspected, not a claim that V3 lacks the junction derivation.",
+  "lean_inspected": [
+    "ThermoKineticTransport.Transport and Collision",
+    "ThermoResponse.Reading, Probe and coefficient",
+    "CollectivePlasmaOscillation.RestoringResponse and screened"
+  ],
+  "lean_finding": "Transport paths, collision permutations and response readings are retained inputs in these definitions. The inspected proofs establish adjacency, conservation, exact ratios, and conditional observation closure; no source-bound junction composition was obtained in this turn.",
+  "new_proofs": 0,
+  "count_change": 0
+}

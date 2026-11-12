@@ -4661,3 +4661,49 @@ import SFT.Materials.CubicEvidence
 import SFT.Materials.CubicExperiment
 
 import SFT.Materials.CubicValidation
+
+import SFT.Materials.RotationFactors
+
+import SFT.Materials.RotationFactorSupport
+
+import SFT.Materials.RotationTotient
+
+import SFT.Materials.RotationFactorDivisibility
+
+import SFT.Materials.RotationFactorPrimality
+
+import SFT.Materials.RotationPrimeSupport
+
+import SFT.Materials.RotationCoprime
+
+import SFT.Materials.RotationCertificate
+
+import SFT.Materials.RotationDegreeBase
+
+import SFT.Materials.RotationResidueBlocks
+
+import SFT.Materials.RotationPrimePower
+
+import SFT.Materials.RotationDegreeLift
+
+import SFT.Materials.RotationDegreeProduct
+
+import SFT.Materials.RotationDegreeFresh
+
+import SFT.Materials.RotationFactorDegree
+
+import SFT.Materials.RotationSmallDegrees
+
+import SFT.Materials.RotationClassification
+
+import SFT.Materials.RotationClosure
+
+import SFT.Materials.RotationSource
+
+import SFT.Materials.RotationGrammar
+
+import SFT.Materials.RotationEvidence
+
+import SFT.Materials.RotationExperiment
+
+import SFT.Materials.RotationValidation

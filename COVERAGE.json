@@ -30234,9 +30234,33 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-CRYST-ROTATION-RESTRICTION-001-a0e401100d13252d.json",
       "statement": "A finite rotation preserves a periodic lattice only for generated orders 1, 2, 3, 4 and 6; five is the least excluded positive order.",
       "title": "Crystallographic rotation restriction",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/RotationFactors.lean",
+        "SFT/Materials/RotationFactorSupport.lean",
+        "SFT/Materials/RotationTotient.lean",
+        "SFT/Materials/RotationFactorDivisibility.lean",
+        "SFT/Materials/RotationFactorPrimality.lean",
+        "SFT/Materials/RotationPrimeSupport.lean",
+        "SFT/Materials/RotationCoprime.lean",
+        "SFT/Materials/RotationCertificate.lean",
+        "SFT/Materials/RotationDegreeBase.lean",
+        "SFT/Materials/RotationResidueBlocks.lean",
+        "SFT/Materials/RotationPrimePower.lean",
+        "SFT/Materials/RotationDegreeLift.lean",
+        "SFT/Materials/RotationDegreeProduct.lean",
+        "SFT/Materials/RotationDegreeFresh.lean",
+        "SFT/Materials/RotationFactorDegree.lean",
+        "SFT/Materials/RotationSmallDegrees.lean",
+        "SFT/Materials/RotationClassification.lean",
+        "SFT/Materials/RotationClosure.lean",
+        "SFT/Materials/RotationSource.lean",
+        "SFT/Materials/RotationGrammar.lean",
+        "SFT/Materials/RotationEvidence.lean",
+        "SFT/Materials/RotationExperiment.lean",
+        "SFT/Materials/RotationValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "6b2960186df86f05ac7ea14ddfd506b33828f2f0783add3a42fad33054031daf",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -30301,7 +30325,10 @@
         "status": "empirically_tested",
         "subbranch": "crystal_quasicrystal",
         "title": "Crystallographic rotation restriction"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_677_ROTATION_COMPLETION.json",
+      "verified_scope": "Exact original positive-input guards, trial division, repeated factor stripping, increasing trial order and final-remainder branch, with constructive termination.; Every factor exceeds One; stripped remainder indivisibility and exact removed-power decomposition.; Exact source residue filter and count, complete membership, positive count and rank-two admission.; Every emitted factor divides the original order; no-earlier-divisor invariant preserved by stripping and trial advancement.; Trial and terminal remainder primality for all admitted loop states; every emitted factor prime.; Exact emitted prime support iff prime divisor, preserving every prime through different-prime stripping.; Complete correspondence of the source residue filter with coprimality across all positive orders.; Original allowed-order operation and six certificate fields; exact success/failure guard and error text.; Source degree equals existing complete reduced-residue count; prime degree p-1.; Complete positive interval decomposition and exact nonmultiple counts for every supplied block count.; Complete prime-power degree formula and binary/ternary exponent bounds.; All lifted coprime residue blocks counted exactly via remainder-invariant gcd.; Exact product coprimality and repeated-prime degree recurrence.; Exact excluded multiple bijection and fresh-prime degree recurrence.; Unrestricted p divides n implies p-1 divides degree; admitted prime factors2or3 and degree descent.; Derived primality2and3 and exact recurrence-derived base and exclusion degrees.; Strong-induction classification for every positive order; exact survivors1,2,3,4,6 and source constrained exponent witnesses.; Constrained factor form iff source admission; original candidate guard and six-field certificate verified; least exclusion5.; Original rotation external-fragment requirements and extraction, unchanged shared source guard.; All original eight binary axes,256 alternatives, exact elimination decisions and unique survivor.; Original four operational witnesses including actual allowed orders and least exclusion; registration, complete decisions, controls and closure.; Original fixed-spec validation of all four witnesses and sealed prediction/registration.; Original source, custody, isolation, comparison and adverse-label behavior with preserved empirical boundaries."
     },
     {
       "branch": "materials",
@@ -194580,13 +194607,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T02:18:53.244314+00:00",
+  "updated_at": "2026-11-12T08:06:34.072688+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2331,
-    "fully_reconstructed_claims": 450,
-    "axiom_free_exported_results": 23632,
-    "axiom_free_audited_definitions_and_theorems": 55826
+    "pending": 2330,
+    "fully_reconstructed_claims": 451,
+    "axiom_free_exported_results": 23755,
+    "axiom_free_audited_definitions_and_theorems": 56048
   }
 }

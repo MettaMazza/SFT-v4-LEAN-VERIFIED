@@ -1,0 +1,5 @@
+from pathlib import Path
+import re,subprocess,os,json
+mods=['RotationDegreeBase','RotationResidueBlocks','RotationPrimePower','RotationDegreeLift','RotationDegreeProduct','RotationDegreeFresh','RotationFactorDegree','RotationSmallDegrees','RotationClassification','RotationClosure'];p=Path('work/AuditRotation677.lean');decl=[]
+for m in mods:decl+=['SFT.Materials.'+m+'.'+n for n in re.findall(r'^(?:theorem|def) (\w+)',Path('work/constants-recovery/SFT/Materials/'+m+'.lean').read_text(),re.M)]
+p.write_text('\n'.join('import SFT.Materials.'+m for m in mods)+'\n'+'\n'.join('#print axioms '+d for d in decl)+'\n');e=os.environ.copy();e['LEAN_PATH']=str(Path('work/constants-recovery/.lake/build/lib/lean').resolve())+':/Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/lib/lean';r=subprocess.run(['/Users/dolltrading/.elan/bin/lean',str(p)],capture_output=True,text=True,env=e);Path('work/rotation677_audit.log').write_text(r.stdout+r.stderr);print(r.stdout,r.stderr);r.check_returncode();assert r.stdout.count('does not depend on any axioms')==len(decl);Path('work/rotation677_config.json').write_text(json.dumps({'modules':mods,'declarations':decl},indent=2))

@@ -1,0 +1,13 @@
+SFT.Materials.RotationClassification.exactClassification (n : SFT.Materials.RotationTotient.PositiveCount) :
+  SFT.Materials.RotationTotient.crystallographicRotationAdmitted n = true ↔
+    SFT.Materials.RotationClassification.Allowed n.val
+SFT.Materials.RotationFactorDegree.factorDegreeDivides (n : Nat) (hn : 0 < n) (p : Nat)
+  (prime : SFT.Materials.RotationFactorPrimality.Prime p) (pn : p ∣ n) :
+  p - 1 ∣ (SFT.Materials.RotationTotient.totientCount ⟨n, hn⟩).val
+SFT.Materials.RotationClosure.originalCertificateVerified :
+  SFT.Materials.RotationCertificate.rotationFactorCertificate =
+    Except.ok
+      { degreeBoundary := ⟨2, ⋯⟩,
+        oddPrimeRule := "p divides order implies p-1 divides rotation degree; degree<=2 permits only odd prime 3",
+        factorForm := "order=2^a*3^b", exponentConstraints := ["a<=2", "b<=1", "not(a=2 and b=1)"],
+        survivors := [1, 2, 3, 4, 6], leastExcluded := ⟨5, ⋯⟩ }

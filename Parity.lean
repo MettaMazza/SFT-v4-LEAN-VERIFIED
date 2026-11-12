@@ -1432,3 +1432,9 @@ def main : IO Unit := do
 
   for c in SFT.Materials.MicrostructureGrammar.candidates do
     IO.println ("MicrostructureGrammar\t" ++ SFT.Materials.MicrostructureGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.MicrostructureGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.MicrostructureGrammar.exactForm c ++ "\t" ++ SFT.Materials.MicrostructureGrammar.decisionReason c)
+
+  for c in SFT.Materials.PropertyGrammar.candidates do
+    IO.println ("PropertyGrammar\t" ++ SFT.Materials.PropertyGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PropertyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PropertyGrammar.exactForm c ++ "\t" ++ SFT.Materials.PropertyGrammar.decisionReason c)
+
+  for c in SFT.Materials.TraceabilityGrammar.candidates do
+    IO.println ("TraceabilityGrammar\t" ++ SFT.Materials.TraceabilityGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.TraceabilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.TraceabilityGrammar.exactForm c ++ "\t" ++ SFT.Materials.TraceabilityGrammar.decisionReason c)

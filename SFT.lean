@@ -4563,3 +4563,29 @@ import SFT.Materials.MicrostructureEvidence
 import SFT.Materials.MicrostructureExperiment
 
 import SFT.Materials.MicrostructureValidation
+
+import SFT.Materials.PropertyContext
+
+import SFT.Materials.PropertyRelation
+
+import SFT.Materials.PropertySource
+
+import SFT.Materials.PropertyGrammar
+
+import SFT.Materials.PropertyEvidence
+
+import SFT.Materials.PropertyExperiment
+
+import SFT.Materials.PropertyValidation
+
+import SFT.Materials.Traceability
+
+import SFT.Materials.TraceabilitySource
+
+import SFT.Materials.TraceabilityGrammar
+
+import SFT.Materials.TraceabilityEvidence
+
+import SFT.Materials.TraceabilityExperiment
+
+import SFT.Materials.TraceabilityValidation

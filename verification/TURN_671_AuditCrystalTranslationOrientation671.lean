@@ -1,0 +1,12 @@
+import SFT.Materials.CrystalTranslationOrientation
+#print axioms SFT.Materials.CrystalTranslationOrientation.Pair
+#print axioms SFT.Materials.CrystalTranslationOrientation.Step
+#print axioms SFT.Materials.CrystalTranslationOrientation.Invariant
+#print axioms SFT.Materials.CrystalTranslationOrientation.stepInvariant
+#print axioms SFT.Materials.CrystalTranslationOrientation.reverseStep
+#print axioms SFT.Materials.CrystalTranslationOrientation.Trace
+#print axioms SFT.Materials.CrystalTranslationOrientation.traceInvariant
+#print axioms SFT.Materials.CrystalTranslationOrientation.compose
+#print axioms SFT.Materials.CrystalTranslationOrientation.reverseTrace
+#print axioms SFT.Materials.CrystalTranslationOrientation.generatedIteration
+#print axioms SFT.Materials.CrystalTranslationOrientation.leastGenerated

@@ -51,7 +51,8 @@ theorem noForeignInterfaceField (inside : String → Bool)
 
 def retainedResponse (c : CollectivePlasma.Coupling Part Support State ClockState Clock) :=
  (JunctionTransfer.spaceCharge c.transfer,FieldElectromagnetic.electricProjection c.field,
-  FieldElectromagnetic.magneticProjection c.field,CollectivePlasma.recurrence c)
+  FieldElectromagnetic.magneticProjection c.field,CollectivePlasma.recurrence c,
+  c.field.induction)
 
 theorem depletionAndFieldShareCharge (c : CollectivePlasma.Coupling Part Support State ClockState Clock) :
  (JunctionTransfer.spaceCharge c.transfer).2.1.2 = c.field.electric.charge := c.commonCharge
@@ -77,7 +78,8 @@ theorem depletionReversesActualSourceResponse (c : CollectivePlasma.Coupling Par
  rfl
 
 theorem sourcePropagationRetained (c : CollectivePlasma.Coupling Part Support State ClockState Clock) :
- (retainedResponse c).2.2.2 = FieldElectromagnetic.propagation c.field := rfl
+ (retainedResponse c).2.2.2.1 = FieldElectromagnetic.propagation c.field ∧
+ (retainedResponse c).2.2.2.2 = c.field.induction := ⟨rfl,rfl⟩
 
 theorem exactResponseNormalization (c : CollectivePlasma.Coupling Part Support State ClockState Clock)
  (magnitude : SFT.Foundation.ExactOperations.PositiveFraction) :

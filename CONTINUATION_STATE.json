@@ -54500,7 +54500,7 @@
     "canonical": "directory containing this state file",
     "retained": "workspace/work/constants-recovery"
   },
-  "recorded_at": "2026-11-12T09:11:28.608883+00:00",
+  "recorded_at": "2026-11-12T20:52:34.716921+00:00",
   "audit": {
     "report": "ACCOUNTABILITY_AUDIT.txt",
     "source": "native Codex session/task/token/command/compaction records",
@@ -57518,5 +57518,49 @@
   "junction_scope_review_handle765": {
     "agent": "junction_scope_audit",
     "status": "completed"
+  },
+  "junction_record_correction766": {
+    "entry": "SFT-MAT-SEMI-JUNCTION-001",
+    "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "source_hashes": {
+      "sft/materials/derivation.py": "2791bfa9272633c65fcf5f019ea19c08f6870b172e955973564238483f62b26e",
+      "sft/physics/field_laws.py": "00faa07218945fbe552f1c323ca0a5bc0cf55aa7eb6cb9b221673ea2153d5a37"
+    },
+    "source_operations": [
+      "sft/materials/derivation.py:_dimensions record and organization",
+      "sft/physics/field_laws.py:INDUCTION"
+    ],
+    "changed_declarations": [
+      "SFT.Materials.JunctionCoupling.retainedResponse",
+      "SFT.Materials.JunctionCoupling.sourcePropagationRetained"
+    ],
+    "correction": "Retain the existing complete induction record in addition to its event projection, preserving linked before/after support, source provenance, cyclic boundary and workAt. No new scientific input or law. Existing sourcePropagationRetained now proves both projections. Existing history theorems apply to the corrected records.",
+    "new_declarations": 0,
+    "checks": [
+      {
+        "command": "python3 work/build_rotation677.py JunctionCoupling JunctionObservation JunctionPreservation",
+        "exit_codes": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "command": "lake build SFT.Materials.JunctionCoupling SFT.Materials.JunctionObservation SFT.Materials.JunctionPreservation",
+        "exit_code": 0,
+        "jobs": 256
+      },
+      {
+        "command": "python3 work/audit_junction766.py",
+        "exit_code": 0,
+        "declarations": 44,
+        "theorems": 30,
+        "axiom_dependencies": []
+      }
+    ],
+    "lean_sha256": "c221e8830653749abac2fc106ced080f33b3230e306628da1ce83787033cc197",
+    "entry_complete": false,
+    "completed_entries": 470,
+    "remaining": "Source-bound transport/field balance at declared equilibrium/bias conditions. The record-preservation correction is not a proof of that implication."
   }
 }

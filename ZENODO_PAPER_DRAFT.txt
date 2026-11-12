@@ -19657,6 +19657,13 @@ The original 256-form preservation grammar, three operational witnesses, control
 Original source: sft/materials/obligations.py, SEMI-PN-TYPE (index 30); sft/materials/derivation.py, generated_law.py and claims/SFT-MAT-SEMI-PN-TYPE-001/execution.py, pinned to commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/CarrierMajority.lean, occupationExactly, absenceExactly, imbalanceExhausted, majorityClassesExclusive, completeDopedSupportClassification, occupationFromActualDifference, absenceFromActualDifference and swappingDifferenceReversesMajority; full support differences from DopingSupport. Source/program verification: PNTypeSource, PNTypeGrammar, PNTypeEvidence, PNTypeExperiment and PNTypeValidation. Evidence: verification/TURN_697_PN_TYPE_COMPLETION.json. Chronology: TIMELINE.txt, Turn697.
 
 
+Opposed doped-region inputs
+
+For each of the two retained regions r, use its actual supports B_r before doping and A_r after doping. The preceding support construction gives G_r=A_r\B_r and L_r=B_r\A_r. Thus g_r=|G_r| and l_r=|L_r| are derived counts. Opposed majority classes mean either l_1<g_1 together with g_2<l_2, or g_1<l_1 together with l_2<g_2. These are the two orientations established by occupationFromActualDifference and absenceFromActualDifference; neither assigns a majority to equal counts. These expressions specify the opposed carrier inputs. The transfer and observation statements below state their own arguments explicitly.
+
+Pinned source: sft/materials/obligations.py, SEMI-DOPING, SEMI-PN-TYPE and SEMI-JUNCTION. Lean: SFT/Materials/DopingSupport.lean, gainedExactly and lostExactly; SFT/Materials/CarrierMajority.lean, occupationFromActualDifference and absenceFromActualDifference. Existing proof evidence: verification/TURN_696_DOPING_COMPLETION.json and verification/TURN_697_PN_TYPE_COMPLETION.json. Source/argument trace: verification/TURN_733_JUNCTION_CARRIER_TRACE.json. Chronology: TIMELINE.txt, Turns696,697 and733.
+
+
 Junction preservation grammar and exact enumeration
 
 The junction source constructs eight ordered binary choices: carrier, relation, organization, observation, record, provenance, generality and extension. Write each domain as G_i={rejected_i, retained_i}. Its generated domain is G=G_1×⋯×G_8, so |G|=∏_{i=1}^8 2=256. The native typed constructors represent exactly these two source alternatives on each axis; candidatesComplete proves that every tuple occurs in the generated list.

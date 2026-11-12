@@ -56402,17 +56402,17 @@
     "verified_at": "2026-11-12T02:38:42.803Z"
   },
   "latest_authorization_reconciliation": {
-    "at": "2026-11-12T16:27:35.938187+00:00",
+    "at": "2026-11-12T16:33:46.838742+00:00",
     "scientific_work_authorized": true,
-    "reason": "User explicitly resumed and client active status confirmed."
+    "reason": "Latest user explicitly requests resumption of actual junction work."
   },
   "last_verified_checkpoint": {
-    "commit": "e630c82b7760a6b37760221a938d3b016be7508f",
-    "tree": "7b09f10485ace7837b889f34ad47d2712e7db24c",
-    "verifiedFiles": 6,
+    "commit": "2f0f8f2161f651e7d6137efb9a08d5fd216f2b78",
+    "tree": "e037241ad7c0ed05591f414ed8d222b3fc0a0666",
+    "verifiedFiles": 11,
+    "mainVerified": true,
     "completedEntries": 470,
-    "inProgress": 1,
-    "pending": 2310
+    "inProgress": 1
   },
   "staged_next_entry": {
     "module": "work/constants-recovery/SFT/Materials/CrystalSystems.lean",
@@ -57086,5 +57086,30 @@
     "new_helper_modules": 0,
     "entry_complete": false,
     "completed_entries": 470
+  },
+  "junction_carrier_trace733": {
+    "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "inspected_at": "2026-11-12T16:33:46.838742+00:00",
+    "source": "sft/materials/obligations.py: SEMI-DOPING, SEMI-PN-TYPE, SEMI-JUNCTION",
+    "implementation_hashes": {
+      "SFT/Materials/DopingSupport.lean": "6cef907aeeba7e9249fdcbc48adc8da4f8b0e3666b5e26d6dd39c9f089204f65",
+      "SFT/Materials/CarrierMajority.lean": "46bd65a815658dbfa373e5f03d5e3e9580e31afb33f4253d4ab1c651f05e3a03",
+      "SFT/Materials/JunctionTransfer.lean": "5732931cd93e13f8a2c968baa7721ce786f955242d7c0d1a49c0c47eca8ae8b1",
+      "SFT/Materials/JunctionCoupling.lean": "944274ba56ebaaa92825f9ab61539b77b5713f15f3234a2c6746e42c4bdb02bd",
+      "SFT/Materials/JunctionObservation.lean": "bc19da1657a2457c4cddf6c2d0593221309503bae18e0b0fde31d32f13acf443",
+      "SFT/Physics/ThermoKineticTransport.lean": "2940d223af06fc2f0e2dad3f8402e346b901be70cf4982afeb3fb574ec6ea897"
+    },
+    "actual_arguments": {
+      "CarrierMajority.orientation": "before and after supports; computes gained/lost lengths via DopingSupport",
+      "JunctionTransfer.depletion": "inside : String -> Bool; network : Network String Charge",
+      "JunctionCoupling.interfaceCouplings": "inside : String -> Bool; p : Plasma",
+      "JunctionObservation.closed": "inside : String -> Bool; p : Plasma; sameMacroClass of crossing endpoints",
+      "ThermoKineticTransport.Transport": "supplied transfer with an adjacent propagation path"
+    },
+    "finding": "The inspected junction definitions do not invoke CarrierMajority.orientation or compute their region selector from those doped supports. This identifies an unestablished translation connection in these inspected declarations, not absence of a V3 derivation.",
+    "next_source_question": "Identify how the original opposed-region carrier and declared equilibrium/bias observation bind the retained transitions, then compose those actual operations in the entry. Do not assume observation closure or import a numerical balance equation as a replacement.",
+    "new_proofs": 0,
+    "new_completed_entries": 0,
+    "goal_control_calls": 0
   }
 }

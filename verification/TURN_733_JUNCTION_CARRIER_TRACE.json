@@ -1,0 +1,25 @@
+{
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "inspected_at": "2026-11-12T16:33:46.838742+00:00",
+  "source": "sft/materials/obligations.py: SEMI-DOPING, SEMI-PN-TYPE, SEMI-JUNCTION",
+  "implementation_hashes": {
+    "SFT/Materials/DopingSupport.lean": "6cef907aeeba7e9249fdcbc48adc8da4f8b0e3666b5e26d6dd39c9f089204f65",
+    "SFT/Materials/CarrierMajority.lean": "46bd65a815658dbfa373e5f03d5e3e9580e31afb33f4253d4ab1c651f05e3a03",
+    "SFT/Materials/JunctionTransfer.lean": "5732931cd93e13f8a2c968baa7721ce786f955242d7c0d1a49c0c47eca8ae8b1",
+    "SFT/Materials/JunctionCoupling.lean": "944274ba56ebaaa92825f9ab61539b77b5713f15f3234a2c6746e42c4bdb02bd",
+    "SFT/Materials/JunctionObservation.lean": "bc19da1657a2457c4cddf6c2d0593221309503bae18e0b0fde31d32f13acf443",
+    "SFT/Physics/ThermoKineticTransport.lean": "2940d223af06fc2f0e2dad3f8402e346b901be70cf4982afeb3fb574ec6ea897"
+  },
+  "actual_arguments": {
+    "CarrierMajority.orientation": "before and after supports; computes gained/lost lengths via DopingSupport",
+    "JunctionTransfer.depletion": "inside : String -> Bool; network : Network String Charge",
+    "JunctionCoupling.interfaceCouplings": "inside : String -> Bool; p : Plasma",
+    "JunctionObservation.closed": "inside : String -> Bool; p : Plasma; sameMacroClass of crossing endpoints",
+    "ThermoKineticTransport.Transport": "supplied transfer with an adjacent propagation path"
+  },
+  "finding": "The inspected junction definitions do not invoke CarrierMajority.orientation or compute their region selector from those doped supports. This identifies an unestablished translation connection in these inspected declarations, not absence of a V3 derivation.",
+  "next_source_question": "Identify how the original opposed-region carrier and declared equilibrium/bias observation bind the retained transitions, then compose those actual operations in the entry. Do not assume observation closure or import a numerical balance equation as a replacement.",
+  "new_proofs": 0,
+  "new_completed_entries": 0,
+  "goal_control_calls": 0
+}

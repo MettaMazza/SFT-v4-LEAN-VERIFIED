@@ -1483,3 +1483,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.GrainGrammar.candidates do
     IO.println ("GrainGrammar\t" ++ SFT.Materials.GrainGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.GrainGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.GrainGrammar.exactForm c ++ "\t" ++ SFT.Materials.GrainGrammar.decisionReason c)
+
+  for c in SFT.Materials.InterfaceGrammar.candidates do
+    IO.println ("InterfaceGrammar\t" ++ SFT.Materials.InterfaceGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.InterfaceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.InterfaceGrammar.exactForm c ++ "\t" ++ SFT.Materials.InterfaceGrammar.decisionReason c)

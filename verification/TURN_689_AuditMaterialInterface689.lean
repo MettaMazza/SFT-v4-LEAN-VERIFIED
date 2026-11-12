@@ -1,0 +1,26 @@
+import SFT.Materials.MaterialInterface
+#print axioms SFT.Materials.MaterialInterface.Carrier
+#print axioms SFT.Materials.MaterialInterface.boundary
+#print axioms SFT.Materials.MaterialInterface.boundaryExactly
+#print axioms SFT.Materials.MaterialInterface.boundaryEndpointsHeld
+#print axioms SFT.Materials.MaterialInterface.Payload
+#print axioms SFT.Materials.MaterialInterface.Row
+#print axioms SFT.Materials.MaterialInterface.row
+#print axioms SFT.Materials.MaterialInterface.assemble
+#print axioms SFT.Materials.MaterialInterface.completeBoundaryProjection
+#print axioms SFT.Materials.MaterialInterface.rowExactly
+#print axioms SFT.Materials.MaterialInterface.onBoundary
+#print axioms SFT.Materials.MaterialInterface.compatible
+#print axioms SFT.Materials.MaterialInterface.assembledCompatibility
+#print axioms SFT.Materials.MaterialInterface.distinctCarriersRetained
+#print axioms SFT.Materials.MaterialInterface.everyBoundaryRecorded
+#print axioms SFT.Materials.MaterialInterface.noInternalRow
+#print axioms SFT.Materials.MaterialInterface.contentPaired
+#print axioms SFT.Materials.MaterialInterface.tractionPaired
+#print axioms SFT.Materials.MaterialInterface.allContent
+#print axioms SFT.Materials.MaterialInterface.allTraction
+#print axioms SFT.Materials.MaterialInterface.completeContentBalance
+#print axioms SFT.Materials.MaterialInterface.completeTractionBalance
+#print axioms SFT.Materials.MaterialInterface.transferEndpointsHeld
+#print axioms SFT.Materials.MaterialInterface.observation
+#print axioms SFT.Materials.MaterialInterface.observationBoundaryRetained

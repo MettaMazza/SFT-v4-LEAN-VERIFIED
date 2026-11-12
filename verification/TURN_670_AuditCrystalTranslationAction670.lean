@@ -1,0 +1,5 @@
+import SFT.Materials.CrystalTranslationAction
+#print axioms SFT.Materials.CrystalTranslationAction.generatedComposition
+#print axioms SFT.Materials.CrystalTranslationAction.composedWord
+#print axioms SFT.Materials.CrystalTranslationAction.composedAdjacency
+#print axioms SFT.Materials.CrystalTranslationAction.declaredDepth

@@ -4795,3 +4795,15 @@ import SFT.Materials.VacancyEvidence
 import SFT.Materials.VacancyExperiment
 
 import SFT.Materials.VacancyValidation
+
+import SFT.Materials.InterstitialSubstitution
+
+import SFT.Materials.InterstitialSource
+
+import SFT.Materials.InterstitialGrammar
+
+import SFT.Materials.InterstitialEvidence
+
+import SFT.Materials.InterstitialExperiment
+
+import SFT.Materials.InterstitialValidation

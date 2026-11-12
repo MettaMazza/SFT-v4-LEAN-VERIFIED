@@ -30961,9 +30961,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-DEFECT-INTERSTITIAL-SUBSTITUTION-001-a0adb50fd640b194.json",
       "statement": "Interstitial and substitutional defects are distinguished respectively by an added occupied site relation and a changed occupant label at a retained reference site.",
       "title": "Interstitial and substitutional defects",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/InterstitialSubstitution.lean",
+        "SFT/Materials/InterstitialSource.lean",
+        "SFT/Materials/InterstitialGrammar.lean",
+        "SFT/Materials/InterstitialEvidence.lean",
+        "SFT/Materials/InterstitialExperiment.lean",
+        "SFT/Materials/InterstitialValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "9d46f0bb9771b01e1b08d3d5ea26f614e9c74e9bc3c9ef739d825f702c9d7065",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -31026,7 +31033,10 @@
         "status": "empirically_tested",
         "subbranch": "defects_microstructure",
         "title": "Interstitial and substitutional defects"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_686_INTERSTITIAL-SUBSTITUTION_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[19]: added occupied site relation versus changed occupant at a retained reference site; arbitrary retained rows remain present under addition, exact length increment, retained substitution site/reference/provenance/boundary, exact changed-label equivalence and distinct added/retained site identities.; Original DEFECT-INTERSTITIAL-SUBSTITUTION source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -194679,13 +194689,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T09:18:43.038721+00:00",
+  "updated_at": "2026-11-12T09:26:30.589044+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2323,
-    "fully_reconstructed_claims": 458,
-    "axiom_free_exported_results": 23997,
-    "axiom_free_audited_definitions_and_theorems": 56869
+    "pending": 2322,
+    "fully_reconstructed_claims": 459,
+    "axiom_free_exported_results": 24031,
+    "axiom_free_audited_definitions_and_theorems": 56981
   }
 }

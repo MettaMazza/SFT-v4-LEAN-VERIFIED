@@ -1,0 +1,14 @@
+import SFT.Materials.InterstitialSubstitution
+#print axioms SFT.Materials.InterstitialSubstitution.AddedSite
+#print axioms SFT.Materials.InterstitialSubstitution.insert
+#print axioms SFT.Materials.InterstitialSubstitution.referenceRowsRetained
+#print axioms SFT.Materials.InterstitialSubstitution.newOccupiedRowRetained
+#print axioms SFT.Materials.InterstitialSubstitution.oneOccupiedRelationAdded
+#print axioms SFT.Materials.InterstitialSubstitution.substitute
+#print axioms SFT.Materials.InterstitialSubstitution.substitutionRetainsSite
+#print axioms SFT.Materials.InterstitialSubstitution.substitutionRetainsReference
+#print axioms SFT.Materials.InterstitialSubstitution.substitutionRetainsProvenance
+#print axioms SFT.Materials.InterstitialSubstitution.changedOccupantExactly
+#print axioms SFT.Materials.InterstitialSubstitution.substitutionIsOccupied
+#print axioms SFT.Materials.InterstitialSubstitution.insertedAndRetainedSitesDistinct
+#print axioms SFT.Materials.InterstitialSubstitution.repeatedReplacementSame

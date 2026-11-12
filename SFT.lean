@@ -4759,3 +4759,15 @@ import SFT.Materials.QuasicrystalEvidence
 import SFT.Materials.QuasicrystalExperiment
 
 import SFT.Materials.QuasicrystalValidation
+
+import SFT.Materials.AcousticModes
+
+import SFT.Materials.PhononSource
+
+import SFT.Materials.PhononGrammar
+
+import SFT.Materials.PhononEvidence
+
+import SFT.Materials.PhononExperiment
+
+import SFT.Materials.PhononValidation

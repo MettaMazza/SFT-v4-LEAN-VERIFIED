@@ -30698,9 +30698,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-CRYST-PHONON-001-574d1650178ebf71.json",
       "statement": "A rank-three lattice has exactly one longitudinal and two transverse displacement orientations, forcing three acoustic excitation branches.",
       "title": "Acoustic lattice excitation branches",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/AcousticModes.lean",
+        "SFT/Materials/PhononSource.lean",
+        "SFT/Materials/PhononGrammar.lean",
+        "SFT/Materials/PhononEvidence.lean",
+        "SFT/Materials/PhononExperiment.lean",
+        "SFT/Materials/PhononValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "7bf84c73621fdec31d1b918d19b5ee2eb1ff941a0f502f1db4123a030788bd78",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -30765,7 +30772,10 @@
         "status": "empirically_tested",
         "subbranch": "crystal_quasicrystal",
         "title": "Acoustic lattice excitation branches"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_683_PHONON_COMPLETION.json",
+      "verified_scope": "structural_counts.py AcousticBranch exact orientation/generator fields; acoustic_branch_census exact three rows/order; original simple_cubic_coordination value divided by2 guard and RuntimeError; complete orientation membership, one longitudinal/two transverse counts and original guard success.; Original CRYST-PHONON fragments, ordered extraction and unchanged global guard.; Original eight binary axes, all256 alternatives, original decisions and unique survivor.; All four original operational witnesses including actual computed acoustic census length3; original controls and full program methods.; Original fixed-spec validation of all four witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior and unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -194649,13 +194659,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T09:00:32.396175+00:00",
+  "updated_at": "2026-11-12T09:06:35.508284+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2326,
-    "fully_reconstructed_claims": 455,
-    "axiom_free_exported_results": 23898,
-    "axiom_free_audited_definitions_and_theorems": 56530
+    "pending": 2325,
+    "fully_reconstructed_claims": 456,
+    "axiom_free_exported_results": 23929,
+    "axiom_free_audited_definitions_and_theorems": 56640
   }
 }

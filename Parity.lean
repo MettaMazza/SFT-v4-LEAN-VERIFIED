@@ -1465,3 +1465,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.QuasicrystalGrammar.candidates do
     IO.println ("QuasicrystalGrammar\t" ++ SFT.Materials.QuasicrystalGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.QuasicrystalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.QuasicrystalGrammar.exactForm c ++ "\t" ++ SFT.Materials.QuasicrystalGrammar.decisionReason c)
+
+  for c in SFT.Materials.PhononGrammar.candidates do
+    IO.println ("PhononGrammar\t" ++ SFT.Materials.PhononGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PhononGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PhononGrammar.exactForm c ++ "\t" ++ SFT.Materials.PhononGrammar.decisionReason c)

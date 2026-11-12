@@ -1,0 +1,7 @@
+import SFT.Materials.UnitCellSourceChoices
+#print axioms SFT.Materials.UnitCellSourceChoices.siteChoices
+#print axioms SFT.Materials.UnitCellSourceChoices.siteChoicesMeaning
+#print axioms SFT.Materials.UnitCellSourceChoices.relationChoicesFrom
+#print axioms SFT.Materials.UnitCellSourceChoices.relationChoicesFromMeaning
+#print axioms SFT.Materials.UnitCellSourceChoices.relationChoices
+#print axioms SFT.Materials.UnitCellSourceChoices.relationChoicesMeaning

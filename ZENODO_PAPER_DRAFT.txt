@@ -19158,3 +19158,14 @@ Conversely, the search preserves the property P(z):=∃n,Tₙ(x)=z. It holds at 
 Enumerate V×V and retain precisely those pairs for which this search succeeds. The resulting finite support Rₜ satisfies (x,y)∈Rₜ ⇔ x∈V ∧ y∈V ∧ ∃n,Tₙ(x)=y. Consequently (x,Tₙ(x)) belongs to Rₜ for every finite step n. This supplies complete site-translation support; translating an adjacency requires its two endpoints to use the same step n.
 
 Pinned source: Primitive unit-cell identity in sft/materials/obligations.py; LATTICE in sft/physics/collective_matter_laws.py; registered graph-network and dynamical-system dependencies. Lean: SFT/Materials/UnitCellTranslationSupport.lean, shiftEdgeMeaning, iterationPath, reachedIsIteration, completeTranslationDecision, completeSitePairMeaning and everyStepRepresented; existing GraphPathSoundness.searchPreservesProperty and GraphPathCompleteness.pathWitnessReachable. Chronology: TIMELINE.txt, Turn666.
+
+
+Synchronized relation support and complete source choices
+
+For an original adjacency e=(a,b), define σ(e)=(t(a),t(b)) and σⁿ(e)=(Tₙ(a),Tₙ(b)). The retained adjacency recurrence implies σ(e)∈E whenever e∈E. A finite orbit traversal stores visited relations S, remaining relations U and the next relation q. Initially S=[], U=E and q=e. If q is already in S, traversal ends. Otherwise it appends q to S, removes q from U and advances q to σ(q). The invariant E⊆U∪S ensures every fresh q belongs to U; removing it strictly decreases |U|. Thus termination follows from the original finite relation carrier, without an imposed time cutoff.
+
+The traversal maintains: e is visited or is next; every visited relation and q equal σⁿ(e) for some n; and the successor of every visited relation is visited or is q. At termination q is visited, so the result contains e and is closed under σ. Induction yields every σⁿ(e) in the result; the retained witness invariant gives the converse. Therefore f∈orbit(e) ⇔ ∃n,σⁿ(e)=f. This is synchronized translation of the ordered adjacency, not independent endpoint reachability.
+
+For each target site y, enumerate all x∈V satisfying reach(Gₜ,x,y). The site-choice theorem gives x∈C_y ⇔ x∈V ∧ ∃n,Tₙ(x)=y. For each target relation f, enumerate all e∈E whose synchronized orbit contains f. The relation-choice theorem gives e∈D_f ⇔ e∈E ∧ ∃n,σⁿ(e)=f. These finite per-target source lists are exhaustive and introduce no translation-depth bound.
+
+Pinned source: Primitive unit-cell identity in sft/materials/obligations.py; retained LATTICE in sft/physics/collective_matter_laws.py and registered discrete/graph dependencies. Lean: SFT/Materials/UnitCellRelationSupport.lean, shiftSupported, advanceDecreases, orbitComplete and supportMeaning; SFT/Materials/UnitCellSourceChoices.lean, siteChoicesMeaning and relationChoicesMeaning. Existing finite-removal proof reused: EntropyPairs.pairRemovalShorter. Chronology: TIMELINE.txt, Turn667.

@@ -1,0 +1,19 @@
+import SFT.Materials.UnitCellRelationSupport
+#print axioms SFT.Materials.UnitCellRelationSupport.shift
+#print axioms SFT.Materials.UnitCellRelationSupport.iterate
+#print axioms SFT.Materials.UnitCellRelationSupport.shiftSupported
+#print axioms SFT.Materials.UnitCellRelationSupport.State
+#print axioms SFT.Materials.UnitCellRelationSupport.advance
+#print axioms SFT.Materials.UnitCellRelationSupport.order
+#print axioms SFT.Materials.UnitCellRelationSupport.advanceDecreases
+#print axioms SFT.Materials.UnitCellRelationSupport.body
+#print axioms SFT.Materials.UnitCellRelationSupport.orbit
+#print axioms SFT.Materials.UnitCellRelationSupport.orbitEquation
+#print axioms SFT.Materials.UnitCellRelationSupport.Good
+#print axioms SFT.Materials.UnitCellRelationSupport.advanceGood
+#print axioms SFT.Materials.UnitCellRelationSupport.Complete
+#print axioms SFT.Materials.UnitCellRelationSupport.orbitComplete
+#print axioms SFT.Materials.UnitCellRelationSupport.initial
+#print axioms SFT.Materials.UnitCellRelationSupport.initialGood
+#print axioms SFT.Materials.UnitCellRelationSupport.support
+#print axioms SFT.Materials.UnitCellRelationSupport.supportMeaning

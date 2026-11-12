@@ -109,3 +109,7 @@ An already documented inactivity-to-blocking episode must not be recounted as a 
 
 Source representation before correspondence — 2026-11-12T20:02:07.426722+00:00
 An existing translator-defined predicate is not a scientific completion requirement. If its correspondence to V3 is unestablished, do not demand that V3 prove equivalence to it. Retain independently useful verified components, but determine the correct representation from the source. In particular JunctionObservation.closed is an endpoint-fibre screening predicate; neither its name nor its existing proofs makes it the required definition of equilibrium/bias balance. No terminal-state or universal-convergence criterion is authorized.
+
+
+Original representation fidelity — 2026-11-12T21:02:31.250051+00:00
+Do not call a V3 representation incomplete or omitted because a translator-designed Lean output could retain more data. Before changing a translated output type or adding a field, establish the exact original source operation, its domain and output, and the concrete mismatch. A broad prose instruction to retain complete records does not by itself authorize an arbitrary new output schema. In particular the proposed support-map augmentation of JunctionPreservation.records was not implemented and has no established source-operation correspondence; do not recycle it as required work. The original source determines the translation, not the translator's preferred representation. This correction does not certify the junction complete or authorize weakening its original scientific statement.

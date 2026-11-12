@@ -19,14 +19,26 @@ theorem quotientSmaller (r d : Nat) (hr : 0 < r) (hd : 1 < d)
  have smaller : r/d < d*(r/d) := Nat.lt_of_lt_of_le (Nat.lt_add_of_pos_left positive) bound
  exact Nat.lt_of_lt_of_le smaller (Nat.le_of_eq factor.symm)
 
+abbrev StripState := {r : Nat // 0 < r}
+def stripOrder : WellFoundedRelation StripState := invImage Subtype.val Nat.lt_wfRel
+
+def stripBody (d : Nat) (hd : 1 < d) (s : StripState)
+ (recur : (n : StripState) → stripOrder.rel n s → {out : Nat // 0 < out ∧ out ≤ n.val}) :
+ {out : Nat // 0 < out ∧ out ≤ s.val} :=
+ if h : s.val%d=0 then
+   let divides := dividesFromRemainder s.val d (Nat.lt_trans (by decide) hd) h
+   let next : StripState := ⟨s.val/d,quotientPositive s.val d s.property (Nat.lt_trans (by decide) hd) divides⟩
+   let result := recur next (quotientSmaller s.val d s.property hd h)
+   ⟨result.val,result.property.1,Nat.le_trans result.property.2 (Nat.le_of_lt (quotientSmaller s.val d s.property hd h))⟩
+ else ⟨s.val,s.property,Nat.le_refl s.val⟩
+
 def strip (r d : Nat) (hr : 0 < r) (hd : 1 < d) : {out : Nat // 0 < out ∧ out ≤ r} :=
- if h : r%d=0 then
-   let divides := dividesFromRemainder r d (Nat.lt_trans (by decide) hd) h
-   let result := strip (r/d) d (quotientPositive r d hr (Nat.lt_trans (by decide) hd) divides) hd
-   ⟨result.val,result.property.1,Nat.le_trans result.property.2 (Nat.le_of_lt (quotientSmaller r d hr hd h))⟩
- else ⟨r,hr,Nat.le_refl r⟩
-termination_by r
-decreasing_by exact quotientSmaller r d hr hd h
+ stripOrder.wf.fix (stripBody d hd) ⟨r,hr⟩
+
+theorem stripEquation (r d : Nat) (hr : 0 < r) (hd : 1 < d) :
+ strip r d hr hd = stripBody d hd ⟨r,hr⟩ (fun n _ => strip n.val d n.property hd) := by
+ unfold strip
+ rw [WellFounded.fix_eq]
 
 theorem divisorWithin (r d : Nat) (hd : 1 < d) (bound : d*d ≤ r) : d ≤ r := by
  have h := Nat.mul_le_mul_left d (Nat.le_of_lt hd)
@@ -49,17 +61,33 @@ theorem measureDecreases (r out d : Nat) (smaller : out ≤ r) (bound : d ≤ r)
      | succ out =>
        simpa only [Nat.succ_sub_succ_eq_sub] using ih r out (Nat.le_of_succ_le_succ smaller) bd
 
-def factorLoop (r d : Nat) (hr : 0 < r) (hd : 1 < d) : List Nat :=
- if bound : d*d ≤ r then
-   if divides : r%d=0 then
-     let reduced := strip r d hr hd
-     d :: factorLoop reduced.val (d+1) reduced.property.1 (Nat.lt_trans hd (Nat.lt_succ_self d))
-   else factorLoop r (d+1) hr (Nat.lt_trans hd (Nat.lt_succ_self d))
- else if 1 < r then [r] else []
-termination_by r+1-d
-decreasing_by
- · exact measureDecreases r (strip r d hr hd).val d (strip r d hr hd).property.2 (divisorWithin r d hd bound)
- · exact measureDecreases r r d (Nat.le_refl _) (divisorWithin r d hd bound)
+structure FactorState where
+ remainder : Nat
+ divisor : Nat
+ positive : 0 < remainder
+ lower : 1 < divisor
+
+def factorOrder : WellFoundedRelation FactorState :=
+ invImage (fun s => s.remainder+1-s.divisor) Nat.lt_wfRel
+
+def factorBody (s : FactorState)
+ (recur : (n : FactorState) → factorOrder.rel n s → List Nat) : List Nat :=
+ if bound : s.divisor*s.divisor ≤ s.remainder then
+   if divides : s.remainder%s.divisor=0 then
+     let reduced := strip s.remainder s.divisor s.positive s.lower
+     s.divisor :: recur ⟨reduced.val,s.divisor+1,reduced.property.1,Nat.lt_trans s.lower (Nat.lt_succ_self _)⟩
+       (measureDecreases _ _ _ reduced.property.2 (divisorWithin _ _ s.lower bound))
+   else recur ⟨s.remainder,s.divisor+1,s.positive,Nat.lt_trans s.lower (Nat.lt_succ_self _)⟩
+       (measureDecreases _ _ _ (Nat.le_refl _) (divisorWithin _ _ s.lower bound))
+ else if 1 < s.remainder then [s.remainder] else []
+
+def factorRun : FactorState → List Nat := factorOrder.wf.fix factorBody
+
+theorem factorEquation (s : FactorState) : factorRun s = factorBody s (fun n _ => factorRun n) := by
+ unfold factorRun
+ rw [WellFounded.fix_eq]
+
+def factorLoop (r d : Nat) (hr : 0 < r) (hd : 1 < d) : List Nat := factorRun ⟨r,d,hr,hd⟩
 
 inductive FactorInput where
  | integer : Int → FactorInput

@@ -4589,3 +4589,15 @@ import SFT.Materials.TraceabilityEvidence
 import SFT.Materials.TraceabilityExperiment
 
 import SFT.Materials.TraceabilityValidation
+
+import SFT.Materials.Lattice
+
+import SFT.Materials.LatticeSource
+
+import SFT.Materials.LatticeGrammar
+
+import SFT.Materials.LatticeEvidence
+
+import SFT.Materials.LatticeExperiment
+
+import SFT.Materials.LatticeValidation

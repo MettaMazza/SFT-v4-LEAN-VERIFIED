@@ -1438,3 +1438,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.TraceabilityGrammar.candidates do
     IO.println ("TraceabilityGrammar\t" ++ SFT.Materials.TraceabilityGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.TraceabilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.TraceabilityGrammar.exactForm c ++ "\t" ++ SFT.Materials.TraceabilityGrammar.decisionReason c)
+
+  for c in SFT.Materials.LatticeGrammar.candidates do
+    IO.println ("LatticeGrammar\t" ++ SFT.Materials.LatticeGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.LatticeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.LatticeGrammar.exactForm c ++ "\t" ++ SFT.Materials.LatticeGrammar.decisionReason c)

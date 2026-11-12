@@ -1,0 +1,20 @@
+import SFT.Materials.ReciprocalSupport
+#print axioms SFT.Materials.ReciprocalSupport.Probe
+#print axioms SFT.Materials.ReciprocalSupport.returnsAt
+#print axioms SFT.Materials.ReciprocalSupport.completeReturn
+#print axioms SFT.Materials.ReciprocalSupport.returnTest
+#print axioms SFT.Materials.ReciprocalSupport.returnTestExactly
+#print axioms SFT.Materials.ReciprocalSupport.reciprocalSupport
+#print axioms SFT.Materials.ReciprocalSupport.exactReciprocalClass
+#print axioms SFT.Materials.ReciprocalSupport.nonreturningSiteExcluded
+#print axioms SFT.Materials.ReciprocalSupport.successorReturnExactly
+#print axioms SFT.Materials.ReciprocalSupport.completePaths
+#print axioms SFT.Materials.ReciprocalSupport.completePathCount
+#print axioms SFT.Materials.ReciprocalSupport.earlierPathsRetained
+#print axioms SFT.Materials.ReciprocalSupport.closedPath
+#print axioms SFT.Materials.ReciprocalSupport.coherentMergeRetainsSupport
+#print axioms SFT.Materials.ReciprocalSupport.mergedObservation
+#print axioms SFT.Materials.ReciprocalSupport.coherentMagnitude
+#print axioms SFT.Materials.ReciprocalSupport.completeCoherentMerge
+#print axioms SFT.Materials.ReciprocalSupport.coherentPeakPresent
+#print axioms SFT.Materials.ReciprocalSupport.completeOrganizationReturn

@@ -30520,9 +30520,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-CRYST-RECIPROCAL-001-257f4aeb601ec2c9.json",
       "statement": "Reciprocal support is the exact class of probe path labels whose phase returns coherently over the complete generated material organization; retained classes form diffraction peaks.",
       "title": "Reciprocal support and diffraction",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/ReciprocalSupport.lean",
+        "SFT/Materials/ReciprocalSource.lean",
+        "SFT/Materials/ReciprocalGrammar.lean",
+        "SFT/Materials/ReciprocalEvidence.lean",
+        "SFT/Materials/ReciprocalExperiment.lean",
+        "SFT/Materials/ReciprocalValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "be4aebfb4e014df240759674f316fd9c58ac9b522919cdd512b35239bafed547",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -30587,7 +30594,10 @@
         "status": "empirically_tested",
         "subbranch": "crystal_quasicrystal",
         "title": "Reciprocal support and diffraction"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_680_RECIPROCAL_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[14] exact reciprocal phase-return class over complete generated sites, using registered wave_laws.py INTERFERENCE/DIFFRACTION and existing MechanicalEvents/CollectiveLattice representations. Computes all-site return; proves iff membership, exclusion by nonreturning site, successor equivalence, full trace count/retention, recurrence construction, complete coherent predecessor merging and positive retained peak. Phase types, paths, observation orientations and positive support are held input representations; no fitted scientific coefficient or additional law.; Original CRYST-RECIPROCAL source fragments and ordered extraction, unchanged global guard.; Original eight binary axes, all256 alternatives, original elimination and unique survivor.; Exactly the original three operational witnesses, controls, complete proof records and program methods.; Original fixed-spec validation with all three original witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior and unchanged global guard/preseal."
     },
     {
       "branch": "materials",
@@ -194629,13 +194639,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T08:31:11.898371+00:00",
+  "updated_at": "2026-11-12T08:40:03.811986+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2328,
-    "fully_reconstructed_claims": 453,
-    "axiom_free_exported_results": 23825,
-    "axiom_free_audited_definitions_and_theorems": 56292
+    "pending": 2327,
+    "fully_reconstructed_claims": 454,
+    "axiom_free_exported_results": 23859,
+    "axiom_free_audited_definitions_and_theorems": 56410
   }
 }

@@ -68,7 +68,7 @@ Entry completion means the entry’s actual pinned V3 content is formalised and 
 | Lean theorems proved | **24,306**, all with zero axiom dependencies |
 | Definitions and theorems audited | **57,838**, all with zero axiom dependencies |
 | Candidate records matched to v3 | **188,434 / 188,434** across 466 completed source entries |
-| Complete model entries | **466 / 2,781** — [latest completion evidence](verification/TURN_693_BAND_GAP_COMPLETION.json) |
+| Complete model entries | **466 / 2,781** — [latest completion evidence](verification/TURN_693_CONDUCTOR_CLASS_COMPLETION.json) |
 
 | Source component | Verified work | Evidence |
 | :--- | :--- | :--- |

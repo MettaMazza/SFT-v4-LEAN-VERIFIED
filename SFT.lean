@@ -4807,3 +4807,15 @@ import SFT.Materials.InterstitialEvidence
 import SFT.Materials.InterstitialExperiment
 
 import SFT.Materials.InterstitialValidation
+
+import SFT.Materials.DislocationCircuit
+
+import SFT.Materials.DislocationSource
+
+import SFT.Materials.DislocationGrammar
+
+import SFT.Materials.DislocationEvidence
+
+import SFT.Materials.DislocationExperiment
+
+import SFT.Materials.DislocationValidation

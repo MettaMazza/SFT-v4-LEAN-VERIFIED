@@ -31048,9 +31048,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-DEFECT-DISLOCATION-001-5b63a94c1368233f.json",
       "statement": "A dislocation is a line-supported lattice mismatch whose complete circuit retains a nonclosing held translation and supplies a lawful slip path.",
       "title": "Dislocation line and slip",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/DislocationCircuit.lean",
+        "SFT/Materials/DislocationSource.lean",
+        "SFT/Materials/DislocationGrammar.lean",
+        "SFT/Materials/DislocationEvidence.lean",
+        "SFT/Materials/DislocationExperiment.lean",
+        "SFT/Materials/DislocationValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "d185d044e901694f9e0fd010b9bbb002f1f50268d10a281034cb264fc7ebf251",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -31113,7 +31120,10 @@
         "status": "empirically_tested",
         "subbranch": "defects_microstructure",
         "title": "Dislocation line and slip"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_687_DISLOCATION_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[20]: complete line-supported circuit with each held translation, exact circuit composition and all adjacent vertices retained; derive its whole translation preserving carrier, words and adjacency. Nonclosure is its actual endpoint distinction. Generated slip history preserves support, words, adjacency and every earlier trace row; no supplied continuum coordinate or fitted coefficient.; Original DEFECT-DISLOCATION source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -194689,13 +194699,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T09:26:30.589044+00:00",
+  "updated_at": "2026-11-12T09:35:31.320309+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2322,
-    "fully_reconstructed_claims": 459,
-    "axiom_free_exported_results": 24031,
-    "axiom_free_audited_definitions_and_theorems": 56981
+    "pending": 2321,
+    "fully_reconstructed_claims": 460,
+    "axiom_free_exported_results": 24072,
+    "axiom_free_audited_definitions_and_theorems": 57106
   }
 }

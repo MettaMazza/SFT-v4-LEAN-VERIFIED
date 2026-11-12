@@ -1,0 +1,10 @@
+import SFT.Materials.UnitCellTranslationSupport
+#print axioms SFT.Materials.UnitCellTranslationSupport.shiftGraph
+#print axioms SFT.Materials.UnitCellTranslationSupport.shiftEdgeMeaning
+#print axioms SFT.Materials.UnitCellTranslationSupport.iterationPath
+#print axioms SFT.Materials.UnitCellTranslationSupport.finiteReachabilityOfIteration
+#print axioms SFT.Materials.UnitCellTranslationSupport.reachedIsIteration
+#print axioms SFT.Materials.UnitCellTranslationSupport.completeTranslationDecision
+#print axioms SFT.Materials.UnitCellTranslationSupport.completeSitePairs
+#print axioms SFT.Materials.UnitCellTranslationSupport.completeSitePairMeaning
+#print axioms SFT.Materials.UnitCellTranslationSupport.everyStepRepresented

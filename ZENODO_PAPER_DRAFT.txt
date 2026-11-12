@@ -19147,3 +19147,14 @@ If a,b∈M(F), the defining bounds give s(a)≤s(b) and s(b)≤s(a), hence s(a)=
 Existence is constructive for every finite family containing an admissible witness. Filter to admissible traces. For a nonempty list, induction compares the first size with a minimum of the remaining list. In either natural-number order case, the smaller candidate is no larger than every list member. It therefore belongs to M(F). This proves minimum selection on F; the generation of the complete same-lattice family and its basis correspondence are separate from this selection theorem.
 
 Pinned source obligation: sft/materials/obligations.py, Primitive unit-cell identity, minimal-cell-carrier and basis-choice-canonicalized. Lean component: SFT/Materials/UnitCellMinimum.lean, minimalCheckMeaning, minimumMembership, minimumSizeUnique, largerReconstructionExcluded, sameFamilySameMinima and minimumExists. Chronology: TIMELINE.txt, Turn665.
+
+
+Complete finite translation support
+
+Let V be the retained finite site carrier and t its generated translation. Form the transition graph Gₜ=(V,[(x,t(x)):x∈V]). This is the translation-operation graph; the physical adjacency E remains separate. Its edges satisfy (a,b)∈Gₜ exactly when a∈V and b=t(a). Starting from x∈V, induction builds a graph path from x to Tₙ(x) for every n: the base is [x], and the successor appends the retained transition (Tₙ(x),t(Tₙ(x))). The established path-completeness theorem therefore makes every Tₙ(x) reachable by the finite graph search.
+
+Conversely, the search preserves the property P(z):=∃n,Tₙ(x)=z. It holds at the initial frontier x with n=0. A transition a→b=t(a) carries a witness Tₙ(x)=a to Tₙ₊₁(x)=b. Thus a successful search produces an iteration witness. Combining the two directions gives reach(Gₜ,x,y)=true ⇔ ∃n,Tₙ(x)=y for each retained x. No observation-depth or iteration cutoff is introduced.
+
+Enumerate V×V and retain precisely those pairs for which this search succeeds. The resulting finite support Rₜ satisfies (x,y)∈Rₜ ⇔ x∈V ∧ y∈V ∧ ∃n,Tₙ(x)=y. Consequently (x,Tₙ(x)) belongs to Rₜ for every finite step n. This supplies complete site-translation support; translating an adjacency requires its two endpoints to use the same step n.
+
+Pinned source: Primitive unit-cell identity in sft/materials/obligations.py; LATTICE in sft/physics/collective_matter_laws.py; registered graph-network and dynamical-system dependencies. Lean: SFT/Materials/UnitCellTranslationSupport.lean, shiftEdgeMeaning, iterationPath, reachedIsIteration, completeTranslationDecision, completeSitePairMeaning and everyStepRepresented; existing GraphPathSoundness.searchPreservesProperty and GraphPathCompleteness.pathWitnessReachable. Chronology: TIMELINE.txt, Turn666.

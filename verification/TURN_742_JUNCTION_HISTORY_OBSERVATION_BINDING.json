@@ -1,0 +1,32 @@
+{
+  "claim_id": "SFT-MAT-SEMI-JUNCTION-001",
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "sft/materials/obligations.py: opposed-doped-region-carrier and complete-state-transition-boundary-trace",
+    "sft/materials/derivation.py:_blueprint induction_base and induction_step",
+    "sft/physics/collective_matter_laws.py: complete shared network and observation closure"
+  ],
+  "implementation": "JunctionCoupling.dopedInterfaceCouplings selects actual couplings with the existing support-derived opposition test. JunctionObservation and JunctionPreservation now use that same test instead of an independent inside selector.",
+  "changed_modules": [
+    "JunctionCoupling",
+    "JunctionObservation",
+    "JunctionPreservation"
+  ],
+  "added_declarations": [
+    "SFT.Materials.JunctionCoupling.dopedInterfaceCouplings"
+  ],
+  "new_theorem_count": 0,
+  "modified_existing_proofs": "Existing observation and finite-history proofs now quantify over the support-derived selected coupling list.",
+  "build_command": "python3 work/build_rotation677.py JunctionCoupling JunctionObservation JunctionPreservation",
+  "build_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "audit": "verification/TURN_742_JUNCTION_AUDIT.json",
+  "audited_declarations": 42,
+  "audited_theorems": 29,
+  "axiom_dependencies": [],
+  "entry_complete": false,
+  "remaining": "Full scientific statement correspondence remains unresolved; observation closure is still conditional and these results do not prove existence of a terminal equilibrium."
+}

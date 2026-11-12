@@ -6,24 +6,24 @@ variable {Part Support State ClockState Clock : Type}
 
 -- Endpoint observations use the same generated network as the actual transfers.
 -- V3 collective_matter_laws.py: complete shared cell and boundary records.
-def endpointObservations (inside : String → Bool)
+def endpointObservations (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
  (p : CollectivePlasma.Plasma Part Support State ClockState Clock)
  :=
- (JunctionCoupling.interfaceCouplings inside p).map fun c =>
+ (JunctionCoupling.dopedInterfaceCouplings before after p).map fun c =>
  (c.transfer, image p.flow.cells.observation c.transfer.source,
   image p.flow.cells.observation c.transfer.destination)
 
-def closed (inside : String → Bool)
+def closed (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
  (p : CollectivePlasma.Plasma Part Support State ClockState Clock)
  : Prop :=
- ∀ c, c ∈ JunctionCoupling.interfaceCouplings inside p →
+ ∀ c, c ∈ JunctionCoupling.dopedInterfaceCouplings before after p →
  CollectiveCoarseGrain.sameMacroClass p.flow.cells c.transfer.source c.transfer.destination
 
-theorem closureExactly (inside : String → Bool)
+theorem closureExactly (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
  (p : CollectivePlasma.Plasma Part Support State ClockState Clock)
  :
- closed inside p ↔
- ∀ c, c ∈ JunctionCoupling.interfaceCouplings inside p →
+ closed before after p ↔
+ ∀ c, c ∈ JunctionCoupling.dopedInterfaceCouplings before after p →
  image p.flow.cells.observation c.transfer.source = image p.flow.cells.observation c.transfer.destination := by
  constructor
  · intro h c hc
@@ -45,39 +45,39 @@ theorem closureExactly (inside : String → Bool)
        p.flow.cells.graph p.flow.cells.generated _
        (CollectivePlasma.couplingIsAdjacent p c ((filterMemberIff _ _ _).mp hc).1)).2⟩).mpr (h c hc)
 
-theorem everyDepletionEndpointClosed (inside : String → Bool)
+theorem everyDepletionEndpointClosed (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
  (p : CollectivePlasma.Plasma Part Support State ClockState Clock)
- (h : closed inside p)
+ (h : closed before after p)
  (t : MechanicalConservation.Transfer String FieldElectricDistinction.Charge)
- (held : t ∈ FieldSourceContinuity.outward inside p.flow.transfers) :
+ (held : t ∈ JunctionTransfer.dopedInterfaceTransfers before after p.flow.transfers) :
  CollectiveCoarseGrain.sameMacroClass p.flow.cells t.source t.destination := by
- obtain ⟨c,hc,same,_⟩ := JunctionCoupling.everyDepletionTransferHasSourceField inside p t held
+ obtain ⟨c,hc,same,_⟩ := JunctionCoupling.everyDopedInterfaceTransferHasSourceField before after p t held
  have result := h c hc
  rw [same] at result
  exact result
 
-theorem distinctEndpointPreventsClosure (inside : String → Bool)
+theorem distinctEndpointPreventsClosure (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
  (p : CollectivePlasma.Plasma Part Support State ClockState Clock)
 
  (c : CollectivePlasma.Coupling Part Support State ClockState Clock)
- (held : c ∈ JunctionCoupling.interfaceCouplings inside p)
+ (held : c ∈ JunctionCoupling.dopedInterfaceCouplings before after p)
  (different : image p.flow.cells.observation c.transfer.source ≠ image p.flow.cells.observation c.transfer.destination) :
- ¬ closed inside p := by
+ ¬ closed before after p := by
  intro h
  obtain ⟨label,_,_,left,right⟩ :=
   (CollectiveCoarseGrain.sameClassExactly _ _ _).mp (h c held)
  exact different (left.trans right.symm)
 
-theorem closedTransferRetainsDepletion (inside : String → Bool)
+theorem closedTransferRetainsDepletion (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
  (p : CollectivePlasma.Plasma Part Support State ClockState Clock)
- (h : closed inside p)
+ (h : closed before after p)
  (t : MechanicalConservation.Transfer String FieldElectricDistinction.Charge)
- (held : t ∈ FieldSourceContinuity.outward inside p.flow.transfers) :
- ∃ c, c ∈ JunctionCoupling.interfaceCouplings inside p ∧ c.transfer = t ∧
+ (held : t ∈ JunctionTransfer.dopedInterfaceTransfers before after p.flow.transfers) :
+ ∃ c, c ∈ JunctionCoupling.dopedInterfaceCouplings before after p ∧ c.transfer = t ∧
  (JunctionTransfer.spaceCharge t).2.1.2 = c.field.electric.charge ∧
  CollectiveCoarseGrain.sameMacroClass p.flow.cells t.source t.destination := by
- obtain ⟨c,hc,same,charge⟩ := JunctionCoupling.everyDepletionTransferHasSourceField inside p t held
- exact ⟨c,hc,same,charge.symm,everyDepletionEndpointClosed inside p h t held⟩
+ obtain ⟨c,hc,same,charge⟩ := JunctionCoupling.everyDopedInterfaceTransferHasSourceField before after p t held
+ exact ⟨c,hc,same,charge,everyDepletionEndpointClosed before after p h t held⟩
 
 -- Reuse the existing restoring record; never fabricate a motion or an equilibrium.
 theorem actualRestoringPathRetainsJunctionCharge

@@ -87,6 +87,11 @@ theorem exactResponseNormalization (c : CollectivePlasma.Coupling Part Support S
  (magnitude.denominator*c.transfer.carrier.amount.numerator) := by
  rw [c.commonCharge]
  exact FieldElectricPotential.normalizationExact c.field.electric magnitude
+def dopedInterfaceCouplings
+ (before after : String → SFT.Mathematics.DiscreteObjects.Collection)
+ (p : CollectivePlasma.Plasma Part Support State ClockState Clock) :=
+ p.couplings.filter (fun c => JunctionTransfer.opposedDopedEndpoints before after c.transfer)
+
 -- Bind the entry-specific opposed-support selection to the same existing
 -- charge/field couplings, without supplying an independent field reading.
 theorem everyDopedInterfaceTransferHasSourceField
@@ -94,12 +99,11 @@ theorem everyDopedInterfaceTransferHasSourceField
  (p : CollectivePlasma.Plasma Part Support State ClockState Clock)
  (t : Transfer String FieldElectricDistinction.Charge)
  (held : t ∈ JunctionTransfer.dopedInterfaceTransfers before after p.flow.transfers) :
- ∃ c, c ∈ p.couplings ∧ c.transfer = t ∧
- JunctionTransfer.opposedDopedEndpoints before after c.transfer = true ∧
+ ∃ c, c ∈ dopedInterfaceCouplings before after p ∧ c.transfer = t ∧
  (JunctionTransfer.spaceCharge t).2.1.2 = c.field.electric.charge := by
  have h := (filterMemberIff _ _ _).mp held
  obtain ⟨c,member,same⟩ := CollectivePlasma.everyMobileCarrierCoupled p t h.1
- refine ⟨c,member,same,?_,?_⟩
+ refine ⟨c,(filterMemberIff _ _ _).mpr ⟨member,?_⟩,same,?_⟩
  · rw [same]
    exact h.2
  · have charge := depletionAndFieldShareCharge c

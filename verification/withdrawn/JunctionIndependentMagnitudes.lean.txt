@@ -1,0 +1,26 @@
+-- Compare transport and opposed field response in their retained common
+-- reference. This states the balance criterion without assuming termination.
+def residual (transport response : PositiveFraction) : Scalar :=
+ opposed .forward .counter transport response
+
+theorem balancedExactly (transport response : PositiveFraction) :
+ residual transport response = .emptyOne ↔
+ transport.numerator * response.denominator = response.numerator * transport.denominator :=
+ opposedEmptyIff .forward .counter transport response
+
+theorem transportSurplus (transport response : PositiveFraction)
+ (excess : rightCross transport response < leftCross transport response) :
+ residual transport response = .positive .forward (leftRemainder transport response excess) :=
+ opposedLeft .forward .counter transport response excess
+
+theorem fieldSurplus (transport response : PositiveFraction)
+ (excess : leftCross transport response < rightCross transport response) :
+ residual transport response = .positive .counter (rightRemainder transport response excess) :=
+ opposedRight .forward .counter transport response excess
+
+theorem transportRemainderRetainsBothResponses (transport response : PositiveFraction)
+ (excess : rightCross transport response < leftCross transport response) :
+ rightCross transport response * (leftRemainder transport response excess).denominator +
+ (leftRemainder transport response excess).numerator * denominator transport response =
+ leftCross transport response * (leftRemainder transport response excess).denominator :=
+ leftRemainderReconstructs transport response excess

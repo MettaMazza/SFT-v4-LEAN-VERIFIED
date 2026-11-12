@@ -1444,3 +1444,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.UnitCellGrammar.candidates do
     IO.println ("UnitCellGrammar\t" ++ SFT.Materials.UnitCellGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.UnitCellGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.UnitCellGrammar.exactForm c ++ "\t" ++ SFT.Materials.UnitCellGrammar.decisionReason c)
+
+  for c in SFT.Materials.CrystalTranslationGrammar.candidates do
+    IO.println ("CrystalTranslationGrammar\t" ++ SFT.Materials.CrystalTranslationGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.CrystalTranslationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.CrystalTranslationGrammar.exactForm c ++ "\t" ++ SFT.Materials.CrystalTranslationGrammar.decisionReason c)

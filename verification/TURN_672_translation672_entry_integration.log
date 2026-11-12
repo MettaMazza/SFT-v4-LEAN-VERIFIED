@@ -1,0 +1,7 @@
+SFT.Materials.CrystalTranslationInteger.integerTranslationInvariant {carrier : SFT.Materials.Lattice.Record}
+  (basis : SFT.Materials.CrystalTranslationInteger.IntegerBasis carrier)
+  (instructions : List (SFT.Materials.CrystalTranslationInteger.Instruction basis)) (a b : String)
+  (ha : a ∈ carrier.cells.graph.nodes) (hb : b ∈ carrier.cells.graph.nodes) :
+  SFT.Materials.CrystalTranslationOrientation.Invariant carrier (a, b)
+    (SFT.Materials.CrystalTranslationInteger.run basis instructions a,
+      SFT.Materials.CrystalTranslationInteger.run basis instructions b)

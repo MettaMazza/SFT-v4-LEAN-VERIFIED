@@ -4629,3 +4629,21 @@ import SFT.Materials.UnitCellNormalization
 import SFT.Materials.UnitCellSeedCount
 
 import SFT.Materials.UnitCellClosure
+
+import SFT.Materials.CrystalTranslationSource
+
+import SFT.Materials.CrystalTranslationGrammar
+
+import SFT.Materials.CrystalTranslationEvidence
+
+import SFT.Materials.CrystalTranslationExperiment
+
+import SFT.Materials.CrystalTranslationValidation
+
+import SFT.Materials.CrystalTranslationAction
+
+import SFT.Materials.CrystalTranslationOrientation
+
+import SFT.Materials.CrystalTranslationBasis
+
+import SFT.Materials.CrystalTranslationInteger

@@ -1,0 +1,24 @@
+import SFT.Materials.GrainBoundary
+#print axioms SFT.Materials.GrainBoundary.Carrier
+#print axioms SFT.Materials.GrainBoundary.adjacent
+#print axioms SFT.Materials.GrainBoundary.adjacencySymmetric
+#print axioms SFT.Materials.GrainBoundary.Joined
+#print axioms SFT.Materials.GrainBoundary.adjacentHeld
+#print axioms SFT.Materials.GrainBoundary.joinedHeld
+#print axioms SFT.Materials.GrainBoundary.joinedOrientation
+#print axioms SFT.Materials.GrainBoundary.joinedTransitive
+#print axioms SFT.Materials.GrainBoundary.joinedSymmetric
+#print axioms SFT.Materials.GrainBoundary.grain
+#print axioms SFT.Materials.GrainBoundary.grainCoherent
+#print axioms SFT.Materials.GrainBoundary.grainConnected
+#print axioms SFT.Materials.GrainBoundary.RegionPath
+#print axioms SFT.Materials.GrainBoundary.regionPathStarts
+#print axioms SFT.Materials.GrainBoundary.regionPathEnds
+#print axioms SFT.Materials.GrainBoundary.homogeneousPathJoins
+#print axioms SFT.Materials.GrainBoundary.grainMaximal
+#print axioms SFT.Materials.GrainBoundary.grainHasInternalPaths
+#print axioms SFT.Materials.GrainBoundary.sharedSiteSameGrain
+#print axioms SFT.Materials.GrainBoundary.boundaryEdges
+#print axioms SFT.Materials.GrainBoundary.exactBoundaryMembership
+#print axioms SFT.Materials.GrainBoundary.adjacentDistinctGrainsExactly
+#print axioms SFT.Materials.GrainBoundary.boundarySeparatesExactly

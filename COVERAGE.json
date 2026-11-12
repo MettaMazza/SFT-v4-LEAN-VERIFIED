@@ -31135,9 +31135,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-MICRO-GRAIN-BOUNDARY-001-97779d2048b92fda.json",
       "statement": "A grain is a maximal connected orientation-coherent crystal region; its boundary is the retained adjacency where two such orientation classes meet.",
       "title": "Grain and grain-boundary identity",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/GrainBoundary.lean",
+        "SFT/Materials/GrainSource.lean",
+        "SFT/Materials/GrainGrammar.lean",
+        "SFT/Materials/GrainEvidence.lean",
+        "SFT/Materials/GrainExperiment.lean",
+        "SFT/Materials/GrainValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "842105d5a4477d4ba9011d148bb9c1a3d4f6b488fc462ed8b937db894f752598",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -31200,7 +31207,10 @@
         "status": "empirically_tested",
         "subbranch": "defects_microstructure",
         "title": "Grain and grain-boundary identity"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_688_GRAIN_BOUNDARY_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[21]: complete coherent adjacency closure, held endpoint and orientation proofs, path reversal/composition, connected and coherent grains, maximality for every homogeneous connected region, identical membership for grains sharing a site, and exact original-edge filter iff distinct adjacent grains.; Original MICRO-GRAIN-BOUNDARY source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -194699,13 +194709,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T09:35:31.320309+00:00",
+  "updated_at": "2026-11-12T09:40:27.898524+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2321,
-    "fully_reconstructed_claims": 460,
-    "axiom_free_exported_results": 24072,
-    "axiom_free_audited_definitions_and_theorems": 57106
+    "pending": 2320,
+    "fully_reconstructed_claims": 461,
+    "axiom_free_exported_results": 24113,
+    "axiom_free_audited_definitions_and_theorems": 57226
   }
 }

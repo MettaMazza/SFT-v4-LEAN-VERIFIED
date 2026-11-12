@@ -4819,3 +4819,15 @@ import SFT.Materials.DislocationEvidence
 import SFT.Materials.DislocationExperiment
 
 import SFT.Materials.DislocationValidation
+
+import SFT.Materials.GrainBoundary
+
+import SFT.Materials.GrainSource
+
+import SFT.Materials.GrainGrammar
+
+import SFT.Materials.GrainEvidence
+
+import SFT.Materials.GrainExperiment
+
+import SFT.Materials.GrainValidation

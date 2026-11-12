@@ -54759,7 +54759,7 @@
   ],
   "next_publication_milestone": 500,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "Continue UnitCell complete joint cell-family assembly from UnitCellSourceChoices siteChoices/relationChoices, whose exact membership equivalences now hold for every retained source and arbitrary translation length; relation support uses one shared step n. Normalize complete reconstruction traces to original target ordering and prove recovery/source correspondence, then bind UnitCellMinimum and original basis equivalence before completion. Reuse24 empty-axiom declarations in TURN_667_UNIT_CELL_SOURCE_CHOICES.json and663\u2013666 checks. Count447; next500; no source obstruction established.",
+  "authorized_action": "UnitCell joint source-family coverage is proved: UnitCellFamily.realizeJoint/identityInFamily and UnitCellNormalization.everyTraceInFamily preserve all rows by permutation. Do not re-open finite-family completeness. Next prove distinct seed cardinality invariant under the recorded normalization, bind complete normalized family to minimum selection and original basis equivalence, then reconcile full entry with663 original program checks. Receipt TURN_668_UNIT_CELL_FAMILY.json:30 zero-axiom declarations. Preserve663\u2013667 unchanged evidence. Count447; next500.",
   "scientific_cursor": {
     "completed": "SFT-MAT-CRYST-LATTICE-001",
     "next": "SFT-MAT-CRYST-UNIT-CELL-001",
@@ -56058,5 +56058,54 @@
     ],
     "axiom_dependencies": [],
     "remaining": "Assemble the complete joint cell family from these per-target source lists, prove equivalence to original complete reconstruction traces and bind minimum/basis classification before registering the entry."
+  },
+  "checkpoint667": {
+    "commit": "0dff1a645c176b6ce9d09e4ac2356a40a9a069da",
+    "tree": "3f263230843a2418cdd3bca35f9774b7235bb809",
+    "verified_files": 15,
+    "verified_main_head": true
+  },
+  "unitcell668": {
+    "scope": "Complete joint normalized family, realization and reverse normalization preserving every trace row",
+    "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "source": "sft/materials/obligations.py:MATERIALS_OBLIGATIONS[8] and registered generated-carrier/translation dependencies",
+    "modules": {
+      "UnitCellFamily": "e2d7ca449e35150fa2e65d2a6176184d96eb2d1dfdad979e9e98449dd13f1658",
+      "UnitCellNormalization": "1488366dd4c33c57fe3c54a6729445aaf516ce0030e71db8e6e8b17dbe203172"
+    },
+    "declarations": [
+      "SFT.Materials.UnitCellFamily.assignments",
+      "SFT.Materials.UnitCellFamily.Matches",
+      "SFT.Materials.UnitCellFamily.assignmentsMeaning",
+      "SFT.Materials.UnitCellFamily.targetsRetained",
+      "SFT.Materials.UnitCellFamily.everySourceRetained",
+      "SFT.Materials.UnitCellFamily.siteFamilies",
+      "SFT.Materials.UnitCellFamily.relationFamilies",
+      "SFT.Materials.UnitCellFamily.jointFamily",
+      "SFT.Materials.UnitCellFamily.jointFamilyMeaning",
+      "SFT.Materials.UnitCellFamily.realizeSites",
+      "SFT.Materials.UnitCellFamily.realizeRelations",
+      "SFT.Materials.UnitCellFamily.realizeJoint",
+      "SFT.Materials.UnitCellFamily.diagonalMatches",
+      "SFT.Materials.UnitCellFamily.identityInFamily",
+      "SFT.Materials.UnitCellNormalization.appendMap",
+      "SFT.Materials.UnitCellNormalization.occurrenceAppend",
+      "SFT.Materials.UnitCellNormalization.positiveMember",
+      "SFT.Materials.UnitCellNormalization.splitMember",
+      "SFT.Materials.UnitCellNormalization.permutationRefl",
+      "SFT.Materials.UnitCellNormalization.moveToFront",
+      "SFT.Materials.UnitCellNormalization.cancelPrefixCount",
+      "SFT.Materials.UnitCellNormalization.reorderRows",
+      "SFT.Materials.UnitCellNormalization.normalizeSiteRows",
+      "SFT.Materials.UnitCellNormalization.normalizeRelationRows",
+      "SFT.Materials.UnitCellNormalization.permMember",
+      "SFT.Materials.UnitCellNormalization.siteRows",
+      "SFT.Materials.UnitCellNormalization.relationRows",
+      "SFT.Materials.UnitCellNormalization.siteRowsMatch",
+      "SFT.Materials.UnitCellNormalization.relationRowsMatch",
+      "SFT.Materials.UnitCellNormalization.everyTraceInFamily"
+    ],
+    "axiom_dependencies": [],
+    "remaining": "Bind distinct seed cardinality under normalization to minimum-cell selection and original basis equivalence; then reconcile/register entire entry with preserved original program checks."
   }
 }

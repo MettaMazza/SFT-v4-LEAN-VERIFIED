@@ -1507,3 +1507,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.DopingGrammar.candidates do
     IO.println ("DopingGrammar\t" ++ SFT.Materials.DopingGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.DopingGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.DopingGrammar.exactForm c ++ "\t" ++ SFT.Materials.DopingGrammar.decisionReason c)
+
+  for c in SFT.Materials.PNTypeGrammar.candidates do
+    IO.println ("PNTypeGrammar\t" ++ SFT.Materials.PNTypeGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PNTypeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PNTypeGrammar.exactForm c ++ "\t" ++ SFT.Materials.PNTypeGrammar.decisionReason c)

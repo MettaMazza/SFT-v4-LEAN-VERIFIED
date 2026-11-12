@@ -4933,3 +4933,15 @@ import SFT.Materials.DopingEvidence
 import SFT.Materials.DopingExperiment
 
 import SFT.Materials.DopingValidation
+
+import SFT.Materials.CarrierMajority
+
+import SFT.Materials.PNTypeSource
+
+import SFT.Materials.PNTypeGrammar
+
+import SFT.Materials.PNTypeEvidence
+
+import SFT.Materials.PNTypeExperiment
+
+import SFT.Materials.PNTypeValidation

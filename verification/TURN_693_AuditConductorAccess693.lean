@@ -1,0 +1,24 @@
+import SFT.Materials.ConductorAccess
+#print axioms SFT.Materials.ConductorAccess.Relation
+#print axioms SFT.Materials.ConductorAccess.Activation
+#print axioms SFT.Materials.ConductorAccess.Boundary
+#print axioms SFT.Materials.ConductorAccess.directPaths
+#print axioms SFT.Materials.ConductorAccess.activatedPaths
+#print axioms SFT.Materials.ConductorAccess.Class
+#print axioms SFT.Materials.ConductorAccess.classify
+#print axioms SFT.Materials.ConductorAccess.conductorExactly
+#print axioms SFT.Materials.ConductorAccess.semiconductorExactly
+#print axioms SFT.Materials.ConductorAccess.insulatorExactly
+#print axioms SFT.Materials.ConductorAccess.directPathExactly
+#print axioms SFT.Materials.ConductorAccess.activatedPathExactly
+#print axioms SFT.Materials.ConductorAccess.noActivationNoActivatedPaths
+#print axioms SFT.Materials.ConductorAccess.insulationExcludesDirectPaths
+#print axioms SFT.Materials.ConductorAccess.insulationExcludesActivatedPaths
+#print axioms SFT.Materials.ConductorAccess.completeClassification
+#print axioms SFT.Materials.ConductorAccess.classificationUnique
+#print axioms SFT.Materials.ConductorAccess.record
+#print axioms SFT.Materials.ConductorAccess.fillingGapConditionsRetained
+#print axioms SFT.Materials.ConductorAccess.occupiedComesFromCompleteBand
+#print axioms SFT.Materials.ConductorAccess.accessibleComesFromCompleteBand
+#print axioms SFT.Materials.ConductorAccess.activationRetainsBandSupport
+#print axioms SFT.Materials.ConductorAccess.activationGapPositive

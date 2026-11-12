@@ -4883,3 +4883,17 @@ import SFT.Materials.BandGapEvidence
 import SFT.Materials.BandGapExperiment
 
 import SFT.Materials.BandGapValidation
+
+import SFT.Materials.CarrierAccess
+
+import SFT.Materials.ConductorAccess
+
+import SFT.Materials.ConductorSource
+
+import SFT.Materials.ConductorGrammar
+
+import SFT.Materials.ConductorEvidence
+
+import SFT.Materials.ConductorExperiment
+
+import SFT.Materials.ConductorValidation

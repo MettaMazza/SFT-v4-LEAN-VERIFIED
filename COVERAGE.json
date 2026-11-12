@@ -31572,9 +31572,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-ELEC-CONDUCTOR-CLASS-001-0851d0318085f1b7.json",
       "statement": "Conductor, semiconductor and insulator classes are forced by whether occupied carrier support connects to accessible states directly, across a finite activation gap, or not within the declared conditions.",
       "title": "Conductor, semiconductor and insulator distinction",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/CarrierAccess.lean",
+        "SFT/Materials/ConductorAccess.lean",
+        "SFT/Materials/ConductorSource.lean",
+        "SFT/Materials/ConductorGrammar.lean",
+        "SFT/Materials/ConductorEvidence.lean",
+        "SFT/Materials/ConductorExperiment.lean",
+        "SFT/Materials/ConductorValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "4120e123278bf848492ec6e3f4a2515e73ddb4d00e6dd69ad5970f5084d90853",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -31637,7 +31645,10 @@
         "status": "empirically_tested",
         "subbranch": "electronic_semiconductor",
         "title": "Conductor, semiconductor and insulator distinction"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_693_BAND_GAP_COMPLETION.json",
+      "verified_scope": "Original occupied-to-accessible-state relation: complete endpoint product and equivalence between reachable pairs and full graph path witnesses, with absence iff every occupied/access path is excluded.; MATERIALS_OBLIGATIONS[26]: direct/finite-activation/absent classification with exact iff characterizations; retained positive gap, occupation, conditions, complete-band support correspondence and all-path exclusion; optional activation preserves structural absence without assigning a gap.; Original ELEC-CONDUCTOR-CLASS source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -194751,13 +194762,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T13:33:11.527583+00:00",
+  "updated_at": "2026-11-12T13:42:49.349664+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2316,
-    "fully_reconstructed_claims": 465,
-    "axiom_free_exported_results": 24264,
-    "axiom_free_audited_definitions_and_theorems": 57714
+    "pending": 2315,
+    "fully_reconstructed_claims": 466,
+    "axiom_free_exported_results": 24306,
+    "axiom_free_audited_definitions_and_theorems": 57838
   }
 }

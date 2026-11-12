@@ -1495,3 +1495,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.BandGapGrammar.candidates do
     IO.println ("BandGapGrammar\t" ++ SFT.Materials.BandGapGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.BandGapGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.BandGapGrammar.exactForm c ++ "\t" ++ SFT.Materials.BandGapGrammar.decisionReason c)
+
+  for c in SFT.Materials.ConductorGrammar.candidates do
+    IO.println ("ConductorGrammar\t" ++ SFT.Materials.ConductorGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ConductorGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ConductorGrammar.exactForm c ++ "\t" ++ SFT.Materials.ConductorGrammar.decisionReason c)

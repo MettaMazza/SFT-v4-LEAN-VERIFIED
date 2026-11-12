@@ -1486,3 +1486,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.InterfaceGrammar.candidates do
     IO.println ("InterfaceGrammar\t" ++ SFT.Materials.InterfaceGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.InterfaceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.InterfaceGrammar.exactForm c ++ "\t" ++ SFT.Materials.InterfaceGrammar.decisionReason c)
+
+  for c in SFT.Materials.DiffusionGrammar.candidates do
+    IO.println ("DiffusionGrammar\t" ++ SFT.Materials.DiffusionGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.DiffusionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.DiffusionGrammar.exactForm c ++ "\t" ++ SFT.Materials.DiffusionGrammar.decisionReason c)

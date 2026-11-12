@@ -1,0 +1,25 @@
+import SFT.Materials.DiffusionHistory
+#print axioms SFT.Materials.DiffusionHistory.State
+#print axioms SFT.Materials.DiffusionHistory.content
+#print axioms SFT.Materials.DiffusionHistory.supported
+#print axioms SFT.Materials.DiffusionHistory.Move
+#print axioms SFT.Materials.DiffusionHistory.before
+#print axioms SFT.Materials.DiffusionHistory.after
+#print axioms SFT.Materials.DiffusionHistory.oneMoveConserves
+#print axioms SFT.Materials.DiffusionHistory.oneMoveSupported
+#print axioms SFT.Materials.DiffusionHistory.Run
+#print axioms SFT.Materials.DiffusionHistory.completeContentConserved
+#print axioms SFT.Materials.DiffusionHistory.completeSupportRetained
+#print axioms SFT.Materials.DiffusionHistory.allContentObservationsConserved
+#print axioms SFT.Materials.DiffusionHistory.transitionRecord
+#print axioms SFT.Materials.DiffusionHistory.records
+#print axioms SFT.Materials.DiffusionHistory.everyTransitionRecorded
+#print axioms SFT.Materials.DiffusionHistory.exactTransitionCount
+#print axioms SFT.Materials.DiffusionHistory.successorRetainsRecords
+#print axioms SFT.Materials.DiffusionHistory.successorCount
+#print axioms SFT.Materials.DiffusionHistory.Observation
+#print axioms SFT.Materials.DiffusionHistory.recurrence
+#print axioms SFT.Materials.DiffusionHistory.exactDeclaredRecurrence
+#print axioms SFT.Materials.DiffusionHistory.observationRecord
+#print axioms SFT.Materials.DiffusionHistory.observationConserves
+#print axioms SFT.Materials.DiffusionHistory.observationSupported

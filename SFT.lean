@@ -4843,3 +4843,15 @@ import SFT.Materials.InterfaceEvidence
 import SFT.Materials.InterfaceExperiment
 
 import SFT.Materials.InterfaceValidation
+
+import SFT.Materials.DiffusionHistory
+
+import SFT.Materials.DiffusionSource
+
+import SFT.Materials.DiffusionGrammar
+
+import SFT.Materials.DiffusionEvidence
+
+import SFT.Materials.DiffusionExperiment
+
+import SFT.Materials.DiffusionValidation

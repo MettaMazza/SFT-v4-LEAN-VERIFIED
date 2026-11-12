@@ -1498,3 +1498,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.ConductorGrammar.candidates do
     IO.println ("ConductorGrammar\t" ++ SFT.Materials.ConductorGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ConductorGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ConductorGrammar.exactForm c ++ "\t" ++ SFT.Materials.ConductorGrammar.decisionReason c)
+
+  for c in SFT.Materials.DualityGrammar.candidates do
+    IO.println ("DualityGrammar\t" ++ SFT.Materials.DualityGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.DualityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.DualityGrammar.exactForm c ++ "\t" ++ SFT.Materials.DualityGrammar.decisionReason c)

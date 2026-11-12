@@ -4897,3 +4897,15 @@ import SFT.Materials.ConductorEvidence
 import SFT.Materials.ConductorExperiment
 
 import SFT.Materials.ConductorValidation
+
+import SFT.Materials.CarrierDuality
+
+import SFT.Materials.DualitySource
+
+import SFT.Materials.DualityGrammar
+
+import SFT.Materials.DualityEvidence
+
+import SFT.Materials.DualityExperiment
+
+import SFT.Materials.DualityValidation

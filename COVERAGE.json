@@ -30144,9 +30144,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-CRYST-CUBIC-COORDINATION-001-b49f3d9cf57768f9.json",
       "statement": "Three stable spatial generators with two held orientations per generator force six nearest neighbours for the simple-cubic adjacency class.",
       "title": "Simple-cubic nearest-neighbour coordination",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/CubicCoordination.lean",
+        "SFT/Materials/CubicCoordinationProofs.lean",
+        "SFT/Materials/CubicSource.lean",
+        "SFT/Materials/CubicGrammar.lean",
+        "SFT/Materials/CubicEvidence.lean",
+        "SFT/Materials/CubicExperiment.lean",
+        "SFT/Materials/CubicValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "34b9bf5e5496e0abbba831583c94d6c935d608c2222d29fca11b04d89a017b3a",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -30211,7 +30219,10 @@
         "status": "empirically_tested",
         "subbranch": "crystal_quasicrystal",
         "title": "Simple-cubic nearest-neighbour coordination"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_673_CUBIC_COMPLETION.json",
+      "verified_scope": "structural_counts.py: OrientedNeighbour exact fields; simple_cubic_neighbours original nonempty/distinct guard and direction-major first-fibre/second-fibre order; simple_cubic_coordination generated three-direction count6; general2n cardinality.; Complete neighbour membership iff original generator and one of two original orientations; no duplicate rows for admitted distinct generators; exact accepted domain and result; rejection of repeated directions and preservation of admitted empty-string label; general accepted2n cardinality.; Original CRYST-CUBIC-COORDINATION external source-fragment requirements and ordered extraction, unchanged global guard.; Original eight binary axes and complete256 alternatives with exact elimination decisions and unique survivor.; Original four operational witnesses, including computed simple_cubic_coordination=6, original controls and complete generated program methods.; Original fixed-spec validation including all four witnesses, registration and sealed prediction program.; Original source, custody, isolation, comparison and adverse-label behavior; unchanged common global guard/preseal evidence."
     },
     {
       "branch": "materials",
@@ -194569,13 +194580,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T02:10:15.840895+00:00",
+  "updated_at": "2026-11-12T02:18:53.244314+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2332,
-    "fully_reconstructed_claims": 449,
-    "axiom_free_exported_results": 23597,
-    "axiom_free_audited_definitions_and_theorems": 55711
+    "pending": 2331,
+    "fully_reconstructed_claims": 450,
+    "axiom_free_exported_results": 23632,
+    "axiom_free_audited_definitions_and_theorems": 55826
   }
 }

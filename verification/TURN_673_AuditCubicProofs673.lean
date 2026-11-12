@@ -1,0 +1,8 @@
+import SFT.Materials.CubicCoordinationProofs
+#print axioms SFT.Materials.CubicCoordinationProofs.completeNeighbours
+#print axioms SFT.Materials.CubicCoordinationProofs.noDuplicateNeighbours
+#print axioms SFT.Materials.CubicCoordinationProofs.acceptedDomain
+#print axioms SFT.Materials.CubicCoordinationProofs.admissibleAccepted
+#print axioms SFT.Materials.CubicCoordinationProofs.acceptedCardinality
+#print axioms SFT.Materials.CubicCoordinationProofs.repeatedDirectionsRejected
+#print axioms SFT.Materials.CubicCoordinationProofs.emptyLabelRetained

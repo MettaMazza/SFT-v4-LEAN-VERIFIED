@@ -1,0 +1,8 @@
+SFT.Materials.CubicCoordinationProofs.completeNeighbours (generators : List String)
+  (row : SFT.Materials.CubicCoordination.OrientedNeighbour) :
+  row ∈ SFT.Materials.CubicCoordination.neighbours generators ↔
+    row.generator ∈ generators ∧ (row.orientation = "first-fibre" ∨ row.orientation = "second-fibre")
+SFT.Materials.CubicCoordinationProofs.acceptedCardinality (generators : List String)
+  (rows : List SFT.Materials.CubicCoordination.OrientedNeighbour)
+  (accepted : SFT.Materials.CubicCoordination.simpleCubicNeighbours generators = Except.ok rows) :
+  rows.length = generators.length * 2

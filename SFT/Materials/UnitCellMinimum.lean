@@ -1,9 +1,10 @@
 import SFT.Materials.UnitCellReconstruction
+import SFT.Mathematics.ProbabilityIndependence
 namespace SFT.Materials.UnitCellMinimum
 open UnitCellReconstruction SFT.Mathematics.DiscreteObjects
 
 -- Count distinct retained seed sites, not translation steps or fitted values.
-def seedSites (t : Trace) : List String := (t.siteSteps.map Prod.snd).eraseDups
+def seedSites (t : Trace) : List String := SFT.Mathematics.ProbabilityIndependence.firstLabels (t.siteSteps.map Prod.snd)
 def size (t : Trace) : Nat := (seedSites t).length
 
 -- A trace may use only original held seeds and original adjacency rows.

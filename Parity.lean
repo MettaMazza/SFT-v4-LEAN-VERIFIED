@@ -1441,3 +1441,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.LatticeGrammar.candidates do
     IO.println ("LatticeGrammar\t" ++ SFT.Materials.LatticeGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.LatticeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.LatticeGrammar.exactForm c ++ "\t" ++ SFT.Materials.LatticeGrammar.decisionReason c)
+
+  for c in SFT.Materials.UnitCellGrammar.candidates do
+    IO.println ("UnitCellGrammar\t" ++ SFT.Materials.UnitCellGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.UnitCellGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.UnitCellGrammar.exactForm c ++ "\t" ++ SFT.Materials.UnitCellGrammar.decisionReason c)

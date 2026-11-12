@@ -29955,9 +29955,24 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-CRYST-UNIT-CELL-001-7b95e56aaa1c2c51.json",
       "statement": "A primitive unit cell is the least complete labelled cell whose generated translations reproduce every lattice site and relation once.",
       "title": "Primitive unit-cell identity",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/UnitCellSource.lean",
+        "SFT/Materials/UnitCellGrammar.lean",
+        "SFT/Materials/UnitCellEvidence.lean",
+        "SFT/Materials/UnitCellExperiment.lean",
+        "SFT/Materials/UnitCellValidation.lean",
+        "SFT/Materials/UnitCellReconstruction.lean",
+        "SFT/Materials/UnitCellMinimum.lean",
+        "SFT/Materials/UnitCellTranslationSupport.lean",
+        "SFT/Materials/UnitCellRelationSupport.lean",
+        "SFT/Materials/UnitCellSourceChoices.lean",
+        "SFT/Materials/UnitCellFamily.lean",
+        "SFT/Materials/UnitCellNormalization.lean",
+        "SFT/Materials/UnitCellSeedCount.lean",
+        "SFT/Materials/UnitCellClosure.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "0e353e431239035dba43dd4a90bc822252eee016169f9beecb530019feb05b2f",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -30022,7 +30037,10 @@
         "status": "empirically_tested",
         "subbranch": "crystal_quasicrystal",
         "title": "Primitive unit-cell identity"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_669_UNIT_CELL_COMPLETION.json",
+      "verified_scope": "Original NIST unit-cell/entire-crystal fragments and unchanged original global source guard.; Original complete eight-axis256 enumeration, all source decisions and unique tuple.; Original program registration, source witnesses, closure and controls.; Original complete fixed-spec validation, sealed prediction program and registration.; Original empirical/custody/isolation/comparison/adverse controls, preserving original boundary.; MATERIALS_OBLIGATIONS[8]: actual translated site/adjacency traces, exact multiplicities, identity reconstruction and same-graph presentation invariance.; Distinct retained seed size, original-carrier guard and all-minima selection without tie-breaking; uses existing firstLabels distinct-label operation.; Complete finite site support iff arbitrary finite retained-translation iteration.; Synchronized endpoint iteration on original adjacency carrier, terminating complete orbit without time cutoff.; All admissible original sources per target site and adjacency; exact unbounded-iteration equivalences.; Complete joint assignment product, exact membership, source-retaining actual trace realization, identity member.; Every complete admissible trace represented in the family by permutation preserving every source row and step.; Distinct seed count preserved by normalization; exact size correspondence in both directions.; Positive global minimum over all admissible same-lattice traces; every site/relation once; minimum count unique; minimum presentations reconstruct identical graph."
     },
     {
       "branch": "materials",
@@ -194538,13 +194556,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T00:25:48.534299+00:00",
+  "updated_at": "2026-11-12T01:09:24.813361+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2334,
-    "fully_reconstructed_claims": 447,
-    "axiom_free_exported_results": 23439,
-    "axiom_free_audited_definitions_and_theorems": 55358
+    "pending": 2333,
+    "fully_reconstructed_claims": 448,
+    "axiom_free_exported_results": 23547,
+    "axiom_free_audited_definitions_and_theorems": 55581
   }
 }

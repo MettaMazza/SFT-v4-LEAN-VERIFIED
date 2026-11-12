@@ -4707,3 +4707,17 @@ import SFT.Materials.RotationEvidence
 import SFT.Materials.RotationExperiment
 
 import SFT.Materials.RotationValidation
+
+import SFT.Materials.CrystalSystems
+
+import SFT.Materials.CrystalSystemsProofs
+
+import SFT.Materials.SystemsSource
+
+import SFT.Materials.SystemsGrammar
+
+import SFT.Materials.SystemsEvidence
+
+import SFT.Materials.SystemsExperiment
+
+import SFT.Materials.SystemsValidation

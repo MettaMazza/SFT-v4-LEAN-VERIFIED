@@ -30340,9 +30340,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-CRYST-SYSTEMS-001-8eea622f2a962a3e.json",
       "statement": "Complete rank-three metric and crystallographic-rotation equivalence partitions periodic crystals into seven crystal-system classes.",
       "title": "Three-dimensional crystal-system classification",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/CrystalSystems.lean",
+        "SFT/Materials/CrystalSystemsProofs.lean",
+        "SFT/Materials/SystemsSource.lean",
+        "SFT/Materials/SystemsGrammar.lean",
+        "SFT/Materials/SystemsEvidence.lean",
+        "SFT/Materials/SystemsExperiment.lean",
+        "SFT/Materials/SystemsValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "a1eb5350d06437710d7074184fb03649d63344bd3a04d0bf32af30655721775f",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -30407,7 +30415,10 @@
         "status": "empirically_tested",
         "subbranch": "crystal_quasicrystal",
         "title": "Three-dimensional crystal-system classification"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_678_SYSTEMS_COMPLETION.json",
+      "verified_scope": "structural_counts.py LENGTH_CLASSES, ANGLE_CLASSES, CrystalSystem, exact seven-row _system_name mapping and arbitrary-string lookup; full ordered3x4 grammar, exact ordered seven survivors and original count/name-uniqueness guard.; Complete metric membership iff both labels belong to source carriers; retained row iff original lookup; returned name binds to original compatibility row; unmatched lookup rejection; exact five excluded metric pairs and7+5=12 partition.; Original CRYST-SYSTEMS source fragments and ordered extraction, unchanged global guard.; Original eight binary axes, all256 alternatives, exact elimination and survivor.; Original four operational witnesses including actual crystal_system_census length7, original controls and full program methods.; Original fixed-spec validation of all four witnesses, registration and sealed prediction.; Original source, custody, isolation, comparison and adverse-label behavior, preserved global guard/preseal."
     },
     {
       "branch": "materials",
@@ -194607,13 +194618,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-12T08:06:34.072688+00:00",
+  "updated_at": "2026-11-12T08:23:55.338175+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2330,
-    "fully_reconstructed_claims": 451,
-    "axiom_free_exported_results": 23755,
-    "axiom_free_audited_definitions_and_theorems": 56048
+    "pending": 2329,
+    "fully_reconstructed_claims": 452,
+    "axiom_free_exported_results": 23792,
+    "axiom_free_audited_definitions_and_theorems": 56171
   }
 }

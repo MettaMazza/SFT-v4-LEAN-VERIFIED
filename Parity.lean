@@ -1453,3 +1453,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.RotationGrammar.candidates do
     IO.println ("RotationGrammar\t" ++ SFT.Materials.RotationGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.RotationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.RotationGrammar.exactForm c ++ "\t" ++ SFT.Materials.RotationGrammar.decisionReason c)
+
+  for c in SFT.Materials.SystemsGrammar.candidates do
+    IO.println ("SystemsGrammar\t" ++ SFT.Materials.SystemsGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SystemsGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SystemsGrammar.exactForm c ++ "\t" ++ SFT.Materials.SystemsGrammar.decisionReason c)

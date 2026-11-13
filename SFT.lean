@@ -5337,3 +5337,51 @@ import SFT.Materials.PorousMaterialExperiment
 import SFT.Materials.PorousMaterialValidation
 
 import SFT.Materials.PorousOrganization
+
+import SFT.Materials.BulkMaterialSource
+
+import SFT.Materials.BulkMaterialGrammar
+
+import SFT.Materials.BulkMaterialEvidence
+
+import SFT.Materials.BulkMaterialExperiment
+
+import SFT.Materials.BulkMaterialValidation
+
+import SFT.Materials.BulkCorrespondence
+
+import SFT.Materials.AnisotropyMaterialSource
+
+import SFT.Materials.AnisotropyMaterialGrammar
+
+import SFT.Materials.AnisotropyMaterialEvidence
+
+import SFT.Materials.AnisotropyMaterialExperiment
+
+import SFT.Materials.AnisotropyMaterialValidation
+
+import SFT.Materials.MaterialAnisotropy
+
+import SFT.Materials.SizeMaterialSource
+
+import SFT.Materials.SizeMaterialGrammar
+
+import SFT.Materials.SizeMaterialEvidence
+
+import SFT.Materials.SizeMaterialExperiment
+
+import SFT.Materials.SizeMaterialValidation
+
+import SFT.Materials.SizeSurface
+
+import SFT.Materials.ProcessMaterialSource
+
+import SFT.Materials.ProcessMaterialGrammar
+
+import SFT.Materials.ProcessMaterialEvidence
+
+import SFT.Materials.ProcessMaterialExperiment
+
+import SFT.Materials.ProcessMaterialValidation
+
+import SFT.Materials.ProcessPath

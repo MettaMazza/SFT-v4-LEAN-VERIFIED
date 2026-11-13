@@ -1,0 +1,20 @@
+import SFT.Materials.MaterialAnisotropy
+#print axioms SFT.Materials.MaterialAnisotropy.Record
+#print axioms SFT.Materials.MaterialAnisotropy.anisotropic
+#print axioms SFT.Materials.MaterialAnisotropy.isotropic
+#print axioms SFT.Materials.MaterialAnisotropy.census
+#print axioms SFT.Materials.MaterialAnisotropy.unequalResponsesRequireDistinctDirections
+#print axioms SFT.Materials.MaterialAnisotropy.anisotropyWitness
+#print axioms SFT.Materials.MaterialAnisotropy.isotropyExcludesAnisotropy
+#print axioms SFT.Materials.MaterialAnisotropy.everyDirectionRetained
+#print axioms SFT.Materials.MaterialAnisotropy.noInventedResponse
+#print axioms SFT.Materials.MaterialAnisotropy.appendDirection
+#print axioms SFT.Materials.MaterialAnisotropy.successorCensus
+#print axioms SFT.Materials.MaterialAnisotropy.priorAnisotropyRetained
+#print axioms SFT.Materials.MaterialAnisotropy.fixedIdentities
+#print axioms SFT.Materials.MaterialAnisotropy.coordinateRenamingRetainsResponse
+#print axioms SFT.Materials.MaterialAnisotropy.record
+#print axioms SFT.Materials.MaterialAnisotropy.wholeInputRetained
+#print axioms SFT.Materials.MaterialAnisotropy.records
+#print axioms SFT.Materials.MaterialAnisotropy.base
+#print axioms SFT.Materials.MaterialAnisotropy.successor

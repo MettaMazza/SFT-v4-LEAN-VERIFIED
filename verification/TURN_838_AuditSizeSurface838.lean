@@ -1,0 +1,22 @@
+import SFT.Materials.SizeSurface
+#print axioms SFT.Materials.SizeSurface.Record
+#print axioms SFT.Materials.SizeSurface.supportRelation
+#print axioms SFT.Materials.SizeSurface.observedCensus
+#print axioms SFT.Materials.SizeSurface.supportRatio
+#print axioms SFT.Materials.SizeSurface.sizeEffect
+#print axioms SFT.Materials.SizeSurface.exactPositiveRatio
+#print axioms SFT.Materials.SizeSurface.ratioFromCounts
+#print axioms SFT.Materials.SizeSurface.absentBoundary
+#print axioms SFT.Materials.SizeSurface.absentInterior
+#print axioms SFT.Materials.SizeSurface.boundaryInMaterial
+#print axioms SFT.Materials.SizeSurface.interiorInMaterial
+#print axioms SFT.Materials.SizeSurface.boundaryNotInterior
+#print axioms SFT.Materials.SizeSurface.completeTransferBalance
+#print axioms SFT.Materials.SizeSurface.unchangedSupportNoSizeEffect
+#print axioms SFT.Materials.SizeSurface.unchangedCensusNoSizeEffect
+#print axioms SFT.Materials.SizeSurface.record
+#print axioms SFT.Materials.SizeSurface.wholeInputRetained
+#print axioms SFT.Materials.SizeSurface.surfaceAndShapeRetained
+#print axioms SFT.Materials.SizeSurface.records
+#print axioms SFT.Materials.SizeSurface.base
+#print axioms SFT.Materials.SizeSurface.successor

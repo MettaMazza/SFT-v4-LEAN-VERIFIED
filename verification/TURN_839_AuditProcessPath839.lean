@@ -1,0 +1,22 @@
+import SFT.Materials.ProcessPath
+#print axioms SFT.Materials.ProcessPath.State
+#print axioms SFT.Materials.ProcessPath.Record
+#print axioms SFT.Materials.ProcessPath.stateTable
+#print axioms SFT.Materials.ProcessPath.allStatesRecovered
+#print axioms SFT.Materials.ProcessPath.everyIntermediateState
+#print axioms SFT.Materials.ProcessPath.noInventedState
+#print axioms SFT.Materials.ProcessPath.completeStateCount
+#print axioms SFT.Materials.ProcessPath.allProcessActions
+#print axioms SFT.Materials.ProcessPath.append
+#print axioms SFT.Materials.ProcessPath.successorStates
+#print axioms SFT.Materials.ProcessPath.successorActions
+#print axioms SFT.Materials.ProcessPath.routeAndProvenanceRetained
+#print axioms SFT.Materials.ProcessPath.record
+#print axioms SFT.Materials.ProcessPath.wholeInputRetained
+#print axioms SFT.Materials.ProcessPath.differentRoutesRemainDistinct
+#print axioms SFT.Materials.ProcessPath.endpointOnlyCannotReconstruct
+#print axioms SFT.Materials.ProcessPath.initial
+#print axioms SFT.Materials.ProcessPath.initialTable
+#print axioms SFT.Materials.ProcessPath.records
+#print axioms SFT.Materials.ProcessPath.base
+#print axioms SFT.Materials.ProcessPath.successor

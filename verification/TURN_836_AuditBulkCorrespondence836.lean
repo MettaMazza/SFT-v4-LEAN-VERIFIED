@@ -1,0 +1,22 @@
+import SFT.Materials.BulkCorrespondence
+#print axioms SFT.Materials.BulkCorrespondence.Reading
+#print axioms SFT.Materials.BulkCorrespondence.Record
+#print axioms SFT.Materials.BulkCorrespondence.readings
+#print axioms SFT.Materials.BulkCorrespondence.admitted
+#print axioms SFT.Materials.BulkCorrespondence.completeNetwork
+#print axioms SFT.Materials.BulkCorrespondence.everyConstituentObserved
+#print axioms SFT.Materials.BulkCorrespondence.eachClassComplete
+#print axioms SFT.Materials.BulkCorrespondence.admittedScaleAgreement
+#print axioms SFT.Materials.BulkCorrespondence.scaleDisagreementRejects
+#print axioms SFT.Materials.BulkCorrespondence.append
+#print axioms SFT.Materials.BulkCorrespondence.appendedReadings
+#print axioms SFT.Materials.BulkCorrespondence.successorAdmissionExactly
+#print axioms SFT.Materials.BulkCorrespondence.allHistoryEvents
+#print axioms SFT.Materials.BulkCorrespondence.allPreparationActions
+#print axioms SFT.Materials.BulkCorrespondence.observation
+#print axioms SFT.Materials.BulkCorrespondence.fluctuationAndInterfaceRetained
+#print axioms SFT.Materials.BulkCorrespondence.record
+#print axioms SFT.Materials.BulkCorrespondence.wholeInputRetained
+#print axioms SFT.Materials.BulkCorrespondence.records
+#print axioms SFT.Materials.BulkCorrespondence.base
+#print axioms SFT.Materials.BulkCorrespondence.successor

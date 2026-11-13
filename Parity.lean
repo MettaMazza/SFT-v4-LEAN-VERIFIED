@@ -1609,3 +1609,15 @@ def main : IO Unit := do
 
   for c in SFT.Materials.PorousMaterialGrammar.candidates do
     IO.println ("PorousMaterialGrammar\t" ++ SFT.Materials.PorousMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PorousMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PorousMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.PorousMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.BulkMaterialGrammar.candidates do
+    IO.println ("BulkMaterialGrammar\t" ++ SFT.Materials.BulkMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.BulkMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.BulkMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.BulkMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.AnisotropyMaterialGrammar.candidates do
+    IO.println ("AnisotropyMaterialGrammar\t" ++ SFT.Materials.AnisotropyMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.AnisotropyMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.AnisotropyMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.AnisotropyMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.SizeMaterialGrammar.candidates do
+    IO.println ("SizeMaterialGrammar\t" ++ SFT.Materials.SizeMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SizeMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SizeMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.SizeMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.ProcessMaterialGrammar.candidates do
+    IO.println ("ProcessMaterialGrammar\t" ++ SFT.Materials.ProcessMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ProcessMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ProcessMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.ProcessMaterialGrammar.decisionReason c)

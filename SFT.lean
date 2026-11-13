@@ -5505,3 +5505,27 @@ import SFT.Materials.ThermoelectricMaterialExperiment
 import SFT.Materials.ThermoelectricMaterialValidation
 
 import SFT.Materials.Thermoelectric
+
+import SFT.Materials.PhotonicMaterialSource
+
+import SFT.Materials.PhotonicMaterialGrammar
+
+import SFT.Materials.PhotonicMaterialEvidence
+
+import SFT.Materials.PhotonicMaterialExperiment
+
+import SFT.Materials.PhotonicMaterialValidation
+
+import SFT.Materials.Photonic
+
+import SFT.Materials.FunctionalMagneticMaterialSource
+
+import SFT.Materials.FunctionalMagneticMaterialGrammar
+
+import SFT.Materials.FunctionalMagneticMaterialEvidence
+
+import SFT.Materials.FunctionalMagneticMaterialExperiment
+
+import SFT.Materials.FunctionalMagneticMaterialValidation
+
+import SFT.Materials.FunctionalMagnetic

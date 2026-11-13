@@ -1651,3 +1651,9 @@ def main : IO Unit := do
 
   for c in SFT.Materials.ThermoelectricMaterialGrammar.candidates do
     IO.println ("ThermoelectricMaterialGrammar\t" ++ SFT.Materials.ThermoelectricMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ThermoelectricMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ThermoelectricMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.ThermoelectricMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.PhotonicMaterialGrammar.candidates do
+    IO.println ("PhotonicMaterialGrammar\t" ++ SFT.Materials.PhotonicMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PhotonicMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PhotonicMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.PhotonicMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.FunctionalMagneticMaterialGrammar.candidates do
+    IO.println ("FunctionalMagneticMaterialGrammar\t" ++ SFT.Materials.FunctionalMagneticMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.FunctionalMagneticMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.FunctionalMagneticMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.FunctionalMagneticMaterialGrammar.decisionReason c)

@@ -1,0 +1,25 @@
+import SFT.Materials.FunctionalMagnetic
+#print axioms SFT.Materials.FunctionalMagnetic.State
+#print axioms SFT.Materials.FunctionalMagnetic.momentRows
+#print axioms SFT.Materials.FunctionalMagnetic.net
+#print axioms SFT.Materials.FunctionalMagnetic.walls
+#print axioms SFT.Materials.FunctionalMagnetic.everyCellRetained
+#print axioms SFT.Materials.FunctionalMagnetic.wallExactly
+#print axioms SFT.Materials.FunctionalMagnetic.Record
+#print axioms SFT.Materials.FunctionalMagnetic.stateRecord
+#print axioms SFT.Materials.FunctionalMagnetic.history
+#print axioms SFT.Materials.FunctionalMagnetic.residual
+#print axioms SFT.Materials.FunctionalMagnetic.completeHistoryCount
+#print axioms SFT.Materials.FunctionalMagnetic.completeHistoryEvents
+#print axioms SFT.Materials.FunctionalMagnetic.eachHistoryField
+#print axioms SFT.Materials.FunctionalMagnetic.allTransitionSources
+#print axioms SFT.Materials.FunctionalMagnetic.lossConserved
+#print axioms SFT.Materials.FunctionalMagnetic.everyLossHasActualTransition
+#print axioms SFT.Materials.FunctionalMagnetic.fieldAbsentResidual
+#print axioms SFT.Materials.FunctionalMagnetic.retainedRemanentOrientation
+#print axioms SFT.Materials.FunctionalMagnetic.actualAppliedFieldOrientation
+#print axioms SFT.Materials.FunctionalMagnetic.record
+#print axioms SFT.Materials.FunctionalMagnetic.completeInputRetained
+#print axioms SFT.Materials.FunctionalMagnetic.records
+#print axioms SFT.Materials.FunctionalMagnetic.base
+#print axioms SFT.Materials.FunctionalMagnetic.successor

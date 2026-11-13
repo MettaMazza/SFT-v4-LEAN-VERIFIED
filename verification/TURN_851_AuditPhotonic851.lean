@@ -1,0 +1,24 @@
+import SFT.Materials.Photonic
+#print axioms SFT.Materials.Photonic.Record
+#print axioms SFT.Materials.Photonic.cellRecords
+#print axioms SFT.Materials.Photonic.propagationSupport
+#print axioms SFT.Materials.Photonic.classRows
+#print axioms SFT.Materials.Photonic.completeCellSupport
+#print axioms SFT.Materials.Photonic.generatedGeometryExactly
+#print axioms SFT.Materials.Photonic.allowedPropagationExactly
+#print axioms SFT.Materials.Photonic.completeClassExactly
+#print axioms SFT.Materials.Photonic.gapExactly
+#print axioms SFT.Materials.Photonic.noCompatibleGeometryOmitted
+#print axioms SFT.Materials.Photonic.completeRecurrenceIncluded
+#print axioms SFT.Materials.Photonic.electricMagneticCommonSource
+#print axioms SFT.Materials.Photonic.actualTransportSource
+#print axioms SFT.Materials.Photonic.observedArrivalAllowed
+#print axioms SFT.Materials.Photonic.everyObservedStepIsGeometric
+#print axioms SFT.Materials.Photonic.observedArrivalExcludedByGap
+#print axioms SFT.Materials.Photonic.frequencyAtEveryCell
+#print axioms SFT.Materials.Photonic.Output
+#print axioms SFT.Materials.Photonic.record
+#print axioms SFT.Materials.Photonic.completeInputRetained
+#print axioms SFT.Materials.Photonic.records
+#print axioms SFT.Materials.Photonic.base
+#print axioms SFT.Materials.Photonic.successor

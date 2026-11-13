@@ -35994,9 +35994,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-FUNC-PIEZOELECTRIC-001-e334945fb5c5da11.json",
       "statement": "Piezoelectricity is a reversible cross-relation between mechanical deformation and held electric polarization permitted only when the retained material symmetry does not close the orientation distinction.",
       "title": "Piezoelectric coupling",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/PiezoMaterialSource.lean",
+        "SFT/Materials/PiezoMaterialGrammar.lean",
+        "SFT/Materials/PiezoMaterialEvidence.lean",
+        "SFT/Materials/PiezoMaterialExperiment.lean",
+        "SFT/Materials/PiezoMaterialValidation.lean",
+        "SFT/Materials/Piezoelectric.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "0c64eb718a8bf734105ab4e8cae2bf1f4006ad482398994ea6a53f95f4db929e",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -36060,7 +36067,10 @@
         "status": "empirically_tested",
         "subbranch": "advanced_functional_sustainable",
         "title": "Piezoelectric coupling"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_848_PIEZO_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[76]: complete mechanical-electric response trace: original dynamics reversible_with_record proved from retained duplicate-free transition pairs, all predecessor labels retained, singleton output-inverse criterion separately computed; exact conservation composition and actual electric-orientation nonclosure; charge/orientation records, field-stress boundary and finite closure. No premise that every response has singleton fibres.; Original FUNC-PIEZOELECTRIC source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -195280,13 +195290,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-13T20:45:31.648363+00:00",
+  "updated_at": "2026-11-13T21:07:08.524353+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2266,
-    "fully_reconstructed_claims": 515,
-    "axiom_free_exported_results": 26100,
-    "axiom_free_audited_definitions_and_theorems": 63610
+    "pending": 2265,
+    "fully_reconstructed_claims": 516,
+    "axiom_free_exported_results": 26146,
+    "axiom_free_audited_definitions_and_theorems": 63740
   }
 }

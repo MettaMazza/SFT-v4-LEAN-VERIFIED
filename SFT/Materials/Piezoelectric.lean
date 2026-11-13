@@ -1,9 +1,10 @@
 import SFT.Materials.BoundPolarization
 import SFT.InformationScience.ConservationCardinality
+import SFT.Mathematics.DynamicsTraces
 namespace SFT.Materials.Piezoelectric
 open SFT.InformationScience SFT.Physics
 open SFT.Mathematics.ProbabilityObservations SFT.Mathematics.ProbabilityIndependence
-open SFT.Mathematics.GeometryTopology
+open SFT.Mathematics.GeometryTopology SFT.Mathematics.DiscreteObjects
 open SFT.Foundation.Count.TraceDerivation
 
 -- V3 FUNC-PIEZOELECTRIC: the response is on retained material classes.
@@ -15,7 +16,6 @@ structure Response where
  crossResponse : Observation
  materialAdmitted : ConservationLedger.validateTransformation source materialObservation = .ok materialObservation
  responseAdmitted : ConservationLedger.validateTransformation (MutualObservation.labels source materialObservation) crossResponse = .ok crossResponse
- reversible : ConservationReverse.isReversible (MutualObservation.labels source materialObservation) crossResponse = .ok true
  mechanical : String → MechanicalLocation.Displacement String
  electric : String → BoundPolarization.OrientationRow
  fieldStressConditions : SFT.Host.Canonical.Value
@@ -25,21 +25,34 @@ def retainedMechanical (r : Response) := MutualObservation.labels r.source r.mat
 
 def responseRows (r : Response) := ConservationComposition.composedRows r.source r.materialObservation r.crossResponse
 
+def reversibility (r : Response) := ConservationReverse.isReversible (retainedMechanical r) r.crossResponse
+
 def reverseRows (r : Response) := ConservationReverse.reverseRecord (retainedMechanical r) r.crossResponse
 
 theorem exactComposition (r : Response) :
  ConservationComposition.compose r.source r.materialObservation r.crossResponse = .ok (responseRows r) :=
  ConservationComposition.composeAdmitted _ _ _ r.materialAdmitted r.responseAdmitted
 
-theorem reversibleOnRetainedClasses (r : Response) :
+theorem reversibleOnRetainedClasses (r : Response) (passed : reversibility r = .ok true) :
  ∀ a, a ∈ retainedMechanical r → ∀ b, b ∈ retainedMechanical r →
  ConservationComposition.value r.crossResponse a = ConservationComposition.value r.crossResponse b → a = b :=
- (ConservationCardinality.reversibleIffInjective _ _ r.responseAdmitted).mp r.reversible
+ (ConservationCardinality.reversibleIffInjective _ _ r.responseAdmitted).mp passed
 
-theorem uniquePredecessorFibres (r : Response) :
+theorem uniquePredecessorFibres (r : Response) (passed : reversibility r = .ok true) :
  ∀ label, label ∈ MutualObservation.labels (retainedMechanical r) r.crossResponse →
  ∃ state, SFT.Mathematics.ProbabilityObservations.fibre (retainedMechanical r) r.crossResponse label = [state] :=
- (ConservationCardinality.reversibleIffSingletonFibres _ _ r.responseAdmitted).mp r.reversible
+ (ConservationCardinality.reversibleIffSingletonFibres _ _ r.responseAdmitted).mp passed
+
+theorem reversibilityExactlySingletonFibres (r : Response) :
+ reversibility r = .ok true ↔
+ ∀ label, label ∈ MutualObservation.labels (retainedMechanical r) r.crossResponse →
+ ∃ state, SFT.Mathematics.ProbabilityObservations.fibre (retainedMechanical r) r.crossResponse label = [state] :=
+ ConservationCardinality.reversibleIffSingletonFibres _ _ r.responseAdmitted
+
+theorem reverseRowsExact (r : Response) :
+ reverseRows r = .ok (ConservationReverse.reverseRows
+   (SFT.Mathematics.ProbabilityObservations.classRows (retainedMechanical r) r.crossResponse)) :=
+ ConservationReverse.reverseAdmitted _ _ r.responseAdmitted
 
 theorem closedOrientationCannotReturn (r : Response) (pair : String × String)
  (closed : pair ∈ ConservationLedger.closed r.source r.materialObservation) :
@@ -98,11 +111,44 @@ theorem actualOrientationRequiresNonclosure (r : Response) (a b : String)
  exact orientation (congrArg (fun row => row.displacement.held)
    (closedMaterialHasSameElectricRecord r a b closed))
 
-theorem reverseRestoresMechanicalRecord (r : Response) (a b : String)
+theorem reverseRestoresMechanicalRecord (r : Response) (passed : reversibility r = .ok true) (a b : String)
  (ha : a ∈ retainedMechanical r) (hb : b ∈ retainedMechanical r)
  (same : ConservationComposition.value r.crossResponse a = ConservationComposition.value r.crossResponse b) :
  r.mechanical a = r.mechanical b :=
- congrArg r.mechanical (reversibleOnRetainedClasses r a ha b hb same)
+ congrArg r.mechanical (reversibleOnRetainedClasses r passed a ha b hb same)
+
+-- Original dynamics reversible_with_record accepts merged images when all
+-- predecessor pairs are retained. It does not impose singleton image fibres.
+theorem retainedResponseReversible (r : Response) :
+ SFT.Mathematics.DynamicsTraces.reversibleWithRecord r.crossResponse r.crossResponse = true := by
+ have uniqueKeys := ((MutualObservation.mapMeaning _ _).mp
+   ((ConservationLedger.validationMeaning _ _ _).mp r.responseAdmitted).2.1).1
+ have reflect : ∀ rows : Observation, distinct (rows.map Prod.fst) = true → distinct rows = true := by
+  intro rows
+  induction rows with
+  | nil => intro _; rfl
+  | cons first rest ih =>
+   intro h
+   have parts := (andTrue _ _).mp h
+   have absent : ¬ first ∈ rest := by
+    intro member
+    have key := (hasIff _ _).mpr (memMap Prod.fst first rest member)
+    have rejected := parts.1
+    rw [key] at rejected
+    cases rejected
+   apply (andTrue _ _).mpr
+   constructor
+   · cases h : has rest first with
+     | false => rfl
+     | true => exact False.elim (absent ((hasIff _ _).mp h))
+   · exact ih parts.2
+ exact (SFT.Mathematics.DynamicsTraces.reversalMeaning _ _).mpr
+   ⟨fun _ h => h,reflect _ uniqueKeys⟩
+
+theorem everyMechanicalPredecessorRetained (r : Response) (mechanical electric : String)
+ (row : (mechanical,electric) ∈ r.crossResponse) :
+ mechanical ∈ SFT.Mathematics.DynamicsTraces.predecessorRecords r.crossResponse electric :=
+ SFT.Mathematics.DynamicsTraces.retainedPredecessor _ _ _ _ (retainedResponseReversible r) row
 
 def record (r : Response) :=
  (r,responseRows r,reverseRows r,(retainedMechanical r).map (mechanicalElectricRow r))

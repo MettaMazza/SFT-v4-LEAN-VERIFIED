@@ -1642,3 +1642,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.RadiationDamageMaterialGrammar.candidates do
     IO.println ("RadiationDamageMaterialGrammar\t" ++ SFT.Materials.RadiationDamageMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.RadiationDamageMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.RadiationDamageMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.RadiationDamageMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.PiezoMaterialGrammar.candidates do
+    IO.println ("PiezoMaterialGrammar\t" ++ SFT.Materials.PiezoMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PiezoMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PiezoMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.PiezoMaterialGrammar.decisionReason c)

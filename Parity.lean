@@ -1672,3 +1672,6 @@ def main : IO Unit := do
 
   for c in SFT.Foundation.AdmissionGrammar.candidates do
     IO.println ("AdmissionGrammar\t" ++ SFT.Foundation.AdmissionGrammar.candidateId c ++ "\t" ++ (if SFT.Foundation.AdmissionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Foundation.AdmissionGrammar.exactForm c ++ "\t" ++ SFT.Foundation.AdmissionGrammar.decisionReason c)
+
+  for c in SFT.Mathematics.AlgebraicBalanceGrammar.candidates do
+    IO.println ("AlgebraicBalanceGrammar\t" ++ SFT.Mathematics.AlgebraicBalanceGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.AlgebraicBalanceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.AlgebraicBalanceGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.AlgebraicBalanceGrammar.decisionReason c)

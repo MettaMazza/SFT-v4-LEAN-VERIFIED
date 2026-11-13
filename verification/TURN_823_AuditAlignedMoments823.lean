@@ -1,0 +1,19 @@
+import SFT.Materials.AlignedMoments
+#print axioms SFT.Materials.AlignedMoments.Record
+#print axioms SFT.Materials.AlignedMoments.moments
+#print axioms SFT.Materials.AlignedMoments.accumulate
+#print axioms SFT.Materials.AlignedMoments.magnitudeSum
+#print axioms SFT.Materials.AlignedMoments.alignedSum
+#print axioms SFT.Materials.AlignedMoments.net
+#print axioms SFT.Materials.AlignedMoments.completeMomentRows
+#print axioms SFT.Materials.AlignedMoments.positiveNet
+#print axioms SFT.Materials.AlignedMoments.netNotEmpty
+#print axioms SFT.Materials.AlignedMoments.netHasHeldOrientation
+#print axioms SFT.Materials.AlignedMoments.everyLocalOrientation
+#print axioms SFT.Materials.AlignedMoments.connectedRegion
+#print axioms SFT.Materials.AlignedMoments.recurrentOrientationClass
+#print axioms SFT.Materials.AlignedMoments.record
+#print axioms SFT.Materials.AlignedMoments.completeInputRetained
+#print axioms SFT.Materials.AlignedMoments.records
+#print axioms SFT.Materials.AlignedMoments.base
+#print axioms SFT.Materials.AlignedMoments.successor

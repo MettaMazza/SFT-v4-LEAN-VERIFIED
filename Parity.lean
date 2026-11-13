@@ -1573,3 +1573,12 @@ def main : IO Unit := do
 
   for c in SFT.Materials.ThermalConductionGrammar.candidates do
     IO.println ("ThermalConductionGrammar\t" ++ SFT.Materials.ThermalConductionGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ThermalConductionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ThermalConductionGrammar.exactForm c ++ "\t" ++ SFT.Materials.ThermalConductionGrammar.decisionReason c)
+
+  for c in SFT.Materials.ThermalExpansionGrammar.candidates do
+    IO.println ("ThermalExpansionGrammar\t" ++ SFT.Materials.ThermalExpansionGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ThermalExpansionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ThermalExpansionGrammar.exactForm c ++ "\t" ++ SFT.Materials.ThermalExpansionGrammar.decisionReason c)
+
+  for c in SFT.Materials.FerromagnetismGrammar.candidates do
+    IO.println ("FerromagnetismGrammar\t" ++ SFT.Materials.FerromagnetismGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.FerromagnetismGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.FerromagnetismGrammar.exactForm c ++ "\t" ++ SFT.Materials.FerromagnetismGrammar.decisionReason c)
+
+  for c in SFT.Materials.AntiferromagnetismGrammar.candidates do
+    IO.println ("AntiferromagnetismGrammar\t" ++ SFT.Materials.AntiferromagnetismGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.AntiferromagnetismGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.AntiferromagnetismGrammar.exactForm c ++ "\t" ++ SFT.Materials.AntiferromagnetismGrammar.decisionReason c)

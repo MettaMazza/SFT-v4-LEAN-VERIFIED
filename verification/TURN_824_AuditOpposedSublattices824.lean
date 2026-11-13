@@ -1,0 +1,22 @@
+import SFT.Materials.OpposedSublattices
+#print axioms SFT.Materials.OpposedSublattices.Moment
+#print axioms SFT.Materials.OpposedSublattices.total
+#print axioms SFT.Materials.OpposedSublattices.Record
+#print axioms SFT.Materials.OpposedSublattices.leftValue
+#print axioms SFT.Materials.OpposedSublattices.rightValue
+#print axioms SFT.Materials.OpposedSublattices.net
+#print axioms SFT.Materials.OpposedSublattices.closes
+#print axioms SFT.Materials.OpposedSublattices.closureExactly
+#print axioms SFT.Materials.OpposedSublattices.completeLeftSum
+#print axioms SFT.Materials.OpposedSublattices.completeRightSum
+#print axioms SFT.Materials.OpposedSublattices.localOrientationsDistinct
+#print axioms SFT.Materials.OpposedSublattices.leftOrderPresent
+#print axioms SFT.Materials.OpposedSublattices.rightOrderPresent
+#print axioms SFT.Materials.OpposedSublattices.recurrentOpposedOrder
+#print axioms SFT.Materials.OpposedSublattices.record
+#print axioms SFT.Materials.OpposedSublattices.closureRetainsLocalOrders
+#print axioms SFT.Materials.OpposedSublattices.sublatticesDistinguishable
+#print axioms SFT.Materials.OpposedSublattices.completeInputRetained
+#print axioms SFT.Materials.OpposedSublattices.records
+#print axioms SFT.Materials.OpposedSublattices.base
+#print axioms SFT.Materials.OpposedSublattices.successor

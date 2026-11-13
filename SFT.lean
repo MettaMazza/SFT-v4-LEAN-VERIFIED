@@ -5193,3 +5193,39 @@ import SFT.Materials.ThermalConductionExperiment
 import SFT.Materials.ThermalConductionValidation
 
 import SFT.Materials.EnergyConduction
+
+import SFT.Materials.ThermalExpansionSource
+
+import SFT.Materials.ThermalExpansionGrammar
+
+import SFT.Materials.ThermalExpansionEvidence
+
+import SFT.Materials.ThermalExpansionExperiment
+
+import SFT.Materials.ThermalExpansionValidation
+
+import SFT.Materials.ExcitationSeparation
+
+import SFT.Materials.FerromagnetismSource
+
+import SFT.Materials.FerromagnetismGrammar
+
+import SFT.Materials.FerromagnetismEvidence
+
+import SFT.Materials.FerromagnetismExperiment
+
+import SFT.Materials.FerromagnetismValidation
+
+import SFT.Materials.AlignedMoments
+
+import SFT.Materials.AntiferromagnetismSource
+
+import SFT.Materials.AntiferromagnetismGrammar
+
+import SFT.Materials.AntiferromagnetismEvidence
+
+import SFT.Materials.AntiferromagnetismExperiment
+
+import SFT.Materials.AntiferromagnetismValidation
+
+import SFT.Materials.OpposedSublattices

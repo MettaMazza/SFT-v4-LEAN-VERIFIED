@@ -1,0 +1,20 @@
+import SFT.Materials.ExcitationSeparation
+#print axioms SFT.Materials.ExcitationSeparation.Record
+#print axioms SFT.Materials.ExcitationSeparation.separationChange
+#print axioms SFT.Materials.ExcitationSeparation.excitationChange
+#print axioms SFT.Materials.ExcitationSeparation.response
+#print axioms SFT.Materials.ExcitationSeparation.exactSeparationChange
+#print axioms SFT.Materials.ExcitationSeparation.generatedRecurrence
+#print axioms SFT.Materials.ExcitationSeparation.allReadingsRecur
+#print axioms SFT.Materials.ExcitationSeparation.sameConstituentPair
+#print axioms SFT.Materials.ExcitationSeparation.retainedAdjacency
+#print axioms SFT.Materials.ExcitationSeparation.responseFromOriginalChanges
+#print axioms SFT.Materials.ExcitationSeparation.unchangedExcitationBoundary
+#print axioms SFT.Materials.ExcitationSeparation.exactOrientedResponse
+#print axioms SFT.Materials.ExcitationSeparation.record
+#print axioms SFT.Materials.ExcitationSeparation.materialIdentityRetained
+#print axioms SFT.Materials.ExcitationSeparation.completeAdjacencyRetained
+#print axioms SFT.Materials.ExcitationSeparation.conditionsRetained
+#print axioms SFT.Materials.ExcitationSeparation.records
+#print axioms SFT.Materials.ExcitationSeparation.base
+#print axioms SFT.Materials.ExcitationSeparation.successor

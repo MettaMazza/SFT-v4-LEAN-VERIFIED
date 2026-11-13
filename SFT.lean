@@ -5015,3 +5015,15 @@ import SFT.Materials.FluxQuantizationExperiment
 import SFT.Materials.FluxQuantizationValidation
 
 import SFT.Materials.FluxWinding
+
+import SFT.Materials.JosephsonSource
+
+import SFT.Materials.JosephsonGrammar
+
+import SFT.Materials.JosephsonEvidence
+
+import SFT.Materials.JosephsonExperiment
+
+import SFT.Materials.JosephsonValidation
+
+import SFT.Materials.WeakLinkTransfer

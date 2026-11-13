@@ -1528,3 +1528,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.FluxQuantizationGrammar.candidates do
     IO.println ("FluxQuantizationGrammar\t" ++ SFT.Materials.FluxQuantizationGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.FluxQuantizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.FluxQuantizationGrammar.exactForm c ++ "\t" ++ SFT.Materials.FluxQuantizationGrammar.decisionReason c)
+
+  for c in SFT.Materials.JosephsonGrammar.candidates do
+    IO.println ("JosephsonGrammar\t" ++ SFT.Materials.JosephsonGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.JosephsonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.JosephsonGrammar.exactForm c ++ "\t" ++ SFT.Materials.JosephsonGrammar.decisionReason c)

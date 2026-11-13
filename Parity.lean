@@ -1555,3 +1555,9 @@ def main : IO Unit := do
 
   for c in SFT.Materials.SlipGrammar.candidates do
     IO.println ("SlipGrammar\t" ++ SFT.Materials.SlipGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SlipGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SlipGrammar.exactForm c ++ "\t" ++ SFT.Materials.SlipGrammar.decisionReason c)
+
+  for c in SFT.Materials.ModulusGrammar.candidates do
+    IO.println ("ModulusGrammar\t" ++ SFT.Materials.ModulusGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ModulusGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ModulusGrammar.exactForm c ++ "\t" ++ SFT.Materials.ModulusGrammar.decisionReason c)
+
+  for c in SFT.Materials.StrengthGrammar.candidates do
+    IO.println ("StrengthGrammar\t" ++ SFT.Materials.StrengthGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.StrengthGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.StrengthGrammar.exactForm c ++ "\t" ++ SFT.Materials.StrengthGrammar.decisionReason c)

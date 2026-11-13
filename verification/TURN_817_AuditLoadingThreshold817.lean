@@ -1,0 +1,20 @@
+import SFT.Materials.LoadingThreshold
+#print axioms SFT.Materials.LoadingThreshold.Kind
+#print axioms SFT.Materials.LoadingThreshold.Outcome
+#print axioms SFT.Materials.LoadingThreshold.Event
+#print axioms SFT.Materials.LoadingThreshold.persistent
+#print axioms SFT.Materials.LoadingThreshold.persistentChangesOrganization
+#print axioms SFT.Materials.LoadingThreshold.precedingRestoresOrganization
+#print axioms SFT.Materials.LoadingThreshold.first
+#print axioms SFT.Materials.LoadingThreshold.firstMeaning
+#print axioms SFT.Materials.LoadingThreshold.noThresholdMeaning
+#print axioms SFT.Materials.LoadingThreshold.Test
+#print axioms SFT.Materials.LoadingThreshold.threshold
+#print axioms SFT.Materials.LoadingThreshold.record
+#print axioms SFT.Materials.LoadingThreshold.thresholdIsActualLoad
+#print axioms SFT.Materials.LoadingThreshold.thresholdHasNoEarlierPersistentChange
+#print axioms SFT.Materials.LoadingThreshold.testBoundaryRetained
+#print axioms SFT.Materials.LoadingThreshold.completeLoadingPathRetained
+#print axioms SFT.Materials.LoadingThreshold.records
+#print axioms SFT.Materials.LoadingThreshold.base
+#print axioms SFT.Materials.LoadingThreshold.successor

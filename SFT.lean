@@ -5121,3 +5121,27 @@ import SFT.Materials.SlipExperiment
 import SFT.Materials.SlipValidation
 
 import SFT.Materials.DislocationSlip
+
+import SFT.Materials.ModulusSource
+
+import SFT.Materials.ModulusGrammar
+
+import SFT.Materials.ModulusEvidence
+
+import SFT.Materials.ModulusExperiment
+
+import SFT.Materials.ModulusValidation
+
+import SFT.Materials.ElasticModulus
+
+import SFT.Materials.StrengthSource
+
+import SFT.Materials.StrengthGrammar
+
+import SFT.Materials.StrengthEvidence
+
+import SFT.Materials.StrengthExperiment
+
+import SFT.Materials.StrengthValidation
+
+import SFT.Materials.LoadingThreshold

@@ -1,0 +1,23 @@
+import SFT.Materials.Sintering
+#print axioms SFT.Materials.Sintering.Record
+#print axioms SFT.Materials.Sintering.path
+#print axioms SFT.Materials.Sintering.joinedPairs
+#print axioms SFT.Materials.Sintering.materialContentConserved
+#print axioms SFT.Materials.Sintering.everyContentReadingConserved
+#print axioms SFT.Materials.Sintering.fullTransportSupport
+#print axioms SFT.Materials.Sintering.everyInterfaceDistinct
+#print axioms SFT.Materials.Sintering.everyJoiningPairGenerated
+#print axioms SFT.Materials.Sintering.everyJoiningPairHeld
+#print axioms SFT.Materials.Sintering.allTransportRecorded
+#print axioms SFT.Materials.Sintering.exactPathCount
+#print axioms SFT.Materials.Sintering.finalPoreNotMaterial
+#print axioms SFT.Materials.Sintering.completeFinalPartition
+#print axioms SFT.Materials.Sintering.completeInitialPartition
+#print axioms SFT.Materials.Sintering.finalInterfaceExact
+#print axioms SFT.Materials.Sintering.record
+#print axioms SFT.Materials.Sintering.wholeInputRetained
+#print axioms SFT.Materials.Sintering.poreReorganizationRetained
+#print axioms SFT.Materials.Sintering.processingBoundaryRetained
+#print axioms SFT.Materials.Sintering.records
+#print axioms SFT.Materials.Sintering.base
+#print axioms SFT.Materials.Sintering.successor

@@ -1627,3 +1627,9 @@ def main : IO Unit := do
 
   for c in SFT.Materials.SolidificationMaterialGrammar.candidates do
     IO.println ("SolidificationMaterialGrammar\t" ++ SFT.Materials.SolidificationMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SolidificationMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SolidificationMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.SolidificationMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.SinteringMaterialGrammar.candidates do
+    IO.println ("SinteringMaterialGrammar\t" ++ SFT.Materials.SinteringMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SinteringMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SinteringMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.SinteringMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.HeatMaterialGrammar.candidates do
+    IO.println ("HeatMaterialGrammar\t" ++ SFT.Materials.HeatMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.HeatMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.HeatMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.HeatMaterialGrammar.decisionReason c)

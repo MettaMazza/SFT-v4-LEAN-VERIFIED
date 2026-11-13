@@ -35554,9 +35554,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-PROC-SINTERING-001-579b77a0e4d157c4.json",
       "statement": "Sintering is interface-mediated constituent transport that joins particles and reorganizes structural absence while conserving material content and retaining the processing path.",
       "title": "Sintering and densification",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/SinteringMaterialSource.lean",
+        "SFT/Materials/SinteringMaterialGrammar.lean",
+        "SFT/Materials/SinteringMaterialEvidence.lean",
+        "SFT/Materials/SinteringMaterialExperiment.lean",
+        "SFT/Materials/SinteringMaterialValidation.lean",
+        "SFT/Materials/Sintering.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "151caf7485e91495c78395092d7dc2c2906b3910649f995532f5d96a3b15a2ed",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -35620,7 +35627,10 @@
         "status": "empirically_tested",
         "subbranch": "processing_degradation",
         "title": "Sintering and densification"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_842_SINTERING_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[71]: complete interface-bound diffusion run, exact content conservation, original particle joining pairs, complete initial/final pore partitions and interfaces, all transport/provenance, processing boundary and finite closure.; Original PROC-SINTERING source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -35632,9 +35642,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-PROC-HEAT-TREATMENT-001-173f913f1c66a6f7.json",
       "statement": "Heat treatment is a declared thermal/time path whose phase, defect and microstructure transitions are retained and whose property consequence is path-bound.",
       "title": "Heat treatment",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/HeatMaterialSource.lean",
+        "SFT/Materials/HeatMaterialGrammar.lean",
+        "SFT/Materials/HeatMaterialEvidence.lean",
+        "SFT/Materials/HeatMaterialExperiment.lean",
+        "SFT/Materials/HeatMaterialValidation.lean",
+        "SFT/Materials/HeatTreatment.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "05b1e5d3e4ec08fbee3b863f1069818c1ba1e4b80d95e7b140827011a977d2eb",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -35698,7 +35715,10 @@
         "status": "empirically_tested",
         "subbranch": "processing_degradation",
         "title": "Heat treatment"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_843_HEAT_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[72]: complete thermal/time path with actual microstructure/phase/defect/property states, exact event and transition projection, source provenance, append closure, endpoint-only route reconstruction contradiction and cooling/specimen retention.; Original PROC-HEAT-TREATMENT source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -195230,13 +195250,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-13T20:14:12.129168+00:00",
+  "updated_at": "2026-11-13T20:25:22.654837+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2271,
-    "fully_reconstructed_claims": 510,
-    "axiom_free_exported_results": 25897,
-    "axiom_free_audited_definitions_and_theorems": 62997
+    "pending": 2269,
+    "fully_reconstructed_claims": 512,
+    "axiom_free_exported_results": 25977,
+    "axiom_free_audited_definitions_and_theorems": 63240
   }
 }

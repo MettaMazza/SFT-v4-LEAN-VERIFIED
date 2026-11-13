@@ -1,0 +1,25 @@
+import SFT.Materials.HeatTreatment
+#print axioms SFT.Materials.HeatTreatment.ThermalState
+#print axioms SFT.Materials.HeatTreatment.Record
+#print axioms SFT.Materials.HeatTreatment.observation
+#print axioms SFT.Materials.HeatTreatment.thermalPath
+#print axioms SFT.Materials.HeatTreatment.allEventsRecovered
+#print axioms SFT.Materials.HeatTreatment.everyThermalState
+#print axioms SFT.Materials.HeatTreatment.noInventedThermalState
+#print axioms SFT.Materials.HeatTreatment.exactThermalPathCount
+#print axioms SFT.Materials.HeatTreatment.transition
+#print axioms SFT.Materials.HeatTreatment.transitions
+#print axioms SFT.Materials.HeatTreatment.allTransitionsRecovered
+#print axioms SFT.Materials.HeatTreatment.phaseDefectAndMicrostructure
+#print axioms SFT.Materials.HeatTreatment.completeProvenance
+#print axioms SFT.Materials.HeatTreatment.append
+#print axioms SFT.Materials.HeatTreatment.successorThermalPath
+#print axioms SFT.Materials.HeatTreatment.successorTransitions
+#print axioms SFT.Materials.HeatTreatment.coolingAndSpecimenHeld
+#print axioms SFT.Materials.HeatTreatment.record
+#print axioms SFT.Materials.HeatTreatment.wholeInputRetained
+#print axioms SFT.Materials.HeatTreatment.differentRoutesDistinguished
+#print axioms SFT.Materials.HeatTreatment.endpointOnlyCannotRecoverRoute
+#print axioms SFT.Materials.HeatTreatment.records
+#print axioms SFT.Materials.HeatTreatment.base
+#print axioms SFT.Materials.HeatTreatment.successor

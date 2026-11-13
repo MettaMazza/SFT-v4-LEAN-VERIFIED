@@ -5409,3 +5409,27 @@ import SFT.Materials.SolidificationMaterialExperiment
 import SFT.Materials.SolidificationMaterialValidation
 
 import SFT.Materials.Solidification
+
+import SFT.Materials.SinteringMaterialSource
+
+import SFT.Materials.SinteringMaterialGrammar
+
+import SFT.Materials.SinteringMaterialEvidence
+
+import SFT.Materials.SinteringMaterialExperiment
+
+import SFT.Materials.SinteringMaterialValidation
+
+import SFT.Materials.Sintering
+
+import SFT.Materials.HeatMaterialSource
+
+import SFT.Materials.HeatMaterialGrammar
+
+import SFT.Materials.HeatMaterialEvidence
+
+import SFT.Materials.HeatMaterialExperiment
+
+import SFT.Materials.HeatMaterialValidation
+
+import SFT.Materials.HeatTreatment

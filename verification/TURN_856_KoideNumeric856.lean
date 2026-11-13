@@ -1,0 +1,7 @@
+import SFT.Physics.KoideComparison
+open SFT.Physics SFT.Host.Canonical
+def encode (x : Except String (Rat × Rat)) : Value := match x with
+ | .error e => .array [.text "error",.text e]
+ | .ok (a,b) => .array [.text "ok",.text (toString a.num ++ (if a.den == 1 then "" else "/" ++ toString a.den)),.text (toString b.num ++ (if b.den == 1 then "" else "/" ++ toString b.den))]
+#eval render (.array [encode (KoideEnclosure.positiveSqrtInterval (LeptonIntervals.normalize (0) 1 (by decide)) (160)),encode (KoideEnclosure.positiveSqrtInterval (LeptonIntervals.normalize (-1) 1 (by decide)) (160)),encode (KoideEnclosure.positiveSqrtInterval (LeptonIntervals.normalize (1) 1 (by decide)) (0)),encode (KoideEnclosure.positiveSqrtInterval (LeptonIntervals.normalize (1) 1 (by decide)) (-2)),encode (KoideEnclosure.positiveSqrtInterval (LeptonIntervals.normalize (1) 1 (by decide)) (1)),encode (KoideEnclosure.positiveSqrtInterval (LeptonIntervals.normalize (2) 1 (by decide)) (160)),encode (KoideEnclosure.positiveSqrtInterval (LeptonIntervals.normalize (9) 4 (by decide)) (160)),encode (KoideEnclosure.positiveSqrtInterval (LeptonIntervals.normalize (1) 3 (by decide)) (8)),encode (KoideEnclosure.positiveSqrtInterval (LeptonIntervals.normalize (100) 7 (by decide)) (32)),encode (KoideEnclosure.positiveSqrtInterval (LeptonIntervals.normalize (2067682827) 10000000 (by decide)) (160)),encode (KoideComparison.sourceIntervalRows LeptonSource.snapshotRows)])
+#eval KoideComparison.validateRows LeptonSource.snapshotRows

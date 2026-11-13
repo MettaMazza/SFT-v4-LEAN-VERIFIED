@@ -5565,3 +5565,17 @@ import SFT.Materials.LifecycleMaterialExperiment
 import SFT.Materials.LifecycleMaterialValidation
 
 import SFT.Materials.MaterialLifecycle
+
+import SFT.Physics.KoideEnclosure
+
+import SFT.Physics.KoideComparison
+
+import SFT.Physics.KoideIntervalGrammar
+
+import SFT.Physics.KoideIntervalEvidence
+
+import SFT.Physics.KoideIntervalExperiment
+
+import SFT.Physics.KoideIntervalValidation
+
+import SFT.Physics.KoideIntervalExternal

@@ -1666,3 +1666,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.LifecycleMaterialGrammar.candidates do
     IO.println ("LifecycleMaterialGrammar\t" ++ SFT.Materials.LifecycleMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.LifecycleMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.LifecycleMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.LifecycleMaterialGrammar.decisionReason c)
+
+  for c in SFT.Physics.KoideIntervalGrammar.candidates do
+    IO.println ("KoideIntervalGrammar\t" ++ SFT.Physics.KoideIntervalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.KoideIntervalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.KoideIntervalGrammar.exactForm c ++ "\t" ++ SFT.Physics.KoideIntervalGrammar.decisionReason c)

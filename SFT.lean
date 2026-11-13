@@ -4945,3 +4945,15 @@ import SFT.Materials.PNTypeEvidence
 import SFT.Materials.PNTypeExperiment
 
 import SFT.Materials.PNTypeValidation
+
+import SFT.Materials.SemiTransportSource
+
+import SFT.Materials.SemiTransportGrammar
+
+import SFT.Materials.SemiTransportEvidence
+
+import SFT.Materials.SemiTransportExperiment
+
+import SFT.Materials.SemiTransportValidation
+
+import SFT.Materials.SemiconductorTransport

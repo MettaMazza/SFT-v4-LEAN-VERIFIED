@@ -32561,9 +32561,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-SC-FLUX-QUANTIZATION-001-0ed97a6d6c7de896.json",
       "statement": "Single-valued return of a paired-carrier phase around a closed path forces whole winding classes and therefore discrete flux support.",
       "title": "Superconducting flux quantization",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/FluxQuantizationSource.lean",
+        "SFT/Materials/FluxQuantizationGrammar.lean",
+        "SFT/Materials/FluxQuantizationEvidence.lean",
+        "SFT/Materials/FluxQuantizationExperiment.lean",
+        "SFT/Materials/FluxQuantizationValidation.lean",
+        "SFT/Materials/FluxWinding.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "3ebd641fa4ca294d39813da54d426a63c3ed997dc4646f77b2fb50ca081168f2",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -32627,7 +32634,10 @@
         "status": "empirically_tested",
         "subbranch": "superconducting_superfluid_topological",
         "title": "Superconducting flux quantization"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_806_FLUX_QUANTIZATION_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[37]: exact single-valued phase-return iff whole winding; quotient-computed discrete winding from complete closed-path transitions; retained paired labels and charge; complete record base/successor.; Original SC-FLUX-QUANTIZATION source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -194890,13 +194900,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-13T14:11:57.478932+00:00",
+  "updated_at": "2026-11-13T14:18:00.976611+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2305,
-    "fully_reconstructed_claims": 476,
-    "axiom_free_exported_results": 24660,
-    "axiom_free_audited_definitions_and_theorems": 59006
+    "pending": 2304,
+    "fully_reconstructed_claims": 477,
+    "axiom_free_exported_results": 24693,
+    "axiom_free_audited_definitions_and_theorems": 59119
   }
 }

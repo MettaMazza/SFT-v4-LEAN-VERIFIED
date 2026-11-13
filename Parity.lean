@@ -1513,3 +1513,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.SemiTransportGrammar.candidates do
     IO.println ("SemiTransportGrammar\t" ++ SFT.Materials.SemiTransportGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SemiTransportGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SemiTransportGrammar.exactForm c ++ "\t" ++ SFT.Materials.SemiTransportGrammar.decisionReason c)
+
+  for c in SFT.Materials.SemiOpticalGrammar.candidates do
+    IO.println ("SemiOpticalGrammar\t" ++ SFT.Materials.SemiOpticalGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SemiOpticalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SemiOpticalGrammar.exactForm c ++ "\t" ++ SFT.Materials.SemiOpticalGrammar.decisionReason c)

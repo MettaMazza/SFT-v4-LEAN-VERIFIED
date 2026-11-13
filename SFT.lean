@@ -4957,3 +4957,15 @@ import SFT.Materials.SemiTransportExperiment
 import SFT.Materials.SemiTransportValidation
 
 import SFT.Materials.SemiconductorTransport
+
+import SFT.Materials.SemiOpticalSource
+
+import SFT.Materials.SemiOpticalGrammar
+
+import SFT.Materials.SemiOpticalEvidence
+
+import SFT.Materials.SemiOpticalExperiment
+
+import SFT.Materials.SemiOpticalValidation
+
+import SFT.Materials.InterbandTransition

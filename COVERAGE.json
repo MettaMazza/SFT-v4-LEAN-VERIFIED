@@ -32207,9 +32207,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-SEMI-OPTICAL-001-c4341f21a2853956.json",
       "statement": "An interband optical response exists only when a probe supplies a complete compatible transition between retained occupied and accessible band states under the material selection rules.",
       "title": "Interband optical transition",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/SemiOpticalSource.lean",
+        "SFT/Materials/SemiOpticalGrammar.lean",
+        "SFT/Materials/SemiOpticalEvidence.lean",
+        "SFT/Materials/SemiOpticalExperiment.lean",
+        "SFT/Materials/SemiOpticalValidation.lean",
+        "SFT/Materials/InterbandTransition.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "dc8ab890f745f3b66a035d66b2640507e31e9cf417082b808ff0695b9b580759",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -32272,7 +32279,10 @@
         "status": "empirically_tested",
         "subbranch": "electronic_semiconductor",
         "title": "Interband optical transition"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_802_SEMI_OPTICAL_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[33] and original conditional derivation base/successor: exhaustive occupied/access pair enumeration restricted by declared probe-compatible and material-selection relations; retained band endpoints and full probe/occupation-gap-momentum/selection-resolution records under finite successor.; Original SEMI-OPTICAL source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -194847,13 +194857,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-13T13:39:32.645421+00:00",
+  "updated_at": "2026-11-13T13:53:39.885839+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2309,
-    "fully_reconstructed_claims": 472,
-    "axiom_free_exported_results": 24533,
-    "axiom_free_audited_definitions_and_theorems": 58566
+    "pending": 2308,
+    "fully_reconstructed_claims": 473,
+    "axiom_free_exported_results": 24566,
+    "axiom_free_audited_definitions_and_theorems": 58677
   }
 }

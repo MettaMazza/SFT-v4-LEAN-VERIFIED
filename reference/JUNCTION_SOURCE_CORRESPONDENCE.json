@@ -27,6 +27,21 @@
       "source": "sft/materials/generated_law.py:_source_derived_target, BlindMaterialsAuthorityValidator.validate",
       "lean": "SFT.Materials.JunctionSource.extractTarget; SFT.Materials.JunctionValidation.validate",
       "scope": "Original required fragments and exact comparisons; existing global snapshot rejection preserved"
+    },
+    {
+      "source": "sft/materials/derivation.py:_blueprint induction_base and induction_step (lines 283\u2013289 at the pin)",
+      "lean": [
+        "SFT.Materials.JunctionPreservation.base",
+        "SFT.Materials.JunctionPreservation.appendExactly",
+        "SFT.Materials.JunctionPreservation.successorExactly",
+        "SFT.Materials.JunctionPreservation.earlierRowsRetained",
+        "SFT.Materials.JunctionPreservation.everyRowHasActualTransferAndField",
+        "SFT.Materials.JunctionPreservation.everyCrossingRecorded"
+      ],
+      "status": "verified_original_conditional_preservation_operation",
+      "scope": "Given generated transfer/field couplings from the original declared carrier, filtering and recording preserves earlier rows, appends the exact qualifying row, accounts for selected input/output membership in both directions, and retains common charge. Supplying those generated records is part of the source domain, not an additional assumed balance law.",
+      "evidence": "verification/TURN_775_JUNCTION_AUDIT.json",
+      "new_proofs": 0
     }
   ],
   "component_modules": [
@@ -51,7 +66,7 @@
     "JunctionTransfer.transportRemainderRetainsBothResponses"
   ],
   "remaining": [
-    "Translate the original obligations.py SEMI-JUNCTION statement together with _blueprint's original preservation domain, base and successor. The verified transfer, field and history results remain available; full-entry completion has not been established. No excluded translator requirement may be used as a completion gate."
+    "Translate the transport/field balance at declared conditions in sft/materials/obligations.py:94 on its original domain, which already includes generated cross-interface transfers and their retained space-charge/field organization. The conditional base/successor preservation operation is verified. What remains is identifying and proving the source-specific balance relation at the declared observation boundary; neither generation from bare region data nor assuming balance from the observation-coordinate label is required or authorized."
   ],
   "entry_complete": false,
   "network_binding": "verification/TURN_732_JUNCTION_NETWORK_BINDING.json",
@@ -175,6 +190,39 @@
     "A terminal fixed point or a self-edge not required by the original junction derivation.",
     "Universal convergence or a perturbation basin not required by the original junction derivation.",
     "Equality of independently supplied transport and field magnitudes introduced by the translator.",
-    "Equivalence between the original junction statement and JunctionObservation.closed."
-  ]
+    "Equivalence between the original junction statement and JunctionObservation.closed.",
+    "Generation of transfer from bare opposed-region data outside the original domain, which already retains cross-interface transfer and space-charge/field organization."
+  ],
+  "proposition_correspondence_review": {
+    "recorded_at": "2026-11-13T01:19:48.800768+00:00",
+    "source_clause": "sft/materials/obligations.py:94",
+    "current_lean_representation": "SFT.Materials.JunctionEvidence.registrationData.statement : String",
+    "existing_history_contract": "JunctionPreservation.records takes a supplied list of CollectivePlasma.Coupling records; successorExactly proves filtered-record append preservation.",
+    "finding": "The original program/grammar behavior is translated. The scientific sentence has not been represented as a source-grounded Lean proposition with a corresponding proof. Neither a new equilibrium definition nor rebranding the existing preservation conjunction is justified by this review.",
+    "scope": "Review of actual original source and current proof bodies using the completed source trace; no global source-absence or necessary external prerequisite established.",
+    "reuse": "Do not rerun the same source trace or replace this gap with fixed points, convergence, independent force equality or endpoint-fibre equality."
+  },
+  "domain_review": {
+    "recorded_at": "2026-11-13T02:03:22.632831+00:00",
+    "source": "sft/materials/derivation.py:_blueprint grammar_boundary; _dimensions observation admission reason; obligations.py:94",
+    "correction": "Requiring generation of transfer from bare opposed-region data strengthens the original declared domain. Generated cross-interface transfers and their actual field couplings are legitimate inputs.",
+    "established_operation": {
+      "source": "sft/materials/derivation.py:_blueprint induction_base and induction_step (lines 283\u2013289 at the pin)",
+      "lean": [
+        "SFT.Materials.JunctionPreservation.base",
+        "SFT.Materials.JunctionPreservation.appendExactly",
+        "SFT.Materials.JunctionPreservation.successorExactly",
+        "SFT.Materials.JunctionPreservation.earlierRowsRetained",
+        "SFT.Materials.JunctionPreservation.everyRowHasActualTransferAndField",
+        "SFT.Materials.JunctionPreservation.everyCrossingRecorded"
+      ],
+      "status": "verified_original_conditional_preservation_operation",
+      "scope": "Given generated transfer/field couplings from the original declared carrier, filtering and recording preserves earlier rows, appends the exact qualifying row, accounts for selected input/output membership in both directions, and retains common charge. Supplying those generated records is part of the source domain, not an additional assumed balance law.",
+      "evidence": "verification/TURN_775_JUNCTION_AUDIT.json",
+      "new_proofs": 0
+    },
+    "not_established": "The observation coordinate retains declared conditions; it does not assume the desired balance. Neither common-charge identity nor field normalization has yet been identified as the complete meaning of the original balance statement.",
+    "completed_entries": 470,
+    "entry_complete": false
+  }
 }

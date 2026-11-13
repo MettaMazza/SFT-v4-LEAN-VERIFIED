@@ -1675,3 +1675,6 @@ def main : IO Unit := do
 
   for c in SFT.Mathematics.AlgebraicBalanceGrammar.candidates do
     IO.println ("AlgebraicBalanceGrammar\t" ++ SFT.Mathematics.AlgebraicBalanceGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.AlgebraicBalanceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.AlgebraicBalanceGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.AlgebraicBalanceGrammar.decisionReason c)
+
+  for c in SFT.Mathematics.BoundedNBodyGrammar.candidates do
+    IO.println ("BoundedNBodyGrammar\t" ++ SFT.Mathematics.BoundedNBodyGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.BoundedNBodyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.BoundedNBodyGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.BoundedNBodyGrammar.decisionReason c)

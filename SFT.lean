@@ -5265,3 +5265,27 @@ import SFT.Materials.MaterialTransitionExperiment
 import SFT.Materials.MaterialTransitionValidation
 
 import SFT.Materials.PhaseHistory
+
+import SFT.Materials.MetallicMaterialSource
+
+import SFT.Materials.MetallicMaterialGrammar
+
+import SFT.Materials.MetallicMaterialEvidence
+
+import SFT.Materials.MetallicMaterialExperiment
+
+import SFT.Materials.MetallicMaterialValidation
+
+import SFT.Materials.MetalOrganization
+
+import SFT.Materials.CeramicMaterialSource
+
+import SFT.Materials.CeramicMaterialGrammar
+
+import SFT.Materials.CeramicMaterialEvidence
+
+import SFT.Materials.CeramicMaterialExperiment
+
+import SFT.Materials.CeramicMaterialValidation
+
+import SFT.Materials.CeramicOrganization

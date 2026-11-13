@@ -1591,3 +1591,9 @@ def main : IO Unit := do
 
   for c in SFT.Materials.MaterialTransitionGrammar.candidates do
     IO.println ("MaterialTransitionGrammar\t" ++ SFT.Materials.MaterialTransitionGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.MaterialTransitionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.MaterialTransitionGrammar.exactForm c ++ "\t" ++ SFT.Materials.MaterialTransitionGrammar.decisionReason c)
+
+  for c in SFT.Materials.MetallicMaterialGrammar.candidates do
+    IO.println ("MetallicMaterialGrammar\t" ++ SFT.Materials.MetallicMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.MetallicMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.MetallicMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.MetallicMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.CeramicMaterialGrammar.candidates do
+    IO.println ("CeramicMaterialGrammar\t" ++ SFT.Materials.CeramicMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.CeramicMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.CeramicMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.CeramicMaterialGrammar.decisionReason c)

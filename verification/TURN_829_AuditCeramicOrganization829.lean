@@ -1,0 +1,23 @@
+import SFT.Materials.CeramicOrganization
+#print axioms SFT.Materials.CeramicOrganization.LocalJoin
+#print axioms SFT.Materials.CeramicOrganization.endpoints
+#print axioms SFT.Materials.CeramicOrganization.kind
+#print axioms SFT.Materials.CeramicOrganization.bondRow
+#print axioms SFT.Materials.CeramicOrganization.Record
+#print axioms SFT.Materials.CeramicOrganization.ionicLocalClosure
+#print axioms SFT.Materials.CeramicOrganization.covalentSameCarrier
+#print axioms SFT.Materials.CeramicOrganization.covalentDistinctCentres
+#print axioms SFT.Materials.CeramicOrganization.allBondsAccounted
+#print axioms SFT.Materials.CeramicOrganization.noThirdJoiningRule
+#print axioms SFT.Materials.CeramicOrganization.poreIsRetainedSupport
+#print axioms SFT.Materials.CeramicOrganization.poreDistinctFromSolid
+#print axioms SFT.Materials.CeramicOrganization.grainOrientationRetained
+#print axioms SFT.Materials.CeramicOrganization.phaseMemberInBulk
+#print axioms SFT.Materials.CeramicOrganization.grainMemberSolid
+#print axioms SFT.Materials.CeramicOrganization.interfaces
+#print axioms SFT.Materials.CeramicOrganization.allGrainsRetained
+#print axioms SFT.Materials.CeramicOrganization.record
+#print axioms SFT.Materials.CeramicOrganization.completeInputRetained
+#print axioms SFT.Materials.CeramicOrganization.records
+#print axioms SFT.Materials.CeramicOrganization.base
+#print axioms SFT.Materials.CeramicOrganization.successor

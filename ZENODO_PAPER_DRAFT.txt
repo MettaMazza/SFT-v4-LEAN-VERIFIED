@@ -19698,13 +19698,40 @@ The original observation coordinate is equilibrium-and-bias-bounded: the declare
 
 Pinned V3 sources: claims/SFT-MAT-SEMI-JUNCTION-001/WHY_DERIVATION_CHECK.md; sft/materials/derivation.py, _dimensions and _blueprint, commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/JunctionGrammar.lean, candidatesComplete, sourceDecisionMatchesCriteria, uniqueSurvivor; SFT/Materials/JunctionPreservation.lean, base, appendExactly and successorExactly. Chronology: TIMELINE.txt, Original-scope reconciliation, 12 November 2026. These references identify the grammar and preservation results; the entry's remaining correspondence is tracked in reference/JUNCTION_SOURCE_CORRESPONDENCE.json.
 
+Source-derived opposed endpoint selection
+
+For each endpoint v, let B_v and A_v be its retained support lists before and after doping. The existing support construction computes the two ordered difference lists
+  G_v = [x in A_v : x is absent from B_v],
+  L_v = [x in B_v : x is absent from A_v],
+  g_v = length(G_v),  l_v = length(L_v).
+Membership in G_v is equivalent to membership in A_v and absence from B_v; membership in L_v gives the reverse pair of conditions. Therefore a support element cannot occur in both difference lists. The definitions retain list occurrences, rather than replacing the lists with sets.
+
+The majority selector compares these natural counts without introducing a signed difference:
+  M_v = first   if l_v < g_v,
+  M_v = second  if g_v < l_v,
+  M_v = none    if g_v = l_v.
+Strict-order asymmetry makes the first two cases exclusive; order trichotomy makes the three cases exhaustive. In particular, equality selects neither majority class. For an actual transfer t with endpoints s and d, the junction selection is exactly
+  P(t) iff (M_s = first and M_d = second)
+           or (M_s = second and M_d = first).
+The proof evaluates all endpoint-selector cases: either none result rejects the pair, matching orientations reject it, and the two opposed orientations admit it. Filtering the original ordered transfer list N gives T_pn = [t in N : P(t)], preserving both transfer directions and the order and multiplicity of the qualifying records.
+
+Pinned V3 sources: claims/SFT-MAT-SEMI-DOPING-001/WHY_DERIVATION_CHECK.md; claims/SFT-MAT-SEMI-PN-TYPE-001/WHY_DERIVATION_CHECK.md; claims/SFT-MAT-SEMI-JUNCTION-001/WHY_DERIVATION_CHECK.md, commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/DopingSupport.lean, gainedExactly, lostExactly and differenceOrientationsDisjoint; SFT/Materials/CarrierMajority.lean, select, orientation, occupationExactly, absenceExactly and balancedSupport; SFT/Materials/JunctionTransfer.lean, opposedDopedEndpointsExactly and dopedInterfaceTransfers. Chronology: TIMELINE.txt, Turn735 and Junction manuscript derivation expansion.
+
+
 Junction transfer, depletion and balance identities
 
 For every retained cross-interface transfer t, retain its source s, destination d, charge q, source identity and action record. The paired space-charge description holds (s, reverse(q)) and (d,q). Charge reversal preserves the positive magnitude and exchanges the held orientation. Every depletion row is exactly the image of an original transfer whose source lies inside the selected region and whose destination lies outside it; the converse inclusion is proved as well. Original interface compatibility retains both endpoints on the generated lattice.
 
 For every complete finite transfer network, the exact boundary ledger satisfies
   departures_inside + inward_count = arrivals_inside + outward_count.
-This identity is inherited from the original complete source/destination accounting, without dropping individual transfer occurrences.
+To derive the identity, fix the declared region-membership test I and inspect one transfer t=(s,d,q). Let a and b be the natural counting indicators of I(s) and I(d). Write j_in for the indicator of the case a=0,b=1, and j_out for the indicator of a=1,b=0. The four endpoint cases give
+  (a,b)=(0,0): a+j_in = 0 = b+j_out,
+  (a,b)=(0,1): a+j_in = 1 = b+j_out,
+  (a,b)=(1,0): a+j_in = 1 = b+j_out,
+  (a,b)=(1,1): a+j_in = 1 = b+j_out.
+Thus a+j_in=b+j_out for each transfer occurrence. The empty network has four zero counts. Appending an occurrence adds its corresponding indicators to the four counts; associativity and commutativity of natural addition preserve the identity. Equivalently, summing the per-occurrence equality over the original list gives
+  sum_t a(t) + sum_t j_in(t) = sum_t b(t) + sum_t j_out(t).
+The four sums are precisely departures_inside, inward_count, arrivals_inside and outward_count. Repeated transfers contribute once for each retained occurrence. This is the transfer-count boundary identity proved by FieldSourceContinuity.exactInteriorBoundaryBalance and reused by JunctionTransfer.exactDepletionTransportBalance.
 
 The transfer ledger retains every source and destination occurrence. The paired space-charge construction retains the same positive charge magnitude at both endpoints and reverses the held orientation at the depleted endpoint. The charge–field correspondence below uses the charge of that same transfer and its retained work record.
 

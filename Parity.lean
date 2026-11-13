@@ -1669,3 +1669,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.KoideIntervalGrammar.candidates do
     IO.println ("KoideIntervalGrammar\t" ++ SFT.Physics.KoideIntervalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.KoideIntervalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.KoideIntervalGrammar.exactForm c ++ "\t" ++ SFT.Physics.KoideIntervalGrammar.decisionReason c)
+
+  for c in SFT.Foundation.AdmissionGrammar.candidates do
+    IO.println ("AdmissionGrammar\t" ++ SFT.Foundation.AdmissionGrammar.candidateId c ++ "\t" ++ (if SFT.Foundation.AdmissionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Foundation.AdmissionGrammar.exactForm c ++ "\t" ++ SFT.Foundation.AdmissionGrammar.decisionReason c)

@@ -5579,3 +5579,77 @@ import SFT.Physics.KoideIntervalExperiment
 import SFT.Physics.KoideIntervalValidation
 
 import SFT.Physics.KoideIntervalExternal
+
+import SFT.Foundation.AdmissionAcceptance
+
+import SFT.Foundation.AdmissionGrammarCore
+
+import SFT.Foundation.AdmissionGrammarBlock0
+
+import SFT.Foundation.AdmissionGrammarBlock1
+
+import SFT.Foundation.AdmissionGrammarBlock2
+
+import SFT.Foundation.AdmissionGrammarBlock3
+
+import SFT.Foundation.AdmissionGrammarBlock4
+
+import SFT.Foundation.AdmissionGrammarBlock5
+
+import SFT.Foundation.AdmissionGrammarBlock6
+
+import SFT.Foundation.AdmissionGrammarBlock7
+
+import SFT.Foundation.AdmissionGrammarBlock8
+
+import SFT.Foundation.AdmissionGrammarBlock9
+
+import SFT.Foundation.AdmissionGrammarBlock10
+
+import SFT.Foundation.AdmissionGrammarBlock11
+
+import SFT.Foundation.AdmissionGrammarBlock12
+
+import SFT.Foundation.AdmissionGrammarBlock13
+
+import SFT.Foundation.AdmissionGrammarBlock14
+
+import SFT.Foundation.AdmissionGrammarBlock15
+
+import SFT.Foundation.AdmissionGrammarBlock16
+
+import SFT.Foundation.AdmissionGrammarBlock17
+
+import SFT.Foundation.AdmissionGrammarBlock18
+
+import SFT.Foundation.AdmissionGrammarBlock19
+
+import SFT.Foundation.AdmissionGrammarBlock20
+
+import SFT.Foundation.AdmissionGrammarBlock21
+
+import SFT.Foundation.AdmissionGrammarBlock22
+
+import SFT.Foundation.AdmissionGrammarBlock23
+
+import SFT.Foundation.AdmissionGrammarBlock24
+
+import SFT.Foundation.AdmissionGrammarBlock25
+
+import SFT.Foundation.AdmissionGrammarBlock26
+
+import SFT.Foundation.AdmissionGrammarBlock27
+
+import SFT.Foundation.AdmissionGrammarBlock28
+
+import SFT.Foundation.AdmissionGrammarBlock29
+
+import SFT.Foundation.AdmissionGrammarBlock30
+
+import SFT.Foundation.AdmissionGrammarBlock31
+
+import SFT.Foundation.AdmissionGrammar
+
+import SFT.Foundation.AdmissionControls
+
+import SFT.Foundation.AdmissionEvidence

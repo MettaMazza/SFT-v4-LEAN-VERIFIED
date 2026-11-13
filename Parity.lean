@@ -1534,3 +1534,9 @@ def main : IO Unit := do
 
   for c in SFT.Materials.SuperfluidGrammar.candidates do
     IO.println ("SuperfluidGrammar\t" ++ SFT.Materials.SuperfluidGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SuperfluidGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SuperfluidGrammar.exactForm c ++ "\t" ++ SFT.Materials.SuperfluidGrammar.decisionReason c)
+
+  for c in SFT.Materials.CirculationGrammar.candidates do
+    IO.println ("CirculationGrammar\t" ++ SFT.Materials.CirculationGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.CirculationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.CirculationGrammar.exactForm c ++ "\t" ++ SFT.Materials.CirculationGrammar.decisionReason c)
+
+  for c in SFT.Materials.MaterialInvariantGrammar.candidates do
+    IO.println ("MaterialInvariantGrammar\t" ++ SFT.Materials.MaterialInvariantGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.MaterialInvariantGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.MaterialInvariantGrammar.exactForm c ++ "\t" ++ SFT.Materials.MaterialInvariantGrammar.decisionReason c)

@@ -5039,3 +5039,25 @@ import SFT.Materials.SuperfluidExperiment
 import SFT.Materials.SuperfluidValidation
 
 import SFT.Materials.SuperfluidBoundary
+
+import SFT.Materials.CirculationSource
+
+import SFT.Materials.CirculationGrammar
+
+import SFT.Materials.CirculationEvidence
+
+import SFT.Materials.CirculationExperiment
+
+import SFT.Materials.CirculationValidation
+
+import SFT.Materials.SuperflowWinding
+
+import SFT.Materials.MaterialInvariantSource
+
+import SFT.Materials.MaterialInvariantGrammar
+
+import SFT.Materials.MaterialInvariantEvidence
+
+import SFT.Materials.MaterialInvariantExperiment
+
+import SFT.Materials.MaterialInvariantValidation

@@ -4981,3 +4981,13 @@ import SFT.Materials.CoherentPairExperiment
 import SFT.Materials.CoherentPairValidation
 
 import SFT.Materials.PairedCarrier
+
+import SFT.Materials.ZeroResistanceSource
+
+import SFT.Materials.ZeroResistanceGrammar
+
+import SFT.Materials.ZeroResistanceEvidence
+
+import SFT.Materials.ZeroResistanceExperiment
+
+import SFT.Materials.ZeroResistanceValidation

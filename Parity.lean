@@ -1519,3 +1519,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.CoherentPairGrammar.candidates do
     IO.println ("CoherentPairGrammar\t" ++ SFT.Materials.CoherentPairGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.CoherentPairGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.CoherentPairGrammar.exactForm c ++ "\t" ++ SFT.Materials.CoherentPairGrammar.decisionReason c)
+
+  for c in SFT.Materials.ZeroResistanceGrammar.candidates do
+    IO.println ("ZeroResistanceGrammar\t" ++ SFT.Materials.ZeroResistanceGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ZeroResistanceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ZeroResistanceGrammar.exactForm c ++ "\t" ++ SFT.Materials.ZeroResistanceGrammar.decisionReason c)

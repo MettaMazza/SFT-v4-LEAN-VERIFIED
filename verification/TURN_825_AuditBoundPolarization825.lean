@@ -1,0 +1,26 @@
+import SFT.Materials.BoundPolarization
+#print axioms SFT.Materials.BoundPolarization.Label
+#print axioms SFT.Materials.BoundPolarization.bound
+#print axioms SFT.Materials.BoundPolarization.moveRemainsBound
+#print axioms SFT.Materials.BoundPolarization.BoundRun
+#print axioms SFT.Materials.BoundPolarization.originalRun
+#print axioms SFT.Materials.BoundPolarization.everyFiniteRunBound
+#print axioms SFT.Materials.BoundPolarization.everyChargeRetained
+#print axioms SFT.Materials.BoundPolarization.OrientationRow
+#print axioms SFT.Materials.BoundPolarization.reorient
+#print axioms SFT.Materials.BoundPolarization.reorientationRetainsCharge
+#print axioms SFT.Materials.BoundPolarization.reorientationChangesHeld
+#print axioms SFT.Materials.BoundPolarization.reorientationRetainsPair
+#print axioms SFT.Materials.BoundPolarization.Record
+#print axioms SFT.Materials.BoundPolarization.field
+#print axioms SFT.Materials.BoundPolarization.exactAppliedField
+#print axioms SFT.Materials.BoundPolarization.loadingConserves
+#print axioms SFT.Materials.BoundPolarization.relaxationConserves
+#print axioms SFT.Materials.BoundPolarization.bothStatesBound
+#print axioms SFT.Materials.BoundPolarization.record
+#print axioms SFT.Materials.BoundPolarization.completeInputRetained
+#print axioms SFT.Materials.BoundPolarization.completeLoadingCount
+#print axioms SFT.Materials.BoundPolarization.completeRelaxationCount
+#print axioms SFT.Materials.BoundPolarization.records
+#print axioms SFT.Materials.BoundPolarization.base
+#print axioms SFT.Materials.BoundPolarization.successor

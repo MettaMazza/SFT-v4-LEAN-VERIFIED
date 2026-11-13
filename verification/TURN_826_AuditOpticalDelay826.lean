@@ -1,0 +1,19 @@
+import SFT.Materials.OpticalDelay
+#print axioms SFT.Materials.OpticalDelay.Record
+#print axioms SFT.Materials.OpticalDelay.timeScalar
+#print axioms SFT.Materials.OpticalDelay.timing
+#print axioms SFT.Materials.OpticalDelay.delay
+#print axioms SFT.Materials.OpticalDelay.phaseChange
+#print axioms SFT.Materials.OpticalDelay.commonPhaseCycle
+#print axioms SFT.Materials.OpticalDelay.exactPositiveTiming
+#print axioms SFT.Materials.OpticalDelay.actualAdjacentPropagation
+#print axioms SFT.Materials.OpticalDelay.wholeMaterialPhase
+#print axioms SFT.Materials.OpticalDelay.excitationClassHeld
+#print axioms SFT.Materials.OpticalDelay.lossLedgerConserved
+#print axioms SFT.Materials.OpticalDelay.completeDispersionRelation
+#print axioms SFT.Materials.OpticalDelay.record
+#print axioms SFT.Materials.OpticalDelay.separateLossRecord
+#print axioms SFT.Materials.OpticalDelay.completeInputRetained
+#print axioms SFT.Materials.OpticalDelay.records
+#print axioms SFT.Materials.OpticalDelay.base
+#print axioms SFT.Materials.OpticalDelay.successor

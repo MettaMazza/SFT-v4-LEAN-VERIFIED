@@ -1582,3 +1582,12 @@ def main : IO Unit := do
 
   for c in SFT.Materials.AntiferromagnetismGrammar.candidates do
     IO.println ("AntiferromagnetismGrammar\t" ++ SFT.Materials.AntiferromagnetismGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.AntiferromagnetismGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.AntiferromagnetismGrammar.exactForm c ++ "\t" ++ SFT.Materials.AntiferromagnetismGrammar.decisionReason c)
+
+  for c in SFT.Materials.DielectricPolarizationGrammar.candidates do
+    IO.println ("DielectricPolarizationGrammar\t" ++ SFT.Materials.DielectricPolarizationGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.DielectricPolarizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.DielectricPolarizationGrammar.exactForm c ++ "\t" ++ SFT.Materials.DielectricPolarizationGrammar.decisionReason c)
+
+  for c in SFT.Materials.RefractiveResponseGrammar.candidates do
+    IO.println ("RefractiveResponseGrammar\t" ++ SFT.Materials.RefractiveResponseGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.RefractiveResponseGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.RefractiveResponseGrammar.exactForm c ++ "\t" ++ SFT.Materials.RefractiveResponseGrammar.decisionReason c)
+
+  for c in SFT.Materials.MaterialTransitionGrammar.candidates do
+    IO.println ("MaterialTransitionGrammar\t" ++ SFT.Materials.MaterialTransitionGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.MaterialTransitionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.MaterialTransitionGrammar.exactForm c ++ "\t" ++ SFT.Materials.MaterialTransitionGrammar.decisionReason c)

@@ -5229,3 +5229,39 @@ import SFT.Materials.AntiferromagnetismExperiment
 import SFT.Materials.AntiferromagnetismValidation
 
 import SFT.Materials.OpposedSublattices
+
+import SFT.Materials.DielectricPolarizationSource
+
+import SFT.Materials.DielectricPolarizationGrammar
+
+import SFT.Materials.DielectricPolarizationEvidence
+
+import SFT.Materials.DielectricPolarizationExperiment
+
+import SFT.Materials.DielectricPolarizationValidation
+
+import SFT.Materials.BoundPolarization
+
+import SFT.Materials.RefractiveResponseSource
+
+import SFT.Materials.RefractiveResponseGrammar
+
+import SFT.Materials.RefractiveResponseEvidence
+
+import SFT.Materials.RefractiveResponseExperiment
+
+import SFT.Materials.RefractiveResponseValidation
+
+import SFT.Materials.OpticalDelay
+
+import SFT.Materials.MaterialTransitionSource
+
+import SFT.Materials.MaterialTransitionGrammar
+
+import SFT.Materials.MaterialTransitionEvidence
+
+import SFT.Materials.MaterialTransitionExperiment
+
+import SFT.Materials.MaterialTransitionValidation
+
+import SFT.Materials.PhaseHistory

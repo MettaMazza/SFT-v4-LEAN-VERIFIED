@@ -1621,3 +1621,9 @@ def main : IO Unit := do
 
   for c in SFT.Materials.ProcessMaterialGrammar.candidates do
     IO.println ("ProcessMaterialGrammar\t" ++ SFT.Materials.ProcessMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ProcessMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ProcessMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.ProcessMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.PhaseMapMaterialGrammar.candidates do
+    IO.println ("PhaseMapMaterialGrammar\t" ++ SFT.Materials.PhaseMapMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PhaseMapMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PhaseMapMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.PhaseMapMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.SolidificationMaterialGrammar.candidates do
+    IO.println ("SolidificationMaterialGrammar\t" ++ SFT.Materials.SolidificationMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SolidificationMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SolidificationMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.SolidificationMaterialGrammar.decisionReason c)

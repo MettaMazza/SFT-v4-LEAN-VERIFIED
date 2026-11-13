@@ -5385,3 +5385,27 @@ import SFT.Materials.ProcessMaterialExperiment
 import SFT.Materials.ProcessMaterialValidation
 
 import SFT.Materials.ProcessPath
+
+import SFT.Materials.PhaseMapMaterialSource
+
+import SFT.Materials.PhaseMapMaterialGrammar
+
+import SFT.Materials.PhaseMapMaterialEvidence
+
+import SFT.Materials.PhaseMapMaterialExperiment
+
+import SFT.Materials.PhaseMapMaterialValidation
+
+import SFT.Materials.PhaseMap
+
+import SFT.Materials.SolidificationMaterialSource
+
+import SFT.Materials.SolidificationMaterialGrammar
+
+import SFT.Materials.SolidificationMaterialEvidence
+
+import SFT.Materials.SolidificationMaterialExperiment
+
+import SFT.Materials.SolidificationMaterialValidation
+
+import SFT.Materials.Solidification

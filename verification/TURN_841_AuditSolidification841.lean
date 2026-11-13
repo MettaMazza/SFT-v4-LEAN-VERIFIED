@@ -1,0 +1,25 @@
+import SFT.Materials.Solidification
+#print axioms SFT.Materials.Solidification.Record
+#print axioms SFT.Materials.Solidification.leastPersistentNucleus
+#print axioms SFT.Materials.Solidification.allMinimalAlternativesRetained
+#print axioms SFT.Materials.Solidification.finalPhasePersists
+#print axioms SFT.Materials.Solidification.originalPhaseHeld
+#print axioms SFT.Materials.Solidification.originalConditionsHeld
+#print axioms SFT.Materials.Solidification.exactGrowthCount
+#print axioms SFT.Materials.Solidification.completeIntermediateClusters
+#print axioms SFT.Materials.Solidification.nucleusRetained
+#print axioms SFT.Materials.Solidification.finalPositionsHeld
+#print axioms SFT.Materials.Solidification.mobileSeparationRetained
+#print axioms SFT.Materials.Solidification.latentTransferConserved
+#print axioms SFT.Materials.Solidification.rejectedConstituentsConserved
+#print axioms SFT.Materials.Solidification.rejectionCrossesBoundary
+#print axioms SFT.Materials.Solidification.completeInterfaceRecurrence
+#print axioms SFT.Materials.Solidification.interfacePhaseHeld
+#print axioms SFT.Materials.Solidification.record
+#print axioms SFT.Materials.Solidification.wholeInputRetained
+#print axioms SFT.Materials.Solidification.everyGrowthProvenance
+#print axioms SFT.Materials.Solidification.changedRejectionDistinguished
+#print axioms SFT.Materials.Solidification.boundaryRetained
+#print axioms SFT.Materials.Solidification.records
+#print axioms SFT.Materials.Solidification.base
+#print axioms SFT.Materials.Solidification.successor

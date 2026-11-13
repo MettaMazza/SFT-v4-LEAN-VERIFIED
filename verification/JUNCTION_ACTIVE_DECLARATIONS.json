@@ -8,7 +8,8 @@
     "JunctionTransfer",
     "JunctionCoupling",
     "JunctionObservation",
-    "JunctionPreservation"
+    "JunctionPreservation",
+    "JunctionIndependentValidator"
   ],
   "declarations": [
     "SFT.Materials.JunctionSource.requirements",
@@ -168,7 +169,20 @@
     "SFT.Materials.JunctionPreservation.successorExactly",
     "SFT.Materials.JunctionPreservation.earlierRowsRetained",
     "SFT.Materials.JunctionPreservation.everyRowHasActualTransferAndField",
-    "SFT.Materials.JunctionPreservation.everyCrossingRecorded"
+    "SFT.Materials.JunctionPreservation.everyCrossingRecorded",
+    "SFT.Materials.JunctionIndependentValidator.claimId",
+    "SFT.Materials.JunctionIndependentValidator.domains",
+    "SFT.Materials.JunctionIndependentValidator.productRows",
+    "SFT.Materials.JunctionIndependentValidator.generated",
+    "SFT.Materials.JunctionIndependentValidator.survivor",
+    "SFT.Materials.JunctionIndependentValidator.Sealed",
+    "SFT.Materials.JunctionIndependentValidator.putDecision",
+    "SFT.Materials.JunctionIndependentValidator.decisionMap",
+    "SFT.Materials.JunctionIndependentValidator.decisionsMatch",
+    "SFT.Materials.JunctionIndependentValidator.passed",
+    "SFT.Materials.JunctionIndependentValidator.certificate",
+    "SFT.Materials.JunctionIndependentValidator.generatedCardinality",
+    "SFT.Materials.JunctionIndependentValidator.wrongClaimRejected"
   ],
   "theorems": [
     "SFT.Materials.JunctionSource.rejectedSourcesStop",
@@ -226,7 +240,9 @@
     "SFT.Materials.JunctionPreservation.successorExactly",
     "SFT.Materials.JunctionPreservation.earlierRowsRetained",
     "SFT.Materials.JunctionPreservation.everyRowHasActualTransferAndField",
-    "SFT.Materials.JunctionPreservation.everyCrossingRecorded"
+    "SFT.Materials.JunctionPreservation.everyCrossingRecorded",
+    "SFT.Materials.JunctionIndependentValidator.generatedCardinality",
+    "SFT.Materials.JunctionIndependentValidator.wrongClaimRejected"
   ],
   "definitions_and_theorems": [
     "SFT.Materials.JunctionSource.requirements",
@@ -376,12 +392,25 @@
     "SFT.Materials.JunctionPreservation.successorExactly",
     "SFT.Materials.JunctionPreservation.earlierRowsRetained",
     "SFT.Materials.JunctionPreservation.everyRowHasActualTransferAndField",
-    "SFT.Materials.JunctionPreservation.everyCrossingRecorded"
+    "SFT.Materials.JunctionPreservation.everyCrossingRecorded",
+    "SFT.Materials.JunctionIndependentValidator.claimId",
+    "SFT.Materials.JunctionIndependentValidator.domains",
+    "SFT.Materials.JunctionIndependentValidator.productRows",
+    "SFT.Materials.JunctionIndependentValidator.generated",
+    "SFT.Materials.JunctionIndependentValidator.survivor",
+    "SFT.Materials.JunctionIndependentValidator.putDecision",
+    "SFT.Materials.JunctionIndependentValidator.decisionMap",
+    "SFT.Materials.JunctionIndependentValidator.decisionsMatch",
+    "SFT.Materials.JunctionIndependentValidator.passed",
+    "SFT.Materials.JunctionIndependentValidator.certificate",
+    "SFT.Materials.JunctionIndependentValidator.generatedCardinality",
+    "SFT.Materials.JunctionIndependentValidator.wrongClaimRejected"
   ],
   "evidence": {
     "original_program": "Unchanged original turn698 build, audit and comparisons",
     "corrected_components": [
       "TURN_775_JUNCTION_AUDIT.json: current four component modules"
-    ]
+    ],
+    "independent_validator": "JUNCTION_INDEPENDENT/RESULT.json"
   }
 }

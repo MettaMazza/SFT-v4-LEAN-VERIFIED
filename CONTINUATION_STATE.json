@@ -54494,6 +54494,56 @@
       "root": "canonical",
       "path": "verification/TURN_622_run_interfacetransfer622.py",
       "sha256": "f8d39bbd4a36b1a07ded40c066efa49b7250557b7ceabaf06a32155efc2bf294"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Materials/JunctionTransfer.lean",
+      "sha256": "948f04fbc3635899b972a8eb6f22564c1919ce4aa05efc6ba7a0d7e09e34c472"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Materials/JunctionCoupling.lean",
+      "sha256": "ec0c8a952b1cef0356713a54b5640b484cb874dcc9dac206c48cafba1062c210"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Materials/JunctionObservation.lean",
+      "sha256": "429318e07f0b454fe68299ddf21e5af841ad3d42b11a6b4c457172777ecb1061"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Materials/JunctionPreservation.lean",
+      "sha256": "25e1dd2894f88be91584c2e27b03fe670150b84cd07a8e51366929df729905c3"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Materials/JunctionTransfer.lean",
+      "sha256": "948f04fbc3635899b972a8eb6f22564c1919ce4aa05efc6ba7a0d7e09e34c472"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Materials/JunctionCoupling.lean",
+      "sha256": "ec0c8a952b1cef0356713a54b5640b484cb874dcc9dac206c48cafba1062c210"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Materials/JunctionObservation.lean",
+      "sha256": "429318e07f0b454fe68299ddf21e5af841ad3d42b11a6b4c457172777ecb1061"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Materials/JunctionPreservation.lean",
+      "sha256": "25e1dd2894f88be91584c2e27b03fe670150b84cd07a8e51366929df729905c3"
+    },
+    {
+      "root": "canonical",
+      "path": "SFT/Materials/JunctionIndependentValidator.lean",
+      "sha256": "a40813a2ff8c9513cb3e961131607029cba3be3fe97818d35ea47d89cd284adc"
+    },
+    {
+      "root": "retained",
+      "path": "SFT/Materials/JunctionIndependentValidator.lean",
+      "sha256": "a40813a2ff8c9513cb3e961131607029cba3be3fe97818d35ea47d89cd284adc"
     }
   ],
   "roots": {
@@ -57979,5 +58029,102 @@
     "entry_complete": false,
     "new_proofs": 0,
     "scope": "Assessment of this specific source-to-proof inference, not source-wide absence or a demonstrated external prerequisite."
+  },
+  "junction_reconciliation_meaning_review": {
+    "recorded_at": "2026-11-13T09:23:47.366514+00:00",
+    "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "sources": [
+      "sft/materials/v2_reconciliation.py",
+      "audits/materials_v1_v2_atomic_ownership.json"
+    ],
+    "finding": "The original reconciliation explicitly identifies itself as a question-coverage guard, never a proof import. The balancing-junction atom maps to SEMI-JUNCTION and the already resolved ab3ac6d4d7277124 receipt. Its same-strength status is a recorded audit conclusion; this row supplies no additional derivation body or definition of balance. No prior-version result was imported.",
+    "scope": "These reconciliation records only; no source-wide absence inference.",
+    "new_proofs": 0
+  },
+  "junction_observation_carrier_comparison": {
+    "recorded_at": "2026-11-13T09:29:44.400471+00:00",
+    "inspected": [
+      "JunctionCoupling.retainedResponse",
+      "JunctionObservation.endpointObservations",
+      "CollectivePlasma.Coupling",
+      "CollectivePlasma.Plasma",
+      "CollectiveCoarseGrain.NetworkObservation"
+    ],
+    "finding": "The full plasma input retains the generated network, declared scale, observation map and its exact partition through flow.cells; the coupling/history projections retain selected transfer/field records. These are different views of the existing carrier. Their separate types do not by themselves demonstrate an omitted source condition or justify adding a new field to the history projection. No such augmentation was made.",
+    "new_proofs": 0,
+    "entry_complete": false
+  },
+  "junction_shared_trace_candidate_review": {
+    "recorded_at": "2026-11-13T09:35:52.281487+00:00",
+    "source": "sft/physics/collective_matter_laws.py:PLASMA_COLLECTIVE, PLASMA_OSCILLATION, PLASMA_MHD; sft/physics/field_laws.py:ELECTROMAGNETIC_COMPOSITION",
+    "lean": [
+      "CollectivePlasma.Coupling.commonCharge",
+      "FieldElectromagnetic.Carrier.commonSource",
+      "FieldElectromagnetic.Carrier.commonMagnetic",
+      "FieldElectromagnetic.commonPropagation",
+      "FieldInduction.BoundaryWork",
+      "MechanicalConservation.Transfer"
+    ],
+    "finding": "The coupling binds transferred charge to electric charge; the electromagnetic carrier also binds the magnetic charge to that electric charge, retains linked-after magnetic response and carries the complete induction boundary. Source/action records are retained in the transfer and boundary trace. The inspected wording does not specify an equation identifying a transfer action with a particular induction row or equating magnetic motion with the electric work final velocity at the same stage. Adding either as a new mandatory input guard would require a source correspondence not established here. No such guard was added.",
+    "new_proofs": 0,
+    "entry_complete": false,
+    "scope": "Bounded candidate translation-defect inspection; no certification of full junction balance or assertion that V3 lacks it."
+  },
+  "junction_snapshot_reconciliation": {
+    "recorded_at": "2026-11-13T09:44:12.024587+00:00",
+    "receipt": "verification/TURN_775_JUNCTION_AUDIT.json",
+    "files": [
+      {
+        "root": "canonical",
+        "path": "SFT/Materials/JunctionTransfer.lean",
+        "sha256": "948f04fbc3635899b972a8eb6f22564c1919ce4aa05efc6ba7a0d7e09e34c472"
+      },
+      {
+        "root": "canonical",
+        "path": "SFT/Materials/JunctionCoupling.lean",
+        "sha256": "ec0c8a952b1cef0356713a54b5640b484cb874dcc9dac206c48cafba1062c210"
+      },
+      {
+        "root": "canonical",
+        "path": "SFT/Materials/JunctionObservation.lean",
+        "sha256": "429318e07f0b454fe68299ddf21e5af841ad3d42b11a6b4c457172777ecb1061"
+      },
+      {
+        "root": "canonical",
+        "path": "SFT/Materials/JunctionPreservation.lean",
+        "sha256": "25e1dd2894f88be91584c2e27b03fe670150b84cd07a8e51366929df729905c3"
+      },
+      {
+        "root": "retained",
+        "path": "SFT/Materials/JunctionTransfer.lean",
+        "sha256": "948f04fbc3635899b972a8eb6f22564c1919ce4aa05efc6ba7a0d7e09e34c472"
+      },
+      {
+        "root": "retained",
+        "path": "SFT/Materials/JunctionCoupling.lean",
+        "sha256": "ec0c8a952b1cef0356713a54b5640b484cb874dcc9dac206c48cafba1062c210"
+      },
+      {
+        "root": "retained",
+        "path": "SFT/Materials/JunctionObservation.lean",
+        "sha256": "429318e07f0b454fe68299ddf21e5af841ad3d42b11a6b4c457172777ecb1061"
+      },
+      {
+        "root": "retained",
+        "path": "SFT/Materials/JunctionPreservation.lean",
+        "sha256": "25e1dd2894f88be91584c2e27b03fe670150b84cd07a8e51366929df729905c3"
+      }
+    ],
+    "scope": "Only the eight current canonical/retained files matching the existing source-bound audit. No new proof, build, scientific completion or global snapshot refresh.",
+    "remaining_action": "Formalise the original SEMI-JUNCTION transport/field balance at declared conditions on the original generated-carrier domain, which already contains cross-interface transfers and their actual space-charge/field coupling. Preserve and credit the verified conditional base/successor history operation; do not demand generation from bare region data. Determine the source-specific balance relation without assuming it from the observation label. Do not add a terminal state, convergence condition, independent force equality, or equivalence to JunctionObservation.closed. Preserve the verified Turn750 and Turn775 source-bound results and reuse their unchanged checks."
+  },
+  "junction_independent_validator_translation": {
+    "recorded_at": "2026-11-13T13:21:13.344791+00:00",
+    "source_operation": "claims/SFT-MAT-SEMI-JUNCTION-001/independent_validator.py:main",
+    "lean": "SFT/Materials/JunctionIndependentValidator.lean",
+    "receipt": "verification/JUNCTION_INDEPENDENT/RESULT.json",
+    "complete": true,
+    "entry_complete": false,
+    "no_new_scientific_requirement": true
   }
 }

@@ -1,0 +1,143 @@
+{
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_path": "claims/SFT-MAT-SEMI-JUNCTION-001/independent_validator.py",
+  "source_sha256": "242af7a014e37d79c48913791872b4b000c5b19abad8b8cdca0c69c1b41cd673",
+  "lean_sha256": "a40813a2ff8c9513cb3e961131607029cba3be3fe97818d35ea47d89cd284adc",
+  "generated_census_matches_all_256_ordered_source_ids": true,
+  "cases": [
+    {
+      "case": "original",
+      "passed": true,
+      "native_matches_original": true
+    },
+    {
+      "case": "wrong-claim",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "reversed-census",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "missing-candidate",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "duplicate-candidate",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "wrong-cardinality",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "negative-cardinality",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "missing-decision",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "foreign-decision",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "reversed-decisions",
+      "passed": true,
+      "native_matches_original": true
+    },
+    {
+      "case": "earlier-false-overwritten",
+      "passed": true,
+      "native_matches_original": true
+    },
+    {
+      "case": "later-false-retained",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "later-true-overwrites-false",
+      "passed": true,
+      "native_matches_original": true
+    },
+    {
+      "case": "finite-closure",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "conditional-closure",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "failed-minimality",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "failed-uniqueness",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "missing-control",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "duplicate-control",
+      "passed": true,
+      "native_matches_original": true
+    },
+    {
+      "case": "failed-control",
+      "passed": false,
+      "native_matches_original": true
+    },
+    {
+      "case": "reversed-controls",
+      "passed": true,
+      "native_matches_original": true
+    },
+    {
+      "case": "seal-identity",
+      "passed": true,
+      "native_matches_original": true
+    }
+  ],
+  "declarations": [
+    "claimId",
+    "domains",
+    "productRows",
+    "generated",
+    "survivor",
+    "Sealed",
+    "putDecision",
+    "decisionMap",
+    "decisionsMatch",
+    "passed",
+    "certificate",
+    "generatedCardinality",
+    "wrongClaimRejected"
+  ],
+  "axiom_dependencies": [],
+  "scope": "Typed original engine sealed records; not a proof of the junction scientific balance clause.",
+  "lake_build": {
+    "command": "lake build SFT.Materials.JunctionIndependentValidator",
+    "exit_code": 0,
+    "jobs": 8
+  },
+  "native_run": "lean --run work/TestJunctionIndependent.lean",
+  "comparison_command": "python3 work/check_junction_independent.py"
+}

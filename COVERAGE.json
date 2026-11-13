@@ -32018,7 +32018,8 @@
         "SFT/Materials/JunctionTransfer.lean",
         "SFT/Materials/JunctionCoupling.lean",
         "SFT/Materials/JunctionObservation.lean",
-        "SFT/Materials/JunctionPreservation.lean"
+        "SFT/Materials/JunctionPreservation.lean",
+        "SFT/Materials/JunctionIndependentValidator.lean"
       ],
       "artifact_runtime_parity": "verified_original_program_outputs",
       "registration_sha256": "7518e2c2e3f218d57ec65894ce5801e291f062a031ed308115c4b66c59aa6a77",
@@ -32085,7 +32086,7 @@
         "title": "p-n junction and depletion organization"
       },
       "source_correspondence": "reference/JUNCTION_SOURCE_CORRESPONDENCE.json",
-      "verified_component_declarations": 158,
+      "verified_component_declarations": 171,
       "full_entry_complete": false,
       "remaining_source_binding": [
         "Translate the transport/field balance at declared conditions in sft/materials/obligations.py:94 on its original domain, which already includes generated cross-interface transfers and their retained space-charge/field organization. The conditional base/successor preservation operation is verified. What remains is identifying and proving the source-specific balance relation at the declared observation boundary; neither generation from bare region data nor assuming balance from the observation-coordinate label is required or authorized."
@@ -32105,7 +32106,8 @@
         "scope": "Given generated transfer/field couplings from the original declared carrier, filtering and recording preserves earlier rows, appends the exact qualifying row, accounts for selected input/output membership in both directions, and retains common charge. Supplying those generated records is part of the source domain, not an additional assumed balance law.",
         "evidence": "verification/TURN_775_JUNCTION_AUDIT.json",
         "new_proofs": 0
-      }
+      },
+      "independent_validator_translation": "verification/JUNCTION_INDEPENDENT/RESULT.json"
     },
     {
       "branch": "materials",

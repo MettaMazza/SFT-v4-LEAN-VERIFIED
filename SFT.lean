@@ -5145,3 +5145,15 @@ import SFT.Materials.StrengthExperiment
 import SFT.Materials.StrengthValidation
 
 import SFT.Materials.LoadingThreshold
+
+import SFT.Materials.FractureSource
+
+import SFT.Materials.FractureGrammar
+
+import SFT.Materials.FractureEvidence
+
+import SFT.Materials.FractureExperiment
+
+import SFT.Materials.FractureValidation
+
+import SFT.Materials.FractureAdvance

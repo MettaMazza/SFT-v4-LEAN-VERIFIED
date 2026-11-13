@@ -33611,9 +33611,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-MECH-FRACTURE-001-d47271030cd2fb14.json",
       "statement": "Fracture is connected bond-path separation creating new retained boundary support; toughness is the declared resistance relation for crack initiation or advance with a complete work ledger.",
       "title": "Fracture and toughness",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/FractureSource.lean",
+        "SFT/Materials/FractureGrammar.lean",
+        "SFT/Materials/FractureEvidence.lean",
+        "SFT/Materials/FractureExperiment.lean",
+        "SFT/Materials/FractureValidation.lean",
+        "SFT/Materials/FractureAdvance.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "37b65651a0a2a72923b3bb2fed7a5ed9164a69c7ea24190e6ac1a80e45eeb63c",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -33676,7 +33683,10 @@
         "status": "empirically_tested",
         "subbranch": "mechanical",
         "title": "Fracture and toughness"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_818_FRACTURE_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[49]: connected crack-path bonds removed exactly, unbroken bonds and full material support retained; both new boundary sides and complete per-bond actual force/displacement work and declared resistance ledger, geometry/rate conditions and finite-record closure.; Original MECH-FRACTURE source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -195010,13 +195020,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-13T15:21:21.400738+00:00",
+  "updated_at": "2026-11-13T15:28:53.864804+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2293,
-    "fully_reconstructed_claims": 488,
-    "axiom_free_exported_results": 25058,
-    "axiom_free_audited_definitions_and_theorems": 60362
+    "pending": 2292,
+    "fully_reconstructed_claims": 489,
+    "axiom_free_exported_results": 25096,
+    "axiom_free_audited_definitions_and_theorems": 60484
   }
 }

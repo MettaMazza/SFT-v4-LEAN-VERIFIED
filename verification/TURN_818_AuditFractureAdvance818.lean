@@ -1,0 +1,25 @@
+import SFT.Materials.FractureAdvance
+#print axioms SFT.Materials.FractureAdvance.Crack
+#print axioms SFT.Materials.FractureAdvance.broken
+#print axioms SFT.Materials.FractureAdvance.remaining
+#print axioms SFT.Materials.FractureAdvance.connectedBondsHeld
+#print axioms SFT.Materials.FractureAdvance.remainingExactly
+#print axioms SFT.Materials.FractureAdvance.everyBrokenBondSeparated
+#print axioms SFT.Materials.FractureAdvance.unbrokenBondRetained
+#print axioms SFT.Materials.FractureAdvance.materialSupportRetained
+#print axioms SFT.Materials.FractureAdvance.BoundaryPair
+#print axioms SFT.Materials.FractureAdvance.boundaryPair
+#print axioms SFT.Materials.FractureAdvance.newBoundary
+#print axioms SFT.Materials.FractureAdvance.completeNewBoundary
+#print axioms SFT.Materials.FractureAdvance.bothSidesRetained
+#print axioms SFT.Materials.FractureAdvance.workRow
+#print axioms SFT.Materials.FractureAdvance.ledger
+#print axioms SFT.Materials.FractureAdvance.completeWorkLedger
+#print axioms SFT.Materials.FractureAdvance.everyInteractionRetained
+#print axioms SFT.Materials.FractureAdvance.workUsesActualForceAndSeparation
+#print axioms SFT.Materials.FractureAdvance.declaredResistanceRetained
+#print axioms SFT.Materials.FractureAdvance.record
+#print axioms SFT.Materials.FractureAdvance.geometryRateRetained
+#print axioms SFT.Materials.FractureAdvance.records
+#print axioms SFT.Materials.FractureAdvance.base
+#print axioms SFT.Materials.FractureAdvance.successor

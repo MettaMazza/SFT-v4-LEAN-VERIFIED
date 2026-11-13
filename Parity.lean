@@ -1561,3 +1561,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.StrengthGrammar.candidates do
     IO.println ("StrengthGrammar\t" ++ SFT.Materials.StrengthGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.StrengthGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.StrengthGrammar.exactForm c ++ "\t" ++ SFT.Materials.StrengthGrammar.decisionReason c)
+
+  for c in SFT.Materials.FractureGrammar.candidates do
+    IO.println ("FractureGrammar\t" ++ SFT.Materials.FractureGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.FractureGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.FractureGrammar.exactForm c ++ "\t" ++ SFT.Materials.FractureGrammar.decisionReason c)

@@ -5433,3 +5433,27 @@ import SFT.Materials.HeatMaterialExperiment
 import SFT.Materials.HeatMaterialValidation
 
 import SFT.Materials.HeatTreatment
+
+import SFT.Materials.CorrosionMaterialSource
+
+import SFT.Materials.CorrosionMaterialGrammar
+
+import SFT.Materials.CorrosionMaterialEvidence
+
+import SFT.Materials.CorrosionMaterialExperiment
+
+import SFT.Materials.CorrosionMaterialValidation
+
+import SFT.Materials.Corrosion
+
+import SFT.Materials.WearMaterialSource
+
+import SFT.Materials.WearMaterialGrammar
+
+import SFT.Materials.WearMaterialEvidence
+
+import SFT.Materials.WearMaterialExperiment
+
+import SFT.Materials.WearMaterialValidation
+
+import SFT.Materials.Wear

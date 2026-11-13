@@ -1,0 +1,25 @@
+import SFT.Materials.Wear
+#print axioms SFT.Materials.Wear.State
+#print axioms SFT.Materials.Wear.Record
+#print axioms SFT.Materials.Wear.transfers
+#print axioms SFT.Materials.Wear.debris
+#print axioms SFT.Materials.Wear.frictionHistory
+#print axioms SFT.Materials.Wear.surfaceHistory
+#print axioms SFT.Materials.Wear.allSurfaceStatesRecovered
+#print axioms SFT.Materials.Wear.allFrictionStatesRecovered
+#print axioms SFT.Materials.Wear.transferredContentConserved
+#print axioms SFT.Materials.Wear.debrisExactly
+#print axioms SFT.Materials.Wear.debrisStillHasContent
+#print axioms SFT.Materials.Wear.exactSurfaceStateCount
+#print axioms SFT.Materials.Wear.everyContactAction
+#print axioms SFT.Materials.Wear.record
+#print axioms SFT.Materials.Wear.wholeInputRetained
+#print axioms SFT.Materials.Wear.frictionDoesNotEraseTransfer
+#print axioms SFT.Materials.Wear.changedSurfaceRetained
+#print axioms SFT.Materials.Wear.append
+#print axioms SFT.Materials.Wear.successorSurfaceHistory
+#print axioms SFT.Materials.Wear.successorFrictionHistory
+#print axioms SFT.Materials.Wear.contactBoundaryHeld
+#print axioms SFT.Materials.Wear.records
+#print axioms SFT.Materials.Wear.base
+#print axioms SFT.Materials.Wear.successor

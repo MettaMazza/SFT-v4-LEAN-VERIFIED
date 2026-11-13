@@ -1,0 +1,27 @@
+import SFT.Materials.Corrosion
+#print axioms SFT.Materials.Corrosion.Edge
+#print axioms SFT.Materials.Corrosion.Record
+#print axioms SFT.Materials.Corrosion.row
+#print axioms SFT.Materials.Corrosion.rows
+#print axioms SFT.Materials.Corrosion.completeInterface
+#print axioms SFT.Materials.Corrosion.everyInterfaceRow
+#print axioms SFT.Materials.Corrosion.noInventedInterfaceRow
+#print axioms SFT.Materials.Corrosion.jointCarriersDistinct
+#print axioms SFT.Materials.Corrosion.placements
+#print axioms SFT.Materials.Corrosion.electronRows
+#print axioms SFT.Materials.Corrosion.allTransport
+#print axioms SFT.Materials.Corrosion.constituentCountsConserved
+#print axioms SFT.Materials.Corrosion.completeProductsRetainCarriers
+#print axioms SFT.Materials.Corrosion.actualReactionChange
+#print axioms SFT.Materials.Corrosion.electronSequenceRetained
+#print axioms SFT.Materials.Corrosion.chargeLossGainPaired
+#print axioms SFT.Materials.Corrosion.transportContentConserved
+#print axioms SFT.Materials.Corrosion.transportEndpointsHeld
+#print axioms SFT.Materials.Corrosion.electronEndpointsHeld
+#print axioms SFT.Materials.Corrosion.record
+#print axioms SFT.Materials.Corrosion.wholeInputRetained
+#print axioms SFT.Materials.Corrosion.completeElectronHistory
+#print axioms SFT.Materials.Corrosion.environmentAndProvenanceHeld
+#print axioms SFT.Materials.Corrosion.records
+#print axioms SFT.Materials.Corrosion.base
+#print axioms SFT.Materials.Corrosion.successor

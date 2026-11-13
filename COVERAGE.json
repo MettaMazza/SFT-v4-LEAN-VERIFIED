@@ -35730,9 +35730,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-DEGR-CORROSION-001-4542786b0ea6848b.json",
       "statement": "Corrosion is an interfacial reaction/transport process that transforms a material and environment jointly while retaining complete constituent, charge, product and boundary provenance.",
       "title": "Corrosion",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/CorrosionMaterialSource.lean",
+        "SFT/Materials/CorrosionMaterialGrammar.lean",
+        "SFT/Materials/CorrosionMaterialEvidence.lean",
+        "SFT/Materials/CorrosionMaterialExperiment.lean",
+        "SFT/Materials/CorrosionMaterialValidation.lean",
+        "SFT/Materials/Corrosion.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "b83d0baed81f798e3f76d6e4f1bb53f3f70e306d79678ad9297c884dd85068b0",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -35796,7 +35803,10 @@
         "status": "empirically_tested",
         "subbranch": "processing_degradation",
         "title": "Corrosion"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_844_CORROSION_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[73]: complete material-environment interface with source-bound reactions, redox and transport, constituent/charge/product conservation, exact interface coverage and provenance, environment-time boundary and finite closure.; Original DEGR-CORROSION source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -35808,9 +35818,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-DEGR-WEAR-001-c59b96e47896844a.json",
       "statement": "Wear is retained material transfer or surface reorganization produced by a declared contact/load/motion path; frictional response and material loss remain separately recorded.",
       "title": "Wear and tribological material transfer",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/WearMaterialSource.lean",
+        "SFT/Materials/WearMaterialGrammar.lean",
+        "SFT/Materials/WearMaterialEvidence.lean",
+        "SFT/Materials/WearMaterialExperiment.lean",
+        "SFT/Materials/WearMaterialValidation.lean",
+        "SFT/Materials/Wear.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "9fc4be7955a0716ac7fcb49f905bbd0857d7a8c90b3d7ec277f5fe256f371d76",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -35874,7 +35891,10 @@
         "status": "empirically_tested",
         "subbranch": "processing_degradation",
         "title": "Wear and tribological material transfer"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_845_WEAR_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[74]: complete contact/load/motion path, both surface histories, separate friction and material-transfer/debris ledgers, exact debris membership and content conservation, actual transition append and contact-boundary retention.; Original DEGR-WEAR source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -195250,13 +195270,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-13T20:25:22.654837+00:00",
+  "updated_at": "2026-11-13T20:35:22.819654+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2269,
-    "fully_reconstructed_claims": 512,
-    "axiom_free_exported_results": 25977,
-    "axiom_free_audited_definitions_and_theorems": 63240
+    "pending": 2267,
+    "fully_reconstructed_claims": 514,
+    "axiom_free_exported_results": 26057,
+    "axiom_free_audited_definitions_and_theorems": 63487
   }
 }

@@ -1540,3 +1540,9 @@ def main : IO Unit := do
 
   for c in SFT.Materials.MaterialInvariantGrammar.candidates do
     IO.println ("MaterialInvariantGrammar\t" ++ SFT.Materials.MaterialInvariantGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.MaterialInvariantGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.MaterialInvariantGrammar.exactForm c ++ "\t" ++ SFT.Materials.MaterialInvariantGrammar.decisionReason c)
+
+  for c in SFT.Materials.BulkBoundaryGrammar.candidates do
+    IO.println ("BulkBoundaryGrammar\t" ++ SFT.Materials.BulkBoundaryGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.BulkBoundaryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.BulkBoundaryGrammar.exactForm c ++ "\t" ++ SFT.Materials.BulkBoundaryGrammar.decisionReason c)
+
+  for c in SFT.Materials.StressStrainGrammar.candidates do
+    IO.println ("StressStrainGrammar\t" ++ SFT.Materials.StressStrainGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.StressStrainGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.StressStrainGrammar.exactForm c ++ "\t" ++ SFT.Materials.StressStrainGrammar.decisionReason c)

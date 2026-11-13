@@ -5061,3 +5061,27 @@ import SFT.Materials.MaterialInvariantEvidence
 import SFT.Materials.MaterialInvariantExperiment
 
 import SFT.Materials.MaterialInvariantValidation
+
+import SFT.Materials.BulkBoundarySource
+
+import SFT.Materials.BulkBoundaryGrammar
+
+import SFT.Materials.BulkBoundaryEvidence
+
+import SFT.Materials.BulkBoundaryExperiment
+
+import SFT.Materials.BulkBoundaryValidation
+
+import SFT.Materials.ProtectedBoundary
+
+import SFT.Materials.StressStrainSource
+
+import SFT.Materials.StressStrainGrammar
+
+import SFT.Materials.StressStrainEvidence
+
+import SFT.Materials.StressStrainExperiment
+
+import SFT.Materials.StressStrainValidation
+
+import SFT.Materials.StressStrainRecord

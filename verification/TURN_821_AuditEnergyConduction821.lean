@@ -1,0 +1,20 @@
+import SFT.Materials.EnergyConduction
+#print axioms SFT.Materials.EnergyConduction.EnergyLabel
+#print axioms SFT.Materials.EnergyConduction.Record
+#print axioms SFT.Materials.EnergyConduction.ledger
+#print axioms SFT.Materials.EnergyConduction.energyLabelsConserved
+#print axioms SFT.Materials.EnergyConduction.energyValuesConserved
+#print axioms SFT.Materials.EnergyConduction.energySourcesConserved
+#print axioms SFT.Materials.EnergyConduction.connectedTransfer
+#print axioms SFT.Materials.EnergyConduction.retainedMaterialSupport
+#print axioms SFT.Materials.EnergyConduction.completeLedgerCount
+#print axioms SFT.Materials.EnergyConduction.everyTransferHeld
+#print axioms SFT.Materials.EnergyConduction.exactTransferRecurrence
+#print axioms SFT.Materials.EnergyConduction.scatteringRetainsRecords
+#print axioms SFT.Materials.EnergyConduction.scatteringCount
+#print axioms SFT.Materials.EnergyConduction.scatteringLocal
+#print axioms SFT.Materials.EnergyConduction.record
+#print axioms SFT.Materials.EnergyConduction.completeInputRetained
+#print axioms SFT.Materials.EnergyConduction.records
+#print axioms SFT.Materials.EnergyConduction.base
+#print axioms SFT.Materials.EnergyConduction.successor

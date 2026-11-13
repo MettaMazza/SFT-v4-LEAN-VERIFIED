@@ -1564,3 +1564,12 @@ def main : IO Unit := do
 
   for c in SFT.Materials.FractureGrammar.candidates do
     IO.println ("FractureGrammar\t" ++ SFT.Materials.FractureGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.FractureGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.FractureGrammar.exactForm c ++ "\t" ++ SFT.Materials.FractureGrammar.decisionReason c)
+
+  for c in SFT.Materials.FatigueCreepGrammar.candidates do
+    IO.println ("FatigueCreepGrammar\t" ++ SFT.Materials.FatigueCreepGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.FatigueCreepGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.FatigueCreepGrammar.exactForm c ++ "\t" ++ SFT.Materials.FatigueCreepGrammar.decisionReason c)
+
+  for c in SFT.Materials.HeatCapacityGrammar.candidates do
+    IO.println ("HeatCapacityGrammar\t" ++ SFT.Materials.HeatCapacityGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.HeatCapacityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.HeatCapacityGrammar.exactForm c ++ "\t" ++ SFT.Materials.HeatCapacityGrammar.decisionReason c)
+
+  for c in SFT.Materials.ThermalConductionGrammar.candidates do
+    IO.println ("ThermalConductionGrammar\t" ++ SFT.Materials.ThermalConductionGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ThermalConductionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ThermalConductionGrammar.exactForm c ++ "\t" ++ SFT.Materials.ThermalConductionGrammar.decisionReason c)

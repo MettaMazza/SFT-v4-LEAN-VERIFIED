@@ -1,0 +1,19 @@
+import SFT.Materials.ExcitationStorage
+#print axioms SFT.Materials.ExcitationStorage.Record
+#print axioms SFT.Materials.ExcitationStorage.supplied
+#print axioms SFT.Materials.ExcitationStorage.accessible
+#print axioms SFT.Materials.ExcitationStorage.response
+#print axioms SFT.Materials.ExcitationStorage.originalThermalRelation
+#print axioms SFT.Materials.ExcitationStorage.accessibleFromFullSupports
+#print axioms SFT.Materials.ExcitationStorage.beforeCountExact
+#print axioms SFT.Materials.ExcitationStorage.afterCountExact
+#print axioms SFT.Materials.ExcitationStorage.everyEnergyInteraction
+#print axioms SFT.Materials.ExcitationStorage.unchangedSupportBoundary
+#print axioms SFT.Materials.ExcitationStorage.actualOrientedResponse
+#print axioms SFT.Materials.ExcitationStorage.exactMagnitude
+#print axioms SFT.Materials.ExcitationStorage.record
+#print axioms SFT.Materials.ExcitationStorage.originalRecordRetained
+#print axioms SFT.Materials.ExcitationStorage.phaseConditionsWindow
+#print axioms SFT.Materials.ExcitationStorage.records
+#print axioms SFT.Materials.ExcitationStorage.base
+#print axioms SFT.Materials.ExcitationStorage.successor

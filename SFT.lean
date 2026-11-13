@@ -5157,3 +5157,39 @@ import SFT.Materials.FractureExperiment
 import SFT.Materials.FractureValidation
 
 import SFT.Materials.FractureAdvance
+
+import SFT.Materials.FatigueCreepSource
+
+import SFT.Materials.FatigueCreepGrammar
+
+import SFT.Materials.FatigueCreepEvidence
+
+import SFT.Materials.FatigueCreepExperiment
+
+import SFT.Materials.FatigueCreepValidation
+
+import SFT.Materials.MaterialLoadHistory
+
+import SFT.Materials.HeatCapacitySource
+
+import SFT.Materials.HeatCapacityGrammar
+
+import SFT.Materials.HeatCapacityEvidence
+
+import SFT.Materials.HeatCapacityExperiment
+
+import SFT.Materials.HeatCapacityValidation
+
+import SFT.Materials.ExcitationStorage
+
+import SFT.Materials.ThermalConductionSource
+
+import SFT.Materials.ThermalConductionGrammar
+
+import SFT.Materials.ThermalConductionEvidence
+
+import SFT.Materials.ThermalConductionExperiment
+
+import SFT.Materials.ThermalConductionValidation
+
+import SFT.Materials.EnergyConduction

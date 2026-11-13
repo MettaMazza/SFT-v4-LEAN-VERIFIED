@@ -5085,3 +5085,39 @@ import SFT.Materials.StressStrainExperiment
 import SFT.Materials.StressStrainValidation
 
 import SFT.Materials.StressStrainRecord
+
+import SFT.Materials.ElasticitySource
+
+import SFT.Materials.ElasticityGrammar
+
+import SFT.Materials.ElasticityEvidence
+
+import SFT.Materials.ElasticityExperiment
+
+import SFT.Materials.ElasticityValidation
+
+import SFT.Materials.ElasticRecovery
+
+import SFT.Materials.PlasticitySource
+
+import SFT.Materials.PlasticityGrammar
+
+import SFT.Materials.PlasticityEvidence
+
+import SFT.Materials.PlasticityExperiment
+
+import SFT.Materials.PlasticityValidation
+
+import SFT.Materials.PlasticReorganization
+
+import SFT.Materials.SlipSource
+
+import SFT.Materials.SlipGrammar
+
+import SFT.Materials.SlipEvidence
+
+import SFT.Materials.SlipExperiment
+
+import SFT.Materials.SlipValidation
+
+import SFT.Materials.DislocationSlip

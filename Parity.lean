@@ -1546,3 +1546,12 @@ def main : IO Unit := do
 
   for c in SFT.Materials.StressStrainGrammar.candidates do
     IO.println ("StressStrainGrammar\t" ++ SFT.Materials.StressStrainGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.StressStrainGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.StressStrainGrammar.exactForm c ++ "\t" ++ SFT.Materials.StressStrainGrammar.decisionReason c)
+
+  for c in SFT.Materials.ElasticityGrammar.candidates do
+    IO.println ("ElasticityGrammar\t" ++ SFT.Materials.ElasticityGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ElasticityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ElasticityGrammar.exactForm c ++ "\t" ++ SFT.Materials.ElasticityGrammar.decisionReason c)
+
+  for c in SFT.Materials.PlasticityGrammar.candidates do
+    IO.println ("PlasticityGrammar\t" ++ SFT.Materials.PlasticityGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PlasticityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PlasticityGrammar.exactForm c ++ "\t" ++ SFT.Materials.PlasticityGrammar.decisionReason c)
+
+  for c in SFT.Materials.SlipGrammar.candidates do
+    IO.println ("SlipGrammar\t" ++ SFT.Materials.SlipGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SlipGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SlipGrammar.exactForm c ++ "\t" ++ SFT.Materials.SlipGrammar.decisionReason c)

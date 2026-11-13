@@ -1,0 +1,20 @@
+import SFT.Materials.PlasticReorganization
+#print axioms SFT.Materials.PlasticReorganization.State
+#print axioms SFT.Materials.PlasticReorganization.Change
+#print axioms SFT.Materials.PlasticReorganization.applyChange
+#print axioms SFT.Materials.PlasticReorganization.allContentRetained
+#print axioms SFT.Materials.PlasticReorganization.phaseIdentityRetained
+#print axioms SFT.Materials.PlasticReorganization.actualAdjacencyRetained
+#print axioms SFT.Materials.PlasticReorganization.changedCanonicalOrganization
+#print axioms SFT.Materials.PlasticReorganization.recordedReleaseDoesNotRestore
+#print axioms SFT.Materials.PlasticReorganization.history
+#print axioms SFT.Materials.PlasticReorganization.everyFiniteHistoryRetainsContent
+#print axioms SFT.Materials.PlasticReorganization.everyFiniteHistoryRetainsPhase
+#print axioms SFT.Materials.PlasticReorganization.Row
+#print axioms SFT.Materials.PlasticReorganization.record
+#print axioms SFT.Materials.PlasticReorganization.defectRecordRetained
+#print axioms SFT.Materials.PlasticReorganization.yieldBoundaryRetained
+#print axioms SFT.Materials.PlasticReorganization.plasticRowMeaning
+#print axioms SFT.Materials.PlasticReorganization.records
+#print axioms SFT.Materials.PlasticReorganization.base
+#print axioms SFT.Materials.PlasticReorganization.successor

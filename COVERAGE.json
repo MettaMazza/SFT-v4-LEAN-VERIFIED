@@ -35906,9 +35906,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-MAT-DEGR-RADIATION-001-dbf66ce45a26ae89.json",
       "statement": "Radiation damage is the complete source-bound path from probe energy transfer to retained displacement, excitation or transmutation defects and their subsequent migration/recovery.",
       "title": "Radiation damage",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Materials/RadiationDamageMaterialSource.lean",
+        "SFT/Materials/RadiationDamageMaterialGrammar.lean",
+        "SFT/Materials/RadiationDamageMaterialEvidence.lean",
+        "SFT/Materials/RadiationDamageMaterialExperiment.lean",
+        "SFT/Materials/RadiationDamageMaterialValidation.lean",
+        "SFT/Materials/RadiationDamage.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 program and independent controls; fresh NIST fragment extraction and every post-source empirical field/hash. Original global guard rejection preserved, not reported as a passing full replay.",
       "registration_sha256": "df7e7835ce2bc4bb9fd9366b126523e50afb0fdc86ae7a423f32fc6b2b71f10c",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -35972,7 +35979,10 @@
         "status": "empirically_tested",
         "subbranch": "processing_degradation",
         "title": "Radiation damage"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_846_RADIATIONDAMAGE_COMPLETION.json",
+      "verified_scope": "MATERIALS_OBLIGATIONS[75]: actual probe/energy action binding to complete localized defect, exact reference/actual change, retained migration/recovery path, complete typed nuclear source/target ledgers, dose-rate-spectrum boundary and finite closure.; Original DEGR-RADIATION source fragments and unchanged global guard.; Original eight binary axes/full256 alternatives, exact elimination and survivor.; Exactly three original operational witnesses, controls/proof records and all program methods.; Original fixed-spec validation of all three witnesses, registration and sealed prediction.; Original source/custody/isolation/comparison/adverse-label behavior, unchanged preseal/global guard."
     },
     {
       "branch": "materials",
@@ -195270,13 +195280,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-13T20:35:22.819654+00:00",
+  "updated_at": "2026-11-13T20:45:31.648363+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2267,
-    "fully_reconstructed_claims": 514,
-    "axiom_free_exported_results": 26057,
-    "axiom_free_audited_definitions_and_theorems": 63487
+    "pending": 2266,
+    "fully_reconstructed_claims": 515,
+    "axiom_free_exported_results": 26100,
+    "axiom_free_audited_definitions_and_theorems": 63610
   }
 }

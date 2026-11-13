@@ -5457,3 +5457,15 @@ import SFT.Materials.WearMaterialExperiment
 import SFT.Materials.WearMaterialValidation
 
 import SFT.Materials.Wear
+
+import SFT.Materials.RadiationDamageMaterialSource
+
+import SFT.Materials.RadiationDamageMaterialGrammar
+
+import SFT.Materials.RadiationDamageMaterialEvidence
+
+import SFT.Materials.RadiationDamageMaterialExperiment
+
+import SFT.Materials.RadiationDamageMaterialValidation
+
+import SFT.Materials.RadiationDamage

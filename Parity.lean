@@ -1639,3 +1639,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.WearMaterialGrammar.candidates do
     IO.println ("WearMaterialGrammar\t" ++ SFT.Materials.WearMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.WearMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.WearMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.WearMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.RadiationDamageMaterialGrammar.candidates do
+    IO.println ("RadiationDamageMaterialGrammar\t" ++ SFT.Materials.RadiationDamageMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.RadiationDamageMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.RadiationDamageMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.RadiationDamageMaterialGrammar.decisionReason c)

@@ -133,7 +133,14 @@
     "No step completion without exact source-operation mapping and source-bound applicable check receipts.",
     "Do not infer incompleteness from a missing identifier, filename, prose summary or registration label."
   ],
-  "live_jobs": [],
+  "live_jobs": [
+    {
+      "session_id": 24316,
+      "command": "python3 work/build_piezo847.py",
+      "log": "work/piezo847_build.json",
+      "claim": "SFT-MAT-FUNC-PIEZOELECTRIC-001"
+    }
+  ],
   "snapshot": [
     {
       "root": "canonical",
@@ -54804,12 +54811,12 @@
   ],
   "next_publication_milestone": 500,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "Continue SFT-MAT-DEGR-RADIATION-001 in dependency order toward750 using actual pinned source and verified dependencies. Update counts, paper and timeline and push verified batches. Prepare complete750 review package before pausing.",
+  "authorized_action": "Continue SFT-MAT-FUNC-PIEZOELECTRIC-001 in dependency order toward750 using actual pinned source and verified dependencies. Update counts, paper and timeline and push verified batches. Prepare complete750 review package before pausing.",
   "scientific_cursor": {
-    "completed": "SFT-MAT-DEGR-WEAR-001",
-    "next": "SFT-MAT-DEGR-RADIATION-001",
-    "receipt": "verification/TURN_845_WEAR_COMPLETION.json",
-    "source": "claims/SFT-MAT-DEGR-RADIATION-001/execution.py",
+    "completed": "SFT-MAT-DEGR-RADIATION-001",
+    "next": "SFT-MAT-FUNC-PIEZOELECTRIC-001",
+    "receipt": "verification/TURN_846_RADIATIONDAMAGE_COMPLETION.json",
+    "source": "claims/SFT-MAT-FUNC-PIEZOELECTRIC-001/execution.py",
     "next_milestone": 750
   },
   "video_verification": {
@@ -58228,15 +58235,15 @@
     "candidate_rows": 256
   },
   "latest_verified_remote": {
-    "commit": "fec866d7c7a720235cd00a8f1aa9782c02c87032",
-    "tree": "58999f71d93f7b2533db72f83d141dea3eeeb2b5",
+    "commit": "8ea277462282cfc7925e14a528ec39ec48d0f060",
+    "tree": "e39d7ca12eef7f95eeac29834dbedb7c90751dbb",
     "files": 84,
     "main_verified": true,
-    "count": 512,
-    "verified_at": "2026-11-13T20:28:47.125053+00:00",
-    "manifest": "work/checkpoint843_manifest.json",
+    "count": 514,
+    "verified_at": "2026-11-13T20:38:50.358828+00:00",
+    "manifest": "work/checkpoint845_manifest.json",
     "verification": "Fetched main and walked Git trees; all84 changed blob identities match frozen manifest.",
-    "receipt": "verification/TURN_843_REMOTE_RECEIPT.json"
+    "receipt": "verification/TURN_845_REMOTE_RECEIPT.json"
   },
   "matstressstrain812": {
     "status": "complete",
@@ -58457,15 +58464,27 @@
     "candidate_rows": 256
   },
   "next_source_inspection": {
-    "claim": "SFT-MAT-DEGR-RADIATION-001",
-    "original_read": "claims/SFT-MAT-DEGR-RADIATION-001/WHY_DERIVATION_CHECK.md",
-    "existing_bodies_read": [
-      "SFT.Physics.MatterScattering.everyChannelRetained",
-      "SFT.Physics.MatterScattering.exactCrossSection",
-      "SFT.Materials.PointDefect.differenceExactlyAtSource",
-      "SFT.Materials.PointDefect.everyLocalizedActualRepresented"
+    "claim": "SFT-MAT-FUNC-PIEZOELECTRIC-001",
+    "original_read": [
+      "claims/SFT-MAT-FUNC-PIEZOELECTRIC-001/WHY_DERIVATION_CHECK.md",
+      "claims/SFT-MAT-FUNC-PIEZOELECTRIC-001/execution.py",
+      "sft/materials/derivation.py:_dimensions,_structural_witnesses"
     ],
-    "next": "Read original radiation-damage execution binding and actual energy-transfer/migration/recovery dependencies; assemble source-specific complete probe-to-defect path. Preserve verified prior receipts."
+    "existing_bodies_read": [
+      "SFT.Materials.BoundPolarization.everyChargeRetained",
+      "SFT.Materials.BoundPolarization.reorientationChangesHeld",
+      "SFT.Materials.ElasticRecovery.uniqueOriginalFibre",
+      "SFT.Materials.ElasticRecovery.canonicalStateReturns",
+      "SFT.Physics.FieldElectricDistinction.reversedTwice",
+      "SFT.InformationScience.ConservationReverse.uniqueRecovery"
+    ],
+    "staged_protocol": {
+      "index": 76,
+      "build_log": "work/piezo847_build.json",
+      "driver": "work/build_piezo847.py",
+      "session_id": 24316
+    },
+    "next": "Preserve/poll the original staged build; trace actual reversible mechanical-electric response and retained symmetry/orientation correspondence through source dependencies. Reuse inspected exact reverse/fibre and polarization proofs. No proposed coupling equation or completion obstruction has been established; do not invent one."
   },
   "phasemap840": {
     "status": "complete",
@@ -58501,6 +58520,12 @@
     "status": "complete",
     "receipt": "verification/TURN_845_WEAR_COMPLETION.json",
     "audited_declarations": 136,
+    "candidate_rows": 256
+  },
+  "radiationdamage846": {
+    "status": "complete",
+    "receipt": "verification/TURN_846_RADIATIONDAMAGE_COMPLETION.json",
+    "audited_declarations": 137,
     "candidate_rows": 256
   }
 }

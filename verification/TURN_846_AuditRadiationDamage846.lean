@@ -1,0 +1,26 @@
+import SFT.Materials.RadiationDamage
+#print axioms SFT.Materials.RadiationDamage.Record
+#print axioms SFT.Materials.RadiationDamage.actualDefectGenerated
+#print axioms SFT.Materials.RadiationDamage.localChangeExactly
+#print axioms SFT.Materials.RadiationDamage.initialPathContainsDefect
+#print axioms SFT.Materials.RadiationDamage.otherInitialSitesHeld
+#print axioms SFT.Materials.RadiationDamage.actualProbeAction
+#print axioms SFT.Materials.RadiationDamage.completeEnergyInteractions
+#print axioms SFT.Materials.RadiationDamage.actualEnergyComposition
+#print axioms SFT.Materials.RadiationDamage.completeRecoveryStateCount
+#print axioms SFT.Materials.RadiationDamage.completeRecoveryProvenance
+#print axioms SFT.Materials.RadiationDamage.recoveredAt
+#print axioms SFT.Materials.RadiationDamage.recoveryTestExact
+#print axioms SFT.Materials.RadiationDamage.retainedDepartureNotRecovered
+#print axioms SFT.Materials.RadiationDamage.everyMigrationConserves
+#print axioms SFT.Materials.RadiationDamage.everyMigrationSupported
+#print axioms SFT.Materials.RadiationDamage.everyTransmutationConserves
+#print axioms SFT.Materials.RadiationDamage.TransmutationRecord
+#print axioms SFT.Materials.RadiationDamage.transmutationRecord
+#print axioms SFT.Materials.RadiationDamage.record
+#print axioms SFT.Materials.RadiationDamage.wholeInputRetained
+#print axioms SFT.Materials.RadiationDamage.everyMigrationRecorded
+#print axioms SFT.Materials.RadiationDamage.spectrumBoundaryHeld
+#print axioms SFT.Materials.RadiationDamage.records
+#print axioms SFT.Materials.RadiationDamage.base
+#print axioms SFT.Materials.RadiationDamage.successor

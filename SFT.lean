@@ -4991,3 +4991,15 @@ import SFT.Materials.ZeroResistanceEvidence
 import SFT.Materials.ZeroResistanceExperiment
 
 import SFT.Materials.ZeroResistanceValidation
+
+import SFT.Materials.MeissnerSource
+
+import SFT.Materials.MeissnerGrammar
+
+import SFT.Materials.MeissnerEvidence
+
+import SFT.Materials.MeissnerExperiment
+
+import SFT.Materials.MeissnerValidation
+
+import SFT.Materials.MeissnerBoundary

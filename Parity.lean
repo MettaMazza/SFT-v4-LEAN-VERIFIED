@@ -1522,3 +1522,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.ZeroResistanceGrammar.candidates do
     IO.println ("ZeroResistanceGrammar\t" ++ SFT.Materials.ZeroResistanceGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ZeroResistanceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ZeroResistanceGrammar.exactForm c ++ "\t" ++ SFT.Materials.ZeroResistanceGrammar.decisionReason c)
+
+  for c in SFT.Materials.MeissnerGrammar.candidates do
+    IO.println ("MeissnerGrammar\t" ++ SFT.Materials.MeissnerGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.MeissnerGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.MeissnerGrammar.exactForm c ++ "\t" ++ SFT.Materials.MeissnerGrammar.decisionReason c)

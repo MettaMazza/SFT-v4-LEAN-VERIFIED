@@ -1,0 +1,25 @@
+import SFT.Materials.Ferroelectric
+#print axioms SFT.Materials.Ferroelectric.PolarClass
+#print axioms SFT.Materials.Ferroelectric.polarizationRows
+#print axioms SFT.Materials.Ferroelectric.stable
+#print axioms SFT.Materials.Ferroelectric.stabilityComputed
+#print axioms SFT.Materials.Ferroelectric.completeRecurrenceReturns
+#print axioms SFT.Materials.Ferroelectric.everyOrientationHeld
+#print axioms SFT.Materials.Ferroelectric.completePolarizationSupport
+#print axioms SFT.Materials.Ferroelectric.connectedPolarRegion
+#print axioms SFT.Materials.Ferroelectric.Switching
+#print axioms SFT.Materials.Ferroelectric.opposedClassesDistinct
+#print axioms SFT.Materials.Ferroelectric.bothClassesStable
+#print axioms SFT.Materials.Ferroelectric.bothClassesRecur
+#print axioms SFT.Materials.Ferroelectric.switchingHasTransition
+#print axioms SFT.Materials.Ferroelectric.completeSwitchingEvents
+#print axioms SFT.Materials.Ferroelectric.allSwitchingSources
+#print axioms SFT.Materials.Ferroelectric.everyStepHasActualField
+#print axioms SFT.Materials.Ferroelectric.fieldValues
+#print axioms SFT.Materials.Ferroelectric.completeFieldCount
+#print axioms SFT.Materials.Ferroelectric.eachFieldExact
+#print axioms SFT.Materials.Ferroelectric.record
+#print axioms SFT.Materials.Ferroelectric.completeInputRetained
+#print axioms SFT.Materials.Ferroelectric.records
+#print axioms SFT.Materials.Ferroelectric.base
+#print axioms SFT.Materials.Ferroelectric.successor

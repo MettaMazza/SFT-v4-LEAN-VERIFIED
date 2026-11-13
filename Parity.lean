@@ -1645,3 +1645,9 @@ def main : IO Unit := do
 
   for c in SFT.Materials.PiezoMaterialGrammar.candidates do
     IO.println ("PiezoMaterialGrammar\t" ++ SFT.Materials.PiezoMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PiezoMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PiezoMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.PiezoMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.FerroelectricMaterialGrammar.candidates do
+    IO.println ("FerroelectricMaterialGrammar\t" ++ SFT.Materials.FerroelectricMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.FerroelectricMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.FerroelectricMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.FerroelectricMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.ThermoelectricMaterialGrammar.candidates do
+    IO.println ("ThermoelectricMaterialGrammar\t" ++ SFT.Materials.ThermoelectricMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.ThermoelectricMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.ThermoelectricMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.ThermoelectricMaterialGrammar.decisionReason c)

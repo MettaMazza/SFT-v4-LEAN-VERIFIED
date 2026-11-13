@@ -1,0 +1,23 @@
+import SFT.Materials.Thermoelectric
+#print axioms SFT.Materials.Thermoelectric.ChargeLabel
+#print axioms SFT.Materials.Thermoelectric.Record
+#print axioms SFT.Materials.Thermoelectric.chargeLedger
+#print axioms SFT.Materials.Thermoelectric.energyConserved
+#print axioms SFT.Materials.Thermoelectric.chargeConserved
+#print axioms SFT.Materials.Thermoelectric.jointConservation
+#print axioms SFT.Materials.Thermoelectric.heldChargesConserved
+#print axioms SFT.Materials.Thermoelectric.chargeSourcesConserved
+#print axioms SFT.Materials.Thermoelectric.energyValuesConserved
+#print axioms SFT.Materials.Thermoelectric.chargeSupportedOnEnergyNetwork
+#print axioms SFT.Materials.Thermoelectric.energySupportedOnJointNetwork
+#print axioms SFT.Materials.Thermoelectric.chargeTransferOnJointNetwork
+#print axioms SFT.Materials.Thermoelectric.completeChargeLedgerCount
+#print axioms SFT.Materials.Thermoelectric.everyChargeTransferRetained
+#print axioms SFT.Materials.Thermoelectric.completeEnergyLedgerCount
+#print axioms SFT.Materials.Thermoelectric.chargeRecurrenceExact
+#print axioms SFT.Materials.Thermoelectric.record
+#print axioms SFT.Materials.Thermoelectric.completeInputRetained
+#print axioms SFT.Materials.Thermoelectric.gradientRetained
+#print axioms SFT.Materials.Thermoelectric.records
+#print axioms SFT.Materials.Thermoelectric.base
+#print axioms SFT.Materials.Thermoelectric.successor

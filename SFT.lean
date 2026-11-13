@@ -5481,3 +5481,27 @@ import SFT.Materials.PiezoMaterialExperiment
 import SFT.Materials.PiezoMaterialValidation
 
 import SFT.Materials.Piezoelectric
+
+import SFT.Materials.FerroelectricMaterialSource
+
+import SFT.Materials.FerroelectricMaterialGrammar
+
+import SFT.Materials.FerroelectricMaterialEvidence
+
+import SFT.Materials.FerroelectricMaterialExperiment
+
+import SFT.Materials.FerroelectricMaterialValidation
+
+import SFT.Materials.Ferroelectric
+
+import SFT.Materials.ThermoelectricMaterialSource
+
+import SFT.Materials.ThermoelectricMaterialGrammar
+
+import SFT.Materials.ThermoelectricMaterialEvidence
+
+import SFT.Materials.ThermoelectricMaterialExperiment
+
+import SFT.Materials.ThermoelectricMaterialValidation
+
+import SFT.Materials.Thermoelectric

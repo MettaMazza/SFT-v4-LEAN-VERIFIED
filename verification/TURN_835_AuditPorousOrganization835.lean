@@ -1,0 +1,19 @@
+import SFT.Materials.PorousOrganization
+#print axioms SFT.Materials.PorousOrganization.Record
+#print axioms SFT.Materials.PorousOrganization.accessible
+#print axioms SFT.Materials.PorousOrganization.poreSupportRetained
+#print axioms SFT.Materials.PorousOrganization.solidSupportRetained
+#print axioms SFT.Materials.PorousOrganization.poreNotSolid
+#print axioms SFT.Materials.PorousOrganization.interfaceExactly
+#print axioms SFT.Materials.PorousOrganization.accessibleIsPore
+#print axioms SFT.Materials.PorousOrganization.accessibleNotSolid
+#print axioms SFT.Materials.PorousOrganization.everyAccessPointAccessible
+#print axioms SFT.Materials.PorousOrganization.connectedAccessPropagates
+#print axioms SFT.Materials.PorousOrganization.accessSearchSound
+#print axioms SFT.Materials.PorousOrganization.accessSearchComplete
+#print axioms SFT.Materials.PorousOrganization.record
+#print axioms SFT.Materials.PorousOrganization.wholeInputRetained
+#print axioms SFT.Materials.PorousOrganization.resolutionRetained
+#print axioms SFT.Materials.PorousOrganization.records
+#print axioms SFT.Materials.PorousOrganization.base
+#print axioms SFT.Materials.PorousOrganization.successor

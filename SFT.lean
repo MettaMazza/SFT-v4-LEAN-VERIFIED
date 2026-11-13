@@ -5289,3 +5289,51 @@ import SFT.Materials.CeramicMaterialExperiment
 import SFT.Materials.CeramicMaterialValidation
 
 import SFT.Materials.CeramicOrganization
+
+import SFT.Materials.PolymerMaterialSource
+
+import SFT.Materials.PolymerMaterialGrammar
+
+import SFT.Materials.PolymerMaterialEvidence
+
+import SFT.Materials.PolymerMaterialExperiment
+
+import SFT.Materials.PolymerMaterialValidation
+
+import SFT.Materials.PolymerOrganization
+
+import SFT.Materials.CompositeMaterialSource
+
+import SFT.Materials.CompositeMaterialGrammar
+
+import SFT.Materials.CompositeMaterialEvidence
+
+import SFT.Materials.CompositeMaterialExperiment
+
+import SFT.Materials.CompositeMaterialValidation
+
+import SFT.Materials.CompositeOrganization
+
+import SFT.Materials.GlassMaterialSource
+
+import SFT.Materials.GlassMaterialGrammar
+
+import SFT.Materials.GlassMaterialEvidence
+
+import SFT.Materials.GlassMaterialExperiment
+
+import SFT.Materials.GlassMaterialValidation
+
+import SFT.Materials.GlassOrganization
+
+import SFT.Materials.PorousMaterialSource
+
+import SFT.Materials.PorousMaterialGrammar
+
+import SFT.Materials.PorousMaterialEvidence
+
+import SFT.Materials.PorousMaterialExperiment
+
+import SFT.Materials.PorousMaterialValidation
+
+import SFT.Materials.PorousOrganization

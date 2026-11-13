@@ -1,0 +1,27 @@
+import SFT.Materials.PolymerOrganization
+#print axioms SFT.Materials.PolymerOrganization.Member
+#print axioms SFT.Materials.PolymerOrganization.Record
+#print axioms SFT.Materials.PolymerOrganization.population
+#print axioms SFT.Materials.PolymerOrganization.sequence
+#print axioms SFT.Materials.PolymerOrganization.length
+#print axioms SFT.Materials.PolymerOrganization.census
+#print axioms SFT.Materials.PolymerOrganization.positivePopulation
+#print axioms SFT.Materials.PolymerOrganization.actualLength
+#print axioms SFT.Materials.PolymerOrganization.positiveLength
+#print axioms SFT.Materials.PolymerOrganization.repeatIdentityRetained
+#print axioms SFT.Materials.PolymerOrganization.sourceChainAdmitted
+#print axioms SFT.Materials.PolymerOrganization.completeCovalentSequence
+#print axioms SFT.Materials.PolymerOrganization.eachNeighborCovalent
+#print axioms SFT.Materials.PolymerOrganization.actualCovalentRecurrence
+#print axioms SFT.Materials.PolymerOrganization.everyCensusRow
+#print axioms SFT.Materials.PolymerOrganization.noInventedCensusRow
+#print axioms SFT.Materials.PolymerOrganization.append
+#print axioms SFT.Materials.PolymerOrganization.successorPopulation
+#print axioms SFT.Materials.PolymerOrganization.successorCensus
+#print axioms SFT.Materials.PolymerOrganization.priorMemberRetained
+#print axioms SFT.Materials.PolymerOrganization.boundaryRetained
+#print axioms SFT.Materials.PolymerOrganization.record
+#print axioms SFT.Materials.PolymerOrganization.wholeInputRetained
+#print axioms SFT.Materials.PolymerOrganization.records
+#print axioms SFT.Materials.PolymerOrganization.base
+#print axioms SFT.Materials.PolymerOrganization.successor

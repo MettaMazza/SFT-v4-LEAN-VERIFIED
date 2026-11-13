@@ -1,0 +1,22 @@
+import SFT.Materials.CompositeOrganization
+#print axioms SFT.Materials.CompositeOrganization.Constituent
+#print axioms SFT.Materials.CompositeOrganization.Interface
+#print axioms SFT.Materials.CompositeOrganization.Record
+#print axioms SFT.Materials.CompositeOrganization.constituents
+#print axioms SFT.Materials.CompositeOrganization.content
+#print axioms SFT.Materials.CompositeOrganization.traction
+#print axioms SFT.Materials.CompositeOrganization.distinguishableConstituents
+#print axioms SFT.Materials.CompositeOrganization.allContentConserved
+#print axioms SFT.Materials.CompositeOrganization.allTractionConserved
+#print axioms SFT.Materials.CompositeOrganization.eachContentFromInterface
+#print axioms SFT.Materials.CompositeOrganization.eachTractionFromInterface
+#print axioms SFT.Materials.CompositeOrganization.contentUsesDeclaredInterface
+#print axioms SFT.Materials.CompositeOrganization.tractionUsesDeclaredInterface
+#print axioms SFT.Materials.CompositeOrganization.appendInterface
+#print axioms SFT.Materials.CompositeOrganization.successorConstituents
+#print axioms SFT.Materials.CompositeOrganization.successorContent
+#print axioms SFT.Materials.CompositeOrganization.record
+#print axioms SFT.Materials.CompositeOrganization.wholeInputRetained
+#print axioms SFT.Materials.CompositeOrganization.records
+#print axioms SFT.Materials.CompositeOrganization.base
+#print axioms SFT.Materials.CompositeOrganization.successor

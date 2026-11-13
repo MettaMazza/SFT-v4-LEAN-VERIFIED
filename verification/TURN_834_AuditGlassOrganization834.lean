@@ -1,0 +1,22 @@
+import SFT.Materials.GlassOrganization
+#print axioms SFT.Materials.GlassOrganization.Carrier
+#print axioms SFT.Materials.GlassOrganization.CrystallineTranslation
+#print axioms SFT.Materials.GlassOrganization.noncrystalline
+#print axioms SFT.Materials.GlassOrganization.Record
+#print axioms SFT.Materials.GlassOrganization.localStructureReturns
+#print axioms SFT.Materials.GlassOrganization.translationWouldPreserveWord
+#print axioms SFT.Materials.GlassOrganization.noCrystallineClass
+#print axioms SFT.Materials.GlassOrganization.sourceClassExactly
+#print axioms SFT.Materials.GlassOrganization.elapsed
+#print axioms SFT.Materials.GlassOrganization.macrostate
+#print axioms SFT.Materials.GlassOrganization.exactObservationTime
+#print axioms SFT.Materials.GlassOrganization.allHistoryEvents
+#print axioms SFT.Materials.GlassOrganization.allHistoryActions
+#print axioms SFT.Materials.GlassOrganization.completeMacroClass
+#print axioms SFT.Materials.GlassOrganization.record
+#print axioms SFT.Materials.GlassOrganization.wholeInputRetained
+#print axioms SFT.Materials.GlassOrganization.preparationDistinguished
+#print axioms SFT.Materials.GlassOrganization.relaxationDistinguished
+#print axioms SFT.Materials.GlassOrganization.records
+#print axioms SFT.Materials.GlassOrganization.base
+#print axioms SFT.Materials.GlassOrganization.successor

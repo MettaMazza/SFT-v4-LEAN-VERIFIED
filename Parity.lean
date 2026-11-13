@@ -1597,3 +1597,15 @@ def main : IO Unit := do
 
   for c in SFT.Materials.CeramicMaterialGrammar.candidates do
     IO.println ("CeramicMaterialGrammar\t" ++ SFT.Materials.CeramicMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.CeramicMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.CeramicMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.CeramicMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.PolymerMaterialGrammar.candidates do
+    IO.println ("PolymerMaterialGrammar\t" ++ SFT.Materials.PolymerMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PolymerMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PolymerMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.PolymerMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.CompositeMaterialGrammar.candidates do
+    IO.println ("CompositeMaterialGrammar\t" ++ SFT.Materials.CompositeMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.CompositeMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.CompositeMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.CompositeMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.GlassMaterialGrammar.candidates do
+    IO.println ("GlassMaterialGrammar\t" ++ SFT.Materials.GlassMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.GlassMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.GlassMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.GlassMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.PorousMaterialGrammar.candidates do
+    IO.println ("PorousMaterialGrammar\t" ++ SFT.Materials.PorousMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.PorousMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.PorousMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.PorousMaterialGrammar.decisionReason c)

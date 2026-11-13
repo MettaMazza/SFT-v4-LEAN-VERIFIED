@@ -1516,3 +1516,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.SemiOpticalGrammar.candidates do
     IO.println ("SemiOpticalGrammar\t" ++ SFT.Materials.SemiOpticalGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SemiOpticalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SemiOpticalGrammar.exactForm c ++ "\t" ++ SFT.Materials.SemiOpticalGrammar.decisionReason c)
+
+  for c in SFT.Materials.CoherentPairGrammar.candidates do
+    IO.println ("CoherentPairGrammar\t" ++ SFT.Materials.CoherentPairGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.CoherentPairGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.CoherentPairGrammar.exactForm c ++ "\t" ++ SFT.Materials.CoherentPairGrammar.decisionReason c)

@@ -1,0 +1,19 @@
+import SFT.Materials.PairedCarrier
+#print axioms SFT.Materials.PairedCarrier.pair
+#print axioms SFT.Materials.PairedCarrier.opposedDistinct
+#print axioms SFT.Materials.PairedCarrier.completeOpposedPairs
+#print axioms SFT.Materials.PairedCarrier.support
+#print axioms SFT.Materials.PairedCarrier.pairHasTwoLabels
+#print axioms SFT.Materials.PairedCarrier.noSingletonHoldsBoth
+#print axioms SFT.Materials.PairedCarrier.actions
+#print axioms SFT.Materials.PairedCarrier.oneActionAlternates
+#print axioms SFT.Materials.PairedCarrier.oneActionNotClosed
+#print axioms SFT.Materials.PairedCarrier.twoActionsClose
+#print axioms SFT.Materials.PairedCarrier.compositeClass
+#print axioms SFT.Materials.PairedCarrier.pairedActions
+#print axioms SFT.Materials.PairedCarrier.everyPairedRecurrenceCloses
+#print axioms SFT.Materials.PairedCarrier.exchangeRetainsOpposition
+#print axioms SFT.Materials.PairedCarrier.exchangeReturnsCompletePair
+#print axioms SFT.Materials.PairedCarrier.records
+#print axioms SFT.Materials.PairedCarrier.base
+#print axioms SFT.Materials.PairedCarrier.successor

@@ -4969,3 +4969,15 @@ import SFT.Materials.SemiOpticalExperiment
 import SFT.Materials.SemiOpticalValidation
 
 import SFT.Materials.InterbandTransition
+
+import SFT.Materials.CoherentPairSource
+
+import SFT.Materials.CoherentPairGrammar
+
+import SFT.Materials.CoherentPairEvidence
+
+import SFT.Materials.CoherentPairExperiment
+
+import SFT.Materials.CoherentPairValidation
+
+import SFT.Materials.PairedCarrier

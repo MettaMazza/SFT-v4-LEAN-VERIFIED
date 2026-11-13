@@ -20855,3 +20855,26 @@ Original V3: sft/materials/obligations.py, MATERIALS_OBLIGATIONS[75]; sft/materi
 
 Source and proof links: [Original V3 obligation](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/materials/obligations.py#L148); [Lean derivation](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Materials/RadiationDamage.lean); [Timeline TURN846](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt#L7221); [Verification receipt](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/verification/TURN_846_RADIATIONDAMAGE_COMPLETION.json).
 
+
+720. Mechanical–electric orientation preservation and inverse records
+
+Let S be the complete source support, q:S→M its retained material observation, and f:M→E the mechanical–electric response, with M=q(S). Each operation uses the original admitted finite transformation domain: the source is nonempty and has distinct labels, and exactly one image is supplied for each source label. Its original composition is
+
+    (f∘q)(s)=f(q(s)).
+
+For the response passing the original reversibility test |f(M)|=|M|, finite injectivity gives
+
+    f(a)=f(b), a,b∈M ⇒ a=b,
+    f⁻¹({e})={a} for every e∈f(M).
+
+The inverse record therefore recovers the mechanical displacement attached to a. This test is on retained classes M; q itself may close distinctions. No injectivity of q is required.
+
+Write P(e) for the complete bound electric-orientation record associated with e. If the material observation closes a distinction, q(s)=q(t), substitution through the complete response gives
+
+    P(f(q(s)))=P(f(q(t))).
+
+Consequently, different held orientations in those actual records imply q(s)≠q(t). Equivalently, every pair retained by f∘q was already retained by q. Reorienting a bound polarization record changes its held orientation while retaining its charge and its endpoint pair. These statements use the full records, not a fitted coupling coefficient. The complete output preserves the input, composed response, inverse records and every mechanical/electric row. The base is one complete record; finite extension appends exactly one complete record.
+
+Original derivation operations: sft/information_science/conservation_loss_transformation/law.py, transformation_ledger, compose, is_reversible, reverse_record and downstream_retention_law; original Materials statement and grammar: sft/materials/obligations.py, entry76, and claims/SFT-MAT-FUNC-PIEZOELECTRIC-001/WHY_DERIVATION_CHECK.md, pinned to76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: SFT/Materials/Piezoelectric.lean, exactComposition, reversibleOnRetainedClasses, uniquePredecessorFibres, closedMaterialHasSameElectricRecord, actualOrientationRequiresNonclosure, reverseRestoresMechanicalRecord and successor; reused ConservationComposition, ConservationCardinality and BoundPolarization. Timeline: TURN847. Component proof evidence: verification/TURN_847_PIEZO_COMPONENTS.json.
+
+Source and proof links: [Original V3 conservation derivation](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/conservation_loss_transformation/law.py); [Lean declarations](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Materials/Piezoelectric.lean); [Timeline TURN847](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt); [Component evidence](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/verification/TURN_847_PIEZO_COMPONENTS.json).

@@ -1,6 +1,6 @@
 ## 500 / 2,781 V3 entries complete
 
-> **500-entry milestone — author review edition 0.3.** [Read the cumulative review PDF](publication/SFT_REVIEW.pdf) · [Review guide](publication/REVIEW_GUIDE.txt). This edition awaits author approval before Zenodo publication.
+> **500-entry milestone — published edition 0.3.** [Read the paper](https://zenodo.org/records/24205463/files/SFT_PAPER.pdf) · [Zenodo publication](https://zenodo.org/records/24205463) · [Release evidence](publication/PUBLICATION_RECEIPT.json).
 
 **25,500 Lean theorems proved · 0 axiom dependencies · Unified Constants complete: 26 exact readings across seven sectors.**
 
@@ -23,15 +23,15 @@
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
 
-## Unified Constants milestone - corrected edition 0.2.1
+## 500-entry milestone - edition 0.3
 
-**Smithian Fold Theory: A Zero-Axiom, Zero-Free-Parameter Unified Constants Object - Lean 4 Formal Verification**
+**Smithian Fold Theory: Zero-Axiom, Zero-Free-Parameter Derivations from First Principles - Lean 4 Formal Verification**
 
-The exact fine-structure ratio opens the cumulative SFT paper. This milestone connects 26 terminal readings across seven sectors through one rooted constants object, with all 4,096 original alternatives verified.
+The exact fine-structure ratio opens the cumulative paper. Its Unified Constants construction connects 26 terminal readings across seven sectors, followed by the completed chemistry and materials derivations. The 643-page edition contains 704 numbered main sections and 16 subsections, with 720 bookmarks and source/Lean/timeline references.
 
-**[Read the corrected paper](https://zenodo.org/records/23849998/files/SFT_PAPER.pdf)** · [Published full text](publication/editions/0.2.1/ZENODO_PAPER_DRAFT.txt) · [Working paper toward 500](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Review guide](publication/REVIEW_GUIDE.txt) · [Release index](publication/RELEASE_INDEX.json)
+**[Read the published PDF](https://zenodo.org/records/24205463/files/SFT_PAPER.pdf)** · [Full text](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Release index](publication/RELEASE_INDEX.json) · [Publication verification](publication/PUBLICATION_RECEIPT.json)
 
-**[Corrected edition 0.2.1 is published on Zenodo](https://doi.org/10.5281/zenodo.23849998).** [Published edition 0.2](https://doi.org/10.5281/zenodo.23846751) remains available. The [previous published edition 0.1](https://doi.org/10.5281/zenodo.23782217) remains available. This edition includes the cumulative mathematical manuscript, timeline, source correspondence and full verification evidence. The next review milestone is 500 completed entries, then every 250; the full cumulative paper is updated and checked before each review pause.
+**[Edition 0.3 is published on Zenodo](https://doi.org/10.5281/zenodo.24205463).** Previous editions [0.2.1](https://doi.org/10.5281/zenodo.23849998), [0.2](https://doi.org/10.5281/zenodo.23846751) and [0.1](https://doi.org/10.5281/zenodo.23782217) remain available. The main PDF is the verified default landing-page preview. The next review milestone is 750 completed entries, then every 250; scientific continuation requires the author's explicit resumption.
 
 # One model. Every derivation. Machine-checked.
 
@@ -141,7 +141,7 @@ lake env lean --run Parity.lean
 lake env lean --run RootParity.lean
 ```
 
-The commands below reproduce their configured Lean build, declaration-audit and source-comparison checks. The present milestone retains applicable source-bound audits and comparisons and passed a focused integration import of all eight milestone entries. A whole-repository root rebuild was not completed because an older GeometryGrammar cache object was absent; no whole-root build result is claimed for this review edition.
+The commands below reproduce their configured Lean build, declaration-audit and source-comparison checks. The present milestone retains applicable source-bound audits and comparisons and passed a focused integration import of all eight milestone entries. A whole-repository root rebuild was not completed because an older GeometryGrammar cache object was absent; no whole-root build result is claimed for that historical review checkpoint.
 
 ```sh
 SFT_V3_SOURCE=/path/to/pinned/v3 python3 verification/check_current_parity.py
@@ -174,7 +174,7 @@ The scripts read pinned v3 source and artifacts without importing or executing v
 
 ## Historical verification checkpoints
 
-The following records describe earlier checkpoints; their intermediate counts and running-process notes are historical. Current status is the 308-entry review summary above. Full chronology is retained in [TIMELINE.txt](TIMELINE.txt).
+The following records describe earlier checkpoints; their intermediate counts and running-process notes are historical. Current status is the 500-entry published milestone above. Full chronology is retained in [TIMELINE.txt](TIMELINE.txt).
 
 Batch review: [all 21 existing entries](verification/TURN_114_BATCH_EXISTING_WORK.json). Run `python3 verification/batch_existing_work.py` for the existing global build/audit/parity and exact missing-method inventory. Interface presence alone does not establish derivation completion.
 

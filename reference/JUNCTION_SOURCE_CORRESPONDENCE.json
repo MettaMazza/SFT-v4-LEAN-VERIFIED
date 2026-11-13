@@ -1,7 +1,7 @@
 {
   "claim_id": "SFT-MAT-SEMI-JUNCTION-001",
   "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
-  "status": "verified_components_entry_in_progress",
+  "status": "complete",
   "source_operations": [
     {
       "source": "sft/materials/derivation.py:_dimensions, blueprint_candidate_ids",
@@ -80,10 +80,8 @@
     "JunctionTransfer.fieldSurplus",
     "JunctionTransfer.transportRemainderRetainsBothResponses"
   ],
-  "remaining": [
-    "Translate the transport/field balance at declared conditions in sft/materials/obligations.py:94 on its original domain, which already includes generated cross-interface transfers and their retained space-charge/field organization. The conditional base/successor preservation operation is verified. What remains is identifying and proving the source-specific balance relation at the declared observation boundary; neither generation from bare region data nor assuming balance from the observation-coordinate label is required or authorized."
-  ],
-  "entry_complete": false,
+  "remaining": [],
+  "entry_complete": true,
   "network_binding": "verification/TURN_732_JUNCTION_NETWORK_BINDING.json",
   "carrier_argument_inspection": "verification/TURN_733_JUNCTION_CARRIER_TRACE.json",
   "doped_carrier_binding": "verification/TURN_735_JUNCTION_DOPED_BINDING.json",
@@ -279,5 +277,13 @@
     "existing_translation": "SFT.Materials.JunctionExperiment.validateSpec and registeredSpecValid already implement and certify the registered blueprint validation; no duplicate implementation is needed.",
     "new_proofs": 0,
     "entry_complete": false
+  },
+  "completion_evidence": "verification/JUNCTION_COMPLETION_RECONCILIATION.json",
+  "completion_reconciliation": {
+    "recorded_at": "2026-11-13T13:30:35.696974+00:00",
+    "receipt": "verification/JUNCTION_COMPLETION_RECONCILIATION.json",
+    "source_scope_unchanged": true,
+    "prior_reviews_retained_as_history": true,
+    "additional_completion_requirement_removed": true
   }
 }

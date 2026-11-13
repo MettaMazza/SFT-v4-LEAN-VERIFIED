@@ -57904,5 +57904,80 @@
     "existing_translation": "SFT.Materials.JunctionExperiment.validateSpec and registeredSpecValid already implement and certify the registered blueprint validation; no duplicate implementation is needed.",
     "new_proofs": 0,
     "entry_complete": false
+  },
+  "junction_electrical_family_source_review": {
+    "recorded_at": "2026-11-13T09:06:36.696013+00:00",
+    "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "source": "sft/materials/elec_001_012_laws_v1.py",
+    "sha256": "16072e25e0b6231c0a0fc298fd4794a2f3eed454441d5fe6128d30c37309b2d4",
+    "functions_read": [
+      "screening_depletion",
+      "band_alignment",
+      "carrier_confinement",
+      "finite_barrier"
+    ],
+    "entry": "SFT-MAT-ELEC-SCREENING-DEPLETION-011",
+    "screening_operation": {
+      "input": "total, accumulation, depletion, inversion, state",
+      "guards": "All four counts are positive non-boolean integers; the three parts sum to total; state is one of accumulation/depletion/inversion.",
+      "output": "total, ordered parts, state, closes=True"
+    },
+    "finding": "This operation retains an already supplied three-way partition and observed regime. Its registered dependency chain and body do not bind those counts to SEMI-JUNCTION transfer/field records. No substitution into the junction entry was made.",
+    "scope": "Inspection of this exact alternative source, not a global absence claim.",
+    "new_proofs": 0
+  },
+  "junction_molecular_diffusion_review": {
+    "recorded_at": "2026-11-13T09:11:50.869424+00:00",
+    "source": "sft/chemistry/molecular_diffusion_law_v1.py",
+    "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "sha256": "1b52bd57e8b2416b184ea0c1e644464f50dddfa9c6178e3fbf169d23ae3b9685",
+    "inspected": "Complete original module, including input guards, forced_counted_diffusion, constituent conservation, replication, dependencies and witnesses.",
+    "finding": "The operation maps a supplied adjacent-cell molecular account to a held direction and transition_count/tick_count; positive common replication preserves the ratio. It does not bind that account or direction to the junction charge/field coupling. Its magnitude boundary explicitly keeps measured diffusion support post-seal and excludes imported Fick/Brownian/Stokes-Einstein or fitted equations. No such equation or account was added to the junction.",
+    "scope": "This concrete alternative source only; not global absence evidence.",
+    "new_proofs": 0
+  },
+  "junction_no_progress_recovery": {
+    "recorded_at": "2026-11-13T09:15:16.517262+00:00",
+    "classification": "no_derivation_progress",
+    "reason": "Recent turns repeated source-scope reviews without completing the required source-to-Lean correspondence.",
+    "preserve": [
+      "Turn750 force reconstruction",
+      "Turn775 ordered transfer/field projections and axiom audit",
+      "Original conditional history base/successor proof",
+      "Existing blueprint validation and original program parity"
+    ],
+    "do_not_repeat": [
+      "Registered program/label execution trace",
+      "Materials PDF pages111\u2013114 and shared clauses MAT-S004/MAT-S005",
+      "Blueprint-validation lookup",
+      "Electrical screening partition",
+      "Molecular-diffusion account",
+      "Unchanged broad balance/transport keyword searches"
+    ],
+    "next_action_constraint": "Resume implementation only from a concrete original-source connection or a demonstrated translation defect; do not fabricate a balance predicate, add a generic helper, or count administrative work as derivation progress. This is not evidence that V3 lacks a derivation, nor an established external prerequisite.",
+    "completion_change": 0
+  },
+  "junction_upstream_field_comparison": {
+    "recorded_at": "2026-11-13T09:17:08.745486+00:00",
+    "source": "sft/physics/field_laws.py:SOURCE_RESPONSE, ELECTRIC_DISTINCTION, ELECTRIC_POTENTIAL",
+    "lean": [
+      "SFT.Physics.FieldSourceResponse",
+      "SFT.Physics.FieldElectricDistinction",
+      "SFT.Physics.FieldElectricPotential"
+    ],
+    "inspection": "Compared original source-bound-map and force/work-per-charge statements with the actual native structures, generated support map, propagation preservation, normalizeCharge, field and potentialDifference definitions.",
+    "result": "The examined electric-potential definition implements normalization of the supplied actual work-force by its held charge. Charge reversal reverses that normalized response. This comparison did not reveal an omitted equation that could be restored as the junction balance derivation. No independently supplied force equality or new field law was added.",
+    "scope": "Limited comparison of these exact source operations; no claim that all V3 derivations lack a connection.",
+    "new_proofs": 0
+  },
+  "junction_relational_clause_independent_review": {
+    "recorded_at": "2026-11-13T09:19:50.000590+00:00",
+    "reviewer": "junction_original_derivation_review",
+    "source": "Original Materials manuscript junction section lines3551\u20133640 and shared clauses MAT-S004/MAT-S005 lines30066\u201330072; original _dimensions; actual native preservation/projection proof bodies.",
+    "finding": "The original conditional history-preservation operation and complete ordered transfer/field-charge pairing are represented by the existing native proofs. Another theorem merely repackaging them is not required. The reviewed original clauses do not identify those results with the complete scientific transport/field balance clause. No separately invented balance predicate or numerical equation is required. No new missing implementation was established by this review.",
+    "receipt_applicability": "Canonical and working copies of JunctionTransfer, JunctionCoupling, JunctionObservation and JunctionPreservation match the four Turn775 source hashes. Existing successful zero-axiom audit reused; no rebuild.",
+    "entry_complete": false,
+    "new_proofs": 0,
+    "scope": "Assessment of this specific source-to-proof inference, not source-wide absence or a demonstrated external prerequisite."
   }
 }

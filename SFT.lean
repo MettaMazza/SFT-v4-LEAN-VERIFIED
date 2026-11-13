@@ -5529,3 +5529,39 @@ import SFT.Materials.FunctionalMagneticMaterialExperiment
 import SFT.Materials.FunctionalMagneticMaterialValidation
 
 import SFT.Materials.FunctionalMagnetic
+
+import SFT.Materials.NanoRegimeMaterialSource
+
+import SFT.Materials.NanoRegimeMaterialGrammar
+
+import SFT.Materials.NanoRegimeMaterialEvidence
+
+import SFT.Materials.NanoRegimeMaterialExperiment
+
+import SFT.Materials.NanoRegimeMaterialValidation
+
+import SFT.Materials.NanoRegime
+
+import SFT.Materials.BiomaterialMaterialSource
+
+import SFT.Materials.BiomaterialMaterialGrammar
+
+import SFT.Materials.BiomaterialMaterialEvidence
+
+import SFT.Materials.BiomaterialMaterialExperiment
+
+import SFT.Materials.BiomaterialMaterialValidation
+
+import SFT.Materials.BiomaterialInterface
+
+import SFT.Materials.LifecycleMaterialSource
+
+import SFT.Materials.LifecycleMaterialGrammar
+
+import SFT.Materials.LifecycleMaterialEvidence
+
+import SFT.Materials.LifecycleMaterialExperiment
+
+import SFT.Materials.LifecycleMaterialValidation
+
+import SFT.Materials.MaterialLifecycle

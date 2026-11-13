@@ -1,0 +1,26 @@
+import SFT.Materials.MaterialLifecycle
+#print axioms SFT.Materials.MaterialLifecycle.Recovery
+#print axioms SFT.Materials.MaterialLifecycle.Record
+#print axioms SFT.Materials.MaterialLifecycle.recoveryChanges
+#print axioms SFT.Materials.MaterialLifecycle.transitions
+#print axioms SFT.Materials.MaterialLifecycle.ledger
+#print axioms SFT.Materials.MaterialLifecycle.everyTransitionRetained
+#print axioms SFT.Materials.MaterialLifecycle.transitionLedgerExactly
+#print axioms SFT.Materials.MaterialLifecycle.processingHistoryComplete
+#print axioms SFT.Materials.MaterialLifecycle.useHistoryComplete
+#print axioms SFT.Materials.MaterialLifecycle.recoveryHistoryComplete
+#print axioms SFT.Materials.MaterialLifecycle.processingSourcesRetained
+#print axioms SFT.Materials.MaterialLifecycle.allFlows
+#print axioms SFT.Materials.MaterialLifecycle.allLosses
+#print axioms SFT.Materials.MaterialLifecycle.completeFlowBalance
+#print axioms SFT.Materials.MaterialLifecycle.lossesRemainInLedger
+#print axioms SFT.Materials.MaterialLifecycle.recyclable
+#print axioms SFT.Materials.MaterialLifecycle.requiresExplicitRecovery
+#print axioms SFT.Materials.MaterialLifecycle.absentRecoveryRejected
+#print axioms SFT.Materials.MaterialLifecycle.recoveryIdentityExactly
+#print axioms SFT.Materials.MaterialLifecycle.record
+#print axioms SFT.Materials.MaterialLifecycle.fullInputRetained
+#print axioms SFT.Materials.MaterialLifecycle.lossQualityRetained
+#print axioms SFT.Materials.MaterialLifecycle.records
+#print axioms SFT.Materials.MaterialLifecycle.base
+#print axioms SFT.Materials.MaterialLifecycle.successor

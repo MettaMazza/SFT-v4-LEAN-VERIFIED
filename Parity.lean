@@ -1657,3 +1657,12 @@ def main : IO Unit := do
 
   for c in SFT.Materials.FunctionalMagneticMaterialGrammar.candidates do
     IO.println ("FunctionalMagneticMaterialGrammar\t" ++ SFT.Materials.FunctionalMagneticMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.FunctionalMagneticMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.FunctionalMagneticMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.FunctionalMagneticMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.NanoRegimeMaterialGrammar.candidates do
+    IO.println ("NanoRegimeMaterialGrammar\t" ++ SFT.Materials.NanoRegimeMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.NanoRegimeMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.NanoRegimeMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.NanoRegimeMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.BiomaterialMaterialGrammar.candidates do
+    IO.println ("BiomaterialMaterialGrammar\t" ++ SFT.Materials.BiomaterialMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.BiomaterialMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.BiomaterialMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.BiomaterialMaterialGrammar.decisionReason c)
+
+  for c in SFT.Materials.LifecycleMaterialGrammar.candidates do
+    IO.println ("LifecycleMaterialGrammar\t" ++ SFT.Materials.LifecycleMaterialGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.LifecycleMaterialGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.LifecycleMaterialGrammar.exactForm c ++ "\t" ++ SFT.Materials.LifecycleMaterialGrammar.decisionReason c)

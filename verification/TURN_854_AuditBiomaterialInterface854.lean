@@ -1,0 +1,21 @@
+import SFT.Materials.BiomaterialInterface
+#print axioms SFT.Materials.BiomaterialInterface.Record
+#print axioms SFT.Materials.BiomaterialInterface.relation
+#print axioms SFT.Materials.BiomaterialInterface.exactInterface
+#print axioms SFT.Materials.BiomaterialInterface.identitiesRetained
+#print axioms SFT.Materials.BiomaterialInterface.completeCompatibility
+#print axioms SFT.Materials.BiomaterialInterface.everyInterfaceRetained
+#print axioms SFT.Materials.BiomaterialInterface.transferEitherDirection
+#print axioms SFT.Materials.BiomaterialInterface.responseEitherDirection
+#print axioms SFT.Materials.BiomaterialInterface.transferSupportHeld
+#print axioms SFT.Materials.BiomaterialInterface.completeTransferBalance
+#print axioms SFT.Materials.BiomaterialInterface.completeResponseBalance
+#print axioms SFT.Materials.BiomaterialInterface.observeOutcome
+#print axioms SFT.Materials.BiomaterialInterface.outcomeCannotSelectRelation
+#print axioms SFT.Materials.BiomaterialInterface.record
+#print axioms SFT.Materials.BiomaterialInterface.fullInputRetained
+#print axioms SFT.Materials.BiomaterialInterface.exposureFunctionRetained
+#print axioms SFT.Materials.BiomaterialInterface.outcomeRecorded
+#print axioms SFT.Materials.BiomaterialInterface.records
+#print axioms SFT.Materials.BiomaterialInterface.base
+#print axioms SFT.Materials.BiomaterialInterface.successor

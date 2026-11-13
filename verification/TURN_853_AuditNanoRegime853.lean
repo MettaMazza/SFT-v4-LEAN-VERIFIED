@@ -1,0 +1,22 @@
+import SFT.Materials.NanoRegime
+#print axioms SFT.Materials.NanoRegime.Record
+#print axioms SFT.Materials.NanoRegime.census
+#print axioms SFT.Materials.NanoRegime.bulkCloses
+#print axioms SFT.Materials.NanoRegime.nanoscaleBoundary
+#print axioms SFT.Materials.NanoRegime.closureExactly
+#print axioms SFT.Materials.NanoRegime.nanoscaleExactly
+#print axioms SFT.Materials.NanoRegime.retainedDistinctionRejectsBulk
+#print axioms SFT.Materials.NanoRegime.retainedDistinctionAdmitsBoundary
+#print axioms SFT.Materials.NanoRegime.boundaryInteriorDistinguished
+#print axioms SFT.Materials.NanoRegime.collapsedBoundaryInteriorAdmitted
+#print axioms SFT.Materials.NanoRegime.propertyDistinctionRetained
+#print axioms SFT.Materials.NanoRegime.bulkCannotReconstruct
+#print axioms SFT.Materials.NanoRegime.exactSupportRatio
+#print axioms SFT.Materials.NanoRegime.completeTransferConservation
+#print axioms SFT.Materials.NanoRegime.censusRows
+#print axioms SFT.Materials.NanoRegime.everyCellRecorded
+#print axioms SFT.Materials.NanoRegime.record
+#print axioms SFT.Materials.NanoRegime.completeInputRetained
+#print axioms SFT.Materials.NanoRegime.records
+#print axioms SFT.Materials.NanoRegime.base
+#print axioms SFT.Materials.NanoRegime.successor

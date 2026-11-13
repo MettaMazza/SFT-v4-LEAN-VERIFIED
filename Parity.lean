@@ -1531,3 +1531,6 @@ def main : IO Unit := do
 
   for c in SFT.Materials.JosephsonGrammar.candidates do
     IO.println ("JosephsonGrammar\t" ++ SFT.Materials.JosephsonGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.JosephsonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.JosephsonGrammar.exactForm c ++ "\t" ++ SFT.Materials.JosephsonGrammar.decisionReason c)
+
+  for c in SFT.Materials.SuperfluidGrammar.candidates do
+    IO.println ("SuperfluidGrammar\t" ++ SFT.Materials.SuperfluidGrammar.candidateId c ++ "\t" ++ (if SFT.Materials.SuperfluidGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Materials.SuperfluidGrammar.exactForm c ++ "\t" ++ SFT.Materials.SuperfluidGrammar.decisionReason c)

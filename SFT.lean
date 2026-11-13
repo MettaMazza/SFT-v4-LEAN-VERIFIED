@@ -5027,3 +5027,15 @@ import SFT.Materials.JosephsonExperiment
 import SFT.Materials.JosephsonValidation
 
 import SFT.Materials.WeakLinkTransfer
+
+import SFT.Materials.SuperfluidSource
+
+import SFT.Materials.SuperfluidGrammar
+
+import SFT.Materials.SuperfluidEvidence
+
+import SFT.Materials.SuperfluidExperiment
+
+import SFT.Materials.SuperfluidValidation
+
+import SFT.Materials.SuperfluidBoundary

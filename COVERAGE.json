@@ -38889,9 +38889,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-CPLX-ARBITRARY-CIRCUIT-LOWER-BOUND-002-18e485a78cc263bd.json",
       "statement": "Across every circuit assembled from admitted Fold edges, closing a depth-k path requires at least k gates, complete source support requires width b^k, and complete layered coverage requires the sum of b^r edges for r from One through k. The registered circuit attains every bound.",
       "title": "Arbitrary admitted Fold-circuit lower-bound law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Computation/NativeCircuit.lean",
+        "SFT/Computation/NativeCircuitPaths.lean",
+        "SFT/Computation/NativeCircuitCensus.lean",
+        "SFT/Computation/NativeCircuitDomain.lean",
+        "SFT/Computation/NativeCircuitWitnesses.lean",
+        "SFT/Computation/NativeCircuitGrammar.lean",
+        "SFT/Computation/NativeCircuitEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256 Lean program and all original fields/hashes, four original independent accepted/adverse cases; original formal evidence mode preserved.",
       "registration_sha256": "11d4950faf7fdfe45b321990304e2ed900fe48c662b2de22a6cf68f8bfbf9367",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -38930,7 +38938,10 @@
         "statement": "Across every circuit assembled from admitted Fold edges, closing a depth-k path requires at least k gates, complete source support requires width b^k, and complete layered coverage requires the sum of b^r edges for r from One through k. The registered circuit attains every bound.",
         "status": "independently_replicated",
         "title": "Arbitrary admitted Fold-circuit lower-bound law"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_866_CIRCUIT_COMPLETION.json",
+      "verified_scope": "Exact forced-edge generation, binary layer widths, layered counts, distinct word and edge populations, arbitrary input/source coverage lower bounds.; Rank drop of each actual lawful edge; all arbitrary lawful closing paths have the exact input depth; complete forced-edge circuit constructs every closing path and attains required source-edge count.; All16384 original subsets of14 forced edges; exact arithmetic binary-mask selection; unique full-mask survivor.; Original positive finite depth guard and exact returned resource tuple.; Original resource,full-subset uniqueness and distinct-edge attainment witnesses at every source depth1..14.; All eight original binary axes,complete256 product,source decisions/reasons and unique survivor.; Original GeneratedComputationProgram registration,census,decisions,closure,three executable witnesses,controls,hashes and unknown ID."
     },
     {
       "branch": "quantum_computation",
@@ -195638,13 +195649,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-14T03:23:26.604924+00:00",
+  "updated_at": "2026-11-14T03:51:49.608489+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2248,
-    "fully_reconstructed_claims": 533,
-    "axiom_free_exported_results": 27166,
-    "axiom_free_audited_definitions_and_theorems": 66027
+    "pending": 2247,
+    "fully_reconstructed_claims": 534,
+    "axiom_free_exported_results": 27210,
+    "axiom_free_audited_definitions_and_theorems": 66127
   }
 }

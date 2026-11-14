@@ -6041,3 +6041,17 @@ import SFT.Computation.NativePnpWitnesses
 import SFT.Computation.NativePnpGrammar
 
 import SFT.Computation.NativePnpEvidence
+
+import SFT.Computation.NativeCircuit
+
+import SFT.Computation.NativeCircuitPaths
+
+import SFT.Computation.NativeCircuitCensus
+
+import SFT.Computation.NativeCircuitDomain
+
+import SFT.Computation.NativeCircuitWitnesses
+
+import SFT.Computation.NativeCircuitGrammar
+
+import SFT.Computation.NativeCircuitEvidence

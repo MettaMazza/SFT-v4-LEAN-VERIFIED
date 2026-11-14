@@ -1681,3 +1681,6 @@ def main : IO Unit := do
 
   for c in SFT.Mathematics.FlooredFluidGrammar.candidates do
     IO.println ("FlooredFluidGrammar\t" ++ SFT.Mathematics.FlooredFluidGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.FlooredFluidGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.FlooredFluidGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.FlooredFluidGrammar.decisionReason c)
+
+  for c in SFT.Mathematics.PrimePairGrammar.candidates do
+    IO.println ("PrimePairGrammar\t" ++ SFT.Mathematics.PrimePairGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.PrimePairGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.PrimePairGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.PrimePairGrammar.decisionReason c)

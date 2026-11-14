@@ -6115,3 +6115,16 @@ import SFT.Physics.ParityGrammar
 import SFT.Physics.ParityControls
 
 import SFT.Physics.ParityEvidence
+import SFT.Physics.PrecisionValidationOperations
+import SFT.Physics.PrecisionValidationWitnesses
+import SFT.Physics.PrecisionValidationRecords
+import SFT.Physics.EWValidationGrammar
+import SFT.Physics.EWValidationWitnesses
+import SFT.Physics.EWValidationEvidence
+import SFT.Physics.EWValidationExperiment
+import SFT.Physics.EWValidationValidation
+import SFT.Physics.HierarchyValidationGrammar
+import SFT.Physics.HierarchyValidationWitnesses
+import SFT.Physics.HierarchyValidationEvidence
+import SFT.Physics.HierarchyValidationExperiment
+import SFT.Physics.HierarchyValidationValidation

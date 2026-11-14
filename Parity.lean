@@ -1717,3 +1717,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ParityGrammar.candidates do
     IO.println ("ParityGrammar\t" ++ SFT.Physics.ParityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ParityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ParityGrammar.exactForm c ++ "\t" ++ SFT.Physics.ParityGrammar.decisionReason c)
+
+  for c in SFT.Physics.EWValidationGrammar.candidates do
+    IO.println ("EWValidationGrammar\t" ++ SFT.Physics.EWValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.EWValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.EWValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.EWValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.HierarchyValidationGrammar.candidates do
+    IO.println ("HierarchyValidationGrammar\t" ++ SFT.Physics.HierarchyValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HierarchyValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HierarchyValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.HierarchyValidationGrammar.decisionReason c)

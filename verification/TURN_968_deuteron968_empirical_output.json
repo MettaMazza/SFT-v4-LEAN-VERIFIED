@@ -1,0 +1,67 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "AMDC-AME2020-MASS-1-2021",
+    "AMDC-NUBASE2020-2021",
+    "NIST-CODATA-2022",
+    "IAEA-NDS-JENDL1-INDC-JAP-45",
+    "IAEA-THEORY-NUCLEAR-STRUCTURE-STI-PUB-249"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:2b155933d2136c40f9411be2934d366e1bb1211b5c48d1b3612fbeb632f61c6c",
+  "falsification_condition": "Reject if the complete AME2020 or NUBASE2020 census contains a different A=2 bound-state inventory; if the directly measured deuteron spin/parity is not 1+; if the exact CODATA proton-plus-neutron taking deuteron interval does not overlap the complete AME2020 deuteron binding interval; if IAEA does not retain distinct singlet/triplet support, a bound parallel-spin deuteron or the reported spin-channel separation; if any source, uncertainty, row or unfavorable control is omitted; or if target content enters before seal.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:1bc4132cc9b3f3454a85ac694fded29649157bc1d5892117f5d2a99fd3cdf36b",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:810b495d4a22dd094552e50447675601945c46ef496d4f917278e3cba354c972",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-PHYS-NUCLEAR-DEUTERON-DINUCLEON-TERMINAL-006-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:8fe80335905493d1f68128747ea9ca9f9c2d5d8ba63f5929e93faf80e32b0814",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:b9ac9f42cb4faeea89bf2baaa6f5883f3033523849e7f42a5ad6efccef97a733",
+    "prediction_seal_hash": "sha256:1ff2d26668f10dbcf01d819dcb6d1ba53c7b199b778ea18437fb34e27f85ccee",
+    "program_hash": "sha256:ece3241f2e5954ab19b7a01609a72b39dae1ceff49d0bec5b4c713dcfc297ad5",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:e0eddf55b2bd1e9f5cfa7be8ae2d520c1f45166ec0ff8a09d754d477a12dabaa",
+    "target_material_present": false,
+    "trace_hash": "sha256:360d208dec733450eca492f3d0e507fc5b7fcb20cb05e55f335119961071e649"
+  },
+  "measurement_receipt_hash": "sha256:517fdc91b68661db3cf84eb534f213a8acfdb139ab490279a5aed8744ae9241d",
+  "measurements": [
+    "complete AME2020 numeric coordinate census retained: 3,558 rows; exactly one A=2 coordinate (2H)",
+    "complete NUBASE2020 state census retained: 5,843 rows; exactly one A=2 state, stable 2H with directly measured Jpi=1+",
+    "NIST CODATA proton+neutron taking deuteron binding interval MeV: (Fraction(111228251, 50000000), Fraction(55614193, 25000000)); central 222456637/100000000",
+    "AME2020 deuteron total binding interval MeV: (Fraction(11122829, 5000000), Fraction(11122833, 5000000)); central 11122831/5000 keV",
+    "CODATA mass-difference and AME2020 binding intervals overlap exactly after all reported uncertainties",
+    "IAEA JENDL complete two-set spin-channel table retained; singlet scattering lengths are externally signed opposite to both positive triplet entries, with every effective-range uncertainty",
+    "IAEA records the bound deuteron, parallel neutron/proton spins, triplet association and spin-dependent cross-section separation",
+    "reversed pp/nn binding, Coulomb-only nn explanation, incomplete-census and changed-source controls rejected"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:dbc76018471956c03fcd443307afeeca2fbbf4d56cf5731eba650eec50b23bc3",
+    "custodian_id": "SFT-EXP-PHYS-NUCLEAR-DEUTERON-DINUCLEON-TERMINAL-006-external-target-custodian",
+    "experiment_registration_hash": "sha256:2b155933d2136c40f9411be2934d366e1bb1211b5c48d1b3612fbeb632f61c6c",
+    "prediction_seal_hash": "sha256:1ff2d26668f10dbcf01d819dcb6d1ba53c7b199b778ea18437fb34e27f85ccee",
+    "registered_target_identity_hash": "sha256:e0eddf55b2bd1e9f5cfa7be8ae2d520c1f45166ec0ff8a09d754d477a12dabaa",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:b3867a0d1fd7030e5c55761d705b2a6f02188f4dcc53cb190c9ba4be0504fe4f"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "sha256:a618c2d97aa7b0e98f2b95f55e582ae9432238180faa3b17c53e0450b5c6ab94"
+}

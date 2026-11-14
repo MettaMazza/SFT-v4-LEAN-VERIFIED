@@ -1,0 +1,402 @@
+{
+  "inputs": {
+    "alternating_readings": {
+      "value": 1
+    },
+    "alternating_remainder": {
+      "family": "structural-absence",
+      "label": "empty-form"
+    },
+    "alternating_support": {
+      "denominator": {
+        "value": 4
+      },
+      "numerator": {
+        "value": 1
+      }
+    },
+    "composite_spin": {
+      "denominator": {
+        "value": 1
+      },
+      "numerator": {
+        "value": 1
+      }
+    },
+    "nn_binding": {
+      "family": "binding-outcome",
+      "label": "unbound"
+    },
+    "nn_spin_hand": {
+      "family": "spin-exchange",
+      "label": "exchange-alternating"
+    },
+    "pn_binding": {
+      "family": "binding-outcome",
+      "label": "bound"
+    },
+    "pn_spin_hand": {
+      "family": "spin-exchange",
+      "label": "exchange-preserving"
+    },
+    "pp_binding": {
+      "family": "binding-outcome",
+      "label": "unbound"
+    },
+    "pp_charge_path": {
+      "denominator": {
+        "value": 1
+      },
+      "numerator": {
+        "value": 1
+      }
+    },
+    "pp_spin_hand": {
+      "family": "spin-exchange",
+      "label": "exchange-alternating"
+    },
+    "preserving_readings": {
+      "value": 3
+    },
+    "preserving_remainder": {
+      "denominator": {
+        "value": 2
+      },
+      "numerator": {
+        "value": 1
+      }
+    },
+    "preserving_support": {
+      "denominator": {
+        "value": 4
+      },
+      "numerator": {
+        "value": 3
+      }
+    },
+    "residual_boundary": {
+      "denominator": {
+        "value": 4
+      },
+      "numerator": {
+        "value": 1
+      }
+    }
+  },
+  "program": {
+    "instructions": [
+      {
+        "arguments": [
+          "preserving_support"
+        ],
+        "destination": "preserving_support",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "alternating_support"
+        ],
+        "destination": "alternating_support",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "residual_boundary"
+        ],
+        "destination": "residual_boundary",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "preserving_remainder"
+        ],
+        "destination": "preserving_remainder",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "preserving_readings"
+        ],
+        "destination": "preserving_readings",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "alternating_readings"
+        ],
+        "destination": "alternating_readings",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "composite_spin"
+        ],
+        "destination": "composite_spin",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "alternating_remainder"
+        ],
+        "destination": "alternating_remainder",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "pn_spin_hand"
+        ],
+        "destination": "pn_spin_hand",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "pp_spin_hand"
+        ],
+        "destination": "pp_spin_hand",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "nn_spin_hand"
+        ],
+        "destination": "nn_spin_hand",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "pn_binding"
+        ],
+        "destination": "pn_binding",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "pp_binding"
+        ],
+        "destination": "pp_binding",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "nn_binding"
+        ],
+        "destination": "nn_binding",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "pp_charge_path"
+        ],
+        "destination": "pp_charge_path",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "preserving_support",
+          "alternating_support",
+          "residual_boundary",
+          "preserving_remainder",
+          "preserving_readings",
+          "alternating_readings",
+          "composite_spin",
+          "alternating_remainder",
+          "pn_spin_hand",
+          "pp_spin_hand",
+          "nn_spin_hand",
+          "pn_binding",
+          "pp_binding",
+          "nn_binding",
+          "pp_charge_path"
+        ],
+        "destination": "prediction",
+        "opcode": "word"
+      },
+      {
+        "arguments": [
+          "prediction"
+        ],
+        "destination": "",
+        "opcode": "emit"
+      }
+    ],
+    "program_id": "SFT-EXP-PHYS-NUCLEAR-DEUTERON-DINUCLEON-TERMINAL-006-exact-prediction",
+    "schema": "sft-v3-fold-program/1"
+  },
+  "registration": {
+    "claim_id": "SFT-PHYS-NUCLEAR-DEUTERON-DINUCLEON-TERMINAL-006",
+    "comparison_protocol": "exact rational uncertainty propagation, full A=2 inventory, exact spin inscription, complete singlet/triplet table identity and deliberately reversed binding controls",
+    "evidence_mode": "observational_derivation",
+    "experiment_id": "SFT-EXP-PHYS-NUCLEAR-DEUTERON-DINUCLEON-TERMINAL-006",
+    "falsification_condition": "Reject if the complete AME2020 or NUBASE2020 census contains a different A=2 bound-state inventory; if the directly measured deuteron spin/parity is not 1+; if the exact CODATA proton-plus-neutron taking deuteron interval does not overlap the complete AME2020 deuteron binding interval; if IAEA does not retain distinct singlet/triplet support, a bound parallel-spin deuteron or the reported spin-channel separation; if any source, uncertainty, row or unfavorable control is omitted; or if target content enters before seal.",
+    "frozen_relation": "Complete two-label exchange support forces a three-reading preserving channel with positive half-One binding remainder, a one-reading alternating channel with empty remainder, proton-neutron binding with spin One and exclusion of proton-proton and neutron-neutron ground binding.",
+    "prediction_program": {
+      "instructions": [
+        {
+          "arguments": [
+            "preserving_support"
+          ],
+          "destination": "preserving_support",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "alternating_support"
+          ],
+          "destination": "alternating_support",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "residual_boundary"
+          ],
+          "destination": "residual_boundary",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "preserving_remainder"
+          ],
+          "destination": "preserving_remainder",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "preserving_readings"
+          ],
+          "destination": "preserving_readings",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "alternating_readings"
+          ],
+          "destination": "alternating_readings",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "composite_spin"
+          ],
+          "destination": "composite_spin",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "alternating_remainder"
+          ],
+          "destination": "alternating_remainder",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "pn_spin_hand"
+          ],
+          "destination": "pn_spin_hand",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "pp_spin_hand"
+          ],
+          "destination": "pp_spin_hand",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "nn_spin_hand"
+          ],
+          "destination": "nn_spin_hand",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "pn_binding"
+          ],
+          "destination": "pn_binding",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "pp_binding"
+          ],
+          "destination": "pp_binding",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "nn_binding"
+          ],
+          "destination": "nn_binding",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "pp_charge_path"
+          ],
+          "destination": "pp_charge_path",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "preserving_support",
+            "alternating_support",
+            "residual_boundary",
+            "preserving_remainder",
+            "preserving_readings",
+            "alternating_readings",
+            "composite_spin",
+            "alternating_remainder",
+            "pn_spin_hand",
+            "pp_spin_hand",
+            "nn_spin_hand",
+            "pn_binding",
+            "pp_binding",
+            "nn_binding",
+            "pp_charge_path"
+          ],
+          "destination": "prediction",
+          "opcode": "word"
+        },
+        {
+          "arguments": [
+            "prediction"
+          ],
+          "destination": "",
+          "opcode": "emit"
+        }
+      ],
+      "program_id": "SFT-EXP-PHYS-NUCLEAR-DEUTERON-DINUCLEON-TERMINAL-006-exact-prediction",
+      "schema": "sft-v3-fold-program/1"
+    },
+    "protocol": "observational-data-informed_target-inaccessible_sealed-prediction",
+    "registered_by": "Maria Smith",
+    "row_retention_policy": "all 3,558 AME2020 numeric coordinates, all 5,843 NUBASE2020 states, all three CODATA mass-energy rows, both complete JENDL singlet/triplet parameter sets and every registered IAEA spin-dependence row",
+    "schema": "sft-v3-deuteron-dinucleon-experiment/1",
+    "source_hashes": {
+      "experiments/external_sources/physics/snapshots/ame2020-mass_1.mas20": "sha256:e8599c6d7f724fac91934e59f1b9de8fb8f63e820f4b39456b790665ed2a3307",
+      "experiments/external_sources/physics/snapshots/deuteron-dinucleon-terminal-source-record.json": "sha256:b54be2810599c91e9e4ab7839d8cb4ac84eae6caf5f5aea1b2cb3c3562d5ba7d",
+      "experiments/external_sources/physics/snapshots/iaea-jendl-np-data.pdf": "sha256:f504aca94fab528cc9ddcdfbdad79b7390fd2ba955642ed755c9b774f341ad76",
+      "experiments/external_sources/physics/snapshots/iaea-nuclear-theory.pdf": "sha256:74f7d06bc8b3c6ba719f5b6afb2e0a39fe9bf521f3b7a11bcafb666f1fe1761c",
+      "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "experiments/external_sources/physics/snapshots/nubase2020-nubase_4.mas20": "sha256:1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859"
+    },
+    "source_id": "AMDC-NIST-IAEA-DEUTERON-DINUCLEON-2026",
+    "source_ids": [
+      "AMDC-AME2020-MASS-1-2021",
+      "AMDC-NUBASE2020-2021",
+      "NIST-CODATA-2022",
+      "IAEA-NDS-JENDL1-INDC-JAP-45",
+      "IAEA-THEORY-NUCLEAR-STRUCTURE-STI-PUB-249"
+    ],
+    "source_record_hash": "sha256:b54be2810599c91e9e4ab7839d8cb4ac84eae6caf5f5aea1b2cb3c3562d5ba7d",
+    "source_record_path": "experiments/external_sources/physics/snapshots/deuteron-dinucleon-terminal-source-record.json",
+    "target_access_policy": "capability-closed prediction; release only after matching seal",
+    "withheld_target_ids": [
+      "AME2020-COMPLETE-MASS-COORDINATE-CENSUS",
+      "NUBASE2020-COMPLETE-STATE-CENSUS",
+      "NIST-CODATA-NUCLEON-DEUTERON-MASS-ENERGY-VECTOR",
+      "IAEA-JENDL-COMPLETE-NP-SPIN-CHANNEL-TABLE",
+      "IAEA-DEUTERON-SPIN-DEPENDENCE-RECORD"
+    ]
+  }
+}

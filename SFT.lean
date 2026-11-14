@@ -7056,3 +7056,11 @@ import SFT.Physics.YieldThresholdMeasurement
 import SFT.Physics.YieldThresholdPrediction
 import SFT.Physics.YieldThresholdExperiment
 import SFT.Physics.YieldThresholdValidation
+import SFT.Physics.DeuteronDinucleon
+import SFT.Physics.DeuteronDinucleonProofs
+import SFT.Physics.DeuteronDinucleonGrammar
+import SFT.Physics.DeuteronDinucleonEvidence
+import SFT.Physics.DeuteronMeasurement
+import SFT.Physics.DeuteronPrediction
+import SFT.Physics.DeuteronExperiment
+import SFT.Physics.DeuteronValidation

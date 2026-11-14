@@ -1,0 +1,14 @@
+import SFT.Physics.NeutrinoLadder
+namespace SFT.Physics.NeutrinoSplittingEntryWitnesses
+open NeutrinoLadder
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def identityCheck : Bool := match neutrinoSplittingStructure with
+ | .error _ => false
+ | .ok f => decide (f.rungRatio=(⟨33,1,by decide,by decide⟩ : Rat)) && decide (f.translationRatio=(⟨3,100,by decide,by decide⟩ : Rat))
+def witnesses : List Witness := [WITNESS_ROWS]
+theorem identityCheckPassed : identityCheck=true := rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := rfl
+end SFT.Physics.NeutrinoSplittingEntryWitnesses

@@ -1,0 +1,38 @@
+
+789. Exact CKM fibre alignment
+
+The existing generator-three construction supplies c=3. The original operation generates both complete fibres in their registered order, for i=1,2,3:
+
+mᵢ=(ci−1)/c²,
+vᵢ=i/c.
+
+Consequently
+
+(m₁,m₂,m₃)=(2/9,5/9,8/9),
+(v₁,v₂,v₃)=(1/3,2/3,1)=(3/9,6/9,9/9).
+
+Every pair contributes one overlap cell. With the original absolute difference retained,
+
+Mᵢⱼ=1−|mᵢ−vⱼ|.
+
+The complete difference matrix is
+
+|mᵢ−vⱼ|=(1/9,4/9,7/9;
+           2/9,1/9,4/9;
+           5/9,2/9,1/9).
+
+Subtracting each entry from One gives
+
+M=(8/9,5/9,2/9;
+   7/9,8/9,5/9;
+   4/9,7/9,8/9).
+
+All three diagonal values equal 8/9. The two adjacent bands are 5/9 and 7/9, so the matrix is asymmetric; its far corners are 2/9 and 4/9. The complete product of two three-element fibres contains exactly nine cells. No independently selected mixing coefficient enters this construction.
+
+CKMFibres.ckmFibres obtains c from the existing generatorPeriod operation, constructs both bases from the original index range, evaluates every absolute-difference overlap and checks the entire diagonal against the replicated 8/9 value. completeSourceRecord proves all three returned fields, completeNineCells proves all row lengths and originalDiagonal proves the exact diagonal. The source-index operation preserves the original ordered accesses. The complete native output comparison retains every numerator and denominator in both bases and every cell.
+
+The source base forms the first overlap row from the complete fibre pair. Its successor appends the remaining generated cells until all nine are present. The original eight binary axes generate the complete 256-form grammar; the relation axis retains this full two-fibre object and rejects nine independent mixing dials. The original matrix witness checks the complete matrix, and the native program preserves the full census, elimination decisions, controls and closure.
+
+Original V3: sft/physics/matter_flavour_laws_v1.py, ckm_fibres and CKM_FIBRE_SPEC; generator_period_three dependency. Pin: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: CKMFibres and CKMFibreEntryWitnesses/Grammar/Controls/Evidence. Timeline: TURN917. Receipt: verification/TURN_917_CKM_FIBRE_COMPLETION.json.
+
+[Original source](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/matter_flavour_laws_v1.py); [Native fibre derivation](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/CKMFibres.lean); [Full grammar](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/CKMFibreEntryGrammar.lean); [Timeline](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt).

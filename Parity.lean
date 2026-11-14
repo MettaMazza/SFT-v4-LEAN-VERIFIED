@@ -1849,3 +1849,21 @@ def main : IO Unit := do
 
   for c in SFT.Physics.QuarkDressingEntryGrammar.candidates do
     IO.println ("QuarkDressingEntryGrammar\t" ++ SFT.Physics.QuarkDressingEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.QuarkDressingEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.QuarkDressingEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.QuarkDressingEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.CKMFibreEntryGrammar.candidates do
+    IO.println ("CKMFibreEntryGrammar\t" ++ SFT.Physics.CKMFibreEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CKMFibreEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CKMFibreEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.CKMFibreEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.PhysicalCKMEntryGrammar.candidates do
+    IO.println ("PhysicalCKMEntryGrammar\t" ++ SFT.Physics.PhysicalCKMEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PhysicalCKMEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PhysicalCKMEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.PhysicalCKMEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.ProtonIdentityEntryGrammar.candidates do
+    IO.println ("ProtonIdentityEntryGrammar\t" ++ SFT.Physics.ProtonIdentityEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ProtonIdentityEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ProtonIdentityEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.ProtonIdentityEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.NeutrinoSplittingEntryGrammar.candidates do
+    IO.println ("NeutrinoSplittingEntryGrammar\t" ++ SFT.Physics.NeutrinoSplittingEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NeutrinoSplittingEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NeutrinoSplittingEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.NeutrinoSplittingEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.NeutrinoMassEntryGrammar.candidates do
+    IO.println ("NeutrinoMassEntryGrammar\t" ++ SFT.Physics.NeutrinoMassEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NeutrinoMassEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NeutrinoMassEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.NeutrinoMassEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.PMNSPhysicalEntryGrammar.candidates do
+    IO.println ("PMNSPhysicalEntryGrammar\t" ++ SFT.Physics.PMNSPhysicalEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PMNSPhysicalEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PMNSPhysicalEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.PMNSPhysicalEntryGrammar.decisionReason c)

@@ -1,0 +1,14 @@
+import SFT.Physics.MatterIdentityGraphs
+namespace SFT.Physics.ProtonIdentityEntryWitnesses
+open MatterIdentityGraphs
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def identityCheck : Bool := match protonElectronIdentity with
+ | .error _ => false
+ | .ok f => decide (f.protonShare=(⟨1,3,by decide,by decide⟩ : Rat)) && decide (f.leptonPolynomial=originalProton.leptonPolynomial)
+def witnesses : List Witness := [⟨"graph","The complete ratio graph has only admitted exact carriers.",identityCheck⟩]
+theorem identityCheckPassed : identityCheck=true := rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := rfl
+end SFT.Physics.ProtonIdentityEntryWitnesses

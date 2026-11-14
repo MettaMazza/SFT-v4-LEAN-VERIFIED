@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "source": "sft/physics/matter_flavour_laws_v1.py:ckm_physical_identity,proton_electron_identity",
+  "actual": {
+    "ckm": {
+      "apex_squared": [
+        1,
+        6
+      ],
+      "phase": [
+        1,
+        2
+      ],
+      "s12_squared": "down-light-mass/down-central-mass",
+      "s13_squared": "s12-squared times s23-squared over six-channel-support",
+      "s23": "down-central-root/down-heavy-root positive-take up-central-root/up-heavy-root"
+    },
+    "proton": {
+      "lepton_polynomial": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          485
+        ]
+      ],
+      "proton_share": [
+        1,
+        3
+      ],
+      "ratio_graph": "one-third times positive-take(muon-mass,electron-mass) over their product"
+    }
+  },
+  "expected": {
+    "ckm": {
+      "s12_squared": "down-light-mass/down-central-mass",
+      "s23": "down-central-root/down-heavy-root positive-take up-central-root/up-heavy-root",
+      "s13_squared": "s12-squared times s23-squared over six-channel-support",
+      "apex_squared": [
+        1,
+        6
+      ],
+      "phase": [
+        1,
+        2
+      ]
+    },
+    "proton": {
+      "lepton_polynomial": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          485
+        ]
+      ],
+      "proton_share": [
+        1,
+        3
+      ],
+      "ratio_graph": "one-third times positive-take(muon-mass,electron-mass) over their product"
+    }
+  },
+  "audited_declarations": [
+    "SFT.Physics.MatterIdentityGraphs.CKMIdentity",
+    "SFT.Physics.MatterIdentityGraphs.ckmPhysicalIdentity",
+    "SFT.Physics.MatterIdentityGraphs.originalCKM",
+    "SFT.Physics.MatterIdentityGraphs.completeCKMIdentity",
+    "SFT.Physics.MatterIdentityGraphs.apexSixChannelIdentity",
+    "SFT.Physics.MatterIdentityGraphs.ProtonIdentity",
+    "SFT.Physics.MatterIdentityGraphs.protonElectronIdentity",
+    "SFT.Physics.MatterIdentityGraphs.originalProton",
+    "SFT.Physics.MatterIdentityGraphs.completeProtonIdentity",
+    "SFT.Physics.MatterIdentityGraphs.threeColourShare"
+  ],
+  "axioms": []
+}

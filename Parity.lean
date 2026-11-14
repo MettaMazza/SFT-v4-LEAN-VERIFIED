@@ -1975,3 +1975,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.AtomicFieldSplittingEntryGrammar.candidates do
     IO.println ("AtomicFieldSplittingEntryGrammar\t" ++ SFT.Physics.AtomicFieldSplittingEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AtomicFieldSplittingEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AtomicFieldSplittingEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.AtomicFieldSplittingEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.NucleonBindingEntryGrammar.candidates do
+    IO.println ("NucleonBindingEntryGrammar\t" ++ SFT.Physics.NucleonBindingEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NucleonBindingEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NucleonBindingEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.NucleonBindingEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.HadronReggeEntryGrammar.candidates do
+    IO.println ("HadronReggeEntryGrammar\t" ++ SFT.Physics.HadronReggeEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HadronReggeEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HadronReggeEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.HadronReggeEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.NuclearResidualForceEntryGrammar.candidates do
+    IO.println ("NuclearResidualForceEntryGrammar\t" ++ SFT.Physics.NuclearResidualForceEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NuclearResidualForceEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NuclearResidualForceEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.NuclearResidualForceEntryGrammar.decisionReason c)

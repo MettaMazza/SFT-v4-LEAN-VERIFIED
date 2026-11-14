@@ -2002,3 +2002,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ScatteringRutherfordComptonGrammar.candidates do
     IO.println ("ScatteringRutherfordComptonGrammar\t" ++ SFT.Physics.ScatteringRutherfordComptonGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ScatteringRutherfordComptonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ScatteringRutherfordComptonEvidence.exactForm c ++ "\t" ++ SFT.Physics.ScatteringRutherfordComptonEvidence.decisionReason c)
+
+  for c in SFT.Physics.DecayWidthBranchingLifetimeGrammar.candidates do
+    IO.println ("DecayWidthBranchingLifetimeGrammar\t" ++ SFT.Physics.DecayWidthBranchingLifetimeGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DecayWidthBranchingLifetimeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DecayWidthBranchingLifetimeEvidence.exactForm c ++ "\t" ++ SFT.Physics.DecayWidthBranchingLifetimeEvidence.decisionReason c)

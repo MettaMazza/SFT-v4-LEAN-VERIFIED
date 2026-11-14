@@ -7073,3 +7073,13 @@ import SFT.Physics.ScatteringMeasurement
 import SFT.Physics.ScatteringPrediction
 import SFT.Physics.RutherfordComptonExperiment
 import SFT.Physics.RutherfordComptonValidation
+import SFT.Physics.DecayWidthBranchingLifetime
+import SFT.Physics.DecayWidthBranchingLifetimeCertificate
+import SFT.Physics.DecayWidthBranchingLifetimeProofs
+import SFT.Physics.DecayWidthBranchingLifetimeGrammar
+import SFT.Physics.DecayWidthBranchingLifetimeEvidence
+import SFT.Physics.DecayWidthMeasurement
+import SFT.Physics.DecayWidthPrediction
+import SFT.Physics.DecayWidthExperiment
+import SFT.Physics.DecayWidthValidation
+import SFT.Physics.DecayWidthBranchingLifetimeGeneral

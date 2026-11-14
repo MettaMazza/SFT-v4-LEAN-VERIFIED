@@ -1735,3 +1735,15 @@ def main : IO Unit := do
 
   for c in SFT.Physics.VacuumCycleGrammar.candidates do
     IO.println ("VacuumCycleGrammar\t" ++ SFT.Physics.VacuumCycleGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumCycleGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumCycleGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumCycleGrammar.decisionReason c)
+
+  for c in SFT.Physics.VacuumFloorValidationGrammar.candidates do
+    IO.println ("VacuumFloorValidationGrammar\t" ++ SFT.Physics.VacuumFloorValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumFloorValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumFloorValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumFloorValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.VacuumPolarizationValidationGrammar.candidates do
+    IO.println ("VacuumPolarizationValidationGrammar\t" ++ SFT.Physics.VacuumPolarizationValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumPolarizationValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumPolarizationValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumPolarizationValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.VacuumInertiaValidationGrammar.candidates do
+    IO.println ("VacuumInertiaValidationGrammar\t" ++ SFT.Physics.VacuumInertiaValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumInertiaValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumInertiaValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumInertiaValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.VacuumExtractionValidationGrammar.candidates do
+    IO.println ("VacuumExtractionValidationGrammar\t" ++ SFT.Physics.VacuumExtractionValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumExtractionValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumExtractionValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumExtractionValidationGrammar.decisionReason c)

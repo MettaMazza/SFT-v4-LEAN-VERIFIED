@@ -1,0 +1,20 @@
+import SFT.Physics.TerminalHyperfineMeasurement
+#print axioms SFT.Physics.AtomicPrecisionRecords.sourceHash
+#print axioms SFT.Physics.AtomicPrecisionRecords.componentHashes
+#print axioms SFT.Physics.AtomicPrecisionRecords.payloadBoundary
+#print axioms SFT.Physics.AtomicPrecisionRecords.authoritativeRecord
+#print axioms SFT.Physics.AtomicPrecisionRecords.componentFiles
+#print axioms SFT.Physics.AtomicPrecisionRecords.registeredRecord
+#print axioms SFT.Physics.AtomicPrecisionRecords.originalPayloadBoundary
+#print axioms SFT.Physics.TerminalHyperfineMeasurement.symmetricInterval
+#print axioms SFT.Physics.TerminalHyperfineMeasurement.rydbergInterval
+#print axioms SFT.Physics.TerminalHyperfineMeasurement.targetInterval
+#print axioms SFT.Physics.TerminalHyperfineMeasurement.translatedPredictionInterval
+#print axioms SFT.Physics.TerminalHyperfineMeasurement.centralCarrierInterval
+#print axioms SFT.Physics.TerminalHyperfineMeasurement.intervalsOverlap
+#print axioms SFT.Physics.TerminalHyperfineMeasurement.label
+#print axioms SFT.Physics.TerminalHyperfineMeasurement.classificationFromRecord
+#print axioms SFT.Physics.TerminalHyperfineMeasurement.classification
+#print axioms SFT.Physics.TerminalHyperfineMeasurement.originalClassification
+#print axioms SFT.Physics.TerminalHyperfineMeasurement.carrierCheck
+#print axioms SFT.Physics.TerminalHyperfineMeasurement.carrierCheckPassed

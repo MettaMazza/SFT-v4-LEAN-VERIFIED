@@ -1951,3 +1951,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.HydrogenPostsealValidationGrammar.candidates do
     IO.println ("HydrogenPostsealValidationGrammar\t" ++ SFT.Physics.HydrogenPostsealValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HydrogenPostsealValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HydrogenPostsealValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.HydrogenPostsealValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.TerminalLambEntryGrammar.candidates do
+    IO.println ("TerminalLambEntryGrammar\t" ++ SFT.Physics.TerminalLambEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TerminalLambEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TerminalLambEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TerminalLambEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.TerminalFineEntryGrammar.candidates do
+    IO.println ("TerminalFineEntryGrammar\t" ++ SFT.Physics.TerminalFineEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TerminalFineEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TerminalFineEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TerminalFineEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.TerminalHyperfineEntryGrammar.candidates do
+    IO.println ("TerminalHyperfineEntryGrammar\t" ++ SFT.Physics.TerminalHyperfineEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TerminalHyperfineEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TerminalHyperfineEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TerminalHyperfineEntryGrammar.decisionReason c)

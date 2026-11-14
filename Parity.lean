@@ -1960,3 +1960,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.TerminalHyperfineEntryGrammar.candidates do
     IO.println ("TerminalHyperfineEntryGrammar\t" ++ SFT.Physics.TerminalHyperfineEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TerminalHyperfineEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TerminalHyperfineEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TerminalHyperfineEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.MolecularSpectroscopyEntryGrammar.candidates do
+    IO.println ("MolecularSpectroscopyEntryGrammar\t" ++ SFT.Physics.MolecularSpectroscopyEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MolecularSpectroscopyEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MolecularSpectroscopyEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MolecularSpectroscopyEntryGrammar.decisionReason c)

@@ -1,0 +1,19 @@
+import SFT.Physics.MolecularSpectroscopyMeasurement
+#print axioms SFT.Physics.MolecularSpectroscopyRecords.sourceHash
+#print axioms SFT.Physics.MolecularSpectroscopyRecords.componentHashes
+#print axioms SFT.Physics.MolecularSpectroscopyRecords.payloadBoundary
+#print axioms SFT.Physics.MolecularSpectroscopyRecords.authoritativeRecord
+#print axioms SFT.Physics.MolecularSpectroscopyRecords.componentFiles
+#print axioms SFT.Physics.MolecularSpectroscopyRecords.registeredRecord
+#print axioms SFT.Physics.MolecularSpectroscopyRecords.originalPayloadBoundary
+#print axioms SFT.Physics.MolecularSpectroscopyMeasurement.sourceInterval
+#print axioms SFT.Physics.MolecularSpectroscopyMeasurement.outwardRatioInterval
+#print axioms SFT.Physics.MolecularSpectroscopyMeasurement.squaredInterval
+#print axioms SFT.Physics.MolecularSpectroscopyMeasurement.measuredRatioIntervals
+#print axioms SFT.Physics.MolecularSpectroscopyMeasurement.sealedRatioVector
+#print axioms SFT.Physics.MolecularSpectroscopyMeasurement.label
+#print axioms SFT.Physics.MolecularSpectroscopyMeasurement.classificationFromRecord
+#print axioms SFT.Physics.MolecularSpectroscopyMeasurement.classification
+#print axioms SFT.Physics.MolecularSpectroscopyMeasurement.originalClassification
+#print axioms SFT.Physics.MolecularSpectroscopyMeasurement.carrierCheck
+#print axioms SFT.Physics.MolecularSpectroscopyMeasurement.carrierCheckPassed

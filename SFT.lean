@@ -6598,3 +6598,16 @@ import SFT.Physics.TerminalHyperfineEmpiricalGrammar
 import SFT.Physics.TerminalHyperfineEmpiricalEvidence
 import SFT.Physics.TerminalHyperfineEmpiricalExperiment
 import SFT.Physics.TerminalHyperfineEmpiricalValidation
+import SFT.Physics.MolecularSpectroscopy
+import SFT.Physics.MolecularLadders
+import SFT.Physics.MolecularSpectroscopyRecords
+import SFT.Physics.MolecularSpectroscopyMeasurement
+import SFT.Physics.MolecularSpectroscopyEntryWitnesses
+import SFT.Physics.MolecularSpectroscopyEntryGrammar
+import SFT.Physics.MolecularSpectroscopyEntryControls
+import SFT.Physics.MolecularSpectroscopyEntryEvidence
+import SFT.Physics.MolecularSpectroscopyEmpiricalWitnesses
+import SFT.Physics.MolecularSpectroscopyEmpiricalGrammar
+import SFT.Physics.MolecularSpectroscopyEmpiricalEvidence
+import SFT.Physics.MolecularSpectroscopyEmpiricalExperiment
+import SFT.Physics.MolecularSpectroscopyEmpiricalValidation

@@ -1,0 +1,18 @@
+import SFT.Physics.MolecularSpectroscopy
+#print axioms SFT.Physics.MolecularSpectroscopy.exactAlpha
+#print axioms SFT.Physics.MolecularSpectroscopy.downSupport
+#print axioms SFT.Physics.MolecularSpectroscopy.upSupport
+#print axioms SFT.Physics.MolecularSpectroscopy.terminalSupport
+#print axioms SFT.Physics.MolecularSpectroscopy.heavyComplement
+#print axioms SFT.Physics.MolecularSpectroscopy.hydrogenRotationalToVibrational
+#print axioms SFT.Physics.MolecularSpectroscopy.hydrogenRotationalToVibrationalExpected
+#print axioms SFT.Physics.MolecularSpectroscopy.hydrogenRotationalToVibrationalComplete
+#print axioms SFT.Physics.MolecularSpectroscopy.hydrogenAnharmonicToVibrational
+#print axioms SFT.Physics.MolecularSpectroscopy.hydrogenAnharmonicToVibrationalExpected
+#print axioms SFT.Physics.MolecularSpectroscopy.hydrogenAnharmonicToVibrationalComplete
+#print axioms SFT.Physics.MolecularSpectroscopy.deuteriumRotationalTransport
+#print axioms SFT.Physics.MolecularSpectroscopy.deuteriumVibrationalSquaredTransport
+#print axioms SFT.Physics.MolecularSpectroscopy.deuteriumRotationalTransportExpected
+#print axioms SFT.Physics.MolecularSpectroscopy.deuteriumRotationalTransportComplete
+#print axioms SFT.Physics.MolecularSpectroscopy.deuteriumVibrationalSquaredTransportExpected
+#print axioms SFT.Physics.MolecularSpectroscopy.deuteriumVibrationalSquaredTransportComplete

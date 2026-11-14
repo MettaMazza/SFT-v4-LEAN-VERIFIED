@@ -1915,3 +1915,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.TerminalCKMEntryGrammar.candidates do
     IO.println ("TerminalCKMEntryGrammar\t" ++ SFT.Physics.TerminalCKMEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TerminalCKMEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TerminalCKMEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TerminalCKMEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.TerminalBaryonEntryGrammar.candidates do
+    IO.println ("TerminalBaryonEntryGrammar\t" ++ SFT.Physics.TerminalBaryonEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TerminalBaryonEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TerminalBaryonEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TerminalBaryonEntryGrammar.decisionReason c)

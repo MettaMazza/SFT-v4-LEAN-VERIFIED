@@ -1,0 +1,64 @@
+
+828. Complete principal shells, generated filling recurrence and periodic closure
+
+The admitted orbit-capacity construction supplies every positive orbit rank r with one central orientation and r-1 complete pairs of boundary orientations. Each orientation retains the two exclusion-distinct labels. Its capacity is therefore
+  C(r)=2[1+2(r-1)].
+A principal shell n contains each orbit rank One through n exactly once. Define its complete sum by
+  S(0)=0 (host accumulator),
+  S(n+1)=S(n)+C(n+1).
+The first emitted shell is S(1)=2. If S(n)=2n^2, the next complete orbit contributes 2(1+2n)=4n+2, so
+  S(n+1)=2n^2+4n+2=2(n+1)^2.
+The Lean induction proves this identity for every n; the original first-32 witness is retained alongside it. In particular the first four shell capacities are 2,8,18,32. Boolean, non-integer, nonpositive shell inputs retain the original rejection behavior.
+
+The filling walk is generated from joint cover, not from a table of configurations. For each cover c=2,...,M, visit principal ranks p=1,...,c-1 in order, set r=c-p, and emit (p,r) exactly when r<=p. Thus every emitted cell has 1<=r<=p and p+r=c. The next cover appends its complete row while holding every earlier cell. The accepted cover domain is integer M>=2, excluding Booleans. The source's atomic endpoint is the previously derived floor of inverse alpha, 137, so the closure walk uses M=2*137=274.
+
+Starting with the host accumulator A=0, each emitted (p,r) updates A to A+C(r). Emit a closure precisely at the first cell (1,1) or whenever r=2. Return when the requested positive closure-prefix length has been emitted; a request exceeding the admitted walk retains the original failure. The first cells and their cumulative capacities are
+  (1,1):2; (2,1):4; (2,2):10; (3,1):12; (3,2):18;
+  (4,1):20; (3,3):30; (4,2):36; (5,1):38; (4,3):48;
+  (5,2):54; (6,1):56; (4,4):70; (5,3):80; (6,2):86;
+  (7,1):88; (5,4):102; (6,3):112; (7,2):118.
+The original rank-two closure rule consequently gives
+  Q=(2,10,18,36,54,86,118).
+Successive positive differences, using a host origin only for the first subtraction, give
+  W=(Q1,Q2-Q1,...,Q7-Q6)=(2,8,8,18,18,32,32).
+These are period widths; they are distinct from the complete principal-shell capacities. The implementation generates the walk and accumulates orbit capacities before comparing these output vectors.
+
+The original grammar has ten binary axes: predecessor, shell, sum, order, closure, recurrence, ionization, target, trace and extension. All 2^10=1,024 forms are enumerated with the original decisions, controls and closure. The admitted shell sum uses the universal successor proof; filling and period closure retain the original traversal and exact endpoint. The four witnesses retain the first-32 shell identity, first four shells, seven closures and seven widths.
+
+After sealing, the empirical comparison retains the complete original IUPAC table identity, all twelve custody conditions and the exact nineteen-symbol NIST row set. The seven generated closures and widths must equal the retained table vectors. The twelve original closure/successor configuration strings are checked without importing them into the formal filling operation:
+  He:1s2; Li:1s2.2s; Ne:1s2.2s2.2p6; Na:[Ne].3s;
+  Ar:[Ne].3s2.3p6; K:[Ar].4s; Kr:[Ar].3d10.4s2.4p6;
+  Rb:[Kr].5s; Xe:[Cd].5p6; Cs:[Xe].6s; Rn:[Hg].6p6; Fr:[Rn].7s.
+
+Each source interval is J_X=[E_X Take delta_X,E_X+delta_X]. The original reported uncertainty is used where provided; otherwise the separately labelled displayed-resolution half-width is retained. The exact inequalities test six rising period envelopes,
+  J_He,lo>J_H,hi; J_Ne,lo>J_Li,hi; J_Ar,lo>J_Na,hi;
+  J_Kr,lo>J_K,hi; J_Xe,lo>J_Rb,hi; J_Rn,lo>J_Cs,hi,
+six closure-to-successor resets,
+  J_He,lo>J_Li,hi; J_Ne,lo>J_Na,hi; J_Ar,lo>J_K,hi;
+  J_Kr,lo>J_Rb,hi; J_Xe,lo>J_Cs,hi; J_Rn,lo>J_Fr,hi,
+and all three retained local dips,
+  J_Be,lo>J_B,hi; J_N,lo>J_O,hi; J_Mg,lo>J_Al,hi.
+These are the original envelope/reset relations, with internal reversals retained. The empirical grammar separately enumerates all 256 forms. Its blind validator runs before authoritative classification, and the original final guard also requires validation.passed.
+
+Complete registered ionization input vector (eV):
+  H: 13.598434599702 +/- 0.000000000012 (reported uncertainty).
+  He: 24.587389011 +/- 0.000000025 (reported uncertainty).
+  Li: 5.391714996 +/- 0.000000022 (reported uncertainty).
+  Be: 9.322699 +/- 0.000007 (reported uncertainty).
+  B: 8.298019 +/- 0.000003 (reported uncertainty).
+  N: 14.53413 +/- 0.00004 (reported uncertainty).
+  O: 13.618055 +/- 0.000007 (reported uncertainty).
+  Ne: 21.564541 +/- 0.000007 (reported uncertainty).
+  Na: 5.13907696 +/- 0.00000025 (reported uncertainty).
+  Mg: 7.646236 +/- 0.000004 (reported uncertainty).
+  Al: 5.985769 +/- 0.000003 (reported uncertainty).
+  Ar: 15.7596119 +/- 0.0000005 (reported uncertainty).
+  K: 4.34066373 +/- 0.00000009 (reported uncertainty).
+  Kr: 13.9996055 +/- 0.0000020 (reported uncertainty).
+  Rb: 4.1771281 +/- 0.0000012 (reported uncertainty).
+  Xe: 12.1298437 +/- 0.0000015 (reported uncertainty).
+  Cs: 3.89390572743 +/- 0.00000000017 (reported uncertainty).
+  Rn: 10.74850 +/- 0.000005 (displayed-resolution half-width).
+  Fr: 4.0727411 +/- 0.0000011 (reported uncertainty).
+
+Source correspondence: pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/physics/atomic_shell_periodicity_successor_laws_v1.py, atomic_shell_periodicity_successor_validation_v1.py and atomic_shell_periodicity_successor_execution_v1.py; reused atomic_constants.py orbit-capacity and atomic-endpoint constructions. Native verification: SFT/Physics/AtomicShellPeriodicity.lean (shellSum, everyPositiveShell, coverRows, closureWalk, generatedPeriodClosures and generatedPeriodWidths), AtomicOrbitCapacity.lean, AtomicBoundary.lean, AtomicShellRecords.lean, AtomicShellMeasurement.lean, AtomicShellPeriodicityEntry{Witnesses,Grammar,Controls,Evidence}.lean and AtomicShellPeriodicityEmpirical{Witnesses,Grammar,Evidence,Experiment,Validation}.lean. Execution and completion correspondence: TIMELINE.txt TURN956 and verification/TURN_956_ATOMIC_SHELL_PERIODICITY_COMPLETION.json.

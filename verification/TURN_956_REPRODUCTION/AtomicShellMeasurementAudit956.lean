@@ -1,0 +1,21 @@
+import SFT.Physics.AtomicShellMeasurement
+#print axioms SFT.Physics.AtomicShellRecords.sourceHash
+#print axioms SFT.Physics.AtomicShellRecords.iupacHash
+#print axioms SFT.Physics.AtomicShellRecords.payloadBoundary
+#print axioms SFT.Physics.AtomicShellRecords.requiredRows
+#print axioms SFT.Physics.AtomicShellRecords.authoritativeRecord
+#print axioms SFT.Physics.AtomicShellRecords.componentFiles
+#print axioms SFT.Physics.AtomicShellRecords.registeredRecord
+#print axioms SFT.Physics.AtomicShellRecords.originalPayloadBoundary
+#print axioms SFT.Physics.AtomicShellMeasurement.ionizationInterval
+#print axioms SFT.Physics.AtomicShellMeasurement.configurations
+#print axioms SFT.Physics.AtomicShellMeasurement.envelopes
+#print axioms SFT.Physics.AtomicShellMeasurement.resets
+#print axioms SFT.Physics.AtomicShellMeasurement.localDips
+#print axioms SFT.Physics.AtomicShellMeasurement.label
+#print axioms SFT.Physics.AtomicShellMeasurement.allSeparated
+#print axioms SFT.Physics.AtomicShellMeasurement.classificationFromRecord
+#print axioms SFT.Physics.AtomicShellMeasurement.classification
+#print axioms SFT.Physics.AtomicShellMeasurement.originalClassification
+#print axioms SFT.Physics.AtomicShellMeasurement.carrierCheck
+#print axioms SFT.Physics.AtomicShellMeasurement.carrierCheckPassed

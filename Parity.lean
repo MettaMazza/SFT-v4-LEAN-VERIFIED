@@ -1966,3 +1966,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.HydrogenRydbergEntryGrammar.candidates do
     IO.println ("HydrogenRydbergEntryGrammar\t" ++ SFT.Physics.HydrogenRydbergEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HydrogenRydbergEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HydrogenRydbergEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.HydrogenRydbergEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.AtomicShellPeriodicityEntryGrammar.candidates do
+    IO.println ("AtomicShellPeriodicityEntryGrammar\t" ++ SFT.Physics.AtomicShellPeriodicityEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AtomicShellPeriodicityEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AtomicShellPeriodicityEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.AtomicShellPeriodicityEntryGrammar.decisionReason c)

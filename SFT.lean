@@ -6623,3 +6623,15 @@ import SFT.Physics.HydrogenRydbergEmpiricalGrammar
 import SFT.Physics.HydrogenRydbergEmpiricalEvidence
 import SFT.Physics.HydrogenRydbergEmpiricalExperiment
 import SFT.Physics.HydrogenRydbergEmpiricalValidation
+import SFT.Physics.AtomicShellPeriodicity
+import SFT.Physics.AtomicShellRecords
+import SFT.Physics.AtomicShellMeasurement
+import SFT.Physics.AtomicShellPeriodicityEntryWitnesses
+import SFT.Physics.AtomicShellPeriodicityEntryGrammar
+import SFT.Physics.AtomicShellPeriodicityEntryControls
+import SFT.Physics.AtomicShellPeriodicityEntryEvidence
+import SFT.Physics.AtomicShellPeriodicityEmpiricalWitnesses
+import SFT.Physics.AtomicShellPeriodicityEmpiricalGrammar
+import SFT.Physics.AtomicShellPeriodicityEmpiricalEvidence
+import SFT.Physics.AtomicShellPeriodicityEmpiricalExperiment
+import SFT.Physics.AtomicShellPeriodicityEmpiricalValidation

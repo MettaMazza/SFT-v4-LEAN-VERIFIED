@@ -6457,3 +6457,8 @@ import SFT.Physics.GenerationDepthEntryWitnesses
 import SFT.Physics.GenerationDepthEntryGrammar
 import SFT.Physics.GenerationDepthEntryControls
 import SFT.Physics.GenerationDepthEntryEvidence
+import SFT.Physics.ConfinementLift
+import SFT.Physics.ConfinementLiftEntryWitnesses
+import SFT.Physics.ConfinementLiftEntryGrammar
+import SFT.Physics.ConfinementLiftEntryControls
+import SFT.Physics.ConfinementLiftEntryEvidence

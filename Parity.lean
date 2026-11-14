@@ -1909,3 +1909,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.GenerationDepthEntryGrammar.candidates do
     IO.println ("GenerationDepthEntryGrammar\t" ++ SFT.Physics.GenerationDepthEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GenerationDepthEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GenerationDepthEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.GenerationDepthEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.ConfinementLiftEntryGrammar.candidates do
+    IO.println ("ConfinementLiftEntryGrammar\t" ++ SFT.Physics.ConfinementLiftEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ConfinementLiftEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ConfinementLiftEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.ConfinementLiftEntryGrammar.decisionReason c)

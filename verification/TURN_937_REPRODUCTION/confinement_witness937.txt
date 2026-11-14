@@ -1,0 +1,14 @@
+import SFT.Physics.ConfinementLift
+namespace SFT.Physics.ConfinementLiftEntryWitnesses
+open ConfinementLift
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def productsCheck : Bool := match sharpenedQuarkProducts,confinementLift with
+ | .ok p,.ok r => p.down == LeptonIntervals.normalize 3 1454 (by decide) && p.up == LeptonIntervals.normalize 3 13118 (by decide) && r.lightestCarrierLift == 2
+ | _,_ => false
+def witnesses : List Witness := [WITNESS_ROWS]
+theorem productsCheckPassed : productsCheck=true := rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := rfl
+end SFT.Physics.ConfinementLiftEntryWitnesses

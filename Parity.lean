@@ -1678,3 +1678,6 @@ def main : IO Unit := do
 
   for c in SFT.Mathematics.BoundedNBodyGrammar.candidates do
     IO.println ("BoundedNBodyGrammar\t" ++ SFT.Mathematics.BoundedNBodyGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.BoundedNBodyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.BoundedNBodyGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.BoundedNBodyGrammar.decisionReason c)
+
+  for c in SFT.Mathematics.FlooredFluidGrammar.candidates do
+    IO.println ("FlooredFluidGrammar\t" ++ SFT.Mathematics.FlooredFluidGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.FlooredFluidGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.FlooredFluidGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.FlooredFluidGrammar.decisionReason c)

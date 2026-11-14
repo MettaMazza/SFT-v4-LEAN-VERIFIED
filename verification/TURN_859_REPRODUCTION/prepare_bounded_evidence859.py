@@ -19,9 +19,13 @@ set_option maxHeartbeats 100000000
 def witness0 : Bool := ([1,2,4] : List Nat).map (fun p => OrbitOrderIdentity.foldRank p 7) == [2,4,1]
 def witness1 : Bool := (OrbitNumberWitnesses.orbitWitness 1 5).map List.length == some 4
 def witness2 : Bool :=
- match OrbitNumberWitnesses.orderWitness 3,OrbitNumberWitnesses.orderWitness 5,OrbitNumberWitnesses.orderWitness 7 with
- | some a,some b,some c => Nat.lcm (Nat.lcm a b) c == 12
- | _,_,_ => false
+ match OrbitNumberWitnesses.orderWitness 3 with
+ | none => false
+ | some a => match OrbitNumberWitnesses.orderWitness 5 with
+   | none => false
+   | some b => match OrbitNumberWitnesses.orderWitness 7 with
+     | none => false
+     | some c => Nat.lcm (Nat.lcm a b) c == 12
 theorem witness0Passed : witness0 = true := rfl
 theorem witness1Passed : witness1 = true := rfl
 theorem witness2Passed : witness2 = true := rfl

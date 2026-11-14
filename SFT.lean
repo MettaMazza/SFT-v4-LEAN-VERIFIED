@@ -6611,3 +6611,15 @@ import SFT.Physics.MolecularSpectroscopyEmpiricalGrammar
 import SFT.Physics.MolecularSpectroscopyEmpiricalEvidence
 import SFT.Physics.MolecularSpectroscopyEmpiricalExperiment
 import SFT.Physics.MolecularSpectroscopyEmpiricalValidation
+import SFT.Physics.HydrogenRydberg
+import SFT.Physics.HydrogenRydbergRecords
+import SFT.Physics.HydrogenRydbergMeasurement
+import SFT.Physics.HydrogenRydbergEntryWitnesses
+import SFT.Physics.HydrogenRydbergEntryGrammar
+import SFT.Physics.HydrogenRydbergEntryControls
+import SFT.Physics.HydrogenRydbergEntryEvidence
+import SFT.Physics.HydrogenRydbergEmpiricalWitnesses
+import SFT.Physics.HydrogenRydbergEmpiricalGrammar
+import SFT.Physics.HydrogenRydbergEmpiricalEvidence
+import SFT.Physics.HydrogenRydbergEmpiricalExperiment
+import SFT.Physics.HydrogenRydbergEmpiricalValidation

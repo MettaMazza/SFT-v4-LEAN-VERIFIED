@@ -1,0 +1,22 @@
+import SFT.Physics.HydrogenRydbergMeasurement
+#print axioms SFT.Physics.HydrogenRydbergRecords.sourceHash
+#print axioms SFT.Physics.HydrogenRydbergRecords.componentHashes
+#print axioms SFT.Physics.HydrogenRydbergRecords.payloadBoundary
+#print axioms SFT.Physics.HydrogenRydbergRecords.authoritativeRecord
+#print axioms SFT.Physics.HydrogenRydbergRecords.componentFiles
+#print axioms SFT.Physics.HydrogenRydbergRecords.registeredRecord
+#print axioms SFT.Physics.HydrogenRydbergRecords.originalPayloadBoundary
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.symmetricInterval
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.rydbergInterval
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.ionizationTargetInterval
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.lineTargetInterval
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.outwardRatioInterval
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.predictedIonizationInterval
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.predictedLineInterval
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.intervalsOverlap
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.label
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.classificationFromRecord
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.classification
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.originalClassification
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.carrierCheck
+#print axioms SFT.Physics.HydrogenRydbergMeasurement.carrierCheckPassed

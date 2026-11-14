@@ -1963,3 +1963,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.MolecularSpectroscopyEntryGrammar.candidates do
     IO.println ("MolecularSpectroscopyEntryGrammar\t" ++ SFT.Physics.MolecularSpectroscopyEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MolecularSpectroscopyEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MolecularSpectroscopyEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MolecularSpectroscopyEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.HydrogenRydbergEntryGrammar.candidates do
+    IO.println ("HydrogenRydbergEntryGrammar\t" ++ SFT.Physics.HydrogenRydbergEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HydrogenRydbergEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HydrogenRydbergEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.HydrogenRydbergEntryGrammar.decisionReason c)

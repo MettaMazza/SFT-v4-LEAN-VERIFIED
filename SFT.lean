@@ -6139,3 +6139,13 @@ import SFT.Physics.VacuumInertiaWitnesses
 import SFT.Physics.VacuumInertiaGrammar
 import SFT.Physics.VacuumInertiaControls
 import SFT.Physics.VacuumInertiaEvidence
+import SFT.Physics.VacuumBeat
+import SFT.Physics.VacuumBeatWitnesses
+import SFT.Physics.VacuumBeatGrammar
+import SFT.Physics.VacuumBeatControls
+import SFT.Physics.VacuumBeatEvidence
+import SFT.Physics.VacuumCycle
+import SFT.Physics.VacuumCycleWitnesses
+import SFT.Physics.VacuumCycleGrammar
+import SFT.Physics.VacuumCycleControls
+import SFT.Physics.VacuumCycleEvidence

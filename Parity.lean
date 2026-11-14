@@ -1729,3 +1729,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.VacuumInertiaGrammar.candidates do
     IO.println ("VacuumInertiaGrammar\t" ++ SFT.Physics.VacuumInertiaGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumInertiaGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumInertiaGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumInertiaGrammar.decisionReason c)
+
+  for c in SFT.Physics.VacuumBeatGrammar.candidates do
+    IO.println ("VacuumBeatGrammar\t" ++ SFT.Physics.VacuumBeatGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumBeatGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumBeatGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumBeatGrammar.decisionReason c)
+
+  for c in SFT.Physics.VacuumCycleGrammar.candidates do
+    IO.println ("VacuumCycleGrammar\t" ++ SFT.Physics.VacuumCycleGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumCycleGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumCycleGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumCycleGrammar.decisionReason c)

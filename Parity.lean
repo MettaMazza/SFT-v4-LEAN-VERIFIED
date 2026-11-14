@@ -1747,3 +1747,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.VacuumExtractionValidationGrammar.candidates do
     IO.println ("VacuumExtractionValidationGrammar\t" ++ SFT.Physics.VacuumExtractionValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumExtractionValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumExtractionValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumExtractionValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.FreePhaseGrammar.candidates do
+    IO.println ("FreePhaseGrammar\t" ++ SFT.Physics.FreePhaseGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FreePhaseGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FreePhaseGrammar.exactForm c ++ "\t" ++ SFT.Physics.FreePhaseGrammar.decisionReason c)
+
+  for c in SFT.Physics.PotentialPhaseGrammar.candidates do
+    IO.println ("PotentialPhaseGrammar\t" ++ SFT.Physics.PotentialPhaseGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PotentialPhaseGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PotentialPhaseGrammar.exactForm c ++ "\t" ++ SFT.Physics.PotentialPhaseGrammar.decisionReason c)
+
+  for c in SFT.Physics.StationaryGrammar.candidates do
+    IO.println ("StationaryGrammar\t" ++ SFT.Physics.StationaryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StationaryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StationaryGrammar.exactForm c ++ "\t" ++ SFT.Physics.StationaryGrammar.decisionReason c)

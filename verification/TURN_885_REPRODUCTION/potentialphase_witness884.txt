@@ -1,0 +1,22 @@
+import SFT.Physics.FreePhase
+namespace SFT.Physics.PotentialPhaseWitnesses
+open FreePhase
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def original := potentialPhaseEvolution (.fraction ⟨1,3,by decide,by decide⟩) (.fraction ⟨1,8,by decide,by decide⟩) (.fraction ⟨1,4,by decide,by decide⟩)
+def compositionCheck : Bool := match original with
+ | .error _ => false
+ | .ok t => !t.2.2.2.blt (⟨17,24,by decide,by decide⟩ : Rat) && !(⟨17,24,by decide,by decide⟩ : Rat).blt t.2.2.2
+def totalCheck : Bool := match original with
+ | .error _ => false
+ | .ok t => !t.2.2.1.blt (⟨3,8,by decide,by decide⟩ : Rat) && !(⟨3,8,by decide,by decide⟩ : Rat).blt t.2.2.1
+def witnesses : List Witness := [WITNESS_ROWS]
+theorem compositionCheckPassed : compositionCheck=true := by unfold compositionCheck original;rw [originalPotentialAssembly];rfl
+theorem totalCheckPassed : totalCheck=true := by unfold totalCheck original;rw [originalPotentialAssembly];rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := by
+ change (compositionCheck && totalCheck && true)=true
+ rw [compositionCheckPassed,totalCheckPassed]
+ rfl
+end SFT.Physics.PotentialPhaseWitnesses

@@ -1,0 +1,28 @@
+import SFT.Physics.StationarySpectrum
+namespace SFT.Physics.StationaryWitnesses
+open StationarySpectrum VacuumSpectrum
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def depthTwoCheck : Bool := match stationarySpectrum (.integer 2) with
+ | .error _ => false
+ | .ok xs => pairs xs == [(1,8),(3,8),(5,8),(7,8)]
+def gapsFrom (prior : SFT.Foundation.ExactOperations.PositiveFraction) : List SFT.Foundation.ExactOperations.PositiveFraction → List Rat
+ | [] => []
+ | x::xs => LeptonIntervals.subtract (BoundaryGrowth.asFraction x) (BoundaryGrowth.asFraction prior)::gapsFrom x xs
+def distinctGaps (xs : List Rat) : List Rat := xs.foldl (fun kept x => if kept.any (fun y => same x y) then kept else kept++[x]) []
+def uniformCheck : Bool := ([1,2,3,4,5] : List Nat).all fun depth =>
+ match stationarySpectrum (.integer (.ofNat depth)) with
+ | .error _ => false
+ | .ok values => match values with
+  | [] => false
+  | first::rest => (distinctGaps (gapsFrom first rest)).length == 1
+def witnesses : List Witness := [⟨"depth-two","Depth two has the complete four-level spectrum.",depthTwoCheck⟩,⟨"uniform","All tested finite successors retain uniform gaps.",uniformCheck⟩]
+theorem depthTwoCheckPassed : depthTwoCheck=true := rfl
+theorem uniformCheckPassed : uniformCheck=true := rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := by
+ change (depthTwoCheck && uniformCheck && true)=true
+ rw [depthTwoCheckPassed,uniformCheckPassed]
+ rfl
+end SFT.Physics.StationaryWitnesses

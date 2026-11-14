@@ -1,0 +1,8 @@
+import SFT.Physics.NeutrinoComparisonMeasurement
+#print axioms SFT.Physics.NeutrinoComparisonMeasurement.neutrinoLabel
+#print axioms SFT.Physics.NeutrinoComparisonMeasurement.neutrinoClassificationUsing
+#print axioms SFT.Physics.NeutrinoComparisonMeasurement.neutrinoClassificationFromRecord
+#print axioms SFT.Physics.NeutrinoComparisonMeasurement.neutrinoClassification
+#print axioms SFT.Physics.NeutrinoComparisonMeasurement.originalClassification
+#print axioms SFT.Physics.NeutrinoComparisonMeasurement.neutrinoCheck
+#print axioms SFT.Physics.NeutrinoComparisonMeasurement.neutrinoCheckPassed

@@ -1,0 +1,169 @@
+{
+  "values": {
+    "claim_id": "SFT-PHYS-VALIDATION-NEUTRINO-MASS-MIXING-003",
+    "title": "Neutrino mass, ordering, PMNS and CP comparison",
+    "statement": "The positive mass-square coefficients, splitting law, PMNS triple and CP carrier are translated with one declared solar anchor and tested against complete PDG, KATRIN and Planck rows.",
+    "dependencies": [
+      "SFT-PHYS-NEUTRINO-SPLITTING-003",
+      "SFT-PHYS-NEUTRINO-POSITIVE-MASS-003",
+      "SFT-PHYS-NEUTRINO-PMNS-CP-PHYSICAL-003",
+      "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001",
+      "SFT-PHYS-MEAS-TARGET-CUSTODY-001",
+      "SFT-PHYS-MEAS-UNCERTAINTY-001",
+      "SFT-MATH-EXACT-ARITHMETIC-001"
+    ],
+    "generation_rule": "Generate the complete eight-axis post-seal neutrino mass, ordering, pmns and cp comparison comparison product.",
+    "grammar_boundary": "Every registered source row, uncertainty, scheme/status limitation and unfavorable outcome in this comparison.",
+    "exact_result": "All PMNS/CP predictions lie in registered three-sigma support; the positive normal mass sum is about 0.060 eV and remains below current direct and cosmological bounds; normal ordering preference is not yet decisive.",
+    "induction_base": "The solar splitting is the sole declared dimensional anchor.",
+    "induction_step": "Atmospheric, mass, mixing, CP, direct-bound, cosmological-bound and ordering-status rows append with their uncertainties and scope.",
+    "exclusions": [
+      "no numerical-zero lightest mass",
+      "no claim of decisive measured ordering",
+      "no hidden second scale anchor",
+      "no omitted model dependence of cosmological bound"
+    ],
+    "experiment_id": "SFT-EXP-PHYS-VALIDATION-NEUTRINO-MASS-MIXING-003",
+    "expected_observation_label": "positive-normal-neutrino-mass-structure-PMNS-and-CP-inside-registered-three-sigma-support__mass-sum-below-direct-and-cosmological-bounds__ordering-preference-not-decisive",
+    "target_rows": [
+      [
+        "MATTER-FLAVOUR-NEUTRINO",
+        "MATTER-FLAVOUR-AUTHORITATIVE-2022-2026",
+        "complete registered NIST/PDG/Fermilab/Planck vector including unfavorable and scope rows",
+        "positive-normal-neutrino-mass-structure-PMNS-and-CP-inside-registered-three-sigma-support__mass-sum-below-direct-and-cosmological-bounds__ordering-preference-not-decisive"
+      ]
+    ],
+    "source_snapshot_path": "experiments/external_sources/physics/snapshots/matter-flavour-source-record.json",
+    "source_snapshot_hash": "sha256:6e56fcdd94371ebf396b9600a1431fd448075f69073572b9cb0660959329b9fe",
+    "falsification_condition": "A PMNS/CP value leaves the registered support, the positive mass sum exceeds a robust bound, inverted ordering becomes decisive, or an uncertainty/scope row is altered."
+  },
+  "dimensions": [
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "answer-only-scalar",
+          "admitted": false,
+          "reason": "An answer-only scalar erases the generated physical carrier."
+        },
+        {
+          "name": "complete-fold-carrier",
+          "admitted": true,
+          "reason": "The complete Fold trace retains the observed physical distinction."
+        }
+      ]
+    },
+    {
+      "key": "relation",
+      "choices": [
+        {
+          "name": "imported-or-fitted-relation",
+          "admitted": false,
+          "reason": "An imported or fitted relation lets consensus or target data select the law."
+        },
+        {
+          "name": "sealed-formal-laws-versus-complete-matter-flavour-vector",
+          "admitted": true,
+          "reason": "Every favorable, adverse, unavailable-measurement and closed-prediction row remains visible."
+        }
+      ]
+    },
+    {
+      "key": "provenance",
+      "choices": [
+        {
+          "name": "unbound-provenance",
+          "admitted": false,
+          "reason": "Unbound provenance cannot demonstrate which premises produced the result."
+        },
+        {
+          "name": "source-bound-proof-trace",
+          "admitted": true,
+          "reason": "Every generated candidate and decision is bound to its exact source trace."
+        }
+      ]
+    },
+    {
+      "key": "prediction",
+      "choices": [
+        {
+          "name": "target-readable-prediction",
+          "admitted": false,
+          "reason": "A target-readable predictor can copy or optimize against the measurement."
+        },
+        {
+          "name": "capability-closed-prediction",
+          "admitted": true,
+          "reason": "The registered Fold instruction surface has no target or ambient host capability."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "proof-measurement-conflation",
+          "admitted": false,
+          "reason": "Treating an external decimal record as a proof scalar violates the measured-value boundary."
+        },
+        {
+          "name": "separate-measurement-record",
+          "admitted": true,
+          "reason": "External values remain source-bound records compared only after sealing."
+        }
+      ]
+    },
+    {
+      "key": "rows",
+      "choices": [
+        {
+          "name": "selected-favourable-rows",
+          "admitted": false,
+          "reason": "Selecting favorable rows cannot falsify the relation."
+        },
+        {
+          "name": "complete-registered-rows",
+          "admitted": true,
+          "reason": "Every favorable, unfavorable and tampered registered row is retained."
+        }
+      ]
+    },
+    {
+      "key": "generality",
+      "choices": [
+        {
+          "name": "finite-answer-lookup",
+          "admitted": false,
+          "reason": "An answer lookup has no successor certificate."
+        },
+        {
+          "name": "one-successor-closure",
+          "admitted": true,
+          "reason": "The One base and generated successor preserve the relation at every declared finite depth."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "free-extra-rule",
+          "admitted": false,
+          "reason": "A free constant, scale or exception can select the measured answer."
+        },
+        {
+          "name": "no-extra-rule",
+          "admitted": true,
+          "reason": "No rule beyond the admitted dependencies and forced relation is present."
+        }
+      ]
+    }
+  ],
+  "witnesses": [
+    [
+      "complete-classification",
+      "The full comparison vector recomputes its exact classification.",
+      true
+    ]
+  ]
+}

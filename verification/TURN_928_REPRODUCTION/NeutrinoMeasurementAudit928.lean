@@ -1,0 +1,23 @@
+import SFT.Physics.NeutrinoMeasurementRoots
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.Interval
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.initialBracket
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.needsRefinement
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.SourceRun
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.refineWithin
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.refinementCorrespondence
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.sqrtRefined
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.lightestSquare
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.lightestInterval
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.lightestRefinement
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.lightestSourceRun
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.lightestExact
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.middleSquare
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.middleInterval
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.middleRefinement
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.middleSourceRun
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.middleExact
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.heavySquare
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.heavyInterval
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.heavyRefinement
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.heavySourceRun
+#print axioms SFT.Physics.NeutrinoMeasurementRoots.heavyExact

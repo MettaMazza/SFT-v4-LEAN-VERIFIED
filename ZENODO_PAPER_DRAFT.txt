@@ -25002,3 +25002,42 @@ For returned positive rational bounds [ℓ,h], the source score interval is [R�
 The shared cover construction supplies the tail cutoff T=b^(d+u)=2^12=4096 and its exact radius 16. The tail-bound operation first forms the largest pairing gain G=p/(T·16)=1/262144. Its low-charge bound is B_low=1−a·9/25+G=5963801/6553600. For the high-charge case it uses z₀=⌊T/d⌋+1=820, ordered paths z₀(z₀−1)=671580, and B_high=1−α·671580/(4096·16)+G=122203900286693485/132080309493825536. Its fifth returned field evaluates the original successor inequality bT²>b²gT+14: 33554432>49166. The operation retains both bounds, cutoff mass, cutoff radius and that Boolean result.
 
 Original source: pinned V3 sft/physics/nuclear_binding_curve_successor_laws_v1.py, functions surface_deficit_share through continuous_vertex_enclosure, tail_cutoff_mass and tail_upper_bounds; the inherited coefficients follow atomic_constants.py and nuclear_residual_force_successor_laws_v1.py. Native verification: SFT/Physics/NuclearBindingCurve.lean, NuclearBindingRadius.lean and NuclearBindingTail.lean, including WholeTrace, scanTrace and wholeLoopCorrespondence. The 36 audited declarations have empty axiom dependencies. Source comparisons retain all ten ledger fields, 1,365 count/ledger cases, 268 radius/score/vertex cases and all five tail-bound fields. Chronological implementation and checks: TIMELINE.txt, TURN962. Evidence: verification/TURN_962_SUPPORTED_DERIVATIONS/nuclearbindingcurve962_{ledger,radius,tail}_report.json and the corresponding axiom audits.
+
+835. Complete integer/parity census and nuclear peak separation
+
+The charge census follows the continuous vertex v_A(r)=A(r+α)/(2r+2αA) from Section 834. At refinement n, let [v_lo,v_hi] be its exact enclosed values. The original refinement loop begins at n=1 and increases n by one until v_hi−v_lo<1/4. It then includes every integer charge from max(1,⌊v_lo⌋−2) through min(A−1,⌊v_hi⌋+3), in ascending order. Both parity classes remain present in this interval; no measured isotope is used to choose its endpoints.
+
+The complete mass range is 2≤A<2^(5+7)=4096. Applying that operation to every one of its 4,094 masses produces 25,303 ordered (A,Z) pairs. The numbers of mass rows first reaching the vertex-width condition after one through seven refinements are respectively 59,33,67,138,310,847 and2,640; their sum is 4,094. Native kernel equalities establish the generated charge list for every mass, and a source-loop trace proves that each successful result follows the original stop-or-successor rule. This gives 4,094 exact evaluation proofs and 4,094 corresponding uncapped-loop proofs, all with empty axiom dependencies. The full concatenated census also matches the original ordered 25,303-pair result.
+
+For each candidate c=(A,Z), the score calculation produces the exact interval [L_c(n),U_c(n)] described in Section 834. At each stage choose w as the first candidate attaining max_c L_c(n), retaining the source's first-on-equal rule, and form R_w(n)=max_{c≠w}U_c(n). Separation holds precisely when L_w(n)>R_w(n). Otherwise the refinement count doubles. Thus the comparison stages are n=1,2,4,8; no target-selected radius precision enters the construction.
+
+The source calculation and native exact evaluator return w=(62,28), hence N=62−28=34, with
+L_w=9080439588063887159/9809818781286064340,
+U_w=1515016807116167539/1636583784834496420,
+and R_w=7773977012907656069/8398424104442482780.
+The separating lower endpoint exceeds R_w and both tail bounds from Section 834. The complete eleven-field certificate retains mass, charge, neutron count, both score endpoints, the largest rival upper endpoint, eight refinements, 4,094 masses, 25,303 possible maximizers, cutoff 4096 and the original tail-closure flag. The original score and candidate operations, rather than a coordinate lookup table, produce this certificate.
+
+Original source: pinned V3 sft/physics/nuclear_binding_curve_successor_laws_v1.py, possible_mass_maximizers, finite_peak_candidates and binding_peak_certificate. Native verification: SFT/Physics/NuclearBindingCensus.lean (candidateStep, CandidateRun, candidatesWithin, candidatesCorrespond, finitePeakCandidatesWithin); NuclearBindingCensusBatch00.lean through NuclearBindingCensusBatch63.lean (every mass evaluation and source trace); NuclearBindingPeak.lean (scoreCandidates, bestLower, largestUpper, separationStep, SeparationRun, separationCorrespond and completeCertificate). Evidence: verification/TURN_963_SUPPORTED_DERIVATIONS/nuclearbindingcurve963_census_report.json, nuclearbindingcurve963_census_all_audit.log and nuclearbindingcurve963_peak_report.json. Chronological work: TIMELINE.txt, TURN963.
+
+836. Complete AME2020 comparison and uncertainty-separated measured maximum
+
+The original empirical boundary opens the identity-bound AMDC AME2020 mass table only after prediction. The record retains 2,550 numeric rows, of which 2,548 are positive composites. Two mass-One rows bearing the external inscription 0.0 remain explicit empty-binding boundary rows. The native reader preserves the original fixed columns, skips the same nonnumeric, estimated or absent binding inscriptions, and retains every accepted row's A,Z,N, element, central binding energy, reported uncertainty and both outward endpoints.
+
+For a reported binding b and standard uncertainty σ, the comparison interval is [b−σ,b+σ], with the original positive-take guard on the lower endpoint. A stable descending ranking of all 2,548 central values gives nickel-62 as the maximum and iron-58 as the runner-up. Nickel-62 has b=17589111/2000 keV per nucleon and σ=69/10000 keV, hence [43972743/5000,10993203/1250]. Iron-58 has b=43961267/5000 and σ=11/2000, hence [87922479/10000,87922589/10000]. The complete rival scan gives max_rival U=87922589/10000. The measured separation is therefore exact:
+43972743/5000 > 87922589/10000,
+because 87945486>87922589 after multiplication by 10,000.
+
+All eight registered anchors are retained, in keV per nucleon:
+deuterium: [11122829/10000,11122833/10000];
+helium-4: [35369577/5000,35369579/5000];
+carbon-12: [19200361/2500,9600181/1250];
+iron-56: [17580703/2000,87903611/10000];
+iron-58: [87922479/10000,87922589/10000];
+nickel-62: [43972743/5000,10993203/1250];
+lead-208: [3146979/400,15734917/2000];
+uranium-238: [75701199/10000,3028053/400].
+The original light-rise comparison checks U_D<L_He<L_C<L_Fe56<L_Ni62. The heavy-fall comparison checks U_Pb208<L_Ni62 and U_U238<L_Pb208. The complete analysis also compares the independently calculated structural coordinate (62,28,34) with the measured maximum and retains the adverse rejection of an unqualified iron-only maximum: the winner is Ni and the runner-up is Fe.
+
+Native execution matches every field of all 2,548 original measured rows, the complete ranking analysis, all eight anchor intervals, the original five Boolean comparison decisions and the full classification label. The AME record and raw-table identities, ten custody conditions, complete row counts and both singleton boundary records remain explicit. The measured table does not select any coefficient or formal candidate.
+
+Original source: pinned V3 sft/physics/nuclear_binding_curve_successor_validation_v1.py, authoritative_record, measured_binding_rows, row_by_coordinate, measurement_analysis and nuclear_binding_curve_classification; snapshots nuclear-binding-curve-successor-source-record.json and ame2020-mass_1.mas20. Native verification: SFT/Physics/NuclearBindingRecords.lean, NuclearBindingMeasuredRows.lean and NuclearBindingMeasurement.lean. Evidence: verification/TURN_963_SUPPORTED_DERIVATIONS/nuclearbindingcurve963_rows_report.json, nuclearbindingcurve963_measurement_report.json and the corresponding empty-axiom audits. Chronological work: TIMELINE.txt, TURN963.

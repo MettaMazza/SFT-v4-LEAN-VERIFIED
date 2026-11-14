@@ -25269,3 +25269,65 @@ The right-angle ceiling retains that full interval; the backscatter ceiling is i
 The IAEA comparison preserves the historical large-angle observation, inverse-square Coulomb source and full Rutherford scale/angle relation. It retains the Compton wavelength relation, an essentially free stationary electron, incident energy much larger than binding energy, and conservation of photon/recoil-electron energy and momentum. Fifteen ordered prediction inputs are generated from the formal certificate before the two target packages are released. The original twelve acceptance conditions, all adverse controls, three file identities, page/row conditions, complete comparison payload, seal, target custody and isolation receipts are verified against fresh V3 execution and its pinned record. The entire native validation output matches the source.
 
 Original pinned sources: sft/physics/scattering_rutherford_compton_terminal_law_v1.py, all guarded transfer/area/scale/photon operations, formal_certificate, eight forcing predicates and complete programme; scattering_rutherford_compton_terminal_validation_v1.py, complete CODATA and IAEA analyses, prediction, experiment and validator; scattering_rutherford_compton_terminal_execution_v1.py. Native verification: SFT/Physics/ScatteringRutherfordCompton.lean, ScatteringRutherfordComptonProofs.lean, ScatteringRutherfordComptonGrammar.lean, ScatteringRutherfordComptonEvidence.lean, ScatteringRutherfordComptonGeneral.lean, ScatteringMeasurement.lean, ScatteringPrediction.lean, RutherfordComptonExperiment.lean and RutherfordComptonValidation.lean. The general declarations named above use the existing exact rational, positive-take and normalized-value proofs. Source correspondence and checks: verification/TURN_970_SCATTERING_RUTHERFORD_COMPTON_COMPLETION.json and linked reports. Chronological work: TIMELINE.txt, TURN969–970.
+
+845. Terminal decay widths, complete branching partitions and lifetimes
+
+An open decay channel retains a positive overlap leg l, generated available-output support E and action carrier A. Pairing the transition leg with its return gives l². Composition with output support and division by action therefore yield
+γ=l²E/A.
+For l=L/K, E=P/Q and A=U/V, the exact generated carrier is
+γ=[(L²/K²)(P/Q)]/(U/V)=L²PV/(K²QU).
+All six numerator and denominator counts are positive. The original operation rejects nonpositive carriers. A closed channel is the empty form (), and is not inserted into an open-channel family as a numerical null. partialWidthForEveryPositiveCarrier verifies this formula for every admitted positive rational triple; closedChannelIsEmpty verifies the distinct empty representation.
+
+For a nonempty ordered family (γ₁,…,γₙ), the total starts with γ₁ and folds positive addition over the remaining channels:
+Γ₁=γ₁,             Γₙ₊₁=Γₙ+γₙ₊₁.
+No numerical-null seed is used. totalForEveryAdmittedFamily identifies the original total operation with this fold. appendedSourceFamily and totalAfterEveryAdmittedSuccessor connect the original guarded append operation to the displayed successor equality. The appended channel is validated as positive before it enters the family.
+
+Every such rational family admits a constructed common denominator D. If the retained tail is represented by numerators nᵢ over D and the next carrier is p/q, extend the denominator to Dq, the tail numerators to nᵢq and the new numerator to pD. The equalities
+nᵢ/D=(nᵢq)/(Dq),             p/q=(pD)/(Dq)
+preserve every carrier and its order. All new numerators and the new denominator remain positive. Starting from the empty denominator bookkeeping value One, this construction covers every finite list; the physical total still starts with its first positive channel. everyPositiveFamilyHasCommonDenominator proves this representation from the actual positive-numerator guards. The common denominator is determined from existing inputs and is neither a scientific fit nor an additional physical parameter.
+
+Writing γᵢ=nᵢ/D and N=n₁+⋯+nₙ gives Γ=N/D. Each branch is its own width divided by the complete total:
+bᵢ=γᵢ/Γ=(nᵢ/D)/(N/D)=nᵢ/N.
+Complete exclusive composition then gives
+b₁+⋯+bₙ=(n₁+⋯+nₙ)/N=N/N=One.
+For the first channel alone, N=n₁ and b₁=One. For a successor channel γₙ₊₁, every branch uses the enlarged common total Γₙ+γₙ₊₁, so
+Σᵢ₌₁ⁿ⁺¹ γᵢ/(Γₙ+γₙ₊₁)
+ =(Γₙ+γₙ₊₁)/(Γₙ+γₙ₊₁)=One.
+branchingForEveryCommonDenominatorFamily establishes the normalized vector. completePartitionForEveryAdmittedFamily combines the constructive representation and finite-sum induction to prove the actual completeBranchingPartition operation equals One for every admitted nonempty source family. enlargedFamilyStillPartitionsOne proves the same result after the actual append operation. These are arbitrary-family proofs, independent of the finite witness vector.
+
+Duration is fixed by action-width reciprocity:
+τ=A/Γ.
+For A=a/b and Γ=n/d, τ=ad/(bn); lifetimeForEveryPositiveCarrier verifies that exact operation and its guards. If Γₐ=n/d and Γᵦ=m/e with ne<md, then
+τₐ=ad/(bn),             τᵦ=ae/(bm),
+(ae)(bn)<(ad)(bm).
+The final inequality is the original width inequality multiplied by positive ab and reordered, so τᵦ<τₐ. everyPositiveWidthOrder proves that the original widerStateLifetimeTake operation accepts this reversed duration ordering and returns the exact positive take of the shorter duration from the longer. Thus increased open-channel width strictly shortens duration while retaining the same action carrier.
+
+The source certificate contains ten fields. Its three target-free partial widths are calculated, rather than supplied as independent answers:
+(1/2)²(1/2)/(1/2)=1/4,
+(1/2)²One/(1/2)=1/2,
+One²(5/8)/(1/2)=5/4.
+Their total is 2, their branch vector is (1/8,1/4,5/8), its complete partition is One, and the duration at unit action is 1/2. Widths (1/2,One,2) give durations (2,One,1/2). The original successor widths (1/8,1/4,1/2,One), every resulting total increment, every enlarged partition and the three original strict lifetime takes are retained alongside the empty closed channel.
+
+The original grammar is the ordered product of seven three-way axes and two two-way axes: partial-width carrier, channel domain, total-width aggregator, branch normalization, complete partition, lifetime relation, width-lifetime ordering, target custody and extension. It has exactly 3⁷·2²=8,748 alternatives. Every typed combination is included. Computed source predicates reject the unpaired or target-assigned width, numerical-null or indistinguishable channel family, maximum-only or mean total, inverted or unnormalized branches, incomplete or double-counted partition, direct or multiplicative lifetime, reversed or constant ordering, exposed target and free correction. The original witnesses and full certificate determine the decisions. The unique survivor retains paired positive width, complete ordered positive composition, branch-over-total normalization, the One partition, inverse lifetime, sealed custody and empty extension. The four controls preserve false incomplete/direct-lifetime laws, changed source identity, actual duplicated census and the original boundary conditions.
+
+The independent measurement comparison retains all sixteen PDG W-width rows, all thirteen primary decay-mode rows and the complete NIST reduced-action row. The three width components used in the source average retain their use status alongside the unused rows. Exclusive primary modes, aggregates, inclusive subsets and search classes remain distinct. None of these readings selects the formal grammar's survivor.
+
+The released total width is 107/50 GeV, with interval [209/100,219/100] GeV. In the universality fit each of the three leptonic branches is 543/5000, giving the exact complement
+One−3(543/5000)=3371/5000.
+The individual leptonic branches are 1071/10000, 1063/10000 and 569/5000, giving
+One−[1071/10000+1063/10000+569/5000]=841/1250.
+Both forced complements lie within the respective released hadronic interval. The complete universality interval sums to [1989/2000,10053/10000]; the individual exclusive interval sums to [4967/5000,2523/2500]. Both contain One. The printed central universality vector falls short of One by 1/10000, whereas the individual printed vector exceeds One by 13/10000. These published rounding residuals remain explicit instead of being replaced by exact closure of the rounded inscriptions.
+
+For each branch interval [bᵢ⁻,bᵢ⁺] and total-width interval [Γ⁻,Γ⁺], positive interval transport gives
+γᵢ∈[Γ⁻bᵢ⁻,Γ⁺bᵢ⁺].
+The four partial-width intervals sum to [1038103/500000,552537/250000] GeV, enclosing the complete released total-width interval. Inclusive subsets are retained as subsets and never added as extra exclusive channels.
+
+The NIST inscription 6.582119569…×10⁻¹⁶ eV s is enclosed by the adjacent rationals
+A⁻=6582119569/10²⁵,             A⁺=6582119570/10²⁵  eV s.
+After division by 10⁹ to obtain GeV s, inverse-width transport yields
+τ∈[(A⁻/10⁹)/(219/100),(A⁺/10⁹)/(209/100)] seconds.
+Both endpoints are positive and ordered. The ellipsis is not replaced by an exact rational equality. The released widths 2.202 and 2.046 GeV also retain the strict inverse-duration order at the same lower action endpoint. The complete measurement analysis, including every interval, row count, classification and complement, is compared with fresh original execution.
+
+Thirteen ordered formal prediction inputs encode the three partial widths, total, three branches, partition, lifetime and four typed relation labels. Their actual capability program emits the same exact word before target release. The original fourteen acceptance conditions, omitted-branch, double-counted-subset, inverted-branch, direct-duration and incomplete-table controls are retained with complete source identities, comparison payload, measurement strings and isolation/custody receipts.
+
+Original pinned sources: sft/physics/decay_width_branching_lifetime_terminal_law_v1.py, all guarded operations, formal_certificate, nine forcing predicates and full programme; decay_width_branching_lifetime_terminal_validation_v1.py, authoritative_record, codata_action_row, pdg_analysis, nist_action_analysis, prediction, experiment and validator; decay_width_branching_lifetime_terminal_execution_v1.py. Native verification: SFT/Physics/DecayWidthBranchingLifetime.lean, DecayWidthBranchingLifetimeCertificate.lean, DecayWidthBranchingLifetimeProofs.lean, DecayWidthBranchingLifetimeGrammar.lean, DecayWidthBranchingLifetimeEvidence.lean, DecayWidthBranchingLifetimeGeneral.lean, DecayWidthMeasurement.lean, DecayWidthPrediction.lean, DecayWidthExperiment.lean and DecayWidthValidation.lean. The declarations named above retain the original positive-carrier domain and reuse the existing exact rational arithmetic proofs. Chronological implementation and checks: TIMELINE.txt, TURN971.

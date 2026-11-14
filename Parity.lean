@@ -1690,3 +1690,6 @@ def main : IO Unit := do
 
   for c in SFT.Mathematics.CollatzGrammar.candidates do
     IO.println ("CollatzGrammar\t" ++ SFT.Mathematics.CollatzGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.CollatzGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.CollatzGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.CollatzGrammar.decisionReason c)
+
+  for c in SFT.Computation.NativeBusyGrammar.candidates do
+    IO.println ("NativeBusyGrammar\t" ++ SFT.Computation.NativeBusyGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.NativeBusyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.NativeBusyGrammar.exactForm c ++ "\t" ++ SFT.Computation.NativeBusyGrammar.decisionReason c)

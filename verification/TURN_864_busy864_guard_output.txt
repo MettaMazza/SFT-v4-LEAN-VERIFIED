@@ -1,0 +1,31 @@
+(-2,
+ Except.error "depth must be a supplied positive finite host count",
+ Except.error "max() arg is an empty sequence",
+ Except.error "recurrence requires a supplied positive finite host count")
+(0,
+ Except.error "depth must be a supplied positive finite host count",
+ Except.error "max() arg is an empty sequence",
+ Except.error "recurrence requires a supplied positive finite host count")
+(1, Except.ok [["held-lower"], ["held-upper"]], Except.ok 1, Except.ok ["held-lower", "held-upper"])
+(4,
+ Except.ok [["held-lower", "held-lower", "held-lower", "held-lower"],
+  ["held-lower", "held-lower", "held-lower", "held-upper"],
+  ["held-lower", "held-lower", "held-upper", "held-lower"],
+  ["held-lower", "held-lower", "held-upper", "held-upper"],
+  ["held-lower", "held-upper", "held-lower", "held-lower"],
+  ["held-lower", "held-upper", "held-lower", "held-upper"],
+  ["held-lower", "held-upper", "held-upper", "held-lower"],
+  ["held-lower", "held-upper", "held-upper", "held-upper"],
+  ["held-upper", "held-lower", "held-lower", "held-lower"],
+  ["held-upper", "held-lower", "held-lower", "held-upper"],
+  ["held-upper", "held-lower", "held-upper", "held-lower"],
+  ["held-upper", "held-lower", "held-upper", "held-upper"],
+  ["held-upper", "held-upper", "held-lower", "held-lower"],
+  ["held-upper", "held-upper", "held-lower", "held-upper"],
+  ["held-upper", "held-upper", "held-upper", "held-lower"],
+  ["held-upper", "held-upper", "held-upper", "held-upper"]],
+ Except.ok 4,
+ Except.ok ["held-lower", "held-upper", "held-lower", "held-upper", "held-lower"])
+([], Except.error "a closing trace requires one exact generated Fold word")
+(["foreign"], Except.error "a closing trace requires one exact generated Fold word")
+(["held-lower", "held-upper"], Except.ok [["held-lower", "held-upper"], ["held-upper"], ["empty-One"]])

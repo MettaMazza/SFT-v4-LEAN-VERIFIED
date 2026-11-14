@@ -38765,9 +38765,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-COMP-CBL-NATIVE-BUSY-BEAVER-002-92715d1d41f9021e.json",
       "statement": "For every supplied positive finite description depth k in the admitted native Fold closing-process grammar, every process halts within k lawful depth-lowering transitions and a depth-k source attains k; therefore BB_F(k)=k. Period-b recurrent processes carry an exact nonhalting certificate and are excluded from the closing maximum.",
       "title": "Unrestricted native Fold Busy-Beaver law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Computation/NativeClosing.lean",
+        "SFT/Computation/NativeClosingDomain.lean",
+        "SFT/Computation/NativeClosingWitnesses.lean",
+        "SFT/Computation/NativeBusyGrammar.lean",
+        "SFT/Computation/NativeBusyEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256 Lean program and all original fields/hashes, four original independent accepted/adverse cases; original formal evidence mode preserved.",
       "registration_sha256": "5d8e0f06d153ec24fecb2dbe3edbfd7cc0eefc19d76873d80ffa3136031c26f4",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -38806,7 +38812,10 @@
         "statement": "For every supplied positive finite description depth k in the admitted native Fold closing-process grammar, every process halts within k lawful depth-lowering transitions and a depth-k source attains k; therefore BB_F(k)=k. Period-b recurrent processes carry an exact nonhalting certificate and are excluded from the closing maximum.",
         "status": "independently_replicated",
         "title": "Unrestricted native Fold Busy-Beaver law"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_864_BUSY_COMPLETION.json",
+      "verified_scope": "Original native word generation,positive-depth and closing-trace guards,complete suffix evaluator,exact trace length,all-depth upper bound and attainment,actual generated-list maximum BB_F(k)=k,original empty-maximum rejection and recurrent exclusion.; Generated-word membership implies original closing guard acceptance; exact original first word is the attaining lower-label word at every depth.; All14 original native maximum witnesses composed from the actual all-depth maximum theorem.; Complete original eight binary axes,all256 alternatives,exact decisions/reasons and unique survivor.; Original GeneratedComputationProgram registration,census,all decisions,closure,three computed witnesses,controls,canonical hashes and unknown identifier."
     },
     {
       "branch": "computation",
@@ -195621,13 +195630,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-14T02:31:47.065917+00:00",
+  "updated_at": "2026-11-14T02:48:28.748609+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2250,
-    "fully_reconstructed_claims": 531,
-    "axiom_free_exported_results": 27072,
-    "axiom_free_audited_definitions_and_theorems": 65829
+    "pending": 2249,
+    "fully_reconstructed_claims": 532,
+    "axiom_free_exported_results": 27133,
+    "axiom_free_audited_definitions_and_theorems": 65945
   }
 }

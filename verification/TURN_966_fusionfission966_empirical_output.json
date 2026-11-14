@@ -1,0 +1,61 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "AMDC-AME2020-MASS-1-BINDING-2021"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:0d15bc9ca07fc1fbfb961d50f57127846c409613de4adf708d930a0dccd397d3",
+  "falsification_condition": "Reject if either sealed exact binding direction is absent from AME2020 after reported uncertainties, if mass/charge coordinates differ, if the sealed global maximum is not the complete-census maximum, if any positive-composite row or singleton boundary inscription is omitted, if a reversed-direction control is accepted, if a source identity changes, or if target content enters prediction before its seal.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:262fe874dacac1094654742a8ac05cd6be9e2ff3d5f9934bdbdef781f523d50d",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:edfc23245eb66cf95b299c90f539e8d4e2744adfdd82efecaea0e788f6b3454e",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-PHYS-NUCLEAR-FUSION-FISSION-TERMINAL-005-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:d508f35e90e9eb84693cc90b20b1070c38bffc498c54bd32c4c1cbaff65a49ef",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:8a51493d5eaa9ecbacf63ce987759a40b23b079d0cf73ee5212d2bffc2954646",
+    "prediction_seal_hash": "sha256:76f2760e15afefca07b526cfd5eeaaa7eff3fe780fc4b29d4fa250e0b99f2457",
+    "program_hash": "sha256:a2095c802eda94857c56a7560842091850c8f527a2539cef61c4a80dbb12b0a3",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:afb2efd527cc67e25a3c9578b21005cd1093c542d3256cb19d0b7f508139f594",
+    "target_material_present": false,
+    "trace_hash": "sha256:93f5ddb7f9640b18d41481d3905867fbde154d1a7cdbebcd919d0cca5e136f8e"
+  },
+  "measurement_receipt_hash": "sha256:722810443b2187a7ddf03f88a97bd8fd7b1123f536427cd976857f14552d35ee",
+  "measurements": [
+    "complete AME2020 positive-composite census retained: 2548 rows",
+    "fusion anchor exact intervals keV/nucleon: D [11122829/10000, 11122833/10000], He-4 [35369577/5000, 35369579/5000]; strict rise True",
+    "fission anchor exact intervals keV/nucleon: U-238 [75701199/10000, 3028053/400], Pd-119 [83688901/10000, 83690287/10000]; strict rise True",
+    "complete-census maximum: A=62, Z=28, N=34; separated from every rival True",
+    "both external singleton 0.0 inscriptions retained only as empty-binding boundaries",
+    "reversed fusion and fission directions, incomplete census and displaced peak controls rejected"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:b89abecbb1d4af6705d6b925ca4de257608d015c8de9ba2f7246f954fc1baef3",
+    "custodian_id": "SFT-EXP-PHYS-NUCLEAR-FUSION-FISSION-TERMINAL-005-external-target-custodian",
+    "experiment_registration_hash": "sha256:0d15bc9ca07fc1fbfb961d50f57127846c409613de4adf708d930a0dccd397d3",
+    "prediction_seal_hash": "sha256:76f2760e15afefca07b526cfd5eeaaa7eff3fe780fc4b29d4fa250e0b99f2457",
+    "registered_target_identity_hash": "sha256:afb2efd527cc67e25a3c9578b21005cd1093c542d3256cb19d0b7f508139f594",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:3d71d3c654f6b16db51e835c7d3181c6962b269f1e7dc69d74801a653db24c64"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "sha256:3b5ba8c1b1c7cef52e338ec2656e5043717dbb8f9d23040986d9325c1b25302c"
+}

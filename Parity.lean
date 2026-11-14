@@ -1990,3 +1990,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.RadioactiveDecayEntryGrammar.candidates do
     IO.println ("RadioactiveDecayEntryGrammar\t" ++ SFT.Physics.RadioactiveDecayEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.RadioactiveDecayEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.RadioactiveDecayEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.RadioactiveDecayEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.FusionFissionTerminalGrammar.candidates do
+    IO.println ("FusionFissionTerminalGrammar\t" ++ SFT.Physics.FusionFissionTerminalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FusionFissionTerminalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FusionFissionTerminalEvidence.exactForm c ++ "\t" ++ SFT.Physics.FusionFissionTerminalEvidence.decisionReason c)

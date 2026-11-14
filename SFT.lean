@@ -7040,3 +7040,11 @@ import SFT.Physics.RadioactiveDecayEmpiricalGrammar
 import SFT.Physics.RadioactiveDecayEmpiricalEvidence
 import SFT.Physics.RadioactiveDecayEmpiricalExperiment
 import SFT.Physics.RadioactiveDecayEmpiricalValidation
+import SFT.Physics.FusionFissionTerminal
+import SFT.Physics.FusionFissionTerminalProofs
+import SFT.Physics.FusionFissionTerminalGrammar
+import SFT.Physics.FusionFissionTerminalEvidence
+import SFT.Physics.FusionFissionMeasurement
+import SFT.Physics.FusionFissionPrediction
+import SFT.Physics.FusionFissionExperiment
+import SFT.Physics.FusionFissionValidation

@@ -1,8 +1,10 @@
+import SFT.Foundation.AdmissionControls
 import SFT.Physics.CustodyTypes
 import SFT.Engine.EvidenceGates
 import SFT.Engine.RegistrationGate
 namespace SFT.Physics.TargetCustody
 open SFT.Host SFT.Host.Canonical
+open SFT.Foundation.AdmissionControls (admissionIdentity)
 abbrev PredictionSeal := SFT.Physics.LeptonCustody.PredictionSeal
 def insertTarget (entry : String × Value) : List (String × Value) → List (String × Value)
  | [] => [entry]
@@ -13,7 +15,7 @@ def sortTargets : List (String × Value) → List (String × Value)
  | head::tail => insertTarget head (sortTargets tail)
 
 def targetIdentity (values : List (String × Value)) (nonce : String) : String :=
- identity (.array ((sortTargets values).map fun (name,value) => .array [.text name,.text nonce,value]))
+ admissionIdentity (.array ((sortTargets values).map fun (name,value) => .array [.text name,.text nonce,value]))
 
 structure Commitment where
  experiment : String
@@ -50,7 +52,7 @@ def createVault (experiment custodian : String) (values : List (String × Value)
     let payload : Value := .object [("experiment_id",.text experiment),("custodian_id",.text custodian),
       ("target_ids",.array (ids.map Value.text)),("target_identity_hash",.text targetHash),
       ("expected_envelope_hash",.text expectedEnvelope)]
-    .ok ⟨⟨experiment,custodian,ids,targetHash,expectedEnvelope,identity payload⟩,values,nonce,false⟩
+    .ok ⟨⟨experiment,custodian,ids,targetHash,expectedEnvelope,admissionIdentity payload⟩,values,nonce,false⟩
 
 theorem constructorRetainsCommitment (experiment custodian : String) (values : List (String × Value))
     (nonce expectedEnvelope : String) (vault : Vault)
@@ -99,7 +101,7 @@ def release (vault : Vault) (prediction : PredictionSeal) : Except String (Vault
  else
    let raw : Release := ⟨vault.commitment.experiment,vault.commitment.custodian,prediction.sealHash,
      vault.commitment.targetHash,vault.values,vault.nonce,""⟩
-   .ok ({vault with released := true},{raw with releaseHash := identity (releasePayload raw)})
+   .ok ({vault with released := true},{raw with releaseHash := admissionIdentity (releasePayload raw)})
 
 def sameNames (left right : List String) : Bool :=
  (left.map Text.chars) == (right.map Text.chars)
@@ -113,7 +115,7 @@ def violations (commitment : Commitment) (released : Release) (prediction : Pred
  (if !sameNames ((sortTargets released.values).map Prod.fst) commitment.targetIds then ["released target support differs from the commitment"] else []) ++
  (if !Text.equal (targetIdentity released.values released.nonce) commitment.targetHash || !Text.equal released.targetHash commitment.targetHash
   then ["released target content differs from the pre-seal commitment"] else []) ++
- (if !Text.equal released.releaseHash (identity (releasePayload released)) then ["target release identity differs from its contents"] else [])
+ (if !Text.equal released.releaseHash (admissionIdentity (releasePayload released)) then ["target release identity differs from its contents"] else [])
 
 def verify (commitment : Commitment) (released : Release) (prediction : PredictionSeal) : Except String Unit :=
  let errors := violations commitment released prediction
@@ -193,7 +195,7 @@ theorem exchangeChecksExactly (commitment : Commitment) (released : Release) (pr
     (!Text.equal prediction.envelopeHash commitment.expectedEnvelopeHash) = false ∧
     (!sameNames ((sortTargets released.values).map Prod.fst) commitment.targetIds) = false ∧
     (!Text.equal (targetIdentity released.values released.nonce) commitment.targetHash || !Text.equal released.targetHash commitment.targetHash) = false ∧
-    (!Text.equal released.releaseHash (identity (releasePayload released))) = false := by
+    (!Text.equal released.releaseHash (admissionIdentity (releasePayload released))) = false := by
   constructor
   · intro accepted
     have empty := (verifyEmpty commitment released prediction).mp accepted

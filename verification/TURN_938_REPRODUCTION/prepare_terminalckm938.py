@@ -25,3 +25,6 @@ s=(w/'prepare_baryonphoton_native931.py').read_text().replace('931','938').repla
 p=r/'SFT/Physics/TerminalCKMEntryEvidence.lean';s=p.read_text().replace('evidenceMode := .formal','evidenceMode := .empirical').replace('provenance := [.forwardForcing]','provenance := [.observationalDerivation]');p.write_text(s)
 import shutil
 shutil.copy2(p,Path('/Volumes/One Touch/SFT v4 Full model LEAN/SFT/Physics')/p.name)
+
+for kind in ['original','program','independent']:
+ p=w/f'check_terminalckm_{kind}938.py';s=p.read_text().replace('matter_flavour_completion_laws_v1','matter_flavour_terminal_ckm_laws_v1').replace('matter_flavour_completion_validator_v1','matter_flavour_terminal_ckm_validator_v1').replace('SFT-PHYS-MATTER-MIXING-CORRESPONDENCE-003','SFT-PHYS-MATTER-CKM-TERMINAL-004').replace("=='formal'","=='empirical'").replace("==['forward_forcing']","==['observational_derivation']");p.write_text(s)

@@ -1825,3 +1825,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.HorizonInformationEntryGrammar.candidates do
     IO.println ("HorizonInformationEntryGrammar\t" ++ SFT.Physics.HorizonInformationEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HorizonInformationEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HorizonInformationEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.HorizonInformationEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.WormholeEntryGrammar.candidates do
+    IO.println ("WormholeEntryGrammar\t" ++ SFT.Physics.WormholeEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.WormholeEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.WormholeEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.WormholeEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.WarpEntryGrammar.candidates do
+    IO.println ("WarpEntryGrammar\t" ++ SFT.Physics.WarpEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.WarpEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.WarpEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.WarpEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.TimelikeEntryGrammar.candidates do
+    IO.println ("TimelikeEntryGrammar\t" ++ SFT.Physics.TimelikeEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TimelikeEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TimelikeEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TimelikeEntryGrammar.decisionReason c)

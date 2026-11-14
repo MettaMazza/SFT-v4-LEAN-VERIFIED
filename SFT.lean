@@ -6309,3 +6309,16 @@ import SFT.Physics.HorizonInformationEntryWitnesses
 import SFT.Physics.HorizonInformationEntryGrammar
 import SFT.Physics.HorizonInformationEntryControls
 import SFT.Physics.HorizonInformationEntryEvidence
+import SFT.Physics.SpacetimeAdmissibility
+import SFT.Physics.WormholeEntryWitnesses
+import SFT.Physics.WormholeEntryGrammar
+import SFT.Physics.WormholeEntryControls
+import SFT.Physics.WormholeEntryEvidence
+import SFT.Physics.WarpEntryWitnesses
+import SFT.Physics.WarpEntryGrammar
+import SFT.Physics.WarpEntryControls
+import SFT.Physics.WarpEntryEvidence
+import SFT.Physics.TimelikeEntryWitnesses
+import SFT.Physics.TimelikeEntryGrammar
+import SFT.Physics.TimelikeEntryControls
+import SFT.Physics.TimelikeEntryEvidence

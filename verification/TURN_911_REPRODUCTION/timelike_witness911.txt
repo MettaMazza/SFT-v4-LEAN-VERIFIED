@@ -1,0 +1,19 @@
+import SFT.Physics.SpacetimeAdmissibility
+namespace SFT.Physics.TimelikeEntryWitnesses
+open SpacetimeAdmissibility
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def cycleCheck : Bool := closedTimelikeAdmissible ["state","proof"] ["state","proof"] true
+def paradoxCheck : Bool := !closedTimelikeAdmissible ["state","proof"] ["changed-state","proof"] true
+def traceCheck : Bool := !closedTimelikeAdmissible ["state","proof"] ["state","proof"] false
+def witnesses : List Witness := [WITNESS_ROWS]
+theorem cycleCheckPassed : cycleCheck=true := rfl
+theorem paradoxCheckPassed : paradoxCheck=true := rfl
+theorem traceCheckPassed : traceCheck=true := rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := by
+ change (cycleCheck && paradoxCheck && traceCheck && true)=true
+ rw [cycleCheckPassed,paradoxCheckPassed,traceCheckPassed]
+ rfl
+end SFT.Physics.TimelikeEntryWitnesses

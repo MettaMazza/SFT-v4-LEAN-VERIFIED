@@ -1,0 +1,12 @@
+from pathlib import Path
+w=Path('work');r=w/'constants-recovery';worm=[((1,4),True,True),((1,4),False,True),((1,4),True,False),((1,4),False,False),((0,1),True,True),((-1,1),True,True),(None,True,True),((3,1),True,True)];warp=[((1,4),(1,4),True),((1,4),(1,2),True),((1,4),(1,4),False),((0,1),(0,1),True),((-1,1),(-1,1),True),(None,(1,4),True),((1,4),None,True),((3,1),(3,1),True)];ctc=[(['state','proof'],['state','proof'],True),(['state','proof'],['changed-state','proof'],True),(['state','proof'],['state','proof'],False),([],[],True),(['state'],['state','proof'],True),(['state','proof'],['state','changed-proof'],True)]
+import json
+qs=lambda x:'.nonFraction' if x is None else '(.fraction ⟨'+str(x[0])+','+str(x[1])+',by decide,by decide⟩)'
+s='import SFT.Physics.SpacetimeAdmissibility\nopen SFT.Physics SFT.Host.Canonical\ndef main : IO Unit := do\n'
+for q,a,b in worm:s+=' IO.println (render (.boolean (SpacetimeAdmissibility.wormholeAdmissible '+qs(q)+' '+str(a).lower()+' '+str(b).lower()+')))\n'
+for q,p,a in warp:s+=' IO.println (render (.boolean (SpacetimeAdmissibility.warpAdmissible '+qs(q)+' '+qs(p)+' '+str(a).lower()+')))\n'
+for a,b,c in ctc:s+=' IO.println (render (.boolean (SpacetimeAdmissibility.closedTimelikeAdmissible '+json.dumps(a)+' '+json.dumps(b)+' '+str(c).lower()+')))\n'
+(r/'AdmissibilityCompare909.lean').write_text(s)
+s=(w/'check_gravity899.py').read_text();a=s.index('from sft.physics.gravity_spacetime_laws_v1 import');b=s.index('def canon',a);s=s[:a]+'from sft.physics.gravity_spacetime_laws_v1 import wormhole_admissible,warp_admissible,closed_timelike_admissible\nworm='+repr(worm)+'\nwarp='+repr(warp)+'\nctc='+repr(ctc)+'\n'+s[b:];a=s.index('expected=[]');b=s.index('out=subprocess',a);s=s[:a]+'''conv=lambda q: F(*q) if q is not None else 1
+expected=[wormhole_admissible(conv(q),a,b) for q,a,b in worm]+[warp_admissible(conv(q),conv(p),a) for q,p,a in warp]+[closed_timelike_admissible(tuple(a),tuple(b),c) for a,b,c in ctc]
+'''+s[b:];s=s.replace('GravityCompare899','AdmissibilityCompare909').replace('gravity899_science','admissibility909_science').replace('Complete original weak-gravity records and positive_take empty/subtraction/rejection behavior;16 cases.','All three original spacetime admissibility operations:complete/omitted traces,exact source equality,nonempty recurrence,positive/type guards and above-One admitted sources;22 cases.').replace('PASS16 original gravity/take cases','PASS22 original admissibility cases');(w/'check_admissibility909.py').write_text(s)

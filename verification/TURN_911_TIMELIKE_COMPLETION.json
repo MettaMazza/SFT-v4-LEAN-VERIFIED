@@ -1,0 +1,383 @@
+{
+  "status": "complete",
+  "registered_at": "2026-11-14T09:38:19.865614+00:00",
+  "claim_id": "SFT-PHYS-SPACETIME-CLOSED-TIMELIKE-ADMISSIBILITY-003",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_component_correspondence": {
+    "SpacetimeAdmissibility": {
+      "source": "sft/physics/gravity_spacetime_laws_v1.py",
+      "shared_protocol_source": "sft/physics/structural_constants.py",
+      "component": "Exact original wormhole,warp and closed-timelike operations,original accepted domains,complete acceptance equivalences and original witnesses."
+    },
+    "TimelikeEntryWitnesses": {
+      "source": "sft/physics/gravity_spacetime_laws_v1.py",
+      "shared_protocol_source": "sft/physics/structural_constants.py",
+      "component": "Original entry-specific acceptance and rejection witnesses through the exact source operation."
+    },
+    "TimelikeEntryGrammar": {
+      "source": "sft/physics/gravity_spacetime_laws_v1.py",
+      "shared_protocol_source": "sft/physics/structural_constants.py",
+      "component": "Original eight binary axes,complete256-product enumeration,all original decisions and unique survivor."
+    },
+    "TimelikeEntryControls": {
+      "source": "sft/physics/gravity_spacetime_laws_v1.py",
+      "shared_protocol_source": "sft/physics/structural_constants.py",
+      "component": "Original four controls,complete original closure statement and original operational witnesses."
+    },
+    "TimelikeEntryEvidence": {
+      "source": "sft/physics/gravity_spacetime_laws_v1.py",
+      "shared_protocol_source": "sft/physics/structural_constants.py",
+      "component": "Complete original StructuralPhysicsProgram registration,census,candidate/decision hashes,closure,witness records,controls and unknown identifier."
+    }
+  },
+  "lean_source_sha256": {
+    "SpacetimeAdmissibility": "e5b97a2bfa79ea7f7722fb0ffe0dd430f386a9309fa3742a20e0f0d1e57f987f",
+    "TimelikeEntryWitnesses": "7287eaa814619e8a169cf5d1bcc14d2c4e9ac3827bca5bc40b2904a780bc3273",
+    "TimelikeEntryGrammar": "622b20d4249100389385d66aa83135f14de42349080dcf9ff0d5295a97e6785e",
+    "TimelikeEntryControls": "02f9b841b4b4e9d0e49bbce2226ac6423699c93622027c119e0514160dcdf6ea",
+    "TimelikeEntryEvidence": "a6e4cf79c58b0d7ba858cb96fb5d1e77d724dcc284e824d1a9af674d040f7dad"
+  },
+  "dependencies": {
+    "SFT-PHYS-SPACETIME-WARP-ADMISSIBILITY-003": "complete",
+    "SFT-MATH-DYNAMICAL-SYSTEMS-001": "complete",
+    "SFT-COMP-CBL-HALTING-001": "complete"
+  },
+  "candidate_rows": 256,
+  "axiom_dependencies": [],
+  "audited_declarations": [
+    "SFT.Physics.SpacetimeAdmissibility.wormholeAdmissible",
+    "SFT.Physics.SpacetimeAdmissibility.warpAdmissible",
+    "SFT.Physics.SpacetimeAdmissibility.closedTimelikeAdmissible",
+    "SFT.Physics.SpacetimeAdmissibility.wormholeExact",
+    "SFT.Physics.SpacetimeAdmissibility.warpExact",
+    "SFT.Physics.SpacetimeAdmissibility.closedTimelikeExact",
+    "SFT.Physics.SpacetimeAdmissibility.originalWormholeWitnesses",
+    "SFT.Physics.SpacetimeAdmissibility.originalWarpWitnesses",
+    "SFT.Physics.SpacetimeAdmissibility.originalTimelikeWitnesses",
+    "SFT.Physics.TimelikeEntryWitnesses.Witness",
+    "SFT.Physics.TimelikeEntryWitnesses.cycleCheck",
+    "SFT.Physics.TimelikeEntryWitnesses.paradoxCheck",
+    "SFT.Physics.TimelikeEntryWitnesses.traceCheck",
+    "SFT.Physics.TimelikeEntryWitnesses.witnesses",
+    "SFT.Physics.TimelikeEntryWitnesses.cycleCheckPassed",
+    "SFT.Physics.TimelikeEntryWitnesses.paradoxCheckPassed",
+    "SFT.Physics.TimelikeEntryWitnesses.traceCheckPassed",
+    "SFT.Physics.TimelikeEntryWitnesses.allWitnessesPass",
+    "SFT.Physics.TimelikeEntryGrammar.Carrier",
+    "SFT.Physics.TimelikeEntryGrammar.carrierName",
+    "SFT.Physics.TimelikeEntryGrammar.Dependency",
+    "SFT.Physics.TimelikeEntryGrammar.dependencyName",
+    "SFT.Physics.TimelikeEntryGrammar.Relation",
+    "SFT.Physics.TimelikeEntryGrammar.relationName",
+    "SFT.Physics.TimelikeEntryGrammar.Enumeration",
+    "SFT.Physics.TimelikeEntryGrammar.enumerationName",
+    "SFT.Physics.TimelikeEntryGrammar.Minimality",
+    "SFT.Physics.TimelikeEntryGrammar.minimalityName",
+    "SFT.Physics.TimelikeEntryGrammar.Measurement",
+    "SFT.Physics.TimelikeEntryGrammar.measurementName",
+    "SFT.Physics.TimelikeEntryGrammar.Record",
+    "SFT.Physics.TimelikeEntryGrammar.recordName",
+    "SFT.Physics.TimelikeEntryGrammar.Extension",
+    "SFT.Physics.TimelikeEntryGrammar.extensionName",
+    "SFT.Physics.TimelikeEntryGrammar.Candidate",
+    "SFT.Physics.TimelikeEntryGrammar.sourceFields",
+    "SFT.Physics.TimelikeEntryGrammar.candidateId",
+    "SFT.Physics.TimelikeEntryGrammar.exactForm",
+    "SFT.Physics.TimelikeEntryGrammar.survivorId",
+    "SFT.Physics.TimelikeEntryGrammar.survives",
+    "SFT.Physics.TimelikeEntryGrammar.criteriaDecision",
+    "SFT.Physics.TimelikeEntryGrammar.decisionReason",
+    "SFT.Physics.TimelikeEntryGrammar.generationRule",
+    "SFT.Physics.TimelikeEntryGrammar.grammarBoundary",
+    "SFT.Physics.TimelikeEntryGrammar.candidates",
+    "SFT.Physics.TimelikeEntryGrammar.survivor",
+    "SFT.Physics.TimelikeEntryGrammar.generatedCardinality",
+    "SFT.Physics.TimelikeEntryGrammar.candidatesComplete",
+    "SFT.Physics.TimelikeEntryGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.TimelikeEntryGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.TimelikeEntryGrammar.uniqueSurvivor",
+    "SFT.Physics.TimelikeEntryGrammar.survivorAccepted",
+    "SFT.Physics.TimelikeEntryGrammar.ExactCriteria",
+    "SFT.Physics.TimelikeEntryGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.TimelikeEntryGrammar.carrier_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.dependency_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.relation_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.enumeration_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.minimality_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.measurement_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.record_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.extension_rejected_rejected",
+    "SFT.Physics.TimelikeEntryControls.exclusions",
+    "SFT.Physics.TimelikeEntryControls.closureValue",
+    "SFT.Physics.TimelikeEntryControls.falseCandidate",
+    "SFT.Physics.TimelikeEntryControls.survivorIds",
+    "SFT.Physics.TimelikeEntryControls.record",
+    "SFT.Physics.TimelikeEntryControls.falsePremise",
+    "SFT.Physics.TimelikeEntryControls.tamperedSource",
+    "SFT.Physics.TimelikeEntryControls.tamperedArtifact",
+    "SFT.Physics.TimelikeEntryControls.boundary",
+    "SFT.Physics.TimelikeEntryControls.falsePremisePassed",
+    "SFT.Physics.TimelikeEntryControls.boundaryPassed",
+    "SFT.Physics.TimelikeEntryControls.controlRecords",
+    "SFT.Physics.TimelikeEntryControls.resultData",
+    "SFT.Physics.TimelikeEntryControls.runControls",
+    "SFT.Physics.TimelikeEntryEvidence.candidateRecord",
+    "SFT.Physics.TimelikeEntryEvidence.completenessRecord",
+    "SFT.Physics.TimelikeEntryEvidence.registrationData",
+    "SFT.Physics.TimelikeEntryEvidence.registration",
+    "SFT.Physics.TimelikeEntryEvidence.generatedCandidateData",
+    "SFT.Physics.TimelikeEntryEvidence.censusData",
+    "SFT.Physics.TimelikeEntryEvidence.census",
+    "SFT.Physics.TimelikeEntryEvidence.decisionData",
+    "SFT.Physics.TimelikeEntryEvidence.decision",
+    "SFT.Physics.TimelikeEntryEvidence.decideCandidate",
+    "SFT.Physics.TimelikeEntryEvidence.closureData",
+    "SFT.Physics.TimelikeEntryEvidence.closure",
+    "SFT.Physics.TimelikeEntryEvidence.nativeDecisionPreservesSurvival",
+    "SFT.Physics.TimelikeEntryEvidence.nativeDecisionPreservesReason",
+    "SFT.Physics.TimelikeEntryEvidence.registrationHasNoAxioms",
+    "SFT.Physics.TimelikeEntryEvidence.registrationHasNoFreeParameters",
+    "SFT.Physics.TimelikeEntryEvidence.lookupDependsOnlyOnIdentifier"
+  ],
+  "added_registered_theorems": [
+    "SFT.Physics.TimelikeEntryWitnesses.cycleCheckPassed",
+    "SFT.Physics.TimelikeEntryWitnesses.paradoxCheckPassed",
+    "SFT.Physics.TimelikeEntryWitnesses.traceCheckPassed",
+    "SFT.Physics.TimelikeEntryWitnesses.allWitnessesPass",
+    "SFT.Physics.TimelikeEntryGrammar.generatedCardinality",
+    "SFT.Physics.TimelikeEntryGrammar.candidatesComplete",
+    "SFT.Physics.TimelikeEntryGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.TimelikeEntryGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.TimelikeEntryGrammar.uniqueSurvivor",
+    "SFT.Physics.TimelikeEntryGrammar.survivorAccepted",
+    "SFT.Physics.TimelikeEntryGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.TimelikeEntryGrammar.carrier_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.dependency_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.relation_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.enumeration_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.minimality_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.measurement_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.record_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.extension_rejected_rejected",
+    "SFT.Physics.TimelikeEntryControls.falsePremisePassed",
+    "SFT.Physics.TimelikeEntryControls.boundaryPassed",
+    "SFT.Physics.TimelikeEntryEvidence.nativeDecisionPreservesSurvival",
+    "SFT.Physics.TimelikeEntryEvidence.nativeDecisionPreservesReason",
+    "SFT.Physics.TimelikeEntryEvidence.registrationHasNoAxioms",
+    "SFT.Physics.TimelikeEntryEvidence.registrationHasNoFreeParameters",
+    "SFT.Physics.TimelikeEntryEvidence.lookupDependsOnlyOnIdentifier"
+  ],
+  "added_audited_definitions_and_theorems": [
+    "SFT.Physics.TimelikeEntryWitnesses.cycleCheck",
+    "SFT.Physics.TimelikeEntryWitnesses.paradoxCheck",
+    "SFT.Physics.TimelikeEntryWitnesses.traceCheck",
+    "SFT.Physics.TimelikeEntryWitnesses.witnesses",
+    "SFT.Physics.TimelikeEntryWitnesses.cycleCheckPassed",
+    "SFT.Physics.TimelikeEntryWitnesses.paradoxCheckPassed",
+    "SFT.Physics.TimelikeEntryWitnesses.traceCheckPassed",
+    "SFT.Physics.TimelikeEntryWitnesses.allWitnessesPass",
+    "SFT.Physics.TimelikeEntryGrammar.carrierName",
+    "SFT.Physics.TimelikeEntryGrammar.dependencyName",
+    "SFT.Physics.TimelikeEntryGrammar.relationName",
+    "SFT.Physics.TimelikeEntryGrammar.enumerationName",
+    "SFT.Physics.TimelikeEntryGrammar.minimalityName",
+    "SFT.Physics.TimelikeEntryGrammar.measurementName",
+    "SFT.Physics.TimelikeEntryGrammar.recordName",
+    "SFT.Physics.TimelikeEntryGrammar.extensionName",
+    "SFT.Physics.TimelikeEntryGrammar.sourceFields",
+    "SFT.Physics.TimelikeEntryGrammar.candidateId",
+    "SFT.Physics.TimelikeEntryGrammar.exactForm",
+    "SFT.Physics.TimelikeEntryGrammar.survivorId",
+    "SFT.Physics.TimelikeEntryGrammar.survives",
+    "SFT.Physics.TimelikeEntryGrammar.criteriaDecision",
+    "SFT.Physics.TimelikeEntryGrammar.decisionReason",
+    "SFT.Physics.TimelikeEntryGrammar.generationRule",
+    "SFT.Physics.TimelikeEntryGrammar.grammarBoundary",
+    "SFT.Physics.TimelikeEntryGrammar.candidates",
+    "SFT.Physics.TimelikeEntryGrammar.survivor",
+    "SFT.Physics.TimelikeEntryGrammar.generatedCardinality",
+    "SFT.Physics.TimelikeEntryGrammar.candidatesComplete",
+    "SFT.Physics.TimelikeEntryGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.TimelikeEntryGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.TimelikeEntryGrammar.uniqueSurvivor",
+    "SFT.Physics.TimelikeEntryGrammar.survivorAccepted",
+    "SFT.Physics.TimelikeEntryGrammar.ExactCriteria",
+    "SFT.Physics.TimelikeEntryGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.TimelikeEntryGrammar.carrier_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.dependency_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.relation_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.enumeration_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.minimality_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.measurement_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.record_rejected_rejected",
+    "SFT.Physics.TimelikeEntryGrammar.extension_rejected_rejected",
+    "SFT.Physics.TimelikeEntryControls.exclusions",
+    "SFT.Physics.TimelikeEntryControls.closureValue",
+    "SFT.Physics.TimelikeEntryControls.falseCandidate",
+    "SFT.Physics.TimelikeEntryControls.survivorIds",
+    "SFT.Physics.TimelikeEntryControls.record",
+    "SFT.Physics.TimelikeEntryControls.falsePremise",
+    "SFT.Physics.TimelikeEntryControls.tamperedSource",
+    "SFT.Physics.TimelikeEntryControls.tamperedArtifact",
+    "SFT.Physics.TimelikeEntryControls.boundary",
+    "SFT.Physics.TimelikeEntryControls.falsePremisePassed",
+    "SFT.Physics.TimelikeEntryControls.boundaryPassed",
+    "SFT.Physics.TimelikeEntryControls.controlRecords",
+    "SFT.Physics.TimelikeEntryControls.resultData",
+    "SFT.Physics.TimelikeEntryControls.runControls",
+    "SFT.Physics.TimelikeEntryEvidence.candidateRecord",
+    "SFT.Physics.TimelikeEntryEvidence.completenessRecord",
+    "SFT.Physics.TimelikeEntryEvidence.registrationData",
+    "SFT.Physics.TimelikeEntryEvidence.registration",
+    "SFT.Physics.TimelikeEntryEvidence.generatedCandidateData",
+    "SFT.Physics.TimelikeEntryEvidence.censusData",
+    "SFT.Physics.TimelikeEntryEvidence.census",
+    "SFT.Physics.TimelikeEntryEvidence.decisionData",
+    "SFT.Physics.TimelikeEntryEvidence.decision",
+    "SFT.Physics.TimelikeEntryEvidence.decideCandidate",
+    "SFT.Physics.TimelikeEntryEvidence.closureData",
+    "SFT.Physics.TimelikeEntryEvidence.closure",
+    "SFT.Physics.TimelikeEntryEvidence.nativeDecisionPreservesSurvival",
+    "SFT.Physics.TimelikeEntryEvidence.nativeDecisionPreservesReason",
+    "SFT.Physics.TimelikeEntryEvidence.registrationHasNoAxioms",
+    "SFT.Physics.TimelikeEntryEvidence.registrationHasNoFreeParameters",
+    "SFT.Physics.TimelikeEntryEvidence.lookupDependsOnlyOnIdentifier"
+  ],
+  "remaining": [],
+  "program_report": "verification/TURN_911_timelike_program911_report.json",
+  "independent_validator_cases": [
+    {
+      "case": "original",
+      "expected": true,
+      "actual": {
+        "certificate": {
+          "exact_result": {
+            "claim_id": "SFT-PHYS-SPACETIME-CLOSED-TIMELIKE-ADMISSIBILITY-003",
+            "exact": [
+              [
+                "state",
+                "proof"
+              ],
+              [
+                "state",
+                "proof"
+              ],
+              [
+                "changed-state",
+                "proof"
+              ],
+              "no-physical-CTC-claim"
+            ]
+          },
+          "generated_cardinality": 256,
+          "unique_survivor": "generated-exact-Fold-carrier__admitted-V3-root-trace__exact-first-return-of-complete-state-and-proof-record__complete-registered-product__every-omission-rejected__formal-result-sealed-first__complete-causal-source-control-record__no-extra-rule"
+        },
+        "passed": true,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-timelike-911"
+      }
+    },
+    {
+      "case": "omitted_candidate",
+      "expected": false,
+      "actual": {
+        "certificate": {
+          "exact_result": {
+            "claim_id": "SFT-PHYS-SPACETIME-CLOSED-TIMELIKE-ADMISSIBILITY-003",
+            "exact": [
+              [
+                "state",
+                "proof"
+              ],
+              [
+                "state",
+                "proof"
+              ],
+              [
+                "changed-state",
+                "proof"
+              ],
+              "no-physical-CTC-claim"
+            ]
+          },
+          "generated_cardinality": 256,
+          "unique_survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-timelike-911"
+      }
+    },
+    {
+      "case": "additional_survivor",
+      "expected": false,
+      "actual": {
+        "certificate": {
+          "exact_result": {
+            "claim_id": "SFT-PHYS-SPACETIME-CLOSED-TIMELIKE-ADMISSIBILITY-003",
+            "exact": [
+              [
+                "state",
+                "proof"
+              ],
+              [
+                "state",
+                "proof"
+              ],
+              [
+                "changed-state",
+                "proof"
+              ],
+              "no-physical-CTC-claim"
+            ]
+          },
+          "generated_cardinality": 256,
+          "unique_survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-timelike-911"
+      }
+    },
+    {
+      "case": "failed_control",
+      "expected": false,
+      "actual": {
+        "certificate": {
+          "exact_result": {
+            "claim_id": "SFT-PHYS-SPACETIME-CLOSED-TIMELIKE-ADMISSIBILITY-003",
+            "exact": [
+              [
+                "state",
+                "proof"
+              ],
+              [
+                "state",
+                "proof"
+              ],
+              [
+                "changed-state",
+                "proof"
+              ],
+              "no-physical-CTC-claim"
+            ]
+          },
+          "generated_cardinality": 256,
+          "unique_survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-timelike-911"
+      }
+    }
+  ],
+  "canonical_build": "PASS affected original source entry",
+  "checks_executed": [
+    "Retained source-hash-bound kernel audit of all entry declarations",
+    "lake build SFT.Physics.TimelikeEntryEvidence",
+    "check_timelike_original911.py",
+    "check_admissibility909.py",
+    "check_timelike_program911.py with native executable",
+    "check_timelike_independent911.py"
+  ]
+}

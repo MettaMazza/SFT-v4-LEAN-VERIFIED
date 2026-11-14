@@ -1,0 +1,24 @@
+
+813. Complete terminal turn projection
+
+The original finite turn construction uses the already generated c=3 complete sectors, up-depth u=7, binary count b=2 and the complete four-rung promotion object [125,175,245,343]. Its support is generated from the number of rungs, rather than supplied independently:
+
+    n = length([125,175,245,343]) = 4,
+    S = bⁿ = 2⁴ = 16.
+
+The sole returning One passes through the up-depth and then that terminal support. Preserving the specified order of the two positive reciprocal operations yields
+
+    T = c + 1/(u+1/S)
+      = 3 + 1/(7+1/16)
+      = 3 + 1/[(112+1)/16]
+      = 3 + 16/113
+      = (339+16)/113
+      = 355/113.
+
+Thus the whole part, return depth and terminating support all come from existing generated carriers. This is the exact rational turn projection specified by V3; no irrational carrier, measured decimal or additional remainder enters its construction. The promotion object has exhausted its directions, so the original closure does not append another rung or return.
+
+The complete nine-axis grammar enumerates all 512 choices of carrier, sectors, return, depth, support, join, domain, provenance and extension. Membership proofs cover every tuple; the original decision predicate agrees with the criteria on every candidate, and their conjunction selects exactly the source survivor. The two operational witnesses establish S=16 and T=355/113. All original controls and full program output agree with the pinned source. This entry retains V3's formal evidence mode and observational-derivation provenance; it introduces no measurement validator beyond the original execution binding.
+
+Original V3: sft/physics/matter_flavour_terminal_anomaly_laws_v1.py, terminal_turn_support, terminal_turn_projection and TURN_SPEC; its original execution and independent validator. Pin: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: TerminalTurn.terminalTurnSupport, terminalTurnProjection, completeSupport, completeProjection and exactReturn; TerminalTurnEntryWitnesses, Grammar, Controls and Evidence. Timeline: TURN941. Receipt: verification/TURN_941_TERMINAL_TURN_COMPLETION.json.
+
+[Original construction](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/matter_flavour_terminal_anomaly_laws_v1.py); [Native construction](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/TerminalTurn.lean); [Complete grammar](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/TerminalTurnEntryGrammar.lean); [Timeline](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt).

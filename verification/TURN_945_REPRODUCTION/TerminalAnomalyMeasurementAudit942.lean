@@ -1,0 +1,21 @@
+import SFT.Physics.TerminalAnomalyMeasurement
+#print axioms SFT.Physics.TerminalAnomalyRecords.componentFiles
+#print axioms SFT.Physics.TerminalAnomalyRecords.sourceHash
+#print axioms SFT.Physics.TerminalAnomalyRecords.componentHashes
+#print axioms SFT.Physics.TerminalAnomalyRecords.payloadBoundary
+#print axioms SFT.Physics.TerminalAnomalyRecords.authoritativeRecord
+#print axioms SFT.Physics.TerminalAnomalyRecords.registeredRecord
+#print axioms SFT.Physics.TerminalAnomalyRecords.originalPayloadBoundary
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.electronLabel
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.muonLabel
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.sourceIntervalFromRecord
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.classificationFromRecord
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.classification
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.originalElectronClassification
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.originalMuonClassification
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.electronCheck
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.muonCheck
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.electronCheckPassed
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.muonCheckPassed
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.electronClassification
+#print axioms SFT.Physics.TerminalAnomalyMeasurement.muonClassification

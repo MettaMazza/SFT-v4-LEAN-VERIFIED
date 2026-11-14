@@ -1,0 +1,10 @@
+from pathlib import Path
+import json,sys,subprocess,os,re
+w=Path('work');r=w/'constants-recovery';c=Path('/Volumes/One Touch/SFT v4 Full model LEAN');sys.path.insert(0,str((w/'v3-runtime500').resolve()))
+from sft.physics import matter_flavour_terminal_anomaly_laws_v1 as source
+mods=['TerminalElectronAnomaly','TerminalMuonAnomaly'];names=[]
+for m in mods:names += ['SFT.Physics.'+m+'.'+n for n in re.findall(r'^(?:def|theorem) (\w+)',(r/'SFT/Physics'/f'{m}.lean').read_text(),re.M)]
+p=r/'TerminalAnomalyAudit942.lean';p.write_text('import SFT.Physics.TerminalMuonAnomaly\n'+''.join('#print axioms '+n+'\n' for n in names));env=dict(os.environ,LEAN_PATH=str(c/'.lake/build/lib/lean'));lean='/Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean';a=subprocess.check_output([lean,'-j1',str(p)],env=env,text=True);(w/'terminalanomaly942_core_audit.log').write_text(a);assert all("'"+n+"' does not depend on any axioms" in a for n in names)
+ops=[('TerminalElectronAnomaly.electronLoopCarrier',source.electron_loop_carrier),('TerminalElectronAnomaly.electronAnomalyRetention',source.electron_anomaly_retention),('TerminalElectronAnomaly.terminalElectronAnomaly',source.terminal_electron_anomaly),('TerminalMuonAnomaly.muonGenerationCorrection',source.muon_generation_correction),('TerminalMuonAnomaly.terminalMuonAnomaly',source.terminal_muon_anomaly)]
+p=r/'TerminalAnomalyCompare942.lean';p.write_text('import SFT.Physics.TerminalMuonAnomaly\nopen SFT.Physics SFT.Host.Canonical\n#eval do\n'+''.join(f' let q{i} ← IO.ofExcept {n}\n' for i,(n,_) in enumerate(ops))+' IO.println (render (.array ['+','.join(f'.array [.integer q{i}.num,.integer (.ofNat q{i}.den)]' for i in range(len(ops)))+']))\n')
+actual=json.loads(subprocess.check_output([lean,'-j1',str(p)],env=env,text=True));expected=[[f().numerator,f().denominator] for _,f in ops];assert actual==expected;(w/'terminalanomaly942_science_report.json').write_text(json.dumps(dict(status='PASS',actual=actual,expected=expected,axioms=[],audited_declarations=names),indent=2));print('PASS all five source operations,',len(names),'empty-axiom declarations')

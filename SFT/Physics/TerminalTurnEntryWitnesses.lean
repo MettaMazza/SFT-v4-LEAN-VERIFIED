@@ -1,0 +1,16 @@
+import SFT.Physics.TerminalTurn
+namespace SFT.Physics.TerminalTurnEntryWitnesses
+open TerminalTurn LeptonIntervals VacuumLedgerProofs
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def supportCheck : Bool := match terminalTurnSupport with
+ | .error _ => false
+ | .ok n => n == 16
+def projectionCheck : Bool := match terminalTurnProjection with
+ | .error _ => false
+ | .ok q => q == normalize 355 113 (by decide)
+def witnesses : List Witness := [⟨"terminal-support","Four terminal promotion rungs generate binary support sixteen.",supportCheck⟩,⟨"two-route-turn","The nested exact route reduces to 355/113.",projectionCheck⟩]
+theorem allWitnessesPass : witnesses.all Witness.passed=true := rfl
+end SFT.Physics.TerminalTurnEntryWitnesses

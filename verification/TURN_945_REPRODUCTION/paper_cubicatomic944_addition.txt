@@ -1,0 +1,19 @@
+
+816. Generated cubic atomic support and exact neighbour balance
+
+The forced spatial carrier has three axes, and the binary Fold supplies two held directions on each. The complete neighbour count is therefore obtained from their generated product:
+
+    N=b·c=2·3=6.
+
+The half-One balance is divided equally across all six neighbours. The original source constructs the weight and recomposes it without selecting a subset:
+
+    w=1/(bN)=1/(2·6)=1/12,
+    B=Nw=6·(1/12)=1/2.
+
+One axis contributes its pair of held directions; appending each of the other two forced axes contributes the same pair once, yielding 2+2+2=6. Every neighbour receives the same generated fraction, and the complete sum returns the half-One. No measured coordination number or imported lattice is an operand of these operations.
+
+The original eight-axis grammar preserves carrier, support, operation, orientation, depth, provenance, trace and extension. All 256 alternatives and their original decisions are enumerated. Its three witnesses establish coordination, neighbour weight and half balance; controls retain the complete support and exclude a selected subset. The full original program and independent-validator cases remain part of entry verification.
+
+Original V3: sft/physics/atomic_spectra_completion_laws_v1.py, cubic_coordination, cubic_neighbour_weight, cubic_balance and CUBIC_SPEC. Pin: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: CubicAtomicSupport.cubicCoordination, cubicNeighbourWeight, cubicBalance and completeCoordination, completeNeighbourWeight, completeBalance; CubicAtomicSupportEntryWitnesses, Grammar, Controls and Evidence. Timeline: TURN944. Receipt: verification/TURN_944_CUBIC_ATOMIC_COMPLETION.json.
+
+[Original derivation](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/atomic_spectra_completion_laws_v1.py); [Native derivation](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/CubicAtomicSupport.lean); [Timeline](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt).

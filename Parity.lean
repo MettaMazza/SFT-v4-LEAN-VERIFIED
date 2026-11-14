@@ -1918,3 +1918,21 @@ def main : IO Unit := do
 
   for c in SFT.Physics.TerminalBaryonEntryGrammar.candidates do
     IO.println ("TerminalBaryonEntryGrammar\t" ++ SFT.Physics.TerminalBaryonEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TerminalBaryonEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TerminalBaryonEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TerminalBaryonEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.TerminalProtonEntryGrammar.candidates do
+    IO.println ("TerminalProtonEntryGrammar\t" ++ SFT.Physics.TerminalProtonEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TerminalProtonEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TerminalProtonEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TerminalProtonEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.TerminalTurnEntryGrammar.candidates do
+    IO.println ("TerminalTurnEntryGrammar\t" ++ SFT.Physics.TerminalTurnEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TerminalTurnEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TerminalTurnEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TerminalTurnEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.TerminalElectronAnomalyEntryGrammar.candidates do
+    IO.println ("TerminalElectronAnomalyEntryGrammar\t" ++ SFT.Physics.TerminalElectronAnomalyEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TerminalElectronAnomalyEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TerminalElectronAnomalyEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TerminalElectronAnomalyEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.TerminalMuonAnomalyEntryGrammar.candidates do
+    IO.println ("TerminalMuonAnomalyEntryGrammar\t" ++ SFT.Physics.TerminalMuonAnomalyEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TerminalMuonAnomalyEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TerminalMuonAnomalyEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TerminalMuonAnomalyEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.CubicAtomicSupportEntryGrammar.candidates do
+    IO.println ("CubicAtomicSupportEntryGrammar\t" ++ SFT.Physics.CubicAtomicSupportEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CubicAtomicSupportEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CubicAtomicSupportEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.CubicAtomicSupportEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.HydrogenSpectrumEntryGrammar.candidates do
+    IO.println ("HydrogenSpectrumEntryGrammar\t" ++ SFT.Physics.HydrogenSpectrumEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HydrogenSpectrumEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HydrogenSpectrumEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.HydrogenSpectrumEntryGrammar.decisionReason c)

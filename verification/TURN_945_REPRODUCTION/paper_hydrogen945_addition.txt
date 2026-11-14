@@ -1,0 +1,33 @@
+
+817. Depth-independent hydrogen support and positive emitted transitions
+
+The binary Fold supplies exponent b=2. For every supplied positive principal count n, the original source constructs
+
+    H(n)=1/nᵇ=1/n²,    n≥1.
+
+The principal count labels the supplied bound support; it is not a fitted coefficient. The native theorem everyPositivePrincipal covers all n=k+1, for arbitrary finite k. Normalization retains numerator One and denominator n², so H(n)>0. At the successor the same operation gives H(n+1)=1/(n+1)²; no new rule, coefficient or selected truncation is introduced.
+
+An emitted transition first requires an upper count u strictly above its lower count l, then requires both principal counts to be positive. For 1≤l<u, multiplication by positive counts gives
+
+    l² < lu < u²,
+    0 < 1/u² < 1/l².
+
+The original guarded positive take is therefore admitted at every ordered pair:
+
+    Δ(u,l)=positive_take(H(l),H(u))
+          =1/l²−1/u²
+          =(u²−l²)/(l²u²)>0.
+
+The Lean theorem everyOrderedEmission connects these inequalities to the actual hydrogenTransition operation for arbitrary ordered positive counts. The proof uses the original guard order and the retained constructive arithmetic and normalization proofs. It does not establish the general statement by extrapolating a finite table.
+
+The ground support and original line witnesses follow directly:
+
+    H(1)=1,
+    Δ(2,1)=1−1/4=3/4,
+    Δ(3,2)=1/4−1/9=(9−4)/36=5/36.
+
+The original eight-axis grammar retains all 256 alternatives and all three witnesses, together with the original controls, depth-independent closure and dependency trace. No measured wavelength, Rydberg value or continuum spectral solver enters these source operations.
+
+Original V3: sft/physics/atomic_spectra_completion_laws_v1.py, hydrogen_level, hydrogen_transition and HYDROGEN_SPEC. Pin: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: HydrogenSpectrum.hydrogenLevel, hydrogenTransition, everyPositivePrincipal, positivePrincipalSuccessor, principalNumerator, principalDenominator, principalPositive, orderedPrincipalSupports, everyOrderedEmission, groundLevel, lymanAlpha and balmerAlpha; HydrogenSpectrumEntryWitnesses, Grammar, Controls and Evidence. Timeline: TURN945. Receipt: verification/TURN_945_HYDROGEN_SPECTRUM_COMPLETION.json.
+
+[Original operations](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/atomic_spectra_completion_laws_v1.py); [Native all-count derivation](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/HydrogenSpectrum.lean); [Timeline](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt).

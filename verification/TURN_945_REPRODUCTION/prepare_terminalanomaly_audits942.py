@@ -1,0 +1,4 @@
+from pathlib import Path
+w=Path('work')
+for tag,low,n,emp in [('TerminalElectronAnomaly','terminalelectron',942,'TerminalElectronEmpirical'),('TerminalMuonAnomaly','terminalmuon',943,'TerminalMuonEmpirical')]:
+ s=(w/'audit_terminalbaryon939_all.py').read_text();a=s.index("mods=");b=s.index('\nassert',a);s=s[:a]+"mods=['TerminalElectronAnomaly','TerminalMuonAnomaly','TerminalAnomalyRecords','TerminalAnomalyMeasurement']+['"+tag+"Entry'+x for x in ['Witnesses','Grammar','Controls','Evidence']]+['"+emp+"'+x for x in ['Witnesses','Grammar','Evidence','Experiment','Validation']]"+s[b:];s=s.replace('terminalbaryon939_empirical_build.log','terminalanomaly942_empirical_build.log').replace('TerminalBaryon',tag).replace('terminalbaryon',low).replace('939',str(n));(w/f'audit_{low}{n}_all.py').write_text(s)

@@ -1,0 +1,228 @@
+{
+  "status": "PASS",
+  "source_operations": {
+    "status": "PASS",
+    "actual": [
+      [
+        3182795114292575489155907760862130413,
+        15348845477447574186616254353993605080
+      ],
+      [
+        3860879071540620541668151957392454145886918802951,
+        3866730234211311292172284649092877532317343691260
+      ],
+      [
+        802043885254987612353732350015309596419810381071082962486959,
+        691624522219221826633260329062771192166997958003333260609833700
+      ],
+      [
+        310479169992349922722961830242428547204076304956,
+        49529785361563432125548098065237971768251524099149113
+      ],
+      [
+        619745274311623050916605735634604124523304559300692711407964753527,
+        531550101425149592524472125682179988053522781617335787441469519636100
+      ]
+    ],
+    "expected": [
+      [
+        3182795114292575489155907760862130413,
+        15348845477447574186616254353993605080
+      ],
+      [
+        3860879071540620541668151957392454145886918802951,
+        3866730234211311292172284649092877532317343691260
+      ],
+      [
+        802043885254987612353732350015309596419810381071082962486959,
+        691624522219221826633260329062771192166997958003333260609833700
+      ],
+      [
+        310479169992349922722961830242428547204076304956,
+        49529785361563432125548098065237971768251524099149113
+      ],
+      [
+        619745274311623050916605735634604124523304559300692711407964753527,
+        531550101425149592524472125682179988053522781617335787441469519636100
+      ]
+    ],
+    "axioms": [],
+    "audited_declarations": [
+      "SFT.Physics.TerminalElectronAnomaly.electronLoopCarrier",
+      "SFT.Physics.TerminalElectronAnomaly.electronAnomalyRetention",
+      "SFT.Physics.TerminalElectronAnomaly.terminalElectronAnomaly",
+      "SFT.Physics.TerminalElectronAnomaly.electronLoopCarrierExpected",
+      "SFT.Physics.TerminalElectronAnomaly.electronLoopCarrierComplete",
+      "SFT.Physics.TerminalElectronAnomaly.electronAnomalyRetentionExpected",
+      "SFT.Physics.TerminalElectronAnomaly.electronAnomalyRetentionComplete",
+      "SFT.Physics.TerminalElectronAnomaly.terminalElectronAnomalyExpected",
+      "SFT.Physics.TerminalElectronAnomaly.terminalElectronAnomalyComplete",
+      "SFT.Physics.TerminalMuonAnomaly.muonGenerationCorrection",
+      "SFT.Physics.TerminalMuonAnomaly.terminalMuonAnomaly",
+      "SFT.Physics.TerminalMuonAnomaly.muonGenerationCorrectionExpected",
+      "SFT.Physics.TerminalMuonAnomaly.muonGenerationCorrectionComplete",
+      "SFT.Physics.TerminalMuonAnomaly.terminalMuonAnomalyExpected",
+      "SFT.Physics.TerminalMuonAnomaly.terminalMuonAnomalyComplete"
+    ]
+  },
+  "complete_record_and_classification": {
+    "status": "PASS",
+    "actual": {
+      "electron": [
+        [
+          28991304507,
+          25000000000000
+        ],
+        [
+          7247826129,
+          6250000000000
+        ],
+        "terminal-target-inaccessible-electron-anomaly-prediction-inside-complete-CODATA-interval__observational-prediction-protocol-passed"
+      ],
+      "muon": [
+        [
+          116592057,
+          100000000000
+        ],
+        [
+          58296043,
+          50000000000
+        ],
+        "terminal-target-inaccessible-muon-anomaly-prediction-inside-complete-Fermilab-world-average-interval__observational-prediction-protocol-passed"
+      ],
+      "record": {
+        "custody": {
+          "classification": "observational_derivation",
+          "complete_uncertainties_retained": true,
+          "development_target_already_known": true,
+          "earlier_unfavorable_receipt_preserved": true,
+          "empirical_prediction_protocol": true,
+          "engine_prediction_sealed_before_target_release_within_run": true,
+          "formal_relation_contains_measurement": false,
+          "measurement_selects_formal_survivor": false,
+          "protocol_classification": "observational-data-informed_target-inaccessible_sealed-prediction",
+          "target_inaccessible_during_prediction_execution": true
+        },
+        "retrieval_date": "2026-07-24",
+        "schema": "sft-v3-terminal-anomaly-postseal-source-record/1",
+        "sources": {
+          "electron": {
+            "body": "National Institute of Standards and Technology / CODATA Task Group on Fundamental Constants",
+            "row": {
+              "quantity": "electron magnetic moment anomaly",
+              "standard_uncertainty": "0.00000000000018",
+              "value": "0.00115965218046"
+            },
+            "snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+            "snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+            "source_id": "NIST-CODATA-2022-ELECTRON-MAGNETIC-ANOMALY",
+            "source_uri": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt"
+          },
+          "muon": {
+            "body": "Fermilab Muon g-2 Collaboration",
+            "row": {
+              "quantity": "muon magnetic moment anomaly world average",
+              "standard_uncertainty": "0.000000000145",
+              "value": "0.001165920715"
+            },
+            "snapshot_hash": "sha256:22fa2f99c52932ed012dc222eb821c2cb1a3d387671d650b23fbbed87a6e80a0",
+            "snapshot_path": "experiments/external_sources/physics/snapshots/fermilab-muon-g2-result-2025.pdf",
+            "source_id": "FERMILAB-MUON-G2-WORLD-AVERAGE-2025",
+            "source_uri": "https://muon-g-2.fnal.gov/result2025.pdf"
+          }
+        },
+        "validation_boundary": "This is the registered observational-derivation empirical prediction protocol: authoritative observations informed construction of explicit candidate laws; the executable relations contain only admitted exact Fold carriers; both targets are inaccessible while the engine completely enumerates, uniquely selects and seals each prediction; this source record is released only afterward for exact comparison; the complete reported uncertainties and earlier unfavorable receipt remain retained."
+      }
+    },
+    "expected": {
+      "record": {
+        "schema": "sft-v3-terminal-anomaly-postseal-source-record/1",
+        "retrieval_date": "2026-07-24",
+        "custody": {
+          "development_target_already_known": true,
+          "classification": "observational_derivation",
+          "protocol_classification": "observational-data-informed_target-inaccessible_sealed-prediction",
+          "empirical_prediction_protocol": true,
+          "target_inaccessible_during_prediction_execution": true,
+          "formal_relation_contains_measurement": false,
+          "measurement_selects_formal_survivor": false,
+          "engine_prediction_sealed_before_target_release_within_run": true,
+          "earlier_unfavorable_receipt_preserved": true,
+          "complete_uncertainties_retained": true
+        },
+        "sources": {
+          "electron": {
+            "source_id": "NIST-CODATA-2022-ELECTRON-MAGNETIC-ANOMALY",
+            "body": "National Institute of Standards and Technology / CODATA Task Group on Fundamental Constants",
+            "source_uri": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+            "snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+            "snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+            "row": {
+              "quantity": "electron magnetic moment anomaly",
+              "value": "0.00115965218046",
+              "standard_uncertainty": "0.00000000000018"
+            }
+          },
+          "muon": {
+            "source_id": "FERMILAB-MUON-G2-WORLD-AVERAGE-2025",
+            "body": "Fermilab Muon g-2 Collaboration",
+            "source_uri": "https://muon-g-2.fnal.gov/result2025.pdf",
+            "snapshot_path": "experiments/external_sources/physics/snapshots/fermilab-muon-g2-result-2025.pdf",
+            "snapshot_hash": "sha256:22fa2f99c52932ed012dc222eb821c2cb1a3d387671d650b23fbbed87a6e80a0",
+            "row": {
+              "quantity": "muon magnetic moment anomaly world average",
+              "value": "0.001165920715",
+              "standard_uncertainty": "0.000000000145"
+            }
+          }
+        },
+        "validation_boundary": "This is the registered observational-derivation empirical prediction protocol: authoritative observations informed construction of explicit candidate laws; the executable relations contain only admitted exact Fold carriers; both targets are inaccessible while the engine completely enumerates, uniquely selects and seals each prediction; this source record is released only afterward for exact comparison; the complete reported uncertainties and earlier unfavorable receipt remain retained."
+      },
+      "electron": [
+        [
+          28991304507,
+          25000000000000
+        ],
+        [
+          7247826129,
+          6250000000000
+        ],
+        "terminal-target-inaccessible-electron-anomaly-prediction-inside-complete-CODATA-interval__observational-prediction-protocol-passed"
+      ],
+      "muon": [
+        [
+          116592057,
+          100000000000
+        ],
+        [
+          58296043,
+          50000000000
+        ],
+        "terminal-target-inaccessible-muon-anomaly-prediction-inside-complete-Fermilab-world-average-interval__observational-prediction-protocol-passed"
+      ]
+    },
+    "axioms": [],
+    "audited_declarations": [
+      "SFT.Physics.TerminalAnomalyRecords.componentFiles",
+      "SFT.Physics.TerminalAnomalyRecords.sourceHash",
+      "SFT.Physics.TerminalAnomalyRecords.componentHashes",
+      "SFT.Physics.TerminalAnomalyRecords.payloadBoundary",
+      "SFT.Physics.TerminalAnomalyRecords.authoritativeRecord",
+      "SFT.Physics.TerminalAnomalyRecords.registeredRecord",
+      "SFT.Physics.TerminalAnomalyRecords.originalPayloadBoundary",
+      "SFT.Physics.TerminalAnomalyMeasurement.electronLabel",
+      "SFT.Physics.TerminalAnomalyMeasurement.muonLabel",
+      "SFT.Physics.TerminalAnomalyMeasurement.sourceIntervalFromRecord",
+      "SFT.Physics.TerminalAnomalyMeasurement.classificationFromRecord",
+      "SFT.Physics.TerminalAnomalyMeasurement.classification",
+      "SFT.Physics.TerminalAnomalyMeasurement.originalElectronClassification",
+      "SFT.Physics.TerminalAnomalyMeasurement.originalMuonClassification",
+      "SFT.Physics.TerminalAnomalyMeasurement.electronCheck",
+      "SFT.Physics.TerminalAnomalyMeasurement.muonCheck",
+      "SFT.Physics.TerminalAnomalyMeasurement.electronCheckPassed",
+      "SFT.Physics.TerminalAnomalyMeasurement.muonCheckPassed",
+      "SFT.Physics.TerminalAnomalyMeasurement.electronClassification",
+      "SFT.Physics.TerminalAnomalyMeasurement.muonClassification"
+    ]
+  }
+}

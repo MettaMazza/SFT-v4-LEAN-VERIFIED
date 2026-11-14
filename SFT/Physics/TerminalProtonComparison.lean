@@ -1,0 +1,63 @@
+import SFT.Physics.TerminalProton
+namespace SFT.Physics.TerminalProtonComparison
+open LeptonIntervals
+set_option maxRecDepth 20000
+set_option maxHeartbeats 100000000
+abbrev Interval := Rat × Rat
+
+abbrev pairSum := ProtonComparison.pairSum
+abbrev productValue := ProtonComparison.productValue
+def needsRefinement (b : List Interval) : Bool :=
+ (b.take 2).any (fun row => (normalize 1 (10^18) (by decide)).blt (subtract row.2 row.1))
+def refine (b : List Interval) := b.map (fun row => QuarkIsolation.bisectBracket row pairSum productValue)
+inductive SourceRun : List Interval → List Interval → Prop where
+ | stop (b : List Interval) (h : needsRefinement b = false) : SourceRun b b
+ | next (b result : List Interval) (h : needsRefinement b = true) (later : SourceRun (refine b) result) : SourceRun b result
+
+def refineWithin : Nat → List Interval → Option (List Interval)
+ | 0,_ => none
+ | fuel+1,b => if needsRefinement b then refineWithin fuel (refine b) else some b
+
+theorem refinementCorrespondence (fuel : Nat) (b result : List Interval)
+ (h : refineWithin fuel b = some result) : SourceRun b result := by
+ induction fuel generalizing b with
+ | zero => cases h
+ | succ fuel ih =>
+   unfold refineWithin at h
+   cases hc : needsRefinement b with
+   | false =>
+     rw [hc] at h
+     have he := Option.some.inj h
+     cases he
+     exact .stop result hc
+   | true =>
+     rw [hc] at h
+     exact .next b result hc (ih _ h)
+abbrev initialBrackets := ProtonComparison.initialBrackets
+def refinedBrackets : List Interval := [(normalize (15495770747463853) 1152921504606846976 (by decide),normalize (7747885373731927) 576460752303423488 (by decide)),(normalize (222993885489484957) 1152921504606846976 (by decide),normalize (111496942744742479) 576460752303423488 (by decide)),(normalize (228607962092474541) 288230376151711744 (by decide),normalize (914431848369898165) 1152921504606846976 (by decide))]
+theorem originalIsolation : QuarkIsolation.isolateCubicRoots pairSum productValue = .ok initialBrackets := ProtonComparison.originalIsolation
+theorem originalRefinement : refineWithin 54 initialBrackets = some refinedBrackets := rfl
+theorem exactSourceRun : SourceRun initialBrackets refinedBrackets := refinementCorrespondence _ _ _ originalRefinement
+def protonRatioInterval : Except String Interval := do
+ let initial ← QuarkIsolation.isolateCubicRoots pairSum productValue
+ let b ← match refineWithin 54 initial with
+  | none => .error "unreachable: certified original proton refinement"
+  | some b => .ok b
+ let electron ← LeptonRatios.atIndex b 0
+ let muon ← LeptonRatios.atIndex b 1
+ let one := normalize 1 1 (by decide)
+ let third := normalize 1 3 (by decide)
+ let eUpper ← LeptonRatios.divide one (multiply electron.2 electron.2)
+ let mLower ← LeptonRatios.divide one (multiply muon.1 muon.1)
+ let eLower ← LeptonRatios.divide one (multiply electron.1 electron.1)
+ let mUpper ← LeptonRatios.divide one (multiply muon.2 muon.2)
+ let base := (multiply third (subtract eUpper mLower),multiply third (subtract eLower mUpper))
+ let retention ← TerminalProton.retention
+ let result := (multiply base.1 retention,multiply base.2 retention)
+ let dressing ← TerminalProton.dressing
+ if !result.1.blt result.2 || !(add retention dressing == one) then
+  throw "terminal proton exact enclosure failed"
+ pure result
+def originalRatio : Interval := (normalize (74718297426259036056971830572404596488542602126948058358071940468772939180241180411348219688409462778888192) 40692856595020106090836336350610772579268383774483929485573939730939819158164518364791874584549759862775 (by decide),normalize (283929530219784339753187991431617944340940410141987676082953346091216289006272311734904216778865652359233536) 154632855061076384573985735564432652740918811148002765787796434394349785900661767747505613641783925765505 (by decide))
+theorem completeSourceRatio : protonRatioInterval = .ok originalRatio := rfl
+end SFT.Physics.TerminalProtonComparison

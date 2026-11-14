@@ -1,0 +1,43 @@
+{
+  "schema": "sft-v3-terminal-anomaly-postseal-source-record/1",
+  "retrieval_date": "2026-07-24",
+  "custody": {
+    "development_target_already_known": true,
+    "classification": "observational_derivation",
+    "protocol_classification": "observational-data-informed_target-inaccessible_sealed-prediction",
+    "empirical_prediction_protocol": true,
+    "target_inaccessible_during_prediction_execution": true,
+    "formal_relation_contains_measurement": false,
+    "measurement_selects_formal_survivor": false,
+    "engine_prediction_sealed_before_target_release_within_run": true,
+    "earlier_unfavorable_receipt_preserved": true,
+    "complete_uncertainties_retained": true
+  },
+  "sources": {
+    "electron": {
+      "source_id": "NIST-CODATA-2022-ELECTRON-MAGNETIC-ANOMALY",
+      "body": "National Institute of Standards and Technology / CODATA Task Group on Fundamental Constants",
+      "source_uri": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+      "snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+      "snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+      "row": {
+        "quantity": "electron magnetic moment anomaly",
+        "value": "0.00115965218046",
+        "standard_uncertainty": "0.00000000000018"
+      }
+    },
+    "muon": {
+      "source_id": "FERMILAB-MUON-G2-WORLD-AVERAGE-2025",
+      "body": "Fermilab Muon g-2 Collaboration",
+      "source_uri": "https://muon-g-2.fnal.gov/result2025.pdf",
+      "snapshot_path": "experiments/external_sources/physics/snapshots/fermilab-muon-g2-result-2025.pdf",
+      "snapshot_hash": "sha256:22fa2f99c52932ed012dc222eb821c2cb1a3d387671d650b23fbbed87a6e80a0",
+      "row": {
+        "quantity": "muon magnetic moment anomaly world average",
+        "value": "0.001165920715",
+        "standard_uncertainty": "0.000000000145"
+      }
+    }
+  },
+  "validation_boundary": "This is the registered observational-derivation empirical prediction protocol: authoritative observations informed construction of explicit candidate laws; the executable relations contain only admitted exact Fold carriers; both targets are inaccessible while the engine completely enumerates, uniquely selects and seals each prediction; this source record is released only afterward for exact comparison; the complete reported uncertainties and earlier unfavorable receipt remain retained."
+}

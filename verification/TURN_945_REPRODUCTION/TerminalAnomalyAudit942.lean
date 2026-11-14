@@ -1,0 +1,16 @@
+import SFT.Physics.TerminalMuonAnomaly
+#print axioms SFT.Physics.TerminalElectronAnomaly.electronLoopCarrier
+#print axioms SFT.Physics.TerminalElectronAnomaly.electronAnomalyRetention
+#print axioms SFT.Physics.TerminalElectronAnomaly.terminalElectronAnomaly
+#print axioms SFT.Physics.TerminalElectronAnomaly.electronLoopCarrierExpected
+#print axioms SFT.Physics.TerminalElectronAnomaly.electronLoopCarrierComplete
+#print axioms SFT.Physics.TerminalElectronAnomaly.electronAnomalyRetentionExpected
+#print axioms SFT.Physics.TerminalElectronAnomaly.electronAnomalyRetentionComplete
+#print axioms SFT.Physics.TerminalElectronAnomaly.terminalElectronAnomalyExpected
+#print axioms SFT.Physics.TerminalElectronAnomaly.terminalElectronAnomalyComplete
+#print axioms SFT.Physics.TerminalMuonAnomaly.muonGenerationCorrection
+#print axioms SFT.Physics.TerminalMuonAnomaly.terminalMuonAnomaly
+#print axioms SFT.Physics.TerminalMuonAnomaly.muonGenerationCorrectionExpected
+#print axioms SFT.Physics.TerminalMuonAnomaly.muonGenerationCorrectionComplete
+#print axioms SFT.Physics.TerminalMuonAnomaly.terminalMuonAnomalyExpected
+#print axioms SFT.Physics.TerminalMuonAnomaly.terminalMuonAnomalyComplete

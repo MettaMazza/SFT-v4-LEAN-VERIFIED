@@ -1984,3 +1984,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.NuclearResidualForceEntryGrammar.candidates do
     IO.println ("NuclearResidualForceEntryGrammar\t" ++ SFT.Physics.NuclearResidualForceEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NuclearResidualForceEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NuclearResidualForceEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.NuclearResidualForceEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.NuclearBindingCurveEntryGrammar.candidates do
+    IO.println ("NuclearBindingCurveEntryGrammar\t" ++ SFT.Physics.NuclearBindingCurveEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NuclearBindingCurveEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NuclearBindingCurveEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.NuclearBindingCurveEntryGrammar.decisionReason c)

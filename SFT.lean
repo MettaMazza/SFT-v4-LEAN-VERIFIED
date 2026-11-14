@@ -5815,3 +5815,211 @@ import SFT.Mathematics.RiemannMirror
 import SFT.Mathematics.RiemannMirrorGrammar
 
 import SFT.Mathematics.RiemannMirrorEvidence
+
+import SFT.Mathematics.CollatzCensus
+
+import SFT.Mathematics.CollatzBlock0
+
+import SFT.Mathematics.CollatzBlock1
+
+import SFT.Mathematics.CollatzBlock2
+
+import SFT.Mathematics.CollatzBlock3
+
+import SFT.Mathematics.CollatzBlock4
+
+import SFT.Mathematics.CollatzBlock5
+
+import SFT.Mathematics.CollatzBlock6
+
+import SFT.Mathematics.CollatzBlock7
+
+import SFT.Mathematics.CollatzBlock8
+
+import SFT.Mathematics.CollatzBlock9
+
+import SFT.Mathematics.CollatzBlock10
+
+import SFT.Mathematics.CollatzBlock11
+
+import SFT.Mathematics.CollatzBlock12
+
+import SFT.Mathematics.CollatzBlock13
+
+import SFT.Mathematics.CollatzBlock14
+
+import SFT.Mathematics.CollatzBlock15
+
+import SFT.Mathematics.CollatzBlock16
+
+import SFT.Mathematics.CollatzBlock17
+
+import SFT.Mathematics.CollatzBlock18
+
+import SFT.Mathematics.CollatzBlock19
+
+import SFT.Mathematics.CollatzBlock20
+
+import SFT.Mathematics.CollatzBlock21
+
+import SFT.Mathematics.CollatzBlock22
+
+import SFT.Mathematics.CollatzBlock23
+
+import SFT.Mathematics.CollatzBlock24
+
+import SFT.Mathematics.CollatzBlock25
+
+import SFT.Mathematics.CollatzBlock26
+
+import SFT.Mathematics.CollatzBlock27
+
+import SFT.Mathematics.CollatzBlock28
+
+import SFT.Mathematics.CollatzBlock29
+
+import SFT.Mathematics.CollatzBlock30
+
+import SFT.Mathematics.CollatzBlock31
+
+import SFT.Mathematics.CollatzBlock32
+
+import SFT.Mathematics.CollatzBlock33
+
+import SFT.Mathematics.CollatzBlock34
+
+import SFT.Mathematics.CollatzBlock35
+
+import SFT.Mathematics.CollatzBlock36
+
+import SFT.Mathematics.CollatzBlock37
+
+import SFT.Mathematics.CollatzBlock38
+
+import SFT.Mathematics.CollatzBlock39
+
+import SFT.Mathematics.CollatzBlock40
+
+import SFT.Mathematics.CollatzBlock41
+
+import SFT.Mathematics.CollatzBlock42
+
+import SFT.Mathematics.CollatzBlock43
+
+import SFT.Mathematics.CollatzBlock44
+
+import SFT.Mathematics.CollatzBlock45
+
+import SFT.Mathematics.CollatzBlock46
+
+import SFT.Mathematics.CollatzBlock47
+
+import SFT.Mathematics.CollatzBlock48
+
+import SFT.Mathematics.CollatzBlock49
+
+import SFT.Mathematics.CollatzBlock50
+
+import SFT.Mathematics.CollatzBlock51
+
+import SFT.Mathematics.CollatzBlock52
+
+import SFT.Mathematics.CollatzBlock53
+
+import SFT.Mathematics.CollatzBlock54
+
+import SFT.Mathematics.CollatzBlock55
+
+import SFT.Mathematics.CollatzBlock56
+
+import SFT.Mathematics.CollatzBlock57
+
+import SFT.Mathematics.CollatzBlock58
+
+import SFT.Mathematics.CollatzBlock59
+
+import SFT.Mathematics.CollatzBlock60
+
+import SFT.Mathematics.CollatzBlock61
+
+import SFT.Mathematics.CollatzBlock62
+
+import SFT.Mathematics.CollatzBlock63
+
+import SFT.Mathematics.CollatzBlock64
+
+import SFT.Mathematics.CollatzBlock65
+
+import SFT.Mathematics.CollatzBlock66
+
+import SFT.Mathematics.CollatzBlock67
+
+import SFT.Mathematics.CollatzBlock68
+
+import SFT.Mathematics.CollatzBlock69
+
+import SFT.Mathematics.CollatzBlock70
+
+import SFT.Mathematics.CollatzBlock71
+
+import SFT.Mathematics.CollatzBlock72
+
+import SFT.Mathematics.CollatzBlock73
+
+import SFT.Mathematics.CollatzBlock74
+
+import SFT.Mathematics.CollatzBlock75
+
+import SFT.Mathematics.CollatzBlock76
+
+import SFT.Mathematics.CollatzBlock77
+
+import SFT.Mathematics.CollatzBlock78
+
+import SFT.Mathematics.CollatzBlock79
+
+import SFT.Mathematics.CollatzBlock80
+
+import SFT.Mathematics.CollatzBlock81
+
+import SFT.Mathematics.CollatzBlock82
+
+import SFT.Mathematics.CollatzBlock83
+
+import SFT.Mathematics.CollatzBlock84
+
+import SFT.Mathematics.CollatzBlock85
+
+import SFT.Mathematics.CollatzBlock86
+
+import SFT.Mathematics.CollatzBlock87
+
+import SFT.Mathematics.CollatzBlock88
+
+import SFT.Mathematics.CollatzBlock89
+
+import SFT.Mathematics.CollatzBlock90
+
+import SFT.Mathematics.CollatzBlock91
+
+import SFT.Mathematics.CollatzBlock92
+
+import SFT.Mathematics.CollatzBlock93
+
+import SFT.Mathematics.CollatzBlock94
+
+import SFT.Mathematics.CollatzBlock95
+
+import SFT.Mathematics.CollatzBlock96
+
+import SFT.Mathematics.CollatzBlock97
+
+import SFT.Mathematics.CollatzBlock98
+
+import SFT.Mathematics.CollatzBlock99
+
+import SFT.Mathematics.CollatzComplete
+
+import SFT.Mathematics.CollatzGrammar
+
+import SFT.Mathematics.CollatzEvidence

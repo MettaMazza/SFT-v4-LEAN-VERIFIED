@@ -1687,3 +1687,6 @@ def main : IO Unit := do
 
   for c in SFT.Mathematics.RiemannMirrorGrammar.candidates do
     IO.println ("RiemannMirrorGrammar\t" ++ SFT.Mathematics.RiemannMirrorGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.RiemannMirrorGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.RiemannMirrorGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.RiemannMirrorGrammar.decisionReason c)
+
+  for c in SFT.Mathematics.CollatzGrammar.candidates do
+    IO.println ("CollatzGrammar\t" ++ SFT.Mathematics.CollatzGrammar.candidateId c ++ "\t" ++ (if SFT.Mathematics.CollatzGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Mathematics.CollatzGrammar.exactForm c ++ "\t" ++ SFT.Mathematics.CollatzGrammar.decisionReason c)

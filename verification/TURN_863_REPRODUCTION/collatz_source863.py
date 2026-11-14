@@ -1,0 +1,4 @@
+from pathlib import Path
+import ast,subprocess,json,time
+pin='76f1b34e9e9682989adcbb088797b4ae4ce4fcf1';src=subprocess.check_output(['git','-C','/Volumes/One Touch/ernos-labs-sft-platform','show',pin+':sft/mathematics/lineage_laws.py'],text=True);tree=ast.parse(src);ns={};exec(compile(ast.Module(body=[n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='_collatz_steps'],type_ignores=[]),'pinned_v3','exec'),ns)
+counts=[ns['_collatz_steps'](n) for n in range(1,100001)];Path('work/collatz863_original_counts.json').write_text(json.dumps(counts));report=dict(source_commit=pin,source_operation='_collatz_steps',starts=100000,maximum_executed_steps=max(counts),maximum_first_start=counts.index(max(counts))+1,twenty_seven=counts[26]);Path('work/collatz863_original_report.json').write_text(json.dumps(report,indent=2));print(report)

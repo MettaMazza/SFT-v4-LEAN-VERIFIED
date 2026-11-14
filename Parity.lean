@@ -1936,3 +1936,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.HydrogenSpectrumEntryGrammar.candidates do
     IO.println ("HydrogenSpectrumEntryGrammar\t" ++ SFT.Physics.HydrogenSpectrumEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HydrogenSpectrumEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HydrogenSpectrumEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.HydrogenSpectrumEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.AtomicCorrectionsEntryGrammar.candidates do
+    IO.println ("AtomicCorrectionsEntryGrammar\t" ++ SFT.Physics.AtomicCorrectionsEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AtomicCorrectionsEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AtomicCorrectionsEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.AtomicCorrectionsEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.AtomicTransitionEntryGrammar.candidates do
+    IO.println ("AtomicTransitionEntryGrammar\t" ++ SFT.Physics.AtomicTransitionEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AtomicTransitionEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AtomicTransitionEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.AtomicTransitionEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.MolecularSpectrumEntryGrammar.candidates do
+    IO.println ("MolecularSpectrumEntryGrammar\t" ++ SFT.Physics.MolecularSpectrumEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MolecularSpectrumEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MolecularSpectrumEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MolecularSpectrumEntryGrammar.decisionReason c)

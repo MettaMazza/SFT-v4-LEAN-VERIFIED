@@ -1969,3 +1969,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.AtomicShellPeriodicityEntryGrammar.candidates do
     IO.println ("AtomicShellPeriodicityEntryGrammar\t" ++ SFT.Physics.AtomicShellPeriodicityEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AtomicShellPeriodicityEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AtomicShellPeriodicityEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.AtomicShellPeriodicityEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.AtomicTransitionRateEntryGrammar.candidates do
+    IO.println ("AtomicTransitionRateEntryGrammar\t" ++ SFT.Physics.AtomicTransitionRateEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AtomicTransitionRateEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AtomicTransitionRateEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.AtomicTransitionRateEntryGrammar.decisionReason c)

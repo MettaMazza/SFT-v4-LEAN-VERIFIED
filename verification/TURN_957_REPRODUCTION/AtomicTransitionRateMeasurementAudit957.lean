@@ -1,0 +1,16 @@
+import SFT.Physics.AtomicTransitionRateMeasurement
+#print axioms SFT.Physics.AtomicTransitionRateRecords.sourceHash
+#print axioms SFT.Physics.AtomicTransitionRateRecords.componentHash
+#print axioms SFT.Physics.AtomicTransitionRateRecords.payloadBoundary
+#print axioms SFT.Physics.AtomicTransitionRateRecords.authoritativeRecord
+#print axioms SFT.Physics.AtomicTransitionRateRecords.componentFiles
+#print axioms SFT.Physics.AtomicTransitionRateRecords.registeredRecord
+#print axioms SFT.Physics.AtomicTransitionRateRecords.originalPayloadBoundary
+#print axioms SFT.Physics.AtomicTransitionRateMeasurement.measuredInterval
+#print axioms SFT.Physics.AtomicTransitionRateMeasurement.allowedExampleLifetime
+#print axioms SFT.Physics.AtomicTransitionRateMeasurement.label
+#print axioms SFT.Physics.AtomicTransitionRateMeasurement.classificationFromRecord
+#print axioms SFT.Physics.AtomicTransitionRateMeasurement.classification
+#print axioms SFT.Physics.AtomicTransitionRateMeasurement.originalClassification
+#print axioms SFT.Physics.AtomicTransitionRateMeasurement.carrierCheck
+#print axioms SFT.Physics.AtomicTransitionRateMeasurement.carrierCheckPassed

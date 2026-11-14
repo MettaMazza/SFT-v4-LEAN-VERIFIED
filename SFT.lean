@@ -6055,3 +6055,13 @@ import SFT.Computation.NativeCircuitWitnesses
 import SFT.Computation.NativeCircuitGrammar
 
 import SFT.Computation.NativeCircuitEvidence
+
+import SFT.QuantumComputation.UnboundedFaults
+
+import SFT.QuantumComputation.UnboundedComposition
+
+import SFT.QuantumComputation.UnboundedWitnesses
+
+import SFT.QuantumComputation.UnboundedGrammar
+
+import SFT.QuantumComputation.UnboundedEvidence

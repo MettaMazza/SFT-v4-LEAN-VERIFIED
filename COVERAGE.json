@@ -38953,9 +38953,15 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-QUANTUM-UNBOUNDED-FINITE-FAULT-TOLERANCE-002-97e061e60929c595.json",
       "statement": "For every supplied positive finite fault-order trace t, the unique first repetition width correcting every mask through t is 2t+1: at least t+1 source labels remain against at most t changes, every width through 2t has a constructive tie or wrong-majority counterexample, redundancy is exactly 2t, and the successor fault order adds exactly two labels. The corrected word composes with exact Fold circuit semantics. This is an unbounded finite fault-order theorem, not a stochastic hardware-rate or physical threshold constant.",
       "title": "Unbounded finite Fold quantum fault-tolerance law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/QuantumComputation/UnboundedFaults.lean",
+        "SFT/QuantumComputation/UnboundedComposition.lean",
+        "SFT/QuantumComputation/UnboundedWitnesses.lean",
+        "SFT/QuantumComputation/UnboundedGrammar.lean",
+        "SFT/QuantumComputation/UnboundedEvidence.lean"
+      ],
+      "artifact_runtime_parity": "PASS fresh complete256 Lean program and all original fields/hashes, four original independent accepted/adverse cases; original formal evidence mode preserved.",
       "registration_sha256": "d1199d63a3231f1df1e838fdca92b973b14adad2cac36faa4a8cf9088b1577b9",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -38995,7 +39001,10 @@
         "statement": "For every supplied positive finite fault-order trace t, the unique first repetition width correcting every mask through t is 2t+1: at least t+1 source labels remain against at most t changes, every width through 2t has a constructive tie or wrong-majority counterexample, redundancy is exactly 2t, and the successor fault order adds exactly two labels. The corrected word composes with exact Fold circuit semantics. This is an unbounded finite fault-order theorem, not a stochastic hardware-rate or physical threshold constant.",
         "status": "independently_replicated",
         "title": "Unbounded finite Fold quantum fault-tolerance law"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_867_UNBOUNDED_COMPLETION.json",
+      "verified_scope": "Exact original forced-width trace guard,decoder including tie/error cases,complete masks,predecessor words and worst-mask roundtrip;general original-label majority preservation,minimality at every predecessor width,exact redundancy/successor and recovery of every generated source word.; Exact recovered source word preserves original retained branches/phase cycle and complete existing reversible circuit evaluation.; All eight original operational checks,widths1..14,all168 small masks,210 predecessor counterexamples,successors and128 depth-seven source-word roundtrips.; Original eight binary axes,full256 product,all source decisions/reasons and unique survivor.; Original GeneratedQuantumProgram distinct registration,census,candidate/decision hashes,closure with8 witnesses,controls and unknown-ID behavior."
     },
     {
       "branch": "physics",
@@ -195649,13 +195658,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-14T03:51:49.608489+00:00",
+  "updated_at": "2026-11-14T04:01:03.598261+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2247,
-    "fully_reconstructed_claims": 534,
-    "axiom_free_exported_results": 27210,
-    "axiom_free_audited_definitions_and_theorems": 66127
+    "pending": 2246,
+    "fully_reconstructed_claims": 535,
+    "axiom_free_exported_results": 27268,
+    "axiom_free_audited_definitions_and_theorems": 66255
   }
 }

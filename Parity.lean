@@ -1699,3 +1699,6 @@ def main : IO Unit := do
 
   for c in SFT.Computation.NativeCircuitGrammar.candidates do
     IO.println ("NativeCircuitGrammar\t" ++ SFT.Computation.NativeCircuitGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.NativeCircuitGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.NativeCircuitGrammar.exactForm c ++ "\t" ++ SFT.Computation.NativeCircuitGrammar.decisionReason c)
+
+  for c in SFT.QuantumComputation.UnboundedGrammar.candidates do
+    IO.println ("UnboundedGrammar\t" ++ SFT.QuantumComputation.UnboundedGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.UnboundedGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.UnboundedGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.UnboundedGrammar.decisionReason c)

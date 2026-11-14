@@ -1,0 +1,25 @@
+import SFT.Physics.HorizonInformation
+namespace SFT.Physics.HorizonInformationEntryWitnesses
+open HorizonInformation
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def localCheck : Bool := match horizonInformationLedger with
+ | .error _ => false
+ | .ok x => x.locallyClosedPredecessor.isEmpty
+def boundaryCheck : Bool := match horizonInformationLedger with
+ | .error _ => false
+ | .ok x => x.retainedBoundaryRecords.length==8
+def inverseCheck : Bool := match horizonInformationLedger with
+ | .error _ => false
+ | .ok x => x.reconstructibleWithCompleteInverseRecord
+def witnesses : List Witness := [⟨"local","Local predecessor is structurally closed.",localCheck⟩,⟨"boundary","Eight exact boundary records remain.",boundaryCheck⟩,⟨"inverse","Complete inverse records permit reconstruction.",inverseCheck⟩]
+theorem localCheckPassed : localCheck=true := by unfold localCheck;rw [completeSourceRecord] <;> rfl
+theorem boundaryCheckPassed : boundaryCheck=true := by unfold boundaryCheck;rw [completeSourceRecord] <;> rfl
+theorem inverseCheckPassed : inverseCheck=true := by unfold inverseCheck;rw [completeSourceRecord] <;> rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := by
+ change (localCheck && boundaryCheck && inverseCheck && true)=true
+ rw [localCheckPassed,boundaryCheckPassed,inverseCheckPassed]
+ rfl
+end SFT.Physics.HorizonInformationEntryWitnesses

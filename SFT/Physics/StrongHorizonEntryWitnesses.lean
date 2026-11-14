@@ -1,0 +1,36 @@
+import SFT.Physics.StrongFieldHorizon
+namespace SFT.Physics.StrongHorizonEntryWitnesses
+open StrongFieldHorizon
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def same (a b : Rat) : Bool := !a.blt b && !b.blt a
+def radiusCheck : Bool := match strongFieldHorizon with
+ | .error _ => false
+ | .ok x => same x.radius ⟨1,2,by decide,by decide⟩
+def areaCheck : Bool := match strongFieldHorizon with
+ | .error _ => false
+ | .ok x => same x.entropyCells ⟨8,1,by decide,by decide⟩
+def positiveAt (n : Nat) : Bool := match finiteDistanceFloor (.integer (.ofNat (n+1))) with
+ | .error _ => false
+ | .ok q => LeptonIntervals.zero.blt q
+def floorCheck : Bool := (List.range 16).all positiveAt
+def thermalCheck : Bool := match strongFieldHorizon with
+ | .error _ => false
+ | .ok x => same x.normalizedThermalCarrier ⟨1,4,by decide,by decide⟩
+def witnesses : List Witness := [⟨"radius","Horizon radius is twice the mass.",radiusCheck⟩,⟨"area","Quarter area coefficient maps 32 cells to eight.",areaCheck⟩,⟨"floor","Every tested finite depth retains positive support.",floorCheck⟩,⟨"thermal","The normalized horizon thermal carrier is positive quarter-One.",thermalCheck⟩]
+theorem radiusCheckPassed : radiusCheck=true := by unfold radiusCheck;rw [completeSourceRecord];rfl
+theorem areaCheckPassed : areaCheck=true := by unfold areaCheck;rw [completeSourceRecord];rfl
+theorem positiveAtPassed (n : Nat) : positiveAt n=true := by unfold positiveAt;rw [everyPositiveDepth];exact everyFiniteFloorPositive n
+theorem allDepthsPassed (xs : List Nat) : xs.all positiveAt=true := by
+ induction xs with
+ | nil => rfl
+ | cons x xs ih => change (positiveAt x && xs.all positiveAt)=true;rw [positiveAtPassed,ih];rfl
+theorem floorCheckPassed : floorCheck=true := allDepthsPassed _
+theorem thermalCheckPassed : thermalCheck=true := by unfold thermalCheck;rw [completeSourceRecord];rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := by
+ change (radiusCheck && areaCheck && floorCheck && thermalCheck && true)=true
+ rw [radiusCheckPassed,areaCheckPassed,floorCheckPassed,thermalCheckPassed]
+ rfl
+end SFT.Physics.StrongHorizonEntryWitnesses

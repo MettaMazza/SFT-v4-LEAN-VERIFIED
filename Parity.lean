@@ -1816,3 +1816,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.GravitonPolarizationEntryGrammar.candidates do
     IO.println ("GravitonPolarizationEntryGrammar\t" ++ SFT.Physics.GravitonPolarizationEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravitonPolarizationEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravitonPolarizationEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravitonPolarizationEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravityWaveEntryGrammar.candidates do
+    IO.println ("GravityWaveEntryGrammar\t" ++ SFT.Physics.GravityWaveEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityWaveEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityWaveEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityWaveEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.StrongHorizonEntryGrammar.candidates do
+    IO.println ("StrongHorizonEntryGrammar\t" ++ SFT.Physics.StrongHorizonEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StrongHorizonEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StrongHorizonEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.StrongHorizonEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.HorizonInformationEntryGrammar.candidates do
+    IO.println ("HorizonInformationEntryGrammar\t" ++ SFT.Physics.HorizonInformationEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HorizonInformationEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HorizonInformationEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.HorizonInformationEntryGrammar.decisionReason c)

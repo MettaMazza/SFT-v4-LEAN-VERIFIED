@@ -1756,3 +1756,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.StationaryGrammar.candidates do
     IO.println ("StationaryGrammar\t" ++ SFT.Physics.StationaryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StationaryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StationaryGrammar.exactForm c ++ "\t" ++ SFT.Physics.StationaryGrammar.decisionReason c)
+
+  for c in SFT.Physics.TwoHandGrammar.candidates do
+    IO.println ("TwoHandGrammar\t" ++ SFT.Physics.TwoHandGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TwoHandGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TwoHandGrammar.exactForm c ++ "\t" ++ SFT.Physics.TwoHandGrammar.decisionReason c)
+
+  for c in SFT.Physics.FullDiracGrammar.candidates do
+    IO.println ("FullDiracGrammar\t" ++ SFT.Physics.FullDiracGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FullDiracGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FullDiracGrammar.exactForm c ++ "\t" ++ SFT.Physics.FullDiracGrammar.decisionReason c)

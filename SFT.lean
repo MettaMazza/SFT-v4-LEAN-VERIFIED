@@ -6186,3 +6186,13 @@ import SFT.Physics.StationaryWitnesses
 import SFT.Physics.StationaryGrammar
 import SFT.Physics.StationaryControls
 import SFT.Physics.StationaryEvidence
+import SFT.Physics.TwoHandDirac
+import SFT.Physics.TwoHandWitnesses
+import SFT.Physics.TwoHandGrammar
+import SFT.Physics.TwoHandControls
+import SFT.Physics.TwoHandEvidence
+import SFT.Physics.FullDiracSquare
+import SFT.Physics.FullDiracWitnesses
+import SFT.Physics.FullDiracGrammar
+import SFT.Physics.FullDiracControls
+import SFT.Physics.FullDiracEvidence

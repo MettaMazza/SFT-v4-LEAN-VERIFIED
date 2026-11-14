@@ -1,0 +1,22 @@
+import SFT.Physics.TwoHandDirac
+namespace SFT.Physics.TwoHandWitnesses
+open TwoHandDirac
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def same (a b : Rat) : Bool := !a.blt b && !b.blt a
+def partsCheck : Bool := match twoHandDiracSquare with
+ | .error _ => false
+ | .ok x => same x.momentum ⟨3,5,by decide,by decide⟩ && same x.mass ⟨4,5,by decide,by decide⟩
+def squareCheck : Bool := match twoHandDiracSquare with
+ | .error _ => false
+ | .ok x => same x.energySquare ⟨1,1,by decide,by decide⟩
+def witnesses : List Witness := [⟨"parts","Motion and substance are exact three-fifths and four-fifths.",partsCheck⟩,⟨"square","Their squares close exactly.",squareCheck⟩]
+theorem partsCheckPassed : partsCheck=true := by unfold partsCheck;rw [sourceAssembly];rfl
+theorem squareCheckPassed : squareCheck=true := by unfold squareCheck;rw [sourceAssembly];rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := by
+ change (partsCheck && squareCheck && true)=true
+ rw [partsCheckPassed,squareCheckPassed]
+ rfl
+end SFT.Physics.TwoHandWitnesses

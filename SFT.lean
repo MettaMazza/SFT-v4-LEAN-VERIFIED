@@ -7064,3 +7064,12 @@ import SFT.Physics.DeuteronMeasurement
 import SFT.Physics.DeuteronPrediction
 import SFT.Physics.DeuteronExperiment
 import SFT.Physics.DeuteronValidation
+import SFT.Physics.ScatteringRutherfordCompton
+import SFT.Physics.ScatteringRutherfordComptonProofs
+import SFT.Physics.ScatteringRutherfordComptonGrammar
+import SFT.Physics.ScatteringRutherfordComptonEvidence
+import SFT.Physics.ScatteringRutherfordComptonGeneral
+import SFT.Physics.ScatteringMeasurement
+import SFT.Physics.ScatteringPrediction
+import SFT.Physics.RutherfordComptonExperiment
+import SFT.Physics.RutherfordComptonValidation

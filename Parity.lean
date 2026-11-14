@@ -1999,3 +1999,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.DeuteronDinucleonGrammar.candidates do
     IO.println ("DeuteronDinucleonGrammar\t" ++ SFT.Physics.DeuteronDinucleonGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DeuteronDinucleonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DeuteronDinucleonEvidence.exactForm c ++ "\t" ++ SFT.Physics.DeuteronDinucleonEvidence.decisionReason c)
+
+  for c in SFT.Physics.ScatteringRutherfordComptonGrammar.candidates do
+    IO.println ("ScatteringRutherfordComptonGrammar\t" ++ SFT.Physics.ScatteringRutherfordComptonGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ScatteringRutherfordComptonGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ScatteringRutherfordComptonEvidence.exactForm c ++ "\t" ++ SFT.Physics.ScatteringRutherfordComptonEvidence.decisionReason c)

@@ -1,0 +1,224 @@
+{
+  "codata": {
+    "all_rows_exact_positive": true,
+    "backscatter_high_energy_ceiling_interval_MeV": [
+      {
+        "denominator": 200000000000,
+        "numerator": 51099895053
+      },
+      {
+        "denominator": 40000000000,
+        "numerator": 10219979017
+      }
+    ],
+    "classical_electron_radius_interval_m": [
+      {
+        "denominator": 1250000000000000000000000,
+        "numerator": 3522425399
+      },
+      {
+        "denominator": 5000000000000000000000000,
+        "numerator": 14089701609
+      }
+    ],
+    "derived_compton_wavelength_interval_m": [
+      {
+        "denominator": 2600880509804446332,
+        "numerator": 6310543
+      },
+      {
+        "denominator": 7802641524616659668,
+        "numerator": 18931629
+      }
+    ],
+    "derived_reported_intervals_overlap": true,
+    "electron_rest_energy_interval_MeV": [
+      {
+        "denominator": 100000000000,
+        "numerator": 51099895053
+      },
+      {
+        "denominator": 20000000000,
+        "numerator": 10219979017
+      }
+    ],
+    "iaea_rounded_compton_carrier_contains_nist": true,
+    "planck_exact": true,
+    "reported_compton_wavelength_interval_m": [
+      {
+        "denominator": 50000000000000000000000,
+        "numerator": 121315511731
+      },
+      {
+        "denominator": 50000000000000000000000,
+        "numerator": 121315511807
+      }
+    ],
+    "right_angle_high_energy_ceiling_interval_MeV": [
+      {
+        "denominator": 100000000000,
+        "numerator": 51099895053
+      },
+      {
+        "denominator": 20000000000,
+        "numerator": 10219979017
+      }
+    ],
+    "row_count": 7,
+    "speed_exact": true,
+    "thomson_cross_section_interval_m2": [
+      {
+        "denominator": 1000000000000000000000000000000000000000,
+        "numerator": 66524586989
+      },
+      {
+        "denominator": 1000000000000000000000000000000000000000,
+        "numerator": 66524587113
+      }
+    ]
+  },
+  "iaea": {
+    "compton_assumptions_complete": true,
+    "compton_relation_complete": true,
+    "iaea_compton_shift_vector": [
+      {
+        "denominator": 2,
+        "numerator": 1
+      },
+      {
+        "denominator": 1,
+        "numerator": 1
+      },
+      {
+        "denominator": 2,
+        "numerator": 3
+      },
+      {
+        "denominator": 1,
+        "numerator": 2
+      }
+    ],
+    "iaea_rutherford_angular_vector": [
+      {
+        "denominator": 1,
+        "numerator": 16
+      },
+      {
+        "denominator": 1,
+        "numerator": 4
+      },
+      {
+        "denominator": 9,
+        "numerator": 16
+      },
+      {
+        "denominator": 1,
+        "numerator": 1
+      }
+    ],
+    "inverse_square_coulomb_recorded": true,
+    "large_angle_observed_support": true,
+    "rutherford_relation_complete": true,
+    "rutherford_scope_retained": true
+  },
+  "record": {
+    "custody": {
+      "complete_reported_rows_retained": true,
+      "development_targets_already_known": true,
+      "empirical_prediction_protocol": true,
+      "engine_prediction_sealed_before_target_release_within_run": true,
+      "formal_relations_contain_measurement": false,
+      "measurements_select_formal_survivors": false,
+      "protocol_classification": "observational-data-informed_target-inaccessible_sealed-prediction",
+      "target_inaccessible_during_prediction_execution": true
+    },
+    "measurement_scope": {
+      "iaea_handbook": {
+        "compton": {
+          "assumptions_retained": [
+            "The electron is essentially free and stationary.",
+            "The incident photon energy is much larger than the electron binding energy.",
+            "Energy and momentum are conserved across photon and recoil-electron carriers."
+          ],
+          "compton_carrier_definition": "lambda_C = h/(m_e c)",
+          "compton_carrier_rounded_angstrom": "0.024",
+          "pdf_page_index_one_based": 68,
+          "printed_page": 30,
+          "wavelength_shift_relation": "delta_lambda = lambda_C * (1 - cos(theta))"
+        },
+        "publication": {
+          "identifier": "STI/PUB/1196",
+          "publisher": "International Atomic Energy Agency",
+          "title": "Radiation Oncology Physics: A Handbook for Teachers and Students"
+        },
+        "rutherford": {
+          "coulomb_force_radial_order": "inverse-square",
+          "differential_cross_section_relation": "d_sigma/d_omega = (D/4)^2 / sin(theta/2)^4",
+          "distance_of_closest_approach_relation": "D = z_alpha * Z_N * e^2 / (4*pi*epsilon_0*E_K)",
+          "historical_large_angle_observation": {
+            "angle_class": "theta greater than 90 degrees",
+            "geiger_marsden_observed_probability": "approximately 1/10^4",
+            "obsolete_diffuse_model_prediction_order": "10^-3500"
+          },
+          "historical_pdf_page_index_one_based": 47,
+          "historical_printed_page": 9,
+          "relation_pdf_page_index_one_based": 48,
+          "relation_printed_page": 10,
+          "scope_boundary": "Repulsive Coulomb scattering of a positively charged alpha particle by a more massive positively charged nucleus under the handbook's stated nonrelativistic point-boundary conditions."
+        }
+      },
+      "nist_codata2022": {
+        "relation_boundary": "Planck action divided by electron inertial support and limiting-speed support predicts the electron Compton carrier. Electron mass-energy fixes the 90-degree and backscatter high-energy Compton ceilings after the structural relation is sealed.",
+        "required_rows": [
+          {
+            "quantity": "Planck constant",
+            "unit": "J Hz^-1"
+          },
+          {
+            "quantity": "speed of light in vacuum",
+            "unit": "m s^-1"
+          },
+          {
+            "quantity": "electron mass",
+            "unit": "kg"
+          },
+          {
+            "quantity": "Compton wavelength",
+            "unit": "m"
+          },
+          {
+            "quantity": "electron mass energy equivalent in MeV",
+            "unit": "MeV"
+          },
+          {
+            "quantity": "classical electron radius",
+            "unit": "m"
+          },
+          {
+            "quantity": "Thomson cross section",
+            "unit": "m^2"
+          }
+        ]
+      }
+    },
+    "retrieval_date": "2026-07-25",
+    "schema": "sft-v3-scattering-rutherford-compton-source-record/1",
+    "source_id": "IAEA-NIST-RUTHERFORD-COMPTON-2026",
+    "sources": [
+      {
+        "measurement_body": "International Atomic Energy Agency",
+        "snapshot_hash": "sha256:da4e3b5af19ed9506a812fea6704ff15cf55991902684a17759dbc7cbba05da0",
+        "snapshot_path": "experiments/external_sources/physics/snapshots/iaea-rutherford-compton-handbook.pdf",
+        "source_id": "IAEA-STI-PUB-1196-RADIATION-PHYSICS",
+        "source_uri": "https://www-pub.iaea.org/mtcd/publications/pdf/pub1196_web.pdf"
+      },
+      {
+        "measurement_body": "National Institute of Standards and Technology",
+        "snapshot_hash": "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+        "snapshot_path": "experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",
+        "source_id": "NIST-CODATA-2022",
+        "source_uri": "https://physics.nist.gov/cuu/Constants/index.html"
+      }
+    ]
+  }
+}

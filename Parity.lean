@@ -1912,3 +1912,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ConfinementLiftEntryGrammar.candidates do
     IO.println ("ConfinementLiftEntryGrammar\t" ++ SFT.Physics.ConfinementLiftEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ConfinementLiftEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ConfinementLiftEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.ConfinementLiftEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.TerminalCKMEntryGrammar.candidates do
+    IO.println ("TerminalCKMEntryGrammar\t" ++ SFT.Physics.TerminalCKMEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TerminalCKMEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TerminalCKMEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TerminalCKMEntryGrammar.decisionReason c)

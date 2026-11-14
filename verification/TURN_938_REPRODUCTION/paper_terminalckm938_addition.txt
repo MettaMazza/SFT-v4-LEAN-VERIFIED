@@ -1,0 +1,80 @@
+
+810. Terminal physical CKM transport and complete four-row comparison
+
+The terminal construction transports a dependency already present in the physical CKM law: the upper-quark retention. Let A denote the terminal inverse fine-structure constant. The established values give
+
+A=503846395469/3676744786,
+α=1/A,
+ρ_u=A/(A+7)=503846395469/529583608971.
+
+Distributing one retained electromagnetic share across the generated three-colour carrier gives
+
+δ=αρ_u/3
+ =(1/A)·[A/(A+7)]/3
+ =1/[3(A+7)]
+ =3676744786/1588750826913.
+
+The two routes agree exactly. This contribution is appended once to the positive down/up central-to-heavy root-slope separation. The light/central relation and six-channel relation retain their original forms. For the ordered positive down roots d₀,d₁,d₂ and up roots u₀,u₁,u₂,
+
+X=(d₀/d₁)²,
+t=d₁/d₂−u₁/u₂+δ,
+Y=t²,
+Z=XY/6,
+J²=X(1−X)Y(1−Y)Z(1−Z)².
+
+The phase remains half-One. The source terminal_ckm_relation retains the leading slope, exact terminal contribution, terminal-slope composition, unchanged X relation, six-channel Z relation and phase as its six-field record. TerminalCKM.slopeContribution computes both rational routes and checks their equality; exactContribution and completeSourceRecord prove the resulting contribution and full record.
+
+The comparison uses the already established cubics
+
+d³−d²+d/8−1/383=0,
+u³−u²+u/12−1/3071=0.
+
+The source isolates all three roots of each cubic and bisects every bracket until every width is at most 10⁻¹⁵. The exact initial down intervals are (1/64,1/32),(7/64,1/8),(27/32,55/64); the up intervals are (1/256,1/128),(11/128,23/256),(29/32,233/256). The original stopping traces require 44 down refinements and 42 up refinements. TerminalQuarkRoots.sourceDown and sourceUp establish these original uncapped-loop traces; their native evaluation budgets include the final stopping test and do not change the stopping condition.
+
+Write each resulting interval as [a₋,a₊]. The exact down endpoints are
+
+d₀∈[29565302218591/1125899906842624,923915694331/35184372088832],
+d₁∈[32625432524185/281474976710656,130501730096741/1125899906842624],
+d₂∈[241458218631823/281474976710656,965832874527293/1125899906842624].
+
+The exact up endpoints are
+
+u₀∈[578336531095/140737488355328,4626692248761/1125899906842624],
+u₁∈[98182672820103/1125899906842624,12272834102513/140737488355328],
+u₂∈[15985789715215/17592186044416,1023090541773761/1125899906842624].
+
+The full interval propagation is
+
+X₋=(d₀₋/d₁₊)²,    X₊=(d₀₊/d₁₋)²,
+t₋=d₁₋/d₂₊−u₁₊/u₂₋+δ,
+t₊=d₁₊/d₂₋−u₁₋/u₂₊+δ,
+Y₋=t₋²,    Y₊=t₊²,
+Z₋=X₋Y₋/6,    Z₊=X₊Y₊/6.
+
+The original guards establish t₋>10⁻⁹, X₊<1/2, Y₊<1/2 and Z₊<1/3. The complete source Jarlskog enclosure then uses
+
+F=[X₋(1−X₋),X₊(1−X₊)],
+G=[Y₋(1−Y₋),Y₊(1−Y₊)],
+H=[Z₋(1−Z₊)²,Z₊(1−Z₋)²],
+J²∈[F₋G₋H₋,F₊G₊H₊].
+
+These formulas and the exact endpoints above specify every rational bound without rounding. TerminalCKMComparison.completePredictions proves the complete four-interval result of the translated source operation.
+
+The registered PDG comparison retains all four rows and their asymmetric uncertainties. For each centre m with lower and upper uncertainties σ₋ and σ₊, the exact squared comparison interval is
+
+T=[(m−3σ₋)²,(m+3σ₊)²],    m−3σ₋>10⁻¹².
+
+The rows are (m,σ₋,σ₊):
+
+sin θ₁₂: (0.22501,0.00068,0.00068),
+sin θ₂₃: (0.04183,0.00069,0.00079),
+sin θ₁₃: (0.003732,0.000085,0.000090),
+J: (0.0000312,0.0000012,0.0000013).
+
+Overlap is checked inclusively as P₋≤T₊ and T₋≤P₊ for every row. All four comparisons pass. TerminalCKMMeasurement.originalClassification proves the original complete classification against the retained source record. The record's custody fields disclose that the earlier target was already known during development, that no measurement enters the formal relation or selects its survivor, that the prediction seals before target release within the run, and that every row and uncertainty is retained. V3 classifies this terminal successor as an observational derivation; it does not claim blind forward discovery.
+
+The complete original law grammar retains all 256 alternatives, including the alternative that leaves the declared terminal dependency unused or chooses a shift from a target. Its exact two-route witness, controls and closure are preserved. The separate registered post-seal comparison retains its own complete eight-axis product and four-row validation protocol.
+
+Original V3: sft/physics/matter_flavour_terminal_ckm_laws_v1.py, terminal_ckm_slope_contribution, terminal_ckm_relation and TERMINAL_CKM_SPEC; matter_flavour_terminal_ckm_validation_v1.py, refined_quark_roots, terminal_ckm_prediction_intervals, three_sigma_squared, terminal_ckm_classification and TERMINAL_CKM_EMPIRICAL_SPEC. Pin: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: TerminalCKM, TerminalQuarkRoots, TerminalCKMComparison, TerminalMatterRecords, TerminalCKMMeasurement, TerminalCKMEntry and TerminalCKMEmpirical modules. Timeline: TURN938. Receipt: verification/TURN_938_TERMINAL_CKM_COMPLETION.json.
+
+[Original terminal law](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/matter_flavour_terminal_ckm_laws_v1.py); [Original complete comparison](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/matter_flavour_terminal_ckm_validation_v1.py); [Native terminal derivation](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/TerminalCKM.lean); [Native interval derivation](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/TerminalCKMComparison.lean); [Timeline](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt).

@@ -1,0 +1,60 @@
+import SFT.Physics.TerminalCKM
+import SFT.Physics.TerminalQuarkRoots
+import SFT.Physics.TerminalCKMComparison
+import SFT.Physics.TerminalMatterRecords
+import SFT.Physics.TerminalCKMMeasurement
+#print axioms SFT.Physics.TerminalCKM.slopeContribution
+#print axioms SFT.Physics.TerminalCKM.Result
+#print axioms SFT.Physics.TerminalCKM.terminalCKMRelation
+#print axioms SFT.Physics.TerminalCKM.originalContribution
+#print axioms SFT.Physics.TerminalCKM.exactContribution
+#print axioms SFT.Physics.TerminalCKM.originalRecord
+#print axioms SFT.Physics.TerminalCKM.completeSourceRecord
+#print axioms SFT.Physics.TerminalCKM.contributionPositive
+#print axioms SFT.Physics.TerminalQuarkRoots.Interval
+#print axioms SFT.Physics.TerminalQuarkRoots.precision
+#print axioms SFT.Physics.TerminalQuarkRoots.needsRefinement
+#print axioms SFT.Physics.TerminalQuarkRoots.refine
+#print axioms SFT.Physics.TerminalQuarkRoots.SourceRun
+#print axioms SFT.Physics.TerminalQuarkRoots.refineWithin
+#print axioms SFT.Physics.TerminalQuarkRoots.refinementCorrespondence
+#print axioms SFT.Physics.TerminalQuarkRoots.downPair
+#print axioms SFT.Physics.TerminalQuarkRoots.downProduct
+#print axioms SFT.Physics.TerminalQuarkRoots.upPair
+#print axioms SFT.Physics.TerminalQuarkRoots.upProduct
+#print axioms SFT.Physics.TerminalQuarkRoots.initialDown
+#print axioms SFT.Physics.TerminalQuarkRoots.initialUp
+#print axioms SFT.Physics.TerminalQuarkRoots.initialSource
+#print axioms SFT.Physics.TerminalQuarkRoots.refinedDown
+#print axioms SFT.Physics.TerminalQuarkRoots.exactDown
+#print axioms SFT.Physics.TerminalQuarkRoots.sourceDown
+#print axioms SFT.Physics.TerminalQuarkRoots.refinedUp
+#print axioms SFT.Physics.TerminalQuarkRoots.exactUp
+#print axioms SFT.Physics.TerminalQuarkRoots.sourceUp
+#print axioms SFT.Physics.TerminalQuarkRoots.refinedQuarkRoots
+#print axioms SFT.Physics.TerminalQuarkRoots.completeRefinedRoots
+#print axioms SFT.Physics.TerminalCKMComparison.Predictions
+#print axioms SFT.Physics.TerminalCKMComparison.predictionIntervals
+#print axioms SFT.Physics.TerminalCKMComparison.originalPredictions
+#print axioms SFT.Physics.TerminalCKMComparison.completePredictions
+#print axioms SFT.Physics.TerminalMatterRecords.componentHashes
+#print axioms SFT.Physics.TerminalMatterRecords.sourceHash
+#print axioms SFT.Physics.TerminalMatterRecords.payloadBoundary
+#print axioms SFT.Physics.TerminalMatterRecords.lastPathPartChars
+#print axioms SFT.Physics.TerminalMatterRecords.lastPathPart
+#print axioms SFT.Physics.TerminalMatterRecords.checkComponents
+#print axioms SFT.Physics.TerminalMatterRecords.authoritativeRecord
+#print axioms SFT.Physics.TerminalMatterRecords.findSourceRows
+#print axioms SFT.Physics.TerminalMatterRecords.sourceRowsFromRecord
+#print axioms SFT.Physics.TerminalMatterRecords.sourceRows
+#print axioms SFT.Physics.TerminalMatterRecords.registeredRecord
+#print axioms SFT.Physics.TerminalMatterRecords.originalPayloadBoundary
+#print axioms SFT.Physics.TerminalCKMMeasurement.label
+#print axioms SFT.Physics.TerminalCKMMeasurement.threeSigmaSquared
+#print axioms SFT.Physics.TerminalCKMMeasurement.checksForRows
+#print axioms SFT.Physics.TerminalCKMMeasurement.classificationRows
+#print axioms SFT.Physics.TerminalCKMMeasurement.classificationFromRecord
+#print axioms SFT.Physics.TerminalCKMMeasurement.classification
+#print axioms SFT.Physics.TerminalCKMMeasurement.originalClassification
+#print axioms SFT.Physics.TerminalCKMMeasurement.completeCheck
+#print axioms SFT.Physics.TerminalCKMMeasurement.completeCheckPassed

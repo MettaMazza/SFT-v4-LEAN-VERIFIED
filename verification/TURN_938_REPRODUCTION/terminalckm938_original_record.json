@@ -1,0 +1,64 @@
+{
+  "schema": "sft-v3-matter-flavour-terminal-postseal-source-record/1",
+  "retrieval_date": "2026-07-24",
+  "custody": {
+    "development_target_already_known": true,
+    "classification": "observational_derivation",
+    "formal_relation_contains_measurement": false,
+    "measurement_selects_formal_survivor": false,
+    "engine_prediction_sealed_before_target_release_within_run": true,
+    "blind_forward_discovery_claimed": false,
+    "all_rows_and_uncertainties_retained": true
+  },
+  "sources": [
+    {
+      "source_id": "PDG-2025-CKM-MATRIX",
+      "body": "Particle Data Group, Lawrence Berkeley National Laboratory",
+      "source_uri": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-ckm-matrix.pdf",
+      "snapshot_path": "experiments/external_sources/physics/snapshots/pdg-2025-ckm-matrix.pdf",
+      "snapshot_hash": "sha256:a0a78578971f38ff89c6fc5579bc608de41ec383a205dc25cba1d26f7145610a",
+      "rows": {
+        "sin_theta12": {
+          "value": "0.22501",
+          "lower_uncertainty": "0.00068",
+          "upper_uncertainty": "0.00068"
+        },
+        "sin_theta23": {
+          "value": "0.04183",
+          "lower_uncertainty": "0.00069",
+          "upper_uncertainty": "0.00079"
+        },
+        "sin_theta13": {
+          "value": "0.003732",
+          "lower_uncertainty": "0.000085",
+          "upper_uncertainty": "0.000090"
+        },
+        "jarlskog": {
+          "value": "0.0000312",
+          "lower_uncertainty": "0.0000012",
+          "upper_uncertainty": "0.0000013"
+        }
+      }
+    },
+    {
+      "source_id": "PDG-2025-BIG-BANG-COSMOLOGY",
+      "body": "Particle Data Group, Lawrence Berkeley National Laboratory",
+      "source_uri": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-bbang-cosmology.pdf",
+      "snapshot_path": "experiments/external_sources/physics/snapshots/pdg-2025-bbang-cosmology.pdf",
+      "snapshot_hash": "sha256:2ea12893db3cdd33a67b6dbff98e74ca15b14ba2b2c3c2be5abcfdeffd98b543",
+      "rows": {
+        "bbn_baryon_to_photon_ratio": {
+          "strict_lower": "0.00000000058",
+          "strict_upper": "0.00000000063",
+          "source_equation": "22.55"
+        },
+        "planck_derived_baryon_to_photon_ratio": {
+          "value": "0.000000000612",
+          "standard_uncertainty": "0.000000000004",
+          "source_context": "PDG translation of the registered Planck baryon density"
+        }
+      }
+    }
+  ],
+  "validation_boundary": "The target was visible during successor development, so the result is registered as an observational derivation rather than a blind forward discovery. The executable Fold relations contain no target value, the engine seals each prediction before releasing this record within the admission run, and every source row and uncertainty is retained as a post-seal test."
+}

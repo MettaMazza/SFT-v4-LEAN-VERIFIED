@@ -6447,3 +6447,13 @@ import SFT.Physics.MirrorMassClosureEntryWitnesses
 import SFT.Physics.MirrorMassClosureEntryGrammar
 import SFT.Physics.MirrorMassClosureEntryControls
 import SFT.Physics.MirrorMassClosureEntryEvidence
+import SFT.Physics.MixingRowCoupling
+import SFT.Physics.MixingRowCouplingEntryWitnesses
+import SFT.Physics.MixingRowCouplingEntryGrammar
+import SFT.Physics.MixingRowCouplingEntryControls
+import SFT.Physics.MixingRowCouplingEntryEvidence
+import SFT.Physics.GenerationDepth
+import SFT.Physics.GenerationDepthEntryWitnesses
+import SFT.Physics.GenerationDepthEntryGrammar
+import SFT.Physics.GenerationDepthEntryControls
+import SFT.Physics.GenerationDepthEntryEvidence

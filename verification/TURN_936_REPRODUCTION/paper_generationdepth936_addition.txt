@@ -1,0 +1,28 @@
+
+808. A common two-operation generation return
+
+All three generated lepton sites follow the same ordered operations: generator tripling, followed by one binary Fold. Tripling multiplies by three and removes complete Ones only while the value exceeds One. Its complete traces are
+
+1/6 → 1/2,
+1/2 → 3/2 → 1/2,
+5/6 → 5/2 → 3/2 → 1/2.
+
+The latter arrows inside each tripling trace are its exact One-subtractions, not extra generator operations. Thus the shared waypoint is
+
+W=(1/2,1/2,1/2).
+
+For an exact positive part x≤1, the source Fold is
+
+F(x)=2x if 2x≤1; otherwise F(x)=2x−1.
+
+At every shared waypoint, F(1/2)=1. The complete home triple is therefore
+
+H=(1,1,1).
+
+Every original site uses one tripling operation and one Fold operation. The common operation depth is the generated binary count b=2; it is not separately chosen for each generation.
+
+GenerationDepth.generationDepth constructs every site, maps the original tripling operation over all of them, maps the guarded Fold over all waypoints and checks both complete target triples. completeSourceRecord proves all four returned fields. firstStage and secondStage prove the entire intermediate and home triples; twoStages verifies the original operation count. The original base is the first complete trace; each successor site retains the same ordered operations, waypoint and home. The eight-axis grammar includes all 256 alternatives and rejects generation-specific coupling depths. Its return witness, controls, closure and independent validation preserve those original decisions.
+
+Original V3: sft/physics/matter_flavour_completion_laws_v1.py, generation_depth and GENERATION_DEPTH_SPEC; structural_constants.py, fold_part; matter_flavour_laws_v1.py, tripling_fold. Pin: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: GenerationDepth and GenerationDepthEntry Witnesses/Grammar/Controls/Evidence; reused MixingCorrespondence.leptonMassBasis and triplingFold. Timeline: TURN936. Receipt: verification/TURN_936_GENERATION_DEPTH_COMPLETION.json.
+
+[Original complete trace](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/matter_flavour_completion_laws_v1.py); [Native two-stage proof](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/GenerationDepth.lean); [Complete grammar](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/GenerationDepthEntryGrammar.lean); [Timeline](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt).

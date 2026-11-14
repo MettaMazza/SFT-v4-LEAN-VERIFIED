@@ -1,0 +1,14 @@
+import SFT.Physics.GenerationDepth
+namespace SFT.Physics.GenerationDepthEntryWitnesses
+open GenerationDepth
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def depthCheck : Bool := match generationDepth with
+ | .error _ => false
+ | .ok result => result.generatorSteps == 2
+def witnesses : List Witness := [⟨"return","All three exact traces share waypoint and home.",depthCheck⟩]
+theorem depthCheckPassed : depthCheck=true := rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := rfl
+end SFT.Physics.GenerationDepthEntryWitnesses

@@ -1,0 +1,24 @@
+
+807. Alignment rows return their generating locks
+
+The complete first quark and lepton alignment rows are already fixed by the shared overlap construction:
+
+Q₁=(8/9,5/9,2/9),    L₁=(5/6,1/2,1/6).
+
+Retaining every channel gives
+
+ΣQ₁=(8+5+2)/9=15/9=5/3,
+ΣL₁=(5+3+1)/6=9/6=3/2.
+
+Holding out one complete One returns each row's generating lock:
+
+q=ΣQ₁−1=5/3−3/3=2/3,
+ℓ=ΣL₁−1=3/2−2/2=1/2.
+
+Thus the quark and lepton residues are the same locks used to generate their respective fibres. No independent row normalization is introduced. The source begins with the first overlap and appends each subsequent channel; only after the complete row is retained is One held out.
+
+MixingRowCoupling.interEntryCouplings reuses the generated matrices, selects each complete first row, accumulates from its first element, subtracts One and checks both residues against their original locks. completeSourceRecord proves all four returned fields: both row sums and both locks. bothOriginalLocks records the resulting pair. The original eight-axis grammar retains all 256 alternatives; the original locks witness, controls, closure and independent validator reject independently chosen row normalizations.
+
+Original V3: sft/physics/matter_flavour_completion_laws_v1.py, inter_entry_couplings and INTER_ENTRY_SPEC, pinned at 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: MixingRowCoupling and MixingRowCouplingEntry Witnesses/Grammar/Controls/Evidence; reused MixingCorrespondence.mixingCorrespondence. Timeline: TURN935. Receipt: verification/TURN_935_MIXING_ROW_COMPLETION.json.
+
+[Original derivation](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/matter_flavour_completion_laws_v1.py); [Native complete row derivation](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/MixingRowCoupling.lean); [Complete grammar](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/MixingRowCouplingEntryGrammar.lean); [Timeline](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt).

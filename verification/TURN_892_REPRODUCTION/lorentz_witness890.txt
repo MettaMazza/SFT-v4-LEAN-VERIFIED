@@ -1,0 +1,23 @@
+import SFT.Physics.LorentzTransfer
+namespace SFT.Physics.LorentzTransferEntryWitnesses
+open LorentzTransfer
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def same (a b : Rat) : Bool := !a.blt b && !b.blt a
+def original := lorentzTransfer (.fraction ⟨1,4,by decide,by decide⟩) (.fraction ⟨1,2,by decide,by decide⟩)
+def retainedCheck : Bool := match original with
+ | .error _ => false
+ | .ok x => same x.retainedForce ⟨3,16,by decide,by decide⟩
+def partitionCheck : Bool := match original with
+ | .error _ => false
+ | .ok x => same (LeptonIntervals.add x.retainedForce x.motionShare) ⟨1,4,by decide,by decide⟩
+def witnesses : List Witness := [WITNESS_ROWS]
+theorem retainedCheckPassed : retainedCheck=true := by unfold retainedCheck original;rw [originalSourceRecord];rfl
+theorem partitionCheckPassed : partitionCheck=true := by unfold partitionCheck original;rw [originalSourceRecord];rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := by
+ change (retainedCheck && partitionCheck && true)=true
+ rw [retainedCheckPassed,partitionCheckPassed]
+ rfl
+end SFT.Physics.LorentzTransferEntryWitnesses

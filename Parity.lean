@@ -1765,3 +1765,15 @@ def main : IO Unit := do
 
   for c in SFT.Physics.CoulombGrammar.candidates do
     IO.println ("CoulombGrammar\t" ++ SFT.Physics.CoulombGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CoulombGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CoulombGrammar.exactForm c ++ "\t" ++ SFT.Physics.CoulombGrammar.decisionReason c)
+
+  for c in SFT.Physics.MagneticCorrectionGrammar.candidates do
+    IO.println ("MagneticCorrectionGrammar\t" ++ SFT.Physics.MagneticCorrectionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MagneticCorrectionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MagneticCorrectionGrammar.exactForm c ++ "\t" ++ SFT.Physics.MagneticCorrectionGrammar.decisionReason c)
+
+  for c in SFT.Physics.LorentzTransferEntryGrammar.candidates do
+    IO.println ("LorentzTransferEntryGrammar\t" ++ SFT.Physics.LorentzTransferEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.LorentzTransferEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.LorentzTransferEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.LorentzTransferEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.MaxwellPlanarEntryGrammar.candidates do
+    IO.println ("MaxwellPlanarEntryGrammar\t" ++ SFT.Physics.MaxwellPlanarEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MaxwellPlanarEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MaxwellPlanarEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MaxwellPlanarEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.MaxwellSpatialEntryGrammar.candidates do
+    IO.println ("MaxwellSpatialEntryGrammar\t" ++ SFT.Physics.MaxwellSpatialEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MaxwellSpatialEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MaxwellSpatialEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MaxwellSpatialEntryGrammar.decisionReason c)

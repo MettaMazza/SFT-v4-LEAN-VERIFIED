@@ -1,0 +1,22 @@
+import SFT.Physics.MagneticRelativity
+namespace SFT.Physics.MagneticCorrectionWitnesses
+open MagneticRelativity
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def same (a b : Rat) : Bool := !a.blt b && !b.blt a
+def innerCheck : Bool := match magneticRelativisticFactor (.fraction ⟨1,2,by decide,by decide⟩) with
+ | .error _ => false
+ | .ok x => same x.electricRemainder ⟨3,4,by decide,by decide⟩ && same x.foldedRemainder ⟨1,2,by decide,by decide⟩
+def outerCheck : Bool := match magneticRelativisticFactor (.fraction ⟨1,3,by decide,by decide⟩) with
+ | .error _ => false
+ | .ok x => same x.foldedRemainder ⟨7,9,by decide,by decide⟩
+def witnesses : List Witness := [⟨"half-speed","Half speed gives three-quarter remainder and half folded remainder.",innerCheck⟩,⟨"third-speed","Third speed independently preserves Fold covariance.",outerCheck⟩]
+theorem innerCheckPassed : innerCheck=true := by unfold innerCheck;rw [halfSpeedSource];rfl
+theorem outerCheckPassed : outerCheck=true := by unfold outerCheck;rw [thirdSpeedSource];rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := by
+ change (innerCheck && outerCheck && true)=true
+ rw [innerCheckPassed,outerCheckPassed]
+ rfl
+end SFT.Physics.MagneticCorrectionWitnesses

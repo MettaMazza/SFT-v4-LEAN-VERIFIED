@@ -1,0 +1,61 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "SFTOM-V1-E3-EXACT-OBSERVATION"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:cff1d0fd848d6a8d28a5ce9ab997e4234cead2611f5c9a1cae219c6d774afd14",
+  "falsification_condition": "Reject if either frozen V1 source identity changes; if the original E3 inputs, status, observation or acceptance rule are omitted or altered; if the independently measured complete recurrence vector changes with positive Fold depth; if any released region is empty despite region count not exceeding the odd complete-lattice count; if total occupancy differs from complete lattice membership; if the general odd-lattice permutation or positive-depth successor certificate fails; or if the historical target or result enters the claimant before its prediction seal.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:345afc73832ddb0cc00bd60c847d470bf61a2a413f5b740590726f59cc560cac",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:d00068fd2e628d7caf38b55a81d82272f19c45bb27235ada37d80603c74cdefb",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-PHYS-ODD-LATTICE-ALL-REGION-OCCUPANCY-TERMINAL-007-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:249d24611b08b20b1935859b88ea7075ecf7344c227f12162f86b3b8e0333565",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:44d16199d103aac9a8a16e83e8ed415cf38f2521c5cc40386005c383dbc22df0",
+    "prediction_seal_hash": "sha256:e5d599416b11c63f1e98317343d764b2109e78b3200560b962c4f2bbe1906285",
+    "program_hash": "sha256:6e24a7281917a67a41e9fcc52f64badcccb4ca4393df0ea38b1256e5eb96a39c",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:5c598de841ebbe9551406de7b5bc6156e5e44e934e51bb0d85d3f3057aa8b404",
+    "target_material_present": false,
+    "trace_hash": "sha256:2b605da95685ee3fc2924f582ded884f4eb5e18b468098781359f4d96968711a"
+  },
+  "measurement_receipt_hash": "sha256:d594ef374830c0bbaaa7fa872e2bc62d0e69e1559739e76bc3c0618b335f6140",
+  "measurements": [
+    "Both frozen V1 E3 source files are retained byte-for-byte and were opened only after the V3 prediction seal.",
+    "Released historical inputs: complete 255-member lattice, twelve Fold steps and eight regions.",
+    "Complete independently measured recurrence vector: (32, 32, 32, 32, 32, 32, 32, 31).",
+    "Every one of the eight regions is occupied; the exact vector totals all 255 members.",
+    "The same complete vector occurs after the first, eleventh and twelfth positive Fold steps, directly replicating and strengthening the original measured statement.",
+    "The V3 law is depth-independent and applies to every positive finite odd complete lattice and every complete region partition within its member count; the historical run did not select that law."
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:2f4f005522a7f137483c4a7872b7754cdbf20f082a870aaa74a422403ec663e3",
+    "custodian_id": "SFT-EXP-PHYS-ODD-LATTICE-ALL-REGION-OCCUPANCY-TERMINAL-007-external-target-custodian",
+    "experiment_registration_hash": "sha256:cff1d0fd848d6a8d28a5ce9ab997e4234cead2611f5c9a1cae219c6d774afd14",
+    "prediction_seal_hash": "sha256:e5d599416b11c63f1e98317343d764b2109e78b3200560b962c4f2bbe1906285",
+    "registered_target_identity_hash": "sha256:5c598de841ebbe9551406de7b5bc6156e5e44e934e51bb0d85d3f3057aa8b404",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:aa4f9f81c1bf2b56734ecdc711f280ede551ca1d1457afe916d39b832e98162a"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "sha256:7428718697ab3ad78dcc7d9b4b4b1ac2e439f159d444ad22c956903f8deb3372"
+}

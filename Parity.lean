@@ -1702,3 +1702,18 @@ def main : IO Unit := do
 
   for c in SFT.QuantumComputation.UnboundedGrammar.candidates do
     IO.println ("UnboundedGrammar\t" ++ SFT.QuantumComputation.UnboundedGrammar.candidateId c ++ "\t" ++ (if SFT.QuantumComputation.UnboundedGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.QuantumComputation.UnboundedGrammar.exactForm c ++ "\t" ++ SFT.QuantumComputation.UnboundedGrammar.decisionReason c)
+
+  for c in SFT.Physics.PMNSGrammar.candidates do
+    IO.println ("PMNSGrammar\t" ++ SFT.Physics.PMNSGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PMNSGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PMNSGrammar.exactForm c ++ "\t" ++ SFT.Physics.PMNSGrammar.decisionReason c)
+
+  for c in SFT.Physics.WZGrammar.candidates do
+    IO.println ("WZGrammar\t" ++ SFT.Physics.WZGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.WZGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.WZGrammar.exactForm c ++ "\t" ++ SFT.Physics.WZGrammar.decisionReason c)
+
+  for c in SFT.Physics.CPGrammar.candidates do
+    IO.println ("CPGrammar\t" ++ SFT.Physics.CPGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CPGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CPGrammar.exactForm c ++ "\t" ++ SFT.Physics.CPGrammar.decisionReason c)
+
+  for c in SFT.Physics.DiracGrammar.candidates do
+    IO.println ("DiracGrammar\t" ++ SFT.Physics.DiracGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DiracGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DiracGrammar.exactForm c ++ "\t" ++ SFT.Physics.DiracGrammar.decisionReason c)
+
+  for c in SFT.Physics.ParityGrammar.candidates do
+    IO.println ("ParityGrammar\t" ++ SFT.Physics.ParityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ParityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ParityGrammar.exactForm c ++ "\t" ++ SFT.Physics.ParityGrammar.decisionReason c)

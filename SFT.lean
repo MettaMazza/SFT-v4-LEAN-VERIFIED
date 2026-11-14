@@ -6065,3 +6065,53 @@ import SFT.QuantumComputation.UnboundedWitnesses
 import SFT.QuantumComputation.UnboundedGrammar
 
 import SFT.QuantumComputation.UnboundedEvidence
+
+import SFT.Physics.PMNSSupport
+
+import SFT.Physics.PMNSWitnesses
+
+import SFT.Physics.PMNSGrammar
+
+import SFT.Physics.PMNSControls
+
+import SFT.Physics.PMNSEvidence
+
+import SFT.Physics.WZRelation
+
+import SFT.Physics.WZWitnesses
+
+import SFT.Physics.WZGrammar
+
+import SFT.Physics.WZControls
+
+import SFT.Physics.WZEvidence
+
+import SFT.Physics.CPPhase
+
+import SFT.Physics.CPWitnesses
+
+import SFT.Physics.CPGrammar
+
+import SFT.Physics.CPControls
+
+import SFT.Physics.CPEvidence
+
+import SFT.Physics.DiracG
+
+import SFT.Physics.DiracWitnesses
+
+import SFT.Physics.DiracGrammar
+
+import SFT.Physics.DiracControls
+
+import SFT.Physics.DiracEvidence
+
+import SFT.Physics.ParityFibre
+
+import SFT.Physics.ParityWitnesses
+
+import SFT.Physics.ParityGrammar
+
+import SFT.Physics.ParityControls
+
+import SFT.Physics.ParityEvidence

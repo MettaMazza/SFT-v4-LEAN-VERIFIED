@@ -1,4 +1,5 @@
 import SFT.Physics.AlphaCovers
+import SFT.Physics.BoundarySupport
 namespace SFT.Physics.AlphaBlocks
 open AlphaCovers GeneratorOperations FoldFirstReturn
 set_option maxRecDepth 20000

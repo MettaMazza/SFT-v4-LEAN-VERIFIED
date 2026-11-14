@@ -1,0 +1,23 @@
+import SFT.Physics.AlphaCovers
+#print axioms SFT.Physics.AlphaCovers.binaryCount
+#print axioms SFT.Physics.AlphaCovers.binaryCountTwo
+#print axioms SFT.Physics.AlphaCovers.powerFrom
+#print axioms SFT.Physics.AlphaCovers.powerFromValue
+#print axioms SFT.Physics.AlphaCovers.positivePower
+#print axioms SFT.Physics.AlphaCovers.positivePowerValue
+#print axioms SFT.Physics.AlphaCovers.CoverRun
+#print axioms SFT.Physics.AlphaCovers.successorBudget
+#print axioms SFT.Physics.AlphaCovers.coverBounded
+#print axioms SFT.Physics.AlphaCovers.coverDepth
+#print axioms SFT.Physics.AlphaCovers.coverDepthRun
+#print axioms SFT.Physics.AlphaCovers.runLower
+#print axioms SFT.Physics.AlphaCovers.runCovered
+#print axioms SFT.Physics.AlphaCovers.runMinimal
+#print axioms SFT.Physics.AlphaCovers.leastPositiveCover
+#print axioms SFT.Physics.AlphaCovers.minimalBinaryCover
+#print axioms SFT.Physics.AlphaCovers.nativeLeastCover
+#print axioms SFT.Physics.AlphaCovers.downCover
+#print axioms SFT.Physics.AlphaCovers.upCover
+#print axioms SFT.Physics.AlphaCovers.supportPower
+#print axioms SFT.Physics.AlphaCovers.completeBinarySupport
+#print axioms SFT.Physics.AlphaCovers.leastCompleteSupport

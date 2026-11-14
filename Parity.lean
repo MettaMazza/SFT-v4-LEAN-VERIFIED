@@ -1894,3 +1894,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.BaryonPhotonEntryGrammar.candidates do
     IO.println ("BaryonPhotonEntryGrammar\t" ++ SFT.Physics.BaryonPhotonEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.BaryonPhotonEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.BaryonPhotonEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.BaryonPhotonEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.MixingCorrespondenceEntryGrammar.candidates do
+    IO.println ("MixingCorrespondenceEntryGrammar\t" ++ SFT.Physics.MixingCorrespondenceEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MixingCorrespondenceEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MixingCorrespondenceEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MixingCorrespondenceEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.MassRatioFamilyEntryGrammar.candidates do
+    IO.println ("MassRatioFamilyEntryGrammar\t" ++ SFT.Physics.MassRatioFamilyEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MassRatioFamilyEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MassRatioFamilyEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MassRatioFamilyEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.MirrorMassClosureEntryGrammar.candidates do
+    IO.println ("MirrorMassClosureEntryGrammar\t" ++ SFT.Physics.MirrorMassClosureEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MirrorMassClosureEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MirrorMassClosureEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MirrorMassClosureEntryGrammar.decisionReason c)

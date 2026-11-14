@@ -1,0 +1,14 @@
+import SFT.Physics.MassRatioFamily
+namespace SFT.Physics.MassRatioFamilyEntryWitnesses
+open MassRatioFamily
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def prefixCheck : Bool := match ([1,2,3].mapM fun d => do let r ← massRatioFamily (.integer (.ofNat d)); pure r.heavyOverLight) with
+ | .error _ => false
+ | .ok ratios => decide (ratios=[VacuumLedgerProofs.wholeRatio 5,VacuumLedgerProofs.wholeRatio 17,VacuumLedgerProofs.wholeRatio 53])
+def witnesses : List Witness := [⟨"prefix","The exact first three ratios are five, seventeen and fifty-three.",prefixCheck⟩]
+theorem prefixCheckPassed : prefixCheck=true := rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := rfl
+end SFT.Physics.MassRatioFamilyEntryWitnesses

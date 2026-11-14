@@ -1,0 +1,41 @@
+
+805. The mass-ratio family at every positive depth
+
+The binary count b=2 and generator period c=3 fix the complete combined-ladder support. At each positive integer depth d,
+
+N_d=b c^d=2·3^d.
+
+The light carrier occupies one support cell. Its heavy complement occupies all remaining cells. Their exact fractions and the central carrier are
+
+L_d=1/N_d,    H_d=(N_d−1)/N_d,    C=1/2.
+
+The partition closes because
+
+L_d+H_d=[1+(N_d−1)]/N_d=N_d/N_d=1.
+
+Dividing the complement by the light carrier cancels their shared support:
+
+H_d/L_d=[(N_d−1)/N_d]/[1/N_d]
+       =[(N_d−1)N_d]/[N_d·1]
+       =N_d−1=2·3^d−1.
+
+This identity holds at every positive depth, rather than being inferred from the displayed initial values. The base depth gives N_1=2·3=6 and H_1/L_1=5. At the successor,
+
+N_(d+1)=2·3^(d+1)=3N_d,
+R_(d+1)=3N_d−1=3(R_d+1)−1=3R_d+2.
+
+The first three complete records are therefore
+
+d=1: (N,L,C,H,R)=(6,1/6,1/2,5/6,5),
+d=2: (N,L,C,H,R)=(18,1/18,1/2,17/18,17),
+d=3: (N,L,C,H,R)=(54,1/54,1/2,53/54,53).
+
+The source operation mass_ratio_family rejects booleans and nonpositive depths, derives N from the existing generated counts and positive power, forms both fractions, divides them and checks the result against the independently counted positive predecessor. It returns all five fields shown above. Depth indexes the family; it is not fitted to a measured mass.
+
+MassRatioFamily.completeEveryPositiveDepth proves the entire returned record for every admitted depth. supportSuccessor and lightComplementPartition establish the support recurrence and closure. exactComplementRatio and allDepthRatio establish the exact rational quotient by reusing the existing normalized-division and rational-identity proofs. The source predecessor check follows from predecessorAtSupport and the universal quotient identity. firstThreeRatios verifies the original prefix witness without substituting that prefix for the universal derivation.
+
+The complete original eight-axis grammar contains 256 alternatives. Its original selection retains the complete support-complement construction and rejects a finite ratio list or measured masses as its origin. The prefix witness, controls, closure, program methods and independent validator are bound to the same source operation.
+
+Original V3: sft/physics/matter_flavour_completion_laws_v1.py, mass_ratio_family and MASS_RATIO_FAMILY_SPEC, pinned at 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: MassRatioFamily, MassRatioFamilyEntryWitnesses, MassRatioFamilyEntryGrammar, MassRatioFamilyEntryControls and MassRatioFamilyEntryEvidence; reused AlphaCovers.positivePowerValue, VacuumScaleProofs.divideNormalized and VacuumLedgerProofs.natRatioCongruence. Timeline: TURN933. Receipt: verification/TURN_933_MASS_RATIO_FAMILY_COMPLETION.json.
+
+[Original derivation](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/matter_flavour_completion_laws_v1.py); [Native universal derivation](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/MassRatioFamily.lean); [Complete grammar](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/MassRatioFamilyEntryGrammar.lean); [Timeline](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt).

@@ -1,0 +1,27 @@
+
+806. Mirror closure of the complete lepton carrier
+
+The generated positions from the common alignment construction are
+
+P=(1/6,1/2,5/6).
+
+Applying the exact One-shortfall operation to every position gives
+
+S=(1−1/6,1−1/2,1−5/6)=(5/6,1/2,1/6)=reverse(P).
+
+The central self-antipodal carrier remains fixed, while each outer carrier exchanges with its unique complement. No carrier is removed or independently adjusted. The complete sums agree:
+
+ΣP=1/6+1/2+5/6=(1+3+5)/6=9/6=3/2,
+ΣS=5/6+1/2+1/6=(5+3+1)/6=9/6=3/2.
+
+The equality extends to every symmetric invariant. If F is invariant under reordering, it is invariant under reversal; hence
+
+F(S)=F(reverse(P))=F(P).
+
+The source mirror_mass_closure constructs both complete triples, checks reversal equality and returns positions, shortfalls, both sums and the true closure flag. MirrorMassClosure.completeSourceRecord proves the complete five-field record; exactReverse establishes the carrier identity; bothCompleteSums proves both exact totals. everySymmetricInvariant gives the quantified consequence for every reverse-invariant observable, retaining the stated invariance hypothesis explicitly.
+
+The original base is the fixed central carrier. The successor includes each outer member with its exact complement, preserving the complete mirror multiset. The original eight binary axes enumerate all 256 alternatives, rejecting independent position and mass tables. Its original mirror witness, controls, closure and independent-validator binding use the same generated carrier.
+
+Original V3: sft/physics/matter_flavour_completion_laws_v1.py, mirror_mass_closure and MIRROR_MASS_SPEC, pinned at 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: MirrorMassClosure and MirrorMassClosureEntry Witnesses/Grammar/Controls/Evidence; reused MixingCorrespondence.leptonMassBasis. Timeline: TURN934. Receipt: verification/TURN_934_MIRROR_MASS_COMPLETION.json.
+
+[Original derivation](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/matter_flavour_completion_laws_v1.py); [Native mirror proof](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/MirrorMassClosure.lean); [Complete grammar](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/MirrorMassClosureEntryGrammar.lean); [Timeline](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt).

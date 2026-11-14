@@ -1,0 +1,14 @@
+import SFT.Physics.MixingCorrespondence
+namespace SFT.Physics.MixingCorrespondenceEntryWitnesses
+open MixingCorrespondence
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def rowCheck : Bool := match mixingCorrespondence with
+ | .error _ => false
+ | .ok result => decide (result.leptonMatrix.headD []=originalLeptonMatrix.headD [])
+def witnesses : List Witness := [WITNESS_ROWS]
+theorem rowCheckPassed : rowCheck=true := rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := rfl
+end SFT.Physics.MixingCorrespondenceEntryWitnesses

@@ -1,0 +1,17 @@
+from pathlib import Path
+import json,hashlib,shutil,datetime
+w=Path('work');c=Path('/Volumes/One Touch/SFT v4 Full model LEAN');assert json.loads((c/'COVERAGE.json').read_text())['summary']['fully_reconstructed_claims']==618
+s=json.loads((c/'CONTINUATION_STATE.json').read_text());s['live_jobs_current']={'terminallamb951_entry_build':31666,'terminallamb951_empirical_build':67810};s['atomicvalidation949_staged']['registered']=True;s['atomicvalidation949_staged']['remaining']=[];s['terminallamb951_staged']={'registered':False,'source':'sft/physics/atomic_precision_successor_laws_v1.py and atomic_precision_successor_validation_v1.py','core_evidence':'workspace/work/terminallamb951_science_report.json','remaining':['Observe31666 and67810;run full source-specific law and empirical audits/comparisons. Source record/measurement translated and built,awaiting their full comparison. Register only on complete original-entry checks.']};s['continuation_after_live_batch']='Push frozen618checkpoint950 from940eea2a764e43ba3c93af75a41c566793ecad7b,verify files/head,thencontinue951withlive31666/67810. Goal active toward750.';(c/'CONTINUATION_STATE.json').write_text(json.dumps(s,indent=2)+'\n')
+with (c/'TIMELINE.txt').open('a') as f:f.write('\n'+datetime.datetime.now(datetime.timezone.utc).isoformat()+' — TURN950 batch: original44381fullchecks and70360registration completed. Both original256-candidate programs,three adverse independent cases each,complete four-snapshot empirical validators and131-declaration audits per entry passed;registered617then618,mathematical sections821/822 appended. Read next actual execution binding and pinned atomic_precision_successor laws/validation. Reused exact alpha,generatedheavy,positivepower andturnsupport;implemented five terminal Lamb operations with original three ordered positive Takes and route check,all source outputs matchfreshV3 and10declarations have emptyaxioms. Complete1024lawgrammar31666 and256empiricalgrammar67810running. Original three-component precision custody/record and Lamb/Rydberg interval operations translated andbuilt. These remain unregistered pendingfullchecks. Frozen618checkpoint prepared;noZenodo orgoal-controlchange.\n')
+paths={'verification/TURN_948_REMOTE_RECEIPT.json'}
+for n in [949,950]:paths.update(json.loads((w/f'checkpoint{n}_paths.json').read_text()))
+repro=c/'verification/TURN_950_REPRODUCTION';repro.mkdir(exist_ok=True)
+for pat in ['*atomicvalidation*949*.py','*atomicrecord949*.py','*atomicmeasurement949*.py','paper_*postsealvalidation*.txt','timeline949_addition.txt','timeline950_addition.txt','prepare_cubicpostsealvalidation*949.py','check_cubicpostsealvalidation*949.py','prepare_hydrogenpostsealvalidation*950.py','check_hydrogenpostsealvalidation*950.py','freeze950.py']:
+ for p in w.glob(pat):
+  if p.is_file():q=repro/p.name;shutil.copy2(p,q);paths.add(str(q.relative_to(c)))
+for pat in ['AtomicPostseal*949.lean','CubicPostsealValidation*949.lean','HydrogenPostsealValidation*950.lean']:
+ for p in (w/'constants-recovery').glob(pat):q=repro/p.name;shutil.copy2(p,q);paths.add(str(q.relative_to(c)))
+ready=w/'checkpoint950_ready';manifest=[]
+for path in sorted(paths):
+ b=(c/path).read_bytes();p=ready/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b);manifest.append(dict(path=path,size=len(b),sha=hashlib.sha1(f'blob {len(b)}\0'.encode()+b).hexdigest()))
+(w/'checkpoint950_manifest.json').write_text(json.dumps(manifest,indent=2));print(len(manifest),sum(x['size'] for x in manifest))

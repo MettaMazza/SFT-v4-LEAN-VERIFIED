@@ -1945,3 +1945,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.MolecularSpectrumEntryGrammar.candidates do
     IO.println ("MolecularSpectrumEntryGrammar\t" ++ SFT.Physics.MolecularSpectrumEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MolecularSpectrumEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MolecularSpectrumEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MolecularSpectrumEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.CubicPostsealValidationGrammar.candidates do
+    IO.println ("CubicPostsealValidationGrammar\t" ++ SFT.Physics.CubicPostsealValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CubicPostsealValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CubicPostsealValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.CubicPostsealValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.HydrogenPostsealValidationGrammar.candidates do
+    IO.println ("HydrogenPostsealValidationGrammar\t" ++ SFT.Physics.HydrogenPostsealValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HydrogenPostsealValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HydrogenPostsealValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.HydrogenPostsealValidationGrammar.decisionReason c)

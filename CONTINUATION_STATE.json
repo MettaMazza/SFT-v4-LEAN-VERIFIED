@@ -54815,12 +54815,12 @@
   ],
   "next_publication_milestone": 750,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "Continue SFT-PHYS-VALIDATION-ATOMIC-CUBIC-SUPPORT-004 in registered dependency order toward750,reusing retained source-specific implementations and checks. Update counts,paper,timeline and push verified work. Pause only at750 with complete review package.",
+  "authorized_action": "Continue SFT-PHYS-ATOMIC-LAMB-SHIFT-TERMINAL-005 in registered dependency order toward750,reusing retained source-specific implementations and checks. Update counts,paper,timeline and push verified work. Pause only at750 with complete review package.",
   "scientific_cursor": {
-    "completed": "SFT-PHYS-MOLECULAR-SPECTRUM-HIERARCHY-004",
-    "next": "SFT-PHYS-VALIDATION-ATOMIC-CUBIC-SUPPORT-004",
-    "receipt": "verification/TURN_948_MOLECULAR_SPECTRUM_COMPLETION.json",
-    "source": "claims/SFT-PHYS-VALIDATION-ATOMIC-CUBIC-SUPPORT-004/execution.py",
+    "completed": "SFT-PHYS-VALIDATION-ATOMIC-HYDROGEN-SPECTRUM-004",
+    "next": "SFT-PHYS-ATOMIC-LAMB-SHIFT-TERMINAL-005",
+    "receipt": "verification/TURN_950_HYDROGEN_POSTSEAL_COMPLETION.json",
+    "source": "claims/SFT-PHYS-ATOMIC-LAMB-SHIFT-TERMINAL-005/execution.py",
     "next_milestone": 750
   },
   "video_verification": {
@@ -60047,10 +60047,10 @@
   },
   "last_verified_remote": {
     "status": "PASS",
-    "commit": "78d5226fc602050d50227c4b1cc91d71e148db0d",
-    "tree": "ecd87ca3dc378bbde7058a7fddc613d4f2e8ede9",
-    "verified_files": 387,
-    "completed_entries": 613,
+    "commit": "940eea2a764e43ba3c93af75a41c566793ecad7b",
+    "tree": "ce4a706b648a23c6933d55c69d689e4d344f5503",
+    "verified_files": 63,
+    "completed_entries": 616,
     "head_verified": true
   },
   "confinement937": {
@@ -60099,14 +60099,15 @@
     ]
   },
   "live_jobs_current": {
-    "atomicvalidation949_build": 40204
+    "terminallamb951_entry_build": 31666,
+    "terminallamb951_empirical_build": 67810
   },
   "cubicatomic944_staged": {
     "registered": true,
     "remaining": [],
     "receipt": "verification/TURN_944_CUBIC_ATOMIC_COMPLETION.json"
   },
-  "continuation_after_live_batch": "616registered;push frozen948 checkpoint from78d5226fc602050d50227c4b1cc91d71e148db0d;retain40204. Continue949 source validation in dependency order toward750.",
+  "continuation_after_live_batch": "Push frozen618checkpoint950 from940eea2a764e43ba3c93af75a41c566793ecad7b,verify files/head,thencontinue951withlive31666/67810. Goal active toward750.",
   "terminalproton940": {
     "status": "complete",
     "receipt": "verification/TURN_940_TERMINAL_PROTON_COMPLETION.json",
@@ -60182,7 +60183,7 @@
     "candidate_rows": 256
   },
   "atomicvalidation949_staged": {
-    "registered": false,
+    "registered": true,
     "modules": [
       "AtomicPostsealRecords",
       "AtomicPostsealMeasurement",
@@ -60199,9 +60200,28 @@
     ],
     "source": "sft/physics/atomic_spectra_postseal_validation_v1.py",
     "core_evidence": "workspace/work/atomicmeasurement949_report.json",
+    "remaining": [],
+    "build_log": "workspace/work/atomicvalidation949_build.log",
+    "build_status": "PASS after hydrogen two-row assertion repair; original failed log retained"
+  },
+  "cubicpostsealvalidation949": {
+    "status": "complete",
+    "receipt": "verification/TURN_949_CUBIC_POSTSEAL_COMPLETION.json",
+    "audited_declarations": 131,
+    "candidate_rows": 256
+  },
+  "hydrogenpostsealvalidation950": {
+    "status": "complete",
+    "receipt": "verification/TURN_950_HYDROGEN_POSTSEAL_COMPLETION.json",
+    "audited_declarations": 131,
+    "candidate_rows": 256
+  },
+  "terminallamb951_staged": {
+    "registered": false,
+    "source": "sft/physics/atomic_precision_successor_laws_v1.py and atomic_precision_successor_validation_v1.py",
+    "core_evidence": "workspace/work/terminallamb951_science_report.json",
     "remaining": [
-      "Observe40204 without duplicating it. Complete original full-program and independent empirical comparisons for949/950; register in order after all applicable checks."
-    ],
-    "build_log": "workspace/work/atomicvalidation949_build.log"
+      "Observe31666 and67810;run full source-specific law and empirical audits/comparisons. Source record/measurement translated and built,awaiting their full comparison. Register only on complete original-entry checks."
+    ]
   }
 }

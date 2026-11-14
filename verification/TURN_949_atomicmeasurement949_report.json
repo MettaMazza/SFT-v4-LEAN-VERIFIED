@@ -1,0 +1,252 @@
+{
+  "status": "PASS",
+  "actual": {
+    "hydrogen": {
+      "balmer_lower": [
+        761657,
+        50
+      ],
+      "balmer_passed": true,
+      "balmer_prediction": [
+        1096787717,
+        72000
+      ],
+      "balmer_upper": [
+        380832,
+        25
+      ],
+      "lyman_lower": [
+        4112951,
+        50
+      ],
+      "lyman_passed": true,
+      "lyman_prediction": [
+        3290363151,
+        40000
+      ],
+      "lyman_upper": [
+        822593,
+        10
+      ],
+      "scale": [
+        1096787717,
+        10000
+      ]
+    },
+    "observed": 6,
+    "record": {
+      "custody": {
+        "classification": "observational_derivation",
+        "complete_reported_uncertainties_retained": true,
+        "development_targets_already_known": true,
+        "engine_prediction_sealed_before_target_release_within_run": true,
+        "formal_relations_contain_measurement": false,
+        "measurements_select_formal_survivors": false,
+        "protocol_classification": "observational-data-informed_target-inaccessible_sealed-prediction",
+        "target_inaccessible_during_prediction_execution": true,
+        "unfavorable_molecular_ratio_retained": true
+      },
+      "registered_results": {
+        "cubic_support": "The formal six-neighbour result agrees exactly with the NIST simple-cubic packing row.",
+        "hydrogen_gross_ratios": "Using the NIST hydrogen ionization wavenumber only as the dimensionful input carrier, the sealed exact ratios three-quarters and five-thirty-sixths predict intervals overlapping the complete reported Lyman-alpha and Balmer-alpha intervals.",
+        "molecular_hierarchy": "The NIST H2 values confirm electronic above vibrational above rotational scales but reject a universal equality of rotational and vibrational quarter-supports or a universal two-to-one electronic/molecular numerical ratio; the leading formal receipt is retained and a versioned successor is mandatory."
+      },
+      "retrieval_date": "2026-07-24",
+      "schema": "sft-v3-atomic-spectra-postseal-source-record/1",
+      "sources": [
+        {
+          "body": "National Institute of Standards and Technology, NIST Center for Neutron Research",
+          "locator": "PDF page 10, nearest-neighbour packing comparison",
+          "reported_record": {
+            "simple_cubic_nearest_neighbours": 6
+          },
+          "snapshot_hash": "sha256:ab723f91d6658bd8b5d19889884fd87e07046d2b0060e23f7df8d7cb6c35fa5b",
+          "snapshot_path": "experiments/external_sources/physics/snapshots/nist-simple-cubic-neighbours.pdf",
+          "source_id": "NIST-NCNR-DCS-SUPERFLUID-HELIUM",
+          "source_uri": "https://www.nist.gov/document/dcs"
+        },
+        {
+          "body": "National Institute of Standards and Technology, Atomic Spectra Database",
+          "locator": "H I ground-state ionization-energy row",
+          "reported_record": {
+            "hydrogen_ionization_wavenumber_cm_inverse": "109678.7717"
+          },
+          "snapshot_hash": "sha256:cc54c774518d62cbb7e95f17b3b7fcd9d1faf0aa90043a607b91dff0a43e2087",
+          "snapshot_path": "experiments/external_sources/physics/snapshots/nist-hydrogen-atomic-data.html",
+          "source_id": "NIST-ASD-HYDROGEN-ATOMIC-DATA",
+          "source_uri": "https://physics.nist.gov/PhysRefData/Handbook/Tables/hydrogentable1.htm"
+        },
+        {
+          "body": "National Institute of Standards and Technology, Atomic Physics Division",
+          "locator": "Table 11, Lyman n=2 observed wavenumber; Table 10, Balmer 2-3 observed wavenumber",
+          "reported_record": {
+            "balmer_alpha_observed_wavenumber_cm_inverse": "15233.21",
+            "balmer_alpha_uncertainty_cm_inverse": "0.07",
+            "lyman_alpha_observed_wavenumber_cm_inverse": "82259.16",
+            "lyman_alpha_uncertainty_cm_inverse": "0.14"
+          },
+          "snapshot_hash": "sha256:86ccaeb875fcdb4445e727618509621ceee656e5dc02295140ecdb6e1d2dd443",
+          "snapshot_path": "experiments/external_sources/physics/snapshots/nist-hydrogen-critical-compilation.pdf",
+          "source_id": "NIST-KRAMIDA-HYDROGEN-CRITICAL-COMPILATION-2010-2019",
+          "source_uri": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=842564"
+        },
+        {
+          "body": "National Institute of Standards and Technology, Chemistry WebBook SRD 69",
+          "locator": "Constants of diatomic molecules, H2 X ground state and B excited state rows",
+          "reported_record": {
+            "electronic_state_energy_cm_inverse": "91700.0",
+            "ground_rotational_constant_cm_inverse": "60.8530",
+            "ground_vibrational_constant_cm_inverse": "4401.213"
+          },
+          "snapshot_hash": "sha256:18036a188088f880122249544ceb6b384fabfba93b300b4f9f0fa01aa0ed9b24",
+          "snapshot_path": "experiments/external_sources/physics/snapshots/nist-webbook-h2-diatomic-constants.html",
+          "source_id": "NIST-WEBBOOK-SRD69-H2-DIATOMIC-CONSTANTS",
+          "source_uri": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C1333740&Mask=1828"
+        }
+      ],
+      "validation_boundary": "All source values are external observation records. They never enter the formal atomic candidate censuses. Comparison execution receives only the registered input carrier and sealed Fold ratios; withheld line targets and the unfavorable molecular ratio are released after the prediction seal."
+    }
+  },
+  "expected": {
+    "record": {
+      "schema": "sft-v3-atomic-spectra-postseal-source-record/1",
+      "retrieval_date": "2026-07-24",
+      "custody": {
+        "development_targets_already_known": true,
+        "classification": "observational_derivation",
+        "protocol_classification": "observational-data-informed_target-inaccessible_sealed-prediction",
+        "target_inaccessible_during_prediction_execution": true,
+        "formal_relations_contain_measurement": false,
+        "measurements_select_formal_survivors": false,
+        "engine_prediction_sealed_before_target_release_within_run": true,
+        "complete_reported_uncertainties_retained": true,
+        "unfavorable_molecular_ratio_retained": true
+      },
+      "sources": [
+        {
+          "source_id": "NIST-NCNR-DCS-SUPERFLUID-HELIUM",
+          "body": "National Institute of Standards and Technology, NIST Center for Neutron Research",
+          "source_uri": "https://www.nist.gov/document/dcs",
+          "snapshot_path": "experiments/external_sources/physics/snapshots/nist-simple-cubic-neighbours.pdf",
+          "snapshot_hash": "sha256:ab723f91d6658bd8b5d19889884fd87e07046d2b0060e23f7df8d7cb6c35fa5b",
+          "locator": "PDF page 10, nearest-neighbour packing comparison",
+          "reported_record": {
+            "simple_cubic_nearest_neighbours": 6
+          }
+        },
+        {
+          "source_id": "NIST-ASD-HYDROGEN-ATOMIC-DATA",
+          "body": "National Institute of Standards and Technology, Atomic Spectra Database",
+          "source_uri": "https://physics.nist.gov/PhysRefData/Handbook/Tables/hydrogentable1.htm",
+          "snapshot_path": "experiments/external_sources/physics/snapshots/nist-hydrogen-atomic-data.html",
+          "snapshot_hash": "sha256:cc54c774518d62cbb7e95f17b3b7fcd9d1faf0aa90043a607b91dff0a43e2087",
+          "locator": "H I ground-state ionization-energy row",
+          "reported_record": {
+            "hydrogen_ionization_wavenumber_cm_inverse": "109678.7717"
+          }
+        },
+        {
+          "source_id": "NIST-KRAMIDA-HYDROGEN-CRITICAL-COMPILATION-2010-2019",
+          "body": "National Institute of Standards and Technology, Atomic Physics Division",
+          "source_uri": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=842564",
+          "snapshot_path": "experiments/external_sources/physics/snapshots/nist-hydrogen-critical-compilation.pdf",
+          "snapshot_hash": "sha256:86ccaeb875fcdb4445e727618509621ceee656e5dc02295140ecdb6e1d2dd443",
+          "locator": "Table 11, Lyman n=2 observed wavenumber; Table 10, Balmer 2-3 observed wavenumber",
+          "reported_record": {
+            "lyman_alpha_observed_wavenumber_cm_inverse": "82259.16",
+            "lyman_alpha_uncertainty_cm_inverse": "0.14",
+            "balmer_alpha_observed_wavenumber_cm_inverse": "15233.21",
+            "balmer_alpha_uncertainty_cm_inverse": "0.07"
+          }
+        },
+        {
+          "source_id": "NIST-WEBBOOK-SRD69-H2-DIATOMIC-CONSTANTS",
+          "body": "National Institute of Standards and Technology, Chemistry WebBook SRD 69",
+          "source_uri": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C1333740&Mask=1828",
+          "snapshot_path": "experiments/external_sources/physics/snapshots/nist-webbook-h2-diatomic-constants.html",
+          "snapshot_hash": "sha256:18036a188088f880122249544ceb6b384fabfba93b300b4f9f0fa01aa0ed9b24",
+          "locator": "Constants of diatomic molecules, H2 X ground state and B excited state rows",
+          "reported_record": {
+            "electronic_state_energy_cm_inverse": "91700.0",
+            "ground_vibrational_constant_cm_inverse": "4401.213",
+            "ground_rotational_constant_cm_inverse": "60.8530"
+          }
+        }
+      ],
+      "registered_results": {
+        "cubic_support": "The formal six-neighbour result agrees exactly with the NIST simple-cubic packing row.",
+        "hydrogen_gross_ratios": "Using the NIST hydrogen ionization wavenumber only as the dimensionful input carrier, the sealed exact ratios three-quarters and five-thirty-sixths predict intervals overlapping the complete reported Lyman-alpha and Balmer-alpha intervals.",
+        "molecular_hierarchy": "The NIST H2 values confirm electronic above vibrational above rotational scales but reject a universal equality of rotational and vibrational quarter-supports or a universal two-to-one electronic/molecular numerical ratio; the leading formal receipt is retained and a versioned successor is mandatory."
+      },
+      "validation_boundary": "All source values are external observation records. They never enter the formal atomic candidate censuses. Comparison execution receives only the registered input carrier and sealed Fold ratios; withheld line targets and the unfavorable molecular ratio are released after the prediction seal."
+    },
+    "observed": 6,
+    "hydrogen": {
+      "scale": [
+        1096787717,
+        10000
+      ],
+      "lyman_prediction": [
+        3290363151,
+        40000
+      ],
+      "lyman_lower": [
+        4112951,
+        50
+      ],
+      "lyman_upper": [
+        822593,
+        10
+      ],
+      "lyman_passed": true,
+      "balmer_prediction": [
+        1096787717,
+        72000
+      ],
+      "balmer_lower": [
+        761657,
+        50
+      ],
+      "balmer_upper": [
+        380832,
+        25
+      ],
+      "balmer_passed": true
+    }
+  },
+  "axioms": [],
+  "audited_declarations": [
+    "SFT.Physics.AtomicPostsealRecords.sourceHash",
+    "SFT.Physics.AtomicPostsealRecords.componentHashes",
+    "SFT.Physics.AtomicPostsealRecords.sourceId",
+    "SFT.Physics.AtomicPostsealRecords.sourceById",
+    "SFT.Physics.AtomicPostsealRecords.payloadBoundary",
+    "SFT.Physics.AtomicPostsealRecords.authoritativeRecord",
+    "SFT.Physics.AtomicPostsealRecords.reportedRow",
+    "SFT.Physics.AtomicPostsealRecords.registeredRecord",
+    "SFT.Physics.AtomicPostsealRecords.originalPayloadBoundary",
+    "SFT.Physics.AtomicPostsealMeasurement.cubicObservedCoordination",
+    "SFT.Physics.AtomicPostsealMeasurement.hydrogenComparison",
+    "SFT.Physics.AtomicPostsealMeasurement.originalCubicCount",
+    "SFT.Physics.AtomicPostsealMeasurement.cubicComparison",
+    "SFT.Physics.AtomicPostsealMeasurement.originalCubicComparison",
+    "SFT.Physics.AtomicPostsealMeasurement.hydrogenPassed",
+    "SFT.Physics.AtomicPostsealMeasurement.originalHydrogenComparison",
+    "SFT.Physics.AtomicPostsealMeasurement.formalCountCheck",
+    "SFT.Physics.AtomicPostsealMeasurement.observedCountCheck",
+    "SFT.Physics.AtomicPostsealMeasurement.cubicEqualityCheck",
+    "SFT.Physics.AtomicPostsealMeasurement.lymanRatioCheck",
+    "SFT.Physics.AtomicPostsealMeasurement.balmerRatioCheck",
+    "SFT.Physics.AtomicPostsealMeasurement.lymanIntervalCheck",
+    "SFT.Physics.AtomicPostsealMeasurement.balmerIntervalCheck",
+    "SFT.Physics.AtomicPostsealMeasurement.formalCountCheckPassed",
+    "SFT.Physics.AtomicPostsealMeasurement.observedCountCheckPassed",
+    "SFT.Physics.AtomicPostsealMeasurement.cubicEqualityCheckPassed",
+    "SFT.Physics.AtomicPostsealMeasurement.lymanRatioCheckPassed",
+    "SFT.Physics.AtomicPostsealMeasurement.balmerRatioCheckPassed",
+    "SFT.Physics.AtomicPostsealMeasurement.lymanIntervalCheckPassed",
+    "SFT.Physics.AtomicPostsealMeasurement.balmerIntervalCheckPassed",
+    "SFT.Physics.AtomicPostsealMeasurement.cubicClassification",
+    "SFT.Physics.AtomicPostsealMeasurement.hydrogenClassification"
+  ]
+}

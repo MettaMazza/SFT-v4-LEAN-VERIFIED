@@ -1,0 +1,23 @@
+import SFT.Physics.GravitonPolarization
+namespace SFT.Physics.GravitonPolarizationEntryWitnesses
+open GravitonPolarization
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def fourCheck : Bool := match gravitonPolarizations (.integer 4) with
+ | .error _ => false
+ | .ok x => match x.physicalPolarizations with
+   | none => false
+   | some n => n==2
+def planarCheck : Bool := match gravitonPolarizations (.integer 3) with
+ | .error _ => false
+ | .ok x => x.physicalPolarizations.isNone
+def witnesses : List Witness := [⟨"four","Four-dimensional support leaves two polarizations.",fourCheck⟩,⟨"planar","Planar support has an empty propagating polarization record.",planarCheck⟩]
+theorem fourCheckPassed : fourCheck=true := by unfold fourCheck;rw [originalFour];rfl
+theorem planarCheckPassed : planarCheck=true := by unfold planarCheck;rw [originalPlanar];rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := by
+ change (fourCheck && planarCheck && true)=true
+ rw [fourCheckPassed,planarCheckPassed]
+ rfl
+end SFT.Physics.GravitonPolarizationEntryWitnesses

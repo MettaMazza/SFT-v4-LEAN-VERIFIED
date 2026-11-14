@@ -1,0 +1,387 @@
+{
+  "status": "complete",
+  "registered_at": "2026-11-14T09:07:55.357502+00:00",
+  "claim_id": "SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003",
+  "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_component_correspondence": {
+    "LatticeCurvature": {
+      "source": "sft/physics/gravity_spacetime_laws_v1.py",
+      "shared_protocol_source": "sft/physics/structural_constants.py",
+      "component": "Original square_lattice_curvature and lattice_laplacian,exact guards,source-order square/positive-take/divide operations,original spacings and complete dimension family."
+    },
+    "LatticeCurvatureProofs": {
+      "source": "sft/physics/gravity_spacetime_laws_v1.py",
+      "shared_protocol_source": "sft/physics/structural_constants.py",
+      "component": "everyPositiveSpacing binds arbitrary admitted source position/spacing to exact binary curvature;everyGeneratedAxisFamily proves2,4,6 for every admitted lattice spacing through actual source operations."
+    },
+    "LatticeCurvatureEntryWitnesses": {
+      "source": "sft/physics/gravity_spacetime_laws_v1.py",
+      "shared_protocol_source": "sft/physics/structural_constants.py",
+      "component": "Original spacing and family witnesses through exact source operations."
+    },
+    "LatticeCurvatureEntryGrammar": {
+      "source": "sft/physics/gravity_spacetime_laws_v1.py",
+      "shared_protocol_source": "sft/physics/structural_constants.py",
+      "component": "Original eight binary axes,complete256-product enumeration,all original decisions and unique survivor."
+    },
+    "LatticeCurvatureEntryControls": {
+      "source": "sft/physics/gravity_spacetime_laws_v1.py",
+      "shared_protocol_source": "sft/physics/structural_constants.py",
+      "component": "Original four controls,complete original closure statement and original operational witnesses."
+    },
+    "LatticeCurvatureEntryEvidence": {
+      "source": "sft/physics/gravity_spacetime_laws_v1.py",
+      "shared_protocol_source": "sft/physics/structural_constants.py",
+      "component": "Complete original StructuralPhysicsProgram registration,census,candidate/decision hashes,closure,witness records,controls and unknown identifier."
+    }
+  },
+  "lean_source_sha256": {
+    "LatticeCurvature": "f39775e9410e569f8cc99742e53d9f74801083a2a73356d424e09515405b702a",
+    "LatticeCurvatureProofs": "33e1337fb274a2dcf5ea5060b53d00314e2feca1258293efe86d9aeec88348ee",
+    "LatticeCurvatureEntryWitnesses": "76fd9bb13be5715c6565a21b5ab6cb65ef72faf504d0f7704fde5cf1ea4e942f",
+    "LatticeCurvatureEntryGrammar": "09fb137719edfef03db7067e05e019a613230674cab46b712c3956fde933f62e",
+    "LatticeCurvatureEntryControls": "9c5aa1a63050a503eb341dac2b73af1d67d21f4fabd948c88bb1c83356885dd0",
+    "LatticeCurvatureEntryEvidence": "4ccb1f042fb16b2771c26cfd3526d37eb6a6193686900d392d66126801c76250"
+  },
+  "dependencies": {
+    "SFT-PHYS-GRAVITY-REDSHIFT-EQUIVALENCE-003": "complete",
+    "SFT-PHYS-GRAVITY-CURVATURE-001": "complete",
+    "SFT-PHYS-SPACE-DIMENSION-THREE-001": "complete"
+  },
+  "candidate_rows": 256,
+  "axiom_dependencies": [],
+  "audited_declarations": [
+    "SFT.Physics.LatticeCurvature.squareLatticeCurvature",
+    "SFT.Physics.LatticeCurvature.appendAxes",
+    "SFT.Physics.LatticeCurvature.latticeLaplacian",
+    "SFT.Physics.LatticeCurvature.eighthSpacing",
+    "SFT.Physics.LatticeCurvature.sixteenthSpacing",
+    "SFT.Physics.LatticeCurvature.originalFamily",
+    "SFT.Physics.LatticeCurvatureProofs.everyNormalizedSpacing",
+    "SFT.Physics.LatticeCurvatureProofs.everyPositiveSpacing",
+    "SFT.Physics.LatticeCurvatureProofs.everyGeneratedAxisFamily",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.Witness",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.two",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.spacingCheck",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.count",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.familyCheck",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.witnesses",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.spacingCheckPassed",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.familyCheckPassed",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.allWitnessesPass",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.Carrier",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.carrierName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.Dependency",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.dependencyName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.Relation",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.relationName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.Enumeration",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.enumerationName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.Minimality",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.minimalityName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.Measurement",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.measurementName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.Record",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.recordName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.Extension",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.extensionName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.Candidate",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.sourceFields",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.candidateId",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.exactForm",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.survivorId",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.survives",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.criteriaDecision",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.decisionReason",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.generationRule",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.grammarBoundary",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.candidates",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.survivor",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.generatedCardinality",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.candidatesComplete",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.uniqueSurvivor",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.survivorAccepted",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.ExactCriteria",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.carrier_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.dependency_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.relation_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.enumeration_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.minimality_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.measurement_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.record_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.extension_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryControls.exclusions",
+    "SFT.Physics.LatticeCurvatureEntryControls.closureValue",
+    "SFT.Physics.LatticeCurvatureEntryControls.falseCandidate",
+    "SFT.Physics.LatticeCurvatureEntryControls.survivorIds",
+    "SFT.Physics.LatticeCurvatureEntryControls.record",
+    "SFT.Physics.LatticeCurvatureEntryControls.falsePremise",
+    "SFT.Physics.LatticeCurvatureEntryControls.tamperedSource",
+    "SFT.Physics.LatticeCurvatureEntryControls.tamperedArtifact",
+    "SFT.Physics.LatticeCurvatureEntryControls.boundary",
+    "SFT.Physics.LatticeCurvatureEntryControls.falsePremisePassed",
+    "SFT.Physics.LatticeCurvatureEntryControls.boundaryPassed",
+    "SFT.Physics.LatticeCurvatureEntryControls.controlRecords",
+    "SFT.Physics.LatticeCurvatureEntryControls.resultData",
+    "SFT.Physics.LatticeCurvatureEntryControls.runControls",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.candidateRecord",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.completenessRecord",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.registrationData",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.registration",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.generatedCandidateData",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.censusData",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.census",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.decisionData",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.decision",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.decideCandidate",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.closureData",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.closure",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.nativeDecisionPreservesSurvival",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.nativeDecisionPreservesReason",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.registrationHasNoAxioms",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.registrationHasNoFreeParameters",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.lookupDependsOnlyOnIdentifier"
+  ],
+  "added_registered_theorems": [
+    "SFT.Physics.LatticeCurvature.eighthSpacing",
+    "SFT.Physics.LatticeCurvature.sixteenthSpacing",
+    "SFT.Physics.LatticeCurvature.originalFamily",
+    "SFT.Physics.LatticeCurvatureProofs.everyNormalizedSpacing",
+    "SFT.Physics.LatticeCurvatureProofs.everyPositiveSpacing",
+    "SFT.Physics.LatticeCurvatureProofs.everyGeneratedAxisFamily",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.spacingCheckPassed",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.familyCheckPassed",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.allWitnessesPass",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.generatedCardinality",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.candidatesComplete",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.uniqueSurvivor",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.survivorAccepted",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.carrier_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.dependency_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.relation_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.enumeration_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.minimality_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.measurement_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.record_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.extension_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryControls.falsePremisePassed",
+    "SFT.Physics.LatticeCurvatureEntryControls.boundaryPassed",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.nativeDecisionPreservesSurvival",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.nativeDecisionPreservesReason",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.registrationHasNoAxioms",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.registrationHasNoFreeParameters",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.lookupDependsOnlyOnIdentifier"
+  ],
+  "added_audited_definitions_and_theorems": [
+    "SFT.Physics.LatticeCurvature.squareLatticeCurvature",
+    "SFT.Physics.LatticeCurvature.appendAxes",
+    "SFT.Physics.LatticeCurvature.latticeLaplacian",
+    "SFT.Physics.LatticeCurvature.eighthSpacing",
+    "SFT.Physics.LatticeCurvature.sixteenthSpacing",
+    "SFT.Physics.LatticeCurvature.originalFamily",
+    "SFT.Physics.LatticeCurvatureProofs.everyNormalizedSpacing",
+    "SFT.Physics.LatticeCurvatureProofs.everyPositiveSpacing",
+    "SFT.Physics.LatticeCurvatureProofs.everyGeneratedAxisFamily",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.two",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.spacingCheck",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.count",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.familyCheck",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.witnesses",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.spacingCheckPassed",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.familyCheckPassed",
+    "SFT.Physics.LatticeCurvatureEntryWitnesses.allWitnessesPass",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.carrierName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.dependencyName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.relationName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.enumerationName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.minimalityName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.measurementName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.recordName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.extensionName",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.sourceFields",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.candidateId",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.exactForm",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.survivorId",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.survives",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.criteriaDecision",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.decisionReason",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.generationRule",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.grammarBoundary",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.candidates",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.survivor",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.generatedCardinality",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.candidatesComplete",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.sourceDecisionMatchesCriteria",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.uniqueCriteriaSurvivor",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.uniqueSurvivor",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.survivorAccepted",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.ExactCriteria",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.acceptanceIffExactCriteria",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.carrier_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.dependency_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.relation_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.enumeration_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.minimality_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.measurement_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.record_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryGrammar.extension_rejected_rejected",
+    "SFT.Physics.LatticeCurvatureEntryControls.exclusions",
+    "SFT.Physics.LatticeCurvatureEntryControls.closureValue",
+    "SFT.Physics.LatticeCurvatureEntryControls.falseCandidate",
+    "SFT.Physics.LatticeCurvatureEntryControls.survivorIds",
+    "SFT.Physics.LatticeCurvatureEntryControls.record",
+    "SFT.Physics.LatticeCurvatureEntryControls.falsePremise",
+    "SFT.Physics.LatticeCurvatureEntryControls.tamperedSource",
+    "SFT.Physics.LatticeCurvatureEntryControls.tamperedArtifact",
+    "SFT.Physics.LatticeCurvatureEntryControls.boundary",
+    "SFT.Physics.LatticeCurvatureEntryControls.falsePremisePassed",
+    "SFT.Physics.LatticeCurvatureEntryControls.boundaryPassed",
+    "SFT.Physics.LatticeCurvatureEntryControls.controlRecords",
+    "SFT.Physics.LatticeCurvatureEntryControls.resultData",
+    "SFT.Physics.LatticeCurvatureEntryControls.runControls",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.candidateRecord",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.completenessRecord",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.registrationData",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.registration",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.generatedCandidateData",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.censusData",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.census",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.decisionData",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.decision",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.decideCandidate",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.closureData",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.closure",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.nativeDecisionPreservesSurvival",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.nativeDecisionPreservesReason",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.registrationHasNoAxioms",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.registrationHasNoFreeParameters",
+    "SFT.Physics.LatticeCurvatureEntryEvidence.lookupDependsOnlyOnIdentifier"
+  ],
+  "remaining": [],
+  "program_report": "verification/TURN_903_lattice_program903_report.json",
+  "independent_validator_cases": [
+    {
+      "case": "original",
+      "expected": true,
+      "actual": {
+        "certificate": {
+          "exact_result": {
+            "claim_id": "SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003",
+            "exact": [
+              [
+                "2",
+                "2"
+              ],
+              [
+                2,
+                4,
+                6
+              ]
+            ]
+          },
+          "generated_cardinality": 256,
+          "unique_survivor": "generated-exact-Fold-carrier__admitted-V3-root-trace__binary-curvature-per-generated-axis__complete-registered-product__every-omission-rejected__formal-result-sealed-first__complete-causal-source-control-record__no-extra-rule"
+        },
+        "passed": true,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-lattice-903"
+      }
+    },
+    {
+      "case": "omitted_candidate",
+      "expected": false,
+      "actual": {
+        "certificate": {
+          "exact_result": {
+            "claim_id": "SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003",
+            "exact": [
+              [
+                "2",
+                "2"
+              ],
+              [
+                2,
+                4,
+                6
+              ]
+            ]
+          },
+          "generated_cardinality": 256,
+          "unique_survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-lattice-903"
+      }
+    },
+    {
+      "case": "additional_survivor",
+      "expected": false,
+      "actual": {
+        "certificate": {
+          "exact_result": {
+            "claim_id": "SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003",
+            "exact": [
+              [
+                "2",
+                "2"
+              ],
+              [
+                2,
+                4,
+                6
+              ]
+            ]
+          },
+          "generated_cardinality": 256,
+          "unique_survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-lattice-903"
+      }
+    },
+    {
+      "case": "failed_control",
+      "expected": false,
+      "actual": {
+        "certificate": {
+          "exact_result": {
+            "claim_id": "SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003",
+            "exact": [
+              [
+                "2",
+                "2"
+              ],
+              [
+                2,
+                4,
+                6
+              ]
+            ]
+          },
+          "generated_cardinality": 256,
+          "unique_survivor": null
+        },
+        "passed": false,
+        "recomputed_from_declared_inputs": true,
+        "validated_seal_hash": "native-lattice-903"
+      }
+    }
+  ],
+  "canonical_build": "PASS affected original source entry",
+  "checks_executed": [
+    "Retained source-hash-bound kernel audit of all entry declarations",
+    "lake build SFT.Physics.LatticeCurvatureEntryEvidence",
+    "check_lattice_original903.py",
+    "check_lattice903.py",
+    "check_lattice_program903.py with native executable",
+    "check_lattice_independent903.py"
+  ]
+}

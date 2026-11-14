@@ -1807,3 +1807,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.RedshiftEquivalenceEntryGrammar.candidates do
     IO.println ("RedshiftEquivalenceEntryGrammar\t" ++ SFT.Physics.RedshiftEquivalenceEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.RedshiftEquivalenceEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.RedshiftEquivalenceEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.RedshiftEquivalenceEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.LatticeCurvatureEntryGrammar.candidates do
+    IO.println ("LatticeCurvatureEntryGrammar\t" ++ SFT.Physics.LatticeCurvatureEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.LatticeCurvatureEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.LatticeCurvatureEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.LatticeCurvatureEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravitySelfSourceEntryGrammar.candidates do
+    IO.println ("GravitySelfSourceEntryGrammar\t" ++ SFT.Physics.GravitySelfSourceEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravitySelfSourceEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravitySelfSourceEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravitySelfSourceEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravitonPolarizationEntryGrammar.candidates do
+    IO.println ("GravitonPolarizationEntryGrammar\t" ++ SFT.Physics.GravitonPolarizationEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravitonPolarizationEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravitonPolarizationEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravitonPolarizationEntryGrammar.decisionReason c)

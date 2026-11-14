@@ -1,0 +1,26 @@
+import SFT.Physics.LatticeCurvatureProofs
+namespace SFT.Physics.LatticeCurvatureEntryWitnesses
+open LatticeCurvature
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def two (x : Except String Rat) : Bool := match x with
+ | .error _ => false
+ | .ok q => !q.blt ⟨2,1,by decide,by decide⟩ && !(⟨2,1,by decide,by decide⟩ : Rat).blt q
+def spacingCheck : Bool := two (squareLatticeCurvature (.fraction ⟨1,2,by decide,by decide⟩) (.fraction ⟨1,8,by decide,by decide⟩)) &&
+ two (squareLatticeCurvature (.fraction ⟨1,2,by decide,by decide⟩) (.fraction ⟨1,16,by decide,by decide⟩))
+def count (x : Except String Int) (n : Int) : Bool := match x with
+ | .error _ => false
+ | .ok q => @decide (q=n) (Int.decEq q n)
+def familyCheck : Bool :=
+ let family := (latticeLaplacian (.integer 1) (.fraction ⟨1,8,by decide,by decide⟩),latticeLaplacian (.integer 2) (.fraction ⟨1,8,by decide,by decide⟩),latticeLaplacian (.integer 3) (.fraction ⟨1,8,by decide,by decide⟩))
+ count family.1 2 && count family.2.1 4 && count family.2.2 6
+def witnesses : List Witness := [⟨"spacing","Two exact spacings give identical curvature.",spacingCheck⟩,⟨"family","The full generated dimension family is two, four, six.",familyCheck⟩]
+theorem spacingCheckPassed : spacingCheck=true := by unfold spacingCheck;rw [eighthSpacing,sixteenthSpacing];rfl
+theorem familyCheckPassed : familyCheck=true := by unfold familyCheck;rw [originalFamily];rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := by
+ change (spacingCheck && familyCheck && true)=true
+ rw [spacingCheckPassed,familyCheckPassed]
+ rfl
+end SFT.Physics.LatticeCurvatureEntryWitnesses

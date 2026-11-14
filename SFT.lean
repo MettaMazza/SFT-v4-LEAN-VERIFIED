@@ -6224,3 +6224,14 @@ import SFT.Physics.MaxwellSpatialEntryWitnesses
 import SFT.Physics.MaxwellSpatialEntryGrammar
 import SFT.Physics.MaxwellSpatialEntryControls
 import SFT.Physics.MaxwellSpatialEntryEvidence
+import SFT.Physics.OpticalOperations
+import SFT.Physics.OpticalEntryWitnesses
+import SFT.Physics.OpticalEntryGrammar
+import SFT.Physics.OpticalEntryControls
+import SFT.Physics.OpticalEntryEvidence
+import SFT.Physics.FiniteLoop
+import SFT.Physics.FiniteLoopProofs
+import SFT.Physics.FiniteLoopEntryWitnesses
+import SFT.Physics.FiniteLoopEntryGrammar
+import SFT.Physics.FiniteLoopEntryControls
+import SFT.Physics.FiniteLoopEntryEvidence

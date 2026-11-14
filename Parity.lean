@@ -1777,3 +1777,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.MaxwellSpatialEntryGrammar.candidates do
     IO.println ("MaxwellSpatialEntryGrammar\t" ++ SFT.Physics.MaxwellSpatialEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MaxwellSpatialEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MaxwellSpatialEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MaxwellSpatialEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.OpticalEntryGrammar.candidates do
+    IO.println ("OpticalEntryGrammar\t" ++ SFT.Physics.OpticalEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.OpticalEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.OpticalEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.OpticalEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.FiniteLoopEntryGrammar.candidates do
+    IO.println ("FiniteLoopEntryGrammar\t" ++ SFT.Physics.FiniteLoopEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FiniteLoopEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FiniteLoopEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.FiniteLoopEntryGrammar.decisionReason c)

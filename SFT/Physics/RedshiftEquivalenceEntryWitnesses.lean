@@ -1,0 +1,18 @@
+import SFT.Physics.RedshiftEquivalence
+namespace SFT.Physics.RedshiftEquivalenceEntryWitnesses
+open RedshiftEquivalence
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def same (a b : Rat) : Bool := !a.blt b && !b.blt a
+def equivalenceCheck : Bool := match redshiftEquivalence (.fraction ⟨1,4,by decide,by decide⟩) (.fraction ⟨1,1,by decide,by decide⟩) with
+ | .error _ => false
+ | .ok x => same x.gravitationalRedshift ⟨1,4,by decide,by decide⟩ && same x.acceleratedDoppler ⟨1,4,by decide,by decide⟩
+def witnesses : List Witness := [⟨"equivalence","The two weak-field shifts are identical quarter-One carriers.",equivalenceCheck⟩]
+theorem equivalenceCheckPassed : equivalenceCheck=true := by unfold equivalenceCheck;rw [originalRecord];rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := by
+ change (equivalenceCheck && true)=true
+ rw [equivalenceCheckPassed]
+ rfl
+end SFT.Physics.RedshiftEquivalenceEntryWitnesses

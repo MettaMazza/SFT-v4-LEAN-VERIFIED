@@ -1795,3 +1795,15 @@ def main : IO Unit := do
 
   for c in SFT.Physics.FiniteLoopValidationGrammar.candidates do
     IO.println ("FiniteLoopValidationGrammar\t" ++ SFT.Physics.FiniteLoopValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FiniteLoopValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FiniteLoopValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.FiniteLoopValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravityFluxEntryGrammar.candidates do
+    IO.println ("GravityFluxEntryGrammar\t" ++ SFT.Physics.GravityFluxEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityFluxEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityFluxEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityFluxEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.CausalIntervalEntryGrammar.candidates do
+    IO.println ("CausalIntervalEntryGrammar\t" ++ SFT.Physics.CausalIntervalEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CausalIntervalEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CausalIntervalEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.CausalIntervalEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.StaticFoldClockEntryGrammar.candidates do
+    IO.println ("StaticFoldClockEntryGrammar\t" ++ SFT.Physics.StaticFoldClockEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StaticFoldClockEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StaticFoldClockEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.StaticFoldClockEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.RedshiftEquivalenceEntryGrammar.candidates do
+    IO.println ("RedshiftEquivalenceEntryGrammar\t" ++ SFT.Physics.RedshiftEquivalenceEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.RedshiftEquivalenceEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.RedshiftEquivalenceEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.RedshiftEquivalenceEntryGrammar.decisionReason c)

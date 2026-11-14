@@ -1834,3 +1834,18 @@ def main : IO Unit := do
 
   for c in SFT.Physics.TimelikeEntryGrammar.candidates do
     IO.println ("TimelikeEntryGrammar\t" ++ SFT.Physics.TimelikeEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.TimelikeEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.TimelikeEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.TimelikeEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravityClockValidationGrammar.candidates do
+    IO.println ("GravityClockValidationGrammar\t" ++ SFT.Physics.GravityClockValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityClockValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityClockValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityClockValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravityWaveValidationGrammar.candidates do
+    IO.println ("GravityWaveValidationGrammar\t" ++ SFT.Physics.GravityWaveValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityWaveValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityWaveValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityWaveValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.GravityHorizonValidationGrammar.candidates do
+    IO.println ("GravityHorizonValidationGrammar\t" ++ SFT.Physics.GravityHorizonValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.GravityHorizonValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.GravityHorizonValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.GravityHorizonValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.NonstandardSpacetimeValidationGrammar.candidates do
+    IO.println ("NonstandardSpacetimeValidationGrammar\t" ++ SFT.Physics.NonstandardSpacetimeValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NonstandardSpacetimeValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NonstandardSpacetimeValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.NonstandardSpacetimeValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.QuarkDressingEntryGrammar.candidates do
+    IO.println ("QuarkDressingEntryGrammar\t" ++ SFT.Physics.QuarkDressingEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.QuarkDressingEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.QuarkDressingEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.QuarkDressingEntryGrammar.decisionReason c)

@@ -1,0 +1,14 @@
+import SFT.Physics.QuarkDressing
+namespace SFT.Physics.QuarkDressingEntryWitnesses
+open QuarkDressing
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def factorsCheck : Bool := match quarkDressingFactors with
+ | .error _ => false
+ | .ok f => (SFT.Foundation.ExactPartCarrier.asFraction SFT.Foundation.ExactOperations.one).blt f.centralDownLift && SFT.Physics.LeptonIntervals.zero.blt f.upperUpRetention && f.upperUpRetention.blt (SFT.Foundation.ExactPartCarrier.asFraction SFT.Foundation.ExactOperations.one)
+def witnesses : List Witness := [⟨"factors","Both dressing factors are strict positive exact parts or lifts.",factorsCheck⟩]
+theorem factorsCheckPassed : factorsCheck=true := rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := rfl
+end SFT.Physics.QuarkDressingEntryWitnesses

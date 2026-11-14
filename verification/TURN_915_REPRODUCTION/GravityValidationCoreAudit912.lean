@@ -1,0 +1,33 @@
+import SFT.Physics.GravityAuthoritativeRecords
+import SFT.Physics.GravityAuthoritativeWitnesses
+#print axioms SFT.Physics.GravityAuthoritativeRecords.componentHashes
+#print axioms SFT.Physics.GravityAuthoritativeRecords.sourceHash
+#print axioms SFT.Physics.GravityAuthoritativeRecords.payloadBoundary
+#print axioms SFT.Physics.GravityAuthoritativeRecords.checkComponents
+#print axioms SFT.Physics.GravityAuthoritativeRecords.controlsBoundary
+#print axioms SFT.Physics.GravityAuthoritativeRecords.authoritativeRecord
+#print axioms SFT.Physics.GravityAuthoritativeRecords.classificationFromRecord
+#print axioms SFT.Physics.GravityAuthoritativeRecords.classification
+#print axioms SFT.Physics.GravityAuthoritativeRecords.clockLabel
+#print axioms SFT.Physics.GravityAuthoritativeRecords.clockClassification
+#print axioms SFT.Physics.GravityAuthoritativeRecords.waveLabel
+#print axioms SFT.Physics.GravityAuthoritativeRecords.waveClassification
+#print axioms SFT.Physics.GravityAuthoritativeRecords.horizonLabel
+#print axioms SFT.Physics.GravityAuthoritativeRecords.horizonClassification
+#print axioms SFT.Physics.GravityAuthoritativeRecords.nonstandardLabel
+#print axioms SFT.Physics.GravityAuthoritativeRecords.nonstandardClassification
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.registeredRecord
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.originalPayloadBoundary
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.originalControlsBoundary
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.clockCheck
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.clockCheckPassed
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.clockOriginalClassification
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.waveCheck
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.waveCheckPassed
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.waveOriginalClassification
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.horizonCheck
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.horizonCheckPassed
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.horizonOriginalClassification
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.nonstandardCheck
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.nonstandardCheckPassed
+#print axioms SFT.Physics.GravityAuthoritativeWitnesses.nonstandardOriginalClassification

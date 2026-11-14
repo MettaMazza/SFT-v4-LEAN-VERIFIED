@@ -1,0 +1,8 @@
+from pathlib import Path
+w=Path('work')
+s=(w/'prepare_field_checks895.py').read_text().replace('relativistic_field_validation_v1','gravity_spacetime_validation_v1').replace('FieldAuthoritative','GravityAuthoritative').replace('fieldvalidation','gravityvalidation').replace('field_authoritative','gravity_authoritative').replace('895','912')
+s=s.replace("[('DYNAMICS','DynamicsValidation',912),('FIELD','RelativisticFieldValidation',896),('OPTICS','OpticsValidation',897),('LOOP','FiniteLoopValidation',898)]","[('CLOCK','GravityClockValidation',912),('WAVE','GravityWaveValidation',913),('HORIZON','GravityHorizonValidation',914),('NONSTANDARD','NonstandardSpacetimeValidation',915)]")
+s=s.replace('range(912,899)','range(912,916)').replace('DynamicsValidation','GravityClockValidation').replace('["dynamics_and_spectra","relativistic_and_electromagnetic_fields","optical_operations","finite_loops"]','["weak_gravity_clock_equivalence","gravitational_waves","horizons_information","nonstandard_spacetime"]').replace('relativistic-field-source-record.json','gravity-spacetime-source-record.json')
+exec(compile(s,'prepare-gravity-checks','exec'))
+s=(w/'check_field_authoritative895.py').read_text().replace('fieldvalidation895','gravityvalidation912').replace('FieldAuthoritativeNative895','GravityAuthoritativeNative912').replace('12-claim boundary,seven-source and five-control record checks,all four component hashes','13-claim boundary,six-source and six-control record checks,both component hashes');(w/'check_gravity_authoritative912.py').write_text(s)
+s=(w/'finish_fieldvalidation895.py').read_text().replace('fieldvalidation895','gravityvalidation912').replace('_build895','_build912');(w/'finish_gravityvalidation912.py').write_text(s)

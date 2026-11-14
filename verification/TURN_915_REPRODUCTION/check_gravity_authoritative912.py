@@ -1,0 +1,5 @@
+from pathlib import Path
+import json,subprocess
+w=Path('work');expected={'record':json.load(open(w/'gravityvalidation912_original_record.json')),'classifications':json.load(open(w/'gravityvalidation912_original_classifications.json'))}
+out=subprocess.check_output([str((w/'circuit866_native_objects/GravityAuthoritativeNative912').resolve()),str((w/'v3-runtime500').resolve())],text=True);actual=json.loads(out);assert actual==expected
+(w/'gravityvalidation912_authoritative_output.json').write_text(json.dumps(actual,indent=2));(w/'gravityvalidation912_authoritative_report.json').write_text(json.dumps({'status':'PASS','source_commit':'76f1b34e9e9682989adcbb088797b4ae4ce4fcf1','scope':'Fresh original source and Lean execution of full document-hash,13-claim boundary,six-source and six-control record checks,both component hashes and all four classifications;entire returned record compared.','fresh_native_execution':True,'entire_record_matches':True,'all_classifications_match':True},indent=2));print('PASS complete original record and all four classifications')

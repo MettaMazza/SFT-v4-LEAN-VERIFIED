@@ -2005,3 +2005,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.DecayWidthBranchingLifetimeGrammar.candidates do
     IO.println ("DecayWidthBranchingLifetimeGrammar\t" ++ SFT.Physics.DecayWidthBranchingLifetimeGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DecayWidthBranchingLifetimeGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DecayWidthBranchingLifetimeEvidence.exactForm c ++ "\t" ++ SFT.Physics.DecayWidthBranchingLifetimeEvidence.decisionReason c)
+
+  for c in SFT.Physics.OddLatticeAllRegionGrammar.candidates do
+    IO.println ("OddLatticeAllRegionGrammar\t" ++ SFT.Physics.OddLatticeAllRegionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.OddLatticeAllRegionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.OddLatticeAllRegionEvidence.exactForm c ++ "\t" ++ SFT.Physics.OddLatticeAllRegionEvidence.decisionReason c)

@@ -1867,3 +1867,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.PMNSPhysicalEntryGrammar.candidates do
     IO.println ("PMNSPhysicalEntryGrammar\t" ++ SFT.Physics.PMNSPhysicalEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PMNSPhysicalEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PMNSPhysicalEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.PMNSPhysicalEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.MajoranaEntryGrammar.candidates do
+    IO.println ("MajoranaEntryGrammar\t" ++ SFT.Physics.MajoranaEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MajoranaEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MajoranaEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MajoranaEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.ZeroNuEntryGrammar.candidates do
+    IO.println ("ZeroNuEntryGrammar\t" ++ SFT.Physics.ZeroNuEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ZeroNuEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ZeroNuEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.ZeroNuEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.MagneticAnomalyEntryGrammar.candidates do
+    IO.println ("MagneticAnomalyEntryGrammar\t" ++ SFT.Physics.MagneticAnomalyEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MagneticAnomalyEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MagneticAnomalyEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MagneticAnomalyEntryGrammar.decisionReason c)

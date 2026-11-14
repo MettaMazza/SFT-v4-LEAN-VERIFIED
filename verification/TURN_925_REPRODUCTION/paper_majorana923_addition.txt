@@ -1,0 +1,39 @@
+
+795. Single-hand Majorana discriminator
+
+The original operation constructs the complete held pair from the generated binary count b=2. Its squared support and positive predecessor are
+
+bᵇ=2²=4,
+predecessor(4)=3.
+
+The left and right hands are therefore
+
+L=1/4,
+R=3/4,
+positive_take(R,L)=3/4−1/4=1/2.
+
+The source positive_take operation requires exact fractions and ordered positive support. Equal whole and part return the original structural-empty record; an ordered unequal pair returns their positive difference. The Majorana translation reuses the same already verified ordered-take operation with this source's exact error texts and preserves its empty-equality result.
+
+For the generic left hand, the complementary carrier is
+
+positive_take(1,L)=1−1/4=3/4=R≠L.
+
+The generated lock is H=1/b=1/2, and
+
+positive_take(1,H)=1−1/2=1/2=H.
+
+The existing CPPhase.uniqueSelfAntipodal proof establishes the full uniqueness implication
+
+complement(p)=ok(p) ⇒ p=halfOne,
+
+and everyOtherPartExcluded excludes every other admitted part. This supplies the original discriminator's uniqueness argument across the admitted part carrier, beyond the two displayed evaluations.
+
+The original neutrino record retains singleHandCount=1. The complete charged pair uses two distinct held hands separated by 1/2; the retained single hand does not instantiate that pair. The generic quarter-One hand is not its own antipode, while the unique half-One lock is. The source therefore retains its single-hand self-antipodal Majorana class.
+
+MajoranaStructure.majoranaStructure returns all seven original fields: left hand, right hand, pair separation, single-hand count, self-antipodal-lock flag, generic-hand-self-antipodal flag and classification. completeSourceRecord proves the complete output; genericComplement and halfOneLock prove the exact complement evaluations. The source comparison also checks the ordered-take type guards, rejected supports, strict difference and structural-empty equality case.
+
+The source base supplies the complete held fibre. Its successor retains the single neutrino hand, eliminates the two-hand pairing and applies the unique self-antipodal lock. The complete eight-axis, 256-form grammar preserves this discriminator and rejects an independently asserted Dirac/Majorana label. Its original witness checks the half-One pair separation, successful lock and failed generic self-antipode together.
+
+Original V3: sft/physics/matter_flavour_laws_v1.py, positive_take, majorana_structure and MAJORANA_SPEC; original particle/antiparticle, Dirac and PMNS/CP dependencies. Pin: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: MajoranaStructure and MajoranaEntryWitnesses/Grammar/Controls/Evidence; existing GravityFlux.positiveTake and CPPhase uniqueness proofs. Timeline: TURN923. Receipt: verification/TURN_923_MAJORANA_COMPLETION.json.
+
+[Original source](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/matter_flavour_laws_v1.py); [Native discriminator](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/MajoranaStructure.lean); [Existing unique self-antipode proof](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/CPPhase.lean); [Full grammar](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/MajoranaEntryGrammar.lean); [Timeline](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt).

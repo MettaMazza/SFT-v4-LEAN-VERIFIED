@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "source": "sft/physics/matter_flavour_laws_v1.py:positive_take,majorana_structure",
+  "actual": {
+    "record": {
+      "class": "single-hand-self-antipodal-Majorana",
+      "dirac_pair_separation": [
+        1,
+        2
+      ],
+      "generic_hand_self_antipodal": false,
+      "left_hand": [
+        1,
+        4
+      ],
+      "right_hand": [
+        3,
+        4
+      ],
+      "self_antipodal_lock": true,
+      "single_hand_count": 1
+    },
+    "take_cases": [
+      [
+        1,
+        2
+      ],
+      [],
+      "ValueError: positive take requires ordered positive support",
+      "ValueError: positive take requires ordered positive support",
+      "ValueError: positive take requires ordered positive support",
+      "ValueError: positive take requires ordered positive support",
+      "ValueError: positive take requires exact fractions",
+      "ValueError: positive take requires exact fractions"
+    ]
+  },
+  "expected": {
+    "record": {
+      "left_hand": [
+        1,
+        4
+      ],
+      "right_hand": [
+        3,
+        4
+      ],
+      "dirac_pair_separation": [
+        1,
+        2
+      ],
+      "single_hand_count": 1,
+      "self_antipodal_lock": true,
+      "generic_hand_self_antipodal": false,
+      "class": "single-hand-self-antipodal-Majorana"
+    },
+    "take_cases": [
+      [
+        1,
+        2
+      ],
+      [],
+      "ValueError: positive take requires ordered positive support",
+      "ValueError: positive take requires ordered positive support",
+      "ValueError: positive take requires ordered positive support",
+      "ValueError: positive take requires ordered positive support",
+      "ValueError: positive take requires exact fractions",
+      "ValueError: positive take requires exact fractions"
+    ]
+  },
+  "audited_declarations": [
+    "SFT.Physics.MajoranaStructure.positiveTake",
+    "SFT.Physics.MajoranaStructure.Result",
+    "SFT.Physics.MajoranaStructure.majoranaStructure",
+    "SFT.Physics.MajoranaStructure.originalRecord",
+    "SFT.Physics.MajoranaStructure.completeSourceRecord",
+    "SFT.Physics.MajoranaStructure.genericComplement",
+    "SFT.Physics.MajoranaStructure.halfOneLock"
+  ],
+  "axioms": []
+}

@@ -1,0 +1,18 @@
+import SFT.Physics.MagneticAnomaly
+namespace SFT.Physics.MagneticAnomalyEntryWitnesses
+open MagneticAnomaly
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def leadingCheck : Bool := match magneticAnomalyStructure with
+ | .error _ => false
+ | .ok f => decide (f.phaseNormalizedLeadingAnomaly=originalRecord.phaseNormalizedLeadingAnomaly)
+def bareCheck : Bool := match magneticAnomalyStructure with
+ | .error _ => false
+ | .ok f => decide (f.bareG=2)
+def witnesses : List Witness := [WITNESS_ROWS]
+theorem leadingCheckPassed : leadingCheck=true := rfl
+theorem bareCheckPassed : bareCheck=true := rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := rfl
+end SFT.Physics.MagneticAnomalyEntryWitnesses

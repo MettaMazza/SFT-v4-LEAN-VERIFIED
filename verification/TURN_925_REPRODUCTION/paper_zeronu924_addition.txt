@@ -1,0 +1,52 @@
+
+796. Exact noncancellation certificate for neutrinoless double beta
+
+The preceding entries supply the positive mass-square coefficients
+
+q=(1/32,33/32,3203/96)
+
+and electron weights
+
+w=(47/72,47/144,1/48).
+
+The original square-root operation first searches positive whole upper endpoints in increasing order. For q=n/d>0 with d≥1, q≤n<(n+1)², so this search has a derived finite upper bound. wholeUpperFromOne proves that its executable search follows the original first-acceptable-upper relation. This bound is derived from the input numerator; it does not select a scientific bracket or tolerance.
+
+When the whole upper endpoint is One, the source exhausts the ordered dyadic intervals at depths 1 through 64. At support S=2ᵏ it checks every adjacent pair (i/S,(i+1)/S), i=1,…,S−1, and returns the first pair whose squared endpoints enclose q. scanDyadic and dyadicSearch retain this complete order, both inclusive endpoint tests and the original failure boundary.
+
+For the generated three mass squares, the first brackets are
+
+B₀=(1/8,1/4), B₁=(1,2), B₂=(5,6).
+
+Their exact square inequalities are
+
+1/64≤1/32≤1/16,
+1≤33/32≤4,
+2400/96≤3203/96≤3456/96.
+
+allOriginalSquareBounds proves all three. Weighting each lower and upper endpoint gives
+
+L=(47/576,47/144,5/48),
+U=(47/288,47/72,1/8).
+
+The original stopping condition compares the middle lower contribution with the sum of the other upper contributions:
+
+L₁=94/288,
+U₀+U₂=47/288+36/288=83/288,
+L₁>U₀+U₂.
+
+The initial brackets already satisfy this strict condition. exactInitialState, originalStoppingCondition and exactSourceLoop prove that the original loop returns at its first test, before any refinement. The original bisection operation and refinement branch remain represented: the midpoint is (l+u)/2; a midpoint square below q retains (midpoint,u), otherwise (l,midpoint). No chosen refinement count or tolerance enters the stopping condition.
+
+The returned lower and upper coefficients are
+
+F=L₁−U₀−U₂=(94−47−36)/288=11/288>0,
+C=U₀+U₁+U₂=(47+188+36)/288=271/288.
+
+For any held opposing contribution n/d bounded by the two outer terms, d>0 and 288n≤83d imply 288n<94d. everyBoundedOppositionFails proves this cross-multiplied statement for every such numerator and denominator. Together with the certified endpoint bounds, the middle contribution cannot be canceled by the other two, even at their maximum opposing magnitude. The triangle certificate retains the strictly positive floor F and finite ceiling C; the overall dimensional scale remains the square root of the declared post-seal solar anchor.
+
+NeutrinolessBounds.zeroNuNoncancellation computes the original three-field result from the generated masses, weights and first brackets. Its otherwise-unbounded source loop has an explicit SourceLoopRun relation for stopping and refinement; the native entry follows the proved initial stopping branch. completeSourceResult, exactPositiveFloor, exactCeiling and strictlyPositiveFloor establish the full returned result. The original witness checks its positive floor. Fresh source comparisons retain every bracket and coefficient, fourteen root/domain cases and five bisection cases.
+
+The complete original eight binary axes enumerate all 256 forms, retaining every original elimination decision,unique survivor,operational witness,control and closure record.
+
+Original V3: sft/physics/matter_flavour_laws_v1.py, sqrt_bracket, bisect_square, zero_nu_noncancellation and ZERO_NU_SPEC; original registered dependencies. Pin: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: NeutrinolessBounds and ZeroNuEntryWitnesses/Grammar/Controls/Evidence. Timeline: TURN924. Receipt: verification/TURN_924_ZERO_NU_COMPLETION.json.
+
+[Original source](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/matter_flavour_laws_v1.py); [Native derivation](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/NeutrinolessBounds.lean); [Complete grammar](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/ZeroNuEntryGrammar.lean); [Timeline](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt).

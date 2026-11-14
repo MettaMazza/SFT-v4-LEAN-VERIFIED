@@ -2,6 +2,8 @@ import SFT.Physics.CoupledEnsembleSynchronizationEvidence
 import SFT.Physics.CoupledEnsembleSynchronizationGeneral
 import SFT.Physics.CoupledEnsembleSynchronizationMeasurement
 import SFT.Physics.SynchronizationPrediction
+import SFT.Physics.SynchronizationValidation
+import SFT.Physics.CoupledEnsembleSynchronizationBalance
 #print axioms SFT.Physics.CoupledEnsembleSynchronization.positiveTake
 #print axioms SFT.Physics.CoupledEnsembleSynchronization.pairSeparation
 #print axioms SFT.Physics.CoupledEnsembleSynchronization.pairedMove
@@ -98,3 +100,39 @@ import SFT.Physics.SynchronizationPrediction
 #print axioms SFT.Physics.SynchronizationPrediction.predictionProgram
 #print axioms SFT.Physics.SynchronizationPrediction.predictionProgramDocument
 #print axioms SFT.Physics.SynchronizationPrediction.outputMapping
+#print axioms SFT.Physics.SynchronizationRecords.sourceId
+#print axioms SFT.Physics.SynchronizationRecords.sourcePath
+#print axioms SFT.Physics.SynchronizationRecords.sourceHash
+#print axioms SFT.Physics.SynchronizationRecords.sourceHashes
+#print axioms SFT.Physics.SynchronizationRecords.requiredTarget
+#print axioms SFT.Physics.SynchronizationRecords.requiredCustody
+#print axioms SFT.Physics.SynchronizationRecords.getDefault
+#print axioms SFT.Physics.SynchronizationRecords.requiredFields
+#print axioms SFT.Physics.SynchronizationRecords.payloadBoundary
+#print axioms SFT.Physics.SynchronizationRecords.sourceLines
+#print axioms SFT.Physics.SynchronizationRecords.fileBytes
+#print axioms SFT.Physics.SynchronizationRecords.authoritativeRecord
+#print axioms SFT.Physics.SynchronizationExperiment.targetIds
+#print axioms SFT.Physics.SynchronizationExperiment.frozenRelation
+#print axioms SFT.Physics.SynchronizationExperiment.falsification
+#print axioms SFT.Physics.SynchronizationExperiment.registrationRecord
+#print axioms SFT.Physics.SynchronizationExperiment.releasedTargets
+#print axioms SFT.Physics.SynchronizationExperiment.envelope
+#print axioms SFT.Physics.SynchronizationValidation.claimId
+#print axioms SFT.Physics.SynchronizationValidation.sealPrediction
+#print axioms SFT.Physics.SynchronizationValidation.certificate
+#print axioms SFT.Physics.SynchronizationValidation.isolation
+#print axioms SFT.Physics.SynchronizationValidation.custodyCertificate
+#print axioms SFT.Physics.SynchronizationValidation.lookup
+#print axioms SFT.Physics.SynchronizationValidation.labelMatches
+#print axioms SFT.Physics.SynchronizationValidation.frac
+#print axioms SFT.Physics.SynchronizationValidation.rats
+#print axioms SFT.Physics.SynchronizationValidation.nat
+#print axioms SFT.Physics.SynchronizationValidation.recValue
+#print axioms SFT.Physics.SynchronizationValidation.analysisValue
+#print axioms SFT.Physics.SynchronizationValidation.targetCount
+#print axioms SFT.Physics.SynchronizationValidation.rationalText
+#print axioms SFT.Physics.SynchronizationValidation.Validation
+#print axioms SFT.Physics.SynchronizationValidation.validate
+#print axioms SFT.Physics.CoupledEnsembleSynchronizationBalance.equalMovesExhaustSeparationIffHalf
+#print axioms SFT.Physics.CoupledEnsembleSynchronizationBalance.returnedCoordinatesEqualIffBalance

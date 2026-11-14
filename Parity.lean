@@ -1993,3 +1993,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.FusionFissionTerminalGrammar.candidates do
     IO.println ("FusionFissionTerminalGrammar\t" ++ SFT.Physics.FusionFissionTerminalGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FusionFissionTerminalGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FusionFissionTerminalEvidence.exactForm c ++ "\t" ++ SFT.Physics.FusionFissionTerminalEvidence.decisionReason c)
+
+  for c in SFT.Physics.FusionFissionYieldThresholdGrammar.candidates do
+    IO.println ("FusionFissionYieldThresholdGrammar\t" ++ SFT.Physics.FusionFissionYieldThresholdGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FusionFissionYieldThresholdGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FusionFissionYieldThresholdEvidence.exactForm c ++ "\t" ++ SFT.Physics.FusionFissionYieldThresholdEvidence.decisionReason c)

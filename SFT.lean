@@ -7048,3 +7048,11 @@ import SFT.Physics.FusionFissionMeasurement
 import SFT.Physics.FusionFissionPrediction
 import SFT.Physics.FusionFissionExperiment
 import SFT.Physics.FusionFissionValidation
+import SFT.Physics.FusionFissionYieldThreshold
+import SFT.Physics.FusionFissionYieldThresholdProofs
+import SFT.Physics.FusionFissionYieldThresholdGrammar
+import SFT.Physics.FusionFissionYieldThresholdEvidence
+import SFT.Physics.YieldThresholdMeasurement
+import SFT.Physics.YieldThresholdPrediction
+import SFT.Physics.YieldThresholdExperiment
+import SFT.Physics.YieldThresholdValidation

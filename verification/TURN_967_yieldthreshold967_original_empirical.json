@@ -1,0 +1,67 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "AMDC-AME2020-MASS-1-BINDING-2021",
+    "IAEA-WORLD-FUSION-OUTLOOK-2023",
+    "IAEA-TECDOC-2024-NUCLEAR-COGENERATION",
+    "IAEA-ENDF-102-DATA-FORMATS-PROCEDURES",
+    "IAEA-NDS-LEXFOR-FISSION-2006"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:a7acd3f08ef7f6372224311af4257ff6456a9aa60a1477bc725c9c5eefcce018",
+  "falsification_condition": "Reject if the sealed fusion-greater-per-nucleon relation or fission-greater-total relation fails the exact AME2020 uncertainty intervals or the registered IAEA D-T/U-235 energy comparison; if the IAEA charged effective-barrier, neutron-trigger, spontaneous/internal-barrier or captured-particle class is absent; if per-nucleon and total metrics are conflated; if any AME, fusion-table, fission-ledger, threshold or limitation row is omitted; if a source identity changes; or if target content enters prediction before its seal.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:a1d48ce8acda5a3973e9e1fad3621e5911a1bf6a6115a4009da3f418cf87a577",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:02408f9ba0f072cb42fe0cac06970d73f52b3b49be2669c35059a94b3a9e5188",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-PHYS-NUCLEAR-FUSION-FISSION-YIELD-THRESHOLD-006-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:79a9a8dc711cbb4661f8c14a4169d5642e0eca4e5256babf27aa4430068fcff6",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:bcd0f8d235a9d36207a72ab25978aeece8e39da6c4064133205f063a87890176",
+    "prediction_seal_hash": "sha256:859bc6a73faa36ca0b65e45dcccb91d43102779d6bde4c3fab1791e026320d76",
+    "program_hash": "sha256:d0c3efb51d416203ca62a45e6a5aac91124b19cb6a490a22585321ae6a49ba4b",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:2dd433edc1c70e4b2a00563e1c1fb88b55cac43c4bd57db73723959dbfc22b18",
+    "target_material_present": false,
+    "trace_hash": "sha256:42dbf4d9cf36040f2beba7b294af265170be6aec8621516e58004e8ae7abb2e9"
+  },
+  "measurement_receipt_hash": "sha256:550034e2999fda2c58cd3c1d8dadca9e5833baee6d8445271718653240a5de8d",
+  "measurements": [
+    "complete AME2020 positive-composite census retained: 2548 rows",
+    "AME2020 exact gain intervals keV/nucleon: fusion (Fraction(59616321, 10000), Fraction(59616329, 10000)); fission (Fraction(998447, 1250), Fraction(499318, 625)); fusion strictly greater",
+    "AME2020 exact total-gain intervals keV: fusion (Fraction(59616321, 2500), Fraction(59616329, 2500)); fission (Fraction(118815193, 625), Fraction(118837684, 625)); fission strictly greater",
+    "IAEA D-T release and per-incident-nucleon values MeV: 88/5 and 88/25",
+    "IAEA U-235 fission average/released totals MeV: 200 and 207; average per parent nucleon 40/47",
+    "all twelve fusion-energy rows and all seven fission-energy component rows retained",
+    "charged low-or-absent true threshold versus effective Coulomb threshold, neutral neutron evaluation class, spontaneous internal-barrier class and captured-particle class all retained",
+    "rounded illustrative fission masses were not substituted for the exact AME calculation; reversed orders, conflated metrics and incomplete-row controls were rejected"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:0a66cc5340cd48c51515b89932c504dbfdaed8b3d1b244d715e644b64a82fa9f",
+    "custodian_id": "SFT-EXP-PHYS-NUCLEAR-FUSION-FISSION-YIELD-THRESHOLD-006-external-target-custodian",
+    "experiment_registration_hash": "sha256:a7acd3f08ef7f6372224311af4257ff6456a9aa60a1477bc725c9c5eefcce018",
+    "prediction_seal_hash": "sha256:859bc6a73faa36ca0b65e45dcccb91d43102779d6bde4c3fab1791e026320d76",
+    "registered_target_identity_hash": "sha256:2dd433edc1c70e4b2a00563e1c1fb88b55cac43c4bd57db73723959dbfc22b18",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:0b3f5ffaa5890f66968a648a41fa287e5d25ae800d35530942c9697358829a0a"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "sha256:9206289cf47782eef20fdfe8c8f6602338e0746b0a29f668edf950c8b5b90b4e"
+}

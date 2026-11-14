@@ -1876,3 +1876,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.MagneticAnomalyEntryGrammar.candidates do
     IO.println ("MagneticAnomalyEntryGrammar\t" ++ SFT.Physics.MagneticAnomalyEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MagneticAnomalyEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MagneticAnomalyEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.MagneticAnomalyEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.QuarkCKMValidationGrammar.candidates do
+    IO.println ("QuarkCKMValidationGrammar\t" ++ SFT.Physics.QuarkCKMValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.QuarkCKMValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.QuarkCKMValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.QuarkCKMValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.ProtonPrecisionValidationGrammar.candidates do
+    IO.println ("ProtonPrecisionValidationGrammar\t" ++ SFT.Physics.ProtonPrecisionValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ProtonPrecisionValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ProtonPrecisionValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.ProtonPrecisionValidationGrammar.decisionReason c)

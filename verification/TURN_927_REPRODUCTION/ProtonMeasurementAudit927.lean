@@ -1,0 +1,8 @@
+import SFT.Physics.ProtonComparisonMeasurement
+#print axioms SFT.Physics.ProtonComparisonMeasurement.protonLabel
+#print axioms SFT.Physics.ProtonComparisonMeasurement.protonClassificationRow
+#print axioms SFT.Physics.ProtonComparisonMeasurement.protonClassificationFromRecord
+#print axioms SFT.Physics.ProtonComparisonMeasurement.protonClassification
+#print axioms SFT.Physics.ProtonComparisonMeasurement.originalClassification
+#print axioms SFT.Physics.ProtonComparisonMeasurement.protonCheck
+#print axioms SFT.Physics.ProtonComparisonMeasurement.protonCheckPassed

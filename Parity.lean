@@ -1693,3 +1693,6 @@ def main : IO Unit := do
 
   for c in SFT.Computation.NativeBusyGrammar.candidates do
     IO.println ("NativeBusyGrammar\t" ++ SFT.Computation.NativeBusyGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.NativeBusyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.NativeBusyGrammar.exactForm c ++ "\t" ++ SFT.Computation.NativeBusyGrammar.decisionReason c)
+
+  for c in SFT.Computation.NativePnpGrammar.candidates do
+    IO.println ("NativePnpGrammar\t" ++ SFT.Computation.NativePnpGrammar.candidateId c ++ "\t" ++ (if SFT.Computation.NativePnpGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Computation.NativePnpGrammar.exactForm c ++ "\t" ++ SFT.Computation.NativePnpGrammar.decisionReason c)

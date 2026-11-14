@@ -6033,3 +6033,11 @@ import SFT.Computation.NativeClosingWitnesses
 import SFT.Computation.NativeBusyGrammar
 
 import SFT.Computation.NativeBusyEvidence
+
+import SFT.Computation.NativeVerification
+
+import SFT.Computation.NativePnpWitnesses
+
+import SFT.Computation.NativePnpGrammar
+
+import SFT.Computation.NativePnpEvidence

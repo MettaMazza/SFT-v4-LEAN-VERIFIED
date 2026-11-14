@@ -1,0 +1,5 @@
+from pathlib import Path
+import json,subprocess
+w=Path('work');expected={'record':json.load(open(w/'fieldvalidation895_original_record.json')),'classifications':json.load(open(w/'fieldvalidation895_original_classifications.json'))}
+out=subprocess.check_output([str((w/'circuit866_native_objects/FieldAuthoritativeNative895').resolve()),str((w/'v3-runtime500').resolve())],text=True);actual=json.loads(out);assert actual==expected
+(w/'fieldvalidation895_authoritative_output.json').write_text(json.dumps(actual,indent=2));(w/'fieldvalidation895_authoritative_report.json').write_text(json.dumps({'status':'PASS','source_commit':'76f1b34e9e9682989adcbb088797b4ae4ce4fcf1','scope':'Fresh original source and Lean execution of full document-hash,12-claim boundary,seven-source and five-control record checks,all four component hashes and all four classifications;entire returned record compared.','fresh_native_execution':True,'entire_record_matches':True,'all_classifications_match':True},indent=2));print('PASS complete original record and all four classifications')

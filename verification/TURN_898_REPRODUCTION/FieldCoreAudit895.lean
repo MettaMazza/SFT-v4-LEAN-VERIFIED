@@ -1,0 +1,7 @@
+import SFT.Physics.FieldAuthoritativeWitnesses
+#print axioms SFT.Physics.FieldAuthoritativeRecords.authoritativeRecord
+#print axioms SFT.Physics.FieldAuthoritativeRecords.classificationFromRecord
+#print axioms SFT.Physics.FieldAuthoritativeWitnesses.dynamicsOriginalClassification
+#print axioms SFT.Physics.FieldAuthoritativeWitnesses.fieldOriginalClassification
+#print axioms SFT.Physics.FieldAuthoritativeWitnesses.opticsOriginalClassification
+#print axioms SFT.Physics.FieldAuthoritativeWitnesses.loopOriginalClassification

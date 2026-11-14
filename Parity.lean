@@ -1783,3 +1783,15 @@ def main : IO Unit := do
 
   for c in SFT.Physics.FiniteLoopEntryGrammar.candidates do
     IO.println ("FiniteLoopEntryGrammar\t" ++ SFT.Physics.FiniteLoopEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FiniteLoopEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FiniteLoopEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.FiniteLoopEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.DynamicsValidationGrammar.candidates do
+    IO.println ("DynamicsValidationGrammar\t" ++ SFT.Physics.DynamicsValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.DynamicsValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.DynamicsValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.DynamicsValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.RelativisticFieldValidationGrammar.candidates do
+    IO.println ("RelativisticFieldValidationGrammar\t" ++ SFT.Physics.RelativisticFieldValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.RelativisticFieldValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.RelativisticFieldValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.RelativisticFieldValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.OpticsValidationGrammar.candidates do
+    IO.println ("OpticsValidationGrammar\t" ++ SFT.Physics.OpticsValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.OpticsValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.OpticsValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.OpticsValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.FiniteLoopValidationGrammar.candidates do
+    IO.println ("FiniteLoopValidationGrammar\t" ++ SFT.Physics.FiniteLoopValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FiniteLoopValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FiniteLoopValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.FiniteLoopValidationGrammar.decisionReason c)

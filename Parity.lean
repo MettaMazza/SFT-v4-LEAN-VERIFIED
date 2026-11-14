@@ -1885,3 +1885,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.NeutrinoMassMixingValidationGrammar.candidates do
     IO.println ("NeutrinoMassMixingValidationGrammar\t" ++ SFT.Physics.NeutrinoMassMixingValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.NeutrinoMassMixingValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.NeutrinoMassMixingValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.NeutrinoMassMixingValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.MajoranaStatusValidationGrammar.candidates do
+    IO.println ("MajoranaStatusValidationGrammar\t" ++ SFT.Physics.MajoranaStatusValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MajoranaStatusValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MajoranaStatusValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.MajoranaStatusValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.MagneticRawValidationGrammar.candidates do
+    IO.println ("MagneticRawValidationGrammar\t" ++ SFT.Physics.MagneticRawValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MagneticRawValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MagneticRawValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.MagneticRawValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.BaryonPhotonEntryGrammar.candidates do
+    IO.println ("BaryonPhotonEntryGrammar\t" ++ SFT.Physics.BaryonPhotonEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.BaryonPhotonEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.BaryonPhotonEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.BaryonPhotonEntryGrammar.decisionReason c)

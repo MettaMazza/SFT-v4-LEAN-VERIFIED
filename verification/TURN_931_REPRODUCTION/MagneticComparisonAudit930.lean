@@ -1,0 +1,10 @@
+import SFT.Physics.MagneticComparisonMeasurement
+#print axioms SFT.Physics.MagneticComparisonMeasurement.magneticLabel
+#print axioms SFT.Physics.MagneticComparisonMeasurement.leadingInterval
+#print axioms SFT.Physics.MagneticComparisonMeasurement.magneticClassificationRows
+#print axioms SFT.Physics.MagneticComparisonMeasurement.magneticClassificationUsing
+#print axioms SFT.Physics.MagneticComparisonMeasurement.magneticClassificationFromRecord
+#print axioms SFT.Physics.MagneticComparisonMeasurement.magneticClassification
+#print axioms SFT.Physics.MagneticComparisonMeasurement.originalClassification
+#print axioms SFT.Physics.MagneticComparisonMeasurement.magneticCheck
+#print axioms SFT.Physics.MagneticComparisonMeasurement.magneticCheckPassed

@@ -1,0 +1,9 @@
+import SFT.Physics.MajoranaComparisonMeasurement
+#print axioms SFT.Physics.MajoranaComparisonMeasurement.majoranaLabel
+#print axioms SFT.Physics.MajoranaComparisonMeasurement.predictionBounds
+#print axioms SFT.Physics.MajoranaComparisonMeasurement.majoranaClassificationRows
+#print axioms SFT.Physics.MajoranaComparisonMeasurement.majoranaClassificationFromRecord
+#print axioms SFT.Physics.MajoranaComparisonMeasurement.majoranaClassification
+#print axioms SFT.Physics.MajoranaComparisonMeasurement.originalClassification
+#print axioms SFT.Physics.MajoranaComparisonMeasurement.majoranaCheck
+#print axioms SFT.Physics.MajoranaComparisonMeasurement.majoranaCheckPassed

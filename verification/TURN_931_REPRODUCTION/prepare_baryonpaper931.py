@@ -1,0 +1,46 @@
+from pathlib import Path
+w=Path('work')
+p='''
+803. Baryon-to-photon Fold transport
+
+The original relation transports the already sealed squared CP measure through the unique binary Fold imbalance share. Its quark inputs remain the ordered roots of the established down and up cubics,
+
+d³−d²+d/8−1/383=0,
+u³−u²+u/12−1/3071=0.
+
+Write the three roots in each sector as d₀<d₁<d₂ and u₀<u₁<u₂. The source mixing graph retains
+
+X=(d₀/d₁)²,
+T=d₁/d₂−u₁/u₂,
+Y=T²,
+Z=XY/6.
+
+The squared CP transport measure is the sealed Jarlskog-square graph,
+
+J²=X(1−X)Y(1−Y)Z(1−Z)².
+
+Keeping this squared expression preserves the algebraic-root relationships without introducing an irrational decimal or a separately chosen CP measure. The exact cubic identities and rational root enclosures remain available through the existing quark and CKM dependencies.
+
+The binary Fold count is b=2. Its complete pair partitions the transport into the retained half and its antipodal half:
+
+h=1/b=1/2,
+h+h=1.
+
+The existing CPPhase.uniqueSelfAntipodal theorem proves that a part equal to its own One-complement is half-One; everyOtherPartExcluded rules out every other admitted part. Thus the source imbalance share is fixed by the complete two-fibre structure. It is not an adjustable transport efficiency.
+
+The original baryon-to-photon relation is therefore
+
+η=hJ²=J²/2
+ =X(1−X)Y(1−Y)Z(1−Z)²/2.
+
+BaryonPhotonTransport.baryonPhotonRelation preserves all four original fields: the reference to the sealed quark-root Jarlskog-square measure, the computed imbalance share, the exact half-One transport relation and the policy retaining exact polynomials and rational enclosures. completeSourceRelation verifies the entire original record; exactImbalanceShare and twoFoldSharesClose establish the computed share and closure. The source uses no measured baryon abundance or free efficiency in this operation.
+
+Its base is the already sealed CP-odd squared carrier. Its successor divides that residue into the retained half and antipodal half without adding a coefficient. The complete eight-axis grammar enumerates all256 alternatives,including the original rejection of a measured abundance or free efficiency. Its half-One witness,controls,closure and original program/independent-validator bindings are preserved.
+
+Original V3: sft/physics/matter_flavour_completion_laws_v1.py, baryon_photon_relation and BARYON_PHOTON_SPEC; its exact execution binding and existing CKM/CP/complete-budget dependencies. Pin: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean: BaryonPhotonTransport and BaryonPhotonEntry Witnesses/Grammar/Controls/Evidence; existing MatterIdentityGraphs,QuarkIsolation,QuarkComparison and CPPhase. Timeline: TURN931. Receipt: verification/TURN_931_BARYON_PHOTON_COMPLETION.json.
+
+[Original relation](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/physics/matter_flavour_completion_laws_v1.py); [Native source relation](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/BaryonPhotonTransport.lean); [Existing root graph](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/MatterIdentityGraphs.lean); [Existing unique self-antipode](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/CPPhase.lean); [Full grammar](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/SFT/Physics/BaryonPhotonEntryGrammar.lean); [Timeline](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/TIMELINE.txt).
+'''.replace('all256','all 256').replace('alternatives,including','alternatives, including').replace('witness,controls,closure','witness, controls, closure')
+(w/'paper_baryonphoton931_addition.txt').write_text(p)
+s=(w/'register_magneticanomaly925.py').read_text().replace("'MagneticAnomaly':'Original magnetic_anomaly_structure and MAGNETIC_ANOMALY_SPEC;complete exact source operations,returned fields,guards and entry-specific derivation proofs.'","'BaryonPhotonTransport':'Original baryon_photon_relation and BARYON_PHOTON_SPEC;complete four-field exact algebraic graph/transport record,generated half-One share,closure and original dependency bindings.'")
+s=s.replace('sft/physics/matter_flavour_laws_v1.py','sft/physics/matter_flavour_completion_laws_v1.py').replace('magneticanomaly925_core_build.log','baryonphoton931_core_build.log');(w/'register_baryonphoton931.py').write_text(s)

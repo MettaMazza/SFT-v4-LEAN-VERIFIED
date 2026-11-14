@@ -1,0 +1,14 @@
+import SFT.Physics.BaryonPhotonTransport
+namespace SFT.Physics.BaryonPhotonEntryWitnesses
+open BaryonPhotonTransport
+structure Witness where
+ name : String
+ statement : String
+ passed : Bool
+def halfCheck : Bool := match baryonPhotonRelation with
+ | .error _ => false
+ | .ok result => decide (result.imbalanceShare=LeptonIntervals.normalize 1 2 (by decide))
+def witnesses : List Witness := [⟨"half-One","The imbalance share is exactly the forced half-One.",halfCheck⟩]
+theorem halfCheckPassed : halfCheck=true := rfl
+theorem allWitnessesPass : witnesses.all Witness.passed=true := rfl
+end SFT.Physics.BaryonPhotonEntryWitnesses

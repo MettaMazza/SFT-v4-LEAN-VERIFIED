@@ -6196,3 +6196,8 @@ import SFT.Physics.FullDiracWitnesses
 import SFT.Physics.FullDiracGrammar
 import SFT.Physics.FullDiracControls
 import SFT.Physics.FullDiracEvidence
+import SFT.Physics.CoulombGauss
+import SFT.Physics.CoulombWitnesses
+import SFT.Physics.CoulombGrammar
+import SFT.Physics.CoulombControls
+import SFT.Physics.CoulombEvidence

@@ -1,4 +1,4 @@
-import SFT.Physics.SpatialThreeEvidence
+import SFT.Physics.SpatialStability
 namespace SFT.Physics.BoundarySupport
 open SFT.Foundation SFT.Foundation.Count.TraceDerivation
 open SpatialStability GeneratorOperations

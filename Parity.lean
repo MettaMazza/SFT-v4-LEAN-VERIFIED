@@ -1723,3 +1723,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.HierarchyValidationGrammar.candidates do
     IO.println ("HierarchyValidationGrammar\t" ++ SFT.Physics.HierarchyValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.HierarchyValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.HierarchyValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.HierarchyValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.SectorValidationGrammar.candidates do
+    IO.println ("SectorValidationGrammar\t" ++ SFT.Physics.SectorValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SectorValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SectorValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.SectorValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.VacuumInertiaGrammar.candidates do
+    IO.println ("VacuumInertiaGrammar\t" ++ SFT.Physics.VacuumInertiaGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.VacuumInertiaGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.VacuumInertiaGrammar.exactForm c ++ "\t" ++ SFT.Physics.VacuumInertiaGrammar.decisionReason c)

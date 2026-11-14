@@ -6128,3 +6128,14 @@ import SFT.Physics.HierarchyValidationWitnesses
 import SFT.Physics.HierarchyValidationEvidence
 import SFT.Physics.HierarchyValidationExperiment
 import SFT.Physics.HierarchyValidationValidation
+import SFT.Physics.SectorAnchorRecords
+import SFT.Physics.SectorValidationGrammar
+import SFT.Physics.SectorValidationWitnesses
+import SFT.Physics.SectorValidationEvidence
+import SFT.Physics.SectorValidationExperiment
+import SFT.Physics.SectorValidationValidation
+import SFT.Physics.VacuumInertia
+import SFT.Physics.VacuumInertiaWitnesses
+import SFT.Physics.VacuumInertiaGrammar
+import SFT.Physics.VacuumInertiaControls
+import SFT.Physics.VacuumInertiaEvidence

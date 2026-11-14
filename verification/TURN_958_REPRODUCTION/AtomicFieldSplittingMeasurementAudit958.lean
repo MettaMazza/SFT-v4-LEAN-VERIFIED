@@ -1,0 +1,12 @@
+import SFT.Physics.AtomicFieldSplittingMeasurement
+#print axioms SFT.Physics.AtomicFieldSplittingRecords.sourceHash
+#print axioms SFT.Physics.AtomicFieldSplittingRecords.payloadBoundary
+#print axioms SFT.Physics.AtomicFieldSplittingRecords.authoritativeRecord
+#print axioms SFT.Physics.AtomicFieldSplittingRecords.componentFiles
+#print axioms SFT.Physics.AtomicFieldSplittingRecords.registeredRecord
+#print axioms SFT.Physics.AtomicFieldSplittingRecords.originalPayloadBoundary
+#print axioms SFT.Physics.AtomicFieldSplittingMeasurement.label
+#print axioms SFT.Physics.AtomicFieldSplittingMeasurement.operatingField
+#print axioms SFT.Physics.AtomicFieldSplittingMeasurement.classificationFromRecord
+#print axioms SFT.Physics.AtomicFieldSplittingMeasurement.classification
+#print axioms SFT.Physics.AtomicFieldSplittingMeasurement.originalClassification

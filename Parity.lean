@@ -1972,3 +1972,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.AtomicTransitionRateEntryGrammar.candidates do
     IO.println ("AtomicTransitionRateEntryGrammar\t" ++ SFT.Physics.AtomicTransitionRateEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AtomicTransitionRateEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AtomicTransitionRateEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.AtomicTransitionRateEntryGrammar.decisionReason c)
+
+  for c in SFT.Physics.AtomicFieldSplittingEntryGrammar.candidates do
+    IO.println ("AtomicFieldSplittingEntryGrammar\t" ++ SFT.Physics.AtomicFieldSplittingEntryGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AtomicFieldSplittingEntryGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AtomicFieldSplittingEntryGrammar.exactForm c ++ "\t" ++ SFT.Physics.AtomicFieldSplittingEntryGrammar.decisionReason c)

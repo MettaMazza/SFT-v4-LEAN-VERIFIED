@@ -6648,3 +6648,16 @@ import SFT.Physics.AtomicTransitionRateEmpiricalGrammar
 import SFT.Physics.AtomicTransitionRateEmpiricalEvidence
 import SFT.Physics.AtomicTransitionRateEmpiricalExperiment
 import SFT.Physics.AtomicTransitionRateEmpiricalValidation
+import SFT.Physics.AtomicFieldSplitting
+import SFT.Physics.AtomicFieldSplittingProofs
+import SFT.Physics.AtomicFieldSplittingRecords
+import SFT.Physics.AtomicFieldSplittingMeasurement
+import SFT.Physics.AtomicFieldSplittingEntryWitnesses
+import SFT.Physics.AtomicFieldSplittingEntryGrammar
+import SFT.Physics.AtomicFieldSplittingEntryControls
+import SFT.Physics.AtomicFieldSplittingEntryEvidence
+import SFT.Physics.AtomicFieldSplittingEmpiricalWitnesses
+import SFT.Physics.AtomicFieldSplittingEmpiricalGrammar
+import SFT.Physics.AtomicFieldSplittingEmpiricalEvidence
+import SFT.Physics.AtomicFieldSplittingEmpiricalExperiment
+import SFT.Physics.AtomicFieldSplittingEmpiricalValidation

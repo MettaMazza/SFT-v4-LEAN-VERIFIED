@@ -1,0 +1,38 @@
+
+830. Terminal atomic field splitting: held angular support, Zeeman spacing and typed Stark response
+
+Let q be the positive whole doubled-angular count. The complete held support has q positions and its retained successor class, hence
+\[
+ N(q)=q+1,\qquad N(q+1)=N(q)+1.
+\]
+The conventional name q=2J therefore gives 2J+1 sublevels. The first six admitted inputs produce 2,3,4,5,6,7. Opposing directions are retained as side labels; the central unshifted class is the empty form. A displacement from that class is a positive whole distance m. The source does not introduce a signed energy scalar or a numerical-zero central state.
+
+One magnetic field act for each held orientation gives Z(g,m,B)=gmB for positive exact rational g,B. For g=a/d and B=b/e, the translated operation returns precisely
+\[
+ Z(a/d,m,b/e)=\frac{amb}{de}.
+\]
+Appending one orientation preserves the same field act:
+\[
+ Z(g,m+1,B)=g(m+1)B=gmB+gB=Z(g,m,B)+gB.
+\]
+Thus the adjacent spacing is the common carrier gB, rather than a separately selected spacing. AtomicFieldSplittingProofs.exactZeeman and commonZeemanStep prove these identities for all admitted rational inputs and positive distances; everySublevelCount and orientationSuccessor establish the count and its successor.
+
+The electric support distinguishes whether a degenerate partner is retained. With that partner the first dipole act survives, so L(p,E)=pE. Without it, opposed first acts close to the empty form; the first retained response has two field acts and the source assembly is Q(p,E)=pE²/2. The exact rational operations and their general proofs give, for p=a/d and E=b/e,
+\[
+ L(a/d,b/e)=\frac{ab}{de},\qquad
+ Q(a/d,b/e)=\frac{ab^2}{2de^2}.
+\]
+Consequently L(p,2E)=2L(p,E) and Q(p,2E)=4Q(p,E); likewise Z(g,m,2B)=2Z(g,m,B). The original witnesses use g=3/2,m=2 and fields 1/5,2/5, giving Zeeman magnitudes 3/5,6/5. For p=4/7 the same field pair gives linear values 4/35,8/35 and quadratic values 2/175,8/175. The empirical carrier witness retains its original magnetic distance m=1. exactLinearStark and exactQuadraticStark prove the corresponding arbitrary-input rational formulas.
+
+The accepted domain and failure behavior are retained exactly. The doubled-angular count and orientation distance must be positive integers, excluding booleans. All field and response carriers must be positive exact fractions. The magnetic operation checks g, then distance, then field; the electric operations retain their original combined positivity conditions and error messages. These are declared operation arguments, not fitted additions to the source model.
+
+The source grammar is constructed as the complete product of ten binary axes: immutable predecessors, multiplicity, direction, magnetic response, common spacing, degenerate electric support, nondegenerate electric support, typed response order, target custody and extension. Hence its complete enumeration has 2^10=1,024 alternatives. Each source elimination decision is retained, including the distinction between the two electric support classes. The surviving assembly composes the existing field predecessors, counts the complete orientation successor, retains side labels and positive distances, uses a single magnetic field act, preserves common spacing, and selects the electric response order through the retained support class. The original induction, exclusions, four operational witnesses and controls accompany this enumeration. The separate empirical grammar retains all 2^8=256 alternatives and its original blind-validation-before-classification order.
+
+The complete external record retains three distinct source rows. The NIST weak-field row gives 2J+1 and delta-E=g*M*mu_B*B, with linear field order and displayed wavenumber coefficient 0.46686=23343/50000. Its original status states that no uncertainty is reported on that page. The NBS hydrogen row describes an extreme Rydberg state and a precision measurement of a linear energy shift; its response order is linear. The NIST nondegenerate cesium 15s row gives frequency-shift=(polarizability/2)*electric-field-squared, displayed polarizability 0.5=1/2, voltage range 750 V and electrode spacing 0.005 m. The exact operating-field calculation is
+\[
+ E=750/(5/1000)=150000\ \mathrm{V/m}
+   =1500\ \mathrm{V/cm},
+\]
+matching the reported first level-crossing field. The original record explicitly reports no uncertainty for these displayed design values. These measured coefficients and operating conditions remain external comparisons; they are not loaded by the formal prediction module. All ten custody conditions, the complete source records and their authoritative aggregate identity are retained. Classification checks the original relations, response orders, displayed coefficients, operating field, uncertainty statuses and exact scaling controls. It preserves V3's empirical evidence mode and observational-derivation provenance.
+
+Source correspondence: pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/physics/atomic_field_splitting_successor_laws_v1.py (magnetic_sublevel_count, zeeman_shift_magnitude, linear_stark_magnitude, quadratic_stark_magnitude, field_axes, ATOMIC_FIELD_SPLITTING_SPEC), atomic_field_splitting_successor_validation_v1.py and atomic_field_splitting_successor_execution_v1.py. Native verification: SFT/Physics/AtomicFieldSplitting.lean, AtomicFieldSplittingProofs.lean, AtomicFieldSplittingRecords.lean, AtomicFieldSplittingMeasurement.lean, AtomicFieldSplittingEntry{Witnesses,Grammar,Controls,Evidence}.lean and AtomicFieldSplittingEmpirical{Witnesses,Grammar,Evidence,Experiment,Validation}.lean. Chronological implementation and verification: TIMELINE.txt, TURN958. Entry evidence: verification/TURN_958_ATOMIC_FIELD_SPLITTING_COMPLETION.json.

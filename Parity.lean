@@ -2077,3 +2077,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.YangMillsSpectrumGrammar.candidates do
     IO.println ("YangMillsSpectrumGrammar\t" ++ SFT.Physics.YangMillsSpectrumGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.YangMillsSpectrumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.YangMillsSpectrumGrammar.exactForm c ++ "\t" ++ SFT.Physics.YangMillsSpectrumGrammar.decisionReason c)
+
+  for c in SFT.Physics.ParkerProtonEnergyGrammar.candidates do
+    IO.println ("ParkerProtonEnergyGrammar\t" ++ SFT.Physics.ParkerProtonEnergyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ParkerProtonEnergyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ParkerProtonEnergyGrammar.exactForm c ++ "\t" ++ SFT.Physics.ParkerProtonEnergyGrammar.decisionReason c)

@@ -1,0 +1,176 @@
+import SFT.Physics.FoldUniverseTransport
+import SFT.Foundation.CommonRefinement
+namespace SFT.Physics.FoldUniverseTransportGrammar
+open SFT.Foundation
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+
+inductive Orbit where
+  | rejected | admitted
+
+def orbitName : Orbit → String
+  | .rejected => "unbounded-cosmological-world"
+  | .admitted => "exact-odd-denominator-orbit-component"
+
+inductive Dynamics where
+  | rejected | admitted
+
+def dynamicsName : Dynamics → String
+  | .rejected => "selected-denominator-change"
+  | .admitted => "denominator-preserved-at-every-step"
+
+inductive Topology where
+  | rejected | admitted
+
+def topologyName : Topology → String
+  | .rejected => "asserted-network-edge"
+  | .admitted => "complete-coprime-composite-product"
+
+inductive Mapping where
+  | rejected | admitted
+
+def mappingName : Mapping → String
+  | .rejected => "lossy-or-selected-projection"
+  | .admitted => "bijective-commuting-component-map"
+
+inductive Period where
+  | rejected | admitted
+
+def periodName : Period → String
+  | .rejected => "chosen-or-multiplied-period"
+  | .admitted => "least-common-multiple-period"
+
+inductive Correlation where
+  | rejected | admitted
+
+def correlationName : Correlation → String
+  | .rejected => "independent-unrelated-trajectories"
+  | .admitted => "joint-lockstep-support-correlation"
+
+inductive Signal where
+  | rejected | admitted
+
+def signalName : Signal → String
+  | .rejected => "correlation-relabeled-as-signal"
+  | .admitted => "target-trajectory-independent-of-source"
+
+inductive Travel where
+  | rejected | admitted
+
+def travelName : Travel → String
+  | .rejected => "description-map-relabeled-as-travel"
+  | .admitted => "empty-cross-component-transition-record"
+
+inductive Physical where
+  | rejected | admitted
+
+def physicalName : Physical → String
+  | .rejected => "literal-multiverse-transport-asserted"
+  | .admitted => "arithmetic-correspondence-with-causal-boundary"
+
+inductive Extension where
+  | rejected | admitted
+
+def extensionName : Extension → String
+  | .rejected => "free-portal-or-time-channel"
+  | .admitted => "no-extra-rule"
+
+structure Candidate where
+  orbit : Orbit
+  dynamics : Dynamics
+  topology : Topology
+  mapping : Mapping
+  period : Period
+  correlation : Correlation
+  signal : Signal
+  travel : Travel
+  physical : Physical
+  extension : Extension
+
+def sourceFields (c : Candidate) : List String := [orbitName c.orbit, dynamicsName c.dynamics, topologyName c.topology, mappingName c.mapping, periodName c.period, correlationName c.correlation, signalName c.signal, travelName c.travel, physicalName c.physical, extensionName c.extension]
+
+def candidateId (c : Candidate) : String := SFT.Host.Text.intercalate "__" (sourceFields c)
+def exactForm (c : Candidate) : String := SFT.Host.Text.intercalate "; " [SFT.Host.Text.append "orbit=" (orbitName c.orbit), SFT.Host.Text.append "dynamics=" (dynamicsName c.dynamics), SFT.Host.Text.append "topology=" (topologyName c.topology), SFT.Host.Text.append "mapping=" (mappingName c.mapping), SFT.Host.Text.append "period=" (periodName c.period), SFT.Host.Text.append "correlation=" (correlationName c.correlation), SFT.Host.Text.append "signal=" (signalName c.signal), SFT.Host.Text.append "travel=" (travelName c.travel), SFT.Host.Text.append "physical=" (physicalName c.physical), SFT.Host.Text.append "extension=" (extensionName c.extension)]
+def survivorId : String := "exact-odd-denominator-orbit-component__denominator-preserved-at-every-step__complete-coprime-composite-product__bijective-commuting-component-map__least-common-multiple-period__joint-lockstep-support-correlation__target-trajectory-independent-of-source__empty-cross-component-transition-record__arithmetic-correspondence-with-causal-boundary__no-extra-rule"
+def survives (c : Candidate) : Bool := SFT.Host.Text.equal (candidateId c) survivorId
+def criteriaDecision (c : Candidate) : Bool :=
+  SFT.Host.Text.equal (orbitName c.orbit) "exact-odd-denominator-orbit-component" &&
+  SFT.Host.Text.equal (dynamicsName c.dynamics) "denominator-preserved-at-every-step" &&
+  SFT.Host.Text.equal (topologyName c.topology) "complete-coprime-composite-product" &&
+  SFT.Host.Text.equal (mappingName c.mapping) "bijective-commuting-component-map" &&
+  SFT.Host.Text.equal (periodName c.period) "least-common-multiple-period" &&
+  SFT.Host.Text.equal (correlationName c.correlation) "joint-lockstep-support-correlation" &&
+  SFT.Host.Text.equal (signalName c.signal) "target-trajectory-independent-of-source" &&
+  SFT.Host.Text.equal (travelName c.travel) "empty-cross-component-transition-record" &&
+  SFT.Host.Text.equal (physicalName c.physical) "arithmetic-correspondence-with-causal-boundary" &&
+  SFT.Host.Text.equal (extensionName c.extension) "no-extra-rule"
+
+def decisionReason (c : Candidate) : String :=
+  if SFT.Host.Text.equal (orbitName c.orbit) "unbounded-cosmological-world" then "A cosmological world is not generated by denominator arithmetic." else
+  if SFT.Host.Text.equal (dynamicsName c.dynamics) "selected-denominator-change" then "No Fold transition generates a new denominator." else
+  if SFT.Host.Text.equal (topologyName c.topology) "asserted-network-edge" then "An asserted edge has no exact state map." else
+  if SFT.Host.Text.equal (mappingName c.mapping) "lossy-or-selected-projection" then "Selection or loss breaks exact component recovery." else
+  if SFT.Host.Text.equal (periodName c.period) "chosen-or-multiplied-period" then "A chosen/product period ignores shared recurrence factors." else
+  if SFT.Host.Text.equal (correlationName c.correlation) "independent-unrelated-trajectories" then "That discards the shared composite origin." else
+  if SFT.Host.Text.equal (signalName c.signal) "correlation-relabeled-as-signal" then "Correlation alone supplies no sender-selected change." else
+  if SFT.Host.Text.equal (travelName c.travel) "description-map-relabeled-as-travel" then "A preparation/projection map is not a native transition path." else
+  if SFT.Host.Text.equal (physicalName c.physical) "literal-multiverse-transport-asserted" then "Arithmetic components do not by themselves establish multiple physical cosmologies or traversal." else
+  if SFT.Host.Text.equal (extensionName c.extension) "free-portal-or-time-channel" then "A portal or temporal channel is an unforced extra law." else
+  "Coprime odd-denominator Fold components have an exact bijective composite map that commutes with Fold and has least-common-multiple recurrence, forcing joint lockstep correlation; native Fold dynamics preserves each denominator, one component cannot steer another, and the literal physical inter-component signalling/travel record is empty."
+
+def generationRule : String := "Generate the complete product of orbit identity, denominator dynamics, composite topology, component map, period law, correlation record, signal test, travel test, physical interpretation and extension forms."
+def grammarBoundary : String := "Every positive reduced odd-denominator Fold orbit; every coprime pair and its complete composite unit-residue product; every positive finite Fold depth; and the admitted locality, causal-order, entanglement and no-signalling boundaries."
+
+def candidates : List Candidate :=
+  ([Orbit.rejected,Orbit.admitted]).flatMap fun orbit =>
+  ([Dynamics.rejected,Dynamics.admitted]).flatMap fun dynamics =>
+  ([Topology.rejected,Topology.admitted]).flatMap fun topology =>
+  ([Mapping.rejected,Mapping.admitted]).flatMap fun mapping =>
+  ([Period.rejected,Period.admitted]).flatMap fun period =>
+  ([Correlation.rejected,Correlation.admitted]).flatMap fun correlation =>
+  ([Signal.rejected,Signal.admitted]).flatMap fun signal =>
+  ([Travel.rejected,Travel.admitted]).flatMap fun travel =>
+  ([Physical.rejected,Physical.admitted]).flatMap fun physical =>
+  ([Extension.rejected,Extension.admitted]).map fun extension =>
+  ⟨orbit,dynamics,topology,mapping,period,correlation,signal,travel,physical,extension⟩
+
+def survivor : Candidate := ⟨.admitted,.admitted,.admitted,.admitted,.admitted,.admitted,.admitted,.admitted,.admitted,.admitted⟩
+
+theorem generatedCardinality : candidates.length = 1024 := rfl
+
+theorem candidatesComplete (c : Candidate) : c ∈ candidates := by
+  cases c with
+  | mk orbit dynamics topology mapping period correlation signal travel physical extension =>
+    have horbit : orbit ∈ [Orbit.rejected,Orbit.admitted] := by
+      cases orbit <;> repeat first | exact List.Mem.head _ | apply List.Mem.tail
+    have hdynamics : dynamics ∈ [Dynamics.rejected,Dynamics.admitted] := by
+      cases dynamics <;> repeat first | exact List.Mem.head _ | apply List.Mem.tail
+    have htopology : topology ∈ [Topology.rejected,Topology.admitted] := by
+      cases topology <;> repeat first | exact List.Mem.head _ | apply List.Mem.tail
+    have hmapping : mapping ∈ [Mapping.rejected,Mapping.admitted] := by
+      cases mapping <;> repeat first | exact List.Mem.head _ | apply List.Mem.tail
+    have hperiod : period ∈ [Period.rejected,Period.admitted] := by
+      cases period <;> repeat first | exact List.Mem.head _ | apply List.Mem.tail
+    have hcorrelation : correlation ∈ [Correlation.rejected,Correlation.admitted] := by
+      cases correlation <;> repeat first | exact List.Mem.head _ | apply List.Mem.tail
+    have hsignal : signal ∈ [Signal.rejected,Signal.admitted] := by
+      cases signal <;> repeat first | exact List.Mem.head _ | apply List.Mem.tail
+    have htravel : travel ∈ [Travel.rejected,Travel.admitted] := by
+      cases travel <;> repeat first | exact List.Mem.head _ | apply List.Mem.tail
+    have hphysical : physical ∈ [Physical.rejected,Physical.admitted] := by
+      cases physical <;> repeat first | exact List.Mem.head _ | apply List.Mem.tail
+    have hextension : extension ∈ [Extension.rejected,Extension.admitted] := by
+      cases extension <;> repeat first | exact List.Mem.head _ | apply List.Mem.tail
+    unfold candidates
+    apply CommonRefinement.memFlatMap _ _ orbit _ horbit
+    apply CommonRefinement.memFlatMap _ _ dynamics _ hdynamics
+    apply CommonRefinement.memFlatMap _ _ topology _ htopology
+    apply CommonRefinement.memFlatMap _ _ mapping _ hmapping
+    apply CommonRefinement.memFlatMap _ _ period _ hperiod
+    apply CommonRefinement.memFlatMap _ _ correlation _ hcorrelation
+    apply CommonRefinement.memFlatMap _ _ signal _ hsignal
+    apply CommonRefinement.memFlatMap _ _ travel _ htravel
+    apply CommonRefinement.memFlatMap _ _ physical _ hphysical
+    exact Count.TraceDerivation.memMap _ extension _ hextension
+
+end SFT.Physics.FoldUniverseTransportGrammar

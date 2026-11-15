@@ -2065,3 +2065,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.FiniteQuantumGravityGrammar.candidates do
     IO.println ("FiniteQuantumGravityGrammar\t" ++ SFT.Physics.FiniteQuantumGravityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FiniteQuantumGravityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FiniteQuantumGravityGrammar.exactForm c ++ "\t" ++ SFT.Physics.FiniteQuantumGravityGrammar.decisionReason c)
+
+  for c in SFT.Physics.FoldUniverseTransportGrammar.candidates do
+    IO.println ("FoldUniverseTransportGrammar\t" ++ SFT.Physics.FoldUniverseTransportGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FoldUniverseTransportGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FoldUniverseTransportGrammar.exactForm c ++ "\t" ++ SFT.Physics.FoldUniverseTransportGrammar.decisionReason c)

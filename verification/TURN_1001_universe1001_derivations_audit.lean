@@ -1,0 +1,25 @@
+import SFT.Physics.FoldUniverseTransportDynamics
+import SFT.Physics.FoldUniverseTransportSource
+#print axioms SFT.Physics.FoldUniverseTransportDynamics.originalDenominatorSteps
+#print axioms SFT.Physics.FoldUniverseTransportDynamics.originalTargetProjection
+#print axioms SFT.Physics.FoldUniverseTransportDynamics.originalNoSteering
+#print axioms SFT.Physics.FoldUniverseTransportComposition.originalCompositeDivisibility
+#print axioms SFT.Physics.FoldUniverseTransportComposition.originalComponentMapInjective
+#print axioms SFT.Physics.FoldUniverseTransportComposition.originalProjectionReduction
+#print axioms SFT.Physics.FoldUniverseTransportComposition.originalFoldCommutation
+#print axioms SFT.Physics.FoldUniverseTransportComposition.originalProgressionInjective
+#print axioms SFT.Physics.FoldUniverseTransportComposition.originalProgressionOnto
+#print axioms SFT.Physics.FoldUniverseTransportComposition.originalComponentPairExists
+#print axioms SFT.Physics.FoldUniverseTransportComposition.originalUnitPairExists
+#print axioms SFT.Physics.FoldUniverseTransportComposition.originalUnitProjection
+#print axioms SFT.Physics.FoldUniverseTransportPeriod.originalCompositeReturn
+#print axioms SFT.Physics.FoldUniverseTransportPeriod.originalOrderDivides
+#print axioms SFT.Physics.FoldUniverseTransportPeriod.originalLeastCompositePeriod
+#print axioms SFT.Physics.FoldUniverseTransportSource.originalUnitEnumeration
+#print axioms SFT.Physics.FoldUniverseTransportSource.originalUnitMembership
+#print axioms SFT.Physics.FoldUniverseTransportSource.originalFoldOnUnit
+#print axioms SFT.Physics.FoldUniverseTransportSource.originalDenominatorTotal
+#print axioms SFT.Physics.FoldUniverseTransportSource.originalPairedTotal
+#print axioms SFT.Physics.FoldUniverseTransportSource.originalOrbitTrace
+#print axioms SFT.Physics.FoldUniverseTransportSource.originalPeriodOperation
+#print axioms SFT.Physics.FoldUniverseTransportSource.originalComponentOperation

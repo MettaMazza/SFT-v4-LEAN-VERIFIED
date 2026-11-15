@@ -60,4 +60,17 @@ theorem sourceFilter (xs : List Candidate) : xs.filter survives=xs.filter accept
   | false => exact ih
   | true => exact congrArg (List.cons c) ih
 theorem fullSourceAcceptedCount : (candidates.filter acceptedCoordinates).length=1 := by decide +kernel
+theorem sourceFilterCount (xs : List Candidate) :
+ (xs.filter survives).length=(xs.filter acceptedCoordinates).length := by
+ induction xs with
+ | nil => rfl
+ | cons c cs ih =>
+  change (match survives c with | true => c::cs.filter survives | false => cs.filter survives).length =
+   (match acceptedCoordinates c with | true => c::cs.filter acceptedCoordinates | false => cs.filter acceptedCoordinates).length
+  rw [sourceEqualsCoordinates c]
+  cases acceptedCoordinates c with
+  | false => exact ih
+  | true => exact congrArg Nat.succ ih
+theorem fullOriginalSurvivorCount : (candidates.filter survives).length=1 :=
+ (sourceFilterCount candidates).trans fullSourceAcceptedCount
 end SFT.Physics.CompositeConfiningAcceptanceCount

@@ -2059,3 +2059,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.BaryogenesisDependencyGrammar.candidates do
     IO.println ("BaryogenesisDependencyGrammar\t" ++ SFT.Physics.BaryogenesisDependencyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.BaryogenesisDependencyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.BaryogenesisDependencyGrammar.exactForm c ++ "\t" ++ SFT.Physics.BaryogenesisDependencyGrammar.decisionReason c)
+
+  for c in SFT.Physics.LatticeOperatorGrammar.candidates do
+    IO.println ("LatticeOperatorGrammar\t" ++ SFT.Physics.LatticeOperatorGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.LatticeOperatorGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.LatticeOperatorGrammar.exactForm c ++ "\t" ++ SFT.Physics.LatticeOperatorGrammar.decisionReason c)

@@ -2017,3 +2017,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.CoupledMapCriticalityGrammar.candidates do
     IO.println ("CoupledMapCriticalityGrammar\t" ++ SFT.Physics.CoupledMapCriticalityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CoupledMapCriticalityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CoupledMapCriticalityEvidence.exactForm c ++ "\t" ++ SFT.Physics.CoupledMapCriticalityEvidence.decisionReason c)
+
+  for c in SFT.Physics.OrbitalDimensionStabilityGrammar.candidates do
+    IO.println ("OrbitalDimensionStabilityGrammar\t" ++ SFT.Physics.OrbitalDimensionStabilityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.OrbitalDimensionStabilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.OrbitalDimensionStabilityEvidence.exactForm c ++ "\t" ++ SFT.Physics.OrbitalDimensionStabilityEvidence.decisionReason c)

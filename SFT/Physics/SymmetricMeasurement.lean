@@ -1,0 +1,25 @@
+import SFT.Physics.SymmetricSourceConservationEvidence
+import SFT.Physics.RunningConvergenceMeasurement
+namespace SFT.Physics.SymmetricMeasurement
+open SFT.Host SFT.Host.Canonical RunningConvergenceMeasurement SymmetricSourceConservationCertificate
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+def requiredTargetRows : List String := ["v1_source_entry", "v1_symmetric_four_coordinate_slots", "v1_planar_slots", "v1_energy_source_slots", "v1_momentum_source_slots", "v1_stress_source_slots", "v1_local_conservation_directions", "v1_balanced_source_conserved", "v1_leaking_source_rejected", "existing_v3_symmetric_slots", "existing_v3_physical_polarizations", "carroll_source_tensor", "carroll_geometric_tensor", "carroll_contracted_identity", "carroll_field_equation", "carroll_source_consequence", "regge_exact_discrete_identity", "regge_contracted_identity_count_in_four_dimensions", "regge_equation_count_in_four_dimensions", "regge_gauge_condition_count_in_four_dimensions", "regge_physical_degree_count_in_four_dimensions", "regge_arbitrary_curvature_validity", "regge_general_identity_linear_in_curvature", "regge_operator_identical_to_v3_commuting_difference_operator", "ligo_generic_metric_mode_count", "ligo_general_relativity_tensor_mode_count", "ligo_tensor_vs_vector_log10_bayes", "ligo_tensor_vs_scalar_log10_bayes", "ligo_sky_location", "ligo_hypothesis_scope", "ligo_mixed_mode_tested", "measured_parameter_fitted_into_v3"]
+def targetRows (target : Value) (keys : List String) : Except String (List Value) := keys.mapM (field target)
+def countText (n : Nat) : Value := .text (render (.integer (.ofNat n)))
+def exactMeasurementAnalysis (target : Value) : Except String Value := do
+ let c := conservationCertificate
+ let historical ← targetRows target ["v1_symmetric_four_coordinate_slots","v1_energy_source_slots","v1_momentum_source_slots","v1_stress_source_slots","v1_local_conservation_directions"]
+ let existing ← targetRows target ["existing_v3_symmetric_slots","existing_v3_physical_polarizations"]
+ let carroll ← targetRows target ["carroll_source_tensor","carroll_geometric_tensor","carroll_contracted_identity","carroll_field_equation","carroll_source_consequence"]
+ let regge ← targetRows target ["regge_exact_discrete_identity","regge_contracted_identity_count_in_four_dimensions","regge_equation_count_in_four_dimensions","regge_gauge_condition_count_in_four_dimensions","regge_physical_degree_count_in_four_dimensions","regge_arbitrary_curvature_validity","regge_general_identity_linear_in_curvature","regge_operator_identical_to_v3_commuting_difference_operator"]
+ let reggeScope := sameValue (← field target "regge_exact_discrete_identity") (.boolean true) && sameValue (← field target "regge_arbitrary_curvature_validity") (.boolean true) && sameValue (← field target "regge_general_identity_linear_in_curvature") (.boolean false) && sameValue (← field target "regge_operator_identical_to_v3_commuting_difference_operator") (.boolean false)
+ let ligo ← targetRows target ["ligo_generic_metric_mode_count","ligo_general_relativity_tensor_mode_count","ligo_tensor_vs_vector_log10_bayes","ligo_tensor_vs_scalar_log10_bayes","ligo_sky_location","ligo_hypothesis_scope","ligo_mixed_mode_tested"]
+ let ligoScope := sameValue (← field target "ligo_mixed_mode_tested") (.boolean false) && sameValue (← field target "ligo_hypothesis_scope") (.text "pure-tensor-versus-pure-vector-versus-pure-scalar")
+ let keys ← match target with
+  | .object fields => .ok (fields.map Prod.fst)
+  | .null | .boolean _ | .integer _ | .text _ | .array _ => .error "TypeError"
+ let retained := keys.length==32 && keys.map (fun s => s.toUTF8.data.toList.map UInt8.toNat)==requiredTargetRows.map (fun s => s.toUTF8.data.toList.map UInt8.toNat)
+ let nv := fun n : Nat => Value.integer (.ofNat n)
+ pure (.object [("formal_slot_count",nv c.slotCount),("formal_source_partition",.array (c.sourcePartitionCounts.map nv)),("formal_componentwise_pair_count",nv c.componentwiseBijection.length),("formal_conserved_directions",nv c.conservedDirections.length),("formal_term_counts",.array (c.divergenceRows.map (fun row => .array [nv row.carriedTerms,nv row.opposedTerms,nv row.distinctTerms]))),("all_formal_ledgers_balanced",.boolean c.allFourBalanced),("formal_commuting_words",nv c.commutation.wordCount),("formal_commutation_complete",.boolean c.commutation.everyDerivativeOrderCommutes),("formal_leak_rejected",.boolean (!c.leakingControlBalanced && c.leakingControlHasOneMissingFlow)),("historical_counts_match",.boolean (sameValue (.array (([c.slotCount]++c.sourcePartitionCounts++[c.conservedDirections.length]).map countText)) (.array historical))),("existing_v3_counts_match",.boolean (sameValue (.array [countText c.slotCount,.text "2"]) (.array existing))),("carroll_rows_retained",.array carroll),("regge_rows_retained",.array regge),("regge_scope_preserved",.boolean reggeScope),("ligo_rows_retained",.array ligo),("ligo_scope_preserved",.boolean ligoScope),("all_target_rows_retained",.boolean retained),("fitted_value_used",.boolean false)])
+end SFT.Physics.SymmetricMeasurement

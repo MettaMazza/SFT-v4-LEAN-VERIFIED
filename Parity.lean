@@ -2047,3 +2047,9 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ScatteringPartitionPathGrammar.candidates do
     IO.println ("ScatteringPartitionPathGrammar\t" ++ SFT.Physics.ScatteringPartitionPathGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ScatteringPartitionPathGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ScatteringPartitionPathGrammar.exactForm c ++ "\t" ++ SFT.Physics.ScatteringPartitionPathGrammar.decisionReason c)
+
+  for c in SFT.Physics.LandauerDemonLedgerGrammar.candidates do
+    IO.println ("LandauerDemonLedgerGrammar\t" ++ SFT.Physics.LandauerDemonLedgerGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.LandauerDemonLedgerGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.LandauerDemonLedgerGrammar.exactForm c ++ "\t" ++ SFT.Physics.LandauerDemonLedgerGrammar.decisionReason c)
+
+  for c in SFT.Physics.LandauerValidationGrammar.candidates do
+    IO.println ("LandauerValidationGrammar\t" ++ SFT.Physics.LandauerValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.LandauerValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.LandauerValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.LandauerValidationGrammar.decisionReason c)

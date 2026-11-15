@@ -1,0 +1,20 @@
+import SFT.Physics.ParkerPrediction
+import SFT.Physics.ParkerRecords
+namespace SFT.Physics.ParkerExperiment
+open SFT.Host SFT.Host.Canonical ParkerPrediction RunningConvergenceMeasurement
+open SFT.Foundation.AdmissionControls (admissionIdentity)
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+def targetIds : List String := ["WITHHELD-PARKER-PROTON-RANGE-AND-CODATA-SCALE"]
+def frozenRelation : String := "The current exact proton share is eight terminal-alpha squared; the leading-rung V2 fraction remains a historical control."
+def falsification : String := "Reject if any source identity or registered row changes; if the terminal fraction or NIST-propagated prediction leaves the complete 67-527 keV Parker analysis range; if approximately 400 keV is presented as an exact cutoff or given an unreported uncertainty; if the broad observation is claimed to empirically select eight over every adverse formula; if a local plasma value enters the derivation; or if targets are accessible before prediction sealing."
+def registrationRecord : Except String Value := do
+ let document ← predictionProgramDocument
+ pure (.object [("schema",.text "sft-v3-parker-proton-energy-experiment/1"),("claim_id",.text "SFT-PHYS-PARKER-PROTON-ENERGY-TERMINAL-028"),("experiment_id",.text "SFT-EXP-PHYS-PARKER-PROTON-ENERGY-TERMINAL-028"),("registered_by",.text "Maria Smith"),("protocol",.text "observational-data-informed_target-inaccessible_sealed-comparison"),("frozen_relation",.text "The current exact proton share is eight terminal-alpha squared; the leading-rung V2 fraction remains a historical control."),("prediction_program",document),("withheld_target_ids",.array [.text "WITHHELD-PARKER-PROTON-RANGE-AND-CODATA-SCALE"]),("source_ids",.array [.text "DESAI-ET-AL-2025-PARKER-HCS-PROTONS",.text "NIST-CODATA-2022"]),("source_hashes",.object [("experiments/external_sources/physics/snapshots/parker-proton-energy-source-record.json",.text "sha256:bd644fb01e46ae9ee3cdb096776e4d68fcfecc4ecb9bba078f3ac185edaecae1"),("experiments/external_sources/physics/snapshots/desai-2025-parker-400kev.pdf",.text "sha256:6c950a6e142edf57df600d06e1ce40445fc18c84d42c3d2b916d63679a100fb5"),("experiments/external_sources/physics/snapshots/nist-codata-2022-allascii.txt",.text "sha256:77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67")]),("row_retention_policy",.text "complete primary event/range/context rows, exact CODATA proton row, all forced-sector/power controls and precision nonclaim"),("target_access_policy",.text "capability-closed prediction; release only after matching seal"),("comparison_protocol",.text "exact rational interval propagation and complete adverse-formula range census"),("falsification_condition",.text "Reject if any source identity or registered row changes; if the terminal fraction or NIST-propagated prediction leaves the complete 67-527 keV Parker analysis range; if approximately 400 keV is presented as an exact cutoff or given an unreported uncertainty; if the broad observation is claimed to empirically select eight over every adverse formula; if a local plasma value enters the derivation; or if targets are accessible before prediction sealing.")])
+def releasedTargets (files : List (String × ByteArray)) (payload : Value) : Except String (List (String × Value)) := do
+ let record ← ParkerRecords.authoritativeRecord files payload
+ pure [("WITHHELD-PARKER-PROTON-RANGE-AND-CODATA-SCALE",← field record "registered_target")]
+def envelope (derivationSeal : String) (inputs : List (String × CapabilityValues.Value)) (registrationHash : String) : Value := .object [
+ ("experiment_id",.text experimentId),("registered_inputs",.object (inputs.map (fun (key,value) => (key,.text (admissionIdentity (CapabilityValues.canonical value)))))),
+ ("withheld_target_ids",.array (targetIds.map Value.text)),("frozen_relation_hash",.text (admissionIdentity (.array [.text derivationSeal,.text frozenRelation]))),("experiment_registration_hash",.text registrationHash)]
+end SFT.Physics.ParkerExperiment

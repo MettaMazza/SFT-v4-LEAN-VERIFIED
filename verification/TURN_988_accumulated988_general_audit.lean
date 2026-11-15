@@ -1,0 +1,6 @@
+import SFT.Physics.AccumulatedSeparationGeneral
+#print axioms SFT.Physics.AccumulatedSeparationGeneral.originalFirstStepNotHalf
+#print axioms SFT.Physics.AccumulatedSeparationGeneral.originalContractionDenominatorIdentity
+#print axioms SFT.Physics.AccumulatedSeparationGeneral.originalEveryContractionCross
+#print axioms SFT.Physics.AccumulatedSeparationGeneral.originalSupportContractionCross
+#print axioms SFT.Physics.AccumulatedSeparationGeneral.originalEveryHalfContraction

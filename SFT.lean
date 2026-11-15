@@ -7185,3 +7185,13 @@ import SFT.Physics.StrongCarrierRecords
 import SFT.Physics.StrongCarrierExperiment
 import SFT.Physics.StrongCarrierMeasurement
 import SFT.Physics.StrongCarrierValidation
+import SFT.Physics.StrongFieldNonlinearFixedPoint
+import SFT.Physics.StrongFieldNonlinearFixedPointCertificate
+import SFT.Physics.StrongFieldNonlinearFixedPointGeneral
+import SFT.Physics.StrongFieldNonlinearFixedPointGrammar
+import SFT.Physics.StrongFieldNonlinearFixedPointEvidence
+import SFT.Physics.StrongFieldPrediction
+import SFT.Physics.StrongFieldRecords
+import SFT.Physics.StrongFieldExperiment
+import SFT.Physics.StrongFieldMeasurement
+import SFT.Physics.StrongFieldValidation

@@ -2035,3 +2035,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.StrongCarrierMasslessConfinedGrammar.candidates do
     IO.println ("StrongCarrierMasslessConfinedGrammar\t" ++ SFT.Physics.StrongCarrierMasslessConfinedGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StrongCarrierMasslessConfinedGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StrongCarrierMasslessConfinedEvidence.exactForm c ++ "\t" ++ SFT.Physics.StrongCarrierMasslessConfinedEvidence.decisionReason c)
+
+  for c in SFT.Physics.StrongFieldNonlinearFixedPointGrammar.candidates do
+    IO.println ("StrongFieldNonlinearFixedPointGrammar\t" ++ SFT.Physics.StrongFieldNonlinearFixedPointGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StrongFieldNonlinearFixedPointGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StrongFieldNonlinearFixedPointEvidence.exactForm c ++ "\t" ++ SFT.Physics.StrongFieldNonlinearFixedPointEvidence.decisionReason c)

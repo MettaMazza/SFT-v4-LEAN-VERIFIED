@@ -2029,3 +2029,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.StaticExteriorClockGrammar.candidates do
     IO.println ("StaticExteriorClockGrammar\t" ++ SFT.Physics.StaticExteriorClockGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StaticExteriorClockGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StaticExteriorClockEvidence.exactForm c ++ "\t" ++ SFT.Physics.StaticExteriorClockEvidence.decisionReason c)
+
+  for c in SFT.Physics.QuadrupoleRadiatedPowerGrammar.candidates do
+    IO.println ("QuadrupoleRadiatedPowerGrammar\t" ++ SFT.Physics.QuadrupoleRadiatedPowerGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.QuadrupoleRadiatedPowerGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.QuadrupoleRadiatedPowerEvidence.exactForm c ++ "\t" ++ SFT.Physics.QuadrupoleRadiatedPowerEvidence.decisionReason c)

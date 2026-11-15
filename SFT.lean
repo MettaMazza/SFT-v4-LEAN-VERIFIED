@@ -7165,3 +7165,13 @@ import SFT.Physics.StaticRecords
 import SFT.Physics.StaticExperiment
 import SFT.Physics.StaticMeasurement
 import SFT.Physics.StaticValidation
+import SFT.Physics.QuadrupoleRadiatedPower
+import SFT.Physics.QuadrupoleRadiatedPowerCertificate
+import SFT.Physics.QuadrupoleRadiatedPowerGeneral
+import SFT.Physics.QuadrupoleRadiatedPowerGrammar
+import SFT.Physics.QuadrupoleRadiatedPowerEvidence
+import SFT.Physics.QuadrupolePrediction
+import SFT.Physics.QuadrupoleRecords
+import SFT.Physics.QuadrupoleExperiment
+import SFT.Physics.QuadrupoleMeasurement
+import SFT.Physics.QuadrupoleValidation

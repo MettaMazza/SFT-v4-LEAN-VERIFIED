@@ -2056,3 +2056,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.MediatorRangeChannelGrammar.candidates do
     IO.println ("MediatorRangeChannelGrammar\t" ++ SFT.Physics.MediatorRangeChannelGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MediatorRangeChannelGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MediatorRangeChannelGrammar.exactForm c ++ "\t" ++ SFT.Physics.MediatorRangeChannelGrammar.decisionReason c)
+
+  for c in SFT.Physics.BaryogenesisDependencyGrammar.candidates do
+    IO.println ("BaryogenesisDependencyGrammar\t" ++ SFT.Physics.BaryogenesisDependencyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.BaryogenesisDependencyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.BaryogenesisDependencyGrammar.exactForm c ++ "\t" ++ SFT.Physics.BaryogenesisDependencyGrammar.decisionReason c)

@@ -7669,3 +7669,397 @@ import SFT.Physics.ProtonRadiusExperiment
 import SFT.Physics.ProtonRadiusValidation
 import SFT.Physics.ProtonRadiusRecords
 import SFT.Physics.ProtonRadiusMeasurement
+
+import SFT.Mathematics.CalculatorStatisticsV3
+
+import SFT.Mathematics.CalculatorFunctionsV3
+
+import SFT.Mathematics.CalculatorInverseV3
+
+import SFT.Mathematics.CalculatorMachineV3
+
+import SFT.Mathematics.CalculatorSession
+
+import SFT.Mathematics.CalculatorDisplay
+
+import SFT.Mathematics.CalculatorGUI
+
+import SFT.Mathematics.CalculatorLayout
+
+import SFT.Mathematics.CalculatorTerminal
+
+import SFT.Mathematics.CalculatorInputV3
+
+import SFT.Mathematics.CalculatorV3Census0
+
+import SFT.Mathematics.CalculatorV3Census1
+
+import SFT.Mathematics.CalculatorV3Census10
+
+import SFT.Mathematics.CalculatorV3Census100
+
+import SFT.Mathematics.CalculatorV3Census101
+
+import SFT.Mathematics.CalculatorV3Census102
+
+import SFT.Mathematics.CalculatorV3Census103
+
+import SFT.Mathematics.CalculatorV3Census104
+
+import SFT.Mathematics.CalculatorV3Census105
+
+import SFT.Mathematics.CalculatorV3Census106
+
+import SFT.Mathematics.CalculatorV3Census107
+
+import SFT.Mathematics.CalculatorV3Census108
+
+import SFT.Mathematics.CalculatorV3Census109
+
+import SFT.Mathematics.CalculatorV3Census11
+
+import SFT.Mathematics.CalculatorV3Census110
+
+import SFT.Mathematics.CalculatorV3Census111
+
+import SFT.Mathematics.CalculatorV3Census112
+
+import SFT.Mathematics.CalculatorV3Census113
+
+import SFT.Mathematics.CalculatorV3Census114
+
+import SFT.Mathematics.CalculatorV3Census115
+
+import SFT.Mathematics.CalculatorV3Census116
+
+import SFT.Mathematics.CalculatorV3Census117
+
+import SFT.Mathematics.CalculatorV3Census118
+
+import SFT.Mathematics.CalculatorV3Census119
+
+import SFT.Mathematics.CalculatorV3Census12
+
+import SFT.Mathematics.CalculatorV3Census120
+
+import SFT.Mathematics.CalculatorV3Census121
+
+import SFT.Mathematics.CalculatorV3Census122
+
+import SFT.Mathematics.CalculatorV3Census123
+
+import SFT.Mathematics.CalculatorV3Census124
+
+import SFT.Mathematics.CalculatorV3Census125
+
+import SFT.Mathematics.CalculatorV3Census126
+
+import SFT.Mathematics.CalculatorV3Census127
+
+import SFT.Mathematics.CalculatorV3Census13
+
+import SFT.Mathematics.CalculatorV3Census14
+
+import SFT.Mathematics.CalculatorV3Census15
+
+import SFT.Mathematics.CalculatorV3Census16
+
+import SFT.Mathematics.CalculatorV3Census17
+
+import SFT.Mathematics.CalculatorV3Census18
+
+import SFT.Mathematics.CalculatorV3Census19
+
+import SFT.Mathematics.CalculatorV3Census2
+
+import SFT.Mathematics.CalculatorV3Census20
+
+import SFT.Mathematics.CalculatorV3Census21
+
+import SFT.Mathematics.CalculatorV3Census22
+
+import SFT.Mathematics.CalculatorV3Census23
+
+import SFT.Mathematics.CalculatorV3Census24
+
+import SFT.Mathematics.CalculatorV3Census25
+
+import SFT.Mathematics.CalculatorV3Census26
+
+import SFT.Mathematics.CalculatorV3Census27
+
+import SFT.Mathematics.CalculatorV3Census28
+
+import SFT.Mathematics.CalculatorV3Census29
+
+import SFT.Mathematics.CalculatorV3Census3
+
+import SFT.Mathematics.CalculatorV3Census30
+
+import SFT.Mathematics.CalculatorV3Census31
+
+import SFT.Mathematics.CalculatorV3Census32
+
+import SFT.Mathematics.CalculatorV3Census33
+
+import SFT.Mathematics.CalculatorV3Census34
+
+import SFT.Mathematics.CalculatorV3Census35
+
+import SFT.Mathematics.CalculatorV3Census36
+
+import SFT.Mathematics.CalculatorV3Census37
+
+import SFT.Mathematics.CalculatorV3Census38
+
+import SFT.Mathematics.CalculatorV3Census39
+
+import SFT.Mathematics.CalculatorV3Census4
+
+import SFT.Mathematics.CalculatorV3Census40
+
+import SFT.Mathematics.CalculatorV3Census41
+
+import SFT.Mathematics.CalculatorV3Census42
+
+import SFT.Mathematics.CalculatorV3Census43
+
+import SFT.Mathematics.CalculatorV3Census44
+
+import SFT.Mathematics.CalculatorV3Census45
+
+import SFT.Mathematics.CalculatorV3Census46
+
+import SFT.Mathematics.CalculatorV3Census47
+
+import SFT.Mathematics.CalculatorV3Census48
+
+import SFT.Mathematics.CalculatorV3Census49
+
+import SFT.Mathematics.CalculatorV3Census5
+
+import SFT.Mathematics.CalculatorV3Census50
+
+import SFT.Mathematics.CalculatorV3Census51
+
+import SFT.Mathematics.CalculatorV3Census52
+
+import SFT.Mathematics.CalculatorV3Census53
+
+import SFT.Mathematics.CalculatorV3Census54
+
+import SFT.Mathematics.CalculatorV3Census55
+
+import SFT.Mathematics.CalculatorV3Census56
+
+import SFT.Mathematics.CalculatorV3Census57
+
+import SFT.Mathematics.CalculatorV3Census58
+
+import SFT.Mathematics.CalculatorV3Census59
+
+import SFT.Mathematics.CalculatorV3Census6
+
+import SFT.Mathematics.CalculatorV3Census60
+
+import SFT.Mathematics.CalculatorV3Census61
+
+import SFT.Mathematics.CalculatorV3Census62
+
+import SFT.Mathematics.CalculatorV3Census63
+
+import SFT.Mathematics.CalculatorV3Census64
+
+import SFT.Mathematics.CalculatorV3Census65
+
+import SFT.Mathematics.CalculatorV3Census66
+
+import SFT.Mathematics.CalculatorV3Census67
+
+import SFT.Mathematics.CalculatorV3Census68
+
+import SFT.Mathematics.CalculatorV3Census69
+
+import SFT.Mathematics.CalculatorV3Census7
+
+import SFT.Mathematics.CalculatorV3Census70
+
+import SFT.Mathematics.CalculatorV3Census71
+
+import SFT.Mathematics.CalculatorV3Census72
+
+import SFT.Mathematics.CalculatorV3Census73
+
+import SFT.Mathematics.CalculatorV3Census74
+
+import SFT.Mathematics.CalculatorV3Census75
+
+import SFT.Mathematics.CalculatorV3Census76
+
+import SFT.Mathematics.CalculatorV3Census77
+
+import SFT.Mathematics.CalculatorV3Census78
+
+import SFT.Mathematics.CalculatorV3Census79
+
+import SFT.Mathematics.CalculatorV3Census8
+
+import SFT.Mathematics.CalculatorV3Census80
+
+import SFT.Mathematics.CalculatorV3Census81
+
+import SFT.Mathematics.CalculatorV3Census82
+
+import SFT.Mathematics.CalculatorV3Census83
+
+import SFT.Mathematics.CalculatorV3Census84
+
+import SFT.Mathematics.CalculatorV3Census85
+
+import SFT.Mathematics.CalculatorV3Census86
+
+import SFT.Mathematics.CalculatorV3Census87
+
+import SFT.Mathematics.CalculatorV3Census88
+
+import SFT.Mathematics.CalculatorV3Census89
+
+import SFT.Mathematics.CalculatorV3Census9
+
+import SFT.Mathematics.CalculatorV3Census90
+
+import SFT.Mathematics.CalculatorV3Census91
+
+import SFT.Mathematics.CalculatorV3Census92
+
+import SFT.Mathematics.CalculatorV3Census93
+
+import SFT.Mathematics.CalculatorV3Census94
+
+import SFT.Mathematics.CalculatorV3Census95
+
+import SFT.Mathematics.CalculatorV3Census96
+
+import SFT.Mathematics.CalculatorV3Census97
+
+import SFT.Mathematics.CalculatorV3Census98
+
+import SFT.Mathematics.CalculatorV3Census99
+
+import SFT.Mathematics.CalculatorV3Evidence
+
+import SFT.Mathematics.CalculatorV3Grammar
+
+import SFT.Mathematics.CalculatorV3GrammarBase
+
+import SFT.Mathematics.CalculatorV3WitnessProof12
+
+import SFT.Mathematics.CalculatorV3WitnessProof13
+
+import SFT.Mathematics.CalculatorV3WitnessProof14
+
+import SFT.Mathematics.CalculatorV3WitnessProof15
+
+import SFT.Mathematics.CalculatorV3WitnessProof16
+
+import SFT.Mathematics.CalculatorV3WitnessProof17
+
+import SFT.Mathematics.CalculatorV3WitnessProof18
+
+import SFT.Mathematics.CalculatorV3Witnesses
+
+import SFT.Physics.CompositeConfining
+
+import SFT.Physics.CompositeConfiningAcceptanceCount
+
+import SFT.Physics.CompositeConfiningBinding
+
+import SFT.Physics.CompositeConfiningCensus0
+
+import SFT.Physics.CompositeConfiningCensus1
+
+import SFT.Physics.CompositeConfiningCensus10
+
+import SFT.Physics.CompositeConfiningCensus11
+
+import SFT.Physics.CompositeConfiningCensus12
+
+import SFT.Physics.CompositeConfiningCensus13
+
+import SFT.Physics.CompositeConfiningCensus14
+
+import SFT.Physics.CompositeConfiningCensus15
+
+import SFT.Physics.CompositeConfiningCensus16
+
+import SFT.Physics.CompositeConfiningCensus17
+
+import SFT.Physics.CompositeConfiningCensus18
+
+import SFT.Physics.CompositeConfiningCensus19
+
+import SFT.Physics.CompositeConfiningCensus2
+
+import SFT.Physics.CompositeConfiningCensus20
+
+import SFT.Physics.CompositeConfiningCensus21
+
+import SFT.Physics.CompositeConfiningCensus22
+
+import SFT.Physics.CompositeConfiningCensus23
+
+import SFT.Physics.CompositeConfiningCensus24
+
+import SFT.Physics.CompositeConfiningCensus25
+
+import SFT.Physics.CompositeConfiningCensus26
+
+import SFT.Physics.CompositeConfiningCensus27
+
+import SFT.Physics.CompositeConfiningCensus28
+
+import SFT.Physics.CompositeConfiningCensus29
+
+import SFT.Physics.CompositeConfiningCensus3
+
+import SFT.Physics.CompositeConfiningCensus30
+
+import SFT.Physics.CompositeConfiningCensus31
+
+import SFT.Physics.CompositeConfiningCensus4
+
+import SFT.Physics.CompositeConfiningCensus5
+
+import SFT.Physics.CompositeConfiningCensus6
+
+import SFT.Physics.CompositeConfiningCensus7
+
+import SFT.Physics.CompositeConfiningCensus8
+
+import SFT.Physics.CompositeConfiningCensus9
+
+import SFT.Physics.CompositeConfiningComplements
+
+import SFT.Physics.CompositeConfiningControls
+
+import SFT.Physics.CompositeConfiningDerivation
+
+import SFT.Physics.CompositeConfiningEvidence
+
+import SFT.Physics.CompositeConfiningGrammar
+
+import SFT.Physics.CompositeConfiningGrammarBase
+
+import SFT.Physics.CompositeConfiningLoop
+
+import SFT.Physics.CompositeConfiningOrbits
+
+import SFT.Physics.CompositeConfiningPairCount
+
+import SFT.Physics.CompositeConfiningPairCoverage
+
+import SFT.Physics.CompositeConfiningPartition
+
+import SFT.Physics.CompositeConfiningReturn
+
+import SFT.Physics.CompositeConfiningWitnesses

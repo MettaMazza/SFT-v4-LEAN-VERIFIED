@@ -1,0 +1,30 @@
+import SFT.Physics.SymmetryActionDescent
+import SFT.Physics.SymmetryActionRank
+import SFT.Physics.SymmetryActionRankTrace
+import SFT.Physics.SymmetryActionClassCompleteness
+#print axioms SFT.Physics.SymmetryActionDescent.originalDyadicNextDenominator
+#print axioms SFT.Physics.SymmetryActionDescent.originalDenominatorOneStops
+#print axioms SFT.Physics.SymmetryActionDescent.originalPositiveDepthContinues
+#print axioms SFT.Physics.SymmetryActionDescent.originalDyadicTrace
+#print axioms SFT.Physics.SymmetryActionDescent.originalTraceLength
+#print axioms SFT.Physics.SymmetryActionDescent.originalDyadicDomain
+#print axioms SFT.Physics.SymmetryActionDescent.originalReturnedTrace
+#print axioms SFT.Physics.SymmetryActionDescent.originalEveryDyadicTrace
+#print axioms SFT.Physics.SymmetryActionDescent.originalTraceUnique
+#print axioms SFT.Physics.SymmetryActionDescent.originalTraceEndsAtOne
+#print axioms SFT.Physics.SymmetryActionRank.originalRankLoop
+#print axioms SFT.Physics.SymmetryActionRank.originalPositiveDepthNotOneValue
+#print axioms SFT.Physics.SymmetryActionRank.originalEveryPositiveRank
+#print axioms SFT.Physics.SymmetryActionRank.originalOneValue
+#print axioms SFT.Physics.SymmetryActionRank.originalSourceRankFalls
+#print axioms SFT.Physics.SymmetryActionRankTrace.originalRankEdgesTrace
+#print axioms SFT.Physics.SymmetryActionRankTrace.originalTraceLastValue
+#print axioms SFT.Physics.SymmetryActionRankTrace.originalWholeTraceRankCheck
+#print axioms SFT.Physics.SymmetryActionRankTrace.originalEveryReturnedRankCheck
+#print axioms SFT.Physics.SymmetryActionClassCompleteness.originalIndexSupportDistinct
+#print axioms SFT.Physics.SymmetryActionClassCompleteness.originalEveryIndexBijection
+#print axioms SFT.Physics.SymmetryActionClassCompleteness.originalIndexCensusUnique
+#print axioms SFT.Physics.SymmetryActionClassCompleteness.originalSelectedCharges
+#print axioms SFT.Physics.SymmetryActionClassCompleteness.originalSelectedEdges
+#print axioms SFT.Physics.SymmetryActionClassCompleteness.originalChargeClassComplete
+#print axioms SFT.Physics.SymmetryActionClassCompleteness.originalCompleteSymmetryClass

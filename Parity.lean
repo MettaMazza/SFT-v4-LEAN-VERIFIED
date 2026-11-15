@@ -2014,3 +2014,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.LyapunovKSCorrespondenceGrammar.candidates do
     IO.println ("LyapunovKSCorrespondenceGrammar\t" ++ SFT.Physics.LyapunovKSCorrespondenceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.LyapunovKSCorrespondenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.LyapunovKSCorrespondenceEvidence.exactForm c ++ "\t" ++ SFT.Physics.LyapunovKSCorrespondenceEvidence.decisionReason c)
+
+  for c in SFT.Physics.CoupledMapCriticalityGrammar.candidates do
+    IO.println ("CoupledMapCriticalityGrammar\t" ++ SFT.Physics.CoupledMapCriticalityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CoupledMapCriticalityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CoupledMapCriticalityEvidence.exactForm c ++ "\t" ++ SFT.Physics.CoupledMapCriticalityEvidence.decisionReason c)

@@ -7115,3 +7115,13 @@ import SFT.Physics.LyapunovRecords
 import SFT.Physics.LyapunovExperiment
 import SFT.Physics.LyapunovMeasurement
 import SFT.Physics.LyapunovValidation
+import SFT.Physics.CoupledMapCriticality
+import SFT.Physics.CoupledMapCriticalityCertificate
+import SFT.Physics.CoupledMapCriticalityGeneral
+import SFT.Physics.CoupledMapCriticalityGrammar
+import SFT.Physics.CoupledMapCriticalityEvidence
+import SFT.Physics.CriticalityPrediction
+import SFT.Physics.CriticalityRecords
+import SFT.Physics.CriticalityExperiment
+import SFT.Physics.CriticalityMeasurement
+import SFT.Physics.CriticalityValidation

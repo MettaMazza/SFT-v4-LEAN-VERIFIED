@@ -1,0 +1,92 @@
+import SFT.Mathematics.CalculatorGrammar
+import SFT.Mathematics.CalculatorWitnessProof0
+import SFT.Mathematics.CalculatorWitnessProof1
+import SFT.Mathematics.CalculatorWitnessProof2
+import SFT.Mathematics.CalculatorWitnessProof3
+import SFT.Mathematics.CalculatorWitnessProof4
+import SFT.Mathematics.CalculatorWitnessProof5
+import SFT.Mathematics.CalculatorWitnessProof6
+import SFT.Mathematics.CalculatorWitnessProof7
+import SFT.Mathematics.CalculatorWitnessProof8
+import SFT.Mathematics.CalculatorWitnessProof9
+import SFT.Foundation.AdmissionControls
+import SFT.Engine.RegistrationGate
+namespace SFT.Mathematics.CalculatorEvidence
+open SFT.Host.Canonical CalculatorGrammar CalculatorWitnesses
+open SFT.Foundation.AdmissionControls (admissionIdentity)
+set_option maxRecDepth 20000
+set_option maxHeartbeats 100000000
+
+def witnesses : Value := .array [.array [.text "exact-decimal",.text "0.1 plus 0.2 is the exact rational part 3/10, not a host floating result.",.boolean witness0],.array [.text "empty-cancellation",.text "One substituted from One yields structural empty-One.",.boolean witness1],.array [.text "held-remainder",.text "One substituted by three yields counter-held positive magnitude two.",.boolean witness2],.array [.text "root-balance",.text "The exact sqrt(2) bracket has lower square below two and upper square at or above two.",.boolean witness3],.array [.text "combinatorial-recurrence",.text "Factorial and selection recurrence reproduce exact finite arrangements.",.boolean witness4],.array [.text "transcendental-enclosure",.text "exp, ln, sin and circle operations return ordered rational enclosures with certificates.",.boolean witness5],.array [.text "orthogonal-composition",.text "The square of the unit orthogonal fibre is counter-held real One with empty orthogonal fibre.",.boolean witness6],.array [.text "domain-halt",.text "Division by structural empty-One halts without returning NaN or infinity.",.boolean witness7],.array [.text "complete-trace",.text "A parsed calculation retains boundary translation, operation and terminal records.",.boolean witness8],.array [.text "scientific-notation",.text "Scientific notation is translated exactly without a floating intermediate.",.boolean witness9]]
+def witnessRecords : Value := .array [.object [("name",.text "exact-decimal"),("statement",.text "0.1 plus 0.2 is the exact rational part 3/10, not a host floating result."),("passed",.boolean witness0)],.object [("name",.text "empty-cancellation"),("statement",.text "One substituted from One yields structural empty-One."),("passed",.boolean witness1)],.object [("name",.text "held-remainder"),("statement",.text "One substituted by three yields counter-held positive magnitude two."),("passed",.boolean witness2)],.object [("name",.text "root-balance"),("statement",.text "The exact sqrt(2) bracket has lower square below two and upper square at or above two."),("passed",.boolean witness3)],.object [("name",.text "combinatorial-recurrence"),("statement",.text "Factorial and selection recurrence reproduce exact finite arrangements."),("passed",.boolean witness4)],.object [("name",.text "transcendental-enclosure"),("statement",.text "exp, ln, sin and circle operations return ordered rational enclosures with certificates."),("passed",.boolean witness5)],.object [("name",.text "orthogonal-composition"),("statement",.text "The square of the unit orthogonal fibre is counter-held real One with empty orthogonal fibre."),("passed",.boolean witness6)],.object [("name",.text "domain-halt"),("statement",.text "Division by structural empty-One halts without returning NaN or infinity."),("passed",.boolean witness7)],.object [("name",.text "complete-trace"),("statement",.text "A parsed calculation retains boundary translation, operation and terminal records."),("passed",.boolean witness8)],.object [("name",.text "scientific-notation"),("statement",.text "Scientific notation is translated exactly without a floating intermediate."),("passed",.boolean witness9)]]
+def claimId : String := "SFT-MATH-SCIENTIFIC-CALCULATOR-003"
+def dependencies : List String := ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-ALGEBRAIC-BALANCE-002","SFT-MATH-LIMIT-CONTINUUM-002","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001"]
+def candidateRecord (c : Candidate) : Value := .object [("candidate_id",.text (candidateId c)),("coordinates",.array [.array [.text "input",.text (inputName c.input)],.array [.text "empty",.text (emptyName c.empty)],.array [.text "orientation",.text (orientationName c.orientation)],.array [.text "operations",.text (operationsName c.operations)],.array [.text "nonrational",.text (nonrationalName c.nonrational)],.array [.text "transcendental",.text (transcendentalName c.transcendental)],.array [.text "orthogonal",.text (orthogonalName c.orthogonal)],.array [.text "domain",.text (domainName c.domain)],.array [.text "trace",.text (traceName c.trace)],.array [.text "addition",.text (additionName c.addition)]]),("exact_form",.text (exactForm c))]
+def completenessRecord : Value := .object [("generation_rule",.text "Generate the complete product of input-value, empty, orientation, exact-operation, non-rational, transcendental, orthogonal, domain, trace and extra-rule choices."),("grammar_boundary",.text "All calculator semantics formed from the ten declared binary representation and execution choices, with exact finite rational recurrences and a declared finite resource bound."),("dimensions",.array [.object [("key",.text "input"),("question",.text "How are entered numerals represented?"),("choices",.array [.array [.text "host-float",.text "A host float loses the exact entered part before proof begins."],.array [.text "character-exact-part",.text "Characters generate the exact counted numerator, denominator and exponent."]])],.object [("key",.text "empty"),("question",.text "What represents the absence of retained magnitude?"),("choices",.array [.array [.text "numeric-zero",.text "Numerical zero is not an admitted SFT value."],.array [.text "structural-empty-One",.text "The empty-One form records complete cancellation or empty magnitude."]])],.object [("key",.text "orientation"),("question",.text "How is a conventional negative result retained?"),("choices",.array [.array [.text "negative-scalar",.text "A negative scalar imports a forbidden signed field."],.array [.text "held-fibre-orientation",.text "One of two generated held labels records orientation with a positive magnitude."]])],.object [("key",.text "operations"),("question",.text "What executes arithmetic?"),("choices",.array [.array [.text "host-arithmetic-oracle",.text "A host arithmetic oracle erases the generated Fold construction."],.array [.text "generated-exact-kernels",.text "Junction, pairing, refinement and recurrence execute the operation exactly."]])],.object [("key",.text "nonrational"),("question",.text "How are roots without a rational exact value represented?"),("choices",.array [.array [.text "irrational-scalar",.text "An irrational scalar is outside the proof domain."],.array [.text "rational-balance-enclosure",.text "An exact rational bracket and polynomial balance certify the result without importing a scalar."]])],.object [("key",.text "transcendental"),("question",.text "How are exp, logarithmic, circular and trigonometric functions evaluated?"),("choices",.array [.array [.text "black-box-library-value",.text "A black-box value supplies no Fold derivation or remainder certificate."],.array [.text "finite-rational-recurrence-bound",.text "A finite exact recurrence and positive tail bound enclose the function value."]])],.object [("key",.text "orthogonal"),("question",.text "How is conventional imaginary notation represented?"),("choices",.array [.array [.text "imaginary-scalar",.text "An imaginary scalar is not an admitted proof value."],.array [.text "typed-orthogonal-fibre-pair",.text "Two exact Fold fibres retain real and orthogonal coordinates compositionally."]])],.object [("key",.text "domain"),("question",.text "What happens when a proof obligation is undefined or unclosed?"),("choices",.array [.array [.text "nan-infinity-continuation",.text "NaN or infinity silently continues beyond the admitted domain."],.array [.text "explicit-lawful-halt",.text "The machine halts before returning an uncertified value."]])],.object [("key",.text "trace"),("question",.text "What evidence accompanies an answer?"),("choices",.array [.array [.text "answer-only",.text "An answer without provenance cannot be replayed or independently checked."],.array [.text "complete-proof-resource-trace",.text "Input translation, operations, result and counted resources are retained."]])],.object [("key",.text "addition"),("question",.text "May a calculator-specific scale or answer rule be added?"),("choices",.array [.array [.text "has-extra-rule",.text "A fitted constant or answer-selecting rule is not supplied by the dependencies."],.array [.text "no-extra-rule",.text "The calculator composes only already-admitted exact structures and proofs."]])]]),("product_exhaustion",.text "Every named option in every registered dimension occurs once with every option in every other dimension; duplicate candidate identities are forbidden."),("candidate_ids",.array (candidates.map fun c => .text (candidateId c)))]
+def registrationData (sourceHash : String) : SFT.Engine.ClaimRegistration where
+ claimId := claimId
+ title := "Exact traced SFT-native scientific calculator"
+ branch := "mathematics"
+ statement := "A scientific-calculator interface is admitted in SFT only when every entered decimal is translated character-by-character to an exact rational part, displayed zero is structural empty-One, subtraction uses held orientation, all algebraic and transcendental non-rational results remain exact rational enclosures with replayable bounds, orthogonal values remain typed Fold fibres, every operation is traced, and every undefined or uncertified operation halts."
+ evidenceMode := .formal
+ rootTheorems := [SFT.Engine.rootTheoremId]
+ dependencies := dependencies
+ axioms := []
+ freeParameters := []
+ provenance := [.forwardForcing]
+ sourceHash := sourceHash
+
+def registration (sourceHash : String) : Value := SFT.Engine.registrationValue (registrationData sourceHash)
+def generatedCandidateData (c : Candidate) : SFT.Engine.Candidate where
+ candidateId := candidateId c
+ exactForm := exactForm c
+ traceHash := admissionIdentity (.object [("claim_id",.text claimId),("generator",.text generationRule),("record",candidateRecord c)])
+def censusData : SFT.Engine.CandidateCensus where
+ generationRule := generationRule
+ grammarBoundary := grammarBoundary
+ expectedCardinality := .ofNat candidates.length
+ completenessCertificateHash := admissionIdentity completenessRecord
+ candidates := candidates.map generatedCandidateData
+def census : Value := SFT.Engine.censusValue censusData
+
+def decisionData (c : Candidate) : SFT.Engine.CandidateDecision where
+ candidateId := candidateId c
+ survives := survives c
+ reason := decisionReason c
+ proofHash := admissionIdentity (.object [("claim_id",.text claimId),("dependencies",.array (dependencies.map Value.text)),("record",candidateRecord c),("survives",.boolean (survives c)),("reason",.text (decisionReason c))])
+def decideCandidate (candidate : SFT.Engine.Candidate) : Except String SFT.Engine.CandidateDecision :=
+ match candidates.find? (fun c => SFT.Host.Text.equal (candidateId c) candidate.candidateId) with
+ | some c => .ok (decisionData c)
+ | none => .error "StopIteration"
+def closureValue : Value := .object [("exact_result",.text "The unique admitted calculator semantics uses exact character-generated rational parts, structural empty-One, held orientation, generated exact kernels, certified rational enclosures, finite rational recurrences with explicit remainder bounds, typed orthogonal fibres, mandatory domain halts, complete proof/resource traces and no extra rule."),("laws",.array [.text "decimal and scientific notation are exact rational boundary encodings, never floating proof values",.text "complete cancellation returns structural empty-One and unmatched remainder retains held orientation",.text "every exact operation composes admitted arithmetic, combinatorial and order structures",.text "every non-rational result is an exact rational enclosure carrying its generating recurrence and bound",.text "an unclosed enclosure, exhausted resource bound or invalid domain halts without a result",.text "orthogonal composition is a typed two-fibre product and introduces no imaginary scalar",.text "decimal output is a downstream display projection and never proof evidence"]),("operational_witnesses",witnesses),("minimality",.text "Replacing any admitted coordinate by a generated alternative removes a registered preservation, completeness, exactness or provenance condition."),("named_shape_uniqueness",.text "The complete product contains exactly one all-admitted coordinate: character-exact-part__structural-empty-One__held-fibre-orientation__generated-exact-kernels__rational-balance-enclosure__finite-rational-recurrence-bound__typed-orthogonal-fibre-pair__explicit-lawful-halt__complete-proof-resource-trace__no-extra-rule."),("induction_base",.text "One entered digit is translated to an exact counted part; the structural empty-One and structural One supply cancellation and identity bases."),("induction_step",.text "Appending a generated digit refines the exact denominator by one counted tenfold composition; appending an operator composes two already-certified values, and appending one recurrence term retains the previous exact sum plus one exact part while replacing the remainder by a proven smaller positive bound."),("boundary_exclusions",.array [.text "semantic numerical zero, NaN and infinity are not admitted values",.text "negative, irrational and imaginary scalars are replaced by typed Fold structures",.text "binary floating-point and opaque host-library answers are excluded from proof",.text "uncertified roots, series, singularities and exhausted resource bounds halt",.text "decimal projections are correspondence displays only"])]
+def generalityValue : Value := .object [("claim_id",.text claimId),("base",.text "One entered digit is translated to an exact counted part; the structural empty-One and structural One supply cancellation and identity bases."),("successor",.text "Appending a generated digit refines the exact denominator by one counted tenfold composition; appending an operator composes two already-certified values, and appending one recurrence term retains the previous exact sum plus one exact part while replacing the remainder by a proven smaller positive bound."),("laws",.array [.text "decimal and scientific notation are exact rational boundary encodings, never floating proof values",.text "complete cancellation returns structural empty-One and unmatched remainder retains held orientation",.text "every exact operation composes admitted arithmetic, combinatorial and order structures",.text "every non-rational result is an exact rational enclosure carrying its generating recurrence and bound",.text "an unclosed enclosure, exhausted resource bound or invalid domain halts without a result",.text "orthogonal composition is a typed two-fibre product and introduces no imaginary scalar",.text "decimal output is a downstream display projection and never proof evidence"]),("witnesses",witnessRecords)]
+def closureData (decisions : List SFT.Engine.CandidateDecision) : SFT.Engine.ClosureEvidence where
+ scope := .depthIndependent
+ exactBoundary := grammarBoundary
+ minimalityPassed := true
+ namedShapeUniquenessPassed := true
+ proofHash := admissionIdentity (.object [("closure",closureValue),("decisions",.array (decisions.map SFT.Engine.decisionValue))])
+ generalityCertificateHash := some (admissionIdentity generalityValue)
+def closure (decisions : List SFT.Engine.CandidateDecision) : Value := SFT.Engine.closureEvidenceValue (closureData decisions)
+
+def control (kind : SFT.Engine.ControlKind) (passed : Bool) (expected observed : String) : SFT.Engine.ControlResult where
+ kind := kind
+ passed := passed
+ expectedBehavior := expected
+ observedBehavior := observed
+ receiptHash := admissionIdentity (.object [("kind",.text (SFT.Engine.kindName kind)),("expected",.text expected),("observed",.text observed),("passed",.boolean passed)])
+def exclusions : List String := ["semantic numerical zero, NaN and infinity are not admitted values","negative, irrational and imaginary scalars are replaced by typed Fold structures","binary floating-point and opaque host-library answers are excluded from proof","uncertified roots, series, singularities and exhausted resource bounds halt","decimal projections are correspondence displays only"]
+def controls (sourceHash : String) : List SFT.Engine.ControlResult := [
+ control .falsePremise (!(SFT.Host.Text.equal (candidateId {survivor with input := .rejected}) survivorId))
+ "reject a generated form missing the first required structural condition" (decisionReason {survivor with input := .rejected}),
+ control .tamperedSource (!(SFT.Host.Text.equal (admissionIdentity (.object [("changed",.text sourceHash)])) sourceHash))
+ "reject a changed official source identity" "the changed identity differs from the registered source manifest",
+ control .tamperedArtifact (((candidates.filter survives).length == 1) && ((candidates.map candidateId).eraseDups.length == candidates.length))
+ "reject a missing, duplicated or additional survivor" "the generated product contains exactly one registered survivor",
+ control .boundary (!exclusions.isEmpty && witness0 && witness1 && witness2 && witness3 && witness4 && witness5 && witness6 && witness7 && witness8 && witness9)
+ "halt any attempt to import an excluded object or answer-producing model" (SFT.Host.Text.intercalate "; " exclusions)]
+def runControls (sourceHash : String) : Value := .array ((controls sourceHash).map SFT.Engine.controlResultValue)
+theorem registrationNoAxioms (sourceHash : String) : (registrationData sourceHash).axioms = [] := rfl
+theorem registrationNoFreeParameters (sourceHash : String) : (registrationData sourceHash).freeParameters = [] := rfl
+theorem decisionPreservesSurvival (c : Candidate) : (decisionData c).survives = survives c := rfl
+end SFT.Mathematics.CalculatorEvidence

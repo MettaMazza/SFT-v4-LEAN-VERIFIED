@@ -7546,3 +7546,91 @@ import SFT.Physics.ParkerExperiment
 import SFT.Physics.ParkerValidation
 import SFT.Physics.ParkerRecords
 import SFT.Physics.ParkerMeasurement
+
+import SFT.Mathematics.CalculatorCensus0
+
+import SFT.Mathematics.CalculatorCensus1
+
+import SFT.Mathematics.CalculatorCensus10
+
+import SFT.Mathematics.CalculatorCensus11
+
+import SFT.Mathematics.CalculatorCensus12
+
+import SFT.Mathematics.CalculatorCensus13
+
+import SFT.Mathematics.CalculatorCensus14
+
+import SFT.Mathematics.CalculatorCensus15
+
+import SFT.Mathematics.CalculatorCensus2
+
+import SFT.Mathematics.CalculatorCensus3
+
+import SFT.Mathematics.CalculatorCensus4
+
+import SFT.Mathematics.CalculatorCensus5
+
+import SFT.Mathematics.CalculatorCensus6
+
+import SFT.Mathematics.CalculatorCensus7
+
+import SFT.Mathematics.CalculatorCensus8
+
+import SFT.Mathematics.CalculatorCensus9
+
+import SFT.Mathematics.CalculatorEvidence
+
+import SFT.Mathematics.CalculatorGrammar
+
+import SFT.Mathematics.CalculatorGrammarBase
+
+import SFT.Mathematics.CalculatorLexer
+
+import SFT.Mathematics.CalculatorMachine
+
+import SFT.Mathematics.CalculatorNumerals
+
+import SFT.Mathematics.CalculatorOperations
+
+import SFT.Mathematics.CalculatorProjection
+
+import SFT.Mathematics.CalculatorRoots
+
+import SFT.Mathematics.CalculatorSeries
+
+import SFT.Mathematics.CalculatorTrigonometry
+
+import SFT.Mathematics.CalculatorValues
+
+import SFT.Mathematics.CalculatorWitnessProof0
+
+import SFT.Mathematics.CalculatorWitnessProof1
+
+import SFT.Mathematics.CalculatorWitnessProof2
+
+import SFT.Mathematics.CalculatorWitnessProof3
+
+import SFT.Mathematics.CalculatorWitnessProof4
+
+import SFT.Mathematics.CalculatorWitnessProof5
+
+import SFT.Mathematics.CalculatorWitnessProof6
+
+import SFT.Mathematics.CalculatorWitnessProof7
+
+import SFT.Mathematics.CalculatorWitnessProof8
+
+import SFT.Mathematics.CalculatorWitnessProof9
+
+import SFT.Mathematics.CalculatorWitnesses
+
+import SFT.Mathematics.CalculatorOperationsV2
+
+import SFT.Mathematics.CalculatorMachineV2
+
+import SFT.Mathematics.CalculatorV2Witnesses
+
+import SFT.Mathematics.CalculatorV2WitnessProofs
+
+import SFT.Mathematics.CalculatorV2Evidence

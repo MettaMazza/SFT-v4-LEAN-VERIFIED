@@ -2062,3 +2062,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.LatticeOperatorGrammar.candidates do
     IO.println ("LatticeOperatorGrammar\t" ++ SFT.Physics.LatticeOperatorGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.LatticeOperatorGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.LatticeOperatorGrammar.exactForm c ++ "\t" ++ SFT.Physics.LatticeOperatorGrammar.decisionReason c)
+
+  for c in SFT.Physics.FiniteQuantumGravityGrammar.candidates do
+    IO.println ("FiniteQuantumGravityGrammar\t" ++ SFT.Physics.FiniteQuantumGravityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FiniteQuantumGravityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FiniteQuantumGravityGrammar.exactForm c ++ "\t" ++ SFT.Physics.FiniteQuantumGravityGrammar.decisionReason c)

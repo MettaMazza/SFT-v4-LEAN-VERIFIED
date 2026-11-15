@@ -2053,3 +2053,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.LandauerValidationGrammar.candidates do
     IO.println ("LandauerValidationGrammar\t" ++ SFT.Physics.LandauerValidationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.LandauerValidationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.LandauerValidationGrammar.exactForm c ++ "\t" ++ SFT.Physics.LandauerValidationGrammar.decisionReason c)
+
+  for c in SFT.Physics.MediatorRangeChannelGrammar.candidates do
+    IO.println ("MediatorRangeChannelGrammar\t" ++ SFT.Physics.MediatorRangeChannelGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.MediatorRangeChannelGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.MediatorRangeChannelGrammar.exactForm c ++ "\t" ++ SFT.Physics.MediatorRangeChannelGrammar.decisionReason c)

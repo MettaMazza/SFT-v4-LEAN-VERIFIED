@@ -1,0 +1,16 @@
+import SFT.Physics.MediatorRangeChannelLedger
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalForwardTake
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalEveryRestReassemblesOne
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalCountsStayWithinInitial
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalPartRepresentation
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalProperTrace
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalTraceStartsAtOneCount
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalEveryReturnedLedgerCloses
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalTraceTerminal
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalActualTraceTerminal
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalEveryBrokenShortfall
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalEveryBrokenMassPositive
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalStoppedGuard
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalEveryRationalTrace
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalActualRationalLoop
+#print axioms SFT.Physics.MediatorRangeChannelLedger.originalSuccessorRestTransfer

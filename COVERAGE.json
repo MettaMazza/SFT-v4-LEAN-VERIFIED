@@ -47953,9 +47953,36 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-COUPLING-ACCUMULATED-SEPARATION-TERMINAL-015-723ff785cf91a40c.json",
       "statement": "For the admitted binary and generator-three running sectors on the common Fold support R, the exact adjacent gap at positive level n is 1/((R_n+2)(R_n+3)), with R_1=One and R_(n+1)=2R_n.  The first gap is 1/12 and the second is 1/20.  Every successor from the second gap onward is strictly below half its predecessor.  Consequently every positive finite partial accumulation S_N satisfies 1/12 <= S_N < 11/60, and for every positive finite tolerance a generated level supplies a smaller exact remaining-tail envelope.  This is constructive finite convergence, not a completed infinite sum.",
       "title": "Finite accumulated Fold-coupling separation",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/AccumulatedSeparation.lean",
+        "SFT/Physics/AccumulatedSeparationGeneral.lean",
+        "SFT/Physics/AccumulatedSeparationLedger.lean",
+        "SFT/Physics/AccumulatedSeparationBracket.lean",
+        "SFT/Physics/AccumulatedSeparationTolerance.lean",
+        "SFT/Physics/AccumulatedSeparationWitnesses.lean",
+        "SFT/Physics/AccumulatedSeparationGrammar.lean",
+        "SFT/Physics/AccumulatedSeparationControls.lean",
+        "SFT/Physics/AccumulatedSeparationEvidence.lean",
+        "SFT/Physics/AccumulatedSeparationGrammarBase.lean",
+        "SFT/Physics/AccumulatedSeparationCensus0.lean",
+        "SFT/Physics/AccumulatedSeparationCensus1.lean",
+        "SFT/Physics/AccumulatedSeparationCensus2.lean",
+        "SFT/Physics/AccumulatedSeparationCensus3.lean",
+        "SFT/Physics/AccumulatedSeparationCensus4.lean",
+        "SFT/Physics/AccumulatedSeparationCensus5.lean",
+        "SFT/Physics/AccumulatedSeparationCensus6.lean",
+        "SFT/Physics/AccumulatedSeparationCensus7.lean",
+        "SFT/Physics/AccumulatedSeparationCensus8.lean",
+        "SFT/Physics/AccumulatedSeparationCensus9.lean",
+        "SFT/Physics/AccumulatedSeparationCensus10.lean",
+        "SFT/Physics/AccumulatedSeparationCensus11.lean",
+        "SFT/Physics/AccumulatedSeparationCensus12.lean",
+        "SFT/Physics/AccumulatedSeparationCensus13.lean",
+        "SFT/Physics/AccumulatedSeparationCensus14.lean",
+        "SFT/Physics/AccumulatedSeparationCensus15.lean"
+      ],
+      "artifact_runtime_parity": "PASS complete512 native programme equals fresh original and pin; four independent validator cases; every source finite-tail, partial bracket and tolerance search proved with empty axioms; no empirical validator in original binding",
       "registration_sha256": "660e9dea3b1be5759c53cef2432f7ad0925157f9ea1018a867d1eab90183d34b",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -47994,7 +48021,10 @@
         "statement": "For the admitted binary and generator-three running sectors, every positive finite partial accumulation of their exact common-support gaps lies in [1/12, 11/60); every successor from the second gap onward is below half its predecessor, and every positive rational tolerance has a generated finite tail witness.",
         "status": "independently_replicated",
         "title": "Finite accumulated Fold-coupling separation"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_989_ACCUMULATED_SEPARATION_COMPLETION.json",
+      "verified_scope": "Original guarded binary_support, adjacent_sector_gap, ordered finite_partial_accumulation, successor_is_below_half, finite_tail_envelope and accumulation_is_bounded.; First exceptional transition, exact denominator identity and every actual source half-contraction from level two.; Actual ordered sum equals existing exact partialLedger; doubled denominator majorant, finite geometric budget and every actual finite-tail check.; Exact head-tail ledger identity, both bracket inequalities and actual accumulation_is_bounded for every positive level.; Original denominator guards, successive exact rational comparison and first-success search; computed termination bound, complete source search trace and actual tolerance_is_witnessed for every positive denominator.; All four original witnesses with exact original finite ranges and denominator list; connected to actual operations.; All eight original axes, 512 ordered alternatives, every candidate membership, original first-failure decisions and unique preserving candidate.; All four original StructuralPhysicsProgram controls and full closure including original exclusions and operational witnesses.; Full original registration, ordered census, all candidate lookups/decisions and hashes, closure and unknown identifier behavior.; Original eight-axis definitions and complete512 ordered candidate product; every candidate membership.; Exhaustive32-row source decision and unique-criteria proof chunk 0 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 1 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 2 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 3 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 4 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 5 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 6 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 7 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 8 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 9 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 10 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 11 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 12 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 13 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 14 of16; collectively all512 original alternatives.; Exhaustive32-row source decision and unique-criteria proof chunk 15 of16; collectively all512 original alternatives."
     },
     {
       "branch": "physics",
@@ -197252,13 +197282,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-15T06:46:49.836060+00:00",
+  "updated_at": "2026-11-15T07:27:29.357772+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2134,
-    "fully_reconstructed_claims": 647,
-    "axiom_free_exported_results": 41360,
-    "axiom_free_audited_definitions_and_theorems": 91388
+    "pending": 2133,
+    "fully_reconstructed_claims": 648,
+    "axiom_free_exported_results": 41458,
+    "axiom_free_audited_definitions_and_theorems": 91547
   }
 }

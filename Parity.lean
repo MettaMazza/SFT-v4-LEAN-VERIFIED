@@ -2038,3 +2038,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.StrongFieldNonlinearFixedPointGrammar.candidates do
     IO.println ("StrongFieldNonlinearFixedPointGrammar\t" ++ SFT.Physics.StrongFieldNonlinearFixedPointGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StrongFieldNonlinearFixedPointGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StrongFieldNonlinearFixedPointEvidence.exactForm c ++ "\t" ++ SFT.Physics.StrongFieldNonlinearFixedPointEvidence.decisionReason c)
+
+  for c in SFT.Physics.AccumulatedSeparationGrammar.candidates do
+    IO.println ("AccumulatedSeparationGrammar\t" ++ SFT.Physics.AccumulatedSeparationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.AccumulatedSeparationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.AccumulatedSeparationGrammar.exactForm c ++ "\t" ++ SFT.Physics.AccumulatedSeparationGrammar.decisionReason c)

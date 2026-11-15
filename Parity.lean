@@ -2071,3 +2071,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.InteractionUnificationGrammar.candidates do
     IO.println ("InteractionUnificationGrammar\t" ++ SFT.Physics.InteractionUnificationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.InteractionUnificationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.InteractionUnificationGrammar.exactForm c ++ "\t" ++ SFT.Physics.InteractionUnificationGrammar.decisionReason c)
+
+  for c in SFT.Physics.YangMillsSingletGapGrammar.candidates do
+    IO.println ("YangMillsSingletGapGrammar\t" ++ SFT.Physics.YangMillsSingletGapGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.YangMillsSingletGapGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.YangMillsSingletGapGrammar.exactForm c ++ "\t" ++ SFT.Physics.YangMillsSingletGapGrammar.decisionReason c)

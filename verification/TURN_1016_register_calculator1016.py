@@ -1,0 +1,55 @@
+from pathlib import Path
+import json,re,hashlib,datetime,shutil,sys
+r=Path('/Volumes/One Touch/SFT v4 Full model LEAN');w=Path('work');version=5;low='calculator1015';cid='SFT-MATH-SCIENTIFIC-CALCULATOR-005';receipt='verification/TURN_1016_CALCULATOR_005_COMPLETION.json';now=datetime.datetime.now(datetime.timezone.utc).isoformat();prefix='calculator1016';cfg=json.load(open(w/'calculator1016_proofs_config.json'));audit=(w/'calculator1016_audit.log').read_text()
+assert all("'"+n+"' does not depend on any axioms" in audit for n in cfg['declarations'])
+for f in ['calculator1015_program_report.json','calculator1015_fresh_report.json']:assert json.load(open(w/f))['status']=='PASS'
+cases=json.load(open(w/('calculator1015_independent_report.json')));assert len(cases)==4 and all(x['expected']==x['actual']['passed'] for x in cases)
+checks=['calculator1014_'+part+'_report.json' for part in ['statistics','functions','inverse']]+['calculator1015_'+part+'_report.json' for part in ['machine','session','display','gui','witnesses','grammar','evidence']]+['calculator1016_'+part+'_report.json' for part in ['terminal','layout','callbacks','input']]
+for f in checks:assert json.load(open(w/f))['status']=='PASS'
+cov=json.load(open(r/'COVERAGE.json'));by={x['claim_id']:x for x in cov['claims']};entry=by[cid];assert entry['lean_status']=='pending';assert all(by[d]['lean_status']=='complete' for d in entry['v3_registration']['dependencies']);state=json.load(open(r/'CONTINUATION_STATE.json'));assert state['scientific_cursor']['next']==cid
+scopes={
+'CalculatorStatisticsV3':('operations_v3.py','Original interval roots, exact statistics,rounding,wholegcd/lcm/modulo andgoldenratio composition.'),
+'CalculatorFunctionsV3':('operations_v3.py','Original rational/certified powers,exponential/logarithmic/trigonometric/hyperbolic operations andangle conversion.'),
+'CalculatorInverseV3':('operations_v3.py','Original bounded arctangent recurrence andinverse circular functioncomposition.'),
+'CalculatorMachineV3':('machine_v3.py','Original parser,evaluation,dispatch,complete Calculation andtrace with sessionfixedASCIIbindings;arbitraryconstructor symbolkeysuseCalculatorInputV3.'),
+'CalculatorInputV3':('machine_v3.py','Original publicclasssymbolnormalization atASCIIlexer-nameboundary includingKelvinkeyandnormalizedcollisionorder.'),
+'CalculatorSession':('session.py','Originalanswer,memory,angle,history state transitions;preserves stateonrejected evaluation.'),
+'CalculatorDisplay':('gui.py','OriginalGUIkeypad,insertions,guide,friendlyprojection andsourceorderedinterval/hull wrappers.'),
+'CalculatorGUI':('gui.py','OriginalGUIcontrollercallbacks andtyped applicationstateeffects at thewidgetboundary.'),
+'CalculatorLayout':('gui.py','Every originalconstructor hostcall,args,kwargs,callbackandlayoutorder;themepriority/scalingfailure andlaunchimport/creation/mainloopboundary.'),
+'CalculatorTerminal':('__main__.py','Originalargumentdeclarations,directandinteractivecommands,EOF/quit/trace/memory/history/mode behavior,stdout/stderr/exitcode atparsedhostargumentboundary.')}
+
+paths=set();corr=json.load(open(r/'reference/CORRESPONDENCE.json'));oldth=set(re.findall(r'^#print axioms (\S+)',(r/'Audit.lean').read_text(),re.M));newth=[n for n in cfg['theorems'] if n not in oldth];readme=(r/'README.md').read_text();oldlog=re.search(r'verification/TURN_\w+_REGISTERED_DECLARATIONS_AUDIT\.log',readme)[0];old_audit=(r/oldlog).read_text();olddefs=set(re.findall("'([^']+)' does not depend on any axioms",old_audit));newdefs=[n for n in cfg['definitions_and_theorems'] if n not in olddefs];newlog='verification/TURN_1016_REGISTERED_DECLARATIONS_AUDIT.log';(r/newlog).write_text(old_audit+'\n'+audit);paths.add(newlog)
+source_map={};hashes={}
+for mod in cfg['modules']:
+ rel='SFT/Mathematics/'+mod+'.lean';p=r/rel;body=p.read_text();assert not re.search(r'\bsorry\b|^\s*axiom\b',body,re.M);hashes[mod]=hashlib.sha256(p.read_bytes()).hexdigest();paths.add(rel)
+ if mod in scopes:src,scope=scopes[mod]
+ elif 'Witness' in mod:src,scope='law_v3.py','Exact source operational witnesses with their original predicates and native kernel proofs; inherited witnesses reused.'
+ elif 'Evidence' in mod:src,scope='../generated_law.py','Complete source registration,census,decisions,closure,controls,canonical hashes and unknown-identifier behavior.'
+ else:src,scope='law_v3.py','All thirteen original binary axes,8192 alternatives,complete enumeration,first-failure decisions andunique survivor.'
+ source='sft/mathematics/calculator/'+src if src!='../generated_law.py' else 'sft/mathematics/generated_law.py';source_map[mod]={'source':source,'component':scope}; source_map[mod].update(additional_source='sft/mathematics/calculator/operations_v3.py') if mod=='CalculatorDisplay' else None;imp='import '+rel[:-5].replace('/','.')
+ if imp not in (r/'SFT.lean').read_text().splitlines():
+  with (r/'SFT.lean').open('a') as f:f.write('\n'+imp+'\n')
+ corr['modules' if 'Grammar' in mod or 'Census' in mod else 'evidence_modules'].append(dict(module=rel,v3_claim=cid,source_path=source,lean_source_sha256=hashes[mod],domain=scope,remaining=[],completion_evidence=receipt))
+with (r/'Audit.lean').open('a') as f:f.write(''.join('#print axioms '+n+'\n' for n in newth))
+files=[prefix+'_proofs_config.json',prefix+'_audit.log','calculator1015_program_report.json','calculator1015_program_output.json','calculator1015_fresh_report.json','calculator1015_independent_report.json']+checks
+for name in files:
+ rel='verification/TURN_1016_'+name;shutil.copy2(w/name,r/rel);paths.add(rel)
+report=dict(status='complete',registered_at=now,claim_id=cid,source_commit=cov['source_commit'],source_component_correspondence=source_map,lean_source_sha256=hashes,dependencies={d:'complete' for d in entry['v3_registration']['dependencies']},candidate_rows=8192,axiom_dependencies=[],audited_declarations=cfg['declarations'],added_registered_theorems=newth,added_audited_definitions_and_theorems=newdefs,remaining=[],source_registration_status=entry['v3_registration'].get('status'),source_supersession=entry['v3_registration'].get('superseded_by'),shared_grammar='SFT.Mathematics.CalculatorV3Grammar',program_report='verification/TURN_1016_'+'calculator1015_program_report.json',independent_validator_cases=cases,checks_executed=['lake build entry-specific Calculator Evidence target','Source-specific full native8192programme versus pinned records and fresh original Python','Original independent validator unchanged and three adverse cases','All exported entry declarations axiom audit','Retained source-hash-bound operation/parser/full-calculation comparisons'])
+(r/receipt).write_text(json.dumps(report,indent=2)+'\n');paths.add(receipt)
+entry.update(lean_status='complete',remaining=[],lean_modules=['SFT/Mathematics/'+m+'.lean' for m in cfg['modules']],completion_evidence=receipt,verified_scope='; '.join(v['component'] for v in source_map.values()),artifact_runtime_parity='PASS complete8192native programme=freshV3=pinnedrecords; original independent validator and three adverse cases; all source-bound operation checks retained; original source registration and supersession unchanged.')
+old=cov['summary'].copy();count=old['fully_reconstructed_claims']+1;cov['summary'].update(fully_reconstructed_claims=count,pending=old['pending']-1,axiom_free_exported_results=old['axiom_free_exported_results']+len(newth),axiom_free_audited_definitions_and_theorems=old['axiom_free_audited_definitions_and_theorems']+len(newdefs));cov['updated_at']=now;assert count==sum(x['lean_status']=='complete' for x in cov['claims']);(r/'COVERAGE.json').write_text(json.dumps(cov,indent=2)+'\n');corr['audited_theorems']=sorted(set(corr['audited_theorems'])|set(newth));(r/'reference/CORRESPONDENCE.json').write_text(json.dumps(corr,indent=2)+'\n')
+oldrows=int(re.search(r'([0-9,]+) candidate records matched',readme)[1].replace(',',''))
+for name in ['README.md','docs/assets/sft-banner.svg','ZENODO_PAPER_DRAFT.txt']:
+ p=r/name;s=p.read_text()
+ for tail in [' / 2,781',' V3 entries verified',' model entries',' completed entries',' completed source entries',' source entries']:s=s.replace(str(count-1)+tail,str(count)+tail)
+ for field in ['axiom_free_exported_results','axiom_free_audited_definitions_and_theorems']:s=s.replace(f"{old[field]:,}",f"{cov['summary'][field]:,}")
+ s=s.replace(f'{oldrows:,}',f'{oldrows+8192:,}').replace(f"{old['pending']:,} entries remain pending",f"{cov['summary']['pending']:,} entries remain pending")
+ if name=='README.md':s=re.sub(r'(\[latest completion evidence\]\()[^)]+',lambda m:m.group(1)+receipt,s).replace(oldlog,newlog)
+ if name=='ZENODO_PAPER_DRAFT.txt':
+  s+=f'\nThe expanded scientific-calculator entry is registered complete as source entry {count}. Its {len(cfg["declarations"])} audited declarations have empty axiom dependencies. The complete 8,192-candidate native programme agrees with fresh original execution and pinned records; the original independent validator accepts it and rejects all three retained adverse cases. Source correspondence and completion evidence: {receipt}.\n'
+
+ p.write_text(s);paths.add(name)
+status='verification/TURN_377_NATIVE_BATCH/BATCH_STATUS.json';b=json.load(open(r/status));b['completed_entries']=count;(r/status).write_text(json.dumps(b,indent=2)+'\n');paths.add(status)
+with (r/'TIMELINE.txt').open('a') as f:f.write(f'\n{now} — TURN1016 registered {cid} as entry {count}: complete8192programme, fresh original, pinned outputs, original independent validator/three adversecases, {len(cfg["declarations"])} empty-axiom declarations. Reused unchanged source-bound operation evidence; original source status preserved. Updated count, source correspondence and manuscript immediately. Receipt {receipt}.\n')
+state=json.load(open(r/'CONTINUATION_STATE.json'));done={x['claim_id'] for x in cov['claims'] if x['lean_status']=='complete'};nextentry=next(x['claim_id'] for x in cov['claims'] if x['claim_id'] not in done and set(x['v3_registration']['dependencies'])<=done);state['scientific_cursor']={'completed':cid,'next':nextentry,'receipt':receipt,'source':'claims/'+nextentry+'/execution.py','next_milestone':750};state['authorized_action']='Continue '+nextentry+' in dependency order toward750;reuse source-bound verified work;prepare complete cumulative publication review package at750,thenpause.';state[prefix]={'status':'complete','receipt':receipt,'remaining':[]};(r/'CONTINUATION_STATE.json').write_text(json.dumps(state,indent=2)+'\n');paths.update(['SFT.lean','Audit.lean','COVERAGE.json','reference/CORRESPONDENCE.json','TIMELINE.txt','CONTINUATION_STATE.json']);(w/'checkpoint1016_paths.json').write_text(json.dumps(sorted(paths)));print(json.dumps(cov['summary']));print('NEXT',nextentry)

@@ -1,0 +1,13 @@
+import SFT.Physics.StaticExteriorClockGeneral
+#print axioms SFT.Physics.StaticExteriorClockGeneral.originalFieldFormula
+#print axioms SFT.Physics.StaticExteriorClockGeneral.originalFluxIdentity
+#print axioms SFT.Physics.StaticExteriorClockGeneral.originalWellRadiusIdentity
+#print axioms SFT.Physics.StaticExteriorClockGeneral.originalPositiveComplement
+#print axioms SFT.Physics.StaticExteriorClockGeneral.originalComplementCompletesOne
+#print axioms SFT.Physics.StaticExteriorClockGeneral.originalEveryExteriorComplement
+#print axioms SFT.Physics.StaticExteriorClockGeneral.originalEveryRadiusWellHalving
+#print axioms SFT.Physics.StaticExteriorClockGeneral.originalEveryRadiusFieldQuartering
+#print axioms SFT.Physics.StaticExteriorClockGeneral.originalEverySuccessorComplementIncreases
+#print axioms SFT.Physics.StaticExteriorClockGeneral.originalGeneratedHorizonFormula
+#print axioms SFT.Physics.StaticExteriorClockGeneral.uniqueOriginalPositiveComplement
+#print axioms SFT.Physics.StaticExteriorClockGeneral.originalEveryBoundaryEmpty

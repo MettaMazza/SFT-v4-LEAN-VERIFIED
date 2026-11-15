@@ -94,4 +94,41 @@ theorem originalStandingEnumeration (k : Nat) : standingModes (.integer (.ofNat 
 theorem originalCommonHalf : commonHalfOneSectors=.ok [3,5,7] := rfl
 theorem originalTwoSectorEmpty : standingModes (.integer 2)=.ok [] := rfl
 theorem originalAdverseSlope : priorFlatSlopeBundleIsConsistent=false := rfl
+structure PeriodDictionary where
+ gravity : Nat
+ electromagnetic : Nat
+ strong : Nat
+ joint : Nat
+def periodDictionary : Except String PeriodDictionary := do
+ let gravityTrace ← FoldFirstReturn.firstReturn (SFT.Foundation.ExactOperations.normalizePart 1 1 (by decide) (by decide))
+ let electromagneticTrace ← FoldFirstReturn.firstReturn (SFT.Foundation.ExactOperations.normalizePart 1 3 (by decide) (by decide))
+ let strongTrace ← FoldFirstReturn.firstReturn (SFT.Foundation.ExactOperations.normalizePart 1 7 (by decide) (by decide))
+ let g := gravityTrace.length
+ let e := electromagneticTrace.length
+ let s := strongTrace.length
+ pure ⟨g,e,s,g*e*s/Nat.gcd g (Nat.gcd e s)⟩
+theorem originalPeriodDictionary : periodDictionary=.ok ⟨1,2,3,6⟩ := rfl
+theorem originalGravityPeriod : PeriodRun one one 1 := .returned one rfl
+theorem originalElectromagneticPeriod :
+ PeriodRun (normalize 1 3 (by decide)) (normalize 1 3 (by decide)) 2 := by
+ apply PeriodRun.advanced _ 1
+ · intro h
+   have eq := congrArg Rat.num h
+   change (2:Int)=1 at eq
+   exact (by decide : (2:Nat)≠1) (congrArg Int.toNat eq)
+ · exact .returned _ rfl
+theorem originalStrongPeriod :
+ PeriodRun (normalize 1 7 (by decide)) (normalize 1 7 (by decide)) 3 := by
+ apply PeriodRun.advanced _ 2
+ · intro h
+   have eq := congrArg Rat.num h
+   change (2:Int)=1 at eq
+   exact (by decide : (2:Nat)≠1) (congrArg Int.toNat eq)
+ · apply PeriodRun.advanced _ 1
+   · intro h
+     have eq := congrArg Rat.num h
+     change (4:Int)=1 at eq
+     exact (by decide : (4:Nat)≠1) (congrArg Int.toNat eq)
+   · exact .returned _ rfl
+
 end SFT.Physics.InteractionUnification

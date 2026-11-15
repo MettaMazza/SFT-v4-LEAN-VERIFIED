@@ -2068,3 +2068,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.FoldUniverseTransportGrammar.candidates do
     IO.println ("FoldUniverseTransportGrammar\t" ++ SFT.Physics.FoldUniverseTransportGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.FoldUniverseTransportGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.FoldUniverseTransportGrammar.exactForm c ++ "\t" ++ SFT.Physics.FoldUniverseTransportGrammar.decisionReason c)
+
+  for c in SFT.Physics.InteractionUnificationGrammar.candidates do
+    IO.println ("InteractionUnificationGrammar\t" ++ SFT.Physics.InteractionUnificationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.InteractionUnificationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.InteractionUnificationGrammar.exactForm c ++ "\t" ++ SFT.Physics.InteractionUnificationGrammar.decisionReason c)

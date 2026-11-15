@@ -2044,3 +2044,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.SymmetryActionGrammar.candidates do
     IO.println ("SymmetryActionGrammar\t" ++ SFT.Physics.SymmetryActionGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SymmetryActionGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SymmetryActionGrammar.exactForm c ++ "\t" ++ SFT.Physics.SymmetryActionGrammar.decisionReason c)
+
+  for c in SFT.Physics.ScatteringPartitionPathGrammar.candidates do
+    IO.println ("ScatteringPartitionPathGrammar\t" ++ SFT.Physics.ScatteringPartitionPathGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ScatteringPartitionPathGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ScatteringPartitionPathGrammar.exactForm c ++ "\t" ++ SFT.Physics.ScatteringPartitionPathGrammar.decisionReason c)

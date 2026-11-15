@@ -2011,3 +2011,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.CoupledEnsembleSynchronizationGrammar.candidates do
     IO.println ("CoupledEnsembleSynchronizationGrammar\t" ++ SFT.Physics.CoupledEnsembleSynchronizationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.CoupledEnsembleSynchronizationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.CoupledEnsembleSynchronizationEvidence.exactForm c ++ "\t" ++ SFT.Physics.CoupledEnsembleSynchronizationEvidence.decisionReason c)
+
+  for c in SFT.Physics.LyapunovKSCorrespondenceGrammar.candidates do
+    IO.println ("LyapunovKSCorrespondenceGrammar\t" ++ SFT.Physics.LyapunovKSCorrespondenceGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.LyapunovKSCorrespondenceGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.LyapunovKSCorrespondenceEvidence.exactForm c ++ "\t" ++ SFT.Physics.LyapunovKSCorrespondenceEvidence.decisionReason c)

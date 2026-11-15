@@ -1,0 +1,3 @@
+from pathlib import Path
+import json,subprocess
+w=Path('work');expected=json.load(open(w/'lyapunov975_original_program.json'));out=subprocess.check_output([str((w/'circuit866_native_objects/LyapunovProgram975').resolve()),expected['registration']['source_hash']],text=True);actual=json.loads(out);(w/'lyapunov975_program_output.json').write_text(json.dumps(actual,indent=2));assert actual==expected,[k for k in expected if actual.get(k)!=expected[k]];(w/'lyapunov975_program_report.json').write_text(json.dumps({'status':'PASS','candidate_rows':2916,'full_original_program':True,'fresh_native_output':True},indent=2));print('PASS all2916 full original methods')

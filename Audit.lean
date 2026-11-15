@@ -41151,3 +41151,17 @@ import SFT
 #print axioms SFT.Physics.CoupledEnsembleSynchronizationBalance.originalResidualPositiveOffHalf
 #print axioms SFT.Physics.CoupledEnsembleSynchronizationBalance.everyAdmittedPairEmptyIffHalf
 #print axioms SFT.Physics.CoupledEnsembleSynchronizationBalance.everyAdmittedOffHalfResidualPositive
+#print axioms SFT.Physics.LyapunovKSCorrespondence.completeEnumerationCount
+#print axioms SFT.Physics.LyapunovKSCorrespondenceCertificate.originalComputedFacts
+#print axioms SFT.Physics.LyapunovKSCorrespondenceGeneral.completeOriginalSupport
+#print axioms SFT.Physics.LyapunovKSCorrespondenceGeneral.exactOriginalCardinality
+#print axioms SFT.Physics.LyapunovKSCorrespondenceGeneral.exactOriginalSeparation
+#print axioms SFT.Physics.LyapunovKSCorrespondenceGeneral.supportSuccessorCarrier
+#print axioms SFT.Physics.LyapunovKSCorrespondenceGeneral.separationCarrierRatio
+#print axioms SFT.Physics.LyapunovKSCorrespondenceGrammar.factsComputed
+#print axioms SFT.Physics.LyapunovKSCorrespondenceGrammar.sourceDecision
+#print axioms SFT.Physics.LyapunovKSCorrespondenceGrammar.candidateCount
+#print axioms SFT.Physics.LyapunovKSCorrespondenceGrammar.uniqueSurvivor
+#print axioms SFT.Physics.LyapunovKSCorrespondenceGrammar.survivorAccepted
+#print axioms SFT.Physics.LyapunovKSCorrespondenceGrammar.candidatesComplete
+#print axioms SFT.Physics.LyapunovKSCorrespondenceEvidence.sourceIdentityPreserves

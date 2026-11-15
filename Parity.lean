@@ -2032,3 +2032,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.QuadrupoleRadiatedPowerGrammar.candidates do
     IO.println ("QuadrupoleRadiatedPowerGrammar\t" ++ SFT.Physics.QuadrupoleRadiatedPowerGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.QuadrupoleRadiatedPowerGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.QuadrupoleRadiatedPowerEvidence.exactForm c ++ "\t" ++ SFT.Physics.QuadrupoleRadiatedPowerEvidence.decisionReason c)
+
+  for c in SFT.Physics.StrongCarrierMasslessConfinedGrammar.candidates do
+    IO.println ("StrongCarrierMasslessConfinedGrammar\t" ++ SFT.Physics.StrongCarrierMasslessConfinedGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StrongCarrierMasslessConfinedGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StrongCarrierMasslessConfinedEvidence.exactForm c ++ "\t" ++ SFT.Physics.StrongCarrierMasslessConfinedEvidence.decisionReason c)

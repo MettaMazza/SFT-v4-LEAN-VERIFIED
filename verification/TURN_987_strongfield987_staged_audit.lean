@@ -1,0 +1,46 @@
+import SFT.Physics.StrongFieldNonlinearFixedPoint
+import SFT.Physics.StrongFieldNonlinearFixedPointCertificate
+import SFT.Physics.StrongFieldNonlinearFixedPointGrammar
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPoint.colourSelfSourceSuccessor
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPoint.sourceSteps
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPoint.strongSourceIteration
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPoint.neutralSourceIteration
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPoint.finiteStrongFixedPointTest
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPoint.strongSourceExceedsPositiveBound
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPoint.originalSourcePrefix
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPoint.originalBound
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointCertificate.fieldIterationCertificate
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointCertificate.certificateFacts
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointCertificate.originalComputedFacts
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.sourceName
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.sourcePassed
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.updateName
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.updatePassed
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.correctionName
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.correctionPassed
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.fixedName
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.fixedPassed
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.comparatorName
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.comparatorPassed
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.confinementName
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.confinementPassed
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.targetName
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.targetPassed
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.extensionName
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.extensionPassed
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.sourceFields
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.candidateId
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.candidateFacts
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.computedFacts
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.factsComputed
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.survives
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.sourceSurvives
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.sourceDecision
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.candidates
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.survivor
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.candidateCount
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.uniqueSurvivor
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.survivorAccepted
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.candidatesComplete
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.generationRule
+#print axioms SFT.Physics.StrongFieldNonlinearFixedPointGrammar.grammarBoundary

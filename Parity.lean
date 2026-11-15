@@ -2074,3 +2074,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.YangMillsSingletGapGrammar.candidates do
     IO.println ("YangMillsSingletGapGrammar\t" ++ SFT.Physics.YangMillsSingletGapGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.YangMillsSingletGapGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.YangMillsSingletGapGrammar.exactForm c ++ "\t" ++ SFT.Physics.YangMillsSingletGapGrammar.decisionReason c)
+
+  for c in SFT.Physics.YangMillsSpectrumGrammar.candidates do
+    IO.println ("YangMillsSpectrumGrammar\t" ++ SFT.Physics.YangMillsSpectrumGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.YangMillsSpectrumGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.YangMillsSpectrumGrammar.exactForm c ++ "\t" ++ SFT.Physics.YangMillsSpectrumGrammar.decisionReason c)

@@ -2020,3 +2020,12 @@ def main : IO Unit := do
 
   for c in SFT.Physics.OrbitalDimensionStabilityGrammar.candidates do
     IO.println ("OrbitalDimensionStabilityGrammar\t" ++ SFT.Physics.OrbitalDimensionStabilityGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.OrbitalDimensionStabilityGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.OrbitalDimensionStabilityEvidence.exactForm c ++ "\t" ++ SFT.Physics.OrbitalDimensionStabilityEvidence.decisionReason c)
+
+  for c in SFT.Physics.PostNewtonianFixedPointGrammar.candidates do
+    IO.println ("PostNewtonianFixedPointGrammar\t" ++ SFT.Physics.PostNewtonianFixedPointGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.PostNewtonianFixedPointGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.PostNewtonianFixedPointEvidence.exactForm c ++ "\t" ++ SFT.Physics.PostNewtonianFixedPointEvidence.decisionReason c)
+
+  for c in SFT.Physics.SymmetricSourceConservationGrammar.candidates do
+    IO.println ("SymmetricSourceConservationGrammar\t" ++ SFT.Physics.SymmetricSourceConservationGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.SymmetricSourceConservationGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.SymmetricSourceConservationEvidence.exactForm c ++ "\t" ++ SFT.Physics.SymmetricSourceConservationEvidence.decisionReason c)
+
+  for c in SFT.Physics.StaticExteriorClockGrammar.candidates do
+    IO.println ("StaticExteriorClockGrammar\t" ++ SFT.Physics.StaticExteriorClockGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.StaticExteriorClockGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.StaticExteriorClockEvidence.exactForm c ++ "\t" ++ SFT.Physics.StaticExteriorClockEvidence.decisionReason c)

@@ -2080,3 +2080,6 @@ def main : IO Unit := do
 
   for c in SFT.Physics.ParkerProtonEnergyGrammar.candidates do
     IO.println ("ParkerProtonEnergyGrammar\t" ++ SFT.Physics.ParkerProtonEnergyGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ParkerProtonEnergyGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ParkerProtonEnergyGrammar.exactForm c ++ "\t" ++ SFT.Physics.ParkerProtonEnergyGrammar.decisionReason c)
+
+  for c in SFT.Physics.ProtonRadiusGrammar.candidates do
+    IO.println ("ProtonRadiusGrammar\t" ++ SFT.Physics.ProtonRadiusGrammar.candidateId c ++ "\t" ++ (if SFT.Physics.ProtonRadiusGrammar.survives c then "true" else "false") ++ "\t" ++ SFT.Physics.ProtonRadiusGrammar.exactForm c ++ "\t" ++ SFT.Physics.ProtonRadiusGrammar.decisionReason c)

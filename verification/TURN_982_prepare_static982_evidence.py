@@ -1,0 +1,22 @@
+from pathlib import Path
+import json
+w=Path('work');r=Path('/Volumes/One Touch/SFT v4 Full model LEAN');q=json.dumps
+s=(r/'SFT/Physics/PostNewtonianFixedPointEvidence.lean').read_text().replace('PostNewtonianFixedPoint','StaticExteriorClock')
+fields=list(zip(['horizon_normalization','field_law','well_law','coefficient_law','clock_law','boundary_law','target_boundary','extension'],['horizon','field','well','coefficient','clock','boundary','target','extension']))
+a=s.index('def formValue');b=s.index('def completenessRecord');s=s[:a]+'def formValue (c : Candidate) : Value := .object ['+','.join('('+q(k)+',.text ('+v+'Name c.'+v+'))' for k,v in fields)+']\ndef factsValue (c : Candidate) : Value := .object ((computedFacts c).map (fun (key,b) => (key,.boolean b)))\ndef exactForm (c : Candidate) : String := Text.intercalate "" ["CandidateForm(",Text.intercalate ", " ['+','.join('Text.intercalate "" ['+q(k+"='")+','+v+'Name c.'+v+',"\'"]' for k,v in fields)+'],")"]\ndef decisionReason (c : Candidate) : String :=\n let failures := ((computedFacts c).filter (fun p => !p.2)).map Prod.fst\n if !failures.isEmpty then Text.intercalate "" ["Rejected by computed Fold predicates: ",Text.intercalate ", " failures,"."] else "Generated horizon, conserved flux, radius-derived well, positive complement and exact clock boundary force the complete exterior law."\n'+s[b:]
+a=s.index('def nv');b=s.index('def closureRecord');cv=(w/'constants-recovery/StaticCertificate982.lean').read_text();cv=cv[cv.index('def frac'):cv.index('def result')];s=s[:a]+cv+'''def generality : Value := .object [("base",.text "At the first exterior doubling, the well is half-One, the coefficient is its positive complement and flux reconstructs the doubled-mass boundary."),("successor",.text "Every radius doubling halves the well, quarters the field, preserves field times radius squared and retains a positive complement closer to the One."),("completed_infinity_not_used",.boolean true),("targets_absent",.boolean true)]
+'''+s[b:]
+s=s.replace('convergenceCertificate','exteriorCertificate').replace('cert.admissibleFixedPoints==[LeptonIntervals.normalize 1 4 (by decide)] && cert.errorsStrictlyShrink && cert.correctionsStrictlyShrink && cert.allFactorsBelowQuarter','cert.allFluxesEqualHorizon && cert.allComplementsCompleteOne && cert.wellHalvesEachSuccessor && cert.fieldQuartersEachSuccessor && cert.horizonClockRecordEmpty && cert.exactClockPair.farClockFaster').replace('controls require one survivor','controls require one computed survivor')
+a=s.index(' control .falsePremise');b=s.index('\n control .tamperedSource',a);s=s[:a]+''' control .falsePremise ((← exteriorCertificate).boundary.coefficient.isNone && (← exteriorCertificate).horizonClockRecordEmpty) "Reject a numerical boundary coefficient or exterior clock record at complete well depth." "The boundary is the empty structural record.",'''+s[b:];s=s.replace('All identities unique.','All identities are unique.').replace('{held with scope:=.c1}','{held with coefficient:=.c1}').replace('Reject universalization, target access and correction.','Reject signed import, pre-seal observation and free correction.').replace('Only scalar scope, sealed target and empty extension survive.','Only positive complement, sealed target and empty extension survive.')
+a=s.index('def registrationData');reg=json.load(open(w/'static982_original_program.json'))['registration'];s=s[:a]+'def registrationData (sourceHash : String) : SFT.Engine.ClaimRegistration where\n'+''.join(' '+k+' := '+q(reg[v])+'\n' for k,v in [('claimId','claim_id'),('title','title'),('branch','branch'),('statement','statement')])+''' evidenceMode := .empirical
+ rootTheorems := [SFT.Engine.rootTheoremId]
+ dependencies := '''+q(reg['dependencies'])+'''
+ axioms := []
+ freeParameters := []
+ provenance := [.forwardForcing,.observationalDerivation]
+ sourceHash := sourceHash
+end SFT.Physics.StaticExteriorClockEvidence
+'''
+for root in [r,w/'constants-recovery']:(root/'SFT/Physics/StaticExteriorClockEvidence.lean').write_text(s)
+for old,new in [('constants-recovery/SymmetricProgram980.lean','constants-recovery/StaticProgram982.lean'),('prepare_symmetric980_native.py','prepare_static982_native.py'),('check_symmetric980_program.py','check_static982_program.py')]:
+ s=(w/old).read_text().replace('SymmetricSourceConservation','StaticExteriorClock').replace('SymmetricProgram980','StaticProgram982').replace('symmetric980','static982');(w/new).write_text(s)

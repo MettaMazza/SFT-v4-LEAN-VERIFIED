@@ -1,0 +1,36 @@
+from pathlib import Path
+import sys,json,subprocess,os,re,hashlib,concurrent.futures
+w=Path('work');r=Path('/Volumes/One Touch/SFT v4 Full model LEAN');runtime=w/'v3-runtime500';sys.path.insert(0,str(runtime.resolve()))
+from sft.physics import composite_confining_sector_terminal_law_v1 as src
+from sft.engine.canonical import canonical_value
+rel='sft/physics/composite_confining_sector_terminal_law_v1.py';pinned=subprocess.check_output(['git','-C','/Volumes/One Touch/ernos-labs-sft-platform','show','76f1b34e9e9682989adcbb088797b4ae4ce4fcf1:'+rel]);assert (runtime/rel).read_bytes()==pinned
+expected=[];expr=[]
+def arg(x):return '(.boolean '+str(x).lower()+')' if isinstance(x,bool) else '(.integer ('+str(x)+'))'
+def check(f,args,name,out):
+ try:expected.append({'ok':canonical_value(f(*args))})
+ except ValueError as e:expected.append({'error':str(e)})
+ expr.append('out '+out+' ('+name+' '+ ' '.join(arg(a) for a in args)+')')
+sectors=[-4,-1,0,1,2,3,4,6,8,12,18,24,30,32,40,50,100,False,True]
+for sector in sectors:
+ for f,n,out in [(src.held_denominator,'heldDenominator','natValue'),(src.standing_mode_labels,'standingModeLabels','nats'),(src.standing_modes,'standingModes','rationals'),(src.antipodal_pairs,'antipodalPairs','pairs'),(src.holding_coupling,'holdingCoupling','rational')]:check(f,[sector],n,out)
+ for label in (list(range(-1,sector+1))+[False,True] if isinstance(sector,int) and 2<sector<=32 else [-1,0,1,2,True,False]):
+  check(src.fold_mode_label,[label,sector],'foldModeLabel','natValue');check(src.inverse_fold_mode_label,[label,sector],'inverseFoldModeLabel','natValue')
+header='''import SFT.Physics.CompositeConfining
+import SFT.Host.Canonical
+open SFT.Physics.CompositeConfining SFT.Host.Canonical
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+def rational (q : Rat) : Value := .object [("numerator",.integer q.num),("denominator",.integer (.ofNat q.den))]
+def natValue (n : Nat) : Value := .integer (.ofNat n)
+def nats (xs : List Nat) : Value := .array (xs.map natValue)
+def rationals (xs : List Rat) : Value := .array (xs.map rational)
+def pairs (xs : List (Nat × Nat)) : Value := .array (xs.map (fun (a,b) => .array [natValue a,natValue b]))
+def out (f : α → Value) : Except String α → Value | .ok x => .object [("ok",f x)] | .error e => .object [("error",.text e)]
+'''
+lean='/Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean';env={**os.environ,'LEAN_PATH':str(r/'.lake/build/lib/lean')}
+def batch(i):
+ p=w/f'constants-recovery/CompositeConfining1013_{i}.lean';p.write_text(header+'#eval IO.println (render (.array ['+',\n'.join(expr[i:i+100])+']))\n');x=subprocess.run([lean,'-j1',str(p)],env=env,capture_output=True,text=True);(w/f'composite_confining1013_batch{i}.log').write_text(x.stdout+x.stderr);assert x.returncode==0,x.stdout[-2000:];return json.loads(x.stdout)
+with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:actual=[a for rows in pool.map(batch,range(0,len(expr),100)) for a in rows]
+assert actual==expected,[(i,a,e) for i,(a,e) in enumerate(zip(actual,expected)) if a!=e][:5]
+p=r/'SFT/Physics/CompositeConfining.lean';s=p.read_text();names=['SFT.Physics.CompositeConfining.'+n for n in re.findall(r'^(?:def|theorem) (\w+)',s,re.M)];q=w/'composite_confining1013_core_audit.lean';q.write_text('import SFT.Physics.CompositeConfining\n'+''.join('#print axioms '+n+'\n' for n in names));x=subprocess.run([lean,str(q)],env=env,capture_output=True,text=True);(w/'composite_confining1013_core_audit.log').write_text(x.stdout+x.stderr);assert x.returncode==0 and x.stdout.count('does not depend on any axioms')==len(names),x.stdout
+(w/'composite_confining1013_core_report.json').write_text(json.dumps(dict(status='PASS',cases=len(expected),axioms=[],declarations=names,source_sha256=hashlib.sha256(p.read_bytes()).hexdigest(),original_sha256=hashlib.sha256(pinned).hexdigest(),scope='Original held denominators,complete labels and exact fractions,forward/inverse labels,antipodal pairs,couplings,and accepted integer/Boolean domain guards; orbit assembly/general closure not asserted complete'),indent=2));print('PASS',len(expected),'source outputs;',len(names),'empty-axiom declarations')

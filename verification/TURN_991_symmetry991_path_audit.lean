@@ -1,0 +1,28 @@
+import SFT.Physics.SymmetryActionPathProofs
+import SFT.Physics.SymmetryActionPathLedger
+import SFT.Physics.SymmetryActionPathBoundary
+import SFT.Physics.SymmetryActionPathCoverage
+#print axioms SFT.Physics.SymmetryActionPathProofs.originalDownwardMagnitude
+#print axioms SFT.Physics.SymmetryActionPathProofs.originalUpwardMagnitude
+#print axioms SFT.Physics.SymmetryActionPathProofs.originalStepMagnitude
+#print axioms SFT.Physics.SymmetryActionPathProofs.originalNonlowerAction
+#print axioms SFT.Physics.SymmetryActionPathProofs.originalSameAction
+#print axioms SFT.Physics.SymmetryActionPathLedger.originalInitialPositive
+#print axioms SFT.Physics.SymmetryActionPathLedger.originalTerminalPositive
+#print axioms SFT.Physics.SymmetryActionPathLedger.originalGapPositive
+#print axioms SFT.Physics.SymmetryActionPathLedger.originalAppendAction
+#print axioms SFT.Physics.SymmetryActionPathLedger.originalPathAction
+#print axioms SFT.Physics.SymmetryActionPathLedger.originalLastCoordinate
+#print axioms SFT.Physics.SymmetryActionPathLedger.originalEndpointSeparation
+#print axioms SFT.Physics.SymmetryActionPathBoundary.originalEveryDetour
+#print axioms SFT.Physics.SymmetryActionPathBoundary.originalDescendingLedger
+#print axioms SFT.Physics.SymmetryActionPathBoundary.originalDescendingPredicate
+#print axioms SFT.Physics.SymmetryActionPathBoundary.originalEveryMonotoneTelescopes
+#print axioms SFT.Physics.SymmetryActionPathCoverage.originalCoordinateValue
+#print axioms SFT.Physics.SymmetryActionPathCoverage.originalCoordinatePositive
+#print axioms SFT.Physics.SymmetryActionPathCoverage.originalScalePreservesInputs
+#print axioms SFT.Physics.SymmetryActionPathCoverage.originalEveryPositivePathRepresented
+#print axioms SFT.Physics.SymmetryActionPathCoverage.originalScalePreservesAdmission
+#print axioms SFT.Physics.SymmetryActionPathCoverage.originalEverySourceDetour
+#print axioms SFT.Physics.SymmetryActionPathCoverage.originalMonotonePredicateComplete
+#print axioms SFT.Physics.SymmetryActionPathCoverage.originalEverySourceMonotoneTelescopes

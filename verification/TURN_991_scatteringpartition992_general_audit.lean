@@ -1,0 +1,8 @@
+import SFT.Physics.ScatteringPartitionPathGeneral
+#print axioms SFT.Physics.ScatteringPartitionPathGeneral.originalContainedSection
+#print axioms SFT.Physics.ScatteringPartitionPathGeneral.originalMeanFreePath
+#print axioms SFT.Physics.ScatteringPartitionPathGeneral.originalLargerSectionShortensPath
+#print axioms SFT.Physics.ScatteringPartitionPathGeneral.originalTwoDistinctOutcomes
+#print axioms SFT.Physics.ScatteringPartitionPathGeneral.originalTwoCellPartition
+#print axioms SFT.Physics.ScatteringPartitionPathGeneral.originalEncounterSuccessor
+#print axioms SFT.Physics.ScatteringPartitionPathGeneral.originalEncounterPathReassemblesOne

@@ -10743,3 +10743,31 @@ import SFT.Chemistry.ConjugatedSupportExperiment
 import SFT.Chemistry.ConjugatedSupportControls
 
 import SFT.Chemistry.ConjugatedSupportValidation
+
+import SFT.Chemistry.StateEnergyOrder
+
+import SFT.Chemistry.StateEnergyOrderWitnesses
+
+import SFT.Chemistry.StateEnergyOrderDerivation
+
+import SFT.Chemistry.StateEnergyOrderSuccessor
+
+import SFT.Chemistry.StateEnergyOrderGrammar
+
+import SFT.Chemistry.StateEnergyOrderEvidence
+
+import SFT.Chemistry.StateEnergyOrderPrediction
+
+import SFT.Chemistry.StateEnergySourceTables
+
+import SFT.Chemistry.StateEnergyInscription
+
+import SFT.Chemistry.StateEnergyTargets
+
+import SFT.Chemistry.StateEnergyComparison
+
+import SFT.Chemistry.StateEnergyOrderExperiment
+
+import SFT.Chemistry.StateEnergyControls
+
+import SFT.Chemistry.StateEnergyValidation

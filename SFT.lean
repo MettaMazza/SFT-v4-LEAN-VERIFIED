@@ -9727,3 +9727,81 @@ import SFT.Physics.ReggeMeasuredAnalysis
 import SFT.Physics.ReggeMeasuredAnalysisProofs
 
 import SFT.Physics.ReggeMeasuredInputProofs
+
+import SFT.Physics.ParticleModeObservationExternal
+
+import SFT.Physics.ParticleModeObservationRecords
+
+import SFT.Physics.ParticleModeObservationMeasurement
+
+import SFT.Physics.ParticleModeObservationWitnesses
+
+import SFT.Physics.ParticleModeObservationGrammar
+
+import SFT.Physics.ParticleModeObservationEvidence
+
+import SFT.Physics.ParticleModeObservationExperiment
+
+import SFT.Physics.ParticleModeObservationValidation
+
+import SFT.Physics.ParticleModeObservationAnalysis
+
+import SFT.Physics.ParticleModeObservationAnalysisProofs
+
+import SFT.Physics.ParticleModeObservationInputProofs
+
+import SFT.Physics.SmithionFlavour
+
+import SFT.Physics.SmithionInvariants
+
+import SFT.Physics.SmithionRoots
+
+import SFT.Physics.SmithionRoots0
+
+import SFT.Physics.SmithionRoots1
+
+import SFT.Physics.SmithionRoots2
+
+import SFT.Physics.SmithionRoots3
+
+import SFT.Physics.SmithionSpectrum
+
+import SFT.Physics.SmithionWitnesses
+
+import SFT.Physics.SmithionGrammarBase
+
+import SFT.Physics.SmithionCensus0
+
+import SFT.Physics.SmithionCensus1
+
+import SFT.Physics.SmithionCensus2
+
+import SFT.Physics.SmithionCensus3
+
+import SFT.Physics.SmithionCensus4
+
+import SFT.Physics.SmithionCensus5
+
+import SFT.Physics.SmithionCensus6
+
+import SFT.Physics.SmithionCensus7
+
+import SFT.Physics.SmithionCensus8
+
+import SFT.Physics.SmithionCensus9
+
+import SFT.Physics.SmithionCensus10
+
+import SFT.Physics.SmithionCensus11
+
+import SFT.Physics.SmithionCensus12
+
+import SFT.Physics.SmithionCensus13
+
+import SFT.Physics.SmithionCensus14
+
+import SFT.Physics.SmithionCensus15
+
+import SFT.Physics.SmithionGrammar
+
+import SFT.Physics.SmithionEntryEvidence

@@ -1,0 +1,9 @@
+import SFT.Physics.QuantumSupportTerminalWitnessProofs
+import SFT.Physics.QuantumSupportWalshThreeProof
+#print axioms SFT.Physics.QuantumSupportWalshThreeProof.originalFirstThreeDepths
+#print axioms SFT.Physics.QuantumSupportTerminalWitnessProofs.originalSpacingChecks
+#print axioms SFT.Physics.QuantumSupportTerminalWitnessProofs.originalAllFourSpacings
+#print axioms SFT.Physics.QuantumSupportTerminalWitnessProofs.originalFloorCheck
+#print axioms SFT.Physics.QuantumSupportTerminalWitnessProofs.originalDepthTwoFloor
+#print axioms SFT.Physics.QuantumSupportTerminalWitnessProofs.originalCoprimeChecks
+#print axioms SFT.Physics.QuantumSupportTerminalWitnessProofs.originalBothCoprimeTraces

@@ -60331,26 +60331,26 @@
     ]
   },
   "live_jobs_current": {
-    "grandlock1069": [
-      {
-        "session_id": 81876,
-        "pid": 42298,
-        "log": "work/grandlock1069_program_driver.log",
-        "action": "075 full4096 programme comparison"
-      },
-      {
-        "session_id": 81990,
-        "log": "work/grandlockobservation1069_program_driver.log",
-        "action": "076 full256 programme comparison",
-        "pid": 43257
-      },
-      {
-        "session_id": 66734,
-        "log": "work/grandlockobservation1069_empirical_driver3.log",
-        "action": "076 full empirical pipeline",
-        "pid": 43480
-      }
-    ]
+    "grandlock075": {
+      "session_id": 81876,
+      "pid": 42298
+    },
+    "rovibronic_program": {
+      "session_id": 51593,
+      "pid": 48347
+    },
+    "rovibronic_empirical": {
+      "session_id": 76730,
+      "pid": 48442
+    },
+    "current_step": {
+      "session_id": 69801,
+      "pid": 39335
+    },
+    "canonical_sync": {
+      "session_id": 51784,
+      "pid": 46012
+    }
   },
   "cubicatomic944_staged": {
     "registered": true,
@@ -61720,9 +61720,9 @@
   },
   "latest_scientific_remote_checkpoint": {
     "status": "PASS",
-    "commit": "7099533daf187e0b23b121fab747104c23120bec",
-    "tree": "969c0e752b4d86c3fb439fb2f48378aebfbb651f",
-    "verified_files": 50,
+    "commit": "a49af0235d28d7db93132933d50641ddd95b3bc8",
+    "tree": "83834b37d6132b0e940352593bf5b609fe68fb5a",
+    "verified_files": 82,
     "head_verified": true,
     "completed_entries": 712
   },
@@ -64232,5 +64232,37 @@
       "session_id": 70122,
       "log": "work/grandlock1065_root_data.log"
     }
-  ]
+  ],
+  "checkpoint1069_remote": {
+    "status": "PASS",
+    "commit": "a49af0235d28d7db93132933d50641ddd95b3bc8",
+    "tree": "83834b37d6132b0e940352593bf5b609fe68fb5a",
+    "verified_files": 82,
+    "head_verified": true,
+    "completed_entries": 712
+  },
+  "grandlock1070": {
+    "action": "Retain075 live programme while preparing existing registration;076 complete programme/fresh/independent/empirical checks passed. Under standing long-running-batch instruction, translate next dependency-ready Rovibronic entry from exact pinned source; register only after075/076 in order.",
+    "source_cache": "work/pinned1070/SOURCE_IDENTITIES.json",
+    "programme075_session": 81876,
+    "source_sync_session": 51784,
+    "source_sync_status": "work/canonical_sync1070_status.json",
+    "rovibronic": {
+      "source": "sft/chemistry/rovibronic_composition_derivation.py",
+      "operation_report": "work/rovibronic1070_operations_report.json",
+      "audit_report": "work/rovibronic1070_audit_report.json",
+      "validation_audit": "work/rovibronic1070_validation_render_audit.log",
+      "program_session": 51593,
+      "program_pid": 48347,
+      "empirical_session": 76730,
+      "empirical_pid": 48442,
+      "empirical_source_correction": "Numeric message renderer changed after original live run started; retain its result, then verify current renderer without repeating unchanged grammar/proofs."
+    },
+    "completed076_checks": [
+      "work/grandlockobservation1064_program_report.json",
+      "work/grandlockobservation1064_fresh_report.json",
+      "work/grandlockobservation1064_independent_report.json",
+      "work/grandlockobservation1064_empirical_report.json"
+    ]
+  }
 }

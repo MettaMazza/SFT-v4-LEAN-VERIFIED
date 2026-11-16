@@ -8421,3 +8421,19 @@ import SFT.Physics.InflationGrowthGrammar
 import SFT.Physics.InflationGrowthWitnesses
 
 import SFT.Physics.InflationGrowthEntryEvidence
+
+import SFT.Physics.InflationObservationAnalysis
+
+import SFT.Physics.InflationObservationRecords
+
+import SFT.Physics.InflationObservationMeasurement
+
+import SFT.Physics.InflationObservationWitnesses
+
+import SFT.Physics.InflationObservationGrammar
+
+import SFT.Physics.InflationObservationEvidence
+
+import SFT.Physics.InflationObservationExperiment
+
+import SFT.Physics.InflationObservationValidation

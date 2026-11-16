@@ -8301,3 +8301,59 @@ import SFT.Physics.VacuumPlanckRecords
 import SFT.Physics.VacuumPlanckValidation
 
 import SFT.Physics.VacuumPlanckWitnesses
+
+import SFT.Physics.ThermalHistory
+
+import SFT.Physics.ThermalHistoryTransport
+
+import SFT.Physics.ThermalHistoryCertificate
+
+import SFT.Physics.ThermalHistoryHorizon
+
+import SFT.Physics.ThermalHistoryVisibility
+
+import SFT.Physics.ThermalHistoryThresholds
+
+import SFT.Physics.ThermalHistoryOrder
+
+import SFT.Physics.ThermalHistoryAcoustic
+
+import SFT.Physics.ThermalHistoryGrammarBase
+
+import SFT.Physics.ThermalHistoryCensus0
+
+import SFT.Physics.ThermalHistoryCensus1
+
+import SFT.Physics.ThermalHistoryCensus2
+
+import SFT.Physics.ThermalHistoryCensus3
+
+import SFT.Physics.ThermalHistoryCensus4
+
+import SFT.Physics.ThermalHistoryCensus5
+
+import SFT.Physics.ThermalHistoryCensus6
+
+import SFT.Physics.ThermalHistoryCensus7
+
+import SFT.Physics.ThermalHistoryCensus8
+
+import SFT.Physics.ThermalHistoryCensus9
+
+import SFT.Physics.ThermalHistoryCensus10
+
+import SFT.Physics.ThermalHistoryCensus11
+
+import SFT.Physics.ThermalHistoryCensus12
+
+import SFT.Physics.ThermalHistoryCensus13
+
+import SFT.Physics.ThermalHistoryCensus14
+
+import SFT.Physics.ThermalHistoryCensus15
+
+import SFT.Physics.ThermalHistoryGrammar
+
+import SFT.Physics.ThermalHistoryWitnesses
+
+import SFT.Physics.ThermalHistoryEntryEvidence

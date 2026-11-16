@@ -136,4 +136,72 @@ theorem originalEveryWeightPositive (radius x : Nat) (h : x ∈ weights radius) 
  cases SFT.Foundation.Count.TraceDerivation.memAppendCases x _ _ h with
  | inl left => exact (originalSideBelowMidpoint (radius+1) x left).1
  | inr right => exact (originalReflectedSideBelowMidpoint radius x right).1
+
+theorem originalNormalizedRecord (radius : Nat) (positive : 0<radius) :
+ (visibilityLedger radius).toOption.map Visibility.normalized =
+ some ((weights radius).map (fun n => natRatio n ((weights radius).foldl Nat.add 0)
+  (originalWeightTotalPositive radius))) := by
+ have nonzero : (radius == 0)=false := by
+  cases radius with
+  | zero => cases positive
+  | succ n => rfl
+ unfold visibilityLedger
+ rw [nonzero]
+ change (do
+   let normalized ← (weights radius).mapM (fun n => LeptonRatios.divide (wholeRatio n)
+    (wholeRatio ((weights radius).foldl (fun a b => a+b) 0)))
+   pure (⟨radius,weights radius,normalized,radius,
+    VelocityComposition.ratEqual (visibilityAt normalized radius)
+      (normalized.foldl (fun a b => if a.blt b then b else a) zero) &&
+      (normalized.filter (VelocityComposition.ratEqual (visibilityAt normalized radius))).length == 1,
+    VelocityComposition.ratEqual (normalized.foldl add zero) (wholeRatio 1)⟩ : Visibility)).toOption.map Visibility.normalized = _
+ rw [originalNormalizedWeights (weights radius) ((weights radius).foldl (fun a b => a+b) 0) (originalWeightTotalPositive radius)]
+ rfl
+
+theorem originalNormalizedMidpointDecomposition (radius : Nat) :
+ let total := (weights radius).foldl Nat.add 0
+ let norm := fun n => natRatio n total (originalWeightTotalPositive radius)
+ (weights radius).map norm =
+ (((List.range radius).map (fun n => n+1)).map norm ++ [norm (radius+1)]) ++
+ (((List.range radius).map (fun n => n+1)).reverse.map norm) := by
+ dsimp only
+ let norm := fun n => natRatio n ((weights radius).foldl Nat.add 0) (originalWeightTotalPositive radius)
+ have h := congrArg (fun xs => xs.map norm) (originalMidpointDecomposition radius)
+ rw [SFT.Mathematics.ExactTraceArithmetic.mapAppend,SFT.Mathematics.ExactTraceArithmetic.mapAppend] at h
+ exact h
+
+theorem originalNormalizedSideStrict (radius x : Nat)
+ (member : x ∈ (List.range radius).map (fun n => n+1)) :
+ let total := (weights radius).foldl Nat.add 0
+ (natRatio x total (originalWeightTotalPositive radius)).blt
+  (natRatio (radius+1) total (originalWeightTotalPositive radius)) = true := by
+ have bounds := originalSideBelowMidpoint radius x member
+ apply CommonScaleAxis.positiveNormalizedLess x _ (radius+1) _ bounds.1
+  (originalWeightTotalPositive radius) (Nat.zero_lt_succ radius) (originalWeightTotalPositive radius)
+ exact Nat.mul_lt_mul_of_pos_right bounds.2 (originalWeightTotalPositive radius)
+
+theorem originalNormalizedReflectedSideStrict (radius x : Nat)
+ (member : x ∈ ((List.range radius).map (fun n => n+1)).reverse) :
+ let total := (weights radius).foldl Nat.add 0
+ (natRatio x total (originalWeightTotalPositive radius)).blt
+  (natRatio (radius+1) total (originalWeightTotalPositive radius)) = true :=
+ originalNormalizedSideStrict radius x (reverseMembers _ x member)
+
+theorem originalUniqueNormalizedMidpoint (radius : Nat) (positive : 0<radius) :
+ let peak := natRatio (radius+1) ((weights radius).foldl Nat.add 0) (originalWeightTotalPositive radius)
+ ∃ left right : List Rat,
+  (visibilityLedger radius).toOption.map Visibility.normalized = some ((left++[peak])++right) ∧
+  (∀ q,q ∈ left → q.blt peak=true) ∧ (∀ q,q ∈ right → q.blt peak=true) := by
+ let norm := fun n => natRatio n ((weights radius).foldl Nat.add 0) (originalWeightTotalPositive radius)
+ let side := (List.range radius).map (fun n => n+1)
+ refine ⟨side.map norm,side.reverse.map norm,?_,?_,?_⟩
+ · rw [originalNormalizedRecord radius positive,originalNormalizedMidpointDecomposition]
+ · intro q member
+   obtain ⟨x,hx,eq⟩ := SFT.Foundation.Count.TraceDerivation.memMapPreimage norm q side member
+   cases eq
+   exact originalNormalizedSideStrict radius x hx
+ · intro q member
+   obtain ⟨x,hx,eq⟩ := SFT.Foundation.Count.TraceDerivation.memMapPreimage norm q side.reverse member
+   cases eq
+   exact originalNormalizedReflectedSideStrict radius x hx
 end SFT.Physics.ThermalHistoryVisibility

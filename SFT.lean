@@ -10771,3 +10771,27 @@ import SFT.Chemistry.StateEnergyOrderExperiment
 import SFT.Chemistry.StateEnergyControls
 
 import SFT.Chemistry.StateEnergyValidation
+
+import SFT.Chemistry.ResonanceEquivalent
+
+import SFT.Chemistry.ResonanceEquivalentWitnesses
+
+import SFT.Chemistry.ResonanceEquivalentDerivation
+
+import SFT.Chemistry.ResonanceEquivalentGrammar
+
+import SFT.Chemistry.ResonanceEquivalentEvidence
+
+import SFT.Chemistry.ResonanceEquivalentPrediction
+
+import SFT.Chemistry.ResonanceEquivalentAnalysis
+
+import SFT.Chemistry.ResonanceEquivalentSource
+
+import SFT.Chemistry.ResonanceEquivalentComparison
+
+import SFT.Chemistry.ResonanceEquivalentExperiment
+
+import SFT.Chemistry.ResonanceEquivalentControls
+
+import SFT.Chemistry.ResonanceEquivalentValidation

@@ -10653,3 +10653,17 @@ import SFT.Chemistry.MolecularElectronicEvidence
 import SFT.Chemistry.MolecularElectronicExperiment
 
 import SFT.Chemistry.MolecularElectronicValidation
+
+import SFT.Chemistry.MolecularRovibronicState
+
+import SFT.Chemistry.MolecularRovibronicRecurrences
+
+import SFT.Chemistry.MolecularRovibronicWitnesses
+
+import SFT.Chemistry.MolecularRovibronicGrammar
+
+import SFT.Chemistry.MolecularRovibronicEvidence
+
+import SFT.Chemistry.MolecularRovibronicExperiment
+
+import SFT.Chemistry.MolecularRovibronicValidation

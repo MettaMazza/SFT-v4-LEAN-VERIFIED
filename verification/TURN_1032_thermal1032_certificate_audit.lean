@@ -1,0 +1,10 @@
+import SFT.Physics.ThermalHistoryCertificate
+#print axioms SFT.Physics.ThermalHistoryTransport.admittedPositive
+#print axioms SFT.Physics.ThermalHistoryTransport.originalInverseTransport
+#print axioms SFT.Physics.ThermalHistoryTransport.originalHeldProduct
+#print axioms SFT.Physics.ThermalHistoryTransport.originalInvariant
+#print axioms SFT.Physics.ThermalHistoryCertificate.Certificate
+#print axioms SFT.Physics.ThermalHistoryCertificate.ratListsEqual
+#print axioms SFT.Physics.ThermalHistoryCertificate.certificate
+#print axioms SFT.Physics.ThermalHistoryCertificate.originalCertificateFlags
+#print axioms SFT.Physics.ThermalHistoryCertificate.originalCertificateQuantities

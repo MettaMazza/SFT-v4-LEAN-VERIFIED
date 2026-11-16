@@ -26737,3 +26737,16 @@ The native thermal-history operations preserve the original positive rational gu
 For positive radius r, the visibility operation constructs weights (1,2,…,r+1,r,…,2,1), divides every weight by their exact sum and retains midpoint index r, the unique-midpoint test and total-normalization test. For positive mode count N it returns every mode m=1,…,N, phase support m/(N+1), and compression for odd m or rarefaction for even m. The finite sound horizon computes the source-ordered sum of positive paired segments Σᵢ Δtᵢvᵢ. For (Δtᵢ)=(1/8,1/4,3/8) and (vᵢ)=(1/2,2/3,3/4), this is 1/16+1/6+9/32=49/96.
 
 The operation layer reproduces 149 complete original outputs, including invalid-carrier, duplicate-threshold, empty/mismatched segment and Boolean-count controls. Its 20 audited declarations have empty axiom dependencies. Full entry registration also includes the source's general derivations, certificate, grammar and programme checks. Original source: sft/physics/thermal_history_recombination_terminal_law_v1.py. Native operations and closed proofs: SFT/Physics/ThermalHistory.lean. Evidence: verification/TURN_1032_thermal1032_core_report.json. Chronological correspondence: TIMELINE.txt TURN1032.
+
+909. General thermal transport and the complete original certificate
+
+Let T and g be any original positive rational temperature and scale carriers. The existing exact quotient and product operations give
+
+    T_later=T/g,
+    T_later·g=(T/g)·g=T.
+
+The source positivity guards admit both carriers. ThermalHistoryTransport.originalInverseTransport binds the source operation to that exact quotient; originalHeldProduct establishes the product identity; originalInvariant proves that the original temperature_scale_invariant operation returns true for every such pair. The proof reuses the established exact quotient, product and recomposition derivations, with no selected cooling exponent.
+
+The original certificate combines all nine prescribed temperature/growth pairs, the complete descending threshold list (7/8,3/4,1/2,1/4), orbit (1,2,4), freeze-out ratio 1/6, capture ratio 1/7, family shares 1/4 and 3/4, visibility checks at every radius 1 through 8, the eight alternating acoustic modes and finite horizon 49/96. All ten returned fields match original V3 execution. The four general transport proofs and the certificate's definitions and two closed kernel proofs have empty axiom dependencies.
+
+Original source: sft/physics/thermal_history_recombination_terminal_law_v1.py, transported_temperature, temperature_scale_invariant and theorem_certificate. Native verification: SFT/Physics/ThermalHistoryTransport.lean and ThermalHistoryCertificate.lean; reused source arithmetic: GravitySourceProofs.sourceQuotient, sourceProduct and InverseSquare.recomposes. Evidence: verification/TURN_1032_thermal1032_certificate_report.json and TURN_1032_thermal1032_certificate_audit.log. Chronological correspondence: TIMELINE.txt TURN1032.

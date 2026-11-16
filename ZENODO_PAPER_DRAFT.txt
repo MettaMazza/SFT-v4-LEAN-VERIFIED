@@ -27600,3 +27600,29 @@ Diagonal point pairs have agreement at every mode, so H(A_d(x,x))=2^d and R(A_d(
 The generated-word length theorem establishes the native equal-length guard for every point and mode. QuantumSupportOrthogonalityNative.originalGeneratedProductRow then identifies each original inner product-row operation, including both native phase calls and their held/returned comparison, with the agreement label used in the induction. Thus the induction applies to the source table's actual rows. The 340 pair rows through the source's four census depths also agree exactly with the original Python output. This is supplementary output correspondence; the all-depth conclusion follows from the induction itself.
 
 Pinned V3: sft/physics/quantum_support_uncertainty_terminal_law_v1.py, binary_words, walsh_phase, orthogonality_certificate, induction_base and induction_step. Lean: SFT/Physics/QuantumSupportParity.lean, originalHeldHeld, originalHeldReturned, originalReturnedHeld, originalReturnedReturned and originalPhaseOperation; QuantumSupportOrthogonalityInduction.lean, originalRowSuccessor, originalOffDiagonalCounts, originalAllModesRetained, originalDiagonalCounts, originalGeneratedWordLength and originalCompleteOrthogonality; QuantumSupportOrthogonalityNative.lean, originalGeneratedProductRow. All 18 audited declarations have empty axiom dependencies. Evidence: verification/TURN_1052_quantumsupport1052_general_report.json and the corresponding general/native axiom logs. Timeline: TURN1052. The continuing entry's Parseval/support-product composition and registration are separate from this established orthogonality result.
+
+940. Parseval counting and the forced support-product bound
+
+For a selected support S and mode k, retain the original positive count pair (h_k,r_k), where h_k counts held phase labels and r_k counts returned phase labels. Write m(h,r)=magnitude(imbalance(h,r)), using exactly the original empty-One result when h=r and the positive count difference otherwise. The mode energy is E_k(S)=m(h_k,r_k)^2. No signed amplitude is introduced.
+
+The count recurrence has the exact identity
+m(h+1,r)^2+2r=m(h,r)^2+2h+1.
+To derive it, remove one held and one returned occurrence together: m(h+1,r+1)=m(h,r). The two empty-side cases reduce to m(h,0)=h and m(0,r)=r. At the remaining boundary, (n+1)^2=n^2+2n+1 supplies the successor identity. Interchanging h and r gives the returned-phase counterpart.
+
+Adjoin a fresh generated point x to S. At each mode, let a_k count existing points whose phase agrees with x and let o_k count those whose phase differs. In either orientation the same successor relation is
+E_k(S∪{x})+2o_k=E_k(S)+2a_k+1.
+For every y in S, x differs from y. The all-depth off-diagonal theorem therefore gives equal agreement and disagreement counts over the complete mode carrier. Summing over the retained points preserves that equality: sum_k a_k=sum_k o_k. Summing the mode successor relation and cancelling these equal count terms yields
+E(S∪{x})=E(S)+N, where E(S)=sum_k E_k(S) and N=2^d.
+The empty accumulator has E(empty)=0. Induction over the original unique selected support gives the exact Parseval count
+sum_k m(h_k,r_k)^2=N·|S|.
+Uniqueness is precisely the original no-duplicate support requirement; membership is in the original complete binary carrier. The empty accumulator is the proof's list-induction base and does not change the source operation's nonempty input guard.
+
+Let s_t=|S| and let s_f count the original occupied modes, namely those whose imbalance is not empty-One. Every mode retains h_k+r_k=s_t. Hence m(h_k,r_k)≤s_t and E_k(S)≤s_t². Unoccupied modes contribute zero to the host count sum. Keeping every occupied mode gives
+N·s_t=E(S)≤s_f·s_t²=(s_t·s_f)·s_t.
+For the source's nonempty support, s_t>0, so cancellation forces N≤s_t·s_f. This derives the source support-product inequality from its phase-count table and exact count recurrence.
+
+QuantumSupportParseval.originalModeEnergySuccessor, originalSupportEnergySuccessor, originalParsevalCounting and originalSupportProductBound prove these relations for every generated depth and every source-admitted unique support. Their definitions retain the original held count, returned count, imbalance magnitude and occupied-mode test. All nine public definitions/theorems in this module have empty axiom dependencies. The energy, frequency-support count and every held/returned mode-count pair agree with all 273 retained original nonempty supports through depth three. This comparison supplements the general proofs and does not replace their induction.
+
+The full original 3×5 joint-support operation is also kernel-verified as the exact eleven-field result (3,5,15,32767,217,32550,217,true,true,true,true). Thus all 32767 nonempty supports, the 217 factorable and 32550 nonfactorable split, full-product factorability, complete projections and remote-relabel invariance are retained together. QuantumSupportJointThreeFiveProof.originalThreeByFive has no axiom dependencies.
+
+Pinned V3: sft/physics/quantum_support_uncertainty_terminal_law_v1.py, _imbalance, _magnitude, walsh_support_certificate, joint_subset_census and the phase-count induction. Lean: SFT/Physics/QuantumSupportParseval.lean, heldAt, returnedAt, energyAt, energySum, frequencySupport and the four theorems above; QuantumSupportJointThreeFiveProof.lean. Evidence: verification/TURN_1053_quantumsupport1053_report.json, TURN_1053_quantumsupport1053_full_audit.log and TURN_1053_quantumsupport1052_joint35_memory_retry.log. Timeline: TURN1053. Entry 049's remaining normalization/spacing and entry-assembly work is not included in the completed-entry count.

@@ -1,0 +1,6 @@
+import SFT.Physics.QuantumSupportNormalization
+#print axioms SFT.Physics.QuantumSupportNormalization.originalUnitFreeBound
+#print axioms SFT.Physics.QuantumSupportNormalization.originalSquaredProduct
+#print axioms SFT.Physics.QuantumSupportNormalization.originalSquaredGridBound
+#print axioms SFT.Physics.QuantumSupportNormalization.originalSpacingCancellation
+#print axioms SFT.Physics.QuantumSupportNormalization.originalEveryPositiveSpacing

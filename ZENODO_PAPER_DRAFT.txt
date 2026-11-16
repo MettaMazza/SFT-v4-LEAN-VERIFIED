@@ -27626,3 +27626,49 @@ QuantumSupportParseval.originalModeEnergySuccessor, originalSupportEnergySuccess
 The full original 3×5 joint-support operation is also kernel-verified as the exact eleven-field result (3,5,15,32767,217,32550,217,true,true,true,true). Thus all 32767 nonempty supports, the 217 factorable and 32550 nonfactorable split, full-product factorability, complete projections and remote-relabel invariance are retained together. QuantumSupportJointThreeFiveProof.originalThreeByFive has no axiom dependencies.
 
 Pinned V3: sft/physics/quantum_support_uncertainty_terminal_law_v1.py, _imbalance, _magnitude, walsh_support_certificate, joint_subset_census and the phase-count induction. Lean: SFT/Physics/QuantumSupportParseval.lean, heldAt, returnedAt, energyAt, energySum, frequencySupport and the four theorems above; QuantumSupportJointThreeFiveProof.lean. Evidence: verification/TURN_1053_quantumsupport1053_report.json, TURN_1053_quantumsupport1053_full_audit.log and TURN_1053_quantumsupport1052_joint35_memory_retry.log. Timeline: TURN1053. Entry 049's remaining normalization/spacing and entry-assembly work is not included in the completed-entry count.
+
+941. Exact normalization, squared spread and spacing cancellation
+
+The phase-count derivation establishes N≤s_t s_f for N=2^d and every original nonempty unique selected support. The complete generated carrier has N>0. Put P=s_t s_f. Dividing the support inequality by the positive N gives P/N≥1, the exact unit-free support product. The native rational comparison is proved false for P/N<1; this binds the mathematical inequality to the original Boolean test.
+
+The source squares each normalized support separately and multiplies:
+(s_t/N)^2(s_f/N)^2 = (s_t²s_f²)/N⁴ = P²/N⁴.
+Since P≥N>0, multiplication gives P²≥N². Division by N⁴ gives
+P²/N⁴ ≥ N²/N⁴ = 1/N².
+The Lean equality retains the actual normalized rational multiplication, and the bound retains the actual rational less-than operation. Cross-multiplication uses positive denominators throughout. At the already established depth-two saturation N=4, P=4, the result is P²/N⁴=16/256=1/16.
+
+Let a be any positive exact rational spacing accepted by the source. Its reduced numerator p and denominator q satisfy p>0 and q>0, with a=p/q. The original positional extent is s_t a. Its reciprocal-grid frequency extent is (s_f/N)/a. Therefore
+(s_t a)((s_f/N)/a)
+= (s_t p/q)((s_f/N)(q/p))
+= (s_t p s_f q)/(q N p)
+= s_t s_f/N.
+The proof first establishes the identity for positive p,q and then derives that representation from every native rational satisfying the original positive-spacing guard. Thus it covers the complete accepted spacing domain, including the four original certificate spacings 1/8, 2/9, 3/7 and 5/11, without selecting a spacing to determine the result.
+
+Pinned V3: sft/physics/quantum_support_uncertainty_terminal_law_v1.py, walsh_support_certificate and spacing_cancellation_certificate. Lean: SFT/Physics/QuantumSupportNormalization.lean, originalUnitFreeBound, originalSquaredProduct, originalSquaredGridBound, originalSpacingCancellation and originalEveryPositiveSpacing. All five declarations have empty axiom dependencies. The existing exact operation-output correspondence is retained unchanged. Evidence: verification/TURN_1054_quantumsupport1054_normalization_report.json and TURN_1054_quantumsupport1054_audit.log. Timeline: TURN1054.
+
+942. The support-uncertainty entry's complete grammar and executable record
+
+The original grammar has eight binary coordinates: preparation depth, parity observation, support uncertainty, weighted spread, joint factorability, projection, Bell boundary and extension. Its carrier is the Cartesian product of these eight declared two-form axes, so its cardinality is 2^8=256. The enumerator retains every combination in the original nested-product order. Each coordinate has the original rejected form and the form supported by its source derivation.
+
+For a candidate c=(c₁,…,c₈), let Aᵢ(cᵢ) be the original admissibility decision on coordinate i. The translated source decision satisfies
+survives(c)=A₁(c₁)∧A₂(c₂)∧⋯∧A₈(c₈).
+Exhausting both constructors on each coordinate proves that this conjunction is true exactly when every coordinate is its admitted form. Hence there is one survivor. The membership proof supplies every constructed candidate to the enumerated carrier; the decision proof preserves the first failing axis and its exact original reason. No additional candidate form or rejection criterion is introduced.
+
+The executable record retains the seven operational witnesses, exact source statement, dependency list, source identity, full census, all decision records and hashes, depth-independent closure, four original controls and unknown-identifier rejection. Fresh native Lean output agrees field-for-field with both the pinned records and fresh execution of the original V3 program. The unchanged independent validator reconstructs the Walsh, joint and Bell censuses and accepts the record; its checks reject the omitted-candidate, additional-survivor and failed-control cases.
+
+Pinned V3: sft/physics/quantum_support_uncertainty_terminal_law_v1.py, SPEC; sft/physics/structural_constants.py, StructuralPhysicsProgram; generated/physics/quantum_support_uncertainty_terminal_validator_v1.py. Lean: QuantumSupportGrammarBase.lean, candidatesComplete; QuantumSupportCensus0.lean through QuantumSupportCensus15.lean; QuantumSupportGrammar.lean, sourceDecisionMatchesCriteria and uniqueCriteriaSurvivor; QuantumSupportWitnesses.lean; QuantumSupportEntryEvidence.lean. The 99 audited entry declarations have empty axiom dependencies. Evidence: verification/TURN_1054_quantumsupport1054_grammar_comparison.json, TURN_1054_quantumsupport1054_entry_report.json, TURN_1054_quantumsupport1054_program_report.json, TURN_1054_quantumsupport1054_fresh_report.json and TURN_1054_quantumsupport1054_independent_report.json. Timeline: TURN1054.
+
+943. Exact post-seal Bell interval and timing analysis
+
+The original measured record supplies S=(20747±33)/10000 and local-factorization bound 2/1. Retaining the full stated interval gives
+S_lower=(20747−33)/10000=20714/10000,
+S_upper=(20747+33)/10000=20780/10000.
+The complete interval is above the bound because 20714·1>2·10000. The central excess in numerator units is 20747−20000=747; twenty-two stated uncertainty units are 22·33=726. Thus 747>726, preserving the exact strict comparison. The original analysis also retains the reported significance fields 22 and 108 and the trial lower-bound field 1000000; these are measured records, not inputs to formal candidate selection.
+
+The lower light-travel budget is 109489−15=109474 thousandths of a nanosecond. The upper trial duration is 10740+26=10766 hundredths, or 107660 thousandths. Their exact difference is 1814 thousandths, and 107660<109474 establishes the source's strict interval separation. The comparison uses the complete timing intervals.
+
+The analysis preserves all fourteen original returned fields: positivity of the declared exact carriers; the complete Bell interval; its bound comparison; the central-excess comparison; significance and trial records; two settings and binary outcomes; deterministic entanglement generation; timing separation; memory control; setting-choice method; measurement independence; the authors' unavoidable-assumption statement; and complete-row retention. Each Boolean condition tests literal truth, so integer one and the text “true” do not replace a declared Boolean. Original integer conversions are retained. Changing the Bell center to 19900 fails the interval comparison; changing the trial-duration center to 11100 fails the timing comparison.
+
+This is the source's post-seal test of local factorization under its retained experimental conditions. Its measurement-independence record remains explicit, deterministic complete-record admissibility is retained, and the separate Walsh support product is not turned into a statistical-variance measurement.
+
+Pinned V3: sft/physics/quantum_support_uncertainty_validation_v1.py, exact_quantum_support_bell_analysis; experiments/external_sources/physics/snapshots/quantum-support-bell-postseal-source-record.json. Lean: SFT/Physics/QuantumSupportObservationMeasurement.lean, exactQuantumSupportBellAnalysis, originalTarget and originalCompleteAnalysis. All three declarations have empty axiom dependencies. All 181 complete fourteen-field comparisons, including integer-conversion inputs, Boolean-identity checks and the two original adverse changes, agree with V3. Evidence: verification/TURN_1054_quantumobservation1054_analysis_report.json and associated cases/audit logs. Timeline: TURN1054. This analysis is prepared for the next source dependency; entry registration retains dependency order.

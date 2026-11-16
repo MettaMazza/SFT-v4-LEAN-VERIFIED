@@ -1,0 +1,7 @@
+from pathlib import Path
+w=Path('work');r=Path('/Volumes/One Touch/SFT v4 Full model LEAN')
+def sub(s):return s.replace('SpinCondensation','CriticalObservation').replace('spinobservation1049','criticalobservation1051').replace('Program1049','Program1051').replace('Empirical1049','Empirical1051').replace('spin_statistics_condensation','criticality_universality_turbulence').replace('SpinStatisticsCondensationValidator','CriticalityUniversalityTurbulenceValidator').replace('SFT-PHYS-VALIDATION-SPIN-STATISTICS-CONDENSATION-046','SFT-PHYS-VALIDATION-CRITICALITY-UNIVERSALITY-TURBULENCE-048').replace("'spinobservation',1049","'criticalobservation',1051")
+for k in ['program','fresh','grammar','independent','empirical','original']:(w/f'check_criticalobservation1051_{k}.py').write_text(sub((w/f'check_spinobservation1049_{k}.py').read_text()))
+for old,new in [('run_spinobservation1049_native.py','run_criticalobservation1051_native.py'),('prepare_spinobservation1049_empirical_native.py','prepare_criticalobservation1051_empirical_native.py'),('audit_spinobservation1049.py','audit_criticalobservation1051.py')]:
+ s=sub((w/old).read_text()).replace("['Analysis','Records','Measurement'","['Records','Measurement'");(w/new).write_text(s)
+(w/'constants-recovery/CriticalObservationEmpirical1051.lean').write_text(sub((w/'constants-recovery/SpinCondensationEmpirical1049.lean').read_text()));(r/'CriticalObservationProgram1051.lean').write_text(sub((r/'SpinCondensationProgram1049.lean').read_text()))

@@ -1,0 +1,26 @@
+import SFT.Physics.QuantumSupportBell
+#print axioms SFT.Physics.QuantumSupportPreparation.Word
+#print axioms SFT.Physics.QuantumSupportPreparation.held
+#print axioms SFT.Physics.QuantumSupportPreparation.returned
+#print axioms SFT.Physics.QuantumSupportPreparation.words
+#print axioms SFT.Physics.QuantumSupportPreparation.binaryWords
+#print axioms SFT.Physics.QuantumSupportPreparation.Preparation
+#print axioms SFT.Physics.QuantumSupportPreparation.preparationDepth
+#print axioms SFT.Physics.QuantumSupportPreparation.Partition
+#print axioms SFT.Physics.QuantumSupportPreparation.measurementPartition
+#print axioms SFT.Physics.QuantumSupportPreparation.walshPhase
+#print axioms SFT.Physics.QuantumSupportPreparation.imbalance
+#print axioms SFT.Physics.QuantumSupportPreparation.magnitude
+#print axioms SFT.Physics.QuantumSupportPreparation.originalEightBranchPreparation
+#print axioms SFT.Physics.QuantumSupportPreparation.originalNontrivialGuard
+#print axioms SFT.Physics.QuantumSupportPreparation.originalNonDyadicGuard
+#print axioms SFT.Physics.QuantumSupportBell.LocalCensus
+#print axioms SFT.Physics.QuantumSupportBell.bellLocalRecordCensus
+#print axioms SFT.Physics.QuantumSupportBell.Inclusive
+#print axioms SFT.Physics.QuantumSupportBell.settingInclusiveNoSignalSupport
+#print axioms SFT.Physics.QuantumSupportBell.originalSixteenStrategies
+#print axioms SFT.Physics.QuantumSupportBell.originalMaximumThree
+#print axioms SFT.Physics.QuantumSupportBell.originalEveryLocalRecordBounded
+#print axioms SFT.Physics.QuantumSupportBell.originalAllSettingsSatisfied
+#print axioms SFT.Physics.QuantumSupportBell.originalBothMarginals
+#print axioms SFT.Physics.QuantumSupportBell.originalNoSignalling

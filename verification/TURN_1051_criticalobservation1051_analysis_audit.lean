@@ -1,0 +1,12 @@
+import SFT.Physics.CriticalObservationMeasurement
+#print axioms SFT.Physics.CriticalObservationMeasurement.originalPositiveWhole
+#print axioms SFT.Physics.CriticalObservationMeasurement.contains
+#print axioms SFT.Physics.CriticalObservationMeasurement.intField
+#print axioms SFT.Physics.CriticalObservationMeasurement.setSample
+#print axioms SFT.Physics.CriticalObservationMeasurement.samplePresent
+#print axioms SFT.Physics.CriticalObservationMeasurement.sampleValue
+#print axioms SFT.Physics.CriticalObservationMeasurement.Manganite
+#print axioms SFT.Physics.CriticalObservationMeasurement.manganiteRows
+#print axioms SFT.Physics.CriticalObservationMeasurement.exactCriticalityAnalysis
+#print axioms SFT.Physics.CriticalObservationMeasurement.originalTarget
+#print axioms SFT.Physics.CriticalObservationMeasurement.originalCompleteAnalysis

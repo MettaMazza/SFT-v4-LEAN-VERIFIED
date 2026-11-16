@@ -1,0 +1,9 @@
+from pathlib import Path
+import subprocess
+w=Path('work');pin='76f1b34e9e9682989adcbb088797b4ae4ce4fcf1';v3='/Volumes/One Touch/ernos-labs-sft-platform'
+for rel in ['sft/physics/criticality_universality_turbulence_empirical_v1.py','sft/physics/criticality_universality_turbulence_validation_v1.py','sft/physics/criticality_universality_turbulence_empirical_execution_v1.py','generated/physics/criticality_universality_turbulence_empirical_validator_v1.py','claims/SFT-PHYS-VALIDATION-CRITICALITY-UNIVERSALITY-TURBULENCE-048/execution.py']:
+ p=w/'v3-runtime500'/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(subprocess.check_output(['git','-C',v3,'show',pin+':'+rel]))
+s=(w/'prepare_spinobservation1049_entry.py').read_text().replace('spin_statistics_condensation_empirical_v1','criticality_universality_turbulence_empirical_v1').replace('SpinCondensation','CriticalObservation').replace('spinobservation1049','criticalobservation1051').replace('SpinStatisticsCertificateProof','CriticalityUniversality').replace('SpinStatisticsCondensationCertificate','CriticalityUniversality').replace('open CriticalityUniversality CriticalityUniversality','open CriticalityUniversality').replace("checks=['occupation','weights','spin','cold']","checks=['meanField','identities','cascade','classes']").replace('match certificate with','match theoremCertificate with').replace('formalOccupation','formalMeanfield').replace('formalWeights','formalIdentities').replace('formalSpin','formalCascade').replace('formalCold','formalClasses').replace('targetRows.length = 3','targetRows.length = 4').replace('[expectedLabel,expectedLabel,expectedLabel]','[expectedLabel,expectedLabel,expectedLabel,expectedLabel]').replace('3witness','4witness')
+exec(compile(s,'original048entry','exec'))
+# The generated template initially has one-row declarations; correct to the source four rows.
+p=Path('/Volumes/One Touch/SFT v4 Full model LEAN/SFT/Physics/CriticalObservationEvidence.lean')

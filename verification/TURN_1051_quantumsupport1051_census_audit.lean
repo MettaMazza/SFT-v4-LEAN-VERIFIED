@@ -1,0 +1,8 @@
+import SFT.Physics.QuantumSupportOrthogonality
+import SFT.Physics.QuantumSupportJointCertificateProof
+#print axioms SFT.Physics.QuantumSupportOrthogonality.originalRowChecks
+#print axioms SFT.Physics.QuantumSupportOrthogonality.originalDepthOne
+#print axioms SFT.Physics.QuantumSupportOrthogonality.originalDepthTwo
+#print axioms SFT.Physics.QuantumSupportOrthogonality.originalDepthThree
+#print axioms SFT.Physics.QuantumSupportOrthogonality.originalDepthFour
+#print axioms SFT.Physics.QuantumSupportJointCertificateProof.originalTwoByThree

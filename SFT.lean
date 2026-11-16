@@ -8749,3 +8749,17 @@ import SFT.Physics.CriticalityUniversalityGrammar
 import SFT.Physics.CriticalityUniversalityWitnesses
 
 import SFT.Physics.CriticalityUniversalityEntryEvidence
+
+import SFT.Physics.CriticalObservationRecords
+
+import SFT.Physics.CriticalObservationMeasurement
+
+import SFT.Physics.CriticalObservationWitnesses
+
+import SFT.Physics.CriticalObservationGrammar
+
+import SFT.Physics.CriticalObservationEvidence
+
+import SFT.Physics.CriticalObservationExperiment
+
+import SFT.Physics.CriticalObservationValidation

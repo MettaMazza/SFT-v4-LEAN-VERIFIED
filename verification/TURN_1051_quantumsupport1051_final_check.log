@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/Users/dolltrading/Documents/Codex/2026-10-26/p/work/verify_quantumsupport1051_final.py", line 9, in <module>
+    p=w/'quantumsupport1051_final_audit.lean';p.write_text(''.join('import SFT.Physics.'+m+'\n'for m in mods)+''.join('#print axioms '+n+'\n'for n in names));x=subprocess.run(['/Users/dolltrading/.elan/bin/lean',str(p)],env=ev,capture_output=True,text=True);(w/'quantumsupport1051_final_audit.log').write_text(x.stdout+x.stderr);assert x.returncode==0 and all("'"+n+"' does not depend on any axioms"in x.stdout for n in names),x.stdout[-2400:]
+AssertionError: 'SFT.Physics.QuantumSupportWalsh.SupportCertificate' does not depend on any axioms
+'SFT.Physics.QuantumSupportWalsh.walshSupportCertificate' does not depend on any axioms
+'SFT.Physics.QuantumSupportWalsh.Orthogonality' does not depend on any axioms
+'SFT.Physics.QuantumSupportWalsh.orthogonalityCertificate' does not depend on any axioms
+'SFT.Physics.QuantumSupportWalsh.combinations' does not depend on any axioms
+'SFT.Physics.QuantumSupportWalsh.WalshCensus' does not depend on any axioms
+'SFT.Physics.QuantumSupportWalsh.completeWalshCensus' does not depend on any axioms
+'SFT.Physics.QuantumSupportWalsh.SpacingCertificate' does not depend on any axioms
+'SFT.Physics.QuantumSupportWalsh.spacingCancellationCertificate' does not depend on any axioms
+'SFT.Physics.QuantumSupportJoint.Joint' does not depend on any axioms
+'SFT.Physics.QuantumSupportJoint.labels' does not depend on any axioms
+'SFT.Physics.QuantumSupportJoint.isFactorableJoint' does not depend on any axioms
+'SFT.Physics.QuantumSupportJoint.JointCensus' does not depend on any axioms
+'SFT.Physics.QuantumSupportJoint.jointSubsetCensus' does not depend on any axioms
+'SFT.Physics.QuantumSupportJoint.CoprimeCensus' does not depend on any axioms
+'SFT.Physics.QuantumSupportJoint.coprimeTraceCensus' does not depend on any axioms
+'SFT.Physics.QuantumSupportCertificate.Certificate' does not depend on any axioms
+'SFT.Physics.QuantumSupportCertificate.theoremCertificate' does not depend on any axioms
+'SFT.Physics.QuantumSupportDepth.originalWordCount' depends on axioms: [propext]
+'SFT.Physics.QuantumSupportDepth.originalDyadicCover' does not depend on any axioms
+'SFT.Physics.QuantumSupportDepth.originalPreparationDepthUnique' does not depend on any axioms
+'SFT.Physics.QuantumSupportDepth.originalEveryDyadicPreparation' does not depend on any axioms
+

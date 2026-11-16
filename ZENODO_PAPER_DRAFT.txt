@@ -26758,3 +26758,32 @@ The original thermal grammar is the product of eight binary axes: provenance, te
 The eight source witnesses connect this grammar to the complete thermal certificate: inverse temperature transport, threshold order, the full depth-seven orbit, the distinction between freeze-out and capture ratios, the nuclear family partition, finite visibility, acoustic parity and the exact finite sound horizon. Each witness evaluates the source certificate's actual field or prescribed equality. The original structural programme retains its registration, dependencies, first-failure decisions, closure, controls, trace and proof hashes. Its 256 candidate records agree with original V3 in order, identifier, exact form, acceptance and reason. The 106 audited grammar, witness and programme declarations have empty axiom dependencies.
 
 Original sources: sft/physics/thermal_history_recombination_terminal_law_v1.py, SPEC; sft/physics/structural_constants.py. Native verification: SFT/Physics/ThermalHistoryGrammarBase.lean, ThermalHistoryCensus0.lean through ThermalHistoryCensus15.lean, ThermalHistoryGrammar.lean, ThermalHistoryWitnesses.lean and ThermalHistoryEntryEvidence.lean. Evidence: verification/TURN_1032_thermal1032_grammar_report.json, TURN_1032_thermal1032_grammar_audit.log and TURN_1032_thermal1032_grammar_comparison.json. Chronological correspondence: TIMELINE.txt TURN1032.
+
+911. General finite sound-horizon and visibility derivations
+
+For every nonempty finite ordered list of positive exact duration-speed pairs (Δtᵢ,vᵢ), the original operation first forms each positive segment sᵢ=Δtᵢvᵢ, then evaluates the source-ordered cumulative sum
+
+    S₁=s₁,
+    Sᵢ₊₁=Sᵢ+sᵢ₊₁,
+    H=Sₙ.
+
+Each multiplication and addition returns the original positive rational carrier. The base segment is positive; every successor preserves positivity and retains the additional segment. ThermalHistoryHorizon.originalSegments binds the original two-list operation to all supplied pairs. originalPositiveSum connects its exact left fold to the existing positive-carrier addition. originalFiniteHorizon proves the complete source operation returns that positive sum for every such nonempty list. This uses the established exact product and sum representations, without a continuum integral or a fitted speed.
+
+At radius r, let Aᵣ=(1,2,…,r). The exact source weight list is
+
+    Wᵣ=Aᵣ ++ [r+1] ++ reverse(Aᵣ).
+
+originalMidpointDecomposition proves this equality for the source operation's actual rising-and-reflected construction. Every weight is positive. Every member of either side is strictly less than r+1, so the single displayed midpoint is greater than both side supports. The accumulated total Zᵣ=ΣWᵣ is positive. Normalization uses each exact fraction w/Zᵣ. For each source prefix, exact common-denominator addition gives
+
+    (w₁/Zᵣ)+⋯+(wⱼ/Zᵣ)=(w₁+⋯+wⱼ)/Zᵣ.
+
+At the full list, the right side is Zᵣ/Zᵣ=One. ThermalHistoryVisibility.originalNormalizedWeights binds every actual source division to these fractions; originalNormalizedTotal proves their accumulated sum. originalVisibilityComplete proves that the original visibility_ledger returned complete field is true at every positive radius. The positivity, midpoint-decomposition and strict-side-bound proofs quantify over the complete finite support, rather than just the certificate's eight radii.
+
+All fourteen exported declarations in these two modules, including twelve general source theorems, have empty axiom dependencies. The complete thermal programme separately matches every field and hash in fresh V3 execution and the pinned records; its independent validator accepts the result and rejects the three original adverse cases. Original source: sft/physics/thermal_history_recombination_terminal_law_v1.py, finite_sound_horizon and visibility_ledger; structural programme: sft/physics/structural_constants.py. Native verification: SFT/Physics/ThermalHistoryHorizon.lean and ThermalHistoryVisibility.lean. Evidence: verification/TURN_1033_thermal1033_general_report.json, TURN_1033_thermal1033_audit.log, TURN_1033_thermal1032_program_report.json, TURN_1033_thermal1032_fresh_report.json and TURN_1033_thermal1032_independent_report.json. Chronological correspondence: TIMELINE.txt TURN1033.
+
+The source threshold insertion and sorting operations also retain their complete input records. For every threshold x and finite list L,
+
+    insertDescending(x,L) is a permutation of x::L,
+    sortDescending(L) is a permutation of L.
+
+In the insertion base, the result is [x]. In the successor, either x is placed before the current head, or the head is retained and insertion continues on the tail. Induction preserves every occurrence in both cases. The sorting induction composes this insertion permutation with the retained sorted tail. ThermalHistoryThresholds.originalInsertionRetains and originalSortRetains prove these statements for the actual source operations, with empty axiom dependencies. Original source: ordered_thresholds in sft/physics/thermal_history_recombination_terminal_law_v1.py. Native verification: SFT/Physics/ThermalHistoryThresholds.lean. Audit: verification/TURN_1033_thermal1033_threshold_audit.log. Chronological correspondence: TIMELINE.txt TURN1033.

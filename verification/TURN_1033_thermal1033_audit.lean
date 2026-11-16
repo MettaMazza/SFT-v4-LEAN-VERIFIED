@@ -1,0 +1,16 @@
+import SFT.Physics.ThermalHistoryHorizon
+import SFT.Physics.ThermalHistoryVisibility
+#print axioms SFT.Physics.ThermalHistoryHorizon.segmentValue
+#print axioms SFT.Physics.ThermalHistoryHorizon.originalSegments
+#print axioms SFT.Physics.ThermalHistoryHorizon.originalPositiveSum
+#print axioms SFT.Physics.ThermalHistoryHorizon.originalFiniteHorizon
+#print axioms SFT.Physics.ThermalHistoryVisibility.weights
+#print axioms SFT.Physics.ThermalHistoryVisibility.sumRetains
+#print axioms SFT.Physics.ThermalHistoryVisibility.originalWeightTotalPositive
+#print axioms SFT.Physics.ThermalHistoryVisibility.originalNormalizedWeights
+#print axioms SFT.Physics.ThermalHistoryVisibility.originalNormalizedTotal
+#print axioms SFT.Physics.ThermalHistoryVisibility.originalVisibilityComplete
+#print axioms SFT.Physics.ThermalHistoryVisibility.originalMidpointDecomposition
+#print axioms SFT.Physics.ThermalHistoryVisibility.originalSideBelowMidpoint
+#print axioms SFT.Physics.ThermalHistoryVisibility.originalReflectedSideBelowMidpoint
+#print axioms SFT.Physics.ThermalHistoryVisibility.originalEveryWeightPositive

@@ -1,0 +1,3 @@
+import SFT.Physics.ThermalHistoryThresholds
+#print axioms SFT.Physics.ThermalHistoryThresholds.originalInsertionRetains
+#print axioms SFT.Physics.ThermalHistoryThresholds.originalSortRetains

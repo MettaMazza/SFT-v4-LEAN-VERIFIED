@@ -1,0 +1,18 @@
+import SFT.Physics.QuantumSupportParity
+import SFT.Physics.QuantumSupportOrthogonalityInduction
+#print axioms SFT.Physics.QuantumSupportParity.phaseBit
+#print axioms SFT.Physics.QuantumSupportParity.originalHeldHeld
+#print axioms SFT.Physics.QuantumSupportParity.originalHeldReturned
+#print axioms SFT.Physics.QuantumSupportParity.originalReturnedHeld
+#print axioms SFT.Physics.QuantumSupportParity.originalReturnedReturned
+#print axioms SFT.Physics.QuantumSupportParity.originalPhaseOperation
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.agreementRows
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.heldCount
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.returnedCount
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.prepend
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.originalRowSuccessor
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.originalOffDiagonalCounts
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.originalAllModesRetained
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.originalDiagonalCounts
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.originalGeneratedWordLength
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.originalCompleteOrthogonality

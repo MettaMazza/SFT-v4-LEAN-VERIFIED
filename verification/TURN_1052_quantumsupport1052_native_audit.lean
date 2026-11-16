@@ -1,0 +1,3 @@
+import SFT.Physics.QuantumSupportOrthogonalityNative
+#print axioms SFT.Physics.QuantumSupportOrthogonalityNative.productRow
+#print axioms SFT.Physics.QuantumSupportOrthogonalityNative.originalGeneratedProductRow

@@ -1,0 +1,16 @@
+from pathlib import Path
+import ast,json,subprocess,os,itertools,hashlib
+w=Path('work');r=Path('/Volumes/One Touch/SFT v4 Full model LEAN');source=(w/'thermal_equilibrium_validation1042.py').read_text();tree=ast.parse(source);fn=next(n for n in tree.body if isinstance(n,ast.FunctionDef)and n.name=='exact_thermal_analysis');ns={};exec(compile(ast.Module(body=[fn],type_ignores=[]),'original-thermal-analysis','exec'),ns)
+keys=['exact_si_kb_scaled','acoustic_kb_scaled_center','acoustic_kb_scaled_standard_uncertainty','electronic_kb_scaled_center','electronic_kb_scaled_standard_uncertainty','scale_denominator','measurement_route_count','electronic_johnson_relation_accuracy_parts_per_million'];flags=['measurement_routes_physically_distinct','acoustic_temperature_measures_average_kinetic_energy','electronic_johnson_noise_power_depends_on_resistance_and_temperature','universal_dyadic_population_ladder_reported_as_measured','three_quarter_response_reported_as_universal_measured_value','all_registered_rows_retained'];base=dict(zip(keys,[13806490,13806484,28,13806510,170,10**30,2,1]));base.update(zip(flags,[True,True,True,False,False,True]));cases=[base]
+for k in keys:
+ for v in [-1,0,1,2,13000000,13806490]:cases.append({**base,k:v})
+for k in flags:
+ for v in [True,False,1,0,'true',None]:cases.append({**base,k:v})
+lines=['import SFT.Physics.ThermometryAnalysis','open SFT.Physics.ThermometryAnalysis SFT.Host.Canonical']
+for t in cases:
+ vals=[str(t[k])if t[k]>=0 else '('+str(t[k])+')'for k in keys]+[str(t[k] is (False if i in [3,4] else True)).lower()for i,k in enumerate(flags)]
+ lines.append('#eval render (exactAnalysis ⟨'+','.join(vals)+'⟩)')
+p=w/'thermometry1042_analysis_cases.lean';p.write_text('\n'.join(lines)+'\n');x=subprocess.run(['/Users/dolltrading/.elan/bin/lean',str(p)],env={**os.environ,'LEAN_PATH':str(r/'.lake/build/lib/lean')},capture_output=True,text=True);(w/'thermometry1042_analysis_cases.log').write_text(x.stdout+x.stderr);assert x.returncode==0,x.stdout
+actual=[json.loads(json.loads(line))for line in x.stdout.splitlines()if line.startswith('"')];expected=[json.loads(json.dumps(ns['exact_thermal_analysis'](t)))for t in cases];assert actual==expected
+body=(r/'SFT/Physics/ThermometryAnalysis.lean').read_text();names=__import__('re').findall(r'^(?:def|theorem|structure) (\w+)',body,__import__('re').M);p=w/'thermometry1042_analysis_audit.lean';p.write_text('import SFT.Physics.ThermometryAnalysis\n'+''.join('#print axioms SFT.Physics.ThermometryAnalysis.'+n+'\n'for n in names));x=subprocess.run(['/Users/dolltrading/.elan/bin/lean',str(p)],env={**os.environ,'LEAN_PATH':str(r/'.lake/build/lib/lean')},capture_output=True,text=True);(w/'thermometry1042_analysis_audit.log').write_text(x.stdout+x.stderr);assert x.returncode==0 and x.stdout.count('does not depend on any axioms')==len(names)
+(w/'thermometry1042_analysis_report.json').write_text(json.dumps(dict(status='PASS',cases=len(cases),fields=13,declarations=names,axioms=[],source_sha256=hashlib.sha256(body.encode()).hexdigest(),scope='Original exact_thermal_analysis after integer conversion and exact Boolean identity tests; complete 13-field output, all numeric mutations and identity-vs-truthiness controls'),indent=2));print('PASS',len(cases),'full13fieldsourceoutputs;',len(names),'zeroaxiomdeclarations')

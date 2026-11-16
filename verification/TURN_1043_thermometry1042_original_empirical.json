@@ -1,0 +1,65 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "NIST-CODATA-2022-BOLTZMANN",
+    "NIM-NIST-ACOUSTIC-BOLTZMANN-2017",
+    "NIST-JOHNSON-NOISE-BOLTZMANN-2011"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:28f9957a89ff5860b20b5854868a4f0ac20ea1852a468dbf2d96cdbcedee0bef",
+  "falsification_condition": "Reject if any source or row changes; either complete measured interval excludes exact SI k_B; the routes are not physically distinct; the kinetic-temperature or Johnson-noise response row is absent; a limitation row is omitted; an internal Fold coordinate is relabelled as directly measured; or target data alter the formal survivor.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:ee10f5a56f89082a81a2e386f8e5f82d14ff84edf39ea3859ba317b2e04b3eb7",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:2016d4b99d1f2840904b7d108d0dd9ec92c5ecd0bd7a62f0ba06e76170dd8afc",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-PHYS-VALIDATION-THERMAL-EQUILIBRIUM-044-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:01a22ef271f38b0dbb6dd364de02957d1ac207ee0277bf37ae3de82e77ffc676",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:a96db50d266028d4ecbf26199f14651e94385564d75242df7a093cce33a2c48a",
+    "prediction_seal_hash": "sha256:b5bca19566b495deacf0beacede71c8332f19591690fd55a9d7cfb3a94f1ee7d",
+    "program_hash": "sha256:57208d4ff6e6cc3d4043c800a1ffbe92c33089d43695b9ced526305659c87b2c",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:dd8093774d369050a97f72fb192fedc78fdeab91a234ebdc8f962506d90964fd",
+    "target_material_present": false,
+    "trace_hash": "sha256:b5eda4311121239f500f9634836c7f2ba35ac58e760dd1de1ee4146c804dfddc"
+  },
+  "measurement_receipt_hash": "sha256:cffa2dbbd885f19cf9a19f08aec070370ba237b7aa12735d2173fc8d77f0e7f6",
+  "measurements": [
+    "Exact SI k_B is 13806490/10^30 J/K.",
+    "Acoustic interval [13806456,13806512]/10^30 J/K contains exact SI k_B.",
+    "Johnson-noise interval [13806340,13806680]/10^30 J/K contains exact SI k_B.",
+    "Acoustic and electronic routes are physically distinct and both remain complete.",
+    "Acoustic thermometry retains the mean-kinetic-energy temperature relation.",
+    "Johnson noise retains joint temperature/resistance response at the reported one-part-per-million regime.",
+    "No direct universal measurement is claimed for the dyadic ladder or 3/4:1/4 Fold coordinates.",
+    "Tampered acoustic interval excludes the exact carrier and rejects."
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:2e674cf79354cc078e08ef624ddad870c176f981f96c15a124d1c6a36730445f",
+    "custodian_id": "SFT-EXP-PHYS-VALIDATION-THERMAL-EQUILIBRIUM-044-external-target-custodian",
+    "experiment_registration_hash": "sha256:28f9957a89ff5860b20b5854868a4f0ac20ea1852a468dbf2d96cdbcedee0bef",
+    "prediction_seal_hash": "sha256:b5bca19566b495deacf0beacede71c8332f19591690fd55a9d7cfb3a94f1ee7d",
+    "registered_target_identity_hash": "sha256:dd8093774d369050a97f72fb192fedc78fdeab91a234ebdc8f962506d90964fd",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:1585861040a6efee103aef5a263619e1d65a231d0315ffb493efa4c26acdb793"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "sha256:019db88dcdb566512199c250c6841ce242ba1a225cf35f4495a68b1977c7ed37"
+}

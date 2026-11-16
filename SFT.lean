@@ -8595,3 +8595,19 @@ import SFT.Physics.KoideValidationV2Experiment
 import SFT.Physics.KoideValidationV2Validation
 
 import SFT.Physics.KoideValidationV2External
+
+import SFT.Physics.ThermometryAnalysis
+
+import SFT.Physics.ThermometryRecords
+
+import SFT.Physics.ThermometryMeasurement
+
+import SFT.Physics.ThermometryWitnesses
+
+import SFT.Physics.ThermometryGrammar
+
+import SFT.Physics.ThermometryEvidence
+
+import SFT.Physics.ThermometryExperiment
+
+import SFT.Physics.ThermometryValidation

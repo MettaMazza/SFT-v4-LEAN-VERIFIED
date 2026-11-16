@@ -8689,3 +8689,63 @@ import SFT.Physics.SpinStatisticsCriticalExecution
 import SFT.Physics.SpinStatisticsCriticalSelection
 
 import SFT.Physics.SpinStatisticsGroundRecord
+
+import SFT.Physics.SpinCondensationAnalysis
+
+import SFT.Physics.SpinCondensationRecords
+
+import SFT.Physics.SpinCondensationMeasurement
+
+import SFT.Physics.SpinCondensationWitnesses
+
+import SFT.Physics.SpinCondensationGrammar
+
+import SFT.Physics.SpinCondensationEvidence
+
+import SFT.Physics.SpinCondensationExperiment
+
+import SFT.Physics.SpinCondensationValidation
+
+import SFT.Physics.CriticalityUniversality
+
+import SFT.Physics.CriticalityScaling
+
+import SFT.Physics.CriticalityUniversalityGrammarBase
+
+import SFT.Physics.CriticalityUniversalityCensus0
+
+import SFT.Physics.CriticalityUniversalityCensus1
+
+import SFT.Physics.CriticalityUniversalityCensus2
+
+import SFT.Physics.CriticalityUniversalityCensus3
+
+import SFT.Physics.CriticalityUniversalityCensus4
+
+import SFT.Physics.CriticalityUniversalityCensus5
+
+import SFT.Physics.CriticalityUniversalityCensus6
+
+import SFT.Physics.CriticalityUniversalityCensus7
+
+import SFT.Physics.CriticalityUniversalityCensus8
+
+import SFT.Physics.CriticalityUniversalityCensus9
+
+import SFT.Physics.CriticalityUniversalityCensus10
+
+import SFT.Physics.CriticalityUniversalityCensus11
+
+import SFT.Physics.CriticalityUniversalityCensus12
+
+import SFT.Physics.CriticalityUniversalityCensus13
+
+import SFT.Physics.CriticalityUniversalityCensus14
+
+import SFT.Physics.CriticalityUniversalityCensus15
+
+import SFT.Physics.CriticalityUniversalityGrammar
+
+import SFT.Physics.CriticalityUniversalityWitnesses
+
+import SFT.Physics.CriticalityUniversalityEntryEvidence

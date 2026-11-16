@@ -1,4 +1,6 @@
 import SFT.Physics.ThermalEquilibriumPaired
+import SFT.Physics.ThermalEquilibriumWeights
+import SFT.Physics.CollectiveRadiationCompleteness
 namespace SFT.Physics.ThermalEquilibriumMultinomial
 open ThermalEquilibriumResponse SFT.Foundation.FractionReduction
 set_option maxHeartbeats 100000000
@@ -225,4 +227,141 @@ theorem originalFixedPopulationDenominatorStrict (targets counts : List Nat)
  | inl result => exact result
  | inr contrary => exact False.elim (Nat.not_lt_of_ge
     (Nat.mul_le_mul_right (powerProduct targets targets) contrary) strict)
+
+private theorem powerPower (a b c : Nat) : (a^b)^c=a^(b*c) := by
+ induction c with
+ | zero => rw [Nat.pow_zero,Nat.mul_zero,Nat.pow_zero]
+ | succ c ih => rw [Nat.pow_succ,ih,Nat.mul_succ,powerAdd]
+
+private theorem powerProductEnergy (indices counts : List Nat) :
+ powerProduct (indices.map (fun i => 2^i)) counts = 2^(CollectiveRadiation.wordEnergy indices counts) := by
+ induction indices generalizing counts with
+ | nil => rfl
+ | cons i indices ih =>
+   cases counts with
+   | nil => rfl
+   | cons c counts =>
+     change (2^i)^c*powerProduct (indices.map (fun i => 2^i)) counts = _
+     rw [powerPower,ih,CollectiveRadiationCompleteness.originalEnergySuccessor,powerAdd]
+
+private theorem complementaryExponent (levels index : Nat) (bound : index<levels) :
+ (levels-index-1)+index=levels-1 := by
+ obtain ⟨d,eq⟩ := differenceWitness (index+1) levels bound
+ have same : levels=index+(d+1) := eq.trans (Nat.add_right_comm index 1 d)
+ rw [same,Nat.add_comm index (d+1),SFT.Foundation.ExactCast.addSubtract,
+   SFT.Foundation.ExactCast.addSubtract,Nat.add_right_comm d 1 index,SFT.Foundation.ExactCast.addSubtract]
+
+private theorem complementaryProducts (levels : Nat) (indices counts : List Nat)
+ (sameLength : indices.length=counts.length) (bounded : ∀ i ∈ indices, i<levels) :
+ powerProduct (indices.map (fun i => 2^(levels-i-1))) counts *
+ powerProduct (indices.map (fun i => 2^i)) counts = 2^((levels-1)*population counts) := by
+ induction indices generalizing counts with
+ | nil => cases counts with
+   | nil => rw [population,Nat.mul_zero]; rfl
+   | cons c cs => cases sameLength
+ | cons i indices ih =>
+   cases counts with
+   | nil => cases sameLength
+   | cons c cs =>
+     have tail := ih cs (Nat.succ.inj sameLength) (fun j hj => bounded j (.tail i hj))
+     change ((2^(levels-i-1))^c*powerProduct (indices.map (fun i => 2^(levels-i-1))) cs)*
+       ((2^i)^c*powerProduct (indices.map (fun i => 2^i)) cs) = 2^((levels-1)*(c+population cs))
+     rw [SFT.Foundation.PrimitiveMaps.mulInterchange,powerPower,powerPower,←powerAdd,
+       ←VacuumLedgerProofs.addMul,complementaryExponent levels i (bounded i (.head indices)),tail,
+       ←powerAdd,←Nat.mul_add]
+
+private theorem originalRangeLength (n : Nat) : (List.range n).length=n :=
+ (SFT.Mathematics.OrbitCycleSupport.rangeLoopLength n []).trans (Nat.add_zero n)
+
+theorem originalDyadicCountLength (n : Nat) : (ThermalEquilibriumWeights.originalCounts n).length=n+2 := by
+ unfold ThermalEquilibriumWeights.originalCounts
+ rw [SFT.Foundation.CommonRefinement.mapLength,originalRangeLength]
+
+theorem originalFixedCountThrowProduct (n : Nat) (counts : List Nat) (length : counts.length=n+2) :
+ powerProduct (ThermalEquilibriumWeights.originalCounts n) counts * 2^(countedThrow counts) =
+ 2^((n+1)*counts.foldl Nat.add 0) := by
+ have product := complementaryProducts (n+2) (List.range (n+2)) counts
+   ((originalRangeLength (n+2)).trans length.symm)
+   (fun i hi => (SFT.Mathematics.OrbitCyclotomic.rangeMember _ _).mp hi)
+ rw [powerProductEnergy] at product
+ change powerProduct (ThermalEquilibriumWeights.originalCounts n) counts *
+  2^(CollectiveRadiation.wordEnergy (List.range (n+2)) counts) = 2^((n+1)*population counts) at product
+ unfold countedThrow
+ rw [length,populationFold,Nat.zero_add]
+ exact product
+
+theorem originalFixedCountThrowPower (n : Nat) (counts : List Nat) (length : counts.length=n+2)
+ (samePopulation : (ThermalEquilibriumWeights.originalCounts n).foldl Nat.add 0=counts.foldl Nat.add 0)
+ (sameThrow : countedThrow (ThermalEquilibriumWeights.originalCounts n)=countedThrow counts) :
+ powerProduct (ThermalEquilibriumWeights.originalCounts n) counts =
+ powerProduct (ThermalEquilibriumWeights.originalCounts n) (ThermalEquilibriumWeights.originalCounts n) := by
+ have candidate := originalFixedCountThrowProduct n counts length
+ have target := originalFixedCountThrowProduct n (ThermalEquilibriumWeights.originalCounts n) (originalDyadicCountLength n)
+ rw [←samePopulation,←sameThrow] at candidate
+ exact Nat.eq_of_mul_eq_mul_right (Nat.pow_pos (by decide)) (candidate.trans target.symm)
+
+theorem originalDyadicTargetPositive (n t : Nat) (member : t∈ThermalEquilibriumWeights.originalCounts n) : 0<t := by
+ obtain ⟨i,_,eq⟩ := SFT.Foundation.Count.TraceDerivation.memMapPreimage
+   (fun i => 2^(n+2-i-1)) t (List.range (n+2)) member
+ rw [←eq]
+ exact Nat.pow_pos (by decide)
+
+theorem originalDyadicDenominatorStrict (n : Nat) (counts : List Nat) (length : counts.length=n+2)
+ (samePopulation : (ThermalEquilibriumWeights.originalCounts n).foldl Nat.add 0=counts.foldl Nat.add 0)
+ (sameThrow : countedThrow (ThermalEquilibriumWeights.originalCounts n)=countedThrow counts)
+ (different : ThermalEquilibriumWeights.originalCounts n≠counts) :
+ factorialProduct (ThermalEquilibriumWeights.originalCounts n)<factorialProduct counts :=
+ originalFixedPopulationDenominatorStrict _ _ ((originalDyadicCountLength n).trans length.symm)
+   (originalDyadicTargetPositive n) samePopulation (originalFixedCountThrowPower n counts length samePopulation sameThrow) different
+
+private def exactMultiplicity : List Nat → Nat
+ | [] => 1
+ | c::cs => binomial (c+population cs) c * exactMultiplicity cs
+private theorem exactMultiplicityPositive (counts : List Nat) : 0<exactMultiplicity counts := by
+ induction counts with
+ | nil => exact Nat.zero_lt_succ _
+ | cons c cs ih => exact Nat.mul_pos (ThermalEquilibriumPaired.originalBinomialPositive c (population cs)) ih
+private theorem exactFactorization (counts : List Nat) :
+ exactMultiplicity counts * factorialProduct counts = factorial (population counts) := by
+ induction counts with
+ | nil => rfl
+ | cons c cs ih =>
+   change (binomial (c+population cs) c*exactMultiplicity cs)*(factorial c*factorialProduct cs)=_
+   rw [SFT.Foundation.PrimitiveMaps.mulInterchange,ih,mulAssoc]
+   exact ThermalEquilibriumPaired.originalBinomialFactorization c (population cs)
+private theorem exactSequentialDivision (counts : List Nat) (k : Nat) :
+ counts.foldl (fun value count => value/factorial count) (k*factorialProduct counts)=k := by
+ induction counts generalizing k with
+ | nil => exact Nat.mul_one k
+ | cons c cs ih =>
+   change cs.foldl (fun value count => value/factorial count) ((k*(factorial c*factorialProduct cs))/factorial c)=_
+   rw [←mulAssoc k (factorial c),Nat.mul_comm k (factorial c),mulAssoc,
+     divisionMultiple _ _ (factorialPositive c)]
+   exact ih k
+private theorem actualMultiplicity (counts : List Nat) : multinomialCount counts=exactMultiplicity counts := by
+ unfold multinomialCount
+ rw [populationFold,Nat.zero_add,←exactFactorization,exactSequentialDivision]
+
+theorem originalMultinomialDenominatorIdentity (counts : List Nat) :
+ multinomialCount counts * factorialProduct counts = factorial (counts.foldl Nat.add 0) := by
+ rw [actualMultiplicity,exactFactorization,populationFold,Nat.zero_add]
+
+theorem originalMultinomialPositive (counts : List Nat) : 0<multinomialCount counts := by
+ rw [actualMultiplicity]
+ exact exactMultiplicityPositive counts
+
+theorem originalDyadicMultinomialStrictMaximum (n : Nat) (counts : List Nat) (length : counts.length=n+2)
+ (samePopulation : (ThermalEquilibriumWeights.originalCounts n).foldl Nat.add 0=counts.foldl Nat.add 0)
+ (sameThrow : countedThrow (ThermalEquilibriumWeights.originalCounts n)=countedThrow counts)
+ (different : ThermalEquilibriumWeights.originalCounts n≠counts) :
+ multinomialCount counts < multinomialCount (ThermalEquilibriumWeights.originalCounts n) := by
+ have denominator := originalDyadicDenominatorStrict n counts length samePopulation sameThrow different
+ cases Nat.lt_or_ge (multinomialCount counts) (multinomialCount (ThermalEquilibriumWeights.originalCounts n)) with
+ | inl result => exact result
+ | inr contrary =>
+   have first := Nat.mul_lt_mul_of_pos_left denominator
+     (originalMultinomialPositive (ThermalEquilibriumWeights.originalCounts n))
+   have strict := Nat.lt_of_lt_of_le first (Nat.mul_le_mul_right (factorialProduct counts) contrary)
+   rw [originalMultinomialDenominatorIdentity,originalMultinomialDenominatorIdentity,samePopulation] at strict
+   exact False.elim (Nat.lt_irrefl _ strict)
 end SFT.Physics.ThermalEquilibriumMultinomial

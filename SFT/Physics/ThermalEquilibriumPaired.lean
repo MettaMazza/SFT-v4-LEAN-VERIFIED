@@ -305,4 +305,13 @@ theorem originalEveryPositivePairedCensus (n : Nat) (positive : 0<n) :
               pure (⟨2*(n+1),(List.range (2*(n+1)+1)).map (fun k => (k,binomial (2*(n+1)) k)),[n+1],share⟩ : PairedCensus)) = _
    rw [quotient]
    rfl
+
+theorem originalBinomialFactorization (a b : Nat) :
+ binomial (a+b) a * (factorial a*factorial b)=factorial (a+b) := by
+ rw [originalSplitMultiplicity]
+ exact factorialMultiplicity a b
+
+theorem originalBinomialPositive (a b : Nat) : 0<binomial (a+b) a := by
+ rw [originalSplitMultiplicity]
+ exact multiplicityPositive a b
 end SFT.Physics.ThermalEquilibriumPaired

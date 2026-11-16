@@ -9805,3 +9805,21 @@ import SFT.Physics.SmithionCensus15
 import SFT.Physics.SmithionGrammar
 
 import SFT.Physics.SmithionEntryEvidence
+
+import SFT.Physics.SmithionObservationRecords
+
+import SFT.Physics.SmithionObservationWitnesses
+
+import SFT.Physics.SmithionObservationGrammar
+
+import SFT.Physics.SmithionObservationEvidence
+
+import SFT.Physics.SmithionObservationExperiment
+
+import SFT.Physics.SmithionObservationValidation
+
+import SFT.Physics.SmithionObservationAnalysis
+
+import SFT.Physics.SmithionObservationAnalysisProofs
+
+import SFT.Physics.SmithionObservationInputProofs

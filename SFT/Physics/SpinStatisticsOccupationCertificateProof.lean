@@ -1,0 +1,7 @@
+import SFT.Physics.SpinStatisticsCondensationCertificate
+namespace SFT.Physics.SpinStatisticsOccupationCertificateProof
+open SpinStatisticsCondensationCertificate
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+theorem originalOccupation : occupationCheck=.ok true := rfl
+end SFT.Physics.SpinStatisticsOccupationCertificateProof

@@ -1,0 +1,7 @@
+import SFT.Physics.SpinStatisticsCondensationCertificate
+namespace SFT.Physics.SpinStatisticsColdCertificateProof
+open SpinStatisticsCondensationCertificate
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+theorem originalCold : coldCheck=.ok true := rfl
+end SFT.Physics.SpinStatisticsColdCertificateProof

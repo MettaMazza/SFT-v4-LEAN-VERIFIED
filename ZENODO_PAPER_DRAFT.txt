@@ -27331,3 +27331,39 @@ Since 13000028<13806490, the exact carrier is outside this interval and the cont
 Original pinned sources: sft/physics/thermal_equilibrium_empirical_v1.py and sft/physics/thermal_equilibrium_validation_v1.py, exact_thermal_analysis and ThermalEquilibriumValidator. Lean verification: SFT/Physics/ThermometryAnalysis.lean and ThermometryMeasurement.lean; the source record binding is in ThermometryRecords.lean, and the original formal certificate is reused from ThermalEquilibriumCertificateProof.lean. Chronological correspondence: TIMELINE.txt TURN1042–1043.
 
 Complete entry evidence: verification/TURN_1043_THERMOMETRY_044_COMPLETION.json.
+
+929. Complete finite occupation words and the cold occupation measure
+
+For N positive occupants and L positive generated levels, the original occupation walk holds a prefix and a remaining population. At each nonterminal cell it enumerates every integer c from zero through min(cap, remaining), in that order, and recurses on remaining−c. At the last cell it emits the remaining population exactly when it is at most cap. The preserving class uses cap=N; the alternating class uses cap=1. Zero is the source's empty-cell record.
+
+The walk invariant and its converse are
+
+    emitted word = prefix ++ suffix,
+    length(suffix) = remaining levels,
+    sum(suffix) = remaining population,
+    every suffix coordinate ≤ cap.
+
+The base case has one remaining cell. In the successor case, choosing c subtracts c from the remaining population and adds one coordinate. Conversely, the first coordinate of every admissible suffix lies in the enumerated interval, and its tail satisfies the recursive conditions. Different first coordinates belong to disjoint branches; induction gives no duplicates within a branch. This proves exhaustive, duplicate-free enumeration at every finite positive N and L.
+
+For preserving words, sum(n_i)=N already implies n_i≤N, so the implementation cap adds no restriction. Its exact carrier is
+
+    {(n_0,…,n_(L−1)) : n_i≥0 and Σ_i n_i=N}.
+
+For alternating words the exact carrier adds n_i≤1. Summing these bounds gives N≤L. Consequently the complete alternating enumeration is empty when N>L. These statements are proved for the original walk, including the input-operation bindings, rather than inferred from a sample census.
+
+The source raw weights and complete canonical measure are
+
+    a_i=2^(L−i−1),
+    s_d(n)=∏_i a_i^(d n_i),
+    Z_d=Σ_(n in the complete occupation carrier) s_d(n),
+    p_d(n)=s_d(n)/Z_d.
+
+Here d is the positive cold-depth input of the original operation. The canonical mean throw uses the same entire distribution:
+
+    T_d=Σ_n p_d(n) [Σ_i(i+1)n_i]/N.
+
+The ground word is g=(N,0,…,0). The source searches successive positive depths for p_d(g)≥(m−1)/m, retaining every tested triple (d,p_d(g),T_d). Its finite search bound uses K, the number of preserving competitors: it finds the first positive b with 2^b≥max(1,K(m−1)), then tests depths 1 through b+1. The implementation reuses AlphaCovers.coverDepth and its established least-positive-cover derivation for this exact integer argument. No measured critical temperature enters the search.
+
+The original four-field certificate is retained in full: all occupation censuses for N,L from 1 through 6; all normalization checks for both classes, L from 2 through 5, N from 1 through L and d from 1 through 4; all first-crossing/prior-depth and unique-ground checks for m,L from 2 through 5 and N from 2 through 6; and the original spin count and first return. Its four results are established by native kernel reduction. The exact operations, their output records and input guards additionally match 1,064 direct original-source evaluations. These numerical checks accompany the general enumeration proof above.
+
+Original pinned source: sft/physics/spin_statistics_condensation_terminal_law_v1.py, occupation_vectors, occupation_census, canonical_occupation_weights, canonical_mean_throw, critical_condensation_certificate, minimal_throw_ground_certificate and theorem_certificate. Lean verification: SFT/Physics/SpinStatisticsCondensation.lean; SpinStatisticsOccupationEnumeration.lean, originalWalkSound, originalWalkComplete, originalWalkMembership and originalWalkUnique; SpinStatisticsOccupationBounds.lean, originalPreservingComplete, originalAlternatingComplete and originalOverfullAlternatingEmpty; SpinStatisticsCertificateProof.lean, originalCertificate, with its three component certificate proofs. Chronological correspondence: TIMELINE.txt TURN1043–1044. Verification evidence: verification/TURN_1044_spinstatistics1043_core_report.json and TURN_1044_spinstatistics1043_certificate_report.json.

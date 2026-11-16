@@ -8267,3 +8267,21 @@ import SFT.Physics.VelocityCompositionPairProduct
 import SFT.Physics.VelocityCompositionReconstruction
 
 import SFT.Physics.VelocityCompositionWitnesses
+
+import SFT.Physics.FizeauAnalysis
+
+import SFT.Physics.FizeauEvidence
+
+import SFT.Physics.FizeauExperiment
+
+import SFT.Physics.FizeauGrammar
+
+import SFT.Physics.FizeauMeasurement
+
+import SFT.Physics.FizeauRecords
+
+import SFT.Physics.FizeauValidation
+
+import SFT.Physics.FizeauWitnessProofs
+
+import SFT.Physics.FizeauWitnesses

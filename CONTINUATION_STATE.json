@@ -55014,12 +55014,12 @@
   ],
   "next_publication_milestone": 750,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "Continue034 Fizeau validation fromactual original source read inTURN1030. Preserveanalysisbuild60256/pid25246;inspectactualoutcome,runprepared41casecomparison andaudit. RecordsbuildPASS;sourcepayloadcomparison/auditpending. Completeexact originalspec256grammar,controls,empiricalprogram andindependent/empiricalvalidators usingexistingmachinery;reuse033complete669. Nextpause750fullreviewpackage.",
+  "authorized_action": "Continue036Planck/CODATAfromactualsource readTURN1031. Reusecompleted035terminalshare/coefficient. StagedVacuumPlanckAnalysis preserves17fields,accepteddivisiondomain andthreeclosedkernelproofs;buildPASS;inspect44casecomparison/audit56176. Finishoriginalsource-recordchecks,measurementadapter,threewitnesses,256grammar,program,customempiricalvalidatorandoriginalvalidators. 034complete670;noFizeaulivejobs. Pauseonly750completepublicationreview.",
   "scientific_cursor": {
-    "completed": "SFT-PHYS-SPACETIME-VELOCITY-COMPOSITION-TERMINAL-033",
-    "next": "SFT-PHYS-VALIDATION-VELOCITY-COMPOSITION-034",
-    "receipt": "verification/TURN_1030_VELOCITY_033_COMPLETION.json",
-    "source": "claims/SFT-PHYS-VALIDATION-VELOCITY-COMPOSITION-034/execution.py",
+    "completed": "SFT-PHYS-VALIDATION-VELOCITY-COMPOSITION-034",
+    "next": "SFT-PHYS-VALIDATION-VACUUM-DENSITY-SCALE-036",
+    "receipt": "verification/TURN_1031_FIZEAU_034_COMPLETION.json",
+    "source": "claims/SFT-PHYS-VALIDATION-VACUUM-DENSITY-SCALE-036/execution.py",
     "next_milestone": 750
   },
   "video_verification": {
@@ -62526,25 +62526,58 @@
   "velocity1030": {
     "status": "complete",
     "receipt": "verification/TURN_1030_VELOCITY_033_COMPLETION.json",
-    "remaining": []
+    "remaining": [],
+    "remote": {
+      "status": "PASS",
+      "commit": "98288d4d785c1e5256c671fda2dcca22c726d3f3",
+      "tree": "12c7694bd624c522ab2434daf7ae9cc454996735",
+      "verified_files": 75,
+      "head_verified": true,
+      "completed_entries": 669
+    }
   },
   "fizeau1030_staged": {
     "claim_id": "SFT-PHYS-VALIDATION-VELOCITY-COMPOSITION-034",
     "modules": [
       "SFT/Physics/FizeauAnalysis.lean",
-      "SFT/Physics/FizeauRecords.lean"
+      "SFT/Physics/FizeauRecords.lean",
+      "SFT/Physics/FizeauMeasurement.lean",
+      "SFT/Physics/FizeauWitnesses.lean",
+      "SFT/Physics/FizeauGrammar.lean",
+      "SFT/Physics/FizeauEvidence.lean"
     ],
-    "live_jobs": [
-      {
-        "session_id": 60256,
-        "pid": 25246,
-        "log": "work/fizeau1030_build.log",
-        "action": "Retain currentbuild; checkactual result before analysis41casecomparison andaxiomaudit."
-      }
-    ],
+    "live_jobs": [],
     "checks_prepared": [
       "work/check_fizeau1030_analysis.py",
       "work/fizeau1030_audit.lean"
+    ],
+    "registered": true,
+    "records": {
+      "status": "PASS",
+      "cases": 157,
+      "declarations": 9,
+      "axioms": [],
+      "report": "verification/TURN_1030_fizeau1030_records_report.json"
+    },
+    "remaining": [],
+    "completion_receipt": "verification/TURN_1031_FIZEAU_034_COMPLETION.json"
+  },
+  "fizeau1031": {
+    "status": "complete",
+    "receipt": "verification/TURN_1031_FIZEAU_034_COMPLETION.json",
+    "remaining": []
+  },
+  "vacuumplanck1031_staged": {
+    "claim_id": "SFT-PHYS-VALIDATION-VACUUM-DENSITY-SCALE-036",
+    "module": "SFT/Physics/VacuumPlanckAnalysis.lean",
+    "build": "work/vacuumplanck1031_analysis_build2.log",
+    "live_jobs": [
+      {
+        "session_id": 56176,
+        "log": "work/vacuumplanck1031_check.log",
+        "script": "work/check_vacuumplanck1031_analysis.py",
+        "action": "Original44wholeoutputcomparisons andaxiomaudit;inspectactualresult,no restart."
+      }
     ],
     "registered": false
   }

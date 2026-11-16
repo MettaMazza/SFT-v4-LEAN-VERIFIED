@@ -8493,3 +8493,17 @@ import SFT.Physics.CollectiveRadiationGrammar
 import SFT.Physics.CollectiveRadiationWitnesses
 
 import SFT.Physics.CollectiveRadiationEntryEvidence
+
+import SFT.Physics.CollectiveObservationRecords
+
+import SFT.Physics.CollectiveObservationMeasurement
+
+import SFT.Physics.CollectiveObservationWitnesses
+
+import SFT.Physics.CollectiveObservationGrammar
+
+import SFT.Physics.CollectiveObservationEvidence
+
+import SFT.Physics.CollectiveObservationExperiment
+
+import SFT.Physics.CollectiveObservationValidation

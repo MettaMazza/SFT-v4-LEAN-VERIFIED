@@ -1,0 +1,6 @@
+from pathlib import Path
+import re,json,hashlib,subprocess,os
+w=Path('work');r=Path('/Volumes/One Touch/SFT v4 Full model LEAN');mods=['ElectroweakMeasured'+s for s in ['Records','Measurement','Witnesses','Grammar','Evidence','Experiment','Validation','Analysis']];names=[];sha={}
+for m in mods:
+ body=(r/f'SFT/Physics/{m}.lean').read_text();assert not re.search(r'\bsorry\b|^\s*axiom\b',body,re.M);names+=['SFT.Physics.'+m+'.'+n for n in re.findall(r'^(?:def|theorem|structure) (\w+)',body,re.M)];sha[m]=hashlib.sha256(body.encode()).hexdigest()
+p=w/'electroweak1056_staged_audit.lean';p.write_text(''.join('import SFT.Physics.'+m+'\n' for m in mods)+''.join('#print axioms '+n+'\n' for n in names));x=subprocess.run(['/Users/dolltrading/.elan/bin/lean',str(p)],env={**os.environ,'LEAN_PATH':str(r/'.lake/build/lib/lean')},capture_output=True,text=True);(w/'electroweak1056_staged_audit.log').write_text(x.stdout+x.stderr);assert x.returncode==0 and x.stdout.count('does not depend on any axioms')==len(names),x.stdout[-2000:];(w/'electroweak1056_staged_report.json').write_text(json.dumps(dict(status='PASS',modules=mods,declarations=names,source_sha256=sha,axioms=[]),indent=2));print('PASS',len(names),'emptyaxiom declarations')

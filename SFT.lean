@@ -9527,3 +9527,19 @@ import SFT.Physics.ParticleModeReach
 import SFT.Physics.ParticleModeTransport
 
 import SFT.Physics.ParticleModeWitnesses
+
+import SFT.Physics.ElectroweakMeasuredRecords
+
+import SFT.Physics.ElectroweakMeasuredMeasurement
+
+import SFT.Physics.ElectroweakMeasuredWitnesses
+
+import SFT.Physics.ElectroweakMeasuredGrammar
+
+import SFT.Physics.ElectroweakMeasuredEvidence
+
+import SFT.Physics.ElectroweakMeasuredExperiment
+
+import SFT.Physics.ElectroweakMeasuredValidation
+
+import SFT.Physics.ElectroweakMeasuredAnalysis

@@ -1,0 +1,38 @@
+import SFT.Physics.ElectroweakMeasuredAnalysis
+import SFT.Physics.ElectroweakMeasuredRecords
+import SFT.Physics.ElectroweakMeasuredMeasurement
+import SFT.Physics.ElectroweakMeasuredWitnesses
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.interval
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.Target
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.Analysis
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.squaredEndpoints
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.exactAnalysis
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.empirical
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.registeredTarget
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.measuredPass
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.directTamperRejected
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.compatibleWTamperRejected
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.originalMeasuredPass
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.originalDirectControl
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.originalCompatibleWControl
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.exactTerminalWitness
+#print axioms SFT.Physics.ElectroweakMeasuredAnalysis.originalTerminalWitness
+#print axioms SFT.Physics.ElectroweakMeasuredRecords.sourcePath
+#print axioms SFT.Physics.ElectroweakMeasuredRecords.sourceHashes
+#print axioms SFT.Physics.ElectroweakMeasuredRecords.sourceIds
+#print axioms SFT.Physics.ElectroweakMeasuredRecords.boundariesRetained
+#print axioms SFT.Physics.ElectroweakMeasuredRecords.authoritativeRecord
+#print axioms SFT.Physics.ElectroweakMeasuredRecords.originalBoundary
+#print axioms SFT.Physics.ElectroweakMeasuredRecords.originalBoundaryRetained
+#print axioms SFT.Physics.ElectroweakMeasuredMeasurement.originalRecordTarget
+#print axioms SFT.Physics.ElectroweakMeasuredMeasurement.ratio
+#print axioms SFT.Physics.ElectroweakMeasuredMeasurement.pair
+#print axioms SFT.Physics.ElectroweakMeasuredMeasurement.analysisValue
+#print axioms SFT.Physics.ElectroweakMeasuredMeasurement.exactElectroweakAnalysis
+#print axioms SFT.Physics.ElectroweakMeasuredWitnesses.Witness
+#print axioms SFT.Physics.ElectroweakMeasuredWitnesses.formalShare
+#print axioms SFT.Physics.ElectroweakMeasuredWitnesses.formalComplement
+#print axioms SFT.Physics.ElectroweakMeasuredWitnesses.witnesses
+#print axioms SFT.Physics.ElectroweakMeasuredWitnesses.formalSharePassed
+#print axioms SFT.Physics.ElectroweakMeasuredWitnesses.formalComplementPassed
+#print axioms SFT.Physics.ElectroweakMeasuredWitnesses.allWitnessesPass

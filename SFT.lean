@@ -8357,3 +8357,19 @@ import SFT.Physics.ThermalHistoryGrammar
 import SFT.Physics.ThermalHistoryWitnesses
 
 import SFT.Physics.ThermalHistoryEntryEvidence
+
+import SFT.Physics.ThermalObservationAnalysis
+
+import SFT.Physics.ThermalObservationRecords
+
+import SFT.Physics.ThermalObservationMeasurement
+
+import SFT.Physics.ThermalObservationWitnesses
+
+import SFT.Physics.ThermalObservationGrammar
+
+import SFT.Physics.ThermalObservationEvidence
+
+import SFT.Physics.ThermalObservationExperiment
+
+import SFT.Physics.ThermalObservationValidation

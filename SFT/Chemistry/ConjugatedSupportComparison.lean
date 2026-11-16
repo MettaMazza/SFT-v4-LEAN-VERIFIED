@@ -38,7 +38,7 @@ def heldCellLabel : Value → Except String String
  | .label held => .ok held.label
  | .emptyOne _ => .error "'EmptyOne' object has no attribute 'label'"
  | .count _ => .error "'PositiveCount' object has no attribute 'label'"
- | .ratio _ _ => .error "'ExactPart' object has no attribute 'label'"
+ | .ratio _ _ => .error "'PositiveRatio' object has no attribute 'label'"
  | .word _ => .error "'FoldWord' object has no attribute 'label'"
  | .pair _ _ => .error "'FoldPair' object has no attribute 'label'"
  | .table _ => .error "'FoldTable' object has no attribute 'label'"

@@ -10719,3 +10719,27 @@ import SFT.Chemistry.OrbitalSupportComparison
 import SFT.Chemistry.OrbitalSupportExperiment
 
 import SFT.Chemistry.OrbitalSupportValidation
+
+import SFT.Chemistry.ConjugatedSupport
+
+import SFT.Chemistry.ConjugatedSupportWitnesses
+
+import SFT.Chemistry.ConjugatedSupportDerivation
+
+import SFT.Chemistry.ConjugatedSupportGrammar
+
+import SFT.Chemistry.ConjugatedSupportEvidence
+
+import SFT.Chemistry.ConjugatedSupportPrediction
+
+import SFT.Chemistry.ConjugatedSupportAnalysis
+
+import SFT.Chemistry.ConjugatedSupportSource
+
+import SFT.Chemistry.ConjugatedSupportComparison
+
+import SFT.Chemistry.ConjugatedSupportExperiment
+
+import SFT.Chemistry.ConjugatedSupportControls
+
+import SFT.Chemistry.ConjugatedSupportValidation

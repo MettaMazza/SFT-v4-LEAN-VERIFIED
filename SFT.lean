@@ -9559,3 +9559,25 @@ import SFT.Physics.CommonMeasuredExperiment
 import SFT.Physics.CommonMeasuredValidation
 
 import SFT.Physics.CommonMeasuredAnalysis
+
+import SFT.Physics.CosmicMeasuredRecords
+
+import SFT.Physics.CosmicMeasuredMeasurement
+
+import SFT.Physics.CosmicMeasuredWitnesses
+
+import SFT.Physics.CosmicMeasuredGrammar
+
+import SFT.Physics.CosmicMeasuredEvidence
+
+import SFT.Physics.CosmicMeasuredExperiment
+
+import SFT.Physics.CosmicMeasuredValidation
+
+import SFT.Physics.CosmicMeasuredRoots
+
+import SFT.Physics.CosmicMeasuredResidual
+
+import SFT.Physics.CosmicMeasuredOriginal
+
+import SFT.Physics.CosmicMeasuredInputProofs

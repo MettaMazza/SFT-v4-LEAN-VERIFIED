@@ -1,0 +1,5 @@
+import SFT.Physics.InflationGrowthCertificate
+#print axioms SFT.Physics.InflationGrowthCertificate.Certificate
+#print axioms SFT.Physics.InflationGrowthCertificate.certificate
+#print axioms SFT.Physics.InflationGrowthCertificate.originalCertificateCounts
+#print axioms SFT.Physics.InflationGrowthCertificate.originalCertificateFlags

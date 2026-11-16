@@ -26816,3 +26816,29 @@ Both numerator and denominator are positive. Mapping all N indices yields exactl
 so successive rows alternate compression and rarefaction. ThermalHistoryAcoustic.originalModeLedger identifies the actual returned rows; originalCompleteModeCount, originalPositiveMode, originalPhasePositive, originalSuccessiveParity and originalLoadingAlternates prove count, positivity and succession for every positive count. These are internal mode labels. The original observed-angular-position representation retains its projection and driving records.
 
 Original pinned source: sft/physics/thermal_history_recombination_terminal_law_v1.py, ordered_thresholds, visibility_ledger, acoustic_mode_ledger, theorem_certificate and SPEC. Lean verification: SFT/Physics/ThermalHistoryOrder.lean, ThermalHistoryVisibility.lean and ThermalHistoryAcoustic.lean, together with the transport, horizon, certificate, grammar, witnesses and entry evidence modules listed in verification/TURN_1034_THERMAL_037_COMPLETION.json. All 178 audited declarations have empty axiom dependencies; all 256 candidate decisions, the complete programme and original independent-validator controls match V3. This registers completed source entry 672. Chronological correspondence: TIMELINE.txt TURN1034.
+
+913. Post-seal thermal-history interval and acoustic-row analysis
+
+The original observation operation retains each measured centre c and standard uncertainty u as the exact interval [c−u,c+u]. For the temperature exponent and helium mass fraction this gives
+
+    [1007/1000−27/1000,1007/1000+27/1000]=[49/50,517/500],
+    [2458/10000−13/10000,2458/10000+13/10000]=[489/2000,2471/10000].
+
+The first interval contains One. The second has upper endpoint 2471/10000<1/4. The analytic helium-family partition remains 1/4; its difference from the measured centre is 1/4−2458/10000=21/5000. The original V3 comparison retains this exclusion of exact measured-quarter equality.
+
+The deuterium centre and width are both divided by 100000 before interval formation:
+
+    I_D=[(2.527−0.030)/100000,(2.527+0.030)/100000]
+       =[2497/100000000,2557/100000000].
+
+Its lower endpoint is positive and its upper endpoint is below the helium interval's lower endpoint. Recombination retains
+
+    I_z=[1089.92−0.25,1089.92+0.25]=[108967/100,109017/100],
+
+with positive width and lower endpoint. These observed widths are retained measurement inputs, not coefficients in the formal thermal law.
+
+For each paired peak centre pᵢ and uncertainty uᵢ, the operation constructs Jᵢ=[pᵢ−uᵢ,pᵢ+uᵢ]. For modes m=2,…,7 it compares Jₘ against mJ₁. Two closed intervals overlap precisely when neither upper endpoint lies strictly below the other's lower endpoint. Each of the six comparisons is disjoint for the retained record, rejecting exact observed angular integer multiples. Seven position intervals, seven amplitudes and seven amplitude uncertainties are retained; the separate mission count remains eighteen. Freeze-out and capture labels retain the original approximate 1/6 and 1/7 sequence. The analytic-quarter label and complete-row value are preserved separately. All eighteen returned fields are translated, including full interval arrays and the original detected-count and row-retention values.
+
+ThermalObservationAnalysis.originalIntervals and originalComparison prove the registered exact results. originalTamperedRejected proves rejection after the original exponent change to 1.100. The input parser and canonical output operation ThermalObservationMeasurement.exactThermalAnalysis preserve the original exact conversions and all returned fields. ThermalObservationRecords.payloadBoundary retains the six-source requirement, formal-receipt binding, fixed target fields, complete seven-row checks and all eight custody flags; authoritativeRecord additionally binds every original file hash. The complete eight-axis candidate product contains 256 alternatives, with exhaustive coverage, original elimination decisions and one survivor; its three witnesses reuse the admitted thermal-history certificate.
+
+Original pinned sources: sft/physics/thermal_history_validation_v1.py (exact_thermal_analysis, authoritative_record and source_hashes), thermal_history_empirical_v1.py (SPEC and its original observational provenance), and experiments/external_sources/physics/snapshots/thermal-history-postseal-source-record.json. Native verification: SFT/Physics/ThermalObservationAnalysis.lean, ThermalObservationRecords.lean, ThermalObservationMeasurement.lean, ThermalObservationWitnesses.lean, ThermalObservationGrammar.lean and ThermalObservationEvidence.lean. Verification covers 72 complete typed analyses, 152 authoritative-record payload cases, 89 complete canonical analyses and all 256 candidate records; all 83 exported declarations audited here have empty axiom dependencies. Evidence: verification/TURN_1034_thermalobservation1034_analysis_report.json, records_report.json, measurement_report.json, grammar_report.json and staged_report.json (the latter four use the same TURN_1034_thermalobservation1034_ prefix). Chronological correspondence: TIMELINE.txt TURN1034. These results do not yet register entry 038; its complete post-seal validation assembly remains the next operation.

@@ -1,0 +1,7 @@
+from pathlib import Path
+import sys,subprocess,os,ast,json,hashlib
+w=Path('work');r=Path('/Volumes/One Touch/SFT v4 Full model LEAN');sys.path.insert(0,str((w/'v3-runtime500').resolve()))
+from sft.physics.thermal_history_empirical_v1 import SPEC,ObservationalEmpiricalPhysicsProgram
+p=ObservationalEmpiricalPhysicsProgram(SPEC,'source-identity-irrelevant-to-these-four-fields');cs=p.generate_candidates().candidates;expected=[(c.candidate_id,c.exact_form,p.decide_candidate(c).survives,p.decide_candidate(c).reason)for c in cs]
+f=w/'thermalobservation1034_grammar.lean';f.write_text('import SFT.Physics.ThermalObservationGrammar\nopen SFT.Physics.ThermalObservationGrammar\n#eval candidates.map fun c => (candidateId c,exactForm c,survives c,decisionReason c)\n');x=subprocess.run(['/Users/dolltrading/.elan/bin/lean',str(f)],env={**os.environ,'LEAN_PATH':str(r/'.lake/build/lib/lean')},capture_output=True,text=True);(w/'thermalobservation1034_grammar.log').write_text(x.stdout+x.stderr);assert x.returncode==0,x.stdout;actual=ast.literal_eval(x.stdout.replace('true','True').replace('false','False'));assert actual==expected
+(w/'thermalobservation1034_grammar_report.json').write_text(json.dumps(dict(status='PASS',candidates=len(cs),fields=['candidate_id','exact_form','survives','reason'],order_preserved=True,source_sha256=hashlib.sha256((r/'SFT/Physics/ThermalObservationGrammar.lean').read_bytes()).hexdigest()),indent=2));print('PASS',len(cs),'complete source candidate records')

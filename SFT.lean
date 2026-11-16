@@ -8763,3 +8763,675 @@ import SFT.Physics.CriticalObservationEvidence
 import SFT.Physics.CriticalObservationExperiment
 
 import SFT.Physics.CriticalObservationValidation
+
+import SFT.Physics.QuantumSupportBell
+
+import SFT.Physics.QuantumSupportCensus0
+
+import SFT.Physics.QuantumSupportCensus1
+
+import SFT.Physics.QuantumSupportCensus10
+
+import SFT.Physics.QuantumSupportCensus11
+
+import SFT.Physics.QuantumSupportCensus12
+
+import SFT.Physics.QuantumSupportCensus13
+
+import SFT.Physics.QuantumSupportCensus14
+
+import SFT.Physics.QuantumSupportCensus15
+
+import SFT.Physics.QuantumSupportCensus2
+
+import SFT.Physics.QuantumSupportCensus3
+
+import SFT.Physics.QuantumSupportCensus4
+
+import SFT.Physics.QuantumSupportCensus5
+
+import SFT.Physics.QuantumSupportCensus6
+
+import SFT.Physics.QuantumSupportCensus7
+
+import SFT.Physics.QuantumSupportCensus8
+
+import SFT.Physics.QuantumSupportCensus9
+
+import SFT.Physics.QuantumSupportCertificate
+
+import SFT.Physics.QuantumSupportCertificateProof
+
+import SFT.Physics.QuantumSupportDepth
+
+import SFT.Physics.QuantumSupportEntryEvidence
+
+import SFT.Physics.QuantumSupportGrammar
+
+import SFT.Physics.QuantumSupportGrammarBase
+
+import SFT.Physics.QuantumSupportJoint
+
+import SFT.Physics.QuantumSupportJointCertificateProof
+
+import SFT.Physics.QuantumSupportJointThreeFiveProof
+
+import SFT.Physics.QuantumSupportNormalization
+
+import SFT.Physics.QuantumSupportOrthogonality
+
+import SFT.Physics.QuantumSupportOrthogonalityInduction
+
+import SFT.Physics.QuantumSupportOrthogonalityNative
+
+import SFT.Physics.QuantumSupportParity
+
+import SFT.Physics.QuantumSupportParseval
+
+import SFT.Physics.QuantumSupportPreparation
+
+import SFT.Physics.QuantumSupportTerminalWitnessProofs
+
+import SFT.Physics.QuantumSupportWalsh
+
+import SFT.Physics.QuantumSupportWalshBatch
+
+import SFT.Physics.QuantumSupportWalshBatch01_00
+
+import SFT.Physics.QuantumSupportWalshBatch02_00
+
+import SFT.Physics.QuantumSupportWalshBatch03_00
+
+import SFT.Physics.QuantumSupportWalshBatch03_01
+
+import SFT.Physics.QuantumSupportWalshBatch03_02
+
+import SFT.Physics.QuantumSupportWalshBatch04_00
+
+import SFT.Physics.QuantumSupportWalshBatch04_01
+
+import SFT.Physics.QuantumSupportWalshBatch04_02
+
+import SFT.Physics.QuantumSupportWalshBatch04_03
+
+import SFT.Physics.QuantumSupportWalshBatch04_04
+
+import SFT.Physics.QuantumSupportWalshBatch04_05
+
+import SFT.Physics.QuantumSupportWalshBatch04_06
+
+import SFT.Physics.QuantumSupportWalshBatch04_07
+
+import SFT.Physics.QuantumSupportWalshBatch05_00
+
+import SFT.Physics.QuantumSupportWalshBatch05_01
+
+import SFT.Physics.QuantumSupportWalshBatch05_02
+
+import SFT.Physics.QuantumSupportWalshBatch05_03
+
+import SFT.Physics.QuantumSupportWalshBatch05_04
+
+import SFT.Physics.QuantumSupportWalshBatch05_05
+
+import SFT.Physics.QuantumSupportWalshBatch05_06
+
+import SFT.Physics.QuantumSupportWalshBatch05_07
+
+import SFT.Physics.QuantumSupportWalshBatch05_08
+
+import SFT.Physics.QuantumSupportWalshBatch05_09
+
+import SFT.Physics.QuantumSupportWalshBatch05_10
+
+import SFT.Physics.QuantumSupportWalshBatch05_11
+
+import SFT.Physics.QuantumSupportWalshBatch05_12
+
+import SFT.Physics.QuantumSupportWalshBatch05_13
+
+import SFT.Physics.QuantumSupportWalshBatch05_14
+
+import SFT.Physics.QuantumSupportWalshBatch05_15
+
+import SFT.Physics.QuantumSupportWalshBatch05_16
+
+import SFT.Physics.QuantumSupportWalshBatch05_17
+
+import SFT.Physics.QuantumSupportWalshBatch06_00
+
+import SFT.Physics.QuantumSupportWalshBatch06_01
+
+import SFT.Physics.QuantumSupportWalshBatch06_02
+
+import SFT.Physics.QuantumSupportWalshBatch06_03
+
+import SFT.Physics.QuantumSupportWalshBatch06_04
+
+import SFT.Physics.QuantumSupportWalshBatch06_05
+
+import SFT.Physics.QuantumSupportWalshBatch06_06
+
+import SFT.Physics.QuantumSupportWalshBatch06_07
+
+import SFT.Physics.QuantumSupportWalshBatch06_08
+
+import SFT.Physics.QuantumSupportWalshBatch06_09
+
+import SFT.Physics.QuantumSupportWalshBatch06_10
+
+import SFT.Physics.QuantumSupportWalshBatch06_11
+
+import SFT.Physics.QuantumSupportWalshBatch06_12
+
+import SFT.Physics.QuantumSupportWalshBatch06_13
+
+import SFT.Physics.QuantumSupportWalshBatch06_14
+
+import SFT.Physics.QuantumSupportWalshBatch06_15
+
+import SFT.Physics.QuantumSupportWalshBatch06_16
+
+import SFT.Physics.QuantumSupportWalshBatch06_17
+
+import SFT.Physics.QuantumSupportWalshBatch06_18
+
+import SFT.Physics.QuantumSupportWalshBatch06_19
+
+import SFT.Physics.QuantumSupportWalshBatch06_20
+
+import SFT.Physics.QuantumSupportWalshBatch06_21
+
+import SFT.Physics.QuantumSupportWalshBatch06_22
+
+import SFT.Physics.QuantumSupportWalshBatch06_23
+
+import SFT.Physics.QuantumSupportWalshBatch06_24
+
+import SFT.Physics.QuantumSupportWalshBatch06_25
+
+import SFT.Physics.QuantumSupportWalshBatch06_26
+
+import SFT.Physics.QuantumSupportWalshBatch06_27
+
+import SFT.Physics.QuantumSupportWalshBatch06_28
+
+import SFT.Physics.QuantumSupportWalshBatch06_29
+
+import SFT.Physics.QuantumSupportWalshBatch06_30
+
+import SFT.Physics.QuantumSupportWalshBatch06_31
+
+import SFT.Physics.QuantumSupportWalshBatch07_00
+
+import SFT.Physics.QuantumSupportWalshBatch07_01
+
+import SFT.Physics.QuantumSupportWalshBatch07_02
+
+import SFT.Physics.QuantumSupportWalshBatch07_03
+
+import SFT.Physics.QuantumSupportWalshBatch07_04
+
+import SFT.Physics.QuantumSupportWalshBatch07_05
+
+import SFT.Physics.QuantumSupportWalshBatch07_06
+
+import SFT.Physics.QuantumSupportWalshBatch07_07
+
+import SFT.Physics.QuantumSupportWalshBatch07_08
+
+import SFT.Physics.QuantumSupportWalshBatch07_09
+
+import SFT.Physics.QuantumSupportWalshBatch07_10
+
+import SFT.Physics.QuantumSupportWalshBatch07_11
+
+import SFT.Physics.QuantumSupportWalshBatch07_12
+
+import SFT.Physics.QuantumSupportWalshBatch07_13
+
+import SFT.Physics.QuantumSupportWalshBatch07_14
+
+import SFT.Physics.QuantumSupportWalshBatch07_15
+
+import SFT.Physics.QuantumSupportWalshBatch07_16
+
+import SFT.Physics.QuantumSupportWalshBatch07_17
+
+import SFT.Physics.QuantumSupportWalshBatch07_18
+
+import SFT.Physics.QuantumSupportWalshBatch07_19
+
+import SFT.Physics.QuantumSupportWalshBatch07_20
+
+import SFT.Physics.QuantumSupportWalshBatch07_21
+
+import SFT.Physics.QuantumSupportWalshBatch07_22
+
+import SFT.Physics.QuantumSupportWalshBatch07_23
+
+import SFT.Physics.QuantumSupportWalshBatch07_24
+
+import SFT.Physics.QuantumSupportWalshBatch07_25
+
+import SFT.Physics.QuantumSupportWalshBatch07_26
+
+import SFT.Physics.QuantumSupportWalshBatch07_27
+
+import SFT.Physics.QuantumSupportWalshBatch07_28
+
+import SFT.Physics.QuantumSupportWalshBatch07_29
+
+import SFT.Physics.QuantumSupportWalshBatch07_30
+
+import SFT.Physics.QuantumSupportWalshBatch07_31
+
+import SFT.Physics.QuantumSupportWalshBatch07_32
+
+import SFT.Physics.QuantumSupportWalshBatch07_33
+
+import SFT.Physics.QuantumSupportWalshBatch07_34
+
+import SFT.Physics.QuantumSupportWalshBatch07_35
+
+import SFT.Physics.QuantumSupportWalshBatch07_36
+
+import SFT.Physics.QuantumSupportWalshBatch07_37
+
+import SFT.Physics.QuantumSupportWalshBatch07_38
+
+import SFT.Physics.QuantumSupportWalshBatch07_39
+
+import SFT.Physics.QuantumSupportWalshBatch07_40
+
+import SFT.Physics.QuantumSupportWalshBatch07_41
+
+import SFT.Physics.QuantumSupportWalshBatch07_42
+
+import SFT.Physics.QuantumSupportWalshBatch07_43
+
+import SFT.Physics.QuantumSupportWalshBatch07_44
+
+import SFT.Physics.QuantumSupportWalshBatch08_00
+
+import SFT.Physics.QuantumSupportWalshBatch08_01
+
+import SFT.Physics.QuantumSupportWalshBatch08_02
+
+import SFT.Physics.QuantumSupportWalshBatch08_03
+
+import SFT.Physics.QuantumSupportWalshBatch08_04
+
+import SFT.Physics.QuantumSupportWalshBatch08_05
+
+import SFT.Physics.QuantumSupportWalshBatch08_06
+
+import SFT.Physics.QuantumSupportWalshBatch08_07
+
+import SFT.Physics.QuantumSupportWalshBatch08_08
+
+import SFT.Physics.QuantumSupportWalshBatch08_09
+
+import SFT.Physics.QuantumSupportWalshBatch08_10
+
+import SFT.Physics.QuantumSupportWalshBatch08_11
+
+import SFT.Physics.QuantumSupportWalshBatch08_12
+
+import SFT.Physics.QuantumSupportWalshBatch08_13
+
+import SFT.Physics.QuantumSupportWalshBatch08_14
+
+import SFT.Physics.QuantumSupportWalshBatch08_15
+
+import SFT.Physics.QuantumSupportWalshBatch08_16
+
+import SFT.Physics.QuantumSupportWalshBatch08_17
+
+import SFT.Physics.QuantumSupportWalshBatch08_18
+
+import SFT.Physics.QuantumSupportWalshBatch08_19
+
+import SFT.Physics.QuantumSupportWalshBatch08_20
+
+import SFT.Physics.QuantumSupportWalshBatch08_21
+
+import SFT.Physics.QuantumSupportWalshBatch08_22
+
+import SFT.Physics.QuantumSupportWalshBatch08_23
+
+import SFT.Physics.QuantumSupportWalshBatch08_24
+
+import SFT.Physics.QuantumSupportWalshBatch08_25
+
+import SFT.Physics.QuantumSupportWalshBatch08_26
+
+import SFT.Physics.QuantumSupportWalshBatch08_27
+
+import SFT.Physics.QuantumSupportWalshBatch08_28
+
+import SFT.Physics.QuantumSupportWalshBatch08_29
+
+import SFT.Physics.QuantumSupportWalshBatch08_30
+
+import SFT.Physics.QuantumSupportWalshBatch08_31
+
+import SFT.Physics.QuantumSupportWalshBatch08_32
+
+import SFT.Physics.QuantumSupportWalshBatch08_33
+
+import SFT.Physics.QuantumSupportWalshBatch08_34
+
+import SFT.Physics.QuantumSupportWalshBatch08_35
+
+import SFT.Physics.QuantumSupportWalshBatch08_36
+
+import SFT.Physics.QuantumSupportWalshBatch08_37
+
+import SFT.Physics.QuantumSupportWalshBatch08_38
+
+import SFT.Physics.QuantumSupportWalshBatch08_39
+
+import SFT.Physics.QuantumSupportWalshBatch08_40
+
+import SFT.Physics.QuantumSupportWalshBatch08_41
+
+import SFT.Physics.QuantumSupportWalshBatch08_42
+
+import SFT.Physics.QuantumSupportWalshBatch08_43
+
+import SFT.Physics.QuantumSupportWalshBatch08_44
+
+import SFT.Physics.QuantumSupportWalshBatch08_45
+
+import SFT.Physics.QuantumSupportWalshBatch08_46
+
+import SFT.Physics.QuantumSupportWalshBatch08_47
+
+import SFT.Physics.QuantumSupportWalshBatch08_48
+
+import SFT.Physics.QuantumSupportWalshBatch08_49
+
+import SFT.Physics.QuantumSupportWalshBatch08_50
+
+import SFT.Physics.QuantumSupportWalshBatch09_00
+
+import SFT.Physics.QuantumSupportWalshBatch09_01
+
+import SFT.Physics.QuantumSupportWalshBatch09_02
+
+import SFT.Physics.QuantumSupportWalshBatch09_03
+
+import SFT.Physics.QuantumSupportWalshBatch09_04
+
+import SFT.Physics.QuantumSupportWalshBatch09_05
+
+import SFT.Physics.QuantumSupportWalshBatch09_06
+
+import SFT.Physics.QuantumSupportWalshBatch09_07
+
+import SFT.Physics.QuantumSupportWalshBatch09_08
+
+import SFT.Physics.QuantumSupportWalshBatch09_09
+
+import SFT.Physics.QuantumSupportWalshBatch09_10
+
+import SFT.Physics.QuantumSupportWalshBatch09_11
+
+import SFT.Physics.QuantumSupportWalshBatch09_12
+
+import SFT.Physics.QuantumSupportWalshBatch09_13
+
+import SFT.Physics.QuantumSupportWalshBatch09_14
+
+import SFT.Physics.QuantumSupportWalshBatch09_15
+
+import SFT.Physics.QuantumSupportWalshBatch09_16
+
+import SFT.Physics.QuantumSupportWalshBatch09_17
+
+import SFT.Physics.QuantumSupportWalshBatch09_18
+
+import SFT.Physics.QuantumSupportWalshBatch09_19
+
+import SFT.Physics.QuantumSupportWalshBatch09_20
+
+import SFT.Physics.QuantumSupportWalshBatch09_21
+
+import SFT.Physics.QuantumSupportWalshBatch09_22
+
+import SFT.Physics.QuantumSupportWalshBatch09_23
+
+import SFT.Physics.QuantumSupportWalshBatch09_24
+
+import SFT.Physics.QuantumSupportWalshBatch09_25
+
+import SFT.Physics.QuantumSupportWalshBatch09_26
+
+import SFT.Physics.QuantumSupportWalshBatch09_27
+
+import SFT.Physics.QuantumSupportWalshBatch09_28
+
+import SFT.Physics.QuantumSupportWalshBatch09_29
+
+import SFT.Physics.QuantumSupportWalshBatch09_30
+
+import SFT.Physics.QuantumSupportWalshBatch09_31
+
+import SFT.Physics.QuantumSupportWalshBatch09_32
+
+import SFT.Physics.QuantumSupportWalshBatch09_33
+
+import SFT.Physics.QuantumSupportWalshBatch09_34
+
+import SFT.Physics.QuantumSupportWalshBatch09_35
+
+import SFT.Physics.QuantumSupportWalshBatch09_36
+
+import SFT.Physics.QuantumSupportWalshBatch09_37
+
+import SFT.Physics.QuantumSupportWalshBatch09_38
+
+import SFT.Physics.QuantumSupportWalshBatch09_39
+
+import SFT.Physics.QuantumSupportWalshBatch09_40
+
+import SFT.Physics.QuantumSupportWalshBatch09_41
+
+import SFT.Physics.QuantumSupportWalshBatch09_42
+
+import SFT.Physics.QuantumSupportWalshBatch09_43
+
+import SFT.Physics.QuantumSupportWalshBatch09_44
+
+import SFT.Physics.QuantumSupportWalshBatch10_00
+
+import SFT.Physics.QuantumSupportWalshBatch10_01
+
+import SFT.Physics.QuantumSupportWalshBatch10_02
+
+import SFT.Physics.QuantumSupportWalshBatch10_03
+
+import SFT.Physics.QuantumSupportWalshBatch10_04
+
+import SFT.Physics.QuantumSupportWalshBatch10_05
+
+import SFT.Physics.QuantumSupportWalshBatch10_06
+
+import SFT.Physics.QuantumSupportWalshBatch10_07
+
+import SFT.Physics.QuantumSupportWalshBatch10_08
+
+import SFT.Physics.QuantumSupportWalshBatch10_09
+
+import SFT.Physics.QuantumSupportWalshBatch10_10
+
+import SFT.Physics.QuantumSupportWalshBatch10_11
+
+import SFT.Physics.QuantumSupportWalshBatch10_12
+
+import SFT.Physics.QuantumSupportWalshBatch10_13
+
+import SFT.Physics.QuantumSupportWalshBatch10_14
+
+import SFT.Physics.QuantumSupportWalshBatch10_15
+
+import SFT.Physics.QuantumSupportWalshBatch10_16
+
+import SFT.Physics.QuantumSupportWalshBatch10_17
+
+import SFT.Physics.QuantumSupportWalshBatch10_18
+
+import SFT.Physics.QuantumSupportWalshBatch10_19
+
+import SFT.Physics.QuantumSupportWalshBatch10_20
+
+import SFT.Physics.QuantumSupportWalshBatch10_21
+
+import SFT.Physics.QuantumSupportWalshBatch10_22
+
+import SFT.Physics.QuantumSupportWalshBatch10_23
+
+import SFT.Physics.QuantumSupportWalshBatch10_24
+
+import SFT.Physics.QuantumSupportWalshBatch10_25
+
+import SFT.Physics.QuantumSupportWalshBatch10_26
+
+import SFT.Physics.QuantumSupportWalshBatch10_27
+
+import SFT.Physics.QuantumSupportWalshBatch10_28
+
+import SFT.Physics.QuantumSupportWalshBatch10_29
+
+import SFT.Physics.QuantumSupportWalshBatch10_30
+
+import SFT.Physics.QuantumSupportWalshBatch10_31
+
+import SFT.Physics.QuantumSupportWalshBatch11_00
+
+import SFT.Physics.QuantumSupportWalshBatch11_01
+
+import SFT.Physics.QuantumSupportWalshBatch11_02
+
+import SFT.Physics.QuantumSupportWalshBatch11_03
+
+import SFT.Physics.QuantumSupportWalshBatch11_04
+
+import SFT.Physics.QuantumSupportWalshBatch11_05
+
+import SFT.Physics.QuantumSupportWalshBatch11_06
+
+import SFT.Physics.QuantumSupportWalshBatch11_07
+
+import SFT.Physics.QuantumSupportWalshBatch11_08
+
+import SFT.Physics.QuantumSupportWalshBatch11_09
+
+import SFT.Physics.QuantumSupportWalshBatch11_10
+
+import SFT.Physics.QuantumSupportWalshBatch11_11
+
+import SFT.Physics.QuantumSupportWalshBatch11_12
+
+import SFT.Physics.QuantumSupportWalshBatch11_13
+
+import SFT.Physics.QuantumSupportWalshBatch11_14
+
+import SFT.Physics.QuantumSupportWalshBatch11_15
+
+import SFT.Physics.QuantumSupportWalshBatch11_16
+
+import SFT.Physics.QuantumSupportWalshBatch11_17
+
+import SFT.Physics.QuantumSupportWalshBatch12_00
+
+import SFT.Physics.QuantumSupportWalshBatch12_01
+
+import SFT.Physics.QuantumSupportWalshBatch12_02
+
+import SFT.Physics.QuantumSupportWalshBatch12_03
+
+import SFT.Physics.QuantumSupportWalshBatch12_04
+
+import SFT.Physics.QuantumSupportWalshBatch12_05
+
+import SFT.Physics.QuantumSupportWalshBatch12_06
+
+import SFT.Physics.QuantumSupportWalshBatch12_07
+
+import SFT.Physics.QuantumSupportWalshBatch13_00
+
+import SFT.Physics.QuantumSupportWalshBatch13_01
+
+import SFT.Physics.QuantumSupportWalshBatch13_02
+
+import SFT.Physics.QuantumSupportWalshBatch14_00
+
+import SFT.Physics.QuantumSupportWalshBatch15_00
+
+import SFT.Physics.QuantumSupportWalshBatch16_00
+
+import SFT.Physics.QuantumSupportWalshBatchAssembly
+
+import SFT.Physics.QuantumSupportWalshCensusAssembly
+
+import SFT.Physics.QuantumSupportWalshFourProof
+
+import SFT.Physics.QuantumSupportWalshGuardAssembly
+
+import SFT.Physics.QuantumSupportWalshOrderedAssembly
+
+import SFT.Physics.QuantumSupportWalshSize01
+
+import SFT.Physics.QuantumSupportWalshSize02
+
+import SFT.Physics.QuantumSupportWalshSize03
+
+import SFT.Physics.QuantumSupportWalshSize04
+
+import SFT.Physics.QuantumSupportWalshSize05
+
+import SFT.Physics.QuantumSupportWalshSize06
+
+import SFT.Physics.QuantumSupportWalshSize07
+
+import SFT.Physics.QuantumSupportWalshSize08
+
+import SFT.Physics.QuantumSupportWalshSize09
+
+import SFT.Physics.QuantumSupportWalshSize10
+
+import SFT.Physics.QuantumSupportWalshSize11
+
+import SFT.Physics.QuantumSupportWalshSize12
+
+import SFT.Physics.QuantumSupportWalshSize13
+
+import SFT.Physics.QuantumSupportWalshSize14
+
+import SFT.Physics.QuantumSupportWalshSize15
+
+import SFT.Physics.QuantumSupportWalshSize16
+
+import SFT.Physics.QuantumSupportWalshThreeProof
+
+import SFT.Physics.QuantumSupportWitnessProofs
+
+import SFT.Physics.QuantumSupportWitnesses
+
+import SFT.Physics.QuantumSupportObservationRecords
+
+import SFT.Physics.QuantumSupportObservationMeasurement
+
+import SFT.Physics.QuantumSupportObservationWitnesses
+
+import SFT.Physics.QuantumSupportObservationGrammar
+
+import SFT.Physics.QuantumSupportObservationEvidence
+
+import SFT.Physics.QuantumSupportObservationExperiment
+
+import SFT.Physics.QuantumSupportObservationValidation
+
+import SFT.Physics.QuantumSupportObservationWitnessProofs

@@ -1,0 +1,852 @@
+import SFT.Physics.QuantumSupportBell
+import SFT.Physics.QuantumSupportCensus0
+import SFT.Physics.QuantumSupportCensus1
+import SFT.Physics.QuantumSupportCensus10
+import SFT.Physics.QuantumSupportCensus11
+import SFT.Physics.QuantumSupportCensus12
+import SFT.Physics.QuantumSupportCensus13
+import SFT.Physics.QuantumSupportCensus14
+import SFT.Physics.QuantumSupportCensus15
+import SFT.Physics.QuantumSupportCensus2
+import SFT.Physics.QuantumSupportCensus3
+import SFT.Physics.QuantumSupportCensus4
+import SFT.Physics.QuantumSupportCensus5
+import SFT.Physics.QuantumSupportCensus6
+import SFT.Physics.QuantumSupportCensus7
+import SFT.Physics.QuantumSupportCensus8
+import SFT.Physics.QuantumSupportCensus9
+import SFT.Physics.QuantumSupportCertificate
+import SFT.Physics.QuantumSupportCertificateProof
+import SFT.Physics.QuantumSupportDepth
+import SFT.Physics.QuantumSupportEntryEvidence
+import SFT.Physics.QuantumSupportGrammar
+import SFT.Physics.QuantumSupportGrammarBase
+import SFT.Physics.QuantumSupportJoint
+import SFT.Physics.QuantumSupportJointCertificateProof
+import SFT.Physics.QuantumSupportJointThreeFiveProof
+import SFT.Physics.QuantumSupportNormalization
+import SFT.Physics.QuantumSupportOrthogonality
+import SFT.Physics.QuantumSupportOrthogonalityInduction
+import SFT.Physics.QuantumSupportOrthogonalityNative
+import SFT.Physics.QuantumSupportParity
+import SFT.Physics.QuantumSupportParseval
+import SFT.Physics.QuantumSupportPreparation
+import SFT.Physics.QuantumSupportTerminalWitnessProofs
+import SFT.Physics.QuantumSupportWalsh
+import SFT.Physics.QuantumSupportWalshBatch
+import SFT.Physics.QuantumSupportWalshBatch01_00
+import SFT.Physics.QuantumSupportWalshBatch02_00
+import SFT.Physics.QuantumSupportWalshBatch03_00
+import SFT.Physics.QuantumSupportWalshBatch03_01
+import SFT.Physics.QuantumSupportWalshBatch03_02
+import SFT.Physics.QuantumSupportWalshBatch04_00
+import SFT.Physics.QuantumSupportWalshBatch04_01
+import SFT.Physics.QuantumSupportWalshBatch04_02
+import SFT.Physics.QuantumSupportWalshBatch04_03
+import SFT.Physics.QuantumSupportWalshBatch04_04
+import SFT.Physics.QuantumSupportWalshBatch04_05
+import SFT.Physics.QuantumSupportWalshBatch04_06
+import SFT.Physics.QuantumSupportWalshBatch04_07
+import SFT.Physics.QuantumSupportWalshBatch05_00
+import SFT.Physics.QuantumSupportWalshBatch05_01
+import SFT.Physics.QuantumSupportWalshBatch05_02
+import SFT.Physics.QuantumSupportWalshBatch05_03
+import SFT.Physics.QuantumSupportWalshBatch05_04
+import SFT.Physics.QuantumSupportWalshBatch05_05
+import SFT.Physics.QuantumSupportWalshBatch05_06
+import SFT.Physics.QuantumSupportWalshBatch05_07
+import SFT.Physics.QuantumSupportWalshBatch05_08
+import SFT.Physics.QuantumSupportWalshBatch05_09
+import SFT.Physics.QuantumSupportWalshBatch05_10
+import SFT.Physics.QuantumSupportWalshBatch05_11
+import SFT.Physics.QuantumSupportWalshBatch05_12
+import SFT.Physics.QuantumSupportWalshBatch05_13
+import SFT.Physics.QuantumSupportWalshBatch05_14
+import SFT.Physics.QuantumSupportWalshBatch05_15
+import SFT.Physics.QuantumSupportWalshBatch05_16
+import SFT.Physics.QuantumSupportWalshBatch05_17
+import SFT.Physics.QuantumSupportWalshBatch06_00
+import SFT.Physics.QuantumSupportWalshBatch06_01
+import SFT.Physics.QuantumSupportWalshBatch06_02
+import SFT.Physics.QuantumSupportWalshBatch06_03
+import SFT.Physics.QuantumSupportWalshBatch06_04
+import SFT.Physics.QuantumSupportWalshBatch06_05
+import SFT.Physics.QuantumSupportWalshBatch06_06
+import SFT.Physics.QuantumSupportWalshBatch06_07
+import SFT.Physics.QuantumSupportWalshBatch06_08
+import SFT.Physics.QuantumSupportWalshBatch06_09
+import SFT.Physics.QuantumSupportWalshBatch06_10
+import SFT.Physics.QuantumSupportWalshBatch06_11
+import SFT.Physics.QuantumSupportWalshBatch06_12
+import SFT.Physics.QuantumSupportWalshBatch06_13
+import SFT.Physics.QuantumSupportWalshBatch06_14
+import SFT.Physics.QuantumSupportWalshBatch06_15
+import SFT.Physics.QuantumSupportWalshBatch06_16
+import SFT.Physics.QuantumSupportWalshBatch06_17
+import SFT.Physics.QuantumSupportWalshBatch06_18
+import SFT.Physics.QuantumSupportWalshBatch06_19
+import SFT.Physics.QuantumSupportWalshBatch06_20
+import SFT.Physics.QuantumSupportWalshBatch06_21
+import SFT.Physics.QuantumSupportWalshBatch06_22
+import SFT.Physics.QuantumSupportWalshBatch06_23
+import SFT.Physics.QuantumSupportWalshBatch06_24
+import SFT.Physics.QuantumSupportWalshBatch06_25
+import SFT.Physics.QuantumSupportWalshBatch06_26
+import SFT.Physics.QuantumSupportWalshBatch06_27
+import SFT.Physics.QuantumSupportWalshBatch06_28
+import SFT.Physics.QuantumSupportWalshBatch06_29
+import SFT.Physics.QuantumSupportWalshBatch06_30
+import SFT.Physics.QuantumSupportWalshBatch06_31
+import SFT.Physics.QuantumSupportWalshBatch07_00
+import SFT.Physics.QuantumSupportWalshBatch07_01
+import SFT.Physics.QuantumSupportWalshBatch07_02
+import SFT.Physics.QuantumSupportWalshBatch07_03
+import SFT.Physics.QuantumSupportWalshBatch07_04
+import SFT.Physics.QuantumSupportWalshBatch07_05
+import SFT.Physics.QuantumSupportWalshBatch07_06
+import SFT.Physics.QuantumSupportWalshBatch07_07
+import SFT.Physics.QuantumSupportWalshBatch07_08
+import SFT.Physics.QuantumSupportWalshBatch07_09
+import SFT.Physics.QuantumSupportWalshBatch07_10
+import SFT.Physics.QuantumSupportWalshBatch07_11
+import SFT.Physics.QuantumSupportWalshBatch07_12
+import SFT.Physics.QuantumSupportWalshBatch07_13
+import SFT.Physics.QuantumSupportWalshBatch07_14
+import SFT.Physics.QuantumSupportWalshBatch07_15
+import SFT.Physics.QuantumSupportWalshBatch07_16
+import SFT.Physics.QuantumSupportWalshBatch07_17
+import SFT.Physics.QuantumSupportWalshBatch07_18
+import SFT.Physics.QuantumSupportWalshBatch07_19
+import SFT.Physics.QuantumSupportWalshBatch07_20
+import SFT.Physics.QuantumSupportWalshBatch07_21
+import SFT.Physics.QuantumSupportWalshBatch07_22
+import SFT.Physics.QuantumSupportWalshBatch07_23
+import SFT.Physics.QuantumSupportWalshBatch07_24
+import SFT.Physics.QuantumSupportWalshBatch07_25
+import SFT.Physics.QuantumSupportWalshBatch07_26
+import SFT.Physics.QuantumSupportWalshBatch07_27
+import SFT.Physics.QuantumSupportWalshBatch07_28
+import SFT.Physics.QuantumSupportWalshBatch07_29
+import SFT.Physics.QuantumSupportWalshBatch07_30
+import SFT.Physics.QuantumSupportWalshBatch07_31
+import SFT.Physics.QuantumSupportWalshBatch07_32
+import SFT.Physics.QuantumSupportWalshBatch07_33
+import SFT.Physics.QuantumSupportWalshBatch07_34
+import SFT.Physics.QuantumSupportWalshBatch07_35
+import SFT.Physics.QuantumSupportWalshBatch07_36
+import SFT.Physics.QuantumSupportWalshBatch07_37
+import SFT.Physics.QuantumSupportWalshBatch07_38
+import SFT.Physics.QuantumSupportWalshBatch07_39
+import SFT.Physics.QuantumSupportWalshBatch07_40
+import SFT.Physics.QuantumSupportWalshBatch07_41
+import SFT.Physics.QuantumSupportWalshBatch07_42
+import SFT.Physics.QuantumSupportWalshBatch07_43
+import SFT.Physics.QuantumSupportWalshBatch07_44
+import SFT.Physics.QuantumSupportWalshBatch08_00
+import SFT.Physics.QuantumSupportWalshBatch08_01
+import SFT.Physics.QuantumSupportWalshBatch08_02
+import SFT.Physics.QuantumSupportWalshBatch08_03
+import SFT.Physics.QuantumSupportWalshBatch08_04
+import SFT.Physics.QuantumSupportWalshBatch08_05
+import SFT.Physics.QuantumSupportWalshBatch08_06
+import SFT.Physics.QuantumSupportWalshBatch08_07
+import SFT.Physics.QuantumSupportWalshBatch08_08
+import SFT.Physics.QuantumSupportWalshBatch08_09
+import SFT.Physics.QuantumSupportWalshBatch08_10
+import SFT.Physics.QuantumSupportWalshBatch08_11
+import SFT.Physics.QuantumSupportWalshBatch08_12
+import SFT.Physics.QuantumSupportWalshBatch08_13
+import SFT.Physics.QuantumSupportWalshBatch08_14
+import SFT.Physics.QuantumSupportWalshBatch08_15
+import SFT.Physics.QuantumSupportWalshBatch08_16
+import SFT.Physics.QuantumSupportWalshBatch08_17
+import SFT.Physics.QuantumSupportWalshBatch08_18
+import SFT.Physics.QuantumSupportWalshBatch08_19
+import SFT.Physics.QuantumSupportWalshBatch08_20
+import SFT.Physics.QuantumSupportWalshBatch08_21
+import SFT.Physics.QuantumSupportWalshBatch08_22
+import SFT.Physics.QuantumSupportWalshBatch08_23
+import SFT.Physics.QuantumSupportWalshBatch08_24
+import SFT.Physics.QuantumSupportWalshBatch08_25
+import SFT.Physics.QuantumSupportWalshBatch08_26
+import SFT.Physics.QuantumSupportWalshBatch08_27
+import SFT.Physics.QuantumSupportWalshBatch08_28
+import SFT.Physics.QuantumSupportWalshBatch08_29
+import SFT.Physics.QuantumSupportWalshBatch08_30
+import SFT.Physics.QuantumSupportWalshBatch08_31
+import SFT.Physics.QuantumSupportWalshBatch08_32
+import SFT.Physics.QuantumSupportWalshBatch08_33
+import SFT.Physics.QuantumSupportWalshBatch08_34
+import SFT.Physics.QuantumSupportWalshBatch08_35
+import SFT.Physics.QuantumSupportWalshBatch08_36
+import SFT.Physics.QuantumSupportWalshBatch08_37
+import SFT.Physics.QuantumSupportWalshBatch08_38
+import SFT.Physics.QuantumSupportWalshBatch08_39
+import SFT.Physics.QuantumSupportWalshBatch08_40
+import SFT.Physics.QuantumSupportWalshBatch08_41
+import SFT.Physics.QuantumSupportWalshBatch08_42
+import SFT.Physics.QuantumSupportWalshBatch08_43
+import SFT.Physics.QuantumSupportWalshBatch08_44
+import SFT.Physics.QuantumSupportWalshBatch08_45
+import SFT.Physics.QuantumSupportWalshBatch08_46
+import SFT.Physics.QuantumSupportWalshBatch08_47
+import SFT.Physics.QuantumSupportWalshBatch08_48
+import SFT.Physics.QuantumSupportWalshBatch08_49
+import SFT.Physics.QuantumSupportWalshBatch08_50
+import SFT.Physics.QuantumSupportWalshBatch09_00
+import SFT.Physics.QuantumSupportWalshBatch09_01
+import SFT.Physics.QuantumSupportWalshBatch09_02
+import SFT.Physics.QuantumSupportWalshBatch09_03
+import SFT.Physics.QuantumSupportWalshBatch09_04
+import SFT.Physics.QuantumSupportWalshBatch09_05
+import SFT.Physics.QuantumSupportWalshBatch09_06
+import SFT.Physics.QuantumSupportWalshBatch09_07
+import SFT.Physics.QuantumSupportWalshBatch09_08
+import SFT.Physics.QuantumSupportWalshBatch09_09
+import SFT.Physics.QuantumSupportWalshBatch09_10
+import SFT.Physics.QuantumSupportWalshBatch09_11
+import SFT.Physics.QuantumSupportWalshBatch09_12
+import SFT.Physics.QuantumSupportWalshBatch09_13
+import SFT.Physics.QuantumSupportWalshBatch09_14
+import SFT.Physics.QuantumSupportWalshBatch09_15
+import SFT.Physics.QuantumSupportWalshBatch09_16
+import SFT.Physics.QuantumSupportWalshBatch09_17
+import SFT.Physics.QuantumSupportWalshBatch09_18
+import SFT.Physics.QuantumSupportWalshBatch09_19
+import SFT.Physics.QuantumSupportWalshBatch09_20
+import SFT.Physics.QuantumSupportWalshBatch09_21
+import SFT.Physics.QuantumSupportWalshBatch09_22
+import SFT.Physics.QuantumSupportWalshBatch09_23
+import SFT.Physics.QuantumSupportWalshBatch09_24
+import SFT.Physics.QuantumSupportWalshBatch09_25
+import SFT.Physics.QuantumSupportWalshBatch09_26
+import SFT.Physics.QuantumSupportWalshBatch09_27
+import SFT.Physics.QuantumSupportWalshBatch09_28
+import SFT.Physics.QuantumSupportWalshBatch09_29
+import SFT.Physics.QuantumSupportWalshBatch09_30
+import SFT.Physics.QuantumSupportWalshBatch09_31
+import SFT.Physics.QuantumSupportWalshBatch09_32
+import SFT.Physics.QuantumSupportWalshBatch09_33
+import SFT.Physics.QuantumSupportWalshBatch09_34
+import SFT.Physics.QuantumSupportWalshBatch09_35
+import SFT.Physics.QuantumSupportWalshBatch09_36
+import SFT.Physics.QuantumSupportWalshBatch09_37
+import SFT.Physics.QuantumSupportWalshBatch09_38
+import SFT.Physics.QuantumSupportWalshBatch09_39
+import SFT.Physics.QuantumSupportWalshBatch09_40
+import SFT.Physics.QuantumSupportWalshBatch09_41
+import SFT.Physics.QuantumSupportWalshBatch09_42
+import SFT.Physics.QuantumSupportWalshBatch09_43
+import SFT.Physics.QuantumSupportWalshBatch09_44
+import SFT.Physics.QuantumSupportWalshBatch10_00
+import SFT.Physics.QuantumSupportWalshBatch10_01
+import SFT.Physics.QuantumSupportWalshBatch10_02
+import SFT.Physics.QuantumSupportWalshBatch10_03
+import SFT.Physics.QuantumSupportWalshBatch10_04
+import SFT.Physics.QuantumSupportWalshBatch10_05
+import SFT.Physics.QuantumSupportWalshBatch10_06
+import SFT.Physics.QuantumSupportWalshBatch10_07
+import SFT.Physics.QuantumSupportWalshBatch10_08
+import SFT.Physics.QuantumSupportWalshBatch10_09
+import SFT.Physics.QuantumSupportWalshBatch10_10
+import SFT.Physics.QuantumSupportWalshBatch10_11
+import SFT.Physics.QuantumSupportWalshBatch10_12
+import SFT.Physics.QuantumSupportWalshBatch10_13
+import SFT.Physics.QuantumSupportWalshBatch10_14
+import SFT.Physics.QuantumSupportWalshBatch10_15
+import SFT.Physics.QuantumSupportWalshBatch10_16
+import SFT.Physics.QuantumSupportWalshBatch10_17
+import SFT.Physics.QuantumSupportWalshBatch10_18
+import SFT.Physics.QuantumSupportWalshBatch10_19
+import SFT.Physics.QuantumSupportWalshBatch10_20
+import SFT.Physics.QuantumSupportWalshBatch10_21
+import SFT.Physics.QuantumSupportWalshBatch10_22
+import SFT.Physics.QuantumSupportWalshBatch10_23
+import SFT.Physics.QuantumSupportWalshBatch10_24
+import SFT.Physics.QuantumSupportWalshBatch10_25
+import SFT.Physics.QuantumSupportWalshBatch10_26
+import SFT.Physics.QuantumSupportWalshBatch10_27
+import SFT.Physics.QuantumSupportWalshBatch10_28
+import SFT.Physics.QuantumSupportWalshBatch10_29
+import SFT.Physics.QuantumSupportWalshBatch10_30
+import SFT.Physics.QuantumSupportWalshBatch10_31
+import SFT.Physics.QuantumSupportWalshBatch11_00
+import SFT.Physics.QuantumSupportWalshBatch11_01
+import SFT.Physics.QuantumSupportWalshBatch11_02
+import SFT.Physics.QuantumSupportWalshBatch11_03
+import SFT.Physics.QuantumSupportWalshBatch11_04
+import SFT.Physics.QuantumSupportWalshBatch11_05
+import SFT.Physics.QuantumSupportWalshBatch11_06
+import SFT.Physics.QuantumSupportWalshBatch11_07
+import SFT.Physics.QuantumSupportWalshBatch11_08
+import SFT.Physics.QuantumSupportWalshBatch11_09
+import SFT.Physics.QuantumSupportWalshBatch11_10
+import SFT.Physics.QuantumSupportWalshBatch11_11
+import SFT.Physics.QuantumSupportWalshBatch11_12
+import SFT.Physics.QuantumSupportWalshBatch11_13
+import SFT.Physics.QuantumSupportWalshBatch11_14
+import SFT.Physics.QuantumSupportWalshBatch11_15
+import SFT.Physics.QuantumSupportWalshBatch11_16
+import SFT.Physics.QuantumSupportWalshBatch11_17
+import SFT.Physics.QuantumSupportWalshBatch12_00
+import SFT.Physics.QuantumSupportWalshBatch12_01
+import SFT.Physics.QuantumSupportWalshBatch12_02
+import SFT.Physics.QuantumSupportWalshBatch12_03
+import SFT.Physics.QuantumSupportWalshBatch12_04
+import SFT.Physics.QuantumSupportWalshBatch12_05
+import SFT.Physics.QuantumSupportWalshBatch12_06
+import SFT.Physics.QuantumSupportWalshBatch12_07
+import SFT.Physics.QuantumSupportWalshBatch13_00
+import SFT.Physics.QuantumSupportWalshBatch13_01
+import SFT.Physics.QuantumSupportWalshBatch13_02
+import SFT.Physics.QuantumSupportWalshBatch14_00
+import SFT.Physics.QuantumSupportWalshBatch15_00
+import SFT.Physics.QuantumSupportWalshBatch16_00
+import SFT.Physics.QuantumSupportWalshBatchAssembly
+import SFT.Physics.QuantumSupportWalshCensusAssembly
+import SFT.Physics.QuantumSupportWalshFourProof
+import SFT.Physics.QuantumSupportWalshGuardAssembly
+import SFT.Physics.QuantumSupportWalshOrderedAssembly
+import SFT.Physics.QuantumSupportWalshSize01
+import SFT.Physics.QuantumSupportWalshSize02
+import SFT.Physics.QuantumSupportWalshSize03
+import SFT.Physics.QuantumSupportWalshSize04
+import SFT.Physics.QuantumSupportWalshSize05
+import SFT.Physics.QuantumSupportWalshSize06
+import SFT.Physics.QuantumSupportWalshSize07
+import SFT.Physics.QuantumSupportWalshSize08
+import SFT.Physics.QuantumSupportWalshSize09
+import SFT.Physics.QuantumSupportWalshSize10
+import SFT.Physics.QuantumSupportWalshSize11
+import SFT.Physics.QuantumSupportWalshSize12
+import SFT.Physics.QuantumSupportWalshSize13
+import SFT.Physics.QuantumSupportWalshSize14
+import SFT.Physics.QuantumSupportWalshSize15
+import SFT.Physics.QuantumSupportWalshSize16
+import SFT.Physics.QuantumSupportWalshThreeProof
+import SFT.Physics.QuantumSupportWitnessProofs
+import SFT.Physics.QuantumSupportWitnesses
+#print axioms SFT.Physics.QuantumSupportBell.LocalCensus
+#print axioms SFT.Physics.QuantumSupportBell.bellLocalRecordCensus
+#print axioms SFT.Physics.QuantumSupportBell.Inclusive
+#print axioms SFT.Physics.QuantumSupportBell.settingInclusiveNoSignalSupport
+#print axioms SFT.Physics.QuantumSupportBell.originalSixteenStrategies
+#print axioms SFT.Physics.QuantumSupportBell.originalMaximumThree
+#print axioms SFT.Physics.QuantumSupportBell.originalEveryLocalRecordBounded
+#print axioms SFT.Physics.QuantumSupportBell.originalAllSettingsSatisfied
+#print axioms SFT.Physics.QuantumSupportBell.originalBothMarginals
+#print axioms SFT.Physics.QuantumSupportBell.originalNoSignalling
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk0
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk0
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk1
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk1
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk10
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk10
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk11
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk11
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk12
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk12
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk13
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk13
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk14
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk14
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk15
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk15
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk2
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk2
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk3
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk3
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk4
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk4
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk5
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk5
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk6
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk6
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk7
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk7
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk8
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk8
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionChunk9
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaChunk9
+#print axioms SFT.Physics.QuantumSupportCertificate.Certificate
+#print axioms SFT.Physics.QuantumSupportCertificate.theoremCertificate
+#print axioms SFT.Physics.QuantumSupportCertificateProof.originalCertificate
+#print axioms SFT.Physics.QuantumSupportDepth.originalWordCount
+#print axioms SFT.Physics.QuantumSupportDepth.originalDyadicCover
+#print axioms SFT.Physics.QuantumSupportDepth.originalPreparationDepthUnique
+#print axioms SFT.Physics.QuantumSupportDepth.originalEveryDyadicPreparation
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.witnessRecords
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.claimId
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.dependencies
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.candidateRecord
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.completenessRecord
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.registrationData
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.registration
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.generatedCandidateData
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.censusData
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.census
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.decisionData
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.decideCandidate
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.closureValue
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.closureData
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.closure
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.control
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.exclusions
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.controls
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.runControls
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.registrationNoAxioms
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.registrationNoFreeParameters
+#print axioms SFT.Physics.QuantumSupportEntryEvidence.decisionPreservesSurvival
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceDecisionMatchesCriteria
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueCriteriaSurvivor
+#print axioms SFT.Physics.QuantumSupportGrammar.uniqueSurvivor
+#print axioms SFT.Physics.QuantumSupportGrammar.survivorAccepted
+#print axioms SFT.Physics.QuantumSupportGrammar.ExactCriteria
+#print axioms SFT.Physics.QuantumSupportGrammar.acceptanceIffExactCriteria
+#print axioms SFT.Physics.QuantumSupportGrammar.depth_rejected_rejected
+#print axioms SFT.Physics.QuantumSupportGrammar.observation_rejected_rejected
+#print axioms SFT.Physics.QuantumSupportGrammar.uncertainty_rejected_rejected
+#print axioms SFT.Physics.QuantumSupportGrammar.spread_rejected_rejected
+#print axioms SFT.Physics.QuantumSupportGrammar.joint_rejected_rejected
+#print axioms SFT.Physics.QuantumSupportGrammar.projection_rejected_rejected
+#print axioms SFT.Physics.QuantumSupportGrammar.bell_rejected_rejected
+#print axioms SFT.Physics.QuantumSupportGrammar.extension_rejected_rejected
+#print axioms SFT.Physics.QuantumSupportGrammar.depthName
+#print axioms SFT.Physics.QuantumSupportGrammar.observationName
+#print axioms SFT.Physics.QuantumSupportGrammar.uncertaintyName
+#print axioms SFT.Physics.QuantumSupportGrammar.spreadName
+#print axioms SFT.Physics.QuantumSupportGrammar.jointName
+#print axioms SFT.Physics.QuantumSupportGrammar.projectionName
+#print axioms SFT.Physics.QuantumSupportGrammar.bellName
+#print axioms SFT.Physics.QuantumSupportGrammar.extensionName
+#print axioms SFT.Physics.QuantumSupportGrammar.Candidate
+#print axioms SFT.Physics.QuantumSupportGrammar.sourceFields
+#print axioms SFT.Physics.QuantumSupportGrammar.candidateId
+#print axioms SFT.Physics.QuantumSupportGrammar.exactForm
+#print axioms SFT.Physics.QuantumSupportGrammar.survivorId
+#print axioms SFT.Physics.QuantumSupportGrammar.survives
+#print axioms SFT.Physics.QuantumSupportGrammar.criteriaDecision
+#print axioms SFT.Physics.QuantumSupportGrammar.decisionReason
+#print axioms SFT.Physics.QuantumSupportGrammar.generationRule
+#print axioms SFT.Physics.QuantumSupportGrammar.grammarBoundary
+#print axioms SFT.Physics.QuantumSupportGrammar.candidates
+#print axioms SFT.Physics.QuantumSupportGrammar.survivor
+#print axioms SFT.Physics.QuantumSupportGrammar.generatedCardinality
+#print axioms SFT.Physics.QuantumSupportGrammar.candidatesComplete
+#print axioms SFT.Physics.QuantumSupportJoint.labels
+#print axioms SFT.Physics.QuantumSupportJoint.isFactorableJoint
+#print axioms SFT.Physics.QuantumSupportJoint.JointCensus
+#print axioms SFT.Physics.QuantumSupportJoint.jointSubsetCensus
+#print axioms SFT.Physics.QuantumSupportJoint.CoprimeCensus
+#print axioms SFT.Physics.QuantumSupportJoint.coprimeTraceCensus
+#print axioms SFT.Physics.QuantumSupportJointCertificateProof.originalTwoByThree
+#print axioms SFT.Physics.QuantumSupportJointThreeFiveProof.originalThreeByFive
+#print axioms SFT.Physics.QuantumSupportNormalization.originalUnitFreeBound
+#print axioms SFT.Physics.QuantumSupportNormalization.originalSquaredProduct
+#print axioms SFT.Physics.QuantumSupportNormalization.originalSquaredGridBound
+#print axioms SFT.Physics.QuantumSupportNormalization.originalSpacingCancellation
+#print axioms SFT.Physics.QuantumSupportNormalization.originalEveryPositiveSpacing
+#print axioms SFT.Physics.QuantumSupportOrthogonality.originalRowChecks
+#print axioms SFT.Physics.QuantumSupportOrthogonality.originalDepthOne
+#print axioms SFT.Physics.QuantumSupportOrthogonality.originalDepthTwo
+#print axioms SFT.Physics.QuantumSupportOrthogonality.originalDepthThree
+#print axioms SFT.Physics.QuantumSupportOrthogonality.originalDepthFour
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.agreementRows
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.heldCount
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.returnedCount
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.prepend
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.originalRowSuccessor
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.originalOffDiagonalCounts
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.originalAllModesRetained
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.originalDiagonalCounts
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.originalGeneratedWordLength
+#print axioms SFT.Physics.QuantumSupportOrthogonalityInduction.originalCompleteOrthogonality
+#print axioms SFT.Physics.QuantumSupportOrthogonalityNative.productRow
+#print axioms SFT.Physics.QuantumSupportOrthogonalityNative.originalGeneratedProductRow
+#print axioms SFT.Physics.QuantumSupportParity.phaseBit
+#print axioms SFT.Physics.QuantumSupportParity.originalHeldHeld
+#print axioms SFT.Physics.QuantumSupportParity.originalHeldReturned
+#print axioms SFT.Physics.QuantumSupportParity.originalReturnedHeld
+#print axioms SFT.Physics.QuantumSupportParity.originalReturnedReturned
+#print axioms SFT.Physics.QuantumSupportParity.originalPhaseOperation
+#print axioms SFT.Physics.QuantumSupportParseval.heldAt
+#print axioms SFT.Physics.QuantumSupportParseval.returnedAt
+#print axioms SFT.Physics.QuantumSupportParseval.energyAt
+#print axioms SFT.Physics.QuantumSupportParseval.originalModeEnergySuccessor
+#print axioms SFT.Physics.QuantumSupportParseval.energySum
+#print axioms SFT.Physics.QuantumSupportParseval.originalSupportEnergySuccessor
+#print axioms SFT.Physics.QuantumSupportParseval.originalParsevalCounting
+#print axioms SFT.Physics.QuantumSupportParseval.frequencySupport
+#print axioms SFT.Physics.QuantumSupportParseval.originalSupportProductBound
+#print axioms SFT.Physics.QuantumSupportPreparation.held
+#print axioms SFT.Physics.QuantumSupportPreparation.returned
+#print axioms SFT.Physics.QuantumSupportPreparation.words
+#print axioms SFT.Physics.QuantumSupportPreparation.binaryWords
+#print axioms SFT.Physics.QuantumSupportPreparation.Preparation
+#print axioms SFT.Physics.QuantumSupportPreparation.preparationDepth
+#print axioms SFT.Physics.QuantumSupportPreparation.Partition
+#print axioms SFT.Physics.QuantumSupportPreparation.measurementPartition
+#print axioms SFT.Physics.QuantumSupportPreparation.walshPhase
+#print axioms SFT.Physics.QuantumSupportPreparation.imbalance
+#print axioms SFT.Physics.QuantumSupportPreparation.magnitude
+#print axioms SFT.Physics.QuantumSupportPreparation.originalEightBranchPreparation
+#print axioms SFT.Physics.QuantumSupportPreparation.originalNontrivialGuard
+#print axioms SFT.Physics.QuantumSupportPreparation.originalNonDyadicGuard
+#print axioms SFT.Physics.QuantumSupportTerminalWitnessProofs.originalSpacingChecks
+#print axioms SFT.Physics.QuantumSupportTerminalWitnessProofs.originalAllFourSpacings
+#print axioms SFT.Physics.QuantumSupportTerminalWitnessProofs.originalFloorCheck
+#print axioms SFT.Physics.QuantumSupportTerminalWitnessProofs.originalDepthTwoFloor
+#print axioms SFT.Physics.QuantumSupportTerminalWitnessProofs.originalCoprimeChecks
+#print axioms SFT.Physics.QuantumSupportTerminalWitnessProofs.originalBothCoprimeTraces
+#print axioms SFT.Physics.QuantumSupportWalsh.SupportCertificate
+#print axioms SFT.Physics.QuantumSupportWalsh.walshSupportCertificate
+#print axioms SFT.Physics.QuantumSupportWalsh.Orthogonality
+#print axioms SFT.Physics.QuantumSupportWalsh.orthogonalityCertificate
+#print axioms SFT.Physics.QuantumSupportWalsh.combinations
+#print axioms SFT.Physics.QuantumSupportWalsh.WalshCensus
+#print axioms SFT.Physics.QuantumSupportWalsh.completeWalshCensus
+#print axioms SFT.Physics.QuantumSupportWalsh.SpacingCertificate
+#print axioms SFT.Physics.QuantumSupportWalsh.spacingCancellationCertificate
+#print axioms SFT.Physics.QuantumSupportWalshBatch.step
+#print axioms SFT.Physics.QuantumSupportWalshBatch.offset
+#print axioms SFT.Physics.QuantumSupportWalshBatch.stepOffset
+#print axioms SFT.Physics.QuantumSupportWalshBatch.foldOffset
+#print axioms SFT.Physics.QuantumSupportWalshBatch.foldAppend
+#print axioms SFT.Physics.QuantumSupportWalshBatch.foldFromZero
+#print axioms SFT.Physics.QuantumSupportWalshBatch.batch
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch01_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch02_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch03_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch03_01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch03_02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch04_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch04_01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch04_02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch04_03
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch04_04
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch04_05
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch04_06
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch04_07
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_03
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_04
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_05
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_06
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_07
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_08
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_09
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_10
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_11
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_12
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_13
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_14
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_15
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_16
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch05_17
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_03
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_04
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_05
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_06
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_07
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_08
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_09
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_10
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_11
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_12
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_13
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_14
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_15
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_16
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_17
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_18
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_19
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_20
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_21
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_22
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_23
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_24
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_25
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_26
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_27
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_28
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_29
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_30
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch06_31
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_03
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_04
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_05
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_06
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_07
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_08
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_09
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_10
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_11
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_12
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_13
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_14
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_15
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_16
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_17
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_18
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_19
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_20
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_21
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_22
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_23
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_24
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_25
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_26
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_27
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_28
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_29
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_30
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_31
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_32
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_33
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_34
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_35
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_36
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_37
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_38
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_39
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_40
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_41
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_42
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_43
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch07_44
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_03
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_04
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_05
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_06
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_07
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_08
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_09
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_10
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_11
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_12
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_13
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_14
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_15
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_16
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_17
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_18
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_19
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_20
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_21
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_22
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_23
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_24
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_25
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_26
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_27
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_28
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_29
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_30
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_31
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_32
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_33
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_34
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_35
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_36
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_37
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_38
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_39
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_40
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_41
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_42
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_43
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_44
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_45
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_46
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_47
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_48
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_49
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch08_50
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_03
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_04
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_05
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_06
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_07
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_08
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_09
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_10
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_11
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_12
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_13
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_14
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_15
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_16
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_17
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_18
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_19
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_20
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_21
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_22
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_23
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_24
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_25
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_26
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_27
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_28
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_29
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_30
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_31
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_32
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_33
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_34
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_35
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_36
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_37
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_38
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_39
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_40
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_41
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_42
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_43
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch09_44
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_03
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_04
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_05
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_06
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_07
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_08
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_09
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_10
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_11
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_12
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_13
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_14
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_15
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_16
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_17
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_18
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_19
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_20
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_21
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_22
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_23
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_24
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_25
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_26
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_27
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_28
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_29
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_30
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch10_31
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_03
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_04
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_05
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_06
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_07
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_08
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_09
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_10
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_11
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_12
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_13
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_14
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_15
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_16
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch11_17
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch12_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch12_01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch12_02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch12_03
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch12_04
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch12_05
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch12_06
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch12_07
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch13_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch13_01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch13_02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch14_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch15_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalBatch16_00
+#print axioms SFT.Physics.QuantumSupportWalshBatch.appendResults
+#print axioms SFT.Physics.QuantumSupportWalshBatch.depthStep
+#print axioms SFT.Physics.QuantumSupportWalshBatch.assembledCensus
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalRepresentation
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalFirstThreeTotals
+#print axioms SFT.Physics.QuantumSupportWalshFourProof.originalCompleteCensus
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalDepthGuard
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalFourthGuard
+#print axioms SFT.Physics.QuantumSupportWalshBatch.depthAppend
+#print axioms SFT.Physics.QuantumSupportWalshOrderedAssembly.sizeStep
+#print axioms SFT.Physics.QuantumSupportWalshOrderedAssembly.orderedCons
+#print axioms SFT.Physics.QuantumSupportWalshOrderedAssembly.originalFourthSizes
+#print axioms SFT.Physics.QuantumSupportWalshOrderedAssembly.originalFourthDepth
+#print axioms SFT.Physics.QuantumSupportWalshOrderedAssembly.depthLast
+#print axioms SFT.Physics.QuantumSupportWalshOrderedAssembly.originalAllDepthTotals
+#print axioms SFT.Physics.QuantumSupportWalshOrderedAssembly.sourceCensusResult
+#print axioms SFT.Physics.QuantumSupportWalshOrderedAssembly.originalCompleteCensus
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize01
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize02
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition03
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize03
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition04
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize04
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition05
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize05
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition06
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize06
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition07
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize07
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition08
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize08
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition09
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize09
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition10
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize10
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition11
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize11
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition12
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize12
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition13
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize13
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition14
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize14
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition15
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize15
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalPartition16
+#print axioms SFT.Physics.QuantumSupportWalshBatch.originalSize16
+#print axioms SFT.Physics.QuantumSupportWalshThreeProof.originalFirstThreeDepths
+#print axioms SFT.Physics.QuantumSupportWitnessProofs.witness0Passed
+#print axioms SFT.Physics.QuantumSupportWitnessProofs.witness1Passed
+#print axioms SFT.Physics.QuantumSupportWitnessProofs.witness2Passed
+#print axioms SFT.Physics.QuantumSupportWitnessProofs.witness3Passed
+#print axioms SFT.Physics.QuantumSupportWitnessProofs.witness4Passed
+#print axioms SFT.Physics.QuantumSupportWitnessProofs.witness5Passed
+#print axioms SFT.Physics.QuantumSupportWitnessProofs.witness6Passed
+#print axioms SFT.Physics.QuantumSupportWitnesses.Witness
+#print axioms SFT.Physics.QuantumSupportWitnesses.readFlag
+#print axioms SFT.Physics.QuantumSupportWitnesses.originalFieldExtraction
+#print axioms SFT.Physics.QuantumSupportWitnesses.witness0
+#print axioms SFT.Physics.QuantumSupportWitnesses.witness1
+#print axioms SFT.Physics.QuantumSupportWitnesses.witness2
+#print axioms SFT.Physics.QuantumSupportWitnesses.witness3
+#print axioms SFT.Physics.QuantumSupportWitnesses.witness4
+#print axioms SFT.Physics.QuantumSupportWitnesses.witness5
+#print axioms SFT.Physics.QuantumSupportWitnesses.witness6
+#print axioms SFT.Physics.QuantumSupportWitnesses.witnesses

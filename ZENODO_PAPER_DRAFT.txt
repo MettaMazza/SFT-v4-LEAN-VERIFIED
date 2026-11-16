@@ -27127,3 +27127,37 @@ The connection to the actual source programme preserves its full computation. or
 ThermalEquilibriumPaired.originalEveryPositivePairedCensus proves the full four-field result of pairedEquilibriumCensus: population 2n, every original ordered (k,B(2n,k)) row, survivor list [n], and exact half-One share. This covers every positive pair count and retains the complete enumeration. All nine exported theorems in this module have empty Lean axiom dependencies.
 
 Original pinned source: sft/physics/thermal_equilibrium_response_terminal_law_v1.py, paired_equilibrium_census and its declared base/successor statement; claims/SFT-PHYS-THERMAL-EQUILIBRIUM-RESPONSE-TERMINAL-043/WHY_DERIVATION_CHECK.md. Lean verification: SFT/Physics/ThermalEquilibriumPaired.lean, with the unchanged factorial, binomial and pairedEquilibriumCensus operations in ThermalEquilibriumResponse.lean. Evidence: verification/TURN_1037_equilibrium1037_paired_report.json and TURN_1037_equilibrium1037_paired_audit.log. The earlier complete operation comparison remains applicable to the unchanged operation source. Chronological correspondence: TIMELINE.txt TURN1037.
+
+923. Exact factorial comparison for the fixed-population multinomial census
+
+The original multinomial operation divides the factorial of the complete population by each component factorial. Its denominator comparison can be expressed entirely in positive integer arithmetic. For a positive target count t and any competing nonnegative count c,
+
+    t!·t^c ≤ c!·t^t,
+
+with strict inequality when c>t. For c≤t, write t=c+d. Every factor of (c+1)(c+2)…(c+d) is at most t, so
+
+    t!≤c!·t^d,
+    t!·t^c≤c!·t^(d+c)=c!·t^t.
+
+For c=t+d, begin at equality for d=0. Advancing to c+1 multiplies the left comparison by t while the right factorial grows by c+1>t. Since the factorial and power factors are positive, each such successor makes the comparison strict. ThermalEquilibriumMultinomial.originalFactorialWeightBound and originalExcessCountStrictBound prove these statements for the exact factorial operation used by the source.
+
+For aligned target and competing vectors t=(t₀,…,t_(L−1)) and c=(c₀,…,c_(L−1)), define the products of these same factors:
+
+    F(t)=∏ᵢtᵢ!,    P(t,c)=∏ᵢtᵢ^cᵢ.
+
+Multiplying every coordinate inequality, with each tᵢ>0, gives
+
+    F(t)·P(t,c) ≤ F(c)·P(t,t).
+
+If at least one cᵢ>tᵢ, its coordinate inequality is strict and all remaining factors are positive; hence the product inequality is strict. originalProductBound and originalExcessProductStrict prove both results over the complete aligned vectors.
+
+The original fixed-population condition is the exact equality Σᵢtᵢ=Σᵢcᵢ. Under equal lengths, either the vectors coincide or some competing coordinate exceeds its target. This alternative is constructive: compare the first counts; an excess supplies the witness immediately. Otherwise the tail cannot have a smaller total if the complete competing total is at least the target total. Continue through the finite tail. If no excess occurs, the tail vectors coincide and total equality forces the first counts to coincide as well. originalEqualPopulationAlternative proves this alternative using the original fold-left population sums.
+
+Combining the preceding results yields the exact conditional denominator comparison
+
+    t≠c,    Σᵢtᵢ=Σᵢcᵢ,    P(t,c)=P(t,t)
+       ⇒ F(t)<F(c).
+
+Indeed, unequal equal-population vectors supply an excess coordinate, giving F(t)P(t,c)<F(c)P(t,t); equality of the two power products then permits the same positive integer factor to be cancelled. originalFixedPopulationDenominatorStrict proves this implication. Its power-product equality is an explicit hypothesis of this intermediate theorem. The factorial and power products are arithmetic expressions over the existing candidate counts; they add no input fields or selection choices to the source operation. All eight exported declarations in this module have empty axiom dependencies.
+
+Original pinned source: sft/physics/thermal_equilibrium_response_terminal_law_v1.py, multinomial_count and the equal-population constraint in fixed_count_throw_forms. Lean verification: SFT/Physics/ThermalEquilibriumMultinomial.lean, using the unchanged factorial operation in ThermalEquilibriumResponse.lean. Evidence: verification/TURN_1038_equilibrium1038_multinomial_report.json and TURN_1038_equilibrium1038_multinomial_audit.log. Chronological correspondence: TIMELINE.txt TURN1038.

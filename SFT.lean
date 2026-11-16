@@ -9601,3 +9601,45 @@ import SFT.Physics.CriticalMeasuredAnalysis
 import SFT.Physics.CriticalMeasuredAnalysisProofs
 
 import SFT.Physics.CriticalMeasuredInputProofs
+
+import SFT.Physics.HeliumIsotope
+
+import SFT.Physics.HeliumIsotopeWitnesses
+
+import SFT.Physics.HeliumIsotopeGrammarBase
+
+import SFT.Physics.HeliumIsotopeCensus0
+
+import SFT.Physics.HeliumIsotopeCensus1
+
+import SFT.Physics.HeliumIsotopeCensus2
+
+import SFT.Physics.HeliumIsotopeCensus3
+
+import SFT.Physics.HeliumIsotopeCensus4
+
+import SFT.Physics.HeliumIsotopeCensus5
+
+import SFT.Physics.HeliumIsotopeCensus6
+
+import SFT.Physics.HeliumIsotopeCensus7
+
+import SFT.Physics.HeliumIsotopeCensus8
+
+import SFT.Physics.HeliumIsotopeCensus9
+
+import SFT.Physics.HeliumIsotopeCensus10
+
+import SFT.Physics.HeliumIsotopeCensus11
+
+import SFT.Physics.HeliumIsotopeCensus12
+
+import SFT.Physics.HeliumIsotopeCensus13
+
+import SFT.Physics.HeliumIsotopeCensus14
+
+import SFT.Physics.HeliumIsotopeCensus15
+
+import SFT.Physics.HeliumIsotopeGrammar
+
+import SFT.Physics.HeliumIsotopeEntryEvidence

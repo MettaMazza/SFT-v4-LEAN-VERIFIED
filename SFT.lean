@@ -10695,3 +10695,27 @@ import SFT.Chemistry.ElectronSpinRegistry
 import SFT.Chemistry.ElectronSpinTargets
 
 import SFT.Chemistry.ElectronSpinValidation
+
+import SFT.Chemistry.OrbitalSupport
+
+import SFT.Chemistry.OrbitalSupportDerivation
+
+import SFT.Chemistry.OrbitalSupportWitnesses
+
+import SFT.Chemistry.OrbitalSupportGrammar
+
+import SFT.Chemistry.OrbitalSupportEvidence
+
+import SFT.Chemistry.OrbitalSourceTables
+
+import SFT.Chemistry.OrbitalSupportPrediction
+
+import SFT.Chemistry.OrbitalAssignments
+
+import SFT.Chemistry.OrbitalSupportTargets
+
+import SFT.Chemistry.OrbitalSupportComparison
+
+import SFT.Chemistry.OrbitalSupportExperiment
+
+import SFT.Chemistry.OrbitalSupportValidation

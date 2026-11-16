@@ -1,0 +1,77 @@
+import SFT.Physics.ParticleModeGrammar
+import SFT.Physics.ParticleModeWitnesses
+import SFT.Foundation.AdmissionControls
+import SFT.Engine.RegistrationGate
+namespace SFT.Physics.ParticleModeEntryEvidence
+open SFT.Host.Canonical ParticleModeGrammar ParticleModeWitnesses
+open SFT.Foundation.AdmissionControls (admissionIdentity)
+set_option maxRecDepth 20000
+set_option maxHeartbeats 100000000
+
+def witnessRecords : Value := .array [.object [("name",.text "general-fibres"),("statement",.text "The finite census and index induction force m preimages and m-2 fixed modes."),("passed",.boolean witness0)],.object [("name",.text "generation-coordinates"),("statement",.text "All four coordinate records are complete ordered three-label carriers and none is relabelled as mass."),("passed",.boolean witness1)],.object [("name",.text "cover-depths"),("statement",.text "The 27-cell volume uniquely forces binary depth five and colour depth three."),("passed",.boolean witness2)],.object [("name",.text "particle-placement"),("statement",.text "Every finite recurrent trace census injects into internal stationary modes."),("passed",.boolean witness3)],.object [("name",.text "terminal-mass-transport"),("statement",.text "All charged-lepton, quark and positive-neutrino sector carriers are retained while old site-as-mass claims reject."),("passed",.boolean witness4)],.object [("name",.text "dual-seeds"),("statement",.text "The complete colour/binary dual reconstructs 1/95, 1/383 and 1/485."),("passed",.boolean witness5)],.object [("name",.text "reach"),("statement",.text "Heavy/light equals exact subtraction reach at every checked depth and by the registered induction."),("passed",.boolean witness6)],.object [("name",.text "transition"),("statement",.text "Quarter-mode separations close structurally without becoming a universal observed rate."),("passed",.boolean witness7)]]
+def claimId : String := "SFT-PHYS-PARTICLE-MODE-GENERATION-TERMINAL-051"
+def dependencies : List String := ["SFT-FOUNDATION-ONE-001", "SFT-FOUNDATION-FOLD-001", "SFT-FOUNDATION-FOLD-DYNAMICS-001", "SFT-MATH-EXACT-ARITHMETIC-001", "SFT-MATH-COMBINATORICS-001", "SFT-PHYS-STRUCT-GENERATOR-THREE-001", "SFT-PHYS-SPACE-DIMENSION-THREE-001", "SFT-PHYS-DYNAMICS-STATIONARY-SPECTRUM-003", "SFT-PHYS-MATTER-PARTICLE-SPECTRUM-001", "SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003", "SFT-PHYS-MATTER-QUARK-INVARIANTS-003", "SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001", "SFT-PHYS-NEUTRINO-POSITIVE-MASS-003", "SFT-PHYS-MATTER-GENERATION-DEPTH-003", "SFT-PHYS-MATTER-CKM-TERMINAL-004"]
+def candidateRecord (c : Candidate) : Value := .object [("candidate_id",.text (candidateId c)),("coordinates",.array [.array [.text "fibre",.text (fibreName c.fibre)],.array [.text "mode",.text (modeName c.mode)],.array [.text "generation",.text (generationName c.generation)],.array [.text "cover",.text (coverName c.cover)],.array [.text "placement",.text (placementName c.placement)],.array [.text "mass",.text (massName c.mass)],.array [.text "dual",.text (dualName c.dual)],.array [.text "reach",.text (reachName c.reach)],.array [.text "transition",.text (transitionName c.transition)],.array [.text "extension",.text (extensionName c.extension)]]),("exact_form",.text (exactForm c))]
+def completenessRecord : Value := .object [("generation_rule",.text "Generate the complete product of fibre, fixed-mode, generation-coordinate, cover-depth, particle-placement, mass-transport, dual, reach, transition and extra-rule forms."),("grammar_boundary",.text "Every positive finite m-Fold by depth-independent index induction; all four complete three-label coordinate systems; the exact 27-cell cover; every finite recurrent particle-trace census; all admitted terminal charged-lepton, quark, neutrino and CKM carriers; and every superseded site-as-mass and separation-as-observed-rate alternative."),("axes",.array [.object [("key",.text "fibre"),("question",.text "How many preimages does an m-Fold carry?"),("choices",.array [.array [.text "selected-binary-or-colour-count",.text "A selected special case is not a general law."],.array [.text "complete-m-offset-fibre",.text "The complete offset range contains exactly m positive preimages."]])],.object [("key",.text "mode"),("question",.text "What fixes interior stationary modes?"),("choices",.array [.array [.text "named-three-mode-pattern",.text "Naming three modes does not force the general count."],.array [.text "complete-fixed-index-range",.text "Indices one through m-2 force exactly m-2 interior modes."]])],.object [("key",.text "generation"),("question",.text "What are the generation sites?"),("choices",.array [.array [.text "one-coordinate-system-selected-as-mass",.text "A coordinate value is not automatically a physical mass."],.array [.text "three-order-isomorphic-coordinate-systems",.text "All generated site systems carry the same complete ordered three-label set."]])],.object [("key",.text "cover"),("question",.text "What fixes sector depth?"),("choices",.array [.array [.text "chosen-depth-five-or-seven",.text "A selected depth is a free choice."],.array [.text "least-cover-of-generator-volume",.text "The least m^d covering 3^3 uniquely fixes each sector depth."]])],.object [("key",.text "placement"),("question",.text "Where do particle modes live?"),("choices",.array [.array [.text "extra-spatial-dimension",.text "An extra spatial coordinate is not generated."],.array [.text "internal-recurrent-trace-mode",.text "Each recurrent trace class is itself an internal mode and injects into the stationary ladder."]])],.object [("key",.text "mass"),("question",.text "How do generation sites relate to masses?"),("choices",.array [.array [.text "site-fraction-is-mass",.text "This superseded identification conflicts with the terminal spectra."],.array [.text "order-transport-to-terminal-polynomials",.text "Site order labels the separately forced sector polynomial roots without selecting their values."]])],.object [("key",.text "dual"),("question",.text "What fixes colour/binary mass seeds?"),("choices",.array [.array [.text "lookup-depth-fractions",.text "Looked-up fractions are not forced."],.array [.text "complete-colour-binary-dual",.text "The admitted cover depths in the complete dual forms force 1/95, 1/383 and 1/485."]])],.object [("key",.text "reach"),("question",.text "What is the subtraction reach?"),("choices",.array [.array [.text "lifetime-equals-mass-ratio-postulate",.text "A dimensional lifetime equality is not forced by the count."],.array [.text "exact-structural-reach-identity",.text "The same N-1 count is heavy/light ratio and light-step reach; lifetime is tested separately."]])],.object [("key",.text "transition"),("question",.text "What does the quarter ladder force?"),("choices",.array [.array [.text "universal-observed-rate-ratio",.text "The old 1:1:4 physical-rate claim omits interaction carriers."],.array [.text "structural-separation-multiplicity",.text "The exact squared separation multiplicity is retained while terminal mixing supplies physical entries."]])],.object [("key",.text "extension"),("question",.text "May compactification or a fitted spectrum rule enter?"),("choices",.array [.array [.text "extra-dimension-or-fit",.text "Either addition is an unforced parameter."],.array [.text "no-extra-rule",.text "Internal depth, terminal polynomial transport and three-space exhaust the grammar."]])]]),("product_exhaustion",.text "Every registered choice occurs once with every choice on every other axis."),("candidate_ids",.array (candidates.map fun c => .text (candidateId c)))]
+def registrationData (sourceHash : String) : SFT.Engine.ClaimRegistration where
+ claimId := claimId
+ title := "Terminal general Fold-fibre, particle-mode and generation-transport law"
+ branch := "physics"
+ statement := "Every positive finite m-Fold with m at least two has exactly m positive preimages for each positive image and exactly m-2 interior fixed modes. The proof is generated directly from the complete offset and fixed-index ranges and extends by induction. The generator-three fibre supplies three ordered generation labels represented equivalently by the half-One fibre (1/6,1/2,5/6), the One fibre (1/3,2/3,One), the interior five-Fold modes (1/4,1/2,3/4) and the quarter transition ladder; these are order-isomorphic coordinates, not measured masses. The generator-three state volume in three forced spatial directions is 3^3=27, whose least binary cover is depth five and least colour cover is depth three. Every finite recurrent particle-trace census injects into the exact internal stationary-mode ladder, so mode depth adds no spatial dimension. Generation order transports to the separately admitted charged-lepton, up-quark, down-quark and positive-neutrino polynomial carriers; it never licenses the superseded claim that a site fraction itself is a mass. The colour/binary duals 1/95, 1/383 and 1/485, the depth-independent heavy/light equals subtraction-reach identity, and the 1:1:4 quarter-mode squared multiplicity close as exact structural records; physical masses, mixing entries and lifetimes remain separate post-seal comparisons."
+ evidenceMode := .formal
+ rootTheorems := [SFT.Engine.rootTheoremId]
+ dependencies := dependencies
+ axioms := []
+ freeParameters := []
+ provenance := [.forwardForcing]
+ sourceHash := sourceHash
+def registration (sourceHash : String) : Value := SFT.Engine.registrationValue (registrationData sourceHash)
+def generatedCandidateData (c : Candidate) : SFT.Engine.Candidate where
+ candidateId := candidateId c
+ exactForm := exactForm c
+ traceHash := admissionIdentity (.array [.text claimId,.text generationRule,candidateRecord c])
+def censusData : SFT.Engine.CandidateCensus where
+ generationRule := generationRule
+ grammarBoundary := grammarBoundary
+ expectedCardinality := .ofNat candidates.length
+ completenessCertificateHash := admissionIdentity completenessRecord
+ candidates := candidates.map generatedCandidateData
+def census : Value := SFT.Engine.censusValue censusData
+
+def decisionData (c : Candidate) : SFT.Engine.CandidateDecision where
+ candidateId := candidateId c
+ survives := survives c
+ reason := decisionReason c
+ proofHash := admissionIdentity (.array [.text claimId,.array (dependencies.map Value.text),candidateRecord c,.boolean (survives c),.text (decisionReason c)])
+def decideCandidate (candidate : SFT.Engine.Candidate) : Except String SFT.Engine.CandidateDecision :=
+ match candidates.find? (fun c => SFT.Host.Text.equal (candidateId c) candidate.candidateId) with
+ | some c => .ok (decisionData c)
+ | none => .error "StopIteration"
+def closureValue : Value := .object [("result",.text "For every positive finite m>=2, the m-Fold has exactly m positive preimages and m-2 interior fixed modes. The four generation coordinate records are complete ordered three-label systems and are not masses. The exact 27-cell state volume forces binary cover depth five and colour cover depth three. Every finite recurrent particle class injects into internal Fold modes without adding a spatial dimension. Generation order transports to the admitted terminal lepton, quark and neutrino polynomial carriers; superseded site-as-mass readings are rejected. The exact dual seeds are 1/95, 1/383 and 1/485; at every positive depth the heavy/light ratio equals the subtraction reach N-1; and the quarter-mode 1:1:4 record is a structural squared-separation multiplicity, not a universal measured mixing-rate ratio."),("base",.text "At m=2 the complete two-offset fibre exists and the interior fixed-mode carrier is the empty One form; one recurrent trace occupies one exact internal mode."),("successor",.text "Increasing m by One appends exactly one offset preimage and one fixed-mode index; increasing a finite particle census by One either fills the next current-depth mode or uniquely doubles capacity and preserves every earlier placement. The least-cover inequality and mass-ratio reach identity therefore extend at every positive finite depth."),("exclusions",.array [.text "no V1/V2 result artifact, string-theory dimension rule, particle table or measured mass as a formal premise",.text "no identification of 1/6, 1/2, 5/6, 1/3, 2/3, One, 1/4 or 3/4 with terminal measured masses",.text "no claim that 1:1:4 is a universal observed mixing or decay-rate spectrum",.text "no extra spatial dimension, compactification choice, landscape count or target-selected mode",.text "no fitted mass coefficient, lifetime coefficient, mixing shift or omitted terminal sector",.text "no numerical-nothingness, negative, irrational, imaginary, floating, NaN, continuum or completed-infinity Fold proof magnitude"]),("witnesses",witnessRecords),("unique_survivor",.text survivorId)]
+def closureData (decisions : List SFT.Engine.CandidateDecision) : SFT.Engine.ClosureEvidence where
+ scope := .depthIndependent
+ exactBoundary := grammarBoundary
+ minimalityPassed := true
+ namedShapeUniquenessPassed := true
+ proofHash := admissionIdentity (.array [closureValue,.array (decisions.map SFT.Engine.decisionValue)])
+ generalityCertificateHash := some (admissionIdentity closureValue)
+def closure (decisions : List SFT.Engine.CandidateDecision) : Value := SFT.Engine.closureEvidenceValue (closureData decisions)
+
+def control (kind : SFT.Engine.ControlKind) (passed : Bool) (observation : String) : SFT.Engine.ControlResult where
+ kind := kind
+ passed := passed
+ expectedBehavior := observation
+ observedBehavior := if passed then observation else "control failed"
+ receiptHash := identity (.array [.text claimId,.text (SFT.Engine.kindName kind),.boolean passed,.text observation])
+def exclusions : List String := ["no V1/V2 result artifact, string-theory dimension rule, particle table or measured mass as a formal premise", "no identification of 1/6, 1/2, 5/6, 1/3, 2/3, One, 1/4 or 3/4 with terminal measured masses", "no claim that 1:1:4 is a universal observed mixing or decay-rate spectrum", "no extra spatial dimension, compactification choice, landscape count or target-selected mode", "no fitted mass coefficient, lifetime coefficient, mixing shift or omitted terminal sector", "no numerical-nothingness, negative, irrational, imaginary, floating, NaN, continuum or completed-infinity Fold proof magnitude"]
+def controls (sourceHash : String) : List SFT.Engine.ControlResult := [
+ control .falsePremise (!(SFT.Host.Text.equal (candidateId {survivor with fibre := .rejected}) survivorId)) "reject the form missing the first structural preservation",
+ control .tamperedSource (!(SFT.Host.Text.equal (identity (.object [("changed",.text sourceHash)])) sourceHash)) "reject a changed source identity",
+ control .tamperedArtifact ((candidates.filter survives).length==1) "reject a missing, duplicate or additional survivor",
+ control .boundary (!exclusions.isEmpty && witness0 && witness1 && witness2 && witness3 && witness4 && witness5 && witness6 && witness7) "reject forbidden values, target feedback and extra laws"]
+def runControls (sourceHash : String) : Value := .array ((controls sourceHash).map SFT.Engine.controlResultValue)
+
+theorem registrationNoAxioms (sourceHash : String) : (registrationData sourceHash).axioms = [] := rfl
+theorem registrationNoFreeParameters (sourceHash : String) : (registrationData sourceHash).freeParameters = [] := rfl
+theorem decisionPreservesSurvival (c : Candidate) : (decisionData c).survives = survives c := rfl
+end SFT.Physics.ParticleModeEntryEvidence

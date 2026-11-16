@@ -9435,3 +9435,95 @@ import SFT.Physics.QuantumSupportObservationExperiment
 import SFT.Physics.QuantumSupportObservationValidation
 
 import SFT.Physics.QuantumSupportObservationWitnessProofs
+
+import SFT.Physics.ParticleModeCensus0
+
+import SFT.Physics.ParticleModeCensus1
+
+import SFT.Physics.ParticleModeCensus10
+
+import SFT.Physics.ParticleModeCensus11
+
+import SFT.Physics.ParticleModeCensus12
+
+import SFT.Physics.ParticleModeCensus13
+
+import SFT.Physics.ParticleModeCensus14
+
+import SFT.Physics.ParticleModeCensus15
+
+import SFT.Physics.ParticleModeCensus16
+
+import SFT.Physics.ParticleModeCensus17
+
+import SFT.Physics.ParticleModeCensus18
+
+import SFT.Physics.ParticleModeCensus19
+
+import SFT.Physics.ParticleModeCensus2
+
+import SFT.Physics.ParticleModeCensus20
+
+import SFT.Physics.ParticleModeCensus21
+
+import SFT.Physics.ParticleModeCensus22
+
+import SFT.Physics.ParticleModeCensus23
+
+import SFT.Physics.ParticleModeCensus24
+
+import SFT.Physics.ParticleModeCensus25
+
+import SFT.Physics.ParticleModeCensus26
+
+import SFT.Physics.ParticleModeCensus27
+
+import SFT.Physics.ParticleModeCensus28
+
+import SFT.Physics.ParticleModeCensus29
+
+import SFT.Physics.ParticleModeCensus3
+
+import SFT.Physics.ParticleModeCensus30
+
+import SFT.Physics.ParticleModeCensus31
+
+import SFT.Physics.ParticleModeCensus4
+
+import SFT.Physics.ParticleModeCensus5
+
+import SFT.Physics.ParticleModeCensus6
+
+import SFT.Physics.ParticleModeCensus7
+
+import SFT.Physics.ParticleModeCensus8
+
+import SFT.Physics.ParticleModeCensus9
+
+import SFT.Physics.ParticleModeCertificate
+
+import SFT.Physics.ParticleModeCoordinates
+
+import SFT.Physics.ParticleModeCover
+
+import SFT.Physics.ParticleModeEntryEvidence
+
+import SFT.Physics.ParticleModeFibreDerivation
+
+import SFT.Physics.ParticleModeFibres
+
+import SFT.Physics.ParticleModeFixedDerivation
+
+import SFT.Physics.ParticleModeGrammar
+
+import SFT.Physics.ParticleModeGrammarBase
+
+import SFT.Physics.ParticleModeNativeBindings
+
+import SFT.Physics.ParticleModePlacement
+
+import SFT.Physics.ParticleModeReach
+
+import SFT.Physics.ParticleModeTransport
+
+import SFT.Physics.ParticleModeWitnesses

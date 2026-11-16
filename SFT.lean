@@ -9987,3 +9987,169 @@ import SFT.Physics.HiggsObservationAnalysis
 import SFT.Physics.HiggsObservationAnalysisProofs
 
 import SFT.Physics.HiggsObservationInputProofs
+
+import SFT.Physics.StellarResponses
+
+import SFT.Physics.StellarTides
+
+import SFT.Physics.StellarTidalClosure
+
+import SFT.Physics.StellarRadialDerivation
+
+import SFT.Physics.StellarCertificateProof
+
+import SFT.Physics.StellarCertificate
+
+import SFT.Physics.StellarWitnesses
+
+import SFT.Physics.StellarGrammarBase
+
+import SFT.Physics.StellarCensus0
+
+import SFT.Physics.StellarCensus1
+
+import SFT.Physics.StellarCensus2
+
+import SFT.Physics.StellarCensus3
+
+import SFT.Physics.StellarCensus4
+
+import SFT.Physics.StellarCensus5
+
+import SFT.Physics.StellarCensus6
+
+import SFT.Physics.StellarCensus7
+
+import SFT.Physics.StellarCensus8
+
+import SFT.Physics.StellarCensus9
+
+import SFT.Physics.StellarCensus10
+
+import SFT.Physics.StellarCensus11
+
+import SFT.Physics.StellarCensus12
+
+import SFT.Physics.StellarCensus13
+
+import SFT.Physics.StellarCensus14
+
+import SFT.Physics.StellarCensus15
+
+import SFT.Physics.StellarCensus16
+
+import SFT.Physics.StellarCensus17
+
+import SFT.Physics.StellarCensus18
+
+import SFT.Physics.StellarCensus19
+
+import SFT.Physics.StellarCensus20
+
+import SFT.Physics.StellarCensus21
+
+import SFT.Physics.StellarCensus22
+
+import SFT.Physics.StellarCensus23
+
+import SFT.Physics.StellarCensus24
+
+import SFT.Physics.StellarCensus25
+
+import SFT.Physics.StellarCensus26
+
+import SFT.Physics.StellarCensus27
+
+import SFT.Physics.StellarCensus28
+
+import SFT.Physics.StellarCensus29
+
+import SFT.Physics.StellarCensus30
+
+import SFT.Physics.StellarCensus31
+
+import SFT.Physics.StellarCensus32
+
+import SFT.Physics.StellarCensus33
+
+import SFT.Physics.StellarCensus34
+
+import SFT.Physics.StellarCensus35
+
+import SFT.Physics.StellarCensus36
+
+import SFT.Physics.StellarCensus37
+
+import SFT.Physics.StellarCensus38
+
+import SFT.Physics.StellarCensus39
+
+import SFT.Physics.StellarCensus40
+
+import SFT.Physics.StellarCensus41
+
+import SFT.Physics.StellarCensus42
+
+import SFT.Physics.StellarCensus43
+
+import SFT.Physics.StellarCensus44
+
+import SFT.Physics.StellarCensus45
+
+import SFT.Physics.StellarCensus46
+
+import SFT.Physics.StellarCensus47
+
+import SFT.Physics.StellarCensus48
+
+import SFT.Physics.StellarCensus49
+
+import SFT.Physics.StellarCensus50
+
+import SFT.Physics.StellarCensus51
+
+import SFT.Physics.StellarCensus52
+
+import SFT.Physics.StellarCensus53
+
+import SFT.Physics.StellarCensus54
+
+import SFT.Physics.StellarCensus55
+
+import SFT.Physics.StellarCensus56
+
+import SFT.Physics.StellarCensus57
+
+import SFT.Physics.StellarCensus58
+
+import SFT.Physics.StellarCensus59
+
+import SFT.Physics.StellarCensus60
+
+import SFT.Physics.StellarCensus61
+
+import SFT.Physics.StellarCensus62
+
+import SFT.Physics.StellarCensus63
+
+import SFT.Physics.StellarGrammar
+
+import SFT.Physics.StellarEntryEvidence
+
+import SFT.Physics.StellarObservationRecords
+
+import SFT.Physics.StellarObservationWitnesses
+
+import SFT.Physics.StellarObservationGrammar
+
+import SFT.Physics.StellarObservationEvidence
+
+import SFT.Physics.StellarObservationExperiment
+
+import SFT.Physics.StellarObservationValidation
+
+import SFT.Physics.StellarObservationAnalysis
+
+import SFT.Physics.StellarObservationAnalysisProofs
+
+import SFT.Physics.StellarObservationInputProofs

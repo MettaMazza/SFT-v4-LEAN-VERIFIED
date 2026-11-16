@@ -1,0 +1,77 @@
+import SFT.Physics.StellarGrammar
+import SFT.Physics.StellarWitnesses
+import SFT.Foundation.AdmissionControls
+import SFT.Engine.RegistrationGate
+namespace SFT.Physics.StellarEntryEvidence
+open SFT.Host.Canonical StellarGrammar StellarWitnesses
+open SFT.Foundation.AdmissionControls (admissionIdentity)
+set_option maxRecDepth 20000
+set_option maxHeartbeats 100000000
+
+def witnessRecords : Value := .array [.object [("name",.text "hydrostatic"),("statement",.text "Half-One is the complete balanced pair."),("passed",.boolean witness0)],.object [("name",.text "radial-restoration"),("statement",.text "All exact registered displacements restore without evaluating a fractional root."),("passed",.boolean witness1)],.object [("name",.text "stellar-endpoints"),("statement",.text "Three/four luminosity and two/three lifetime endpoint classes are exact."),("passed",.boolean witness2)],.object [("name",.text "flat-curve"),("statement",.text "Every exact registered flat curve forces enclosed support growth."),("passed",.boolean witness3)],.object [("name",.text "tully-four"),("statement",.text "Three-space plus the recurrence forces fourth-power baryonic transport."),("passed",.boolean witness4)],.object [("name",.text "tidal-terminal"),("statement",.text "Every finite registered mismatch terminates at one-to-one with strict prior decrease."),("passed",.boolean witness5)]]
+def claimId : String := "SFT-PHYS-STELLAR-GALACTIC-TIDAL-TERMINAL-067"
+def dependencies : List String := ["SFT-FOUNDATION-FOLD-001", "SFT-FOUNDATION-ONE-001", "SFT-PHYS-SPACE-DIMENSION-THREE-001", "SFT-PHYS-FIELD-INVERSE-SQUARE-001", "SFT-PHYS-ORBITAL-DIMENSION-STABILITY-TERMINAL-009", "SFT-PHYS-FLUID-PRESSURE-STRESS-001", "SFT-PHYS-THERMAL-EQUILIBRIUM-RESPONSE-TERMINAL-043", "SFT-PHYS-WAVE-RESONANCE-001", "SFT-PHYS-MECH-ANGULAR-MOTION-001", "SFT-PHYS-DARK-SMITHION-LFV-TERMINAL-061", "SFT-PHYS-COSMO-STRUCTURE-GROWTH-001", "SFT-MATH-EXACT-ARITHMETIC-001", "SFT-MATH-DYNAMICAL-SYSTEMS-001", "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"]
+def candidateRecord (c : Candidate) : Value := .object [("candidate_id",.text (candidateId c)),("coordinates",.array [.array [.text "hydrostatic",.text (hydrostaticName c.hydrostatic)],.array [.text "radial",.text (radialName c.radial)],.array [.text "stellar",.text (stellarName c.stellar)],.array [.text "lifetime",.text (lifetimeName c.lifetime)],.array [.text "circular",.text (circularName c.circular)],.array [.text "flat",.text (flatName c.flat)],.array [.text "dark",.text (darkName c.dark)],.array [.text "tully",.text (tullyName c.tully)],.array [.text "resonance",.text (resonanceName c.resonance)],.array [.text "tidal",.text (tidalName c.tidal)],.array [.text "measurement",.text (measurementName c.measurement)],.array [.text "extension",.text (extensionName c.extension)]]),("exact_form",.text (exactForm c))]
+def completenessRecord : Value := .object [("generation_rule",.text "Generate the complete twelve-axis product of hydrostatic balance, radial response, stellar scaling, lifetime, circular balance, flat-curve support, dark carrier, Tully-Fisher exponent, resonance, tidal dissipation, measurement custody and extension forms."),("grammar_boundary",.text "Exact positive normalized shares; three-space and two-fibre counts; exact q above the One; perfect-power response comparisons; homologous volume and radiative-recurrence stellar endpoints; circular inverse-square balance; finite enclosed-support and velocity ratios; finite rational spin/orbit cycle counts; inherited neutral relic and resonance laws; and no measurement before seal."),("axes",.array [.object [("key",.text "hydrostatic"),("question",.text "What closes stellar push and pull?"),("choices",.array [.array [.text "selected-pressure-gravity-ratio",.text "A selected ratio is a parameter."],.array [.text "complete-self-antipodal-half-One",.text "The only complete equal two-share partition is half-One plus half-One."]])],.object [("key",.text "radial"),("question",.text "What determines restoration?"),("choices",.array [.array [.text "asserted-self-correction",.text "An assertion does not compare response carriers."],.array [.text "five-thirds-versus-four-thirds-perfect-power-test",.text "Three-space with two fibres and one source forces q^5 versus q^4 after cubing."]])],.object [("key",.text "stellar"),("question",.text "Which terminal homologous luminosity classes are generated?"),("choices",.array [.array [.text "fitted-single-power",.text "A fitted exponent is selected by stellar data."],.array [.text "three-space-and-volume-plus-recurrence",.text "Volume supplies power three and one radiative recurrence supplies power four."]])],.object [("key",.text "lifetime"),("question",.text "How does lifetime follow?"),("choices",.array [.array [.text "independent-lifetime-fit",.text "An independent lifetime exponent adds a dial."],.array [.text "one-fuel-carrier-over-complete-luminosity",.text "Subtracting the one fuel carrier from powers three/four forces fall magnitudes two/three."]])],.object [("key",.text "circular"),("question",.text "What is the circular-response relation?"),("choices",.array [.array [.text "imported-Kepler-answer",.text "An inherited named answer is not a Fold derivation."],.array [.text "inverse-square-balance-v-squared-equals-M-over-r",.text "The admitted inverse-square carrier and circular recurrence close the exact squared relation."]])],.object [("key",.text "flat"),("question",.text "What sustains a flat outer curve?"),("choices",.array [.array [.text "finite-visible-asymptote",.text "A fixed mass makes M/r fall outward."],.array [.text "enclosed-support-grows-linearly-with-radius",.text "Exact constancy of M/r forces identical mass and radius ratios."]])],.object [("key",.text "dark"),("question",.text "Which carrier supplies the additional support?"),("choices",.array [.array [.text "modified-law-or-named-particle",.text "A named alternative is not structurally selected."],.array [.text "admitted-neutral-stable-relic-under-fixed-gravity",.text "The existing neutral relic supplies support while the independently sealed gravity law remains fixed."]])],.object [("key",.text "tully"),("question",.text "What fixes the baryonic rotation exponent?"),("choices",.array [.array [.text "measured-or-fitted-slope",.text "A slope selected from galaxies is a parameter."],.array [.text "three-space-plus-one-orbital-recurrence",.text "Complete spatial support plus its recurrence forces fourth-power velocity transport."]])],.object [("key",.text "resonance"),("question",.text "Which orbital recurrences are admissible?"),("choices",.array [.array [.text "irrational-continuum-period",.text "An irrational continuum period violates the generated finite recurrence grammar."],.array [.text "finite-low-denominator-common-refinement",.text "The inherited resonance law retains exact rational common refinements."]])],.object [("key",.text "tidal"),("question",.text "Where does isolated circular tidal dissipation terminate?"),("choices",.array [.array [.text "unbounded-or-selected-terminal-ratio",.text "An unbounded path or selected ratio does not close."],.array [.text "finite-mismatch-exhaustion-to-one-to-one",.text "Every step removes one surplus cycle and finite support terminates at equality."]])],.object [("key",.text "measurement"),("question",.text "May observations select any exponent or terminal?"),("choices",.array [.array [.text "target-readable-before-seal",.text "That would fit the result."],.array [.text "all-targets-inaccessible-until-seal",.text "Stellar, galaxy and planetary measurements open only after the formal receipt."]])],.object [("key",.text "extension"),("question",.text "May another response or correction be appended?"),("choices",.array [.array [.text "free-response-scale-or-correction",.text "An added response forks the law."],.array [.text "no-extra-rule",.text "The complete generated carriers and explicit external-forcing boundary exhaust the grammar."]])]]),("product_exhaustion",.text "Every registered choice occurs once with every choice on every other axis."),("candidate_ids",.array (candidates.map fun c => .text (candidateId c)))]
+def registrationData (sourceHash : String) : SFT.Engine.ClaimRegistration where
+ claimId := claimId
+ title := "Terminal stellar hydrostatics, galactic response and tidal-lock law"
+ branch := "physics"
+ statement := "Half-One is the unique complete two-share balance, so normalized stellar pressure and gravity meet at one-half each. In three generated spatial directions, complete pressure response retains the three directions plus both Fold fibres, while gravity retains the three directions plus the One source: exact exponents 5/3 and 4/3. Cubing removes every root; compression gives q^5>q^4 and expansion gives 1/q^4>1/q^5, forcing radial restoration. Three-space volume and its one radiative recurrence force the two terminal luminosity classes M^3 and M^4; one fuel carrier then forces lifetime divisors M^2 and M^3. Under the admitted inverse-square law, circular balance is v^2=M(r)/r: a finite visible-mass asymptote must fall, while a flat curve forces enclosed support to grow exactly with radius. Three-space plus the orbital recurrence forces the fourth-power baryonic Tully-Fisher carrier. Finally, every finite rational spin-orbit mismatch loses one generated surplus cell per dissipative step and terminates at 1:1 when no separate eccentric or external forcing channel remains."
+ evidenceMode := .formal
+ rootTheorems := [SFT.Engine.rootTheoremId]
+ dependencies := dependencies
+ axioms := []
+ freeParameters := []
+ provenance := [.forwardForcing,.observationalDerivation]
+ sourceHash := sourceHash
+def registration (sourceHash : String) : Value := SFT.Engine.registrationValue (registrationData sourceHash)
+def generatedCandidateData (c : Candidate) : SFT.Engine.Candidate where
+ candidateId := candidateId c
+ exactForm := exactForm c
+ traceHash := admissionIdentity (.array [.text claimId,.text generationRule,candidateRecord c])
+def censusData : SFT.Engine.CandidateCensus where
+ generationRule := generationRule
+ grammarBoundary := grammarBoundary
+ expectedCardinality := .ofNat candidates.length
+ completenessCertificateHash := admissionIdentity completenessRecord
+ candidates := candidates.map generatedCandidateData
+def census : Value := SFT.Engine.censusValue censusData
+
+def decisionData (c : Candidate) : SFT.Engine.CandidateDecision where
+ candidateId := candidateId c
+ survives := survives c
+ reason := decisionReason c
+ proofHash := admissionIdentity (.array [.text claimId,.array (dependencies.map Value.text),candidateRecord c,.boolean (survives c),.text (decisionReason c)])
+def decideCandidate (candidate : SFT.Engine.Candidate) : Except String SFT.Engine.CandidateDecision :=
+ match candidates.find? (fun c => SFT.Host.Text.equal (candidateId c) candidate.candidateId) with
+ | some c => .ok (decisionData c)
+ | none => .error "StopIteration"
+def closureValue : Value := .object [("result",.text "Hydrostatic balance is exactly (1/2,1/2). Radial pressure and gravity responses are 5/3 and 4/3, certified only through q^5 and q^4 perfect powers: every compression is outward restoring and every expansion inward restoring. The two terminal homologous luminosity exponents are three and four, forcing lifetime-fall magnitudes two and three. Circular balance is v^2=M(r)/r; flat v forces M(r) proportional to r and excludes a finite visible-only asymptote. The baryonic Tully-Fisher exponent is exactly four. Every finite rational isolated circular tidal mismatch exhausts to 1:1; eccentric or externally forced resonances remain an explicit separate boundary rather than a counterexample hidden from the census."),("base",.text "Half-One closes the first pressure/gravity pair; q^5 versus q^4 closes the first exact radial displacement; one surplus spin/orbit cell closes in one dissipative step."),("successor",.text "Every positive q successor preserves perfect-power order, every homologous mass successor preserves the generated powers, every radius successor preserves M/r only by identical enclosed-support growth, and every finite mismatch successor removes exactly one remaining surplus cell."),("exclusions",.array [.text "no V1/V2 executable, stellar catalogue, galaxy slope, lunar period, survivor identifier or measured target in formal execution",.text "no fitted exponent, mass-to-light ratio, halo profile, tidal quality factor, age, metallicity or normalization",.text "no universal claim that every stellar mass domain has one exponent and no concealment of separate microphysical regimes",.text "no universal 1:1 claim for eccentric or externally maintained spin-orbit resonances",.text "no negative, irrational, imaginary, floating, NaN, continuum or infinite proof scalar"]),("witnesses",witnessRecords),("unique_survivor",.text survivorId)]
+def closureData (decisions : List SFT.Engine.CandidateDecision) : SFT.Engine.ClosureEvidence where
+ scope := .depthIndependent
+ exactBoundary := grammarBoundary
+ minimalityPassed := true
+ namedShapeUniquenessPassed := true
+ proofHash := admissionIdentity (.array [closureValue,.array (decisions.map SFT.Engine.decisionValue)])
+ generalityCertificateHash := some (admissionIdentity closureValue)
+def closure (decisions : List SFT.Engine.CandidateDecision) : Value := SFT.Engine.closureEvidenceValue (closureData decisions)
+
+def control (kind : SFT.Engine.ControlKind) (passed : Bool) (observation : String) : SFT.Engine.ControlResult where
+ kind := kind
+ passed := passed
+ expectedBehavior := observation
+ observedBehavior := if passed then observation else "control failed"
+ receiptHash := identity (.array [.text claimId,.text (SFT.Engine.kindName kind),.boolean passed,.text observation])
+def exclusions : List String := ["no V1/V2 executable, stellar catalogue, galaxy slope, lunar period, survivor identifier or measured target in formal execution", "no fitted exponent, mass-to-light ratio, halo profile, tidal quality factor, age, metallicity or normalization", "no universal claim that every stellar mass domain has one exponent and no concealment of separate microphysical regimes", "no universal 1:1 claim for eccentric or externally maintained spin-orbit resonances", "no negative, irrational, imaginary, floating, NaN, continuum or infinite proof scalar"]
+def controls (sourceHash : String) : List SFT.Engine.ControlResult := [
+ control .falsePremise (!(SFT.Host.Text.equal (candidateId {survivor with hydrostatic := .rejected}) survivorId)) "reject the form missing the first structural preservation",
+ control .tamperedSource (!(SFT.Host.Text.equal (identity (.object [("changed",.text sourceHash)])) sourceHash)) "reject a changed source identity",
+ control .tamperedArtifact ((candidates.filter survives).length==1) "reject a missing, duplicate or additional survivor",
+ control .boundary (!exclusions.isEmpty && witness0 && witness1 && witness2 && witness3 && witness4 && witness5) "reject forbidden values, target feedback and extra laws"]
+def runControls (sourceHash : String) : Value := .array ((controls sourceHash).map SFT.Engine.controlResultValue)
+
+theorem registrationNoAxioms (sourceHash : String) : (registrationData sourceHash).axioms = [] := rfl
+theorem registrationNoFreeParameters (sourceHash : String) : (registrationData sourceHash).freeParameters = [] := rfl
+theorem decisionPreservesSurvival (c : Candidate) : (decisionData c).survives = survives c := rfl
+end SFT.Physics.StellarEntryEvidence

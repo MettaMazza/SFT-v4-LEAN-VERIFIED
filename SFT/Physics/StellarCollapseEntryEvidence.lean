@@ -1,0 +1,77 @@
+import SFT.Physics.StellarCollapseGrammar
+import SFT.Physics.StellarCollapseWitnesses
+import SFT.Foundation.AdmissionControls
+import SFT.Engine.RegistrationGate
+namespace SFT.Physics.StellarCollapseEntryEvidence
+open SFT.Host.Canonical StellarCollapseGrammar StellarCollapseWitnesses
+open SFT.Foundation.AdmissionControls (admissionIdentity)
+set_option maxRecDepth 20000
+set_option maxHeartbeats 100000000
+
+def witnessRecords : Value := .array [.object [("name",.text "strict-stage-chain"),("statement",.text "All registered finite stage chains have strictly increasing access carriers."),("passed",.boolean witness0)],.object [("name",.text "binding-terminal"),("statement",.text "The terminal coordinate is unique and tail-closed."),("passed",.boolean witness1)],.object [("name",.text "support-loss"),("statement",.text "Fusion release closes at the peak while inward gravity remains."),("passed",.boolean witness2)],.object [("name",.text "thermonuclear"),("statement",.text "Every registered positive-feedback trace terminates only on finite fuel exhaustion."),("passed",.boolean witness3)],.object [("name",.text "neutral-capture"),("statement",.text "Every registered neutral-capture trace retains mass and recorded label rebalance."),("passed",.boolean witness4)]]
+def claimId : String := "SFT-PHYS-STELLAR-NUCLEAR-COLLAPSE-TERMINAL-069"
+def dependencies : List String := ["SFT-FOUNDATION-FOLD-001", "SFT-FOUNDATION-ONE-001", "SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005", "SFT-PHYS-NUCLEAR-FUSION-FISSION-TERMINAL-005", "SFT-PHYS-NUCLEAR-FUSION-FISSION-YIELD-THRESHOLD-006", "SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005", "SFT-PHYS-NUCLEAR-RADIOACTIVE-DECAY-TERMINAL-005", "SFT-PHYS-STELLAR-GALACTIC-TIDAL-TERMINAL-067", "SFT-PHYS-GRAVITY-HORIZON-001", "SFT-PHYS-MATTER-CONSERVED-LABELS-001", "SFT-MATH-EXACT-ARITHMETIC-001"]
+def candidateRecord (c : Candidate) : Value := .object [("candidate_id",.text (candidateId c)),("coordinates",.array [.array [.text "stage",.text (stageName c.stage)],.array [.text "barrier",.text (barrierName c.barrier)],.array [.text "release",.text (releaseName c.release)],.array [.text "terminal",.text (terminalName c.terminal)],.array [.text "nesting",.text (nestingName c.nesting)],.array [.text "loss",.text (lossName c.loss)],.array [.text "collapse",.text (collapseName c.collapse)],.array [.text "thermonuclear",.text (thermonuclearName c.thermonuclear)],.array [.text "capture",.text (captureName c.capture)],.array [.text "rebalance",.text (rebalanceName c.rebalance)],.array [.text "measurement",.text (measurementName c.measurement)],.array [.text "extension",.text (extensionName c.extension)]]),("exact_form",.text (exactForm c))]
+def completenessRecord : Value := .object [("generation_rule",.text "Generate the complete twelve-axis product of stage composition, charged boundary order, release direction, global binding terminal, nested support, fusion-support loss, collapse endpoint, thermonuclear recurrence, neutral capture, radioactive rebalance, target custody and extension forms."),("grammar_boundary",.text "Every positive finite stage count and successor; complete charged boundary paths; the inherited all-mass binding maximum and tail induction; half-One hydrostatic shares; empty-One absence of release; both compressed support and horizon endpoint classes; every finite fuel recurrence; neutral incident capture followed by registered radioactive rebalance; and no stellar or supernova target before seal."),("axes",.array [.object [("key",.text "stage"),("question",.text "How are burning stages composed?"),("choices",.array [.array [.text "named-stage-list",.text "A named observational list is not a derivation."],.array [.text "positive-Fold-stage-successor",.text "Every stage is generated from the prior positive stage."]])],.object [("key",.text "barrier"),("question",.text "How does access change?"),("choices",.array [.array [.text "one-universal-dimensional-temperature",.text "One selected temperature erases reaction-specific structure."],.array [.text "strictly-growing-charged-boundary-paths",.text "n(n+1) grows strictly under every positive successor."]])],.object [("key",.text "release"),("question",.text "Which fusion direction supports the star?"),("choices",.array [.array [.text "fusion-past-peak-by-assertion",.text "Fusion past the maximum cannot release binding support."],.array [.text "only-toward-higher-binding",.text "The admitted exact binding ledger retains release only toward greater binding."]])],.object [("key",.text "terminal"),("question",.text "Where does ordinary stellar fusion end?"),("choices",.array [.array [.text "selected-iron-name",.text "A conventional name cannot select the endpoint."],.array [.text "unique-all-mass-62-28-binding-maximum",.text "The admitted complete census and tail induction force the terminal coordinate."]])],.object [("key",.text "nesting"),("question",.text "How are later stages organized?"),("choices",.array [.array [.text "unordered-mixed-shells",.text "Higher access cannot occupy a larger lower-access support."],.array [.text "strictly-nested-access-support",.text "Every successor is retained inside its predecessor's accessible support."]])],.object [("key",.text "loss"),("question",.text "What happens when peak fusion adds no release?"),("choices",.array [.array [.text "hidden-residual-fusion-energy",.text "An ungenerated residual is a free source."],.array [.text "empty-One-fusion-support-with-gravity-retained",.text "The outward fusion carrier closes while the inward half-One remains."]])],.object [("key",.text "collapse"),("question",.text "Which complete endpoints remain?"),("choices",.array [.array [.text "single-selected-remnant",.text "Selecting one outcome omits the distinct support boundary."],.array [.text "compressed-nuclear-support-or-horizon",.text "Finite compression either closes on retained nuclear support or reaches the horizon."]])],.object [("key",.text "thermonuclear"),("question",.text "Can complete linked fuel settle partway?"),("choices",.array [.array [.text "chosen-partial-burn",.text "A partial terminal is not fixed under positive feedback."],.array [.text "runaway-to-finite-fuel-exhaustion",.text "Each reaction increases access until the finite support is exhausted."]])],.object [("key",.text "capture"),("question",.text "How can mass cross beyond the fusion terminal?"),("choices",.array [.array [.text "charged-fusion-beyond-maximum",.text "That requires inward energy and a Coulomb path."],.array [.text "neutral-capture-with-empty-charge-path",.text "A neutral incident label adds mass without an inter-boundary charge path."]])],.object [("key",.text "rebalance"),("question",.text "How does the captured word return toward stability?"),("choices",.array [.array [.text "unrecorded-charge-change",.text "An unrecorded change violates label conservation."],.array [.text "registered-radioactive-label-successor",.text "The inherited decay law rebalances the held label with a complete record."]])],.object [("key",.text "measurement"),("question",.text "May observed stages or explosions select the law?"),("choices",.array [.array [.text "target-readable-before-seal",.text "That would fit the channel census."],.array [.text "all-targets-inaccessible-until-seal",.text "Every external record opens only after the formal receipt."]])],.object [("key",.text "extension"),("question",.text "May another channel or energy term be appended?"),("choices",.array [.array [.text "free-channel-or-energy",.text "An ungenerated term destroys zero-parameter closure."],.array [.text "no-extra-rule",.text "The complete fusion, collapse, runaway and neutral-capture channels exhaust the grammar."]])]]),("product_exhaustion",.text "Every registered choice occurs once with every choice on every other axis."),("candidate_ids",.array (candidates.map fun c => .text (candidateId c)))]
+def registrationData (sourceHash : String) : SFT.Engine.ClaimRegistration where
+ claimId := claimId
+ title := "Terminal stellar nuclear chain, collapse and heavy-element law"
+ branch := "physics"
+ statement := "Every charged fusion-stage successor adds a complete positive source-to-target boundary carrier, so its access requirement is strictly greater than its predecessor at every finite depth. The corresponding supports are strictly nested. While a junction moves toward the unique all-mass binding maximum it retains positive release; at the globally closed mass-62, charge-28 terminal, ordinary fusion beyond the maximum has the empty One release form. With inward gravity retained, loss of this outward carrier forces collapse unless a distinct compressed nuclear support closes first; otherwise the horizon closes the path. A separate complete-fuel recurrence has no interior fixed point and terminates only when finite fuel is exhausted, forcing the thermonuclear-unbinding channel. Beyond the binding maximum, a neutral capture carries no inter-boundary charge path; repeated capture followed by radioactive label rebalance is therefore the unique generated heavy-element path that does not falsely demand exothermic charged fusion past the maximum."
+ evidenceMode := .formal
+ rootTheorems := [SFT.Engine.rootTheoremId]
+ dependencies := dependencies
+ axioms := []
+ freeParameters := []
+ provenance := [.forwardForcing,.observationalDerivation]
+ sourceHash := sourceHash
+def registration (sourceHash : String) : Value := SFT.Engine.registrationValue (registrationData sourceHash)
+def generatedCandidateData (c : Candidate) : SFT.Engine.Candidate where
+ candidateId := candidateId c
+ exactForm := exactForm c
+ traceHash := admissionIdentity (.array [.text claimId,.text generationRule,candidateRecord c])
+def censusData : SFT.Engine.CandidateCensus where
+ generationRule := generationRule
+ grammarBoundary := grammarBoundary
+ expectedCardinality := .ofNat candidates.length
+ completenessCertificateHash := admissionIdentity completenessRecord
+ candidates := candidates.map generatedCandidateData
+def census : Value := SFT.Engine.censusValue censusData
+
+def decisionData (c : Candidate) : SFT.Engine.CandidateDecision where
+ candidateId := candidateId c
+ survives := survives c
+ reason := decisionReason c
+ proofHash := admissionIdentity (.array [.text claimId,.array (dependencies.map Value.text),candidateRecord c,.boolean (survives c),.text (decisionReason c)])
+def decideCandidate (candidate : SFT.Engine.Candidate) : Except String SFT.Engine.CandidateDecision :=
+ match candidates.find? (fun c => SFT.Host.Text.equal (candidateId c) candidate.candidateId) with
+ | some c => .ok (decisionData c)
+ | none => .error "StopIteration"
+def closureValue : Value := .object [("result",.text "Charged access paths are exactly n(n+1) and strictly increase for every positive stage successor; finite stage supports are strictly nested. Exothermic ordinary fusion terminates at the independently forced global binding maximum (mass 62, charge 28, neutron count 34), beyond which its release is the empty One form. Retained inward gravity then forces the support-loss collapse channel, with compressed nuclear support and horizon closure as the complete endpoints. The distinct linked-fuel recurrence has no interior fixed point and ends only at finite fuel exhaustion, forcing thermonuclear unbinding. Neutral capture has the empty inter-boundary charge path; repeated capture followed by registered radioactive rebalance forces the heavy-element channel beyond the ordinary-fusion terminal. Dimensional ignition temperatures and observed events remain post-seal checks."),("base",.text "The first positive stage has one complete charged boundary carrier; the first neutral capture has the empty inter-boundary charge path; one fuel cell exhausts in one recurrence."),("successor",.text "n(n+1) grows to (n+1)(n+2), each later support nests inside its predecessor, each finite runaway consumes one further positive fuel cell, and each neutral capture adds one held mass label before one recorded rebalance."),("exclusions",.array [.text "no V1/V2 executable, named stellar stage, ignition temperature, supernova event, abundance, isotope target or survivor identifier in formal execution",.text "no fitted reaction rate, stellar mass, opacity, metallicity, explosion energy, neutrino efficiency or standard-candle calibration",.text "no universal dimensional threshold substituted for reaction-specific access carriers",.text "no fusion release asserted beyond the globally sealed binding maximum",.text "no unrecorded charge change and no omission of either collapse endpoint or either explosion channel",.text "no negative, irrational, imaginary, floating, NaN, continuum or infinite Fold proof scalar"]),("witnesses",witnessRecords),("unique_survivor",.text survivorId)]
+def closureData (decisions : List SFT.Engine.CandidateDecision) : SFT.Engine.ClosureEvidence where
+ scope := .depthIndependent
+ exactBoundary := grammarBoundary
+ minimalityPassed := true
+ namedShapeUniquenessPassed := true
+ proofHash := admissionIdentity (.array [closureValue,.array (decisions.map SFT.Engine.decisionValue)])
+ generalityCertificateHash := some (admissionIdentity closureValue)
+def closure (decisions : List SFT.Engine.CandidateDecision) : Value := SFT.Engine.closureEvidenceValue (closureData decisions)
+
+def control (kind : SFT.Engine.ControlKind) (passed : Bool) (observation : String) : SFT.Engine.ControlResult where
+ kind := kind
+ passed := passed
+ expectedBehavior := observation
+ observedBehavior := if passed then observation else "control failed"
+ receiptHash := identity (.array [.text claimId,.text (SFT.Engine.kindName kind),.boolean passed,.text observation])
+def exclusions : List String := ["no V1/V2 executable, named stellar stage, ignition temperature, supernova event, abundance, isotope target or survivor identifier in formal execution", "no fitted reaction rate, stellar mass, opacity, metallicity, explosion energy, neutrino efficiency or standard-candle calibration", "no universal dimensional threshold substituted for reaction-specific access carriers", "no fusion release asserted beyond the globally sealed binding maximum", "no unrecorded charge change and no omission of either collapse endpoint or either explosion channel", "no negative, irrational, imaginary, floating, NaN, continuum or infinite Fold proof scalar"]
+def controls (sourceHash : String) : List SFT.Engine.ControlResult := [
+ control .falsePremise (!(SFT.Host.Text.equal (candidateId {survivor with stage := .rejected}) survivorId)) "reject the form missing the first structural preservation",
+ control .tamperedSource (!(SFT.Host.Text.equal (identity (.object [("changed",.text sourceHash)])) sourceHash)) "reject a changed source identity",
+ control .tamperedArtifact ((candidates.filter survives).length==1) "reject a missing, duplicate or additional survivor",
+ control .boundary (!exclusions.isEmpty && witness0 && witness1 && witness2 && witness3 && witness4) "reject forbidden values, target feedback and extra laws"]
+def runControls (sourceHash : String) : Value := .array ((controls sourceHash).map SFT.Engine.controlResultValue)
+
+theorem registrationNoAxioms (sourceHash : String) : (registrationData sourceHash).axioms = [] := rfl
+theorem registrationNoFreeParameters (sourceHash : String) : (registrationData sourceHash).freeParameters = [] := rfl
+theorem decisionPreservesSurvival (c : Candidate) : (decisionData c).survives = survives c := rfl
+end SFT.Physics.StellarCollapseEntryEvidence

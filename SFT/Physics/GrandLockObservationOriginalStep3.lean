@@ -1,0 +1,8 @@
+import SFT.Physics.GrandLockObservationOriginalData
+namespace SFT.Physics.GrandLockObservationAnalysisProofs
+open SFT.Host.Canonical SFT.Physics.GrandLockObservationAnalysis
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+theorem original_measurementsRetained : measurementsRetained original_measurements = true := rfl
+#print axioms original_measurementsRetained
+end SFT.Physics.GrandLockObservationAnalysisProofs

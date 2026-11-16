@@ -10641,3 +10641,15 @@ import SFT.Physics.ChirpObservationAnalysis
 import SFT.Physics.ChirpObservationAnalysisProofs
 
 import SFT.Physics.ChirpObservationInputProofs
+
+import SFT.Chemistry.MolecularElectronicState
+
+import SFT.Chemistry.MolecularElectronicWitnesses
+
+import SFT.Chemistry.MolecularElectronicGrammar
+
+import SFT.Chemistry.MolecularElectronicEvidence
+
+import SFT.Chemistry.MolecularElectronicExperiment
+
+import SFT.Chemistry.MolecularElectronicValidation

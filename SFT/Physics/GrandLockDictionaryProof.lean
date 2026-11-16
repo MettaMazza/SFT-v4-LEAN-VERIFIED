@@ -1,0 +1,2679 @@
+import SFT.Physics.GrandLockDictionaryData
+namespace SFT.Physics.GrandLockDependencyProofs
+open SFT.Physics.GrandLockDependency
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+theorem dictionaryFold534 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary534 sourceRows534 = sourceDictionary534 := rfl
+theorem dictionaryInsert533 : put sourceDictionary533 "SFT-ROOT-THERE-IS-NO-NOTHING" [] = sourceDictionary534 := rfl
+theorem dictionaryFold533 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary533 sourceRows533 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary533 "SFT-ROOT-THERE-IS-NO-NOTHING" []) sourceRows534 = _
+ rw [dictionaryInsert533]
+ exact dictionaryFold534
+theorem dictionaryInsert532 : put sourceDictionary532 "SFT-QUANTUM-VERIFICATION-001" ["SFT-QUANTUM-SIMULATION-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary533 := rfl
+theorem dictionaryFold532 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary532 sourceRows532 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary532 "SFT-QUANTUM-VERIFICATION-001" ["SFT-QUANTUM-SIMULATION-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows533 = _
+ rw [dictionaryInsert532]
+ exact dictionaryFold533
+theorem dictionaryInsert531 : put sourceDictionary531 "SFT-QUANTUM-UNIVERSALITY-001" ["SFT-QUANTUM-CIRCUIT-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary532 := rfl
+theorem dictionaryFold531 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary531 sourceRows531 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary531 "SFT-QUANTUM-UNIVERSALITY-001" ["SFT-QUANTUM-CIRCUIT-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows532 = _
+ rw [dictionaryInsert531]
+ exact dictionaryFold532
+theorem dictionaryInsert530 : put sourceDictionary530 "SFT-QUANTUM-SUPERPOSITION-001" ["SFT-QUANTUM-STATE-COMPOSITION-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary531 := rfl
+theorem dictionaryFold530 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary530 sourceRows530 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary530 "SFT-QUANTUM-SUPERPOSITION-001" ["SFT-QUANTUM-STATE-COMPOSITION-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows531 = _
+ rw [dictionaryInsert530]
+ exact dictionaryFold531
+theorem dictionaryInsert529 : put sourceDictionary529 "SFT-QUANTUM-STATE-COMPOSITION-001" ["SFT-QUANTUM-INFORMATION-UNIT-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary530 := rfl
+theorem dictionaryFold529 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary529 sourceRows529 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary529 "SFT-QUANTUM-STATE-COMPOSITION-001" ["SFT-QUANTUM-INFORMATION-UNIT-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows530 = _
+ rw [dictionaryInsert529]
+ exact dictionaryFold530
+theorem dictionaryInsert528 : put sourceDictionary528 "SFT-QUANTUM-SIMULATION-001" ["SFT-QUANTUM-FAULT-TOLERANCE-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary529 := rfl
+theorem dictionaryFold528 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary528 sourceRows528 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary528 "SFT-QUANTUM-SIMULATION-001" ["SFT-QUANTUM-FAULT-TOLERANCE-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows529 = _
+ rw [dictionaryInsert528]
+ exact dictionaryFold529
+theorem dictionaryInsert527 : put sourceDictionary527 "SFT-QUANTUM-REVERSIBLE-MODEL-001" ["SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary528 := rfl
+theorem dictionaryFold527 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary527 sourceRows527 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary527 "SFT-QUANTUM-REVERSIBLE-MODEL-001" ["SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows528 = _
+ rw [dictionaryInsert527]
+ exact dictionaryFold528
+theorem dictionaryInsert526 : put sourceDictionary526 "SFT-QUANTUM-PHASE-INTERFERENCE-001" ["SFT-QUANTUM-SUPERPOSITION-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary527 := rfl
+theorem dictionaryFold526 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary526 sourceRows526 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary526 "SFT-QUANTUM-PHASE-INTERFERENCE-001" ["SFT-QUANTUM-SUPERPOSITION-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows527 = _
+ rw [dictionaryInsert526]
+ exact dictionaryFold527
+theorem dictionaryInsert525 : put sourceDictionary525 "SFT-QUANTUM-MEASUREMENT-001" ["SFT-QUANTUM-ENTANGLEMENT-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary526 := rfl
+theorem dictionaryFold525 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary525 sourceRows525 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary525 "SFT-QUANTUM-MEASUREMENT-001" ["SFT-QUANTUM-ENTANGLEMENT-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows526 = _
+ rw [dictionaryInsert525]
+ exact dictionaryFold526
+theorem dictionaryInsert524 : put sourceDictionary524 "SFT-QUANTUM-LEARNING-001" ["SFT-QUANTUM-VERIFICATION-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary525 := rfl
+theorem dictionaryFold524 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary524 sourceRows524 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary524 "SFT-QUANTUM-LEARNING-001" ["SFT-QUANTUM-VERIFICATION-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows525 = _
+ rw [dictionaryInsert524]
+ exact dictionaryFold525
+theorem dictionaryInsert523 : put sourceDictionary523 "SFT-QUANTUM-INFORMATION-UNIT-001" ["SFT-QUANTUM-REVERSIBLE-MODEL-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary524 := rfl
+theorem dictionaryFold523 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary523 sourceRows523 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary523 "SFT-QUANTUM-INFORMATION-UNIT-001" ["SFT-QUANTUM-REVERSIBLE-MODEL-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows524 = _
+ rw [dictionaryInsert523]
+ exact dictionaryFold524
+theorem dictionaryInsert522 : put sourceDictionary522 "SFT-QUANTUM-GATE-001" ["SFT-QUANTUM-MEASUREMENT-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary523 := rfl
+theorem dictionaryFold522 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary522 sourceRows522 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary522 "SFT-QUANTUM-GATE-001" ["SFT-QUANTUM-MEASUREMENT-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows523 = _
+ rw [dictionaryInsert522]
+ exact dictionaryFold523
+theorem dictionaryInsert521 : put sourceDictionary521 "SFT-QUANTUM-FAULT-TOLERANCE-001" ["SFT-QUANTUM-ERROR-CORRECTION-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary522 := rfl
+theorem dictionaryFold521 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary521 sourceRows521 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary521 "SFT-QUANTUM-FAULT-TOLERANCE-001" ["SFT-QUANTUM-ERROR-CORRECTION-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows522 = _
+ rw [dictionaryInsert521]
+ exact dictionaryFold522
+theorem dictionaryInsert520 : put sourceDictionary520 "SFT-QUANTUM-ERROR-CORRECTION-001" ["SFT-QUANTUM-CODING-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary521 := rfl
+theorem dictionaryFold520 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary520 sourceRows520 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary520 "SFT-QUANTUM-ERROR-CORRECTION-001" ["SFT-QUANTUM-CODING-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows521 = _
+ rw [dictionaryInsert520]
+ exact dictionaryFold521
+theorem dictionaryInsert519 : put sourceDictionary519 "SFT-QUANTUM-ENTANGLEMENT-001" ["SFT-QUANTUM-PHASE-INTERFERENCE-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary520 := rfl
+theorem dictionaryFold519 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary519 sourceRows519 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary519 "SFT-QUANTUM-ENTANGLEMENT-001" ["SFT-QUANTUM-PHASE-INTERFERENCE-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows520 = _
+ rw [dictionaryInsert519]
+ exact dictionaryFold520
+theorem dictionaryInsert518 : put sourceDictionary518 "SFT-QUANTUM-COMPLEXITY-001" ["SFT-QUANTUM-ALGORITHMS-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary519 := rfl
+theorem dictionaryFold518 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary518 sourceRows518 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary518 "SFT-QUANTUM-COMPLEXITY-001" ["SFT-QUANTUM-ALGORITHMS-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows519 = _
+ rw [dictionaryInsert518]
+ exact dictionaryFold519
+theorem dictionaryInsert517 : put sourceDictionary517 "SFT-QUANTUM-COMMUNICATION-001" ["SFT-QUANTUM-COMPLEXITY-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary518 := rfl
+theorem dictionaryFold517 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary517 sourceRows517 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary517 "SFT-QUANTUM-COMMUNICATION-001" ["SFT-QUANTUM-COMPLEXITY-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows518 = _
+ rw [dictionaryInsert517]
+ exact dictionaryFold518
+theorem dictionaryInsert516 : put sourceDictionary516 "SFT-QUANTUM-CODING-001" ["SFT-QUANTUM-COMMUNICATION-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary517 := rfl
+theorem dictionaryFold516 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary516 sourceRows516 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary516 "SFT-QUANTUM-CODING-001" ["SFT-QUANTUM-COMMUNICATION-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows517 = _
+ rw [dictionaryInsert516]
+ exact dictionaryFold517
+theorem dictionaryInsert515 : put sourceDictionary515 "SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001" ["SFT-QUANTUM-LEARNING-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary516 := rfl
+theorem dictionaryFold515 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary515 sourceRows515 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary515 "SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001" ["SFT-QUANTUM-LEARNING-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows516 = _
+ rw [dictionaryInsert515]
+ exact dictionaryFold516
+theorem dictionaryInsert514 : put sourceDictionary514 "SFT-QUANTUM-CIRCUIT-001" ["SFT-QUANTUM-GATE-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary515 := rfl
+theorem dictionaryFold514 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary514 sourceRows514 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary514 "SFT-QUANTUM-CIRCUIT-001" ["SFT-QUANTUM-GATE-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows515 = _
+ rw [dictionaryInsert514]
+ exact dictionaryFold515
+theorem dictionaryInsert513 : put sourceDictionary513 "SFT-QUANTUM-ALGORITHMS-001" ["SFT-QUANTUM-UNIVERSALITY-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"] = sourceDictionary514 := rfl
+theorem dictionaryFold513 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary513 sourceRows513 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary513 "SFT-QUANTUM-ALGORITHMS-001" ["SFT-QUANTUM-UNIVERSALITY-001","SFT-COMP-SCI-MATHEMATICAL-MODELLING-001","SFT-COMP-FORM-CIRCUIT-001","SFT-COMP-FORM-UNIVERSALITY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-INFO-QUANTUM-CORRESPONDENCE-001"]) sourceRows514 = _
+ rw [dictionaryInsert513]
+ exact dictionaryFold514
+theorem dictionaryInsert512 : put sourceDictionary512 "SFT-PHYS-YANG-MILLS-SINGLET-GAP-TERMINAL-026" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-STRONG-CARRIER-MASSLESS-CONFINED-TERMINAL-013","SFT-PHYS-STRONG-FIELD-NONLINEAR-FIXED-POINT-TERMINAL-014","SFT-PHYS-INTERACTION-UNIFICATION-TERMINAL-025","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary513 := rfl
+theorem dictionaryFold512 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary512 sourceRows512 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary512 "SFT-PHYS-YANG-MILLS-SINGLET-GAP-TERMINAL-026" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-STRONG-CARRIER-MASSLESS-CONFINED-TERMINAL-013","SFT-PHYS-STRONG-FIELD-NONLINEAR-FIXED-POINT-TERMINAL-014","SFT-PHYS-INTERACTION-UNIFICATION-TERMINAL-025","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows513 = _
+ rw [dictionaryInsert512]
+ exact dictionaryFold513
+theorem dictionaryInsert511 : put sourceDictionary511 "SFT-PHYS-YANG-MILLS-SINGLET-GAP-EMPIRICAL-027" ["SFT-PHYS-YANG-MILLS-SINGLET-GAP-TERMINAL-026","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001"] = sourceDictionary512 := rfl
+theorem dictionaryFold511 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary511 sourceRows511 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary511 "SFT-PHYS-YANG-MILLS-SINGLET-GAP-EMPIRICAL-027" ["SFT-PHYS-YANG-MILLS-SINGLET-GAP-TERMINAL-026","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001"]) sourceRows512 = _
+ rw [dictionaryInsert511]
+ exact dictionaryFold512
+theorem dictionaryInsert510 : put sourceDictionary510 "SFT-PHYS-WEAK-PARITY-FIBRE-002" ["SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-MATTER-PARTICLE-ANTIPARTICLE-001"] = sourceDictionary511 := rfl
+theorem dictionaryFold510 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary510 sourceRows510 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary510 "SFT-PHYS-WEAK-PARITY-FIBRE-002" ["SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-MATTER-PARTICLE-ANTIPARTICLE-001"]) sourceRows511 = _
+ rw [dictionaryInsert510]
+ exact dictionaryFold511
+theorem dictionaryInsert509 : put sourceDictionary509 "SFT-PHYS-WAVE-SUPERPOSITION-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001"] = sourceDictionary510 := rfl
+theorem dictionaryFold509 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary509 sourceRows509 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary509 "SFT-PHYS-WAVE-SUPERPOSITION-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001"]) sourceRows510 = _
+ rw [dictionaryInsert509]
+ exact dictionaryFold510
+theorem dictionaryInsert508 : put sourceDictionary508 "SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-PROPAGATION-001"] = sourceDictionary509 := rfl
+theorem dictionaryFold508 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary508 sourceRows508 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary508 "SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-PROPAGATION-001"]) sourceRows509 = _
+ rw [dictionaryInsert508]
+ exact dictionaryFold509
+theorem dictionaryInsert507 : put sourceDictionary507 "SFT-PHYS-WAVE-RESONANCE-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-DISPERSION-001"] = sourceDictionary508 := rfl
+theorem dictionaryFold507 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary507 sourceRows507 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary507 "SFT-PHYS-WAVE-RESONANCE-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-DISPERSION-001"]) sourceRows508 = _
+ rw [dictionaryInsert507]
+ exact dictionaryFold508
+theorem dictionaryInsert506 : put sourceDictionary506 "SFT-PHYS-WAVE-PROPAGATION-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-PERIOD-FREQUENCY-001"] = sourceDictionary507 := rfl
+theorem dictionaryFold506 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary506 sourceRows506 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary506 "SFT-PHYS-WAVE-PROPAGATION-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-PERIOD-FREQUENCY-001"]) sourceRows507 = _
+ rw [dictionaryInsert506]
+ exact dictionaryFold507
+theorem dictionaryInsert505 : put sourceDictionary505 "SFT-PHYS-WAVE-POLARIZATION-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-DIFFRACTION-001"] = sourceDictionary506 := rfl
+theorem dictionaryFold505 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary505 sourceRows505 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary505 "SFT-PHYS-WAVE-POLARIZATION-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-DIFFRACTION-001"]) sourceRows506 = _
+ rw [dictionaryInsert505]
+ exact dictionaryFold506
+theorem dictionaryInsert504 : put sourceDictionary504 "SFT-PHYS-WAVE-PERIOD-FREQUENCY-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001"] = sourceDictionary505 := rfl
+theorem dictionaryFold504 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary504 sourceRows504 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary504 "SFT-PHYS-WAVE-PERIOD-FREQUENCY-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001"]) sourceRows505 = _
+ rw [dictionaryInsert504]
+ exact dictionaryFold505
+theorem dictionaryInsert503 : put sourceDictionary503 "SFT-PHYS-WAVE-INTERFERENCE-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-SUPERPOSITION-001"] = sourceDictionary504 := rfl
+theorem dictionaryFold503 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary503 sourceRows503 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary503 "SFT-PHYS-WAVE-INTERFERENCE-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-SUPERPOSITION-001"]) sourceRows504 = _
+ rw [dictionaryInsert503]
+ exact dictionaryFold504
+theorem dictionaryInsert502 : put sourceDictionary502 "SFT-PHYS-WAVE-EXACT-OPERATIONS-003" ["SFT-PHYS-FIELD-MAXWELL-THREE-SPACE-CLOSURE-003","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-PHYS-WAVE-POLARIZATION-001","SFT-PHYS-WAVE-RESONANCE-001"] = sourceDictionary503 := rfl
+theorem dictionaryFold502 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary502 sourceRows502 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary502 "SFT-PHYS-WAVE-EXACT-OPERATIONS-003" ["SFT-PHYS-FIELD-MAXWELL-THREE-SPACE-CLOSURE-003","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-PHYS-WAVE-POLARIZATION-001","SFT-PHYS-WAVE-RESONANCE-001"]) sourceRows503 = _
+ rw [dictionaryInsert502]
+ exact dictionaryFold503
+theorem dictionaryInsert501 : put sourceDictionary501 "SFT-PHYS-WAVE-ENERGY-MOMENTUM-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-RESONANCE-001"] = sourceDictionary502 := rfl
+theorem dictionaryFold501 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary501 sourceRows501 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary501 "SFT-PHYS-WAVE-ENERGY-MOMENTUM-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-RESONANCE-001"]) sourceRows502 = _
+ rw [dictionaryInsert501]
+ exact dictionaryFold502
+theorem dictionaryInsert500 : put sourceDictionary500 "SFT-PHYS-WAVE-DISPERSION-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-POLARIZATION-001"] = sourceDictionary501 := rfl
+theorem dictionaryFold500 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary500 sourceRows500 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary500 "SFT-PHYS-WAVE-DISPERSION-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-POLARIZATION-001"]) sourceRows501 = _
+ rw [dictionaryInsert500]
+ exact dictionaryFold501
+theorem dictionaryInsert499 : put sourceDictionary499 "SFT-PHYS-WAVE-DIFFRACTION-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-INTERFERENCE-001"] = sourceDictionary500 := rfl
+theorem dictionaryFold499 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary499 sourceRows499 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary499 "SFT-PHYS-WAVE-DIFFRACTION-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-INTERFERENCE-001"]) sourceRows500 = _
+ rw [dictionaryInsert499]
+ exact dictionaryFold500
+theorem dictionaryInsert498 : put sourceDictionary498 "SFT-PHYS-VALIDATION-WAVE-FREQUENCY-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001"] = sourceDictionary499 := rfl
+theorem dictionaryFold498 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary498 sourceRows498 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary498 "SFT-PHYS-VALIDATION-WAVE-FREQUENCY-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001"]) sourceRows499 = _
+ rw [dictionaryInsert498]
+ exact dictionaryFold499
+theorem dictionaryInsert497 : put sourceDictionary497 "SFT-PHYS-VALIDATION-WAVE-ENERGY-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001"] = sourceDictionary498 := rfl
+theorem dictionaryFold497 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary497 sourceRows497 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary497 "SFT-PHYS-VALIDATION-WAVE-ENERGY-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001"]) sourceRows498 = _
+ rw [dictionaryInsert497]
+ exact dictionaryFold498
+theorem dictionaryInsert496 : put sourceDictionary496 "SFT-PHYS-VALIDATION-VELOCITY-COMPOSITION-034" ["SFT-PHYS-SPACETIME-VELOCITY-COMPOSITION-TERMINAL-033","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001"] = sourceDictionary497 := rfl
+theorem dictionaryFold496 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary496 sourceRows496 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary496 "SFT-PHYS-VALIDATION-VELOCITY-COMPOSITION-034" ["SFT-PHYS-SPACETIME-VELOCITY-COMPOSITION-TERMINAL-033","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001"]) sourceRows497 = _
+ rw [dictionaryInsert496]
+ exact dictionaryFold497
+theorem dictionaryInsert495 : put sourceDictionary495 "SFT-PHYS-VALIDATION-VACUUM-POLARIZATION-003" ["SFT-PHYS-VACUUM-POLARIZATION-RUNNING-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary496 := rfl
+theorem dictionaryFold495 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary495 sourceRows495 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary495 "SFT-PHYS-VALIDATION-VACUUM-POLARIZATION-003" ["SFT-PHYS-VACUUM-POLARIZATION-RUNNING-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows496 = _
+ rw [dictionaryInsert495]
+ exact dictionaryFold496
+theorem dictionaryInsert494 : put sourceDictionary494 "SFT-PHYS-VALIDATION-VACUUM-INERTIA-003" ["SFT-PHYS-VACUUM-INERTIA-UNITY-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary495 := rfl
+theorem dictionaryFold494 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary494 sourceRows494 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary494 "SFT-PHYS-VALIDATION-VACUUM-INERTIA-003" ["SFT-PHYS-VACUUM-INERTIA-UNITY-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows495 = _
+ rw [dictionaryInsert494]
+ exact dictionaryFold495
+theorem dictionaryInsert493 : put sourceDictionary493 "SFT-PHYS-VALIDATION-VACUUM-FLOOR-003" ["SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary494 := rfl
+theorem dictionaryFold493 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary493 sourceRows493 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary493 "SFT-PHYS-VALIDATION-VACUUM-FLOOR-003" ["SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows494 = _
+ rw [dictionaryInsert493]
+ exact dictionaryFold494
+theorem dictionaryInsert492 : put sourceDictionary492 "SFT-PHYS-VALIDATION-VACUUM-EXTRACTION-003" ["SFT-PHYS-VACUUM-COMPLETE-CYCLE-LEDGER-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-PHYS-VACUUM-ASYMMETRIC-BEAT-EXTRACTION-003"] = sourceDictionary493 := rfl
+theorem dictionaryFold492 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary492 sourceRows492 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary492 "SFT-PHYS-VALIDATION-VACUUM-EXTRACTION-003" ["SFT-PHYS-VACUUM-COMPLETE-CYCLE-LEDGER-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-PHYS-VACUUM-ASYMMETRIC-BEAT-EXTRACTION-003"]) sourceRows493 = _
+ rw [dictionaryInsert492]
+ exact dictionaryFold493
+theorem dictionaryInsert491 : put sourceDictionary491 "SFT-PHYS-VALIDATION-VACUUM-DENSITY-SCALE-036" ["SFT-PHYS-VACUUM-DENSITY-SCALE-TERMINAL-035","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001"] = sourceDictionary492 := rfl
+theorem dictionaryFold491 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary491 sourceRows491 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary491 "SFT-PHYS-VALIDATION-VACUUM-DENSITY-SCALE-036" ["SFT-PHYS-VACUUM-DENSITY-SCALE-TERMINAL-035","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001"]) sourceRows492 = _
+ rw [dictionaryInsert491]
+ exact dictionaryFold492
+theorem dictionaryInsert490 : put sourceDictionary490 "SFT-PHYS-VALIDATION-THERMO-MOLAR-ENERGY-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-THERMO-TEMPERATURE-001"] = sourceDictionary491 := rfl
+theorem dictionaryFold490 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary490 sourceRows490 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary490 "SFT-PHYS-VALIDATION-THERMO-MOLAR-ENERGY-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-THERMO-TEMPERATURE-001"]) sourceRows491 = _
+ rw [dictionaryInsert490]
+ exact dictionaryFold491
+theorem dictionaryInsert489 : put sourceDictionary489 "SFT-PHYS-VALIDATION-THERMAL-HISTORY-RECOMBINATION-038" ["SFT-PHYS-THERMAL-HISTORY-RECOMBINATION-TERMINAL-037","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001"] = sourceDictionary490 := rfl
+theorem dictionaryFold489 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary489 sourceRows489 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary489 "SFT-PHYS-VALIDATION-THERMAL-HISTORY-RECOMBINATION-038" ["SFT-PHYS-THERMAL-HISTORY-RECOMBINATION-TERMINAL-037","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001"]) sourceRows490 = _
+ rw [dictionaryInsert489]
+ exact dictionaryFold490
+theorem dictionaryInsert488 : put sourceDictionary488 "SFT-PHYS-VALIDATION-THERMAL-HISTORY-MEASURED-VALUE-058" ["SFT-PHYS-THERMAL-HISTORY-RECOMBINATION-TERMINAL-037","SFT-PHYS-THERMAL-HELIUM-ISOTOPE-TERMINAL-057","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary489 := rfl
+theorem dictionaryFold488 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary488 sourceRows488 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary488 "SFT-PHYS-VALIDATION-THERMAL-HISTORY-MEASURED-VALUE-058" ["SFT-PHYS-THERMAL-HISTORY-RECOMBINATION-TERMINAL-037","SFT-PHYS-THERMAL-HELIUM-ISOTOPE-TERMINAL-057","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows489 = _
+ rw [dictionaryInsert488]
+ exact dictionaryFold489
+theorem dictionaryInsert487 : put sourceDictionary487 "SFT-PHYS-VALIDATION-THERMAL-EQUILIBRIUM-044" ["SFT-PHYS-THERMAL-EQUILIBRIUM-RESPONSE-TERMINAL-043","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary488 := rfl
+theorem dictionaryFold487 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary487 sourceRows487 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary487 "SFT-PHYS-VALIDATION-THERMAL-EQUILIBRIUM-044" ["SFT-PHYS-THERMAL-EQUILIBRIUM-RESPONSE-TERMINAL-043","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows488 = _
+ rw [dictionaryInsert487]
+ exact dictionaryFold488
+theorem dictionaryInsert486 : put sourceDictionary486 "SFT-PHYS-VALIDATION-STRONG-CP-BARYON-STABILITY-064" ["SFT-PHYS-STRONG-CP-BARYON-STABILITY-TERMINAL-063","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary487 := rfl
+theorem dictionaryFold486 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary486 sourceRows486 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary486 "SFT-PHYS-VALIDATION-STRONG-CP-BARYON-STABILITY-064" ["SFT-PHYS-STRONG-CP-BARYON-STABILITY-TERMINAL-063","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows487 = _
+ rw [dictionaryInsert486]
+ exact dictionaryFold487
+theorem dictionaryInsert485 : put sourceDictionary485 "SFT-PHYS-VALIDATION-STELLAR-NUCLEAR-COLLAPSE-070" ["SFT-PHYS-STELLAR-NUCLEAR-COLLAPSE-TERMINAL-069","SFT-PHYS-NUCLEAR-FUSION-FISSION-YIELD-THRESHOLD-006","SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005","SFT-PHYS-NUCLEAR-RADIOACTIVE-DECAY-TERMINAL-005","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary486 := rfl
+theorem dictionaryFold485 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary485 sourceRows485 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary485 "SFT-PHYS-VALIDATION-STELLAR-NUCLEAR-COLLAPSE-070" ["SFT-PHYS-STELLAR-NUCLEAR-COLLAPSE-TERMINAL-069","SFT-PHYS-NUCLEAR-FUSION-FISSION-YIELD-THRESHOLD-006","SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005","SFT-PHYS-NUCLEAR-RADIOACTIVE-DECAY-TERMINAL-005","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows486 = _
+ rw [dictionaryInsert485]
+ exact dictionaryFold486
+theorem dictionaryInsert484 : put sourceDictionary484 "SFT-PHYS-VALIDATION-STELLAR-GALACTIC-TIDAL-068" ["SFT-PHYS-STELLAR-GALACTIC-TIDAL-TERMINAL-067","SFT-PHYS-ORBITAL-DIMENSION-STABILITY-TERMINAL-009","SFT-PHYS-DARK-SMITHION-LFV-TERMINAL-061","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary485 := rfl
+theorem dictionaryFold484 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary484 sourceRows484 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary484 "SFT-PHYS-VALIDATION-STELLAR-GALACTIC-TIDAL-068" ["SFT-PHYS-STELLAR-GALACTIC-TIDAL-TERMINAL-067","SFT-PHYS-ORBITAL-DIMENSION-STABILITY-TERMINAL-009","SFT-PHYS-DARK-SMITHION-LFV-TERMINAL-061","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows485 = _
+ rw [dictionaryInsert484]
+ exact dictionaryFold485
+theorem dictionaryInsert483 : put sourceDictionary483 "SFT-PHYS-VALIDATION-SPIN-STATISTICS-CONDENSATION-046" ["SFT-PHYS-SPIN-STATISTICS-CONDENSATION-TERMINAL-045","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary484 := rfl
+theorem dictionaryFold483 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary483 sourceRows483 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary483 "SFT-PHYS-VALIDATION-SPIN-STATISTICS-CONDENSATION-046" ["SFT-PHYS-SPIN-STATISTICS-CONDENSATION-TERMINAL-045","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows484 = _
+ rw [dictionaryInsert483]
+ exact dictionaryFold484
+theorem dictionaryInsert482 : put sourceDictionary482 "SFT-PHYS-VALIDATION-RELATIVISTIC-FIELDS-003" ["SFT-PHYS-RELATIVITY-FULL-DIRAC-SQUARE-003","SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-PHYS-FIELD-LORENTZ-TRANSFER-003","SFT-PHYS-FIELD-MAXWELL-THREE-SPACE-CLOSURE-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary483 := rfl
+theorem dictionaryFold482 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary482 sourceRows482 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary482 "SFT-PHYS-VALIDATION-RELATIVISTIC-FIELDS-003" ["SFT-PHYS-RELATIVITY-FULL-DIRAC-SQUARE-003","SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-PHYS-FIELD-LORENTZ-TRANSFER-003","SFT-PHYS-FIELD-MAXWELL-THREE-SPACE-CLOSURE-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows483 = _
+ rw [dictionaryInsert482]
+ exact dictionaryFold483
+theorem dictionaryInsert481 : put sourceDictionary481 "SFT-PHYS-VALIDATION-QUARK-CKM-003" ["SFT-PHYS-MATTER-QUARK-CUBICS-003","SFT-PHYS-MATTER-QUARK-DRESSING-003","SFT-PHYS-MATTER-CKM-PHYSICAL-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary482 := rfl
+theorem dictionaryFold481 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary481 sourceRows481 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary481 "SFT-PHYS-VALIDATION-QUARK-CKM-003" ["SFT-PHYS-MATTER-QUARK-CUBICS-003","SFT-PHYS-MATTER-QUARK-DRESSING-003","SFT-PHYS-MATTER-CKM-PHYSICAL-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows482 = _
+ rw [dictionaryInsert481]
+ exact dictionaryFold482
+theorem dictionaryInsert480 : put sourceDictionary480 "SFT-PHYS-VALIDATION-QUANTUM-SUPPORT-UNCERTAINTY-050" ["SFT-PHYS-QUANTUM-SUPPORT-UNCERTAINTY-TERMINAL-049","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-QUANTUM-BELL-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001"] = sourceDictionary481 := rfl
+theorem dictionaryFold480 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary480 sourceRows480 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary480 "SFT-PHYS-VALIDATION-QUANTUM-SUPPORT-UNCERTAINTY-050" ["SFT-PHYS-QUANTUM-SUPPORT-UNCERTAINTY-TERMINAL-049","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-QUANTUM-BELL-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001"]) sourceRows481 = _
+ rw [dictionaryInsert480]
+ exact dictionaryFold481
+theorem dictionaryInsert479 : put sourceDictionary479 "SFT-PHYS-VALIDATION-PROTON-PLANCK-TERMINAL-003" ["SFT-PHYS-SCALE-PROTON-PLANCK-TERMINAL-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary480 := rfl
+theorem dictionaryFold479 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary479 sourceRows479 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary479 "SFT-PHYS-VALIDATION-PROTON-PLANCK-TERMINAL-003" ["SFT-PHYS-SCALE-PROTON-PLANCK-TERMINAL-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows480 = _
+ rw [dictionaryInsert479]
+ exact dictionaryFold480
+theorem dictionaryInsert478 : put sourceDictionary478 "SFT-PHYS-VALIDATION-PROTON-ELECTRON-003" ["SFT-PHYS-MATTER-PROTON-ELECTRON-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary479 := rfl
+theorem dictionaryFold478 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary478 sourceRows478 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary478 "SFT-PHYS-VALIDATION-PROTON-ELECTRON-003" ["SFT-PHYS-MATTER-PROTON-ELECTRON-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows479 = _
+ rw [dictionaryInsert478]
+ exact dictionaryFold479
+theorem dictionaryInsert477 : put sourceDictionary477 "SFT-PHYS-VALIDATION-PARTICLE-MODE-GENERATION-052" ["SFT-PHYS-PARTICLE-MODE-GENERATION-TERMINAL-051","SFT-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-002","SFT-PHYS-VALIDATION-QUARK-CKM-003","SFT-PHYS-MATTER-CKM-TERMINAL-004","SFT-PHYS-VALIDATION-NEUTRINO-MASS-MIXING-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary478 := rfl
+theorem dictionaryFold477 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary477 sourceRows477 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary477 "SFT-PHYS-VALIDATION-PARTICLE-MODE-GENERATION-052" ["SFT-PHYS-PARTICLE-MODE-GENERATION-TERMINAL-051","SFT-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-002","SFT-PHYS-VALIDATION-QUARK-CKM-003","SFT-PHYS-MATTER-CKM-TERMINAL-004","SFT-PHYS-VALIDATION-NEUTRINO-MASS-MIXING-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows478 = _
+ rw [dictionaryInsert477]
+ exact dictionaryFold478
+theorem dictionaryInsert476 : put sourceDictionary476 "SFT-PHYS-VALIDATION-OPTICAL-OPERATIONS-003" ["SFT-PHYS-WAVE-EXACT-OPERATIONS-003","SFT-PHYS-FIELD-MAXWELL-THREE-SPACE-CLOSURE-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary477 := rfl
+theorem dictionaryFold476 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary476 sourceRows476 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary476 "SFT-PHYS-VALIDATION-OPTICAL-OPERATIONS-003" ["SFT-PHYS-WAVE-EXACT-OPERATIONS-003","SFT-PHYS-FIELD-MAXWELL-THREE-SPACE-CLOSURE-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows477 = _
+ rw [dictionaryInsert476]
+ exact dictionaryFold477
+theorem dictionaryInsert475 : put sourceDictionary475 "SFT-PHYS-VALIDATION-NUCLEAR-CLOSURES-001" ["SFT-PHYS-NUCLEAR-CLOSURE-SEQUENCE-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary476 := rfl
+theorem dictionaryFold475 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary475 sourceRows475 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary475 "SFT-PHYS-VALIDATION-NUCLEAR-CLOSURES-001" ["SFT-PHYS-NUCLEAR-CLOSURE-SEQUENCE-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows476 = _
+ rw [dictionaryInsert475]
+ exact dictionaryFold476
+theorem dictionaryInsert474 : put sourceDictionary474 "SFT-PHYS-VALIDATION-NONSTANDARD-SPACETIME-003" ["SFT-PHYS-SPACETIME-WORMHOLE-ADMISSIBILITY-003","SFT-PHYS-SPACETIME-WARP-ADMISSIBILITY-003","SFT-PHYS-SPACETIME-CLOSED-TIMELIKE-ADMISSIBILITY-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary475 := rfl
+theorem dictionaryFold474 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary474 sourceRows474 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary474 "SFT-PHYS-VALIDATION-NONSTANDARD-SPACETIME-003" ["SFT-PHYS-SPACETIME-WORMHOLE-ADMISSIBILITY-003","SFT-PHYS-SPACETIME-WARP-ADMISSIBILITY-003","SFT-PHYS-SPACETIME-CLOSED-TIMELIKE-ADMISSIBILITY-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows475 = _
+ rw [dictionaryInsert474]
+ exact dictionaryFold475
+theorem dictionaryInsert473 : put sourceDictionary473 "SFT-PHYS-VALIDATION-NEUTRINO-MASS-MIXING-003" ["SFT-PHYS-NEUTRINO-SPLITTING-003","SFT-PHYS-NEUTRINO-POSITIVE-MASS-003","SFT-PHYS-NEUTRINO-PMNS-CP-PHYSICAL-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary474 := rfl
+theorem dictionaryFold473 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary473 sourceRows473 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary473 "SFT-PHYS-VALIDATION-NEUTRINO-MASS-MIXING-003" ["SFT-PHYS-NEUTRINO-SPLITTING-003","SFT-PHYS-NEUTRINO-POSITIVE-MASS-003","SFT-PHYS-NEUTRINO-PMNS-CP-PHYSICAL-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows474 = _
+ rw [dictionaryInsert473]
+ exact dictionaryFold474
+theorem dictionaryInsert472 : put sourceDictionary472 "SFT-PHYS-VALIDATION-METROLOGY-MOLAR-PLANCK-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MEAS-UNIT-COMPARISON-001"] = sourceDictionary473 := rfl
+theorem dictionaryFold472 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary472 sourceRows472 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary472 "SFT-PHYS-VALIDATION-METROLOGY-MOLAR-PLANCK-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MEAS-UNIT-COMPARISON-001"]) sourceRows473 = _
+ rw [dictionaryInsert472]
+ exact dictionaryFold473
+theorem dictionaryInsert471 : put sourceDictionary471 "SFT-PHYS-VALIDATION-MECHANICS-MOMENTUM-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MECH-MOMENTUM-001"] = sourceDictionary472 := rfl
+theorem dictionaryFold471 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary471 sourceRows471 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary471 "SFT-PHYS-VALIDATION-MECHANICS-MOMENTUM-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MECH-MOMENTUM-001"]) sourceRows472 = _
+ rw [dictionaryInsert471]
+ exact dictionaryFold472
+theorem dictionaryInsert470 : put sourceDictionary470 "SFT-PHYS-VALIDATION-MECHANICS-FORCE-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MECH-FORCE-001"] = sourceDictionary471 := rfl
+theorem dictionaryFold470 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary470 sourceRows470 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary470 "SFT-PHYS-VALIDATION-MECHANICS-FORCE-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MECH-FORCE-001"]) sourceRows471 = _
+ rw [dictionaryInsert470]
+ exact dictionaryFold471
+theorem dictionaryInsert469 : put sourceDictionary469 "SFT-PHYS-VALIDATION-MAJORANA-ZERO-NU-003" ["SFT-PHYS-NEUTRINO-MAJORANA-003","SFT-PHYS-NEUTRINO-ZERO-NU-BETA-BETA-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary470 := rfl
+theorem dictionaryFold469 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary469 sourceRows469 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary469 "SFT-PHYS-VALIDATION-MAJORANA-ZERO-NU-003" ["SFT-PHYS-NEUTRINO-MAJORANA-003","SFT-PHYS-NEUTRINO-ZERO-NU-BETA-BETA-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows470 = _
+ rw [dictionaryInsert469]
+ exact dictionaryFold470
+theorem dictionaryInsert468 : put sourceDictionary468 "SFT-PHYS-VALIDATION-MAGNETIC-ANOMALIES-003" ["SFT-PHYS-QED-LEPTON-MAGNETIC-ANOMALY-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary469 := rfl
+theorem dictionaryFold468 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary468 sourceRows468 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary468 "SFT-PHYS-VALIDATION-MAGNETIC-ANOMALIES-003" ["SFT-PHYS-QED-LEPTON-MAGNETIC-ANOMALY-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows469 = _
+ rw [dictionaryInsert468]
+ exact dictionaryFold469
+theorem dictionaryInsert467 : put sourceDictionary467 "SFT-PHYS-VALIDATION-INVERSE-SQUARE-001" ["SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-MEAS-BOUNDARY-GROWTH-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary468 := rfl
+theorem dictionaryFold467 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary467 sourceRows467 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary467 "SFT-PHYS-VALIDATION-INVERSE-SQUARE-001" ["SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-MEAS-BOUNDARY-GROWTH-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows468 = _
+ rw [dictionaryInsert467]
+ exact dictionaryFold468
+theorem dictionaryInsert466 : put sourceDictionary466 "SFT-PHYS-VALIDATION-INVERSE-FINE-STRUCTURE-001" ["SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary467 := rfl
+theorem dictionaryFold466 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary466 sourceRows466 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary466 "SFT-PHYS-VALIDATION-INVERSE-FINE-STRUCTURE-001" ["SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows467 = _
+ rw [dictionaryInsert466]
+ exact dictionaryFold467
+theorem dictionaryInsert465 : put sourceDictionary465 "SFT-PHYS-VALIDATION-INFLATION-GROWTH-040" ["SFT-PHYS-INFLATION-GROWTH-TERMINAL-039","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001"] = sourceDictionary466 := rfl
+theorem dictionaryFold465 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary465 sourceRows465 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary465 "SFT-PHYS-VALIDATION-INFLATION-GROWTH-040" ["SFT-PHYS-INFLATION-GROWTH-TERMINAL-039","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001"]) sourceRows466 = _
+ rw [dictionaryInsert465]
+ exact dictionaryFold466
+theorem dictionaryInsert464 : put sourceDictionary464 "SFT-PHYS-VALIDATION-HIGGS-SYMMETRY-TERMINAL-066" ["SFT-PHYS-HIGGS-SYMMETRY-TERMINAL-065","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary465 := rfl
+theorem dictionaryFold464 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary464 sourceRows464 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary464 "SFT-PHYS-VALIDATION-HIGGS-SYMMETRY-TERMINAL-066" ["SFT-PHYS-HIGGS-SYMMETRY-TERMINAL-065","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows465 = _
+ rw [dictionaryInsert464]
+ exact dictionaryFold465
+theorem dictionaryInsert463 : put sourceDictionary463 "SFT-PHYS-VALIDATION-HADRON-REGGE-MEASURED-VALUE-060" ["SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-PHYS-HADRON-REGGE-DIMENSIONAL-TERMINAL-059","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary464 := rfl
+theorem dictionaryFold463 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary463 sourceRows463 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary463 "SFT-PHYS-VALIDATION-HADRON-REGGE-MEASURED-VALUE-060" ["SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-PHYS-HADRON-REGGE-DIMENSIONAL-TERMINAL-059","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows464 = _
+ rw [dictionaryInsert463]
+ exact dictionaryFold464
+theorem dictionaryInsert462 : put sourceDictionary462 "SFT-PHYS-VALIDATION-GRAVITY-HORIZONS-003" ["SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003","SFT-PHYS-GRAVITY-HORIZON-INFORMATION-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary463 := rfl
+theorem dictionaryFold462 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary462 sourceRows462 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary462 "SFT-PHYS-VALIDATION-GRAVITY-HORIZONS-003" ["SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003","SFT-PHYS-GRAVITY-HORIZON-INFORMATION-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows463 = _
+ rw [dictionaryInsert462]
+ exact dictionaryFold463
+theorem dictionaryInsert461 : put sourceDictionary461 "SFT-PHYS-VALIDATION-GRAVITY-CLOCK-EQUIVALENCE-003" ["SFT-PHYS-GRAVITY-STATIC-CLOCK-003","SFT-PHYS-GRAVITY-REDSHIFT-EQUIVALENCE-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary462 := rfl
+theorem dictionaryFold461 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary461 sourceRows461 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary461 "SFT-PHYS-VALIDATION-GRAVITY-CLOCK-EQUIVALENCE-003" ["SFT-PHYS-GRAVITY-STATIC-CLOCK-003","SFT-PHYS-GRAVITY-REDSHIFT-EQUIVALENCE-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows462 = _
+ rw [dictionaryInsert461]
+ exact dictionaryFold462
+theorem dictionaryInsert460 : put sourceDictionary460 "SFT-PHYS-VALIDATION-GRAVITATIONAL-WAVES-003" ["SFT-PHYS-GRAVITY-WAVE-QUADRUPOLE-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary461 := rfl
+theorem dictionaryFold460 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary460 sourceRows460 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary460 "SFT-PHYS-VALIDATION-GRAVITATIONAL-WAVES-003" ["SFT-PHYS-GRAVITY-WAVE-QUADRUPOLE-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows461 = _
+ rw [dictionaryInsert460]
+ exact dictionaryFold461
+theorem dictionaryInsert459 : put sourceDictionary459 "SFT-PHYS-VALIDATION-GRAVITATIONAL-WAVE-CHIRP-RINGDOWN-074" ["SFT-PHYS-GRAVITATIONAL-WAVE-CHIRP-RINGDOWN-TERMINAL-073","SFT-PHYS-VALIDATION-GRAVITATIONAL-WAVES-003","SFT-PHYS-VALIDATION-GRAVITY-HORIZONS-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary460 := rfl
+theorem dictionaryFold459 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary459 sourceRows459 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary459 "SFT-PHYS-VALIDATION-GRAVITATIONAL-WAVE-CHIRP-RINGDOWN-074" ["SFT-PHYS-GRAVITATIONAL-WAVE-CHIRP-RINGDOWN-TERMINAL-073","SFT-PHYS-VALIDATION-GRAVITATIONAL-WAVES-003","SFT-PHYS-VALIDATION-GRAVITY-HORIZONS-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows460 = _
+ rw [dictionaryInsert459]
+ exact dictionaryFold460
+theorem dictionaryInsert458 : put sourceDictionary458 "SFT-PHYS-VALIDATION-FORCE-SECTOR-ANCHORS-003" ["SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary459 := rfl
+theorem dictionaryFold458 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary458 sourceRows458 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary458 "SFT-PHYS-VALIDATION-FORCE-SECTOR-ANCHORS-003" ["SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows459 = _
+ rw [dictionaryInsert458]
+ exact dictionaryFold459
+theorem dictionaryInsert457 : put sourceDictionary457 "SFT-PHYS-VALIDATION-FINITE-LOOPS-003" ["SFT-PHYS-FIELD-FINITE-LOOP-CLOSURE-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary458 := rfl
+theorem dictionaryFold457 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary457 sourceRows457 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary457 "SFT-PHYS-VALIDATION-FINITE-LOOPS-003" ["SFT-PHYS-FIELD-FINITE-LOOP-CLOSURE-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows458 = _
+ rw [dictionaryInsert457]
+ exact dictionaryFold458
+theorem dictionaryInsert456 : put sourceDictionary456 "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"] = sourceDictionary457 := rfl
+theorem dictionaryFold456 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary456 sourceRows456 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary456 "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-STRENGTH-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"]) sourceRows457 = _
+ rw [dictionaryInsert456]
+ exact dictionaryFold457
+theorem dictionaryInsert455 : put sourceDictionary455 "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-POTENTIAL-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"] = sourceDictionary456 := rfl
+theorem dictionaryFold455 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary455 sourceRows455 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary455 "SFT-PHYS-VALIDATION-FIELD-ELECTRIC-POTENTIAL-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"]) sourceRows456 = _
+ rw [dictionaryInsert455]
+ exact dictionaryFold456
+theorem dictionaryInsert454 : put sourceDictionary454 "SFT-PHYS-VALIDATION-ELECTROWEAK-TERMINAL-003" ["SFT-PHYS-ELECTROWEAK-TERMINAL-ON-SHELL-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary455 := rfl
+theorem dictionaryFold454 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary454 sourceRows454 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary454 "SFT-PHYS-VALIDATION-ELECTROWEAK-TERMINAL-003" ["SFT-PHYS-ELECTROWEAK-TERMINAL-ON-SHELL-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows455 = _
+ rw [dictionaryInsert454]
+ exact dictionaryFold455
+theorem dictionaryInsert453 : put sourceDictionary453 "SFT-PHYS-VALIDATION-ELECTROWEAK-MEASURED-VALUE-053" ["SFT-PHYS-ELECTROWEAK-TERMINAL-ON-SHELL-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary454 := rfl
+theorem dictionaryFold453 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary453 sourceRows453 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary453 "SFT-PHYS-VALIDATION-ELECTROWEAK-MEASURED-VALUE-053" ["SFT-PHYS-ELECTROWEAK-TERMINAL-ON-SHELL-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows454 = _
+ rw [dictionaryInsert453]
+ exact dictionaryFold454
+theorem dictionaryInsert452 : put sourceDictionary452 "SFT-PHYS-VALIDATION-DYNAMICS-SPECTRA-003" ["SFT-PHYS-DYNAMICS-FREE-PHASE-DISPERSION-003","SFT-PHYS-DYNAMICS-STATIONARY-SPECTRUM-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary453 := rfl
+theorem dictionaryFold452 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary452 sourceRows452 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary452 "SFT-PHYS-VALIDATION-DYNAMICS-SPECTRA-003" ["SFT-PHYS-DYNAMICS-FREE-PHASE-DISPERSION-003","SFT-PHYS-DYNAMICS-STATIONARY-SPECTRUM-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows453 = _
+ rw [dictionaryInsert452]
+ exact dictionaryFold453
+theorem dictionaryInsert451 : put sourceDictionary451 "SFT-PHYS-VALIDATION-DARK-SMITHION-LFV-062" ["SFT-PHYS-DARK-SMITHION-LFV-TERMINAL-061","SFT-PHYS-COSMO-DARK-BARYON-FRACTION-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary452 := rfl
+theorem dictionaryFold451 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary451 sourceRows451 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary451 "SFT-PHYS-VALIDATION-DARK-SMITHION-LFV-062" ["SFT-PHYS-DARK-SMITHION-LFV-TERMINAL-061","SFT-PHYS-COSMO-DARK-BARYON-FRACTION-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows452 = _
+ rw [dictionaryInsert451]
+ exact dictionaryFold452
+theorem dictionaryInsert450 : put sourceDictionary450 "SFT-PHYS-VALIDATION-CRITICALITY-UNIVERSALITY-TURBULENCE-048" ["SFT-PHYS-CRITICALITY-UNIVERSALITY-TURBULENCE-TERMINAL-047","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary451 := rfl
+theorem dictionaryFold450 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary450 sourceRows450 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary450 "SFT-PHYS-VALIDATION-CRITICALITY-UNIVERSALITY-TURBULENCE-048" ["SFT-PHYS-CRITICALITY-UNIVERSALITY-TURBULENCE-TERMINAL-047","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows451 = _
+ rw [dictionaryInsert450]
+ exact dictionaryFold451
+theorem dictionaryInsert449 : put sourceDictionary449 "SFT-PHYS-VALIDATION-CRITICALITY-MEASURED-VALUE-056" ["SFT-PHYS-CRITICALITY-UNIVERSALITY-TURBULENCE-TERMINAL-047","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-PROBABILITY-STATISTICS-001"] = sourceDictionary450 := rfl
+theorem dictionaryFold449 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary449 sourceRows449 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary449 "SFT-PHYS-VALIDATION-CRITICALITY-MEASURED-VALUE-056" ["SFT-PHYS-CRITICALITY-UNIVERSALITY-TURBULENCE-TERMINAL-047","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-PROBABILITY-STATISTICS-001"]) sourceRows450 = _
+ rw [dictionaryInsert449]
+ exact dictionaryFold450
+theorem dictionaryInsert448 : put sourceDictionary448 "SFT-PHYS-VALIDATION-COSMIC-TRANSPORT-MEASURED-VALUE-055" ["SFT-PHYS-COSMO-COMPONENT-TRANSPORT-TERMINAL-032","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-PROBABILITY-STATISTICS-001"] = sourceDictionary449 := rfl
+theorem dictionaryFold448 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary448 sourceRows448 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary448 "SFT-PHYS-VALIDATION-COSMIC-TRANSPORT-MEASURED-VALUE-055" ["SFT-PHYS-COSMO-COMPONENT-TRANSPORT-TERMINAL-032","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-PROBABILITY-STATISTICS-001"]) sourceRows449 = _
+ rw [dictionaryInsert448]
+ exact dictionaryFold449
+theorem dictionaryInsert447 : put sourceDictionary447 "SFT-PHYS-VALIDATION-COMPACT-HORIZON-THERMODYNAMICS-072" ["SFT-PHYS-COMPACT-HORIZON-THERMODYNAMICS-TERMINAL-071","SFT-PHYS-VALIDATION-GRAVITY-HORIZONS-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary448 := rfl
+theorem dictionaryFold447 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary447 sourceRows447 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary447 "SFT-PHYS-VALIDATION-COMPACT-HORIZON-THERMODYNAMICS-072" ["SFT-PHYS-COMPACT-HORIZON-THERMODYNAMICS-TERMINAL-071","SFT-PHYS-VALIDATION-GRAVITY-HORIZONS-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows448 = _
+ rw [dictionaryInsert447]
+ exact dictionaryFold448
+theorem dictionaryInsert446 : put sourceDictionary446 "SFT-PHYS-VALIDATION-COMMON-SCALE-MEASURED-VALUE-054" ["SFT-PHYS-SCALE-COMMON-AXIS-TERMINAL-030","SFT-PHYS-VALIDATION-ELECTROWEAK-MEASURED-VALUE-053","SFT-PHYS-COUPLING-RUNNING-CONVERGENCE-TERMINAL-006","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary447 := rfl
+theorem dictionaryFold446 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary446 sourceRows446 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary446 "SFT-PHYS-VALIDATION-COMMON-SCALE-MEASURED-VALUE-054" ["SFT-PHYS-SCALE-COMMON-AXIS-TERMINAL-030","SFT-PHYS-VALIDATION-ELECTROWEAK-MEASURED-VALUE-053","SFT-PHYS-COUPLING-RUNNING-CONVERGENCE-TERMINAL-006","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows447 = _
+ rw [dictionaryInsert446]
+ exact dictionaryFold447
+theorem dictionaryInsert445 : put sourceDictionary445 "SFT-PHYS-VALIDATION-COLLECTIVE-RADIATION-RESPONSE-042" ["SFT-PHYS-COLLECTIVE-RADIATION-RESPONSE-TERMINAL-041","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001"] = sourceDictionary446 := rfl
+theorem dictionaryFold445 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary445 sourceRows445 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary445 "SFT-PHYS-VALIDATION-COLLECTIVE-RADIATION-RESPONSE-042" ["SFT-PHYS-COLLECTIVE-RADIATION-RESPONSE-TERMINAL-041","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001"]) sourceRows446 = _
+ rw [dictionaryInsert445]
+ exact dictionaryFold446
+theorem dictionaryInsert444 : put sourceDictionary444 "SFT-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-002" ["SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary445 := rfl
+theorem dictionaryFold444 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary444 sourceRows444 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary444 "SFT-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-002" ["SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows445 = _
+ rw [dictionaryInsert444]
+ exact dictionaryFold445
+theorem dictionaryInsert443 : put sourceDictionary443 "SFT-PHYS-VALIDATION-CHARGED-LEPTON-KOIDE-002" ["SFT-PHYS-VALIDATION-CHARGED-LEPTON-KOIDE-001","SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary444 := rfl
+theorem dictionaryFold443 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary443 sourceRows443 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary443 "SFT-PHYS-VALIDATION-CHARGED-LEPTON-KOIDE-002" ["SFT-PHYS-VALIDATION-CHARGED-LEPTON-KOIDE-001","SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows444 = _
+ rw [dictionaryInsert443]
+ exact dictionaryFold444
+theorem dictionaryInsert442 : put sourceDictionary442 "SFT-PHYS-VALIDATION-CHARGED-LEPTON-KOIDE-001" ["SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary443 := rfl
+theorem dictionaryFold442 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary442 sourceRows442 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary442 "SFT-PHYS-VALIDATION-CHARGED-LEPTON-KOIDE-001" ["SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows443 = _
+ rw [dictionaryInsert442]
+ exact dictionaryFold443
+theorem dictionaryInsert441 : put sourceDictionary441 "SFT-PHYS-VALIDATION-ATOMIC-HYDROGEN-SPECTRUM-004" ["SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary442 := rfl
+theorem dictionaryFold441 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary441 sourceRows441 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary441 "SFT-PHYS-VALIDATION-ATOMIC-HYDROGEN-SPECTRUM-004" ["SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows442 = _
+ rw [dictionaryInsert441]
+ exact dictionaryFold442
+theorem dictionaryInsert440 : put sourceDictionary440 "SFT-PHYS-VALIDATION-ATOMIC-CUBIC-SUPPORT-004" ["SFT-PHYS-ATOMIC-CUBIC-SUPPORT-004","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary441 := rfl
+theorem dictionaryFold440 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary440 sourceRows440 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary440 "SFT-PHYS-VALIDATION-ATOMIC-CUBIC-SUPPORT-004" ["SFT-PHYS-ATOMIC-CUBIC-SUPPORT-004","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows441 = _
+ rw [dictionaryInsert440]
+ exact dictionaryFold441
+theorem dictionaryInsert439 : put sourceDictionary439 "SFT-PHYS-VACUUM-POLARIZATION-RUNNING-003" ["SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-PHYS-VACUUM-ODD-RECURRENCE-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001"] = sourceDictionary440 := rfl
+theorem dictionaryFold439 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary439 sourceRows439 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary439 "SFT-PHYS-VACUUM-POLARIZATION-RUNNING-003" ["SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-PHYS-VACUUM-ODD-RECURRENCE-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001"]) sourceRows440 = _
+ rw [dictionaryInsert439]
+ exact dictionaryFold440
+theorem dictionaryInsert438 : put sourceDictionary438 "SFT-PHYS-VACUUM-ODD-RECURRENCE-003" ["SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-FOUNDATION-FOLD-001","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-MATH-DYNAMICAL-SYSTEMS-001"] = sourceDictionary439 := rfl
+theorem dictionaryFold438 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary438 sourceRows438 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary438 "SFT-PHYS-VACUUM-ODD-RECURRENCE-003" ["SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-FOUNDATION-FOLD-001","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-MATH-DYNAMICAL-SYSTEMS-001"]) sourceRows439 = _
+ rw [dictionaryInsert438]
+ exact dictionaryFold439
+theorem dictionaryInsert437 : put sourceDictionary437 "SFT-PHYS-VACUUM-INERTIA-UNITY-003" ["SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-PHYS-MECH-INERTIA-001","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary438 := rfl
+theorem dictionaryFold437 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary437 sourceRows437 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary437 "SFT-PHYS-VACUUM-INERTIA-UNITY-003" ["SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-PHYS-MECH-INERTIA-001","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows438 = _
+ rw [dictionaryInsert437]
+ exact dictionaryFold438
+theorem dictionaryInsert436 : put sourceDictionary436 "SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003" ["SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary437 := rfl
+theorem dictionaryFold436 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary436 sourceRows436 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary436 "SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003" ["SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows437 = _
+ rw [dictionaryInsert436]
+ exact dictionaryFold437
+theorem dictionaryInsert435 : put sourceDictionary435 "SFT-PHYS-VACUUM-DENSITY-SCALE-TERMINAL-035" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-EXACT-OPERATIONS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-PHYS-COSMO-COMPLETE-BUDGET-001","SFT-PHYS-COSMO-COMPONENT-TRANSPORT-TERMINAL-032","SFT-PHYS-SCALE-COMMON-AXIS-TERMINAL-030","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001"] = sourceDictionary436 := rfl
+theorem dictionaryFold435 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary435 sourceRows435 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary435 "SFT-PHYS-VACUUM-DENSITY-SCALE-TERMINAL-035" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-EXACT-OPERATIONS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-PHYS-COSMO-COMPLETE-BUDGET-001","SFT-PHYS-COSMO-COMPONENT-TRANSPORT-TERMINAL-032","SFT-PHYS-SCALE-COMMON-AXIS-TERMINAL-030","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001"]) sourceRows436 = _
+ rw [dictionaryInsert435]
+ exact dictionaryFold436
+theorem dictionaryInsert434 : put sourceDictionary434 "SFT-PHYS-VACUUM-COMPLETE-CYCLE-LEDGER-003" ["SFT-PHYS-VACUUM-ASYMMETRIC-BEAT-EXTRACTION-003","SFT-PHYS-THERMO-FIRST-LAW-001","SFT-PHYS-THERMO-ENTROPY-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary435 := rfl
+theorem dictionaryFold434 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary434 sourceRows434 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary434 "SFT-PHYS-VACUUM-COMPLETE-CYCLE-LEDGER-003" ["SFT-PHYS-VACUUM-ASYMMETRIC-BEAT-EXTRACTION-003","SFT-PHYS-THERMO-FIRST-LAW-001","SFT-PHYS-THERMO-ENTROPY-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows435 = _
+ rw [dictionaryInsert434]
+ exact dictionaryFold435
+theorem dictionaryInsert433 : put sourceDictionary433 "SFT-PHYS-VACUUM-ASYMMETRIC-BEAT-EXTRACTION-003" ["SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-PHYS-VACUUM-ODD-RECURRENCE-003","SFT-PHYS-VACUUM-INERTIA-UNITY-003","SFT-PHYS-WAVE-RESONANCE-001","SFT-PHYS-MECH-CONSERVATION-001"] = sourceDictionary434 := rfl
+theorem dictionaryFold433 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary433 sourceRows433 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary433 "SFT-PHYS-VACUUM-ASYMMETRIC-BEAT-EXTRACTION-003" ["SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-PHYS-VACUUM-ODD-RECURRENCE-003","SFT-PHYS-VACUUM-INERTIA-UNITY-003","SFT-PHYS-WAVE-RESONANCE-001","SFT-PHYS-MECH-CONSERVATION-001"]) sourceRows434 = _
+ rw [dictionaryInsert433]
+ exact dictionaryFold434
+theorem dictionaryInsert432 : put sourceDictionary432 "SFT-PHYS-THERMO-THIRD-LAW-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-SECOND-LAW-001"] = sourceDictionary433 := rfl
+theorem dictionaryFold432 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary432 sourceRows432 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary432 "SFT-PHYS-THERMO-THIRD-LAW-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-SECOND-LAW-001"]) sourceRows433 = _
+ rw [dictionaryInsert432]
+ exact dictionaryFold433
+theorem dictionaryInsert431 : put sourceDictionary431 "SFT-PHYS-THERMO-TEMPERATURE-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-MICRO-MACRO-001"] = sourceDictionary432 := rfl
+theorem dictionaryFold431 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary431 sourceRows431 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary431 "SFT-PHYS-THERMO-TEMPERATURE-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-MICRO-MACRO-001"]) sourceRows432 = _
+ rw [dictionaryInsert431]
+ exact dictionaryFold432
+theorem dictionaryInsert430 : put sourceDictionary430 "SFT-PHYS-THERMO-STATISTICAL-WEIGHT-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-THIRD-LAW-001"] = sourceDictionary431 := rfl
+theorem dictionaryFold430 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary430 sourceRows430 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary430 "SFT-PHYS-THERMO-STATISTICAL-WEIGHT-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-THIRD-LAW-001"]) sourceRows431 = _
+ rw [dictionaryInsert430]
+ exact dictionaryFold431
+theorem dictionaryInsert429 : put sourceDictionary429 "SFT-PHYS-THERMO-STATE-RELATION-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-STATISTICAL-WEIGHT-001"] = sourceDictionary430 := rfl
+theorem dictionaryFold429 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary429 sourceRows429 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary429 "SFT-PHYS-THERMO-STATE-RELATION-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-STATISTICAL-WEIGHT-001"]) sourceRows430 = _
+ rw [dictionaryInsert429]
+ exact dictionaryFold430
+theorem dictionaryInsert428 : put sourceDictionary428 "SFT-PHYS-THERMO-SECOND-LAW-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-ENTROPY-001"] = sourceDictionary429 := rfl
+theorem dictionaryFold428 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary428 sourceRows428 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary428 "SFT-PHYS-THERMO-SECOND-LAW-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-ENTROPY-001"]) sourceRows429 = _
+ rw [dictionaryInsert428]
+ exact dictionaryFold429
+theorem dictionaryInsert427 : put sourceDictionary427 "SFT-PHYS-THERMO-RESPONSE-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-IRREVERSIBILITY-001"] = sourceDictionary428 := rfl
+theorem dictionaryFold427 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary427 sourceRows427 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary427 "SFT-PHYS-THERMO-RESPONSE-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-IRREVERSIBILITY-001"]) sourceRows428 = _
+ rw [dictionaryInsert427]
+ exact dictionaryFold428
+theorem dictionaryInsert426 : put sourceDictionary426 "SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-STATE-RELATION-001"] = sourceDictionary427 := rfl
+theorem dictionaryFold426 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary426 sourceRows426 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary426 "SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-STATE-RELATION-001"]) sourceRows427 = _
+ rw [dictionaryInsert426]
+ exact dictionaryFold427
+theorem dictionaryInsert425 : put sourceDictionary425 "SFT-PHYS-THERMO-MICRO-MACRO-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001"] = sourceDictionary426 := rfl
+theorem dictionaryFold425 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary425 sourceRows425 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary425 "SFT-PHYS-THERMO-MICRO-MACRO-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001"]) sourceRows426 = _
+ rw [dictionaryInsert425]
+ exact dictionaryFold426
+theorem dictionaryInsert424 : put sourceDictionary424 "SFT-PHYS-THERMO-LANDAUER-EMPIRICAL-019" ["SFT-PHYS-THERMO-LANDAUER-DEMON-TERMINAL-018","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001"] = sourceDictionary425 := rfl
+theorem dictionaryFold424 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary424 sourceRows424 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary424 "SFT-PHYS-THERMO-LANDAUER-EMPIRICAL-019" ["SFT-PHYS-THERMO-LANDAUER-DEMON-TERMINAL-018","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001"]) sourceRows425 = _
+ rw [dictionaryInsert424]
+ exact dictionaryFold425
+theorem dictionaryInsert423 : put sourceDictionary423 "SFT-PHYS-THERMO-LANDAUER-DEMON-TERMINAL-018" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-HALF-ONE-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-PHYS-THERMO-IRREVERSIBILITY-001","SFT-PHYS-THERMO-SECOND-LAW-001","SFT-PHYS-THERMO-HEAT-WORK-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary424 := rfl
+theorem dictionaryFold423 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary423 sourceRows423 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary423 "SFT-PHYS-THERMO-LANDAUER-DEMON-TERMINAL-018" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-HALF-ONE-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-PHYS-THERMO-IRREVERSIBILITY-001","SFT-PHYS-THERMO-SECOND-LAW-001","SFT-PHYS-THERMO-HEAT-WORK-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows424 = _
+ rw [dictionaryInsert423]
+ exact dictionaryFold424
+theorem dictionaryInsert422 : put sourceDictionary422 "SFT-PHYS-THERMO-KINETIC-TRANSPORT-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001"] = sourceDictionary423 := rfl
+theorem dictionaryFold422 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary422 sourceRows422 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary422 "SFT-PHYS-THERMO-KINETIC-TRANSPORT-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001"]) sourceRows423 = _
+ rw [dictionaryInsert422]
+ exact dictionaryFold423
+theorem dictionaryInsert421 : put sourceDictionary421 "SFT-PHYS-THERMO-IRREVERSIBILITY-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-FLUCTUATION-001"] = sourceDictionary422 := rfl
+theorem dictionaryFold421 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary421 sourceRows421 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary421 "SFT-PHYS-THERMO-IRREVERSIBILITY-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-FLUCTUATION-001"]) sourceRows422 = _
+ rw [dictionaryInsert421]
+ exact dictionaryFold422
+theorem dictionaryInsert420 : put sourceDictionary420 "SFT-PHYS-THERMO-HEAT-WORK-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-EQUILIBRIUM-001"] = sourceDictionary421 := rfl
+theorem dictionaryFold420 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary420 sourceRows420 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary420 "SFT-PHYS-THERMO-HEAT-WORK-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-EQUILIBRIUM-001"]) sourceRows421 = _
+ rw [dictionaryInsert420]
+ exact dictionaryFold421
+theorem dictionaryInsert419 : put sourceDictionary419 "SFT-PHYS-THERMO-FLUCTUATION-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001"] = sourceDictionary420 := rfl
+theorem dictionaryFold419 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary419 sourceRows419 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary419 "SFT-PHYS-THERMO-FLUCTUATION-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001"]) sourceRows420 = _
+ rw [dictionaryInsert419]
+ exact dictionaryFold420
+theorem dictionaryInsert418 : put sourceDictionary418 "SFT-PHYS-THERMO-FIRST-LAW-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-HEAT-WORK-001"] = sourceDictionary419 := rfl
+theorem dictionaryFold418 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary418 sourceRows418 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary418 "SFT-PHYS-THERMO-FIRST-LAW-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-HEAT-WORK-001"]) sourceRows419 = _
+ rw [dictionaryInsert418]
+ exact dictionaryFold419
+theorem dictionaryInsert417 : put sourceDictionary417 "SFT-PHYS-THERMO-EQUILIBRIUM-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-TEMPERATURE-001"] = sourceDictionary418 := rfl
+theorem dictionaryFold417 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary417 sourceRows417 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary417 "SFT-PHYS-THERMO-EQUILIBRIUM-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-TEMPERATURE-001"]) sourceRows418 = _
+ rw [dictionaryInsert417]
+ exact dictionaryFold418
+theorem dictionaryInsert416 : put sourceDictionary416 "SFT-PHYS-THERMO-ENTROPY-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-FIRST-LAW-001"] = sourceDictionary417 := rfl
+theorem dictionaryFold416 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary416 sourceRows416 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary416 "SFT-PHYS-THERMO-ENTROPY-001" ["SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-WAVE-ENERGY-MOMENTUM-001","SFT-PHYS-THERMO-FIRST-LAW-001"]) sourceRows417 = _
+ rw [dictionaryInsert416]
+ exact dictionaryFold417
+theorem dictionaryInsert415 : put sourceDictionary415 "SFT-PHYS-THERMAL-HISTORY-RECOMBINATION-TERMINAL-037" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-EXACT-OPERATIONS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-THERMO-TEMPERATURE-001","SFT-PHYS-THERMO-EQUILIBRIUM-001","SFT-PHYS-COSMO-REDSHIFT-001","SFT-PHYS-COSMO-BACKGROUND-001","SFT-PHYS-COSMO-COMPONENT-TRANSPORT-TERMINAL-032","SFT-PHYS-MATTER-BARYON-PHOTON-TERMINAL-004","SFT-PHYS-ATOMIC-HYDROGEN-RYDBERG-TERMINAL-005","SFT-PHYS-NUCLEAR-DEUTERON-DINUCLEON-TERMINAL-006","SFT-PHYS-NUCLEAR-FUSION-FISSION-YIELD-THRESHOLD-006","SFT-PHYS-PLASMA-COLLECTIVE-001","SFT-PHYS-PLASMA-OSCILLATION-001"] = sourceDictionary416 := rfl
+theorem dictionaryFold415 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary415 sourceRows415 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary415 "SFT-PHYS-THERMAL-HISTORY-RECOMBINATION-TERMINAL-037" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-EXACT-OPERATIONS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-THERMO-TEMPERATURE-001","SFT-PHYS-THERMO-EQUILIBRIUM-001","SFT-PHYS-COSMO-REDSHIFT-001","SFT-PHYS-COSMO-BACKGROUND-001","SFT-PHYS-COSMO-COMPONENT-TRANSPORT-TERMINAL-032","SFT-PHYS-MATTER-BARYON-PHOTON-TERMINAL-004","SFT-PHYS-ATOMIC-HYDROGEN-RYDBERG-TERMINAL-005","SFT-PHYS-NUCLEAR-DEUTERON-DINUCLEON-TERMINAL-006","SFT-PHYS-NUCLEAR-FUSION-FISSION-YIELD-THRESHOLD-006","SFT-PHYS-PLASMA-COLLECTIVE-001","SFT-PHYS-PLASMA-OSCILLATION-001"]) sourceRows416 = _
+ rw [dictionaryInsert415]
+ exact dictionaryFold416
+theorem dictionaryInsert414 : put sourceDictionary414 "SFT-PHYS-THERMAL-HELIUM-ISOTOPE-TERMINAL-057" ["SFT-PHYS-THERMAL-HISTORY-RECOMBINATION-TERMINAL-037","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"] = sourceDictionary415 := rfl
+theorem dictionaryFold414 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary414 sourceRows414 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary414 "SFT-PHYS-THERMAL-HELIUM-ISOTOPE-TERMINAL-057" ["SFT-PHYS-THERMAL-HISTORY-RECOMBINATION-TERMINAL-037","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"]) sourceRows415 = _
+ rw [dictionaryInsert414]
+ exact dictionaryFold415
+theorem dictionaryInsert413 : put sourceDictionary413 "SFT-PHYS-THERMAL-EQUILIBRIUM-RESPONSE-TERMINAL-043" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-THERMO-TEMPERATURE-001","SFT-PHYS-THERMO-EQUILIBRIUM-001","SFT-PHYS-THERMO-STATISTICAL-WEIGHT-001","SFT-PHYS-THERMO-FLUCTUATION-001","SFT-PHYS-THERMO-RESPONSE-001"] = sourceDictionary414 := rfl
+theorem dictionaryFold413 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary413 sourceRows413 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary413 "SFT-PHYS-THERMAL-EQUILIBRIUM-RESPONSE-TERMINAL-043" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-THERMO-TEMPERATURE-001","SFT-PHYS-THERMO-EQUILIBRIUM-001","SFT-PHYS-THERMO-STATISTICAL-WEIGHT-001","SFT-PHYS-THERMO-FLUCTUATION-001","SFT-PHYS-THERMO-RESPONSE-001"]) sourceRows414 = _
+ rw [dictionaryInsert413]
+ exact dictionaryFold414
+theorem dictionaryInsert412 : put sourceDictionary412 "SFT-PHYS-SYMMETRIC-SOURCE-CONSERVATION-TERMINAL-010" ["SFT-PHYS-GRAVITY-GRAVITON-POLARIZATION-003","SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003","SFT-PHYS-POST-NEWTONIAN-FIXED-POINT-TERMINAL-009","SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003","SFT-PHYS-SPACETIME-EXACT-INTERVAL-003","SFT-MATH-EXACT-ARITHMETIC-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = sourceDictionary413 := rfl
+theorem dictionaryFold412 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary412 sourceRows412 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary412 "SFT-PHYS-SYMMETRIC-SOURCE-CONSERVATION-TERMINAL-010" ["SFT-PHYS-GRAVITY-GRAVITON-POLARIZATION-003","SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003","SFT-PHYS-POST-NEWTONIAN-FIXED-POINT-TERMINAL-009","SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003","SFT-PHYS-SPACETIME-EXACT-INTERVAL-003","SFT-MATH-EXACT-ARITHMETIC-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"]) sourceRows413 = _
+ rw [dictionaryInsert412]
+ exact dictionaryFold413
+theorem dictionaryInsert411 : put sourceDictionary411 "SFT-PHYS-STRUCT-GENERATOR-THREE-001" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"] = sourceDictionary412 := rfl
+theorem dictionaryFold411 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary411 sourceRows411 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary411 "SFT-PHYS-STRUCT-GENERATOR-THREE-001" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"]) sourceRows412 = _
+ rw [dictionaryInsert411]
+ exact dictionaryFold412
+theorem dictionaryInsert410 : put sourceDictionary410 "SFT-PHYS-STRONG-RUNNING-DIRECTION-002" ["SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-FIELD-SOURCE-RESPONSE-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"] = sourceDictionary411 := rfl
+theorem dictionaryFold410 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary410 sourceRows410 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary410 "SFT-PHYS-STRONG-RUNNING-DIRECTION-002" ["SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-FIELD-SOURCE-RESPONSE-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"]) sourceRows411 = _
+ rw [dictionaryInsert410]
+ exact dictionaryFold411
+theorem dictionaryInsert409 : put sourceDictionary409 "SFT-PHYS-STRONG-FIELD-NONLINEAR-FIXED-POINT-TERMINAL-014" ["SFT-PHYS-STRONG-RUNNING-DIRECTION-002","SFT-PHYS-POST-NEWTONIAN-FIXED-POINT-TERMINAL-009","SFT-PHYS-FIELD-SOURCE-RESPONSE-001","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-STRONG-CARRIER-MASSLESS-CONFINED-TERMINAL-013","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = sourceDictionary410 := rfl
+theorem dictionaryFold409 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary409 sourceRows409 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary409 "SFT-PHYS-STRONG-FIELD-NONLINEAR-FIXED-POINT-TERMINAL-014" ["SFT-PHYS-STRONG-RUNNING-DIRECTION-002","SFT-PHYS-POST-NEWTONIAN-FIXED-POINT-TERMINAL-009","SFT-PHYS-FIELD-SOURCE-RESPONSE-001","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-STRONG-CARRIER-MASSLESS-CONFINED-TERMINAL-013","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"]) sourceRows410 = _
+ rw [dictionaryInsert409]
+ exact dictionaryFold410
+theorem dictionaryInsert408 : put sourceDictionary408 "SFT-PHYS-STRONG-CP-BARYON-STABILITY-TERMINAL-063" ["SFT-PHYS-WEAK-PARITY-FIBRE-002","SFT-PHYS-NEUTRINO-CP-PHASE-002","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-MATTER-PARTICLE-ANTIPARTICLE-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-BARYOGENESIS-DEPENDENCY-TERMINAL-021","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"] = sourceDictionary409 := rfl
+theorem dictionaryFold408 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary408 sourceRows408 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary408 "SFT-PHYS-STRONG-CP-BARYON-STABILITY-TERMINAL-063" ["SFT-PHYS-WEAK-PARITY-FIBRE-002","SFT-PHYS-NEUTRINO-CP-PHASE-002","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-MATTER-PARTICLE-ANTIPARTICLE-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-BARYOGENESIS-DEPENDENCY-TERMINAL-021","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"]) sourceRows409 = _
+ rw [dictionaryInsert408]
+ exact dictionaryFold409
+theorem dictionaryInsert407 : put sourceDictionary407 "SFT-PHYS-STRONG-CARRIER-MASSLESS-CONFINED-TERMINAL-013" ["SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-STRONG-RUNNING-DIRECTION-002","SFT-PHYS-SPACETIME-EXACT-INTERVAL-003","SFT-PHYS-WAVE-EXACT-OPERATIONS-003","SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = sourceDictionary408 := rfl
+theorem dictionaryFold407 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary407 sourceRows407 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary407 "SFT-PHYS-STRONG-CARRIER-MASSLESS-CONFINED-TERMINAL-013" ["SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-STRONG-RUNNING-DIRECTION-002","SFT-PHYS-SPACETIME-EXACT-INTERVAL-003","SFT-PHYS-WAVE-EXACT-OPERATIONS-003","SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"]) sourceRows408 = _
+ rw [dictionaryInsert407]
+ exact dictionaryFold408
+theorem dictionaryInsert406 : put sourceDictionary406 "SFT-PHYS-STELLAR-NUCLEAR-COLLAPSE-TERMINAL-069" ["SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-ONE-001","SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005","SFT-PHYS-NUCLEAR-FUSION-FISSION-TERMINAL-005","SFT-PHYS-NUCLEAR-FUSION-FISSION-YIELD-THRESHOLD-006","SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005","SFT-PHYS-NUCLEAR-RADIOACTIVE-DECAY-TERMINAL-005","SFT-PHYS-STELLAR-GALACTIC-TIDAL-TERMINAL-067","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary407 := rfl
+theorem dictionaryFold406 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary406 sourceRows406 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary406 "SFT-PHYS-STELLAR-NUCLEAR-COLLAPSE-TERMINAL-069" ["SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-ONE-001","SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005","SFT-PHYS-NUCLEAR-FUSION-FISSION-TERMINAL-005","SFT-PHYS-NUCLEAR-FUSION-FISSION-YIELD-THRESHOLD-006","SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005","SFT-PHYS-NUCLEAR-RADIOACTIVE-DECAY-TERMINAL-005","SFT-PHYS-STELLAR-GALACTIC-TIDAL-TERMINAL-067","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows407 = _
+ rw [dictionaryInsert406]
+ exact dictionaryFold407
+theorem dictionaryInsert405 : put sourceDictionary405 "SFT-PHYS-STELLAR-GALACTIC-TIDAL-TERMINAL-067" ["SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-ONE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-ORBITAL-DIMENSION-STABILITY-TERMINAL-009","SFT-PHYS-FLUID-PRESSURE-STRESS-001","SFT-PHYS-THERMAL-EQUILIBRIUM-RESPONSE-TERMINAL-043","SFT-PHYS-WAVE-RESONANCE-001","SFT-PHYS-MECH-ANGULAR-MOTION-001","SFT-PHYS-DARK-SMITHION-LFV-TERMINAL-061","SFT-PHYS-COSMO-STRUCTURE-GROWTH-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"] = sourceDictionary406 := rfl
+theorem dictionaryFold405 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary405 sourceRows405 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary405 "SFT-PHYS-STELLAR-GALACTIC-TIDAL-TERMINAL-067" ["SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-ONE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-ORBITAL-DIMENSION-STABILITY-TERMINAL-009","SFT-PHYS-FLUID-PRESSURE-STRESS-001","SFT-PHYS-THERMAL-EQUILIBRIUM-RESPONSE-TERMINAL-043","SFT-PHYS-WAVE-RESONANCE-001","SFT-PHYS-MECH-ANGULAR-MOTION-001","SFT-PHYS-DARK-SMITHION-LFV-TERMINAL-061","SFT-PHYS-COSMO-STRUCTURE-GROWTH-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"]) sourceRows406 = _
+ rw [dictionaryInsert405]
+ exact dictionaryFold406
+theorem dictionaryInsert404 : put sourceDictionary404 "SFT-PHYS-STATIC-EXTERIOR-CLOCK-TERMINAL-011" ["SFT-PHYS-GRAVITY-WEAK-FIELD-FLUX-003","SFT-PHYS-GRAVITY-STATIC-CLOCK-003","SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003","SFT-PHYS-GRAVITY-REDSHIFT-EQUIVALENCE-003","SFT-PHYS-VALIDATION-GRAVITY-CLOCK-EQUIVALENCE-003","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-SYMMETRIC-SOURCE-CONSERVATION-TERMINAL-010","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = sourceDictionary405 := rfl
+theorem dictionaryFold404 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary404 sourceRows404 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary404 "SFT-PHYS-STATIC-EXTERIOR-CLOCK-TERMINAL-011" ["SFT-PHYS-GRAVITY-WEAK-FIELD-FLUX-003","SFT-PHYS-GRAVITY-STATIC-CLOCK-003","SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003","SFT-PHYS-GRAVITY-REDSHIFT-EQUIVALENCE-003","SFT-PHYS-VALIDATION-GRAVITY-CLOCK-EQUIVALENCE-003","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-SYMMETRIC-SOURCE-CONSERVATION-TERMINAL-010","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"]) sourceRows405 = _
+ rw [dictionaryInsert404]
+ exact dictionaryFold405
+theorem dictionaryInsert403 : put sourceDictionary403 "SFT-PHYS-SPIN-STATISTICS-CONDENSATION-TERMINAL-045" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-FERMION-BOSON-001","SFT-PHYS-NUCLEAR-DEUTERON-DINUCLEON-TERMINAL-006","SFT-PHYS-COUPLED-MAP-CRITICALITY-TERMINAL-008","SFT-PHYS-THERMAL-EQUILIBRIUM-RESPONSE-TERMINAL-043","SFT-PHYS-COLLECTIVE-RADIATION-RESPONSE-TERMINAL-041"] = sourceDictionary404 := rfl
+theorem dictionaryFold403 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary403 sourceRows403 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary403 "SFT-PHYS-SPIN-STATISTICS-CONDENSATION-TERMINAL-045" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-FERMION-BOSON-001","SFT-PHYS-NUCLEAR-DEUTERON-DINUCLEON-TERMINAL-006","SFT-PHYS-COUPLED-MAP-CRITICALITY-TERMINAL-008","SFT-PHYS-THERMAL-EQUILIBRIUM-RESPONSE-TERMINAL-043","SFT-PHYS-COLLECTIVE-RADIATION-RESPONSE-TERMINAL-041"]) sourceRows404 = _
+ rw [dictionaryInsert403]
+ exact dictionaryFold404
+theorem dictionaryInsert402 : put sourceDictionary402 "SFT-PHYS-SPACETIME-WORMHOLE-ADMISSIBILITY-003" ["SFT-PHYS-GRAVITY-HORIZON-INFORMATION-003","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-SPACETIME-CAUSAL-ORDER-001"] = sourceDictionary403 := rfl
+theorem dictionaryFold402 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary402 sourceRows402 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary402 "SFT-PHYS-SPACETIME-WORMHOLE-ADMISSIBILITY-003" ["SFT-PHYS-GRAVITY-HORIZON-INFORMATION-003","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-SPACETIME-CAUSAL-ORDER-001"]) sourceRows403 = _
+ rw [dictionaryInsert402]
+ exact dictionaryFold403
+theorem dictionaryInsert401 : put sourceDictionary401 "SFT-PHYS-SPACETIME-WARP-ADMISSIBILITY-003" ["SFT-PHYS-SPACETIME-WORMHOLE-ADMISSIBILITY-003","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-VACUUM-COMPLETE-CYCLE-LEDGER-003"] = sourceDictionary402 := rfl
+theorem dictionaryFold401 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary401 sourceRows401 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary401 "SFT-PHYS-SPACETIME-WARP-ADMISSIBILITY-003" ["SFT-PHYS-SPACETIME-WORMHOLE-ADMISSIBILITY-003","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-VACUUM-COMPLETE-CYCLE-LEDGER-003"]) sourceRows402 = _
+ rw [dictionaryInsert401]
+ exact dictionaryFold402
+theorem dictionaryInsert400 : put sourceDictionary400 "SFT-PHYS-SPACETIME-VELOCITY-COMPOSITION-TERMINAL-033" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-EXACT-OPERATIONS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-MECH-SPEED-VELOCITY-001","SFT-PHYS-SPACETIME-INERTIAL-TRANSFORMATION-001","SFT-PHYS-SPACETIME-LIMIT-SPEED-001"] = sourceDictionary401 := rfl
+theorem dictionaryFold400 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary400 sourceRows400 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary400 "SFT-PHYS-SPACETIME-VELOCITY-COMPOSITION-TERMINAL-033" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-EXACT-OPERATIONS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-MECH-SPEED-VELOCITY-001","SFT-PHYS-SPACETIME-INERTIAL-TRANSFORMATION-001","SFT-PHYS-SPACETIME-LIMIT-SPEED-001"]) sourceRows401 = _
+ rw [dictionaryInsert400]
+ exact dictionaryFold401
+theorem dictionaryInsert399 : put sourceDictionary399 "SFT-PHYS-SPACETIME-LIMIT-SPEED-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-INERTIAL-TRANSFORMATION-001"] = sourceDictionary400 := rfl
+theorem dictionaryFold399 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary399 sourceRows399 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary399 "SFT-PHYS-SPACETIME-LIMIT-SPEED-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-INERTIAL-TRANSFORMATION-001"]) sourceRows400 = _
+ rw [dictionaryInsert399]
+ exact dictionaryFold400
+theorem dictionaryInsert398 : put sourceDictionary398 "SFT-PHYS-SPACETIME-LENGTH-RELATION-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001"] = sourceDictionary399 := rfl
+theorem dictionaryFold398 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary398 sourceRows398 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary398 "SFT-PHYS-SPACETIME-LENGTH-RELATION-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001"]) sourceRows399 = _
+ rw [dictionaryInsert398]
+ exact dictionaryFold399
+theorem dictionaryInsert397 : put sourceDictionary397 "SFT-PHYS-SPACETIME-INTERVAL-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-EVENT-RELATION-001"] = sourceDictionary398 := rfl
+theorem dictionaryFold397 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary397 sourceRows397 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary397 "SFT-PHYS-SPACETIME-INTERVAL-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-EVENT-RELATION-001"]) sourceRows398 = _
+ rw [dictionaryInsert397]
+ exact dictionaryFold398
+theorem dictionaryInsert396 : put sourceDictionary396 "SFT-PHYS-SPACETIME-INERTIAL-TRANSFORMATION-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-CAUSAL-ORDER-001"] = sourceDictionary397 := rfl
+theorem dictionaryFold396 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary396 sourceRows396 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary396 "SFT-PHYS-SPACETIME-INERTIAL-TRANSFORMATION-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-CAUSAL-ORDER-001"]) sourceRows397 = _
+ rw [dictionaryInsert396]
+ exact dictionaryFold397
+theorem dictionaryInsert395 : put sourceDictionary395 "SFT-PHYS-SPACETIME-EXACT-INTERVAL-003" ["SFT-PHYS-GRAVITY-WEAK-FIELD-FLUX-003","SFT-PHYS-SPACETIME-INTERVAL-001","SFT-PHYS-RELATIVITY-TWO-HAND-DIRAC-SQUARE-003"] = sourceDictionary396 := rfl
+theorem dictionaryFold395 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary395 sourceRows395 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary395 "SFT-PHYS-SPACETIME-EXACT-INTERVAL-003" ["SFT-PHYS-GRAVITY-WEAK-FIELD-FLUX-003","SFT-PHYS-SPACETIME-INTERVAL-001","SFT-PHYS-RELATIVITY-TWO-HAND-DIRAC-SQUARE-003"]) sourceRows396 = _
+ rw [dictionaryInsert395]
+ exact dictionaryFold396
+theorem dictionaryInsert394 : put sourceDictionary394 "SFT-PHYS-SPACETIME-EVENT-RELATION-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001"] = sourceDictionary395 := rfl
+theorem dictionaryFold394 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary394 sourceRows394 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary394 "SFT-PHYS-SPACETIME-EVENT-RELATION-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001"]) sourceRows395 = _
+ rw [dictionaryInsert394]
+ exact dictionaryFold395
+theorem dictionaryInsert393 : put sourceDictionary393 "SFT-PHYS-SPACETIME-CLOSED-TIMELIKE-ADMISSIBILITY-003" ["SFT-PHYS-SPACETIME-WARP-ADMISSIBILITY-003","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-COMP-CBL-HALTING-001"] = sourceDictionary394 := rfl
+theorem dictionaryFold393 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary393 sourceRows393 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary393 "SFT-PHYS-SPACETIME-CLOSED-TIMELIKE-ADMISSIBILITY-003" ["SFT-PHYS-SPACETIME-WARP-ADMISSIBILITY-003","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-COMP-CBL-HALTING-001"]) sourceRows394 = _
+ rw [dictionaryInsert393]
+ exact dictionaryFold394
+theorem dictionaryInsert392 : put sourceDictionary392 "SFT-PHYS-SPACETIME-CLOCK-RATE-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-LIMIT-SPEED-001"] = sourceDictionary393 := rfl
+theorem dictionaryFold392 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary392 sourceRows392 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary392 "SFT-PHYS-SPACETIME-CLOCK-RATE-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-LIMIT-SPEED-001"]) sourceRows393 = _
+ rw [dictionaryInsert392]
+ exact dictionaryFold393
+theorem dictionaryInsert391 : put sourceDictionary391 "SFT-PHYS-SPACETIME-CAUSAL-ORDER-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-INTERVAL-001"] = sourceDictionary392 := rfl
+theorem dictionaryFold391 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary391 sourceRows391 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary391 "SFT-PHYS-SPACETIME-CAUSAL-ORDER-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-INTERVAL-001"]) sourceRows392 = _
+ rw [dictionaryInsert391]
+ exact dictionaryFold392
+theorem dictionaryInsert390 : put sourceDictionary390 "SFT-PHYS-SPACE-DIMENSION-THREE-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"] = sourceDictionary391 := rfl
+theorem dictionaryFold390 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary390 sourceRows390 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary390 "SFT-PHYS-SPACE-DIMENSION-THREE-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"]) sourceRows391 = _
+ rw [dictionaryInsert390]
+ exact dictionaryFold391
+theorem dictionaryInsert389 : put sourceDictionary389 "SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001" ["SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001"] = sourceDictionary390 := rfl
+theorem dictionaryFold389 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary389 sourceRows389 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary389 "SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001" ["SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001"]) sourceRows390 = _
+ rw [dictionaryInsert389]
+ exact dictionaryFold390
+theorem dictionaryInsert388 : put sourceDictionary388 "SFT-PHYS-SCATTERING-RUTHERFORD-COMPTON-TERMINAL-006" ["SFT-PHYS-MATTER-SCATTERING-001","SFT-PHYS-QUANTUM-PHYSICAL-STATE-001","SFT-PHYS-QUANTUM-WEIGHT-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-LIMIT-SPEED-001","SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary389 := rfl
+theorem dictionaryFold388 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary388 sourceRows388 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary388 "SFT-PHYS-SCATTERING-RUTHERFORD-COMPTON-TERMINAL-006" ["SFT-PHYS-MATTER-SCATTERING-001","SFT-PHYS-QUANTUM-PHYSICAL-STATE-001","SFT-PHYS-QUANTUM-WEIGHT-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-LIMIT-SPEED-001","SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows389 = _
+ rw [dictionaryInsert388]
+ exact dictionaryFold389
+theorem dictionaryInsert387 : put sourceDictionary387 "SFT-PHYS-SCATTERING-PARTITION-PATH-TERMINAL-017" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-MATH-PROBABILITY-STATISTICS-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-CLASSICAL-PROBABILISTIC-001","SFT-PHYS-MATTER-SCATTERING-001","SFT-PHYS-SCATTERING-RUTHERFORD-COMPTON-TERMINAL-006","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary388 := rfl
+theorem dictionaryFold387 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary387 sourceRows387 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary387 "SFT-PHYS-SCATTERING-PARTITION-PATH-TERMINAL-017" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-MATH-PROBABILITY-STATISTICS-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-CLASSICAL-PROBABILISTIC-001","SFT-PHYS-MATTER-SCATTERING-001","SFT-PHYS-SCATTERING-RUTHERFORD-COMPTON-TERMINAL-006","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows388 = _
+ rw [dictionaryInsert387]
+ exact dictionaryFold388
+theorem dictionaryInsert386 : put sourceDictionary386 "SFT-PHYS-SCALE-PROTON-PLANCK-TERMINAL-003" ["SFT-PHYS-SCALE-PROTON-PLANCK-HIERARCHY-002","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary387 := rfl
+theorem dictionaryFold386 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary386 sourceRows386 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary386 "SFT-PHYS-SCALE-PROTON-PLANCK-TERMINAL-003" ["SFT-PHYS-SCALE-PROTON-PLANCK-HIERARCHY-002","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows387 = _
+ rw [dictionaryInsert386]
+ exact dictionaryFold387
+theorem dictionaryInsert385 : put sourceDictionary385 "SFT-PHYS-SCALE-PROTON-PLANCK-HIERARCHY-002" ["SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary386 := rfl
+theorem dictionaryFold385 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary385 sourceRows385 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary385 "SFT-PHYS-SCALE-PROTON-PLANCK-HIERARCHY-002" ["SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows386 = _
+ rw [dictionaryInsert385]
+ exact dictionaryFold386
+theorem dictionaryInsert384 : put sourceDictionary384 "SFT-PHYS-SCALE-COMMON-AXIS-TERMINAL-030" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-MEAS-UNIT-COMPARISON-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001","SFT-PHYS-SPACETIME-LIMIT-SPEED-001","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-COUPLING-RUNNING-CONVERGENCE-TERMINAL-006","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-ELECTROWEAK-TERMINAL-ON-SHELL-003","SFT-PHYS-SCALE-PROTON-PLANCK-TERMINAL-003","SFT-PHYS-MATTER-QUARK-INVARIANTS-003","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"] = sourceDictionary385 := rfl
+theorem dictionaryFold384 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary384 sourceRows384 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary384 "SFT-PHYS-SCALE-COMMON-AXIS-TERMINAL-030" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-MEAS-UNIT-COMPARISON-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001","SFT-PHYS-SPACETIME-LIMIT-SPEED-001","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-COUPLING-RUNNING-CONVERGENCE-TERMINAL-006","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-ELECTROWEAK-TERMINAL-ON-SHELL-003","SFT-PHYS-SCALE-PROTON-PLANCK-TERMINAL-003","SFT-PHYS-MATTER-QUARK-INVARIANTS-003","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"]) sourceRows385 = _
+ rw [dictionaryInsert384]
+ exact dictionaryFold385
+theorem dictionaryInsert383 : put sourceDictionary383 "SFT-PHYS-RELATIVITY-TWO-HAND-DIRAC-SQUARE-003" ["SFT-PHYS-DYNAMICS-STATIONARY-SPECTRUM-003","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary384 := rfl
+theorem dictionaryFold383 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary383 sourceRows383 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary383 "SFT-PHYS-RELATIVITY-TWO-HAND-DIRAC-SQUARE-003" ["SFT-PHYS-DYNAMICS-STATIONARY-SPECTRUM-003","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows384 = _
+ rw [dictionaryInsert383]
+ exact dictionaryFold384
+theorem dictionaryInsert382 : put sourceDictionary382 "SFT-PHYS-RELATIVITY-FULL-DIRAC-SQUARE-003" ["SFT-PHYS-RELATIVITY-TWO-HAND-DIRAC-SQUARE-003","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003"] = sourceDictionary383 := rfl
+theorem dictionaryFold382 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary382 sourceRows382 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary382 "SFT-PHYS-RELATIVITY-FULL-DIRAC-SQUARE-003" ["SFT-PHYS-RELATIVITY-TWO-HAND-DIRAC-SQUARE-003","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003"]) sourceRows383 = _
+ rw [dictionaryInsert382]
+ exact dictionaryFold383
+theorem dictionaryInsert381 : put sourceDictionary381 "SFT-PHYS-QUANTUM-WEIGHT-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-OBSERVABLE-001"] = sourceDictionary382 := rfl
+theorem dictionaryFold381 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary381 sourceRows381 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary381 "SFT-PHYS-QUANTUM-WEIGHT-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-OBSERVABLE-001"]) sourceRows382 = _
+ rw [dictionaryInsert381]
+ exact dictionaryFold382
+theorem dictionaryInsert380 : put sourceDictionary380 "SFT-PHYS-QUANTUM-TUNNELLING-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-EXCLUSION-001"] = sourceDictionary381 := rfl
+theorem dictionaryFold380 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary380 sourceRows380 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary380 "SFT-PHYS-QUANTUM-TUNNELLING-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-EXCLUSION-001"]) sourceRows381 = _
+ rw [dictionaryInsert380]
+ exact dictionaryFold381
+theorem dictionaryInsert379 : put sourceDictionary379 "SFT-PHYS-QUANTUM-SUPPORT-UNCERTAINTY-TERMINAL-049" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-ALGEBRA-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-QUANTUM-INCOMPATIBILITY-001","SFT-PHYS-QUANTUM-ENTANGLEMENT-001","SFT-PHYS-QUANTUM-BELL-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001"] = sourceDictionary380 := rfl
+theorem dictionaryFold379 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary379 sourceRows379 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary379 "SFT-PHYS-QUANTUM-SUPPORT-UNCERTAINTY-TERMINAL-049" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-ALGEBRA-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-QUANTUM-INCOMPATIBILITY-001","SFT-PHYS-QUANTUM-ENTANGLEMENT-001","SFT-PHYS-QUANTUM-BELL-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001"]) sourceRows380 = _
+ rw [dictionaryInsert379]
+ exact dictionaryFold380
+theorem dictionaryInsert378 : put sourceDictionary378 "SFT-PHYS-QUANTUM-SPIN-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-INCOMPATIBILITY-001"] = sourceDictionary379 := rfl
+theorem dictionaryFold378 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary378 sourceRows378 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary378 "SFT-PHYS-QUANTUM-SPIN-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-INCOMPATIBILITY-001"]) sourceRows379 = _
+ rw [dictionaryInsert378]
+ exact dictionaryFold379
+theorem dictionaryInsert377 : put sourceDictionary377 "SFT-PHYS-QUANTUM-PHYSICAL-STATE-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001"] = sourceDictionary378 := rfl
+theorem dictionaryFold377 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary377 sourceRows377 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary377 "SFT-PHYS-QUANTUM-PHYSICAL-STATE-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001"]) sourceRows378 = _
+ rw [dictionaryInsert377]
+ exact dictionaryFold378
+theorem dictionaryInsert376 : put sourceDictionary376 "SFT-PHYS-QUANTUM-OBSERVABLE-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-EVOLUTION-001"] = sourceDictionary377 := rfl
+theorem dictionaryFold376 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary376 sourceRows376 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary376 "SFT-PHYS-QUANTUM-OBSERVABLE-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-EVOLUTION-001"]) sourceRows377 = _
+ rw [dictionaryInsert376]
+ exact dictionaryFold377
+theorem dictionaryInsert375 : put sourceDictionary375 "SFT-PHYS-QUANTUM-NO-SIGNALLING-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-CLASSICAL-LIMIT-001"] = sourceDictionary376 := rfl
+theorem dictionaryFold375 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary375 sourceRows375 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary375 "SFT-PHYS-QUANTUM-NO-SIGNALLING-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-CLASSICAL-LIMIT-001"]) sourceRows376 = _
+ rw [dictionaryInsert375]
+ exact dictionaryFold376
+theorem dictionaryInsert374 : put sourceDictionary374 "SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-SPIN-001"] = sourceDictionary375 := rfl
+theorem dictionaryFold374 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary374 sourceRows374 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary374 "SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-SPIN-001"]) sourceRows375 = _
+ rw [dictionaryInsert374]
+ exact dictionaryFold375
+theorem dictionaryInsert373 : put sourceDictionary373 "SFT-PHYS-QUANTUM-INCOMPATIBILITY-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-WEIGHT-001"] = sourceDictionary374 := rfl
+theorem dictionaryFold373 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary373 sourceRows373 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary373 "SFT-PHYS-QUANTUM-INCOMPATIBILITY-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-WEIGHT-001"]) sourceRows374 = _
+ rw [dictionaryInsert373]
+ exact dictionaryFold374
+theorem dictionaryInsert372 : put sourceDictionary372 "SFT-PHYS-QUANTUM-EXCLUSION-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001"] = sourceDictionary373 := rfl
+theorem dictionaryFold372 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary372 sourceRows372 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary372 "SFT-PHYS-QUANTUM-EXCLUSION-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001"]) sourceRows373 = _
+ rw [dictionaryInsert372]
+ exact dictionaryFold373
+theorem dictionaryInsert371 : put sourceDictionary371 "SFT-PHYS-QUANTUM-EVOLUTION-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-PHYSICAL-STATE-001"] = sourceDictionary372 := rfl
+theorem dictionaryFold371 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary371 sourceRows371 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary371 "SFT-PHYS-QUANTUM-EVOLUTION-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-PHYSICAL-STATE-001"]) sourceRows372 = _
+ rw [dictionaryInsert371]
+ exact dictionaryFold372
+theorem dictionaryInsert370 : put sourceDictionary370 "SFT-PHYS-QUANTUM-ENTANGLEMENT-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001"] = sourceDictionary371 := rfl
+theorem dictionaryFold370 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary370 sourceRows370 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary370 "SFT-PHYS-QUANTUM-ENTANGLEMENT-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001"]) sourceRows371 = _
+ rw [dictionaryInsert370]
+ exact dictionaryFold371
+theorem dictionaryInsert369 : put sourceDictionary369 "SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-TUNNELLING-001"] = sourceDictionary370 := rfl
+theorem dictionaryFold369 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary369 sourceRows369 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary369 "SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-TUNNELLING-001"]) sourceRows370 = _
+ rw [dictionaryInsert369]
+ exact dictionaryFold370
+theorem dictionaryInsert368 : put sourceDictionary368 "SFT-PHYS-QUANTUM-DECOHERENCE-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-CONTEXTUALITY-001"] = sourceDictionary369 := rfl
+theorem dictionaryFold368 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary368 sourceRows368 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary368 "SFT-PHYS-QUANTUM-DECOHERENCE-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-CONTEXTUALITY-001"]) sourceRows369 = _
+ rw [dictionaryInsert368]
+ exact dictionaryFold369
+theorem dictionaryInsert367 : put sourceDictionary367 "SFT-PHYS-QUANTUM-CONTEXTUALITY-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-BELL-001"] = sourceDictionary368 := rfl
+theorem dictionaryFold367 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary367 sourceRows367 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary367 "SFT-PHYS-QUANTUM-CONTEXTUALITY-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-BELL-001"]) sourceRows368 = _
+ rw [dictionaryInsert367]
+ exact dictionaryFold368
+theorem dictionaryInsert366 : put sourceDictionary366 "SFT-PHYS-QUANTUM-CLASSICAL-LIMIT-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-DECOHERENCE-001"] = sourceDictionary367 := rfl
+theorem dictionaryFold366 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary366 sourceRows366 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary366 "SFT-PHYS-QUANTUM-CLASSICAL-LIMIT-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-DECOHERENCE-001"]) sourceRows367 = _
+ rw [dictionaryInsert366]
+ exact dictionaryFold367
+theorem dictionaryInsert365 : put sourceDictionary365 "SFT-PHYS-QUANTUM-BELL-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-ENTANGLEMENT-001"] = sourceDictionary366 := rfl
+theorem dictionaryFold365 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary365 sourceRows365 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary365 "SFT-PHYS-QUANTUM-BELL-001" ["SFT-INFO-QUANTUM-CORRESPONDENCE-001","SFT-QUANTUM-INFORMATION-UNIT-001","SFT-QUANTUM-STATE-COMPOSITION-001","SFT-QUANTUM-MEASUREMENT-001","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-QUANTUM-CLASSICAL-CORRESPONDENCE-001","SFT-PHYS-QUANTUM-ENTANGLEMENT-001"]) sourceRows366 = _
+ rw [dictionaryInsert365]
+ exact dictionaryFold366
+theorem dictionaryInsert364 : put sourceDictionary364 "SFT-PHYS-QUADRUPOLE-RADIATED-POWER-TERMINAL-012" ["SFT-PHYS-GRAVITY-WAVE-QUADRUPOLE-003","SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-SYMMETRIC-SOURCE-CONSERVATION-TERMINAL-010","SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = sourceDictionary365 := rfl
+theorem dictionaryFold364 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary364 sourceRows364 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary364 "SFT-PHYS-QUADRUPOLE-RADIATED-POWER-TERMINAL-012" ["SFT-PHYS-GRAVITY-WAVE-QUADRUPOLE-003","SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-SYMMETRIC-SOURCE-CONSERVATION-TERMINAL-010","SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"]) sourceRows365 = _
+ rw [dictionaryInsert364]
+ exact dictionaryFold365
+theorem dictionaryInsert363 : put sourceDictionary363 "SFT-PHYS-QED-TERMINAL-TURN-PROJECTION-004" ["SFT-FOUNDATION-EXACT-OPERATIONS-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-DYNAMICS-FREE-PHASE-DISPERSION-003","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary364 := rfl
+theorem dictionaryFold363 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary363 sourceRows363 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary363 "SFT-PHYS-QED-TERMINAL-TURN-PROJECTION-004" ["SFT-FOUNDATION-EXACT-OPERATIONS-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-DYNAMICS-FREE-PHASE-DISPERSION-003","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows364 = _
+ rw [dictionaryInsert363]
+ exact dictionaryFold364
+theorem dictionaryInsert362 : put sourceDictionary362 "SFT-PHYS-QED-MUON-MAGNETIC-ANOMALY-004" ["SFT-PHYS-QED-ELECTRON-MAGNETIC-ANOMALY-004","SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003","SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001","SFT-PHYS-QED-LEPTON-MAGNETIC-ANOMALY-003","SFT-PHYS-FIELD-FINITE-LOOP-CLOSURE-003","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary363 := rfl
+theorem dictionaryFold362 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary362 sourceRows362 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary362 "SFT-PHYS-QED-MUON-MAGNETIC-ANOMALY-004" ["SFT-PHYS-QED-ELECTRON-MAGNETIC-ANOMALY-004","SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003","SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001","SFT-PHYS-QED-LEPTON-MAGNETIC-ANOMALY-003","SFT-PHYS-FIELD-FINITE-LOOP-CLOSURE-003","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows363 = _
+ rw [dictionaryInsert362]
+ exact dictionaryFold363
+theorem dictionaryInsert361 : put sourceDictionary361 "SFT-PHYS-QED-LEPTON-MAGNETIC-ANOMALY-003" ["SFT-PHYS-ELECTRON-DIRAC-G-FACTOR-002","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001"] = sourceDictionary362 := rfl
+theorem dictionaryFold361 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary361 sourceRows361 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary361 "SFT-PHYS-QED-LEPTON-MAGNETIC-ANOMALY-003" ["SFT-PHYS-ELECTRON-DIRAC-G-FACTOR-002","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001"]) sourceRows362 = _
+ rw [dictionaryInsert361]
+ exact dictionaryFold362
+theorem dictionaryInsert360 : put sourceDictionary360 "SFT-PHYS-QED-ELECTRON-MAGNETIC-ANOMALY-004" ["SFT-PHYS-QED-LEPTON-MAGNETIC-ANOMALY-003","SFT-PHYS-QED-TERMINAL-TURN-PROJECTION-004","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-FIELD-FINITE-LOOP-CLOSURE-003","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-PHYS-ELECTRON-DIRAC-G-FACTOR-002","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary361 := rfl
+theorem dictionaryFold360 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary360 sourceRows360 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary360 "SFT-PHYS-QED-ELECTRON-MAGNETIC-ANOMALY-004" ["SFT-PHYS-QED-LEPTON-MAGNETIC-ANOMALY-003","SFT-PHYS-QED-TERMINAL-TURN-PROJECTION-004","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-FIELD-FINITE-LOOP-CLOSURE-003","SFT-PHYS-WAVE-INTERFERENCE-001","SFT-PHYS-ELECTRON-DIRAC-G-FACTOR-002","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows361 = _
+ rw [dictionaryInsert360]
+ exact dictionaryFold361
+theorem dictionaryInsert359 : put sourceDictionary359 "SFT-PHYS-PROTON-RADIUS-TERMINAL-029" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-QUANTUM-EVOLUTION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = sourceDictionary360 := rfl
+theorem dictionaryFold359 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary359 sourceRows359 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary359 "SFT-PHYS-PROTON-RADIUS-TERMINAL-029" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-QUANTUM-EVOLUTION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"]) sourceRows360 = _
+ rw [dictionaryInsert359]
+ exact dictionaryFold360
+theorem dictionaryInsert358 : put sourceDictionary358 "SFT-PHYS-POST-NEWTONIAN-FIXED-POINT-TERMINAL-009" ["SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = sourceDictionary359 := rfl
+theorem dictionaryFold358 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary358 sourceRows358 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary358 "SFT-PHYS-POST-NEWTONIAN-FIXED-POINT-TERMINAL-009" ["SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"]) sourceRows359 = _
+ rw [dictionaryInsert358]
+ exact dictionaryFold359
+theorem dictionaryInsert357 : put sourceDictionary357 "SFT-PHYS-PLASMA-OSCILLATION-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-PLASMA-COLLECTIVE-001"] = sourceDictionary358 := rfl
+theorem dictionaryFold357 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary357 sourceRows357 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary357 "SFT-PHYS-PLASMA-OSCILLATION-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-PLASMA-COLLECTIVE-001"]) sourceRows358 = _
+ rw [dictionaryInsert357]
+ exact dictionaryFold358
+theorem dictionaryInsert356 : put sourceDictionary356 "SFT-PHYS-PLASMA-MHD-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-PLASMA-OSCILLATION-001"] = sourceDictionary357 := rfl
+theorem dictionaryFold356 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary356 sourceRows356 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary356 "SFT-PHYS-PLASMA-MHD-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-PLASMA-OSCILLATION-001"]) sourceRows357 = _
+ rw [dictionaryInsert356]
+ exact dictionaryFold357
+theorem dictionaryInsert355 : put sourceDictionary355 "SFT-PHYS-PLASMA-COLLECTIVE-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-FLUID-TURBULENCE-001"] = sourceDictionary356 := rfl
+theorem dictionaryFold355 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary355 sourceRows355 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary355 "SFT-PHYS-PLASMA-COLLECTIVE-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-FLUID-TURBULENCE-001"]) sourceRows356 = _
+ rw [dictionaryInsert355]
+ exact dictionaryFold356
+theorem dictionaryInsert354 : put sourceDictionary354 "SFT-PHYS-PARTICLE-MODE-GENERATION-TERMINAL-051" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-DYNAMICS-STATIONARY-SPECTRUM-003","SFT-PHYS-MATTER-PARTICLE-SPECTRUM-001","SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003","SFT-PHYS-MATTER-QUARK-INVARIANTS-003","SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001","SFT-PHYS-NEUTRINO-POSITIVE-MASS-003","SFT-PHYS-MATTER-GENERATION-DEPTH-003","SFT-PHYS-MATTER-CKM-TERMINAL-004"] = sourceDictionary355 := rfl
+theorem dictionaryFold354 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary354 sourceRows354 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary354 "SFT-PHYS-PARTICLE-MODE-GENERATION-TERMINAL-051" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-DYNAMICS-STATIONARY-SPECTRUM-003","SFT-PHYS-MATTER-PARTICLE-SPECTRUM-001","SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003","SFT-PHYS-MATTER-QUARK-INVARIANTS-003","SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001","SFT-PHYS-NEUTRINO-POSITIVE-MASS-003","SFT-PHYS-MATTER-GENERATION-DEPTH-003","SFT-PHYS-MATTER-CKM-TERMINAL-004"]) sourceRows355 = _
+ rw [dictionaryInsert354]
+ exact dictionaryFold355
+theorem dictionaryInsert353 : put sourceDictionary353 "SFT-PHYS-PARKER-PROTON-ENERGY-TERMINAL-028" ["SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-SCATTERING-RUTHERFORD-COMPTON-TERMINAL-006","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = sourceDictionary354 := rfl
+theorem dictionaryFold353 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary353 sourceRows353 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary353 "SFT-PHYS-PARKER-PROTON-ENERGY-TERMINAL-028" ["SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-SCATTERING-RUTHERFORD-COMPTON-TERMINAL-006","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"]) sourceRows354 = _
+ rw [dictionaryInsert353]
+ exact dictionaryFold354
+theorem dictionaryInsert352 : put sourceDictionary352 "SFT-PHYS-ORBITAL-DIMENSION-STABILITY-TERMINAL-009" ["SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-VALIDATION-INVERSE-SQUARE-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = sourceDictionary353 := rfl
+theorem dictionaryFold352 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary352 sourceRows352 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary352 "SFT-PHYS-ORBITAL-DIMENSION-STABILITY-TERMINAL-009" ["SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-VALIDATION-INVERSE-SQUARE-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"]) sourceRows353 = _
+ rw [dictionaryInsert352]
+ exact dictionaryFold353
+theorem dictionaryInsert351 : put sourceDictionary351 "SFT-PHYS-ODD-LATTICE-ALL-REGION-OCCUPANCY-TERMINAL-007" ["SFT-PHYS-VACUUM-ODD-RECURRENCE-003","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary352 := rfl
+theorem dictionaryFold351 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary351 sourceRows351 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary351 "SFT-PHYS-ODD-LATTICE-ALL-REGION-OCCUPANCY-TERMINAL-007" ["SFT-PHYS-VACUUM-ODD-RECURRENCE-003","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows352 = _
+ rw [dictionaryInsert351]
+ exact dictionaryFold352
+theorem dictionaryInsert350 : put sourceDictionary350 "SFT-PHYS-NUCLEON-BINDING-TERMINAL-005" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-MATTER-QUARK-CUBICS-003","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-MATTER-PROTON-ELECTRON-TERMINAL-004","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary351 := rfl
+theorem dictionaryFold350 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary350 sourceRows350 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary350 "SFT-PHYS-NUCLEON-BINDING-TERMINAL-005" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-MATTER-QUARK-CUBICS-003","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-MATTER-PROTON-ELECTRON-TERMINAL-004","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows351 = _
+ rw [dictionaryInsert350]
+ exact dictionaryFold351
+theorem dictionaryInsert349 : put sourceDictionary349 "SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005" ["SFT-FOUNDATION-HALF-ONE-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary350 := rfl
+theorem dictionaryFold349 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary349 sourceRows349 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary349 "SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005" ["SFT-FOUNDATION-HALF-ONE-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows350 = _
+ rw [dictionaryInsert349]
+ exact dictionaryFold350
+theorem dictionaryInsert348 : put sourceDictionary348 "SFT-PHYS-NUCLEAR-REACTIONS-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-NUCLEAR-RADIOACTIVITY-001"] = sourceDictionary349 := rfl
+theorem dictionaryFold348 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary348 sourceRows348 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary348 "SFT-PHYS-NUCLEAR-REACTIONS-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-NUCLEAR-RADIOACTIVITY-001"]) sourceRows349 = _
+ rw [dictionaryInsert348]
+ exact dictionaryFold349
+theorem dictionaryInsert347 : put sourceDictionary347 "SFT-PHYS-NUCLEAR-RADIOACTIVITY-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-NUCLEAR-LEVELS-001"] = sourceDictionary348 := rfl
+theorem dictionaryFold347 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary347 sourceRows347 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary347 "SFT-PHYS-NUCLEAR-RADIOACTIVITY-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-NUCLEAR-LEVELS-001"]) sourceRows348 = _
+ rw [dictionaryInsert347]
+ exact dictionaryFold348
+theorem dictionaryInsert346 : put sourceDictionary346 "SFT-PHYS-NUCLEAR-RADIOACTIVE-DECAY-TERMINAL-005" ["SFT-PHYS-NUCLEAR-RADIOACTIVITY-001","SFT-PHYS-NUCLEAR-CLOSURE-SEQUENCE-001","SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005","SFT-PHYS-QUANTUM-TUNNELLING-001","SFT-PHYS-WEAK-PARITY-FIBRE-002","SFT-PHYS-ATOMIC-TRANSITION-RATE-TERMINAL-005","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-INFO-ENTROPY-UNCERTAINTY-001"] = sourceDictionary347 := rfl
+theorem dictionaryFold346 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary346 sourceRows346 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary346 "SFT-PHYS-NUCLEAR-RADIOACTIVE-DECAY-TERMINAL-005" ["SFT-PHYS-NUCLEAR-RADIOACTIVITY-001","SFT-PHYS-NUCLEAR-CLOSURE-SEQUENCE-001","SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005","SFT-PHYS-QUANTUM-TUNNELLING-001","SFT-PHYS-WEAK-PARITY-FIBRE-002","SFT-PHYS-ATOMIC-TRANSITION-RATE-TERMINAL-005","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-INFO-ENTROPY-UNCERTAINTY-001"]) sourceRows347 = _
+ rw [dictionaryInsert346]
+ exact dictionaryFold347
+theorem dictionaryInsert345 : put sourceDictionary345 "SFT-PHYS-NUCLEAR-LEVELS-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-NUCLEAR-BINDING-001"] = sourceDictionary346 := rfl
+theorem dictionaryFold345 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary345 sourceRows345 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary345 "SFT-PHYS-NUCLEAR-LEVELS-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-NUCLEAR-BINDING-001"]) sourceRows346 = _
+ rw [dictionaryInsert345]
+ exact dictionaryFold346
+theorem dictionaryInsert344 : put sourceDictionary344 "SFT-PHYS-NUCLEAR-FUSION-FISSION-YIELD-THRESHOLD-006" ["SFT-PHYS-NUCLEAR-FUSION-FISSION-TERMINAL-005","SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005","SFT-PHYS-QUANTUM-TUNNELLING-001","SFT-PHYS-THERMO-TEMPERATURE-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary345 := rfl
+theorem dictionaryFold344 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary344 sourceRows344 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary344 "SFT-PHYS-NUCLEAR-FUSION-FISSION-YIELD-THRESHOLD-006" ["SFT-PHYS-NUCLEAR-FUSION-FISSION-TERMINAL-005","SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005","SFT-PHYS-QUANTUM-TUNNELLING-001","SFT-PHYS-THERMO-TEMPERATURE-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows345 = _
+ rw [dictionaryInsert344]
+ exact dictionaryFold345
+theorem dictionaryInsert343 : put sourceDictionary343 "SFT-PHYS-NUCLEAR-FUSION-FISSION-TERMINAL-005" ["SFT-FOUNDATION-HALF-ONE-001","SFT-PHYS-NUCLEAR-FUSION-001","SFT-PHYS-NUCLEAR-FISSION-001","SFT-PHYS-QUANTUM-TUNNELLING-001","SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary344 := rfl
+theorem dictionaryFold343 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary343 sourceRows343 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary343 "SFT-PHYS-NUCLEAR-FUSION-FISSION-TERMINAL-005" ["SFT-FOUNDATION-HALF-ONE-001","SFT-PHYS-NUCLEAR-FUSION-001","SFT-PHYS-NUCLEAR-FISSION-001","SFT-PHYS-QUANTUM-TUNNELLING-001","SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows344 = _
+ rw [dictionaryInsert343]
+ exact dictionaryFold344
+theorem dictionaryInsert342 : put sourceDictionary342 "SFT-PHYS-NUCLEAR-FUSION-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-NUCLEAR-FISSION-001"] = sourceDictionary343 := rfl
+theorem dictionaryFold342 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary342 sourceRows342 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary342 "SFT-PHYS-NUCLEAR-FUSION-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-NUCLEAR-FISSION-001"]) sourceRows343 = _
+ rw [dictionaryInsert342]
+ exact dictionaryFold343
+theorem dictionaryInsert341 : put sourceDictionary341 "SFT-PHYS-NUCLEAR-FISSION-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-NUCLEAR-REACTIONS-001"] = sourceDictionary342 := rfl
+theorem dictionaryFold341 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary341 sourceRows341 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary341 "SFT-PHYS-NUCLEAR-FISSION-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-NUCLEAR-REACTIONS-001"]) sourceRows342 = _
+ rw [dictionaryInsert341]
+ exact dictionaryFold342
+theorem dictionaryInsert340 : put sourceDictionary340 "SFT-PHYS-NUCLEAR-DEUTERON-DINUCLEON-TERMINAL-006" ["SFT-FOUNDATION-HALF-ONE-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-FERMION-BOSON-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005","SFT-PHYS-NUCLEAR-BINDING-001","SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary341 := rfl
+theorem dictionaryFold340 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary340 sourceRows340 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary340 "SFT-PHYS-NUCLEAR-DEUTERON-DINUCLEON-TERMINAL-006" ["SFT-FOUNDATION-HALF-ONE-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-FERMION-BOSON-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005","SFT-PHYS-NUCLEAR-BINDING-001","SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows341 = _
+ rw [dictionaryInsert340]
+ exact dictionaryFold341
+theorem dictionaryInsert339 : put sourceDictionary339 "SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary340 := rfl
+theorem dictionaryFold339 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary339 sourceRows339 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary339 "SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows340 = _
+ rw [dictionaryInsert339]
+ exact dictionaryFold340
+theorem dictionaryInsert338 : put sourceDictionary338 "SFT-PHYS-NUCLEAR-CLOSURE-SEQUENCE-001" ["SFT-PHYS-ATOMIC-CELL-ORBIT-CAPACITY-001","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-NUCLEAR-BINDING-001","SFT-PHYS-NUCLEAR-LEVELS-001","SFT-PHYS-NUCLEAR-REACTIONS-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary339 := rfl
+theorem dictionaryFold338 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary338 sourceRows338 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary338 "SFT-PHYS-NUCLEAR-CLOSURE-SEQUENCE-001" ["SFT-PHYS-ATOMIC-CELL-ORBIT-CAPACITY-001","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-NUCLEAR-BINDING-001","SFT-PHYS-NUCLEAR-LEVELS-001","SFT-PHYS-NUCLEAR-REACTIONS-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows339 = _
+ rw [dictionaryInsert338]
+ exact dictionaryFold339
+theorem dictionaryInsert337 : put sourceDictionary337 "SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005" ["SFT-PHYS-NUCLEAR-BINDING-001","SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005","SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary338 := rfl
+theorem dictionaryFold337 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary337 sourceRows337 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary337 "SFT-PHYS-NUCLEAR-BINDING-CURVE-TERMINAL-005" ["SFT-PHYS-NUCLEAR-BINDING-001","SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005","SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows338 = _
+ rw [dictionaryInsert337]
+ exact dictionaryFold338
+theorem dictionaryInsert336 : put sourceDictionary336 "SFT-PHYS-NUCLEAR-BINDING-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-MIXING-001"] = sourceDictionary337 := rfl
+theorem dictionaryFold336 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary336 sourceRows336 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary336 "SFT-PHYS-NUCLEAR-BINDING-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-MIXING-001"]) sourceRows337 = _
+ rw [dictionaryInsert336]
+ exact dictionaryFold337
+theorem dictionaryInsert335 : put sourceDictionary335 "SFT-PHYS-NEUTRINO-ZERO-NU-BETA-BETA-003" ["SFT-PHYS-NEUTRINO-MAJORANA-003","SFT-PHYS-NEUTRINO-POSITIVE-MASS-003","SFT-PHYS-NEUTRINO-PMNS-CP-PHYSICAL-003"] = sourceDictionary336 := rfl
+theorem dictionaryFold335 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary335 sourceRows335 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary335 "SFT-PHYS-NEUTRINO-ZERO-NU-BETA-BETA-003" ["SFT-PHYS-NEUTRINO-MAJORANA-003","SFT-PHYS-NEUTRINO-POSITIVE-MASS-003","SFT-PHYS-NEUTRINO-PMNS-CP-PHYSICAL-003"]) sourceRows336 = _
+ rw [dictionaryInsert335]
+ exact dictionaryFold336
+theorem dictionaryInsert334 : put sourceDictionary334 "SFT-PHYS-NEUTRINO-SPLITTING-003" ["SFT-PHYS-MATTER-QUARK-INVARIANTS-003","SFT-PHYS-NEUTRINO-PMNS-ANGLES-002","SFT-MATH-ORBIT-NUMBER-THEORY-002"] = sourceDictionary335 := rfl
+theorem dictionaryFold334 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary334 sourceRows334 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary334 "SFT-PHYS-NEUTRINO-SPLITTING-003" ["SFT-PHYS-MATTER-QUARK-INVARIANTS-003","SFT-PHYS-NEUTRINO-PMNS-ANGLES-002","SFT-MATH-ORBIT-NUMBER-THEORY-002"]) sourceRows335 = _
+ rw [dictionaryInsert334]
+ exact dictionaryFold335
+theorem dictionaryInsert333 : put sourceDictionary333 "SFT-PHYS-NEUTRINO-POSITIVE-MASS-003" ["SFT-PHYS-NEUTRINO-SPLITTING-003","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-PHYS-NEUTRINO-PMNS-ANGLES-002"] = sourceDictionary334 := rfl
+theorem dictionaryFold333 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary333 sourceRows333 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary333 "SFT-PHYS-NEUTRINO-POSITIVE-MASS-003" ["SFT-PHYS-NEUTRINO-SPLITTING-003","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-PHYS-NEUTRINO-PMNS-ANGLES-002"]) sourceRows334 = _
+ rw [dictionaryInsert333]
+ exact dictionaryFold334
+theorem dictionaryInsert332 : put sourceDictionary332 "SFT-PHYS-NEUTRINO-PMNS-CP-PHYSICAL-003" ["SFT-PHYS-NEUTRINO-POSITIVE-MASS-003","SFT-PHYS-NEUTRINO-PMNS-ANGLES-002","SFT-PHYS-NEUTRINO-CP-PHASE-002"] = sourceDictionary333 := rfl
+theorem dictionaryFold332 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary332 sourceRows332 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary332 "SFT-PHYS-NEUTRINO-PMNS-CP-PHYSICAL-003" ["SFT-PHYS-NEUTRINO-POSITIVE-MASS-003","SFT-PHYS-NEUTRINO-PMNS-ANGLES-002","SFT-PHYS-NEUTRINO-CP-PHASE-002"]) sourceRows333 = _
+ rw [dictionaryInsert332]
+ exact dictionaryFold333
+theorem dictionaryInsert331 : put sourceDictionary331 "SFT-PHYS-NEUTRINO-PMNS-ANGLES-002" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-QUANTUM-PHYSICAL-STATE-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary332 := rfl
+theorem dictionaryFold331 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary331 sourceRows331 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary331 "SFT-PHYS-NEUTRINO-PMNS-ANGLES-002" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-QUANTUM-PHYSICAL-STATE-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows332 = _
+ rw [dictionaryInsert331]
+ exact dictionaryFold332
+theorem dictionaryInsert330 : put sourceDictionary330 "SFT-PHYS-NEUTRINO-MAJORANA-003" ["SFT-PHYS-NEUTRINO-PMNS-CP-PHYSICAL-003","SFT-PHYS-MATTER-PARTICLE-ANTIPARTICLE-001","SFT-PHYS-ELECTRON-DIRAC-G-FACTOR-002"] = sourceDictionary331 := rfl
+theorem dictionaryFold330 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary330 sourceRows330 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary330 "SFT-PHYS-NEUTRINO-MAJORANA-003" ["SFT-PHYS-NEUTRINO-PMNS-CP-PHYSICAL-003","SFT-PHYS-MATTER-PARTICLE-ANTIPARTICLE-001","SFT-PHYS-ELECTRON-DIRAC-G-FACTOR-002"]) sourceRows331 = _
+ rw [dictionaryInsert330]
+ exact dictionaryFold331
+theorem dictionaryInsert329 : put sourceDictionary329 "SFT-PHYS-NEUTRINO-CP-PHASE-002" ["SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-OBSERVABLE-001"] = sourceDictionary330 := rfl
+theorem dictionaryFold329 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary329 sourceRows329 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary329 "SFT-PHYS-NEUTRINO-CP-PHASE-002" ["SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-OBSERVABLE-001"]) sourceRows330 = _
+ rw [dictionaryInsert329]
+ exact dictionaryFold330
+theorem dictionaryInsert328 : put sourceDictionary328 "SFT-PHYS-MOLECULAR-SPECTRUM-HIERARCHY-004" ["SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-WAVE-RESONANCE-001","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-CHEM-BOND-COVALENT-001"] = sourceDictionary329 := rfl
+theorem dictionaryFold328 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary328 sourceRows328 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary328 "SFT-PHYS-MOLECULAR-SPECTRUM-HIERARCHY-004" ["SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-WAVE-RESONANCE-001","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-CHEM-BOND-COVALENT-001"]) sourceRows329 = _
+ rw [dictionaryInsert328]
+ exact dictionaryFold329
+theorem dictionaryInsert327 : put sourceDictionary327 "SFT-PHYS-MOLECULAR-SPECTROSCOPY-TERMINAL-005" ["SFT-PHYS-MOLECULAR-SPECTRUM-HIERARCHY-004","SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003","SFT-PHYS-WAVE-RESONANCE-001","SFT-CHEM-BOND-COVALENT-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary328 := rfl
+theorem dictionaryFold327 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary327 sourceRows327 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary327 "SFT-PHYS-MOLECULAR-SPECTROSCOPY-TERMINAL-005" ["SFT-PHYS-MOLECULAR-SPECTRUM-HIERARCHY-004","SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003","SFT-PHYS-WAVE-RESONANCE-001","SFT-CHEM-BOND-COVALENT-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows328 = _
+ rw [dictionaryInsert327]
+ exact dictionaryFold328
+theorem dictionaryInsert326 : put sourceDictionary326 "SFT-PHYS-MEDIATOR-RANGE-CHANNEL-TERMINAL-020" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-ELECTROWEAK-TERMINAL-ON-SHELL-003","SFT-PHYS-VALIDATION-ELECTROWEAK-TERMINAL-003","SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-SPACETIME-LIMIT-SPEED-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary327 := rfl
+theorem dictionaryFold326 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary326 sourceRows326 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary326 "SFT-PHYS-MEDIATOR-RANGE-CHANNEL-TERMINAL-020" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-ELECTROWEAK-TERMINAL-ON-SHELL-003","SFT-PHYS-VALIDATION-ELECTROWEAK-TERMINAL-003","SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-SPACETIME-LIMIT-SPEED-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows327 = _
+ rw [dictionaryInsert326]
+ exact dictionaryFold327
+theorem dictionaryInsert325 : put sourceDictionary325 "SFT-PHYS-MECH-WORK-ENERGY-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-FORCE-001"] = sourceDictionary326 := rfl
+theorem dictionaryFold325 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary325 sourceRows325 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary325 "SFT-PHYS-MECH-WORK-ENERGY-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-FORCE-001"]) sourceRows326 = _
+ rw [dictionaryInsert325]
+ exact dictionaryFold326
+theorem dictionaryInsert324 : put sourceDictionary324 "SFT-PHYS-MECH-SPEED-VELOCITY-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001"] = sourceDictionary325 := rfl
+theorem dictionaryFold324 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary324 sourceRows324 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary324 "SFT-PHYS-MECH-SPEED-VELOCITY-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001"]) sourceRows325 = _
+ rw [dictionaryInsert324]
+ exact dictionaryFold325
+theorem dictionaryInsert323 : put sourceDictionary323 "SFT-PHYS-MECH-POWER-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-WORK-ENERGY-001"] = sourceDictionary324 := rfl
+theorem dictionaryFold323 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary323 sourceRows323 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary323 "SFT-PHYS-MECH-POWER-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-WORK-ENERGY-001"]) sourceRows324 = _
+ rw [dictionaryInsert323]
+ exact dictionaryFold324
+theorem dictionaryInsert322 : put sourceDictionary322 "SFT-PHYS-MECH-MOMENTUM-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-INERTIA-001"] = sourceDictionary323 := rfl
+theorem dictionaryFold322 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary322 sourceRows322 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary322 "SFT-PHYS-MECH-MOMENTUM-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-INERTIA-001"]) sourceRows323 = _
+ rw [dictionaryInsert322]
+ exact dictionaryFold323
+theorem dictionaryInsert321 : put sourceDictionary321 "SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-DURATION-001"] = sourceDictionary322 := rfl
+theorem dictionaryFold321 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary321 sourceRows321 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary321 "SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-DURATION-001"]) sourceRows322 = _
+ rw [dictionaryInsert321]
+ exact dictionaryFold322
+theorem dictionaryInsert320 : put sourceDictionary320 "SFT-PHYS-MECH-INERTIA-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-ACCELERATION-001"] = sourceDictionary321 := rfl
+theorem dictionaryFold320 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary320 sourceRows320 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary320 "SFT-PHYS-MECH-INERTIA-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-ACCELERATION-001"]) sourceRows321 = _
+ rw [dictionaryInsert320]
+ exact dictionaryFold321
+theorem dictionaryInsert319 : put sourceDictionary319 "SFT-PHYS-MECH-FORCE-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-MOMENTUM-001"] = sourceDictionary320 := rfl
+theorem dictionaryFold319 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary319 sourceRows319 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary319 "SFT-PHYS-MECH-FORCE-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-MOMENTUM-001"]) sourceRows320 = _
+ rw [dictionaryInsert319]
+ exact dictionaryFold320
+theorem dictionaryInsert318 : put sourceDictionary318 "SFT-PHYS-MECH-EVENT-CHANGE-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001"] = sourceDictionary319 := rfl
+theorem dictionaryFold318 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary318 sourceRows318 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary318 "SFT-PHYS-MECH-EVENT-CHANGE-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001"]) sourceRows319 = _
+ rw [dictionaryInsert318]
+ exact dictionaryFold319
+theorem dictionaryInsert317 : put sourceDictionary317 "SFT-PHYS-MECH-DURATION-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-EVENT-CHANGE-001"] = sourceDictionary318 := rfl
+theorem dictionaryFold317 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary317 sourceRows317 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary317 "SFT-PHYS-MECH-DURATION-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-EVENT-CHANGE-001"]) sourceRows318 = _
+ rw [dictionaryInsert317]
+ exact dictionaryFold318
+theorem dictionaryInsert316 : put sourceDictionary316 "SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001"] = sourceDictionary317 := rfl
+theorem dictionaryFold316 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary316 sourceRows316 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary316 "SFT-PHYS-MECH-CONSTRAINT-OSCILLATION-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001"]) sourceRows317 = _
+ rw [dictionaryInsert316]
+ exact dictionaryFold317
+theorem dictionaryInsert315 : put sourceDictionary315 "SFT-PHYS-MECH-CONSERVATION-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-COMPOSITE-CENTRE-001"] = sourceDictionary316 := rfl
+theorem dictionaryFold315 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary315 sourceRows315 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary315 "SFT-PHYS-MECH-CONSERVATION-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-COMPOSITE-CENTRE-001"]) sourceRows316 = _
+ rw [dictionaryInsert315]
+ exact dictionaryFold316
+theorem dictionaryInsert314 : put sourceDictionary314 "SFT-PHYS-MECH-COMPOSITE-CENTRE-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-ANGULAR-MOMENTUM-001"] = sourceDictionary315 := rfl
+theorem dictionaryFold314 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary314 sourceRows314 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary314 "SFT-PHYS-MECH-COMPOSITE-CENTRE-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-ANGULAR-MOMENTUM-001"]) sourceRows315 = _
+ rw [dictionaryInsert314]
+ exact dictionaryFold315
+theorem dictionaryInsert313 : put sourceDictionary313 "SFT-PHYS-MECH-ANGULAR-MOTION-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-POWER-001"] = sourceDictionary314 := rfl
+theorem dictionaryFold313 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary313 sourceRows313 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary313 "SFT-PHYS-MECH-ANGULAR-MOTION-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-POWER-001"]) sourceRows314 = _
+ rw [dictionaryInsert313]
+ exact dictionaryFold314
+theorem dictionaryInsert312 : put sourceDictionary312 "SFT-PHYS-MECH-ANGULAR-MOMENTUM-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-ANGULAR-MOTION-001"] = sourceDictionary313 := rfl
+theorem dictionaryFold312 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary312 sourceRows312 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary312 "SFT-PHYS-MECH-ANGULAR-MOMENTUM-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-ANGULAR-MOTION-001"]) sourceRows313 = _
+ rw [dictionaryInsert312]
+ exact dictionaryFold313
+theorem dictionaryInsert311 : put sourceDictionary311 "SFT-PHYS-MECH-ACCELERATION-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-SPEED-VELOCITY-001"] = sourceDictionary312 := rfl
+theorem dictionaryFold311 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary311 sourceRows311 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary311 "SFT-PHYS-MECH-ACCELERATION-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-SPEED-VELOCITY-001"]) sourceRows312 = _
+ rw [dictionaryInsert311]
+ exact dictionaryFold312
+theorem dictionaryInsert310 : put sourceDictionary310 "SFT-PHYS-MEAS-VALUE-RECORD-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-REFERENCE-REALIZATION-001"] = sourceDictionary311 := rfl
+theorem dictionaryFold310 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary310 sourceRows310 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary310 "SFT-PHYS-MEAS-VALUE-RECORD-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-REFERENCE-REALIZATION-001"]) sourceRows311 = _
+ rw [dictionaryInsert310]
+ exact dictionaryFold311
+theorem dictionaryInsert309 : put sourceDictionary309 "SFT-PHYS-MEAS-UNIT-COMPARISON-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001"] = sourceDictionary310 := rfl
+theorem dictionaryFold309 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary309 sourceRows309 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary309 "SFT-PHYS-MEAS-UNIT-COMPARISON-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001"]) sourceRows310 = _
+ rw [dictionaryInsert309]
+ exact dictionaryFold310
+theorem dictionaryInsert308 : put sourceDictionary308 "SFT-PHYS-MEAS-UNCERTAINTY-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001"] = sourceDictionary309 := rfl
+theorem dictionaryFold308 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary308 sourceRows308 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary308 "SFT-PHYS-MEAS-UNCERTAINTY-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001"]) sourceRows309 = _
+ rw [dictionaryInsert308]
+ exact dictionaryFold309
+theorem dictionaryInsert307 : put sourceDictionary307 "SFT-PHYS-MEAS-TARGET-CUSTODY-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-COMP-SEC-HASHING-001","SFT-COMP-SEC-COMMITMENT-001","SFT-COMP-SEC-INTEGRITY-001"] = sourceDictionary308 := rfl
+theorem dictionaryFold307 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary307 sourceRows307 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary307 "SFT-PHYS-MEAS-TARGET-CUSTODY-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-COMP-SEC-HASHING-001","SFT-COMP-SEC-COMMITMENT-001","SFT-COMP-SEC-INTEGRITY-001"]) sourceRows308 = _
+ rw [dictionaryInsert307]
+ exact dictionaryFold308
+theorem dictionaryInsert306 : put sourceDictionary306 "SFT-PHYS-MEAS-REFERENCE-REALIZATION-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-UNIT-COMPARISON-001"] = sourceDictionary307 := rfl
+theorem dictionaryFold306 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary306 sourceRows306 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary306 "SFT-PHYS-MEAS-REFERENCE-REALIZATION-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-UNIT-COMPARISON-001"]) sourceRows307 = _
+ rw [dictionaryInsert306]
+ exact dictionaryFold307
+theorem dictionaryInsert305 : put sourceDictionary305 "SFT-PHYS-MEAS-QUANTITY-CARRIER-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001"] = sourceDictionary306 := rfl
+theorem dictionaryFold305 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary305 sourceRows305 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary305 "SFT-PHYS-MEAS-QUANTITY-CARRIER-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001"]) sourceRows306 = _
+ rw [dictionaryInsert305]
+ exact dictionaryFold306
+theorem dictionaryInsert304 : put sourceDictionary304 "SFT-PHYS-MEAS-OBSERVATION-CARRIER-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001"] = sourceDictionary305 := rfl
+theorem dictionaryFold304 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary304 sourceRows304 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary304 "SFT-PHYS-MEAS-OBSERVATION-CARRIER-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001"]) sourceRows305 = _
+ rw [dictionaryInsert304]
+ exact dictionaryFold305
+theorem dictionaryInsert303 : put sourceDictionary303 "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-COMP-SEC-INTEGRITY-001","SFT-COMP-SEC-ADVERSARIAL-001","SFT-COMP-SEM-VERIFICATION-001"] = sourceDictionary304 := rfl
+theorem dictionaryFold303 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary303 sourceRows303 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary303 "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001" ["SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-COMP-SEC-INTEGRITY-001","SFT-COMP-SEC-ADVERSARIAL-001","SFT-COMP-SEM-VERIFICATION-001"]) sourceRows304 = _
+ rw [dictionaryInsert303]
+ exact dictionaryFold304
+theorem dictionaryInsert302 : put sourceDictionary302 "SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-CALIBRATION-001"] = sourceDictionary303 := rfl
+theorem dictionaryFold302 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary302 sourceRows302 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary302 "SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-CALIBRATION-001"]) sourceRows303 = _
+ rw [dictionaryInsert302]
+ exact dictionaryFold303
+theorem dictionaryInsert301 : put sourceDictionary301 "SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001"] = sourceDictionary302 := rfl
+theorem dictionaryFold301 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary301 sourceRows301 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary301 "SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001"]) sourceRows302 = _
+ rw [dictionaryInsert301]
+ exact dictionaryFold302
+theorem dictionaryInsert300 : put sourceDictionary300 "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-INFO-ENCODING-DECODING-001","SFT-COMP-FORM-STATE-TRANSITION-001","SFT-COMP-FORM-OPERATIONAL-PROCESS-001","SFT-COMP-SEM-EVALUATION-001","SFT-COMP-SEM-TERMINATION-001","SFT-COMP-SEM-VERIFICATION-001"] = sourceDictionary301 := rfl
+theorem dictionaryFold300 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary300 sourceRows300 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary300 "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-INFO-ENCODING-DECODING-001","SFT-COMP-FORM-STATE-TRANSITION-001","SFT-COMP-FORM-OPERATIONAL-PROCESS-001","SFT-COMP-SEM-EVALUATION-001","SFT-COMP-SEM-TERMINATION-001","SFT-COMP-SEM-VERIFICATION-001"]) sourceRows301 = _
+ rw [dictionaryInsert300]
+ exact dictionaryFold301
+theorem dictionaryInsert299 : put sourceDictionary299 "SFT-PHYS-MEAS-CALIBRATION-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-UNCERTAINTY-001"] = sourceDictionary300 := rfl
+theorem dictionaryFold299 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary299 sourceRows299 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary299 "SFT-PHYS-MEAS-CALIBRATION-001" ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-UNCERTAINTY-001"]) sourceRows300 = _
+ rw [dictionaryInsert299]
+ exact dictionaryFold300
+theorem dictionaryInsert298 : put sourceDictionary298 "SFT-PHYS-MEAS-BOUNDARY-GROWTH-001" ["SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-FIELD-SOURCE-RESPONSE-001","SFT-PHYS-FIELD-GEOMETRIC-DILUTION-001"] = sourceDictionary299 := rfl
+theorem dictionaryFold298 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary298 sourceRows298 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary298 "SFT-PHYS-MEAS-BOUNDARY-GROWTH-001" ["SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-FIELD-SOURCE-RESPONSE-001","SFT-PHYS-FIELD-GEOMETRIC-DILUTION-001"]) sourceRows299 = _
+ rw [dictionaryInsert298]
+ exact dictionaryFold299
+theorem dictionaryInsert297 : put sourceDictionary297 "SFT-PHYS-MATTER-SCATTERING-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001"] = sourceDictionary298 := rfl
+theorem dictionaryFold297 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary297 sourceRows297 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary297 "SFT-PHYS-MATTER-SCATTERING-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001"]) sourceRows298 = _
+ rw [dictionaryInsert297]
+ exact dictionaryFold298
+theorem dictionaryInsert296 : put sourceDictionary296 "SFT-PHYS-MATTER-QUARK-INVARIANTS-003" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001"] = sourceDictionary297 := rfl
+theorem dictionaryFold296 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary296 sourceRows296 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary296 "SFT-PHYS-MATTER-QUARK-INVARIANTS-003" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001"]) sourceRows297 = _
+ rw [dictionaryInsert296]
+ exact dictionaryFold297
+theorem dictionaryInsert295 : put sourceDictionary295 "SFT-PHYS-MATTER-QUARK-DRESSING-003" ["SFT-PHYS-MATTER-QUARK-CUBICS-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-VALIDATION-INVERSE-FINE-STRUCTURE-001"] = sourceDictionary296 := rfl
+theorem dictionaryFold295 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary295 sourceRows295 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary295 "SFT-PHYS-MATTER-QUARK-DRESSING-003" ["SFT-PHYS-MATTER-QUARK-CUBICS-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-VALIDATION-INVERSE-FINE-STRUCTURE-001"]) sourceRows296 = _
+ rw [dictionaryInsert295]
+ exact dictionaryFold296
+theorem dictionaryInsert294 : put sourceDictionary294 "SFT-PHYS-MATTER-QUARK-CUBICS-003" ["SFT-PHYS-MATTER-QUARK-INVARIANTS-003","SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001","SFT-MATH-ALGEBRA-001"] = sourceDictionary295 := rfl
+theorem dictionaryFold294 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary294 sourceRows294 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary294 "SFT-PHYS-MATTER-QUARK-CUBICS-003" ["SFT-PHYS-MATTER-QUARK-INVARIANTS-003","SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001","SFT-MATH-ALGEBRA-001"]) sourceRows295 = _
+ rw [dictionaryInsert294]
+ exact dictionaryFold295
+theorem dictionaryInsert293 : put sourceDictionary293 "SFT-PHYS-MATTER-PROTON-ELECTRON-TERMINAL-004" ["SFT-PHYS-MATTER-PROTON-ELECTRON-003","SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary294 := rfl
+theorem dictionaryFold293 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary293 sourceRows293 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary293 "SFT-PHYS-MATTER-PROTON-ELECTRON-TERMINAL-004" ["SFT-PHYS-MATTER-PROTON-ELECTRON-003","SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows294 = _
+ rw [dictionaryInsert293]
+ exact dictionaryFold294
+theorem dictionaryInsert292 : put sourceDictionary292 "SFT-PHYS-MATTER-PROTON-ELECTRON-003" ["SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-MATTER-QUARK-CUBICS-003"] = sourceDictionary293 := rfl
+theorem dictionaryFold292 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary292 sourceRows292 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary292 "SFT-PHYS-MATTER-PROTON-ELECTRON-003" ["SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-MATTER-QUARK-CUBICS-003"]) sourceRows293 = _
+ rw [dictionaryInsert292]
+ exact dictionaryFold293
+theorem dictionaryInsert291 : put sourceDictionary291 "SFT-PHYS-MATTER-PARTICLE-SPECTRUM-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001"] = sourceDictionary292 := rfl
+theorem dictionaryFold291 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary291 sourceRows291 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary291 "SFT-PHYS-MATTER-PARTICLE-SPECTRUM-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001"]) sourceRows292 = _
+ rw [dictionaryInsert291]
+ exact dictionaryFold292
+theorem dictionaryInsert290 : put sourceDictionary290 "SFT-PHYS-MATTER-PARTICLE-ANTIPARTICLE-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-MASS-ENERGY-001"] = sourceDictionary291 := rfl
+theorem dictionaryFold290 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary290 sourceRows290 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary290 "SFT-PHYS-MATTER-PARTICLE-ANTIPARTICLE-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-MASS-ENERGY-001"]) sourceRows291 = _
+ rw [dictionaryInsert290]
+ exact dictionaryFold291
+theorem dictionaryInsert289 : put sourceDictionary289 "SFT-PHYS-MATTER-MIXING-CORRESPONDENCE-003" ["SFT-PHYS-MATTER-CKM-FIBRE-003","SFT-PHYS-NEUTRINO-PMNS-ANGLES-002","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002"] = sourceDictionary290 := rfl
+theorem dictionaryFold289 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary289 sourceRows289 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary289 "SFT-PHYS-MATTER-MIXING-CORRESPONDENCE-003" ["SFT-PHYS-MATTER-CKM-FIBRE-003","SFT-PHYS-NEUTRINO-PMNS-ANGLES-002","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002"]) sourceRows290 = _
+ rw [dictionaryInsert289]
+ exact dictionaryFold290
+theorem dictionaryInsert288 : put sourceDictionary288 "SFT-PHYS-MATTER-MIXING-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-DECAY-001"] = sourceDictionary289 := rfl
+theorem dictionaryFold288 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary288 sourceRows288 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary288 "SFT-PHYS-MATTER-MIXING-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-DECAY-001"]) sourceRows289 = _
+ rw [dictionaryInsert288]
+ exact dictionaryFold289
+theorem dictionaryInsert287 : put sourceDictionary287 "SFT-PHYS-MATTER-MIRROR-MASS-CLOSURE-003" ["SFT-PHYS-MATTER-MIXING-CORRESPONDENCE-003","SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003","SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001"] = sourceDictionary288 := rfl
+theorem dictionaryFold287 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary287 sourceRows287 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary287 "SFT-PHYS-MATTER-MIRROR-MASS-CLOSURE-003" ["SFT-PHYS-MATTER-MIXING-CORRESPONDENCE-003","SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003","SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001"]) sourceRows288 = _
+ rw [dictionaryInsert287]
+ exact dictionaryFold288
+theorem dictionaryInsert286 : put sourceDictionary286 "SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-COUNT-001","SFT-MATH-DISCRETE-001"] = sourceDictionary287 := rfl
+theorem dictionaryFold286 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary286 sourceRows286 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary286 "SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-COUNT-001","SFT-MATH-DISCRETE-001"]) sourceRows287 = _
+ rw [dictionaryInsert286]
+ exact dictionaryFold287
+theorem dictionaryInsert285 : put sourceDictionary285 "SFT-PHYS-MATTER-MASS-ENERGY-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001"] = sourceDictionary286 := rfl
+theorem dictionaryFold285 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary285 sourceRows285 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary285 "SFT-PHYS-MATTER-MASS-ENERGY-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001"]) sourceRows286 = _
+ rw [dictionaryInsert285]
+ exact dictionaryFold286
+theorem dictionaryInsert284 : put sourceDictionary284 "SFT-PHYS-MATTER-INTER-ENTRY-COUPLING-003" ["SFT-PHYS-MATTER-MIXING-CORRESPONDENCE-003","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002"] = sourceDictionary285 := rfl
+theorem dictionaryFold284 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary284 sourceRows284 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary284 "SFT-PHYS-MATTER-INTER-ENTRY-COUPLING-003" ["SFT-PHYS-MATTER-MIXING-CORRESPONDENCE-003","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002"]) sourceRows285 = _
+ rw [dictionaryInsert284]
+ exact dictionaryFold285
+theorem dictionaryInsert283 : put sourceDictionary283 "SFT-PHYS-MATTER-GENERATION-DEPTH-003" ["SFT-PHYS-MATTER-MIXING-CORRESPONDENCE-003","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-FOLD-DYNAMICS-001"] = sourceDictionary284 := rfl
+theorem dictionaryFold283 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary283 sourceRows283 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary283 "SFT-PHYS-MATTER-GENERATION-DEPTH-003" ["SFT-PHYS-MATTER-MIXING-CORRESPONDENCE-003","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-FOLD-DYNAMICS-001"]) sourceRows284 = _
+ rw [dictionaryInsert283]
+ exact dictionaryFold284
+theorem dictionaryInsert282 : put sourceDictionary282 "SFT-PHYS-MATTER-FERMION-BOSON-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-PARTICLE-ANTIPARTICLE-001"] = sourceDictionary283 := rfl
+theorem dictionaryFold282 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary282 sourceRows282 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary282 "SFT-PHYS-MATTER-FERMION-BOSON-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-PARTICLE-ANTIPARTICLE-001"]) sourceRows283 = _
+ rw [dictionaryInsert282]
+ exact dictionaryFold283
+theorem dictionaryInsert281 : put sourceDictionary281 "SFT-PHYS-MATTER-DECAY-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-SCATTERING-001"] = sourceDictionary282 := rfl
+theorem dictionaryFold281 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary281 sourceRows281 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary281 "SFT-PHYS-MATTER-DECAY-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-SCATTERING-001"]) sourceRows282 = _
+ rw [dictionaryInsert281]
+ exact dictionaryFold282
+theorem dictionaryInsert280 : put sourceDictionary280 "SFT-PHYS-MATTER-CONSERVED-LABELS-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-FERMION-BOSON-001"] = sourceDictionary281 := rfl
+theorem dictionaryFold280 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary280 sourceRows280 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary280 "SFT-PHYS-MATTER-CONSERVED-LABELS-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-FERMION-BOSON-001"]) sourceRows281 = _
+ rw [dictionaryInsert280]
+ exact dictionaryFold281
+theorem dictionaryInsert279 : put sourceDictionary279 "SFT-PHYS-MATTER-CONFINEMENT-LIFT-003" ["SFT-PHYS-MATTER-QUARK-CUBICS-003","SFT-PHYS-MATTER-QUARK-INVARIANTS-003","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001"] = sourceDictionary280 := rfl
+theorem dictionaryFold279 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary279 sourceRows279 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary279 "SFT-PHYS-MATTER-CONFINEMENT-LIFT-003" ["SFT-PHYS-MATTER-QUARK-CUBICS-003","SFT-PHYS-MATTER-QUARK-INVARIANTS-003","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001"]) sourceRows280 = _
+ rw [dictionaryInsert279]
+ exact dictionaryFold280
+theorem dictionaryInsert278 : put sourceDictionary278 "SFT-PHYS-MATTER-COMPOSITE-HADRONS-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-PARTICLE-SPECTRUM-001"] = sourceDictionary279 := rfl
+theorem dictionaryFold278 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary278 sourceRows278 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary278 "SFT-PHYS-MATTER-COMPOSITE-HADRONS-001" ["SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-MATTER-PARTICLE-SPECTRUM-001"]) sourceRows279 = _
+ rw [dictionaryInsert278]
+ exact dictionaryFold279
+theorem dictionaryInsert277 : put sourceDictionary277 "SFT-PHYS-MATTER-CKM-TERMINAL-004" ["SFT-PHYS-MATTER-CKM-PHYSICAL-003","SFT-PHYS-MATTER-QUARK-DRESSING-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001"] = sourceDictionary278 := rfl
+theorem dictionaryFold277 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary277 sourceRows277 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary277 "SFT-PHYS-MATTER-CKM-TERMINAL-004" ["SFT-PHYS-MATTER-CKM-PHYSICAL-003","SFT-PHYS-MATTER-QUARK-DRESSING-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001"]) sourceRows278 = _
+ rw [dictionaryInsert277]
+ exact dictionaryFold278
+theorem dictionaryInsert276 : put sourceDictionary276 "SFT-PHYS-MATTER-CKM-PHYSICAL-003" ["SFT-PHYS-MATTER-QUARK-DRESSING-003","SFT-PHYS-MATTER-CKM-FIBRE-003","SFT-PHYS-NEUTRINO-CP-PHASE-002"] = sourceDictionary277 := rfl
+theorem dictionaryFold276 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary276 sourceRows276 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary276 "SFT-PHYS-MATTER-CKM-PHYSICAL-003" ["SFT-PHYS-MATTER-QUARK-DRESSING-003","SFT-PHYS-MATTER-CKM-FIBRE-003","SFT-PHYS-NEUTRINO-CP-PHASE-002"]) sourceRows277 = _
+ rw [dictionaryInsert276]
+ exact dictionaryFold277
+theorem dictionaryInsert275 : put sourceDictionary275 "SFT-PHYS-MATTER-CKM-FIBRE-003" ["SFT-PHYS-MATTER-QUARK-INVARIANTS-003","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary276 := rfl
+theorem dictionaryFold275 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary275 sourceRows275 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary275 "SFT-PHYS-MATTER-CKM-FIBRE-003" ["SFT-PHYS-MATTER-QUARK-INVARIANTS-003","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-MATH-COMBINATORICS-001"]) sourceRows276 = _
+ rw [dictionaryInsert275]
+ exact dictionaryFold276
+theorem dictionaryInsert274 : put sourceDictionary274 "SFT-PHYS-MATTER-BARYON-PHOTON-TERMINAL-004" ["SFT-PHYS-MATTER-CKM-TERMINAL-004","SFT-PHYS-MATTER-BARYON-PHOTON-003","SFT-PHYS-COSMO-COMPLETE-BUDGET-001"] = sourceDictionary275 := rfl
+theorem dictionaryFold274 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary274 sourceRows274 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary274 "SFT-PHYS-MATTER-BARYON-PHOTON-TERMINAL-004" ["SFT-PHYS-MATTER-CKM-TERMINAL-004","SFT-PHYS-MATTER-BARYON-PHOTON-003","SFT-PHYS-COSMO-COMPLETE-BUDGET-001"]) sourceRows275 = _
+ rw [dictionaryInsert274]
+ exact dictionaryFold275
+theorem dictionaryInsert273 : put sourceDictionary273 "SFT-PHYS-MATTER-BARYON-PHOTON-003" ["SFT-PHYS-MATTER-CKM-PHYSICAL-003","SFT-PHYS-NEUTRINO-CP-PHASE-002","SFT-PHYS-COSMO-COMPLETE-BUDGET-001"] = sourceDictionary274 := rfl
+theorem dictionaryFold273 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary273 sourceRows273 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary273 "SFT-PHYS-MATTER-BARYON-PHOTON-003" ["SFT-PHYS-MATTER-CKM-PHYSICAL-003","SFT-PHYS-NEUTRINO-CP-PHASE-002","SFT-PHYS-COSMO-COMPLETE-BUDGET-001"]) sourceRows274 = _
+ rw [dictionaryInsert273]
+ exact dictionaryFold274
+theorem dictionaryInsert272 : put sourceDictionary272 "SFT-PHYS-LYAPUNOV-KS-CORRESPONDENCE-TERMINAL-008" ["SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"] = sourceDictionary273 := rfl
+theorem dictionaryFold272 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary272 sourceRows272 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary272 "SFT-PHYS-LYAPUNOV-KS-CORRESPONDENCE-TERMINAL-008" ["SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"]) sourceRows273 = _
+ rw [dictionaryInsert272]
+ exact dictionaryFold273
+theorem dictionaryInsert271 : put sourceDictionary271 "SFT-PHYS-LATTICE-OPERATOR-TERMINAL-022" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003","SFT-PHYS-FIELD-MAXWELL-PLANAR-CLOSURE-003","SFT-PHYS-FIELD-MAXWELL-THREE-SPACE-CLOSURE-003","SFT-PHYS-WAVE-DISPERSION-001","SFT-PHYS-DYNAMICS-FREE-PHASE-DISPERSION-003","SFT-PHYS-VALIDATION-ATOMIC-CUBIC-SUPPORT-004","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary272 := rfl
+theorem dictionaryFold271 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary271 sourceRows271 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary271 "SFT-PHYS-LATTICE-OPERATOR-TERMINAL-022" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003","SFT-PHYS-FIELD-MAXWELL-PLANAR-CLOSURE-003","SFT-PHYS-FIELD-MAXWELL-THREE-SPACE-CLOSURE-003","SFT-PHYS-WAVE-DISPERSION-001","SFT-PHYS-DYNAMICS-FREE-PHASE-DISPERSION-003","SFT-PHYS-VALIDATION-ATOMIC-CUBIC-SUPPORT-004","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows272 = _
+ rw [dictionaryInsert271]
+ exact dictionaryFold272
+theorem dictionaryInsert270 : put sourceDictionary270 "SFT-PHYS-INTERACTION-UNIFICATION-TERMINAL-025" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-STRONG-RUNNING-DIRECTION-002","SFT-PHYS-VACUUM-POLARIZATION-RUNNING-003","SFT-PHYS-COUPLING-RUNNING-CONVERGENCE-TERMINAL-006","SFT-PHYS-VALIDATION-FORCE-SECTOR-ANCHORS-003","SFT-PHYS-VALIDATION-VACUUM-POLARIZATION-003","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary271 := rfl
+theorem dictionaryFold270 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary270 sourceRows270 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary270 "SFT-PHYS-INTERACTION-UNIFICATION-TERMINAL-025" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-STRONG-RUNNING-DIRECTION-002","SFT-PHYS-VACUUM-POLARIZATION-RUNNING-003","SFT-PHYS-COUPLING-RUNNING-CONVERGENCE-TERMINAL-006","SFT-PHYS-VALIDATION-FORCE-SECTOR-ANCHORS-003","SFT-PHYS-VALIDATION-VACUUM-POLARIZATION-003","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows271 = _
+ rw [dictionaryInsert270]
+ exact dictionaryFold271
+theorem dictionaryInsert269 : put sourceDictionary269 "SFT-PHYS-INFLATION-GROWTH-TERMINAL-039" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-PART-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-GRAVITY-GRAVITON-POLARIZATION-003","SFT-PHYS-COSMO-EXPANSION-001","SFT-PHYS-COSMO-SPATIAL-FLATNESS-001","SFT-PHYS-COSMO-STRUCTURE-GROWTH-001","SFT-PHYS-COSMO-COMPONENT-TRANSPORT-TERMINAL-032"] = sourceDictionary270 := rfl
+theorem dictionaryFold269 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary269 sourceRows269 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary269 "SFT-PHYS-INFLATION-GROWTH-TERMINAL-039" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-PART-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-GRAVITY-GRAVITON-POLARIZATION-003","SFT-PHYS-COSMO-EXPANSION-001","SFT-PHYS-COSMO-SPATIAL-FLATNESS-001","SFT-PHYS-COSMO-STRUCTURE-GROWTH-001","SFT-PHYS-COSMO-COMPONENT-TRANSPORT-TERMINAL-032"]) sourceRows270 = _
+ rw [dictionaryInsert269]
+ exact dictionaryFold270
+theorem dictionaryInsert268 : put sourceDictionary268 "SFT-PHYS-HIGGS-SYMMETRY-TERMINAL-065" ["SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-ONE-001","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-MEDIATOR-RANGE-CHANNEL-TERMINAL-020","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-PARTICLE-MODE-GENERATION-TERMINAL-051","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"] = sourceDictionary269 := rfl
+theorem dictionaryFold268 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary268 sourceRows268 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary268 "SFT-PHYS-HIGGS-SYMMETRY-TERMINAL-065" ["SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-ONE-001","SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-MEDIATOR-RANGE-CHANNEL-TERMINAL-020","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-PARTICLE-MODE-GENERATION-TERMINAL-051","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"]) sourceRows269 = _
+ rw [dictionaryInsert268]
+ exact dictionaryFold269
+theorem dictionaryInsert267 : put sourceDictionary267 "SFT-PHYS-HADRON-REGGE-TERMINAL-005" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary268 := rfl
+theorem dictionaryFold267 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary267 sourceRows267 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary267 "SFT-PHYS-HADRON-REGGE-TERMINAL-005" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-NUCLEAR-COLOUR-COUPLING-001","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows268 = _
+ rw [dictionaryInsert267]
+ exact dictionaryFold268
+theorem dictionaryInsert266 : put sourceDictionary266 "SFT-PHYS-HADRON-REGGE-DIMENSIONAL-TERMINAL-059" ["SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-PHYS-RELATIVITY-TWO-HAND-DIRAC-SQUARE-003","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"] = sourceDictionary267 := rfl
+theorem dictionaryFold266 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary266 sourceRows266 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary266 "SFT-PHYS-HADRON-REGGE-DIMENSIONAL-TERMINAL-059" ["SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-PHYS-RELATIVITY-TWO-HAND-DIRAC-SQUARE-003","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"]) sourceRows267 = _
+ rw [dictionaryInsert266]
+ exact dictionaryFold267
+theorem dictionaryInsert265 : put sourceDictionary265 "SFT-PHYS-GRAVITY-WEAK-FIELD-FLUX-003" ["SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-GRAVITY-FIELD-SOURCE-001","SFT-PHYS-MECH-CONSERVATION-001"] = sourceDictionary266 := rfl
+theorem dictionaryFold265 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary265 sourceRows265 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary265 "SFT-PHYS-GRAVITY-WEAK-FIELD-FLUX-003" ["SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-GRAVITY-FIELD-SOURCE-001","SFT-PHYS-MECH-CONSERVATION-001"]) sourceRows266 = _
+ rw [dictionaryInsert265]
+ exact dictionaryFold266
+theorem dictionaryInsert264 : put sourceDictionary264 "SFT-PHYS-GRAVITY-WAVE-QUADRUPOLE-003" ["SFT-PHYS-GRAVITY-GRAVITON-POLARIZATION-003","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-FIELD-MAXWELL-THREE-SPACE-CLOSURE-003"] = sourceDictionary265 := rfl
+theorem dictionaryFold264 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary264 sourceRows264 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary264 "SFT-PHYS-GRAVITY-WAVE-QUADRUPOLE-003" ["SFT-PHYS-GRAVITY-GRAVITON-POLARIZATION-003","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-FIELD-MAXWELL-THREE-SPACE-CLOSURE-003"]) sourceRows265 = _
+ rw [dictionaryInsert264]
+ exact dictionaryFold265
+theorem dictionaryInsert263 : put sourceDictionary263 "SFT-PHYS-GRAVITY-WAVE-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-GRAVITY-FIELD-SOURCE-001"] = sourceDictionary264 := rfl
+theorem dictionaryFold263 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary263 sourceRows263 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary263 "SFT-PHYS-GRAVITY-WAVE-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-GRAVITY-FIELD-SOURCE-001"]) sourceRows264 = _
+ rw [dictionaryInsert263]
+ exact dictionaryFold264
+theorem dictionaryInsert262 : put sourceDictionary262 "SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003" ["SFT-PHYS-GRAVITY-WAVE-QUADRUPOLE-003","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003"] = sourceDictionary263 := rfl
+theorem dictionaryFold262 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary262 sourceRows262 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary262 "SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003" ["SFT-PHYS-GRAVITY-WAVE-QUADRUPOLE-003","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003"]) sourceRows263 = _
+ rw [dictionaryInsert262]
+ exact dictionaryFold263
+theorem dictionaryInsert261 : put sourceDictionary261 "SFT-PHYS-GRAVITY-STATIC-CLOCK-003" ["SFT-PHYS-SPACETIME-EXACT-INTERVAL-003","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003"] = sourceDictionary262 := rfl
+theorem dictionaryFold261 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary261 sourceRows261 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary261 "SFT-PHYS-GRAVITY-STATIC-CLOCK-003" ["SFT-PHYS-SPACETIME-EXACT-INTERVAL-003","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003"]) sourceRows262 = _
+ rw [dictionaryInsert261]
+ exact dictionaryFold262
+theorem dictionaryInsert260 : put sourceDictionary260 "SFT-PHYS-GRAVITY-REDSHIFT-EQUIVALENCE-003" ["SFT-PHYS-GRAVITY-STATIC-CLOCK-003","SFT-PHYS-GRAVITY-EQUIVALENCE-001","SFT-PHYS-MECH-ACCELERATION-001"] = sourceDictionary261 := rfl
+theorem dictionaryFold260 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary260 sourceRows260 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary260 "SFT-PHYS-GRAVITY-REDSHIFT-EQUIVALENCE-003" ["SFT-PHYS-GRAVITY-STATIC-CLOCK-003","SFT-PHYS-GRAVITY-EQUIVALENCE-001","SFT-PHYS-MECH-ACCELERATION-001"]) sourceRows261 = _
+ rw [dictionaryInsert260]
+ exact dictionaryFold261
+theorem dictionaryInsert259 : put sourceDictionary259 "SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003" ["SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003","SFT-PHYS-GRAVITY-FIELD-SOURCE-001","SFT-PHYS-MATTER-MASS-ENERGY-001"] = sourceDictionary260 := rfl
+theorem dictionaryFold259 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary259 sourceRows259 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary259 "SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003" ["SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003","SFT-PHYS-GRAVITY-FIELD-SOURCE-001","SFT-PHYS-MATTER-MASS-ENERGY-001"]) sourceRows260 = _
+ rw [dictionaryInsert259]
+ exact dictionaryFold260
+theorem dictionaryInsert258 : put sourceDictionary258 "SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003" ["SFT-PHYS-GRAVITY-REDSHIFT-EQUIVALENCE-003","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001"] = sourceDictionary259 := rfl
+theorem dictionaryFold258 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary258 sourceRows258 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary258 "SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003" ["SFT-PHYS-GRAVITY-REDSHIFT-EQUIVALENCE-003","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001"]) sourceRows259 = _
+ rw [dictionaryInsert258]
+ exact dictionaryFold259
+theorem dictionaryInsert257 : put sourceDictionary257 "SFT-PHYS-GRAVITY-HORIZON-INFORMATION-003" ["SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003","SFT-INFO-CONSERVATION-LOSS-001","SFT-QUANTUM-MEASUREMENT-001"] = sourceDictionary258 := rfl
+theorem dictionaryFold257 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary257 sourceRows257 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary257 "SFT-PHYS-GRAVITY-HORIZON-INFORMATION-003" ["SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003","SFT-INFO-CONSERVATION-LOSS-001","SFT-QUANTUM-MEASUREMENT-001"]) sourceRows258 = _
+ rw [dictionaryInsert257]
+ exact dictionaryFold258
+theorem dictionaryInsert256 : put sourceDictionary256 "SFT-PHYS-GRAVITY-HORIZON-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-GRAVITY-WAVE-001"] = sourceDictionary257 := rfl
+theorem dictionaryFold256 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary256 sourceRows256 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary256 "SFT-PHYS-GRAVITY-HORIZON-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-GRAVITY-WAVE-001"]) sourceRows257 = _
+ rw [dictionaryInsert256]
+ exact dictionaryFold257
+theorem dictionaryInsert255 : put sourceDictionary255 "SFT-PHYS-GRAVITY-GRAVITON-POLARIZATION-003" ["SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-GRAVITY-WAVE-001"] = sourceDictionary256 := rfl
+theorem dictionaryFold255 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary255 sourceRows255 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary255 "SFT-PHYS-GRAVITY-GRAVITON-POLARIZATION-003" ["SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-GRAVITY-WAVE-001"]) sourceRows256 = _
+ rw [dictionaryInsert255]
+ exact dictionaryFold256
+theorem dictionaryInsert254 : put sourceDictionary254 "SFT-PHYS-GRAVITY-GEODESIC-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-GRAVITY-CURVATURE-001"] = sourceDictionary255 := rfl
+theorem dictionaryFold254 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary254 sourceRows254 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary254 "SFT-PHYS-GRAVITY-GEODESIC-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-GRAVITY-CURVATURE-001"]) sourceRows255 = _
+ rw [dictionaryInsert254]
+ exact dictionaryFold255
+theorem dictionaryInsert253 : put sourceDictionary253 "SFT-PHYS-GRAVITY-FIELD-SOURCE-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-GRAVITY-GEODESIC-001"] = sourceDictionary254 := rfl
+theorem dictionaryFold253 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary253 sourceRows253 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary253 "SFT-PHYS-GRAVITY-FIELD-SOURCE-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-GRAVITY-GEODESIC-001"]) sourceRows254 = _
+ rw [dictionaryInsert253]
+ exact dictionaryFold254
+theorem dictionaryInsert252 : put sourceDictionary252 "SFT-PHYS-GRAVITY-EQUIVALENCE-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-LENGTH-RELATION-001"] = sourceDictionary253 := rfl
+theorem dictionaryFold252 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary252 sourceRows252 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary252 "SFT-PHYS-GRAVITY-EQUIVALENCE-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-SPACETIME-LENGTH-RELATION-001"]) sourceRows253 = _
+ rw [dictionaryInsert252]
+ exact dictionaryFold253
+theorem dictionaryInsert251 : put sourceDictionary251 "SFT-PHYS-GRAVITY-CURVATURE-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-GRAVITY-EQUIVALENCE-001"] = sourceDictionary252 := rfl
+theorem dictionaryFold251 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary251 sourceRows251 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary251 "SFT-PHYS-GRAVITY-CURVATURE-001" ["SFT-PHYS-MECH-EVENT-CHANGE-001","SFT-PHYS-MECH-LOCATION-DISPLACEMENT-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-WAVE-PROPAGATION-001","SFT-PHYS-MATTER-MASS-ENERGY-001","SFT-PHYS-GRAVITY-EQUIVALENCE-001"]) sourceRows252 = _
+ rw [dictionaryInsert251]
+ exact dictionaryFold252
+theorem dictionaryInsert250 : put sourceDictionary250 "SFT-PHYS-GRAVITATIONAL-WAVE-CHIRP-RINGDOWN-TERMINAL-073" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-MECH-ANGULAR-MOTION-001","SFT-PHYS-WAVE-PERIOD-FREQUENCY-001","SFT-PHYS-ORBITAL-DIMENSION-STABILITY-TERMINAL-009","SFT-PHYS-GRAVITY-WAVE-QUADRUPOLE-003","SFT-PHYS-QUADRUPOLE-RADIATED-POWER-TERMINAL-012","SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003","SFT-PHYS-COMPACT-HORIZON-THERMODYNAMICS-TERMINAL-071"] = sourceDictionary251 := rfl
+theorem dictionaryFold250 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary250 sourceRows250 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary250 "SFT-PHYS-GRAVITATIONAL-WAVE-CHIRP-RINGDOWN-TERMINAL-073" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-MECH-ANGULAR-MOTION-001","SFT-PHYS-WAVE-PERIOD-FREQUENCY-001","SFT-PHYS-ORBITAL-DIMENSION-STABILITY-TERMINAL-009","SFT-PHYS-GRAVITY-WAVE-QUADRUPOLE-003","SFT-PHYS-QUADRUPOLE-RADIATED-POWER-TERMINAL-012","SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003","SFT-PHYS-COMPACT-HORIZON-THERMODYNAMICS-TERMINAL-071"]) sourceRows251 = _
+ rw [dictionaryInsert250]
+ exact dictionaryFold251
+theorem dictionaryInsert249 : put sourceDictionary249 "SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-MATH-COMBINATORICS-001"] = sourceDictionary250 := rfl
+theorem dictionaryFold249 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary249 sourceRows249 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary249 "SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-MATH-COMBINATORICS-001"]) sourceRows250 = _
+ rw [dictionaryInsert249]
+ exact dictionaryFold250
+theorem dictionaryInsert248 : put sourceDictionary248 "SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003" ["SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002","SFT-PHYS-STRONG-RUNNING-DIRECTION-002","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-MATTER-MIXING-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary249 := rfl
+theorem dictionaryFold248 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary248 sourceRows248 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary248 "SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003" ["SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002","SFT-PHYS-STRONG-RUNNING-DIRECTION-002","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-MATTER-MIXING-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows249 = _
+ rw [dictionaryInsert248]
+ exact dictionaryFold249
+theorem dictionaryInsert247 : put sourceDictionary247 "SFT-PHYS-FOLD-UNIVERSE-TRANSPORT-TERMINAL-024" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-ALGEBRA-001","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-PHYS-QUANTUM-ENTANGLEMENT-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary248 := rfl
+theorem dictionaryFold247 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary247 sourceRows247 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary247 "SFT-PHYS-FOLD-UNIVERSE-TRANSPORT-TERMINAL-024" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-ALGEBRA-001","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-PHYS-QUANTUM-ENTANGLEMENT-001","SFT-PHYS-QUANTUM-NO-SIGNALLING-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001","SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows248 = _
+ rw [dictionaryInsert247]
+ exact dictionaryFold248
+theorem dictionaryInsert246 : put sourceDictionary246 "SFT-PHYS-FLUID-VISCOSITY-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-FLUID-INVISCID-001"] = sourceDictionary247 := rfl
+theorem dictionaryFold246 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary246 sourceRows246 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary246 "SFT-PHYS-FLUID-VISCOSITY-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-FLUID-INVISCID-001"]) sourceRows247 = _
+ rw [dictionaryInsert246]
+ exact dictionaryFold247
+theorem dictionaryInsert245 : put sourceDictionary245 "SFT-PHYS-FLUID-TURBULENCE-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-FLUID-VISCOSITY-001"] = sourceDictionary246 := rfl
+theorem dictionaryFold245 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary245 sourceRows245 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary245 "SFT-PHYS-FLUID-TURBULENCE-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-FLUID-VISCOSITY-001"]) sourceRows246 = _
+ rw [dictionaryInsert245]
+ exact dictionaryFold246
+theorem dictionaryInsert244 : put sourceDictionary244 "SFT-PHYS-FLUID-PRESSURE-STRESS-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-FLUID-DENSITY-001"] = sourceDictionary245 := rfl
+theorem dictionaryFold244 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary244 sourceRows244 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary244 "SFT-PHYS-FLUID-PRESSURE-STRESS-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-FLUID-DENSITY-001"]) sourceRows245 = _
+ rw [dictionaryInsert244]
+ exact dictionaryFold245
+theorem dictionaryInsert243 : put sourceDictionary243 "SFT-PHYS-FLUID-INVISCID-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-FLUID-CONSERVATION-001"] = sourceDictionary244 := rfl
+theorem dictionaryFold243 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary243 sourceRows243 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary243 "SFT-PHYS-FLUID-INVISCID-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-FLUID-CONSERVATION-001"]) sourceRows244 = _
+ rw [dictionaryInsert243]
+ exact dictionaryFold244
+theorem dictionaryInsert242 : put sourceDictionary242 "SFT-PHYS-FLUID-DENSITY-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-CONTINUUM-COARSE-GRAIN-001"] = sourceDictionary243 := rfl
+theorem dictionaryFold242 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary242 sourceRows242 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary242 "SFT-PHYS-FLUID-DENSITY-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-CONTINUUM-COARSE-GRAIN-001"]) sourceRows243 = _
+ rw [dictionaryInsert242]
+ exact dictionaryFold243
+theorem dictionaryInsert241 : put sourceDictionary241 "SFT-PHYS-FLUID-CONSERVATION-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-FLUID-PRESSURE-STRESS-001"] = sourceDictionary242 := rfl
+theorem dictionaryFold241 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary241 sourceRows241 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary241 "SFT-PHYS-FLUID-CONSERVATION-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-FLUID-PRESSURE-STRESS-001"]) sourceRows242 = _
+ rw [dictionaryInsert241]
+ exact dictionaryFold242
+theorem dictionaryInsert240 : put sourceDictionary240 "SFT-PHYS-FINITE-QUANTUM-GRAVITY-TERMINAL-023" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-QUANTUM-PHYSICAL-STATE-001","SFT-PHYS-QUANTUM-EVOLUTION-001","SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003","SFT-PHYS-SYMMETRIC-SOURCE-CONSERVATION-TERMINAL-010","SFT-PHYS-GRAVITY-WAVE-QUADRUPOLE-003","SFT-PHYS-FIELD-FINITE-LOOP-CLOSURE-003","SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003","SFT-PHYS-GRAVITY-HORIZON-INFORMATION-003","SFT-PHYS-VALIDATION-GRAVITY-HORIZONS-003","SFT-PHYS-VALIDATION-FINITE-LOOPS-003","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary241 := rfl
+theorem dictionaryFold240 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary240 sourceRows240 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary240 "SFT-PHYS-FINITE-QUANTUM-GRAVITY-TERMINAL-023" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-QUANTUM-PHYSICAL-STATE-001","SFT-PHYS-QUANTUM-EVOLUTION-001","SFT-PHYS-GRAVITY-LATTICE-CURVATURE-003","SFT-PHYS-SYMMETRIC-SOURCE-CONSERVATION-TERMINAL-010","SFT-PHYS-GRAVITY-WAVE-QUADRUPOLE-003","SFT-PHYS-FIELD-FINITE-LOOP-CLOSURE-003","SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003","SFT-PHYS-GRAVITY-HORIZON-INFORMATION-003","SFT-PHYS-VALIDATION-GRAVITY-HORIZONS-003","SFT-PHYS-VALIDATION-FINITE-LOOPS-003","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows241 = _
+ rw [dictionaryInsert240]
+ exact dictionaryFold241
+theorem dictionaryInsert239 : put sourceDictionary239 "SFT-PHYS-FIELD-SOURCE-RESPONSE-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001"] = sourceDictionary240 := rfl
+theorem dictionaryFold239 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary239 sourceRows239 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary239 "SFT-PHYS-FIELD-SOURCE-RESPONSE-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001"]) sourceRows240 = _
+ rw [dictionaryInsert239]
+ exact dictionaryFold240
+theorem dictionaryInsert238 : put sourceDictionary238 "SFT-PHYS-FIELD-RADIATION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001"] = sourceDictionary239 := rfl
+theorem dictionaryFold238 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary238 sourceRows238 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary238 "SFT-PHYS-FIELD-RADIATION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001"]) sourceRows239 = _
+ rw [dictionaryInsert238]
+ exact dictionaryFold239
+theorem dictionaryInsert237 : put sourceDictionary237 "SFT-PHYS-FIELD-MAXWELL-THREE-SPACE-CLOSURE-003" ["SFT-PHYS-FIELD-MAXWELL-PLANAR-CLOSURE-003","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001"] = sourceDictionary238 := rfl
+theorem dictionaryFold237 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary237 sourceRows237 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary237 "SFT-PHYS-FIELD-MAXWELL-THREE-SPACE-CLOSURE-003" ["SFT-PHYS-FIELD-MAXWELL-PLANAR-CLOSURE-003","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001"]) sourceRows238 = _
+ rw [dictionaryInsert237]
+ exact dictionaryFold238
+theorem dictionaryInsert236 : put sourceDictionary236 "SFT-PHYS-FIELD-MAXWELL-PLANAR-CLOSURE-003" ["SFT-PHYS-FIELD-LORENTZ-TRANSFER-003","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001"] = sourceDictionary237 := rfl
+theorem dictionaryFold236 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary236 sourceRows236 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary236 "SFT-PHYS-FIELD-MAXWELL-PLANAR-CLOSURE-003" ["SFT-PHYS-FIELD-LORENTZ-TRANSFER-003","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001"]) sourceRows237 = _
+ rw [dictionaryInsert236]
+ exact dictionaryFold237
+theorem dictionaryInsert235 : put sourceDictionary235 "SFT-PHYS-FIELD-MAGNETIC-RELATIVITY-003" ["SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-PHYS-FIELD-MAGNETIC-001","SFT-PHYS-SPACETIME-LIMIT-SPEED-001"] = sourceDictionary236 := rfl
+theorem dictionaryFold235 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary235 sourceRows235 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary235 "SFT-PHYS-FIELD-MAGNETIC-RELATIVITY-003" ["SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-PHYS-FIELD-MAGNETIC-001","SFT-PHYS-SPACETIME-LIMIT-SPEED-001"]) sourceRows236 = _
+ rw [dictionaryInsert235]
+ exact dictionaryFold236
+theorem dictionaryInsert234 : put sourceDictionary234 "SFT-PHYS-FIELD-MAGNETIC-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"] = sourceDictionary235 := rfl
+theorem dictionaryFold234 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary234 sourceRows234 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary234 "SFT-PHYS-FIELD-MAGNETIC-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"]) sourceRows235 = _
+ rw [dictionaryInsert234]
+ exact dictionaryFold235
+theorem dictionaryInsert233 : put sourceDictionary233 "SFT-PHYS-FIELD-LORENTZ-TRANSFER-003" ["SFT-PHYS-FIELD-MAGNETIC-RELATIVITY-003","SFT-PHYS-MECH-FORCE-001","SFT-PHYS-MECH-CONSERVATION-001"] = sourceDictionary234 := rfl
+theorem dictionaryFold233 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary233 sourceRows233 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary233 "SFT-PHYS-FIELD-LORENTZ-TRANSFER-003" ["SFT-PHYS-FIELD-MAGNETIC-RELATIVITY-003","SFT-PHYS-MECH-FORCE-001","SFT-PHYS-MECH-CONSERVATION-001"]) sourceRows234 = _
+ rw [dictionaryInsert233]
+ exact dictionaryFold234
+theorem dictionaryInsert232 : put sourceDictionary232 "SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-GAUGE-EQUIVALENCE-001"] = sourceDictionary233 := rfl
+theorem dictionaryFold232 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary232 sourceRows232 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary232 "SFT-PHYS-FIELD-LOCALITY-CAUSALITY-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-GAUGE-EQUIVALENCE-001"]) sourceRows233 = _
+ rw [dictionaryInsert232]
+ exact dictionaryFold233
+theorem dictionaryInsert231 : put sourceDictionary231 "SFT-PHYS-FIELD-INVERSE-SQUARE-001" ["SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-FIELD-SOURCE-RESPONSE-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-FIELD-GEOMETRIC-DILUTION-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary232 := rfl
+theorem dictionaryFold231 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary231 sourceRows231 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary231 "SFT-PHYS-FIELD-INVERSE-SQUARE-001" ["SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-FIELD-SOURCE-RESPONSE-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-FIELD-GEOMETRIC-DILUTION-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows232 = _
+ rw [dictionaryInsert231]
+ exact dictionaryFold232
+theorem dictionaryInsert230 : put sourceDictionary230 "SFT-PHYS-FIELD-INTERACTION-CLASSES-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-RADIATION-001"] = sourceDictionary231 := rfl
+theorem dictionaryFold230 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary230 sourceRows230 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary230 "SFT-PHYS-FIELD-INTERACTION-CLASSES-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-RADIATION-001"]) sourceRows231 = _
+ rw [dictionaryInsert230]
+ exact dictionaryFold231
+theorem dictionaryInsert229 : put sourceDictionary229 "SFT-PHYS-FIELD-INDUCTION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-MAGNETIC-001"] = sourceDictionary230 := rfl
+theorem dictionaryFold229 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary229 sourceRows229 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary229 "SFT-PHYS-FIELD-INDUCTION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-MAGNETIC-001"]) sourceRows230 = _
+ rw [dictionaryInsert229]
+ exact dictionaryFold230
+theorem dictionaryInsert228 : put sourceDictionary228 "SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-GEOMETRIC-DILUTION-001"] = sourceDictionary229 := rfl
+theorem dictionaryFold228 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary228 sourceRows228 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary228 "SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-GEOMETRIC-DILUTION-001"]) sourceRows229 = _
+ rw [dictionaryInsert228]
+ exact dictionaryFold229
+theorem dictionaryInsert227 : put sourceDictionary227 "SFT-PHYS-FIELD-GEOMETRIC-DILUTION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-SOURCE-RESPONSE-001"] = sourceDictionary228 := rfl
+theorem dictionaryFold227 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary227 sourceRows227 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary227 "SFT-PHYS-FIELD-GEOMETRIC-DILUTION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-SOURCE-RESPONSE-001"]) sourceRows228 = _
+ rw [dictionaryInsert227]
+ exact dictionaryFold228
+theorem dictionaryInsert226 : put sourceDictionary226 "SFT-PHYS-FIELD-GAUGE-EQUIVALENCE-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001"] = sourceDictionary227 := rfl
+theorem dictionaryFold226 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary226 sourceRows226 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary226 "SFT-PHYS-FIELD-GAUGE-EQUIVALENCE-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001"]) sourceRows227 = _
+ rw [dictionaryInsert226]
+ exact dictionaryFold227
+theorem dictionaryInsert225 : put sourceDictionary225 "SFT-PHYS-FIELD-FINITE-LOOP-CLOSURE-003" ["SFT-PHYS-WAVE-EXACT-OPERATIONS-003","SFT-PHYS-VACUUM-ODD-RECURRENCE-003","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary226 := rfl
+theorem dictionaryFold225 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary225 sourceRows225 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary225 "SFT-PHYS-FIELD-FINITE-LOOP-CLOSURE-003" ["SFT-PHYS-WAVE-EXACT-OPERATIONS-003","SFT-PHYS-VACUUM-ODD-RECURRENCE-003","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows226 = _
+ rw [dictionaryInsert225]
+ exact dictionaryFold226
+theorem dictionaryInsert224 : put sourceDictionary224 "SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INDUCTION-001"] = sourceDictionary225 := rfl
+theorem dictionaryFold224 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary224 sourceRows224 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary224 "SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INDUCTION-001"]) sourceRows225 = _
+ rw [dictionaryInsert224]
+ exact dictionaryFold225
+theorem dictionaryInsert223 : put sourceDictionary223 "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001"] = sourceDictionary224 := rfl
+theorem dictionaryFold223 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary223 sourceRows223 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary223 "SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001"]) sourceRows224 = _
+ rw [dictionaryInsert223]
+ exact dictionaryFold224
+theorem dictionaryInsert222 : put sourceDictionary222 "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001"] = sourceDictionary223 := rfl
+theorem dictionaryFold222 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary222 sourceRows222 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary222 "SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-GRAVITATIONAL-INTERACTION-001"]) sourceRows223 = _
+ rw [dictionaryInsert222]
+ exact dictionaryFold223
+theorem dictionaryInsert221 : put sourceDictionary221 "SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003" ["SFT-PHYS-RELATIVITY-FULL-DIRAC-SQUARE-003","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001"] = sourceDictionary222 := rfl
+theorem dictionaryFold221 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary221 sourceRows221 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary221 "SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003" ["SFT-PHYS-RELATIVITY-FULL-DIRAC-SQUARE-003","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001"]) sourceRows222 = _
+ rw [dictionaryInsert221]
+ exact dictionaryFold222
+theorem dictionaryInsert220 : put sourceDictionary220 "SFT-PHYS-FIELD-CONSERVED-SOURCE-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001"] = sourceDictionary221 := rfl
+theorem dictionaryFold220 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary220 sourceRows220 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary220 "SFT-PHYS-FIELD-CONSERVED-SOURCE-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-INTERACTION-CLASSES-001"]) sourceRows221 = _
+ rw [dictionaryInsert220]
+ exact dictionaryFold221
+theorem dictionaryInsert219 : put sourceDictionary219 "SFT-PHYS-FIELD-ACTION-REACTION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001"] = sourceDictionary220 := rfl
+theorem dictionaryFold219 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary219 sourceRows219 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary219 "SFT-PHYS-FIELD-ACTION-REACTION-001" ["SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001"]) sourceRows220 = _
+ rw [dictionaryInsert219]
+ exact dictionaryFold220
+theorem dictionaryInsert218 : put sourceDictionary218 "SFT-PHYS-ELECTROWEAK-WZ-RATIO-002" ["SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary219 := rfl
+theorem dictionaryFold218 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary218 sourceRows218 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary218 "SFT-PHYS-ELECTROWEAK-WZ-RATIO-002" ["SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows219 = _
+ rw [dictionaryInsert218]
+ exact dictionaryFold219
+theorem dictionaryInsert217 : put sourceDictionary217 "SFT-PHYS-ELECTROWEAK-TERMINAL-ON-SHELL-003" ["SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary218 := rfl
+theorem dictionaryFold217 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary217 sourceRows217 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary217 "SFT-PHYS-ELECTROWEAK-TERMINAL-ON-SHELL-003" ["SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows218 = _
+ rw [dictionaryInsert217]
+ exact dictionaryFold218
+theorem dictionaryInsert216 : put sourceDictionary216 "SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002" ["SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-PART-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary217 := rfl
+theorem dictionaryFold216 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary216 sourceRows216 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary216 "SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002" ["SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-PART-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows217 = _
+ rw [dictionaryInsert216]
+ exact dictionaryFold217
+theorem dictionaryInsert215 : put sourceDictionary215 "SFT-PHYS-ELECTRON-DIRAC-G-FACTOR-002" ["SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001","SFT-MATH-EXACT-RELATIONS-002"] = sourceDictionary216 := rfl
+theorem dictionaryFold215 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary215 sourceRows215 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary215 "SFT-PHYS-ELECTRON-DIRAC-G-FACTOR-002" ["SFT-PHYS-ELECTROWEAK-FOLD-MIXING-002","SFT-PHYS-FIELD-ELECTROMAGNETIC-COMPOSITION-001","SFT-MATH-EXACT-RELATIONS-002"]) sourceRows216 = _
+ rw [dictionaryInsert215]
+ exact dictionaryFold216
+theorem dictionaryInsert214 : put sourceDictionary214 "SFT-PHYS-DYNAMICS-SYMMETRY-ACTION-TERMINAL-016" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-FOUNDATION-PART-001"] = sourceDictionary215 := rfl
+theorem dictionaryFold214 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary214 sourceRows214 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary214 "SFT-PHYS-DYNAMICS-SYMMETRY-ACTION-TERMINAL-016" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-FOUNDATION-PART-001"]) sourceRows215 = _
+ rw [dictionaryInsert214]
+ exact dictionaryFold215
+theorem dictionaryInsert213 : put sourceDictionary213 "SFT-PHYS-DYNAMICS-STATIONARY-SPECTRUM-003" ["SFT-PHYS-DYNAMICS-POTENTIAL-EVOLUTION-003","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001"] = sourceDictionary214 := rfl
+theorem dictionaryFold213 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary213 sourceRows213 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary213 "SFT-PHYS-DYNAMICS-STATIONARY-SPECTRUM-003" ["SFT-PHYS-DYNAMICS-POTENTIAL-EVOLUTION-003","SFT-PHYS-VACUUM-HALF-ONE-FLOOR-003","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001"]) sourceRows214 = _
+ rw [dictionaryInsert213]
+ exact dictionaryFold214
+theorem dictionaryInsert212 : put sourceDictionary212 "SFT-PHYS-DYNAMICS-POTENTIAL-EVOLUTION-003" ["SFT-PHYS-DYNAMICS-FREE-PHASE-DISPERSION-003","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"] = sourceDictionary213 := rfl
+theorem dictionaryFold212 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary212 sourceRows212 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary212 "SFT-PHYS-DYNAMICS-POTENTIAL-EVOLUTION-003" ["SFT-PHYS-DYNAMICS-FREE-PHASE-DISPERSION-003","SFT-PHYS-MECH-WORK-ENERGY-001","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"]) sourceRows213 = _
+ rw [dictionaryInsert212]
+ exact dictionaryFold213
+theorem dictionaryInsert211 : put sourceDictionary211 "SFT-PHYS-DYNAMICS-FREE-PHASE-DISPERSION-003" ["SFT-FOUNDATION-FOLD-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-MOMENTUM-001"] = sourceDictionary212 := rfl
+theorem dictionaryFold211 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary211 sourceRows211 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary211 "SFT-PHYS-DYNAMICS-FREE-PHASE-DISPERSION-003" ["SFT-FOUNDATION-FOLD-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-MECH-MOMENTUM-001"]) sourceRows212 = _
+ rw [dictionaryInsert211]
+ exact dictionaryFold212
+theorem dictionaryInsert210 : put sourceDictionary210 "SFT-PHYS-DECAY-WIDTH-BRANCHING-LIFETIME-TERMINAL-006" ["SFT-PHYS-MATTER-DECAY-001","SFT-PHYS-ATOMIC-TRANSITION-RATE-TERMINAL-005","SFT-PHYS-NUCLEAR-RADIOACTIVE-DECAY-TERMINAL-005","SFT-PHYS-QUANTUM-WEIGHT-001","SFT-PHYS-MECH-DURATION-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary211 := rfl
+theorem dictionaryFold210 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary210 sourceRows210 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary210 "SFT-PHYS-DECAY-WIDTH-BRANCHING-LIFETIME-TERMINAL-006" ["SFT-PHYS-MATTER-DECAY-001","SFT-PHYS-ATOMIC-TRANSITION-RATE-TERMINAL-005","SFT-PHYS-NUCLEAR-RADIOACTIVE-DECAY-TERMINAL-005","SFT-PHYS-QUANTUM-WEIGHT-001","SFT-PHYS-MECH-DURATION-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001","SFT-PHYS-MEAS-DIMENSIONAL-CONSISTENCY-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows211 = _
+ rw [dictionaryInsert210]
+ exact dictionaryFold211
+theorem dictionaryInsert209 : put sourceDictionary209 "SFT-PHYS-DARK-SMITHION-LFV-TERMINAL-061" ["SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-PARTICLE-MODE-GENERATION-TERMINAL-051","SFT-PHYS-COSMO-DARK-BARYON-FRACTION-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-COMPOSITE-CONFINING-SECTOR-TERMINAL-031","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"] = sourceDictionary210 := rfl
+theorem dictionaryFold209 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary209 sourceRows209 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary209 "SFT-PHYS-DARK-SMITHION-LFV-TERMINAL-061" ["SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-PARTICLE-MODE-GENERATION-TERMINAL-051","SFT-PHYS-COSMO-DARK-BARYON-FRACTION-001","SFT-PHYS-FIELD-INVERSE-SQUARE-001","SFT-PHYS-COMPOSITE-CONFINING-SECTOR-TERMINAL-031","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001"]) sourceRows210 = _
+ rw [dictionaryInsert209]
+ exact dictionaryFold210
+theorem dictionaryInsert208 : put sourceDictionary208 "SFT-PHYS-CRITICALITY-UNIVERSALITY-TURBULENCE-TERMINAL-047" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-CONDENSED-PHASE-ORDER-001","SFT-PHYS-FLUID-TURBULENCE-001","SFT-PHYS-COUPLED-MAP-CRITICALITY-TERMINAL-008"] = sourceDictionary209 := rfl
+theorem dictionaryFold208 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary208 sourceRows208 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary208 "SFT-PHYS-CRITICALITY-UNIVERSALITY-TURBULENCE-TERMINAL-047" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-CONDENSED-PHASE-ORDER-001","SFT-PHYS-FLUID-TURBULENCE-001","SFT-PHYS-COUPLED-MAP-CRITICALITY-TERMINAL-008"]) sourceRows209 = _
+ rw [dictionaryInsert208]
+ exact dictionaryFold209
+theorem dictionaryInsert207 : put sourceDictionary207 "SFT-PHYS-COUPLING-RUNNING-CONVERGENCE-TERMINAL-006" ["SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-STRONG-RUNNING-DIRECTION-002","SFT-PHYS-VACUUM-POLARIZATION-RUNNING-003","SFT-PHYS-MEAS-BOUNDARY-GROWTH-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-LIMIT-CONTINUUM-002","SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary208 := rfl
+theorem dictionaryFold207 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary207 sourceRows207 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary207 "SFT-PHYS-COUPLING-RUNNING-CONVERGENCE-TERMINAL-006" ["SFT-PHYS-FORCE-PRIME-SECTOR-LADDER-002","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-STRONG-RUNNING-DIRECTION-002","SFT-PHYS-VACUUM-POLARIZATION-RUNNING-003","SFT-PHYS-MEAS-BOUNDARY-GROWTH-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-LIMIT-CONTINUUM-002","SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows208 = _
+ rw [dictionaryInsert207]
+ exact dictionaryFold208
+theorem dictionaryInsert206 : put sourceDictionary206 "SFT-PHYS-COUPLING-ACCUMULATED-SEPARATION-TERMINAL-015" ["SFT-PHYS-COUPLING-RUNNING-CONVERGENCE-TERMINAL-006","SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-COUNT-001"] = sourceDictionary207 := rfl
+theorem dictionaryFold206 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary206 sourceRows206 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary206 "SFT-PHYS-COUPLING-ACCUMULATED-SEPARATION-TERMINAL-015" ["SFT-PHYS-COUPLING-RUNNING-CONVERGENCE-TERMINAL-006","SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-FOUNDATION-COUNT-001"]) sourceRows207 = _
+ rw [dictionaryInsert206]
+ exact dictionaryFold207
+theorem dictionaryInsert205 : put sourceDictionary205 "SFT-PHYS-COUPLED-MAP-CRITICALITY-TERMINAL-008" ["SFT-PHYS-LYAPUNOV-KS-CORRESPONDENCE-TERMINAL-008","SFT-PHYS-COUPLED-ENSEMBLE-SYNCHRONIZATION-TERMINAL-007","SFT-COMP-DIST-SYNCHRONIZATION-001","SFT-FOUNDATION-HALF-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"] = sourceDictionary206 := rfl
+theorem dictionaryFold205 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary205 sourceRows205 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary205 "SFT-PHYS-COUPLED-MAP-CRITICALITY-TERMINAL-008" ["SFT-PHYS-LYAPUNOV-KS-CORRESPONDENCE-TERMINAL-008","SFT-PHYS-COUPLED-ENSEMBLE-SYNCHRONIZATION-TERMINAL-007","SFT-COMP-DIST-SYNCHRONIZATION-001","SFT-FOUNDATION-HALF-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"]) sourceRows206 = _
+ rw [dictionaryInsert205]
+ exact dictionaryFold206
+theorem dictionaryInsert204 : put sourceDictionary204 "SFT-PHYS-COUPLED-ENSEMBLE-SYNCHRONIZATION-TERMINAL-007" ["SFT-FOUNDATION-HALF-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary205 := rfl
+theorem dictionaryFold204 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary204 sourceRows204 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary204 "SFT-PHYS-COUPLED-ENSEMBLE-SYNCHRONIZATION-TERMINAL-007" ["SFT-FOUNDATION-HALF-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-COMBINATORICS-001"]) sourceRows205 = _
+ rw [dictionaryInsert204]
+ exact dictionaryFold205
+theorem dictionaryInsert203 : put sourceDictionary203 "SFT-PHYS-COSMO-STRUCTURE-GROWTH-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-COSMO-DISTANCE-001"] = sourceDictionary204 := rfl
+theorem dictionaryFold203 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary203 sourceRows203 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary203 "SFT-PHYS-COSMO-STRUCTURE-GROWTH-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-COSMO-DISTANCE-001"]) sourceRows204 = _
+ rw [dictionaryInsert203]
+ exact dictionaryFold204
+theorem dictionaryInsert202 : put sourceDictionary202 "SFT-PHYS-COSMO-SPATIAL-FLATNESS-001" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-PHYS-COSMO-BRANCH-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary203 := rfl
+theorem dictionaryFold202 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary202 sourceRows202 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary202 "SFT-PHYS-COSMO-SPATIAL-FLATNESS-001" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-PHYS-COSMO-BRANCH-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows203 = _
+ rw [dictionaryInsert202]
+ exact dictionaryFold203
+theorem dictionaryInsert201 : put sourceDictionary201 "SFT-PHYS-COSMO-REDSHIFT-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001"] = sourceDictionary202 := rfl
+theorem dictionaryFold201 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary201 sourceRows201 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary201 "SFT-PHYS-COSMO-REDSHIFT-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001"]) sourceRows202 = _
+ rw [dictionaryInsert201]
+ exact dictionaryFold202
+theorem dictionaryInsert200 : put sourceDictionary200 "SFT-PHYS-COSMO-LENSING-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-COSMO-BACKGROUND-001"] = sourceDictionary201 := rfl
+theorem dictionaryFold200 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary200 sourceRows200 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary200 "SFT-PHYS-COSMO-LENSING-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-COSMO-BACKGROUND-001"]) sourceRows201 = _
+ rw [dictionaryInsert200]
+ exact dictionaryFold201
+theorem dictionaryInsert199 : put sourceDictionary199 "SFT-PHYS-COSMO-HUBBLE-CALIBRATION-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"] = sourceDictionary200 := rfl
+theorem dictionaryFold199 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary199 sourceRows199 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary199 "SFT-PHYS-COSMO-HUBBLE-CALIBRATION-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"]) sourceRows200 = _
+ rw [dictionaryInsert199]
+ exact dictionaryFold200
+theorem dictionaryInsert198 : put sourceDictionary198 "SFT-PHYS-COSMO-EXPANSION-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-COSMO-REDSHIFT-001"] = sourceDictionary199 := rfl
+theorem dictionaryFold198 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary198 sourceRows198 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary198 "SFT-PHYS-COSMO-EXPANSION-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-COSMO-REDSHIFT-001"]) sourceRows199 = _
+ rw [dictionaryInsert198]
+ exact dictionaryFold199
+theorem dictionaryInsert197 : put sourceDictionary197 "SFT-PHYS-COSMO-DISTANCE-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-COSMO-LENSING-001"] = sourceDictionary198 := rfl
+theorem dictionaryFold197 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary197 sourceRows197 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary197 "SFT-PHYS-COSMO-DISTANCE-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-COSMO-LENSING-001"]) sourceRows198 = _
+ rw [dictionaryInsert197]
+ exact dictionaryFold198
+theorem dictionaryInsert196 : put sourceDictionary196 "SFT-PHYS-COSMO-DARK-BARYON-FRACTION-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"] = sourceDictionary197 := rfl
+theorem dictionaryFold196 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary196 sourceRows196 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary196 "SFT-PHYS-COSMO-DARK-BARYON-FRACTION-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"]) sourceRows197 = _
+ rw [dictionaryInsert196]
+ exact dictionaryFold197
+theorem dictionaryInsert195 : put sourceDictionary195 "SFT-PHYS-COSMO-COMPONENT-TRANSPORT-TERMINAL-032" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001","SFT-PHYS-COSMO-REDSHIFT-001","SFT-PHYS-COSMO-EXPANSION-001","SFT-PHYS-COSMO-SPATIAL-FLATNESS-001","SFT-PHYS-COSMO-COMPLETE-BUDGET-001","SFT-PHYS-SCALE-COMMON-AXIS-TERMINAL-030","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001"] = sourceDictionary196 := rfl
+theorem dictionaryFold195 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary195 sourceRows195 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary195 "SFT-PHYS-COSMO-COMPONENT-TRANSPORT-TERMINAL-032" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001","SFT-PHYS-COSMO-REDSHIFT-001","SFT-PHYS-COSMO-EXPANSION-001","SFT-PHYS-COSMO-SPATIAL-FLATNESS-001","SFT-PHYS-COSMO-COMPLETE-BUDGET-001","SFT-PHYS-SCALE-COMMON-AXIS-TERMINAL-030","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001","SFT-PHYS-MEAS-HOSTILE-PACKAGE-001"]) sourceRows196 = _
+ rw [dictionaryInsert195]
+ exact dictionaryFold196
+theorem dictionaryInsert194 : put sourceDictionary194 "SFT-PHYS-COSMO-COMPLETE-BUDGET-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-COSMO-DARK-BARYON-FRACTION-001","SFT-PHYS-COSMO-SPATIAL-FLATNESS-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary195 := rfl
+theorem dictionaryFold194 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary194 sourceRows194 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary194 "SFT-PHYS-COSMO-COMPLETE-BUDGET-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-COSMO-DARK-BARYON-FRACTION-001","SFT-PHYS-COSMO-SPATIAL-FLATNESS-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows195 = _
+ rw [dictionaryInsert194]
+ exact dictionaryFold195
+theorem dictionaryInsert193 : put sourceDictionary193 "SFT-PHYS-COSMO-BRANCH-BOUNDARY-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-COSMO-STRUCTURE-GROWTH-001"] = sourceDictionary194 := rfl
+theorem dictionaryFold193 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary193 sourceRows193 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary193 "SFT-PHYS-COSMO-BRANCH-BOUNDARY-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-COSMO-STRUCTURE-GROWTH-001"]) sourceRows194 = _
+ rw [dictionaryInsert193]
+ exact dictionaryFold194
+theorem dictionaryInsert192 : put sourceDictionary192 "SFT-PHYS-COSMO-BACKGROUND-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-COSMO-EXPANSION-001"] = sourceDictionary193 := rfl
+theorem dictionaryFold192 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary192 sourceRows192 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary192 "SFT-PHYS-COSMO-BACKGROUND-001" ["SFT-PHYS-SPACETIME-CAUSAL-ORDER-001","SFT-PHYS-SPACETIME-CLOCK-RATE-001","SFT-PHYS-GRAVITY-CURVATURE-001","SFT-PHYS-GRAVITY-WAVE-001","SFT-PHYS-GRAVITY-HORIZON-001","SFT-PHYS-COSMO-EXPANSION-001"]) sourceRows193 = _
+ rw [dictionaryInsert192]
+ exact dictionaryFold193
+theorem dictionaryInsert191 : put sourceDictionary191 "SFT-PHYS-CONTINUUM-COARSE-GRAIN-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001"] = sourceDictionary192 := rfl
+theorem dictionaryFold191 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary191 sourceRows191 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary191 "SFT-PHYS-CONTINUUM-COARSE-GRAIN-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001"]) sourceRows192 = _
+ rw [dictionaryInsert191]
+ exact dictionaryFold192
+theorem dictionaryInsert190 : put sourceDictionary190 "SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary191 := rfl
+theorem dictionaryFold190 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary190 sourceRows190 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary190 "SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows191 = _
+ rw [dictionaryInsert190]
+ exact dictionaryFold191
+theorem dictionaryInsert189 : put sourceDictionary189 "SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001" ["SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ALGEBRA-001"] = sourceDictionary190 := rfl
+theorem dictionaryFold189 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary189 sourceRows189 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary189 "SFT-PHYS-CONSTANT-CHARGED-LEPTON-TERMINAL-001" ["SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ALGEBRA-001"]) sourceRows190 = _
+ rw [dictionaryInsert189]
+ exact dictionaryFold190
+theorem dictionaryInsert188 : put sourceDictionary188 "SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ALGEBRA-001"] = sourceDictionary189 := rfl
+theorem dictionaryFold188 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary188 sourceRows188 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary188 "SFT-PHYS-CONSTANT-CHARGED-LEPTON-CUBIC-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ALGEBRA-001"]) sourceRows189 = _
+ rw [dictionaryInsert188]
+ exact dictionaryFold189
+theorem dictionaryInsert187 : put sourceDictionary187 "SFT-PHYS-CONDENSED-TOPOLOGICAL-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-CONDENSED-SUPERCONDUCTIVITY-001"] = sourceDictionary188 := rfl
+theorem dictionaryFold187 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary187 sourceRows187 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary187 "SFT-PHYS-CONDENSED-TOPOLOGICAL-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-CONDENSED-SUPERCONDUCTIVITY-001"]) sourceRows188 = _
+ rw [dictionaryInsert187]
+ exact dictionaryFold188
+theorem dictionaryInsert186 : put sourceDictionary186 "SFT-PHYS-CONDENSED-SUPERCONDUCTIVITY-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-CONDENSED-PHASE-ORDER-001"] = sourceDictionary187 := rfl
+theorem dictionaryFold186 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary186 sourceRows186 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary186 "SFT-PHYS-CONDENSED-SUPERCONDUCTIVITY-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-CONDENSED-PHASE-ORDER-001"]) sourceRows187 = _
+ rw [dictionaryInsert186]
+ exact dictionaryFold187
+theorem dictionaryInsert185 : put sourceDictionary185 "SFT-PHYS-CONDENSED-PHASE-ORDER-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-CONDENSED-BAND-001"] = sourceDictionary186 := rfl
+theorem dictionaryFold185 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary185 sourceRows185 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary185 "SFT-PHYS-CONDENSED-PHASE-ORDER-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-CONDENSED-BAND-001"]) sourceRows186 = _
+ rw [dictionaryInsert185]
+ exact dictionaryFold186
+theorem dictionaryInsert184 : put sourceDictionary184 "SFT-PHYS-CONDENSED-LATTICE-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-PLASMA-MHD-001"] = sourceDictionary185 := rfl
+theorem dictionaryFold184 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary184 sourceRows184 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary184 "SFT-PHYS-CONDENSED-LATTICE-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-PLASMA-MHD-001"]) sourceRows185 = _
+ rw [dictionaryInsert184]
+ exact dictionaryFold185
+theorem dictionaryInsert183 : put sourceDictionary183 "SFT-PHYS-CONDENSED-BAND-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-CONDENSED-LATTICE-001"] = sourceDictionary184 := rfl
+theorem dictionaryFold183 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary183 sourceRows183 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary183 "SFT-PHYS-CONDENSED-BAND-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-PHYS-FIELD-CONSERVED-SOURCE-001","SFT-PHYS-THERMO-KINETIC-TRANSPORT-001","SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001","SFT-PHYS-THERMO-RESPONSE-001","SFT-PHYS-CONDENSED-LATTICE-001"]) sourceRows184 = _
+ rw [dictionaryInsert183]
+ exact dictionaryFold184
+theorem dictionaryInsert182 : put sourceDictionary182 "SFT-PHYS-COMPOSITE-CONFINING-SECTOR-TERMINAL-031" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-PHYS-FOLD-UNIVERSE-TRANSPORT-TERMINAL-024","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-VALIDATION-FORCE-SECTOR-ANCHORS-003","SFT-PHYS-INTERACTION-UNIFICATION-TERMINAL-025"] = sourceDictionary183 := rfl
+theorem dictionaryFold182 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary182 sourceRows182 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary182 "SFT-PHYS-COMPOSITE-CONFINING-SECTOR-TERMINAL-031" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-ORBIT-NUMBER-THEORY-002","SFT-PHYS-FOLD-UNIVERSE-TRANSPORT-TERMINAL-024","SFT-PHYS-FORCE-COMPLETE-SECTOR-INVENTORY-003","SFT-PHYS-VALIDATION-FORCE-SECTOR-ANCHORS-003","SFT-PHYS-INTERACTION-UNIFICATION-TERMINAL-025"]) sourceRows183 = _
+ rw [dictionaryInsert182]
+ exact dictionaryFold183
+theorem dictionaryInsert181 : put sourceDictionary181 "SFT-PHYS-COMPACT-HORIZON-THERMODYNAMICS-TERMINAL-071" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-VACUUM-ODD-RECURRENCE-003","SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003","SFT-PHYS-GRAVITY-HORIZON-INFORMATION-003","SFT-PHYS-FINITE-QUANTUM-GRAVITY-TERMINAL-023","SFT-PHYS-STELLAR-NUCLEAR-COLLAPSE-TERMINAL-069"] = sourceDictionary182 := rfl
+theorem dictionaryFold181 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary181 sourceRows181 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary181 "SFT-PHYS-COMPACT-HORIZON-THERMODYNAMICS-TERMINAL-071" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-VACUUM-ODD-RECURRENCE-003","SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003","SFT-PHYS-GRAVITY-HORIZON-INFORMATION-003","SFT-PHYS-FINITE-QUANTUM-GRAVITY-TERMINAL-023","SFT-PHYS-STELLAR-NUCLEAR-COLLAPSE-TERMINAL-069"]) sourceRows182 = _
+ rw [dictionaryInsert181]
+ exact dictionaryFold182
+theorem dictionaryInsert180 : put sourceDictionary180 "SFT-PHYS-COLLECTIVE-RADIATION-RESPONSE-TERMINAL-041" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-PART-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-THERMO-STATISTICAL-WEIGHT-001","SFT-PHYS-THERMO-TEMPERATURE-001","SFT-PHYS-MATTER-FERMION-BOSON-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-RESONANCE-001","SFT-PHYS-ATOMIC-TRANSITION-RATE-TERMINAL-005","SFT-PHYS-PLASMA-COLLECTIVE-001","SFT-PHYS-PLASMA-OSCILLATION-001","SFT-PHYS-FLUID-DENSITY-001","SFT-PHYS-FIELD-MAGNETIC-001"] = sourceDictionary181 := rfl
+theorem dictionaryFold180 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary180 sourceRows180 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary180 "SFT-PHYS-COLLECTIVE-RADIATION-RESPONSE-TERMINAL-041" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-PART-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-THERMO-STATISTICAL-WEIGHT-001","SFT-PHYS-THERMO-TEMPERATURE-001","SFT-PHYS-MATTER-FERMION-BOSON-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-FIELD-RADIATION-001","SFT-PHYS-WAVE-RESONANCE-001","SFT-PHYS-ATOMIC-TRANSITION-RATE-TERMINAL-005","SFT-PHYS-PLASMA-COLLECTIVE-001","SFT-PHYS-PLASMA-OSCILLATION-001","SFT-PHYS-FLUID-DENSITY-001","SFT-PHYS-FIELD-MAGNETIC-001"]) sourceRows181 = _
+ rw [dictionaryInsert180]
+ exact dictionaryFold181
+theorem dictionaryInsert179 : put sourceDictionary179 "SFT-PHYS-BARYOGENESIS-DEPENDENCY-TERMINAL-021" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-PHYS-MATTER-PARTICLE-ANTIPARTICLE-001","SFT-PHYS-THERMO-IRREVERSIBILITY-001","SFT-PHYS-MATTER-CKM-TERMINAL-004","SFT-PHYS-MATTER-BARYON-PHOTON-TERMINAL-004","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary180 := rfl
+theorem dictionaryFold179 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary179 sourceRows179 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary179 "SFT-PHYS-BARYOGENESIS-DEPENDENCY-TERMINAL-021" ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-PHYS-MATTER-PARTICLE-ANTIPARTICLE-001","SFT-PHYS-THERMO-IRREVERSIBILITY-001","SFT-PHYS-MATTER-CKM-TERMINAL-004","SFT-PHYS-MATTER-BARYON-PHOTON-TERMINAL-004","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows180 = _
+ rw [dictionaryInsert179]
+ exact dictionaryFold180
+theorem dictionaryInsert178 : put sourceDictionary178 "SFT-PHYS-ATOMIC-TRANSITION-SELECTION-004" ["SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-ATOMIC-CUBIC-SUPPORT-004","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-FIELD-MAGNETIC-RELATIVITY-003","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"] = sourceDictionary179 := rfl
+theorem dictionaryFold178 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary178 sourceRows178 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary178 "SFT-PHYS-ATOMIC-TRANSITION-SELECTION-004" ["SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-ATOMIC-CUBIC-SUPPORT-004","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-FIELD-MAGNETIC-RELATIVITY-003","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001"]) sourceRows179 = _
+ rw [dictionaryInsert178]
+ exact dictionaryFold179
+theorem dictionaryInsert177 : put sourceDictionary177 "SFT-PHYS-ATOMIC-TRANSITION-RATE-TERMINAL-005" ["SFT-PHYS-ATOMIC-TRANSITION-SELECTION-004","SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary178 := rfl
+theorem dictionaryFold177 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary177 sourceRows177 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary177 "SFT-PHYS-ATOMIC-TRANSITION-RATE-TERMINAL-005" ["SFT-PHYS-ATOMIC-TRANSITION-SELECTION-004","SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows178 = _
+ rw [dictionaryInsert177]
+ exact dictionaryFold178
+theorem dictionaryInsert176 : put sourceDictionary176 "SFT-PHYS-ATOMIC-SHELL-PERIODICITY-TERMINAL-005" ["SFT-PHYS-ATOMIC-CELL-ORBIT-CAPACITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary177 := rfl
+theorem dictionaryFold176 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary176 sourceRows176 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary176 "SFT-PHYS-ATOMIC-SHELL-PERIODICITY-TERMINAL-005" ["SFT-PHYS-ATOMIC-CELL-ORBIT-CAPACITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows177 = _
+ rw [dictionaryInsert176]
+ exact dictionaryFold177
+theorem dictionaryInsert175 : put sourceDictionary175 "SFT-PHYS-ATOMIC-LAMB-SHIFT-TERMINAL-005" ["SFT-PHYS-ATOMIC-CORRECTION-HIERARCHY-004","SFT-PHYS-VACUUM-POLARIZATION-RUNNING-003","SFT-PHYS-QED-TERMINAL-TURN-PROJECTION-004","SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary176 := rfl
+theorem dictionaryFold175 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary175 sourceRows175 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary175 "SFT-PHYS-ATOMIC-LAMB-SHIFT-TERMINAL-005" ["SFT-PHYS-ATOMIC-CORRECTION-HIERARCHY-004","SFT-PHYS-VACUUM-POLARIZATION-RUNNING-003","SFT-PHYS-QED-TERMINAL-TURN-PROJECTION-004","SFT-PHYS-MATTER-MASS-RATIO-FAMILY-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows176 = _
+ rw [dictionaryInsert175]
+ exact dictionaryFold176
+theorem dictionaryInsert174 : put sourceDictionary174 "SFT-PHYS-ATOMIC-HYPERFINE-TERMINAL-005" ["SFT-PHYS-MATTER-PROTON-ELECTRON-TERMINAL-004","SFT-PHYS-QED-TERMINAL-TURN-PROJECTION-004","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-FIELD-FINITE-LOOP-CLOSURE-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary175 := rfl
+theorem dictionaryFold174 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary174 sourceRows174 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary174 "SFT-PHYS-ATOMIC-HYPERFINE-TERMINAL-005" ["SFT-PHYS-MATTER-PROTON-ELECTRON-TERMINAL-004","SFT-PHYS-QED-TERMINAL-TURN-PROJECTION-004","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-FIELD-FINITE-LOOP-CLOSURE-003","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows175 = _
+ rw [dictionaryInsert174]
+ exact dictionaryFold175
+theorem dictionaryInsert173 : put sourceDictionary173 "SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004" ["SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-PHYS-DYNAMICS-STATIONARY-SPECTRUM-003","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary174 := rfl
+theorem dictionaryFold173 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary173 sourceRows173 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary173 "SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004" ["SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-FIELD-COULOMB-GAUSS-CLOSURE-003","SFT-PHYS-DYNAMICS-STATIONARY-SPECTRUM-003","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows174 = _
+ rw [dictionaryInsert173]
+ exact dictionaryFold174
+theorem dictionaryInsert172 : put sourceDictionary172 "SFT-PHYS-ATOMIC-HYDROGEN-RYDBERG-TERMINAL-005" ["SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-ATOMIC-CORRECTION-HIERARCHY-004","SFT-PHYS-MATTER-PROTON-ELECTRON-TERMINAL-004","SFT-PHYS-ATOMIC-HYPERFINE-TERMINAL-005","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary173 := rfl
+theorem dictionaryFold172 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary172 sourceRows172 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary172 "SFT-PHYS-ATOMIC-HYDROGEN-RYDBERG-TERMINAL-005" ["SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-ATOMIC-CORRECTION-HIERARCHY-004","SFT-PHYS-MATTER-PROTON-ELECTRON-TERMINAL-004","SFT-PHYS-ATOMIC-HYPERFINE-TERMINAL-005","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows173 = _
+ rw [dictionaryInsert172]
+ exact dictionaryFold173
+theorem dictionaryInsert171 : put sourceDictionary171 "SFT-PHYS-ATOMIC-FINE-STRUCTURE-TERMINAL-005" ["SFT-PHYS-ATOMIC-CORRECTION-HIERARCHY-004","SFT-PHYS-RELATIVITY-FULL-DIRAC-SQUARE-003","SFT-PHYS-QED-TERMINAL-TURN-PROJECTION-004","SFT-PHYS-ATOMIC-EXISTENCE-BOUNDARY-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary172 := rfl
+theorem dictionaryFold171 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary171 sourceRows171 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary171 "SFT-PHYS-ATOMIC-FINE-STRUCTURE-TERMINAL-005" ["SFT-PHYS-ATOMIC-CORRECTION-HIERARCHY-004","SFT-PHYS-RELATIVITY-FULL-DIRAC-SQUARE-003","SFT-PHYS-QED-TERMINAL-TURN-PROJECTION-004","SFT-PHYS-ATOMIC-EXISTENCE-BOUNDARY-001","SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows172 = _
+ rw [dictionaryInsert171]
+ exact dictionaryFold172
+theorem dictionaryInsert170 : put sourceDictionary170 "SFT-PHYS-ATOMIC-FIELD-SPLITTING-TERMINAL-005" ["SFT-PHYS-ATOMIC-TRANSITION-SELECTION-004","SFT-PHYS-ATOMIC-SHELL-PERIODICITY-TERMINAL-005","SFT-PHYS-FIELD-MAGNETIC-RELATIVITY-003","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary171 := rfl
+theorem dictionaryFold170 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary170 sourceRows170 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary170 "SFT-PHYS-ATOMIC-FIELD-SPLITTING-TERMINAL-005" ["SFT-PHYS-ATOMIC-TRANSITION-SELECTION-004","SFT-PHYS-ATOMIC-SHELL-PERIODICITY-TERMINAL-005","SFT-PHYS-FIELD-MAGNETIC-RELATIVITY-003","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows171 = _
+ rw [dictionaryInsert170]
+ exact dictionaryFold171
+theorem dictionaryInsert169 : put sourceDictionary169 "SFT-PHYS-ATOMIC-EXISTENCE-BOUNDARY-001" ["SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-ATOMIC-NUMBER-001","SFT-CHEM-ELEM-PERIODIC-ORDER-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary170 := rfl
+theorem dictionaryFold169 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary169 sourceRows169 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary169 "SFT-PHYS-ATOMIC-EXISTENCE-BOUNDARY-001" ["SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-ATOMIC-NUMBER-001","SFT-CHEM-ELEM-PERIODIC-ORDER-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows170 = _
+ rw [dictionaryInsert169]
+ exact dictionaryFold170
+theorem dictionaryInsert168 : put sourceDictionary168 "SFT-PHYS-ATOMIC-CUBIC-SUPPORT-004" ["SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary169 := rfl
+theorem dictionaryFold168 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary168 sourceRows168 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary168 "SFT-PHYS-ATOMIC-CUBIC-SUPPORT-004" ["SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows169 = _
+ rw [dictionaryInsert168]
+ exact dictionaryFold169
+theorem dictionaryInsert167 : put sourceDictionary167 "SFT-PHYS-ATOMIC-CORRECTION-HIERARCHY-004" ["SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-RELATIVITY-FULL-DIRAC-SQUARE-003","SFT-PHYS-VACUUM-POLARIZATION-RUNNING-003"] = sourceDictionary168 := rfl
+theorem dictionaryFold167 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary167 sourceRows167 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary167 "SFT-PHYS-ATOMIC-CORRECTION-HIERARCHY-004" ["SFT-PHYS-CONSTANT-INVERSE-FINE-STRUCTURE-001","SFT-PHYS-ATOMIC-HYDROGEN-SPECTRUM-004","SFT-PHYS-RELATIVITY-FULL-DIRAC-SQUARE-003","SFT-PHYS-VACUUM-POLARIZATION-RUNNING-003"]) sourceRows168 = _
+ rw [dictionaryInsert167]
+ exact dictionaryFold168
+theorem dictionaryInsert166 : put sourceDictionary166 "SFT-PHYS-ATOMIC-CELL-ORBIT-CAPACITY-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary167 := rfl
+theorem dictionaryFold166 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary166 sourceRows166 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary166 "SFT-PHYS-ATOMIC-CELL-ORBIT-CAPACITY-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows167 = _
+ rw [dictionaryInsert166]
+ exact dictionaryFold167
+theorem dictionaryInsert165 : put sourceDictionary165 "SFT-MATH-SELF-SIMILAR-CONVERGENCE-002" ["SFT-MATH-EXACT-RELATIONS-002","SFT-MATH-LIMIT-CONTINUUM-002"] = sourceDictionary166 := rfl
+theorem dictionaryFold165 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary165 sourceRows165 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary165 "SFT-MATH-SELF-SIMILAR-CONVERGENCE-002" ["SFT-MATH-EXACT-RELATIONS-002","SFT-MATH-LIMIT-CONTINUUM-002"]) sourceRows166 = _
+ rw [dictionaryInsert165]
+ exact dictionaryFold166
+theorem dictionaryInsert164 : put sourceDictionary164 "SFT-MATH-PROBABILITY-STATISTICS-001" ["SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary165 := rfl
+theorem dictionaryFold164 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary164 sourceRows164 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary164 "SFT-MATH-PROBABILITY-STATISTICS-001" ["SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"]) sourceRows165 = _
+ rw [dictionaryInsert164]
+ exact dictionaryFold165
+theorem dictionaryInsert163 : put sourceDictionary163 "SFT-MATH-ORDER-LATTICE-001" ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001","SFT-MATH-ALGEBRA-001"] = sourceDictionary164 := rfl
+theorem dictionaryFold163 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary163 sourceRows163 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary163 "SFT-MATH-ORDER-LATTICE-001" ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001","SFT-MATH-ALGEBRA-001"]) sourceRows164 = _
+ rw [dictionaryInsert163]
+ exact dictionaryFold164
+theorem dictionaryInsert162 : put sourceDictionary162 "SFT-MATH-ORBIT-NUMBER-THEORY-002" ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"] = sourceDictionary163 := rfl
+theorem dictionaryFold162 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary162 sourceRows162 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary162 "SFT-MATH-ORBIT-NUMBER-THEORY-002" ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"]) sourceRows163 = _
+ rw [dictionaryInsert162]
+ exact dictionaryFold163
+theorem dictionaryInsert161 : put sourceDictionary161 "SFT-MATH-OPTIMIZATION-001" ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary162 := rfl
+theorem dictionaryFold161 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary161 sourceRows161 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary161 "SFT-MATH-OPTIMIZATION-001" ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows162 = _
+ rw [dictionaryInsert161]
+ exact dictionaryFold162
+theorem dictionaryInsert160 : put sourceDictionary160 "SFT-MATH-LOGIC-PROOF-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-DISCRETE-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary161 := rfl
+theorem dictionaryFold160 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary160 sourceRows160 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary160 "SFT-MATH-LOGIC-PROOF-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-DISCRETE-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows161 = _
+ rw [dictionaryInsert160]
+ exact dictionaryFold161
+theorem dictionaryInsert159 : put sourceDictionary159 "SFT-MATH-LIMIT-CONTINUUM-002" ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary160 := rfl
+theorem dictionaryFold159 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary159 sourceRows159 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary159 "SFT-MATH-LIMIT-CONTINUUM-002" ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows160 = _
+ rw [dictionaryInsert159]
+ exact dictionaryFold160
+theorem dictionaryInsert158 : put sourceDictionary158 "SFT-MATH-GRAPH-NETWORK-001" ["SFT-FOUNDATION-FORM-GRAMMAR-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001"] = sourceDictionary159 := rfl
+theorem dictionaryFold158 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary158 sourceRows158 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary158 "SFT-MATH-GRAPH-NETWORK-001" ["SFT-FOUNDATION-FORM-GRAMMAR-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001"]) sourceRows159 = _
+ rw [dictionaryInsert158]
+ exact dictionaryFold159
+theorem dictionaryInsert157 : put sourceDictionary157 "SFT-MATH-GEOMETRY-TOPOLOGY-001" ["SFT-FOUNDATION-PART-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-ORDER-LATTICE-001"] = sourceDictionary158 := rfl
+theorem dictionaryFold157 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary157 sourceRows157 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary157 "SFT-MATH-GEOMETRY-TOPOLOGY-001" ["SFT-FOUNDATION-PART-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-ORDER-LATTICE-001"]) sourceRows158 = _
+ rw [dictionaryInsert157]
+ exact dictionaryFold158
+theorem dictionaryInsert156 : put sourceDictionary156 "SFT-MATH-EXACT-RELATIONS-002" ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"] = sourceDictionary157 := rfl
+theorem dictionaryFold156 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary156 sourceRows156 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary156 "SFT-MATH-EXACT-RELATIONS-002" ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001"]) sourceRows157 = _
+ rw [dictionaryInsert156]
+ exact dictionaryFold157
+theorem dictionaryInsert155 : put sourceDictionary155 "SFT-MATH-EXACT-ARITHMETIC-001" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001"] = sourceDictionary156 := rfl
+theorem dictionaryFold155 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary155 sourceRows155 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary155 "SFT-MATH-EXACT-ARITHMETIC-001" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001","SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001"]) sourceRows156 = _
+ rw [dictionaryInsert155]
+ exact dictionaryFold156
+theorem dictionaryInsert154 : put sourceDictionary154 "SFT-MATH-DYNAMICAL-SYSTEMS-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-OPTIMIZATION-001"] = sourceDictionary155 := rfl
+theorem dictionaryFold154 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary154 sourceRows154 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary154 "SFT-MATH-DYNAMICAL-SYSTEMS-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-OPTIMIZATION-001"]) sourceRows155 = _
+ rw [dictionaryInsert154]
+ exact dictionaryFold155
+theorem dictionaryInsert153 : put sourceDictionary153 "SFT-MATH-DISCRETE-001" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-FORM-GRAMMAR-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001"] = sourceDictionary154 := rfl
+theorem dictionaryFold153 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary153 sourceRows153 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary153 "SFT-MATH-DISCRETE-001" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-FORM-GRAMMAR-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001"]) sourceRows154 = _
+ rw [dictionaryInsert153]
+ exact dictionaryFold154
+theorem dictionaryInsert152 : put sourceDictionary152 "SFT-MATH-COMBINATORICS-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001"] = sourceDictionary153 := rfl
+theorem dictionaryFold152 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary152 sourceRows152 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary152 "SFT-MATH-COMBINATORICS-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001"]) sourceRows153 = _
+ rw [dictionaryInsert152]
+ exact dictionaryFold153
+theorem dictionaryInsert151 : put sourceDictionary151 "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-ALGEBRA-001","SFT-MATH-LOGIC-PROOF-001"] = sourceDictionary152 := rfl
+theorem dictionaryFold151 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary151 sourceRows151 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary151 "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-ALGEBRA-001","SFT-MATH-LOGIC-PROOF-001"]) sourceRows152 = _
+ rw [dictionaryInsert151]
+ exact dictionaryFold152
+theorem dictionaryInsert150 : put sourceDictionary150 "SFT-MATH-ALGEBRA-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001"] = sourceDictionary151 := rfl
+theorem dictionaryFold150 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary150 sourceRows150 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary150 "SFT-MATH-ALGEBRA-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001"]) sourceRows151 = _
+ rw [dictionaryInsert150]
+ exact dictionaryFold151
+theorem dictionaryInsert149 : put sourceDictionary149 "SFT-INFO-SYMBOL-DISTINCTION-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-DISCRETE-001","SFT-MATH-LOGIC-PROOF-001"] = sourceDictionary150 := rfl
+theorem dictionaryFold149 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary149 sourceRows149 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary149 "SFT-INFO-SYMBOL-DISTINCTION-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-MATH-DISCRETE-001","SFT-MATH-LOGIC-PROOF-001"]) sourceRows150 = _
+ rw [dictionaryInsert149]
+ exact dictionaryFold150
+theorem dictionaryInsert148 : put sourceDictionary148 "SFT-INFO-QUANTUM-CORRESPONDENCE-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-QUANTITY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-INFO-CLASSICAL-PROBABILISTIC-001"] = sourceDictionary149 := rfl
+theorem dictionaryFold148 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary148 sourceRows148 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary148 "SFT-INFO-QUANTUM-CORRESPONDENCE-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-QUANTITY-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-INFO-CLASSICAL-PROBABILISTIC-001"]) sourceRows149 = _
+ rw [dictionaryInsert148]
+ exact dictionaryFold149
+theorem dictionaryInsert147 : put sourceDictionary147 "SFT-INFO-QUANTITY-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001"] = sourceDictionary148 := rfl
+theorem dictionaryFold147 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary147 sourceRows147 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary147 "SFT-INFO-QUANTITY-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001"]) sourceRows148 = _
+ rw [dictionaryInsert147]
+ exact dictionaryFold148
+theorem dictionaryInsert146 : put sourceDictionary146 "SFT-INFO-MUTUAL-CONDITIONAL-001" ["SFT-MATH-PROBABILITY-STATISTICS-001","SFT-MATH-COMBINATORICS-001","SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-QUANTITY-001"] = sourceDictionary147 := rfl
+theorem dictionaryFold146 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary146 sourceRows146 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary146 "SFT-INFO-MUTUAL-CONDITIONAL-001" ["SFT-MATH-PROBABILITY-STATISTICS-001","SFT-MATH-COMBINATORICS-001","SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-QUANTITY-001"]) sourceRows147 = _
+ rw [dictionaryInsert146]
+ exact dictionaryFold147
+theorem dictionaryInsert145 : put sourceDictionary145 "SFT-INFO-ENTROPY-UNCERTAINTY-001" ["SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-MATH-PROBABILITY-STATISTICS-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-QUANTITY-001"] = sourceDictionary146 := rfl
+theorem dictionaryFold145 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary145 sourceRows145 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary145 "SFT-INFO-ENTROPY-UNCERTAINTY-001" ["SFT-FOUNDATION-PART-EQUIVALENCE-001","SFT-MATH-PROBABILITY-STATISTICS-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-QUANTITY-001"]) sourceRows146 = _
+ rw [dictionaryInsert145]
+ exact dictionaryFold146
+theorem dictionaryInsert144 : put sourceDictionary144 "SFT-INFO-ENCODING-DECODING-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DISCRETE-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001"] = sourceDictionary145 := rfl
+theorem dictionaryFold144 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary144 sourceRows144 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary144 "SFT-INFO-ENCODING-DECODING-001" ["SFT-FOUNDATION-FOLD-ASSEMBLY-001","SFT-MATH-DISCRETE-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-SYMBOL-DISTINCTION-001"]) sourceRows145 = _
+ rw [dictionaryInsert144]
+ exact dictionaryFold145
+theorem dictionaryInsert143 : put sourceDictionary143 "SFT-INFO-CONSERVATION-LOSS-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-INFO-MUTUAL-CONDITIONAL-001"] = sourceDictionary144 := rfl
+theorem dictionaryFold143 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary143 sourceRows143 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary143 "SFT-INFO-CONSERVATION-LOSS-001" ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CHANNEL-CAPACITY-001","SFT-INFO-MUTUAL-CONDITIONAL-001"]) sourceRows144 = _
+ rw [dictionaryInsert143]
+ exact dictionaryFold144
+theorem dictionaryInsert142 : put sourceDictionary142 "SFT-INFO-CLASSICAL-PROBABILISTIC-001" ["SFT-MATH-PROBABILITY-STATISTICS-001","SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-MUTUAL-CONDITIONAL-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary143 := rfl
+theorem dictionaryFold142 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary142 sourceRows142 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary142 "SFT-INFO-CLASSICAL-PROBABILISTIC-001" ["SFT-MATH-PROBABILITY-STATISTICS-001","SFT-INFO-ENTROPY-UNCERTAINTY-001","SFT-INFO-MUTUAL-CONDITIONAL-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows143 = _
+ rw [dictionaryInsert142]
+ exact dictionaryFold143
+theorem dictionaryInsert141 : put sourceDictionary141 "SFT-INFO-CHANNEL-CAPACITY-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-OPTIMIZATION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-QUANTITY-001"] = sourceDictionary142 := rfl
+theorem dictionaryFold141 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary141 sourceRows141 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary141 "SFT-INFO-CHANNEL-CAPACITY-001" ["SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-OPTIMIZATION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-QUANTITY-001"]) sourceRows142 = _
+ rw [dictionaryInsert141]
+ exact dictionaryFold142
+theorem dictionaryInsert140 : put sourceDictionary140 "SFT-FOUNDATION-PART-EQUIVALENCE-001" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001"] = sourceDictionary141 := rfl
+theorem dictionaryFold140 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary140 sourceRows140 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary140 "SFT-FOUNDATION-PART-EQUIVALENCE-001" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001"]) sourceRows141 = _
+ rw [dictionaryInsert140]
+ exact dictionaryFold141
+theorem dictionaryInsert139 : put sourceDictionary139 "SFT-FOUNDATION-PART-001" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-COUNT-001"] = sourceDictionary140 := rfl
+theorem dictionaryFold139 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary139 sourceRows139 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary139 "SFT-FOUNDATION-PART-001" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-COUNT-001"]) sourceRows140 = _
+ rw [dictionaryInsert139]
+ exact dictionaryFold140
+theorem dictionaryInsert138 : put sourceDictionary138 "SFT-FOUNDATION-ONE-001" ["SFT-ROOT-THERE-IS-NO-NOTHING"] = sourceDictionary139 := rfl
+theorem dictionaryFold138 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary138 sourceRows138 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary138 "SFT-FOUNDATION-ONE-001" ["SFT-ROOT-THERE-IS-NO-NOTHING"]) sourceRows139 = _
+ rw [dictionaryInsert138]
+ exact dictionaryFold139
+theorem dictionaryInsert137 : put sourceDictionary137 "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001"] = sourceDictionary138 := rfl
+theorem dictionaryFold137 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary137 sourceRows137 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary137 "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001"]) sourceRows138 = _
+ rw [dictionaryInsert137]
+ exact dictionaryFold138
+theorem dictionaryInsert136 : put sourceDictionary136 "SFT-FOUNDATION-HALF-ONE-001" ["SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-EXACT-OPERATIONS-001","SFT-FOUNDATION-PART-EQUIVALENCE-001"] = sourceDictionary137 := rfl
+theorem dictionaryFold136 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary136 sourceRows136 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary136 "SFT-FOUNDATION-HALF-ONE-001" ["SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-EXACT-OPERATIONS-001","SFT-FOUNDATION-PART-EQUIVALENCE-001"]) sourceRows137 = _
+ rw [dictionaryInsert136]
+ exact dictionaryFold137
+theorem dictionaryInsert135 : put sourceDictionary135 "SFT-FOUNDATION-FORM-GRAMMAR-001" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-ASSEMBLY-001"] = sourceDictionary136 := rfl
+theorem dictionaryFold135 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary135 sourceRows135 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary135 "SFT-FOUNDATION-FORM-GRAMMAR-001" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-FOLD-001","SFT-FOUNDATION-FOLD-ASSEMBLY-001"]) sourceRows136 = _
+ rw [dictionaryInsert135]
+ exact dictionaryFold136
+theorem dictionaryInsert134 : put sourceDictionary134 "SFT-FOUNDATION-FORM-ENFORCEMENT-001" ["SFT-FOUNDATION-FORM-GRAMMAR-001"] = sourceDictionary135 := rfl
+theorem dictionaryFold134 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary134 sourceRows134 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary134 "SFT-FOUNDATION-FORM-ENFORCEMENT-001" ["SFT-FOUNDATION-FORM-GRAMMAR-001"]) sourceRows135 = _
+ rw [dictionaryInsert134]
+ exact dictionaryFold135
+theorem dictionaryInsert133 : put sourceDictionary133 "SFT-FOUNDATION-FOLD-DYNAMICS-001" ["SFT-FOUNDATION-EXACT-OPERATIONS-001","SFT-FOUNDATION-HALF-ONE-001"] = sourceDictionary134 := rfl
+theorem dictionaryFold133 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary133 sourceRows133 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary133 "SFT-FOUNDATION-FOLD-DYNAMICS-001" ["SFT-FOUNDATION-EXACT-OPERATIONS-001","SFT-FOUNDATION-HALF-ONE-001"]) sourceRows134 = _
+ rw [dictionaryInsert133]
+ exact dictionaryFold134
+theorem dictionaryInsert132 : put sourceDictionary132 "SFT-FOUNDATION-FOLD-ASSEMBLY-001" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-FOLD-001"] = sourceDictionary133 := rfl
+theorem dictionaryFold132 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary132 sourceRows132 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary132 "SFT-FOUNDATION-FOLD-ASSEMBLY-001" ["SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-FOLD-001"]) sourceRows133 = _
+ rw [dictionaryInsert132]
+ exact dictionaryFold133
+theorem dictionaryInsert131 : put sourceDictionary131 "SFT-FOUNDATION-FOLD-001" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001"] = sourceDictionary132 := rfl
+theorem dictionaryFold131 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary131 sourceRows131 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary131 "SFT-FOUNDATION-FOLD-001" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001"]) sourceRows132 = _
+ rw [dictionaryInsert131]
+ exact dictionaryFold132
+theorem dictionaryInsert130 : put sourceDictionary130 "SFT-FOUNDATION-EXACT-OPERATIONS-001" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001"] = sourceDictionary131 := rfl
+theorem dictionaryFold130 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary130 sourceRows130 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary130 "SFT-FOUNDATION-EXACT-OPERATIONS-001" ["SFT-FOUNDATION-ONE-001","SFT-FOUNDATION-COUNT-001","SFT-FOUNDATION-PART-001"]) sourceRows131 = _
+ rw [dictionaryInsert130]
+ exact dictionaryFold131
+theorem dictionaryInsert129 : put sourceDictionary129 "SFT-FOUNDATION-COUNT-001" ["SFT-FOUNDATION-ONE-001"] = sourceDictionary130 := rfl
+theorem dictionaryFold129 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary129 sourceRows129 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary129 "SFT-FOUNDATION-COUNT-001" ["SFT-FOUNDATION-ONE-001"]) sourceRows130 = _
+ rw [dictionaryInsert129]
+ exact dictionaryFold130
+theorem dictionaryInsert128 : put sourceDictionary128 "SFT-COMP-SEM-VERIFICATION-001" ["SFT-COMP-SEM-COMPILATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary129 := rfl
+theorem dictionaryFold128 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary128 sourceRows128 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary128 "SFT-COMP-SEM-VERIFICATION-001" ["SFT-COMP-SEM-COMPILATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows129 = _
+ rw [dictionaryInsert128]
+ exact dictionaryFold129
+theorem dictionaryInsert127 : put sourceDictionary127 "SFT-COMP-SEM-TYPE-001" ["SFT-COMP-SEM-OPERATIONAL-DENOTATIONAL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary128 := rfl
+theorem dictionaryFold127 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary127 sourceRows127 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary127 "SFT-COMP-SEM-TYPE-001" ["SFT-COMP-SEM-OPERATIONAL-DENOTATIONAL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows128 = _
+ rw [dictionaryInsert127]
+ exact dictionaryFold128
+theorem dictionaryInsert126 : put sourceDictionary126 "SFT-COMP-SEM-TRANSFORMATION-001" ["SFT-COMP-SEM-SPECIFICATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary127 := rfl
+theorem dictionaryFold126 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary126 sourceRows126 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary126 "SFT-COMP-SEM-TRANSFORMATION-001" ["SFT-COMP-SEM-SPECIFICATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows127 = _
+ rw [dictionaryInsert126]
+ exact dictionaryFold127
+theorem dictionaryInsert125 : put sourceDictionary125 "SFT-COMP-SEM-TERMINATION-001" ["SFT-COMP-SEM-PROGRAM-EQUIVALENCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary126 := rfl
+theorem dictionaryFold125 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary125 sourceRows125 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary125 "SFT-COMP-SEM-TERMINATION-001" ["SFT-COMP-SEM-PROGRAM-EQUIVALENCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows126 = _
+ rw [dictionaryInsert125]
+ exact dictionaryFold126
+theorem dictionaryInsert124 : put sourceDictionary124 "SFT-COMP-SEM-SYNTAX-001" ["SFT-COMP-ALG-APPROXIMATE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary125 := rfl
+theorem dictionaryFold124 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary124 sourceRows124 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary124 "SFT-COMP-SEM-SYNTAX-001" ["SFT-COMP-ALG-APPROXIMATE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows125 = _
+ rw [dictionaryInsert124]
+ exact dictionaryFold125
+theorem dictionaryInsert123 : put sourceDictionary123 "SFT-COMP-SEM-SPECIFICATION-001" ["SFT-COMP-SEM-CORRECTNESS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary124 := rfl
+theorem dictionaryFold123 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary123 sourceRows123 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary123 "SFT-COMP-SEM-SPECIFICATION-001" ["SFT-COMP-SEM-CORRECTNESS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows124 = _
+ rw [dictionaryInsert123]
+ exact dictionaryFold124
+theorem dictionaryInsert122 : put sourceDictionary122 "SFT-COMP-SEM-PROGRAM-EQUIVALENCE-001" ["SFT-COMP-SEM-TYPE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary123 := rfl
+theorem dictionaryFold122 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary122 sourceRows122 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary122 "SFT-COMP-SEM-PROGRAM-EQUIVALENCE-001" ["SFT-COMP-SEM-TYPE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows123 = _
+ rw [dictionaryInsert122]
+ exact dictionaryFold123
+theorem dictionaryInsert121 : put sourceDictionary121 "SFT-COMP-SEM-OPERATIONAL-DENOTATIONAL-001" ["SFT-COMP-SEM-EVALUATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary122 := rfl
+theorem dictionaryFold121 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary121 sourceRows121 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary121 "SFT-COMP-SEM-OPERATIONAL-DENOTATIONAL-001" ["SFT-COMP-SEM-EVALUATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows122 = _
+ rw [dictionaryInsert121]
+ exact dictionaryFold122
+theorem dictionaryInsert120 : put sourceDictionary120 "SFT-COMP-SEM-EVALUATION-001" ["SFT-COMP-SEM-BINDING-SUBSTITUTION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary121 := rfl
+theorem dictionaryFold120 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary120 sourceRows120 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary120 "SFT-COMP-SEM-EVALUATION-001" ["SFT-COMP-SEM-BINDING-SUBSTITUTION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows121 = _
+ rw [dictionaryInsert120]
+ exact dictionaryFold121
+theorem dictionaryInsert119 : put sourceDictionary119 "SFT-COMP-SEM-CORRECTNESS-001" ["SFT-COMP-SEM-TERMINATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary120 := rfl
+theorem dictionaryFold119 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary119 sourceRows119 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary119 "SFT-COMP-SEM-CORRECTNESS-001" ["SFT-COMP-SEM-TERMINATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows120 = _
+ rw [dictionaryInsert119]
+ exact dictionaryFold120
+theorem dictionaryInsert118 : put sourceDictionary118 "SFT-COMP-SEM-COMPILATION-001" ["SFT-COMP-SEM-TRANSFORMATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary119 := rfl
+theorem dictionaryFold118 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary118 sourceRows118 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary118 "SFT-COMP-SEM-COMPILATION-001" ["SFT-COMP-SEM-TRANSFORMATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows119 = _
+ rw [dictionaryInsert118]
+ exact dictionaryFold119
+theorem dictionaryInsert117 : put sourceDictionary117 "SFT-COMP-SEM-BINDING-SUBSTITUTION-001" ["SFT-COMP-SEM-SYNTAX-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary118 := rfl
+theorem dictionaryFold117 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary117 sourceRows117 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary117 "SFT-COMP-SEM-BINDING-SUBSTITUTION-001" ["SFT-COMP-SEM-SYNTAX-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows118 = _
+ rw [dictionaryInsert117]
+ exact dictionaryFold118
+theorem dictionaryInsert116 : put sourceDictionary116 "SFT-COMP-SEC-ZERO-KNOWLEDGE-001" ["SFT-COMP-SEC-PROOF-KNOWLEDGE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary117 := rfl
+theorem dictionaryFold116 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary116 sourceRows116 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary116 "SFT-COMP-SEC-ZERO-KNOWLEDGE-001" ["SFT-COMP-SEC-PROOF-KNOWLEDGE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows117 = _
+ rw [dictionaryInsert116]
+ exact dictionaryFold117
+theorem dictionaryInsert115 : put sourceDictionary115 "SFT-COMP-SEC-SIGNATURE-001" ["SFT-COMP-SEC-COMMITMENT-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary116 := rfl
+theorem dictionaryFold115 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary115 sourceRows115 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary115 "SFT-COMP-SEC-SIGNATURE-001" ["SFT-COMP-SEC-COMMITMENT-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows116 = _
+ rw [dictionaryInsert115]
+ exact dictionaryFold116
+theorem dictionaryInsert114 : put sourceDictionary114 "SFT-COMP-SEC-SECURITY-DEFINITION-001" ["SFT-COMP-SEC-ADVERSARIAL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary115 := rfl
+theorem dictionaryFold114 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary114 sourceRows114 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary114 "SFT-COMP-SEC-SECURITY-DEFINITION-001" ["SFT-COMP-SEC-ADVERSARIAL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows115 = _
+ rw [dictionaryInsert114]
+ exact dictionaryFold115
+theorem dictionaryInsert113 : put sourceDictionary113 "SFT-COMP-SEC-SECRECY-001" ["SFT-COMP-SEC-ONE-WAYNESS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary114 := rfl
+theorem dictionaryFold113 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary113 sourceRows113 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary113 "SFT-COMP-SEC-SECRECY-001" ["SFT-COMP-SEC-ONE-WAYNESS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows114 = _
+ rw [dictionaryInsert113]
+ exact dictionaryFold114
+theorem dictionaryInsert112 : put sourceDictionary112 "SFT-COMP-SEC-PROOF-KNOWLEDGE-001" ["SFT-COMP-SEC-SIGNATURE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary113 := rfl
+theorem dictionaryFold112 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary112 sourceRows112 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary112 "SFT-COMP-SEC-PROOF-KNOWLEDGE-001" ["SFT-COMP-SEC-SIGNATURE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows113 = _
+ rw [dictionaryInsert112]
+ exact dictionaryFold113
+theorem dictionaryInsert111 : put sourceDictionary111 "SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001" ["SFT-COMP-SEC-SECURITY-DEFINITION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary112 := rfl
+theorem dictionaryFold111 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary111 sourceRows111 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary111 "SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001" ["SFT-COMP-SEC-SECURITY-DEFINITION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows112 = _
+ rw [dictionaryInsert111]
+ exact dictionaryFold112
+theorem dictionaryInsert110 : put sourceDictionary110 "SFT-COMP-SEC-ONE-WAYNESS-001" ["SFT-COMP-DIST-NETWORK-COMPUTATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary111 := rfl
+theorem dictionaryFold110 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary110 sourceRows110 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary110 "SFT-COMP-SEC-ONE-WAYNESS-001" ["SFT-COMP-DIST-NETWORK-COMPUTATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows111 = _
+ rw [dictionaryInsert110]
+ exact dictionaryFold111
+theorem dictionaryInsert109 : put sourceDictionary109 "SFT-COMP-SEC-MULTIPARTY-001" ["SFT-COMP-SEC-ZERO-KNOWLEDGE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary110 := rfl
+theorem dictionaryFold109 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary109 sourceRows109 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary109 "SFT-COMP-SEC-MULTIPARTY-001" ["SFT-COMP-SEC-ZERO-KNOWLEDGE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows110 = _
+ rw [dictionaryInsert109]
+ exact dictionaryFold110
+theorem dictionaryInsert108 : put sourceDictionary108 "SFT-COMP-SEC-INTEGRITY-001" ["SFT-COMP-SEC-SECRECY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary109 := rfl
+theorem dictionaryFold108 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary108 sourceRows108 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary108 "SFT-COMP-SEC-INTEGRITY-001" ["SFT-COMP-SEC-SECRECY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows109 = _
+ rw [dictionaryInsert108]
+ exact dictionaryFold109
+theorem dictionaryInsert107 : put sourceDictionary107 "SFT-COMP-SEC-HASHING-001" ["SFT-COMP-SEC-AUTHENTICATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary108 := rfl
+theorem dictionaryFold107 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary107 sourceRows107 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary107 "SFT-COMP-SEC-HASHING-001" ["SFT-COMP-SEC-AUTHENTICATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows108 = _
+ rw [dictionaryInsert107]
+ exact dictionaryFold108
+theorem dictionaryInsert106 : put sourceDictionary106 "SFT-COMP-SEC-COMMITMENT-001" ["SFT-COMP-SEC-HASHING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary107 := rfl
+theorem dictionaryFold106 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary106 sourceRows106 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary106 "SFT-COMP-SEC-COMMITMENT-001" ["SFT-COMP-SEC-HASHING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows107 = _
+ rw [dictionaryInsert106]
+ exact dictionaryFold107
+theorem dictionaryInsert105 : put sourceDictionary105 "SFT-COMP-SEC-AUTHENTICATION-001" ["SFT-COMP-SEC-INTEGRITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary106 := rfl
+theorem dictionaryFold105 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary105 sourceRows105 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary105 "SFT-COMP-SEC-AUTHENTICATION-001" ["SFT-COMP-SEC-INTEGRITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows106 = _
+ rw [dictionaryInsert105]
+ exact dictionaryFold106
+theorem dictionaryInsert104 : put sourceDictionary104 "SFT-COMP-SEC-ADVERSARIAL-001" ["SFT-COMP-SEC-MULTIPARTY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary105 := rfl
+theorem dictionaryFold104 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary104 sourceRows104 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary104 "SFT-COMP-SEC-ADVERSARIAL-001" ["SFT-COMP-SEC-MULTIPARTY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows105 = _
+ rw [dictionaryInsert104]
+ exact dictionaryFold105
+theorem dictionaryInsert103 : put sourceDictionary103 "SFT-COMP-SCI-SYMBOLIC-001" ["SFT-COMP-SCI-CONVERGENCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary104 := rfl
+theorem dictionaryFold103 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary103 sourceRows103 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary103 "SFT-COMP-SCI-SYMBOLIC-001" ["SFT-COMP-SCI-CONVERGENCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows104 = _
+ rw [dictionaryInsert103]
+ exact dictionaryFold104
+theorem dictionaryInsert102 : put sourceDictionary102 "SFT-COMP-SCI-STABILITY-001" ["SFT-COMP-SCI-EXACT-APPROXIMATE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary103 := rfl
+theorem dictionaryFold102 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary102 sourceRows102 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary102 "SFT-COMP-SCI-STABILITY-001" ["SFT-COMP-SCI-EXACT-APPROXIMATE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows103 = _
+ rw [dictionaryInsert102]
+ exact dictionaryFold103
+theorem dictionaryInsert101 : put sourceDictionary101 "SFT-COMP-SCI-SIMULATION-001" ["SFT-COMP-SCI-SYMBOLIC-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary102 := rfl
+theorem dictionaryFold101 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary101 sourceRows101 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary101 "SFT-COMP-SCI-SIMULATION-001" ["SFT-COMP-SCI-SYMBOLIC-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows102 = _
+ rw [dictionaryInsert101]
+ exact dictionaryFold102
+theorem dictionaryInsert100 : put sourceDictionary100 "SFT-COMP-SCI-MATHEMATICAL-MODELLING-001" ["SFT-COMP-SCI-MANY-BODY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary101 := rfl
+theorem dictionaryFold100 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary100 sourceRows100 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary100 "SFT-COMP-SCI-MATHEMATICAL-MODELLING-001" ["SFT-COMP-SCI-MANY-BODY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows101 = _
+ rw [dictionaryInsert100]
+ exact dictionaryFold101
+theorem dictionaryInsert99 : put sourceDictionary99 "SFT-COMP-SCI-MANY-BODY-001" ["SFT-COMP-SCI-HIGH-DIMENSIONAL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary100 := rfl
+theorem dictionaryFold99 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary99 sourceRows99 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary99 "SFT-COMP-SCI-MANY-BODY-001" ["SFT-COMP-SCI-HIGH-DIMENSIONAL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows100 = _
+ rw [dictionaryInsert99]
+ exact dictionaryFold100
+theorem dictionaryInsert98 : put sourceDictionary98 "SFT-COMP-SCI-INVERSE-PROBLEM-001" ["SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary99 := rfl
+theorem dictionaryFold98 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary98 sourceRows98 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary98 "SFT-COMP-SCI-INVERSE-PROBLEM-001" ["SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows99 = _
+ rw [dictionaryInsert98]
+ exact dictionaryFold99
+theorem dictionaryInsert97 : put sourceDictionary97 "SFT-COMP-SCI-HIGH-DIMENSIONAL-001" ["SFT-COMP-SCI-COMPUTATIONAL-STATISTICS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary98 := rfl
+theorem dictionaryFold97 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary97 sourceRows97 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary97 "SFT-COMP-SCI-HIGH-DIMENSIONAL-001" ["SFT-COMP-SCI-COMPUTATIONAL-STATISTICS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows98 = _
+ rw [dictionaryInsert97]
+ exact dictionaryFold98
+theorem dictionaryInsert96 : put sourceDictionary96 "SFT-COMP-SCI-EXACT-APPROXIMATE-001" ["SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary97 := rfl
+theorem dictionaryFold96 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary96 sourceRows96 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary96 "SFT-COMP-SCI-EXACT-APPROXIMATE-001" ["SFT-COMP-LEARN-CLASSICAL-LEARNING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows97 = _
+ rw [dictionaryInsert96]
+ exact dictionaryFold97
+theorem dictionaryInsert95 : put sourceDictionary95 "SFT-COMP-SCI-ERROR-PROPAGATION-001" ["SFT-COMP-SCI-STABILITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary96 := rfl
+theorem dictionaryFold95 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary95 sourceRows95 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary95 "SFT-COMP-SCI-ERROR-PROPAGATION-001" ["SFT-COMP-SCI-STABILITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows96 = _
+ rw [dictionaryInsert95]
+ exact dictionaryFold96
+theorem dictionaryInsert94 : put sourceDictionary94 "SFT-COMP-SCI-DISCRETIZATION-001" ["SFT-COMP-SCI-ERROR-PROPAGATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary95 := rfl
+theorem dictionaryFold94 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary94 sourceRows94 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary94 "SFT-COMP-SCI-DISCRETIZATION-001" ["SFT-COMP-SCI-ERROR-PROPAGATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows95 = _
+ rw [dictionaryInsert94]
+ exact dictionaryFold95
+theorem dictionaryInsert93 : put sourceDictionary93 "SFT-COMP-SCI-CONVERGENCE-001" ["SFT-COMP-SCI-DISCRETIZATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary94 := rfl
+theorem dictionaryFold93 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary93 sourceRows93 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary93 "SFT-COMP-SCI-CONVERGENCE-001" ["SFT-COMP-SCI-DISCRETIZATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows94 = _
+ rw [dictionaryInsert93]
+ exact dictionaryFold94
+theorem dictionaryInsert92 : put sourceDictionary92 "SFT-COMP-SCI-COMPUTATIONAL-STATISTICS-001" ["SFT-COMP-SCI-INVERSE-PROBLEM-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary93 := rfl
+theorem dictionaryFold92 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary92 sourceRows92 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary92 "SFT-COMP-SCI-COMPUTATIONAL-STATISTICS-001" ["SFT-COMP-SCI-INVERSE-PROBLEM-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows93 = _
+ rw [dictionaryInsert92]
+ exact dictionaryFold93
+theorem dictionaryInsert91 : put sourceDictionary91 "SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001" ["SFT-COMP-SCI-SIMULATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary92 := rfl
+theorem dictionaryFold91 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary91 sourceRows91 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary91 "SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001" ["SFT-COMP-SCI-SIMULATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows92 = _
+ rw [dictionaryInsert91]
+ exact dictionaryFold92
+theorem dictionaryInsert90 : put sourceDictionary90 "SFT-COMP-LEARN-SEARCH-PLANNING-001" ["SFT-COMP-LEARN-INDUCTION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary91 := rfl
+theorem dictionaryFold90 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary90 sourceRows90 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary90 "SFT-COMP-LEARN-SEARCH-PLANNING-001" ["SFT-COMP-LEARN-INDUCTION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows91 = _
+ rw [dictionaryInsert90]
+ exact dictionaryFold91
+theorem dictionaryInsert89 : put sourceDictionary89 "SFT-COMP-LEARN-SAMPLE-COMPLEXITY-001" ["SFT-COMP-LEARN-GENERALIZATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary90 := rfl
+theorem dictionaryFold89 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary89 sourceRows89 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary89 "SFT-COMP-LEARN-SAMPLE-COMPLEXITY-001" ["SFT-COMP-LEARN-GENERALIZATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows90 = _
+ rw [dictionaryInsert89]
+ exact dictionaryFold90
+theorem dictionaryInsert88 : put sourceDictionary88 "SFT-COMP-LEARN-REPRESENTATION-001" ["SFT-COMP-LEARN-CLASSIFICATION-PREDICTION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary89 := rfl
+theorem dictionaryFold88 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary88 sourceRows88 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary88 "SFT-COMP-LEARN-REPRESENTATION-001" ["SFT-COMP-LEARN-CLASSIFICATION-PREDICTION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows89 = _
+ rw [dictionaryInsert88]
+ exact dictionaryFold89
+theorem dictionaryInsert87 : put sourceDictionary87 "SFT-COMP-LEARN-REINFORCEMENT-001" ["SFT-COMP-LEARN-SEARCH-PLANNING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary88 := rfl
+theorem dictionaryFold87 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary87 sourceRows87 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary87 "SFT-COMP-LEARN-REINFORCEMENT-001" ["SFT-COMP-LEARN-SEARCH-PLANNING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows88 = _
+ rw [dictionaryInsert87]
+ exact dictionaryFold88
+theorem dictionaryInsert86 : put sourceDictionary86 "SFT-COMP-LEARN-MULTIAGENT-001" ["SFT-COMP-LEARN-REINFORCEMENT-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary87 := rfl
+theorem dictionaryFold86 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary86 sourceRows86 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary86 "SFT-COMP-LEARN-MULTIAGENT-001" ["SFT-COMP-LEARN-REINFORCEMENT-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows87 = _
+ rw [dictionaryInsert86]
+ exact dictionaryFold87
+theorem dictionaryInsert85 : put sourceDictionary85 "SFT-COMP-LEARN-LEARNING-OPTIMIZATION-001" ["SFT-COMP-LEARN-SAMPLE-COMPLEXITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary86 := rfl
+theorem dictionaryFold85 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary85 sourceRows85 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary85 "SFT-COMP-LEARN-LEARNING-OPTIMIZATION-001" ["SFT-COMP-LEARN-SAMPLE-COMPLEXITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows86 = _
+ rw [dictionaryInsert85]
+ exact dictionaryFold86
+theorem dictionaryInsert84 : put sourceDictionary84 "SFT-COMP-LEARN-LEARNING-LIMITS-001" ["SFT-COMP-LEARN-ADAPTATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary85 := rfl
+theorem dictionaryFold84 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary84 sourceRows84 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary84 "SFT-COMP-LEARN-LEARNING-LIMITS-001" ["SFT-COMP-LEARN-ADAPTATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows85 = _
+ rw [dictionaryInsert84]
+ exact dictionaryFold85
+theorem dictionaryInsert83 : put sourceDictionary83 "SFT-COMP-LEARN-INTERPRETABILITY-VERIFICATION-001" ["SFT-COMP-LEARN-LEARNING-LIMITS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary84 := rfl
+theorem dictionaryFold83 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary83 sourceRows83 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary83 "SFT-COMP-LEARN-INTERPRETABILITY-VERIFICATION-001" ["SFT-COMP-LEARN-LEARNING-LIMITS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows84 = _
+ rw [dictionaryInsert83]
+ exact dictionaryFold84
+theorem dictionaryInsert82 : put sourceDictionary82 "SFT-COMP-LEARN-INFERENCE-001" ["SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary83 := rfl
+theorem dictionaryFold82 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary82 sourceRows82 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary82 "SFT-COMP-LEARN-INFERENCE-001" ["SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows83 = _
+ rw [dictionaryInsert82]
+ exact dictionaryFold83
+theorem dictionaryInsert81 : put sourceDictionary81 "SFT-COMP-LEARN-INDUCTION-001" ["SFT-COMP-LEARN-LEARNING-OPTIMIZATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary82 := rfl
+theorem dictionaryFold81 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary81 sourceRows81 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary81 "SFT-COMP-LEARN-INDUCTION-001" ["SFT-COMP-LEARN-LEARNING-OPTIMIZATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows82 = _
+ rw [dictionaryInsert81]
+ exact dictionaryFold82
+theorem dictionaryInsert80 : put sourceDictionary80 "SFT-COMP-LEARN-GENERALIZATION-001" ["SFT-COMP-LEARN-REPRESENTATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary81 := rfl
+theorem dictionaryFold80 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary80 sourceRows80 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary80 "SFT-COMP-LEARN-GENERALIZATION-001" ["SFT-COMP-LEARN-REPRESENTATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows81 = _
+ rw [dictionaryInsert80]
+ exact dictionaryFold81
+theorem dictionaryInsert79 : put sourceDictionary79 "SFT-COMP-LEARN-CLASSIFICATION-PREDICTION-001" ["SFT-COMP-LEARN-INFERENCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary80 := rfl
+theorem dictionaryFold79 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary79 sourceRows79 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary79 "SFT-COMP-LEARN-CLASSIFICATION-PREDICTION-001" ["SFT-COMP-LEARN-INFERENCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows80 = _
+ rw [dictionaryInsert79]
+ exact dictionaryFold80
+theorem dictionaryInsert78 : put sourceDictionary78 "SFT-COMP-LEARN-CLASSICAL-LEARNING-001" ["SFT-COMP-LEARN-INTERPRETABILITY-VERIFICATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary79 := rfl
+theorem dictionaryFold78 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary78 sourceRows78 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary78 "SFT-COMP-LEARN-CLASSICAL-LEARNING-001" ["SFT-COMP-LEARN-INTERPRETABILITY-VERIFICATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows79 = _
+ rw [dictionaryInsert78]
+ exact dictionaryFold79
+theorem dictionaryInsert77 : put sourceDictionary77 "SFT-COMP-LEARN-ADAPTATION-001" ["SFT-COMP-LEARN-MULTIAGENT-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary78 := rfl
+theorem dictionaryFold77 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary77 sourceRows77 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary77 "SFT-COMP-LEARN-ADAPTATION-001" ["SFT-COMP-LEARN-MULTIAGENT-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows78 = _
+ rw [dictionaryInsert77]
+ exact dictionaryFold78
+theorem dictionaryInsert76 : put sourceDictionary76 "SFT-COMP-FORM-UNIVERSALITY-001" ["SFT-COMP-FORM-MODEL-EQUIVALENCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary77 := rfl
+theorem dictionaryFold76 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary76 sourceRows76 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary76 "SFT-COMP-FORM-UNIVERSALITY-001" ["SFT-COMP-FORM-MODEL-EQUIVALENCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows77 = _
+ rw [dictionaryInsert76]
+ exact dictionaryFold77
+theorem dictionaryInsert75 : put sourceDictionary75 "SFT-COMP-FORM-STATE-TRANSITION-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary76 := rfl
+theorem dictionaryFold75 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary75 sourceRows75 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary75 "SFT-COMP-FORM-STATE-TRANSITION-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows76 = _
+ rw [dictionaryInsert75]
+ exact dictionaryFold76
+theorem dictionaryInsert74 : put sourceDictionary74 "SFT-COMP-FORM-REWRITING-001" ["SFT-COMP-FORM-AUTOMATON-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary75 := rfl
+theorem dictionaryFold74 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary74 sourceRows74 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary74 "SFT-COMP-FORM-REWRITING-001" ["SFT-COMP-FORM-AUTOMATON-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows75 = _
+ rw [dictionaryInsert74]
+ exact dictionaryFold75
+theorem dictionaryInsert73 : put sourceDictionary73 "SFT-COMP-FORM-RECURSIVE-FUNCTION-001" ["SFT-COMP-FORM-REWRITING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary74 := rfl
+theorem dictionaryFold73 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary73 sourceRows73 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary73 "SFT-COMP-FORM-RECURSIVE-FUNCTION-001" ["SFT-COMP-FORM-REWRITING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows74 = _
+ rw [dictionaryInsert73]
+ exact dictionaryFold74
+theorem dictionaryInsert72 : put sourceDictionary72 "SFT-COMP-FORM-OPERATIONAL-PROCESS-001" ["SFT-COMP-FORM-CIRCUIT-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary73 := rfl
+theorem dictionaryFold72 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary72 sourceRows72 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary72 "SFT-COMP-FORM-OPERATIONAL-PROCESS-001" ["SFT-COMP-FORM-CIRCUIT-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows73 = _
+ rw [dictionaryInsert72]
+ exact dictionaryFold73
+theorem dictionaryInsert71 : put sourceDictionary71 "SFT-COMP-FORM-MODEL-EQUIVALENCE-001" ["SFT-COMP-FORM-COMPOSITION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary72 := rfl
+theorem dictionaryFold71 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary71 sourceRows71 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary71 "SFT-COMP-FORM-MODEL-EQUIVALENCE-001" ["SFT-COMP-FORM-COMPOSITION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows72 = _
+ rw [dictionaryInsert71]
+ exact dictionaryFold72
+theorem dictionaryInsert70 : put sourceDictionary70 "SFT-COMP-FORM-LANGUAGE-GRAMMAR-001" ["SFT-COMP-FORM-STATE-TRANSITION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary71 := rfl
+theorem dictionaryFold70 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary70 sourceRows70 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary70 "SFT-COMP-FORM-LANGUAGE-GRAMMAR-001" ["SFT-COMP-FORM-STATE-TRANSITION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows71 = _
+ rw [dictionaryInsert70]
+ exact dictionaryFold71
+theorem dictionaryInsert69 : put sourceDictionary69 "SFT-COMP-FORM-LAMBDA-CALCULUS-001" ["SFT-COMP-FORM-RECURSIVE-FUNCTION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary70 := rfl
+theorem dictionaryFold69 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary69 sourceRows69 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary69 "SFT-COMP-FORM-LAMBDA-CALCULUS-001" ["SFT-COMP-FORM-RECURSIVE-FUNCTION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows70 = _
+ rw [dictionaryInsert69]
+ exact dictionaryFold70
+theorem dictionaryInsert68 : put sourceDictionary68 "SFT-COMP-FORM-COMPOSITION-001" ["SFT-COMP-FORM-OPERATIONAL-PROCESS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary69 := rfl
+theorem dictionaryFold68 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary68 sourceRows68 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary68 "SFT-COMP-FORM-COMPOSITION-001" ["SFT-COMP-FORM-OPERATIONAL-PROCESS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows69 = _
+ rw [dictionaryInsert68]
+ exact dictionaryFold69
+theorem dictionaryInsert67 : put sourceDictionary67 "SFT-COMP-FORM-CIRCUIT-001" ["SFT-COMP-FORM-ABSTRACT-MACHINE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary68 := rfl
+theorem dictionaryFold67 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary67 sourceRows67 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary67 "SFT-COMP-FORM-CIRCUIT-001" ["SFT-COMP-FORM-ABSTRACT-MACHINE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows68 = _
+ rw [dictionaryInsert67]
+ exact dictionaryFold68
+theorem dictionaryInsert66 : put sourceDictionary66 "SFT-COMP-FORM-AUTOMATON-001" ["SFT-COMP-FORM-LANGUAGE-GRAMMAR-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary67 := rfl
+theorem dictionaryFold66 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary66 sourceRows66 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary66 "SFT-COMP-FORM-AUTOMATON-001" ["SFT-COMP-FORM-LANGUAGE-GRAMMAR-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows67 = _
+ rw [dictionaryInsert66]
+ exact dictionaryFold67
+theorem dictionaryInsert65 : put sourceDictionary65 "SFT-COMP-FORM-ABSTRACT-MACHINE-001" ["SFT-COMP-FORM-LAMBDA-CALCULUS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary66 := rfl
+theorem dictionaryFold65 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary65 sourceRows65 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary65 "SFT-COMP-FORM-ABSTRACT-MACHINE-001" ["SFT-COMP-FORM-LAMBDA-CALCULUS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows66 = _
+ rw [dictionaryInsert65]
+ exact dictionaryFold66
+theorem dictionaryInsert64 : put sourceDictionary64 "SFT-COMP-DIST-SYNCHRONIZATION-001" ["SFT-COMP-DIST-CAUSALITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary65 := rfl
+theorem dictionaryFold64 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary64 sourceRows64 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary64 "SFT-COMP-DIST-SYNCHRONIZATION-001" ["SFT-COMP-DIST-CAUSALITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows65 = _
+ rw [dictionaryInsert64]
+ exact dictionaryFold65
+theorem dictionaryInsert63 : put sourceDictionary63 "SFT-COMP-DIST-REPLICATION-CONSISTENCY-001" ["SFT-COMP-DIST-AGREEMENT-IMPOSSIBILITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary64 := rfl
+theorem dictionaryFold63 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary63 sourceRows63 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary63 "SFT-COMP-DIST-REPLICATION-CONSISTENCY-001" ["SFT-COMP-DIST-AGREEMENT-IMPOSSIBILITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows64 = _
+ rw [dictionaryInsert63]
+ exact dictionaryFold64
+theorem dictionaryInsert62 : put sourceDictionary62 "SFT-COMP-DIST-PARTIAL-ORDER-001" ["SFT-COMP-DIST-COMMUNICATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary63 := rfl
+theorem dictionaryFold62 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary62 sourceRows62 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary62 "SFT-COMP-DIST-PARTIAL-ORDER-001" ["SFT-COMP-DIST-COMMUNICATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows63 = _
+ rw [dictionaryInsert62]
+ exact dictionaryFold63
+theorem dictionaryInsert61 : put sourceDictionary61 "SFT-COMP-DIST-NETWORK-COMPUTATION-001" ["SFT-COMP-DIST-LOCALITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary62 := rfl
+theorem dictionaryFold61 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary61 sourceRows61 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary61 "SFT-COMP-DIST-NETWORK-COMPUTATION-001" ["SFT-COMP-DIST-LOCALITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows62 = _
+ rw [dictionaryInsert61]
+ exact dictionaryFold62
+theorem dictionaryInsert60 : put sourceDictionary60 "SFT-COMP-DIST-LOCALITY-001" ["SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary61 := rfl
+theorem dictionaryFold60 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary60 sourceRows60 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary60 "SFT-COMP-DIST-LOCALITY-001" ["SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows61 = _
+ rw [dictionaryInsert60]
+ exact dictionaryFold61
+theorem dictionaryInsert59 : put sourceDictionary59 "SFT-COMP-DIST-FAULT-MODEL-001" ["SFT-COMP-DIST-REPLICATION-CONSISTENCY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary60 := rfl
+theorem dictionaryFold59 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary59 sourceRows59 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary59 "SFT-COMP-DIST-FAULT-MODEL-001" ["SFT-COMP-DIST-REPLICATION-CONSISTENCY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows60 = _
+ rw [dictionaryInsert59]
+ exact dictionaryFold60
+theorem dictionaryInsert58 : put sourceDictionary58 "SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001" ["SFT-COMP-DIST-FAULT-MODEL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary59 := rfl
+theorem dictionaryFold58 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary58 sourceRows58 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary58 "SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001" ["SFT-COMP-DIST-FAULT-MODEL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows59 = _
+ rw [dictionaryInsert58]
+ exact dictionaryFold59
+theorem dictionaryInsert57 : put sourceDictionary57 "SFT-COMP-DIST-CONSENSUS-001" ["SFT-COMP-DIST-PARTIAL-ORDER-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary58 := rfl
+theorem dictionaryFold57 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary57 sourceRows57 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary57 "SFT-COMP-DIST-CONSENSUS-001" ["SFT-COMP-DIST-PARTIAL-ORDER-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows58 = _
+ rw [dictionaryInsert57]
+ exact dictionaryFold58
+theorem dictionaryInsert56 : put sourceDictionary56 "SFT-COMP-DIST-CONCURRENCY-001" ["SFT-COMP-SEM-VERIFICATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary57 := rfl
+theorem dictionaryFold56 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary56 sourceRows56 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary56 "SFT-COMP-DIST-CONCURRENCY-001" ["SFT-COMP-SEM-VERIFICATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows57 = _
+ rw [dictionaryInsert56]
+ exact dictionaryFold57
+theorem dictionaryInsert55 : put sourceDictionary55 "SFT-COMP-DIST-COMMUNICATION-001" ["SFT-COMP-DIST-SYNCHRONIZATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary56 := rfl
+theorem dictionaryFold55 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary55 sourceRows55 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary55 "SFT-COMP-DIST-COMMUNICATION-001" ["SFT-COMP-DIST-SYNCHRONIZATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows56 = _
+ rw [dictionaryInsert55]
+ exact dictionaryFold56
+theorem dictionaryInsert54 : put sourceDictionary54 "SFT-COMP-DIST-CAUSALITY-001" ["SFT-COMP-DIST-CONCURRENCY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary55 := rfl
+theorem dictionaryFold54 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary54 sourceRows54 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary54 "SFT-COMP-DIST-CAUSALITY-001" ["SFT-COMP-DIST-CONCURRENCY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows55 = _
+ rw [dictionaryInsert54]
+ exact dictionaryFold55
+theorem dictionaryInsert53 : put sourceDictionary53 "SFT-COMP-DIST-AGREEMENT-IMPOSSIBILITY-001" ["SFT-COMP-DIST-CONSENSUS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary54 := rfl
+theorem dictionaryFold53 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary53 sourceRows53 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary53 "SFT-COMP-DIST-AGREEMENT-IMPOSSIBILITY-001" ["SFT-COMP-DIST-CONSENSUS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows54 = _
+ rw [dictionaryInsert53]
+ exact dictionaryFold54
+theorem dictionaryInsert52 : put sourceDictionary52 "SFT-COMP-CPLX-TIME-SPACE-001" ["SFT-COMP-CPLX-INPUT-SIZE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary53 := rfl
+theorem dictionaryFold52 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary52 sourceRows52 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary52 "SFT-COMP-CPLX-TIME-SPACE-001" ["SFT-COMP-CPLX-INPUT-SIZE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows53 = _
+ rw [dictionaryInsert52]
+ exact dictionaryFold53
+theorem dictionaryInsert51 : put sourceDictionary51 "SFT-COMP-CPLX-REVERSIBILITY-COST-001" ["SFT-COMP-CPLX-RANDOMNESS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary52 := rfl
+theorem dictionaryFold51 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary51 sourceRows51 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary51 "SFT-COMP-CPLX-REVERSIBILITY-COST-001" ["SFT-COMP-CPLX-RANDOMNESS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows52 = _
+ rw [dictionaryInsert51]
+ exact dictionaryFold52
+theorem dictionaryInsert50 : put sourceDictionary50 "SFT-COMP-CPLX-REDUCTION-COMPLETENESS-001" ["SFT-COMP-CPLX-BOUNDS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary51 := rfl
+theorem dictionaryFold50 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary50 sourceRows50 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary50 "SFT-COMP-CPLX-REDUCTION-COMPLETENESS-001" ["SFT-COMP-CPLX-BOUNDS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows51 = _
+ rw [dictionaryInsert50]
+ exact dictionaryFold51
+theorem dictionaryInsert49 : put sourceDictionary49 "SFT-COMP-CPLX-RANDOMNESS-001" ["SFT-COMP-CPLX-COMMUNICATION-QUERY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary50 := rfl
+theorem dictionaryFold49 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary49 sourceRows49 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary49 "SFT-COMP-CPLX-RANDOMNESS-001" ["SFT-COMP-CPLX-COMMUNICATION-QUERY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows50 = _
+ rw [dictionaryInsert49]
+ exact dictionaryFold50
+theorem dictionaryInsert48 : put sourceDictionary48 "SFT-COMP-CPLX-PARAMETERIZED-001" ["SFT-COMP-CPLX-APPROXIMATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary49 := rfl
+theorem dictionaryFold48 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary48 sourceRows48 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary48 "SFT-COMP-CPLX-PARAMETERIZED-001" ["SFT-COMP-CPLX-APPROXIMATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows49 = _
+ rw [dictionaryInsert48]
+ exact dictionaryFold49
+theorem dictionaryInsert47 : put sourceDictionary47 "SFT-COMP-CPLX-PARALLEL-001" ["SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary48 := rfl
+theorem dictionaryFold47 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary47 sourceRows47 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary47 "SFT-COMP-CPLX-PARALLEL-001" ["SFT-COMP-CPLX-REVERSIBILITY-COST-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows48 = _
+ rw [dictionaryInsert47]
+ exact dictionaryFold48
+theorem dictionaryInsert46 : put sourceDictionary46 "SFT-COMP-CPLX-INPUT-SIZE-001" ["SFT-COMP-CBL-HYPERCOMPUTATION-LIMIT-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary47 := rfl
+theorem dictionaryFold46 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary46 sourceRows46 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary46 "SFT-COMP-CPLX-INPUT-SIZE-001" ["SFT-COMP-CBL-HYPERCOMPUTATION-LIMIT-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows47 = _
+ rw [dictionaryInsert46]
+ exact dictionaryFold47
+theorem dictionaryInsert45 : put sourceDictionary45 "SFT-COMP-CPLX-DESCRIPTIVE-001" ["SFT-COMP-CPLX-PARAMETERIZED-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary46 := rfl
+theorem dictionaryFold45 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary45 sourceRows45 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary45 "SFT-COMP-CPLX-DESCRIPTIVE-001" ["SFT-COMP-CPLX-PARAMETERIZED-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows46 = _
+ rw [dictionaryInsert45]
+ exact dictionaryFold46
+theorem dictionaryInsert44 : put sourceDictionary44 "SFT-COMP-CPLX-COMMUNICATION-QUERY-001" ["SFT-COMP-CPLX-CIRCUIT-RESOURCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary45 := rfl
+theorem dictionaryFold44 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary44 sourceRows44 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary44 "SFT-COMP-CPLX-COMMUNICATION-QUERY-001" ["SFT-COMP-CPLX-CIRCUIT-RESOURCE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows45 = _
+ rw [dictionaryInsert44]
+ exact dictionaryFold45
+theorem dictionaryInsert43 : put sourceDictionary43 "SFT-COMP-CPLX-CIRCUIT-RESOURCE-001" ["SFT-COMP-CPLX-TIME-SPACE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary44 := rfl
+theorem dictionaryFold43 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary43 sourceRows43 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary43 "SFT-COMP-CPLX-CIRCUIT-RESOURCE-001" ["SFT-COMP-CPLX-TIME-SPACE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows44 = _
+ rw [dictionaryInsert43]
+ exact dictionaryFold44
+theorem dictionaryInsert42 : put sourceDictionary42 "SFT-COMP-CPLX-BOUNDS-001" ["SFT-COMP-CPLX-PARALLEL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary43 := rfl
+theorem dictionaryFold42 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary42 sourceRows42 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary42 "SFT-COMP-CPLX-BOUNDS-001" ["SFT-COMP-CPLX-PARALLEL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows43 = _
+ rw [dictionaryInsert42]
+ exact dictionaryFold43
+theorem dictionaryInsert41 : put sourceDictionary41 "SFT-COMP-CPLX-AVERAGE-WORST-001" ["SFT-COMP-CPLX-REDUCTION-COMPLETENESS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary42 := rfl
+theorem dictionaryFold41 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary41 sourceRows41 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary41 "SFT-COMP-CPLX-AVERAGE-WORST-001" ["SFT-COMP-CPLX-REDUCTION-COMPLETENESS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows42 = _
+ rw [dictionaryInsert41]
+ exact dictionaryFold42
+theorem dictionaryInsert40 : put sourceDictionary40 "SFT-COMP-CPLX-APPROXIMATION-001" ["SFT-COMP-CPLX-AVERAGE-WORST-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary41 := rfl
+theorem dictionaryFold40 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary40 sourceRows40 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary40 "SFT-COMP-CPLX-APPROXIMATION-001" ["SFT-COMP-CPLX-AVERAGE-WORST-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows41 = _
+ rw [dictionaryInsert40]
+ exact dictionaryFold41
+theorem dictionaryInsert39 : put sourceDictionary39 "SFT-COMP-CBL-UNIVERSAL-MACHINE-001" ["SFT-COMP-CBL-DEGREES-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary40 := rfl
+theorem dictionaryFold39 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary39 sourceRows39 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary39 "SFT-COMP-CBL-UNIVERSAL-MACHINE-001" ["SFT-COMP-CBL-DEGREES-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows40 = _
+ rw [dictionaryInsert39]
+ exact dictionaryFold40
+theorem dictionaryInsert38 : put sourceDictionary38 "SFT-COMP-CBL-UNDECIDABILITY-001" ["SFT-COMP-CBL-UNIVERSAL-MACHINE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary39 := rfl
+theorem dictionaryFold38 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary38 sourceRows38 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary38 "SFT-COMP-CBL-UNDECIDABILITY-001" ["SFT-COMP-CBL-UNIVERSAL-MACHINE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows39 = _
+ rw [dictionaryInsert38]
+ exact dictionaryFold39
+theorem dictionaryInsert37 : put sourceDictionary37 "SFT-COMP-CBL-RELATIVE-ORACLE-001" ["SFT-COMP-CBL-INCOMPLETENESS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary38 := rfl
+theorem dictionaryFold37 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary37 sourceRows37 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary37 "SFT-COMP-CBL-RELATIVE-ORACLE-001" ["SFT-COMP-CBL-INCOMPLETENESS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows38 = _
+ rw [dictionaryInsert37]
+ exact dictionaryFold38
+theorem dictionaryInsert36 : put sourceDictionary36 "SFT-COMP-CBL-REDUCTION-001" ["SFT-COMP-CBL-ENUMERATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary37 := rfl
+theorem dictionaryFold36 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary36 sourceRows36 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary36 "SFT-COMP-CBL-REDUCTION-001" ["SFT-COMP-CBL-ENUMERATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows37 = _
+ rw [dictionaryInsert36]
+ exact dictionaryFold37
+theorem dictionaryInsert35 : put sourceDictionary35 "SFT-COMP-CBL-RECOGNITION-DECISION-001" ["SFT-COMP-FORM-UNIVERSALITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary36 := rfl
+theorem dictionaryFold35 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary35 sourceRows35 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary35 "SFT-COMP-CBL-RECOGNITION-DECISION-001" ["SFT-COMP-FORM-UNIVERSALITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows36 = _
+ rw [dictionaryInsert35]
+ exact dictionaryFold36
+theorem dictionaryInsert34 : put sourceDictionary34 "SFT-COMP-CBL-INCOMPLETENESS-001" ["SFT-COMP-CBL-UNDECIDABILITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary35 := rfl
+theorem dictionaryFold34 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary34 sourceRows34 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary34 "SFT-COMP-CBL-INCOMPLETENESS-001" ["SFT-COMP-CBL-UNDECIDABILITY-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows35 = _
+ rw [dictionaryInsert34]
+ exact dictionaryFold35
+theorem dictionaryInsert33 : put sourceDictionary33 "SFT-COMP-CBL-HYPERCOMPUTATION-LIMIT-001" ["SFT-COMP-CBL-RELATIVE-ORACLE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary34 := rfl
+theorem dictionaryFold33 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary33 sourceRows33 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary33 "SFT-COMP-CBL-HYPERCOMPUTATION-LIMIT-001" ["SFT-COMP-CBL-RELATIVE-ORACLE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows34 = _
+ rw [dictionaryInsert33]
+ exact dictionaryFold34
+theorem dictionaryInsert32 : put sourceDictionary32 "SFT-COMP-CBL-HALTING-001" ["SFT-COMP-CBL-RECOGNITION-DECISION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary33 := rfl
+theorem dictionaryFold32 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary32 sourceRows32 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary32 "SFT-COMP-CBL-HALTING-001" ["SFT-COMP-CBL-RECOGNITION-DECISION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows33 = _
+ rw [dictionaryInsert32]
+ exact dictionaryFold33
+theorem dictionaryInsert31 : put sourceDictionary31 "SFT-COMP-CBL-ENUMERATION-001" ["SFT-COMP-CBL-HALTING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary32 := rfl
+theorem dictionaryFold31 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary31 sourceRows31 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary31 "SFT-COMP-CBL-ENUMERATION-001" ["SFT-COMP-CBL-HALTING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows32 = _
+ rw [dictionaryInsert31]
+ exact dictionaryFold32
+theorem dictionaryInsert30 : put sourceDictionary30 "SFT-COMP-CBL-DEGREES-001" ["SFT-COMP-CBL-REDUCTION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary31 := rfl
+theorem dictionaryFold30 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary30 sourceRows30 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary30 "SFT-COMP-CBL-DEGREES-001" ["SFT-COMP-CBL-REDUCTION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows31 = _
+ rw [dictionaryInsert30]
+ exact dictionaryFold31
+theorem dictionaryInsert29 : put sourceDictionary29 "SFT-COMP-ALG-TREES-GRAPHS-001" ["SFT-COMP-ALG-STRINGS-SEQUENCES-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary30 := rfl
+theorem dictionaryFold29 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary29 sourceRows29 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary29 "SFT-COMP-ALG-TREES-GRAPHS-001" ["SFT-COMP-ALG-STRINGS-SEQUENCES-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows30 = _
+ rw [dictionaryInsert29]
+ exact dictionaryFold30
+theorem dictionaryInsert28 : put sourceDictionary28 "SFT-COMP-ALG-SYMBOLIC-001" ["SFT-COMP-ALG-NUMERICAL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary29 := rfl
+theorem dictionaryFold28 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary28 sourceRows28 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary28 "SFT-COMP-ALG-SYMBOLIC-001" ["SFT-COMP-ALG-NUMERICAL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows29 = _
+ rw [dictionaryInsert28]
+ exact dictionaryFold29
+theorem dictionaryInsert27 : put sourceDictionary27 "SFT-COMP-ALG-STRINGS-SEQUENCES-001" ["SFT-COMP-ALG-ARITHMETIC-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary28 := rfl
+theorem dictionaryFold27 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary27 sourceRows27 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary27 "SFT-COMP-ALG-STRINGS-SEQUENCES-001" ["SFT-COMP-ALG-ARITHMETIC-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows28 = _
+ rw [dictionaryInsert27]
+ exact dictionaryFold28
+theorem dictionaryInsert26 : put sourceDictionary26 "SFT-COMP-ALG-SEARCH-ORDER-001" ["SFT-COMP-CPLX-DESCRIPTIVE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary27 := rfl
+theorem dictionaryFold26 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary26 sourceRows26 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary26 "SFT-COMP-ALG-SEARCH-ORDER-001" ["SFT-COMP-CPLX-DESCRIPTIVE-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows27 = _
+ rw [dictionaryInsert26]
+ exact dictionaryFold27
+theorem dictionaryInsert25 : put sourceDictionary25 "SFT-COMP-ALG-RANDOMIZED-001" ["SFT-COMP-ALG-OPTIMIZATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary26 := rfl
+theorem dictionaryFold25 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary25 sourceRows25 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary25 "SFT-COMP-ALG-RANDOMIZED-001" ["SFT-COMP-ALG-OPTIMIZATION-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows26 = _
+ rw [dictionaryInsert25]
+ exact dictionaryFold26
+theorem dictionaryInsert24 : put sourceDictionary24 "SFT-COMP-ALG-PARALLEL-001" ["SFT-COMP-ALG-RANDOMIZED-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary25 := rfl
+theorem dictionaryFold24 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary24 sourceRows24 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary24 "SFT-COMP-ALG-PARALLEL-001" ["SFT-COMP-ALG-RANDOMIZED-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows25 = _
+ rw [dictionaryInsert24]
+ exact dictionaryFold25
+theorem dictionaryInsert23 : put sourceDictionary23 "SFT-COMP-ALG-OPTIMIZATION-001" ["SFT-COMP-ALG-DYNAMIC-PROGRAMMING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary24 := rfl
+theorem dictionaryFold23 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary23 sourceRows23 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary23 "SFT-COMP-ALG-OPTIMIZATION-001" ["SFT-COMP-ALG-DYNAMIC-PROGRAMMING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows24 = _
+ rw [dictionaryInsert23]
+ exact dictionaryFold24
+theorem dictionaryInsert22 : put sourceDictionary22 "SFT-COMP-ALG-ONLINE-STREAMING-001" ["SFT-COMP-ALG-DISTRIBUTED-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary23 := rfl
+theorem dictionaryFold22 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary22 sourceRows22 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary22 "SFT-COMP-ALG-ONLINE-STREAMING-001" ["SFT-COMP-ALG-DISTRIBUTED-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows23 = _
+ rw [dictionaryInsert22]
+ exact dictionaryFold23
+theorem dictionaryInsert21 : put sourceDictionary21 "SFT-COMP-ALG-NUMERICAL-001" ["SFT-COMP-ALG-ONLINE-STREAMING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary22 := rfl
+theorem dictionaryFold21 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary21 sourceRows21 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary21 "SFT-COMP-ALG-NUMERICAL-001" ["SFT-COMP-ALG-ONLINE-STREAMING-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows22 = _
+ rw [dictionaryInsert21]
+ exact dictionaryFold22
+theorem dictionaryInsert20 : put sourceDictionary20 "SFT-COMP-ALG-DYNAMIC-PROGRAMMING-001" ["SFT-COMP-ALG-ALGEBRAIC-GEOMETRIC-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary21 := rfl
+theorem dictionaryFold20 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary20 sourceRows20 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary20 "SFT-COMP-ALG-DYNAMIC-PROGRAMMING-001" ["SFT-COMP-ALG-ALGEBRAIC-GEOMETRIC-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows21 = _
+ rw [dictionaryInsert20]
+ exact dictionaryFold21
+theorem dictionaryInsert19 : put sourceDictionary19 "SFT-COMP-ALG-DISTRIBUTED-001" ["SFT-COMP-ALG-PARALLEL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary20 := rfl
+theorem dictionaryFold19 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary19 sourceRows19 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary19 "SFT-COMP-ALG-DISTRIBUTED-001" ["SFT-COMP-ALG-PARALLEL-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows20 = _
+ rw [dictionaryInsert19]
+ exact dictionaryFold20
+theorem dictionaryInsert18 : put sourceDictionary18 "SFT-COMP-ALG-ARITHMETIC-001" ["SFT-COMP-ALG-SEARCH-ORDER-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary19 := rfl
+theorem dictionaryFold18 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary18 sourceRows18 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary18 "SFT-COMP-ALG-ARITHMETIC-001" ["SFT-COMP-ALG-SEARCH-ORDER-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows19 = _
+ rw [dictionaryInsert18]
+ exact dictionaryFold19
+theorem dictionaryInsert17 : put sourceDictionary17 "SFT-COMP-ALG-APPROXIMATE-001" ["SFT-COMP-ALG-SYMBOLIC-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary18 := rfl
+theorem dictionaryFold17 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary17 sourceRows17 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary17 "SFT-COMP-ALG-APPROXIMATE-001" ["SFT-COMP-ALG-SYMBOLIC-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows18 = _
+ rw [dictionaryInsert17]
+ exact dictionaryFold18
+theorem dictionaryInsert16 : put sourceDictionary16 "SFT-COMP-ALG-ALGEBRAIC-GEOMETRIC-001" ["SFT-COMP-ALG-TREES-GRAPHS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"] = sourceDictionary17 := rfl
+theorem dictionaryFold16 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary16 sourceRows16 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary16 "SFT-COMP-ALG-ALGEBRAIC-GEOMETRIC-001" ["SFT-COMP-ALG-TREES-GRAPHS-001","SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-DISCRETE-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-LOGIC-PROOF-001","SFT-MATH-CATEGORY-TYPE-COMPOSITION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001"]) sourceRows17 = _
+ rw [dictionaryInsert16]
+ exact dictionaryFold17
+theorem dictionaryInsert15 : put sourceDictionary15 "SFT-CHEM-STOICH-CONSERVATION-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-MEAS-CHEMICAL-SPECIES-001","SFT-CHEM-MEAS-SUBSTANCE-001","SFT-CHEM-MEAS-AMOUNT-001","SFT-CHEM-MEAS-FORMULA-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-PERIODIC-ORDER-001","SFT-CHEM-STOICH-COMPOSITION-001"] = sourceDictionary16 := rfl
+theorem dictionaryFold15 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary15 sourceRows15 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary15 "SFT-CHEM-STOICH-CONSERVATION-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-MEAS-CHEMICAL-SPECIES-001","SFT-CHEM-MEAS-SUBSTANCE-001","SFT-CHEM-MEAS-AMOUNT-001","SFT-CHEM-MEAS-FORMULA-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-PERIODIC-ORDER-001","SFT-CHEM-STOICH-COMPOSITION-001"]) sourceRows16 = _
+ rw [dictionaryInsert15]
+ exact dictionaryFold16
+theorem dictionaryInsert14 : put sourceDictionary14 "SFT-CHEM-STOICH-COMPOSITION-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-MEAS-CHEMICAL-SPECIES-001","SFT-CHEM-MEAS-SUBSTANCE-001","SFT-CHEM-MEAS-AMOUNT-001","SFT-CHEM-MEAS-FORMULA-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-PERIODIC-ORDER-001"] = sourceDictionary15 := rfl
+theorem dictionaryFold14 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary14 sourceRows14 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary14 "SFT-CHEM-STOICH-COMPOSITION-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MECH-CONSERVATION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-MEAS-CHEMICAL-SPECIES-001","SFT-CHEM-MEAS-SUBSTANCE-001","SFT-CHEM-MEAS-AMOUNT-001","SFT-CHEM-MEAS-FORMULA-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-PERIODIC-ORDER-001"]) sourceRows15 = _
+ rw [dictionaryInsert14]
+ exact dictionaryFold15
+theorem dictionaryInsert13 : put sourceDictionary13 "SFT-CHEM-MEAS-SUBSTANCE-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-MEAS-CHEMICAL-SPECIES-001"] = sourceDictionary14 := rfl
+theorem dictionaryFold13 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary13 sourceRows13 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary13 "SFT-CHEM-MEAS-SUBSTANCE-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-MEAS-CHEMICAL-SPECIES-001"]) sourceRows14 = _
+ rw [dictionaryInsert13]
+ exact dictionaryFold14
+theorem dictionaryInsert12 : put sourceDictionary12 "SFT-CHEM-MEAS-FORMULA-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-MEAS-CHEMICAL-SPECIES-001","SFT-CHEM-MEAS-SUBSTANCE-001","SFT-CHEM-MEAS-AMOUNT-001"] = sourceDictionary13 := rfl
+theorem dictionaryFold12 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary12 sourceRows12 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary12 "SFT-CHEM-MEAS-FORMULA-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-MEAS-CHEMICAL-SPECIES-001","SFT-CHEM-MEAS-SUBSTANCE-001","SFT-CHEM-MEAS-AMOUNT-001"]) sourceRows13 = _
+ rw [dictionaryInsert12]
+ exact dictionaryFold13
+theorem dictionaryInsert11 : put sourceDictionary11 "SFT-CHEM-MEAS-CHEMICAL-SPECIES-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001"] = sourceDictionary12 := rfl
+theorem dictionaryFold11 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary11 sourceRows11 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary11 "SFT-CHEM-MEAS-CHEMICAL-SPECIES-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001"]) sourceRows12 = _
+ rw [dictionaryInsert11]
+ exact dictionaryFold12
+theorem dictionaryInsert10 : put sourceDictionary10 "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001"] = sourceDictionary11 := rfl
+theorem dictionaryFold10 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary10 sourceRows10 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary10 "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001"]) sourceRows11 = _
+ rw [dictionaryInsert10]
+ exact dictionaryFold11
+theorem dictionaryInsert9 : put sourceDictionary9 "SFT-CHEM-MEAS-AMOUNT-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-SUBSTANCE-001"] = sourceDictionary10 := rfl
+theorem dictionaryFold9 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary9 sourceRows9 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary9 "SFT-CHEM-MEAS-AMOUNT-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-SUBSTANCE-001"]) sourceRows10 = _
+ rw [dictionaryInsert9]
+ exact dictionaryFold10
+theorem dictionaryInsert8 : put sourceDictionary8 "SFT-CHEM-ELEM-VALENCE-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-ATOMIC-NUMBER-001","SFT-CHEM-ELEM-PERIODIC-RECURRENCE-001","SFT-CHEM-ELEM-GROUP-PERIOD-001"] = sourceDictionary9 := rfl
+theorem dictionaryFold8 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary8 sourceRows8 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary8 "SFT-CHEM-ELEM-VALENCE-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-ATOMIC-NUMBER-001","SFT-CHEM-ELEM-PERIODIC-RECURRENCE-001","SFT-CHEM-ELEM-GROUP-PERIOD-001"]) sourceRows9 = _
+ rw [dictionaryInsert8]
+ exact dictionaryFold9
+theorem dictionaryInsert7 : put sourceDictionary7 "SFT-CHEM-ELEM-PERIODIC-RECURRENCE-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-ATOMIC-NUMBER-001","SFT-CHEM-ELEM-PERIODIC-ORDER-001"] = sourceDictionary8 := rfl
+theorem dictionaryFold7 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary7 sourceRows7 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary7 "SFT-CHEM-ELEM-PERIODIC-RECURRENCE-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-ATOMIC-NUMBER-001","SFT-CHEM-ELEM-PERIODIC-ORDER-001"]) sourceRows8 = _
+ rw [dictionaryInsert7]
+ exact dictionaryFold8
+theorem dictionaryInsert6 : put sourceDictionary6 "SFT-CHEM-ELEM-PERIODIC-ORDER-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-ATOMIC-NUMBER-001"] = sourceDictionary7 := rfl
+theorem dictionaryFold6 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary6 sourceRows6 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary6 "SFT-CHEM-ELEM-PERIODIC-ORDER-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-ATOMIC-NUMBER-001"]) sourceRows7 = _
+ rw [dictionaryInsert6]
+ exact dictionaryFold7
+theorem dictionaryInsert5 : put sourceDictionary5 "SFT-CHEM-ELEM-ION-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-ATOMIC-NUMBER-001","SFT-CHEM-ELEM-VALENCE-001"] = sourceDictionary6 := rfl
+theorem dictionaryFold5 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary5 sourceRows5 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary5 "SFT-CHEM-ELEM-ION-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-ATOMIC-NUMBER-001","SFT-CHEM-ELEM-VALENCE-001"]) sourceRows6 = _
+ rw [dictionaryInsert5]
+ exact dictionaryFold6
+theorem dictionaryInsert4 : put sourceDictionary4 "SFT-CHEM-ELEM-GROUP-PERIOD-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-ATOMIC-NUMBER-001","SFT-CHEM-ELEM-PERIODIC-ORDER-001","SFT-CHEM-ELEM-PERIODIC-RECURRENCE-001"] = sourceDictionary5 := rfl
+theorem dictionaryFold4 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary4 sourceRows4 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary4 "SFT-CHEM-ELEM-GROUP-PERIOD-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-INDISTINGUISHABILITY-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-ELEM-ELEMENT-001","SFT-CHEM-ELEM-ATOMIC-NUMBER-001","SFT-CHEM-ELEM-PERIODIC-ORDER-001","SFT-CHEM-ELEM-PERIODIC-RECURRENCE-001"]) sourceRows5 = _
+ rw [dictionaryInsert4]
+ exact dictionaryFold5
+theorem dictionaryInsert3 : put sourceDictionary3 "SFT-CHEM-ELEM-ELEMENT-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-PHYS-MATTER-PARTICLE-SPECTRUM-001","SFT-PHYS-NUCLEAR-LEVELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-MEAS-CHEMICAL-SPECIES-001","SFT-CHEM-MEAS-SUBSTANCE-001"] = sourceDictionary4 := rfl
+theorem dictionaryFold3 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary3 sourceRows3 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary3 "SFT-CHEM-ELEM-ELEMENT-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-PHYS-MATTER-PARTICLE-SPECTRUM-001","SFT-PHYS-NUCLEAR-LEVELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-MEAS-CHEMICAL-SPECIES-001","SFT-CHEM-MEAS-SUBSTANCE-001"]) sourceRows4 = _
+ rw [dictionaryInsert3]
+ exact dictionaryFold4
+theorem dictionaryInsert2 : put sourceDictionary2 "SFT-CHEM-ELEM-ATOMIC-NUMBER-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-PHYS-MATTER-PARTICLE-SPECTRUM-001","SFT-PHYS-NUCLEAR-LEVELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-MEAS-CHEMICAL-SPECIES-001","SFT-CHEM-MEAS-SUBSTANCE-001","SFT-CHEM-ELEM-ELEMENT-001"] = sourceDictionary3 := rfl
+theorem dictionaryFold2 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary2 sourceRows2 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary2 "SFT-CHEM-ELEM-ATOMIC-NUMBER-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-ENCODING-DECODING-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-MEAS-OBSERVATION-CARRIER-001","SFT-PHYS-MEAS-QUANTITY-CARRIER-001","SFT-PHYS-MEAS-VALUE-RECORD-001","SFT-PHYS-MEAS-UNCERTAINTY-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-PHYS-MATTER-PARTICLE-SPECTRUM-001","SFT-PHYS-NUCLEAR-LEVELS-001","SFT-CHEM-MEAS-CHEMICAL-ENTITY-001","SFT-CHEM-MEAS-CHEMICAL-SPECIES-001","SFT-CHEM-MEAS-SUBSTANCE-001","SFT-CHEM-ELEM-ELEMENT-001"]) sourceRows3 = _
+ rw [dictionaryInsert2]
+ exact dictionaryFold3
+theorem dictionaryInsert1 : put sourceDictionary1 "SFT-CHEM-BOND-COVALENT-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-ENTANGLEMENT-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-PHYS-CONDENSED-LATTICE-001","SFT-PHYS-CONDENSED-BAND-001","SFT-PHYS-THERMO-EQUILIBRIUM-001","SFT-CHEM-ELEM-VALENCE-001","SFT-CHEM-ELEM-ION-001","SFT-CHEM-STOICH-COMPOSITION-001","SFT-CHEM-STOICH-CONSERVATION-001","SFT-CHEM-BOND-CHEMICAL-BOND-001"] = sourceDictionary2 := rfl
+theorem dictionaryFold1 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary1 sourceRows1 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary1 "SFT-CHEM-BOND-COVALENT-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-ENTANGLEMENT-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-PHYS-CONDENSED-LATTICE-001","SFT-PHYS-CONDENSED-BAND-001","SFT-PHYS-THERMO-EQUILIBRIUM-001","SFT-CHEM-ELEM-VALENCE-001","SFT-CHEM-ELEM-ION-001","SFT-CHEM-STOICH-COMPOSITION-001","SFT-CHEM-STOICH-CONSERVATION-001","SFT-CHEM-BOND-CHEMICAL-BOND-001"]) sourceRows2 = _
+ rw [dictionaryInsert1]
+ exact dictionaryFold2
+theorem dictionaryInsert0 : put sourceDictionary0 "SFT-CHEM-BOND-CHEMICAL-BOND-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-ENTANGLEMENT-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-PHYS-CONDENSED-LATTICE-001","SFT-PHYS-CONDENSED-BAND-001","SFT-PHYS-THERMO-EQUILIBRIUM-001","SFT-CHEM-ELEM-VALENCE-001","SFT-CHEM-ELEM-ION-001","SFT-CHEM-STOICH-COMPOSITION-001","SFT-CHEM-STOICH-CONSERVATION-001"] = sourceDictionary1 := rfl
+theorem dictionaryFold0 : recordFoldPure (fun d (name,parents)=>put d name parents) sourceDictionary0 sourceRows0 = sourceDictionary534 := by
+ change recordFoldPure (fun d (name,parents)=>put d name parents) (put sourceDictionary0 "SFT-CHEM-BOND-CHEMICAL-BOND-001" ["SFT-FOUNDATION-FORM-ENFORCEMENT-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DISCRETE-001","SFT-MATH-COMBINATORICS-001","SFT-MATH-GRAPH-NETWORK-001","SFT-MATH-GEOMETRY-TOPOLOGY-001","SFT-MATH-ORDER-LATTICE-001","SFT-MATH-LOGIC-PROOF-001","SFT-INFO-SYMBOL-DISTINCTION-001","SFT-INFO-CONSERVATION-LOSS-001","SFT-PHYS-FIELD-ELECTRIC-DISTINCTION-001","SFT-PHYS-FIELD-ELECTRIC-POTENTIAL-001","SFT-PHYS-QUANTUM-DISCRETE-SPECTRA-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-PHYS-QUANTUM-ENTANGLEMENT-001","SFT-PHYS-MATTER-CONSERVED-LABELS-001","SFT-PHYS-CONDENSED-LATTICE-001","SFT-PHYS-CONDENSED-BAND-001","SFT-PHYS-THERMO-EQUILIBRIUM-001","SFT-CHEM-ELEM-VALENCE-001","SFT-CHEM-ELEM-ION-001","SFT-CHEM-STOICH-COMPOSITION-001","SFT-CHEM-STOICH-CONSERVATION-001"]) sourceRows1 = _
+ rw [dictionaryInsert0]
+ exact dictionaryFold1
+theorem originalDictionary : rowDictionary originalRows = sourceDictionary534 := dictionaryFold0
+#print axioms originalDictionary
+end SFT.Physics.GrandLockDependencyProofs

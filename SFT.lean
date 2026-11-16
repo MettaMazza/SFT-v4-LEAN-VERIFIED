@@ -9891,3 +9891,99 @@ import SFT.Physics.StrongCPObservationAnalysis
 import SFT.Physics.StrongCPObservationAnalysisProofs
 
 import SFT.Physics.StrongCPObservationInputProofs
+
+import SFT.Physics.HiggsGround
+
+import SFT.Physics.HiggsTerminal
+
+import SFT.Physics.HiggsCertificate
+
+import SFT.Physics.HiggsWitnesses
+
+import SFT.Physics.HiggsGrammarBase
+
+import SFT.Physics.HiggsCensus0
+
+import SFT.Physics.HiggsCensus1
+
+import SFT.Physics.HiggsCensus2
+
+import SFT.Physics.HiggsCensus3
+
+import SFT.Physics.HiggsCensus4
+
+import SFT.Physics.HiggsCensus5
+
+import SFT.Physics.HiggsCensus6
+
+import SFT.Physics.HiggsCensus7
+
+import SFT.Physics.HiggsCensus8
+
+import SFT.Physics.HiggsCensus9
+
+import SFT.Physics.HiggsCensus10
+
+import SFT.Physics.HiggsCensus11
+
+import SFT.Physics.HiggsCensus12
+
+import SFT.Physics.HiggsCensus13
+
+import SFT.Physics.HiggsCensus14
+
+import SFT.Physics.HiggsCensus15
+
+import SFT.Physics.HiggsCensus16
+
+import SFT.Physics.HiggsCensus17
+
+import SFT.Physics.HiggsCensus18
+
+import SFT.Physics.HiggsCensus19
+
+import SFT.Physics.HiggsCensus20
+
+import SFT.Physics.HiggsCensus21
+
+import SFT.Physics.HiggsCensus22
+
+import SFT.Physics.HiggsCensus23
+
+import SFT.Physics.HiggsCensus24
+
+import SFT.Physics.HiggsCensus25
+
+import SFT.Physics.HiggsCensus26
+
+import SFT.Physics.HiggsCensus27
+
+import SFT.Physics.HiggsCensus28
+
+import SFT.Physics.HiggsCensus29
+
+import SFT.Physics.HiggsCensus30
+
+import SFT.Physics.HiggsCensus31
+
+import SFT.Physics.HiggsGrammar
+
+import SFT.Physics.HiggsEntryEvidence
+
+import SFT.Physics.HiggsObservationRecords
+
+import SFT.Physics.HiggsObservationWitnesses
+
+import SFT.Physics.HiggsObservationGrammar
+
+import SFT.Physics.HiggsObservationEvidence
+
+import SFT.Physics.HiggsObservationExperiment
+
+import SFT.Physics.HiggsObservationValidation
+
+import SFT.Physics.HiggsObservationAnalysis
+
+import SFT.Physics.HiggsObservationAnalysisProofs
+
+import SFT.Physics.HiggsObservationInputProofs

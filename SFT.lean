@@ -10479,3 +10479,147 @@ import SFT.Physics.HorizonObservationAnalysis
 import SFT.Physics.HorizonObservationAnalysisProofs
 
 import SFT.Physics.HorizonObservationInputProofs
+
+import SFT.Physics.ChirpRingdown
+
+import SFT.Physics.ChirpRingdownDerivation
+
+import SFT.Physics.ChirpRingdownCertificateProof
+
+import SFT.Physics.ChirpRingdownWitnesses
+
+import SFT.Physics.ChirpRingdownGrammarBase
+
+import SFT.Physics.ChirpRingdownCensus0
+
+import SFT.Physics.ChirpRingdownCensus1
+
+import SFT.Physics.ChirpRingdownCensus2
+
+import SFT.Physics.ChirpRingdownCensus3
+
+import SFT.Physics.ChirpRingdownCensus4
+
+import SFT.Physics.ChirpRingdownCensus5
+
+import SFT.Physics.ChirpRingdownCensus6
+
+import SFT.Physics.ChirpRingdownCensus7
+
+import SFT.Physics.ChirpRingdownCensus8
+
+import SFT.Physics.ChirpRingdownCensus9
+
+import SFT.Physics.ChirpRingdownCensus10
+
+import SFT.Physics.ChirpRingdownCensus11
+
+import SFT.Physics.ChirpRingdownCensus12
+
+import SFT.Physics.ChirpRingdownCensus13
+
+import SFT.Physics.ChirpRingdownCensus14
+
+import SFT.Physics.ChirpRingdownCensus15
+
+import SFT.Physics.ChirpRingdownCensus16
+
+import SFT.Physics.ChirpRingdownCensus17
+
+import SFT.Physics.ChirpRingdownCensus18
+
+import SFT.Physics.ChirpRingdownCensus19
+
+import SFT.Physics.ChirpRingdownCensus20
+
+import SFT.Physics.ChirpRingdownCensus21
+
+import SFT.Physics.ChirpRingdownCensus22
+
+import SFT.Physics.ChirpRingdownCensus23
+
+import SFT.Physics.ChirpRingdownCensus24
+
+import SFT.Physics.ChirpRingdownCensus25
+
+import SFT.Physics.ChirpRingdownCensus26
+
+import SFT.Physics.ChirpRingdownCensus27
+
+import SFT.Physics.ChirpRingdownCensus28
+
+import SFT.Physics.ChirpRingdownCensus29
+
+import SFT.Physics.ChirpRingdownCensus30
+
+import SFT.Physics.ChirpRingdownCensus31
+
+import SFT.Physics.ChirpRingdownCensus32
+
+import SFT.Physics.ChirpRingdownCensus33
+
+import SFT.Physics.ChirpRingdownCensus34
+
+import SFT.Physics.ChirpRingdownCensus35
+
+import SFT.Physics.ChirpRingdownCensus36
+
+import SFT.Physics.ChirpRingdownCensus37
+
+import SFT.Physics.ChirpRingdownCensus38
+
+import SFT.Physics.ChirpRingdownCensus39
+
+import SFT.Physics.ChirpRingdownCensus40
+
+import SFT.Physics.ChirpRingdownCensus41
+
+import SFT.Physics.ChirpRingdownCensus42
+
+import SFT.Physics.ChirpRingdownCensus43
+
+import SFT.Physics.ChirpRingdownCensus44
+
+import SFT.Physics.ChirpRingdownCensus45
+
+import SFT.Physics.ChirpRingdownCensus46
+
+import SFT.Physics.ChirpRingdownCensus47
+
+import SFT.Physics.ChirpRingdownCensus48
+
+import SFT.Physics.ChirpRingdownCensus49
+
+import SFT.Physics.ChirpRingdownCensus50
+
+import SFT.Physics.ChirpRingdownCensus51
+
+import SFT.Physics.ChirpRingdownCensus52
+
+import SFT.Physics.ChirpRingdownCensus53
+
+import SFT.Physics.ChirpRingdownCensus54
+
+import SFT.Physics.ChirpRingdownCensus55
+
+import SFT.Physics.ChirpRingdownCensus56
+
+import SFT.Physics.ChirpRingdownCensus57
+
+import SFT.Physics.ChirpRingdownCensus58
+
+import SFT.Physics.ChirpRingdownCensus59
+
+import SFT.Physics.ChirpRingdownCensus60
+
+import SFT.Physics.ChirpRingdownCensus61
+
+import SFT.Physics.ChirpRingdownCensus62
+
+import SFT.Physics.ChirpRingdownCensus63
+
+import SFT.Physics.ChirpRingdownGrammar
+
+import SFT.Physics.ChirpRingdownEntryEvidence
+
+import SFT.Physics.ChirpInspiral

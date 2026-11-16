@@ -1,0 +1,21 @@
+import SFT.Physics.ThermalHistory
+#print axioms SFT.Physics.ThermalHistory.requirePositive
+#print axioms SFT.Physics.ThermalHistory.transportedTemperature
+#print axioms SFT.Physics.ThermalHistory.temperatureScaleInvariant
+#print axioms SFT.Physics.ThermalHistory.insertDescending
+#print axioms SFT.Physics.ThermalHistory.sortDescending
+#print axioms SFT.Physics.ThermalHistory.distinct
+#print axioms SFT.Physics.ThermalHistory.orderedThresholds
+#print axioms SFT.Physics.ThermalHistory.orbitLoop
+#print axioms SFT.Physics.ThermalHistory.liveDepthSevenOrbit
+#print axioms SFT.Physics.ThermalHistory.CaptureLedger
+#print axioms SFT.Physics.ThermalHistory.freezeoutCaptureLedger
+#print axioms SFT.Physics.ThermalHistory.Visibility
+#print axioms SFT.Physics.ThermalHistory.visibilityAt
+#print axioms SFT.Physics.ThermalHistory.visibilityLedger
+#print axioms SFT.Physics.ThermalHistory.AcousticMode
+#print axioms SFT.Physics.ThermalHistory.acousticModeLedger
+#print axioms SFT.Physics.ThermalHistory.horizonSegments
+#print axioms SFT.Physics.ThermalHistory.finiteSoundHorizon
+#print axioms SFT.Physics.ThermalHistory.originalOrbit
+#print axioms SFT.Physics.ThermalHistory.originalCaptureShares

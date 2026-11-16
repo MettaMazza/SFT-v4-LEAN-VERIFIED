@@ -1,0 +1,17 @@
+from pathlib import Path
+import sys,json,subprocess,os,re,hashlib,shutil
+w=Path('work');r=Path('/Volumes/One Touch/SFT v4 Full model LEAN');sys.path.insert(0,str((w/'v3-runtime500').resolve()))
+from sft.physics.vacuum_density_planck_empirical_v1 import SPEC
+from sft.physics.vacuum_density_planck_validation_v1 import TARGET_IDS
+from sft.physics.generated_empirical_law import experiment_registration_record,prediction_program_document
+from sft.engine.canonical import canonical_value,sha256_identity
+from sft.engine.empirical import PredictionEnvelope
+from sft.engine.exact import HeldLabel
+reg=experiment_registration_record(SPEC);seals=['sha256:source-test','retained-seal','entry659'];expected=[canonical_value(reg),canonical_value(prediction_program_document(SPEC))]+[canonical_value(PredictionEnvelope(SPEC.experiment_id,{'registered-premise':sha256_identity(HeldLabel('sealed-derivation',s))},TARGET_IDS,s,sha256_identity(reg))) for s in seals]
+p=w/'constants-recovery/VacuumPlanckMetadata1032.lean';p.write_text('import SFT.Physics.VacuumPlanckExperiment\nopen SFT.Host.Canonical SFT.Physics.VacuumPlanckExperiment\nset_option maxRecDepth 100000\nset_option maxHeartbeats 100000000\n#eval IO.println (render (.array [registration,programDocument,'+','.join('envelope '+json.dumps(s) for s in seals)+']))\n')
+lean='/Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean';env={**os.environ,'LEAN_PATH':str(r/'.lake/build/lib/lean')};x=subprocess.run([lean,'-j1',str(p)],env=env,capture_output=True,text=True);(w/'vacuumplanck1032_metadata_lean.log').write_text(x.stdout+x.stderr);assert x.returncode==0,x.stdout[-2000:];actual=json.loads(x.stdout);assert actual==expected,[(i,a,e) for i,(a,e) in enumerate(zip(actual,expected)) if a!=e]
+mods=['VacuumPlanck'+s for s in ['Witnesses','Grammar','Evidence','Experiment','Records']];names=[];ths=[];sha={}
+for m in mods:
+ p=r/f'SFT/Physics/{m}.lean';s=p.read_text();assert not re.search(r'\bsorry\b|^\s*axiom\b',s,re.M);shutil.copy2(p,w/'constants-recovery/SFT/Physics'/p.name);namespace=re.search(r'^namespace (\S+)',s,re.M)[1];names.extend(namespace+'.'+n for n in re.findall(r'^(?:def|theorem) (\w+)',s,re.M));ths.extend(namespace+'.'+n for n in re.findall(r'^theorem (\w+)',s,re.M));sha[m]=hashlib.sha256(p.read_bytes()).hexdigest()
+p=w/'vacuumplanck1032_staged_audit.lean';p.write_text('import SFT.Physics.VacuumPlanckExperiment\n'+''.join('#print axioms '+n+'\n' for n in names));x=subprocess.run([lean,str(p)],env=env,capture_output=True,text=True);(w/'vacuumplanck1032_staged_audit.log').write_text(x.stdout+x.stderr);assert x.returncode==0 and x.stdout.count('does not depend on any axioms')==len(names),x.stdout[-3000:]
+(w/'vacuumplanck1032_staged_proofs_config.json').write_text(json.dumps(dict(modules=mods,declarations=names,theorems=ths,definitions_and_theorems=names,source_sha256=sha),indent=2));(w/'vacuumplanck1032_metadata_report.json').write_text(json.dumps(dict(status='PASS',cases=len(expected),axioms=[],scope='Complete original experiment registration, exact four-instruction prediction document and original single-target envelopes; full custom validator remains to assemble',audited_declarations=len(names)),indent=2));print('PASS',len(expected),'complete metadata outputs;',len(names),'empty-axiom staged declarations')

@@ -1,0 +1,28 @@
+import SFT.Physics.GrandLockDictionaryData
+import SFT.Physics.GrandLockVisitTraceData
+import SFT.Physics.GrandLockTraceFoldStep
+import SFT.Physics.GrandLockVisitUnfold535
+import SFT.Physics.GrandLockVisitNode50
+import SFT.Physics.GrandLockVisitNode61
+import SFT.Physics.GrandLockVisitNode68
+import SFT.Physics.GrandLockVisitNode1500
+import SFT.Physics.GrandLockVisitNode1515
+import SFT.Physics.GrandLockVisitHits20
+namespace SFT.Physics.GrandLockDependencyTrace
+open SFT.Physics.GrandLockDependency SFT.Physics.GrandLockDependencyProofs
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+set_option Elab.async false
+noncomputable def step1518 (state : Complete) (dep : String) : Except String Complete := visit sourceDictionary534 534 (put visitedNode0 "SFT-PHYS-ATOMIC-CELL-ORBIT-CAPACITY-001" ()) state dep
+theorem children1518_7 : recordFold step1518 after1517 [] = .ok after1517 := rfl
+theorem children1518_6 : recordFold step1518 before1517 ["SFT-MATH-COMBINATORICS-001"] = .ok after1517 := sourceFoldCall step1518 before1517 after1517 after1517 "SFT-MATH-COMBINATORICS-001" [] visitCall1517 children1518_7
+theorem children1518_5 : recordFold step1518 before1516 ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = .ok after1517 := sourceFoldCall step1518 before1516 after1516 after1517 "SFT-MATH-EXACT-ARITHMETIC-001" ["SFT-MATH-COMBINATORICS-001"] visitCall1516 children1518_6
+theorem children1518_4 : recordFold step1518 before1515 ["SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = .ok after1517 := sourceFoldCall step1518 before1515 after1515 after1517 "SFT-PHYS-QUANTUM-EXCLUSION-001" ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] visitCall1515 children1518_5
+theorem children1518_3 : recordFold step1518 before1500 ["SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = .ok after1517 := sourceFoldCall step1518 before1500 after1500 after1517 "SFT-PHYS-QUANTUM-SPIN-001" ["SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] visitCall1500 children1518_4
+theorem children1518_2 : recordFold step1518 before68 ["SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = .ok after1517 := sourceFoldCall step1518 before68 after68 after1517 "SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001" ["SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] visitCall68 children1518_3
+theorem children1518_1 : recordFold step1518 before61 ["SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = .ok after1517 := sourceFoldCall step1518 before61 after61 after1517 "SFT-PHYS-SPACE-DIMENSION-THREE-001" ["SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] visitCall61 children1518_2
+theorem children1518_0 : recordFold step1518 before50 ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] = .ok after1517 := sourceFoldCall step1518 before50 after50 after1517 "SFT-PHYS-STRUCT-GENERATOR-THREE-001" ["SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] visitCall50 children1518_1
+theorem visitCall1518 : visit sourceDictionary534 535 visitedNode0 before1518 "SFT-PHYS-ATOMIC-CELL-ORBIT-CAPACITY-001" = .ok after1518 :=
+ visitCallFromFold535 sourceDictionary534 visitedNode0 before1518 after1517 "SFT-PHYS-ATOMIC-CELL-ORBIT-CAPACITY-001" ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-PHYS-SPACE-DIMENSION-THREE-001","SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001","SFT-PHYS-QUANTUM-SPIN-001","SFT-PHYS-QUANTUM-EXCLUSION-001","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-COMBINATORICS-001"] (by rfl) (by rfl) (by rfl) children1518_0
+#print axioms visitCall1518
+end SFT.Physics.GrandLockDependencyTrace

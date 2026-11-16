@@ -1,0 +1,26 @@
+import SFT.Physics.GrandLockDictionaryData
+import SFT.Physics.GrandLockRootTraceData
+import SFT.Physics.GrandLockRootHits2
+namespace SFT.Physics.GrandLockRootTrace
+open SFT.Physics.GrandLockDependency SFT.Physics.GrandLockDependencyProofs
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+theorem parents391_8 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state391_8 [] = .ok state391_8 := rfl
+theorem parents391_7 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state391_7 ["SFT-MATH-EXACT-ARITHMETIC-001"] = .ok state391_8 := rfl
+theorem parents391_6 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state391_6 ["SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001"] = .ok state391_8 := rfl
+theorem parents391_5 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state391_5 ["SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001"] = .ok state391_8 := rfl
+theorem parents391_4 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state391_4 ["SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001"] = .ok state391_8 := rfl
+theorem parents391_3 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state391_3 ["SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001"] = .ok state391_8 := rfl
+theorem parents391_2 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state391_2 ["SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001"] = .ok state391_8 := rfl
+theorem parents391_1 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state391_1 ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001"] = .ok state391_8 := rfl
+theorem parents391_0 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state391_0 ["SFT-FOUNDATION-HALF-ONE-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001"] = .ok state391_8 := by
+ change (reachesOne sourceDictionary534 534 memoNode6167 "SFT-FOUNDATION-HALF-ONE-001" >>= fun next => recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) next ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001"]) = _
+ rewrite [rootCall390]
+ change recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state391_1 ["SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001"] = _
+ exact parents391_1
+theorem rootCall391 : reachesOne sourceDictionary534 535 memoNode6167 "SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005" = .ok result391 := by
+ change (do let result ← recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state391_0 ["SFT-FOUNDATION-HALF-ONE-001","SFT-FOUNDATION-FOLD-DYNAMICS-001","SFT-PHYS-MATTER-COMPOSITE-HADRONS-001","SFT-PHYS-MATTER-CONFINEMENT-LIFT-003","SFT-PHYS-FIELD-INTERACTION-CLASSES-001","SFT-PHYS-NUCLEON-BINDING-TERMINAL-005","SFT-PHYS-HADRON-REGGE-TERMINAL-005","SFT-MATH-EXACT-ARITHMETIC-001"]; pure (result.1,put result.2 "SFT-PHYS-NUCLEAR-RESIDUAL-FORCE-TERMINAL-005" result.1)) = _
+ rewrite [parents391_0]
+ rfl
+#print axioms rootCall391
+end SFT.Physics.GrandLockRootTrace

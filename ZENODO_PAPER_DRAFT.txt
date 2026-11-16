@@ -28473,3 +28473,14 @@ Source correspondence: original electronic_structure_derivation.py, electronic_s
 The complete original eight-field empirical reconciliation equality is established by SFT.Physics.GrandLockObservationAnalysisProofs.originalComplete in GrandLockObservationProofOriginal.lean, using the complete record extraction originalExtraction and the eight field results above; both complete results have empty axiom dependency lists.
 
 The molecular electronic-state entry is verified as cumulative entry 712, with all 19 original dependencies complete. Its complete source correspondence and executed checks are recorded in verification/TURN_1064_ELECTRONIC_STATE_COMPLETION.json. The original empirical boundary and observational provenance are retained.
+
+
+Full dependency traversal and foundational reachability (Section 984)
+
+Let P be the original ordered vector of 347 Physics claim identifiers and D the original dictionary of 534 claim-to-parent records. The traversal retains an active dictionary A, a completed dictionary C and count n. For a call on v, membership v∈A rejects a cycle; membership v∈C returns (C,n) unchanged. Otherwise the exact ordered parent list D(v) is traversed with A∪{v}. If those parent calls return (C′,n′), the call returns (C′∪{v},n′+1). An absent dictionary row rejects as an orphan. The source supplies the recursion bound |D|+1=535. Starting at (∅,0) and processing every identifier in P in its original order gives a completed count of 534.
+
+Foundational reachability retains the source memo M. Its defining cases are R(One,M)=true; R(v,M)=M(v) when a cached value exists; otherwise R(v,M)=∨[R(u,M):u∈D(v)], with the memo threaded through the original parent order and the source short-circuit behavior retained. The complete ordered fold over P returns true. Thus every one of the 347 original Physics identifiers reaches One through its declared source dependencies. The completed-dictionary and memo results are carried between calls; a repeated dependency is not counted as a newly visited claim.
+
+Both complete equalities are checked by Lean with empty axiom-dependency lists. The proof composes the actual source calls and the exact ordered folds, retaining all source identifiers and parent incidences. It does not replace the source graph with a different graph or change its cycle, orphan or completion decisions.
+
+Original source: sft/physics/grand_lock_terminal_law_v1.py, dependency_certificate and its frozen dependency dictionary, at commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native verification: SFT.Physics.GrandLockDependencyTrace.originalTraversal in SFT/Physics/GrandLockVisitTraceComplete.lean and SFT.Physics.GrandLockRootTrace.originalRoots in SFT/Physics/GrandLockRootTraceComplete.lean; retained public declaration aliases are in GrandLockDependencyTraversal.lean and GrandLockDependencyRoots.lean. Chronological proof construction and executed checks: TIMELINE.txt, TURN1065–TURN1067.

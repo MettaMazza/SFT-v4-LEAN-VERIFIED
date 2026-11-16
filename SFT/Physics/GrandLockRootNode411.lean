@@ -1,0 +1,26 @@
+import SFT.Physics.GrandLockDictionaryData
+import SFT.Physics.GrandLockRootTraceData
+import SFT.Physics.GrandLockRootHits3
+namespace SFT.Physics.GrandLockRootTrace
+open SFT.Physics.GrandLockDependency SFT.Physics.GrandLockDependencyProofs
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+theorem parents411_8 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state411_8 [] = .ok state411_8 := rfl
+theorem parents411_7 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state411_7 ["SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = .ok state411_8 := rfl
+theorem parents411_6 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state411_6 ["SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = .ok state411_8 := rfl
+theorem parents411_5 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state411_5 ["SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = .ok state411_8 := rfl
+theorem parents411_4 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state411_4 ["SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = .ok state411_8 := rfl
+theorem parents411_3 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state411_3 ["SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = .ok state411_8 := rfl
+theorem parents411_2 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state411_2 ["SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = .ok state411_8 := rfl
+theorem parents411_1 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state411_1 ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = .ok state411_8 := rfl
+theorem parents411_0 : recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state411_0 ["SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = .ok state411_8 := by
+ change (reachesOne sourceDictionary534 534 memoNode6508 "SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003" >>= fun next => recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) next ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"]) = _
+ rewrite [rootCall410]
+ change recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state411_1 ["SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"] = _
+ exact parents411_1
+theorem rootCall411 : reachesOne sourceDictionary534 535 memoNode6508 "SFT-PHYS-POST-NEWTONIAN-FIXED-POINT-TERMINAL-009" = .ok result411 := by
+ change (do let result ← recordFold (fun ((found,cache) : Bool × Dictionary Bool) dep => if found then pure (found,cache) else reachesOne sourceDictionary534 534 cache dep) state411_0 ["SFT-PHYS-GRAVITY-NONLINEAR-SELF-SOURCE-003","SFT-PHYS-STRUCT-GENERATOR-THREE-001","SFT-FOUNDATION-HALF-ONE-001","SFT-MATH-SELF-SIMILAR-CONVERGENCE-002","SFT-MATH-EXACT-ARITHMETIC-001","SFT-MATH-DYNAMICAL-SYSTEMS-001","SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001","SFT-PHYS-MEAS-TARGET-CUSTODY-001"]; pure (result.1,put result.2 "SFT-PHYS-POST-NEWTONIAN-FIXED-POINT-TERMINAL-009" result.1)) = _
+ rewrite [parents411_0]
+ rfl
+#print axioms rootCall411
+end SFT.Physics.GrandLockRootTrace

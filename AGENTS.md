@@ -135,3 +135,6 @@ Do not replace implementation with repeated unchanged source reviews, status-onl
 
 Resource safety amendment (explicit user instruction,16November2026)
 Supersede the former28-job policy: at most4 concurrent SFT compilers, one thread each,8192MiB limits. Check actual processes and memory pressure before batches; require at least25percent system availability and keep aggregate SFT compiler RSS below40GiB. Preserve completed results and actual live handles. Reconcile interrupted or missing handles before restarting. Keep normal tool output below2000tokens and large generated content in files; do not print large code, JSON or blob payloads into chat. No crash cause may be asserted without evidence. This resource correction does not pause the goal or change source completion criteria.
+
+
+Actual RSS enforcement (16 November2026): require tools/run_lean_guarded.py for Lean invocations. Compiler -M8192 did not prevent a prior137GiB process. Watch actual per-process RSS at one-second intervals, terminate above12GiB or40GiB aggregate, and use at most4 single-thread compilers. Match every pinned Lean executable, including scratch-file invocations, rather than filtering only by workspace argument names. Verify existing process handles before launching. Retain results and compact outputs. No change to scientific scope or completion criteria.

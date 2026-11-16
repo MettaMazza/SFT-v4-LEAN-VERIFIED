@@ -9543,3 +9543,19 @@ import SFT.Physics.ElectroweakMeasuredExperiment
 import SFT.Physics.ElectroweakMeasuredValidation
 
 import SFT.Physics.ElectroweakMeasuredAnalysis
+
+import SFT.Physics.CommonMeasuredRecords
+
+import SFT.Physics.CommonMeasuredMeasurement
+
+import SFT.Physics.CommonMeasuredWitnesses
+
+import SFT.Physics.CommonMeasuredGrammar
+
+import SFT.Physics.CommonMeasuredEvidence
+
+import SFT.Physics.CommonMeasuredExperiment
+
+import SFT.Physics.CommonMeasuredValidation
+
+import SFT.Physics.CommonMeasuredAnalysis

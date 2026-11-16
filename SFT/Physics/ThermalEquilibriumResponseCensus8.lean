@@ -1,0 +1,10 @@
+import SFT.Physics.ThermalEquilibriumResponseGrammarBase
+namespace SFT.Physics.ThermalEquilibriumResponseGrammar
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+theorem sourceDecisionChunk8 (maximum : Maximum) (fluctuation : Fluctuation) (response : Response) (noise : Noise) : survives ⟨.admitted,.rejected,.rejected,.rejected,maximum,fluctuation,response,noise⟩ = criteriaDecision ⟨.admitted,.rejected,.rejected,.rejected,maximum,fluctuation,response,noise⟩ := by
+ cases maximum <;> cases fluctuation <;> cases response <;> cases noise <;> rfl
+theorem uniqueCriteriaChunk8 (maximum : Maximum) (fluctuation : Fluctuation) (response : Response) (noise : Noise) : criteriaDecision ⟨.admitted,.rejected,.rejected,.rejected,maximum,fluctuation,response,noise⟩ = true ↔ (⟨.admitted,.rejected,.rejected,.rejected,maximum,fluctuation,response,noise⟩ : Candidate) = survivor := by
+ cases maximum <;> cases fluctuation <;> cases response <;> cases noise
+ all_goals constructor <;> intro h <;> first | rfl | cases h
+end SFT.Physics.ThermalEquilibriumResponseGrammar

@@ -27043,3 +27043,43 @@ For each level count, the source walk retains every nonnegative count vector wit
 retains all vectors reaching the maximum, and tests that the survivor list is exactly [d_L]. ThermalEquilibriumMaximum2.originalMaximum through ThermalEquilibriumMaximum5.originalMaximum prove the four complete original enumerations by Lean kernel reduction. No enumeration is replaced by an answer lookup or a selected subset. All four proofs have empty axiom dependencies. The complete six-field source certificate also agrees with fresh original execution, including its temperature populations, paired-population range 1 through 11, canonical range 2 through 5, weight range 2 through 9 and noise range 1 through 9.
 
 Original pinned source: sft/physics/thermal_equilibrium_response_terminal_law_v1.py, especially deterministic_noise_cycle, fixed_count_throw_forms, multinomial_count, canonical_maximum_certificate and theorem_certificate. Lean verification: SFT/Physics/ThermalEquilibriumResponse.lean, ThermalEquilibriumResponseCertificate.lean, ThermalEquilibriumNoise.lean and ThermalEquilibriumMaximum2.lean through ThermalEquilibriumMaximum5.lean. Evidence: verification/TURN_1035_equilibrium1035_core_report.json, TURN_1035_equilibrium1035_certificate_report.json, TURN_1035_equilibrium1035_maximum_report.json and TURN_1035_equilibrium1035_staged_report.json. Chronological correspondence: TIMELINE.txt TURN1035.
+
+920. Exact population mean and complete dyadic normalization
+
+For the terminal thermal-response law, let the ordered throw population be (q₀,…,qₙ₋₁), with N≥1 and each qᵢ an exact positive rational. The original input guard checks every throw and retains its value and order. Write Q=Σᵢqᵢ. Each addition of a/b and c/d uses (ad+bc)/(bd), with positive denominator. Since every added throw is positive, the finite accumulation has Q>0. The source operation then returns
+
+    T=Q/N>0,    N·T=N·(Q/N)=Q.
+
+For the last equality, if Q=u/v, the mean is u/(vN); multiplication by N yields Nu/(vN)=u/v. Cancellation is justified by the original nonempty-population condition N>0. ThermalEquilibriumTemperature.originalExactMean binds this expression to exactTemperature on the actual ordered rational list. originalPositiveTemperature proves that the operation returns a positive result, and originalTotalThrowIdentity proves that the original totalThrowIdentity operation returns true for every such population. These statements quantify over the original admitted population, not a selected list of examples. All three exported proofs have empty axiom dependencies.
+
+For L≥2 generated levels, the original integer population vector is
+
+    d_L=(2^(L−1),2^(L−2),…,2,1).
+
+Its construction gives d₂=(2,1) and d_(L+1)=2d_L concatenated with (1): for each earlier index i<L, 2^((L+1)−i−1)=2·2^(L−i−1), and the new terminal exponent is zero. If S_L=Σᵢd_(L,i), then
+
+    S₂=3,    S_(L+1)=2S_L+1,
+    S_L+1=2^L,    S_L=2^L−1>0.
+
+Indeed, S₂+1=4=2²; if S_L+1=2^L, then S_(L+1)+1=2S_L+2=2(S_L+1)=2^(L+1). The terminal population is One, so positivity also follows directly from the complete sum. The actual dyadicCanonicalWeights operation divides each original count by this same positive sum:
+
+    w_(L,i)=2^(L−i−1)/(2^L−1),
+    Σᵢw_(L,i)=S_L/S_L=1.
+
+For adjacent levels i and i+1<L, the earlier numerator is twice the later positive numerator. Dividing both by the same positive denominator preserves the strict inequality, giving w_(L,i)>w_(L,i+1). ThermalEquilibriumWeights.originalCountOperation and originalWeightOperation bind these expressions to the original count and weight operations; originalCountSuccessor, originalPopulationSuccessor, originalPopulationPlusOne and originalPopulationFormula establish the recurrence and denominator; originalCompleteNormalization and originalAdjacentWeightsDecrease establish the sum and strict decline. Every one of the module's thirteen exported declarations has empty axiom dependencies. Level count is the original generated-domain input, not a fitted scientific parameter.
+
+Original pinned source: sft/physics/thermal_equilibrium_response_terminal_law_v1.py, exact_temperature, total_throw_identity, dyadic_canonical_counts and dyadic_canonical_weights, at commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Lean verification: SFT/Physics/ThermalEquilibriumTemperature.lean and ThermalEquilibriumWeights.lean, operating on ThermalEquilibriumResponse.lean. Evidence: verification/TURN_1036_equilibrium1036_temperature_report.json and TURN_1036_equilibrium1036_weights_report.json. Chronological correspondence: TIMELINE.txt TURN1036.
+
+921. Terminal thermal-response grammar and operational witnesses
+
+The original eight axes are temperature, total throw, equilibrium, canonical weights, maximum multiplicity, fluctuation, response and noise. Each has exactly its two source alternatives. Taking their ordered Cartesian product gives 2⁸=256 candidates. The enumeration includes every assignment of the eight alternatives. For a candidate c, let aᵢ(c) record whether axis i has its source-admitted alternative. The source decision follows the original first-failed-axis order, and its acceptance criterion is
+
+    accept(c) ⇔ a₀(c)∧a₁(c)∧…∧a₇(c).
+
+Thus the all-admitted candidate survives; any different candidate has a rejected coordinate and is eliminated at its first failed axis. ThermalEquilibriumResponseGrammar.candidatesComplete proves that every typed candidate occurs in the enumeration. sourceDecisionMatchesCriteria connects the actual source decision to the conjunction; uniqueSurvivor proves acceptance exactly when the candidate equals the all-admitted form. The eight individual rejection proofs establish each coordinate exclusion. All 256 candidate identifiers, exact forms, decisions and reasons match the original execution, in the original order; the 76 grammar declarations have empty axiom dependencies.
+
+The operational certificate retains the original six flags: temperature, equilibrium, canonical maximum, normalized decreasing weights, complementary fluctuation, and complete-cycle noise. Its original finite ranges remain unchanged: paired populations 1 through 11, complete fixed-count/fixed-throw maxima at levels 2 through 5, weights at levels 2 through 9, and orbit repetitions 1 through 9. ThermalEquilibriumCertificateProof.originalCertificate proves the six-field result (true,true,true,true,true,true) using the complete source computations. The four original witnesses read temperature; equilibrium; canonical maximum together with weights; and fluctuation together with noise. Their values follow from that single certificate proof. These certificate and witness proofs have empty axiom dependencies. The general population-mean, normalization and orbit results are established by the separate induction proofs described above; the certificate ranges retain their original operational role.
+
+Original pinned source: sft/physics/thermal_equilibrium_response_terminal_law_v1.py, SPEC.axes, theorem_certificate and SPEC.witnesses; sft/physics/structural_constants.py, candidate_rows and decision_reason. Lean verification: SFT/Physics/ThermalEquilibriumResponseGrammarBase.lean, ThermalEquilibriumResponseCensus0.lean through ThermalEquilibriumResponseCensus15.lean, ThermalEquilibriumResponseGrammar.lean, ThermalEquilibriumCertificateProof.lean and ThermalEquilibriumResponseWitnesses.lean. Evidence: verification/TURN_1036_thermalequilibrium1036_grammar_comparison.json, TURN_1036_thermalequilibrium1036_grammar_audit.json and TURN_1036_thermalequilibrium1036_entry_audit.json. Chronological correspondence: TIMELINE.txt TURN1036.
+
+The complete native terminal thermal-response programme reproduces the pinned original registration, all 256 candidate records and decisions, closure record, controls and unknown-identifier rejection, including every source-derived trace and proof hash. A fresh execution of StructuralPhysicsProgram agrees with the native output in every field. The original independent validator accepts the complete native record and rejects each of the three tested altered records: omitted candidate, added survivor and failed control. Lean verification: ThermalEquilibriumResponseEntryEvidence.lean and ThermalEquilibriumResponseProgram1036.lean. Evidence: verification/TURN_1036_thermalequilibrium1036_program_report.json, TURN_1036_thermalequilibrium1036_fresh_report.json and TURN_1036_thermalequilibrium1036_independent_report.json. Chronological correspondence: TIMELINE.txt TURN1036.

@@ -27414,3 +27414,23 @@ The original totalThrow is M_1. Hence M_1(n)=N+M_0(n)≥N for every word with po
 Equality forces M_1(r)=0. Since M_1(r)≥Σ r, every nonnegative tail coordinate is zero. Thus c=N and the only possible minimum word is g=(N,0,…,0). The full preserving enumeration contains g, and direct evaluation gives M_1(g)=N. Every different generated word therefore has strictly greater total throw. This proves the ground minimum and its uniqueness for every positive population and level count; it does not rely on the finite certificate's sample range.
 
 Original pinned source: sft/physics/spin_statistics_condensation_terminal_law_v1.py, occupation_vectors, occupation_census, canonical_occupation_weights, minimal_throw_ground_certificate and the stated last-cell and cold-occupation induction. Lean verification: SFT/Physics/SpinStatisticsOccupationCounts.lean, originalPreservingCount, originalAlternatingCount and originalEveryOccupationCensus; SpinStatisticsOccupationWeights.lean, originalScorePositive, originalTotalPositive, originalWeightAssembly and originalEveryAdmittedMeasureNormalizes; SpinStatisticsGroundMinimum.lean, originalOffsetDifference, originalThrowLowerBound, originalMinimumWord, originalGroundAttains, originalGroundGenerated and originalExcitedThrowStrict. The factorial quotient reuses ThermalEquilibriumPaired.originalSplitMultiplicity; rational summation reuses ThermalHistoryVisibility.originalNormalizedTotal. Chronological correspondence: TIMELINE.txt TURN1045. Verification evidence: verification/TURN_1045_spinstatistics1045_general_report.json and TURN_1045_spinstatistics1045_ground_report.json.
+
+931. Exact cold-depth disadvantage of every excited occupation word
+
+The source's zero-based throw is e(n)=Σ_i i n_i. The indexed-throw identity proved above gives M_1(n)=N+e(n). The generated ground word has e(g)=0; every different generated word has e(n)>0.
+
+The already established complementary dyadic-product identity applies to the same original weights. Raising it to cold depth d yields
+
+    s_d(n) 2^(d e(n))=2^(d(L−1)N).
+
+For g, e(g)=0, so s_d(g)=2^(d(L−1)N). Thus every generated word obeys the exact integer relation
+
+    s_d(n) 2^(d e(n))=s_d(g).
+
+The source's relative score is consequently 2^(−d e(n)); this notation denotes the exact rational reciprocal of the positive integer 2^(d e(n)). Its denominator has the successor relation
+
+    2^((d+1)e(n))=2^(e(n)) 2^(d e(n)).
+
+For every excited word e(n)≥1, and hence 2^(e(n))≥2. Each successive cold step therefore multiplies that word's relative score by at most one half. These are identities and inequalities for the actual generated occupation words and source score operation.
+
+Original pinned source: sft/physics/spin_statistics_condensation_terminal_law_v1.py, canonical_occupation_weights and the cold-depth induction_step. Lean verification: SFT/Physics/SpinStatisticsColdScores.lean, originalScorePower, originalColdComplement, originalThrowDecomposition, originalExcitedOffsetPositive, originalGroundOffset, originalGroundScore, originalRelativeColdScore, originalColdPenaltySuccessor and originalExcitedCoolingFactor. The complementary identity is reused from ThermalEquilibriumMultinomial.originalFixedCountThrowProduct. Chronological correspondence: TIMELINE.txt TURN1045–1046. Verification evidence: verification/TURN_1046_spinstatistics1045_cold_scores_report.json.

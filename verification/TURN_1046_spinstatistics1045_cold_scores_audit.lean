@@ -1,0 +1,10 @@
+import SFT.Physics.SpinStatisticsColdScores
+#print axioms SFT.Physics.SpinStatisticsColdScores.originalScorePower
+#print axioms SFT.Physics.SpinStatisticsColdScores.originalColdComplement
+#print axioms SFT.Physics.SpinStatisticsColdScores.originalThrowDecomposition
+#print axioms SFT.Physics.SpinStatisticsColdScores.originalExcitedOffsetPositive
+#print axioms SFT.Physics.SpinStatisticsColdScores.originalGroundOffset
+#print axioms SFT.Physics.SpinStatisticsColdScores.originalGroundScore
+#print axioms SFT.Physics.SpinStatisticsColdScores.originalRelativeColdScore
+#print axioms SFT.Physics.SpinStatisticsColdScores.originalColdPenaltySuccessor
+#print axioms SFT.Physics.SpinStatisticsColdScores.originalExcitedCoolingFactor

@@ -9643,3 +9643,65 @@ import SFT.Physics.HeliumIsotopeCensus15
 import SFT.Physics.HeliumIsotopeGrammar
 
 import SFT.Physics.HeliumIsotopeEntryEvidence
+
+import SFT.Physics.ThermalMeasuredRecords
+
+import SFT.Physics.ThermalMeasuredMeasurement
+
+import SFT.Physics.ThermalMeasuredWitnesses
+
+import SFT.Physics.ThermalMeasuredGrammar
+
+import SFT.Physics.ThermalMeasuredEvidence
+
+import SFT.Physics.ThermalMeasuredExperiment
+
+import SFT.Physics.ThermalMeasuredValidation
+
+import SFT.Physics.ThermalMeasuredAnalysis
+
+import SFT.Physics.ThermalMeasuredAnalysisProofs
+
+import SFT.Physics.ThermalMeasuredInputProofs
+
+import SFT.Physics.ReggeDimensional
+
+import SFT.Physics.ReggeDimensionalWitnesses
+
+import SFT.Physics.ReggeDimensionalGrammarBase
+
+import SFT.Physics.ReggeDimensionalCensus0
+
+import SFT.Physics.ReggeDimensionalCensus1
+
+import SFT.Physics.ReggeDimensionalCensus2
+
+import SFT.Physics.ReggeDimensionalCensus3
+
+import SFT.Physics.ReggeDimensionalCensus4
+
+import SFT.Physics.ReggeDimensionalCensus5
+
+import SFT.Physics.ReggeDimensionalCensus6
+
+import SFT.Physics.ReggeDimensionalCensus7
+
+import SFT.Physics.ReggeDimensionalCensus8
+
+import SFT.Physics.ReggeDimensionalCensus9
+
+import SFT.Physics.ReggeDimensionalCensus10
+
+import SFT.Physics.ReggeDimensionalCensus11
+
+import SFT.Physics.ReggeDimensionalCensus12
+
+import SFT.Physics.ReggeDimensionalCensus13
+
+import SFT.Physics.ReggeDimensionalCensus14
+
+import SFT.Physics.ReggeDimensionalCensus15
+
+import SFT.Physics.ReggeDimensionalGrammar
+
+import SFT.Physics.ReggeDimensionalEntryEvidence

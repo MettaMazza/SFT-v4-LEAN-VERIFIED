@@ -8187,3 +8187,83 @@ import SFT.Mathematics.CalculatorBrowserTransaction
 import SFT.Mathematics.CalculatorBrowserTransport
 
 import SFT.Mathematics.CalculatorBrowserWitnesses
+
+import SFT.Physics.VelocityComposition
+
+import SFT.Physics.VelocityCompositionAlgebra
+
+import SFT.Physics.VelocityCompositionCensus0
+
+import SFT.Physics.VelocityCompositionCensus1
+
+import SFT.Physics.VelocityCompositionCensus10
+
+import SFT.Physics.VelocityCompositionCensus11
+
+import SFT.Physics.VelocityCompositionCensus12
+
+import SFT.Physics.VelocityCompositionCensus13
+
+import SFT.Physics.VelocityCompositionCensus14
+
+import SFT.Physics.VelocityCompositionCensus15
+
+import SFT.Physics.VelocityCompositionCensus16
+
+import SFT.Physics.VelocityCompositionCensus17
+
+import SFT.Physics.VelocityCompositionCensus18
+
+import SFT.Physics.VelocityCompositionCensus19
+
+import SFT.Physics.VelocityCompositionCensus2
+
+import SFT.Physics.VelocityCompositionCensus20
+
+import SFT.Physics.VelocityCompositionCensus21
+
+import SFT.Physics.VelocityCompositionCensus22
+
+import SFT.Physics.VelocityCompositionCensus23
+
+import SFT.Physics.VelocityCompositionCensus24
+
+import SFT.Physics.VelocityCompositionCensus25
+
+import SFT.Physics.VelocityCompositionCensus26
+
+import SFT.Physics.VelocityCompositionCensus27
+
+import SFT.Physics.VelocityCompositionCensus28
+
+import SFT.Physics.VelocityCompositionCensus29
+
+import SFT.Physics.VelocityCompositionCensus3
+
+import SFT.Physics.VelocityCompositionCensus30
+
+import SFT.Physics.VelocityCompositionCensus31
+
+import SFT.Physics.VelocityCompositionCensus4
+
+import SFT.Physics.VelocityCompositionCensus5
+
+import SFT.Physics.VelocityCompositionCensus6
+
+import SFT.Physics.VelocityCompositionCensus7
+
+import SFT.Physics.VelocityCompositionCensus8
+
+import SFT.Physics.VelocityCompositionCensus9
+
+import SFT.Physics.VelocityCompositionEntryEvidence
+
+import SFT.Physics.VelocityCompositionGrammar
+
+import SFT.Physics.VelocityCompositionGrammarBase
+
+import SFT.Physics.VelocityCompositionPairProduct
+
+import SFT.Physics.VelocityCompositionReconstruction
+
+import SFT.Physics.VelocityCompositionWitnesses

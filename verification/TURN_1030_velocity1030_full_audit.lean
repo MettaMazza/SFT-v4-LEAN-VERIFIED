@@ -1,0 +1,246 @@
+import SFT.Physics.VelocityComposition
+import SFT.Physics.VelocityCompositionAlgebra
+import SFT.Physics.VelocityCompositionCensus0
+import SFT.Physics.VelocityCompositionCensus1
+import SFT.Physics.VelocityCompositionCensus10
+import SFT.Physics.VelocityCompositionCensus11
+import SFT.Physics.VelocityCompositionCensus12
+import SFT.Physics.VelocityCompositionCensus13
+import SFT.Physics.VelocityCompositionCensus14
+import SFT.Physics.VelocityCompositionCensus15
+import SFT.Physics.VelocityCompositionCensus16
+import SFT.Physics.VelocityCompositionCensus17
+import SFT.Physics.VelocityCompositionCensus18
+import SFT.Physics.VelocityCompositionCensus19
+import SFT.Physics.VelocityCompositionCensus2
+import SFT.Physics.VelocityCompositionCensus20
+import SFT.Physics.VelocityCompositionCensus21
+import SFT.Physics.VelocityCompositionCensus22
+import SFT.Physics.VelocityCompositionCensus23
+import SFT.Physics.VelocityCompositionCensus24
+import SFT.Physics.VelocityCompositionCensus25
+import SFT.Physics.VelocityCompositionCensus26
+import SFT.Physics.VelocityCompositionCensus27
+import SFT.Physics.VelocityCompositionCensus28
+import SFT.Physics.VelocityCompositionCensus29
+import SFT.Physics.VelocityCompositionCensus3
+import SFT.Physics.VelocityCompositionCensus30
+import SFT.Physics.VelocityCompositionCensus31
+import SFT.Physics.VelocityCompositionCensus4
+import SFT.Physics.VelocityCompositionCensus5
+import SFT.Physics.VelocityCompositionCensus6
+import SFT.Physics.VelocityCompositionCensus7
+import SFT.Physics.VelocityCompositionCensus8
+import SFT.Physics.VelocityCompositionCensus9
+import SFT.Physics.VelocityCompositionEntryEvidence
+import SFT.Physics.VelocityCompositionGrammar
+import SFT.Physics.VelocityCompositionGrammarBase
+import SFT.Physics.VelocityCompositionPairProduct
+import SFT.Physics.VelocityCompositionReconstruction
+import SFT.Physics.VelocityCompositionWitnesses
+#print axioms SFT.Physics.VelocityComposition.Motion
+#print axioms SFT.Physics.VelocityComposition.Held
+#print axioms SFT.Physics.VelocityComposition.Pair
+#print axioms SFT.Physics.VelocityComposition.one
+#print axioms SFT.Physics.VelocityComposition.speed
+#print axioms SFT.Physics.VelocityComposition.composeSameDirection
+#print axioms SFT.Physics.VelocityComposition.heldPair
+#print axioms SFT.Physics.VelocityComposition.composeHeldPairs
+#print axioms SFT.Physics.VelocityComposition.recoverSpeed
+#print axioms SFT.Physics.VelocityComposition.BilinearCandidate
+#print axioms SFT.Physics.VelocityComposition.bilinearCandidates
+#print axioms SFT.Physics.VelocityComposition.candidateValue
+#print axioms SFT.Physics.VelocityComposition.uniqueBilinearSurvivor
+#print axioms SFT.Physics.VelocityComposition.exactClosureGrid
+#print axioms SFT.Physics.VelocityComposition.typedLeftIdentity
+#print axioms SFT.Physics.VelocityComposition.typedRightIdentity
+#print axioms SFT.Physics.VelocityComposition.bilinearCensusCount
+#print axioms SFT.Physics.VelocityComposition.bilinearUniqueCoordinates
+#print axioms SFT.Physics.VelocityComposition.bilinearLimitForcesCoordinates
+#print axioms SFT.Physics.VelocityComposition.ratEqual
+#print axioms SFT.Physics.VelocityComposition.motionEqual
+#print axioms SFT.Physics.VelocityComposition.composeThreeLeft
+#print axioms SFT.Physics.VelocityComposition.composeThreeRight
+#print axioms SFT.Physics.VelocityComposition.Certificate
+#print axioms SFT.Physics.VelocityComposition.theoremCertificate
+#print axioms SFT.Physics.VelocityComposition.admittedSpeed
+#print axioms SFT.Physics.VelocityComposition.sumCommutative
+#print axioms SFT.Physics.VelocityComposition.productCommutative
+#print axioms SFT.Physics.VelocityComposition.originalCompositionFormula
+#print axioms SFT.Physics.VelocityComposition.originalCommutative
+#print axioms SFT.Physics.VelocityComposition.sourceSumFractions
+#print axioms SFT.Physics.VelocityComposition.sourceOneAtDenominator
+#print axioms SFT.Physics.VelocityComposition.originalRationalComposition
+#print axioms SFT.Physics.VelocityComposition.originalHeldResidual
+#print axioms SFT.Physics.VelocityComposition.originalStrictClosureCross
+#print axioms SFT.Physics.VelocityComposition.originalLimitCross
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk0
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk0
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk1
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk1
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk10
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk10
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk11
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk11
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk12
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk12
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk13
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk13
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk14
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk14
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk15
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk15
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk16
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk16
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk17
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk17
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk18
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk18
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk19
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk19
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk2
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk2
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk20
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk20
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk21
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk21
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk22
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk22
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk23
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk23
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk24
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk24
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk25
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk25
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk26
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk26
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk27
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk27
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk28
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk28
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk29
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk29
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk3
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk3
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk30
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk30
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk31
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk31
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk4
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk4
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk5
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk5
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk6
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk6
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk7
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk7
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk8
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk8
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionChunk9
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaChunk9
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.witnessRecords
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.claimId
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.dependencies
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.candidateRecord
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.completenessRecord
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.registrationData
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.registration
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.generatedCandidateData
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.censusData
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.census
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.decisionData
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.decideCandidate
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.closureValue
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.closureData
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.closure
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.control
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.exclusions
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.controls
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.runControls
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.registrationNoAxioms
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.registrationNoFreeParameters
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.decisionPreservesSurvival
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceDecisionMatchesCriteria
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueCriteriaSurvivor
+#print axioms SFT.Physics.VelocityCompositionGrammar.uniqueSurvivor
+#print axioms SFT.Physics.VelocityCompositionGrammar.survivorAccepted
+#print axioms SFT.Physics.VelocityCompositionGrammar.ExactCriteria
+#print axioms SFT.Physics.VelocityCompositionGrammar.acceptanceIffExactCriteria
+#print axioms SFT.Physics.VelocityCompositionGrammar.domain_rejected_rejected
+#print axioms SFT.Physics.VelocityCompositionGrammar.rest_rejected_rejected
+#print axioms SFT.Physics.VelocityCompositionGrammar.representation_rejected_rejected
+#print axioms SFT.Physics.VelocityCompositionGrammar.numerator_rejected_rejected
+#print axioms SFT.Physics.VelocityCompositionGrammar.denominator_rejected_rejected
+#print axioms SFT.Physics.VelocityCompositionGrammar.limit_rejected_rejected
+#print axioms SFT.Physics.VelocityCompositionGrammar.closure_rejected_rejected
+#print axioms SFT.Physics.VelocityCompositionGrammar.associativity_rejected_rejected
+#print axioms SFT.Physics.VelocityCompositionGrammar.record_rejected_rejected
+#print axioms SFT.Physics.VelocityCompositionGrammar.measurement_rejected_rejected
+#print axioms SFT.Physics.VelocityCompositionGrammar.extension_rejected_rejected
+#print axioms SFT.Physics.VelocityCompositionGrammar.Domain
+#print axioms SFT.Physics.VelocityCompositionGrammar.domainName
+#print axioms SFT.Physics.VelocityCompositionGrammar.Rest
+#print axioms SFT.Physics.VelocityCompositionGrammar.restName
+#print axioms SFT.Physics.VelocityCompositionGrammar.Representation
+#print axioms SFT.Physics.VelocityCompositionGrammar.representationName
+#print axioms SFT.Physics.VelocityCompositionGrammar.Numerator
+#print axioms SFT.Physics.VelocityCompositionGrammar.numeratorName
+#print axioms SFT.Physics.VelocityCompositionGrammar.Denominator
+#print axioms SFT.Physics.VelocityCompositionGrammar.denominatorName
+#print axioms SFT.Physics.VelocityCompositionGrammar.Limit
+#print axioms SFT.Physics.VelocityCompositionGrammar.limitName
+#print axioms SFT.Physics.VelocityCompositionGrammar.Closure
+#print axioms SFT.Physics.VelocityCompositionGrammar.closureName
+#print axioms SFT.Physics.VelocityCompositionGrammar.Associativity
+#print axioms SFT.Physics.VelocityCompositionGrammar.associativityName
+#print axioms SFT.Physics.VelocityCompositionGrammar.Record
+#print axioms SFT.Physics.VelocityCompositionGrammar.recordName
+#print axioms SFT.Physics.VelocityCompositionGrammar.Measurement
+#print axioms SFT.Physics.VelocityCompositionGrammar.measurementName
+#print axioms SFT.Physics.VelocityCompositionGrammar.Extension
+#print axioms SFT.Physics.VelocityCompositionGrammar.extensionName
+#print axioms SFT.Physics.VelocityCompositionGrammar.Candidate
+#print axioms SFT.Physics.VelocityCompositionGrammar.sourceFields
+#print axioms SFT.Physics.VelocityCompositionGrammar.candidateId
+#print axioms SFT.Physics.VelocityCompositionGrammar.exactForm
+#print axioms SFT.Physics.VelocityCompositionGrammar.survivorId
+#print axioms SFT.Physics.VelocityCompositionGrammar.survives
+#print axioms SFT.Physics.VelocityCompositionGrammar.criteriaDecision
+#print axioms SFT.Physics.VelocityCompositionGrammar.decisionReason
+#print axioms SFT.Physics.VelocityCompositionGrammar.generationRule
+#print axioms SFT.Physics.VelocityCompositionGrammar.grammarBoundary
+#print axioms SFT.Physics.VelocityCompositionGrammar.candidates
+#print axioms SFT.Physics.VelocityCompositionGrammar.survivor
+#print axioms SFT.Physics.VelocityCompositionGrammar.generatedCardinality
+#print axioms SFT.Physics.VelocityCompositionGrammar.candidatesComplete
+#print axioms SFT.Physics.VelocityComposition.appendHeld
+#print axioms SFT.Physics.VelocityComposition.appendPair
+#print axioms SFT.Physics.VelocityComposition.originalPairProduct
+#print axioms SFT.Physics.VelocityComposition.normalizedComponentAssociative
+#print axioms SFT.Physics.VelocityComposition.retainedComponentAssociative
+#print axioms SFT.Physics.VelocityComposition.heldNonnegative
+#print axioms SFT.Physics.VelocityComposition.originalHeldAssociative
+#print axioms SFT.Physics.VelocityComposition.originalPairAssociative
+#print axioms SFT.Physics.VelocityComposition.originalForwardHeldDifference
+#print axioms SFT.Physics.VelocityComposition.originalForwardHeldSum
+#print axioms SFT.Physics.VelocityComposition.originalHeldReconstructionRatio
+#print axioms SFT.Physics.VelocityComposition.originalSubtractNormalized
+#print axioms SFT.Physics.VelocityComposition.originalRecoverNormalized
+#print axioms SFT.Physics.VelocityComposition.originalHeldPairSublimit
+#print axioms SFT.Physics.VelocityComposition.originalHeldPairLimit
+#print axioms SFT.Physics.VelocityComposition.originalComposedHeldSublimit
+#print axioms SFT.Physics.VelocityComposition.originalRecoverEmpty
+#print axioms SFT.Physics.VelocityComposition.originalProductRecovery
+#print axioms SFT.Physics.VelocityComposition.originalReconstructionSublimit
+#print axioms SFT.Physics.VelocityComposition.originalReconstructionLeftLimit
+#print axioms SFT.Physics.VelocityComposition.originalReconstructionRightLimit
+#print axioms SFT.Physics.VelocityCompositionWitnesses.completeBilinearCensus
+#print axioms SFT.Physics.VelocityCompositionWitnesses.typedRestAndLimit
+#print axioms SFT.Physics.VelocityCompositionWitnesses.closureAndAssociativity
+#print axioms SFT.Physics.VelocityCompositionWitnesses.heldPairReconstruction
+#print axioms SFT.Physics.VelocityCompositionWitnesses.lowSpeedBoundary
+#print axioms SFT.Physics.VelocityCompositionWitnesses.completeBilinearCensusPassed
+#print axioms SFT.Physics.VelocityCompositionWitnesses.typedRestAndLimitPassed
+#print axioms SFT.Physics.VelocityCompositionWitnesses.closureAndAssociativityPassed
+#print axioms SFT.Physics.VelocityCompositionWitnesses.heldPairReconstructionPassed
+#print axioms SFT.Physics.VelocityCompositionWitnesses.lowSpeedBoundaryPassed

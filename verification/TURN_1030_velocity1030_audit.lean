@@ -1,0 +1,32 @@
+import SFT.Physics.VelocityCompositionReconstruction
+import SFT.Physics.VelocityCompositionEntryEvidence
+#print axioms SFT.Physics.VelocityComposition.originalSubtractNormalized
+#print axioms SFT.Physics.VelocityComposition.originalRecoverNormalized
+#print axioms SFT.Physics.VelocityComposition.originalHeldPairSublimit
+#print axioms SFT.Physics.VelocityComposition.originalHeldPairLimit
+#print axioms SFT.Physics.VelocityComposition.originalComposedHeldSublimit
+#print axioms SFT.Physics.VelocityComposition.originalRecoverEmpty
+#print axioms SFT.Physics.VelocityComposition.originalProductRecovery
+#print axioms SFT.Physics.VelocityComposition.originalReconstructionSublimit
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.witnessRecords
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.claimId
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.dependencies
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.candidateRecord
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.completenessRecord
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.registrationData
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.registration
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.generatedCandidateData
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.censusData
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.census
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.decisionData
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.decideCandidate
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.closureValue
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.closureData
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.closure
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.control
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.exclusions
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.controls
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.runControls
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.registrationNoAxioms
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.registrationNoFreeParameters
+#print axioms SFT.Physics.VelocityCompositionEntryEvidence.decisionPreservesSurvival

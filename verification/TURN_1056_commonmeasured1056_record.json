@@ -1,0 +1,62 @@
+{
+  "schema": "sft-v3-common-scale-measured-value-successor-source-record/1",
+  "correction_scope": "This successor replaces the mismatch-as-success use of Claim SFT-PHYS-SCALE-COMMON-AXIS-TERMINAL-030 for empirical branch closure. Its formal common-axis result and immutable receipt remain dependencies; its NuTeV-tension acceptance predicate does not establish measured-value closure.",
+  "formal_claim_id": "SFT-PHYS-SCALE-COMMON-AXIS-TERMINAL-030",
+  "formal_receipt_hash": "sha256:44d542f87d12844c02c321ac651008ae7ddd738a3b16e7d2c3d8700ec89eca55",
+  "formal_certificate_hash": "sha256:904ba1d325c5e5200cacb4ff09fdb0abe1b8328d6ae16177e29f2e596d4138bb",
+  "electroweak_successor_claim_id": "SFT-PHYS-VALIDATION-ELECTROWEAK-MEASURED-VALUE-053",
+  "electroweak_successor_receipt_hash": "sha256:e93f04515944a1951b78463db3083350fbc77e6d8506edbcdc13178cedfbc852",
+  "electroweak_successor_certificate_hash": "sha256:3a19d721c429874f404e7b75601511f8ba0c39a68fae6f2c46f2010d12a492a4",
+  "coupling_running_claim_id": "SFT-PHYS-COUPLING-RUNNING-CONVERGENCE-TERMINAL-006",
+  "coupling_running_receipt_hash": "sha256:b9263f585f01a2401261f465ad250f405a9914da5c53e57ba113f076aeb4f309",
+  "retrieval_date": "2026-07-25",
+  "sources": [
+    {
+      "source_id": "PDG-2026-ELECTROWEAK-SCALE-VECTOR",
+      "title": "Review of Particle Physics 2026: Electroweak Model and Constraints on New Physics",
+      "url": "https://pdg.lbl.gov/2026/reviews/rpp2026-rev-standard-model.pdf",
+      "snapshot_path": "experiments/external_sources/physics/snapshots/pdg-2026-electroweak-model.pdf",
+      "snapshot_hash": "sha256:a102f6252b7190dc423200271dffa7c805cd15a50391b1c578853d2f777611cb",
+      "source_pages": "printed pages 23, 25 and 26"
+    },
+    {
+      "source_id": "PDG-2025-2026-STRONG-EM-COMPLETE-RUNNING-VECTOR",
+      "title": "Complete admitted strong and electromagnetic running vector",
+      "url": "repository-bound source record",
+      "snapshot_path": "experiments/external_sources/physics/snapshots/coupling-running-convergence-source-record.json",
+      "snapshot_hash": "sha256:b83331089d96c073fbd5101753ba5c4716ae1a8b1b891e068684b6f7246d9953",
+      "source_pages": "complete registered source vector"
+    }
+  ],
+  "registered_target": {
+    "scheme_rows": [
+      {"scheme": "on-shell", "center": "0.22342", "standard_uncertainty": "0.00009"},
+      {"scheme": "effective lepton angle", "center": "0.23154", "standard_uncertainty": "0.00006"},
+      {"scheme": "MS at Z", "center": "0.23122", "standard_uncertainty": "0.00006"},
+      {"scheme": "MS non-decoupled", "center": "0.23140", "standard_uncertainty": "0.00006"}
+    ],
+    "low_transfer_rows": [
+      {"row_id": "NuTeV-DIS-on-shell", "scheme": "on-shell extraction", "center": "0.2277", "standard_uncertainty": "0.0016", "source_classification": "approximately three-standard-deviation excess; source reports subsequent interpretation concerns affecting the extracted value"},
+      {"row_id": "Jefferson-Lab-Hall-A-eDIS", "scheme": "MS at Z translation", "center": "0.2299", "standard_uncertainty": "0.0043", "source_classification": "two-percent measurement"},
+      {"row_id": "SLAC-E158", "scheme": "MS running", "center": "0.2403", "standard_uncertainty": "0.0013", "source_classification": "six-standard-deviation scale-dependence test"},
+      {"row_id": "Cesium-atomic-parity-violation", "scheme": "MS running", "center": "0.2349", "standard_uncertainty": "0.0018", "source_classification": "atomic-parity-violation translation"}
+    ],
+    "displayed_measurement_classes": ["APV", "Qweak", "SLAC E158", "eDIS", "LEP I", "SLC", "Tevatron", "LHC"],
+    "below_W_effective_theory_and_beta_sign_change_retained": true,
+    "threshold_matching_discontinuities_retained": true,
+    "complete_strong_and_electromagnetic_vector_receipt_retained": true,
+    "NuTeV_extraction_retained_unchanged": true,
+    "NuTeV_extraction_is_not_a_required_mismatch_or_SFT_result": true,
+    "all_source_rows_retained_unchanged": true
+  },
+  "methodological_boundary": {
+    "terminal_on_shell_value_is_tested_against_like_typed_on_shell_measurement": true,
+    "support_eight_value_is_tested_against_like_typed_low_transfer_APV_measurement": true,
+    "NuTeV_is_retained_as_a_source_identified_interpretation_sensitive_extraction": true,
+    "NuTeV_mismatch_is_not_an_acceptance_condition": true,
+    "eDIS_overlap_is_non_discriminating": true,
+    "no_uncertainty_is_widened_or_rescaled": true,
+    "measurement_selected_formal_survivor": false,
+    "target_inaccessible_to_formal_derivation": true
+  }
+}

@@ -8373,3 +8373,51 @@ import SFT.Physics.ThermalObservationEvidence
 import SFT.Physics.ThermalObservationExperiment
 
 import SFT.Physics.ThermalObservationValidation
+
+import SFT.Physics.InflationGrowth
+
+import SFT.Physics.InflationGrowthTransport
+
+import SFT.Physics.InflationGrowthDoubling
+
+import SFT.Physics.InflationGrowthCertificate
+
+import SFT.Physics.InflationGrowthGrammarBase
+
+import SFT.Physics.InflationGrowthCensus0
+
+import SFT.Physics.InflationGrowthCensus1
+
+import SFT.Physics.InflationGrowthCensus2
+
+import SFT.Physics.InflationGrowthCensus3
+
+import SFT.Physics.InflationGrowthCensus4
+
+import SFT.Physics.InflationGrowthCensus5
+
+import SFT.Physics.InflationGrowthCensus6
+
+import SFT.Physics.InflationGrowthCensus7
+
+import SFT.Physics.InflationGrowthCensus8
+
+import SFT.Physics.InflationGrowthCensus9
+
+import SFT.Physics.InflationGrowthCensus10
+
+import SFT.Physics.InflationGrowthCensus11
+
+import SFT.Physics.InflationGrowthCensus12
+
+import SFT.Physics.InflationGrowthCensus13
+
+import SFT.Physics.InflationGrowthCensus14
+
+import SFT.Physics.InflationGrowthCensus15
+
+import SFT.Physics.InflationGrowthGrammar
+
+import SFT.Physics.InflationGrowthWitnesses
+
+import SFT.Physics.InflationGrowthEntryEvidence

@@ -1,0 +1,12 @@
+from pathlib import Path
+import json,re,subprocess,os,hashlib
+w=Path('work');r=Path('/Volumes/One Touch/SFT v4 Full model LEAN');mods=['InflationGrowth','InflationGrowthTransport','InflationGrowthDoubling','InflationGrowthCertificate','InflationGrowthGrammarBase']+['InflationGrowthCensus'+str(i)for i in range(16)]+['InflationGrowthGrammar','InflationGrowthWitnesses','InflationGrowthEntryEvidence'];names=[];ths=[];defs=[];sha={}
+for m in mods:
+ body=(r/f'SFT/Physics/{m}.lean').read_text();assert not re.search(r'\bsorry\b|^\s*axiom\b',body,re.M);ns=re.search(r'^namespace (\S+)',body,re.M)[1];names += [ns+'.'+n for n in re.findall(r'^(?:def|theorem|structure) (\w+)',body,re.M)];ths += [ns+'.'+n for n in re.findall(r'^theorem (\w+)',body,re.M)];defs += [ns+'.'+n for n in re.findall(r'^(?:def|theorem) (\w+)',body,re.M)];sha[m]=hashlib.sha256(body.encode()).hexdigest()
+p=w/'inflation1035_full_audit.lean';p.write_text(''.join('import SFT.Physics.'+m+'\n'for m in mods)+''.join('#print axioms '+n+'\n'for n in names));x=subprocess.run(['/Users/dolltrading/.elan/bin/lean',str(p)],env={**os.environ,'LEAN_PATH':str(r/'.lake/build/lib/lean')},capture_output=True,text=True);(w/'inflation1035_full_audit.log').write_text(x.stdout+x.stderr);assert x.returncode==0 and x.stdout.count('does not depend on any axioms')==len(names),x.stdout[-3000:]
+(w/'inflation1035_audit_config.json').write_text(json.dumps(dict(modules=mods,declarations=names,theorems=ths,definitions_and_theorems=defs,source_sha256=sha),indent=2));print('PASS',len(names),'declarations;',len(ths),'theorems;emptyaxioms',flush=True)
+subprocess.run(['python3','work/check_inflation1035_grammar.py'],check=True)
+subprocess.run(['python3','work/run_inflation1035_native.py'],check=True)
+subprocess.run(['python3','work/check_inflation1035_fresh.py'],check=True)
+subprocess.run(['python3','work/check_inflation1035_independent.py'],check=True)
+print('PASS all original inflation entry checks',flush=True)

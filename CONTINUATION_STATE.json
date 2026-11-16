@@ -135,23 +135,10 @@
   ],
   "live_jobs": [
     {
-      "kind": "069 complete4096nativeprogramme thenfresh/independent",
-      "pid": 60006,
-      "native_pid": 60870,
-      "session_id": 99837,
-      "log": "work/stellarcollapse1062_finish.log",
-      "script": "work/finish_stellarcollapse1062.py"
-    },
-    {
-      "kind": "069 immediate registration afternativechecks",
-      "session_id": 98513,
-      "script": "work/register_ready1062_stellarcollapse.py",
-      "log": "work/registration1062_stellarcollapse.log"
-    },
-    {
-      "kind": "070 sixcompleteanalysis outputproofs",
-      "session_id": 74964,
-      "log": "work/collapseobservation1062_analysis_proofs_build.log"
+      "kind": "071 full4096programme/fresh/independent",
+      "session_id": 90355,
+      "script": "work/finish_compacthorizon1062.py",
+      "log": "work/compacthorizon1062_finish.log"
     }
   ],
   "snapshot": [
@@ -55034,12 +55021,12 @@
   ],
   "next_publication_milestone": 750,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "Continue070originalsourcebindingswhile069nativeprogrammefinishes;registereachentryimmediatelyindependencyorder. Preserveallpassingproofs/livejobs. Continue toward750thenfullpublicationreviewpackage.",
+  "authorized_action": "Continue toward750 in dependency order; preserve071 native job and all verified evidence. Update paper/timeline/counts and push checkpoints. At750 prepare full cumulative publication review package andpause.",
   "scientific_cursor": {
-    "completed": "SFT-PHYS-VALIDATION-STELLAR-GALACTIC-TIDAL-068",
-    "next": "SFT-PHYS-STELLAR-NUCLEAR-COLLAPSE-TERMINAL-069",
-    "receipt": "verification/TURN_1062_STELLAR_OBSERVATION_068_COMPLETION.json",
-    "source": "claims/SFT-PHYS-STELLAR-NUCLEAR-COLLAPSE-TERMINAL-069/execution.py",
+    "completed": "SFT-PHYS-VALIDATION-STELLAR-NUCLEAR-COLLAPSE-070",
+    "next": "SFT-PHYS-COMPACT-HORIZON-THERMODYNAMICS-TERMINAL-071",
+    "receipt": "verification/TURN_1062_COLLAPSE_OBSERVATION_070_COMPLETION.json",
+    "source": "claims/SFT-PHYS-COMPACT-HORIZON-THERMODYNAMICS-TERMINAL-071/execution.py",
     "next_milestone": 750
   },
   "video_verification": {
@@ -63868,7 +63855,7 @@
     "completion_receipt": "verification/TURN_1062_STELLAR_OBSERVATION_068_COMPLETION.json"
   },
   "stellarcollapse1062_staged": {
-    "registered": false,
+    "registered": true,
     "source": "sft/physics/stellar_nuclear_collapse_terminal_law_v1.py",
     "source_sha256": "35684c7c1887b0a0753f237f2dbb4aa55cf0100127339e3369f85d58f8f13444",
     "verified": [
@@ -63879,11 +63866,10 @@
       "generalstage/nesting/fuel/capture-sourceproofs",
       "237exporteddefinitions/theorems emptyaxioms"
     ],
-    "remaining": [
-      "Existingfullnativeprogramme comparison thenfresh/independent",
-      "Preparedimmediateregistration"
-    ],
-    "next_action": "Preserve60006/60870;register069whenallchecksfinish;continue070sourcebindingwithoutredoingexistinganalysis."
+    "remaining": [],
+    "next_action": "Complete;reuse.",
+    "live_jobs": [],
+    "completion_receipt": "verification/TURN_1062_STELLAR_COLLAPSE_069_COMPLETION.json"
   },
   "stellar1062": {
     "status": "complete",
@@ -63896,17 +63882,51 @@
     "remaining": []
   },
   "collapseobservation1062_staged": {
-    "registered": false,
+    "registered": true,
     "source": "sft/physics/stellar_nuclear_collapse_terminal_validation_v1.py",
     "verified": [
-      "34-fieldanalysis built emptyaxioms",
-      "32complete original/control/modified-record comparisons"
+      "34-fieldanalysis emptyaxioms",
+      "32complete source comparisons",
+      "sixcomplete original/control output proofs emptyaxioms"
+    ],
+    "remaining": [],
+    "next_action": "Complete707;reuse.",
+    "live_jobs": [],
+    "completion_receipt": "verification/TURN_1062_COLLAPSE_OBSERVATION_070_COMPLETION.json"
+  },
+  "checkpoint1062_next_remote": {
+    "status": "PASS",
+    "commit": "e9e7c8332d1172c0b4d6d68231f09eabe2fee21c",
+    "tree": "22f30186c1b417836f3210da75cc88d19aae7c4d",
+    "verified_files": 197,
+    "head_verified": true,
+    "completed_entries": 705
+  },
+  "stellarcollapse1062": {
+    "status": "complete",
+    "receipt": "verification/TURN_1062_STELLAR_COLLAPSE_069_COMPLETION.json",
+    "remaining": []
+  },
+  "collapseobservation1062": {
+    "status": "complete",
+    "receipt": "verification/TURN_1062_COLLAPSE_OBSERVATION_070_COMPLETION.json",
+    "remaining": []
+  },
+  "compacthorizon1062_staged": {
+    "registered": false,
+    "source": "sft/physics/compact_horizon_terminal_law_v1.py",
+    "verified": [
+      "83completeoperationoutputs",
+      "full8fieldcertificatekernelproof",
+      "all4096grammar/fourwitnesses",
+      "generalpositivehorizon andfiniteevaporation proof",
+      "243emptyaxiomdeclarations"
     ],
     "remaining": [
-      "Sixcompleteoutputproofbuildinprogress",
-      "Originalauthoritativerecord,custody,formalwitnesses,grammar,validatorandfivecontrolbindings",
-      "Fullsourcechecks andregistrationafter069"
+      "Fullnativeprogramme/fresh/independent running",
+      "Complete original emission monotonicity bindings if not already represented by general source proofs; retain actual operation scope",
+      "Registration"
     ],
-    "next_action": "Preserveproofbuild74964;finishoriginal070bindingsfromexistinganalysis."
+    "next_action": "Preserve90355; continue actual071 emission bindings and072 analysis in parallel;register in dependencyorder."
   }
 }

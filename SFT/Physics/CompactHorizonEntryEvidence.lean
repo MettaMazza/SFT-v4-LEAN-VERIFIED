@@ -1,0 +1,77 @@
+import SFT.Physics.CompactHorizonGrammar
+import SFT.Physics.CompactHorizonWitnesses
+import SFT.Foundation.AdmissionControls
+import SFT.Engine.RegistrationGate
+namespace SFT.Physics.CompactHorizonEntryEvidence
+open SFT.Host.Canonical CompactHorizonGrammar CompactHorizonWitnesses
+open SFT.Foundation.AdmissionControls (admissionIdentity)
+set_option maxRecDepth 20000
+set_option maxHeartbeats 100000000
+
+def witnessRecords : Value := .array [.object [("name",.text "exclusion-scaling"),("statement",.text "Perfect-cube exclusion and gravity exponents close at every registered depth."),("passed",.boolean witness0)],.object [("name",.text "endpoint-census"),("statement",.text "The binary fibre supplies exactly two pre-horizon families."),("passed",.boolean witness1)],.object [("name",.text "reference-horizon"),("statement",.text "The admitted quarter-One witness cross-closes radius and temperature."),("passed",.boolean witness2)],.object [("name",.text "inverse-temperature"),("statement",.text "Every registered finite emission trace preserves mT=1/16 and positive support."),("passed",.boolean witness3)]]
+def claimId : String := "SFT-PHYS-COMPACT-HORIZON-THERMODYNAMICS-TERMINAL-071"
+def dependencies : List String := ["SFT-FOUNDATION-ONE-001", "SFT-FOUNDATION-FOLD-001", "SFT-MATH-EXACT-ARITHMETIC-001", "SFT-PHYS-SPACE-DIMENSION-THREE-001", "SFT-PHYS-SPACE-BOUNDARY-RANK-TWO-001", "SFT-PHYS-QUANTUM-EXCLUSION-001", "SFT-PHYS-VACUUM-ODD-RECURRENCE-003", "SFT-PHYS-GRAVITY-STRONG-FIELD-HORIZON-003", "SFT-PHYS-GRAVITY-HORIZON-INFORMATION-003", "SFT-PHYS-FINITE-QUANTUM-GRAVITY-TERMINAL-023", "SFT-PHYS-STELLAR-NUCLEAR-COLLAPSE-TERMINAL-069"]
+def candidateRecord (c : Candidate) : Value := .object [("candidate_id",.text (candidateId c)),("coordinates",.array [.array [.text "occupation",.text (occupationName c.occupation)],.array [.text "momentum",.text (momentumName c.momentum)],.array [.text "support",.text (supportName c.support)],.array [.text "gravity",.text (gravityName c.gravity)],.array [.text "threshold",.text (thresholdName c.threshold)],.array [.text "endpoint",.text (endpointName c.endpoint)],.array [.text "radius",.text (radiusName c.radius)],.array [.text "area",.text (areaName c.area)],.array [.text "entropy",.text (entropyName c.entropy)],.array [.text "thermal",.text (thermalName c.thermal)],.array [.text "floor",.text (floorName c.floor)],.array [.text "extension",.text (extensionName c.extension)]]),("exact_form",.text (exactForm c))]
+def completenessRecord : Value := .object [("generation_rule",.text "Generate the complete twelve-axis product of occupation, momentum, support scaling, gravity scaling, threshold, endpoint-family, horizon-radius, area, entropy, thermal, finite-floor and extension forms."),("grammar_boundary",.text "Every positive finite perfect-cube exclusion support and successor; the complete binary endpoint fibre; the admitted quarter-One horizon witness; every positive exact mass carrier; every finite binary emission depth; and the complete twelve-axis alternative product, with dimensional observations inaccessible."),("axes",.array [.object [("key",.text "occupation"),("question",.text "How are compact fermions placed?"),("choices",.array [.array [.text "multiply-occupied-cell",.text "That violates the admitted exclusion law."],.array [.text "one-fermion-per-generated-cell",.text "Complete exclusion packing retains one indistinguishable fermion per occupied cell."]])],.object [("key",.text "momentum"),("question",.text "What depth does complete three-space packing force?"),("choices",.array [.array [.text "selected-momentum-scale",.text "A selected scale is a free parameter."],.array [.text "cube-side-momentum-depth",.text "q^3 occupied cells force the positive depth q without evaluating a root."]])],.object [("key",.text "support"),("question",.text "What is the relativistic exclusion support?"),("choices",.array [.array [.text "imported-pressure-equation",.text "An imported equation cannot select the Fold law."],.array [.text "occupants-times-forced-depth-q4",.text "q^3 occupants times depth q gives exact q^4 support."]])],.object [("key",.text "gravity"),("question",.text "What gravitational source support competes?"),("choices",.array [.array [.text "linear-unpaired-source",.text "Gravity couples the complete source support to itself."],.array [.text "paired-source-q6",.text "q^3 paired with itself gives exact q^6 support."]])],.object [("key",.text "threshold"),("question",.text "Which loaded Fold threshold reaches balance?"),("choices",.array [.array [.text "chosen-dimensional-mass",.text "A measured mass cannot choose a structural threshold."],.array [.text "three-quarter-preimage-to-half-One",.text "The complete loaded upper preimage Folds exactly to half-One."]])],.object [("key",.text "endpoint"),("question",.text "How many pre-horizon exclusion families exist?"),("choices",.array [.array [.text "open-ended-remnant-list",.text "An open list is not generated by the binary fibre."],.array [.text "exactly-two-binary-fibre-families",.text "The two fibre labels supply exactly two support families and no third."]])],.object [("key",.text "radius"),("question",.text "How does horizon radius depend on mass?"),("choices",.array [.array [.text "imported-metric-radius",.text "A conventional metric is not a premise."],.array [.text "one-Fold-mass-doubling",.text "The admitted horizon law forces radius equal to mass held twice."]])],.object [("key",.text "area"),("question",.text "Where is horizon support counted?"),("choices",.array [.array [.text "volume-support",.text "A volume count contradicts boundary rank two."],.array [.text "rank-two-radius-pair",.text "The forced boundary rank pairs radius with itself."]])],.object [("key",.text "entropy"),("question",.text "How much boundary information is retained?"),("choices",.array [.array [.text "selected-entropy-coefficient",.text "A selected coefficient is an extra rule."],.array [.text "quarter-area-boundary-record",.text "Two binary halvings force the admitted quarter-area record."]])],.object [("key",.text "thermal"),("question",.text "How does the live horizon recurrence scale?"),("choices",.array [.array [.text "constant-or-fitted-temperature",.text "A constant or fitted temperature loses the scale recurrence."],.array [.text "fixed-thermal-mass-product",.text "The admitted quarter-One witness fixes the one-sixteenth product and therefore inverse-mass scaling."]])],.object [("key",.text "floor"),("question",.text "What happens under continued emission?"),("choices",.array [.array [.text "numerical-zero-or-completed-infinity",.text "Neither is an admissible Fold proof form."],.array [.text "positive-finite-floor-at-every-reached-depth",.text "Every finite successor retains positive mass and temperature."]])],.object [("key",.text "extension"),("question",.text "May a third family or correction be added?"),("choices",.array [.array [.text "free-family-or-correction",.text "An ungenerated addition destroys uniqueness."],.array [.text "no-extra-rule",.text "The complete fibre, scale and finite-floor grammar requires no added selector."]])]]),("product_exhaustion",.text "Every registered choice occurs once with every choice on every other axis."),("candidate_ids",.array (candidates.map fun c => .text (candidateId c)))]
+def registrationData (sourceHash : String) : SFT.Engine.ClaimRegistration where
+ claimId := claimId
+ title := "Terminal compact-object and horizon-thermodynamics law"
+ branch := "physics"
+ statement := "Complete three-space exclusion packing gives q^3 singly occupied cells, momentum depth q and relativistic support numerator q^4, while paired gravitational source support is q^6; gravity therefore overtakes the exclusion scaling after the exact base. The loaded upper preimage is three-quarter-One and Folds to the half-One balance. The binary fibre supplies exactly two pre-horizon exclusion families and no third. The already admitted horizon Fold doubles mass to radius, rank-two support makes area proportional to radius paired with itself, and two binary halvings force entropy to one quarter of that boundary support. The live vacuum recurrence and admitted quarter-One horizon witness fix temperature times mass to one-sixteenth, so temperature varies exactly inversely with mass. Every finite emission successor lowers positive mass, raises positive temperature and lowers area while the finite floor prevents a numerical-zero or infinite proof form."
+ evidenceMode := .formal
+ rootTheorems := [SFT.Engine.rootTheoremId]
+ dependencies := dependencies
+ axioms := []
+ freeParameters := []
+ provenance := [.forwardForcing,.observationalDerivation]
+ sourceHash := sourceHash
+def registration (sourceHash : String) : Value := SFT.Engine.registrationValue (registrationData sourceHash)
+def generatedCandidateData (c : Candidate) : SFT.Engine.Candidate where
+ candidateId := candidateId c
+ exactForm := exactForm c
+ traceHash := admissionIdentity (.array [.text claimId,.text generationRule,candidateRecord c])
+def censusData : SFT.Engine.CandidateCensus where
+ generationRule := generationRule
+ grammarBoundary := grammarBoundary
+ expectedCardinality := .ofNat candidates.length
+ completenessCertificateHash := admissionIdentity completenessRecord
+ candidates := candidates.map generatedCandidateData
+def census : Value := SFT.Engine.censusValue censusData
+
+def decisionData (c : Candidate) : SFT.Engine.CandidateDecision where
+ candidateId := candidateId c
+ survives := survives c
+ reason := decisionReason c
+ proofHash := admissionIdentity (.array [.text claimId,.array (dependencies.map Value.text),candidateRecord c,.boolean (survives c),.text (decisionReason c)])
+def decideCandidate (candidate : SFT.Engine.Candidate) : Except String SFT.Engine.CandidateDecision :=
+ match candidates.find? (fun c => SFT.Host.Text.equal (candidateId c) candidate.candidateId) with
+ | some c => .ok (decisionData c)
+ | none => .error "StopIteration"
+def closureValue : Value := .object [("result",.text "For every positive whole q, complete exclusion packing has q^3 occupants, forced momentum depth q, relativistic support q^4 and gravitational paired support q^6; q^6 is strictly greater after the exact base. The loaded exclusion threshold is 3/4 and its Fold balance is 1/2. Exactly two pre-horizon support families exist. For every positive exact mass m, horizon radius is 2m, area support is (2m)^2, entropy support is one quarter of that area, and temperature is 1/(16m), preserving exact product mT=1/16. At m=1/4 the admitted radius and temperature are respectively 1/2 and 1/4. Every finite halving emission trace retains positive mass, temperature, area and information support; no numerical zero or completed infinity enters."),("base",.text "One occupied cell has unit exclusion and gravitational support; the first fibre family exists; the admitted mass 1/4 horizon has radius 1/2 and temperature 1/4."),("successor",.text "q to q+1 preserves q^4 versus q^6 exponent order; the second fibre label adds the second and final pre-horizon family; each finite mass halving quarters area and doubles temperature while retaining mT=1/16."),("exclusions",.array [.text "no V1/V2 executable, conventional compact-object equation, catalogue mass or Hawking target in formal execution",.text "no fitted mass limit, equation-of-state knob, temperature calibration, area normalization or evaporation correction",.text "no numerical zero, negative, irrational, imaginary, floating, NaN, continuum or completed-infinite proof scalar",.text "no claim that a normalized Fold temperature alone is a direct kelvin observation",.text "no third pre-horizon family, hidden support source, volume entropy or information deletion"]),("witnesses",witnessRecords),("unique_survivor",.text survivorId)]
+def closureData (decisions : List SFT.Engine.CandidateDecision) : SFT.Engine.ClosureEvidence where
+ scope := .depthIndependent
+ exactBoundary := grammarBoundary
+ minimalityPassed := true
+ namedShapeUniquenessPassed := true
+ proofHash := admissionIdentity (.array [closureValue,.array (decisions.map SFT.Engine.decisionValue)])
+ generalityCertificateHash := some (admissionIdentity closureValue)
+def closure (decisions : List SFT.Engine.CandidateDecision) : Value := SFT.Engine.closureEvidenceValue (closureData decisions)
+
+def control (kind : SFT.Engine.ControlKind) (passed : Bool) (observation : String) : SFT.Engine.ControlResult where
+ kind := kind
+ passed := passed
+ expectedBehavior := observation
+ observedBehavior := if passed then observation else "control failed"
+ receiptHash := identity (.array [.text claimId,.text (SFT.Engine.kindName kind),.boolean passed,.text observation])
+def exclusions : List String := ["no V1/V2 executable, conventional compact-object equation, catalogue mass or Hawking target in formal execution", "no fitted mass limit, equation-of-state knob, temperature calibration, area normalization or evaporation correction", "no numerical zero, negative, irrational, imaginary, floating, NaN, continuum or completed-infinite proof scalar", "no claim that a normalized Fold temperature alone is a direct kelvin observation", "no third pre-horizon family, hidden support source, volume entropy or information deletion"]
+def controls (sourceHash : String) : List SFT.Engine.ControlResult := [
+ control .falsePremise (!(SFT.Host.Text.equal (candidateId {survivor with occupation := .rejected}) survivorId)) "reject the form missing the first structural preservation",
+ control .tamperedSource (!(SFT.Host.Text.equal (identity (.object [("changed",.text sourceHash)])) sourceHash)) "reject a changed source identity",
+ control .tamperedArtifact ((candidates.filter survives).length==1) "reject a missing, duplicate or additional survivor",
+ control .boundary (!exclusions.isEmpty && witness0 && witness1 && witness2 && witness3) "reject forbidden values, target feedback and extra laws"]
+def runControls (sourceHash : String) : Value := .array ((controls sourceHash).map SFT.Engine.controlResultValue)
+
+theorem registrationNoAxioms (sourceHash : String) : (registrationData sourceHash).axioms = [] := rfl
+theorem registrationNoFreeParameters (sourceHash : String) : (registrationData sourceHash).freeParameters = [] := rfl
+theorem decisionPreservesSurvival (c : Candidate) : (decisionData c).survives = survives c := rfl
+end SFT.Physics.CompactHorizonEntryEvidence

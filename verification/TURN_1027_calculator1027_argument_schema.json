@@ -1,0 +1,63 @@
+[
+  {
+    "call": "ArgumentParser",
+    "args": [],
+    "kwargs": {
+      "prog": "smithian-fold-calculator",
+      "description": "Open the dependency-free Smithian Fold scientific calculator"
+    }
+  },
+  {
+    "call": "add_argument",
+    "args": [
+      "--no-browser"
+    ],
+    "kwargs": {
+      "action": "store_true",
+      "help": "serve without opening the browser"
+    }
+  },
+  {
+    "call": "add_argument",
+    "args": [
+      "--private"
+    ],
+    "kwargs": {
+      "action": "store_true",
+      "help": "limit access to this computer"
+    }
+  },
+  {
+    "call": "add_argument",
+    "args": [
+      "--port"
+    ],
+    "kwargs": {
+      "type": "int",
+      "default": 8765,
+      "help": "first local port to try"
+    }
+  },
+  {
+    "call": "add_argument",
+    "args": [
+      "--places"
+    ],
+    "kwargs": {
+      "type": "int",
+      "default": 18,
+      "help": "readable decimal places"
+    }
+  },
+  {
+    "call": "add_argument",
+    "args": [
+      "--limit"
+    ],
+    "kwargs": {
+      "type": "int",
+      "default": 10000,
+      "help": "positive counted operation boundary"
+    }
+  }
+]

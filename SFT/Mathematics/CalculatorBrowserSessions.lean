@@ -1,5 +1,5 @@
 import SFT.Mathematics.CalculatorBrowserTransaction
-import SFT.Mathematics.CalculatorCompleteCatalog
+import SFT.Mathematics.CalculatorExpressionCensus
 namespace SFT.Mathematics.CalculatorBrowserSessions
 open SFT.Mathematics SFT.Host CalculatorBrowserTransaction CalculatorBrowserNative
 def memoryButtons : List String := ["MC", "MR", "M+", "M−", "MS"]
@@ -47,7 +47,7 @@ def initialPayload (a : Application) (id : Option String := none) : Except Strin
   ("basic_buttons",.array (basicButtonRows.map fun row => .array (row.map Canonical.Value.text))),
   ("scientific_buttons",.array (scientificButtonRows.map fun row => .array (row.map Canonical.Value.text))),
   ("functions",.array (CalculatorCompleteController.functionCatalog.map fun (x,y,z) => .array [.text x,.text y,.text z])),
-  ("laws",.array (CalculatorCompleteCatalog.specs.map fun spec => .text spec.claimId)),
+  ("laws",.array (CalculatorExpressionCensus.currentClaimIds.map Canonical.Value.text)),
   ("network_url",.text a.networkUrl)])
 def newPagePayload (a : Application) (id : String) : Application × Except String Canonical.Value :=
  let next := newSession a id

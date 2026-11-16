@@ -27083,3 +27083,47 @@ The operational certificate retains the original six flags: temperature, equilib
 Original pinned source: sft/physics/thermal_equilibrium_response_terminal_law_v1.py, SPEC.axes, theorem_certificate and SPEC.witnesses; sft/physics/structural_constants.py, candidate_rows and decision_reason. Lean verification: SFT/Physics/ThermalEquilibriumResponseGrammarBase.lean, ThermalEquilibriumResponseCensus0.lean through ThermalEquilibriumResponseCensus15.lean, ThermalEquilibriumResponseGrammar.lean, ThermalEquilibriumCertificateProof.lean and ThermalEquilibriumResponseWitnesses.lean. Evidence: verification/TURN_1036_thermalequilibrium1036_grammar_comparison.json, TURN_1036_thermalequilibrium1036_grammar_audit.json and TURN_1036_thermalequilibrium1036_entry_audit.json. Chronological correspondence: TIMELINE.txt TURN1036.
 
 The complete native terminal thermal-response programme reproduces the pinned original registration, all 256 candidate records and decisions, closure record, controls and unknown-identifier rejection, including every source-derived trace and proof hash. A fresh execution of StructuralPhysicsProgram agrees with the native output in every field. The original independent validator accepts the complete native record and rejects each of the three tested altered records: omitted candidate, added survivor and failed control. Lean verification: ThermalEquilibriumResponseEntryEvidence.lean and ThermalEquilibriumResponseProgram1036.lean. Evidence: verification/TURN_1036_thermalequilibrium1036_program_report.json, TURN_1036_thermalequilibrium1036_fresh_report.json and TURN_1036_thermalequilibrium1036_independent_report.json. Chronological correspondence: TIMELINE.txt TURN1036.
+
+922. Complete paired-population multiplicity and forced half-One equilibrium
+
+For a positive generated pair count n, the original population is 2n. Its full census contains every upper-label count k=0,…,2n and its exact multiplicity
+
+    B(2n,k)=(2n)!/[k!·(2n−k)!].
+
+The central maximum follows from these source multiplicities. To show the integer quotient and its ordering explicitly, write M(a,b)=B(a+b,a). The counting recurrence has boundary values M(0,b)=M(a,0)=1 and successor
+
+    M(a+1,b+1)=M(a,b+1)+M(a+1,b).
+
+The two summands partition the complete count by the next held label. Its connection to the original factorial quotient is exact:
+
+    M(a,b)·a!·b!=(a+b)!.
+
+At the boundary this is 1·1·b!=b!. For the successor, multiply the recurrence by (a+1)!·(b+1)!. The first summand becomes (a+1)·(a+b+1)! and the second becomes (b+1)·(a+b+1)!, using the two preceding identities. Their sum is
+
+    [(a+1)+(b+1)]·(a+b+1)!=(a+b+2)!.
+
+Thus the quotient in the original operation is the same positive integer M(a,b); it is not rounded or replaced by a different census. ThermalEquilibriumPaired.originalSplitMultiplicity proves this connection for every a,b. The factorial identity also gives the exact adjacent relation
+
+    (a+1)·M(a+1,b)=(b+1)·M(a,b+1).
+
+When a<b, the right coefficient is strictly larger and M(a,b+1)>0. Therefore
+
+    M(a,b+1)<M(a+1,b).
+
+This is the source count's strict increase toward balance, established by originalAdjacentMultiplicity. Iterating it toward the midpoint gives
+
+    M(a,a+2(d+1))<M(a+d+1,a+d+1),    d≥0.
+
+For k<n, write n=k+d+1; the last inequality is B(2n,k)<B(2n,n). For k>n, the exact factorial identity is symmetric in the two label counts: B(2n,k)=B(2n,2n−k). Since 2n−k<n, the preceding inequality applies. Consequently
+
+    0≤k≤2n and k≠n  ⇒  B(2n,k)<B(2n,n).
+
+There is exactly one maximum in the complete original census. originalBelowCentral, originalAboveCentral and originalUniqueCentralMaximum prove these statements, including every original count from zero through 2n.
+
+The connection to the actual source programme preserves its full computation. originalCensusMaximum proves that folding maximum over the complete ordered row list returns B(2n,n): every row is bounded by that value, and the central row occurs in the list. originalCensusSurvivors proves that the original filter and projection return exactly [n]; no other row passes the equal-maximum test, and the original range contains n exactly once. Finally the original share operation divides the survivor count by the complete population:
+
+    share=n/(2n)=1/2,    n>0.
+
+ThermalEquilibriumPaired.originalEveryPositivePairedCensus proves the full four-field result of pairedEquilibriumCensus: population 2n, every original ordered (k,B(2n,k)) row, survivor list [n], and exact half-One share. This covers every positive pair count and retains the complete enumeration. All nine exported theorems in this module have empty Lean axiom dependencies.
+
+Original pinned source: sft/physics/thermal_equilibrium_response_terminal_law_v1.py, paired_equilibrium_census and its declared base/successor statement; claims/SFT-PHYS-THERMAL-EQUILIBRIUM-RESPONSE-TERMINAL-043/WHY_DERIVATION_CHECK.md. Lean verification: SFT/Physics/ThermalEquilibriumPaired.lean, with the unchanged factorial, binomial and pairedEquilibriumCensus operations in ThermalEquilibriumResponse.lean. Evidence: verification/TURN_1037_equilibrium1037_paired_report.json and TURN_1037_equilibrium1037_paired_audit.log. The earlier complete operation comparison remains applicable to the unchanged operation source. Chronological correspondence: TIMELINE.txt TURN1037.

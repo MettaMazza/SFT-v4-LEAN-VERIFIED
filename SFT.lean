@@ -9581,3 +9581,23 @@ import SFT.Physics.CosmicMeasuredResidual
 import SFT.Physics.CosmicMeasuredOriginal
 
 import SFT.Physics.CosmicMeasuredInputProofs
+
+import SFT.Physics.CriticalMeasuredRecords
+
+import SFT.Physics.CriticalMeasuredMeasurement
+
+import SFT.Physics.CriticalMeasuredWitnesses
+
+import SFT.Physics.CriticalMeasuredGrammar
+
+import SFT.Physics.CriticalMeasuredEvidence
+
+import SFT.Physics.CriticalMeasuredExperiment
+
+import SFT.Physics.CriticalMeasuredValidation
+
+import SFT.Physics.CriticalMeasuredAnalysis
+
+import SFT.Physics.CriticalMeasuredAnalysisProofs
+
+import SFT.Physics.CriticalMeasuredInputProofs

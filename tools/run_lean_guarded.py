@@ -12,7 +12,7 @@ def compilers():
  return rows
 rows=compilers();pressure=subprocess.check_output(['memory_pressure','-Q'],text=True);m=re.search(r'memory free percentage:\s*(\d+)%',pressure)
 if len(rows)>=4 or sum(x[1]for x in rows)>40*1024*1024 or not m or int(m[1])<25:raise SystemExit('Resource guard: launch deferred; reconcile live jobs and memory pressure.')
-p=subprocess.Popen(args);started=time.time();peak=0;reason=None;receipt=Path('work')/f'lean_resource_{p.pid}.json'
+p=subprocess.Popen(args);started=time.time();peak=0;reason=None;receipt=Path('work')/f'lean_resource_{p.pid}.json';receipt.parent.mkdir(exist_ok=True)
 def save(code=None):
  receipt.write_text(json.dumps({'pid':p.pid,'command':args,'started_utc':datetime.datetime.fromtimestamp(started,datetime.timezone.utc).isoformat(),'seconds':round(time.time()-started,2),'peak_rss_mib':round(peak/1024,2),'resource_stop':reason,'exit':code},indent=2)+'\n')
 save()
@@ -25,5 +25,5 @@ while p.poll() is None:
   break
  save();time.sleep(1)
 code=p.wait();save(code)
-print(json.dumps({'resource_receipt':str(receipt),'exit':code,'peak_rss_mib':round(peak/1024,2),'resource_stop':reason}),flush=True)
+print(json.dumps({'resource_receipt':str(receipt),'exit':code,'peak_rss_mib':round(peak/1024,2),'resource_stop':reason}),file=sys.stderr,flush=True)
 sys.exit(code if code>=0 else 128-code)

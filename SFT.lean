@@ -10319,3 +10319,163 @@ import SFT.Physics.CollapseObservationAnalysis
 import SFT.Physics.CollapseObservationAnalysisProofs
 
 import SFT.Physics.CollapseObservationInputProofs
+
+import SFT.Physics.CompactHorizon
+
+import SFT.Physics.CompactHorizonDerivation
+
+import SFT.Physics.CompactHorizonCertificateProof
+
+import SFT.Physics.CompactHorizonWitnesses
+
+import SFT.Physics.CompactHorizonGrammarBase
+
+import SFT.Physics.CompactHorizonCensus0
+
+import SFT.Physics.CompactHorizonCensus1
+
+import SFT.Physics.CompactHorizonCensus2
+
+import SFT.Physics.CompactHorizonCensus3
+
+import SFT.Physics.CompactHorizonCensus4
+
+import SFT.Physics.CompactHorizonCensus5
+
+import SFT.Physics.CompactHorizonCensus6
+
+import SFT.Physics.CompactHorizonCensus7
+
+import SFT.Physics.CompactHorizonCensus8
+
+import SFT.Physics.CompactHorizonCensus9
+
+import SFT.Physics.CompactHorizonCensus10
+
+import SFT.Physics.CompactHorizonCensus11
+
+import SFT.Physics.CompactHorizonCensus12
+
+import SFT.Physics.CompactHorizonCensus13
+
+import SFT.Physics.CompactHorizonCensus14
+
+import SFT.Physics.CompactHorizonCensus15
+
+import SFT.Physics.CompactHorizonCensus16
+
+import SFT.Physics.CompactHorizonCensus17
+
+import SFT.Physics.CompactHorizonCensus18
+
+import SFT.Physics.CompactHorizonCensus19
+
+import SFT.Physics.CompactHorizonCensus20
+
+import SFT.Physics.CompactHorizonCensus21
+
+import SFT.Physics.CompactHorizonCensus22
+
+import SFT.Physics.CompactHorizonCensus23
+
+import SFT.Physics.CompactHorizonCensus24
+
+import SFT.Physics.CompactHorizonCensus25
+
+import SFT.Physics.CompactHorizonCensus26
+
+import SFT.Physics.CompactHorizonCensus27
+
+import SFT.Physics.CompactHorizonCensus28
+
+import SFT.Physics.CompactHorizonCensus29
+
+import SFT.Physics.CompactHorizonCensus30
+
+import SFT.Physics.CompactHorizonCensus31
+
+import SFT.Physics.CompactHorizonCensus32
+
+import SFT.Physics.CompactHorizonCensus33
+
+import SFT.Physics.CompactHorizonCensus34
+
+import SFT.Physics.CompactHorizonCensus35
+
+import SFT.Physics.CompactHorizonCensus36
+
+import SFT.Physics.CompactHorizonCensus37
+
+import SFT.Physics.CompactHorizonCensus38
+
+import SFT.Physics.CompactHorizonCensus39
+
+import SFT.Physics.CompactHorizonCensus40
+
+import SFT.Physics.CompactHorizonCensus41
+
+import SFT.Physics.CompactHorizonCensus42
+
+import SFT.Physics.CompactHorizonCensus43
+
+import SFT.Physics.CompactHorizonCensus44
+
+import SFT.Physics.CompactHorizonCensus45
+
+import SFT.Physics.CompactHorizonCensus46
+
+import SFT.Physics.CompactHorizonCensus47
+
+import SFT.Physics.CompactHorizonCensus48
+
+import SFT.Physics.CompactHorizonCensus49
+
+import SFT.Physics.CompactHorizonCensus50
+
+import SFT.Physics.CompactHorizonCensus51
+
+import SFT.Physics.CompactHorizonCensus52
+
+import SFT.Physics.CompactHorizonCensus53
+
+import SFT.Physics.CompactHorizonCensus54
+
+import SFT.Physics.CompactHorizonCensus55
+
+import SFT.Physics.CompactHorizonCensus56
+
+import SFT.Physics.CompactHorizonCensus57
+
+import SFT.Physics.CompactHorizonCensus58
+
+import SFT.Physics.CompactHorizonCensus59
+
+import SFT.Physics.CompactHorizonCensus60
+
+import SFT.Physics.CompactHorizonCensus61
+
+import SFT.Physics.CompactHorizonCensus62
+
+import SFT.Physics.CompactHorizonCensus63
+
+import SFT.Physics.CompactHorizonGrammar
+
+import SFT.Physics.CompactHorizonEntryEvidence
+
+import SFT.Physics.HorizonObservationRecords
+
+import SFT.Physics.HorizonObservationWitnesses
+
+import SFT.Physics.HorizonObservationGrammar
+
+import SFT.Physics.HorizonObservationEvidence
+
+import SFT.Physics.HorizonObservationExperiment
+
+import SFT.Physics.HorizonObservationValidation
+
+import SFT.Physics.HorizonObservationAnalysis
+
+import SFT.Physics.HorizonObservationAnalysisProofs
+
+import SFT.Physics.HorizonObservationInputProofs

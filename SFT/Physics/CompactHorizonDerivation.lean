@@ -98,6 +98,29 @@ theorem originalEvaporationTotal (count n d : Nat) (hn : 0<n) (hd : 0<d) :
     change ((zero.blt (natRatio n d hd) && (zero.blt (natRatio (n+n) d hd) && (zero.blt (natRatio ((n+n)*(n+n)) (d*d) (Nat.mul_pos hd hd)) && (true && (zero.blt (natRatio d (16*n) (Nat.mul_pos (by decide) hn)) && true))))) && true)=true
     rw [positiveNormalized n d hn hd,positiveNormalized (n+n) d pn hd,positiveNormalized ((n+n)*(n+n)) (d*d) pp (Nat.mul_pos hd hd),positiveNormalized d (16*n) hd (Nat.mul_pos (by decide) hn)]
     rfl
+theorem originalEmissionTemperatureRises (n d : Nat) (hn : 0<n) (hd : 0<d) :
+ (natRatio d (16*n) (Nat.mul_pos (by decide) hn)).blt
+ (natRatio (d*2) (16*n) (Nat.mul_pos (by decide) hn))=true := by
+ apply CommonScaleAxis.positiveNormalizedLess _ _ _ _ hd (Nat.mul_pos (by decide) hn) (Nat.mul_pos hd (by decide)) (Nat.mul_pos (by decide) hn)
+ have growth : d<d*2 := by rw [Nat.mul_two]; exact Nat.lt_add_of_pos_right hd
+ exact Nat.mul_lt_mul_of_pos_right growth (Nat.mul_pos (by decide) hn)
+theorem originalEmissionMassOrder (n d : Nat) (hn : 0<n) (hd : 0<d) :
+ (natRatio n (d*2) (Nat.mul_pos hd (by decide))).blt (natRatio n d hd)=true := by
+ apply CommonScaleAxis.positiveNormalizedLess _ _ _ _ hn (Nat.mul_pos hd (by decide)) hn hd
+ have growth : d<d*2 := by rw [Nat.mul_two]; exact Nat.lt_add_of_pos_right hd
+ exact Nat.mul_lt_mul_of_pos_left growth hn
+theorem originalEmissionAreaFalls (n d : Nat) (hn : 0<n) (hd : 0<d) :
+ (natRatio ((n+n)*(n+n)) ((d*2)*(d*2)) (Nat.mul_pos (Nat.mul_pos hd (by decide)) (Nat.mul_pos hd (by decide)))).blt
+ (natRatio ((n+n)*(n+n)) (d*d) (Nat.mul_pos hd hd))=true := by
+ have pn : 0<n+n := Nat.lt_of_lt_of_le hn (Nat.le_add_right n n)
+ have pp := Nat.mul_pos pn pn
+ apply CommonScaleAxis.positiveNormalizedLess _ _ _ _ pp (Nat.mul_pos (Nat.mul_pos hd (by decide)) (Nat.mul_pos hd (by decide))) pp (Nat.mul_pos hd hd)
+ have growth : d<d*2 := by rw [Nat.mul_two]; exact Nat.lt_add_of_pos_right hd
+ have squares := Nat.lt_trans (Nat.mul_lt_mul_of_pos_right growth hd) (Nat.mul_lt_mul_of_pos_left growth (Nat.mul_pos hd (by decide)))
+ exact Nat.mul_lt_mul_of_pos_left squares pp
+#print axioms originalEmissionTemperatureRises
+#print axioms originalEmissionMassOrder
+#print axioms originalEmissionAreaFalls
 #print axioms originalHalving
 #print axioms originalEvaporationTotal
 #print axioms originalQuarterArea

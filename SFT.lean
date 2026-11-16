@@ -9823,3 +9823,71 @@ import SFT.Physics.SmithionObservationAnalysis
 import SFT.Physics.SmithionObservationAnalysisProofs
 
 import SFT.Physics.SmithionObservationInputProofs
+
+import SFT.Physics.StrongCPHands
+
+import SFT.Physics.StrongCPActions
+
+import SFT.Physics.StrongCPCertificate
+
+import SFT.Physics.StrongCPComposition
+
+import SFT.Physics.StrongCPWitnesses
+
+import SFT.Physics.StrongCPGrammarBase
+
+import SFT.Physics.StrongCPCensus0
+
+import SFT.Physics.StrongCPCensus1
+
+import SFT.Physics.StrongCPCensus2
+
+import SFT.Physics.StrongCPCensus3
+
+import SFT.Physics.StrongCPCensus4
+
+import SFT.Physics.StrongCPCensus5
+
+import SFT.Physics.StrongCPCensus6
+
+import SFT.Physics.StrongCPCensus7
+
+import SFT.Physics.StrongCPCensus8
+
+import SFT.Physics.StrongCPCensus9
+
+import SFT.Physics.StrongCPCensus10
+
+import SFT.Physics.StrongCPCensus11
+
+import SFT.Physics.StrongCPCensus12
+
+import SFT.Physics.StrongCPCensus13
+
+import SFT.Physics.StrongCPCensus14
+
+import SFT.Physics.StrongCPCensus15
+
+import SFT.Physics.StrongCPGrammar
+
+import SFT.Physics.StrongCPEntryEvidence
+
+import SFT.Physics.StrongCPObservationRecords
+
+import SFT.Physics.StrongCPObservationMeasurement
+
+import SFT.Physics.StrongCPObservationWitnesses
+
+import SFT.Physics.StrongCPObservationGrammar
+
+import SFT.Physics.StrongCPObservationEvidence
+
+import SFT.Physics.StrongCPObservationExperiment
+
+import SFT.Physics.StrongCPObservationValidation
+
+import SFT.Physics.StrongCPObservationAnalysis
+
+import SFT.Physics.StrongCPObservationAnalysisProofs
+
+import SFT.Physics.StrongCPObservationInputProofs

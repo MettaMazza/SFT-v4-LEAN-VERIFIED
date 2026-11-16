@@ -52030,9 +52030,49 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-PHYS-SPIN-STATISTICS-CONDENSATION-TERMINAL-045-f71da5b86f99d656.json",
       "statement": "The preserving and alternating exchange classes force the two finite quantum statistics. For N occupants over L levels, complete occupation enumeration gives C(N+L-1,N) preserving words with no finite per-level ceiling and C(L,N) alternating words with at most one occupant per level; when N>L the latter support is the empty One form. Exact dyadic Fold weighting normalizes every admitted finite occupation word without a continuum distribution. The complete two-label spin composition has three preserving readings and one alternating reading. An alternating constituent changes held fibre after one complete turn and first returns after two, whereas an alternating pair is preserving and returns after one. For every finite preserving population, repeated cold Fold weighting uniquely raises the shared ground-orbit weight through the already forced lock share (m-1)/m at a first finite depth; its exact canonical mean throw is the critical-temperature carrier. At minimum total throw, exhaustive occupation enumeration leaves exactly one word: the whole population in the shared ground orbit.",
       "title": "Terminal finite spin-statistics, occupation and Bose-condensation law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Physics/SpinStatisticsCondensation.lean",
+        "SFT/Physics/SpinStatisticsCondensationCertificate.lean",
+        "SFT/Physics/SpinStatisticsOccupationCertificateProof.lean",
+        "SFT/Physics/SpinStatisticsWeightsCertificateProof.lean",
+        "SFT/Physics/SpinStatisticsColdCertificateProof.lean",
+        "SFT/Physics/SpinStatisticsCertificateProof.lean",
+        "SFT/Physics/SpinStatisticsOccupationEnumeration.lean",
+        "SFT/Physics/SpinStatisticsOccupationBounds.lean",
+        "SFT/Physics/SpinStatisticsOccupationCounts.lean",
+        "SFT/Physics/SpinStatisticsOccupationWeights.lean",
+        "SFT/Physics/SpinStatisticsGroundMinimum.lean",
+        "SFT/Physics/SpinStatisticsColdScores.lean",
+        "SFT/Physics/SpinStatisticsCondensationGrammarBase.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus0.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus1.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus2.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus3.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus4.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus5.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus6.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus7.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus8.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus9.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus10.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus11.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus12.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus13.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus14.lean",
+        "SFT/Physics/SpinStatisticsCondensationCensus15.lean",
+        "SFT/Physics/SpinStatisticsCondensationGrammar.lean",
+        "SFT/Physics/SpinStatisticsCondensationWitnesses.lean",
+        "SFT/Physics/SpinStatisticsCondensationEntryEvidence.lean",
+        "SFT/Physics/SpinStatisticsColdMeasure.lean",
+        "SFT/Physics/SpinStatisticsColdBound.lean",
+        "SFT/Physics/SpinStatisticsColdThreshold.lean",
+        "SFT/Physics/SpinStatisticsColdGrowth.lean",
+        "SFT/Physics/SpinStatisticsCriticalExecution.lean",
+        "SFT/Physics/SpinStatisticsCriticalSelection.lean",
+        "SFT/Physics/SpinStatisticsGroundRecord.lean"
+      ],
+      "artifact_runtime_parity": "PASS complete256native programme=freshV3=pinnedrecords; original independent validator and three adverse cases; all source-bound operation checks retained; original source registration and supersession unchanged.",
       "registration_sha256": "b41670087afaa979bbcef402f9ca479ad707e4c4815f20cc9fce39c873570c40",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -52081,7 +52121,10 @@
         "statement": "For positive finite N and L, preserving exchange has exactly C(N+L-1,N) occupation words and admits N occupants in one cell for every N; alternating exchange has exactly C(L,N) words for N<=L, an empty support for N>L, and never exceeds one occupant per cell. Every finite canonical occupation weight is exact rational and sums to One. The two-label spin census is 3/4 preserving and 1/4 alternating; alternating spin first returns after two turns, while a pair is preserving and returns after one. For every N,L and m>=2, the ground-orbit share crosses (m-1)/m at a uniquely first finite cold depth, fixing an exact rational critical mean throw; the unique minimum-throw preserving word places all N occupants in the shared ground orbit.",
         "status": "independently_replicated_formal_empirical_comparison_separate",
         "title": "Terminal finite spin-statistics, occupation and Bose-condensation law"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN_1048_SPIN_STATISTICS_045_COMPLETION.json",
+      "verified_scope": "Exact original positive-input guards, occupation walk, counts, dyadic canonical weights, spin census and return, ground share, canonical mean, first crossing and minimum certificate operations.; Complete original four-field occupation, normalization, cold-threshold and spin certificate over its exact finite ranges with native kernel proofs.; Complete original four-field occupation, normalization, cold-threshold and spin certificate over its exact finite ranges with native kernel proofs.; Complete original four-field occupation, normalization, cold-threshold and spin certificate over its exact finite ranges with native kernel proofs.; Complete original four-field occupation, normalization, cold-threshold and spin certificate over its exact finite ranges with native kernel proofs.; Complete original four-field occupation, normalization, cold-threshold and spin certificate over its exact finite ranges with native kernel proofs.; occupation_vectors: exact ordered preserving/alternating operation bindings, capped-walk soundness, completeness and no duplicate words.; occupation_vectors: preserving carrier, alternating per-cell bound and overfull empty carrier.; occupation_census: general original binomial counts and complete census for all positive accepted inputs.; canonical_occupation_weights: positive original score, positive full denominator and normalization of every nonempty admitted measure.; minimal_throw_ground_certificate: indexed throw, generated ground attainment, every different word strictly greater.; canonical_occupation_weights: original dyadic products, complementary score identity and excited relative cold-depth decay.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.axes: all eight binary axes, all 256 original candidates in order, first-failure decisions, exhaustive membership and unique survivor.; SPEC.witnesses: all four original operational predicates bound to native certificate proofs.; StructuralPhysicsProgram: complete registration, census, decisions, closure, controls, canonical hashes and unknown identifier.; ground_orbit_weight: actual generated ground lookup equals exact score divided by complete normalization denominator.; critical_condensation_certificate: full enumerated competing-score bound and original least positive cover.; critical_condensation_certificate: original finite bound reaches exact lock threshold for every accepted population, level and factor.; ground_orbit_weight: strict growth of the actual normalized ground share at successive positive cold depths.; critical_condensation_certificate: native mean exists at every searched depth and original bounded search returns for all accepted inputs.; critical_condensation_certificate: exact first crossing, all earlier depths below threshold, returned fields and exact canonical mean.; minimal_throw_ground_certificate: actual minimum fold, complete survivor list and unique three-field native certificate for every positive input."
     },
     {
       "branch": "physics",
@@ -198289,13 +198332,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-16T04:58:57.190971+00:00",
+  "updated_at": "2026-11-16T05:56:30.017697+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 0,
-    "pending": 2100,
-    "fully_reconstructed_claims": 681,
-    "axiom_free_exported_results": 43897,
-    "axiom_free_audited_definitions_and_theorems": 96800
+    "pending": 2099,
+    "fully_reconstructed_claims": 682,
+    "axiom_free_exported_results": 44019,
+    "axiom_free_audited_definitions_and_theorems": 96994
   }
 }

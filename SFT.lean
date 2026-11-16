@@ -8611,3 +8611,81 @@ import SFT.Physics.ThermometryEvidence
 import SFT.Physics.ThermometryExperiment
 
 import SFT.Physics.ThermometryValidation
+
+import SFT.Physics.SpinStatisticsCondensation
+
+import SFT.Physics.SpinStatisticsCondensationCertificate
+
+import SFT.Physics.SpinStatisticsOccupationCertificateProof
+
+import SFT.Physics.SpinStatisticsWeightsCertificateProof
+
+import SFT.Physics.SpinStatisticsColdCertificateProof
+
+import SFT.Physics.SpinStatisticsCertificateProof
+
+import SFT.Physics.SpinStatisticsOccupationEnumeration
+
+import SFT.Physics.SpinStatisticsOccupationBounds
+
+import SFT.Physics.SpinStatisticsOccupationCounts
+
+import SFT.Physics.SpinStatisticsOccupationWeights
+
+import SFT.Physics.SpinStatisticsGroundMinimum
+
+import SFT.Physics.SpinStatisticsColdScores
+
+import SFT.Physics.SpinStatisticsCondensationGrammarBase
+
+import SFT.Physics.SpinStatisticsCondensationCensus0
+
+import SFT.Physics.SpinStatisticsCondensationCensus1
+
+import SFT.Physics.SpinStatisticsCondensationCensus2
+
+import SFT.Physics.SpinStatisticsCondensationCensus3
+
+import SFT.Physics.SpinStatisticsCondensationCensus4
+
+import SFT.Physics.SpinStatisticsCondensationCensus5
+
+import SFT.Physics.SpinStatisticsCondensationCensus6
+
+import SFT.Physics.SpinStatisticsCondensationCensus7
+
+import SFT.Physics.SpinStatisticsCondensationCensus8
+
+import SFT.Physics.SpinStatisticsCondensationCensus9
+
+import SFT.Physics.SpinStatisticsCondensationCensus10
+
+import SFT.Physics.SpinStatisticsCondensationCensus11
+
+import SFT.Physics.SpinStatisticsCondensationCensus12
+
+import SFT.Physics.SpinStatisticsCondensationCensus13
+
+import SFT.Physics.SpinStatisticsCondensationCensus14
+
+import SFT.Physics.SpinStatisticsCondensationCensus15
+
+import SFT.Physics.SpinStatisticsCondensationGrammar
+
+import SFT.Physics.SpinStatisticsCondensationWitnesses
+
+import SFT.Physics.SpinStatisticsCondensationEntryEvidence
+
+import SFT.Physics.SpinStatisticsColdMeasure
+
+import SFT.Physics.SpinStatisticsColdBound
+
+import SFT.Physics.SpinStatisticsColdThreshold
+
+import SFT.Physics.SpinStatisticsColdGrowth
+
+import SFT.Physics.SpinStatisticsCriticalExecution
+
+import SFT.Physics.SpinStatisticsCriticalSelection
+
+import SFT.Physics.SpinStatisticsGroundRecord

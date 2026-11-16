@@ -8437,3 +8437,59 @@ import SFT.Physics.InflationObservationEvidence
 import SFT.Physics.InflationObservationExperiment
 
 import SFT.Physics.InflationObservationValidation
+
+import SFT.Physics.CollectiveRadiation
+
+import SFT.Physics.CollectiveRadiationCensus
+
+import SFT.Physics.CollectiveRadiationCompleteness
+
+import SFT.Physics.CollectiveRadiationUniqueness
+
+import SFT.Physics.CollectiveRadiationScale
+
+import SFT.Physics.CollectiveRadiationUltraviolet
+
+import SFT.Physics.CollectiveRadiationBalances
+
+import SFT.Physics.CollectiveRadiationCertificate
+
+import SFT.Physics.CollectiveRadiationGrammarBase
+
+import SFT.Physics.CollectiveRadiationCensus0
+
+import SFT.Physics.CollectiveRadiationCensus1
+
+import SFT.Physics.CollectiveRadiationCensus2
+
+import SFT.Physics.CollectiveRadiationCensus3
+
+import SFT.Physics.CollectiveRadiationCensus4
+
+import SFT.Physics.CollectiveRadiationCensus5
+
+import SFT.Physics.CollectiveRadiationCensus6
+
+import SFT.Physics.CollectiveRadiationCensus7
+
+import SFT.Physics.CollectiveRadiationCensus8
+
+import SFT.Physics.CollectiveRadiationCensus9
+
+import SFT.Physics.CollectiveRadiationCensus10
+
+import SFT.Physics.CollectiveRadiationCensus11
+
+import SFT.Physics.CollectiveRadiationCensus12
+
+import SFT.Physics.CollectiveRadiationCensus13
+
+import SFT.Physics.CollectiveRadiationCensus14
+
+import SFT.Physics.CollectiveRadiationCensus15
+
+import SFT.Physics.CollectiveRadiationGrammar
+
+import SFT.Physics.CollectiveRadiationWitnesses
+
+import SFT.Physics.CollectiveRadiationEntryEvidence

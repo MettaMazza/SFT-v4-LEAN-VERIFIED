@@ -1,0 +1,184 @@
+import SFT.Physics.CollectiveRadiation
+import SFT.Physics.CollectiveRadiationCensus
+import SFT.Physics.CollectiveRadiationCompleteness
+import SFT.Physics.CollectiveRadiationUniqueness
+import SFT.Physics.CollectiveRadiationScale
+import SFT.Physics.CollectiveRadiationUltraviolet
+import SFT.Physics.CollectiveRadiationBalances
+import SFT.Physics.CollectiveRadiationCertificate
+import SFT.Physics.CollectiveRadiationGrammarBase
+import SFT.Physics.CollectiveRadiationCensus0
+import SFT.Physics.CollectiveRadiationCensus1
+import SFT.Physics.CollectiveRadiationCensus2
+import SFT.Physics.CollectiveRadiationCensus3
+import SFT.Physics.CollectiveRadiationCensus4
+import SFT.Physics.CollectiveRadiationCensus5
+import SFT.Physics.CollectiveRadiationCensus6
+import SFT.Physics.CollectiveRadiationCensus7
+import SFT.Physics.CollectiveRadiationCensus8
+import SFT.Physics.CollectiveRadiationCensus9
+import SFT.Physics.CollectiveRadiationCensus10
+import SFT.Physics.CollectiveRadiationCensus11
+import SFT.Physics.CollectiveRadiationCensus12
+import SFT.Physics.CollectiveRadiationCensus13
+import SFT.Physics.CollectiveRadiationCensus14
+import SFT.Physics.CollectiveRadiationCensus15
+import SFT.Physics.CollectiveRadiationGrammar
+import SFT.Physics.CollectiveRadiationWitnesses
+import SFT.Physics.CollectiveRadiationEntryEvidence
+#print axioms SFT.Physics.CollectiveRadiation.requirePositive
+#print axioms SFT.Physics.CollectiveRadiation.positiveCount
+#print axioms SFT.Physics.CollectiveRadiation.checkedCosts
+#print axioms SFT.Physics.CollectiveRadiation.occupationProduct
+#print axioms SFT.Physics.CollectiveRadiation.wordEnergy
+#print axioms SFT.Physics.CollectiveRadiation.completeWords
+#print axioms SFT.Physics.CollectiveRadiation.finiteBosonOccupations
+#print axioms SFT.Physics.CollectiveRadiation.occupationAt
+#print axioms SFT.Physics.CollectiveRadiation.exactModeOccupation
+#print axioms SFT.Physics.CollectiveRadiation.ultravioletClosed
+#print axioms SFT.Physics.CollectiveRadiation.occupationScaleCovariant
+#print axioms SFT.Physics.CollectiveRadiation.radiationPowerRatio
+#print axioms SFT.Physics.CollectiveRadiation.acousticLadder
+#print axioms SFT.Physics.CollectiveRadiation.LaserLedger
+#print axioms SFT.Physics.CollectiveRadiation.laserLedger
+#print axioms SFT.Physics.CollectiveRadiation.PlasmaCarriers
+#print axioms SFT.Physics.CollectiveRadiation.plasmaSquaredCarriers
+#print axioms SFT.Physics.CollectiveRadiation.alfvenSquaredCarrier
+#print axioms SFT.Physics.CollectiveRadiationCensus.completeProduct
+#print axioms SFT.Physics.CollectiveRadiationCensus.coordinateCount
+#print axioms SFT.Physics.CollectiveRadiationCensus.originalCompleteCensus
+#print axioms SFT.Physics.CollectiveRadiationCensus.originalEnergyPreserved
+#print axioms SFT.Physics.CollectiveRadiationCensus.originalCoordinateCount
+#print axioms SFT.Physics.CollectiveRadiationCompleteness.originalEnergyAccumulator
+#print axioms SFT.Physics.CollectiveRadiationCompleteness.originalEnergySuccessor
+#print axioms SFT.Physics.CollectiveRadiationCompleteness.originalOccupationLimitForced
+#print axioms SFT.Physics.CollectiveRadiationCompleteness.originalBoundedWordTrace
+#print axioms SFT.Physics.CollectiveRadiationCompleteness.originalEveryEnergyWordGenerated
+#print axioms SFT.Physics.CollectiveRadiationCompleteness.originalFullEnergyCensus
+#print axioms SFT.Physics.CollectiveRadiationUniqueness.branchesDistinct
+#print axioms SFT.Physics.CollectiveRadiationUniqueness.productDistinct
+#print axioms SFT.Physics.CollectiveRadiationUniqueness.originalRangeUnique
+#print axioms SFT.Physics.CollectiveRadiationUniqueness.originalOccupationWordsUnique
+#print axioms SFT.Physics.CollectiveRadiationScale.originalScaledCostLimit
+#print axioms SFT.Physics.CollectiveRadiationScale.originalScaledEnergyFold
+#print axioms SFT.Physics.CollectiveRadiationScale.originalScaledEnergy
+#print axioms SFT.Physics.CollectiveRadiationScale.originalScaledAxes
+#print axioms SFT.Physics.CollectiveRadiationScale.originalScaledEnergyDecision
+#print axioms SFT.Physics.CollectiveRadiationScale.originalScaledWordSelection
+#print axioms SFT.Physics.CollectiveRadiationScale.originalCompleteScaleCovariance
+#print axioms SFT.Physics.CollectiveRadiationUltraviolet.originalAboveSupportCoordinate
+#print axioms SFT.Physics.CollectiveRadiationUltraviolet.originalEveryAboveSupportModeEmpty
+#print axioms SFT.Physics.CollectiveRadiationUltraviolet.originalEmptyModeSum
+#print axioms SFT.Physics.CollectiveRadiationUltraviolet.originalAboveSupportMeanEmpty
+#print axioms SFT.Physics.CollectiveRadiationBalances.originalPositiveAdmission
+#print axioms SFT.Physics.CollectiveRadiationBalances.originalFourthPower
+#print axioms SFT.Physics.CollectiveRadiationBalances.originalAcousticLadder
+#print axioms SFT.Physics.CollectiveRadiationBalances.originalPlasmaBalances
+#print axioms SFT.Physics.CollectiveRadiationBalances.originalAlfvenBalance
+#print axioms SFT.Physics.CollectiveRadiationBalances.originalPositiveLaserLedger
+#print axioms SFT.Physics.CollectiveRadiationCertificate.Certificate
+#print axioms SFT.Physics.CollectiveRadiationCertificate.certificate
+#print axioms SFT.Physics.CollectiveRadiationCertificate.originalCount
+#print axioms SFT.Physics.CollectiveRadiationCertificate.originalFlags
+#print axioms SFT.Physics.CollectiveRadiationGrammar.occupationName
+#print axioms SFT.Physics.CollectiveRadiationGrammar.radiationName
+#print axioms SFT.Physics.CollectiveRadiationGrammar.acousticName
+#print axioms SFT.Physics.CollectiveRadiationGrammar.stimulatedName
+#print axioms SFT.Physics.CollectiveRadiationGrammar.thresholdName
+#print axioms SFT.Physics.CollectiveRadiationGrammar.linewidthName
+#print axioms SFT.Physics.CollectiveRadiationGrammar.plasmaName
+#print axioms SFT.Physics.CollectiveRadiationGrammar.magnetofluidName
+#print axioms SFT.Physics.CollectiveRadiationGrammar.Candidate
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceFields
+#print axioms SFT.Physics.CollectiveRadiationGrammar.candidateId
+#print axioms SFT.Physics.CollectiveRadiationGrammar.exactForm
+#print axioms SFT.Physics.CollectiveRadiationGrammar.survivorId
+#print axioms SFT.Physics.CollectiveRadiationGrammar.survives
+#print axioms SFT.Physics.CollectiveRadiationGrammar.criteriaDecision
+#print axioms SFT.Physics.CollectiveRadiationGrammar.decisionReason
+#print axioms SFT.Physics.CollectiveRadiationGrammar.generationRule
+#print axioms SFT.Physics.CollectiveRadiationGrammar.grammarBoundary
+#print axioms SFT.Physics.CollectiveRadiationGrammar.candidates
+#print axioms SFT.Physics.CollectiveRadiationGrammar.survivor
+#print axioms SFT.Physics.CollectiveRadiationGrammar.generatedCardinality
+#print axioms SFT.Physics.CollectiveRadiationGrammar.candidatesComplete
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk0
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk0
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk1
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk1
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk2
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk2
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk3
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk3
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk4
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk4
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk5
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk5
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk6
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk6
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk7
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk7
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk8
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk8
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk9
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk9
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk10
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk10
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk11
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk11
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk12
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk12
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk13
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk13
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk14
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk14
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionChunk15
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaChunk15
+#print axioms SFT.Physics.CollectiveRadiationGrammar.sourceDecisionMatchesCriteria
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueCriteriaSurvivor
+#print axioms SFT.Physics.CollectiveRadiationGrammar.uniqueSurvivor
+#print axioms SFT.Physics.CollectiveRadiationGrammar.survivorAccepted
+#print axioms SFT.Physics.CollectiveRadiationGrammar.ExactCriteria
+#print axioms SFT.Physics.CollectiveRadiationGrammar.acceptanceIffExactCriteria
+#print axioms SFT.Physics.CollectiveRadiationGrammar.occupation_rejected_rejected
+#print axioms SFT.Physics.CollectiveRadiationGrammar.radiation_rejected_rejected
+#print axioms SFT.Physics.CollectiveRadiationGrammar.acoustic_rejected_rejected
+#print axioms SFT.Physics.CollectiveRadiationGrammar.stimulated_rejected_rejected
+#print axioms SFT.Physics.CollectiveRadiationGrammar.threshold_rejected_rejected
+#print axioms SFT.Physics.CollectiveRadiationGrammar.linewidth_rejected_rejected
+#print axioms SFT.Physics.CollectiveRadiationGrammar.plasma_rejected_rejected
+#print axioms SFT.Physics.CollectiveRadiationGrammar.magnetofluid_rejected_rejected
+#print axioms SFT.Physics.CollectiveRadiationWitnesses.Witness
+#print axioms SFT.Physics.CollectiveRadiationWitnesses.witness0
+#print axioms SFT.Physics.CollectiveRadiationWitnesses.witness0Passed
+#print axioms SFT.Physics.CollectiveRadiationWitnesses.witness1
+#print axioms SFT.Physics.CollectiveRadiationWitnesses.witness1Passed
+#print axioms SFT.Physics.CollectiveRadiationWitnesses.witness2
+#print axioms SFT.Physics.CollectiveRadiationWitnesses.witness2Passed
+#print axioms SFT.Physics.CollectiveRadiationWitnesses.witness3
+#print axioms SFT.Physics.CollectiveRadiationWitnesses.witness3Passed
+#print axioms SFT.Physics.CollectiveRadiationWitnesses.witness4
+#print axioms SFT.Physics.CollectiveRadiationWitnesses.witness4Passed
+#print axioms SFT.Physics.CollectiveRadiationWitnesses.witnesses
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.witnessRecords
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.claimId
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.dependencies
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.candidateRecord
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.completenessRecord
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.registrationData
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.registration
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.generatedCandidateData
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.censusData
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.census
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.decisionData
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.decideCandidate
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.closureValue
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.closureData
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.closure
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.control
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.exclusions
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.controls
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.runControls
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.registrationNoAxioms
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.registrationNoFreeParameters
+#print axioms SFT.Physics.CollectiveRadiationEntryEvidence.decisionPreservesSurvival

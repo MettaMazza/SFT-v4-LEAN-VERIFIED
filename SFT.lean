@@ -8573,3 +8573,13 @@ import SFT.Physics.ThermalEquilibriumResponseGrammar
 import SFT.Physics.ThermalEquilibriumResponseWitnesses
 
 import SFT.Physics.ThermalEquilibriumResponseEntryEvidence
+
+import SFT.Physics.TerminalLeptonValidationWitnesses
+
+import SFT.Physics.TerminalLeptonValidationGrammar
+
+import SFT.Physics.TerminalLeptonValidationEvidence
+
+import SFT.Physics.TerminalLeptonValidationExperiment
+
+import SFT.Physics.TerminalLeptonValidationValidation

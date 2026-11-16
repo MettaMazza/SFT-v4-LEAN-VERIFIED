@@ -55014,12 +55014,12 @@
   ],
   "next_publication_milestone": 750,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "Continue SFT-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-002 in dependency order toward750;reuse source-bound verified work;prepare complete cumulative publication review package at750,thenpause.",
+  "authorized_action": "Continue SFT-PHYS-VALIDATION-CHARGED-LEPTON-KOIDE-002 in dependency order toward750;reuse source-bound verified work;prepare complete cumulative publication review package at750,thenpause.",
   "scientific_cursor": {
-    "completed": "SFT-PHYS-THERMAL-EQUILIBRIUM-RESPONSE-TERMINAL-043",
-    "next": "SFT-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-002",
-    "receipt": "verification/TURN_1039_THERMAL_EQUILIBRIUM_043_COMPLETION.json",
-    "source": "claims/SFT-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-002/execution.py",
+    "completed": "SFT-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-002",
+    "next": "SFT-PHYS-VALIDATION-CHARGED-LEPTON-KOIDE-002",
+    "receipt": "verification/TURN_1040_LEPTON_VALIDATION_002_COMPLETION.json",
+    "source": "claims/SFT-PHYS-VALIDATION-CHARGED-LEPTON-KOIDE-002/execution.py",
     "next_milestone": 750
   },
   "video_verification": {
@@ -62849,12 +62849,82 @@
     "aggregate_build": {
       "session_id": 41958,
       "log": "work/thermalequilibrium1039_registered_build.log",
-      "status": "running"
+      "status": "running_with_observed_older_module_memory_failures",
+      "diagnostic": "Original aggregatebuild hasmemory-cap failures in older grammar modules; preserve run. No scientific proofsource changed; trackrecovery separately."
     },
     "paper_sections": [
       924,
       925
     ],
-    "checkpoint": "preparing"
+    "checkpoint": "pushed_verified",
+    "remote": {
+      "status": "PASS",
+      "commit": "4bcee06d8c0d5ea0c8d962d66edcff54e7ed90f9",
+      "tree": "6419522b436c3aea58b2ee87077288883b3dfc14",
+      "verified_files": 67,
+      "head_verified": true,
+      "completed_entries": 678
+    }
+  },
+  "leptonvalidation1040_staged": {
+    "claim_id": "SFT-PHYS-VALIDATION-CHARGED-LEPTON-TERMINAL-002",
+    "registered": true,
+    "live_jobs": [],
+    "reuse": [
+      "LeptonComparison.nativeComparison",
+      "LeptonComparison.bothRowsPassed",
+      "LeptonRefinement.muonElectronExact",
+      "LeptonRefinement.muonTauExact",
+      "LeptonRefinement.nativeRefinementRun",
+      "LeptonIsolation.terminalSearchComplete"
+    ],
+    "next_action": "Observe18340/actualreports; register002immediatelywhenfullnativeempiricalreportPASS usingconfigure_leptonvalidation1040_completion.py andregister_leptonvalidation1040.py. Do not rerun passedprogramme/independent/audits.",
+    "prepared": "work/prepare_leptonvalidation1040.py",
+    "grammar": "PASS all256originalcandidate records/order",
+    "reuse_evidence": "work/leptonvalidation1040_reuse.json: all7numericalmodules unchanged",
+    "verified": "All256candidatefields/order, fullnativeprogramme=freshoriginal=pinnedrecords, originalindependentvalidatorandthreeadversecasesPASS; originalnumericmodulesunchanged; scopedentryauditPASS after explicitmatchalternatives; fullnativeempiricalrunpending",
+    "parser_retry": {
+      "session_id": 17375,
+      "status": "PASS",
+      "log": "work/leptonvalidation1040_parser_memory_retry.log",
+      "memory_mib": 65536,
+      "scope": "Unchanged source parser proof; targeted retry after12288MiB failure; no source edits"
+    },
+    "remaining": [],
+    "completion_receipt": "verification/TURN_1040_LEPTON_VALIDATION_002_COMPLETION.json"
+  },
+  "koidevalidation1041_staged": {
+    "claim_id": "SFT-PHYS-VALIDATION-CHARGED-LEPTON-KOIDE-002",
+    "registered": false,
+    "prepared": "work/prepare_koidevalidation1041.py",
+    "original_run": "work/koidevalidation1041_original.log",
+    "next_action": "After terminal002registration, finish fullnativeempirical comparison alreadyqueued18340 andregisterwithprepared1041scripts; reusePASS programme/audits.",
+    "live_jobs": [],
+    "verified": "Versioned256grammar/fullnativeprogramme/freshoriginal/pinned/originalindependentPASS; sixmodulefullscopedauditPASS; unchangedKoideEnclosure/Comparison reused; empiricalqueuedsecondin18340"
+  },
+  "thermometry1042_staged": {
+    "claim_id": "SFT-PHYS-VALIDATION-THERMAL-EQUILIBRIUM-044",
+    "registered": false,
+    "verified": "Actual13fieldintegeranalysis:85wholeoutputcomparisons;7zeroaxiomdeclarations. Original freshprogramme/empirical=pinned. Canonicaladapter strictBoolidentity repaired andzeroaxiomaudited. Originalfourhashguards/schema/formalreceipt/three-source guards assembled.",
+    "live_jobs": [
+      {
+        "session_id": 45935,
+        "log": "work/thermometry1042_entry_build.log",
+        "scope": "fullmetadata/grammar/experiment/validator build"
+      }
+    ],
+    "next_action": "Observe45935; run prepared fullprogramme/fresh/independent/empirical/auditchecks afterbuild. Review applicable source input conversions and recordguards; no completion registration until preceding002terminal and002Koide close."
+  },
+  "terminalgrammar1041_cache_retry": {
+    "session_id": 19106,
+    "status": "running",
+    "log": "work/terminalgrammar1041_memory_retry.log",
+    "memory_mib": 65536,
+    "source_unchanged": true
+  },
+  "leptonvalidation1040": {
+    "status": "complete",
+    "receipt": "verification/TURN_1040_LEPTON_VALIDATION_002_COMPLETION.json",
+    "remaining": []
   }
 }

@@ -55014,7 +55014,7 @@
   ],
   "next_publication_milestone": 750,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "Continue source-bound045 from spinstatistics1043_staged.next_action toward750;reuse verified work, no extra criteria. Pause only with750 publication reviewpackage ready.",
+  "authorized_action": "Continue source-bound045 from spinstatistics1043_staged.next_action toward750;reuse verified work; pause only with750 publicationreviewpackage ready.",
   "scientific_cursor": {
     "completed": "SFT-PHYS-VALIDATION-THERMAL-EQUILIBRIUM-044",
     "next": "SFT-PHYS-SPIN-STATISTICS-CONDENSATION-TERMINAL-045",
@@ -62868,10 +62868,12 @@
         "SFT/Mathematics/LogicGrammar.lean",
         "SFT/Physics/AlphaGrammar.lean",
         "SFT/Physics/AtomicBoundaryGrammar.lean",
+        "SFT/Physics/AtomicOrbitCapacityGrammar.lean",
         "SFT/Physics/BoundaryRankGrammar.lean",
         "SFT/Physics/DarkBaryonGrammar.lean",
         "SFT/Physics/LeptonGrammar.lean",
         "SFT/Physics/LeptonSource.lean",
+        "SFT/Physics/NuclearClosureGrammar.lean",
         "SFT/Physics/TerminalGrammar.lean"
       ],
       "recovered_modules": [
@@ -62999,7 +63001,10 @@
       "SpinStatisticsColdCertificateProof",
       "SpinStatisticsCertificateProof",
       "SpinStatisticsOccupationEnumeration",
-      "SpinStatisticsOccupationBounds"
+      "SpinStatisticsOccupationBounds",
+      "SpinStatisticsOccupationCounts",
+      "SpinStatisticsOccupationWeights",
+      "SpinStatisticsGroundMinimum"
     ],
     "source_sha256": {
       "SpinStatisticsCondensation": "095f14cdbd7428302d91eedbdd1469b45cd605783a513174bdd0b04a23aa0820",
@@ -63009,15 +63014,34 @@
       "SpinStatisticsColdCertificateProof": "eb452e85c3a0ad322e9d199b96619858d1f20f909afe8c89f8f2869084dbb10b",
       "SpinStatisticsCertificateProof": "4dd0ed30b3ce38409f7206735d4f96a01739c014cb0d4c4319fb6097f96121c3",
       "SpinStatisticsOccupationEnumeration": "249e9cf2c53fa512a101f35dcd509f1ceb8a1205c677c6b8459f6a9549ea1285",
-      "SpinStatisticsOccupationBounds": "6e412f1d11a224c9fafe4a28df4b77ba5b4642e4e25a7a10dbea94444f8240c1"
+      "SpinStatisticsOccupationBounds": "6e412f1d11a224c9fafe4a28df4b77ba5b4642e4e25a7a10dbea94444f8240c1",
+      "SpinStatisticsOccupationCounts": "b675bda466d7bbab50da3a3da20d1120af44c6ac760d61a1ad14760d0a7cafc9",
+      "SpinStatisticsOccupationWeights": "95a83915902d426a65805324272e66570e786fa8f341d1a773f38de2da556831",
+      "SpinStatisticsGroundMinimum": "8f221e0774499900ef89aab4ba0d00c80e0e34d76c015d93f9b8a67f09acd4d0"
     },
     "live_jobs": [],
-    "verified": "1064 complete original operation outputs;21core declarations zeroaxioms; original4fieldcertificate nativeproofs and15 auditeddeclarations zeroaxioms;general cappedwalk soundness/completeness/uniqueness andexactbothoperationbindings;general preserving carrier,alternatingcarrier andoverfull empty support. Three furtherboundsproofs zeroaxioms.",
+    "verified": "1064 complete original operation outputs;21core declarations zeroaxioms; original4fieldcertificate nativeproofs and15 auditeddeclarations zeroaxioms;general cappedwalk soundness/completeness/uniqueness andexactbothoperationbindings;general preserving carrier,alternatingcarrier andoverfull empty support. Three furtherboundsproofs zeroaxioms. TURN1045: general preserving stars-and-bars count, alternating subset count andallpositive nativecensuscomplete; everyadmitted fullnativecanonical measure normalized;generaluniquegroundminimum,groundgenerated/attainsandallotherwordsstrict.19newpublicdefinitions/theoremszeroaxioms.",
     "reports": [
       "verification/TURN_1044_spinstatistics1043_core_report.json",
       "verification/TURN_1044_spinstatistics1043_certificate_report.json",
-      "verification/TURN_1044_spinstatistics1043_bounds_audit.log"
+      "verification/TURN_1044_spinstatistics1043_bounds_audit.log",
+      "verification/TURN_1045_spinstatistics1045_general_report.json",
+      "verification/TURN_1045_spinstatistics1045_ground_report.json"
     ],
-    "next_action": "Continue original045 derivation assembly from actual source and retained dependency proofs: connect general stars-and-bars/subset counts, normalized occupation measure, strict cold-ground growth/finite first crossing, andunique minimum-total-throw to the implemented source operations. Preserve all verified enumeration/finitecertificate/corechecks. Complete original256grammar,4witnesses,controls/fullprogramme and independentvalidator before registering. Do not reconstruct completed043/044."
+    "next_action": "Continue045 originalcoldinduction: reuse ThermalEquilibriumMultinomial.originalFixedCountThrowProduct (actualcomplementarydyadicscoreidentity,L>=2) andnewgeneralground/census/normalizationproofs tobind each excitedword additionalhalf-disadvantage,strictgroundsharegrowth,originalfiniteboundandfirstcrossing. Connect proveduniqueground result toactualminimumfold/survivorrecord. Complete original256grammar,4witnesses,controls/fullprogrammeandindependentvalidator. Do not rederive completedcount,normalization,groundminimum or043/044. Existing1043coreandcertificatechecks unchanged andretained.",
+    "remote": {
+      "status": "PASS",
+      "commit": "ae2b069e32cd5219b22c314b9e541dc05dc9e665",
+      "tree": "c7aa4830fdf21ff19e14216892e5367fd5bcb9c1",
+      "verified_files": 24,
+      "head_verified": true,
+      "completed_entries": 681
+    },
+    "reuse_next": [
+      "SFT.Physics.ThermalEquilibriumPaired.originalSplitMultiplicity",
+      "SFT.Physics.ThermalEquilibriumPaired.originalBinomialFactorization",
+      "SFT.Physics.ThermalEquilibriumPaired.originalBinomialPositive"
+    ],
+    "last_working_turn": "TURN1045"
   }
 }

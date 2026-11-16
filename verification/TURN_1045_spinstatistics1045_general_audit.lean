@@ -1,0 +1,13 @@
+import SFT.Physics.SpinStatisticsOccupationCounts
+import SFT.Physics.SpinStatisticsOccupationWeights
+#print axioms SFT.Physics.SpinStatisticsOccupationCounts.originalPascalStep
+#print axioms SFT.Physics.SpinStatisticsOccupationCounts.originalPreservingCount
+#print axioms SFT.Physics.SpinStatisticsOccupationCounts.originalBosonCensusCount
+#print axioms SFT.Physics.SpinStatisticsOccupationCounts.originalAlternatingCount
+#print axioms SFT.Physics.SpinStatisticsOccupationCounts.originalEveryOccupationCensus
+#print axioms SFT.Physics.SpinStatisticsOccupationWeights.score
+#print axioms SFT.Physics.SpinStatisticsOccupationWeights.total
+#print axioms SFT.Physics.SpinStatisticsOccupationWeights.originalScorePositive
+#print axioms SFT.Physics.SpinStatisticsOccupationWeights.originalTotalPositive
+#print axioms SFT.Physics.SpinStatisticsOccupationWeights.originalWeightAssembly
+#print axioms SFT.Physics.SpinStatisticsOccupationWeights.originalEveryAdmittedMeasureNormalizes

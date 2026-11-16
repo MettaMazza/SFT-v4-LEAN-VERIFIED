@@ -27367,3 +27367,50 @@ The ground word is g=(N,0,…,0). The source searches successive positive depths
 The original four-field certificate is retained in full: all occupation censuses for N,L from 1 through 6; all normalization checks for both classes, L from 2 through 5, N from 1 through L and d from 1 through 4; all first-crossing/prior-depth and unique-ground checks for m,L from 2 through 5 and N from 2 through 6; and the original spin count and first return. Its four results are established by native kernel reduction. The exact operations, their output records and input guards additionally match 1,064 direct original-source evaluations. These numerical checks accompany the general enumeration proof above.
 
 Original pinned source: sft/physics/spin_statistics_condensation_terminal_law_v1.py, occupation_vectors, occupation_census, canonical_occupation_weights, canonical_mean_throw, critical_condensation_certificate, minimal_throw_ground_certificate and theorem_certificate. Lean verification: SFT/Physics/SpinStatisticsCondensation.lean; SpinStatisticsOccupationEnumeration.lean, originalWalkSound, originalWalkComplete, originalWalkMembership and originalWalkUnique; SpinStatisticsOccupationBounds.lean, originalPreservingComplete, originalAlternatingComplete and originalOverfullAlternatingEmpty; SpinStatisticsCertificateProof.lean, originalCertificate, with its three component certificate proofs. Chronological correspondence: TIMELINE.txt TURN1043–1044. Verification evidence: verification/TURN_1044_spinstatistics1043_core_report.json and TURN_1044_spinstatistics1043_certificate_report.json.
+
+930. General occupation counts, normalization and the unique ground minimum
+
+The preceding exhaustive walk permits an exact count for every finite positive population and level count. Let B(N,L) be its preserving count. Holding the first occupation c leaves N−c occupants and L−1 levels, so
+
+    B(N,1)=1,
+    B(N,L+1)=Σ_(c=0)^N B(N−c,L).
+
+The existing factorial-quotient derivation supplies Pascal's identity
+
+    C(a+b+2,a+1)=C(a+b+1,a)+C(a+b+1,a+1).
+
+Induction on the population telescopes the complete branch sum; induction on the levels therefore gives
+
+    B(N,L)=C(N+L−1,N).
+
+For alternating occupation the first cell is either empty or holds one occupant. Its corresponding recurrence is
+
+    F(N,L+1)=F(N,L)+F(N−1,L).
+
+The empty-population continuation has one all-empty word; a positive population exceeding the number of cells has no word. These are boundary cases of the original recursive enumeration. Induction on the occupied and empty level counts, using the same Pascal identity, gives F(N,L)=C(L,N) for N≤L and F(N,L)=0 otherwise. originalEveryOccupationCensus connects both formulas to the native source census: its complete field is true for every positive N and L, including overfull alternating input.
+
+For the canonical measure, every raw dyadic weight is positive. Each score
+
+    s_d(n)=∏_i [2^(L−i−1)]^(d n_i)
+
+is consequently a positive integer, and the sum Z_d over any nonempty generated support is positive. The implementation retains each original occupation word beside its normalized rational weight. Its complete rational sum is
+
+    Σ_n p_d(n)=Σ_n s_d(n)/Z_d
+              =(Σ_n s_d(n))/Z_d
+              =Z_d/Z_d=1.
+
+originalWeightAssembly proves this exact pairing and normalization for the native operation; originalEveryAdmittedMeasureNormalizes proves its resulting sum. The nonempty-support condition distinguishes the original empty alternating support when N>L; no positive measure is assigned to an absent word.
+
+To derive the ground minimum, expose the starting level index in the source's indexed throw:
+
+    M_a(n)=Σ_(i=0)^(L−1)(a+i)n_i,
+    M_a(c::r)=a c+M_(a+1)(r),
+    M_(a+1)(n)=Σ_i n_i+M_a(n).
+
+The original totalThrow is M_1. Hence M_1(n)=N+M_0(n)≥N for every word with population N. If M_1(c::r)=N, the same recurrence gives
+
+    M_1(c::r)=c+Σ r+M_1(r)=N+M_1(r).
+
+Equality forces M_1(r)=0. Since M_1(r)≥Σ r, every nonnegative tail coordinate is zero. Thus c=N and the only possible minimum word is g=(N,0,…,0). The full preserving enumeration contains g, and direct evaluation gives M_1(g)=N. Every different generated word therefore has strictly greater total throw. This proves the ground minimum and its uniqueness for every positive population and level count; it does not rely on the finite certificate's sample range.
+
+Original pinned source: sft/physics/spin_statistics_condensation_terminal_law_v1.py, occupation_vectors, occupation_census, canonical_occupation_weights, minimal_throw_ground_certificate and the stated last-cell and cold-occupation induction. Lean verification: SFT/Physics/SpinStatisticsOccupationCounts.lean, originalPreservingCount, originalAlternatingCount and originalEveryOccupationCensus; SpinStatisticsOccupationWeights.lean, originalScorePositive, originalTotalPositive, originalWeightAssembly and originalEveryAdmittedMeasureNormalizes; SpinStatisticsGroundMinimum.lean, originalOffsetDifference, originalThrowLowerBound, originalMinimumWord, originalGroundAttains, originalGroundGenerated and originalExcitedThrowStrict. The factorial quotient reuses ThermalEquilibriumPaired.originalSplitMultiplicity; rational summation reuses ThermalHistoryVisibility.originalNormalizedTotal. Chronological correspondence: TIMELINE.txt TURN1045. Verification evidence: verification/TURN_1045_spinstatistics1045_general_report.json and TURN_1045_spinstatistics1045_ground_report.json.

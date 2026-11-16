@@ -1,0 +1,9 @@
+import SFT.Physics.SpinStatisticsGroundMinimum
+#print axioms SFT.Physics.SpinStatisticsGroundMinimum.moment
+#print axioms SFT.Physics.SpinStatisticsGroundMinimum.originalMomentSuccessor
+#print axioms SFT.Physics.SpinStatisticsGroundMinimum.originalOffsetDifference
+#print axioms SFT.Physics.SpinStatisticsGroundMinimum.originalThrowLowerBound
+#print axioms SFT.Physics.SpinStatisticsGroundMinimum.originalMinimumWord
+#print axioms SFT.Physics.SpinStatisticsGroundMinimum.originalGroundAttains
+#print axioms SFT.Physics.SpinStatisticsGroundMinimum.originalGroundGenerated
+#print axioms SFT.Physics.SpinStatisticsGroundMinimum.originalExcitedThrowStrict

@@ -10623,3 +10623,21 @@ import SFT.Physics.ChirpRingdownGrammar
 import SFT.Physics.ChirpRingdownEntryEvidence
 
 import SFT.Physics.ChirpInspiral
+
+import SFT.Physics.ChirpObservationRecords
+
+import SFT.Physics.ChirpObservationWitnesses
+
+import SFT.Physics.ChirpObservationGrammar
+
+import SFT.Physics.ChirpObservationEvidence
+
+import SFT.Physics.ChirpObservationExperiment
+
+import SFT.Physics.ChirpObservationValidation
+
+import SFT.Physics.ChirpObservationAnalysis
+
+import SFT.Physics.ChirpObservationAnalysisProofs
+
+import SFT.Physics.ChirpObservationInputProofs

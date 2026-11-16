@@ -27434,3 +27434,17 @@ The source's relative score is consequently 2^(−d e(n)); this notation denotes
 For every excited word e(n)≥1, and hence 2^(e(n))≥2. Each successive cold step therefore multiplies that word's relative score by at most one half. These are identities and inequalities for the actual generated occupation words and source score operation.
 
 Original pinned source: sft/physics/spin_statistics_condensation_terminal_law_v1.py, canonical_occupation_weights and the cold-depth induction_step. Lean verification: SFT/Physics/SpinStatisticsColdScores.lean, originalScorePower, originalColdComplement, originalThrowDecomposition, originalExcitedOffsetPositive, originalGroundOffset, originalGroundScore, originalRelativeColdScore, originalColdPenaltySuccessor and originalExcitedCoolingFactor. The complementary identity is reused from ThermalEquilibriumMultinomial.originalFixedCountThrowProduct. Chronological correspondence: TIMELINE.txt TURN1045–1046. Verification evidence: verification/TURN_1046_spinstatistics1045_cold_scores_report.json.
+
+932. The original spin-statistics candidate product and operational witnesses
+
+The original candidate construction has eight binary axes: exchange classification, alternating-cell exclusion, preserving multiplicity, occupation weights, spin return, alternating-pair composition, lock threshold and the ground orbit. Its complete product contains 2⁸=256 candidates, in the original nested enumeration order. The source's acceptance test is the conjunction of the eight admitted coordinates; its decision function reports the first failed coordinate in that same order.
+
+Writing each coordinate as b_i in {rejected,admitted}, the exact acceptance relation is
+
+    accept(b_1,…,b_8) ↔ ∧_(i=1)^8 [b_i=admitted].
+
+Exhaustive coordinate cases establish equivalence between the original ordered decision function and this conjunction. They also establish one surviving candidate, namely the all-admitted tuple. Full candidate membership covers every constructor combination, and all 256 candidate identifiers, exact forms, acceptance results and first-failure reasons match the original source in order.
+
+The four source operational witnesses retain their original predicates: the occupation certificate; the weight-normalization certificate; the complete spin count and typed return certificate; and the first-crossing/unique-ground certificate. Each is bound to its corresponding field of the complete native four-field certificate proved above. Neither the witness text nor the candidate classifier replaces those underlying proofs.
+
+Original pinned source: sft/physics/spin_statistics_condensation_terminal_law_v1.py, SPEC.axes and SPEC.witnesses; sft/physics/structural_constants.py, candidate_rows and decision_reason. Lean verification: SFT/Physics/SpinStatisticsCondensationGrammarBase.lean, SpinStatisticsCondensationCensus0.lean through SpinStatisticsCondensationCensus15.lean, SpinStatisticsCondensationGrammar.lean and SpinStatisticsCondensationWitnesses.lean. Chronological correspondence: TIMELINE.txt TURN1046–1047. Evidence: verification/TURN_1047_spinstatistics1046_grammar_comparison.json and TURN_1047_spinstatistics1046_entry_report.json.

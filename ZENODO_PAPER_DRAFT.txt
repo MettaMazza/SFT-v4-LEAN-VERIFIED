@@ -29557,3 +29557,48 @@ The original post-seal comparison retains all 24 registered surfaces from six co
 
 Original source: sft/chemistry/ligand_denticity_chelation_law_v1.py, ligand_denticity_chelation_batch_v1.py and ligand_denticity_chelation_validation_v1.py at V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native verification: SFT/Chemistry/LigandDenticity.lean and LigandDenticityDerivation.lean, including retainedRecord, closedTraceEmptyExactlyAtOne and successorPreservesAndIncrements; the original grammar, source bindings and full validator are in the corresponding LigandDenticityGrammar, Prediction, Source, Analysis, Comparison, Experiment and Validation modules. Chronological work and checks: TIMELINE.txt TURN1155 and TURN1157.
 
+
+
+1094. Nuclear-electronic composition and isotope-labelled coordinate transport
+
+The joint molecular record retains six components: the molecular carrier C, a positive ordered word of distinct nuclear occurrences N, the isotope word I attached to those occurrences, electronic support E, electronic state e and observation record R. The original constructor checks the label families and the one-to-one occurrence/isotope attachment before admitting
+\[
+ S=(C,N,I,E,e,R),\qquad |N|=|I|>0.
+\]
+Distinctness is required of nuclear occurrences; isotope labels may repeat. Thus two separate proton occurrences remain separate even when both carry the same protium label. The native theorem acceptedRetainsAll proves that a successful constructor returns precisely the supplied six-component record.
+
+The nuclear and electronic projections are
+\[
+ K_N(S)=(I_1.\mathrm{label},\ldots,I_n.\mathrm{label}),
+ \qquad K_E(S)=(E.\mathrm{label},e.\mathrm{label}).
+\]
+For two records with the same molecular carrier, the source isotopologue comparison returns
+\[
+ [K_E(S)=K_E(T)]\land[K_N(S)\ne K_N(T)].
+\]
+A different molecular carrier is rejected by the operation. The original hydrogen examples retain the nuclear words (protium, protium), (protium, deuterium) and (deuterium, deuterium), with one common electronic support and electronic-state label. The three nuclear keys are pairwise distinct while their electronic keys coincide; no mass fitting or separation coefficient enters these operations.
+
+The finite-product extension appends one occurrence o and its isotope i:
+\[
+ S^+=(C,N\mathbin{\|}[o],I\mathbin{\|}[i],E,e,R).
+\]
+Consequently K_E(S^+)=K_E(S), the molecular carrier and record remain identical, and taking the original length of either extended word recovers that word. Native induction proves both prefix identities for arbitrary finite words. The original constructor checks remain the admissibility conditions when the extended record is admitted.
+
+The post-seal observation retains the complete 95-row, 1,235-cell NIST H2/HD/D2 source surface. Numerical inscriptions are parsed exactly. If an inscription gives integral digits a and m fractional digits b after underscore removal, its unsigned value is
+\[
+ q=\frac{a10^m+b}{10^m};\qquad
+ (n,d)=\left(\frac{a10^m+b}{g},\frac{10^m}{g}\right),
+ \quad g=\gcd(a10^m+b,10^m).
+\]
+Positive values retain the reduced ratio n/d. Empty cells and source zero retain their distinct provenance classes while both return EmptyOne. Negative inscriptions remain signed external-source labels; nonnumeric inscriptions remain external text. The exact census is 551 positive ratios, 3 source-zero absences, 8 retained negative inscriptions, 223 text inscriptions and 450 blanks, whose sum is 1,235.
+
+Rows sharing their first state-designator token are paired in original source order. For each pair with different isotope support, columns 1 through 10 contribute a comparison when both values are positive. For reduced values a/b and c/d, the transported comparison is
+\[
+ \rho=\frac{a/b}{c/d}=\frac{ad}{bc},\qquad
+ \rho=\frac{ad/\gcd(ad,bc)}{bc/\gcd(ad,bc)}.
+\]
+Distinctness is the exact integer decision ad\ne bc. The resulting 330 complete pair records agree with the original validator, including species, designator, column, ratio inscription and distinctness. All three X-state ground-coordinate absences and the signed-inscription control also agree.
+
+Source correspondence: sft/chemistry/nuclear_electronic_law_v1.py, nuclear_electronic_batch_v1.py and nuclear_electronic_validation_v1.py at pinned V3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native verification: SFT/Chemistry/NuclearElectronic.lean (construct, isotopologues, acceptedRetainsAll and the four successor theorems), NuclearElectronicGrammar.lean and NuclearElectronicEvidence.lean (all eight axes and 256 alternatives), NuclearElectronicCell.lean (signedPrefix, cellForm and provenance theorems), NuclearElectronicSource.lean (original table parser reuse, state selection and independent reconstruction), NuclearElectronicAnalysis.lean (complete cell census and isotope-coordinate pairing), and NuclearElectronicExperiment.lean (original registration and prediction). Timeline: TURN1158. The 50 original core-operation outcomes, 1,235 registered cells plus 14 parser cases, three complete source snapshots and all 330 pair records have been compared directly with V3. The native custody and validator assembly is implemented. Its full programme and 433-message receipt comparisons are running; full-entry registration follows their results in dependency order.
+
+The original molecular-weight inscriptions remain measured source inputs. Their exact reductions are M(H2)=50397/25000, M(HD)=75551/25000 and M(D2)=10070508889/2500000000. For positive denominators, the original ordering test compares integer cross-products: a/b<c/d exactly when ad<cb. Every row of each species must carry the same reduced molecular weight. NuclearElectronicWeights.lean implements this original comparison after the registry and snapshot identity checks; it does not fit these measured inscriptions. NuclearElectronicTargets.lean retains every original registry guard. NuclearElectronicValidation.lean assembles the complete 95-row, 330-pair, five-count and three-weight receipt, with the nine original adverse conditions and unchanged source-custody order. Together the ten nuclear-electronic modules have 169 audited declarations with empty axiom dependencies. Timeline TURN1158.

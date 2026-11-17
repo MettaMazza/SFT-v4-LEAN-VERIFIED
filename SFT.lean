@@ -11555,3 +11555,15 @@ import SFT.Biology.InsideOutsideSource
 import SFT.Biology.InsideOutsideExperiment
 
 import SFT.Biology.InsideOutsideValidation
+
+import SFT.Biology.Membrane
+
+import SFT.Biology.MembraneGrammar
+
+import SFT.Biology.MembraneEvidence
+
+import SFT.Biology.MembraneSource
+
+import SFT.Biology.MembraneExperiment
+
+import SFT.Biology.MembraneValidation

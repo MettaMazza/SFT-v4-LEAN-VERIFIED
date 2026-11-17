@@ -35,14 +35,8 @@ def radiolysisChecks (analysis row : Value) : Except String (List (String × Boo
   ("SFT-CHEM-NUCHEM-012-YIELDS",yieldMatch),("SFT-CHEM-NUCHEM-012-CONDITIONS",highMatch),
   ("SFT-CHEM-NUCHEM-012-PARTITION-CLOSURE",gasMatch),("SFT-CHEM-NUCHEM-012-ADVERSE-UNCERTAINTY",retained),
   ("SFT-CHEM-NUCHEM-012-COMPLETE-SOURCE",sourceCount==4)]
-def exactRadiolysisAnalysis (analysis : Value) (files : List Snapshot) (inputs : List SurfaceInput)
+def resolvedAnalysis (analysis : Value) (recorded : String) (total : Nat × Nat)
  (omitLast : Bool := false) : Except String (Value × List (String × Bool)) := do
- validateAuthorities files
- let fs ← fields analysis
- let recorded ← field analysis "complete_result_vector_sha256" >>= text
- let vector := Value.object (fs.filter (fun row => !Text.equal row.1 "complete_result_vector_sha256"))
- if !Text.equal recorded (identity vector) then throw "NUCHEM-009–012 result vector changed"
- let total ← verifySurfaces analysis inputs
  let row ← field analysis "nuchem_012"
  let fullChecks ← radiolysisChecks analysis row
  let checks := if omitLast then fullChecks.take (fullChecks.length-1) else fullChecks
@@ -54,4 +48,13 @@ def exactRadiolysisAnalysis (analysis : Value) (files : List Snapshot) (inputs :
   ("complete_result_vector_sha256",.text recorded),
   ("all_favorable_adverse_absent_unavailable_unresolved_uncertainty_assumption_correction_fit_estimate_loss_signed_zero_decimal_continuum_and_historical_inscriptions_retained_as_external_provenance_only",.boolean true)]
  return (summary,checks)
+def exactRadiolysisAnalysis (analysis : Value) (files : List Snapshot) (inputs : List SurfaceInput)
+ (omitLast : Bool := false) : Except String (Value × List (String × Bool)) := do
+ validateAuthorities files
+ let fs ← fields analysis
+ let recorded ← field analysis "complete_result_vector_sha256" >>= text
+ let vector := Value.object (fs.filter (fun row => !Text.equal row.1 "complete_result_vector_sha256"))
+ if !Text.equal recorded (identity vector) then throw "NUCHEM-009–012 result vector changed"
+ let total ← verifySurfaces analysis inputs
+ resolvedAnalysis analysis recorded total omitLast
 end SFT.Chemistry.RadiolysisNetworkAnalysis

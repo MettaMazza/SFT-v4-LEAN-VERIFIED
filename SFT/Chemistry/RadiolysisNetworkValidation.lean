@@ -52,11 +52,9 @@ def custodyCertificate (registrationHash : String) (released : TargetCustody.Rel
 def predictionLabel : CapabilityValues.Value → Except String String
  | .label held => .ok held.label
  | .emptyOne _ | .count _ | .ratio _ _ | .word _ | .pair _ _ | .table _ => .error "prediction output has no label"
-def validate (analysis : Value) (files : List NuclideCarrierAnalysis.Snapshot)
- (surfaces : List NuclideCarrierAnalysis.SurfaceInput)
+def validateResolved (summary : Value) (checks : List (String × Bool)) (omission : Bool)
  (derivationSeal host implementation : String) (before after : Snapshot) : Except String Value := do
  validateSpec
- let (summary,checks) ← RadiolysisNetworkAnalysis.exactRadiolysisAnalysis analysis files surfaces
  let registrationHash := identity registration
  let program ← CapabilityDocuments.loadProgramFields programFields
  let inputs ← inputValues derivationSeal
@@ -85,9 +83,6 @@ def validate (analysis : Value) (files : List NuclideCarrierAnalysis.Snapshot)
   let passed := Text.equal predicted observed
   let row : Value := .object [("target_id",.text target),("predicted",.text predicted),("observed",.text observed),("passed",.boolean passed)]
   return (row,passed)
- let omission := match RadiolysisNetworkAnalysis.exactRadiolysisAnalysis analysis files surfaces true with
-  | .error _ => true
-  | .ok _ => false
  let passed := (comparisons.all Prod.snd) && omission
  let targetIdentity ← TargetCustody.identityFromRelease release
  if !Text.equal targetIdentity vault.commitment.targetHash then throw "NUCHEM-009–012 target changed"
@@ -103,6 +98,15 @@ def validate (analysis : Value) (files : List NuclideCarrierAnalysis.Snapshot)
   ("evaluator_verified_seal",.boolean true),("target_opened_after_seal",.boolean true),("all_rows_preserved",.boolean true),
   ("data_source_ids",.array (sourceIds.map Value.text)),("measurements",.array (notes.map Value.text)),
   ("measurement_receipt_hash",.text (identity payload)),("falsification_condition",.text falsification),("passed",.boolean passed)]
+def validate (analysis : Value) (files : List NuclideCarrierAnalysis.Snapshot)
+ (surfaces : List NuclideCarrierAnalysis.SurfaceInput)
+ (derivationSeal host implementation : String) (before after : Snapshot) : Except String Value := do
+ validateSpec
+ let (summary,checks) ← RadiolysisNetworkAnalysis.exactRadiolysisAnalysis analysis files surfaces
+ let omission := match RadiolysisNetworkAnalysis.exactRadiolysisAnalysis analysis files surfaces true with
+  | .error _ => true
+  | .ok _ => false
+ validateResolved summary checks omission derivationSeal host implementation before after
 #print axioms inputValues
 #print axioms sealPrediction
 #print axioms certificate

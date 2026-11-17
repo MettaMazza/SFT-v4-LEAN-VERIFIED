@@ -11367,3 +11367,15 @@ import SFT.Chemistry.RadiochemicalSeparationAnalysis
 import SFT.Chemistry.RadiochemicalSeparationExperiment
 
 import SFT.Chemistry.RadiochemicalSeparationValidation
+
+import SFT.Chemistry.FissionProductDistribution
+
+import SFT.Chemistry.FissionProductDistributionGrammar
+
+import SFT.Chemistry.FissionProductDistributionEvidence
+
+import SFT.Chemistry.FissionProductDistributionAnalysis
+
+import SFT.Chemistry.FissionProductDistributionExperiment
+
+import SFT.Chemistry.FissionProductDistributionValidation

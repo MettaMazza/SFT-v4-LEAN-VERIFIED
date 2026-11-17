@@ -11543,3 +11543,15 @@ import SFT.Biology.CompartmentSource
 import SFT.Biology.CompartmentExperiment
 
 import SFT.Biology.CompartmentValidation
+
+import SFT.Biology.InsideOutside
+
+import SFT.Biology.InsideOutsideGrammar
+
+import SFT.Biology.InsideOutsideEvidence
+
+import SFT.Biology.InsideOutsideSource
+
+import SFT.Biology.InsideOutsideExperiment
+
+import SFT.Biology.InsideOutsideValidation

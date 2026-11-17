@@ -11531,3 +11531,15 @@ import SFT.Chemistry.NuclearElectronicWeights
 import SFT.Chemistry.NuclearElectronicExperiment
 
 import SFT.Chemistry.NuclearElectronicValidation
+
+import SFT.Biology.Compartment
+
+import SFT.Biology.CompartmentGrammar
+
+import SFT.Biology.CompartmentEvidence
+
+import SFT.Biology.CompartmentSource
+
+import SFT.Biology.CompartmentExperiment
+
+import SFT.Biology.CompartmentValidation

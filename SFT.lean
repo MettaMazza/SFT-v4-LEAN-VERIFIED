@@ -11473,3 +11473,15 @@ import SFT.Biology.LifeTurnoverSource
 import SFT.Biology.LifeTurnoverExperiment
 
 import SFT.Biology.LifeTurnoverValidation
+
+import SFT.Chemistry.RadiolysisNetwork
+
+import SFT.Chemistry.RadiolysisNetworkGrammar
+
+import SFT.Chemistry.RadiolysisNetworkEvidence
+
+import SFT.Chemistry.RadiolysisNetworkAnalysis
+
+import SFT.Chemistry.RadiolysisNetworkExperiment
+
+import SFT.Chemistry.RadiolysisNetworkValidation

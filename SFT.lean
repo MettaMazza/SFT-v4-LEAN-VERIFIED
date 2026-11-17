@@ -11295,3 +11295,15 @@ import SFT.Biology.LifeAutocatalyticClosureSource
 import SFT.Biology.LifeAutocatalyticClosureExperiment
 
 import SFT.Biology.LifeAutocatalyticClosureValidation
+
+import SFT.Chemistry.EquilibriumIsotopeFractionation
+
+import SFT.Chemistry.EquilibriumIsotopeFractionationGrammar
+
+import SFT.Chemistry.EquilibriumIsotopeFractionationEvidence
+
+import SFT.Chemistry.EquilibriumIsotopeFractionationAnalysis
+
+import SFT.Chemistry.EquilibriumIsotopeFractionationExperiment
+
+import SFT.Chemistry.EquilibriumIsotopeFractionationValidation

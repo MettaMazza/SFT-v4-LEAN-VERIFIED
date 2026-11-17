@@ -10795,3 +10795,17 @@ import SFT.Chemistry.ResonanceEquivalentExperiment
 import SFT.Chemistry.ResonanceEquivalentControls
 
 import SFT.Chemistry.ResonanceEquivalentValidation
+
+import SFT.Materials.QuasicrystalInflation
+
+import SFT.Materials.QuasicrystalInflationCertificate
+
+import SFT.Materials.QuasicrystalInflationGrammar
+
+import SFT.Materials.QuasicrystalInflationEvidence
+
+import SFT.Materials.QuasicrystalInflationSource
+
+import SFT.Materials.QuasicrystalInflationExperiment
+
+import SFT.Materials.QuasicrystalInflationValidation

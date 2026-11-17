@@ -1,0 +1,8 @@
+import SFT.Chemistry.MulticentrePrediction
+open SFT.Host SFT.Chemistry.MulticentrePrediction
+def ids : List String := ["IUPAC-DELOCALIZATION-DEFINITION","IUPAC-DELOCALIZATION-RIBBON","IUPAC-DELOCALIZATION-SURFACE","IUPAC-DELOCALIZATION-VOLUME","NIST-DIBORANE-POINT-GROUP","NIST-DIBORANE-rBB","NIST-DIBORANE-rBH-OUTER","NIST-DIBORANE-rBH-BRIDGING","NIST-DIBORANE-aHBH-OUTER","NIST-DIBORANE-aHBH-BRIDGING","NIST-DIBORANE-aBHB","NIST-DIBORANE-aHBH-SYMMETRY","NIST-DIBORANE-HB-LINK-COUNT","NIST-BENZENE-POINT-GROUP","NIST-BENZENE-rCC","NIST-BENZENE-rCH","NIST-BENZENE-aCCC","NIST-BENZENE-aHCC","NIST-BENZENE-AROMATIC-LINK-COUNT","NIST-BENZENE-HC-LINK-COUNT"]
+def main : IO Unit := do
+ let out ← IO.getStdout
+ match predictionDocument identityHash "sft-v3-multicentre-identities/1" ids with
+ | .error e => throw (IO.userError e)
+ | .ok value => out.putStrLn (Canonical.render value)

@@ -11019,3 +11019,15 @@ import SFT.Chemistry.RadiochemicalAnalysis
 import SFT.Chemistry.RadiochemicalExperiment
 
 import SFT.Chemistry.RadiochemicalValidation
+
+import SFT.Biology.LifeChemicalBoundary
+
+import SFT.Biology.LifeChemicalBoundaryGrammar
+
+import SFT.Biology.LifeChemicalBoundaryEvidence
+
+import SFT.Biology.LifeChemicalBoundarySource
+
+import SFT.Biology.LifeChemicalBoundaryExperiment
+
+import SFT.Biology.LifeChemicalBoundaryValidation

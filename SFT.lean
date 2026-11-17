@@ -11399,3 +11399,15 @@ import SFT.Chemistry.CoordinationNumberComparison
 import SFT.Chemistry.CoordinationNumberExperiment
 
 import SFT.Chemistry.CoordinationNumberValidation
+
+import SFT.Biology.LifeMaintenance
+
+import SFT.Biology.LifeMaintenanceGrammar
+
+import SFT.Biology.LifeMaintenanceEvidence
+
+import SFT.Biology.LifeMaintenanceSource
+
+import SFT.Biology.LifeMaintenanceExperiment
+
+import SFT.Biology.LifeMaintenanceValidation

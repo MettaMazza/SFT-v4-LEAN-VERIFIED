@@ -10833,3 +10833,13 @@ import SFT.Materials.RectificationSourceBinding
 import SFT.Materials.RectificationSourceExperiment
 
 import SFT.Materials.RectificationSourceValidation
+
+import SFT.Materials.IsotopeResponseGrammar
+
+import SFT.Materials.IsotopeResponseEvidence
+
+import SFT.Materials.IsotopeResponseSource
+
+import SFT.Materials.IsotopeResponseExperiment
+
+import SFT.Materials.IsotopeResponseValidation

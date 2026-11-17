@@ -11427,3 +11427,17 @@ import SFT.Chemistry.SelectionTargets
 import SFT.Chemistry.SelectionRuleExperiment
 
 import SFT.Chemistry.SelectionRuleValidation
+
+import SFT.Chemistry.ConfigurationOrder
+
+import SFT.Chemistry.ConfigurationOrderGrammar
+
+import SFT.Chemistry.ConfigurationOrderEvidence
+
+import SFT.Chemistry.ConfigurationObservation
+
+import SFT.Chemistry.ConfigurationTargets
+
+import SFT.Chemistry.ConfigurationOrderExperiment
+
+import SFT.Chemistry.ConfigurationOrderValidation

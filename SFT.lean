@@ -10961,3 +10961,27 @@ import SFT.Chemistry.RadioactiveTransformationAnalysis
 import SFT.Chemistry.RadioactiveTransformationExperiment
 
 import SFT.Chemistry.RadioactiveTransformationValidation
+
+import SFT.Chemistry.ActivityAmountTime
+
+import SFT.Chemistry.ActivityAmountGrammar
+
+import SFT.Chemistry.ActivityAmountEvidence
+
+import SFT.Chemistry.ActivityAmountAnalysis
+
+import SFT.Chemistry.ActivityAmountExperiment
+
+import SFT.Chemistry.ActivityAmountValidation
+
+import SFT.Chemistry.RadioactiveBranchYield
+
+import SFT.Chemistry.BranchYieldGrammar
+
+import SFT.Chemistry.BranchYieldEvidence
+
+import SFT.Chemistry.BranchYieldAnalysis
+
+import SFT.Chemistry.BranchYieldExperiment
+
+import SFT.Chemistry.BranchYieldValidation

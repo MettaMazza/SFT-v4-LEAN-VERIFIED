@@ -1,0 +1,58 @@
+import SFT.Chemistry.FissionProductDistributionEvidence
+import SFT.Chemistry.NuclideCarrierAnalysis
+import SFT.Physics.MolecularSpectroscopyMeasurement
+namespace SFT.Chemistry.FissionProductDistributionExperiment
+open SFT.Host SFT.Host.Canonical
+def claimId : String := "SFT-CHEM-FISSION-PRODUCT-CHEMICAL-DISTRIBUTION-011"
+def experimentId : String := "SFT-EXP-CHEM-FISSION-PRODUCT-CHEMICAL-DISTRIBUTION-011"
+def expectedLabel : String := "complete-fission-product-chemical-distribution-vector"
+def falsification : String := "The claim halts if the survivor is nonunique; any supplied product, species, phase, location, sample, distribution, transfer, inventory basis, uncontrolled condition, discrepancy, page or byte is omitted; or an external chemical grouping selects the law."
+def sourceIds : List String := ["DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE","DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE","DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE","DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE","DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE","DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE","DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE","NUCHEM-009-012-SOURCE-INVENTORY"]
+def targetIds : List String := ["SFT-CHEM-NUCHEM-011-PHYSICS-HANDOFF","SFT-CHEM-NUCHEM-011-CHEMICAL-IDENTITY","SFT-CHEM-NUCHEM-011-PHASE-LOCATION","SFT-CHEM-NUCHEM-011-DISTRIBUTION","SFT-CHEM-NUCHEM-011-REDISTRIBUTION","SFT-CHEM-NUCHEM-011-TIME-SAMPLE","SFT-CHEM-NUCHEM-011-ADVERSE-DISCREPANCY","SFT-CHEM-NUCHEM-011-COMPLETE-SOURCE"]
+def snapshotHashes : List String := ["sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c","sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c","sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c","sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c","sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c","sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c","sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c","sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c"]
+def predictionDocument : Value := .object [("schema",.text "sft-v3-fold-program/1"),("program_id",.text "SFT-EXP-CHEM-FISSION-PRODUCT-CHEMICAL-DISTRIBUTION-011-prediction"),("instructions",.array [.object [("opcode",.text "input"),("destination",.text "premise"),("arguments",.array [.text "registered-premise"])],.object [("opcode",.text "label"),("destination",.text "prediction"),("arguments",.array [.text "chemical-observation",.text "complete-fission-product-chemical-distribution-vector"])],.object [("opcode",.text "pair"),("destination",.text "bound-result"),("arguments",.array [.text "premise",.text "prediction"])],.object [("opcode",.text "emit"),("destination",.text ""),("arguments",.array [.text "prediction"])]])]
+def registration : Value := .object [("experiment_id",.text "SFT-EXP-CHEM-FISSION-PRODUCT-CHEMICAL-DISTRIBUTION-011"),("claim_id",.text "SFT-CHEM-FISSION-PRODUCT-CHEMICAL-DISTRIBUTION-011"),("provenance",.text "observational_derivation"),("frozen_relation",.text "explicit-physics-product-handoff__held-nuclide-and-chemical-species__complete-phase-location-support__positive-species-resolved-events__exact-complete-partition-of-One__explicit-chemical-redistribution-network__nuclide-change-requires-physics-handoff__successor-retains-complete-time-sample-vector"),("target_references",.array [.array [.text "SFT-CHEM-NUCHEM-011-PHYSICS-HANDOFF",.text "DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE",.text "physics handoff",.text "experiments/external_sources/chemistry/snapshots/nuchem-009-012-radiochemistry-v1/complete-postseal-analysis-v1.json",.text "sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c"],.array [.text "SFT-CHEM-NUCHEM-011-CHEMICAL-IDENTITY",.text "DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE",.text "chemical identity",.text "experiments/external_sources/chemistry/snapshots/nuchem-009-012-radiochemistry-v1/complete-postseal-analysis-v1.json",.text "sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c"],.array [.text "SFT-CHEM-NUCHEM-011-PHASE-LOCATION",.text "DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE",.text "phase location",.text "experiments/external_sources/chemistry/snapshots/nuchem-009-012-radiochemistry-v1/complete-postseal-analysis-v1.json",.text "sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c"],.array [.text "SFT-CHEM-NUCHEM-011-DISTRIBUTION",.text "DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE",.text "distribution",.text "experiments/external_sources/chemistry/snapshots/nuchem-009-012-radiochemistry-v1/complete-postseal-analysis-v1.json",.text "sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c"],.array [.text "SFT-CHEM-NUCHEM-011-REDISTRIBUTION",.text "DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE",.text "redistribution",.text "experiments/external_sources/chemistry/snapshots/nuchem-009-012-radiochemistry-v1/complete-postseal-analysis-v1.json",.text "sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c"],.array [.text "SFT-CHEM-NUCHEM-011-TIME-SAMPLE",.text "DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE",.text "time sample",.text "experiments/external_sources/chemistry/snapshots/nuchem-009-012-radiochemistry-v1/complete-postseal-analysis-v1.json",.text "sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c"],.array [.text "SFT-CHEM-NUCHEM-011-ADVERSE-DISCREPANCY",.text "DOE-ORNL-4865-FISSION-PRODUCT-BEHAVIOR-MSRE",.text "adverse discrepancy",.text "experiments/external_sources/chemistry/snapshots/nuchem-009-012-radiochemistry-v1/complete-postseal-analysis-v1.json",.text "sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c"],.array [.text "SFT-CHEM-NUCHEM-011-COMPLETE-SOURCE",.text "NUCHEM-009-012-SOURCE-INVENTORY",.text "complete source",.text "experiments/external_sources/chemistry/snapshots/nuchem-009-012-radiochemistry-v1/complete-postseal-analysis-v1.json",.text "sha256:6c993195755f1ddf3c63e1f2404fc0d9a8762378c767c834d69b23b1430dae8c"]]),("observation_registry_path",.text "experiments/external_sources/chemistry/snapshots/nuchem-009-012-radiochemistry-v1/complete-postseal-analysis-v1.json"),("prediction_program",.object [("schema",.text "sft-v3-fold-program/1"),("program_id",.text "SFT-EXP-CHEM-FISSION-PRODUCT-CHEMICAL-DISTRIBUTION-011-prediction"),("instructions",.array [.object [("opcode",.text "input"),("destination",.text "premise"),("arguments",.array [.text "registered-premise"])],.object [("opcode",.text "label"),("destination",.text "prediction"),("arguments",.array [.text "chemical-observation",.text "complete-fission-product-chemical-distribution-vector"])],.object [("opcode",.text "pair"),("destination",.text "bound-result"),("arguments",.array [.text "premise",.text "prediction"])],.object [("opcode",.text "emit"),("destination",.text ""),("arguments",.array [.text "prediction"])]])]),("sealed_consequence_label",.text "complete-fission-product-chemical-distribution-vector"),("falsification_condition",.text "The claim halts if the survivor is nonunique; any supplied product, species, phase, location, sample, distribution, transfer, inventory basis, uncontrolled condition, discrepancy, page or byte is omitted; or an external chemical grouping selects the law."),("development_observation_disclosed",.boolean true),("observation_may_have_informed_question_and_candidate_relation",.boolean true),("not_claimed_as_unknown-target_forward_prediction",.boolean true),("external_target_api_absent_from_candidate_generator_and_eliminator",.boolean true),("target_content_inaccessible_to_prediction_execution",.boolean true),("comparison_implementation_inaccessible_to_prediction_execution",.boolean true),("all_rows_required",.boolean true)]
+def programFields : List (String × Value) := match predictionDocument with
+ | .object fs => fs
+ | .null | .text _ | .boolean _ | .integer _ | .array _ => []
+def labelValue (family label : String) : Value := .object [("family",.text family),("label",.text label)]
+def envelope (registrationHash derivationSeal : String) : Value := .object [
+ ("experiment_id",.text experimentId),
+ ("registered_inputs",.object [("registered-premise",.text (identity (labelValue "sealed-derivation" derivationSeal)))]),
+ ("withheld_target_ids",.array (targetIds.map Value.text)),("frozen_relation_hash",.text derivationSeal),
+ ("experiment_registration_hash",.text registrationHash)]
+def dimensions : List (String × List (String × Bool)) := [("handoff",[("chemistry-selects-fission-products",false),("explicit-physics-product-handoff",true)]),("identity",[("mass-chain-only",false),("held-nuclide-and-chemical-species",true)]),("support",[("bulk-release-fraction",false),("complete-phase-location-support",true)]),("events",[("expected-yield-premise",false),("positive-species-resolved-events",true)]),("partition",[("renormalized-selected-products",false),("exact-complete-partition-of-One",true)]),("chemistry",[("fixed-chemical-form-assumption",false),("explicit-chemical-redistribution-network",true)]),("boundary",[("silent-decay-inside-chemistry",false),("nuclide-change-requires-physics-handoff",true)]),("extension",[("selected-terminal-sample",false),("successor-retains-complete-time-sample-vector",true)])]
+def distinct (xs : List String) : Bool := (xs.foldl (fun acc x => if acc.any (Text.equal x) then acc else x::acc) []).length == xs.length
+def validateSpec : Except String Unit := do
+ if !(Text.chars "SFT-CHEM-").isPrefixOf (Text.chars claimId) then throw "empirical Chemistry claim identity is invalid"
+ if !(Text.chars "SFT-EXP-CHEM-").isPrefixOf (Text.chars experimentId) then throw "empirical Chemistry experiment identity is invalid"
+ if FissionProductDistributionEvidence.dependencies.isEmpty || dimensions.length != 8 || targetIds.isEmpty then
+  throw "empirical Chemistry law lacks dependencies, eight dimensions or targets"
+ if !distinct (dimensions.map Prod.fst) then throw "empirical Chemistry law contains duplicate dimensions"
+ let _ ← dimensions.mapM fun d => do
+  if d.2.length != 2 then throw "each Chemistry dimension must exhaust two registered forms"
+  if (d.2.filter Prod.snd).length != 1 then throw "dimension requires one preserving form"
+ if (NuclideCarrierSurface.trimLine (Text.chars expectedLabel)).isEmpty || (NuclideCarrierSurface.trimLine (Text.chars falsification)).isEmpty then
+  throw "Chemistry prediction or falsification condition is missing"
+ if !distinct targetIds then throw "Chemistry target identities are duplicated"
+ if !(snapshotHashes.all fun h => (Text.chars "sha256:").isPrefixOf (Text.chars h)) then throw "Chemistry target snapshot identity is invalid"
+ if !([FissionProductDistribution.handoffWitness,FissionProductDistribution.identityWitness,FissionProductDistribution.supportWitness,
+  FissionProductDistribution.eventsWitness,FissionProductDistribution.partitionWitness,FissionProductDistribution.chemistryWitness,
+  FissionProductDistribution.boundaryWitness,FissionProductDistribution.extensionWitness].all id) then throw "Chemistry operational witness failed"
+ return ()
+#print axioms claimId
+#print axioms experimentId
+#print axioms expectedLabel
+#print axioms falsification
+#print axioms sourceIds
+#print axioms targetIds
+#print axioms snapshotHashes
+#print axioms predictionDocument
+#print axioms registration
+#print axioms programFields
+#print axioms labelValue
+#print axioms envelope
+#print axioms dimensions
+#print axioms distinct
+#print axioms validateSpec
+end SFT.Chemistry.FissionProductDistributionExperiment

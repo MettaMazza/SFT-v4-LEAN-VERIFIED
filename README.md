@@ -1,5 +1,7 @@
 ## 750 / 2,781 V3 entries complete
 
+> **750-entry author-review edition 0.4 — not published.** [Review the complete PDF](publication/SFT_REVIEW.pdf) · [Review guide](publication/REVIEW_GUIDE.txt) · [Contents](publication/CONTENTS.txt) · [Review checks](publication/REVIEW_QA.json).
+
 > **500-entry milestone — published edition 0.3.** [Read the paper](https://zenodo.org/records/24205463/files/SFT_PAPER.pdf) · [Zenodo publication](https://zenodo.org/records/24205463) · [Release evidence](publication/PUBLICATION_RECEIPT.json).
 
 **48,310 Lean theorems proved · 0 axiom dependencies · Unified Constants complete: 26 exact readings across seven sectors.**
@@ -29,9 +31,9 @@
 
 The exact fine-structure ratio opens the cumulative paper. Its Unified Constants construction connects 26 terminal readings across seven sectors, followed by the completed chemistry and materials derivations. The 643-page edition contains 704 numbered main sections and 16 subsections, with 720 bookmarks and source/Lean/timeline references.
 
-**[Read the published PDF](https://zenodo.org/records/24205463/files/SFT_PAPER.pdf)** · [Published full text](publication/editions/0.3/ZENODO_PAPER_DRAFT.txt) · [Working manuscript toward750](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Release index](publication/RELEASE_INDEX.json) · [Publication verification](publication/PUBLICATION_RECEIPT.json)
+**[Read the published PDF](https://zenodo.org/records/24205463/files/SFT_PAPER.pdf)** · [Published full text](publication/editions/0.3/ZENODO_PAPER_DRAFT.txt) · [750-entry review manuscript](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Release index](publication/RELEASE_INDEX.json) · [Publication verification](publication/PUBLICATION_RECEIPT.json)
 
-**[Edition 0.3 is published on Zenodo](https://doi.org/10.5281/zenodo.24205463).** Previous editions [0.2.1](https://doi.org/10.5281/zenodo.23849998), [0.2](https://doi.org/10.5281/zenodo.23846751) and [0.1](https://doi.org/10.5281/zenodo.23782217) remain available. The main PDF is the verified default landing-page preview. The next review milestone is 750 completed entries, then every 250; scientific continuation requires the author's explicit resumption.
+**[Edition 0.3 is published on Zenodo](https://doi.org/10.5281/zenodo.24205463).** Previous editions [0.2.1](https://doi.org/10.5281/zenodo.23849998), [0.2](https://doi.org/10.5281/zenodo.23846751) and [0.1](https://doi.org/10.5281/zenodo.23782217) remain available. The main PDF is the verified default landing-page preview. The 750-entry edition is available above for author review. After explicit resumption, the next milestone is 1,000 completed entries, then every 250.
 
 # One model. Every derivation. Machine-checked.
 

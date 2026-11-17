@@ -11461,3 +11461,15 @@ import SFT.Chemistry.LigandDenticityComparison
 import SFT.Chemistry.LigandDenticityExperiment
 
 import SFT.Chemistry.LigandDenticityValidation
+
+import SFT.Biology.LifeTurnover
+
+import SFT.Biology.LifeTurnoverGrammar
+
+import SFT.Biology.LifeTurnoverEvidence
+
+import SFT.Biology.LifeTurnoverSource
+
+import SFT.Biology.LifeTurnoverExperiment
+
+import SFT.Biology.LifeTurnoverValidation

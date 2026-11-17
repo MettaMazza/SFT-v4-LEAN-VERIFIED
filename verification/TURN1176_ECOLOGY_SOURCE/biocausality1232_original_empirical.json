@@ -1,0 +1,59 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "SFT-BIO-SRC-GO-ANNOTATION-EVIDENCE"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:acbccd7ca27a5af57be15c14815c2b0281f5624d5a417add877a4a08ca714eee",
+  "falsification_condition": "Reject if any registered authoritative biological source contradicts a required content relation, if a generated alternative also preserves every dimension, or if any specimen, control, adverse row, condition or provenance distinction is missing.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:f17484aeed7a523b779d4d2607b1b8f459dcee88af7aab26a65ed40298017563",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:bebeca0d7ff555fb143f7b4c77ad885e780cbd0d3adcada913241c59627b16dc",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-BIO-BIO-CAUSALITY-001-E1-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:1959984aeb3c55813dcfcc5d2704cea249412713db895db80ba369ee4b39aead",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:c6829b2aee4f0057afb2a0c107903aff189090b2b189eaaeac93414637c3e49b",
+    "prediction_seal_hash": "sha256:267cf122df728121402054342c1571f542321f7350d3a542181f64ee9e864402",
+    "program_hash": "sha256:9e23fec13e3ccbe0f373ee5c5e3386541dc75df3e189f91df683be1e02b07a7e",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:6707b6adbef2a5668ac99bbe569494daca0f7d03e71f913551fd887951449ece",
+    "target_material_present": false,
+    "trace_hash": "sha256:a0ab5d4e91ded3242eb6e951c322b99b3d1222fbe1ab187b74f4a3d1d3da1ddb"
+  },
+  "measurement_receipt_hash": "sha256:52f71198d559fd6428f2765c26fd24b46ed450d6a838cfd3436b15ab47b859c7",
+  "measurements": [
+    "sft-bio-bio-causality-001-authority-correspondence: predicted biology:intervention-exposure-outcome-carrier__counterfactual-control-comparison__confounders-timing-and-selection-held__design-specific-causal-scope; source-derived biology:intervention-exposure-outcome-carrier__counterfactual-control-comparison__confounders-timing-and-selection-held__design-specific-causal-scope; exact match True",
+    "every required authoritative fragment and snapshot hash reproduced",
+    "transport/content failures and adverse scientific rows retained",
+    "deliberately tampered unfavorable control rejected"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:376e2a84e3eff91de23c29ada529e80d6559d1b51488783bcd496a6956232d9c",
+    "custodian_id": "SFT-EXP-BIO-BIO-CAUSALITY-001-E1-external-target-custodian",
+    "experiment_registration_hash": "sha256:acbccd7ca27a5af57be15c14815c2b0281f5624d5a417add877a4a08ca714eee",
+    "prediction_seal_hash": "sha256:267cf122df728121402054342c1571f542321f7350d3a542181f64ee9e864402",
+    "registered_target_identity_hash": "sha256:6707b6adbef2a5668ac99bbe569494daca0f7d03e71f913551fd887951449ece",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:46b48edd5047130add34bd0ecf7420dfec8a69e626a75c66e7ca32a09d32ecd3"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "native-biocausality1232"
+}

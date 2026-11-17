@@ -10809,3 +10809,15 @@ import SFT.Materials.QuasicrystalInflationSource
 import SFT.Materials.QuasicrystalInflationExperiment
 
 import SFT.Materials.QuasicrystalInflationValidation
+
+import SFT.Materials.PhononThermalLimits
+
+import SFT.Materials.PhononThermalLimitsGrammar
+
+import SFT.Materials.PhononThermalLimitsEvidence
+
+import SFT.Materials.PhononThermalLimitsSource
+
+import SFT.Materials.PhononThermalLimitsExperiment
+
+import SFT.Materials.PhononThermalLimitsValidation

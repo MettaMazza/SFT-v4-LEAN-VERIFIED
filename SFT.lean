@@ -11283,3 +11283,15 @@ import SFT.Chemistry.CoordinationComparison
 import SFT.Chemistry.CoordinationExperiment
 
 import SFT.Chemistry.CoordinationValidation
+
+import SFT.Biology.LifeAutocatalyticClosure
+
+import SFT.Biology.LifeAutocatalyticClosureGrammar
+
+import SFT.Biology.LifeAutocatalyticClosureEvidence
+
+import SFT.Biology.LifeAutocatalyticClosureSource
+
+import SFT.Biology.LifeAutocatalyticClosureExperiment
+
+import SFT.Biology.LifeAutocatalyticClosureValidation

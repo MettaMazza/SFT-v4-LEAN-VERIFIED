@@ -1,0 +1,41 @@
+from pathlib import Path
+import json,hashlib,re,shutil,datetime
+w=Path('work');r=w/'turn1064_recovery';cid='SFT-CHEM-RADIOTRACER-CUSTODY-INFERENCE-009';now=datetime.datetime.now(datetime.timezone.utc).isoformat();H=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+reports=['radiotracer1140_core_report.json','radiotracer_grammar1140_entry_audit_report.json','radiotracer1140_analysis_source_audit_report.json','radiotracer1140_validation_source_audit_report.json','radiotracer1140_program_report.json','radiotracer1140_empirical_report.json','radiotracer1140_original_report.json']
+for n in reports:assert json.loads((w/n).read_text())['status']=='PASS',n
+cases=json.loads((w/'radiotracer1140_independent_report.json').read_text());assert len(cases)==4 and all(x['result']['passed']==(x['case']=='original')for x in cases)
+assert json.loads((w/'radiotracer1140_empirical_output.json').read_text())==json.loads((w/'radiotracer1140_original_empirical.json').read_text())
+source=w/'pinned1140/sft/chemistry/radiotracer_custody_law_v1.py';core=json.loads((w/'radiotracer1140_core_report.json').read_text());assert H(source)==core['source_sha256'];assert H(r/'SFT/Chemistry/RadiotracerCustody.lean')==core['native_sha256']
+mods={'RadiotracerCustody': ('sft/chemistry/radiotracer_custody_law_v1.py', 'Original six-field observation,family and bounded-custody guards,exact recovery,positive or EmptyOne remainder,complete rank/common identity guards and ordered record;all eight witnesses;acceptedRecordExact and accepted finite-extension/successor preservation.'), 'RadiotracerCustodyGrammar': ('sft/chemistry/radiotracer_custody_law_v1.py', 'All eight binary dimensions,all256forms,original decisions,exhaustion and unique survivor.'), 'RadiotracerCustodyEvidence': ('sft/chemistry/generated_observational_law.py', 'Complete original registration,census,closure,controls and programme outputs/hashes.'), 'RadiotracerCustodyAnalysis': ('sft/chemistry/nuchem_terminal_validation_v1.py', 'Original009 eight checks and eight-field summary;all authority checks,370PDF pages,837013characters and exact source reconstruction.'), 'RadiotracerCustodyExperiment': ('sft/chemistry/nuchem_terminal_batch_v1.py', 'Original009 registration,prediction,spec guards,target identities and envelope.'), 'RadiotracerCustodyValidation': ('sft/chemistry/nuchem_terminal_validation_v1.py', 'Original postseal custody,omission control,isolation and full twelve-field empiricalreceipt;preseal exposure disclosure preserved.')}
+for n in reports[1:4]:
+ d=json.loads((w/n).read_text());log=(w/n.replace('_report.json','.log')).read_text();assert log.count('does not depend on any axioms')==d['count'] and 'depends on axioms'not in log
+ for module,h in d['source_sha256'].items():assert H(r/('SFT/Chemistry/'+module+'.lean'))==h
+log=(w/'radiotracer1140_core_entry_audit.log').read_text();assert log.count('does not depend on any axioms')==30 and 'depends on axioms'not in log
+assert 30+sum(json.loads((w/n).read_text())['count']for n in reports[1:4])==139
+cov=json.loads((r/'COVERAGE.json').read_text());by={x['claim_id']:x for x in cov['claims']};entry=by[cid];assert entry['lean_status']=='pending';assert all(by[x]['lean_status']=='complete'for x in entry['v3_registration']['dependencies']);assert len(entry['v3_registration']['dependencies'])==7
+old=cov['summary'].copy();receipt='verification/TURN_1140_RADIOTRACER_COMPLETION.json';corr=json.loads((r/'reference/CORRESPONDENCE.json').read_text());oldnames=set(re.findall(r'^#print axioms (\S+)',(r/'Audit.lean').read_text(),re.M));newnames=[];hashes={}
+for mod,(src,scope)in mods.items():
+ rel='SFT/Chemistry/'+mod+'.lean';hashes[rel]=H(r/rel);names=['SFT.Chemistry.'+mod+'.'+x for x in re.findall(r'^theorem (\w+)',(r/rel).read_text(),re.M)];newnames.extend(x for x in names if x not in oldnames)
+ corr['modules'].append({'lean_module':rel,'v3_claim':cid,'source_path':src,'lean_source_sha256':hashes[rel],'domain':scope,'remaining':[],'completion_evidence':receipt})
+ imp='import '+rel[:-5].replace('/','.')
+ if imp not in (r/'SFT.lean').read_text().splitlines():
+  with(r/'SFT.lean').open('a')as f:f.write('\n'+imp+'\n')
+with(r/'Audit.lean').open('a')as f:f.write(''.join('#print axioms '+x+'\n'for x in newnames))
+evidence=reports+['radiotracer1140_independent_report.json','radiotracer1140_empirical_output.json','radiotracer1140_original_empirical.json','radiotracer1140_source_pin.json','check_radiotracer1140_program.py','check_radiotracer1140_empirical.py','prepare_radiotracer1140_sources.py']
+for n in evidence:shutil.copy2(w/n,r/'verification'/('TURN_1140_'+n))
+record={'status':'complete','claim_id':cid,'registered_at':now,'source_commit':'76f1b34e9e9682989adcbb088797b4ae4ce4fcf1','lean_source_sha256':hashes,'source_component_correspondence':{m:{'source':p,'component':s}for m,(p,s)in mods.items()},'candidate_rows':256,'observation_cases':75,'record_cases':10,'original_witnesses':8,'audited_declarations':139,'axiom_dependencies':[],'dependencies':entry['v3_registration']['dependencies'],'source_extraction':'Fresh original pypdf6.14.2 extraction of allfour source PDFs,370pages,837013characters; original validator unchanged.','checks':{n:H(w/n)for n in evidence},'remaining':[]};(r/receipt).write_text(json.dumps(record,indent=2)+'\n')
+entry.update(lean_status='complete',remaining=[],lean_modules=list(hashes),completion_evidence=receipt,verified_scope='; '.join(v[1]for v in mods.values()),artifact_runtime_parity='PASS complete256programme,three independent adverse cases,twelve-field empiricalreceipt/allhashes,139empty-axiom declarations,75observation/10record cases.')
+count=sum(x['lean_status']=='complete'for x in cov['claims']);assert count==old['fully_reconstructed_claims']+1
+cov['summary'].update(fully_reconstructed_claims=count,pending=sum(x['lean_status']=='pending'for x in cov['claims']),axiom_free_exported_results=old['axiom_free_exported_results']+len(newnames),axiom_free_audited_definitions_and_theorems=old['axiom_free_audited_definitions_and_theorems']+139);cov['updated_at']=now;(r/'COVERAGE.json').write_text(json.dumps(cov,indent=2)+'\n');corr['audited_theorems']=sorted(set(corr['audited_theorems'])|set(newnames));(r/'reference/CORRESPONDENCE.json').write_text(json.dumps(corr,indent=2)+'\n')
+candidates=int(re.search(r'([0-9,]+) candidate records matched',(r/'README.md').read_text())[1].replace(',',''))
+for fn in ['README.md','docs/assets/sft-banner.svg','ZENODO_PAPER_DRAFT.txt']:
+ p=r/fn;s=p.read_text().replace(f'{candidates:,}',f'{candidates+256:,}')
+ for suffix in [' / 2,781',' V3 entries verified',' model entries',' completed entries',' completed source entries',' source entries']:s=s.replace(str(old['fully_reconstructed_claims'])+suffix,str(count)+suffix)
+ for key in ['axiom_free_exported_results','axiom_free_audited_definitions_and_theorems']:s=s.replace(f'{old[key]:,}',f'{cov["summary"][key]:,}')
+ s=s.replace(f'{old["pending"]:,} entries remain pending',f'{cov["summary"]["pending"]:,} entries remain pending')
+ if fn=='README.md':s=re.sub(r'(\[latest completion evidence\]\()[^)]+',lambda m:m.group(1)+receipt,s)
+ s=s.replace('The full programme and native empirical comparisons remain running.','The full programme and native empirical comparisons pass; the radiotracer entry is registered complete.')
+ p.write_text(s)
+with(r/'TIMELINE.txt').open('a')as f:f.write('\nTURN1140 registration '+now+' — RadiotracerCustody complete at'+str(count)+'. Allseven prerequisites complete;139empty-axiom declarations,256original programme cases,original/threeadverse independent cases,twelve-field empirical receipt and75observation/10record comparisons PASS.\n')
+with(r/'ZENODO_PAPER_DRAFT.txt').open('a')as f:f.write('\nRadiotracer custody verification is complete: all 256 original forms, eight operational witnesses, three independent adverse cases and the full twelve-field empirical receipt match V3. All 139 audited declarations have empty axiom dependencies, including preservation of every prior record row under any accepted finite extension. Original four-source extraction and empirical boundaries remain unchanged. Evidence: '+receipt+'. Timeline TURN1140.\n')
+p=r/'CONTINUATION_STATE.json';s=json.loads(p.read_text());s['radiotracer1140_completion']={'count':count,'receipt':receipt};p.write_text(json.dumps(s,indent=2)+'\n');print(count)

@@ -135,21 +135,24 @@
   ],
   "live_jobs": [
     {
-      "session": 16802,
       "pid": 24474,
-      "driver": "work/check_selection1143_targets.py",
-      "log": "work/selection1143_targets_parity_driver.log"
+      "session": 16802,
+      "driver": "work/check_selection1143_targets.py"
     },
     {
-      "session": 73674,
-      "pid": 25118,
-      "driver": "work/check_selection1143_program.py",
-      "log": "work/selection1143_program_driver.log"
-    },
-    {
+      "pid": 25545,
       "session": 39333,
-      "driver": "work/check_selection1143_empirical.py",
-      "log": "work/selection1143_empirical_driver.log"
+      "driver": "work/check_selection1143_empirical.py"
+    },
+    {
+      "pid": 29189,
+      "session": 38100,
+      "driver": "work/check_coordinationnumber1144_program.py"
+    },
+    {
+      "pid": 29987,
+      "session": 29805,
+      "driver": "work/check_coordinationnumber1144_empirical.py"
     }
   ],
   "snapshot": [
@@ -55039,7 +55042,7 @@
   ],
   "next_publication_milestone": 750,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "747complete: Fissionregistered,do not repeat. Selection160auditeddecls (24core+80grammar+6derivation+10observation+12targets+15experiment+13validation),1332corecasesPASS; sourcechecks16802/PID24474,programme73674/PID25118,empirical39333 running. Preservehandles;finalsourcehash-boundreceiptthenregisterSelection,currentlyin_progress. CoordinationNumber core/derivation15audits and145sourcecasesPASS;translateoriginalCOORDINATION_NUMBER_SPEC and23recordempiricalassembly using completedEntityproofs. Continuedependencyorder toward750;max4guardedcompilers. Fullpaperpackageat750review,nopublicationwithoutapproval.",
+  "authorized_action": "Continue toward750. Preserve four live checks and Maintenance queue18693. Selection programme/independent PASS; pending targets and full receipt. CoordinationNumber all ten modules audited141declarations; pending programme and full receipt. Maintenance six modules staged, original empirical PASS, shared native source/seal reused only after byte/hash checks; queue builds and checks when a slot opens. Register completed source obligations immediately, update counts/paper/timeline/GitHub. At750 prepare full review package then pause; no Zenodo publication without approval.",
   "scientific_cursor": {
     "completed": "SFT-PHYS-VALIDATION-GRAND-LOCK-076",
     "next": "SFT-CHEM-MOLECULAR-STATE-TRANSITION-009",
@@ -66012,5 +66015,43 @@
     "selection_source_bound_derivation_theorems": 6,
     "coordination_source_outcomes": 145,
     "source_unchanged": true
+  },
+  "checkpoint1143_remote": {
+    "status": "PASS",
+    "commit": "29bea502fca21555a73274012b673122766bd9a3",
+    "tree": "ca4d948682566585bd56d01d42e9e35eaea7ae25",
+    "verified_files": 65,
+    "completed": 747
+  },
+  "coordinationnumber1143_staged": {
+    "source_pin": "work/coordinationnumber1143_source_pin.json",
+    "compiled": [
+      "CoordinationNumber",
+      "CoordinationNumberDerivation"
+    ],
+    "grammar_session": 64365,
+    "staged_not_yet_compiled": [
+      "CoordinationNumberPrediction",
+      "CoordinationNumberSource",
+      "CoordinationNumberAnalysis"
+    ],
+    "next_commands_when_slot_free": [
+      "python3 work/build_coordinationnumber1143_prediction.py",
+      "python3 work/build_coordinationnumber1143_source.py",
+      "python3 work/build_coordinationnumber1143_analysis.py"
+    ],
+    "read_original": "coordination_number_law_v1.py; coordination_number_validation_v1.py exact analysis/identity/source/prediction bodies; prior CoordinationPrediction/Source/Analysis reused with exact source differences."
+  },
+  "maintenance1144_queue": {
+    "session": 18693,
+    "state": "work/maintenance1144_queue.json",
+    "original_validator": "work/maintenance1144_original_report.json",
+    "reused_source_evidence": "work/maintenance1144_reused_source_evidence.json"
+  },
+  "turn1144": {
+    "completed": 747,
+    "new_coordination_audits": 126,
+    "maintenance_original": "PASS",
+    "memory_available_percent": 65
   }
 }

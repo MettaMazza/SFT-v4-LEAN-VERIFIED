@@ -10821,3 +10821,15 @@ import SFT.Materials.PhononThermalLimitsSource
 import SFT.Materials.PhononThermalLimitsExperiment
 
 import SFT.Materials.PhononThermalLimitsValidation
+
+import SFT.Materials.RectificationSource
+
+import SFT.Materials.RectificationSourceGrammar
+
+import SFT.Materials.RectificationSourceEvidence
+
+import SFT.Materials.RectificationSourceBinding
+
+import SFT.Materials.RectificationSourceExperiment
+
+import SFT.Materials.RectificationSourceValidation

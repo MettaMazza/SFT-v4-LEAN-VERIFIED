@@ -10985,3 +10985,25 @@ import SFT.Chemistry.BranchYieldAnalysis
 import SFT.Chemistry.BranchYieldExperiment
 
 import SFT.Chemistry.BranchYieldValidation
+
+import SFT.Chemistry.JointCorrelationSupport
+
+import SFT.Chemistry.JointCorrelationObservation
+
+import SFT.Chemistry.JointCorrelationGrammar
+
+import SFT.Chemistry.JointCorrelationEvidence
+
+import SFT.Chemistry.JointCorrelationNotes
+
+import SFT.Chemistry.JointCorrelationPrediction
+
+import SFT.Chemistry.JointCorrelationTargets
+
+import SFT.Chemistry.JointCorrelationComparison
+
+import SFT.Chemistry.JointCorrelationExperiment
+
+import SFT.Chemistry.JointCorrelationControls
+
+import SFT.Chemistry.JointCorrelationValidation

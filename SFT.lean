@@ -11307,3 +11307,15 @@ import SFT.Chemistry.EquilibriumIsotopeFractionationAnalysis
 import SFT.Chemistry.EquilibriumIsotopeFractionationExperiment
 
 import SFT.Chemistry.EquilibriumIsotopeFractionationValidation
+
+import SFT.Chemistry.RadiotracerCustody
+
+import SFT.Chemistry.RadiotracerCustodyGrammar
+
+import SFT.Chemistry.RadiotracerCustodyEvidence
+
+import SFT.Chemistry.RadiotracerCustodyAnalysis
+
+import SFT.Chemistry.RadiotracerCustodyExperiment
+
+import SFT.Chemistry.RadiotracerCustodyValidation

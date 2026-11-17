@@ -1,0 +1,41 @@
+from pathlib import Path
+import json,hashlib,re,shutil,datetime
+w=Path('work');r=w/'turn1064_recovery';cid='SFT-CHEM-RADIOCHEMICAL-SEPARATION-DECONTAMINATION-010';now=datetime.datetime.now(datetime.timezone.utc).isoformat();H=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+reports=['separation1141_core_report.json','separation_grammar1141_entry_audit_report.json','separation1141_analysis_source_audit_report.json','separation1141_validation_source_audit_report.json','separation1141_program_report.json','separation1141_empirical_report.json','separation1141_original_report.json','separation1141_extraction_reuse.json']
+for n in reports:assert json.loads((w/n).read_text())['status']=='PASS',n
+cases=json.loads((w/'separation1141_independent_report.json').read_text());assert len(cases)==4 and all(x['result']['passed']==(x['case']=='original')for x in cases)
+assert json.loads((w/'separation1141_empirical_output.json').read_text())==json.loads((w/'separation1141_original_empirical.json').read_text())
+source=w/'pinned1140/sft/chemistry/radiochemical_separation_law_v1.py';core=json.loads((w/'separation1141_core_report.json').read_text());assert H(source)==core['source_sha256'];assert H(r/'SFT/Chemistry/RadiochemicalSeparation.lean')==core['native_sha256']
+mods={'RadiochemicalSeparation': ('sft/chemistry/radiochemical_separation_law_v1.py', 'Original eight-field ledger;family and label distinctness,exact positive species balance;recovery,decontamination,residual custody;all eight witnesses and universal accepted-species conservation theorem.'), 'RadiochemicalSeparationGrammar': ('sft/chemistry/radiochemical_separation_law_v1.py', 'All eight binary dimensions,256alternatives,originaldecisions,exhaustion and unique survivor.'), 'RadiochemicalSeparationEvidence': ('sft/chemistry/generated_observational_law.py', 'Complete original registration,census,closure,controls andprogramme hashes.'), 'RadiochemicalSeparationAnalysis': ('sft/chemistry/nuchem_terminal_validation_v1.py', 'Original010 eight checks and nine-field summary;unchanged four-source authority/surface guards reused.'), 'RadiochemicalSeparationExperiment': ('sft/chemistry/nuchem_terminal_batch_v1.py', 'Original010 registration,prediction,spec guards,target identities and envelope.'), 'RadiochemicalSeparationValidation': ('sft/chemistry/nuchem_terminal_validation_v1.py', 'Original010 postseal custody,omission control,isolation andtwelve-field empirical receipt,including originalexposure disclosure.')}
+for n in reports[1:4]:
+ d=json.loads((w/n).read_text());log=(w/n.replace('_report.json','.log')).read_text();assert log.count('does not depend on any axioms')==d['count'] and 'depends on axioms'not in log
+ for module,h in d['source_sha256'].items():assert H(r/('SFT/Chemistry/'+module+'.lean'))==h
+log=(w/'separation1141_core_entry_audit.log').read_text();assert log.count('does not depend on any axioms')==24 and 'depends on axioms'not in log
+assert 24+sum(json.loads((w/n).read_text())['count']for n in reports[1:4])==133
+cov=json.loads((r/'COVERAGE.json').read_text());by={x['claim_id']:x for x in cov['claims']};entry=by[cid];assert entry['lean_status']=='pending';assert all(by[x]['lean_status']=='complete'for x in entry['v3_registration']['dependencies']);assert len(entry['v3_registration']['dependencies'])==6
+old=cov['summary'].copy();receipt='verification/TURN_1141_SEPARATION_COMPLETION.json';corr=json.loads((r/'reference/CORRESPONDENCE.json').read_text());oldnames=set(re.findall(r'^#print axioms (\S+)',(r/'Audit.lean').read_text(),re.M));newnames=[];hashes={}
+for mod,(src,scope)in mods.items():
+ rel='SFT/Chemistry/'+mod+'.lean';hashes[rel]=H(r/rel);names=['SFT.Chemistry.'+mod+'.'+x for x in re.findall(r'^theorem (\w+)',(r/rel).read_text(),re.M)];newnames.extend(x for x in names if x not in oldnames)
+ corr['modules'].append({'lean_module':rel,'v3_claim':cid,'source_path':src,'lean_source_sha256':hashes[rel],'domain':scope,'remaining':[],'completion_evidence':receipt})
+ imp='import '+rel[:-5].replace('/','.')
+ if imp not in (r/'SFT.lean').read_text().splitlines():
+  with(r/'SFT.lean').open('a')as f:f.write('\n'+imp+'\n')
+with(r/'Audit.lean').open('a')as f:f.write(''.join('#print axioms '+x+'\n'for x in newnames))
+evidence=reports+['separation1141_independent_report.json','separation1141_empirical_output.json','separation1141_original_empirical.json','separation1141_source_pin.json','check_separation1141_program.py','check_separation1141_empirical.py','prepare_separation1141_empirical.py']
+for n in evidence:shutil.copy2(w/n,r/'verification'/('TURN_1141_'+n))
+record={'status':'complete','claim_id':cid,'registered_at':now,'source_commit':'76f1b34e9e9682989adcbb088797b4ae4ce4fcf1','lean_source_sha256':hashes,'source_component_correspondence':{m:{'source':p,'component':s}for m,(p,s)in mods.items()},'candidate_rows':256,'ledger_cases':162,'residual_cases':25,'same_label_rejection':True,'original_witnesses':8,'audited_declarations':133,'axiom_dependencies':[],'dependencies':entry['v3_registration']['dependencies'],'source_extraction':'Exact previously verified four-source extraction reused for unchanged files; see separation1141_extraction_reuse.json; new original010analysis/receipt computed.','checks':{n:H(w/n)for n in evidence},'remaining':[]};(r/receipt).write_text(json.dumps(record,indent=2)+'\n')
+entry.update(lean_status='complete',remaining=[],lean_modules=list(hashes),completion_evidence=receipt,verified_scope='; '.join(v[1]for v in mods.values()),artifact_runtime_parity='PASS complete256programme,three independent adverse cases,twelve-field empiricalreceipt/allhashes,133empty-axiom declarations,188core outcomes.')
+count=sum(x['lean_status']=='complete'for x in cov['claims']);assert count==old['fully_reconstructed_claims']+1
+cov['summary'].update(fully_reconstructed_claims=count,pending=sum(x['lean_status']=='pending'for x in cov['claims']),axiom_free_exported_results=old['axiom_free_exported_results']+len(newnames),axiom_free_audited_definitions_and_theorems=old['axiom_free_audited_definitions_and_theorems']+133);cov['updated_at']=now;(r/'COVERAGE.json').write_text(json.dumps(cov,indent=2)+'\n');corr['audited_theorems']=sorted(set(corr['audited_theorems'])|set(newnames));(r/'reference/CORRESPONDENCE.json').write_text(json.dumps(corr,indent=2)+'\n')
+candidates=int(re.search(r'([0-9,]+) candidate records matched',(r/'README.md').read_text())[1].replace(',',''))
+for fn in ['README.md','docs/assets/sft-banner.svg','ZENODO_PAPER_DRAFT.txt']:
+ p=r/fn;s=p.read_text().replace(f'{candidates:,}',f'{candidates+256:,}')
+ for suffix in [' / 2,781',' V3 entries verified',' model entries',' completed entries',' completed source entries',' source entries']:s=s.replace(str(old['fully_reconstructed_claims'])+suffix,str(count)+suffix)
+ for key in ['axiom_free_exported_results','axiom_free_audited_definitions_and_theorems']:s=s.replace(f'{old[key]:,}',f'{cov["summary"][key]:,}')
+ s=s.replace(f'{old["pending"]:,} entries remain pending',f'{cov["summary"]["pending"]:,} entries remain pending')
+ if fn=='README.md':s=re.sub(r'(\[latest completion evidence\]\()[^)]+',lambda m:m.group(1)+receipt,s)
+ s=s.replace('The complete native programme and empirical comparisons remain running for the separation entry.','The complete native programme and empirical comparisons pass; the separation entry is registered complete.')
+ p.write_text(s)
+with(r/'TIMELINE.txt').open('a')as f:f.write('\nTURN1141 registration '+now+' — RadiochemicalSeparation complete at'+str(count)+'. Allsix prerequisites complete;133empty-axiom declarations,256original programme cases,original/threeadverse independent cases,twelve-field empirical receipt and188core comparisons PASS.\n')
+with(r/'ZENODO_PAPER_DRAFT.txt').open('a')as f:f.write('\nRadiochemical separation verification is complete. All 256 original forms, eight operational witnesses, three independent adverse cases and the full twelve-field empirical receipt match V3. All 133 audited declarations have empty axiom dependencies, including exact species balance for every accepted ledger. Source correspondence: '+receipt+'. Timeline TURN1141.\n')
+p=r/'CONTINUATION_STATE.json';s=json.loads(p.read_text());s['separation1141_completion']={'count':count,'receipt':receipt};p.write_text(json.dumps(s,indent=2)+'\n');print(count)

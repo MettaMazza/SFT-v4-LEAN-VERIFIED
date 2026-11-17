@@ -56637,8 +56637,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-CONFIGURATION-ORDER-PATH-011-3860aa331987bef8.json",
       "statement": "A molecular configuration surface is an exact generated configuration graph, not a continuum premise. Each node retains its carrier, coordinate, exact positive height above structural EmptyOne and record; complete neighbour order forces stable basins and barriers, connected adjacency forces reaction paths, and periodic recurrence identifies its terminal configuration with its initial class.",
       "title": "Exact molecular configuration order, basin, barrier and path law",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Chemistry/ConfigurationOrder.lean",
+        "SFT/Chemistry/ConfigurationOrderGrammar.lean",
+        "SFT/Chemistry/ConfigurationOrderEvidence.lean",
+        "SFT/Chemistry/ConfigurationObservation.lean",
+        "SFT/Chemistry/ConfigurationTargets.lean",
+        "SFT/Chemistry/ConfigurationOrderExperiment.lean",
+        "SFT/Chemistry/ConfigurationOrderValidation.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "3978687363408e826898e7fdb2d39ced09ca49dfbd44b2f1feae3b2745102aa5",
       "v3_registration": {
@@ -56684,7 +56692,12 @@
         "statement": "A molecular configuration surface is an exact generated configuration graph, not a continuum premise. Each node retains its carrier, coordinate, exact positive height above structural EmptyOne and record; complete neighbour order forces stable basins and barriers, connected adjacency forces reaction paths, and periodic recurrence identifies its terminal configuration with its initial class.",
         "status": "empirically_tested",
         "title": "Exact molecular configuration order, basin, barrier and path law"
-      }
+      },
+      "remaining": [
+        "Finish retained original programme comparison and independent controls",
+        "Finish native full empirical receipt comparison to the original50row validator",
+        "Register completion from source-bound checks"
+      ]
     },
     {
       "branch": "chemistry",
@@ -199992,8 +200005,8 @@
   "updated_at": "2026-11-17T16:53:41.953193+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 0,
-    "pending": 2031,
+    "in_progress": 1,
+    "pending": 2030,
     "fully_reconstructed_claims": 750,
     "axiom_free_exported_results": 48310,
     "axiom_free_audited_definitions_and_theorems": 107276

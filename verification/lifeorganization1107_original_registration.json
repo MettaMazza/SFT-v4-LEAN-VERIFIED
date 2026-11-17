@@ -1,0 +1,74 @@
+{
+  "experiment_id": "SFT-EXP-BIO-LIFE-ORGANIZATION-001-E1",
+  "claim_id": "SFT-BIO-LIFE-ORGANIZATION-001",
+  "frozen_relation": "bounded-process-carrier__self-maintaining-transition-relation__identity-through-turnover__viability-window-declared__complete-state-transition-control-record__root-bound-forward-forcing__positive-finite-successor-and-adverse-closure__no-extra-rule",
+  "target_id": "sft-bio-life-organization-001-authority-correspondence",
+  "source_references": [
+    [
+      "SFT-BIO-SRC-NASEM-UNITY-BIOLOGY-2010",
+      "https://www.ncbi.nlm.nih.gov/books/NBK32506/?report=printable",
+      "experiments/external_sources/biology/snapshots/sft-bio-src-nasem-unity-biology-2010.html",
+      "sha256:62b53a959de8aa5b377997063a3a2719a87ff029a99f36225a383c7a4cfad9e6"
+    ],
+    [
+      "SFT-BIO-SRC-NCBI-CELL-ORIGIN-METABOLISM",
+      "https://www.ncbi.nlm.nih.gov/books/NBK9841/?report=printable",
+      "experiments/external_sources/biology/snapshots/sft-bio-src-ncbi-cell-origin-metabolism.html",
+      "sha256:ce64ef3e815f9a4f14dc6938e708f449bfd3a39de108c317aac8a941bff68b6b"
+    ]
+  ],
+  "required_fragments": [
+    [
+      "SFT-BIO-SRC-NASEM-UNITY-BIOLOGY-2010",
+      "cell is the smallest independent unit of life"
+    ],
+    [
+      "SFT-BIO-SRC-NCBI-CELL-ORIGIN-METABOLISM",
+      "metabolic energy"
+    ]
+  ],
+  "pre_source_seal_path": "experiments/sealed_predictions/biology_foundation_complete_pre_source.json",
+  "pre_source_seal_hash": "sha256:4b3e1ba191d363a1b67e1a02853f071cdf2c9d3d86081fced05ab3c5d079e639",
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-BIO-LIFE-ORGANIZATION-001-E1-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "biology-observation",
+          "biology:bounded-process-carrier__self-maintaining-transition-relation__identity-through-turnover__viability-window-declared"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "expected_observation_label": "biology:bounded-process-carrier__self-maintaining-transition-relation__identity-through-turnover__viability-window-declared",
+  "falsification_condition": "Reject if any registered authoritative biological source contradicts a required content relation, if a generated alternative also preserves every dimension, or if any specimen, control, adverse row, condition or provenance distinction is missing.",
+  "all_source_rows_required": true,
+  "source_content_absent_until_after_complete_branch_seal": true,
+  "target_inaccessible_before_prediction_seal": true,
+  "failed_source_transports_and_content_responses_preserved": true
+}

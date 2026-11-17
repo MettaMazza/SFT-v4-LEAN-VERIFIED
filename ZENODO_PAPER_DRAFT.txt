@@ -29134,3 +29134,18 @@ The complete native empirical return also agrees with all 12 original fields and
 
 IsotopeExchange equilibrium verification result
 The preceding exact four-inventory exchange derivation and original256-form grammar are registered complete. All137audited declarations have empty axiom dependencies. The full native empirical validator reproduces12original fields, three measurement messages and every returned hash; the original five-source empirical boundary is preserved. Source: pinned sft/chemistry/isotope_exchange_law_v1.py and nuchem_fractionation_validation_v1.py. Native: SFT/Chemistry/IsotopeExchange.lean and IsotopeExchangeValidation.lean::validate. Timeline TURN1129; receipt verification/TURN_1129_ISOTOPE_EXCHANGE_COMPLETION.json.
+
+Multicentre edge-scan preservation and the connected attachment step
+Let C be the retained list of molecular centres, E the ordered list of support edges, and S_E(R) the source edge scan starting from reached centres R. Each incident edge inserts its endpoints only when absent. Therefore there is a suffix T such that
+  S_E(R) = R ++ T,     |S_E(R)| = |R| + |T| >= |R|.
+The source stopping condition is not merely a comparison of unrelated counts. If |S_E(R)| <= |R|, the displayed identity forces |T| = 0, hence T = [] and S_E(R) = R. Every remaining recursive scan then retains R unchanged.
+If both endpoints of every edge in E occur in C, processing each edge inserts neither endpoint, so induction over E gives
+  S_E(C) = C.
+For a retained anchor a in C and a fresh centre f not in C, concatenation of scans and the insertion guards give the original attachment step:
+  S_(E ++ [(a,f)])(C)
+    = S_[(a,f)](S_E(C))
+    = S_[(a,f)](C)
+    = addReached(addReached(C,a),f)
+    = C ++ [f].
+Thus the scan retains the existing complete reached list and adds the connected centre without a separate interaction rule. These equations concern the actual source edge-scan and endpoint-custody operations. The existing retained-word derivation supplies the corresponding complete support-word and non-pair statements.
+Original source: pinned sft/chemistry/multicentre_support_law_v1.py::_connected, DelocalizedMolecularSupport.__post_init__, and DIMENSIONS[extension]. Lean verification: SFT/Chemistry/MulticentreDerivation.lean::addReachedRetainsPrefix, scanEdgesRetainsPrefix, scanEdgesLengthMonotone, scanEdgesStopsExactly, connectedScanAtFixedPoint, scanRegisteredCentresFixed, scanEdgesConcatenation, attachedCentreReached. All15 declarations in this derivation module have empty axiom dependencies. Timeline TURN1131. Evidence: verification/TURN_1131_multicentrederivation1131_entry_audit_report.json.

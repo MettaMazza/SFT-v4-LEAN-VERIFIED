@@ -11379,3 +11379,23 @@ import SFT.Chemistry.FissionProductDistributionAnalysis
 import SFT.Chemistry.FissionProductDistributionExperiment
 
 import SFT.Chemistry.FissionProductDistributionValidation
+
+import SFT.Chemistry.CoordinationNumber
+
+import SFT.Chemistry.CoordinationNumberDerivation
+
+import SFT.Chemistry.CoordinationNumberGrammar
+
+import SFT.Chemistry.CoordinationNumberEvidence
+
+import SFT.Chemistry.CoordinationNumberPrediction
+
+import SFT.Chemistry.CoordinationNumberSource
+
+import SFT.Chemistry.CoordinationNumberAnalysis
+
+import SFT.Chemistry.CoordinationNumberComparison
+
+import SFT.Chemistry.CoordinationNumberExperiment
+
+import SFT.Chemistry.CoordinationNumberValidation

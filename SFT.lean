@@ -11319,3 +11319,51 @@ import SFT.Chemistry.RadiotracerCustodyAnalysis
 import SFT.Chemistry.RadiotracerCustodyExperiment
 
 import SFT.Chemistry.RadiotracerCustodyValidation
+
+import SFT.Chemistry.KineticIsotopeFractionation
+
+import SFT.Chemistry.KineticIsotopeFractionationGrammar
+
+import SFT.Chemistry.KineticIsotopeFractionationEvidence
+
+import SFT.Chemistry.KineticIsotopeFractionationAnalysis
+
+import SFT.Chemistry.KineticIsotopeFractionationExperiment
+
+import SFT.Chemistry.KineticIsotopeFractionationValidation
+
+import SFT.Chemistry.MolecularStateTransition
+
+import SFT.Chemistry.MolecularStateTransitionDerivation
+
+import SFT.Chemistry.MolecularStateTransitionGrammar
+
+import SFT.Chemistry.MolecularStateTransitionEvidence
+
+import SFT.Chemistry.StateTransitionSurface
+
+import SFT.Chemistry.StateTransitionPrediction
+
+import SFT.Chemistry.StateTransitionInscription
+
+import SFT.Chemistry.StateTransitionTargets
+
+import SFT.Chemistry.StateTransitionComparison
+
+import SFT.Chemistry.StateTransitionControls
+
+import SFT.Chemistry.StateTransitionExperiment
+
+import SFT.Chemistry.StateTransitionValidation
+
+import SFT.Chemistry.RadiochemicalSeparation
+
+import SFT.Chemistry.RadiochemicalSeparationGrammar
+
+import SFT.Chemistry.RadiochemicalSeparationEvidence
+
+import SFT.Chemistry.RadiochemicalSeparationAnalysis
+
+import SFT.Chemistry.RadiochemicalSeparationExperiment
+
+import SFT.Chemistry.RadiochemicalSeparationValidation

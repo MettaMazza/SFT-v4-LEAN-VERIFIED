@@ -10949,3 +10949,15 @@ import SFT.Biology.LifeOrganizationSeal
 import SFT.Biology.LifeOrganizationExperiment
 
 import SFT.Biology.LifeOrganizationValidation
+
+import SFT.Chemistry.RadioactiveChemicalTransformation
+
+import SFT.Chemistry.RadioactiveTransformationGrammar
+
+import SFT.Chemistry.RadioactiveTransformationEvidence
+
+import SFT.Chemistry.RadioactiveTransformationAnalysis
+
+import SFT.Chemistry.RadioactiveTransformationExperiment
+
+import SFT.Chemistry.RadioactiveTransformationValidation

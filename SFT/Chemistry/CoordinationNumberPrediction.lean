@@ -69,8 +69,8 @@ def predictionDocument (actualHash : String) (document : J) : Except String J :=
   let (newInstructions,newTable) ← recordInstructions ordinal row
   return (instructions++newInstructions,table++newTable))
   ([ElectronSpinPrediction.instruction "input" "premise" ["registered-premise"]],[])
- let instructions := instructions++[ElectronSpinPrediction.instruction "table" "complete-coordination-structure-vector" table,
-  ElectronSpinPrediction.instruction "emit" "" ["complete-coordination-structure-vector"]]
+ let instructions := instructions++[ElectronSpinPrediction.instruction "table" "complete-coordination-number-vector" table,
+  ElectronSpinPrediction.instruction "emit" "" ["complete-coordination-number-vector"]]
  return .object [("schema",.text "sft-v3-fold-program/1"),
   ("program_id",.text "SFT-EXP-CHEM-COORDINATION-NUMBER-INCIDENCE-COUNT-002-value-free-complete-vector"),
   ("instructions",.array instructions)]

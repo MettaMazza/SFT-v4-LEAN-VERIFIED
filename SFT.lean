@@ -11567,3 +11567,17 @@ import SFT.Biology.MembraneSource
 import SFT.Biology.MembraneExperiment
 
 import SFT.Biology.MembraneValidation
+
+import SFT.Chemistry.ResolvedRovibronic
+
+import SFT.Chemistry.ResolvedRovibronicAnalysis
+
+import SFT.Chemistry.ResolvedRovibronicGrammar
+
+import SFT.Chemistry.ResolvedRovibronicEvidence
+
+import SFT.Chemistry.ResolvedRovibronicExperiment
+
+import SFT.Chemistry.ResolvedRovibronicValidation
+
+import SFT.Chemistry.ResolvedRovibronicInduction

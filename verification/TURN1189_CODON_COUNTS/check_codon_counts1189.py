@@ -1,0 +1,17 @@
+from pathlib import Path
+import os,sys,subprocess,json,hashlib,re,time,runpy
+w=Path('work');r=w/'turn1064_recovery';p=r/'SFT/Biology/CodonCounts.lean';source=w/'pinned1183/sft/biology/structural_counts.py'
+source_bytes=subprocess.check_output(['git','-C','/Volumes/One Touch/ernos-labs-sft-platform','show','76f1b34e9e9682989adcbb088797b4ae4ce4fcf1:sft/biology/structural_counts.py']);assert source.read_bytes()==source_bytes
+original=runpy.run_path(str(source));expected={'held_pair_alphabet':original['held_pair_alphabet'](),'codon_words':original['codon_words'](),'codon_boxes':list(original['codon_boxes']().items()),'exact_codon_certificate':original['exact_codon_certificate'](),'validation':original['validate_structural_counts']()};expected=json.loads(json.dumps(expected));(w/'codon_counts1189_original.json').write_text(json.dumps(expected,indent=2)+'\n')
+while sum(x.strip().endswith('/bin/lean')for x in subprocess.check_output(['ps','-axo','comm'],text=True).splitlines())>=4:time.sleep(15)
+env=dict(os.environ,LEAN_PATH=str(Path.home()/'.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean')+':'+str(r.resolve())+':/Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/lib/lean');cmd=[sys.executable,'work/run_lean_guarded.py',str(Path.home()/'.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean'),'-j1','-M8192']
+with(w/'codon_counts1189_build.log').open('w')as f:subprocess.run(cmd+['-o',str(p.with_suffix('.olean')),str(p)],env=env,stdout=f,stderr=subprocess.STDOUT,check=True)
+names=['SFT.Biology.CodonCounts.'+n for n in re.findall(r'^(?:def|theorem) (\w+)',p.read_text(),re.M)];audit=w/'CodonCountsAudit1189.lean';audit.write_text('import SFT.Biology.CodonCounts\n'+''.join('#print axioms '+n+'\n'for n in names))
+with(w/'codon_counts1189_audit.log').open('w')as f:subprocess.run(cmd+[str(audit)],env=env,stdout=f,stderr=subprocess.STDOUT,check=True)
+log=(w/'codon_counts1189_audit.log').read_text();assert log.count('does not depend on any axioms')==len(names) and 'depends on axioms:'not in log
+with(w/'codon_counts1189_native.json').open('w')as out,(w/'codon_counts1189_execution.log').open('w')as err:subprocess.run(cmd+['--run','work/CodonCountsProgram1189.lean'],env=env,stdout=out,stderr=err,check=True)
+actual=json.loads((w/'codon_counts1189_native.json').read_text());assert actual==expected,[k for k in expected if expected[k]!=actual.get(k)]
+report=dict(status='PASS',source_commit='76f1b34e9e9682989adcbb088797b4ae4ce4fcf1',source='sft/biology/structural_counts.py',source_sha256=hashlib.sha256(source_bytes).hexdigest(),lean_source_sha256=hashlib.sha256(p.read_bytes()).hexdigest(),declarations=names,count=len(names),axioms=[],alphabet_labels=len(actual['held_pair_alphabet']),ordered_words=len(actual['codon_words']),ordered_boxes=len(actual['codon_boxes']),certificate_fields=len(actual['exact_codon_certificate']),full_outputs_equal=True)
+sort_rel='SFT/Chemistry/StateEnergyOrder.lean';sort_hash=hashlib.sha256((r/sort_rel).read_bytes()).hexdigest();assert sort_hash=='ef7b093ff9e504131d92dd963dce0d32b2a5ec0ba99a022fb7c009c45a0eed5f'
+report['reused_sort']={'module':sort_rel,'source_sha256':sort_hash,'declaration':'SFT.Chemistry.StateEnergyOrder.sortPositions','existing_completion_receipt':'verification/TURN_1087_STATE_ENERGY_ORDER_COMPLETION.json'}
+(w/'codon_counts1189_report.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report),flush=True)

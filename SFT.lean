@@ -10879,3 +10879,45 @@ import SFT.Materials.BoundaryEdgeCountSource
 import SFT.Materials.BoundaryEdgeCountExperiment
 
 import SFT.Materials.BoundaryEdgeCountValidation
+
+import SFT.Chemistry.StateSymmetry
+
+import SFT.Chemistry.StateSymmetryWitnesses
+
+import SFT.Chemistry.StateSymmetryGrammar
+
+import SFT.Chemistry.StateSymmetryEvidence
+
+import SFT.Chemistry.StateSymmetrySource
+
+import SFT.Chemistry.StateSymmetryPrediction
+
+import SFT.Chemistry.StateSymmetryComparison
+
+import SFT.Chemistry.StateSymmetryExperiment
+
+import SFT.Chemistry.StateSymmetryControls
+
+import SFT.Chemistry.StateSymmetryValidation
+
+import SFT.Chemistry.PairExchange
+
+import SFT.Chemistry.PairExchangeWitnesses
+
+import SFT.Chemistry.PairExchangeGrammar
+
+import SFT.Chemistry.PairExchangeEvidence
+
+import SFT.Chemistry.PairExchangeSource
+
+import SFT.Chemistry.PairExchangeTargets
+
+import SFT.Chemistry.PairExchangePrediction
+
+import SFT.Chemistry.PairExchangeComparison
+
+import SFT.Chemistry.PairExchangeExperiment
+
+import SFT.Chemistry.PairExchangeControls
+
+import SFT.Chemistry.PairExchangeValidation

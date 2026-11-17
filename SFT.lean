@@ -11007,3 +11007,15 @@ import SFT.Chemistry.JointCorrelationExperiment
 import SFT.Chemistry.JointCorrelationControls
 
 import SFT.Chemistry.JointCorrelationValidation
+
+import SFT.Chemistry.RadiochemicalEquilibrium
+
+import SFT.Chemistry.RadiochemicalGrammar
+
+import SFT.Chemistry.RadiochemicalEvidence
+
+import SFT.Chemistry.RadiochemicalAnalysis
+
+import SFT.Chemistry.RadiochemicalExperiment
+
+import SFT.Chemistry.RadiochemicalValidation

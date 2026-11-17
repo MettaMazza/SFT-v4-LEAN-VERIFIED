@@ -11031,3 +11031,15 @@ import SFT.Biology.LifeChemicalBoundarySource
 import SFT.Biology.LifeChemicalBoundaryExperiment
 
 import SFT.Biology.LifeChemicalBoundaryValidation
+
+import SFT.Chemistry.IsotopeExchange
+
+import SFT.Chemistry.IsotopeExchangeGrammar
+
+import SFT.Chemistry.IsotopeExchangeEvidence
+
+import SFT.Chemistry.IsotopeExchangeAnalysis
+
+import SFT.Chemistry.IsotopeExchangeExperiment
+
+import SFT.Chemistry.IsotopeExchangeValidation

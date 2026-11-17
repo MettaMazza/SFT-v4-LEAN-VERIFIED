@@ -11605,3 +11605,51 @@ import SFT.Biology.NestedCompartmentSource
 import SFT.Biology.NestedCompartmentExperiment
 
 import SFT.Biology.NestedCompartmentValidation
+
+import SFT.Biology.CompartmentProvenance
+
+import SFT.Biology.CompartmentProvenanceGrammar
+
+import SFT.Biology.CompartmentProvenanceEvidence
+
+import SFT.Biology.CompartmentProvenanceSource
+
+import SFT.Biology.CompartmentProvenanceExperiment
+
+import SFT.Biology.CompartmentProvenanceValidation
+
+import SFT.Biology.Metabolism
+
+import SFT.Biology.MetabolismGrammar
+
+import SFT.Biology.MetabolismEvidence
+
+import SFT.Biology.MetabolismSource
+
+import SFT.Biology.MetabolismExperiment
+
+import SFT.Biology.MetabolismValidation
+
+import SFT.Biology.ResourceUptake
+
+import SFT.Biology.ResourceUptakeGrammar
+
+import SFT.Biology.ResourceUptakeEvidence
+
+import SFT.Biology.ResourceUptakeSource
+
+import SFT.Biology.ResourceUptakeExperiment
+
+import SFT.Biology.ResourceUptakeValidation
+
+import SFT.Biology.MetabolicTransformation
+
+import SFT.Biology.MetabolicTransformationGrammar
+
+import SFT.Biology.MetabolicTransformationEvidence
+
+import SFT.Biology.MetabolicTransformationSource
+
+import SFT.Biology.MetabolicTransformationExperiment
+
+import SFT.Biology.MetabolicTransformationValidation

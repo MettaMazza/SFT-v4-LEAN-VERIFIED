@@ -1,0 +1,74 @@
+{
+  "experiment_id": "SFT-EXP-MED-PATIENT-IDENTITY-001-E1",
+  "claim_id": "SFT-MED-PATIENT-IDENTITY-001",
+  "frozen_relation": "consented-person-record__same-person-across-episodes__identity-with-held-linkage__declared-care-context-and-interval__complete-protocol-state-transition-adverse-null-record__root-bound-forward-forcing__positive-finite-successor-and-unfavorable-closure__no-extra-rule",
+  "target_id": "sft-med-patient-identity-001-authority-correspondence",
+  "source_references": [
+    [
+      "MED-WHO-HEALTH-001",
+      "https://www.who.int/about/frequently-asked-questions",
+      "experiments/external_sources/medicine/snapshots/MED-WHO-HEALTH-001.html",
+      "sha256:274c2ad78787f127a9f1cf8a479c691e1f89b263d0e21dd49b1753f7805d64f4"
+    ],
+    [
+      "MED-ICH-E6R3-001",
+      "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf",
+      "experiments/external_sources/medicine/snapshots/MED-ICH-E6R3-001.pdf",
+      "sha256:e6ce19e36ce7d2e294f89ee89492b9e035178c3cca48984392bbd92eec9b002c"
+    ]
+  ],
+  "required_fragments": [
+    [
+      "MED-WHO-HEALTH-001",
+      "physical, mental and social well-being"
+    ],
+    [
+      "MED-ICH-E6R3-001",
+      "rights, safety and well-being"
+    ]
+  ],
+  "pre_source_seal_path": "experiments/sealed_predictions/medicine_foundation_complete_pre_source.json",
+  "pre_source_seal_hash": "sha256:57b0813078b36814b831862db7e888601d8e1c1d2820f7429915431bf6066cd5",
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-MED-PATIENT-IDENTITY-001-E1-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "medicine-observation",
+          "medicine:consented-person-record__same-person-across-episodes__identity-with-held-linkage__declared-care-context-and-interval"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "expected_observation_label": "medicine:consented-person-record__same-person-across-episodes__identity-with-held-linkage__declared-care-context-and-interval",
+  "falsification_condition": "Reject if any registered authoritative medical source contradicts a required relation, if another generated form preserves every dimension, or if any patient, arm, outcome, adverse, null, missing, consent or provenance distinction is erased.",
+  "all_source_rows_required": true,
+  "source_content_absent_until_after_complete_branch_seal": true,
+  "target_inaccessible_before_prediction_seal": true,
+  "failed_source_transports_and_content_responses_preserved": true
+}

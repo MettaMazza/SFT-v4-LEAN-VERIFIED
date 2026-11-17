@@ -1,7 +1,7 @@
 # Charged-lepton mass ratios and the exact Koide invariant from Fold geometry
 
 **Maria Smith** · Ernos Labs  
-Standalone paper 3 · Version 1.0 · 17 November 2026 · DOI: 10.5281/zenodo.24324728
+Standalone paper 3 · Version 1.1 · 17 November 2026 · DOI: 10.5281/zenodo.24325169
 
 ## Abstract
 
@@ -307,6 +307,34 @@ The resulting exact rational endpoints, retained in the accompanying arithmetic 
  [0.66658265955384626148\ldots,\ 0.66673848847304794479\ldots].
 \]
 They enclose the sealed value \(2/3\). `KoideComparison.sourceAssembly` proves composition from the two parsed rows, and `nativeSourceAssembly` instantiates it with the registered snapshot. The numeric precheck precedes the complete blind-validation protocol; a failed precheck stops delegation. Both original and versioned Koide registrations retain this numeric result, both complete target rows and their adverse controls.
+
+### 9.1. Central-value residual
+
+The two central values give exact positive ratios
+\[
+ A_0=\frac{2067682827}{10000000},\qquad
+ B_0=\frac{118927}{2000000},\qquad
+ T_0=\frac{A_0}{B_0}=\frac{2067682827}{594635}.
+\]
+The central-value comparison is
+\[
+ Q_0=\frac{1+A_0+T_0}{(1+\sqrt{A_0}+\sqrt{T_0})^2}.
+\]
+Apply the original 160-bit positive square-root enclosure separately to \(A_0\) and \(T_0\). If their returned bounds are \([a_-,a_+]\) and \([t_-,t_+]\), positivity gives the exact outward interval
+\[
+ \frac{1+A_0+T_0}{(1+a_++t_+)^2}
+ \le Q_0\le
+ \frac{1+A_0+T_0}{(1+a_-+t_-)^2}.
+\]
+Its width is below \(10^{-45}\); both endpoints round to the same displayed digits:
+\[
+\begin{aligned}
+ Q_0&\simeq0.66666056927693233980,\\
+ Q_0-\frac23&\simeq-0.000006097389734326867903,\\
+ \frac{Q_0-2/3}{2/3}&\simeq-9.146084601490302\times10^{-6}.
+\end{aligned}
+\]
+Thus the source central values lie approximately 9.146 parts per million below the exact invariant. The signed residual is a central-value comparison. The full-uncertainty test above propagates both complete source intervals and contains \(2/3\). The accompanying arithmetic record retains the exact rational outward endpoints for both calculations, and the reproduction script evaluates them using the original enclosure operation.
 
 ## 10. Native verification and reproducibility
 

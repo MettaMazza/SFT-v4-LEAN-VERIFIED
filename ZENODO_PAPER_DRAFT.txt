@@ -5298,8 +5298,12 @@ These are admissibility conditions, preserving the source requirement for an exe
 For a disclosed record r, verification is the conjunction of admitted machine construction, run(request)=ok(observed), successful resourceLedger(observed,occupied), and validity of its declared external ledger. Expanding these four conjuncts reconstructs
 
 \[
- observed=b\mathbin{++}[t],\quad P(initial,actions,b,t),\quad
- \pi_2(timeTrace)=observed,\quad spaceSupport=occupied,\quad timeCount=|actions|+1.
+\begin{gathered}
+observed=b\mathbin{++}[t],\quad P(initial,actions,b,t),\quad
+ \\
+\pi_2(timeTrace)=observed,\quad spaceSupport=occupied,\quad \\
+timeCount=|actions|+1.
+\end{gathered}
 \]
 
 Every external answer is registered by the ledger induction. A different successful actual output contradicts equality of the two successful run results. An execution error contradicts the success constructor. An undeclared oracle identity contradicts external validity.
@@ -6818,11 +6822,15 @@ Mismatched identities, invalid proof traces and missing conclusions cannot pass 
 
 A boundary \(B\) records source and program identities, program \(e\), specification \(\sigma\), input list \(S\), premises \(P\), rules \(R\), and conclusion \(c\). A proof object \(p\) supplies its identities and step list \(T\). The exact checker theorem is
 \[
- \operatorname{check}(B,p)=\operatorname{true}\iff
- p.\operatorname{sourceId}=B.\operatorname{sourceId}
+\begin{gathered}
+\operatorname{check}(B,p)=\operatorname{true}\iff
+ \\
+p.\operatorname{sourceId}=B.\operatorname{sourceId}
  \land p.\operatorname{programId}=B.\operatorname{programId}
- \land\operatorname{AcceptedTrace}(R,P,T)
+ \\
+\land\operatorname{AcceptedTrace}(R,P,T)
  \land c\in\operatorname{afterSteps}(P,T).
+\end{gathered}
 \]
 The registered interpretation \(\mu\) retains the proof obligations
 \[
@@ -7568,11 +7576,15 @@ The complete 256-form Communication grammar, original operational witnesses, con
 
 For send event \(s\), receive event \(t\), and channel row \(r\), compatibility is the conjunction
 \[
- s.\operatorname{process}=r.\operatorname{sender},\quad
+\begin{gathered}
+s.\operatorname{process}=r.\operatorname{sender},\quad
  t.\operatorname{process}=r.\operatorname{receiver},\quad
- s.\operatorname{content}=r.\operatorname{input},\quad
+ \\
+s.\operatorname{content}=r.\operatorname{input},\quad
  t.\operatorname{content}=r.\operatorname{output},\quad
- s.\operatorname{message}=t.\operatorname{message}.
+ \\
+s.\operatorname{message}=t.\operatorname{message}.
+\end{gathered}
 \]
 The complete candidate list is the ordered product of all sends, receives and channel rows. Filtering it gives
 \[
@@ -7949,11 +7961,16 @@ Credential acceptance is not assumed to establish the actual actor. The complete
 
 Write \(A,P,C,Q,R\) for the registered attempts, principals, credentials, challenges and response rows. For an attempt \(a\), the exact acceptance predicate is
 \[
- \operatorname{Accept}(a)\iff
- a\in A\land a_{\rm claimed}\in P\land a_{\rm challenge}\in Q
- \land\exists c\in C\,
+\begin{gathered}
+\operatorname{Accept}(a)\iff
+ \\
+a\in A\land a_{\rm claimed}\in P\land a_{\rm challenge}\in Q
+ \\
+\land\exists c\in C\,
  (c_{\rm identity}=a_{\rm credential}\land c_{\rm principal}=a_{\rm claimed})
- \land(a_{\rm credential},a_{\rm challenge},a_{\rm response})\in R.
+ \\
+\land(a_{\rm credential},a_{\rm challenge},a_{\rm response})\in R.
+\end{gathered}
 \]
 Filtering \(C\) by the two credential equalities gives the witness list. Nonemptiness supplies its first witness; conversely any matching member proves nonemptiness. Together with the three support checks and response membership, this proves the equivalence with VerificationTrace. Thus the authenticity derivation is
 \[
@@ -8614,11 +8631,17 @@ Fold classical-learning model law is complete: its native derivations, full 256-
 
 With evidence \(E\), hypotheses \(H\), withheld inputs \(W\), filtered targets \(T_W\) and sealed predictor \(p\), the report is the explicit tuple
 \[
- \bigl(\operatorname{infer}(E,H),\ T_W,\
-       [(x,p(x))\mid x\in W],\
-       \operatorname{all}_{t\in T_W}[p(t_x)=\operatorname{ok}(t_y)],\
-       [(\mathrm{examples},|E|),(\mathrm{hypotheses},|H|),
-        (\mathrm{withheld},|W|),(\mathrm{targets},|T_W|)]\bigr).
+\begin{gathered}
+\bigl(\operatorname{infer}(E,H),\ T_W,\
+       \\
+[(x,p(x))\mid x\in W],\
+       \\
+\operatorname{all}_{t\in T_W}[p(t_x)=\operatorname{ok}(t_y)],\
+       \\
+[(\mathrm{examples},|E|),(\mathrm{hypotheses},|H|),
+        \\
+(\mathrm{withheld},|W|),(\mathrm{targets},|T_W|)]\bigr).
+\end{gathered}
 \]
 Under the original unique-name and nonempty-support guards,
 \(\operatorname{infer}(E,H)=\operatorname{ok}([n_h\mid h\in H,\ E\subseteq R_h])\).
@@ -9720,11 +9743,15 @@ For fixed cycle \(C\), define the branch relation recursively:
  T_C([], b, z)\iff b=z,
 \]
 \[
- T_C(g::G, b, z)\iff
+\begin{gathered}
+T_C(g::G, b, z)\iff
  \exists m,\ \operatorname{lookup}(g, b_w)=\operatorname{some}(m_w)
- \land\operatorname{shift}(C, s_g, b_\phi)=\operatorname{some}(m_\phi)
+ \\
+\land\operatorname{shift}(C, s_g, b_\phi)=\operatorname{some}(m_\phi)
  \land T_C(G, m, z),
- \qquad s_g=|g_{\rm successors}|\bmod|C|.
+ \\
+\qquad s_g=|g_{\rm successors}|\bmod|C|.
+\end{gathered}
 \]
 Induction on the full Forward trace, using the gate branch correspondence at each head, proves
 \[
@@ -10139,10 +10166,14 @@ All 256 original observation-program lookups and their census, decision, closure
 
 The validator is the ordered composition
 \[
- \mathrm{specification}\to\mathrm{sourceCheck}\to\mathrm{parse}
- \to\mathrm{inputs/vault}\to\mathrm{execute}\to\mathrm{seal}
- \to\mathrm{protectedAudit}\to\mathrm{release/verify}
+\begin{gathered}
+\mathrm{specification}\to\mathrm{sourceCheck}\to\mathrm{parse}
+ \\
+\to\mathrm{inputs/vault}\to\mathrm{execute}\to\mathrm{seal}
+ \\
+\to\mathrm{protectedAudit}\to\mathrm{release/verify}
  \to\mathrm{openTargets}\to\mathrm{compare}.
+\end{gathered}
 \]
 Each failing operation returns its original error before later stages execute. The seal's retained fields obey
 \[
@@ -14141,7 +14172,10 @@ Source, proof and provenance: [V3 LENSING, cosmological_boundary_laws.py:L54](ht
 
 For a source-bound observation r, define its retained support signature
 \[
-\Sigma (r) = (source, emissionEvent, observationEvent, completeCausalChanges, emittedRecurrence, observedRecurrence)
+\begin{gathered}
+\Sigma (r) = (source, emissionEvent, observationEvent, \\
+completeCausalChanges, emittedRecurrence, observedRecurrence)
+\end{gathered}
 \]
 The distance-support equivalence is exactly
 \[
@@ -15536,10 +15570,13 @@ q_{\rm magnetic}=q_{\rm transferred}.
 \]
 The exact joint carrier conservation theorem states that the outgoing and incoming lists of full joint carriers coincide. Applying either carrier projection yields
 \[
+\begin{gathered}
 \operatorname{map}(f,\operatorname{outgoingSupport}(L))
 =\operatorname{map}(f,\operatorname{incomingSupport}(L)),\qquad
+\\
 \operatorname{map}(q,\operatorname{outgoingSupport}(L))
 =\operatorname{map}(q,\operatorname{incomingSupport}(L)).
+\end{gathered}
 \]
 For every retained region R, the same joint ledger supplies the complete boundary identity
 \[
@@ -18186,10 +18223,13 @@ The first test excludes identical stereochemical forms; the second excludes an e
 
 For nonempty distinct right-hand occurrence support N_B, noProperExactly translates absence of a successful search result into failure of every permutation. exactClassification therefore proves
 \[
+\begin{gathered}
 D(A,B)=\mathrm{true}\quad\Longleftrightarrow\quad
 \bigl[\forall p\in\operatorname{Perm}(N_B),\ P_{\rm proper}(A,B,p)=\mathrm{false}\bigr]
+\\
 \land
 \bigl[\forall p\in\operatorname{Perm}(N_B),\ P_{\rm proper}(R(A),B,p)=\mathrm{false}\bigr].
+\end{gathered}
 \]
 The two universally quantified tests remain distinct. classificationTrace retains each order with its constitution, direct-configuration and reflected-configuration results. It does not collapse the trace to a class name.
 
@@ -24879,8 +24919,11 @@ The source certificate then forms N_low=L−e_p and N_high=U−e_p by positive t
 \]
 and have respective numerators
 \[
- 6281206548079656386042933296710013437878680707997,
+\begin{gathered}
+6281206548079656386042933296710013437878680707997,
+\\
 \qquad 6281206548597679920906788925508312022325964879447.
+\end{gathered}
 \]
 In particular N_low>1/1000>0. Common held support cancels in replacing one up constituent by one down constituent; even after the admitted opposing proton dressing, the retained surplus remains positive. completeRoots, completeSurplus, completeCertificate and positiveNetSurplus verify these exact source operations and the five-field order certificate.
 
@@ -29399,7 +29442,7 @@ Every R(t) is compared with the corresponding registered selection record; this 
 Observation classification is then computed from these reconstructed signatures and original channel classes. The expected complete class vector is
   (direct,mediated,unresolved,coupled,closed,adverse-note)=(52,2,1,4,1,3),
   52+2+1+4+1+3=63.
-The value-free prediction contains eight law rows. Target release remains after its seal. Each of the 63 comparison rows retains its source-record hash; the six count fields and six original controls enter the final measurement receipt. Native source reconstruction, classification, prediction, custody and receipt code is compiled and axiom-audited; its full executable comparisons are running. The original V 3 validator passes the complete 75-message,12-field receipt.
+The value-free prediction contains eight law rows. Target release remains after its seal. Each of the 63 comparison rows retains its source-record hash; the six count fields and six original controls enter the final measurement receipt. Native source reconstruction, classification, prediction, custody and receipt code is compiled and axiom-audited; its full executable comparisons are running. The original V3 validator passes the complete 75-message,12-field receipt.
 Original sources: pinned sft/chemistry/selection_rule_law_v1.py::{SelectionRecord.__post_init__,classify_observation}; selection_rule_validation_v1.py::{_endpoints,_signature,_classify,_targets,SelectionRuleValidator.validate}; selection_rule_batch_v1.py::SELECTION_RULE_SPEC. Native: SFT/Chemistry/SelectionDerivation.lean, SelectionObservation.lean, SelectionTargets.lean, SelectionRuleExperiment.lean andSelectionRuleValidation.lean. The complete 256-form grammar has 80audited declarations with emptyaxiom dependencies; the new six source-bound derivation theorems and 50observation/target/experiment/validation declarations also have emptyaxiom dependencies. Timeline TURN1143; evidence verification/TURN_1143_SELECTION_COORDINATION/.
 
 1089. Coordination number: incidence cardinality and retained successor prefix

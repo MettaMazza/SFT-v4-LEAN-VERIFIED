@@ -11593,3 +11593,15 @@ import SFT.Biology.SelectivePermeabilitySource
 import SFT.Biology.SelectivePermeabilityExperiment
 
 import SFT.Biology.SelectivePermeabilityValidation
+
+import SFT.Biology.NestedCompartment
+
+import SFT.Biology.NestedCompartmentGrammar
+
+import SFT.Biology.NestedCompartmentEvidence
+
+import SFT.Biology.NestedCompartmentSource
+
+import SFT.Biology.NestedCompartmentExperiment
+
+import SFT.Biology.NestedCompartmentValidation

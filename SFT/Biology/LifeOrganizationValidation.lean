@@ -53,14 +53,9 @@ def predictionLabel : CapabilityValues.Value → Except String String
    else .error "prediction emitted an invalid Biology label"
  | .emptyOne _ | .count _ | .ratio _ _ | .word _ | .pair _ _ | .table _ =>
    .error "prediction emitted an invalid Biology label"
-def validate (preSourcePayload : Value) (files : List LifeOrganizationSource.Snapshot)
- (derivationSeal host implementation : String) (before after : Snapshot) : Except String Value := do
- validateSpec
- let sourceSeal ← LifeOrganizationSeal.validate preSourcePayload files
- let registrationHash := identity (registration sourceSeal)
- let program ← CapabilityDocuments.loadProgramFields programFields
- let inputs ← inputValues derivationSeal
- let (observedLabel,extractionHash) ← LifeOrganizationSource.sourceDerivedTarget files
+def validateResolved (registrationHash : String) (program : CapabilityAdmission.Program)
+ (inputs : List (String × CapabilityValues.Value)) (observedLabel extractionHash derivationSeal host implementation : String)
+ (before after : Snapshot) : Except String Value := do
  let target ← CapabilityValues.heldLabel "external-observation" observedLabel
  let vault ← TargetCustody.createVault experimentId (Text.append experimentId "-external-target-custodian")
   [(targetId,CapabilityValues.canonical (.label target))]
@@ -106,11 +101,22 @@ def validate (preSourcePayload : Value) (files : List LifeOrganizationSource.Sna
   ("data_source_ids",.array (sourceIds.map Value.text)),("measurements",.array (messages.map Value.text)),
   ("measurement_receipt_hash",.text (identity payload)),("falsification_condition",.text falsification),
   ("passed",.boolean (passed && controlPassed))]
+
+def validate (preSourcePayload : Value) (files : List LifeOrganizationSource.Snapshot)
+ (derivationSeal host implementation : String) (before after : Snapshot) : Except String Value := do
+ validateSpec
+ let sourceSeal ← LifeOrganizationSeal.validate preSourcePayload files
+ let registrationHash := identity (registration sourceSeal)
+ let program ← CapabilityDocuments.loadProgramFields programFields
+ let inputs ← inputValues derivationSeal
+ let (observedLabel,extractionHash) ← LifeOrganizationSource.sourceDerivedTarget files
+ validateResolved registrationHash program inputs observedLabel extractionHash derivationSeal host implementation before after
 #print axioms inputValues
 #print axioms sealPrediction
 #print axioms certificate
 #print axioms isolation
 #print axioms custodyCertificate
 #print axioms predictionLabel
+#print axioms validateResolved
 #print axioms validate
 end SFT.Biology.LifeOrganizationValidation

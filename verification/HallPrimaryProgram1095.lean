@@ -1,0 +1,4 @@
+import SFT.Materials.HallPrimary
+open SFT.Host SFT.Materials.HallPrimary
+def bounds : List SFT.Materials.RotationTotient.PositiveCount := [⟨1,by decide⟩,⟨2,by decide⟩,⟨3,by decide⟩,⟨4,by decide⟩,⟨5,by decide⟩,⟨6,by decide⟩,⟨7,by decide⟩,⟨8,by decide⟩,⟨9,by decide⟩,⟨10,by decide⟩,⟨11,by decide⟩,⟨12,by decide⟩,⟨13,by decide⟩,⟨14,by decide⟩,⟨15,by decide⟩,⟨16,by decide⟩,⟨17,by decide⟩,⟨18,by decide⟩,⟨19,by decide⟩,⟨20,by decide⟩,⟨21,by decide⟩,⟨22,by decide⟩,⟨23,by decide⟩,⟨24,by decide⟩,⟨25,by decide⟩,⟨26,by decide⟩,⟨27,by decide⟩,⟨28,by decide⟩,⟨29,by decide⟩,⟨30,by decide⟩,⟨31,by decide⟩,⟨32,by decide⟩,⟨63,by decide⟩]
+def main : IO Unit := IO.println (Canonical.render (.array (bounds.map (fun bound => .array ((primaryClasses bound).map value)))))

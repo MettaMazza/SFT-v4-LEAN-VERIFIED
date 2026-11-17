@@ -11411,3 +11411,19 @@ import SFT.Biology.LifeMaintenanceSource
 import SFT.Biology.LifeMaintenanceExperiment
 
 import SFT.Biology.LifeMaintenanceValidation
+
+import SFT.Chemistry.SelectionRule
+
+import SFT.Chemistry.SelectionDerivation
+
+import SFT.Chemistry.SelectionRuleGrammar
+
+import SFT.Chemistry.SelectionRuleEvidence
+
+import SFT.Chemistry.SelectionObservation
+
+import SFT.Chemistry.SelectionTargets
+
+import SFT.Chemistry.SelectionRuleExperiment
+
+import SFT.Chemistry.SelectionRuleValidation

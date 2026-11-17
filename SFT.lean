@@ -11581,3 +11581,15 @@ import SFT.Chemistry.ResolvedRovibronicExperiment
 import SFT.Chemistry.ResolvedRovibronicValidation
 
 import SFT.Chemistry.ResolvedRovibronicInduction
+
+import SFT.Biology.SelectivePermeability
+
+import SFT.Biology.SelectivePermeabilityGrammar
+
+import SFT.Biology.SelectivePermeabilityEvidence
+
+import SFT.Biology.SelectivePermeabilitySource
+
+import SFT.Biology.SelectivePermeabilityExperiment
+
+import SFT.Biology.SelectivePermeabilityValidation

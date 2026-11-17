@@ -11441,3 +11441,23 @@ import SFT.Chemistry.ConfigurationTargets
 import SFT.Chemistry.ConfigurationOrderExperiment
 
 import SFT.Chemistry.ConfigurationOrderValidation
+
+import SFT.Chemistry.LigandDenticity
+
+import SFT.Chemistry.LigandDenticityDerivation
+
+import SFT.Chemistry.LigandDenticityGrammar
+
+import SFT.Chemistry.LigandDenticityEvidence
+
+import SFT.Chemistry.LigandDenticityPrediction
+
+import SFT.Chemistry.LigandDenticitySource
+
+import SFT.Chemistry.LigandDenticityAnalysis
+
+import SFT.Chemistry.LigandDenticityComparison
+
+import SFT.Chemistry.LigandDenticityExperiment
+
+import SFT.Chemistry.LigandDenticityValidation

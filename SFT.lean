@@ -10921,3 +10921,17 @@ import SFT.Chemistry.PairExchangeExperiment
 import SFT.Chemistry.PairExchangeControls
 
 import SFT.Chemistry.PairExchangeValidation
+
+import SFT.Chemistry.NuclideChemicalCarrier
+
+import SFT.Chemistry.NuclideCarrierGrammar
+
+import SFT.Chemistry.NuclideCarrierEvidence
+
+import SFT.Chemistry.NuclideCarrierSurface
+
+import SFT.Chemistry.NuclideCarrierAnalysis
+
+import SFT.Chemistry.NuclideCarrierExperiment
+
+import SFT.Chemistry.NuclideCarrierValidation

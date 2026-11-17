@@ -10843,3 +10843,15 @@ import SFT.Materials.IsotopeResponseSource
 import SFT.Materials.IsotopeResponseExperiment
 
 import SFT.Materials.IsotopeResponseValidation
+
+import SFT.Materials.FerrimagneticGap
+
+import SFT.Materials.FerrimagneticGapGrammar
+
+import SFT.Materials.FerrimagneticGapEvidence
+
+import SFT.Materials.FerrimagneticGapSource
+
+import SFT.Materials.FerrimagneticGapExperiment
+
+import SFT.Materials.FerrimagneticGapValidation

@@ -11263,3 +11263,23 @@ import SFT.Physics.GrandLockObservationRecordAssembly
 import SFT.Physics.GrandLockObservationMissingRowComponents
 
 import SFT.Physics.GrandLockObservationFalseLegacyComponents
+
+import SFT.Chemistry.CoordinationEntity
+
+import SFT.Chemistry.CoordinationEntityDerivation
+
+import SFT.Chemistry.CoordinationEntityGrammar
+
+import SFT.Chemistry.CoordinationEntityEvidence
+
+import SFT.Chemistry.CoordinationPrediction
+
+import SFT.Chemistry.CoordinationSource
+
+import SFT.Chemistry.CoordinationAnalysis
+
+import SFT.Chemistry.CoordinationComparison
+
+import SFT.Chemistry.CoordinationExperiment
+
+import SFT.Chemistry.CoordinationValidation

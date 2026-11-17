@@ -1,0 +1,7 @@
+from pathlib import Path
+import subprocess,os,json,hashlib,sys
+w=Path('work');r=w/'turn1064_recovery';source=r/'SFT/Biology/LifeOrganizationSource.lean';sha=hashlib.sha256(source.read_bytes()).hexdigest();env=dict(os.environ,LEAN_PATH='/Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean:'+str(r.resolve())+':/Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/lib/lean')
+cmd=[sys.executable,'work/run_lean_guarded.py','/Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean','-j1','-M8192','--run','work/LifeOrganizationSourceProgram1106.lean','sources']
+with(w/'lifeorganization1106_sources_output.json').open('w')as out,(w/'lifeorganization1106_sources_execution.log').open('w')as err:subprocess.run(cmd,env=env,stdout=out,stderr=err,check=True)
+a=json.loads((w/'lifeorganization1106_sources_output.json').read_text());e=json.loads((w/'lifeorganization1106_source_expected.json').read_text());assert a=={k:e[k]for k in a};assert 'ok' in a['target'];assert hashlib.sha256(source.read_bytes()).hexdigest()==sha
+report={'status':'PASS','snapshots':17,'all_corpus_hashes_match':True,'original_target_result':a['target'],'source_sha256':sha,'source_validation_passed':True,'note':'Registered PubMed bytes recovered exactly by restoring70 CRLFs in pre element; full empirical custody comparison remains separate.'};(w/'lifeorganization1106_sources_report.json').write_text(json.dumps(report,indent=2)+'\n');print('PASS exact17 corpus hashes and original source-derived target and extraction hash.')

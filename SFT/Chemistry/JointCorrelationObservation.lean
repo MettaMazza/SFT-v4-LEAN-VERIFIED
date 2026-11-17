@@ -63,4 +63,35 @@ theorem acceptedUncertainty (s result : Observation) (h : validate s = .ok resul
          · split at h
            · cases h
            · cases h; assumption
+-- Source uncertainty input after host int conversion, retaining the literal
+-- absence branch separately. Host conversion failures propagate before ratio construction.
+inductive UncertaintyInput where
+ | absence
+ | converted : Except String Int → UncertaintyInput
+
+def uncertaintyInt : UncertaintyInput → Except String Int
+ | .absence => .error "invalid literal for int() with base 10: 'absence'"
+ | .converted result => result
+
+def positiveRatio (numerator denominator : Int) : Except String Value := do
+ let n ← count numerator.toNat
+ let d ← count denominator.toNat
+ return .ratio n d
+
+def dissociationObservation (source species state role : String)
+ (valueNumerator valueDenominator : Int) (uncertaintyNumerator uncertaintyDenominator : UncertaintyInput) : Except String Observation := do
+ let uncertainty ← match uncertaintyNumerator with
+  | .absence => match uncertaintyDenominator with
+   | .absence => .ok (.emptyOne "empty-One")
+   | .converted _ => .error "invalid literal for int() with base 10: 'absence'"
+  | .converted n => do
+   let ni ← n
+   let di ← uncertaintyInt uncertaintyDenominator
+   positiveRatio ni di
+ let sourceIdentity ← heldLabel "external-source" source
+ let speciesIdentity ← heldLabel "chemical-species" species
+ let stateIdentity ← heldLabel "molecular-state" state
+ let jointSupportRole ← heldLabel "joint-support-role" role
+ let energy ← positiveRatio valueNumerator valueDenominator
+ validate ⟨sourceIdentity,speciesIdentity,stateIdentity,jointSupportRole,energy,uncertainty⟩
 end SFT.Chemistry.JointCorrelationObservation

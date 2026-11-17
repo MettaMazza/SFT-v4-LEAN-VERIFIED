@@ -11511,3 +11511,23 @@ import SFT.Chemistry.AnalyticalAccuracyAnalysis
 import SFT.Chemistry.AnalyticalAccuracyExperiment
 
 import SFT.Chemistry.AnalyticalAccuracyValidation
+
+import SFT.Chemistry.NuclearElectronic
+
+import SFT.Chemistry.NuclearElectronicGrammar
+
+import SFT.Chemistry.NuclearElectronicEvidence
+
+import SFT.Chemistry.NuclearElectronicCell
+
+import SFT.Chemistry.NuclearElectronicSource
+
+import SFT.Chemistry.NuclearElectronicAnalysis
+
+import SFT.Chemistry.NuclearElectronicTargets
+
+import SFT.Chemistry.NuclearElectronicWeights
+
+import SFT.Chemistry.NuclearElectronicExperiment
+
+import SFT.Chemistry.NuclearElectronicValidation

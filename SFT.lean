@@ -10935,3 +10935,17 @@ import SFT.Chemistry.NuclideCarrierAnalysis
 import SFT.Chemistry.NuclideCarrierExperiment
 
 import SFT.Chemistry.NuclideCarrierValidation
+
+import SFT.Biology.LifeOrganization
+
+import SFT.Biology.LifeOrganizationGrammar
+
+import SFT.Biology.LifeOrganizationEvidence
+
+import SFT.Biology.LifeOrganizationSource
+
+import SFT.Biology.LifeOrganizationSeal
+
+import SFT.Biology.LifeOrganizationExperiment
+
+import SFT.Biology.LifeOrganizationValidation

@@ -135,18 +135,41 @@
   ],
   "live_jobs": [
     {
-      "session": 24413,
-      "pid": 68833,
-      "driver": "work/check_nuclearelectronic1158_program.py"
+      "session": 84349,
+      "pid": 95752,
+      "driver": "work/check_xray1163_empirical.py"
     },
     {
-      "session": 12445,
-      "pid": 69875,
-      "driver": "work/check_nuclearelectronic1158_empirical.py"
+      "session": 2312,
+      "driver": "work/run_biology_batch1167.py",
+      "current_pid": 30829
     },
     {
-      "session": 1253,
-      "driver": "work/run_turnover1159_checks.py"
+      "session": 69438,
+      "driver": "work/run_metabolism1171_checks.py",
+      "current_pid": 27735
+    },
+    {
+      "session": 96210,
+      "driver": "work/run_inheritance1177_checks.py",
+      "current_pid": 27805
+    },
+    {
+      "session": 47706,
+      "driver": "work/register_metabolism1171_batch_when_ready.py"
+    },
+    {
+      "session": 20830,
+      "driver": "work/register_inheritance1177_batch_when_ready.py"
+    },
+    {
+      "session": 43064,
+      "driver": "work/run_evolution1183_checks.py",
+      "waiting_for_pid": 95752
+    },
+    {
+      "session": 44971,
+      "driver": "work/register_evolution1183_batch_when_ready.py"
     }
   ],
   "snapshot": [
@@ -55036,7 +55059,7 @@
   ],
   "next_publication_milestone": 1000,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "762complete. Preserve X-rayempirical84349,biologybatch2312 nowNestedCompartmentchecks,metabolismchecks69438 ResourceUptakeprogramme,andinheritancechecks96210 Inheritanceprogramme. Watchers47706/20830register verifiedentries onlywhenoriginalparentrecordscomplete. MetabolismownchecksallPASS,do not rerun. CodonCounts21emptyaxioms/fullsourceoutputsPASS;gene6exactspecialbindings/countwitnessesstaged,nativeentrychecksnotlaunched. Evolution6sourceentriesstaged,noprocess. Keep4compilerjobs,continueoriginaldependencyorder toward1000,updatepaper/timeline/counts/GitHub;pauseonlyfull1000reviewpackage,noZenodoaction.",
+  "authorized_action": "Continue toward1000 in original dependency order. Preserve four live compiler jobs and existing dependency-registration watchers. Evolution six-entry check queue43064 waits for Xray PID95752 to exit before taking its worker slot; watcher44971 registers only after actual checks and original dependencies pass. Nested115 zero-axiom and empirical comparison PASS; full programme pending. Reuse completed work, keep max4 compiler jobs, update paper/timeline/counts/GitHub, pause only at full1000 review package. No Zenodo publication.",
   "scientific_cursor": {
     "completed": "SFT-BIO-SELECTIVE-PERMEABILITY-001",
     "next": "SFT-CHEM-MOLECULAR-QUANTUM-MEASUREMENT-REDUCTION-014",
@@ -56684,12 +56707,12 @@
   },
   "last_verified_checkpoint": {
     "status": "PASS",
-    "commit": "045ad62fd8b8123a45bbfda2f0aacedc828eda66",
-    "tree": "3d540ca9d78e870facbb48f70397bf1293112d0f",
-    "verified_files": 95,
-    "completed": 761,
+    "commit": "0329f5b51ea4f27bb535132b464bf71ea3b849ea",
+    "tree": "32b3a5bdb4fb70d05594cc4932186e12f34235bb",
+    "verified_files": 28,
+    "completed": 762,
     "all_blob_hashes_match": true,
-    "checked_at": "2026-11-17T22:26:19.257974+00:00"
+    "checked_at": "2026-11-17T22:34:47.255209+00:00"
   },
   "staged_next_entry": {
     "module": "work/constants-recovery/SFT/Materials/CrystalSystems.lean",
@@ -66633,11 +66656,13 @@
   },
   "nested1169": {
     "claim_id": "SFT-BIO-NESTED-COMPARTMENT-001",
-    "status": "six source-generated modules;original empiricalPASS;native not yet built",
+    "status": "115 empty-axiom declarations and fresh full empirical comparison PASS; full programme still running",
     "source_pin": "work/nested1169_source_pin.json",
     "original_report": "work/nested1169_original_report.json",
     "shared_source": "CompartmentSource with identical original requirements and byte-bound reuse checks",
-    "driver": "work/run_biology_batch1167.py"
+    "driver": "work/run_biology_batch1167.py",
+    "audit": "verification/TURN1169_NESTED/nested1169_full_audit_report.json",
+    "empirical": "verification/TURN1169_NESTED/nested1169_empirical_report.json"
   },
   "provenance1170": {
     "claim_id": "SFT-BIO-COMPARTMENT-PROVENANCE-001",
@@ -66855,8 +66880,12 @@
       "SFT-BIO-FIXATION-001",
       "SFT-BIO-DRIFT-BOUNDARY-001"
     ],
-    "status": "six original source translations staged,originalvalidatorsPASS,native checks not launched",
-    "next": "After inheritance/replication batch, reuse its existing bounded check/registration procedure with these source-specific prepared scripts; first BiologicalVariationSource requires fresh extraction of both original fragments. No live process for this family."
+    "status": "Six existing source translations queued for native checks after live X-ray worker exits; no duplicate compilation",
+    "next": "After inheritance/replication batch, reuse its existing bounded check/registration procedure with these source-specific prepared scripts; first BiologicalVariationSource requires fresh extraction of both original fragments. No live process for this family.",
+    "check_session": 43064,
+    "registration_session": 44971,
+    "driver": "work/run_evolution1183_checks.py",
+    "registration_driver": "work/register_evolution1183_batch_when_ready.py"
   },
   "checkpoint1170_remote": {
     "status": "PASS",
@@ -66950,5 +66979,20 @@
     "completed": 761,
     "all_blob_hashes_match": true,
     "checked_at": "2026-11-17T22:26:19.257974+00:00"
+  },
+  "checkpoint1171b_remote": {
+    "status": "PASS",
+    "commit": "0329f5b51ea4f27bb535132b464bf71ea3b849ea",
+    "tree": "32b3a5bdb4fb70d05594cc4932186e12f34235bb",
+    "verified_files": 28,
+    "completed": 762,
+    "all_blob_hashes_match": true,
+    "checked_at": "2026-11-17T22:34:47.255209+00:00"
+  },
+  "current_step1172": {
+    "command": "canonical tools/current_step.py --workspace current workspace",
+    "output": "work/current_step_resume1172.json",
+    "exit": 2,
+    "interpretation": "Historical fingerprints differ; no fingerprint reset or source recheck performed."
   }
 }

@@ -10855,3 +10855,27 @@ import SFT.Materials.FerrimagneticGapSource
 import SFT.Materials.FerrimagneticGapExperiment
 
 import SFT.Materials.FerrimagneticGapValidation
+
+import SFT.Materials.HallPrimary
+
+import SFT.Materials.HallPrimaryGrammar
+
+import SFT.Materials.HallPrimaryEvidence
+
+import SFT.Materials.HallPrimarySource
+
+import SFT.Materials.HallPrimaryExperiment
+
+import SFT.Materials.HallPrimaryValidation
+
+import SFT.Materials.BoundaryEdgeCount
+
+import SFT.Materials.BoundaryEdgeCountGrammar
+
+import SFT.Materials.BoundaryEdgeCountEvidence
+
+import SFT.Materials.BoundaryEdgeCountSource
+
+import SFT.Materials.BoundaryEdgeCountExperiment
+
+import SFT.Materials.BoundaryEdgeCountValidation

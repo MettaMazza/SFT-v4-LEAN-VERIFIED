@@ -1,0 +1,24 @@
+import SFT.Chemistry.EquilibriumIsotopeFractionation
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.construct
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.normalized
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.ratioA
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.ratioB
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.factor
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.orientation
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.partition
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.identityWitness
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.phasesWitness
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.inventoryWitness
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.ratiosWitness
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.factorWitness
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.orientationWitness
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.coincidenceWitness
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.extensionWitness
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.identityWitnessPassed
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.phasesWitnessPassed
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.inventoryWitnessPassed
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.ratiosWitnessPassed
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.factorWitnessPassed
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.orientationWitnessPassed
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.coincidenceWitnessPassed
+#print axioms SFT.Chemistry.EquilibriumIsotopeFractionation.extensionWitnessPassed

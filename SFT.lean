@@ -11993,3 +11993,11 @@ import SFT.Biology.ProteinInteractionSource
 import SFT.Biology.ProteinInteractionExperiment
 
 import SFT.Biology.ProteinInteractionValidation
+
+import SFT.Chemistry.MolecularCorrespondence
+
+import SFT.Chemistry.MolecularCorrespondenceDerivation
+
+import SFT.Chemistry.MolecularCorrespondenceGrammar
+
+import SFT.Chemistry.MolecularCorrespondenceEvidence

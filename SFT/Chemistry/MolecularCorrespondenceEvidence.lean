@@ -21,7 +21,7 @@ def registrationData (sourceHash : String) : SFT.Engine.ClaimRegistration where
  dependencies := dependencies
  axioms := []
  freeParameters := []
- provenance := [.observationalDerivation]
+ provenance := [.forwardForcing]
  sourceHash := sourceHash
 
 def registration (sourceHash : String) : Value := SFT.Engine.registrationValue (registrationData sourceHash)

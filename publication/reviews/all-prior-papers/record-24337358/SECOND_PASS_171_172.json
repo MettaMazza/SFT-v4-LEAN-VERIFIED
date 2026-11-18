@@ -1,0 +1,49 @@
+{
+  "updated_at": "2026-11-18T23:49:31.773567+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    171,
+    172
+  ],
+  "challenges": [
+    {
+      "section": 171,
+      "challenge": "Does search certify the first match and preserve duplicate-before-absence rejection?",
+      "evidence": "scanTrace reconstructs an unmatched prefix and its exact length by induction; admittedSearch combines scanComplete and scanPosition. exactSearch tests distinct before membership.",
+      "disposition": "The manuscript displays the scan recurrence, prefix condition, index-to-position conversion and actual guard order."
+    },
+    {
+      "section": 172,
+      "challenge": "Does the ordering construction choose one tie order or silently assume a total relation?",
+      "evidence": "completeOrders filters the full arrangements census and proves exactly Perm plus Invariant for any supplied relation. retainedDuplicateClass transfers each original identity via permutation; orderedSuccessor requires the exact fresh comparison rows.",
+      "disposition": "The paper retains all permitted orders and class identities and states the nonempty/distinct carrier and comparison requirements."
+    },
+    {
+      "section": 172,
+      "challenge": "Is recursion only witnessed at two steps or constrained by an extra base-carrier condition?",
+      "evidence": "exactRecursionTrace and recursionCount induct over arbitrary positions and base; structuralRecursion guards only unique successor identities. The concrete two-position example is separately the source witness.",
+      "disposition": "The manuscript gives the general base/successor equations and trace count, with the three evaluations explicitly identified as witnesses."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/catalog.py#L21",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/operations.py",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SearchOrderGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SearchOrderWitnesses.lean#L22",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "d919188baf62564d654beb5732dac70188d9c6450550176ee7e982870fbc4416",
+  "status": "Inspected sections pass second review; whole-paper review incomplete.",
+  "new_builds": 0
+}

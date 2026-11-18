@@ -1,0 +1,58 @@
+{
+  "updated_at": "2026-11-18T23:50:48.498705+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    173,
+    174,
+    175
+  ],
+  "challenges": [
+    {
+      "section": 173,
+      "challenge": "Does an arithmetic certificate merely restate a result, or does it recover the actual recorded execution and errors?",
+      "evidence": "generatedExecution and executionGenerates prove both directions with original recordFrom/execute. completeTerminationTrace derives row count and exact operation sequence; terminalReconstruction uses generatedTraceReplays. rejectedFirstOperation propagates the actual error.",
+      "disposition": "The manuscript shows both induction directions, original ordered input/output binding, exact normal form, replay and compositional successor."
+    },
+    {
+      "section": 174,
+      "challenge": "Are repeated symbols or skipped source positions lost in the matching census?",
+      "evidence": "matchesFrom emits skip and take blocks separately; completeMatchLedger proves exact membership in both directions. exactPositionSymbol reconstructs source prefix/symbol/suffix and start+prefix length for every zipped pair. positionBounds and retainedExtension use the same full Match induction.",
+      "disposition": "The manuscript explicitly gives the subsequence alternative, every skip/take choice, original offsets and source extension; no symbol deduplication occurs."
+    },
+    {
+      "section": 175,
+      "challenge": "Is traversal termination bought by a depth cap or frontier pruning, or does the original measure decrease?",
+      "evidence": "finiteTraversal uses searchOrder.wf.induction and exact skipDecreases/expandDecreases. exactFrontierExpansion retains the entire rest plus outgoingUnvisited list. traversalReplays follows empty/hit/skip/expand; accepted/rejectedPathCertificate uses original reachability equivalence.",
+      "disposition": "The paper displays the full frontier update and unseen/frontier lexicographic decrease and retains separate same-node membership semantics."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ArithmeticGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ArithmeticWitnesses.lean#L22",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/StringsSequencesGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/StringsSequencesWitnesses.lean#L22",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/TreesGraphsGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/TreesGraphsWitnesses.lean#L22",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "db739774b68c1dc4449dadefba7921a2967870eeedb64df7a9f5d879b766c3df",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

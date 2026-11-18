@@ -11797,3 +11797,29 @@ import SFT.Biology.DifferentialReproductionSource
 import SFT.Biology.DifferentialReproductionExperiment
 
 import SFT.Biology.DifferentialReproductionValidation
+
+import SFT.Chemistry.MolecularMeasurement
+
+import SFT.Chemistry.MolecularMeasurementGrammar
+
+import SFT.Chemistry.MolecularMeasurementEvidence
+
+import SFT.Chemistry.MolecularMeasurementSource
+
+import SFT.Chemistry.MolecularMeasurementAnalysis
+
+import SFT.Chemistry.MolecularMeasurementExperiment
+
+import SFT.Chemistry.MolecularMeasurementValidation
+
+import SFT.Biology.Selection
+
+import SFT.Biology.SelectionGrammar
+
+import SFT.Biology.SelectionEvidence
+
+import SFT.Biology.SelectionSource
+
+import SFT.Biology.SelectionExperiment
+
+import SFT.Biology.SelectionValidation

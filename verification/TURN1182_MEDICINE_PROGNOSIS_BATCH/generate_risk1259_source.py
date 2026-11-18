@@ -79,7 +79,7 @@ def validateSources (files : List Snapshot) : Except String Unit := do
    if !Text.equal (bytesHash failure) fh then
     throw (Text.append "Medicine failed-transport receipt changed: " source.sourceId)
   else throw (Text.append "Medicine source has unknown transport status: " source.sourceId)
- if capturedCount!=11 || failedCount!=2 then
+ if capturedCount != 11 || failedCount != 2 then
   throw "Medicine source transport census changed"
  return ()
 def extractRequirements (files : List Snapshot) : Except String (String × String) := do

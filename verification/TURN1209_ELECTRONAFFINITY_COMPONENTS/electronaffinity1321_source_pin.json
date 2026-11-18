@@ -1,0 +1,895 @@
+{
+  "commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "execution_files": [
+    "sft/chemistry/molecular_electron_affinity_law_v1.py",
+    "sft/chemistry/molecular_electron_affinity_batch_v1.py",
+    "sft/chemistry/molecular_electron_affinity_validation_v1.py",
+    "sft/chemistry/generated_law.py",
+    "sft/chemistry/generated_observational_law.py",
+    "sft/physics/generated_empirical_law.py",
+    "tools/capture_chemistry_molecular_electron_affinity_sources_v1.py",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/nist-cccbdb-electron-affinity-catalog.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/nist-webbook-gas-phase-ion-thermochemistry.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/molecular-electron-affinity-primary-records-v1.json",
+    "experiments/external_sources/chemistry/molecular_electron_affinity_target_identities_v1.json",
+    "experiments/external_sources/chemistry/molecular_electron_affinity_withheld_targets_v1.json",
+    "experiments/external_sources/chemistry/molecular_electron_affinity_source_page_manifest_v1.json",
+    "claims/SFT-CHEM-MOLECULAR-ELECTRON-AFFINITY-008/execution.py",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/001-h2-1333740.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/002-lih-7580678.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/003-li2-14452596.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/004-beh-13597972.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/005-be2-14452609.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/006-bh-13766262.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/007-b2-14452610.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/008-ch-3315375.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/009-bc-12011540.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/010-c2-12070154.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/011-nh-13774920.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/012-ben-37279111.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/013-bn-10043115.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/014-cn-2074875.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/015-n2-7727379.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/016-oh-3352576.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/017-lio-12142777.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/018-beo-1304569.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/019-bo-12505770.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/020-co-630080.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/021-no-10102439.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/022-o2-7782447.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/023-lif-7789244.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/024-hf-7664393.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/025-bef-13597961.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/026-bf-13768600.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/027-cf-3889756.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/028-nf-13967061.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/029-fo-12061700.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/030-f2-7782414.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/031-nali-12333492.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/032-nah-7646697.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/033-na2-25681792.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/034-nao-12401864.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/035-naf-7681494.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/036-mgh-14332537.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/037-mg2-29904798.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/038-mgo-1309484.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/039-mgf-14953287.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/040-alh-13967221.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/041-al2-32752946.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/042-aln-24304005.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/043-alo-14457648.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/044-alf-13595829.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/045-sih-13774942.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/046-sic-409212.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/047-si2-12597352.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/048-sin-12033602.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/049-sio-10097286.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/050-sif-11128248.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/051-ph-13967141.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/052-cp-12326851.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/053-sip-12137643.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/054-pn-17739478.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/055-p2-12185090.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/056-po-14452665.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/057-pf-16027922.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/058-hs-13940211.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/059-bes-13598226.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/060-mgs-12032369.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/061-bs-12228396.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/062-als-12251900.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/063-cs-2944050.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/064-sis-12504415.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/065-ns-12033566.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/066-ps-12281366.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/067-s2-23550450.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/068-so-13827322.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/069-sf-16068965.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/070-hcl-7647010.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/071-licl-7447418.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/072-nacl-7647145.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/073-mgcl-14989298.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/074-becl-13814501.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/075-bcl-20583555.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/076-alcl-13595818.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/077-sicl-13966579.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/078-ccl-3889767.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/079-pcl-17167554.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/080-ncl-12190759.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/081-scl-14989323.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/082-clo-14989301.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/083-clf-7790898.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/084-cl2-7782505.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/085-znf-9000139.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/086-hse-13940222.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/087-cse-16674183.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/088-ses-7446346.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/089-seo-12640890.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/090-se2-12185170.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/091-libr-7550358.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/092-hbr-10035106.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/093-nabr-7647156.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/094-bro-15656196.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/095-br2-7726956.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/096-brf-13863597.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/097-brcl-13863417.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/098-bh2-14452643.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/099-ch2-2465567.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/100-c2h-2122487.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/101-nh2-13770406.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/102-hcn-74908.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/103-n3-12596600.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/104-h2o-7732185.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/105-hco-2597446.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/106-hno-14332286.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/107-ho2-3170830.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/108-nco-22400266.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/109-bo2-13840885.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/110-n2o-10024972.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/111-co2-124389.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/112-no2-10102440.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/113-o3-10028156.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/114-fhf-18130740.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/115-cf2-2154598.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/116-alh2-14457659.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/117-sih2-13825906.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/118-ph2-13765430.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/119-po2-12164975.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/120-h2s-7783064.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/121-hcs-36058283.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/122-hns-9000242.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/123-scn-15941772.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/124-cs2-75150.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/125-so2-7446095.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/126-s3-12597034.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/127-sf2-13814250.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/128-ccl2-1605727.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/129-oclo-10049044.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/130-geh2-24968556.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/131-bh3-13283313.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/132-ch3-2229074.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/133-cch2-2143693.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/134-c2h2-74862.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/135-nh3-7664417.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/136-h2co-50000.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/137-no3-12033497.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/138-bf3-7637072.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/139-cf3-2264213.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/140-nf3-7783542.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/141-alh3-7784216.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/142-sih3-13765441.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/143-h2cs-865361.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/144-so3-7446119.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/145-ccl3-3170807.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/146-bh4-16971292.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/147-ch4-74828.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/148-c2h3-2669898.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/149-ch3o-2143682.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/150-c2h4-74851.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/151-c3h3-2932787.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/152-ch3cn-75058.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/153-ch3oh-67561.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/154-ch3co-3170692.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/155-ch3oo-2143580.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/156-c2h5-2025561.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/157-pf6-16919189.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/158-c3h3n2-36954037.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/159-c4h4n-23303095.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/160-c6n4-670542.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/161-ch3coch3-67641.html",
+    "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/162-c6h5-2396012.html"
+  ],
+  "files": [
+    {
+      "path": "sft/chemistry/molecular_electron_affinity_law_v1.py",
+      "sha256": "4b089fe6a910056198013711eb27af16c7eb7e41addc398b13363cd2194a1eba"
+    },
+    {
+      "path": "sft/chemistry/molecular_electron_affinity_batch_v1.py",
+      "sha256": "cab32bc2e582c20e09a28596d67486e4dde783b11747ec5284f7860a33384f6b"
+    },
+    {
+      "path": "sft/chemistry/molecular_electron_affinity_validation_v1.py",
+      "sha256": "6ec662da238547d978641a4ceb479652fb6c6571a5743f3e73c43c69d949ba9f"
+    },
+    {
+      "path": "sft/chemistry/generated_law.py",
+      "sha256": "678de1061dcd4b4a24deefd7757045729d89677d6170bd907cde70bc9ca2e15a"
+    },
+    {
+      "path": "sft/chemistry/generated_observational_law.py",
+      "sha256": "0e2befde38b519c870dc42a4e7b95d9887c4f2afb2db3d4bf08d24ab493be70c"
+    },
+    {
+      "path": "sft/physics/generated_empirical_law.py",
+      "sha256": "65703f059b0a6059af6f06aff9e11f1fcef19a1b10d2a8fa4b675418c8ca8071"
+    },
+    {
+      "path": "tools/capture_chemistry_molecular_electron_affinity_sources_v1.py",
+      "sha256": "e8ec0f75ec0b4a6024c8d6e46ab1aaa329b7d6454fa2fcffa8368e99c0b6f01b"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/nist-cccbdb-electron-affinity-catalog.html",
+      "sha256": "e501037192ac2b1a50efebf2cf11c95a60ca9a84f1cc52c9eef247d68ab7d987"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/nist-webbook-gas-phase-ion-thermochemistry.html",
+      "sha256": "d5ff66aa2f3b1d6156e2e6f934da0decb2a8a05b94a370c1c44437c60ef69d4e"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/molecular-electron-affinity-primary-records-v1.json",
+      "sha256": "a1fe2a76e293f97fed42e911b0daa423654479eb3d637f68fa6ce3e52941f589"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/molecular_electron_affinity_target_identities_v1.json",
+      "sha256": "534bdc5572277948cd24ccac5a9bef92e5d31d21966f4dd261efa379f29eeecd"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/molecular_electron_affinity_withheld_targets_v1.json",
+      "sha256": "4e7e66d57cd72991da1107d96086b5543cfc4efcf29a37d5a5158cba1abd3d9b"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/molecular_electron_affinity_source_page_manifest_v1.json",
+      "sha256": "60b4c37ca8f23672de2c2af922a7cc91af4ca374007f1964ba4dac3e311046c6"
+    },
+    {
+      "path": "claims/SFT-CHEM-MOLECULAR-ELECTRON-AFFINITY-008/execution.py",
+      "sha256": "5d26d9cf76602235fdb472cf4d5251bbcb9668930f950bf608bd85dce74e411f"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/001-h2-1333740.html",
+      "sha256": "b4a74a9588f6aad01502cfcfb8f0c0d9746178c4071d32cd24ef761e45b1d58a"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/002-lih-7580678.html",
+      "sha256": "7be1a0b21d438910a8b84cfcdd3d16ee0be94d9cb8b62e39af561e7e35f8278c"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/003-li2-14452596.html",
+      "sha256": "3ffb75168344c0824f3395f51d614f05e1858edac487d9ed3d6585b3371b233c"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/004-beh-13597972.html",
+      "sha256": "7f72c1e4d44e54d8c23602f08d98b6cb16a085560bc52267074667da42674f8a"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/005-be2-14452609.html",
+      "sha256": "b07d23342cf4d8b88ea265a17f0dc4946c8bc5f6d63e2767b6c76d6689da6b25"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/006-bh-13766262.html",
+      "sha256": "0db66254cd7e698b38bd1935a84c6871b0fa5f60a7111700bfdeed11b471aa9f"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/007-b2-14452610.html",
+      "sha256": "2fed4bc9298ba39f15885aca3954633fc75f45111fb73fc86c4a2b4eadb47c71"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/008-ch-3315375.html",
+      "sha256": "fb8778922f1396a548aa056d1467a09cb7c38ccb4953f7ba9fbc977fafd32660"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/009-bc-12011540.html",
+      "sha256": "84a15abe411ff08768f86fb465e891a4e3386db1bb20c6ae208bbe5dcb682185"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/010-c2-12070154.html",
+      "sha256": "716ef73428343de170ba2abb5115e09337dad72efde0d2f5829fe3dda07631ce"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/011-nh-13774920.html",
+      "sha256": "9c6d531e94c00391b8c60251de194c0da304953b5a6b8b301d3e3fa5f749e0fc"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/012-ben-37279111.html",
+      "sha256": "eabd9395f35d33b4015f734c369a7ac58869270add823df051ac5501cebf0153"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/013-bn-10043115.html",
+      "sha256": "43b2ed181b527c603fb090b7e4d484f92a68e05c31fc974a38e3d3c187f62ed5"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/014-cn-2074875.html",
+      "sha256": "7f708e5f4fa487342cf34f8ff63e8cab7572d4fffa571b155559da47c35c2c50"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/015-n2-7727379.html",
+      "sha256": "6d728c67efca1d2d78444129ac38c53b77a5219941924be334e3ca32086d0d87"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/016-oh-3352576.html",
+      "sha256": "6fc59401206d6a061656ff402b05482bba8b36a2b94f576cd0788ca96617ea7e"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/017-lio-12142777.html",
+      "sha256": "2f09dca49607b8cea813a9053168056a57ccbfa78305443266c142f501e24e44"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/018-beo-1304569.html",
+      "sha256": "05d3fc1ed08ccaa55ee82e8351f93a4951bbdc44d7ee574109c9ea62d5214bdc"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/019-bo-12505770.html",
+      "sha256": "06461b3d586cecf5af3c15fd45309970ff3c37351aa0e515b1e1f5d5d50a5186"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/020-co-630080.html",
+      "sha256": "ffc9861ba7a5dfaec06a871abcfb538ab25a76bd8a25d7103d559d0ad480a20d"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/021-no-10102439.html",
+      "sha256": "f14b8c9dde26801fac9b5a82e78359cb2b19131751c7002247b584730b3cacb0"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/022-o2-7782447.html",
+      "sha256": "790d5e1777813644890ccc492ca2a8db457dfed80b4924e2ea6a6abd325d7f0f"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/023-lif-7789244.html",
+      "sha256": "60ce85f117b23edf6cf85f22717f82fe3fba951080636e2627b1be1e4e28efd0"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/024-hf-7664393.html",
+      "sha256": "1c69d34d07c1f83cdede298b5f034e815a8546b80fe9f0daa17a51b21ef9e74d"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/025-bef-13597961.html",
+      "sha256": "38d2b9f90080465fff510e26484f0910f368147389469832f435f4ee118af9b1"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/026-bf-13768600.html",
+      "sha256": "ccc328e5b7a186dbd4f9abd3082e3ecfdc34847fc95ff539d46e39a8ce5179b2"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/027-cf-3889756.html",
+      "sha256": "cc9327050641a8a08f87938cf661f7fd176890a462a71e48121715413ee6c600"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/028-nf-13967061.html",
+      "sha256": "877743c66860580458227c3f1ba68ec327a9130a267a05ae1133f285a776edf0"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/029-fo-12061700.html",
+      "sha256": "1645b43cb3e7b7a6e81b5816c76e919b065fe759085b45af70c85d7d2a09e5d8"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/030-f2-7782414.html",
+      "sha256": "77fc0a48c656147ecba60e538d3c0645e44d972966f104b6d49fbd3b8b0dcc91"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/031-nali-12333492.html",
+      "sha256": "fbd648cea5220dc9440dd9549484d59b8e229c2c79f3783c6ca436d17ad55882"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/032-nah-7646697.html",
+      "sha256": "95be603143000a55cdc7c17b35d2acd194e554f1158ea240cdc45d52f8a006ab"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/033-na2-25681792.html",
+      "sha256": "c08640b7ea48ed2e246b48e94ae46af30045e2471baa27a40ad419d78eec7b24"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/034-nao-12401864.html",
+      "sha256": "5fd04630d7319e6e17ae369753e4e51d860b0600004a359a65b85f2474ffb3bd"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/035-naf-7681494.html",
+      "sha256": "3a4f288168955c0a21c2412150952151323c9bb4a585d21db0d0f08a2f7e26ea"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/036-mgh-14332537.html",
+      "sha256": "7758aaefab54a43d24afed47151fb718bb80e9a137ece0e7cc80a39e1c80168d"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/037-mg2-29904798.html",
+      "sha256": "84febe8986b6397ba72643ed1d93fb16928c47558b783849ef4647bc093460cc"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/038-mgo-1309484.html",
+      "sha256": "f9a5e34fa141fc908eceb73ff115c54b66815d47357c7acb453c3ff8d23c2dd7"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/039-mgf-14953287.html",
+      "sha256": "eb0c4bdfdccae60c8502f18fd4d1068df5d993da3490f8cf09570eee81ddc76a"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/040-alh-13967221.html",
+      "sha256": "0aec8b8d9c05cb666c810d46082a9e72478bd8eda7a9b27da0d01ce9b2da04a8"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/041-al2-32752946.html",
+      "sha256": "1001951c21873164615f65f36787c2ce534c2e9a812a3635d646645665686dd4"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/042-aln-24304005.html",
+      "sha256": "cf440b2c4ff9a51a74e5b64f1368faeb151310b591f354fc063e623a07ea0790"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/043-alo-14457648.html",
+      "sha256": "9508c8af46ebc546caed4b0812f226de6fd5b121c60dc5147a46206d335c5d03"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/044-alf-13595829.html",
+      "sha256": "97907fc485cb0cd4c6dacb13541d3c3b558b00a254efefe7bfef6cb1f0203e44"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/045-sih-13774942.html",
+      "sha256": "539aab40c1755e5b5e45c84f0e8f28fc396ccf622a8d3595ed20fcfefc1290fa"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/046-sic-409212.html",
+      "sha256": "ef4db9089da2fb66f122f53f6256c7e8f52416d2e8e9f5cbee028a7849d08f20"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/047-si2-12597352.html",
+      "sha256": "e4bb1c965dcfcb531e09cb376ee805f55e908bdf47c3bb5da702e5df957545f9"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/048-sin-12033602.html",
+      "sha256": "2bdc81121c53c0286d049c27436414ab69d98a46763767d7df1350bd9623c8ee"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/049-sio-10097286.html",
+      "sha256": "dbf73e415b304a1a540f5876ba31eb51698f619c05119579c7d3e7e688a889f9"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/050-sif-11128248.html",
+      "sha256": "ac7c8244ed9fc8fbece02f4733af5a7ecfd179da92f5c0408eb11383fa5575d1"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/051-ph-13967141.html",
+      "sha256": "3ec1e8c14c0fe37e7eed0b5f61114aee1aaf3634e218f8e1269f7d973a370877"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/052-cp-12326851.html",
+      "sha256": "3bf1a45aba7626bc2ffbb9a7d1e2106f2b818924c7427b580854772b921ac3c2"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/053-sip-12137643.html",
+      "sha256": "bb465df3d753d30b3cf5d02a6b8902d7fcb01f37b90813d01357734c62c62b92"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/054-pn-17739478.html",
+      "sha256": "0a540fd821b7fde5aa55bfd0d75ea723f5c2240c3ca78c3d4999ce2b701e8088"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/055-p2-12185090.html",
+      "sha256": "b9663c4b5f609acd5e27a8c275823d214cfbfb30dc889c6728852dfd046182a7"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/056-po-14452665.html",
+      "sha256": "6b1b9172cbf5e836d5bad906002febbbc31b3c880080035eb031f31e9e5982c2"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/057-pf-16027922.html",
+      "sha256": "65b0965efd002b8bbb1ae64a1272cb0bcfa089551cccf2e82c167f9ca6c2c84f"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/058-hs-13940211.html",
+      "sha256": "ebec617a5dc7d3447763373709cc945fcc71ba9dee96426d815b28cc346f3ce0"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/059-bes-13598226.html",
+      "sha256": "641f2638c34a61f6745572f0a09ad9b733896ffb12f201601dd8a4262f18e7b1"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/060-mgs-12032369.html",
+      "sha256": "cdd88120d5fd9b68c9e5e3694704eb799cfbc209c3a01198950d10e322645db5"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/061-bs-12228396.html",
+      "sha256": "d15bd66947150d6d2e7e7ba65265aee8c77e861e1fc3edad9017742eae601945"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/062-als-12251900.html",
+      "sha256": "eb7dbf595c9e5e146c3b2118ee37e306defce68106bf2f4ba952bc2aeeb37dc0"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/063-cs-2944050.html",
+      "sha256": "1d5bae76092d0b665422a0e06ab4c05965b63e3684570bb4b7fd4dd631f33e41"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/064-sis-12504415.html",
+      "sha256": "9c1d4d203a60bcc68bf7ab3e276cb339ea951286f765d5aac51f4434bc3deaa2"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/065-ns-12033566.html",
+      "sha256": "8696e7134be2113414923188a7f46039edbde7184976e76e545b293b1d3a8fc0"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/066-ps-12281366.html",
+      "sha256": "109553b8f472b753ba7c5a8c42675f9e3dd1eec7c8baa748ed4ca101e7eb15e7"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/067-s2-23550450.html",
+      "sha256": "6fcbdda9d1119710118c087a8877905090e1c8243b3c9f2e58de0b09e1039008"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/068-so-13827322.html",
+      "sha256": "f4a93d236e26ba0cd4c1104d92bb47809381bde30689ee38428ff4b597d164f5"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/069-sf-16068965.html",
+      "sha256": "427ea11e4ca7ee1f9c4424d9fb1db69f13eda498ce803283da270ea786bb7815"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/070-hcl-7647010.html",
+      "sha256": "9f7777cc72f94a360a2a78a9dbe212c637da75846ba810eaa497657626a67895"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/071-licl-7447418.html",
+      "sha256": "069d9f429af8f1d1399a11818e3587969046d98b42b0d5d510dae9a6a66dbe9c"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/072-nacl-7647145.html",
+      "sha256": "54949c4ddc2487bd326bc6d3c942d7d7e0f68c3e5fafb411da5279d05f7db2fb"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/073-mgcl-14989298.html",
+      "sha256": "b60f7b7ec3949b731a0ddf83d640a3aa76408cd3f7c851081a127f4a8f366a4c"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/074-becl-13814501.html",
+      "sha256": "f708df8d620ab1dae6fcf1557d440544be06523dddf684c84ee011b29463061e"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/075-bcl-20583555.html",
+      "sha256": "a35c1bb322a887eb9b73ea4b2af336a888b0ddf52b2cd3fb473f0c7f95fb7be2"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/076-alcl-13595818.html",
+      "sha256": "68ac37ba88f0e2a0b118785a31ee21b18fbbcdcd6b1da32eebaad6272faef4c2"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/077-sicl-13966579.html",
+      "sha256": "fccb4d7c9dbc21ed7e54844682e5028a7d4d70ccaecad0d9026dc388bbe5fe01"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/078-ccl-3889767.html",
+      "sha256": "6fc19380a0770f4dcccd9fb9c1e4de7e3dfe7fa4057001f8bb3e8fb9ce8bd3a3"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/079-pcl-17167554.html",
+      "sha256": "3b787c6c66b9fbf6aa46d87c41d593d741afe7acaa0f3f40ddb9fff4191b92c4"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/080-ncl-12190759.html",
+      "sha256": "6795313700c80e28dfab21027798f9902f7ea66d7f07f5a1d1d6ace0cb053e1b"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/081-scl-14989323.html",
+      "sha256": "dc4aafc49bc5df16a5dd9456c8700f393ca86369ad98ed2517d7c4c7e388f656"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/082-clo-14989301.html",
+      "sha256": "31bbc7ed249a575d4e6a0cfd9b48004e6978ab640f1af03ae1e5ca2a67f0b821"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/083-clf-7790898.html",
+      "sha256": "2c56021f1b0d17f39c51dd60d2ef101823cb0b68cfde7980fd4db3394e62c852"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/084-cl2-7782505.html",
+      "sha256": "90835cc76e519e26e5adda5b7639efbb03c9bfe61baf2a7fe67ebfd7274a679a"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/085-znf-9000139.html",
+      "sha256": "76bab08e7f72576f0fa894bb7d8d63a9856d1e8d4fe2c4ecbf64ca583a76d865"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/086-hse-13940222.html",
+      "sha256": "703b5d41ef1804e92c6b774fc1823cb029a23781dd3cf09cfdee64adab0c4204"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/087-cse-16674183.html",
+      "sha256": "a32921a95b22e5ec5c1ec8243c2a3a8d8adada62a27d8ebe7dd5fbb7a1b97ccb"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/088-ses-7446346.html",
+      "sha256": "d847c4cbfb756584fd961b4b2213cddfec7328eccfbc1d15bbd6f39507d346d5"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/089-seo-12640890.html",
+      "sha256": "06c8e7bcd368e2f95172ee4a617f20a0e750a3bb2dd4f1afbb589ec5f1766192"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/090-se2-12185170.html",
+      "sha256": "6d5f5d34577923d252881d84d1afc7937822bc711a013dad4270697171104a85"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/091-libr-7550358.html",
+      "sha256": "dfb8b37b8f25bbd4d3aa4d7d049851b09484a6aa9a926d1b9d9aba27ea398f38"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/092-hbr-10035106.html",
+      "sha256": "86e223c529d72af77516f3e72f7a07833a55e7611aac81371e47c47bddc56e19"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/093-nabr-7647156.html",
+      "sha256": "edefd93e7252713740d86ce314812828620f87c4286f3b20d4ec7d4ddb6578be"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/094-bro-15656196.html",
+      "sha256": "db9175f9070a46f9e88e900fba81c86595deb7068c280a00316e60fa47a2c271"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/095-br2-7726956.html",
+      "sha256": "220f62220df0f9af0fc5d4b6310ab718bc0f770bcd739edd4b7c838f4d0abf19"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/096-brf-13863597.html",
+      "sha256": "254d2a57597fe7fdc86338d9a7f5720219864aee690e94050148f46c284a6825"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/097-brcl-13863417.html",
+      "sha256": "5b49d4db8aa6baadd3d61877cd286836484f5283791d7a7e793ba4c8fb976ce4"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/098-bh2-14452643.html",
+      "sha256": "bd5f1a891d152b12612e3d7b40385f9762fea376dd950fb2999367fecd61b001"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/099-ch2-2465567.html",
+      "sha256": "cb803e1253f853a5ba33a0e827860b9a8c87a633b79472047f990909fc813288"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/100-c2h-2122487.html",
+      "sha256": "1dbe9710bb7cae38868aeee826bd5dca92140cfdc752fc6ef0984f18c61ca9c9"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/101-nh2-13770406.html",
+      "sha256": "137845fe3d92f1a3fa38f7f46923850a1a65b931accb337ab0ba3b7cc446716b"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/102-hcn-74908.html",
+      "sha256": "3940410443e1cf7a0c0dc1ad6c816aa8fa601ad73c096e67b07ccb98fbe93c5b"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/103-n3-12596600.html",
+      "sha256": "40f943a3044624d7b6197adf1159677f24417ab53410d56e4c2b75dd24f97dd6"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/104-h2o-7732185.html",
+      "sha256": "13374da120a60aba8ee077fce5217aa7ced76eea9690bca7b41a723b4ee9f28a"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/105-hco-2597446.html",
+      "sha256": "4dfab77d81e4a8d92e72ca90ec07289cff724f6de386a90089577d906f7f376b"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/106-hno-14332286.html",
+      "sha256": "b2883206be8f2e768d49366acc93da4e8f607818a97c70c61ea36f24413d9082"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/107-ho2-3170830.html",
+      "sha256": "edf18e3c1195270981813d4ab4ba0bc6cbe9cce687549075c3f6c446727f382d"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/108-nco-22400266.html",
+      "sha256": "ab57eec5f25380a4c8eb18b3073a02d97afa329f84ac34e63f7f3d4966d43ce1"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/109-bo2-13840885.html",
+      "sha256": "7f80f3b859105081deac1c0932a48a8f2dc343b7edafb7c7b5b883ff9645f35d"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/110-n2o-10024972.html",
+      "sha256": "4fd7eed8c305ea00dbdcdc329287b0233ad7077a64c0567a4955e5033a0c65bc"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/111-co2-124389.html",
+      "sha256": "19f4db581dbee8e49bf70b48dd378cb324a58ccbec55fd33963c104d773196da"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/112-no2-10102440.html",
+      "sha256": "0b5087f6251d1896e2e504da954827fe2885eba034434975729ab84b417f3880"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/113-o3-10028156.html",
+      "sha256": "398179edb5bc871614416463fa9da8c3c66fef106ecc7d59afb3134ef808b3ad"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/114-fhf-18130740.html",
+      "sha256": "faa72ddc40dc847ba9ea37be3fa4341a6c045b2cfca55076de1184f3244b7fd5"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/115-cf2-2154598.html",
+      "sha256": "e18c80d5108cdd9c58d2a057f51e68fbbd35ad76ca82103ac61c950a633950ba"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/116-alh2-14457659.html",
+      "sha256": "af1a5da76aab0541f1bd33c10b4ed863e4d520b820c843c4c5d8d1525f00e7b8"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/117-sih2-13825906.html",
+      "sha256": "0463c09162de77e54f52b5d51bec36b273952385bdf40f685613d0772b277cbe"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/118-ph2-13765430.html",
+      "sha256": "d0dd6593e2c1be3068096cd38becd747862900d0062094cd13789e4867de533c"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/119-po2-12164975.html",
+      "sha256": "7cc8d32759f4a298f8c9dba96fc374877f5c59b36963998a24ddc6fe45ebffca"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/120-h2s-7783064.html",
+      "sha256": "102a7fee6aac53d42f1dad00a7f1abf9025df514b63a47810d9e7db4b6683b17"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/121-hcs-36058283.html",
+      "sha256": "70d72c31b6420e26fd0e2cb40c7216719393fae60d8fe74f1691273b1ba54a6c"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/122-hns-9000242.html",
+      "sha256": "2fd842025e54a919049ef00b1cc7f333993d062a999dd96a3a8bc87145fdecc0"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/123-scn-15941772.html",
+      "sha256": "6f6fefe9c90daee767663a93c86b755e39a6158e86c6e3f5f69fbd2f346225cf"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/124-cs2-75150.html",
+      "sha256": "7fd4bb3b9a2525cc1fee4df52dba61116ef55389e718f636a54ce90bd6e84845"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/125-so2-7446095.html",
+      "sha256": "226af36514f28e552afe1ca153e1c28eecb64fcb15396494450f1f1d59224a94"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/126-s3-12597034.html",
+      "sha256": "1407a42255c28d15d4948467b51cea1f0345b861fd30ea0a512db00a9cb2b3d7"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/127-sf2-13814250.html",
+      "sha256": "dfae9d7270c2e0c76e089ad33498694158f3b35e5ccb12af3aa3c1732d8fe566"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/128-ccl2-1605727.html",
+      "sha256": "ba60f4c463e4bcae719dc281caa65f82c76982d3cbe05cd43f248dff5d0c4b96"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/129-oclo-10049044.html",
+      "sha256": "7753c19314315cbc6c3458112a85cfd5f2948c2756aa8c39018acdd9931a6d24"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/130-geh2-24968556.html",
+      "sha256": "6fff63b8287b81095e978da1d3ef0abcba1fe6855d8018fdce5cd5194cc92ab5"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/131-bh3-13283313.html",
+      "sha256": "854834e0626cf7fa14a10d15e0ff9c124a036f1a076954e9d8ec9ccabf1e01a6"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/132-ch3-2229074.html",
+      "sha256": "a11fb03796534de911cd930b978a31ab7daa1a2bd6f005a331109a05ce6ef1f6"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/133-cch2-2143693.html",
+      "sha256": "d1d2a9cf219de157a1ab226f47281ad7a9ef0cfa2ff636cb6f79697299da66e9"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/134-c2h2-74862.html",
+      "sha256": "ef8239c20b2b2d556cf031c4e614e4ad4d9f40b6cc98bf75de2305cc22d3d56a"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/135-nh3-7664417.html",
+      "sha256": "0c70fd9e8c9704419af54c1af8d6a3aff37ce75d0eaf2321b8f6c344a92e5e4f"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/136-h2co-50000.html",
+      "sha256": "905e339b9fca2640c59e20726723e0872e81805c074c144070bc90a455b5fccf"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/137-no3-12033497.html",
+      "sha256": "372cc0c0eeb9be15163cbb569e0dc24579e0e2beb84587f80dd9a3ecc968ef0c"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/138-bf3-7637072.html",
+      "sha256": "38a63232baab9edc32fa89f9eed35459f1e477436ef8bf4266ef573a7cec18ee"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/139-cf3-2264213.html",
+      "sha256": "34df9b45243c7160eebd6d602822bd833d0341837eba9b8d7d60f9d2e1774015"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/140-nf3-7783542.html",
+      "sha256": "49e81d40fbc59bfdced2c2a3ec17096a8a2c060deb446994591e578f2f5ec86c"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/141-alh3-7784216.html",
+      "sha256": "0053840b4a6f6b845e6e0b41293be9d75d859756bdc4eda851056c3f914a919f"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/142-sih3-13765441.html",
+      "sha256": "cee6bec4825ed5f83b026e00be1a67bb5f50bdc48ca158395e3639581d3fffd0"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/143-h2cs-865361.html",
+      "sha256": "4ad4ad3933d867154a9a19d8013cbf4ede8754a033d2db194854c7a28ee3dcc0"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/144-so3-7446119.html",
+      "sha256": "e230247fcd6c35c2178b0fd2281528c45c2cbaa21258acd14cc4098d440fba6e"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/145-ccl3-3170807.html",
+      "sha256": "2500bbe780c38d1b408b5522e5ab43613819857f65975507ba7fd87e68560c06"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/146-bh4-16971292.html",
+      "sha256": "ddaef6301fc803709927ba883af815edf71525489b49431b4675d30dc1c1a527"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/147-ch4-74828.html",
+      "sha256": "6544185e19c53dfc8154af5338f70a6cd8b805bcf19d4ba71842afb24112de59"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/148-c2h3-2669898.html",
+      "sha256": "81323aa18dc87b398ebd7d677e50bd71712e5d2097091c5cf27e5db01c86d092"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/149-ch3o-2143682.html",
+      "sha256": "b77ba1562746ec2c14a4129ba37f3366abf98593375fa6e543c45aa1b871e295"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/150-c2h4-74851.html",
+      "sha256": "0b5c7cf7a98af987277fff261c7f8e8a67cce8fbdbfff6e3816e8443727c2fb3"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/151-c3h3-2932787.html",
+      "sha256": "ce1f42866da6d16700c98175d91ba6c34f58159254800b9cb0c269670d0f9541"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/152-ch3cn-75058.html",
+      "sha256": "ae5acec871f1e916a09938fc396ec221de7540ea69e0a678d6c4dbaa6c7ef0da"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/153-ch3oh-67561.html",
+      "sha256": "7b10578b8f7b30e93897266afd87012c4e7272eb5eaf9edbec623287d6fe98a0"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/154-ch3co-3170692.html",
+      "sha256": "bc1fa7db822244a853b7fc6e78beaccd25844eda48055a7b5c5f1d889a751957"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/155-ch3oo-2143580.html",
+      "sha256": "f76f4ceffb3196a1fab860ddd8e5be31b2b7525ae37982c00a49fee9eeefa532"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/156-c2h5-2025561.html",
+      "sha256": "c72f4659729814ebd600c6509ac3aeaf9321b7ab130e17385c81f3810b80943f"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/157-pf6-16919189.html",
+      "sha256": "e336f0a69c11192bd77df539df2d419680718014f1278c7aa74fd16e44db556b"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/158-c3h3n2-36954037.html",
+      "sha256": "746223e1495d17491fecd79c9b675e69da25e261345bd2948acaebcec70dcf5b"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/159-c4h4n-23303095.html",
+      "sha256": "dba4024c096eee2d79bd0059c4a969df731fb016b5f7f083048d8faed5afe749"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/160-c6n4-670542.html",
+      "sha256": "3651ef6bf260f0b9035f77659f8e665af0fb37bcafebded1526106456de26704"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/161-ch3coch3-67641.html",
+      "sha256": "2d7c7eba282d46ea476ab7d4d6ec3c2ecd268780d958e0bb4490f262e63942d5"
+    },
+    {
+      "path": "experiments/external_sources/chemistry/snapshots/prop-008-molecular-electron-affinity-v1/162-c6h5-2396012.html",
+      "sha256": "d26b60219d18eea5ecbfa9e6a486e5bf19230eda6a6a48c6c564a29c6e066a54"
+    },
+    {
+      "path": "claims/SFT-CHEM-MOLECULAR-ELECTRON-AFFINITY-008/certificate.json",
+      "sha256": "90c9f4f630d70a620e2815ee2c5a82d963dee6595be8ff9301b5aec4f18949de"
+    },
+    {
+      "path": "claims/SFT-CHEM-MOLECULAR-ELECTRON-AFFINITY-008/independent_validator.py",
+      "sha256": "55504324b4c1ff8430c30485114debdd2a451fb10c4e602597d1a5776397e8ed"
+    }
+  ]
+}

@@ -12147,3 +12147,15 @@ import SFT.Chemistry.AnalyticalDetectionAnalysis
 import SFT.Chemistry.AnalyticalDetectionExperiment
 
 import SFT.Chemistry.AnalyticalDetectionValidation
+
+import SFT.Chemistry.AnalyticalInterferenceMatrix
+
+import SFT.Chemistry.AnalyticalInterferenceMatrixGrammar
+
+import SFT.Chemistry.AnalyticalInterferenceMatrixEvidence
+
+import SFT.Chemistry.AnalyticalInterferenceMatrixAnalysis
+
+import SFT.Chemistry.AnalyticalInterferenceMatrixExperiment
+
+import SFT.Chemistry.AnalyticalInterferenceMatrixValidation

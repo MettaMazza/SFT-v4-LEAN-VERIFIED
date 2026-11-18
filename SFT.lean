@@ -12111,3 +12111,39 @@ import SFT.Chemistry.XrayDiffractionAnalysis
 import SFT.Chemistry.XrayDiffractionExperiment
 
 import SFT.Chemistry.XrayDiffractionValidation
+
+import SFT.Chemistry.MassIsotopeFragment
+
+import SFT.Chemistry.MassIsotopeFragmentGrammar
+
+import SFT.Chemistry.MassIsotopeFragmentEvidence
+
+import SFT.Chemistry.MassIsotopeFragmentAnalysis
+
+import SFT.Chemistry.MassIsotopeFragmentExperiment
+
+import SFT.Chemistry.MassIsotopeFragmentValidation
+
+import SFT.Biology.CellSignalling
+
+import SFT.Biology.CellSignallingGrammar
+
+import SFT.Biology.CellSignallingEvidence
+
+import SFT.Biology.CellSignallingSource
+
+import SFT.Biology.CellSignallingExperiment
+
+import SFT.Biology.CellSignallingValidation
+
+import SFT.Chemistry.AnalyticalDetection
+
+import SFT.Chemistry.AnalyticalDetectionGrammar
+
+import SFT.Chemistry.AnalyticalDetectionEvidence
+
+import SFT.Chemistry.AnalyticalDetectionAnalysis
+
+import SFT.Chemistry.AnalyticalDetectionExperiment
+
+import SFT.Chemistry.AnalyticalDetectionValidation

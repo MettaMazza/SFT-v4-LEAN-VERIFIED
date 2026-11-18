@@ -362,3 +362,8 @@ Binary generation and phase-count orthogonality force the exact energy identity 
 2. Smith, Maria. *SFT V3 monograph*. [doi:10.5281/zenodo.21900790](https://doi.org/10.5281/zenodo.21900790). Operational foundation: [doi:10.5281/zenodo.21627656](https://doi.org/10.5281/zenodo.21627656).
 3. Smith, Maria. *SFT native Lean 4 verification*, edition 0.4. [doi:10.5281/zenodo.24320778](https://doi.org/10.5281/zenodo.24320778). Cumulative sections 938–945; [pinned native source and evidence](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/tree/21cdf559922fb057f8560f42d056ffa035329eb3).
 4. Storz, Simon, et al. “Loophole-free Bell inequality violation with superconducting circuits.” *Nature* 617, 265–270 (2023). [doi:10.1038/s41586-023-05885-0](https://doi.org/10.1038/s41586-023-05885-0). Complete registered target and primary snapshot are included with their pinned V3 bindings.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

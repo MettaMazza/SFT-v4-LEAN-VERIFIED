@@ -263,3 +263,8 @@ The eleven original entry receipts TURN944–947, TURN950–953, TURN955 and TUR
 9. NIST Atomic Spectroscopy. Hydrogen hyperfine record: https://physics.nist.gov/Pubs/AtSpec/node03.html. Selection, rate and lifetime relations: https://physics.nist.gov/Pubs/AtSpec/node17.html and https://physics.nist.gov/Pubs/AtSpec/latex.html.
 10. NIST. Ar9+ metastable lifetime (2018): https://www.nist.gov/publications/lifetime-metastable-2p12-state-f-ar9-isolated-compact-penning-trap. Al+ clock lifetime (2007): https://www.nist.gov/publications/observation-1s0-3p0-clock-transition-27al.
 11. NIST. Zeeman effect: https://physics.nist.gov/Pubs/AtSpec/node12.html. NBS Special Publication 617, hydrogen linear Stark measurement: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication617.pdf. NIST cesium voltage reference (2023): https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=933361.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

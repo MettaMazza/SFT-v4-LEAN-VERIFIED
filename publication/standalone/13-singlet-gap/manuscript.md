@@ -309,3 +309,8 @@ The complete generated colour construction yields a nonempty least physical sing
 2. Smith, Maria. *SFT V3 monograph*. [doi:10.5281/zenodo.21900790](https://doi.org/10.5281/zenodo.21900790). Operational foundation: [doi:10.5281/zenodo.21627656](https://doi.org/10.5281/zenodo.21627656).
 3. Smith, Maria. *SFT native Lean 4 verification*, edition 0.4. [doi:10.5281/zenodo.24320778](https://doi.org/10.5281/zenodo.24320778). Cumulative sections 874–876; [pinned native source and evidence](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/tree/21cdf559922fb057f8560f42d056ffa035329eb3).
 4. Particle Data Group. *Review of Particle Physics 2026: Quark Model*, sections 15.4.2 and 15.8, registered pages 11, 12 and 32. [Original source](https://pdg.lbl.gov/2026/reviews/rpp2026-rev-quark-model.pdf). The exact three-row spectrum and complete source scope are retained in the pinned V3 record `yang-mills-singlet-gap-source-record.json`.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

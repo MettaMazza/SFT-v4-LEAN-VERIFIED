@@ -15,8 +15,9 @@ with pdfplumber.open(src) as pdf:
  pages=len(pdf.pages)
 assert not bad,bad
 text='\n'.join(texts);assert 'SFTDISPLAY' not in text and 'SFTMATHPLACEHOLDER' not in text
+assert 'Maria.smith.sftoe@gmail.com' in text and ('discord.gg/QCNkzq6kZC' in text), 'PDF must include Maria Smith correspondence and Discord invitation'
 (q/'text.txt').write_text(text);subprocess.run(['pdftoppm','-scale-to','950','-png',str(src),str(q/'release')],check=True)
 sheet=Image.new('RGB',(960,460*((pages+2)//3)),'#ddd')
 for i in range(pages):
  f=q/('release-'+str(i+1).zfill(len(str(pages)))+'.png');im=Image.open(f);im.thumbnail((300,425));sheet.paste(im,((i%3)*320+10,(i//3)*460+10));ImageDraw.Draw(sheet).text(((i%3)*320+10,(i//3)*460+440),str(i+1),fill='black')
-sheet.save(q/'contact.png');render=json.loads((p/'render_check.json').read_text());qa={'pdf_sha256':hashlib.sha256(src.read_bytes()).hexdigest(),'pages':pages,'math_expressions':render['equations'],'render_errors':0,'text_boundary_errors':bad,'visual_review_passed':False,'visual_review':'Pending inspection of rendered page images','arithmetic_checks':json.loads((p/'arithmetic_check.json').read_text())};(p/'PUBLICATION_QA.json').write_text(json.dumps(qa,indent=2)+'\n');print(json.dumps({'pages':pages,'equations':render['equations'],'boundary_errors':len(bad),'contact':str(q/'contact.png')}))
+sheet.save(q/'contact.png');render=json.loads((p/'render_check.json').read_text());qa={'author_contact_verified':True,'pdf_sha256':hashlib.sha256(src.read_bytes()).hexdigest(),'pages':pages,'math_expressions':render['equations'],'render_errors':0,'text_boundary_errors':bad,'visual_review_passed':False,'visual_review':'Pending inspection of rendered page images','arithmetic_checks':json.loads((p/'arithmetic_check.json').read_text())};(p/'PUBLICATION_QA.json').write_text(json.dumps(qa,indent=2)+'\n');print(json.dumps({'pages':pages,'equations':render['equations'],'boundary_errors':len(bad),'contact':str(q/'contact.png')}))

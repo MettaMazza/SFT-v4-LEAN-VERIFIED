@@ -233,3 +233,8 @@ selected declarations with empty axiom dependencies. This declaration count is s
 3. Maria Smith. SFT V4 Lean verified corpus, edition 0.4. https://doi.org/10.5281/zenodo.24320778. Pinned native source: https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/tree/21cdf559922fb057f8560f42d056ffa035329eb3.
 4. National Institute of Standards and Technology. Topological Insulators. https://www.nist.gov/programs-projects/topological-insulators. Exact registered snapshot and four entry-specific fragments retained in the archive.
 5. National Institute of Standards and Technology. Integer and Fractional Quantum Hall Effect. https://www.nist.gov/programs-projects/integer-and-fractional-quantum-hall-effect. Exact registered snapshot and five successor fragments retained in the archive.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

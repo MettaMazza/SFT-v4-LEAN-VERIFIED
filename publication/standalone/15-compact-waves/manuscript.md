@@ -560,3 +560,8 @@ The original record's reported signs and units remain measurement records. Every
 21. LIGO–Virgo. *GW190521: A Binary Black Hole Merger with a Total Mass of 150 Solar Masses*. [LIGO-P2000020](https://dcc.ligo.org/P2000020/public).
 
 **Authorship.** Maria Smith is the scientific author of SFT and its original derivations. AI assistance supports source-bound exposition, proof correspondence and publication preparation under her direction.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

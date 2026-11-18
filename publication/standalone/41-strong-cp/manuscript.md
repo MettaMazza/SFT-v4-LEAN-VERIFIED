@@ -305,3 +305,8 @@ Strong-sector alignment is the unique complete colour-times-hand result. The ind
 10. *Search for proton decay via p to e-plus two-pi-zero and p to mu-plus two-pi-zero*. [arXiv:2604.10975](https://arxiv.org/abs/2604.10975). Original two-pion-mode source record.
 
 **Authorship.** Maria Smith is the scientific author of SFT and its original definitions and derivations. AI assistance supports source-bound exposition, native-proof correspondence and publication preparation under her direction.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

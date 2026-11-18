@@ -274,3 +274,8 @@ The complete minimal Fold partition gives the unique displaced half-One ground. 
 [9] ATLAS and CMS Collaborations. *Combination of ATLAS and CMS searches for Higgs boson pair production at 13 TeV*. [arXiv:2602.23991](https://arxiv.org/abs/2602.23991).
 
 **Authorship.** Maria Smith originated SFT and its derivations and directs the scientific work. AI assistance supports source-bound manuscript preparation, native translation and verification.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

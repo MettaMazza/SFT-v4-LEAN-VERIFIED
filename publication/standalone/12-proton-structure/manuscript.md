@@ -373,3 +373,8 @@ The proton colour carrier determines eight non-return mediator channels for ener
 8. Electronic-hydrogen proton-radius measurement, *Nature* (2026). [doi:10.1038/s41586-026-10124-3](https://doi.org/10.1038/s41586-026-10124-3). Original electronic and muonic-reference rows.
 9. PRad proton-radius measurement, *Nature* (2019). [doi:10.1038/s41586-019-1721-2](https://doi.org/10.1038/s41586-019-1721-2).
 10. NIST/CODATA. *2014 recommended values*, historical comparison. [Original archive](https://physics.nist.gov/cuu/Constants/archive2014.html).
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

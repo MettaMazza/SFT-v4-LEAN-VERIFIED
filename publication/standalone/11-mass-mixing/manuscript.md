@@ -475,3 +475,8 @@ All declaration families above are under `SFT.Physics`. Entry-specific `Witnesse
 7. Particle Data Group. *CKM Quark-Mixing Matrix*, 2025. [Original registered review](https://pdg.lbl.gov/2025/reviews/rpp2025-rev-ckm-matrix.pdf).
 8. Particle Data Group. *Big-Bang Cosmology*, 2025. [Original registered review](https://pdg.lbl.gov/2025/reviews/rpp2025-rev-bbang-cosmology.pdf), equation 22.55 and Planck-derived baryon-density translation.
 9. NIST/CODATA. *2022 recommended values of the fundamental physical constants*. [Original complete table](https://physics.nist.gov/cuu/Constants/Table/allascii.txt), proton-electron mass ratio.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

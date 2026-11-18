@@ -299,3 +299,8 @@ The eight selected entry receipts account for 1,034 distinct declarations whose 
 6. A. Bérut et al. Experimental verification of Landauer's principle linking information and thermodynamics. *Nature* **483**, 187–189 (2012). https://doi.org/10.1038/nature10872.
 7. NIST Chemistry WebBook, SRD 69. https://webbook.nist.gov/chemistry/. Original registered thermochemistry, phase-change and reaction-energy source snapshot retained in the archive.
 8. International Association for the Properties of Water and Steam. Scientific releases. https://iapws.org/. Original registered releases snapshot and source-specific locators retained in the archive.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

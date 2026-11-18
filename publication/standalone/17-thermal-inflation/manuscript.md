@@ -494,3 +494,8 @@ Complete support fixes the inflation shares and duration; complete isotope incid
 16. Escamilla et al. *The state of the dark energy equation of state circa 2023*. [doi:10.1088/1475-7516/2024/05/091](https://doi.org/10.1088/1475-7516/2024/05/091).
 17. Gómez-Valent. *Quantifying the evidence for the current speed-up of the Universe with low and intermediate-redshift data*. [doi:10.1088/1475-7516/2019/05/026](https://doi.org/10.1088/1475-7516/2019/05/026).
 18. DESI Collaboration. *DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations and Cosmological Constraints*. [doi:10.1103/PhysRevD.112.083515](https://doi.org/10.1103/PhysRevD.112.083515).
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

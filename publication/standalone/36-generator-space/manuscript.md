@@ -303,3 +303,8 @@ The accompanying `SOURCE_CORRESPONDENCE.json` identifies every source, module an
 5. Smith, Maria. **The fine-structure constant from first principles: an exact zero-parameter Fold derivation.** https://doi.org/10.5281/zenodo.24324400. Downstream application of the generator, direction and boundary counts.
 6. Smith, Maria. **Nuclear shell closure, g-block filling and the predicted periodic endpoint.** https://doi.org/10.5281/zenodo.24325152. Downstream application of complete direction and boundary support.
 
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

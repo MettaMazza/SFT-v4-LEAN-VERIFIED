@@ -230,3 +230,8 @@ The six rectification modules and `verification/TURN_1092_RECTIFICATION_COMPLETI
 4. Robert I. Scace. Semiconductor Technology for the Non-Technologist, second edition. NISTIR 4414, September 1990. Section 3, Figure 1, page 4. https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir4414.pdf.
 5. NIST. The Josephson Volt: NIST's First Quantum Electrical Standard. https://www.nist.gov/news-events/events/josephson-volt-nists-first-quantum-electrical-standard. Original junction-registry snapshot and fragments retained.
 6. NIST. Semiconductors. https://www.nist.gov/mml/mmsd/primary-focus-areas/semiconductors. Original junction-registry snapshot and fragments retained.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

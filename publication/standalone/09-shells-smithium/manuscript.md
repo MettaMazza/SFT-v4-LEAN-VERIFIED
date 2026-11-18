@@ -316,3 +316,8 @@ Original V3 is pinned to commit `76f1b34e9e9682989adcbb088797b4ae4ce4fcf1`. The 
 4. Smith, Maria. **Operational foundation.** https://doi.org/10.5281/zenodo.21627656.
 5. Smith, Maria. **The fine-structure constant from first principles: an exact zero-parameter Fold derivation.** https://doi.org/10.5281/zenodo.24324400.
 6. International Union of Pure and Applied Chemistry. **Periodic Table of the Elements, 4 May 2022.** https://iupac.org/what-we-do/periodic-table-of-elements/. Original pinned source manifest and observation extraction accompany this paper.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

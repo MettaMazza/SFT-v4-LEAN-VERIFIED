@@ -385,3 +385,8 @@ The accompanying reproduction script executes the unchanged original pure functi
 6. Smith, Maria. **Charged-lepton mass ratios and the exact Koide invariant from Fold geometry**, version 1.1. https://doi.org/10.5281/zenodo.24325169.
 7. Smith, Maria. **Twelve Smithion mass-ratio predictions and the dark-to-baryonic abundance from Fold geometry.** https://doi.org/10.5281/zenodo.24324894.
 8. Smith, Maria. **Operational foundation.** https://doi.org/10.5281/zenodo.21627656.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

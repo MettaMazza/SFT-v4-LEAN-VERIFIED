@@ -316,3 +316,8 @@ All selected declarations match retained empty-axiom audit output and their appl
 4. NIST. CODATA 2022 fundamental physical constants, Boltzmann constant. https://physics.nist.gov/cuu/Constants/Table/allascii.txt. Exact registered snapshot retained in the archive.
 5. X. J. Feng et al. Determination of the Boltzmann constant with cylindrical acoustic gas thermometry: new and previous results combined. Metrologia 54, 748 (2017). https://doi.org/10.1088/1681-7575/aa7b4a.
 6. S. P. Benz et al. An electronic measurement of the Boltzmann constant. Metrologia 48, 142–153 (2011). https://doi.org/10.1088/0026-1394/48/3/008.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

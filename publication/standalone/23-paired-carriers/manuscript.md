@@ -288,3 +288,8 @@ All selected declarations match retained empty-axiom audit output. Applicable so
 5. NIST. Flux Lattice in Superconductors and Melting. https://www.nist.gov/ncnr/flux-lattice-superconductors-and-melting. Registered snapshot: `nist-superconducting-flux.html`.
 6. NIST. The Josephson Volt: NIST's First Quantum Electrical Standard. https://www.nist.gov/news-events/events/josephson-volt-nists-first-quantum-electrical-standard. Registered snapshot: `nist-josephson.html`.
 7. NIST. First Controllable Atom SQUID. https://www.nist.gov/news-events/news/2012/11/first-controllable-atom-squid. Registered snapshot: `nist-superfluid-circulation.html`.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

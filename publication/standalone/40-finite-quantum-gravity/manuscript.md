@@ -493,3 +493,8 @@ Each row lists every composite unit in increasing source order and its ordered c
 9. LIGO Scientific Collaboration and Virgo Collaboration. *Tests of General Relativity with GW170817*. [LIGO-P1800059](https://dcc.ligo.org/LIGO-P1800059/public). Original tensor/vector/scalar comparison snapshot.
 
 **Authorship.** Maria Smith is the scientific author of SFT and its original definitions and derivations. AI assistance supports source-bound exposition, native-proof correspondence and publication preparation under her direction.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

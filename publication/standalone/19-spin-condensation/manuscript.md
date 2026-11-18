@@ -328,3 +328,8 @@ All selected declarations match retained empty-axiom audit output, and the appli
 4. J. R. Ensher, D. S. Jin, M. R. Matthews, C. E. Wieman and E. A. Cornell. Bose-Einstein Condensation in a Dilute Gas: Measurement of Energy and Ground-State Occupation. Physical Review Letters 77, 4984–4987 (1996). https://doi.org/10.1103/PhysRevLett.77.4984.
 5. B. L. DeMarco, S. Papp and D. S. Jin. Pauli Blocking of Collisions in a Quantum Degenerate Atomic Fermi Gas (2001). NIST primary publication record: https://www.nist.gov/publications/pauli-blocking-collisions-quantum-degenerate-atomic-fermi-gas-0.
 6. H. Rauch, A. Zeilinger, G. Badurek, A. Wilfing, W. Bauspiess and U. Bonse. Verification of Coherent Spinor Rotation of Fermions. Physics Letters A 54, 425–427 (1975). https://doi.org/10.1016/0375-9601(75)90798-7.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

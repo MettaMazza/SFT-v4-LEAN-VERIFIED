@@ -318,3 +318,8 @@ The generated counts \(b=2\) and \(d=3\) determine both Dirac square constructio
 5. Particle Data Group. *Electroweak Model and Constraints on New Physics*, 2025 review. [Original review](https://pdg.lbl.gov/2025/reviews/rpp2025-rev-standard-model.pdf). The pinned snapshot retains Dirac/Lorentz and radiative-calculation statements.
 6. Williams, E. R., Faller, J. E., and Hill, H. A. “New Experimental Test of Coulomb’s Law: A Laboratory Upper Limit on the Photon Rest Mass.” *Physical Review Letters* 26, 721–724 (1971). [doi:10.1103/PhysRevLett.26.721](https://doi.org/10.1103/PhysRevLett.26.721). The complete reported exponent and uncertainty are retained in the pinned source record.
 7. NIST shared source vector: [Atomic Spectra Database version history](https://physics.nist.gov/PhysRefData/ASD/Html/verhist.shtml); [photon interference](https://www.nist.gov/news-events/news/2019/12/new-playbook-interference); [nonlinear optical synthesis](https://www.nist.gov/publications/nonlinear-networks-arbitrary-optical-synthesis), [doi:10.1103/PhysRevX.13.021027](https://doi.org/10.1103/PhysRevX.13.021027); [PPLN frequency conversion](https://tf.nist.gov/ofm/synthesis/ppln.htm). These identities remain in the original seven-source classification record.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

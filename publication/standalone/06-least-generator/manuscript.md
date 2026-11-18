@@ -357,3 +357,8 @@ Operational presentation supplies the occurrence class; complete addition-free r
 1. Smith, Maria. *SFT V3 operational foundation*. [doi:10.5281/zenodo.21627656](https://doi.org/10.5281/zenodo.21627656). [Pinned original source](https://github.com/MettaMazza/ernos-labs-sft-platform/tree/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1).
 2. Smith, Maria. *SFT V3 monograph*. [doi:10.5281/zenodo.21900790](https://doi.org/10.5281/zenodo.21900790). Physics corpus: [doi:10.5281/zenodo.21761655](https://doi.org/10.5281/zenodo.21761655).
 3. Smith, Maria. *SFT native Lean 4 verification*, edition 0.4. [doi:10.5281/zenodo.24320778](https://doi.org/10.5281/zenodo.24320778). Cumulative sections 6–12 and 21–22, with exact-operation and dynamics dependencies; [pinned native source and evidence](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/tree/21cdf559922fb057f8560f42d056ffa035329eb3).
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

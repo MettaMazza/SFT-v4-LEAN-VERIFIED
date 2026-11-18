@@ -365,3 +365,8 @@ The exact terminal weak share follows from complete finite supports: four promot
 5. Smith, Maria. *The fine-structure constant from first principles: an exact zero-parameter Fold derivation*. [doi:10.5281/zenodo.24324400](https://doi.org/10.5281/zenodo.24324400).
 6. Particle Data Group. *Electroweak Model and Constraints on New Physics*, 2025. [Original review](https://pdg.lbl.gov/2025/reviews/rpp2025-rev-standard-model.pdf), printed pages 19 and 23.
 7. Particle Data Group. *W-boson listing*, 2024. [Original listing](https://pdg.lbl.gov/2024/listings/rpp2024-list-w-boson.pdf), printed page 1.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

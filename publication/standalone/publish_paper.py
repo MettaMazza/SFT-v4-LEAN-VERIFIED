@@ -17,11 +17,15 @@ def call(method,url,data=None,rdm=False):
  except urllib.error.HTTPError as e:raise RuntimeError(str(e.code)+' '+e.read().decode(errors='replace').replace(token,'[REDACTED]')[:1000]) from None
 def save(name,d): (p/name).write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
 meta=json.loads((p/'ZENODO_METADATA.json').read_text());sp=p/'ZENODO_STATE.json'
+contact_email='Maria.smith.sftoe@gmail.com';contact_discord='https://discord.gg/QCNkzq6kZC'
+assert contact_email in meta['description'] and contact_discord in meta['description'], 'Author contact email and Discord must be present in landing metadata'
+assert contact_email in (p/'manuscript.md').read_text() and contact_discord in (p/'manuscript.md').read_text(), 'Author contact email and Discord must be present in paper manuscript'
 if a.action=='create':
  if sp.exists():
   s=json.loads(sp.read_text());print('Existing deposit',s['id'],s['doi']);raise SystemExit
  d=call('POST','https://zenodo.org/api/deposit/depositions',{'metadata':meta});s={'id':d['id'],'doi':d['metadata']['prereserve_doi']['doi'],'status':'draft','created_at':datetime.datetime.now(datetime.timezone.utc).isoformat()};save('ZENODO_STATE.json',s);print(json.dumps(s));raise SystemExit
 s=json.loads(sp.read_text());rid=s['id'];base=f'https://zenodo.org/api/deposit/depositions/{rid}';rb=f'https://zenodo.org/api/records/{rid}';names=['SFT_PAPER.pdf','manuscript.md','SOURCE_CORRESPONDENCE.json','SOURCE_AND_EVIDENCE.zip','PUBLICATION_QA.json','ZENODO_METADATA.json'];hashes={n:hashlib.md5((p/n).read_bytes()).hexdigest() for n in names};sha=hashlib.sha256((p/'SFT_PAPER.pdf').read_bytes()).hexdigest();qa=json.loads((p/'PUBLICATION_QA.json').read_text());assert qa['pdf_sha256']==sha and qa['visual_review_passed']
+assert qa.get('author_contact_verified') or (qa.get('contact_update',{}).get('email')==contact_email and qa.get('contact_update',{}).get('discord')==contact_discord), 'PDF contact verification is required'
 if a.action=='upload':
  d=call('GET',base);assert not d.get('submitted'),'Published record: verify instead of changing deposited files'
  d=call('PUT',base,{'metadata':meta});old={x['filename']:x for x in d['files']}

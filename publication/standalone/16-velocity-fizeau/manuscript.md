@@ -275,3 +275,8 @@ The two entries therefore supply 334 distinct selected declarations with empty a
 2. Maria Smith. Smithian Fold Theory V3 physics corpus. https://doi.org/10.5281/zenodo.21761655. Exhaustive monograph: https://doi.org/10.5281/zenodo.21900790.
 3. Maria Smith. SFT V4 Lean verified corpus, edition 0.4. https://doi.org/10.5281/zenodo.24320778. Pinned native source: https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/tree/21cdf559922fb057f8560f42d056ffa035329eb3.
 4. Thierry Lahaye, Pierre Labastie and Renaud Mathevet. Fizeau's aether-drag experiment in the undergraduate laboratory. arXiv:1201.0501. https://arxiv.org/abs/1201.0501. The exact registered PDF snapshot and source record are included in this release; equations 1–7, Figure 6, Sections V.C–D and Figure 8/Section V.E supply the complete optical and empirical comparison.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

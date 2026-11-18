@@ -321,3 +321,8 @@ The generated sector ceiling, complete prime census and transported coloured con
 [8] BaBar Collaboration. *Searches for Lepton Flavor Violation in the Decays tau to e gamma and tau to mu gamma*. [doi:10.1103/PhysRevLett.104.021802](https://doi.org/10.1103/PhysRevLett.104.021802), [arXiv:0908.2381](https://arxiv.org/abs/0908.2381).
 
 **Authorship.** Maria Smith originated SFT and its derivations and directs the scientific work. AI assistance supports source-bound manuscript preparation, native translation and verification.
+
+
+## Author contact and community
+
+Maria Smith, Ernos Labs. Correspondence: [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com). Join the SFT Discord community: [https://discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC).

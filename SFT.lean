@@ -12209,3 +12209,15 @@ import SFT.Biology.DysregulatedDivisionSource
 import SFT.Biology.DysregulatedDivisionExperiment
 
 import SFT.Biology.DysregulatedDivisionValidation
+
+import SFT.Biology.MulticellularComposition
+
+import SFT.Biology.MulticellularCompositionGrammar
+
+import SFT.Biology.MulticellularCompositionEvidence
+
+import SFT.Biology.MulticellularCompositionSource
+
+import SFT.Biology.MulticellularCompositionExperiment
+
+import SFT.Biology.MulticellularCompositionValidation

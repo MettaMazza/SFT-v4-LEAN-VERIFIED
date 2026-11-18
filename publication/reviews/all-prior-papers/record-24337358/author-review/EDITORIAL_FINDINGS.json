@@ -1,0 +1,33 @@
+{
+  "updated_at": "2026-11-18T22:30:47.992818+00:00",
+  "findings": [
+    {
+      "id": "CUMULATIVE-ALGEBRA-EXPOSITION-01",
+      "section": 43,
+      "finding": "Nine-axis count was stated without explicit alternatives and per-axis elimination reasons in the manuscript. Full-text literal search and source/proof reading establish the omission.",
+      "source": "sft/mathematics/algebraic_structures/law.py:SPEC.dimensions",
+      "proof": "SFT.Mathematics.AlgebraGrammar.candidatesComplete; SFT.Mathematics.AlgebraGrammar.acceptanceIffExactCriteria; nine rejected-coordinate theorems; operation proofs in Sections36\u201342",
+      "repair": "Inserted all nine original coordinate pairs and concrete rejection reasons, linked to the preceding general operation derivations.",
+      "status": "repaired_in_unpublished_draft; whole-paper QA and final review pending"
+    },
+    {
+      "id": "CUMULATIVE-ALGEBRA-EDITORIAL-02",
+      "section": 36,
+      "finding": "Developmental remaining-work sentence survived despite subsequent completed algebra exposition.",
+      "repair": "Replaced with explicit coverage/cardinality-to-total-lookup derivation summary.",
+      "status": "repaired_in_unpublished_draft"
+    },
+    {
+      "id": "CUMULATIVE-ORDER-EXPOSITION-03",
+      "section": 54,
+      "finding": "Nine coordinate categories and count were given, but the manuscript did not spell out the rejected/admitted alternatives and concrete elimination reasons.",
+      "source": "sft/mathematics/order_lattice/law.py:SPEC.dimensions",
+      "proof": "SFT.Mathematics.OrderGrammar.candidatesComplete; acceptanceIffExactCriteria; nine coordinate rejection proofs; SFT.Mathematics.OrderOperations.partialOrderMeaning, acceptedMeetIff, acceptedJoinIff, monotoneMeaning and extension theorems",
+      "repair": "Added each original pair and its source-specific elimination argument with links to the full mathematical exposition; explicitly retains the source distinction between requiring a totality witness and asserting universal totality.",
+      "status": "repaired_in_unpublished_draft; whole-paper QA and final review pending"
+    }
+  ],
+  "source_manuscript_sha256": "47b5f386affd6cdfee477209858743b5fc15792d3397e7238edc2793bf9eeb41",
+  "revised_manuscript_sha256": "66e17b3d36f6d568bf2178d68b60b665a51d3834c6593c0a2664cb79d49bfc80",
+  "publication_status": "UNPUBLISHED; cumulative review incomplete"
+}

@@ -1,0 +1,53 @@
+--- published/ZENODO_PAPER_DRAFT.txt
++++ unpublished-author-review/ZENODO_PAPER_DRAFT.txt
+@@ -1121,7 +1121,7 @@
+ 
+ The operation-table constructor retains the registered carrier and ordered input/output rows. It first requires a nonempty distinct carrier, then checks that row count equals the complete ordered pair support and that the input sets coincide, and finally checks every result belongs to the carrier. These are the original source checks in their original order. Accepted tables preserve their data, cover exactly the carrier pair support, and have carrier-closed results.
+ 
+-Application filters the retained rows by the requested ordered input pair and returns a result only when exactly one row matches. Empty or multiple matches retain the source error. Fresh execution matches 526 constructor cases and 2630 lookup cases, including complete two-member operations in every row order and malformed inputs. General single-valuedness and total lookup follow from the constructor conditions as established below; the remaining algebraic property derivations are tracked separately.
++Application filters the retained rows by the requested ordered input pair and returns a result only when exactly one row matches. Empty or multiple matches retain the source error. Fresh execution matches 526 constructor cases and 2630 lookup cases, including complete two-member operations in every row order and malformed inputs. General single-valuedness and total lookup follow from the constructor conditions: coverage and equal cardinality force the row-input permutation, and distinct pair support then forces exactly one matching result, as proved in Section 37.
+ 
+ For the retained carrier C, define the ordered support P(C)=concat_(a∈C)[(a,b):b∈C]. For the row list R, let K(R) project each row (a,b,c) to its input pair (a,b). The constructor evaluates, in order,
+ 
+@@ -1337,6 +1337,20 @@
+ \]
+ 
+ Thus association is checked on all eight triples. The mate searches give K_O(O)=[O] and K_O(H)=[H], producing [(O,O),(H,H)]. The table is symmetric. By contrast, the second lawful table has a·a=a, a·b=a, b·a=b, b·b=b; for its distinct labels a·b=a≠b=b·a, so commutation fails. The self-map f(O)=O,f(H)=H satisfies f(x·y)=f(x)·f(y) on every cell by direct substitution. These computations establish the six original witness predicates.
++
++The nine coordinate domains are the following source-defined alternatives, in their enumeration order. Each rejected branch fails the stated construction obligation.
++
++1. Carrier: partial-or-aliased-carrier versus complete-canonical-carrier. An omitted form loses its input pairs and an aliased form changes their identity. The retained distinct carrier fixes every operation input once.
++2. Operation: partial-operation-sample versus complete-single-valued-table. A partial sample leaves an ordered carrier pair unassigned. Complete pair coverage and equal row cardinality force the unique result at every pair by Section 37.
++3. Closure: external-result versus carrier-closed-result. An external output enlarges the registered carrier. The constructor checks every retained result against that same carrier before accepting the table.
++4. Identity: named-identity versus exhaustive-identity-witness. Naming a member does not establish either preservation equation. The identity search requires membership and both equations at every carrier member, with the equivalence derived in Section 38.
++5. Association: assumed-parenthesis-law versus complete-triple-witness. An assumed equation supplies the property without its operation trace. The exhaustive triple traversal evaluates both composites and accepts precisely their equality at every triple.
++6. Return: signed-inverse-value versus unique-held-return-mate. The source return operation is a retained carrier relation, not a signed quantity. The complete candidate filter requires exactly one member returning to identity on both sides, as derived in Sections 39–40.
++7. Properties: property-by-name versus property-by-exhaustive-witness. A conventional structure name supplies no tuple comparison. Each special property passes only when its complete required traversal passes; the lawful noncommuting witness explicitly separates carrier admission from commutation.
++8. Maps: arbitrary-carrier-map versus operation-preserving-map. A carrier assignment can erase the operation relation. The dictionary-size, image-membership and pair-equation checks of Sections 41–42 establish exactly when the complete image relation preserves the operation.
++9. Addition: extra-algebraic-axiom versus no-extra-algebraic-axiom. An additional algebraic law is not produced by the registered traces. The admitted branch retains precisely the properties established by the foregoing generated witnesses.
++
++The generator takes the ordered product of these nine two-element domains. Its elements are structural alternatives; the operation tables themselves range over the complete finite carrier construction of Sections 36–42. Thus the finite coordinate census and the arbitrary-finite-carrier derivations establish their respective claims together.
+ 
+ The nine binary grammar axes generate 2⁹=512 ordered tuples. Acceptance is equivalent to the conjunction of the nine admitted-coordinate conditions. The all-preserving tuple satisfies that conjunction; any accepted tuple equals it coordinate by coordinate. A rejected value falsifies its coordinate condition, establishing the exclusion proofs while retaining the full product enumeration.
+ 
+@@ -1714,6 +1728,20 @@
+ 
+ The native program retains its original registration and dependencies, complete candidate records, identifier lookup behavior, completeness and trace identities, decision proof identities, closure and generality payloads, and four original controls. Fresh execution matches all 512 candidate records and complete program fields against the pinned source artifacts. Unknown identifiers retain StopIteration. These results accompany the general order, bound, monotonicity and carrier-extension derivations for the completed order/lattice entry. Completion of this entry is distinct from completion of the entire SFT formalisation.
+ 
++
++The ordered alternatives and their elimination arguments are explicit:
++
++1. Carrier: presentation-carrier versus canonical-carrier. Presentation aliases do not determine exact ordered identity; the generated carrier and its distinctness check retain that identity.
++2. Relation: borrowed-scalar-comparison versus held-pair-relation. An externally supplied scalar ordering would choose comparison outcomes. The actual relation instead retains each generated comparison pair.
++3. Order: named-order versus exhaustive-partial-order-witness. A name supplies none of reflexivity, antisymmetry or transitivity. Section 51 derives acceptance from exactly the complete cell and composite checks.
++4. Comparability: assumed-totality versus pairwise-totality-witness. The diamond witnesses incomparability directly. Totality is accepted precisely when every carrier pair is comparable in addition to partial-order admission.
++5. Bounds: selected-bound versus complete-bound-selection. Selecting one candidate can omit a held constraint or another candidate. The bound filters compare every carrier form with every held member and retain the complete result.
++6. Meet: assumed-meet versus unique-greatest-lower-witness. Lower-bound membership alone does not give the greatest element. The full greatest-filter must be a singleton; Section 53 derives the converse on admitted orders from antisymmetry and distinctness.
++7. Join: assumed-join versus unique-least-upper-witness. Upper-bound membership alone does not give the least element. The dual complete filter and the same uniqueness argument force the returned join.
++8. Maps: arbitrary-map versus comparison-preserving-map. An arbitrary assignment can reverse or discard a retained comparison. The complete source-relation traversal requires both images and their correctly ordered target cell.
++9. Addition: extra-order-axiom versus no-extra-order-axiom. Extra totality or completeness would add an outcome beyond the generated witnesses. The admitted kernel retains partiality and incomparability unless the corresponding exhaustive tests pass.
++
++These coordinate alternatives classify the construction rules. In particular, the admitted comparability coordinate requires a witness before recording totality; it does not assert that the diamond or every admitted partial order is total. The operation equivalences in Sections 50–53 supply the content of each check, and Sections 55–58 supply its carrier-extension arguments.
+ 
+ Let A_i be the ordered two-choice list for source dimension i, with rejected choice followed by admitted choice. The complete candidate list is the ordered Cartesian product
+ 

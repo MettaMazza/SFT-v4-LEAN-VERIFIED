@@ -1,0 +1,619 @@
+{
+  "updated_at": "2026-11-18T22:30:47.992818+00:00",
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source": "sft/mathematics/order_lattice/law.py",
+  "source_sha256": "dbe14c26aed2d9ba1b55651e580c080978076b89577ae8d74a2216af7e5056ea",
+  "source_inspection": "entire original operation/LawSpec source read",
+  "manuscript_sections_read": [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Mathematics/OrderOperations.lean",
+      "sha256": "16c86e65cc4cbd42e930a249093841fa568987bfcb9aff585acf64424493c17f",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderOperations.Relation",
+        "SFT.Mathematics.OrderOperations.isPartialOrder",
+        "SFT.Mathematics.OrderOperations.comparable",
+        "SFT.Mathematics.OrderOperations.isTotal",
+        "SFT.Mathematics.OrderOperations.lowerBounds",
+        "SFT.Mathematics.OrderOperations.upperBounds",
+        "SFT.Mathematics.OrderOperations.uniqueGreatest",
+        "SFT.Mathematics.OrderOperations.uniqueLeast",
+        "SFT.Mathematics.OrderOperations.meet",
+        "SFT.Mathematics.OrderOperations.join",
+        "SFT.Mathematics.OrderOperations.isMonotone",
+        "SFT.Mathematics.OrderOperations.comparableIff",
+        "SFT.Mathematics.OrderOperations.totalIff",
+        "SFT.Mathematics.OrderOperations.lowerBoundsResult",
+        "SFT.Mathematics.OrderOperations.upperBoundsResult",
+        "SFT.Mathematics.OrderOperations.lowerBoundsMembership",
+        "SFT.Mathematics.OrderOperations.upperBoundsMembership",
+        "SFT.Mathematics.OrderOperations.emptyLowerSelectionRejected",
+        "SFT.Mathematics.OrderOperations.emptyUpperSelectionRejected"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderOperations.comparableIff",
+        "SFT.Mathematics.OrderOperations.totalIff",
+        "SFT.Mathematics.OrderOperations.lowerBoundsResult",
+        "SFT.Mathematics.OrderOperations.upperBoundsResult",
+        "SFT.Mathematics.OrderOperations.lowerBoundsMembership",
+        "SFT.Mathematics.OrderOperations.upperBoundsMembership",
+        "SFT.Mathematics.OrderOperations.emptyLowerSelectionRejected",
+        "SFT.Mathematics.OrderOperations.emptyUpperSelectionRejected"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderOperations.comparableIff",
+        "SFT.Mathematics.OrderOperations.totalIff",
+        "SFT.Mathematics.OrderOperations.lowerBoundsResult",
+        "SFT.Mathematics.OrderOperations.upperBoundsResult",
+        "SFT.Mathematics.OrderOperations.lowerBoundsMembership",
+        "SFT.Mathematics.OrderOperations.upperBoundsMembership",
+        "SFT.Mathematics.OrderOperations.emptyLowerSelectionRejected",
+        "SFT.Mathematics.OrderOperations.emptyUpperSelectionRejected"
+      ],
+      "not_in_this_audit": []
+    },
+    {
+      "path": "SFT/Mathematics/OrderMeaning.lean",
+      "sha256": "c93719a6337ec812d1104bf485580340944ffcf31da20fbbe27337f2cf84e721",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderOperations.partialOrderChecksIff",
+        "SFT.Mathematics.OrderOperations.orderCarrierGuardIff",
+        "SFT.Mathematics.OrderOperations.orderEndpointsIff",
+        "SFT.Mathematics.OrderOperations.reflexiveCheckIff",
+        "SFT.Mathematics.OrderOperations.antisymmetricCheckIff",
+        "SFT.Mathematics.OrderOperations.transitiveCheckIff",
+        "SFT.Mathematics.OrderOperations.partialOrderMeaning"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderOperations.partialOrderChecksIff",
+        "SFT.Mathematics.OrderOperations.orderCarrierGuardIff",
+        "SFT.Mathematics.OrderOperations.orderEndpointsIff",
+        "SFT.Mathematics.OrderOperations.reflexiveCheckIff",
+        "SFT.Mathematics.OrderOperations.antisymmetricCheckIff",
+        "SFT.Mathematics.OrderOperations.transitiveCheckIff",
+        "SFT.Mathematics.OrderOperations.partialOrderMeaning"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderOperations.partialOrderChecksIff",
+        "SFT.Mathematics.OrderOperations.orderCarrierGuardIff",
+        "SFT.Mathematics.OrderOperations.orderEndpointsIff",
+        "SFT.Mathematics.OrderOperations.reflexiveCheckIff",
+        "SFT.Mathematics.OrderOperations.antisymmetricCheckIff",
+        "SFT.Mathematics.OrderOperations.transitiveCheckIff",
+        "SFT.Mathematics.OrderOperations.partialOrderMeaning"
+      ],
+      "not_in_this_audit": []
+    },
+    {
+      "path": "SFT/Mathematics/OrderExtrema.lean",
+      "sha256": "23233fe43e3375de99feb23be24c91894af289f92a901bb419540ada708208a2",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderOperations.filterSingletonMeaning",
+        "SFT.Mathematics.OrderOperations.distinctSingletonFromMembers",
+        "SFT.Mathematics.OrderOperations.filterSingletonIff",
+        "SFT.Mathematics.OrderOperations.greatestExactSingleton",
+        "SFT.Mathematics.OrderOperations.leastExactSingleton",
+        "SFT.Mathematics.OrderOperations.greatestMeaning",
+        "SFT.Mathematics.OrderOperations.leastMeaning",
+        "SFT.Mathematics.OrderOperations.greatestIff",
+        "SFT.Mathematics.OrderOperations.leastIff",
+        "SFT.Mathematics.OrderOperations.meetSuccessIff",
+        "SFT.Mathematics.OrderOperations.joinSuccessIff",
+        "SFT.Mathematics.OrderOperations.meetGreatestLowerBound",
+        "SFT.Mathematics.OrderOperations.joinLeastUpperBound"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderOperations.filterSingletonMeaning",
+        "SFT.Mathematics.OrderOperations.distinctSingletonFromMembers",
+        "SFT.Mathematics.OrderOperations.filterSingletonIff",
+        "SFT.Mathematics.OrderOperations.greatestExactSingleton",
+        "SFT.Mathematics.OrderOperations.leastExactSingleton",
+        "SFT.Mathematics.OrderOperations.greatestMeaning",
+        "SFT.Mathematics.OrderOperations.leastMeaning",
+        "SFT.Mathematics.OrderOperations.greatestIff",
+        "SFT.Mathematics.OrderOperations.leastIff",
+        "SFT.Mathematics.OrderOperations.meetSuccessIff",
+        "SFT.Mathematics.OrderOperations.joinSuccessIff",
+        "SFT.Mathematics.OrderOperations.meetGreatestLowerBound",
+        "SFT.Mathematics.OrderOperations.joinLeastUpperBound"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderOperations.filterSingletonMeaning",
+        "SFT.Mathematics.OrderOperations.distinctSingletonFromMembers",
+        "SFT.Mathematics.OrderOperations.filterSingletonIff",
+        "SFT.Mathematics.OrderOperations.greatestExactSingleton",
+        "SFT.Mathematics.OrderOperations.leastExactSingleton",
+        "SFT.Mathematics.OrderOperations.greatestMeaning",
+        "SFT.Mathematics.OrderOperations.leastMeaning",
+        "SFT.Mathematics.OrderOperations.greatestIff",
+        "SFT.Mathematics.OrderOperations.leastIff",
+        "SFT.Mathematics.OrderOperations.meetSuccessIff",
+        "SFT.Mathematics.OrderOperations.joinSuccessIff",
+        "SFT.Mathematics.OrderOperations.meetGreatestLowerBound",
+        "SFT.Mathematics.OrderOperations.joinLeastUpperBound"
+      ],
+      "not_in_this_audit": []
+    },
+    {
+      "path": "SFT/Mathematics/OrderBoundExistence.lean",
+      "sha256": "2a5a2085870873dc279f6d85c3245a2e9d82c3f4e58aaccf04510a856f7d823e",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderOperations.boundsGuardIff",
+        "SFT.Mathematics.OrderOperations.validLowerBounds",
+        "SFT.Mathematics.OrderOperations.validUpperBounds",
+        "SFT.Mathematics.OrderOperations.lowerBoundsDistinct",
+        "SFT.Mathematics.OrderOperations.upperBoundsDistinct",
+        "SFT.Mathematics.OrderOperations.acceptedMeetIff",
+        "SFT.Mathematics.OrderOperations.acceptedJoinIff"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderOperations.boundsGuardIff",
+        "SFT.Mathematics.OrderOperations.validLowerBounds",
+        "SFT.Mathematics.OrderOperations.validUpperBounds",
+        "SFT.Mathematics.OrderOperations.lowerBoundsDistinct",
+        "SFT.Mathematics.OrderOperations.upperBoundsDistinct",
+        "SFT.Mathematics.OrderOperations.acceptedMeetIff",
+        "SFT.Mathematics.OrderOperations.acceptedJoinIff"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderOperations.boundsGuardIff",
+        "SFT.Mathematics.OrderOperations.validLowerBounds",
+        "SFT.Mathematics.OrderOperations.validUpperBounds",
+        "SFT.Mathematics.OrderOperations.lowerBoundsDistinct",
+        "SFT.Mathematics.OrderOperations.upperBoundsDistinct",
+        "SFT.Mathematics.OrderOperations.acceptedMeetIff",
+        "SFT.Mathematics.OrderOperations.acceptedJoinIff"
+      ],
+      "not_in_this_audit": []
+    },
+    {
+      "path": "SFT/Mathematics/OrderMaps.lean",
+      "sha256": "3ebe0ac6fe6dc35911629019ee8e8135693c90b50556f1f2a7d31165944cd67c",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderOperations.monotoneMeaning",
+        "SFT.Mathematics.OrderOperations.emptySourceMonotone"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderOperations.monotoneMeaning",
+        "SFT.Mathematics.OrderOperations.emptySourceMonotone"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderOperations.monotoneMeaning",
+        "SFT.Mathematics.OrderOperations.emptySourceMonotone"
+      ],
+      "not_in_this_audit": []
+    },
+    {
+      "path": "SFT/Mathematics/OrderInduction.lean",
+      "sha256": "45552bd1f0a39958afa819836354625edfb04934c06ffac3c45b7f6231d40a94",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderOperations.onePartialOrder",
+        "SFT.Mathematics.OrderOperations.oneTotalOrder",
+        "SFT.Mathematics.OrderOperations.oneLowerBounds",
+        "SFT.Mathematics.OrderOperations.oneUpperBounds",
+        "SFT.Mathematics.OrderOperations.oneMeet",
+        "SFT.Mathematics.OrderOperations.oneJoin",
+        "SFT.Mathematics.OrderOperations.partialOrderExtensionIff",
+        "SFT.Mathematics.OrderOperations.totalOrderExtensionIff"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderOperations.onePartialOrder",
+        "SFT.Mathematics.OrderOperations.oneTotalOrder",
+        "SFT.Mathematics.OrderOperations.oneLowerBounds",
+        "SFT.Mathematics.OrderOperations.oneUpperBounds",
+        "SFT.Mathematics.OrderOperations.oneMeet",
+        "SFT.Mathematics.OrderOperations.oneJoin",
+        "SFT.Mathematics.OrderOperations.partialOrderExtensionIff",
+        "SFT.Mathematics.OrderOperations.totalOrderExtensionIff"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderOperations.onePartialOrder",
+        "SFT.Mathematics.OrderOperations.oneTotalOrder",
+        "SFT.Mathematics.OrderOperations.oneLowerBounds",
+        "SFT.Mathematics.OrderOperations.oneUpperBounds",
+        "SFT.Mathematics.OrderOperations.oneMeet",
+        "SFT.Mathematics.OrderOperations.oneJoin",
+        "SFT.Mathematics.OrderOperations.partialOrderExtensionIff",
+        "SFT.Mathematics.OrderOperations.totalOrderExtensionIff"
+      ],
+      "not_in_this_audit": []
+    },
+    {
+      "path": "SFT/Mathematics/OrderBoundExtension.lean",
+      "sha256": "82b648089267be4e3a4455116024dd0416eb225d314f91befd5aa010ffe7c5a4",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderOperations.allChecksCongruent",
+        "SFT.Mathematics.OrderOperations.boundFilterCongruent",
+        "SFT.Mathematics.OrderOperations.retainedComparisonCheck",
+        "SFT.Mathematics.OrderOperations.lowerSelectionValid",
+        "SFT.Mathematics.OrderOperations.upperSelectionValid",
+        "SFT.Mathematics.OrderOperations.lowerBoundCheckPreserved",
+        "SFT.Mathematics.OrderOperations.upperBoundCheckPreserved",
+        "SFT.Mathematics.OrderOperations.lowerBoundsCarrierExtension",
+        "SFT.Mathematics.OrderOperations.upperBoundsCarrierExtension"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderOperations.allChecksCongruent",
+        "SFT.Mathematics.OrderOperations.boundFilterCongruent",
+        "SFT.Mathematics.OrderOperations.retainedComparisonCheck",
+        "SFT.Mathematics.OrderOperations.lowerSelectionValid",
+        "SFT.Mathematics.OrderOperations.upperSelectionValid",
+        "SFT.Mathematics.OrderOperations.lowerBoundCheckPreserved",
+        "SFT.Mathematics.OrderOperations.upperBoundCheckPreserved",
+        "SFT.Mathematics.OrderOperations.lowerBoundsCarrierExtension",
+        "SFT.Mathematics.OrderOperations.upperBoundsCarrierExtension"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderOperations.allChecksCongruent",
+        "SFT.Mathematics.OrderOperations.boundFilterCongruent",
+        "SFT.Mathematics.OrderOperations.retainedComparisonCheck",
+        "SFT.Mathematics.OrderOperations.lowerSelectionValid",
+        "SFT.Mathematics.OrderOperations.upperSelectionValid",
+        "SFT.Mathematics.OrderOperations.lowerBoundCheckPreserved",
+        "SFT.Mathematics.OrderOperations.upperBoundCheckPreserved",
+        "SFT.Mathematics.OrderOperations.lowerBoundsCarrierExtension",
+        "SFT.Mathematics.OrderOperations.upperBoundsCarrierExtension"
+      ],
+      "not_in_this_audit": []
+    },
+    {
+      "path": "SFT/Mathematics/OrderHeldExtension.lean",
+      "sha256": "228e5a2529bb56af998a40b9ffe88e97895183dedafd8d5000168417f5c22e56",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderOperations.allChecksSnoc",
+        "SFT.Mathematics.OrderOperations.boundFilterConjunction",
+        "SFT.Mathematics.OrderOperations.lowerBoundsHeldExtension",
+        "SFT.Mathematics.OrderOperations.upperBoundsHeldExtension",
+        "SFT.Mathematics.OrderOperations.meetRetainedOnHeldExtension",
+        "SFT.Mathematics.OrderOperations.joinRetainedOnHeldExtension",
+        "SFT.Mathematics.OrderOperations.meetRetainedOnCarrierExtension",
+        "SFT.Mathematics.OrderOperations.joinRetainedOnCarrierExtension"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderOperations.allChecksSnoc",
+        "SFT.Mathematics.OrderOperations.boundFilterConjunction",
+        "SFT.Mathematics.OrderOperations.lowerBoundsHeldExtension",
+        "SFT.Mathematics.OrderOperations.upperBoundsHeldExtension",
+        "SFT.Mathematics.OrderOperations.meetRetainedOnHeldExtension",
+        "SFT.Mathematics.OrderOperations.joinRetainedOnHeldExtension",
+        "SFT.Mathematics.OrderOperations.meetRetainedOnCarrierExtension",
+        "SFT.Mathematics.OrderOperations.joinRetainedOnCarrierExtension"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderOperations.allChecksSnoc",
+        "SFT.Mathematics.OrderOperations.boundFilterConjunction",
+        "SFT.Mathematics.OrderOperations.lowerBoundsHeldExtension",
+        "SFT.Mathematics.OrderOperations.upperBoundsHeldExtension",
+        "SFT.Mathematics.OrderOperations.meetRetainedOnHeldExtension",
+        "SFT.Mathematics.OrderOperations.joinRetainedOnHeldExtension",
+        "SFT.Mathematics.OrderOperations.meetRetainedOnCarrierExtension",
+        "SFT.Mathematics.OrderOperations.joinRetainedOnCarrierExtension"
+      ],
+      "not_in_this_audit": []
+    },
+    {
+      "path": "SFT/Mathematics/OrderFreshExtrema.lean",
+      "sha256": "987a31a741dccbbb6b5b9cc93be887ad455ca8430541b82366c9c3eae8a0fab0",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderOperations.freshMeetIff",
+        "SFT.Mathematics.OrderOperations.freshJoinIff"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderOperations.freshMeetIff",
+        "SFT.Mathematics.OrderOperations.freshJoinIff"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderOperations.freshMeetIff",
+        "SFT.Mathematics.OrderOperations.freshJoinIff"
+      ],
+      "not_in_this_audit": []
+    },
+    {
+      "path": "SFT/Mathematics/OrderWitnesses.lean",
+      "sha256": "2b0c13645ab9c4d62c6d4c13d9884682178cde3f9dac139c31f7f2c2117947a1",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderWitnesses.diamondCarrier",
+        "SFT.Mathematics.OrderWitnesses.diamondRelation",
+        "SFT.Mathematics.OrderWitnesses.chainRelation",
+        "SFT.Mathematics.OrderWitnesses.Witness",
+        "SFT.Mathematics.OrderWitnesses.partialOrder",
+        "SFT.Mathematics.OrderWitnesses.partialOrderPassed",
+        "SFT.Mathematics.OrderWitnesses.incomparabilityRetained",
+        "SFT.Mathematics.OrderWitnesses.incomparabilityRetainedPassed",
+        "SFT.Mathematics.OrderWitnesses.conditionalTotality",
+        "SFT.Mathematics.OrderWitnesses.conditionalTotalityPassed",
+        "SFT.Mathematics.OrderWitnesses.meetWitness",
+        "SFT.Mathematics.OrderWitnesses.meetWitnessPassed",
+        "SFT.Mathematics.OrderWitnesses.joinWitness",
+        "SFT.Mathematics.OrderWitnesses.joinWitnessPassed",
+        "SFT.Mathematics.OrderWitnesses.monotoneIdentity",
+        "SFT.Mathematics.OrderWitnesses.monotoneIdentityPassed",
+        "SFT.Mathematics.OrderWitnesses.witnesses",
+        "SFT.Mathematics.OrderWitnesses.allWitnessesPass"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderWitnesses.partialOrderPassed",
+        "SFT.Mathematics.OrderWitnesses.incomparabilityRetainedPassed",
+        "SFT.Mathematics.OrderWitnesses.conditionalTotalityPassed",
+        "SFT.Mathematics.OrderWitnesses.meetWitnessPassed",
+        "SFT.Mathematics.OrderWitnesses.joinWitnessPassed",
+        "SFT.Mathematics.OrderWitnesses.monotoneIdentityPassed",
+        "SFT.Mathematics.OrderWitnesses.allWitnessesPass"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderWitnesses.partialOrderPassed",
+        "SFT.Mathematics.OrderWitnesses.incomparabilityRetainedPassed",
+        "SFT.Mathematics.OrderWitnesses.conditionalTotalityPassed",
+        "SFT.Mathematics.OrderWitnesses.meetWitnessPassed",
+        "SFT.Mathematics.OrderWitnesses.joinWitnessPassed",
+        "SFT.Mathematics.OrderWitnesses.monotoneIdentityPassed",
+        "SFT.Mathematics.OrderWitnesses.allWitnessesPass"
+      ],
+      "not_in_this_audit": []
+    },
+    {
+      "path": "SFT/Mathematics/OrderGrammar.lean",
+      "sha256": "f4a69320c20d7d30a80bfe4ed452958acb08b02dc0769d84ccec11a04fa3f8b8",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderGrammar.Carrier",
+        "SFT.Mathematics.OrderGrammar.carrierName",
+        "SFT.Mathematics.OrderGrammar.Relation",
+        "SFT.Mathematics.OrderGrammar.relationName",
+        "SFT.Mathematics.OrderGrammar.Order",
+        "SFT.Mathematics.OrderGrammar.orderName",
+        "SFT.Mathematics.OrderGrammar.Comparability",
+        "SFT.Mathematics.OrderGrammar.comparabilityName",
+        "SFT.Mathematics.OrderGrammar.Bounds",
+        "SFT.Mathematics.OrderGrammar.boundsName",
+        "SFT.Mathematics.OrderGrammar.Meet",
+        "SFT.Mathematics.OrderGrammar.meetName",
+        "SFT.Mathematics.OrderGrammar.Join",
+        "SFT.Mathematics.OrderGrammar.joinName",
+        "SFT.Mathematics.OrderGrammar.Maps",
+        "SFT.Mathematics.OrderGrammar.mapsName",
+        "SFT.Mathematics.OrderGrammar.Addition",
+        "SFT.Mathematics.OrderGrammar.additionName",
+        "SFT.Mathematics.OrderGrammar.Candidate",
+        "SFT.Mathematics.OrderGrammar.sourceFields",
+        "SFT.Mathematics.OrderGrammar.candidateId",
+        "SFT.Mathematics.OrderGrammar.exactForm",
+        "SFT.Mathematics.OrderGrammar.survivorId",
+        "SFT.Mathematics.OrderGrammar.survives",
+        "SFT.Mathematics.OrderGrammar.criteriaDecision",
+        "SFT.Mathematics.OrderGrammar.decisionReason",
+        "SFT.Mathematics.OrderGrammar.generationRule",
+        "SFT.Mathematics.OrderGrammar.grammarBoundary",
+        "SFT.Mathematics.OrderGrammar.candidates",
+        "SFT.Mathematics.OrderGrammar.survivor",
+        "SFT.Mathematics.OrderGrammar.generatedCardinality",
+        "SFT.Mathematics.OrderGrammar.candidatesComplete",
+        "SFT.Mathematics.OrderGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Mathematics.OrderGrammar.uniqueCriteriaSurvivor",
+        "SFT.Mathematics.OrderGrammar.uniqueSurvivor",
+        "SFT.Mathematics.OrderGrammar.survivorAccepted",
+        "SFT.Mathematics.OrderGrammar.ExactCriteria",
+        "SFT.Mathematics.OrderGrammar.acceptanceIffExactCriteria",
+        "SFT.Mathematics.OrderGrammar.carrier_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.relation_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.order_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.comparability_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.bounds_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.meet_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.join_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.maps_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.addition_rejected_rejected"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderGrammar.generatedCardinality",
+        "SFT.Mathematics.OrderGrammar.candidatesComplete",
+        "SFT.Mathematics.OrderGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Mathematics.OrderGrammar.uniqueCriteriaSurvivor",
+        "SFT.Mathematics.OrderGrammar.uniqueSurvivor",
+        "SFT.Mathematics.OrderGrammar.survivorAccepted",
+        "SFT.Mathematics.OrderGrammar.acceptanceIffExactCriteria",
+        "SFT.Mathematics.OrderGrammar.carrier_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.relation_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.order_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.comparability_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.bounds_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.meet_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.join_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.maps_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.addition_rejected_rejected"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderGrammar.generatedCardinality",
+        "SFT.Mathematics.OrderGrammar.candidatesComplete",
+        "SFT.Mathematics.OrderGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Mathematics.OrderGrammar.uniqueCriteriaSurvivor",
+        "SFT.Mathematics.OrderGrammar.uniqueSurvivor",
+        "SFT.Mathematics.OrderGrammar.survivorAccepted",
+        "SFT.Mathematics.OrderGrammar.acceptanceIffExactCriteria",
+        "SFT.Mathematics.OrderGrammar.carrier_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.relation_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.order_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.comparability_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.bounds_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.meet_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.join_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.maps_rejected_rejected",
+        "SFT.Mathematics.OrderGrammar.addition_rejected_rejected"
+      ],
+      "not_in_this_audit": []
+    },
+    {
+      "path": "SFT/Mathematics/OrderControls.lean",
+      "sha256": "c434abe19022199aa9557b37d516797b3235cb823f5339697d0921c3b159d4cc",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderControls.laws",
+        "SFT.Mathematics.OrderControls.exclusions",
+        "SFT.Mathematics.OrderControls.closureValue",
+        "SFT.Mathematics.OrderControls.falseCandidate",
+        "SFT.Mathematics.OrderControls.survivorIds",
+        "SFT.Mathematics.OrderControls.distinctIdentifiers",
+        "SFT.Mathematics.OrderControls.falsePremise",
+        "SFT.Mathematics.OrderControls.tamperedSource",
+        "SFT.Mathematics.OrderControls.tamperedArtifact",
+        "SFT.Mathematics.OrderControls.boundary",
+        "SFT.Mathematics.OrderControls.falsePremisePassed",
+        "SFT.Mathematics.OrderControls.boundaryPassed",
+        "SFT.Mathematics.OrderControls.controlRecords",
+        "SFT.Mathematics.OrderControls.runControls"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderControls.falsePremisePassed",
+        "SFT.Mathematics.OrderControls.boundaryPassed"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderControls.falsePremisePassed",
+        "SFT.Mathematics.OrderControls.boundaryPassed"
+      ],
+      "not_in_this_audit": []
+    },
+    {
+      "path": "SFT/Mathematics/OrderEvidence.lean",
+      "sha256": "3a8554574e08d4c97bd7c4cc7d4f5f6e1738031a9b50adce1acb4baa6967c1af",
+      "inspection": "complete body read",
+      "declarations": [
+        "SFT.Mathematics.OrderEvidence.candidateRecord",
+        "SFT.Mathematics.OrderEvidence.completenessRecord",
+        "SFT.Mathematics.OrderEvidence.registrationData",
+        "SFT.Mathematics.OrderEvidence.registration",
+        "SFT.Mathematics.OrderEvidence.generatedCandidateData",
+        "SFT.Mathematics.OrderEvidence.censusData",
+        "SFT.Mathematics.OrderEvidence.census",
+        "SFT.Mathematics.OrderEvidence.decisionData",
+        "SFT.Mathematics.OrderEvidence.decision",
+        "SFT.Mathematics.OrderEvidence.decideCandidate",
+        "SFT.Mathematics.OrderEvidence.closureData",
+        "SFT.Mathematics.OrderEvidence.closure",
+        "SFT.Mathematics.OrderEvidence.nativeDecisionPreservesSurvival",
+        "SFT.Mathematics.OrderEvidence.nativeDecisionPreservesReason",
+        "SFT.Mathematics.OrderEvidence.registrationHasNoAxioms",
+        "SFT.Mathematics.OrderEvidence.registrationHasNoFreeParameters",
+        "SFT.Mathematics.OrderEvidence.lookupDependsOnlyOnIdentifier"
+      ],
+      "theorems": [
+        "SFT.Mathematics.OrderEvidence.nativeDecisionPreservesSurvival",
+        "SFT.Mathematics.OrderEvidence.nativeDecisionPreservesReason",
+        "SFT.Mathematics.OrderEvidence.registrationHasNoAxioms",
+        "SFT.Mathematics.OrderEvidence.registrationHasNoFreeParameters",
+        "SFT.Mathematics.OrderEvidence.lookupDependsOnlyOnIdentifier"
+      ],
+      "empty_axiom_matches": [
+        "SFT.Mathematics.OrderEvidence.nativeDecisionPreservesSurvival",
+        "SFT.Mathematics.OrderEvidence.nativeDecisionPreservesReason",
+        "SFT.Mathematics.OrderEvidence.registrationHasNoAxioms",
+        "SFT.Mathematics.OrderEvidence.registrationHasNoFreeParameters",
+        "SFT.Mathematics.OrderEvidence.lookupDependsOnlyOnIdentifier"
+      ],
+      "not_in_this_audit": []
+    }
+  ],
+  "retained_completion_receipt": "verification/TURN_118_SFT-MATH-ORDER-LATTICE-001_COMPLETION.json",
+  "receipt_sha256": "4f6842fa8cf4da075ef0d9aa2a859ae2b2462f72a95661aaca36fd7c193d02e9",
+  "receipt_module_identity": [
+    {
+      "file": "SFT/Mathematics/OrderGrammar.lean",
+      "match": true
+    },
+    {
+      "file": "SFT/Mathematics/OrderOperations.lean",
+      "match": true
+    },
+    {
+      "file": "SFT/Mathematics/OrderMeaning.lean",
+      "match": true
+    },
+    {
+      "file": "SFT/Mathematics/OrderExtrema.lean",
+      "match": true
+    },
+    {
+      "file": "SFT/Mathematics/OrderBoundExistence.lean",
+      "match": true
+    },
+    {
+      "file": "SFT/Mathematics/OrderMaps.lean",
+      "match": true
+    },
+    {
+      "file": "SFT/Mathematics/OrderWitnesses.lean",
+      "match": true
+    },
+    {
+      "file": "SFT/Mathematics/OrderControls.lean",
+      "match": true
+    },
+    {
+      "file": "SFT/Mathematics/OrderEvidence.lean",
+      "match": true
+    },
+    {
+      "file": "SFT/Mathematics/OrderInduction.lean",
+      "match": true
+    },
+    {
+      "file": "SFT/Mathematics/OrderBoundExtension.lean",
+      "match": true
+    },
+    {
+      "file": "SFT/Mathematics/OrderHeldExtension.lean",
+      "match": true
+    },
+    {
+      "file": "SFT/Mathematics/OrderFreshExtrema.lean",
+      "match": true
+    }
+  ],
+  "retained_program_report": "verification/TURN_115_PROGRAMS/SFT-MATH-ORDER-LATTICE-001.report.json",
+  "program_result": {
+    "claim_id": "SFT-MATH-ORDER-LATTICE-001",
+    "status": "PASS",
+    "candidate_rows": 512,
+    "source_manifest_hash": "sha256:fb4627050dca9b64d628dfc773d8de1d30656f40689d1cb8a0ae8dd3105940bd",
+    "driver": "verification/TURN_096_OrderProgram.lean",
+    "driver_sha256": "770fc5f6815da4c49009539756242d73610e5c5e7e77b9629ed83c1de679ed65",
+    "matched": [
+      "registration",
+      "complete census",
+      "all decisions",
+      "closure",
+      "four controls",
+      "every embedded hash"
+    ],
+    "unknown_identifier_check": "PASS"
+  },
+  "audit": {
+    "path": "verification/TURN_117_ALL_DECLARATIONS_AUDIT.log",
+    "sha256": "60d459d599fc9257a16419da9af99d106a9d28947a8d97d665368f0db3ad7561",
+    "matching_theorems": 94,
+    "unmatched": []
+  },
+  "result": "Exposition checked against actual source and existing proof bodies; grammar explanation expanded in unpublished draft. Whole-paper review remains in progress.",
+  "new_proofs": 0,
+  "new_builds": 0,
+  "live_jobs": []
+}

@@ -109,8 +109,8 @@ def validate (actualIdentityHash actualTargetHash : String) (identityDocument ta
  let countsExact := counts.length==expected.length && (counts.zip expected).all (fun ((a,n),(b,m)) => Text.equal a b && n==m)
  let absence := counts.any (fun (k,n) => Text.equal k "EmptyOne_tracking_boundary" && n==1)
  let noPredecessor := rows.all fun r => match r.source with
-  | .object fs => fs.all (fun (k,_) => !(Text.chars "predecessor").isInfixOf (Text.chars (Text.lowerAscii k)))
-  | _ => false
+  | .object fs => fs.all (fun (k,_) => !(Text.chars "predecessor").isInfixOf_internal (Text.chars (Text.lowerAscii k)))
+  | .null | .integer _ | .text _ | .boolean _ | .array _ => false
  let adverse : List (String × Bool) := [("exact_complete_counts",countsExact),("all_rows",comparisons.all rowPassed),
   ("omission_rejected",(rows.take (rows.length-1)).length != 330),
   ("zero_duration_retained",absence),("unrecorded_predecessor_not_in_dataset",noPredecessor)]

@@ -25,7 +25,7 @@ def counts (rows : List Row) (components : Nat) : Except String (List (String ×
  let increasing ← intervals.mapM fun r => do
   let a ← NuclearElectronicSource.atNat r.cells 0 >>= ConfigurationObservation.exact
   let b ← NuclearElectronicSource.atNat r.cells 1 >>= ConfigurationObservation.exact
-  return decide (b.num * Int.ofNat a.den > a.num * Int.ofNat b.den)
+  return @decide (Int.lt (a.num * Int.ofNat b.den) (b.num * Int.ofNat a.den)) (Int.decLt _ _)
  let tracking := rows.filter fun r => Text.equal r.file "tracking_time_series.csv"
  let durations ← tracking.mapM fun r => NuclearElectronicSource.atNat r.cells 2 >>= ConfigurationObservation.exact
  let countFile := fun name => (rows.filter fun r => Text.equal r.file name).length
@@ -40,6 +40,6 @@ def counts (rows : List Row) (components : Nat) : Except String (List (String ×
   ("pressure_control_rows",countFile "pressure_dependence_of_J_0_to_J_1_transitions.csv"),
   ("appearance_time_rows",countFile "appearance_time_histogram_J_0_to_J1.csv"),
   ("positive_entry_exit_intervals",(increasing.filter id).length),
-  ("positive_tracking_intervals",(durations.filter (fun x => decide (x.num>0))).length),
-  ("EmptyOne_tracking_boundary",(durations.filter (fun x => x.num==0)).length)]
+  ("positive_tracking_intervals",(durations.filter (fun x => @decide (Int.lt 0 x.num) (Int.decLt 0 x.num))).length),
+  ("EmptyOne_tracking_boundary",(durations.filter (fun x => @decide (x.num = 0) (Int.decEq x.num 0))).length)]
 end SFT.Chemistry.MolecularMeasurementAnalysis

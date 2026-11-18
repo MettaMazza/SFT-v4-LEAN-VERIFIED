@@ -11665,3 +11665,99 @@ import SFT.Biology.EnergyCouplingSource
 import SFT.Biology.EnergyCouplingExperiment
 
 import SFT.Biology.EnergyCouplingValidation
+
+import SFT.Biology.WasteExport
+
+import SFT.Biology.WasteExportGrammar
+
+import SFT.Biology.WasteExportEvidence
+
+import SFT.Biology.WasteExportSource
+
+import SFT.Biology.WasteExportExperiment
+
+import SFT.Biology.WasteExportValidation
+
+import SFT.Biology.ResourceClosure
+
+import SFT.Biology.ResourceClosureGrammar
+
+import SFT.Biology.ResourceClosureEvidence
+
+import SFT.Biology.ResourceClosureSource
+
+import SFT.Biology.ResourceClosureExperiment
+
+import SFT.Biology.ResourceClosureValidation
+
+import SFT.Biology.Inheritance
+
+import SFT.Biology.InheritanceGrammar
+
+import SFT.Biology.InheritanceEvidence
+
+import SFT.Biology.InheritanceSource
+
+import SFT.Biology.InheritanceExperiment
+
+import SFT.Biology.InheritanceValidation
+
+import SFT.Biology.TemplateCopy
+
+import SFT.Biology.TemplateCopyGrammar
+
+import SFT.Biology.TemplateCopyEvidence
+
+import SFT.Biology.TemplateCopySource
+
+import SFT.Biology.TemplateCopyExperiment
+
+import SFT.Biology.TemplateCopyValidation
+
+import SFT.Biology.Replication
+
+import SFT.Biology.ReplicationGrammar
+
+import SFT.Biology.ReplicationEvidence
+
+import SFT.Biology.ReplicationSource
+
+import SFT.Biology.ReplicationExperiment
+
+import SFT.Biology.ReplicationValidation
+
+import SFT.Biology.CopyFidelity
+
+import SFT.Biology.CopyFidelityGrammar
+
+import SFT.Biology.CopyFidelityEvidence
+
+import SFT.Biology.CopyFidelitySource
+
+import SFT.Biology.CopyFidelityExperiment
+
+import SFT.Biology.CopyFidelityValidation
+
+import SFT.Biology.HeritableVariation
+
+import SFT.Biology.HeritableVariationGrammar
+
+import SFT.Biology.HeritableVariationEvidence
+
+import SFT.Biology.HeritableVariationSource
+
+import SFT.Biology.HeritableVariationExperiment
+
+import SFT.Biology.HeritableVariationValidation
+
+import SFT.Biology.ReplicationLineage
+
+import SFT.Biology.ReplicationLineageGrammar
+
+import SFT.Biology.ReplicationLineageEvidence
+
+import SFT.Biology.ReplicationLineageSource
+
+import SFT.Biology.ReplicationLineageExperiment
+
+import SFT.Biology.ReplicationLineageValidation

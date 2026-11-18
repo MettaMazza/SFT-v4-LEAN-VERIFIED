@@ -143,7 +143,7 @@ theorem candidatesComplete (c : Candidate) : c ∈ candidates := by
     apply CommonRefinement.memFlatMap _ _ record _ hrecord
     apply CommonRefinement.memFlatMap _ _ poststate _ hpoststate
     apply CommonRefinement.memFlatMap _ _ reconstruction _ hreconstruction
-    exact Count.TraceDerivation.memMap _ record _ hrecord
+    exact Count.TraceDerivation.memMap _ replication _ hreplication
 
 theorem sourceDecisionBlock0000 (record : Record) (poststate : Poststate) (reconstruction : Reconstruction) (replication : Replication) :
  survives ⟨.rejected,.rejected,.rejected,.rejected,record,poststate,reconstruction,replication⟩ = criteriaDecision ⟨.rejected,.rejected,.rejected,.rejected,record,poststate,reconstruction,replication⟩ := by

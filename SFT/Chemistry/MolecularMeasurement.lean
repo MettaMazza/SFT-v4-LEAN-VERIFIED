@@ -17,19 +17,19 @@ structure Observation where
 def reconstructs (m : Observation) (coordinate : String) : Bool :=
  m.retainedCoordinates.any (fun x => Text.equal x.label coordinate)
 
-def validate (m : Observation) : Except String Observation := do
+def validate (m : Observation) : Except String Observation :=
  if !([(m.preparedState,"prepared-molecular-state"),(m.probeClass,"molecular-observation-class"),
      (m.outcomeRecord,"molecular-readout-record"),(m.postObservationState,"post-observation-molecular-state"),
      (m.instrument,"measurement-instrument"),(m.condition,"measurement-condition")].all
        (fun (x,family) => Text.equal x.family family)) then
-  throw "observation boundary lost a required held family"
- if m.retainedCoordinates.isEmpty then throw "an observation must retain at least one declared coordinate"
- if !(m.retainedCoordinates.all (fun x => Text.equal x.family "retained-molecular-coordinate")) ||
+  .error "observation boundary lost a required held family"
+ else if m.retainedCoordinates.isEmpty then .error "an observation must retain at least one declared coordinate"
+ else if !(m.retainedCoordinates.all (fun x => Text.equal x.family "retained-molecular-coordinate")) ||
     !(m.closedCoordinates.all (fun x => Text.equal x.family "closed-molecular-coordinate")) then
-  throw "retained and closed coordinates require distinct families"
- if m.closedCoordinates.any (fun x => reconstructs m x.label) then
-  throw "one coordinate cannot be both retained and closed"
- return m
+  .error "retained and closed coordinates require distinct families"
+ else if m.closedCoordinates.any (fun x => reconstructs m x.label) then
+  .error "one coordinate cannot be both retained and closed"
+ else .ok m
 
 theorem acceptedRecordUnchanged (m result : Observation) (accepted : validate m = .ok result) : result = m := by
  unfold validate at accepted
@@ -68,11 +68,15 @@ def appendObservation (prior : List Observation) (m : Observation) : List Observ
 theorem leastObservation (m : Observation) : (oneObservation m).length = 1 := rfl
 theorem successorLength (prior : List Observation) (m : Observation) :
  (appendObservation prior m).length = prior.length + 1 := by
- exact List.length_append prior [m]
+ induction prior with
+ | nil => rfl
+ | cons x xs ih =>
+  change (xs ++ [m]).length + 1 = (xs.length + 1) + 1
+  exact congrArg Nat.succ ih
 theorem successorRetains (prior : List Observation) (m x : Observation) (held : x ∈ prior) :
  x ∈ appendObservation prior m := List.mem_append_left [m] held
 theorem successorAdds (prior : List Observation) (m : Observation) : m ∈ appendObservation prior m :=
- List.mem_append_right prior (List.mem_cons_self)
+ List.mem_append_right prior (List.Mem.head [])
 
 def witness : Observation :=
  ⟨⟨"prepared-molecular-state","CaH-J-one",by rfl,by rfl⟩,

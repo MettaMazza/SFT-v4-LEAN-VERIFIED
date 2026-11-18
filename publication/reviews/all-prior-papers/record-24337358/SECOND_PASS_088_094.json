@@ -1,0 +1,117 @@
+{
+  "updated_at": "2026-11-18T22:51:14.675643+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94
+  ],
+  "challenges": [
+    {
+      "claim": "Symbol classes and ledgers cover arbitrary finite admitted alphabets.",
+      "challenge": "Could merged labels erase a microform or could pair partition silently reorder the full original pair list?",
+      "evidence": "SymbolClasses.collectionSources/collectionMembership, collectedFibre, classesCover/fibresDisjoint; SymbolLedger.selectionMembership/ledgerExhausts/ledgerDisjoint and successorPairOrder full bodies.",
+      "disposition": "No demonstrated defect. Ordered fibres retain original symbol pairs; separate ordered filters partition membership. Section89 explicitly does not assert that concatenating passes reconstructs the interleaved pair order."
+    },
+    {
+      "claim": "Fresh-symbol and coarsening results follow the source conditions.",
+      "challenge": "Do they assume the new label is distinct, or assume coarsening for unrelated observations?",
+      "evidence": "SymbolExtension.successorLookup requires fresh symbol and nonempty label, not new label; priorDistinctionPreserved excludes only matching source keys. SymbolLedger.coarseningClosesExactly carries the fine/coarse lookup correspondences.",
+      "disposition": "No demonstrated defect. Section89 retains exactly these hypotheses and permits a fresh symbol to join an existing observation class."
+    },
+    {
+      "claim": "Exact decoder exists iff each used code class is singleton.",
+      "challenge": "Could existence alone certify a left inverse for malformed raw encodings?",
+      "evidence": "EncodingDecoder.inverseExists/decoderExistsIff describe raw classes; decoderLeftInverse additionally takes validateEncoding and an original encoding row.",
+      "disposition": "No demonstrated defect. Section90 states the separate raw class criterion and admitted-encoding left-inverse theorem with both conditions."
+    },
+    {
+      "claim": "Encoding composition and source extension preserve the original relation.",
+      "challenge": "Does first-match lookup disagree with dictionary lookup, or is fresh/reused-word closure only a sample result?",
+      "evidence": "EncodingMaps.interfaceValid rejects duplicate second keys; lookupUnique and composedRow establish exact relation. EncodingExtension.membersSuccessor/freshPreservesDecoder/reusedClosesDecoder quantify arbitrary finite lists with original freshness/admission premises.",
+      "disposition": "No demonstrated defect. Sections91\u201392 explain unique interface lookup, ordered source preservation and both general inductive cases."
+    },
+    {
+      "claim": "Information positions are independently realized at every finite depth.",
+      "challenge": "Could the claim merely count word lengths or rely on three-position examples?",
+      "evidence": "QuantitySupport.wordCharacterization/positionSuccessorOrder/independentPosition/positionAlternativesDistinct; QuantityPositions.traceChecksPass induction generalizes index and proves every actual source check; admittedTrace gives exact result.",
+      "disposition": "No demonstrated defect. Sections93\u201394 contain the all-depth construction, prefix/suffix checks and cancellation argument; added examples illustrate separately."
+    },
+    {
+      "claim": "Fine/coarse quantity ledgers exhaust distinct support pairs.",
+      "challenge": "Could reverse pairs, duplicates or a missing lookup fallback change the count?",
+      "evidence": "QuantityPairs.pairsCover/pairsDistinct/reverseExcluded; QuantityProfile.imageExists/profileData/profilePartition/fineClosesNone/coarseningOnlyLoses.",
+      "disposition": "No demonstrated defect. Source guard order and unique-key coverage remove the missing-lookup branch on admitted support; the paper retains raw-operation behavior separately."
+    }
+  ],
+  "repairs_checked": [
+    "CUMULATIVE-SYMBOL-EXPOSITION-11",
+    "CUMULATIVE-ENCODING-EXPOSITION-12",
+    "CUMULATIVE-QUANTITY-EXPOSITION-13"
+  ],
+  "citations_added": [
+    {
+      "section": 89,
+      "links": [
+        "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/symbols_distinguishability/law.py#L77",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/SymbolGrammar.lean#L129",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/SymbolWitnesses.lean#L43"
+      ]
+    },
+    {
+      "section": 92,
+      "links": [
+        "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/encoding_decoding/law.py#L74",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/EncodingGrammar.lean#L140",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/EncodingWitnesses.lean#L39"
+      ]
+    },
+    {
+      "section": 94,
+      "links": [
+        "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/information_quantity/law.py#L77",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/QuantityGrammar.lean#L129",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/QuantityWitnesses.lean#L42"
+      ]
+    }
+  ],
+  "revised_manuscript_sha256": "d1d50faef9a4b497f088ef8e300a32de9727f50d48353ca66e0227589ac1d4b4",
+  "status": "No unresolved defect in inspected section arguments; entire cumulative paper is not yet passed.",
+  "new_scientific_runs": 0,
+  "public_cited_native_sources_verified": [
+    {
+      "path": "SFT/InformationScience/SymbolGrammar.lean",
+      "sha256": "8bde174cf1ff03fb1fee0bbb61da347908aab0c509f7b13a5bb18d2d91e5c3c3",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "path": "SFT/InformationScience/SymbolWitnesses.lean",
+      "sha256": "2a92084f7f2c34ede2a8babf6991f159f6549c8d6c297c0ca03385b79bc11e3e",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "path": "SFT/InformationScience/EncodingGrammar.lean",
+      "sha256": "c2414d9e2a1e42ab81380cf24ddf76b0f696b95e2b791a2953302185cfda5323",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "path": "SFT/InformationScience/EncodingWitnesses.lean",
+      "sha256": "7a5d932e910e350ab0139f0a37a87332e7f959a8974b89783c98c10b44e5dccb",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "path": "SFT/InformationScience/QuantityGrammar.lean",
+      "sha256": "3e1f1941933c9b04e1ab3c5b54243bed1344252d85cc06efbe9eb083abce954e",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "path": "SFT/InformationScience/QuantityWitnesses.lean",
+      "sha256": "5cae6a22b14651b6386b4d851bc6dc8efb338a72a0668baeab2a77ae075ed250",
+      "public_bytes_equal_reviewed": true
+    }
+  ]
+}

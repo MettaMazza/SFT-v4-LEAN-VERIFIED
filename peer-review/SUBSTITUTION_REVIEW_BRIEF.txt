@@ -1,0 +1,67 @@
+FOCUSED REVIEW: SUBSTITUTION HISTORIES AND RATIONAL FIXED SCALE
+Maria Smith, Ernos Labs — 18 November 2026
+Prepared with AI assistance under the author's direction.
+
+Paper 21: Crystallographic restriction and aperiodic substitution in SFT
+https://doi.org/10.5281/zenodo.24339920
+Start with Section 6. Read the earlier sections for the surrounding construction.
+
+REVIEW QUESTION
+Follow the original positive-depth operation into its native recurrence/history proofs, then examine the universal rational fixed-scale exclusion. Identify the exact operation, declaration or manuscript passage in any finding.
+
+ORIGINAL SOURCE
+Pinned V3:
+https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/materials/successor_structural_counts.py
+
+substitution_populations(depth: PositiveCount) begins with PopulationPair(1,1). Its loop runs over range(1, depth.value), replaces (a,b) with (a+b,a), appends each new pair and returns the complete tuple. Thus depth means the number of retained rows, including the initial row.
+
+rational_inflation_fixed_point_certificate returns the recurrence, coprime-positive fixed-scale equation, divisibility argument, least candidate (1,1), its rejection and the structural-absence record for a positive rational fixed scale. The source certificate is independent of the requested history depth.
+
+NATIVE PROOF ROUTE
+Pinned V4:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Materials/QuasicrystalInflation.lean
+
+Full namespace: SFT.Materials.QuasicrystalInflation
+
+PopulationPair contains two PositiveCount fields. initial constructs (1,1); next constructs (first+second,first), with positivity retained by its constructors. population iterates next over Nat. history 0 is [initial]; history (n+1) appends population (n+1). substitutionPopulations depth is history (depth.val-1).
+
+SFT.Materials.QuasicrystalInflation.successorEquation
+For every n : Nat, gives both coordinates of population (n+1). Both equalities follow directly from the definitions.
+
+SFT.Materials.QuasicrystalInflation.historyCount
+For every n : Nat, proves (history n).length = n+1 by induction. The successor uses the length of concatenation with the appended singleton.
+
+SFT.Materials.QuasicrystalInflation.originalDepthCount
+For every depth : PositiveCount, proves (substitutionPopulations depth).length = depth.val, using historyCount and positivity in the subtraction/addition step.
+
+SFT.Materials.QuasicrystalInflation.originalSixSuccessors
+Identifies the complete depth-six output as
+[(1,1),(2,1),(3,2),(5,3),(8,5),(13,8)].
+This exact witness accompanies the arbitrary-depth history theorem.
+
+SFT.Materials.QuasicrystalInflation.rationalFixedScaleExcluded
+For all p q : PositiveCount with Nat.gcd p.val q.val = 1, proves
+p.val*p.val != p.val*q.val + q.val*q.val.
+
+FOLLOW THE EXCLUSION ARGUMENT
+An unchanged positive rational ratio p/q would obey p/q = 1 + q/p, hence p² = pq + q². The native proof assumes that equation and constructs q | p². If q != 1, positivity yields q > 1. primeDivisorExists supplies a prime r dividing q; composeDivides and primeProduct then give r | p. commonDivisorDividesGcd contradicts the gcd-one hypothesis, so q = 1.
+
+The proof next uses p | p² and p | pq with dividesSubtract to obtain p | q². After q = 1, divisorBound and positivity force p = 1. Substituting both equalities into the assumed equation yields the final contradiction.
+
+The equation is quantified over all coprime positive integer pairs, not only the six displayed history rows. Review the imported divisibility and prime-support arguments through the linked module's imports when tracing these steps.
+
+SMALL CASES AND QUESTIONS
+1. What does depth one return? Answer: just [(1,1)]. Which source loop bound and native subtraction preserve this convention?
+2. Why does a requested depth six return six rows rather than seven? Distinguish history's Nat successor index from the original positive row-count parameter.
+3. Which steps of rationalFixedScaleExcluded use positivity, and which use coprimality?
+4. Where does the universal exclusion connect to a rational ratio being fixed under the actual recurrence?
+5. What references or explanatory connections would help readers place this familiar substitution within the paper's original construction?
+
+ACCESS AND RESPONSE
+The Zenodo record contains manuscript.md, SFT_PAPER.pdf, SOURCE_CORRESPONDENCE.json and SOURCE_AND_EVIDENCE.zip. The correspondence identifies verification/TURN_1091_QUASICRYSTAL_INFLATION_COMPLETION.json and the broader source obligations; this guide navigates the recurrence and exclusion portion rather than replacing that package.
+
+A short finding is welcome:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+Email: Maria.smith.sftoe@gmail.com
+
+State the version, passage or full declaration examined, relevant domain/hypotheses and supporting reasoning. Please disclose relevant affiliations and AI assistance. This is a review invitation, not an independently authored review or endorsement. No new Lean compilation or scientific completion is claimed by this guide.

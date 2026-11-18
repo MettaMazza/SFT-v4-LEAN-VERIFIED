@@ -50,6 +50,25 @@ closedPersists carries equal upstream images through the actual composed rows. r
 
 The Zenodo SOURCE_AND_EVIDENCE.zip supplies these proof bodies and their dependencies. SOURCE_CORRESPONDENCE.json and verification/TURN_164_CONSERVATION_COMPLETION.json identify the retained correspondence and checks. This brief introduces no replacement scientific definitions or new verification results.
 
+TRY THE RECORDS BEFORE READING THE PROOFS
+A. Count and identify.
+For the four-source prefix map above, list all six unordered source pairs in source order. Mark a pair closed when its two images agree and retained otherwise. Now compose with a->one and b->one. Which original pairs remain retained?
+
+B. Recover a particular input.
+Suppose the observed image is a and its reverse record holds (aa,ab). Can this record alone distinguish a run that began with aa from one that began with ab? Compare this with the identity map on the same four-source carrier.
+
+C. Preserve the declared order.
+Keep the prefix map but supply the source order (bb,aa,ba,ab). What is the image order and what is the order within each predecessor fibre? Does changing this enumeration make the prefix map reversible?
+
+WORKED ANSWERS
+A. The pairs are (aa,ab), (aa,ba), (aa,bb), (ab,ba), (ab,bb), (ba,bb). The first and last are closed; the other four are retained. After composition all six are closed. The source operation represents the empty retained ledger by ("empty-One",), not by an additional source pair.
+
+B. Both candidate inputs give the same image a and the same held fibre. The fibre specifies the possible predecessors; reconstruction of the particular run needs a retained predecessor label resolving the choice. For identity, each image has a singleton fibre, and reverse_record returns the unique source string directly. Follow uniqueRecovery and heldRecovery to compare the two cases.
+
+C. First-occurrence image order is (b,a). The fibres are (b,(bb,ba)) and (a,(aa,ab)); reverse_record wraps each member list with "held-predecessor-labels". Both fibres remain non-singleton, so the map remains irreversible. Ordered records preserve more detail than merely reporting the two fibre sizes.
+
+These are reading exercises for the original transformation operations. The source-successor argument and the quantified Lean results remain the general derivation; these examples add no new verification claim.
+
 HOW TO RESPOND
 Choose one concrete step. Identify the source operation, Lean declaration or paper passage, the domain you examined, and your supporting reasoning or counterexample. A short finding or precise unresolved question is welcome; reviewing the whole corpus is unnecessary.
 Public review discussion:

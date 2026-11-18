@@ -1,0 +1,56 @@
+RUN THE EXACT-RATIONAL CALCULATOR EXAMPLE
+Maria Smith, Ernos Labs
+Prepared with AI assistance, 18 November 2026.
+
+START HERE
+Download the script using the Raw/download control on its GitHub page:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/49dc14e68d15db15335c9941ffc7c42f32ab64d9/peer-review/resources/calculator-enclosure-example.py
+
+Save it as calculator-enclosure-example.py. In a terminal opened in the folder containing that file, run:
+
+python3 calculator-enclosure-example.py --x 1/5 --terms 1
+python3 calculator-enclosure-example.py --x 1/5 --terms 2
+
+The script uses Python 3's standard library: argparse and fractions.Fraction. No third-party Python package is required.
+
+EXPECTED VALUES
+For one term:
+partial sum = 1/5
+next-term magnitude = 1/375
+rational endpoints = [74/375, 1/5]
+
+For two terms:
+partial sum = 74/375
+next-term magnitude = 1/15625
+rational endpoints = [74/375, 9253/46875]
+
+These are exact fractions. The output also prints the branch used and interval width.
+
+TRY A CHANGE
+python3 calculator-enclosure-example.py --x 0.2 --terms 2
+
+The decimal text 0.2 is parsed directly as Fraction, so it gives the same exact input as 1/5. If using the Python function directly, construct Fraction("0.2") or Fraction(1, 5); a binary floating-point argument is a different input representation.
+
+The admitted x domain is 0 < x <= 1 and the term count must be a positive integer. For example:
+
+python3 calculator-enclosure-example.py --x 0 --terms 2
+
+This should report an input error and exit rather than produce endpoints. That rejection is intentional.
+
+READ OR RUN THE NOTEBOOK
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/2512afd7abec354cfd708fbffffc94ccfca419b7/peer-review/resources/calculator-enclosure-example.ipynb
+
+GitHub displays the retained cell outputs without requiring a local notebook installation. To change inputs in an existing Python 3 notebook environment, download the .ipynb file, open it there and run cells from top to bottom. Its calculation cells use the same standard-library arithmetic. The notebook environment itself is separate from the standalone script.
+
+FOLLOW THE ARGUMENT
+For the partial sum, next-term bound, parity-dependent endpoints, source domain and original/native correspondence:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/92c8a3712de65bdc79b36995f2babdf488d0de2c/peer-review/CALCULATOR_REVIEW_BRIEF.txt
+Paper 35, version 1.1, Sections 3–5:
+https://doi.org/10.5281/zenodo.24354302
+
+The script is an educational arithmetic illustration. The paper and native source provide the enclosure argument; running this example does not constitute a new Lean build or a new verification of the whole calculator.
+
+REPORT A RESULT OR PROBLEM
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+
+Include the script commit, Python version, exact command and complete relevant output. Identify whether the question concerns input handling, computed arithmetic or the mathematical argument. Please omit credentials and private machine information.

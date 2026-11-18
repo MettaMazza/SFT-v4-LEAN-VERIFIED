@@ -1,0 +1,102 @@
+{
+  "updated_at": "2026-11-18T23:13:34.264037+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118
+  ],
+  "challenges": [
+    {
+      "claim": "Joint and conditional ledgers retain every observed label pair and exact fractions.",
+      "challenge": "Could empty joint cells be omitted, marginal positivity assumed, or target/given order reversed?",
+      "evidence": "MutualJoint.marginalPositive derives a fibre witness from labelsMeaning; rowsProjection/completeProjection preserve full labelPairs. MutualConditional validates target before given but enumerates given-major rows.",
+      "disposition": "Sections108\u2013110 state these separate orders, all cells and exact positive-part cross-products; no defect demonstrated."
+    },
+    {
+      "claim": "The resolution predicate matches the source operation.",
+      "challenge": "Could a literal source name empty-One be treated as an impossible input or silently replaced by a typed empty constructor?",
+      "evidence": "Pinned conditionally_resolved compares presented tuple to EMPTY_ONE; MutualDecisions.countedMeaning/rawSentinelExcluded retain precisely that comparison.",
+      "disposition": "Section110 explicitly shows the literal-list equality and its effect, without changing admitted source names or claiming a stronger resolution theorem."
+    },
+    {
+      "claim": "Joint/product comparison and factorization are exact.",
+      "challenge": "Could positive fractions be compared approximately or absent cells be accepted as equal?",
+      "evidence": "MutualParts.compareEmpty/compareEqual/compareBelow/compareAbove case proofs; MutualDecisions.factorCellMeaning/factorizationMeaning/responsibleMeaning.",
+      "disposition": "Sections109\u2013110 use complete integer cross-product cases, require positive-cell presence and retain every unequal row. No rounding or omitted-cell branch."
+    },
+    {
+      "claim": "Fresh-source succession recomputes all ratios from exact membership.",
+      "challenge": "Could conditional denominators use total support instead of the given fibre, or a fresh label be excluded?",
+      "evidence": "MutualExtension.jointSuccessor/conditionalSuccessor/jointPartSuccessor/conditionalPartSuccessor; EntropyExtension.fibreSuccessor previously inspected.",
+      "disposition": "Section111 derives support.length+1 for joint parts and updated given-fibre length for conditional parts; label membership is established on the extended domain, allowing new labels."
+    },
+    {
+      "claim": "Conservation reversibility is equivalent to singleton fibres.",
+      "challenge": "Could a reordered dictionary make its distinct-value count differ from the source-traversal count, or require an assumed inverse?",
+      "evidence": "Actual prior paper30 ConservationCardinality and ConservationReverse bodies reused with identical bytes; dictionary/value membership correspondence, distinct-list bounds and injectivity/fibre implications.",
+      "disposition": "Sections115\u2013116 state the exact dictionary expression and both directions through equal distinct-image counts. No assumed inverse or new ordering guard."
+    },
+    {
+      "claim": "Downstream and successor pair accounting preserves all original distinctions.",
+      "challenge": "Could set membership erase source order or replace the interleaved successor enumeration?",
+      "evidence": "Actual prior paper30 ConservationComposition/ConservationExtension proof inspection; inherited EncodingLoss source order and EntropyExtension pairSuccessorOrder.",
+      "disposition": "Sections113\u2013114/117 preserve the actual ordered filters and nested pair recurrence; subset and old/new equivalences are membership statements, not replacement concatenation orders."
+    }
+  ],
+  "repairs_checked": [
+    "CUMULATIVE-MUTUAL-EXPOSITION-19",
+    "CUMULATIVE-CONSERVATION-EXPOSITION-20"
+  ],
+  "citations_added": [
+    {
+      "section": 112,
+      "links": [
+        "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/mutual_conditional_information/law.py#L138",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/MutualGrammar.lean#L140",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/MutualWitnesses.lean#L30"
+      ]
+    },
+    {
+      "section": 118,
+      "links": [
+        "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/conservation_loss_transformation/law.py#L98",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ConservationGrammar.lean#L140",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ConservationWitnesses.lean#L37"
+      ]
+    }
+  ],
+  "revised_manuscript_sha256": "c790f8a9954296e01b1bcb58998a714ce12c15dd780019f68ee8872e3691af64",
+  "status": "No unresolved defect in inspected section arguments; entire cumulative paper is not yet passed.",
+  "new_scientific_runs": 0,
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/MutualGrammar.lean#L140",
+      "sha256": "5bd3a63385eeca204842735f7e14cbe91c4ef102897fb8c5a8f417d92780bed1",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/MutualWitnesses.lean#L30",
+      "sha256": "e57e3f6076b7737867664f2b322130c900ef81e7dd4a8a9bbeb184f9c057dd9a",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ConservationGrammar.lean#L140",
+      "sha256": "e399c64b2dacef55b28dcea38303df303b645c82041b3ba59affa1472214abc6",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ConservationWitnesses.lean#L37",
+      "sha256": "053046278861eee808f6188d00ebd32fb9f10b558f0d50ffa61683b44b45347a",
+      "public_bytes_equal_reviewed": true
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+HYDROGEN COMPARISONS: THREE QUESTIONS TO ASK OF THE INTERVALS
+A reading guide to Maria Smith's SFT hydrogen paper, edition 1.1
+Paper and release materials: https://doi.org/10.5281/zenodo.24352683
+Scientific author: Maria Smith. Reading guide prepared with AI assistance.
+
+Start at Section 8, "Frequency and wavenumber comparisons", then read Section 7 for the reduced-mass scale and line transport. This guide explains the published comparison; it is not an independent review.
+
+1. WHICH QUANTITIES ARE BEING COMPARED?
+
+The formal dimensionless carrier is translated into Hz using the registered Rydberg frequency, 3,289,841,960,250,000 ± 3,600 Hz. If a positive prediction ratio occupies [a,b] and the dimensional carrier occupies [R-,R+], the translated interval is [a R-, b R+]. Keeping only the carrier centre produces a different, narrower interval.
+
+The paper states that measurements informed development. Its executable relations contain no measured frequency or source access; the stated protocol seals the prediction before releasing the registered external comparison records. Those statements concern different parts of the workflow and should be read together.
+
+2. DOES "AGREEMENT" MEAN CONTAINMENT OR OVERLAP?
+
+Containment: every point in the prediction interval lies inside the target interval.
+Overlap: the two intervals share at least one point.
+
+For the published Lamb and fine comparisons, the full translated prediction interval is contained in its respective target. For hyperfine, the central-Rydberg prediction enclosure is inside the target, while the full propagated prediction interval overlaps it.
+
+Hyperfine, in Hz (outward-rounded published endpoints):
+  Full propagated prediction: [1420405751.765152, 1420405751.768262]
+  Registered target:          [1420405751.765700, 1420405751.767700]
+
+The full prediction extends below and above the target. Calling that full interval "contained in the target" would misstate this comparison. The paper instead explicitly reports overlap, preserving the external carrier uncertainty.
+
+The central-Rydberg enclosure is approximately
+[1420405751.7667071018, 1420405751.7667072859] Hz.
+This narrower interval is contained in the target. Exact rational endpoints, not these display decimals, determine the implemented decisions.
+
+3. WHAT DO THE INTERVAL WIDTHS REPRESENT?
+
+Section 8 identifies the Rydberg carrier uncertainty and the registered transition uncertainties. It forms the fine target by summing the two positive experimental intervals, adding their uncertainty half-widths.
+
+For the separate wavenumber comparison, the ionization target's half-width of 0.00005 cm^-1 is expressly a displayed-resolution enclosure. Preserve that description when discussing the comparison; it is not interchangeable with an independently stated experimental uncertainty.
+
+FOLLOW THE IMPLEMENTATION
+
+The public repository contains:
+  SFT/Physics/TerminalHyperfineMeasurement.lean
+  namespace SFT.Physics.TerminalHyperfineMeasurement
+
+Read these definitions in order:
+  symmetricInterval
+  rydbergInterval
+  targetInterval
+  translatedPredictionInterval
+  centralCarrierInterval
+  intervalsOverlap
+  classificationFromRecord
+  originalClassification
+
+translatedPredictionInterval multiplies lower endpoints and upper endpoints.
+centralCarrierInterval multiplies both formal endpoints by the Rydberg centre.
+classificationFromRecord first checks full-interval overlap, then checks central-carrier containment.
+originalClassification proves the registered record returns the stated classification.
+
+The other published comparison references are:
+  SFT.Physics.TerminalLambMeasurement.originalClassification
+  SFT.Physics.TerminalFineMeasurement.originalClassification
+  SFT.Physics.HydrogenRydbergMeasurement.originalClassification
+
+Use the release materials at the DOI for the edition's source and verification evidence. The public repository may advance after this edition:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED
+
+AN INVITATION TO EXAMINE A CONCRETE CLAIM
+
+A useful review can focus on one record: identify the transition, the original experimental source, the propagated endpoints and the exact containment or overlap decision. If a correction is needed, identify the affected record or declaration and the numerical or source-specific reason.
+
+Read the complete derivation and comparison section before generalizing from one row. Questions about grammar derivation, experimental record selection and interval arithmetic concern distinct parts of the work and can be addressed separately.
+
+Public review discussion:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+
+No independent review or endorsement is claimed by this guide.

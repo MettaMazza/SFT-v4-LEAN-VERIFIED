@@ -1,0 +1,66 @@
+CAN THE RATIO STAY THE SAME?
+A short substitution puzzle
+Maria Smith · Ernos Labs
+
+START HERE
+Begin with the word AB. At each step replace every A with AB and every B with A, simultaneously. For example:
+
+AB → ABA → ABAAB
+
+Let a count the A's and b count the B's. Initially (a,b) = (1,1).
+
+QUESTIONS
+1. Find the next five count pairs without writing out the longer words.
+2. Explain why the two counts never share a common factor greater than 1.
+3. Could the ratio a/b ever remain exactly unchanged after a substitution step?
+4. More generally, could any positive rational ratio remain unchanged under this count rule?
+
+Try the questions before reading the solution below.
+
+HINTS
+Each A contributes one A and one B to the next word.
+Each B contributes one A.
+For the last question, write the ratio as p/q in lowest terms.
+
+
+WORKED SOLUTION
+
+1. Count the contributions.
+The next pair is (a+b,a). Starting from (1,1), the next five pairs are:
+(2,1), (3,2), (5,3), (8,5), (13,8).
+
+2. Preserve common divisors.
+A number divides both a+b and a exactly when it divides both a and b: subtract a from a+b in one direction, and add a to b in the other. Therefore gcd(a+b,a) = gcd(a,b). Since the initial gcd is 1, it stays 1 at every step.
+
+3–4. Rule out an unchanged positive rational ratio.
+The next ratio is (a+b)/a = 1 + 1/(a/b).
+An unchanged ratio r would therefore satisfy r = 1 + 1/r.
+
+Write r = p/q with positive coprime integers p and q. Multiplying by pq gives:
+p² = pq + q².
+
+The right-hand side is divisible by q, so q divides p². If q were greater than 1, it would have a prime divisor l. That prime would divide p², hence p, contradicting the coprimality of p and q. Thus q = 1.
+
+The same equation shows that p divides q². With q = 1, positivity forces p = 1.
+
+But substituting p = q = 1 gives 1 = 2. This contradiction excludes every positive rational fixed ratio, including each positive rational ratio produced by the substitution.
+
+DISCUSSION
+Which parts used the particular starting word, and which applied to any positive rational ratio? The first six count pairs illustrate the recurrence; the last argument covers all positive rational candidates.
+
+SOURCE AND VERIFICATION REFERENCES
+Adapted from section 6 of Crystallographic restriction and aperiodic substitution in SFT:
+https://doi.org/10.5281/zenodo.24339920
+
+The paper presents the original substitution construction, exact finite histories and rational fixed-scale exclusion. Its native references include:
+QuasicrystalInflation.successorEquation
+QuasicrystalInflation.historyCount
+QuasicrystalInflation.originalDepthCount
+QuasicrystalInflation.originalSixSuccessors
+QuasicrystalInflation.rationalFixedScaleExcluded
+
+The common-divisor explanation in question 2 is an elementary teaching step; the stated universal rational exclusion is the source result above. No claim about an evaluated irrational limit is needed for this puzzle.
+
+Scientific author: Maria Smith, Ernos Labs.
+Explanatory handout prepared with AI assistance under her direction.
+Contact: Maria.smith.sftoe@gmail.com

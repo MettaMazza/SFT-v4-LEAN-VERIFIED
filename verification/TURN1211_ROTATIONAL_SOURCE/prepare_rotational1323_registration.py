@@ -1,0 +1,23 @@
+from pathlib import Path
+w=Path('work');s=(w/'register_vibrational1322.py').read_text().replace('VibrationalFrequency','RotationalConstant').replace('vibrational_frequency','rotational_constant').replace('vibrational1322','rotational1323').replace('1322','1323').replace('VIBRATIONAL','ROTATIONAL').replace('SFT-CHEM-ROTATIONAL-FREQUENCY-009','SFT-CHEM-ROTATIONAL-CONSTANT-010')
+a=s.index(';scopes=')+1;b=s.index('\noldNames=',a)
+scopes={
+'RotationalConstant':('sft/chemistry/rotational_constant_law_v1.py:exact_axis_rotational_constant/repeated_equal_interval_constant/rotational_level_multiple/adjacent_rotational_gap_multiple/rotational_level_ratio/unexcited_rotational_form/RotationalAxisCarrier/_witnesses','Original positive axis recurrence ratio, equal-interval repetition, J(J+1) levels, binary-count 2J gaps, raw constant-level composition, structural EmptyOne ground, nine carrier fields and five operational witnesses.'),
+'RotationalConstantGrammar':('sft/chemistry/rotational_constant_law_v1.py:DIMENSIONS','All eight original binary axes,256 alternatives,original elimination decisions and unique survivor.'),
+'RotationalConstantEvidence':('sft/chemistry/generated_observational_law.py:GeneratedObservationalChemistryProgram; rotational_constant_batch_v1.py:ROTATIONAL_CONSTANT_SPEC','Original depth-independent closure,registration,controls and five operational witnesses.'),
+'RotationalConstantExperiment':('sft/chemistry/rotational_constant_validation_v1.py:_identities/prediction_program_document/experiment_registration_record','All3015 value-free axis identities,51258 instructions,16-cell words,fourteen registration fields and original specification/input guards.'),
+'RotationalConstantSource':('sft/chemistry/rotational_constant_validation_v1.py:_TableRows/_snapshot_rows/_source_rows/_pair','Original td-only six-cell table,1005 displayed molecular rows expanded to3015 ordered axis cells;1681 measured/1334absent;2186listed species,1193query compositions,1832returned choices,83unreturned compositions;six retrieval batches and original five source hashes.'),
+'RotationalConstantPrediction':('sft/chemistry/rotational_constant_validation_v1.py:_prediction_map','Original3015-row16-cell prediction table,word lengths and target identity guards.'),
+'RotationalConstantValidation':('sft/chemistry/rotational_constant_validation_v1.py:RotationalConstantValidator.validate','Original seal/custody,all3015axis comparisons,nine controls and twelve-field3024message receipt,including complete measured/absent and list/choice/query boundaries.')}
+s=s[:a]+'scopes='+repr(scopes)+s[b:]
+s=s.replace('original_target_rows=2009','original_target_rows=3015').replace('measurement_messages=2016','measurement_messages=3024').replace('full12field2016message','full12field3024message').replace('complete2009-row vibrational source reconstruction','complete3015-axis rotational source reconstruction')
+a=s.index(" if fn=='ZENODO_PAPER_DRAFT.txt':");b=s.index(' p.write_text(s)',a)
+s=s[:a]+''' if fn=='ZENODO_PAPER_DRAFT.txt':
+  s=s.replace('Native core, grammar and source-output checks are queued; this entry is not yet registered complete.', 'Native core, grammar and source-output checks pass; completion evidence is verification/TURN1323_ROTATIONAL_COMPLETION.json.')
+  s=s.replace('The complete native rotational source-validator checks are queued.', 'The complete native rotational source-validator checks pass.')
+'''+s[b:]
+a=s.index("with(r/'ZENODO_PAPER_DRAFT.txt').open('a')");b=s.index("with(r/'TIMELINE.txt').open('a')",a)
+s=s[:a]+'''with(r/'ZENODO_PAPER_DRAFT.txt').open('a')as f:f.write('\\nRotational-constant verification is complete. All '+str(len(auditNames))+' audited declarations have empty axiom dependencies. The exact recurrence ratio, arbitrary positive equal-interval repetition, positive rotational ladder, adjacent gap, level composition and structural ground retain their original source relationships. All 51 original operation cases, 10 prediction-domain cases, 51,258 prediction instructions, 14 registration fields, all 256 candidate programme outputs and three adverse independent cases agree. The twelve-field empirical receipt preserves all 3,024 messages: 3,015 axis comparisons and nine controls. Completion receipt: '+receipt+'. Timeline TURN1323.\\n')
+'''+s[b:]
+s=s.replace('Vibrational frequency complete at','Rotational constant complete at');(w/'register_rotational1323.py').write_text(s);compile(s,'register_rotational1323.py','exec')
+s=(w/'register_chemistry_batch1210.py').read_text();a=s.index('entries=');b=s.index('\nfor tag',a);s=s[:a]+"entries=[('rotational1323','SFT-CHEM-ROTATIONAL-CONSTANT-010','RotationalConstantValidation')]"+s[b:];(w/'register_rotational1323_when_ready1211.py').write_text(s)

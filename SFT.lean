@@ -12251,3 +12251,15 @@ import SFT.Biology.CellAdhesionSource
 import SFT.Biology.CellAdhesionExperiment
 
 import SFT.Biology.CellAdhesionValidation
+
+import SFT.Biology.Differentiation
+
+import SFT.Biology.DifferentiationGrammar
+
+import SFT.Biology.DifferentiationEvidence
+
+import SFT.Biology.DifferentiationSource
+
+import SFT.Biology.DifferentiationExperiment
+
+import SFT.Biology.DifferentiationValidation

@@ -1,0 +1,1318 @@
+{
+  "updated_at": "2026-11-18T23:44:07.352553+00:00",
+  "sections_read": [
+    161,
+    162,
+    163,
+    164
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "records": [
+    {
+      "section": 161,
+      "native_modules_read": [
+        {
+          "path": "SFT/Computation/CommunicationResources.lean",
+          "sha256": "fb3be21bf1dc7ffcb134963ae5bff7786e11ef373e7494a5ab623d913da4c52e",
+          "declarations": [
+            "SFT.Computation.CommunicationResources.sentRows",
+            "SFT.Computation.CommunicationResources.receivedRows",
+            "SFT.Computation.CommunicationResources.queryCount",
+            "SFT.Computation.CommunicationResources.mapLength",
+            "SFT.Computation.CommunicationResources.completeQueryCounts",
+            "SFT.Computation.CommunicationResources.joinedRows",
+            "SFT.Computation.CommunicationResources.restore",
+            "SFT.Computation.CommunicationResources.reconstructRows",
+            "SFT.Computation.CommunicationResources.completeQueryReconstruction",
+            "SFT.Computation.CommunicationResources.reconstructedSource",
+            "SFT.Computation.CommunicationResources.unknownIdentityExcluded",
+            "SFT.Computation.CommunicationResources.mapAppend",
+            "SFT.Computation.CommunicationResources.retainedCommunication",
+            "SFT.Computation.CommunicationResources.countAppend",
+            "SFT.Computation.CommunicationResources.completeQueryCost",
+            "SFT.Computation.CommunicationResources.registeredComposition",
+            "SFT.Computation.CommunicationResources.singletonQuery",
+            "SFT.Computation.CommunicationResources.successorQuery",
+            "SFT.Computation.CommunicationResources.retainedLocalKnowledge",
+            "SFT.Computation.CommunicationResources.Certificate",
+            "SFT.Computation.CommunicationResources.protocolReplay",
+            "SFT.Computation.CommunicationResources.distributedInputRetained",
+            "SFT.Computation.CommunicationResources.resultCertificate",
+            "SFT.Computation.CommunicationResources.unregisteredProtocolExcluded"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.CommunicationResources.mapLength",
+            "SFT.Computation.CommunicationResources.completeQueryCounts",
+            "SFT.Computation.CommunicationResources.reconstructRows",
+            "SFT.Computation.CommunicationResources.completeQueryReconstruction",
+            "SFT.Computation.CommunicationResources.reconstructedSource",
+            "SFT.Computation.CommunicationResources.unknownIdentityExcluded",
+            "SFT.Computation.CommunicationResources.mapAppend",
+            "SFT.Computation.CommunicationResources.retainedCommunication",
+            "SFT.Computation.CommunicationResources.countAppend",
+            "SFT.Computation.CommunicationResources.completeQueryCost",
+            "SFT.Computation.CommunicationResources.registeredComposition",
+            "SFT.Computation.CommunicationResources.singletonQuery",
+            "SFT.Computation.CommunicationResources.successorQuery",
+            "SFT.Computation.CommunicationResources.retainedLocalKnowledge",
+            "SFT.Computation.CommunicationResources.protocolReplay",
+            "SFT.Computation.CommunicationResources.distributedInputRetained",
+            "SFT.Computation.CommunicationResources.resultCertificate",
+            "SFT.Computation.CommunicationResources.unregisteredProtocolExcluded"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/CommunicationQueryGrammar.lean",
+          "sha256": "629e399159317897514d9c540be6d43d6c2f54ec0d495104e3691e7e93107111",
+          "declarations": [
+            "SFT.Computation.CommunicationQueryGrammar.Input",
+            "SFT.Computation.CommunicationQueryGrammar.inputName",
+            "SFT.Computation.CommunicationQueryGrammar.Resource",
+            "SFT.Computation.CommunicationQueryGrammar.resourceName",
+            "SFT.Computation.CommunicationQueryGrammar.Model",
+            "SFT.Computation.CommunicationQueryGrammar.modelName",
+            "SFT.Computation.CommunicationQueryGrammar.Comparison",
+            "SFT.Computation.CommunicationQueryGrammar.comparisonName",
+            "SFT.Computation.CommunicationQueryGrammar.Composition",
+            "SFT.Computation.CommunicationQueryGrammar.compositionName",
+            "SFT.Computation.CommunicationQueryGrammar.Witness",
+            "SFT.Computation.CommunicationQueryGrammar.witnessName",
+            "SFT.Computation.CommunicationQueryGrammar.Generality",
+            "SFT.Computation.CommunicationQueryGrammar.generalityName",
+            "SFT.Computation.CommunicationQueryGrammar.Addition",
+            "SFT.Computation.CommunicationQueryGrammar.additionName",
+            "SFT.Computation.CommunicationQueryGrammar.Candidate",
+            "SFT.Computation.CommunicationQueryGrammar.sourceFields",
+            "SFT.Computation.CommunicationQueryGrammar.candidateId",
+            "SFT.Computation.CommunicationQueryGrammar.exactForm",
+            "SFT.Computation.CommunicationQueryGrammar.survivorId",
+            "SFT.Computation.CommunicationQueryGrammar.survives",
+            "SFT.Computation.CommunicationQueryGrammar.criteriaDecision",
+            "SFT.Computation.CommunicationQueryGrammar.decisionReason",
+            "SFT.Computation.CommunicationQueryGrammar.generationRule",
+            "SFT.Computation.CommunicationQueryGrammar.grammarBoundary",
+            "SFT.Computation.CommunicationQueryGrammar.candidates",
+            "SFT.Computation.CommunicationQueryGrammar.survivor",
+            "SFT.Computation.CommunicationQueryGrammar.generatedCardinality",
+            "SFT.Computation.CommunicationQueryGrammar.candidatesComplete",
+            "SFT.Computation.CommunicationQueryGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.CommunicationQueryGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.CommunicationQueryGrammar.uniqueSurvivor",
+            "SFT.Computation.CommunicationQueryGrammar.survivorAccepted",
+            "SFT.Computation.CommunicationQueryGrammar.ExactCriteria",
+            "SFT.Computation.CommunicationQueryGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.CommunicationQueryGrammar.input_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.resource_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.model_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.comparison_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.composition_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.witness_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.generality_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.CommunicationQueryGrammar.generatedCardinality",
+            "SFT.Computation.CommunicationQueryGrammar.candidatesComplete",
+            "SFT.Computation.CommunicationQueryGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.CommunicationQueryGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.CommunicationQueryGrammar.uniqueSurvivor",
+            "SFT.Computation.CommunicationQueryGrammar.survivorAccepted",
+            "SFT.Computation.CommunicationQueryGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.CommunicationQueryGrammar.input_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.resource_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.model_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.comparison_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.composition_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.witness_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.generality_rejected_rejected",
+            "SFT.Computation.CommunicationQueryGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        },
+        {
+          "path": "SFT/Computation/CommunicationQueryWitnesses.lean",
+          "sha256": "a4b33b4e854369737f2ff2a801ce1990ce298fcb3c0b95b8b6b0db58e8e53302",
+          "declarations": [
+            "SFT.Computation.CommunicationQueryWitnesses.Witness",
+            "SFT.Computation.CommunicationQueryWitnesses.sourceLedger",
+            "SFT.Computation.CommunicationQueryWitnesses.timeCheck",
+            "SFT.Computation.CommunicationQueryWitnesses.spaceCheck",
+            "SFT.Computation.CommunicationQueryWitnesses.traceCheck",
+            "SFT.Computation.CommunicationQueryWitnesses.witnesses",
+            "SFT.Computation.CommunicationQueryWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.CommunicationQueryWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        },
+        {
+          "path": "SFT/Computation/CommunicationQueryControls.lean",
+          "sha256": "038caab21b3245771e4d44d2801a8bf4c0a0943fc14c017aa624611cd7258f61",
+          "declarations": [
+            "SFT.Computation.CommunicationQueryControls.laws",
+            "SFT.Computation.CommunicationQueryControls.exclusions",
+            "SFT.Computation.CommunicationQueryControls.closureValue",
+            "SFT.Computation.CommunicationQueryControls.falseCandidate",
+            "SFT.Computation.CommunicationQueryControls.survivorIds",
+            "SFT.Computation.CommunicationQueryControls.distinctIdentifiers",
+            "SFT.Computation.CommunicationQueryControls.falsePremise",
+            "SFT.Computation.CommunicationQueryControls.tamperedSource",
+            "SFT.Computation.CommunicationQueryControls.tamperedArtifact",
+            "SFT.Computation.CommunicationQueryControls.boundary",
+            "SFT.Computation.CommunicationQueryControls.falsePremisePassed",
+            "SFT.Computation.CommunicationQueryControls.boundaryPassed",
+            "SFT.Computation.CommunicationQueryControls.controlRecords",
+            "SFT.Computation.CommunicationQueryControls.resultData",
+            "SFT.Computation.CommunicationQueryControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.CommunicationQueryControls.falsePremisePassed",
+            "SFT.Computation.CommunicationQueryControls.boundaryPassed"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        },
+        {
+          "path": "SFT/Computation/CommunicationQueryEvidence.lean",
+          "sha256": "82801a5a6399c954f0c6acd8722700c5f79b475f24835321f44e9e3448c9bb0c",
+          "declarations": [
+            "SFT.Computation.CommunicationQueryEvidence.candidateRecord",
+            "SFT.Computation.CommunicationQueryEvidence.completenessRecord",
+            "SFT.Computation.CommunicationQueryEvidence.registrationData",
+            "SFT.Computation.CommunicationQueryEvidence.registration",
+            "SFT.Computation.CommunicationQueryEvidence.generatedCandidateData",
+            "SFT.Computation.CommunicationQueryEvidence.censusData",
+            "SFT.Computation.CommunicationQueryEvidence.census",
+            "SFT.Computation.CommunicationQueryEvidence.decisionData",
+            "SFT.Computation.CommunicationQueryEvidence.decision",
+            "SFT.Computation.CommunicationQueryEvidence.decideCandidate",
+            "SFT.Computation.CommunicationQueryEvidence.closureData",
+            "SFT.Computation.CommunicationQueryEvidence.closure",
+            "SFT.Computation.CommunicationQueryEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.CommunicationQueryEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.CommunicationQueryEvidence.registrationHasNoAxioms",
+            "SFT.Computation.CommunicationQueryEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.CommunicationQueryEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.CommunicationQueryEvidence.why",
+            "SFT.Computation.CommunicationQueryEvidence.derivation",
+            "SFT.Computation.CommunicationQueryEvidence.check",
+            "SFT.Computation.CommunicationQueryEvidence.limitations",
+            "SFT.Computation.CommunicationQueryEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.CommunicationQueryEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.CommunicationQueryEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.CommunicationQueryEvidence.registrationHasNoAxioms",
+            "SFT.Computation.CommunicationQueryEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.CommunicationQueryEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_214_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "2337649910ba1623fa9a4f667309a3cb86a0ce785c716e11369c622b753d1795",
+        "matching_theorems": 41
+      },
+      "retained_reports": [
+        {
+          "path": "verification/TURN_214_COMMUNICATION_QUERY_COMPLETION.json",
+          "sha256": "14495c5a190032e664544e2dbdb23e7a8a744bdcfec4c27679ba14c99771cf42",
+          "result": {
+            "claim_id": "SFT-COMP-CPLX-COMMUNICATION-QUERY-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "status": "complete",
+            "source_sha256": {
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/complexity/communication_query/law.py": "40de64cfadf0357c3d5565c0eee7b442d7ffb51dbfcd2473d22c694e281e182a",
+              "claims/SFT-COMP-CPLX-COMMUNICATION-QUERY-001/execution.py": "c4fa7bcfde79778c7c94d50cbcf59a760bac1d8a3e1fbbe7f5519d2a35beb4ad",
+              "claims/SFT-COMP-CPLX-COMMUNICATION-QUERY-001/independent_validator.py": "3305c4a85e9df8b2f096e6f93586501cc6921e1f46053a8d5cac3805c1cb1c35",
+              "claims/SFT-COMP-CPLX-COMMUNICATION-QUERY-001/WHY_DERIVATION_CHECK.md": "9fe6a265c1652b25774afa3b1925f5473a3c790c9787409e713915327c76650e",
+              "claims/SFT-COMP-CPLX-COMMUNICATION-QUERY-001/certificate.json": "d1d7430b083084253541b786bc38bb4ebb915711a9edcf1f0cb9519453570fad",
+              "claims/SFT-COMP-CPLX-COMMUNICATION-QUERY-001/registration.json": "ae2acbbc435ba374d136e70ea2f1f540177bddbdac7052c57f3ad3b07ab96265",
+              "receipts/engine/model_admitted/SFT-COMP-CPLX-COMMUNICATION-QUERY-001-c352ad5637226cc1.json": "d9ad8fff0b6c5cbba31634b459c8086a9c5abf4e55a0aa1618a4c6cd4e3ca226"
+            },
+            "components": {
+              "actual pinned source": "Fourth complexity topic COMMUNICATION-QUERY, original six-file execution binding, independent validator, all8 completed dependencies. Exact declared protocol and oracle identities are retained; channel reliability, arbitrary lower bounds and functional oracles are not added.",
+              "carrier and query trace": "CommunicationResources.sentRows/receivedRows retain identity alongside every query/answer. completeQueryReconstruction reconstructs the complete original OracleTrace.records from paired projections. completeQueryCounts proves neither projection drops a row. reconstructedSource derives original registered alphabet/relation provenance for every reconstructed row.",
+              "protocol input and result": "Certificate binds the original registered Request and decoder to original run, declared distributed-input lookup, original resourceLedger and valid OracleTrace. protocolReplay and distributedInputRetained recover the exact registered protocol and input rows. resultCertificate derives the actual protocol Path, complete terminal observation trace, exact action/trace length, all named oracle records and unchanged local knowledge.",
+              "boundary": "unknownIdentityExcluded uses actual registry absence; unregisteredProtocolExcluded derives contradiction from original interpret/lookup. Existing OracleTrace.undeclaredAnswerExcluded retains declared answer relation; original resourceLedger retains distinct occupied identities and nonempty support/trace checks. No oracle answer is generated by an assumed axiom.",
+              "composition base successor": "retainedCommunication, completeQueryCost and registeredComposition preserve every ordered row and exact additive query cost. singletonQuery and successorQuery provide the generated base and extension, preserving all prior records. Existing OracleTrace.relativeComposition and CircuitComposition.serial retain exact protocol paths and interfaces; ResourceRecord/ExecutionResources retain complete observation and occupied ledgers.",
+              "complete source program": "All256 original complexity-axis candidates,3 resourceLedger witnesses,4 controls, registration/census/closure/exposition and hashes. Fresh native full256 actual IDlookups and every original field/hash/unknown-ID match pinned V3. Existing unchanged resource-ledger and shared-operation checks retained."
+            },
+            "dependencies": [
+              "SFT-COMP-CPLX-CIRCUIT-RESOURCE-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": "All8 complete before this entry",
+            "native_audit": "verification/TURN_214_PARITY_REPORT.json",
+            "program_comparison": "verification/TURN_214_PROGRAM_REPORT.json",
+            "remaining": [],
+            "completion_count": 65
+          }
+        },
+        {
+          "path": "verification/TURN_214_PROGRAM_REPORT.json",
+          "sha256": "a03472ba472ef3b0e3f7632b055feda387bae6731ec1e69dfc0d35dafd98145a",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:c302cd798c3e0e45d7a29366ae64e227b6c5813fe121600d6e5e96f650f2d05a",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All CommunicationQueryProgram method output fields; full engine admission integration remains separate"
+          }
+        }
+      ]
+    },
+    {
+      "section": 162,
+      "native_modules_read": [
+        {
+          "path": "SFT/Computation/RandomnessResources.lean",
+          "sha256": "c872b506c2ec715036d64ed8e35ba39017c3cf289301b6af011a6fffce78b08b",
+          "declarations": [
+            "SFT.Computation.RandomnessResources.Branch",
+            "SFT.Computation.RandomnessResources.Schedule",
+            "SFT.Computation.RandomnessResources.execute",
+            "SFT.Computation.RandomnessResources.executions",
+            "SFT.Computation.RandomnessResources.completeSchedule",
+            "SFT.Computation.RandomnessResources.everyExecution",
+            "SFT.Computation.RandomnessResources.allBranchTraces",
+            "SFT.Computation.RandomnessResources.failedBranchRetained",
+            "SFT.Computation.RandomnessResources.endLabel",
+            "SFT.Computation.RandomnessResources.terminalLabel",
+            "SFT.Computation.RandomnessResources.Outcome",
+            "SFT.Computation.RandomnessResources.outcome",
+            "SFT.Computation.RandomnessResources.terminalOutcome",
+            "SFT.Computation.RandomnessResources.outputClass",
+            "SFT.Computation.RandomnessResources.outputClassMeaning",
+            "SFT.Computation.RandomnessResources.outputClassesCover",
+            "SFT.Computation.RandomnessResources.outputClassesDisjoint",
+            "SFT.Computation.RandomnessResources.deterministicOutcome",
+            "SFT.Computation.RandomnessResources.scheduleComposition",
+            "SFT.Computation.RandomnessResources.completeScheduleCount",
+            "SFT.Computation.RandomnessResources.successorSchedule",
+            "SFT.Computation.RandomnessResources.singletonSchedule",
+            "SFT.Computation.RandomnessResources.scheduleDescriptionCost",
+            "SFT.Computation.RandomnessResources.measuredSourceBoundary",
+            "SFT.Computation.RandomnessResources.registeredScheduleDescription",
+            "SFT.Computation.RandomnessResources.retainedDescriptionCost"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.RandomnessResources.completeSchedule",
+            "SFT.Computation.RandomnessResources.everyExecution",
+            "SFT.Computation.RandomnessResources.allBranchTraces",
+            "SFT.Computation.RandomnessResources.failedBranchRetained",
+            "SFT.Computation.RandomnessResources.terminalLabel",
+            "SFT.Computation.RandomnessResources.terminalOutcome",
+            "SFT.Computation.RandomnessResources.outputClassMeaning",
+            "SFT.Computation.RandomnessResources.outputClassesCover",
+            "SFT.Computation.RandomnessResources.outputClassesDisjoint",
+            "SFT.Computation.RandomnessResources.deterministicOutcome",
+            "SFT.Computation.RandomnessResources.scheduleComposition",
+            "SFT.Computation.RandomnessResources.completeScheduleCount",
+            "SFT.Computation.RandomnessResources.successorSchedule",
+            "SFT.Computation.RandomnessResources.singletonSchedule",
+            "SFT.Computation.RandomnessResources.scheduleDescriptionCost",
+            "SFT.Computation.RandomnessResources.measuredSourceBoundary",
+            "SFT.Computation.RandomnessResources.registeredScheduleDescription",
+            "SFT.Computation.RandomnessResources.retainedDescriptionCost"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/RandomnessGrammar.lean",
+          "sha256": "5dae97bd4429dec96fd0ce96d549395f94c33a4a76ae37d2951587ad9d9364d2",
+          "declarations": [
+            "SFT.Computation.RandomnessGrammar.Input",
+            "SFT.Computation.RandomnessGrammar.inputName",
+            "SFT.Computation.RandomnessGrammar.Resource",
+            "SFT.Computation.RandomnessGrammar.resourceName",
+            "SFT.Computation.RandomnessGrammar.Model",
+            "SFT.Computation.RandomnessGrammar.modelName",
+            "SFT.Computation.RandomnessGrammar.Comparison",
+            "SFT.Computation.RandomnessGrammar.comparisonName",
+            "SFT.Computation.RandomnessGrammar.Composition",
+            "SFT.Computation.RandomnessGrammar.compositionName",
+            "SFT.Computation.RandomnessGrammar.Witness",
+            "SFT.Computation.RandomnessGrammar.witnessName",
+            "SFT.Computation.RandomnessGrammar.Generality",
+            "SFT.Computation.RandomnessGrammar.generalityName",
+            "SFT.Computation.RandomnessGrammar.Addition",
+            "SFT.Computation.RandomnessGrammar.additionName",
+            "SFT.Computation.RandomnessGrammar.Candidate",
+            "SFT.Computation.RandomnessGrammar.sourceFields",
+            "SFT.Computation.RandomnessGrammar.candidateId",
+            "SFT.Computation.RandomnessGrammar.exactForm",
+            "SFT.Computation.RandomnessGrammar.survivorId",
+            "SFT.Computation.RandomnessGrammar.survives",
+            "SFT.Computation.RandomnessGrammar.criteriaDecision",
+            "SFT.Computation.RandomnessGrammar.decisionReason",
+            "SFT.Computation.RandomnessGrammar.generationRule",
+            "SFT.Computation.RandomnessGrammar.grammarBoundary",
+            "SFT.Computation.RandomnessGrammar.candidates",
+            "SFT.Computation.RandomnessGrammar.survivor",
+            "SFT.Computation.RandomnessGrammar.generatedCardinality",
+            "SFT.Computation.RandomnessGrammar.candidatesComplete",
+            "SFT.Computation.RandomnessGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.RandomnessGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.RandomnessGrammar.uniqueSurvivor",
+            "SFT.Computation.RandomnessGrammar.survivorAccepted",
+            "SFT.Computation.RandomnessGrammar.ExactCriteria",
+            "SFT.Computation.RandomnessGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.RandomnessGrammar.input_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.resource_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.model_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.comparison_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.composition_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.witness_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.generality_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.RandomnessGrammar.generatedCardinality",
+            "SFT.Computation.RandomnessGrammar.candidatesComplete",
+            "SFT.Computation.RandomnessGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.RandomnessGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.RandomnessGrammar.uniqueSurvivor",
+            "SFT.Computation.RandomnessGrammar.survivorAccepted",
+            "SFT.Computation.RandomnessGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.RandomnessGrammar.input_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.resource_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.model_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.comparison_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.composition_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.witness_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.generality_rejected_rejected",
+            "SFT.Computation.RandomnessGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        },
+        {
+          "path": "SFT/Computation/RandomnessWitnesses.lean",
+          "sha256": "076af6a9d4731e6050b9a961cec1065f84394bc0d27163506b2cbff7d0b6413a",
+          "declarations": [
+            "SFT.Computation.RandomnessWitnesses.Witness",
+            "SFT.Computation.RandomnessWitnesses.sourceLedger",
+            "SFT.Computation.RandomnessWitnesses.timeCheck",
+            "SFT.Computation.RandomnessWitnesses.spaceCheck",
+            "SFT.Computation.RandomnessWitnesses.traceCheck",
+            "SFT.Computation.RandomnessWitnesses.witnesses",
+            "SFT.Computation.RandomnessWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.RandomnessWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        },
+        {
+          "path": "SFT/Computation/RandomnessControls.lean",
+          "sha256": "687a784afc576310499b70f7eb2e181149ed43bf247ef48f99e22e085b7f20a6",
+          "declarations": [
+            "SFT.Computation.RandomnessControls.laws",
+            "SFT.Computation.RandomnessControls.exclusions",
+            "SFT.Computation.RandomnessControls.closureValue",
+            "SFT.Computation.RandomnessControls.falseCandidate",
+            "SFT.Computation.RandomnessControls.survivorIds",
+            "SFT.Computation.RandomnessControls.distinctIdentifiers",
+            "SFT.Computation.RandomnessControls.falsePremise",
+            "SFT.Computation.RandomnessControls.tamperedSource",
+            "SFT.Computation.RandomnessControls.tamperedArtifact",
+            "SFT.Computation.RandomnessControls.boundary",
+            "SFT.Computation.RandomnessControls.falsePremisePassed",
+            "SFT.Computation.RandomnessControls.boundaryPassed",
+            "SFT.Computation.RandomnessControls.controlRecords",
+            "SFT.Computation.RandomnessControls.resultData",
+            "SFT.Computation.RandomnessControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.RandomnessControls.falsePremisePassed",
+            "SFT.Computation.RandomnessControls.boundaryPassed"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        },
+        {
+          "path": "SFT/Computation/RandomnessEvidence.lean",
+          "sha256": "3d9b8bdd8420651b813251ef53bcdec4f2150a02ea22787bb2dd72db58f2e34b",
+          "declarations": [
+            "SFT.Computation.RandomnessEvidence.candidateRecord",
+            "SFT.Computation.RandomnessEvidence.completenessRecord",
+            "SFT.Computation.RandomnessEvidence.registrationData",
+            "SFT.Computation.RandomnessEvidence.registration",
+            "SFT.Computation.RandomnessEvidence.generatedCandidateData",
+            "SFT.Computation.RandomnessEvidence.censusData",
+            "SFT.Computation.RandomnessEvidence.census",
+            "SFT.Computation.RandomnessEvidence.decisionData",
+            "SFT.Computation.RandomnessEvidence.decision",
+            "SFT.Computation.RandomnessEvidence.decideCandidate",
+            "SFT.Computation.RandomnessEvidence.closureData",
+            "SFT.Computation.RandomnessEvidence.closure",
+            "SFT.Computation.RandomnessEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.RandomnessEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.RandomnessEvidence.registrationHasNoAxioms",
+            "SFT.Computation.RandomnessEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.RandomnessEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.RandomnessEvidence.why",
+            "SFT.Computation.RandomnessEvidence.derivation",
+            "SFT.Computation.RandomnessEvidence.check",
+            "SFT.Computation.RandomnessEvidence.limitations",
+            "SFT.Computation.RandomnessEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.RandomnessEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.RandomnessEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.RandomnessEvidence.registrationHasNoAxioms",
+            "SFT.Computation.RandomnessEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.RandomnessEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_215_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "ea6b8ee99eab6aab9eecdd8d48504b3a088357abe8b0acb54491ba504f6352fd",
+        "matching_theorems": 41
+      },
+      "retained_reports": [
+        {
+          "path": "verification/TURN_215_RANDOMNESS_COMPLETION.json",
+          "sha256": "94cc1fda851f12584621a7a4c7bb0f652a7829920b99403057fc469bcdad173c",
+          "result": {
+            "claim_id": "SFT-COMP-CPLX-RANDOMNESS-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "status": "complete",
+            "source_sha256": {
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/complexity/randomness/law.py": "f206770984224c62d41546c013424b9ccf3dda40f9f6df3ebc2322868de4024e",
+              "claims/SFT-COMP-CPLX-RANDOMNESS-001/execution.py": "93892127192a5fcd956f622a90301ac7ae391734ca1867da9d9a72de92aedc63",
+              "claims/SFT-COMP-CPLX-RANDOMNESS-001/independent_validator.py": "1b5fb97802a589179079e39762fb657820c9eebdd758742ec38930c8f98830b3",
+              "claims/SFT-COMP-CPLX-RANDOMNESS-001/WHY_DERIVATION_CHECK.md": "efbf1f173566894542e6ad03e537f15866ab2d9b1fe7b17d1436f2f9ab7df901",
+              "claims/SFT-COMP-CPLX-RANDOMNESS-001/certificate.json": "efb60c02625dfbf5406fc6ce2a63c2d5f7df609993c4c1a7009831605c24d1fe",
+              "claims/SFT-COMP-CPLX-RANDOMNESS-001/registration.json": "b8b43770bd9bbe8a507e720c7d574ceba820c006703e1b8f6272d36f92f8edd8",
+              "receipts/engine/model_admitted/SFT-COMP-CPLX-RANDOMNESS-001-e4311dc1af067c40.json": "54ac933989102b5ec95e19250fcc51de5097c99f79ecf483dd37b2dd303a7ffe"
+            },
+            "components": {
+              "actual pinned source": "Fifth complexity topic RANDOMNESS, original six-file execution binding and independent validator, all8 dependencies complete. Complete branch schedule; deterministic source process; held labels; execution per branch; output partition; schedule-description cost. No causal randomness or imported probability model added.",
+              "complete branch support": "RandomnessResources.executions applies original run to every labelled Request. completeSchedule and completeScheduleCount preserve every branch label and multiplicity. everyExecution proves exact bidirectional correspondence to the original schedule; allBranchTraces reconstructs the actual Path and terminal trace of every successful branch; failedBranchRetained preserves every original failure.",
+              "output partition": "outcome retains original run failure or the exact terminal observation. terminalLabel/terminalOutcome derive terminal output from the full actual trace. outputClassMeaning proves exact filtered membership; outputClassesCover and outputClassesDisjoint establish exhaustive disjoint classes across the complete declared schedule. deterministicOutcome proves repeatability from the same retained request.",
+              "schedule description cost": "registeredScheduleDescription connects the named complete schedule registry to original validateEncoding/exactDecoder and proves a held exact round-trip code exists. retainedDescriptionCost retains actual schedule/encoding rows and derives both original resourceLedger counts from complete encoded position cells. No unrecorded random-bit source or cost is introduced.",
+              "composition base successor boundary": "scheduleComposition preserves every original execution row in ordered assembly; singletonSchedule and successorSchedule preserve the exact base and prior trace under extension. measuredSourceBoundary derives the original sealed-before-observation, law-preserving, complete-row and identified-source conditions for the explicitly measured external-source alternative. Existing state composition supplies original exact serial interfaces.",
+              "complete source program": "Full256 original complexity-axis candidates,3 resourceLedger witnesses,4 controls, registration/census/closure/exposition and hashes. Fresh native full256 actual lookups and all fields/hashes/unknown-ID match V3. Unchanged resource-ledger/shared-operation checks retained."
+            },
+            "dependencies": [
+              "SFT-COMP-CPLX-COMMUNICATION-QUERY-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": "All8 complete before this entry",
+            "native_audit": "verification/TURN_215_PARITY_REPORT.json",
+            "program_comparison": "verification/TURN_215_PROGRAM_REPORT.json",
+            "remaining": [],
+            "completion_count": 66
+          }
+        },
+        {
+          "path": "verification/TURN_215_PROGRAM_REPORT.json",
+          "sha256": "2f04c4c8c26ba98e2df509388f0907a7b5e47137d3932f1e00f82604c45038b6",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:0607afa19714526b32d36403953ce2de74281e7b9310eb134693acf7ed442306",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All RandomnessProgram method output fields; full engine admission integration remains separate"
+          }
+        }
+      ]
+    },
+    {
+      "section": 163,
+      "native_modules_read": [
+        {
+          "path": "SFT/Computation/ReversibilityResources.lean",
+          "sha256": "3957a7185ea1b109d4ab40431ce102f89bc462b65fc6fbfc79e79f7f3c171941",
+          "declarations": [
+            "SFT.Computation.ReversibilityResources.reaches",
+            "SFT.Computation.ReversibilityResources.predecessorFibre",
+            "SFT.Computation.ReversibilityResources.reachesMeaning",
+            "SFT.Computation.ReversibilityResources.completeFibre",
+            "SFT.Computation.ReversibilityResources.mergedPredecessors",
+            "SFT.Computation.ReversibilityResources.erasedLabelCannotRecover",
+            "SFT.Computation.ReversibilityResources.Row",
+            "SFT.Computation.ReversibilityResources.Inverse",
+            "SFT.Computation.ReversibilityResources.inverseSerial",
+            "SFT.Computation.ReversibilityResources.everyForwardPathHasRetainedInverse",
+            "SFT.Computation.ReversibilityResources.undo",
+            "SFT.Computation.ReversibilityResources.inverseExecutes",
+            "SFT.Computation.ReversibilityResources.nativeInverse",
+            "SFT.Computation.ReversibilityResources.inverseRowsRetained",
+            "SFT.Computation.ReversibilityResources.inverseBase",
+            "SFT.Computation.ReversibilityResources.inverseSuccessor",
+            "SFT.Computation.ReversibilityResources.inverseResourceRecord",
+            "SFT.Computation.ReversibilityResources.retainedInverseCost"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReversibilityResources.reachesMeaning",
+            "SFT.Computation.ReversibilityResources.completeFibre",
+            "SFT.Computation.ReversibilityResources.mergedPredecessors",
+            "SFT.Computation.ReversibilityResources.erasedLabelCannotRecover",
+            "SFT.Computation.ReversibilityResources.inverseSerial",
+            "SFT.Computation.ReversibilityResources.everyForwardPathHasRetainedInverse",
+            "SFT.Computation.ReversibilityResources.inverseExecutes",
+            "SFT.Computation.ReversibilityResources.nativeInverse",
+            "SFT.Computation.ReversibilityResources.inverseRowsRetained",
+            "SFT.Computation.ReversibilityResources.inverseBase",
+            "SFT.Computation.ReversibilityResources.inverseSuccessor",
+            "SFT.Computation.ReversibilityResources.inverseResourceRecord",
+            "SFT.Computation.ReversibilityResources.retainedInverseCost"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/ReversibilityCostGrammar.lean",
+          "sha256": "cbc838d5b8be31e20e61eb5585356f449ea50f07a7b8250c8189a6b78cf7fe41",
+          "declarations": [
+            "SFT.Computation.ReversibilityCostGrammar.Input",
+            "SFT.Computation.ReversibilityCostGrammar.inputName",
+            "SFT.Computation.ReversibilityCostGrammar.Resource",
+            "SFT.Computation.ReversibilityCostGrammar.resourceName",
+            "SFT.Computation.ReversibilityCostGrammar.Model",
+            "SFT.Computation.ReversibilityCostGrammar.modelName",
+            "SFT.Computation.ReversibilityCostGrammar.Comparison",
+            "SFT.Computation.ReversibilityCostGrammar.comparisonName",
+            "SFT.Computation.ReversibilityCostGrammar.Composition",
+            "SFT.Computation.ReversibilityCostGrammar.compositionName",
+            "SFT.Computation.ReversibilityCostGrammar.Witness",
+            "SFT.Computation.ReversibilityCostGrammar.witnessName",
+            "SFT.Computation.ReversibilityCostGrammar.Generality",
+            "SFT.Computation.ReversibilityCostGrammar.generalityName",
+            "SFT.Computation.ReversibilityCostGrammar.Addition",
+            "SFT.Computation.ReversibilityCostGrammar.additionName",
+            "SFT.Computation.ReversibilityCostGrammar.Candidate",
+            "SFT.Computation.ReversibilityCostGrammar.sourceFields",
+            "SFT.Computation.ReversibilityCostGrammar.candidateId",
+            "SFT.Computation.ReversibilityCostGrammar.exactForm",
+            "SFT.Computation.ReversibilityCostGrammar.survivorId",
+            "SFT.Computation.ReversibilityCostGrammar.survives",
+            "SFT.Computation.ReversibilityCostGrammar.criteriaDecision",
+            "SFT.Computation.ReversibilityCostGrammar.decisionReason",
+            "SFT.Computation.ReversibilityCostGrammar.generationRule",
+            "SFT.Computation.ReversibilityCostGrammar.grammarBoundary",
+            "SFT.Computation.ReversibilityCostGrammar.candidates",
+            "SFT.Computation.ReversibilityCostGrammar.survivor",
+            "SFT.Computation.ReversibilityCostGrammar.generatedCardinality",
+            "SFT.Computation.ReversibilityCostGrammar.candidatesComplete",
+            "SFT.Computation.ReversibilityCostGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ReversibilityCostGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ReversibilityCostGrammar.uniqueSurvivor",
+            "SFT.Computation.ReversibilityCostGrammar.survivorAccepted",
+            "SFT.Computation.ReversibilityCostGrammar.ExactCriteria",
+            "SFT.Computation.ReversibilityCostGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ReversibilityCostGrammar.input_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.resource_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.model_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.comparison_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.composition_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.witness_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.generality_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReversibilityCostGrammar.generatedCardinality",
+            "SFT.Computation.ReversibilityCostGrammar.candidatesComplete",
+            "SFT.Computation.ReversibilityCostGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ReversibilityCostGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ReversibilityCostGrammar.uniqueSurvivor",
+            "SFT.Computation.ReversibilityCostGrammar.survivorAccepted",
+            "SFT.Computation.ReversibilityCostGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ReversibilityCostGrammar.input_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.resource_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.model_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.comparison_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.composition_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.witness_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.generality_rejected_rejected",
+            "SFT.Computation.ReversibilityCostGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        },
+        {
+          "path": "SFT/Computation/ReversibilityCostWitnesses.lean",
+          "sha256": "d4ba4aa6710a28fe160cea32c01d3ceca3d12d3639f57fc4e078bbea80e8e087",
+          "declarations": [
+            "SFT.Computation.ReversibilityCostWitnesses.Witness",
+            "SFT.Computation.ReversibilityCostWitnesses.sourceLedger",
+            "SFT.Computation.ReversibilityCostWitnesses.timeCheck",
+            "SFT.Computation.ReversibilityCostWitnesses.spaceCheck",
+            "SFT.Computation.ReversibilityCostWitnesses.traceCheck",
+            "SFT.Computation.ReversibilityCostWitnesses.witnesses",
+            "SFT.Computation.ReversibilityCostWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReversibilityCostWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        },
+        {
+          "path": "SFT/Computation/ReversibilityCostControls.lean",
+          "sha256": "174f55b71bf962ef41bd3a8b2bcd61265a9cc0c0f4f5f7f8f476b3160729476d",
+          "declarations": [
+            "SFT.Computation.ReversibilityCostControls.laws",
+            "SFT.Computation.ReversibilityCostControls.exclusions",
+            "SFT.Computation.ReversibilityCostControls.closureValue",
+            "SFT.Computation.ReversibilityCostControls.falseCandidate",
+            "SFT.Computation.ReversibilityCostControls.survivorIds",
+            "SFT.Computation.ReversibilityCostControls.distinctIdentifiers",
+            "SFT.Computation.ReversibilityCostControls.falsePremise",
+            "SFT.Computation.ReversibilityCostControls.tamperedSource",
+            "SFT.Computation.ReversibilityCostControls.tamperedArtifact",
+            "SFT.Computation.ReversibilityCostControls.boundary",
+            "SFT.Computation.ReversibilityCostControls.falsePremisePassed",
+            "SFT.Computation.ReversibilityCostControls.boundaryPassed",
+            "SFT.Computation.ReversibilityCostControls.controlRecords",
+            "SFT.Computation.ReversibilityCostControls.resultData",
+            "SFT.Computation.ReversibilityCostControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReversibilityCostControls.falsePremisePassed",
+            "SFT.Computation.ReversibilityCostControls.boundaryPassed"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        },
+        {
+          "path": "SFT/Computation/ReversibilityCostEvidence.lean",
+          "sha256": "087713b32d60a05a7230e44d53a4dd40ac89cdffd6469d4823ca2c726d023c16",
+          "declarations": [
+            "SFT.Computation.ReversibilityCostEvidence.candidateRecord",
+            "SFT.Computation.ReversibilityCostEvidence.completenessRecord",
+            "SFT.Computation.ReversibilityCostEvidence.registrationData",
+            "SFT.Computation.ReversibilityCostEvidence.registration",
+            "SFT.Computation.ReversibilityCostEvidence.generatedCandidateData",
+            "SFT.Computation.ReversibilityCostEvidence.censusData",
+            "SFT.Computation.ReversibilityCostEvidence.census",
+            "SFT.Computation.ReversibilityCostEvidence.decisionData",
+            "SFT.Computation.ReversibilityCostEvidence.decision",
+            "SFT.Computation.ReversibilityCostEvidence.decideCandidate",
+            "SFT.Computation.ReversibilityCostEvidence.closureData",
+            "SFT.Computation.ReversibilityCostEvidence.closure",
+            "SFT.Computation.ReversibilityCostEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ReversibilityCostEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ReversibilityCostEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ReversibilityCostEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ReversibilityCostEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.ReversibilityCostEvidence.why",
+            "SFT.Computation.ReversibilityCostEvidence.derivation",
+            "SFT.Computation.ReversibilityCostEvidence.check",
+            "SFT.Computation.ReversibilityCostEvidence.limitations",
+            "SFT.Computation.ReversibilityCostEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReversibilityCostEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ReversibilityCostEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ReversibilityCostEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ReversibilityCostEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ReversibilityCostEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_216_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "4505f6e3cfb4b1cbd687551db32a5f3ab3b234299b04d3a7c8aefbefefff48d3",
+        "matching_theorems": 36
+      },
+      "retained_reports": [
+        {
+          "path": "verification/TURN_216_REVERSIBILITY_COST_COMPLETION.json",
+          "sha256": "d17d7591bcd08177d890745e4c3ffb34b7c1aa4802f3f7153abc15a48d9b5bff",
+          "result": {
+            "claim_id": "SFT-COMP-CPLX-REVERSIBILITY-COST-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "status": "complete",
+            "source_sha256": {
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/complexity/reversibility_cost/law.py": "a8ce521efb9dbe31b7a9f8f241ad97c96650ecdb2f9804fffb33b01a8d504d3b",
+              "claims/SFT-COMP-CPLX-REVERSIBILITY-COST-001/execution.py": "4732aa26de523d81ff31e3cb1993cf6a2583d5e1913e812b501266879600d4da",
+              "claims/SFT-COMP-CPLX-REVERSIBILITY-COST-001/independent_validator.py": "27033e699e5ea3d7cecff2c63d444a4fc28312b9fa21c1ed1a60868917e79d29",
+              "claims/SFT-COMP-CPLX-REVERSIBILITY-COST-001/WHY_DERIVATION_CHECK.md": "9e2f6a7dd91a4821aa5c348ad3eaae5d532105468143184e425dea617016d084",
+              "claims/SFT-COMP-CPLX-REVERSIBILITY-COST-001/certificate.json": "c0b8621b166bdf969d1105a2ad46fe463fd1c49a880a31cb536ec7a8a67cc30f",
+              "claims/SFT-COMP-CPLX-REVERSIBILITY-COST-001/registration.json": "27e8f0c4a12df0373aab278127523b9d6584b25f214f8f4461c1d581059b4ea9",
+              "receipts/engine/model_admitted/SFT-COMP-CPLX-REVERSIBILITY-COST-001-0a8552676c105fc6.json": "ec3b1fe85661ce97c031f6c8d58d51d0e2f2615d6c558f99be64b3844bf13c1c"
+            },
+            "components": {
+              "actual pinned source": "Sixth complexity topic REVERSIBILITY-COST; original six-file binding, independent validator and all8 dependencies complete. Source configurations, transition fibres, merged predecessors, retained labels, inverse trace and erasure boundary. Classical information cost only; the later universal quantum reversible model is not imported.",
+              "complete transition fibres": "ReversibilityResources.reaches and predecessorFibre filter the complete original system.states by actual step. reachesMeaning/completeFibre prove exact equivalence to held source and original transition. mergedPredecessors applies original ConservationReverse.predecessorRecord to the complete fibre; two distinct predecessors cannot be represented as one unique predecessor.",
+              "inverse trace derivation": "everyForwardPathHasRetainedInverse constructs an ordered inverse row ledger by induction over every original Path, retaining each original source/action/target and exactly one row per action. inverseRowsRetained proves every retained row is an actual original step. undo is an explicit native traversal checking target interfaces and original transitions; inverseExecutes and nativeInverse prove it recovers the actual initial configuration from every admitted original run.",
+              "erasure boundary and cost": "erasedLabelCannotRecover proves that one erased target cannot reconstruct two distinct predecessors. retainedInverseCost binds the actual inverse state history to original resourceLedger, deriving complete time rows, exact rows.length+1 observation count and unchanged occupied support. Original ConservationReverse/ConservationLedger retain merged labels and distinctions without introducing a numerical thermodynamic scale.",
+              "composition base successor": "inverseSerial composes retained inverse traces with the exact shared configuration. inverseBase supplies identity, inverseSuccessor retains the new original edge and all earlier rows. Existing StateComposition and ExecutionResources preserve forward interfaces, full history and original cost semantics.",
+              "complete source program": "Full256 original complexity-axis candidates,3 resourceLedger witnesses,4 controls, registration/census/closure/exposition and hashes. Fresh native full256 actual lookups and all fields/hashes/unknown-ID match V3. Unchanged resource-ledger/shared-operation checks retained."
+            },
+            "dependencies": [
+              "SFT-COMP-CPLX-RANDOMNESS-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": "All8 complete before this entry",
+            "native_audit": "verification/TURN_216_PARITY_REPORT.json",
+            "program_comparison": "verification/TURN_216_PROGRAM_REPORT.json",
+            "remaining": [],
+            "completion_count": 67
+          }
+        },
+        {
+          "path": "verification/TURN_216_PROGRAM_REPORT.json",
+          "sha256": "23b326cbd5b8aca5465e1ca31ec0c2c4ddc5295572cc80f5119180dc1d8ec2c3",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:43e6f36f3da6e8a178ac4fbdf14531b45ca6e55ac09ac5b4ec9a1526021b5903",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All ReversibilityCostProgram method output fields; full engine admission integration remains separate"
+          }
+        }
+      ]
+    },
+    {
+      "section": 164,
+      "native_modules_read": [
+        {
+          "path": "SFT/Computation/ParallelResources.lean",
+          "sha256": "9d8014eee58bf1ea8667a49c35821bba4273b8cb5aacda3281dd422dbe829d19",
+          "declarations": [
+            "SFT.Computation.ParallelResources.Ready",
+            "SFT.Computation.ParallelResources.ready",
+            "SFT.Computation.ParallelResources.readySet",
+            "SFT.Computation.ParallelResources.readyMeaning",
+            "SFT.Computation.ParallelResources.completeReadySet",
+            "SFT.Computation.ParallelResources.readyIndependence",
+            "SFT.Computation.ParallelResources.readyChoices",
+            "SFT.Computation.ParallelResources.completeReadyChoices",
+            "SFT.Computation.ParallelResources.synchronizationRows",
+            "SFT.Computation.ParallelResources.completeSynchronization",
+            "SFT.Computation.ParallelResources.workTrace",
+            "SFT.Computation.ParallelResources.LayerSchedule",
+            "SFT.Computation.ParallelResources.workReconstruction",
+            "SFT.Computation.ParallelResources.layerIndependent",
+            "SFT.Computation.ParallelResources.synchronizationRetained",
+            "SFT.Computation.ParallelResources.serialSchedule",
+            "SFT.Computation.ParallelResources.workComposition",
+            "SFT.Computation.ParallelResources.workCost",
+            "SFT.Computation.ParallelResources.generatedLayerReady",
+            "SFT.Computation.ParallelResources.generatedLayerIndependent",
+            "SFT.Computation.ParallelResources.generatedSynchronization",
+            "SFT.Computation.ParallelResources.completeWork",
+            "SFT.Computation.ParallelResources.fullSpan",
+            "SFT.Computation.ParallelResources.retainedLayerSuccessor",
+            "SFT.Computation.ParallelResources.oneTaskLayer"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ParallelResources.readyMeaning",
+            "SFT.Computation.ParallelResources.completeReadySet",
+            "SFT.Computation.ParallelResources.readyIndependence",
+            "SFT.Computation.ParallelResources.completeReadyChoices",
+            "SFT.Computation.ParallelResources.completeSynchronization",
+            "SFT.Computation.ParallelResources.workReconstruction",
+            "SFT.Computation.ParallelResources.layerIndependent",
+            "SFT.Computation.ParallelResources.synchronizationRetained",
+            "SFT.Computation.ParallelResources.serialSchedule",
+            "SFT.Computation.ParallelResources.workComposition",
+            "SFT.Computation.ParallelResources.workCost",
+            "SFT.Computation.ParallelResources.generatedLayerReady",
+            "SFT.Computation.ParallelResources.generatedLayerIndependent",
+            "SFT.Computation.ParallelResources.generatedSynchronization",
+            "SFT.Computation.ParallelResources.completeWork",
+            "SFT.Computation.ParallelResources.fullSpan",
+            "SFT.Computation.ParallelResources.retainedLayerSuccessor",
+            "SFT.Computation.ParallelResources.oneTaskLayer"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/ParallelGrammar.lean",
+          "sha256": "77c733f5b03270300fbc17b0b29ea1b7d16b04b8c3330456f36c25c7fed5a47a",
+          "declarations": [
+            "SFT.Computation.ParallelGrammar.Input",
+            "SFT.Computation.ParallelGrammar.inputName",
+            "SFT.Computation.ParallelGrammar.Resource",
+            "SFT.Computation.ParallelGrammar.resourceName",
+            "SFT.Computation.ParallelGrammar.Model",
+            "SFT.Computation.ParallelGrammar.modelName",
+            "SFT.Computation.ParallelGrammar.Comparison",
+            "SFT.Computation.ParallelGrammar.comparisonName",
+            "SFT.Computation.ParallelGrammar.Composition",
+            "SFT.Computation.ParallelGrammar.compositionName",
+            "SFT.Computation.ParallelGrammar.Witness",
+            "SFT.Computation.ParallelGrammar.witnessName",
+            "SFT.Computation.ParallelGrammar.Generality",
+            "SFT.Computation.ParallelGrammar.generalityName",
+            "SFT.Computation.ParallelGrammar.Addition",
+            "SFT.Computation.ParallelGrammar.additionName",
+            "SFT.Computation.ParallelGrammar.Candidate",
+            "SFT.Computation.ParallelGrammar.sourceFields",
+            "SFT.Computation.ParallelGrammar.candidateId",
+            "SFT.Computation.ParallelGrammar.exactForm",
+            "SFT.Computation.ParallelGrammar.survivorId",
+            "SFT.Computation.ParallelGrammar.survives",
+            "SFT.Computation.ParallelGrammar.criteriaDecision",
+            "SFT.Computation.ParallelGrammar.decisionReason",
+            "SFT.Computation.ParallelGrammar.generationRule",
+            "SFT.Computation.ParallelGrammar.grammarBoundary",
+            "SFT.Computation.ParallelGrammar.candidates",
+            "SFT.Computation.ParallelGrammar.survivor",
+            "SFT.Computation.ParallelGrammar.generatedCardinality",
+            "SFT.Computation.ParallelGrammar.candidatesComplete",
+            "SFT.Computation.ParallelGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ParallelGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ParallelGrammar.uniqueSurvivor",
+            "SFT.Computation.ParallelGrammar.survivorAccepted",
+            "SFT.Computation.ParallelGrammar.ExactCriteria",
+            "SFT.Computation.ParallelGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ParallelGrammar.input_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.resource_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.model_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.comparison_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.composition_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.witness_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.generality_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ParallelGrammar.generatedCardinality",
+            "SFT.Computation.ParallelGrammar.candidatesComplete",
+            "SFT.Computation.ParallelGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ParallelGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ParallelGrammar.uniqueSurvivor",
+            "SFT.Computation.ParallelGrammar.survivorAccepted",
+            "SFT.Computation.ParallelGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ParallelGrammar.input_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.resource_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.model_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.comparison_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.composition_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.witness_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.generality_rejected_rejected",
+            "SFT.Computation.ParallelGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        },
+        {
+          "path": "SFT/Computation/ParallelWitnesses.lean",
+          "sha256": "605d29a279dd349b14b47647c05cdeed823dc44c89b77c96a9d8f84568c51b01",
+          "declarations": [
+            "SFT.Computation.ParallelWitnesses.Witness",
+            "SFT.Computation.ParallelWitnesses.sourceLedger",
+            "SFT.Computation.ParallelWitnesses.timeCheck",
+            "SFT.Computation.ParallelWitnesses.spaceCheck",
+            "SFT.Computation.ParallelWitnesses.traceCheck",
+            "SFT.Computation.ParallelWitnesses.witnesses",
+            "SFT.Computation.ParallelWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ParallelWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        },
+        {
+          "path": "SFT/Computation/ParallelControls.lean",
+          "sha256": "4d9846703dd61660be37d60bb1ea68e0d6bc7f052f5855eab964eeed5e2c7935",
+          "declarations": [
+            "SFT.Computation.ParallelControls.laws",
+            "SFT.Computation.ParallelControls.exclusions",
+            "SFT.Computation.ParallelControls.closureValue",
+            "SFT.Computation.ParallelControls.falseCandidate",
+            "SFT.Computation.ParallelControls.survivorIds",
+            "SFT.Computation.ParallelControls.distinctIdentifiers",
+            "SFT.Computation.ParallelControls.falsePremise",
+            "SFT.Computation.ParallelControls.tamperedSource",
+            "SFT.Computation.ParallelControls.tamperedArtifact",
+            "SFT.Computation.ParallelControls.boundary",
+            "SFT.Computation.ParallelControls.falsePremisePassed",
+            "SFT.Computation.ParallelControls.boundaryPassed",
+            "SFT.Computation.ParallelControls.controlRecords",
+            "SFT.Computation.ParallelControls.resultData",
+            "SFT.Computation.ParallelControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ParallelControls.falsePremisePassed",
+            "SFT.Computation.ParallelControls.boundaryPassed"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        },
+        {
+          "path": "SFT/Computation/ParallelEvidence.lean",
+          "sha256": "d8abe31123484be49dcc5e80bfbda45f3527371d9d501c8fc57d0eb25997ea42",
+          "declarations": [
+            "SFT.Computation.ParallelEvidence.candidateRecord",
+            "SFT.Computation.ParallelEvidence.completenessRecord",
+            "SFT.Computation.ParallelEvidence.registrationData",
+            "SFT.Computation.ParallelEvidence.registration",
+            "SFT.Computation.ParallelEvidence.generatedCandidateData",
+            "SFT.Computation.ParallelEvidence.censusData",
+            "SFT.Computation.ParallelEvidence.census",
+            "SFT.Computation.ParallelEvidence.decisionData",
+            "SFT.Computation.ParallelEvidence.decision",
+            "SFT.Computation.ParallelEvidence.decideCandidate",
+            "SFT.Computation.ParallelEvidence.closureData",
+            "SFT.Computation.ParallelEvidence.closure",
+            "SFT.Computation.ParallelEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ParallelEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ParallelEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ParallelEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ParallelEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.ParallelEvidence.why",
+            "SFT.Computation.ParallelEvidence.derivation",
+            "SFT.Computation.ParallelEvidence.check",
+            "SFT.Computation.ParallelEvidence.limitations",
+            "SFT.Computation.ParallelEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ParallelEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ParallelEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ParallelEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ParallelEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ParallelEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Entire normalized code and every changed literal compared with fully read InputSize template"
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_217_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "fd140b4303bce5ccc209865dbd6c4f20dfd9ae0f8f6e08747da7ecafef94eb51",
+        "matching_theorems": 41
+      },
+      "retained_reports": [
+        {
+          "path": "verification/TURN_217_PARALLEL_COMPLETION.json",
+          "sha256": "19bbff1455208792bc8259b4d2436d8a34fe38782bea302ed44533652ec57a5a",
+          "result": {
+            "claim_id": "SFT-COMP-CPLX-PARALLEL-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "status": "complete",
+            "source_sha256": {
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/complexity/parallel/law.py": "0078757bdcef9205068f2b8145c2519ba0d385efa8b353f3334bda130f86ecfb",
+              "claims/SFT-COMP-CPLX-PARALLEL-001/execution.py": "d2e6460eba136aa20f3bd920eed95a949a26674a1c49bba1239040a3dcaa971a",
+              "claims/SFT-COMP-CPLX-PARALLEL-001/independent_validator.py": "965b607e7abc621e3265f425bf33643ed1a6936f35f90d3d83835a02fe68c90e",
+              "claims/SFT-COMP-CPLX-PARALLEL-001/WHY_DERIVATION_CHECK.md": "7cafa1c40753863fbecd2451fea72283ae612cee36d9609e3f75492686191954",
+              "claims/SFT-COMP-CPLX-PARALLEL-001/certificate.json": "7347099a9ba4cefdc902db718955d6da10153a26511dbe5d1c26c90ea91caa42",
+              "claims/SFT-COMP-CPLX-PARALLEL-001/registration.json": "87b24a1a90e898c8fcfea603ce7ec597cc45574bc8b08d20b640bca417559d20",
+              "receipts/engine/model_admitted/SFT-COMP-CPLX-PARALLEL-001-d451551a66fdaf12.json": "078ae82d136b8c1e38ed7a5a034a847af188022c5088e5a353d50713737046f3"
+            },
+            "components": {
+              "actual pinned source": "Seventh complexity topic PARALLEL, exact six-file binding, independent validator and all8 dependencies complete. Task graph, independent ready sets, layer schedule, work/span traces, synchronization rows and reconstruction. No physical processor count or timing constant.",
+              "ready set derivation": "ParallelResources.ready filters the full declared graph node carrier by held identity, absence from completed tasks and all incoming predecessors completed. readyMeaning and completeReadySet prove exact equivalence. readyIndependence derives absence of dependency edges between simultaneous ready tasks.",
+              "complete layer enumeration": "readyChoices uses original rawSelections on the full readySet; completeReadyChoices proves its exact HeldChoice correspondence. LayerSchedule admits these generated choices, not an arbitrary sampled list. generatedLayerReady/Independent derive actual readiness and independence for every selected task.",
+              "synchronization and work": "synchronizationRows retains every original incoming graph edge for the selected layer; completeSynchronization proves exact membership and generatedSynchronization proves every predecessor completed. workReconstruction derives the full ordered layer flattening. completeWork transfers full graph coverage to the actual work trace without requiring graph.nodes to have the execution order.",
+              "span and composition": "fullSpan applies the existing complete original ordered causal-path enumeration and native maximum to the actual work trace; it yields an attained valid span bounding every admitted causal path in that order. serialSchedule/workComposition preserve exact completed interfaces and all work rows; retainedLayerSuccessor and oneTaskLayer establish extension and base. Original resourceLedger retains exact work trace/support/counts.",
+              "complete source program": "Full256 original complexity-axis candidates,3 resourceLedger witnesses,4 controls, registration/census/closure/exposition and hashes. Fresh native full256 actual lookups and all fields/hashes/unknown-ID match V3. Unchanged resource-ledger/shared-operation checks retained."
+            },
+            "dependencies": [
+              "SFT-COMP-CPLX-REVERSIBILITY-COST-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": "All8 complete before this entry",
+            "native_audit": "verification/TURN_217_PARITY_REPORT.json",
+            "program_comparison": "verification/TURN_217_PROGRAM_REPORT.json",
+            "remaining": [],
+            "completion_count": 68
+          }
+        },
+        {
+          "path": "verification/TURN_217_PROGRAM_REPORT.json",
+          "sha256": "66955524bf637790bef28a19ccf6fd828c463e7191ed1a91d56c99274ffd9e1b",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:2a0ee9adf4736481f873cd67f7b4e348d44ebdc98940be3503dfe98fd403e4ba",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All ParallelProgram method output fields; full engine admission integration remains separate"
+          }
+        }
+      ]
+    }
+  ],
+  "template_comparisons": [
+    {
+      "path": "SFT/Computation/CommunicationQueryGrammar.lean",
+      "normalized_diff": "",
+      "changed_literals": [
+        "\"The forced cross-interface and information-request resources kernel retains distributed input support; sent records; received records; named query interface; answer trace; retained local knowledge; result certificate; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"Generate the literal product of the eight registered Computational Complexity structural axes for cross-interface and information-request resources.\"",
+        "\"All generated finite cross-interface and information-request resources structures whose carriers, relations, traces and interfaces are composed from admitted Foundation, Mathematics and Information Science forms. The exact protocol and oracle identity must be registered.\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/CommunicationQueryWitnesses.lean",
+      "normalized_diff": "--- \n\n+++ \n\n@@ -1,4 +1,4 @@\n\n-import SFT.Computation.InputExtent\n+import SFT.Computation.CommunicationResources\n namespace SFT.Computation.InputSizeWitnesses\n open ResourceRecord\n structure Witness where",
+      "changed_literals": [
+        "\"complexity exact operational witness 1 for SFT-COMP-CPLX-COMMUNICATION-QUERY-001\"",
+        "\"complexity exact operational witness 2 for SFT-COMP-CPLX-COMMUNICATION-QUERY-001\"",
+        "\"complexity exact operational witness 3 for SFT-COMP-CPLX-COMMUNICATION-QUERY-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/CommunicationQueryControls.lean",
+      "normalized_diff": "",
+      "changed_literals": [
+        "\"Carrier law: distributed input support; sent records; received records; named query interface; answer trace; retained local knowledge; result certificate.\"",
+        "\"The exact protocol and oracle identity must be registered.\"",
+        "\"The forced cross-interface and information-request resources kernel retains distributed input support; sent records; received records; named query interface; answer trace; retained local knowledge; result certificate; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"The structural One supplies one canonical cross-interface and information-request resources form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated cross-interface and information-request resources form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"SFT-COMP-CPLX-COMMUNICATION-QUERY-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/CommunicationQueryEvidence.lean",
+      "normalized_diff": "",
+      "changed_literals": [
+        "\"SFT-COMP-CPLX-COMMUNICATION-QUERY-001\"",
+        "\"SFT-COMP-CPLX-COMMUNICATION-QUERY-001\"",
+        "\"Fold communication and query complexity law\"",
+        "\"The forced cross-interface and information-request resources kernel retains distributed input support; sent records; received records; named query interface; answer trace; retained local knowledge; result certificate; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"SFT-COMP-CPLX-CIRCUIT-RESOURCE-001\"",
+        "\"SFT-COMP-CPLX-COMMUNICATION-QUERY-001\"",
+        "\"SFT-COMP-CPLX-COMMUNICATION-QUERY-001\"",
+        "\"SFT-COMP-CPLX-COMMUNICATION-QUERY-001\"",
+        "\"The structural One supplies one canonical cross-interface and information-request resources form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated cross-interface and information-request resources form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"Fold communication and query complexity law is required to derive cross-interface and information-request resources without importing its conventional answer-producing model.\"",
+        "\"Admitted finite forms, exact relations, distinction ledgers and composition supply the carriers. Exhausting the eight group-specific axes forces the only structure retaining: distributed input support; sent records; received records; named query interface; answer trace; retained local knowledge; result certificate.\"",
+        "\"The exact protocol and oracle identity must be registered.\"",
+        "\"communication complexity\"",
+        "\"query complexity\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/RandomnessGrammar.lean",
+      "normalized_diff": "",
+      "changed_literals": [
+        "\"The forced scheduled unresolved branch support kernel retains complete branch schedule; deterministic source process; held branch labels; execution per branch; output partition; schedule-description cost; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"Generate the literal product of the eight registered Computational Complexity structural axes for scheduled unresolved branch support.\"",
+        "\"All generated finite scheduled unresolved branch support structures whose carriers, relations, traces and interfaces are composed from admitted Foundation, Mathematics and Information Science forms. Randomness is not a causal premise; results quantify complete registered branch support or an explicitly measured external source.\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/RandomnessWitnesses.lean",
+      "normalized_diff": "--- \n\n+++ \n\n@@ -1,4 +1,4 @@\n\n-import SFT.Computation.InputExtent\n+import SFT.Computation.InputSizeResources\n namespace SFT.Computation.InputSizeWitnesses\n open ResourceRecord\n structure Witness where",
+      "changed_literals": [
+        "\"complexity exact operational witness 1 for SFT-COMP-CPLX-RANDOMNESS-001\"",
+        "\"complexity exact operational witness 2 for SFT-COMP-CPLX-RANDOMNESS-001\"",
+        "\"complexity exact operational witness 3 for SFT-COMP-CPLX-RANDOMNESS-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/RandomnessControls.lean",
+      "normalized_diff": "",
+      "changed_literals": [
+        "\"Carrier law: complete branch schedule; deterministic source process; held branch labels; execution per branch; output partition; schedule-description cost.\"",
+        "\"Randomness is not a causal premise; results quantify complete registered branch support or an explicitly measured external source.\"",
+        "\"The forced scheduled unresolved branch support kernel retains complete branch schedule; deterministic source process; held branch labels; execution per branch; output partition; schedule-description cost; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"The structural One supplies one canonical scheduled unresolved branch support form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated scheduled unresolved branch support form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"SFT-COMP-CPLX-RANDOMNESS-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/RandomnessEvidence.lean",
+      "normalized_diff": "",
+      "changed_literals": [
+        "\"SFT-COMP-CPLX-RANDOMNESS-001\"",
+        "\"SFT-COMP-CPLX-RANDOMNESS-001\"",
+        "\"Fold randomness-resource law\"",
+        "\"The forced scheduled unresolved branch support kernel retains complete branch schedule; deterministic source process; held branch labels; execution per branch; output partition; schedule-description cost; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"SFT-COMP-CPLX-COMMUNICATION-QUERY-001\"",
+        "\"SFT-COMP-CPLX-RANDOMNESS-001\"",
+        "\"SFT-COMP-CPLX-RANDOMNESS-001\"",
+        "\"SFT-COMP-CPLX-RANDOMNESS-001\"",
+        "\"The structural One supplies one canonical scheduled unresolved branch support form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated scheduled unresolved branch support form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"Fold randomness-resource law is required to derive scheduled unresolved branch support without importing its conventional answer-producing model.\"",
+        "\"Admitted finite forms, exact relations, distinction ledgers and composition supply the carriers. Exhausting the eight group-specific axes forces the only structure retaining: complete branch schedule; deterministic source process; held branch labels; execution per branch; output partition; schedule-description cost.\"",
+        "\"Randomness is not a causal premise; results quantify complete registered branch support or an explicitly measured external source.\"",
+        "\"randomized complexity\"",
+        "\"random bits\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ReversibilityCostGrammar.lean",
+      "normalized_diff": "",
+      "changed_literals": [
+        "\"The forced information retained for inverse execution kernel retains source configurations; transition fibres; merged-predecessor ledger; retained predecessor labels; inverse trace; erasure boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"Generate the literal product of the eight registered Computational Complexity structural axes for information retained for inverse execution.\"",
+        "\"All generated finite information retained for inverse execution structures whose carriers, relations, traces and interfaces are composed from admitted Foundation, Mathematics and Information Science forms. This is the classical cost law; the universal reversible model belongs to the later quantum branch.\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ReversibilityCostWitnesses.lean",
+      "normalized_diff": "--- \n\n+++ \n\n@@ -1,4 +1,4 @@\n\n-import SFT.Computation.InputExtent\n+import SFT.Computation.ReversibilityResources\n namespace SFT.Computation.InputSizeWitnesses\n open ResourceRecord\n structure Witness where",
+      "changed_literals": [
+        "\"complexity exact operational witness 1 for SFT-COMP-CPLX-REVERSIBILITY-COST-001\"",
+        "\"complexity exact operational witness 2 for SFT-COMP-CPLX-REVERSIBILITY-COST-001\"",
+        "\"complexity exact operational witness 3 for SFT-COMP-CPLX-REVERSIBILITY-COST-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ReversibilityCostControls.lean",
+      "normalized_diff": "",
+      "changed_literals": [
+        "\"Carrier law: source configurations; transition fibres; merged-predecessor ledger; retained predecessor labels; inverse trace; erasure boundary.\"",
+        "\"This is the classical cost law; the universal reversible model belongs to the later quantum branch.\"",
+        "\"The forced information retained for inverse execution kernel retains source configurations; transition fibres; merged-predecessor ledger; retained predecessor labels; inverse trace; erasure boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"The structural One supplies one canonical information retained for inverse execution form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated information retained for inverse execution form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"SFT-COMP-CPLX-REVERSIBILITY-COST-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ReversibilityCostEvidence.lean",
+      "normalized_diff": "",
+      "changed_literals": [
+        "\"SFT-COMP-CPLX-REVERSIBILITY-COST-001\"",
+        "\"SFT-COMP-CPLX-REVERSIBILITY-COST-001\"",
+        "\"Fold reversibility-cost law\"",
+        "\"The forced information retained for inverse execution kernel retains source configurations; transition fibres; merged-predecessor ledger; retained predecessor labels; inverse trace; erasure boundary; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"SFT-COMP-CPLX-RANDOMNESS-001\"",
+        "\"SFT-COMP-CPLX-REVERSIBILITY-COST-001\"",
+        "\"SFT-COMP-CPLX-REVERSIBILITY-COST-001\"",
+        "\"SFT-COMP-CPLX-REVERSIBILITY-COST-001\"",
+        "\"The structural One supplies one canonical information retained for inverse execution form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated information retained for inverse execution form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"Fold reversibility-cost law is required to derive information retained for inverse execution without importing its conventional answer-producing model.\"",
+        "\"Admitted finite forms, exact relations, distinction ledgers and composition supply the carriers. Exhausting the eight group-specific axes forces the only structure retaining: source configurations; transition fibres; merged-predecessor ledger; retained predecessor labels; inverse trace; erasure boundary.\"",
+        "\"This is the classical cost law; the universal reversible model belongs to the later quantum branch.\"",
+        "\"reversible computation\"",
+        "\"Landauer cost\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ParallelGrammar.lean",
+      "normalized_diff": "",
+      "changed_literals": [
+        "\"The forced independent and causally layered work kernel retains task dependency graph; independent ready sets; layer schedule; work trace; span trace; synchronization rows; result reconstruction; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"Generate the literal product of the eight registered Computational Complexity structural axes for independent and causally layered work.\"",
+        "\"All generated finite independent and causally layered work structures whose carriers, relations, traces and interfaces are composed from admitted Foundation, Mathematics and Information Science forms. No physical processor count or timing constant is imported.\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ParallelWitnesses.lean",
+      "normalized_diff": "--- \n\n+++ \n\n@@ -1,4 +1,4 @@\n\n-import SFT.Computation.InputExtent\n+import SFT.Computation.InputSizeResources\n namespace SFT.Computation.InputSizeWitnesses\n open ResourceRecord\n structure Witness where",
+      "changed_literals": [
+        "\"complexity exact operational witness 1 for SFT-COMP-CPLX-PARALLEL-001\"",
+        "\"complexity exact operational witness 2 for SFT-COMP-CPLX-PARALLEL-001\"",
+        "\"complexity exact operational witness 3 for SFT-COMP-CPLX-PARALLEL-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ParallelControls.lean",
+      "normalized_diff": "",
+      "changed_literals": [
+        "\"Carrier law: task dependency graph; independent ready sets; layer schedule; work trace; span trace; synchronization rows; result reconstruction.\"",
+        "\"No physical processor count or timing constant is imported.\"",
+        "\"The forced independent and causally layered work kernel retains task dependency graph; independent ready sets; layer schedule; work trace; span trace; synchronization rows; result reconstruction; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"The structural One supplies one canonical independent and causally layered work form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated independent and causally layered work form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"SFT-COMP-CPLX-PARALLEL-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ParallelEvidence.lean",
+      "normalized_diff": "",
+      "changed_literals": [
+        "\"SFT-COMP-CPLX-PARALLEL-001\"",
+        "\"SFT-COMP-CPLX-PARALLEL-001\"",
+        "\"Fold parallel-complexity law\"",
+        "\"The forced independent and causally layered work kernel retains task dependency graph; independent ready sets; layer schedule; work trace; span trace; synchronization rows; result reconstruction; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"SFT-COMP-CPLX-REVERSIBILITY-COST-001\"",
+        "\"SFT-COMP-CPLX-PARALLEL-001\"",
+        "\"SFT-COMP-CPLX-PARALLEL-001\"",
+        "\"SFT-COMP-CPLX-PARALLEL-001\"",
+        "\"The structural One supplies one canonical independent and causally layered work form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated independent and causally layered work form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"Fold parallel-complexity law is required to derive independent and causally layered work without importing its conventional answer-producing model.\"",
+        "\"Admitted finite forms, exact relations, distinction ledgers and composition supply the carriers. Exhausting the eight group-specific axes forces the only structure retaining: task dependency graph; independent ready sets; layer schedule; work trace; span trace; synchronization rows; result reconstruction.\"",
+        "\"No physical processor count or timing constant is imported.\"",
+        "\"parallel complexity\"",
+        "\"work and span\""
+      ]
+    }
+  ],
+  "original_sources_read": "Exact complexity topic records and common catalog/operation/generated-program inspection reused from158 and earlier computation review. Four entry-specific original completion-component and full-program reports read; prior actual OracleTrace, Encoding, ResourceRecord, ConservationReverse, Graph/Selections inspections retained.",
+  "additional_proof_read": {
+    "path": "SFT/Foundation/MeasurementProtocol.lean",
+    "sha256": "b44c2e9f6806fe98e29ee5ab158fa6ef72e731ba54961292ac1a9d072b34e435",
+    "inspection": "Full definitions and proof bodies, including Boolean acceptanceIff and original value-returning host semantics. No new audit run."
+  },
+  "source_correspondence": "CommunicationResources reconstructs query/answer projections and exact registered protocol/input/run/ledger certificate. RandomnessResources retains every scheduled branch, failures, disjoint exhaustive outcomes and actual encoded cost. ReversibilityResources constructs an executable inverse for every original Path by induction, with exact row count and erased-predecessor obstruction. ParallelResources proves ready-set equivalence, all ready choices, synchronization and flattened work/coverage, plus complete attained span from CircuitResources.",
+  "citations_added": [
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CommunicationQueryGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CommunicationQueryWitnesses.lean#L23",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RandomnessGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RandomnessWitnesses.lean#L23",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ReversibilityCostGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ReversibilityCostWitnesses.lean#L23",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ParallelGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ParallelWitnesses.lean#L23"
+  ],
+  "new_proofs": 0,
+  "new_builds": 0,
+  "status": "Source inspection and same-assistant second pass complete for161\u2013164; whole-paper review incomplete"
+}

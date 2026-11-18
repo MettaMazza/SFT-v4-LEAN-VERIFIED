@@ -1,0 +1,73 @@
+{
+  "updated_at": "2026-11-18T23:44:07.352553+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    161,
+    162,
+    163,
+    164
+  ],
+  "challenges": [
+    {
+      "section": 161,
+      "challenge": "Do projections lose source identity, or does protocol replay assume an answer-generating oracle?",
+      "evidence": "completeQueryReconstruction proves exact restoration by induction; resultCertificate reconstructs actual protocol Path and registered relational provenance. Certificate explicitly retains the original run, input lookup, Valid ledger and resources.",
+      "disposition": "The manuscript shows the projection restoration and actual certificate premises; no functional oracle or generated-answer assertion is inserted."
+    },
+    {
+      "section": 162,
+      "challenge": "Are failures or duplicate branches discarded, and is the source of randomness assumed?",
+      "evidence": "executions is an ordered map; failedBranchRetained preserves errors, outputClassMeaning/Cover/Disjoint classify every original branch, and measuredSourceBoundary uses actual MeasurementProtocol.acceptanceIff.",
+      "disposition": "The manuscript retains multiplicity, errors, deterministic per-branch execution and explicit measurement conditions, with full encoded schedule cost."
+    },
+    {
+      "section": 163,
+      "challenge": "Does the inverse result require every original transition to be injective?",
+      "evidence": "everyForwardPathHasRetainedInverse constructs actual predecessor rows by path induction; inverseSerial fixes reverse traversal order; undo checks each original forward edge. erasedLabelCannotRecover separately excludes recovering two different predecessors from their merged target.",
+      "disposition": "The paper derives the retained executable inverse for arbitrary successful finite paths, gives exact action/row count and states the erasure obstruction; no injectivity is assumed."
+    },
+    {
+      "section": 164,
+      "challenge": "Is a sampled ready set or graph-node ordering substituted for the complete schedule?",
+      "evidence": "completeReadySet derives exact readiness; rawSelections enumerates all layer choices. generatedLayerReady/Independent and generatedSynchronization connect generated membership to prerequisites. completeWork uses explicit source coverage, while fullSpan uses the actual flattened execution order.",
+      "disposition": "The manuscript states the coverage condition and full enumeration and does not equate execution order with graph carrier order."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CommunicationQueryGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CommunicationQueryWitnesses.lean#L23",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RandomnessGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RandomnessWitnesses.lean#L23",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ReversibilityCostGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ReversibilityCostWitnesses.lean#L23",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ParallelGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ParallelWitnesses.lean#L23",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "25d7e8f751935340a28be70bdeb8d18bbb28e55fc664951ffd74113393765c6d",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

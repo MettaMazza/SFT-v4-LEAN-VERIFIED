@@ -1,0 +1,67 @@
+FOCUSED REVIEW: CONFIGURATION PATHS AND ETHANOL TORSION RECORDS
+Maria Smith, Ernos Labs — 18 November 2026
+Prepared with AI assistance under the author's direction.
+
+Paper 27, version 1.1:
+Molecular configuration graphs, reaction paths and exact barriers
+https://doi.org/10.5281/zenodo.24354591
+Read Sections 1–2 for the path operation and Section 5 for the observation.
+
+START WITH A PATH EXTENSION
+A configuration node retains its molecular carrier, coordinate label, height and record identity. A path is a nonempty ordered list with the same carrier throughout. Heights retain the original positive-rational or structural EmptyOne representation and constructor decisions.
+
+The list [a,b,c,d] has interior triples (a,b,c) and (b,c,d). Appending e preserves both in their original order and adds (c,d,e). The native proof quantifies over arbitrary finite tails:
+  SFT.Chemistry.ConfigurationOrder.priorComparisonsRetained
+  SFT.Chemistry.ConfigurationOrder.completeComparisonCount
+  SFT.Chemistry.ConfigurationOrder.exactlyOneNewComparison
+The first two use induction on the actual tail; the extension count follows the exact triple-count equation. successorRetainsNodes separately retains the previous node list. The number of interior triples is max(n-2,0), not the number of nodes.
+
+READ THE CORE DECISION BRANCHES
+In the original ConfigurationPath.local_minimum and local_barrier operations, a requested position must have both neighbours inside the retained path. Endpoints and out-of-range signed indices are rejected.
+
+For three positive rational heights, a basin requires the centre strictly below both neighbours; a barrier requires it strictly above both. Ratios compare by exact cross-products.
+
+The structural branches are explicit. An EmptyOne centre is a basin when both neighbours are nonempty. A positive centre with an EmptyOne neighbour is not a basin. In the core barrier operation, a nonempty centre with either EmptyOne neighbour enters the structural barrier branch without additionally comparing the other neighbour's positive height. Read this original branch order, rather than silently substituting the ratio-only test for every case.
+
+Native minimumTriple and barrierTriple preserve these operations. positiveBasin, positiveBarrier and structuralBasin expose their corresponding equations. The source's canonical singleton and other EmptyOne instances also retain distinct runtime outcomes in the native representation; consult Section 2 and the complete source.
+
+FOLLOW THE COMPLETE OBSERVATION SEPARATELY
+The pinned ethanol observation contains two torsion paths, each with 25 rows from 0 to 360 degrees in 15-degree steps. The observation verifies equal initial and terminal heights. It retains all rows, then removes the terminal copy only for cyclic classification, leaving 24 distinct positions per path.
+
+The original validation converts the kJ/mol inscriptions into exact fractions and compares each centre with neighbours at indices (i-1) mod24 and (i+1) mod24. This is the observation's cyclic strict-comparison operation. It remains distinct from the core mixed structural branch above.
+
+Three small checks from the published OH column:
+  60 degrees: 0.52 is below neighbours 1.28 and 1.13 — basin.
+  120 degrees: 4.90 is above neighbours 4.29 and 4.14 — barrier.
+  0 degrees: the left neighbour is 345 degrees, not the duplicated 360-degree row.
+
+The full classification retains ordinary nodes too. Across both paths:
+  50 source rows = 48 cyclic positions + 2 terminal copies.
+  48 cyclic positions = 6 basins + 6 barriers + 36 ordinary nodes.
+  50 source rows = 46 positive heights + 4 structural absences.
+Each path has basins at60,180,300degrees and barriers at0,120,240degrees. Section 5 prints every original energy inscription in both units and describes the sealed structural prediction and subsequent complete comparison. These counts are retained published evidence, not a new replay performed for this guide.
+
+EXACT SOURCE VERSIONS
+V3: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1
+  sft/chemistry/configuration_order_law_v1.py
+  sft/chemistry/configuration_order_validation_v1.py
+Completed configuration-family Lean source:
+  e10682febb1e610fe8ae2ab5613390b71db34514
+  SFT/Chemistry/ConfigurationOrder.lean
+  ConfigurationObservation, ConfigurationTargets,
+  ConfigurationOrderExperiment and ConfigurationOrderValidation families.
+The supporting state-energy and transition families use the separate edition0.4 pin21cdf559922fb057f8560f42d056ffa035329eb3.
+Use SOURCE_CORRESPONDENCE.json to select the applicable pin for each module. SOURCE_AND_EVIDENCE.zip retains original source, proof bodies, observation snapshot and comparison evidence.
+
+QUESTIONS FOR INDEPENDENT REVIEW
+1. Does arbitrary extension retain every original node and comparison in order?
+2. Do all positive and structural comparison branches preserve the original accepted domain and decisions?
+3. Does cyclic observation remove only the terminal copy while retaining all50source inscriptions?
+4. Can every reported basin, barrier and ordinary node be reproduced from the full retained table?
+5. Does the observation record preserve the original source identity, sealed prediction and all reported protocol fields?
+
+Findings should identify the version, original operation or complete native declaration, input domain and reasoning.
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+Maria.smith.sftoe@gmail.com
+
+This is a reading guide and review invitation, not a completed independent assessment. No new Lean compilation or scientific completion is claimed.

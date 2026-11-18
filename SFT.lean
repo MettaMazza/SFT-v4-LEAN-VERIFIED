@@ -11969,3 +11969,15 @@ import SFT.Biology.ProteinFunctionSource
 import SFT.Biology.ProteinFunctionExperiment
 
 import SFT.Biology.ProteinFunctionValidation
+
+import SFT.Chemistry.EquilibriumBondLength
+
+import SFT.Chemistry.EquilibriumBondLengthGrammar
+
+import SFT.Chemistry.EquilibriumBondLengthEvidence
+
+import SFT.Chemistry.EquilibriumBondLengthExperiment
+
+import SFT.Chemistry.EquilibriumBondLengthSource
+
+import SFT.Chemistry.EquilibriumBondLengthValidation

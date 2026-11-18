@@ -58168,9 +58168,11 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-FINITE-MICROSTATE-SUPPORT-001-ec8803582bbf3dae.json",
       "statement": "A chemical thermodynamic support is the complete generated finite tuple of held chemical microstates, partitioned so every state occurs exactly once in one named macro-observation fibre. Multiplicity is the exact positive fibre count and statistical weight is that count over the complete finite support count. All 387 external identities seal before 330 direct state records and 57 calorimetric rows open.",
       "title": "Finite chemical microstate-support law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Chemistry/FiniteMicrostateSupport.lean"
+      ],
+      "artifact_runtime_parity": "Original256candidate programme and12field395message validator PASS; native core33emptyaxioms PASS; full native comparisons queued.",
       "registration_sha256": "a4071d56db0a00e5172e9401b2b920e1b01fce22f8a52c3280b41a276206ecc1",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -58223,7 +58225,13 @@
         "statement": "A chemical thermodynamic support is the complete generated finite tuple of held chemical microstates, partitioned so every state occurs exactly once in one named macro-observation fibre. Multiplicity is the exact positive fibre count and statistical weight is that count over the complete finite support count. All 387 external identities seal before 330 direct state records and 57 calorimetric rows open.",
         "status": "empirically_tested",
         "title": "Finite chemical microstate-support law"
-      }
+      },
+      "remaining": [
+        "finite_successor_preserves_prior_assignments: general successful append-to-prefix composition proof",
+        "44 original operation/domain cases and full256candidate programme comparison",
+        "finite_microstate_validation_v1.py: original 387-row prediction, source parsing, controls and complete receipt translation/verification"
+      ],
+      "staging_evidence": "verification/TURN1223_MICROSTATE_SOURCE/SOURCE_BINDING.json"
     },
     {
       "branch": "chemistry",
@@ -201800,11 +201808,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-18T19:26:42.965488+00:00",
+  "updated_at": "2026-11-18T19:57:05.598440+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 105,
-    "pending": 1859,
+    "in_progress": 106,
+    "pending": 1858,
     "fully_reconstructed_claims": 817,
     "axiom_free_exported_results": 51549,
     "axiom_free_audited_definitions_and_theorems": 115596

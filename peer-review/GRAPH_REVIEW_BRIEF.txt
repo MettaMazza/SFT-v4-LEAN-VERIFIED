@@ -1,0 +1,46 @@
+FOCUSED REVIEW: ORDERED SHORTEST PATHS
+Maria Smith, Ernos Labs
+Prepared 18 November 2026 with AI assistance under the author's direction.
+
+Paper: Constructive reachability, cycles and shortest paths on generated finite graphs
+https://doi.org/10.5281/zenodo.24341593
+Start with Section 4, then Sections 1–3 for the distinct directed-graph operations.
+
+This brief invites independent examination. It is not an independent review or an endorsement.
+
+SOURCE AND PROOF
+Original V3 operation:
+https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/mathematics/geometry_topology/law.py
+
+Native V4 implementation and proofs at the paper's cited checkpoint:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Mathematics/GeometryPaths.lean
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Mathematics/GeometryShortest.lean
+
+The Zenodo bundle supplies SOURCE_CORRESPONDENCE.json, SOURCE_AND_EVIDENCE.zip and PUBLICATION_QA.json alongside the manuscript and PDF. Use the bundle's retained commands and evidence; record the exact versions you examine.
+
+THE OPERATION TO EXAMINE
+The undirected operation checks membership of the two endpoints in the supplied node list. Intermediate identities and adjacency come from the supplied edges. It preserves edge order, queues complete paths, skips previously visited heads, and returns immediately on encountering the target as a neighbor. Equal endpoints retain the source's structural EmptyOne result.
+
+For admitted distinct endpoints, the paper states discovery and shortestness against every complete UndirectedTrace. Path length counts nodes. The negative result states that returning .ok none is equivalent to absence of such a trace.
+
+The relevant full declaration namespace is SFT.Mathematics.GeometryTopology:
+- pathDistanceTrace (GeometryPaths)
+- OriginCovered, VisitedBound, QueueOrdered, QueueWidth (GeometryShortest)
+- frontierStrict, pathLoopBound, pathDistanceComplete
+- pathDistanceShortest, pathDistanceNoneIff
+
+CONCRETE REVIEW QUESTIONS
+1. Does the translation preserve the original endpoint checks, intermediate-node domain, traversal order and identity output?
+2. Does each queue update preserve origin coverage, the visited-neighbor bound, nondecreasing path lengths and queue width at most one?
+3. Does frontierStrict justify immediate target return? Section 4.2 derives |h|+1 <= |q|+1 <= |P| for the returned head extension and any alternative target trace.
+4. Does the None equivalence use both discovery and the returned-path trace, with the same admitted/distinct-endpoint hypotheses?
+
+USEFUL SMALL CASES
+- N=[a,c], E=[(a,x),(x,c)], endpoints a,c: the source permits the intermediate identity x.
+- Two equal-length routes: vary stored edge order and check the retained path choice.
+- Distinct disconnected endpoints; equal admitted endpoints; an absent endpoint.
+These examples help examine behavior. The general statements are the quantified native theorems above.
+
+WHERE TO RESPOND
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+Please cite the DOI/version, exact source operation and Lean declaration, relevant hypotheses, and an argument or reproducible example. State what you inspected and disclose affiliations or AI assistance. A precise question is welcome; a favorable finding is not required.

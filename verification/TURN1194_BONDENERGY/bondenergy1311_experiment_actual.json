@@ -1,0 +1,369 @@
+{
+  "program": {
+    "instructions": [
+      {
+        "arguments": [
+          "registered-premise"
+        ],
+        "destination": "premise",
+        "opcode": "input"
+      },
+      {
+        "arguments": [
+          "isotopologue",
+          "H2"
+        ],
+        "destination": "h2-label-1",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "molecular-origin",
+          "X-1Sigma-g-plus-ground"
+        ],
+        "destination": "h2-label-2",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "threshold-state",
+          "B-prime-1Sigma-u-plus"
+        ],
+        "destination": "h2-label-3",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "threshold-channel",
+          "H-1s-plus-H-2s"
+        ],
+        "destination": "h2-label-4",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "ground-channel",
+          "H-1s-plus-H-1s"
+        ],
+        "destination": "h2-label-5",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "path-operation",
+          "ordered-positive-held-Take"
+        ],
+        "destination": "h2-label-6",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "measurement-custody",
+          "all-values-open-after-relation-seal"
+        ],
+        "destination": "h2-label-7",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "premise",
+          "h2-label-1",
+          "h2-label-2",
+          "h2-label-3",
+          "h2-label-4",
+          "h2-label-5",
+          "h2-label-6",
+          "h2-label-7"
+        ],
+        "destination": "h2-relation",
+        "opcode": "word"
+      },
+      {
+        "arguments": [
+          "isotopologue",
+          "D2"
+        ],
+        "destination": "d2-label-1",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "molecular-origin",
+          "X-1Sigma-g-plus-ground"
+        ],
+        "destination": "d2-label-2",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "threshold-state",
+          "B-prime-1Sigma-u-plus"
+        ],
+        "destination": "d2-label-3",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "threshold-channel",
+          "D-1s-plus-D-2s"
+        ],
+        "destination": "d2-label-4",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "ground-channel",
+          "D-1s-plus-D-1s"
+        ],
+        "destination": "d2-label-5",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "path-operation",
+          "ordered-positive-held-Take"
+        ],
+        "destination": "d2-label-6",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "measurement-custody",
+          "all-values-open-after-relation-seal"
+        ],
+        "destination": "d2-label-7",
+        "opcode": "label"
+      },
+      {
+        "arguments": [
+          "premise",
+          "d2-label-1",
+          "d2-label-2",
+          "d2-label-3",
+          "d2-label-4",
+          "d2-label-5",
+          "d2-label-6",
+          "d2-label-7"
+        ],
+        "destination": "d2-relation",
+        "opcode": "word"
+      },
+      {
+        "arguments": [
+          "h2-label-1",
+          "h2-relation",
+          "d2-label-1",
+          "d2-relation"
+        ],
+        "destination": "structural-relation-vector",
+        "opcode": "table"
+      },
+      {
+        "arguments": [
+          "structural-relation-vector"
+        ],
+        "destination": "",
+        "opcode": "emit"
+      }
+    ],
+    "program_id": "SFT-EXP-CHEM-BOND-DISSOCIATION-ENERGY-002-value-free-relation-prediction",
+    "schema": "sft-v3-fold-program/1"
+  },
+  "registration": {
+    "all_eight_rows_required": true,
+    "all_measured_values_absent_from_law_and_prediction": true,
+    "claim_id": "SFT-CHEM-BOND-DISSOCIATION-ENERGY-002",
+    "experiment_id": "SFT-EXP-CHEM-BOND-DISSOCIATION-ENERGY-002",
+    "falsification_condition": "The claim fails if either post-seal threshold Take atomic interval does not overlap every registered historical and later ground-dissociation interval for its isotopologue; if any of eight measurement rows, a state, product channel, condition, source or uncertainty is erased; if any measured number is readable before the relation seal; if a deliberately displaced interval is accepted; or if a fitted coefficient or correction is introduced.",
+    "frozen_relation": "For each registered H2 or D2 channel, the B-prime threshold terminates in one ground-state atom and one 2s atom, while X-state ground dissociation terminates in two ground-state atoms. Their shared ground-atom prefix cancels structurally, so D0(M2) is exactly the B-prime threshold after the held atomic 1S-2S separation is Taken. This relation is sealed without measured values; only afterward does the complete threshold, atomic and historical/later ground-dissociation vector test it exactly.",
+    "identity_registry": [
+      "experiments/external_sources/chemistry/bond_dissociation_energy_target_identities_v1.json",
+      "sha256:d1ed3e22aac37011c4e957cbc8f022cf3098ca96b1a8c30ee954196c8a6b8f74"
+    ],
+    "prediction_program": {
+      "instructions": [
+        {
+          "arguments": [
+            "registered-premise"
+          ],
+          "destination": "premise",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "isotopologue",
+            "H2"
+          ],
+          "destination": "h2-label-1",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "molecular-origin",
+            "X-1Sigma-g-plus-ground"
+          ],
+          "destination": "h2-label-2",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "threshold-state",
+            "B-prime-1Sigma-u-plus"
+          ],
+          "destination": "h2-label-3",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "threshold-channel",
+            "H-1s-plus-H-2s"
+          ],
+          "destination": "h2-label-4",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "ground-channel",
+            "H-1s-plus-H-1s"
+          ],
+          "destination": "h2-label-5",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "path-operation",
+            "ordered-positive-held-Take"
+          ],
+          "destination": "h2-label-6",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "measurement-custody",
+            "all-values-open-after-relation-seal"
+          ],
+          "destination": "h2-label-7",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "premise",
+            "h2-label-1",
+            "h2-label-2",
+            "h2-label-3",
+            "h2-label-4",
+            "h2-label-5",
+            "h2-label-6",
+            "h2-label-7"
+          ],
+          "destination": "h2-relation",
+          "opcode": "word"
+        },
+        {
+          "arguments": [
+            "isotopologue",
+            "D2"
+          ],
+          "destination": "d2-label-1",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "molecular-origin",
+            "X-1Sigma-g-plus-ground"
+          ],
+          "destination": "d2-label-2",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "threshold-state",
+            "B-prime-1Sigma-u-plus"
+          ],
+          "destination": "d2-label-3",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "threshold-channel",
+            "D-1s-plus-D-2s"
+          ],
+          "destination": "d2-label-4",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "ground-channel",
+            "D-1s-plus-D-1s"
+          ],
+          "destination": "d2-label-5",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "path-operation",
+            "ordered-positive-held-Take"
+          ],
+          "destination": "d2-label-6",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "measurement-custody",
+            "all-values-open-after-relation-seal"
+          ],
+          "destination": "d2-label-7",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "premise",
+            "d2-label-1",
+            "d2-label-2",
+            "d2-label-3",
+            "d2-label-4",
+            "d2-label-5",
+            "d2-label-6",
+            "d2-label-7"
+          ],
+          "destination": "d2-relation",
+          "opcode": "word"
+        },
+        {
+          "arguments": [
+            "h2-label-1",
+            "h2-relation",
+            "d2-label-1",
+            "d2-relation"
+          ],
+          "destination": "structural-relation-vector",
+          "opcode": "table"
+        },
+        {
+          "arguments": [
+            "structural-relation-vector"
+          ],
+          "destination": "",
+          "opcode": "emit"
+        }
+      ],
+      "program_id": "SFT-EXP-CHEM-BOND-DISSOCIATION-ENERGY-002-value-free-relation-prediction",
+      "schema": "sft-v3-fold-program/1"
+    },
+    "provenance": "observational_derivation",
+    "target_ids": [
+      "PATH-H2-BPRIME-THRESHOLD",
+      "PATH-H-ATOMIC-1S2S",
+      "APS-1994-H2-X-GROUND-D0",
+      "CURRENT-H2-X-GROUND-D0",
+      "PATH-D2-BPRIME-THRESHOLD",
+      "PATH-D-ATOMIC-1S2S",
+      "APS-1994-D2-X-GROUND-D0",
+      "CURRENT-D2-X-GROUND-D0"
+    ],
+    "withheld_measurement_registry": [
+      "experiments/external_sources/chemistry/bond_dissociation_energy_withheld_targets_v1.json",
+      "sha256:03eb76d1aeb6dc4a2066236e24f03d5529e9b247a62294db03837077de87cb9c"
+    ]
+  }
+}

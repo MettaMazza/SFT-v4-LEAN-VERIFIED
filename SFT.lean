@@ -11981,3 +11981,15 @@ import SFT.Chemistry.EquilibriumBondLengthExperiment
 import SFT.Chemistry.EquilibriumBondLengthSource
 
 import SFT.Chemistry.EquilibriumBondLengthValidation
+
+import SFT.Biology.ProteinInteraction
+
+import SFT.Biology.ProteinInteractionGrammar
+
+import SFT.Biology.ProteinInteractionEvidence
+
+import SFT.Biology.ProteinInteractionSource
+
+import SFT.Biology.ProteinInteractionExperiment
+
+import SFT.Biology.ProteinInteractionValidation

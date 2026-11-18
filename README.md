@@ -3,6 +3,10 @@
 **Author contact:** [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com) · **Join the SFT Discord community:** [discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC)
 
 
+**New readers:** [Standalone papers and subject reading routes](peer-review/START_HERE.txt) · [Edition-specific reproduction guide](peer-review/REPRODUCTION_GUIDE.txt) · [Independent review discussion](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1)
+
+The reading guide links the published papers, worked examples and public review requests. Choose a paper’s recorded source and evidence edition when checking its results.
+
 <p align="center">
   <img src="docs/assets/sft-banner.svg" alt="SFT - Unified Constants complete. 820 V3 entries verified in Lean, with zero axiom dependencies." width="100%" />
 </p>

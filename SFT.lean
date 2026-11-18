@@ -12001,3 +12001,27 @@ import SFT.Chemistry.MolecularCorrespondenceDerivation
 import SFT.Chemistry.MolecularCorrespondenceGrammar
 
 import SFT.Chemistry.MolecularCorrespondenceEvidence
+
+import SFT.Chemistry.BondDissociationEnergy
+
+import SFT.Chemistry.BondDissociationEnergyGrammar
+
+import SFT.Chemistry.BondDissociationEnergyEvidence
+
+import SFT.Chemistry.BondDissociationEnergyExperiment
+
+import SFT.Chemistry.BondDissociationEnergySource
+
+import SFT.Chemistry.BondDissociationEnergyValidation
+
+import SFT.Biology.ProteinQuaternary
+
+import SFT.Biology.ProteinQuaternaryGrammar
+
+import SFT.Biology.ProteinQuaternaryEvidence
+
+import SFT.Biology.ProteinQuaternarySource
+
+import SFT.Biology.ProteinQuaternaryExperiment
+
+import SFT.Biology.ProteinQuaternaryValidation

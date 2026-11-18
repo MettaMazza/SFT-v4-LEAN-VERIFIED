@@ -1,5 +1,8 @@
 ## 776 / 2,781 V3 entries complete
 
+**Author contact:** [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com) · **Join the SFT Discord community:** [discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC)
+
+
 > **750-entry milestone — published edition 0.4.** [Read the full PDF](https://zenodo.org/records/24320778/files/SFT_PAPER.pdf) · [Zenodo publication](https://doi.org/10.5281/zenodo.24320778) · [Publication verification](publication/PUBLICATION_RECEIPT.json).
 
 **49,539 Lean theorems proved · 0 axiom dependencies · Unified Constants complete: 26 exact readings across seven sectors.**

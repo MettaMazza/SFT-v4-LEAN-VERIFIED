@@ -1,0 +1,60 @@
+EXACT CALCULATOR: A SMALL REVIEW ROUTE
+Maria Smith — Smithian Fold Theory / Ernos Labs
+18 November 2026
+
+Paper: A verified exact scientific calculator across numerical and interface layers
+Version 1.1: https://doi.org/10.5281/zenodo.24354302
+Start with Sections 3–5, then Section 8 and SOURCE_AND_EVIDENCE.zip.
+
+ONE QUESTION TO FOLLOW
+When a calculator displays an enclosure, what determines which endpoint lies above the result?
+
+For 0 < x <= 1, let
+A_N = sum over j = 0,...,N-1 of (-1)^j x^(2j+1)/(2j+1),
+q_N = x^(2N+1)/(2N+1).
+The paper's corrected arctangent operation returns:
+  odd N:  [A_N - q_N, A_N]
+  even N: [A_N, A_N + q_N].
+The next term's sign determines the side of the partial sum on which the result lies. Both endpoints are rational.
+
+TRY TWO TERM COUNTS
+Set x = 1/5.
+For N = 1, A_1 = 1/5 and q_1 = 1/375, giving
+  [74/375, 1/5].
+For N = 2, A_2 = 74/375 and q_2 = 1/15625, giving
+  [74/375, 9253/46875].
+These are arithmetic illustrations of the published branches. They are not additional completion receipts or new Lean results.
+
+FOLLOW THE IMPLEMENTATION
+In the release's source archive, open:
+  v4/SFT/Mathematics/CalculatorOperationsV2.lean
+The full declaration is:
+  SFT.Mathematics.CalculatorOperationsV2.atanUnitEnclosureV2
+Read its guards (positive x at most One; positive term count), construction of positive and counter sums, next-term calculation, parity branch and returned certificate.
+
+Then read:
+  SFT.Mathematics.CalculatorOperationsV2.circleConstantEnclosure
+It combines enclosures for atan(1/5) and atan(1/239) using
+  16*atan(1/5) - 4*atan(1/239).
+If the two intervals are [a,b] and [c,d], the resulting endpoints are
+  [16a - 4d, 16b - 4c].
+Section 5 supplies the angle-composition derivation as well as the enclosure operation.
+
+A CORRECTION IS PART OF THE RECORD
+The original calculator registration 003 retains status superseded_adverse_evidence because its arctangent endpoint parity was reversed. Corrected registration 004 supplies the branches above and is inherited by the subsequent calculator stages. Read both statuses in SOURCE_CORRESPONDENCE.json; the earlier receipt is preserved.
+
+FOLLOW THE RESULT INTO THE INTERFACE
+Sections 1–2 explain why decimal input 0.1+0.2 becomes exactly 3/10. Sections 6–7 follow parser precedence, decimal projection and transactional admission. Section 8 identifies the native source and retained evaluator/controller/browser comparisons. Distinguish the exact value and certificate from its decimal display, and distinguish a mathematical argument from a particular recorded execution.
+
+SOURCE IDENTITY
+Original V3 commit: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1
+V4 edition source: 21cdf559922fb057f8560f42d056ffa035329eb3
+The paper supplies original source references and completion receipts. Use its versioned archive to inspect the same source edition.
+
+INVITATION TO INDEPENDENT READERS
+A focused response can examine the remainder argument on its declared domain, trace the endpoint calculation into the code, or identify a concrete counterexample or source discrepancy. Include the version, declaration, input and result so another reader can reproduce the issue.
+Public discussion:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+A review invitation is not a completed independent review.
+
+Maria Smith is the scientific author. This reading guide was prepared with AI assistance from the released manuscript and archived implementation.

@@ -12073,3 +12073,41 @@ import SFT.Chemistry.MolecularBondAngleExperiment
 import SFT.Chemistry.MolecularBondAngleSource
 
 import SFT.Chemistry.MolecularBondAngleValidation
+
+import SFT.Biology.CellTransport
+
+import SFT.Biology.CellTransportGrammar
+
+import SFT.Biology.CellTransportEvidence
+
+import SFT.Biology.CellTransportSource
+
+import SFT.Biology.CellTransportExperiment
+
+import SFT.Biology.CellTransportValidation
+
+import SFT.Chemistry.AnalyticalSensitivity
+
+import SFT.Chemistry.AnalyticalSensitivityGrammar
+
+import SFT.Chemistry.AnalyticalSensitivityEvidence
+
+import SFT.Chemistry.AnalyticalSensitivityAnalysis
+
+import SFT.Chemistry.AnalyticalSensitivityExperiment
+
+import SFT.Chemistry.AnalyticalSensitivityValidation
+
+import SFT.Chemistry.XrayDiffraction
+
+import SFT.Chemistry.XrayDiffractionGrammar
+
+import SFT.Chemistry.XrayDiffractionEvidence
+
+import SFT.Chemistry.XrayDiffractionJSON
+
+import SFT.Chemistry.XrayDiffractionAnalysis
+
+import SFT.Chemistry.XrayDiffractionExperiment
+
+import SFT.Chemistry.XrayDiffractionValidation

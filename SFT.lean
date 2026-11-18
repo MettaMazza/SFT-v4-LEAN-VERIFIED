@@ -12287,3 +12287,15 @@ import SFT.Biology.MorphogenesisSource
 import SFT.Biology.MorphogenesisExperiment
 
 import SFT.Biology.MorphogenesisValidation
+
+import SFT.Biology.Regeneration
+
+import SFT.Biology.RegenerationGrammar
+
+import SFT.Biology.RegenerationEvidence
+
+import SFT.Biology.RegenerationSource
+
+import SFT.Biology.RegenerationExperiment
+
+import SFT.Biology.RegenerationValidation

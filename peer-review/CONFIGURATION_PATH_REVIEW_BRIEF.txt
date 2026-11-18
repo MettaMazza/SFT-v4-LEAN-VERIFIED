@@ -28,7 +28,7 @@ Native minimumTriple and barrierTriple preserve these operations. positiveBasin,
 FOLLOW THE COMPLETE OBSERVATION SEPARATELY
 The pinned ethanol observation contains two torsion paths, each with 25 rows from 0 to 360 degrees in 15-degree steps. The observation verifies equal initial and terminal heights. It retains all rows, then removes the terminal copy only for cyclic classification, leaving 24 distinct positions per path.
 
-The original validation converts the kJ/mol inscriptions into exact fractions and compares each centre with neighbours at indices (i-1) mod24 and (i+1) mod24. This is the observation's cyclic strict-comparison operation. It remains distinct from the core mixed structural branch above.
+The original validation converts the kJ/mol inscriptions into exact fractions and compares each centre with neighbours at indices (i-1) mod 24 and (i+1) mod 24. This is the observation's cyclic strict-comparison operation. It remains distinct from the core mixed structural branch above.
 
 Three small checks from the published OH column:
   60 degrees: 0.52 is below neighbours 1.28 and 1.13 — basin.
@@ -39,7 +39,7 @@ The full classification retains ordinary nodes too. Across both paths:
   50 source rows = 48 cyclic positions + 2 terminal copies.
   48 cyclic positions = 6 basins + 6 barriers + 36 ordinary nodes.
   50 source rows = 46 positive heights + 4 structural absences.
-Each path has basins at60,180,300degrees and barriers at0,120,240degrees. Section 5 prints every original energy inscription in both units and describes the sealed structural prediction and subsequent complete comparison. These counts are retained published evidence, not a new replay performed for this guide.
+Each path has basins at 60°, 180° and 300°, and barriers at 0°, 120° and 240°. Section 5 prints every original energy inscription in both units and describes the sealed structural prediction and subsequent complete comparison. These counts are retained published evidence, not a new replay performed for this guide.
 
 EXACT SOURCE VERSIONS
 V3: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1
@@ -50,13 +50,13 @@ Completed configuration-family Lean source:
   SFT/Chemistry/ConfigurationOrder.lean
   ConfigurationObservation, ConfigurationTargets,
   ConfigurationOrderExperiment and ConfigurationOrderValidation families.
-The supporting state-energy and transition families use the separate edition0.4 pin21cdf559922fb057f8560f42d056ffa035329eb3.
+The supporting state-energy and transition families use the separate edition 0.4 pin 21cdf559922fb057f8560f42d056ffa035329eb3.
 Use SOURCE_CORRESPONDENCE.json to select the applicable pin for each module. SOURCE_AND_EVIDENCE.zip retains original source, proof bodies, observation snapshot and comparison evidence.
 
 QUESTIONS FOR INDEPENDENT REVIEW
 1. Does arbitrary extension retain every original node and comparison in order?
 2. Do all positive and structural comparison branches preserve the original accepted domain and decisions?
-3. Does cyclic observation remove only the terminal copy while retaining all50source inscriptions?
+3. Does cyclic observation remove only the terminal copy while retaining all 50 source inscriptions?
 4. Can every reported basin, barrier and ordinary node be reproduced from the full retained table?
 5. Does the observation record preserve the original source identity, sealed prediction and all reported protocol fields?
 

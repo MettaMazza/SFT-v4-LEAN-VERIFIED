@@ -1,0 +1,67 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "NIST-CODATA-2022-BOLTZMANN",
+    "NIM-NIST-ACOUSTIC-BOLTZMANN-2017",
+    "NIST-JOHNSON-NOISE-BOLTZMANN-2011"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:e1f72e7c3e3948c359534c1e694624ca08e81da15ec296b93370067252fa44a2",
+  "falsification_condition": "The claim fails if Chemistry requires a different temperature carrier, composition-dependent scale or route-specific correction; if adding a composition changes the common carrier; if any target value opens before all three identities seal; if the exact SI carrier lies outside either complete measured interval; if argon, gas phase, TPW reference, kinetic-temperature relation, Johnson response, uncertainty endpoint or source limitation is omitted; or if target values select the law.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:4b336111ccb5b024696e9d9d00c23b42d8be8aadf3ce5f8992930241d8a02637",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:f8da9480fd5435e0744eff143b576ef4eb67a709c478e5e63660418c88ce2475",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-CHEM-TEMPERATURE-CORRESPONDENCE-002-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:002bc53c363da21296343cdb0c5bea9f597c3d9efd5d8110e671a7e3b3382f2a",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:6046c9049d0494ed342d29c1fee97420d0c8068613ebd0ca884e14a858c3d367",
+    "prediction_seal_hash": "sha256:16ab5ec13c4c3d89b1d12918972d8a2b088e3fa0d9e9dc4504cd535d258e231f",
+    "program_hash": "sha256:164d34736a3d6681914cf07fdf053b41cb84cdfe3d46974ea2d208b00f138a31",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:778071bcd7d564ff0ce7f1988e922e5cdf2c77c1cce701cd14129f1cf7f38bf4",
+    "target_material_present": false,
+    "trace_hash": "sha256:3772fd48658570f5473a6dcb5857ebd0dc95b1ae1c64640c1bcdd60a1a4d389a"
+  },
+  "measurement_receipt_hash": "sha256:5cad4bd90f31225ba11dee0d9e7e0d069619a7e17461e98060689637583f10b4",
+  "measurements": [
+    "Exact SI common carrier: 13806490/10^30 joule per kelvin.",
+    "Acoustic argon interval: [13806456,13806512]/10^30 joule per kelvin; exact carrier contained.",
+    "Johnson-noise interval: [13806340,13806680]/10^30 joule per kelvin; exact carrier contained.",
+    "Acoustic composition/condition: pure argon gas at the triple point of water retained.",
+    "Acoustic kinetic-temperature and electronic Johnson temperature-response relations retained.",
+    "tampered_acoustic_interval_rejected: True",
+    "complete_three_target_rows_retained: True",
+    "two_physically_distinct_routes_retained: True",
+    "all_exact_interval_relations_pass: True",
+    "prediction_contains_no_withheld_target_hash: True"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:66a6b1f1bbac32fb50d7fd0eda796b95ef9864612c8497b3a4c8c98b6fcb3423",
+    "custodian_id": "SFT-EXP-CHEM-TEMPERATURE-CORRESPONDENCE-002-complete-target-custodian",
+    "experiment_registration_hash": "sha256:e1f72e7c3e3948c359534c1e694624ca08e81da15ec296b93370067252fa44a2",
+    "prediction_seal_hash": "sha256:16ab5ec13c4c3d89b1d12918972d8a2b088e3fa0d9e9dc4504cd535d258e231f",
+    "registered_target_identity_hash": "sha256:778071bcd7d564ff0ce7f1988e922e5cdf2c77c1cce701cd14129f1cf7f38bf4",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:ac041759780f74205471a6a1e700db7557ad0872f039c6fc87a1687ffb8e3eef"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "native-temperature1329"
+}

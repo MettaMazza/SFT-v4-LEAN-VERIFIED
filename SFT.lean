@@ -12239,3 +12239,15 @@ import SFT.Chemistry.DihedralTorsionSource
 import SFT.Chemistry.DihedralTorsionPrediction
 
 import SFT.Chemistry.DihedralTorsionValidation
+
+import SFT.Biology.CellAdhesion
+
+import SFT.Biology.CellAdhesionGrammar
+
+import SFT.Biology.CellAdhesionEvidence
+
+import SFT.Biology.CellAdhesionSource
+
+import SFT.Biology.CellAdhesionExperiment
+
+import SFT.Biology.CellAdhesionValidation

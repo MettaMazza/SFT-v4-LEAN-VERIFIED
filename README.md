@@ -2,6 +2,8 @@
 
 **Author contact:** [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com) · **Join the SFT Discord community:** [discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC)
 
+[Author contact editions and verification index](publication/contact-update/README.md).
+
 
 <p align="center">
   <img src="docs/assets/sft-banner.svg" alt="SFT - Unified Constants complete. 781 V3 entries verified in Lean, with zero axiom dependencies." width="100%" />
@@ -28,7 +30,7 @@
 
 The fine-structure derivation opens the cumulative paper, followed by Unified Constants and the completed mathematics, physics, chemistry, materials, computation and biology work. The full 1,007-page edition contains 1,091 numbered main sections and 16 subsections, with 1,107 bookmarks and original-source, Lean-verification and timeline references.
 
-**[Read the published PDF](https://zenodo.org/records/24320778/files/SFT_PAPER.pdf)** · [Full manuscript](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Full source and evidence](https://zenodo.org/records/24320778/files/SFT_FULL_SOURCE_AND_EVIDENCE.zip) · [Release index](publication/RELEASE_INDEX.json)
+**[Read the published PDF](https://zenodo.org/records/24337358/files/SFT_PAPER.pdf)** · [Full manuscript](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Full source and evidence](https://zenodo.org/records/24320778/files/SFT_FULL_SOURCE_AND_EVIDENCE.zip) · [Release index](publication/RELEASE_INDEX.json)
 
 **[Edition 0.4 is published on Zenodo](https://doi.org/10.5281/zenodo.24320778).** The full PDF is the verified default landing-page preview. Previous edition [0.3](https://doi.org/10.5281/zenodo.24205463) remains available. The author has resumed formalisation toward the next review milestone at 1,000 completed entries, then every 250. Edition 0.4 remains the published 750-entry snapshot.
 

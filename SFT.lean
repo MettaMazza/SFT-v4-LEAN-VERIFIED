@@ -12049,3 +12049,27 @@ import SFT.Chemistry.AnalyticalPrecisionAnalysis
 import SFT.Chemistry.AnalyticalPrecisionExperiment
 
 import SFT.Chemistry.AnalyticalPrecisionValidation
+
+import SFT.Biology.CellIdentity
+
+import SFT.Biology.CellIdentityGrammar
+
+import SFT.Biology.CellIdentityEvidence
+
+import SFT.Biology.CellIdentitySource
+
+import SFT.Biology.CellIdentityExperiment
+
+import SFT.Biology.CellIdentityValidation
+
+import SFT.Chemistry.MolecularBondAngle
+
+import SFT.Chemistry.MolecularBondAngleGrammar
+
+import SFT.Chemistry.MolecularBondAngleEvidence
+
+import SFT.Chemistry.MolecularBondAngleExperiment
+
+import SFT.Chemistry.MolecularBondAngleSource
+
+import SFT.Chemistry.MolecularBondAngleValidation

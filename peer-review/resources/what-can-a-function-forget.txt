@@ -1,0 +1,68 @@
+WORKSHEET / 01
+What can a function forget?
+Four labels, six pairs, and a question about recovering the input.
+Start with the ordered source (aa, ab, ba, bb). The function f keeps the first letter. A second function g
+sends both a and b to the single label one.
+Input x f(x) g(f(x))
+aa a one
+ab a one
+ba b one
+bb b one
+1 / Which distinctions survive?
+List the six unordered pairs of distinct source labels. Call a pair closed if its images agree, and retained if
+its images differ. Classify each pair under f, then under g composed with f.
+2 / Can you recover this run?
+An observed output is a. Its reverse record lists the predecessors (aa, ab). Does that list tell you which
+input was used? What changes for the identity function, which returns each label unchanged?
+3 / Does enumeration change reversibility?
+Keep f, but supply the order (bb, aa, ba, ab). Write the image labels in first-occurrence order and each
+predecessor list in source order. Does reordering the source make f reversible?
+4 / Explain the general step.
+If f(u) = f(v), why must g(f(u)) = g(f(v))? What does this imply about closed and retained pairs under
+composition?
+Maria Smith | Ernos Labs | AI-assisted educational resource | 18 November 2026 1
+
+WORKED ANSWERS / 02
+From the table to the proof
+Use these answers after completing the worksheet.
+1 / Two closed pairs become six.
+In source order, the pairs are (aa,ab), (aa,ba), (aa,bb), (ab,ba), (ab,bb), (ba,bb). Under f, the first and last
+pairs are closed; the other four are retained. Under g composed with f, every source has image one, so all
+six pairs are closed and none is retained.
+2 / Possibilities are not a selected predecessor.
+Both aa and ab produce a. The complete predecessor list preserves those possibilities, but reconstruction
+of the particular run needs a retained predecessor label resolving the choice. For the identity function,
+every fibre is a singleton, so the output determines its unique input.
+3 / Order is preserved; ambiguity remains.
+The image order is (b,a). The predecessor lists are (bb,ba) for b and (aa,ab) for a. Each still has two
+members. Changing enumeration does not make the map reversible.
+4 / Equal inputs to g have equal outputs.
+Applying the same function g to the equality f(u) = f(v) gives g(f(u)) = g(f(v)). A closed pair stays closed.
+Equivalently, every pair retained downstream was already retained upstream. The source and native
+proofs establish this for arbitrary admitted finite carriers, beyond the four-label example.
+The exact source convention
+The original input is a nonempty ordered list of distinct strings and a total single-valued map with exactly
+those source keys. A non-singleton reverse fibre is recorded with the tag "held-predecessor-labels"; a
+singleton returns its unique source string. The empty retained ledger is encoded as ("empty-One",), not as
+an extra source pair.
+Read the derivation and native proofs
+Maria Smith, Finite information loss, channel capacity and exact reversibility, Sections 4-5; Sections 1-3
+and 9 give the construction and general derivation.
+doi.org/10.5281/zenodo.24339200
+The source/proof reading guide supplies original and native source links. The relevant Lean namespace is
+SFT.InformationScience: ConservationReverse.uniqueRecovery and heldRecovery explain the reverse records;
+ConservationComposition.closedPersists and retainedSubset establish the composition result.
+Provenance
+Original V3 commit: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1.
+Native V4 commit: 21cdf559922fb057f8560f42d056ffa035329eb3.
+The linked guide identifies exact source operations and retained verification evidence. This worksheet adapts existing
+reading exercises; it reports no new verification or classroom trial. Scientific author: Maria Smith. Prepared with AI assistance
+under her direction.
+Discuss a specific operation or proof: GitHub public review discussion
+Contact: Maria.smith.sftoe@gmail.com
+Maria Smith | Ernos Labs | AI-assisted educational resource | 18 November 2026 2
+
+LINK TARGETS
+https://doi.org/10.5281/zenodo.24339200
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/peer-review/INFORMATION_LOSS_REVIEW_BRIEF.txt
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1

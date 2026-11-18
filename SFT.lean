@@ -11835,3 +11835,125 @@ import SFT.Biology.FixationSource
 import SFT.Biology.FixationExperiment
 
 import SFT.Biology.FixationValidation
+
+import SFT.Biology.DriftBoundary
+
+import SFT.Biology.DriftBoundaryGrammar
+
+import SFT.Biology.DriftBoundaryEvidence
+
+import SFT.Biology.DriftBoundarySource
+
+import SFT.Biology.DriftBoundaryExperiment
+
+import SFT.Biology.DriftBoundaryValidation
+
+import SFT.Biology.CodonCounts
+
+import SFT.Biology.NucleotideAlphabet
+
+import SFT.Biology.NucleotideAlphabetGrammar
+
+import SFT.Biology.NucleotideAlphabetEvidence
+
+import SFT.Biology.NucleotideAlphabetSource
+
+import SFT.Biology.NucleotideAlphabetExperiment
+
+import SFT.Biology.NucleotideAlphabetValidation
+
+import SFT.Biology.CodonWord
+
+import SFT.Biology.CodonWordGrammar
+
+import SFT.Biology.CodonWordEvidence
+
+import SFT.Biology.CodonWordSource
+
+import SFT.Biology.CodonWordExperiment
+
+import SFT.Biology.CodonWordValidation
+
+import SFT.Biology.CodonBox
+
+import SFT.Biology.CodonBoxGrammar
+
+import SFT.Biology.CodonBoxEvidence
+
+import SFT.Biology.CodonBoxSource
+
+import SFT.Biology.CodonBoxExperiment
+
+import SFT.Biology.CodonBoxValidation
+
+import SFT.Biology.Gene
+
+import SFT.Biology.GeneGrammar
+
+import SFT.Biology.GeneEvidence
+
+import SFT.Biology.GeneSource
+
+import SFT.Biology.GeneExperiment
+
+import SFT.Biology.GeneValidation
+
+import SFT.Biology.Genome
+
+import SFT.Biology.GenomeGrammar
+
+import SFT.Biology.GenomeEvidence
+
+import SFT.Biology.GenomeSource
+
+import SFT.Biology.GenomeExperiment
+
+import SFT.Biology.GenomeValidation
+
+import SFT.Biology.ExpressionRegulation
+
+import SFT.Biology.ExpressionRegulationGrammar
+
+import SFT.Biology.ExpressionRegulationEvidence
+
+import SFT.Biology.ExpressionRegulationSource
+
+import SFT.Biology.ExpressionRegulationExperiment
+
+import SFT.Biology.ExpressionRegulationValidation
+
+import SFT.Biology.ProteinSequence
+
+import SFT.Biology.ProteinSequenceGrammar
+
+import SFT.Biology.ProteinSequenceEvidence
+
+import SFT.Biology.ProteinSequenceSource
+
+import SFT.Biology.ProteinSequenceExperiment
+
+import SFT.Biology.ProteinSequenceValidation
+
+import SFT.Biology.ProteinFold
+
+import SFT.Biology.ProteinFoldGrammar
+
+import SFT.Biology.ProteinFoldEvidence
+
+import SFT.Biology.ProteinFoldSource
+
+import SFT.Biology.ProteinFoldExperiment
+
+import SFT.Biology.ProteinFoldValidation
+
+import SFT.Biology.ProteinEnsemble
+
+import SFT.Biology.ProteinEnsembleGrammar
+
+import SFT.Biology.ProteinEnsembleEvidence
+
+import SFT.Biology.ProteinEnsembleSource
+
+import SFT.Biology.ProteinEnsembleExperiment
+
+import SFT.Biology.ProteinEnsembleValidation

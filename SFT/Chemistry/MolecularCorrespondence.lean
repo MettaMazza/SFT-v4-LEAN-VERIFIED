@@ -43,18 +43,28 @@ def processGate (process : Process) : Except String Gate :=
 -- All gate words constructed above are singletons. The pattern decomposition
 -- preserves V3's tuple unpacking on precisely those generated rows.
 def decodeRows (rows : List (Word × Word)) : List (String × String) :=
- rows.flatMap (fun row => match row with
-  | ([source],[target]) => [(source,target)]
-  | _ => [])
+ rows.flatMap (fun row => match row.1 with
+  | [] => []
+  | source::sources => match sources with
+    | _::_ => []
+    | [] => match row.2 with
+      | [] => []
+      | target::targets => match targets with
+        | [] => [(source,target)]
+        | _::_ => [])
 def observationMap (words : List Word) : Classification :=
  words.flatMap (fun word => match word with
-  | [label] => [(word,label)]
-  | _ => [])
+  | [] => []
+  | label::rest => match rest with
+    | [] => [(word,label)]
+    | _::_ => [])
 def measurementRecords (state : State) : Except String (List (List Record)) :=
- state.branches.mapM fun branch => do
+ state.branches.mapM' fun branch => do
   match branch.1 with
-  | [label] => return (← observe state (observationMap (support state)) label).2
-  | _ => throw "molecular execution did not retain singleton words"
+  | [] => throw "molecular execution did not retain singleton words"
+  | label::rest => match rest with
+    | [] => return (← observe state (observationMap (support state)) label).2
+    | _::_ => throw "molecular execution did not retain singleton words"
 
 structure Execution where
  initial : State
@@ -70,7 +80,7 @@ def quantumExecution (process : Process) : Except String Execution := do
  let records ← measurementRecords transformed
  let restored ← applyGate transformed (inverse gate) true
  return ⟨initial,transformed,decodeRows gate.wordMap,records,
-   restored.branches == initial.branches && restored.phaseCycle == initial.phaseCycle⟩
+   decide (restored.branches = initial.branches ∧ restored.phaseCycle = initial.phaseCycle)⟩
 
 def stringsValue (xs : List String) : SFT.Host.Canonical.Value := .array (xs.map .text)
 def branchValue (row : Word × String) : SFT.Host.Canonical.Value :=

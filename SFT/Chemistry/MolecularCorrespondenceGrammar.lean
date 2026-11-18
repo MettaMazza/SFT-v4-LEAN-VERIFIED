@@ -143,7 +143,7 @@ theorem candidatesComplete (c : Candidate) : c ∈ candidates := by
     apply CommonRefinement.memFlatMap _ _ chemistry _ hchemistry
     apply CommonRefinement.memFlatMap _ _ observation _ hobservation
     apply CommonRefinement.memFlatMap _ _ result _ hresult
-    exact Count.TraceDerivation.memMap _ extension _ hextension
+    exact Count.TraceDerivation.memMap _ resource _ hresource
 
 theorem sourceDecisionBlock0000 (chemistry : Chemistry) (observation : Observation) (result : Result) (resource : Resource) :
  survives ⟨.rejected,.rejected,.rejected,.rejected,chemistry,observation,result,resource⟩ = criteriaDecision ⟨.rejected,.rejected,.rejected,.rejected,chemistry,observation,result,resource⟩ := by

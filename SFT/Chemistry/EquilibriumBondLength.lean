@@ -30,7 +30,7 @@ theorem outsideExample : equilibriumLengthMultiplier "HD" =
 def commonBaseWitness : Except String Bool := do
  let base ← LeptonRatios.divide (wholeRatio (← MolecularSpectroscopy.upSupport))
    (wholeRatio (← MolecularSpectroscopy.downSupport))
- pure (base.num == 7 && base.den == 5)
+ pure (@decide (base.num = 7) (Int.decEq _ _) && @decide (base.den = 5) (Nat.decEq _ _))
 def typedCorrectionsWitness : Except String Bool := do
  let h := (← FoldFirstReturn.generatorPeriod) * (← MolecularSpectroscopy.upSupport)
  let d := (← MolecularSpectroscopy.terminalSupport) + (← MolecularSpectroscopy.upSupport) + 1

@@ -39,11 +39,11 @@ def validateSpec : Except String Unit := do
  if MediationEvidence.dependencies.isEmpty || !(SFT.Biology.LifeOrganizationSource.distinctIds MediationEvidence.dependencies) then
   throw "Medicine dependencies are empty or repeated"
  if !(witnesses.all id) then throw "Medicine operational witness failed"
- let expected := (MediationSource.requirements.map MediationSource.Requirement.sourceId).foldl
+ let expected := (MediationSource.requirements.map (fun requirement => requirement.sourceId)).foldl
   (fun acc value => if acc.any (Text.equal value) then acc else acc++[value]) []
  if sourceIds.isEmpty || !(Text.equal (Canonical.render (.array (sourceIds.map Value.text))) (Canonical.render (.array (expected.map Value.text)))) then
   throw "Medicine source identities differ from the registered binding"
- if !Text.equal targetId "sft-med-patient-identity-001-authority-correspondence" then throw "Medicine target identity is invalid"
+ if !Text.equal targetId "sft-med-mediation-001-authority-correspondence" then throw "Medicine target identity is invalid"
  return ()
 #print axioms claimId
 #print axioms experimentId

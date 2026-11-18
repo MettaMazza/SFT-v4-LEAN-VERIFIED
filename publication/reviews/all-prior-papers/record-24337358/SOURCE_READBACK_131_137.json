@@ -1,0 +1,1294 @@
+{
+  "updated_at": "2026-11-18T23:22:48.253567+00:00",
+  "sections_read": [
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_reads": [
+    {
+      "path": "sft/computation/operations.py",
+      "sha256": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+      "scope": "full"
+    },
+    {
+      "path": "sft/computation/catalog.py",
+      "sha256": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+      "scope": "full"
+    },
+    {
+      "path": "sft/computation/generated_law.py",
+      "sha256": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+      "scope": "full"
+    },
+    {
+      "path": "sft/computation/spec_data.py",
+      "sha256": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+      "scope": "Topic type, first four formal-computation records and inventory validation; unrelated topics not claimed read"
+    },
+    {
+      "path": "sft/computation/formal_computation/state_transition/law.py",
+      "sha256": "17cf1301bb86308ff2e0e3c3a2b45826e4ba06962b3498cb2edb41b60645f843",
+      "scope": "full"
+    },
+    {
+      "path": "sft/computation/formal_computation/language_grammar/law.py",
+      "sha256": "035d06972ac949fbedb6f6786977d58483e504f6207515760469b6b2f3e6ee25",
+      "scope": "full"
+    },
+    {
+      "path": "sft/computation/formal_computation/automaton/law.py",
+      "sha256": "3141f83347cb23352449e50e6551a36b2714f43f976d3ae6823d3852080a5b49",
+      "scope": "full"
+    },
+    {
+      "path": "sft/computation/formal_computation/rewriting/law.py",
+      "sha256": "d80ff2806620e698be8397b50d2edd5727812dddba266d594b2b243108afc99d",
+      "scope": "full"
+    }
+  ],
+  "records": [
+    {
+      "prefix": "State",
+      "native_modules_read": [
+        {
+          "path": "SFT/Computation/StateTransition.lean",
+          "sha256": "b10a3bf5bf66b9692e26b1977a888bf0bf67b040245c1ccadeb48c9e1c405fbb",
+          "declarations": [
+            "SFT.Computation.StateTransition.Row",
+            "SFT.Computation.StateTransition.System",
+            "SFT.Computation.StateTransition.rowBound",
+            "SFT.Computation.StateTransition.validateRows",
+            "SFT.Computation.StateTransition.create",
+            "SFT.Computation.StateTransition.targets",
+            "SFT.Computation.StateTransition.step",
+            "SFT.Computation.StateTransition.runFrom",
+            "SFT.Computation.StateTransition.run",
+            "SFT.Computation.StateTransition.rowBoundMeaning",
+            "SFT.Computation.StateTransition.stepMeaning",
+            "SFT.Computation.StateTransition.runBase",
+            "SFT.Computation.StateTransition.runAdmission",
+            "SFT.Computation.StateTransition.Execution",
+            "SFT.Computation.StateTransition.runFromMeaning",
+            "SFT.Computation.StateTransition.executionLength",
+            "SFT.Computation.StateTransition.executionInitial",
+            "SFT.Computation.StateTransition.RowsValid",
+            "SFT.Computation.StateTransition.validateMeaning",
+            "SFT.Computation.StateTransition.createMeaning",
+            "SFT.Computation.StateTransition.checkedRowsBound",
+            "SFT.Computation.StateTransition.targetMembership",
+            "SFT.Computation.StateTransition.stepSourceRow",
+            "SFT.Computation.StateTransition.admittedStepBound",
+            "SFT.Computation.StateTransition.executionStates"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.StateTransition.rowBoundMeaning",
+            "SFT.Computation.StateTransition.stepMeaning",
+            "SFT.Computation.StateTransition.runBase",
+            "SFT.Computation.StateTransition.runAdmission",
+            "SFT.Computation.StateTransition.runFromMeaning",
+            "SFT.Computation.StateTransition.executionLength",
+            "SFT.Computation.StateTransition.executionInitial",
+            "SFT.Computation.StateTransition.validateMeaning",
+            "SFT.Computation.StateTransition.createMeaning",
+            "SFT.Computation.StateTransition.checkedRowsBound",
+            "SFT.Computation.StateTransition.targetMembership",
+            "SFT.Computation.StateTransition.stepSourceRow",
+            "SFT.Computation.StateTransition.admittedStepBound",
+            "SFT.Computation.StateTransition.executionStates"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/StateComposition.lean",
+          "sha256": "8f476c17affaa454512482a2d57052737b2fb0e7b623f95e37af6bf4477c32c7",
+          "declarations": [
+            "SFT.Computation.StateComposition.Path",
+            "SFT.Computation.StateComposition.pathExecution",
+            "SFT.Computation.StateComposition.executionPath",
+            "SFT.Computation.StateComposition.pathSerial",
+            "SFT.Computation.StateComposition.nativeSerial",
+            "SFT.Computation.StateComposition.nativePath",
+            "SFT.Computation.StateComposition.nativeComposition",
+            "SFT.Computation.StateComposition.pathSuccessor",
+            "SFT.Computation.StateComposition.successorTrace",
+            "SFT.Computation.StateComposition.pathTraceLength"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.StateComposition.pathExecution",
+            "SFT.Computation.StateComposition.executionPath",
+            "SFT.Computation.StateComposition.pathSerial",
+            "SFT.Computation.StateComposition.nativeSerial",
+            "SFT.Computation.StateComposition.nativePath",
+            "SFT.Computation.StateComposition.nativeComposition",
+            "SFT.Computation.StateComposition.pathSuccessor",
+            "SFT.Computation.StateComposition.successorTrace",
+            "SFT.Computation.StateComposition.pathTraceLength"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/StateExtension.lean",
+          "sha256": "f9af44814d09c6ae361e69f88c6fd00a9cf8bb0892b85a389b17a6d218982371",
+          "declarations": [
+            "SFT.Computation.StateExtension.matchesKey",
+            "SFT.Computation.StateExtension.validAvoidsSeen",
+            "SFT.Computation.StateExtension.validTargetSingleton",
+            "SFT.Computation.StateExtension.admittedStepIff",
+            "SFT.Computation.StateExtension.extendStep",
+            "SFT.Computation.StateExtension.extendExecution",
+            "SFT.Computation.StateExtension.extendRun",
+            "SFT.Computation.StateExtension.appendPreservesRun",
+            "SFT.Computation.StateExtension.commonAssemblyPreservesRuns"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.StateExtension.matchesKey",
+            "SFT.Computation.StateExtension.validAvoidsSeen",
+            "SFT.Computation.StateExtension.validTargetSingleton",
+            "SFT.Computation.StateExtension.admittedStepIff",
+            "SFT.Computation.StateExtension.extendStep",
+            "SFT.Computation.StateExtension.extendExecution",
+            "SFT.Computation.StateExtension.extendRun",
+            "SFT.Computation.StateExtension.appendPreservesRun",
+            "SFT.Computation.StateExtension.commonAssemblyPreservesRuns"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/StateWords.lean",
+          "sha256": "052a31820a9e800e6684e86d8dac321b0ae3876e38d1a26f8fb3f4d4144a0bb7",
+          "declarations": [
+            "SFT.Computation.StateWords.grow",
+            "SFT.Computation.StateWords.generatedWords",
+            "SFT.Computation.StateWords.rewriteRows",
+            "SFT.Computation.StateWords.exactRewrite",
+            "SFT.Computation.StateWords.growMeaning",
+            "SFT.Computation.StateWords.generatedMeaning",
+            "SFT.Computation.StateWords.generatedMembership",
+            "SFT.Computation.StateWords.growSuccessor",
+            "SFT.Computation.StateWords.rewriteMeaning",
+            "SFT.Computation.StateWords.rewriteTrace",
+            "SFT.Computation.StateWords.rewriteLength",
+            "SFT.Computation.StateWords.rewriteCoordinate"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.StateWords.growMeaning",
+            "SFT.Computation.StateWords.generatedMeaning",
+            "SFT.Computation.StateWords.generatedMembership",
+            "SFT.Computation.StateWords.growSuccessor",
+            "SFT.Computation.StateWords.rewriteMeaning",
+            "SFT.Computation.StateWords.rewriteTrace",
+            "SFT.Computation.StateWords.rewriteLength",
+            "SFT.Computation.StateWords.rewriteCoordinate"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/StateGrammar.lean",
+          "sha256": "b21da3001319b5a59d927f1165995b8a935824d74c90c2094c3950150b41297c",
+          "declarations": [
+            "SFT.Computation.StateGrammar.Carrier",
+            "SFT.Computation.StateGrammar.carrierName",
+            "SFT.Computation.StateGrammar.Identity",
+            "SFT.Computation.StateGrammar.identityName",
+            "SFT.Computation.StateGrammar.Relation",
+            "SFT.Computation.StateGrammar.relationName",
+            "SFT.Computation.StateGrammar.Trace",
+            "SFT.Computation.StateGrammar.traceName",
+            "SFT.Computation.StateGrammar.Boundary",
+            "SFT.Computation.StateGrammar.boundaryName",
+            "SFT.Computation.StateGrammar.Composition",
+            "SFT.Computation.StateGrammar.compositionName",
+            "SFT.Computation.StateGrammar.Generality",
+            "SFT.Computation.StateGrammar.generalityName",
+            "SFT.Computation.StateGrammar.Addition",
+            "SFT.Computation.StateGrammar.additionName",
+            "SFT.Computation.StateGrammar.Candidate",
+            "SFT.Computation.StateGrammar.sourceFields",
+            "SFT.Computation.StateGrammar.candidateId",
+            "SFT.Computation.StateGrammar.exactForm",
+            "SFT.Computation.StateGrammar.survivorId",
+            "SFT.Computation.StateGrammar.survives",
+            "SFT.Computation.StateGrammar.criteriaDecision",
+            "SFT.Computation.StateGrammar.decisionReason",
+            "SFT.Computation.StateGrammar.generationRule",
+            "SFT.Computation.StateGrammar.grammarBoundary",
+            "SFT.Computation.StateGrammar.candidates",
+            "SFT.Computation.StateGrammar.survivor",
+            "SFT.Computation.StateGrammar.generatedCardinality",
+            "SFT.Computation.StateGrammar.candidatesComplete",
+            "SFT.Computation.StateGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.StateGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.StateGrammar.uniqueSurvivor",
+            "SFT.Computation.StateGrammar.survivorAccepted",
+            "SFT.Computation.StateGrammar.ExactCriteria",
+            "SFT.Computation.StateGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.StateGrammar.carrier_rejected_rejected",
+            "SFT.Computation.StateGrammar.identity_rejected_rejected",
+            "SFT.Computation.StateGrammar.relation_rejected_rejected",
+            "SFT.Computation.StateGrammar.trace_rejected_rejected",
+            "SFT.Computation.StateGrammar.boundary_rejected_rejected",
+            "SFT.Computation.StateGrammar.composition_rejected_rejected",
+            "SFT.Computation.StateGrammar.generality_rejected_rejected",
+            "SFT.Computation.StateGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.StateGrammar.generatedCardinality",
+            "SFT.Computation.StateGrammar.candidatesComplete",
+            "SFT.Computation.StateGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.StateGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.StateGrammar.uniqueSurvivor",
+            "SFT.Computation.StateGrammar.survivorAccepted",
+            "SFT.Computation.StateGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.StateGrammar.carrier_rejected_rejected",
+            "SFT.Computation.StateGrammar.identity_rejected_rejected",
+            "SFT.Computation.StateGrammar.relation_rejected_rejected",
+            "SFT.Computation.StateGrammar.trace_rejected_rejected",
+            "SFT.Computation.StateGrammar.boundary_rejected_rejected",
+            "SFT.Computation.StateGrammar.composition_rejected_rejected",
+            "SFT.Computation.StateGrammar.generality_rejected_rejected",
+            "SFT.Computation.StateGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/StateWitnesses.lean",
+          "sha256": "163421ef86b30c9039bbca234b6bd793bf07510d82860b27eaf1ddd7aa3b7eb9",
+          "declarations": [
+            "SFT.Computation.StateWitnesses.Witness",
+            "SFT.Computation.StateWitnesses.traceCheck",
+            "SFT.Computation.StateWitnesses.wordsCheck",
+            "SFT.Computation.StateWitnesses.rewriteCheck",
+            "SFT.Computation.StateWitnesses.witnesses",
+            "SFT.Computation.StateWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.StateWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/StateControls.lean",
+          "sha256": "0938bb8509ee3af615ca21a7e421edb666f8aba6eda93f2d9b9523a542bbda85",
+          "declarations": [
+            "SFT.Computation.StateControls.laws",
+            "SFT.Computation.StateControls.exclusions",
+            "SFT.Computation.StateControls.closureValue",
+            "SFT.Computation.StateControls.falseCandidate",
+            "SFT.Computation.StateControls.survivorIds",
+            "SFT.Computation.StateControls.distinctIdentifiers",
+            "SFT.Computation.StateControls.falsePremise",
+            "SFT.Computation.StateControls.tamperedSource",
+            "SFT.Computation.StateControls.tamperedArtifact",
+            "SFT.Computation.StateControls.boundary",
+            "SFT.Computation.StateControls.falsePremisePassed",
+            "SFT.Computation.StateControls.boundaryPassed",
+            "SFT.Computation.StateControls.controlRecords",
+            "SFT.Computation.StateControls.resultData",
+            "SFT.Computation.StateControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.StateControls.falsePremisePassed",
+            "SFT.Computation.StateControls.boundaryPassed"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/StateEvidence.lean",
+          "sha256": "695643e9756c0639de0c0e5faa7d172e22a046f7a0035277d48626bc8ecb6b23",
+          "declarations": [
+            "SFT.Computation.StateEvidence.candidateRecord",
+            "SFT.Computation.StateEvidence.completenessRecord",
+            "SFT.Computation.StateEvidence.registrationData",
+            "SFT.Computation.StateEvidence.registration",
+            "SFT.Computation.StateEvidence.generatedCandidateData",
+            "SFT.Computation.StateEvidence.censusData",
+            "SFT.Computation.StateEvidence.census",
+            "SFT.Computation.StateEvidence.decisionData",
+            "SFT.Computation.StateEvidence.decision",
+            "SFT.Computation.StateEvidence.decideCandidate",
+            "SFT.Computation.StateEvidence.closureData",
+            "SFT.Computation.StateEvidence.closure",
+            "SFT.Computation.StateEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.StateEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.StateEvidence.registrationHasNoAxioms",
+            "SFT.Computation.StateEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.StateEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.StateEvidence.why",
+            "SFT.Computation.StateEvidence.derivation",
+            "SFT.Computation.StateEvidence.check",
+            "SFT.Computation.StateEvidence.limitations",
+            "SFT.Computation.StateEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.StateEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.StateEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.StateEvidence.registrationHasNoAxioms",
+            "SFT.Computation.StateEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.StateEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_182_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "c0a9cb30bbf0af493d2c3ef3b9f8e61cadf85a7ffbba015830440bd3e4774804",
+        "matching_theorems": 63
+      },
+      "retained_reports": [
+        {
+          "path": "verification/TURN_182_STATE_COMPLETION.json",
+          "sha256": "63cd9fe81d32dcb5fdc1c37a43f8a48c2677d69fda8a02d307d1fa1945fb21ad",
+          "result": {
+            "claim_id": "SFT-COMP-FORM-STATE-TRANSITION-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_path": "sft/computation/formal_computation/state_transition/law.py",
+            "related_sources": [
+              "sft/computation/operations.py",
+              "sft/computation/catalog.py",
+              "sft/computation/spec_data.py",
+              "sft/computation/generated_law.py"
+            ],
+            "status": "complete",
+            "components": {
+              "operations.ExactTransitionSystem": "StateTransition preserves original state/action uniqueness order, nonempty carriers and row-by-row carrier/duplicate-coordinate guards/errors. Partial relations remain allowed. Original step full filter requires exactly one target; original run initial membership/error order/full trace preserved. Native admission iff, row/target membership, all trace states in carrier, initial retention, length and exact execution-chain equivalence.",
+              "catalog Trace/Composition laws": "StateComposition retains exact terminal interface and proves every successful trace has a Path decomposition; serial action/path composition preserves all retained records and joins the shared interface once. StateExtension proves both component traces preserved in a common admitted assembly, with compatibility determined by original constructor.",
+              "catalog induction base/successor": "Native identity path and one-action successor, exact previous trace plus appended target. Every original successful step/execution/run is preserved in any admitted extension retaining original carriers/rows, including explicit append of generated carrier/rows. No unrecorded predecessor or new transition rule.",
+              "operations.generated_words": "StateWords exact original alphabet/position uniqueness and nonempty-alphabet errors. Source frontier iteration from empty word, cumulative empty-One marker then every width in source order. Native frontier and cumulative support correspondence, exhaustive membership at every finite depth and complete next-layer append. Original literal empty-One collisions retained, not incorrectly deduplicated.",
+              "operations.exact_rewrite": "Original position uniqueness first, equal word/position lengths and held-coordinate validation; exact zip/map output and original errors. Native success iff original conditions, full position trace, exact selected/unchanged coordinate output and preserved length.",
+              "operations.group_witnesses(formal_computation)": "All three original native operations: two-step held/returned trace; seven generated words; exact second-position rewrite. Native allWitnessesPass, original names/statements.",
+              "catalog/spec_data/generated_law": "Original eight axes/all256 Cartesian candidates, source order/IDs/forms/reasons and every coordinate rejection, unique survivor, full controls/exposition/closure/registration retained. Complete fresh native actual lookup/program outputs/all hashes/unknown-ID refusal match pinned artifacts."
+            },
+            "dependencies": [
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": "All seven complete before entry",
+            "native_audit": "verification/TURN_182_PARITY_REPORT.json",
+            "program_comparison": "verification/TURN_182_PROGRAM_REPORT.json",
+            "source_cases": [
+              "verification/TURN_180_STATE_CASES.log",
+              "verification/TURN_182_WORD_CASES.log"
+            ],
+            "remaining": [],
+            "completion_count": 40
+          }
+        },
+        {
+          "path": "verification/TURN_182_PROGRAM_REPORT.json",
+          "sha256": "88cf6d40522ce87bffb4299ad1d56c72c4e46406cd216335b893347d5ea1cded",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:d6baac855792700e19eea8e212398cc9d04f90d5282e644b593777276c3aa6ec",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All StateProgram method output fields; full engine admission integration remains separate"
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "Language",
+      "native_modules_read": [
+        {
+          "path": "SFT/Computation/LanguageDerivation.lean",
+          "sha256": "c5482c4ddca4baf145496705ab8b2169ce571a16a22c0183ee91019c99a9e657",
+          "declarations": [
+            "SFT.Computation.LanguageDerivation.Derivation",
+            "SFT.Computation.LanguageDerivation.derivationSound",
+            "SFT.Computation.LanguageDerivation.derivationComplete",
+            "SFT.Computation.LanguageDerivation.exactMembershipCertificate",
+            "SFT.Computation.LanguageDerivation.derivationDepth",
+            "SFT.Computation.LanguageDerivation.derivationCarrier",
+            "SFT.Computation.LanguageDerivation.generatedCertificate",
+            "SFT.Computation.LanguageDerivation.appendCertificate",
+            "SFT.Computation.LanguageDerivation.productionPredecessor",
+            "SFT.Computation.LanguageDerivation.composeDerivations"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.LanguageDerivation.derivationSound",
+            "SFT.Computation.LanguageDerivation.derivationComplete",
+            "SFT.Computation.LanguageDerivation.exactMembershipCertificate",
+            "SFT.Computation.LanguageDerivation.derivationDepth",
+            "SFT.Computation.LanguageDerivation.derivationCarrier",
+            "SFT.Computation.LanguageDerivation.generatedCertificate",
+            "SFT.Computation.LanguageDerivation.appendCertificate",
+            "SFT.Computation.LanguageDerivation.productionPredecessor",
+            "SFT.Computation.LanguageDerivation.composeDerivations"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/LanguageGrammar.lean",
+          "sha256": "99305ae87e9a1f34f151de509e6a209420a65ba92a718d684b5ace880e2c9472",
+          "declarations": [
+            "SFT.Computation.LanguageGrammar.Carrier",
+            "SFT.Computation.LanguageGrammar.carrierName",
+            "SFT.Computation.LanguageGrammar.Identity",
+            "SFT.Computation.LanguageGrammar.identityName",
+            "SFT.Computation.LanguageGrammar.Relation",
+            "SFT.Computation.LanguageGrammar.relationName",
+            "SFT.Computation.LanguageGrammar.Trace",
+            "SFT.Computation.LanguageGrammar.traceName",
+            "SFT.Computation.LanguageGrammar.Boundary",
+            "SFT.Computation.LanguageGrammar.boundaryName",
+            "SFT.Computation.LanguageGrammar.Composition",
+            "SFT.Computation.LanguageGrammar.compositionName",
+            "SFT.Computation.LanguageGrammar.Generality",
+            "SFT.Computation.LanguageGrammar.generalityName",
+            "SFT.Computation.LanguageGrammar.Addition",
+            "SFT.Computation.LanguageGrammar.additionName",
+            "SFT.Computation.LanguageGrammar.Candidate",
+            "SFT.Computation.LanguageGrammar.sourceFields",
+            "SFT.Computation.LanguageGrammar.candidateId",
+            "SFT.Computation.LanguageGrammar.exactForm",
+            "SFT.Computation.LanguageGrammar.survivorId",
+            "SFT.Computation.LanguageGrammar.survives",
+            "SFT.Computation.LanguageGrammar.criteriaDecision",
+            "SFT.Computation.LanguageGrammar.decisionReason",
+            "SFT.Computation.LanguageGrammar.generationRule",
+            "SFT.Computation.LanguageGrammar.grammarBoundary",
+            "SFT.Computation.LanguageGrammar.candidates",
+            "SFT.Computation.LanguageGrammar.survivor",
+            "SFT.Computation.LanguageGrammar.generatedCardinality",
+            "SFT.Computation.LanguageGrammar.candidatesComplete",
+            "SFT.Computation.LanguageGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.LanguageGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.LanguageGrammar.uniqueSurvivor",
+            "SFT.Computation.LanguageGrammar.survivorAccepted",
+            "SFT.Computation.LanguageGrammar.ExactCriteria",
+            "SFT.Computation.LanguageGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.LanguageGrammar.carrier_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.identity_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.relation_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.trace_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.boundary_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.composition_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.generality_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.LanguageGrammar.generatedCardinality",
+            "SFT.Computation.LanguageGrammar.candidatesComplete",
+            "SFT.Computation.LanguageGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.LanguageGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.LanguageGrammar.uniqueSurvivor",
+            "SFT.Computation.LanguageGrammar.survivorAccepted",
+            "SFT.Computation.LanguageGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.LanguageGrammar.carrier_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.identity_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.relation_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.trace_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.boundary_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.composition_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.generality_rejected_rejected",
+            "SFT.Computation.LanguageGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Compared entire normalized code against fully read State template; all residual code differences and all changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/LanguageWitnesses.lean",
+          "sha256": "c57c2456d18e457e9cc240920f1c0651f1bf4ef0dedf7ca5afeb4fb9f1a81aef",
+          "declarations": [
+            "SFT.Computation.LanguageWitnesses.Witness",
+            "SFT.Computation.LanguageWitnesses.traceCheck",
+            "SFT.Computation.LanguageWitnesses.wordsCheck",
+            "SFT.Computation.LanguageWitnesses.rewriteCheck",
+            "SFT.Computation.LanguageWitnesses.witnesses",
+            "SFT.Computation.LanguageWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.LanguageWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Compared entire normalized code against fully read State template; all residual code differences and all changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/LanguageControls.lean",
+          "sha256": "b3e0f10377e3d336f1252153f96252efcc42268c3b63b9fe830a24f6fb9441dc",
+          "declarations": [
+            "SFT.Computation.LanguageControls.laws",
+            "SFT.Computation.LanguageControls.exclusions",
+            "SFT.Computation.LanguageControls.closureValue",
+            "SFT.Computation.LanguageControls.falseCandidate",
+            "SFT.Computation.LanguageControls.survivorIds",
+            "SFT.Computation.LanguageControls.distinctIdentifiers",
+            "SFT.Computation.LanguageControls.falsePremise",
+            "SFT.Computation.LanguageControls.tamperedSource",
+            "SFT.Computation.LanguageControls.tamperedArtifact",
+            "SFT.Computation.LanguageControls.boundary",
+            "SFT.Computation.LanguageControls.falsePremisePassed",
+            "SFT.Computation.LanguageControls.boundaryPassed",
+            "SFT.Computation.LanguageControls.controlRecords",
+            "SFT.Computation.LanguageControls.resultData",
+            "SFT.Computation.LanguageControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.LanguageControls.falsePremisePassed",
+            "SFT.Computation.LanguageControls.boundaryPassed"
+          ],
+          "inspection": "Compared entire normalized code against fully read State template; all residual code differences and all changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/LanguageEvidence.lean",
+          "sha256": "31f0f51d0fa5839dc6167b378faf045f6576dabfcf34fb4d8c97a3ff0145b4e7",
+          "declarations": [
+            "SFT.Computation.LanguageEvidence.candidateRecord",
+            "SFT.Computation.LanguageEvidence.completenessRecord",
+            "SFT.Computation.LanguageEvidence.registrationData",
+            "SFT.Computation.LanguageEvidence.registration",
+            "SFT.Computation.LanguageEvidence.generatedCandidateData",
+            "SFT.Computation.LanguageEvidence.censusData",
+            "SFT.Computation.LanguageEvidence.census",
+            "SFT.Computation.LanguageEvidence.decisionData",
+            "SFT.Computation.LanguageEvidence.decision",
+            "SFT.Computation.LanguageEvidence.decideCandidate",
+            "SFT.Computation.LanguageEvidence.closureData",
+            "SFT.Computation.LanguageEvidence.closure",
+            "SFT.Computation.LanguageEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.LanguageEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.LanguageEvidence.registrationHasNoAxioms",
+            "SFT.Computation.LanguageEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.LanguageEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.LanguageEvidence.why",
+            "SFT.Computation.LanguageEvidence.derivation",
+            "SFT.Computation.LanguageEvidence.check",
+            "SFT.Computation.LanguageEvidence.limitations",
+            "SFT.Computation.LanguageEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.LanguageEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.LanguageEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.LanguageEvidence.registrationHasNoAxioms",
+            "SFT.Computation.LanguageEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.LanguageEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Compared entire normalized code against fully read State template; all residual code differences and all changed literal strings inspected"
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_183_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "857c4d8318706c3d6f972d701ce9f5e85c6ffa0d6b8e45bc9492cf35608990da",
+        "matching_theorems": 32
+      },
+      "retained_reports": [
+        {
+          "path": "verification/TURN_183_LANGUAGE_COMPLETION.json",
+          "sha256": "1e7b2d1c68624737b21274c6fd943ee4a5363e1b4d346dfe5e17060158ddbe7c",
+          "result": {
+            "claim_id": "SFT-COMP-FORM-LANGUAGE-GRAMMAR-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_path": "sft/computation/formal_computation/language_grammar/law.py",
+            "related_sources": [
+              "sft/computation/operations.py",
+              "sft/computation/catalog.py",
+              "sft/computation/spec_data.py",
+              "sft/computation/generated_law.py"
+            ],
+            "status": "complete",
+            "components": {
+              "catalog/spec_data carrier and productions": "Original complete alphabet, empty-One marker and finite successor-word support use the unchanged StateWords generatedWords implementation of operations.generated_words. LanguageDerivation models exactly its empty frontier and append-held-symbol production clauses; no conventional grammar hierarchy or infinite language added.",
+              "derivation trees and exact membership certificates": "LanguageDerivation proves native derivation soundness and completeness against exact words support at every finite depth. generatedCertificate is iff membership in the original cumulative output: empty-One marker or a positive bounded-depth derivation. Proof trees retain predecessors, held symbols and exact depths; depth/carrier and predecessor recovery proved.",
+              "catalog trace/composition/induction": "Derivation composition proves exact concatenation at the summed finite construction depth. Every non-base derivation recovers its admitted predecessor and final held symbol. The original empty frontier base, append production and prior StateWords full-layer successor establish arbitrary finite formation. Original output marker remains distinguished from empty host frontier. Prior StateComposition/StateExtension retain all original group transition and rewrite traces; no new operational model.",
+              "operations.group_witnesses(formal_computation)": "Same unchanged shared ExactTransitionSystem.run, generated_words and exact_rewrite implementations as the completed preceding dependency. All three original claim-specific witness names/statements and actual native outcomes retained; allWitnessesPass.",
+              "catalog/spec_data/generated_law binding": "Complete original eight-axis256 grammar, source order/IDs/forms/reasons, exhaustive enumeration/unique survivor/every coordinate rejection; original laws, controls, scope/exposition/registration retained. Full fresh native256 actual lookups and all registration/census/closure/control/hash/unknown-ID fields match pinned artifacts."
+            },
+            "dependencies": [
+              "SFT-COMP-FORM-STATE-TRANSITION-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": "All eight complete before entry",
+            "native_audit": "verification/TURN_183_PARITY_REPORT.json",
+            "program_comparison": "verification/TURN_183_PROGRAM_REPORT.json",
+            "source_cases": [
+              "verification/TURN_180_STATE_CASES.log",
+              "verification/TURN_182_WORD_CASES.log"
+            ],
+            "remaining": [],
+            "completion_count": 41
+          }
+        },
+        {
+          "path": "verification/TURN_183_PROGRAM_REPORT.json",
+          "sha256": "c341e7e2decae25700571214db1f8228b3452123be19057309d6590b0a882956",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:e7e49951c44319178d53b75d6dbc14f7fcdf81dea5b263bf7e4215c3f358094e",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All LanguageProgram method output fields; full engine admission integration remains separate"
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "Automaton",
+      "native_modules_read": [
+        {
+          "path": "SFT/Computation/AutomatonRecognition.lean",
+          "sha256": "8a4af16ddd304c27054b84a9a16fe511c05291ac5947ad602e83b4d33545171c",
+          "declarations": [
+            "SFT.Computation.AutomatonRecognition.lastState",
+            "SFT.Computation.AutomatonRecognition.terminalState",
+            "SFT.Computation.AutomatonRecognition.HeldClass",
+            "SFT.Computation.AutomatonRecognition.Accepted",
+            "SFT.Computation.AutomatonRecognition.terminalAppend",
+            "SFT.Computation.AutomatonRecognition.acceptedMeaning",
+            "SFT.Computation.AutomatonRecognition.acceptedInitial",
+            "SFT.Computation.AutomatonRecognition.acceptedTraceLength",
+            "SFT.Computation.AutomatonRecognition.emptyClassRejects",
+            "SFT.Computation.AutomatonRecognition.identityAcceptance",
+            "SFT.Computation.AutomatonRecognition.acceptedTerminalInCarrier",
+            "SFT.Computation.AutomatonRecognition.acceptedComposition",
+            "SFT.Computation.AutomatonRecognition.acceptancePreserved",
+            "SFT.Computation.AutomatonRecognition.executionInputAlphabet",
+            "SFT.Computation.AutomatonRecognition.acceptedInputAlphabet",
+            "SFT.Computation.AutomatonRecognition.acceptedSuccessor"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AutomatonRecognition.terminalAppend",
+            "SFT.Computation.AutomatonRecognition.acceptedMeaning",
+            "SFT.Computation.AutomatonRecognition.acceptedInitial",
+            "SFT.Computation.AutomatonRecognition.acceptedTraceLength",
+            "SFT.Computation.AutomatonRecognition.emptyClassRejects",
+            "SFT.Computation.AutomatonRecognition.identityAcceptance",
+            "SFT.Computation.AutomatonRecognition.acceptedTerminalInCarrier",
+            "SFT.Computation.AutomatonRecognition.acceptedComposition",
+            "SFT.Computation.AutomatonRecognition.acceptancePreserved",
+            "SFT.Computation.AutomatonRecognition.executionInputAlphabet",
+            "SFT.Computation.AutomatonRecognition.acceptedInputAlphabet",
+            "SFT.Computation.AutomatonRecognition.acceptedSuccessor"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/AutomatonGrammar.lean",
+          "sha256": "9c01e0fdd9b67f285dc938821501eafbd8537eb50f2dfc48ab0c5f0573c49f94",
+          "declarations": [
+            "SFT.Computation.AutomatonGrammar.Carrier",
+            "SFT.Computation.AutomatonGrammar.carrierName",
+            "SFT.Computation.AutomatonGrammar.Identity",
+            "SFT.Computation.AutomatonGrammar.identityName",
+            "SFT.Computation.AutomatonGrammar.Relation",
+            "SFT.Computation.AutomatonGrammar.relationName",
+            "SFT.Computation.AutomatonGrammar.Trace",
+            "SFT.Computation.AutomatonGrammar.traceName",
+            "SFT.Computation.AutomatonGrammar.Boundary",
+            "SFT.Computation.AutomatonGrammar.boundaryName",
+            "SFT.Computation.AutomatonGrammar.Composition",
+            "SFT.Computation.AutomatonGrammar.compositionName",
+            "SFT.Computation.AutomatonGrammar.Generality",
+            "SFT.Computation.AutomatonGrammar.generalityName",
+            "SFT.Computation.AutomatonGrammar.Addition",
+            "SFT.Computation.AutomatonGrammar.additionName",
+            "SFT.Computation.AutomatonGrammar.Candidate",
+            "SFT.Computation.AutomatonGrammar.sourceFields",
+            "SFT.Computation.AutomatonGrammar.candidateId",
+            "SFT.Computation.AutomatonGrammar.exactForm",
+            "SFT.Computation.AutomatonGrammar.survivorId",
+            "SFT.Computation.AutomatonGrammar.survives",
+            "SFT.Computation.AutomatonGrammar.criteriaDecision",
+            "SFT.Computation.AutomatonGrammar.decisionReason",
+            "SFT.Computation.AutomatonGrammar.generationRule",
+            "SFT.Computation.AutomatonGrammar.grammarBoundary",
+            "SFT.Computation.AutomatonGrammar.candidates",
+            "SFT.Computation.AutomatonGrammar.survivor",
+            "SFT.Computation.AutomatonGrammar.generatedCardinality",
+            "SFT.Computation.AutomatonGrammar.candidatesComplete",
+            "SFT.Computation.AutomatonGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.AutomatonGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.AutomatonGrammar.uniqueSurvivor",
+            "SFT.Computation.AutomatonGrammar.survivorAccepted",
+            "SFT.Computation.AutomatonGrammar.ExactCriteria",
+            "SFT.Computation.AutomatonGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.AutomatonGrammar.carrier_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.identity_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.relation_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.trace_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.boundary_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.composition_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.generality_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AutomatonGrammar.generatedCardinality",
+            "SFT.Computation.AutomatonGrammar.candidatesComplete",
+            "SFT.Computation.AutomatonGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.AutomatonGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.AutomatonGrammar.uniqueSurvivor",
+            "SFT.Computation.AutomatonGrammar.survivorAccepted",
+            "SFT.Computation.AutomatonGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.AutomatonGrammar.carrier_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.identity_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.relation_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.trace_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.boundary_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.composition_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.generality_rejected_rejected",
+            "SFT.Computation.AutomatonGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Compared entire normalized code against fully read State template; all residual code differences and all changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/AutomatonWitnesses.lean",
+          "sha256": "0961e184a2a73c516920856aa9a16483398e37028cb8d367c4b74bdbfdd3cb7a",
+          "declarations": [
+            "SFT.Computation.AutomatonWitnesses.Witness",
+            "SFT.Computation.AutomatonWitnesses.traceCheck",
+            "SFT.Computation.AutomatonWitnesses.wordsCheck",
+            "SFT.Computation.AutomatonWitnesses.rewriteCheck",
+            "SFT.Computation.AutomatonWitnesses.witnesses",
+            "SFT.Computation.AutomatonWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AutomatonWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Compared entire normalized code against fully read State template; all residual code differences and all changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/AutomatonControls.lean",
+          "sha256": "507c4f42a98d813659d94ac900218c2023c3731b0ac36e52bc523707255a7dc7",
+          "declarations": [
+            "SFT.Computation.AutomatonControls.laws",
+            "SFT.Computation.AutomatonControls.exclusions",
+            "SFT.Computation.AutomatonControls.closureValue",
+            "SFT.Computation.AutomatonControls.falseCandidate",
+            "SFT.Computation.AutomatonControls.survivorIds",
+            "SFT.Computation.AutomatonControls.distinctIdentifiers",
+            "SFT.Computation.AutomatonControls.falsePremise",
+            "SFT.Computation.AutomatonControls.tamperedSource",
+            "SFT.Computation.AutomatonControls.tamperedArtifact",
+            "SFT.Computation.AutomatonControls.boundary",
+            "SFT.Computation.AutomatonControls.falsePremisePassed",
+            "SFT.Computation.AutomatonControls.boundaryPassed",
+            "SFT.Computation.AutomatonControls.controlRecords",
+            "SFT.Computation.AutomatonControls.resultData",
+            "SFT.Computation.AutomatonControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AutomatonControls.falsePremisePassed",
+            "SFT.Computation.AutomatonControls.boundaryPassed"
+          ],
+          "inspection": "Compared entire normalized code against fully read State template; all residual code differences and all changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/AutomatonEvidence.lean",
+          "sha256": "565dce08d8d6f4e66af26682939873b8230ae09d808a8d7104c57074dbf8390b",
+          "declarations": [
+            "SFT.Computation.AutomatonEvidence.candidateRecord",
+            "SFT.Computation.AutomatonEvidence.completenessRecord",
+            "SFT.Computation.AutomatonEvidence.registrationData",
+            "SFT.Computation.AutomatonEvidence.registration",
+            "SFT.Computation.AutomatonEvidence.generatedCandidateData",
+            "SFT.Computation.AutomatonEvidence.censusData",
+            "SFT.Computation.AutomatonEvidence.census",
+            "SFT.Computation.AutomatonEvidence.decisionData",
+            "SFT.Computation.AutomatonEvidence.decision",
+            "SFT.Computation.AutomatonEvidence.decideCandidate",
+            "SFT.Computation.AutomatonEvidence.closureData",
+            "SFT.Computation.AutomatonEvidence.closure",
+            "SFT.Computation.AutomatonEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.AutomatonEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.AutomatonEvidence.registrationHasNoAxioms",
+            "SFT.Computation.AutomatonEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.AutomatonEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.AutomatonEvidence.why",
+            "SFT.Computation.AutomatonEvidence.derivation",
+            "SFT.Computation.AutomatonEvidence.check",
+            "SFT.Computation.AutomatonEvidence.limitations",
+            "SFT.Computation.AutomatonEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AutomatonEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.AutomatonEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.AutomatonEvidence.registrationHasNoAxioms",
+            "SFT.Computation.AutomatonEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.AutomatonEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Compared entire normalized code against fully read State template; all residual code differences and all changed literal strings inspected"
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_184_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "fdb97e61b1ed5a8336df2b4413d58e594e775c8353981da312595871033d20d1",
+        "matching_theorems": 35
+      },
+      "retained_reports": [
+        {
+          "path": "verification/TURN_184_AUTOMATON_COMPLETION.json",
+          "sha256": "0392777b2da2d2166a6983a9f9ebb6fd51b6c778b965a7561d754d8c3e7462f2",
+          "result": {
+            "claim_id": "SFT-COMP-FORM-AUTOMATON-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_path": "sft/computation/formal_computation/automaton/law.py",
+            "related_sources": [
+              "sft/computation/operations.py",
+              "sft/computation/catalog.py",
+              "sft/computation/spec_data.py",
+              "sft/computation/generated_law.py"
+            ],
+            "status": "complete",
+            "components": {
+              "catalog/spec_data finite carrier and relation": "Original finite states/input alphabet/source-bound transition relation/initial state/complete trace use unchanged StateTransition constructor/step/run and its completed general proofs. No conventional machine model, total-transition premise or universality claim is added.",
+              "catalog/spec_data accepting class": "AutomatonRecognition explicitly represents the declarative accepting-class and retained-run statement: Accepted records the original initial carrier membership, complete Path and held terminal class. acceptedMeaning proves iff original run succeeds with exactly that trace and terminal membership. It is a typed proposition interpreting the source statement, not an additional operations.py executable method.",
+              "carrier and boundary preservation": "Accepted traces retain the original initial state, exact action-plus-initial length, and input symbols in the admitted system alphabet. A held accepting class retains its terminal within the original state carrier. Empty class rejects; identity trace accepts exactly when its initial state is held in the accepting class.",
+              "catalog composition and induction": "Original Path/transition composition preserves the full recognition trace and matching interface; one generated input successor accepts precisely with its generated target held in the accepting class. Any admitted carrier/row extension preserves prior accepted traces under the same class. Native base/successor/extension proofs are arbitrary finite, not witness-depth tables.",
+              "operations.group_witnesses(formal_computation)": "All three original claim-specific witnesses execute the unchanged native transition run, generated_words and exact_rewrite, with original names/statements and allWitnessesPass. Prior6349 source-expression comparisons remain applicable.",
+              "catalog/spec_data/generated_law": "Complete original eight-axis256 candidate product, source order/IDs/forms/reasons, unique survivor/exhaustive coverage/rejections, four controls, closure/exposition/registration and every source hash retained. Fresh full native program matches all256 actual lookups and every output/hash/unknown-ID refusal."
+            },
+            "dependencies": [
+              "SFT-COMP-FORM-LANGUAGE-GRAMMAR-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": "All eight complete before entry",
+            "native_audit": "verification/TURN_184_PARITY_REPORT.json",
+            "program_comparison": "verification/TURN_184_PROGRAM_REPORT.json",
+            "source_cases": [
+              "verification/TURN_180_STATE_CASES.log",
+              "verification/TURN_182_WORD_CASES.log"
+            ],
+            "remaining": [],
+            "completion_count": 42
+          }
+        },
+        {
+          "path": "verification/TURN_184_PROGRAM_REPORT.json",
+          "sha256": "6a048098d1dd194c2530d5c6fb1ee25eae2ceea43ed1be8ce104f5ab476684d0",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:2875e2c5834ff96fc547959b332f1a1f7a7e84c85bea5e3873518751be60cc6e",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All AutomatonProgram method output fields; full engine admission integration remains separate"
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "Rewriting",
+      "native_modules_read": [
+        {
+          "path": "SFT/Computation/RewritingDerivation.lean",
+          "sha256": "3b9aaac545b94331e171eec84da631ba12c6a8690ed9be4d295ae3ef01931877",
+          "declarations": [
+            "SFT.Computation.RewritingDerivation.overwriteRows",
+            "SFT.Computation.RewritingDerivation.commuteRows",
+            "SFT.Computation.RewritingDerivation.rewriteSuccessorAdmitted",
+            "SFT.Computation.RewritingDerivation.rewriteIdempotent",
+            "SFT.Computation.RewritingDerivation.Record",
+            "SFT.Computation.RewritingDerivation.Replays",
+            "SFT.Computation.RewritingDerivation.recordLength",
+            "SFT.Computation.RewritingDerivation.recordCoordinate",
+            "SFT.Computation.RewritingDerivation.Trace",
+            "SFT.Computation.RewritingDerivation.traceLengthPreserved",
+            "SFT.Computation.RewritingDerivation.traceComposition",
+            "SFT.Computation.RewritingDerivation.traceRecordsReplay"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.RewritingDerivation.overwriteRows",
+            "SFT.Computation.RewritingDerivation.commuteRows",
+            "SFT.Computation.RewritingDerivation.rewriteSuccessorAdmitted",
+            "SFT.Computation.RewritingDerivation.rewriteIdempotent",
+            "SFT.Computation.RewritingDerivation.recordLength",
+            "SFT.Computation.RewritingDerivation.recordCoordinate",
+            "SFT.Computation.RewritingDerivation.traceLengthPreserved",
+            "SFT.Computation.RewritingDerivation.traceComposition",
+            "SFT.Computation.RewritingDerivation.traceRecordsReplay"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/RewritingClasses.lean",
+          "sha256": "7bf270a37ba2aa1e42970562c80bfb948785a54fbc25146517e6314b94ae32de",
+          "declarations": [
+            "SFT.Computation.RewritingClasses.Admitted",
+            "SFT.Computation.RewritingClasses.Retained",
+            "SFT.Computation.RewritingClasses.Terminal",
+            "SFT.Computation.RewritingClasses.Cyclic",
+            "SFT.Computation.RewritingClasses.Branching",
+            "SFT.Computation.RewritingClasses.coordinateExists",
+            "SFT.Computation.RewritingClasses.occurrenceDecomposition",
+            "SFT.Computation.RewritingClasses.admittedPattern",
+            "SFT.Computation.RewritingClasses.unregisteredExcluded",
+            "SFT.Computation.RewritingClasses.sourceOutsideExcluded",
+            "SFT.Computation.RewritingClasses.successorOutsideExcluded",
+            "SFT.Computation.RewritingClasses.traceHead",
+            "SFT.Computation.RewritingClasses.retainedIdentity",
+            "SFT.Computation.RewritingClasses.retainedComposition",
+            "SFT.Computation.RewritingClasses.terminalTraceEmpty",
+            "SFT.Computation.RewritingClasses.terminalNotCyclic",
+            "SFT.Computation.RewritingClasses.terminalNotBranching",
+            "SFT.Computation.RewritingClasses.cyclicRepeat",
+            "SFT.Computation.RewritingClasses.branchTraces",
+            "SFT.Computation.RewritingClasses.retainedStep",
+            "SFT.Computation.RewritingClasses.retainedSuccessor",
+            "SFT.Computation.RewritingClasses.retainedExtension"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.RewritingClasses.coordinateExists",
+            "SFT.Computation.RewritingClasses.occurrenceDecomposition",
+            "SFT.Computation.RewritingClasses.admittedPattern",
+            "SFT.Computation.RewritingClasses.unregisteredExcluded",
+            "SFT.Computation.RewritingClasses.sourceOutsideExcluded",
+            "SFT.Computation.RewritingClasses.successorOutsideExcluded",
+            "SFT.Computation.RewritingClasses.traceHead",
+            "SFT.Computation.RewritingClasses.retainedIdentity",
+            "SFT.Computation.RewritingClasses.retainedComposition",
+            "SFT.Computation.RewritingClasses.terminalTraceEmpty",
+            "SFT.Computation.RewritingClasses.terminalNotCyclic",
+            "SFT.Computation.RewritingClasses.terminalNotBranching",
+            "SFT.Computation.RewritingClasses.cyclicRepeat",
+            "SFT.Computation.RewritingClasses.branchTraces",
+            "SFT.Computation.RewritingClasses.retainedStep",
+            "SFT.Computation.RewritingClasses.retainedSuccessor",
+            "SFT.Computation.RewritingClasses.retainedExtension"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/RewritingGrammar.lean",
+          "sha256": "40eab44c000a2237a6500a270cfde6dd5915c4f246277da8b79acc6329ea9c1c",
+          "declarations": [
+            "SFT.Computation.RewritingGrammar.Carrier",
+            "SFT.Computation.RewritingGrammar.carrierName",
+            "SFT.Computation.RewritingGrammar.Identity",
+            "SFT.Computation.RewritingGrammar.identityName",
+            "SFT.Computation.RewritingGrammar.Relation",
+            "SFT.Computation.RewritingGrammar.relationName",
+            "SFT.Computation.RewritingGrammar.Trace",
+            "SFT.Computation.RewritingGrammar.traceName",
+            "SFT.Computation.RewritingGrammar.Boundary",
+            "SFT.Computation.RewritingGrammar.boundaryName",
+            "SFT.Computation.RewritingGrammar.Composition",
+            "SFT.Computation.RewritingGrammar.compositionName",
+            "SFT.Computation.RewritingGrammar.Generality",
+            "SFT.Computation.RewritingGrammar.generalityName",
+            "SFT.Computation.RewritingGrammar.Addition",
+            "SFT.Computation.RewritingGrammar.additionName",
+            "SFT.Computation.RewritingGrammar.Candidate",
+            "SFT.Computation.RewritingGrammar.sourceFields",
+            "SFT.Computation.RewritingGrammar.candidateId",
+            "SFT.Computation.RewritingGrammar.exactForm",
+            "SFT.Computation.RewritingGrammar.survivorId",
+            "SFT.Computation.RewritingGrammar.survives",
+            "SFT.Computation.RewritingGrammar.criteriaDecision",
+            "SFT.Computation.RewritingGrammar.decisionReason",
+            "SFT.Computation.RewritingGrammar.generationRule",
+            "SFT.Computation.RewritingGrammar.grammarBoundary",
+            "SFT.Computation.RewritingGrammar.candidates",
+            "SFT.Computation.RewritingGrammar.survivor",
+            "SFT.Computation.RewritingGrammar.generatedCardinality",
+            "SFT.Computation.RewritingGrammar.candidatesComplete",
+            "SFT.Computation.RewritingGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.RewritingGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.RewritingGrammar.uniqueSurvivor",
+            "SFT.Computation.RewritingGrammar.survivorAccepted",
+            "SFT.Computation.RewritingGrammar.ExactCriteria",
+            "SFT.Computation.RewritingGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.RewritingGrammar.carrier_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.identity_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.relation_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.trace_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.boundary_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.composition_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.generality_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.RewritingGrammar.generatedCardinality",
+            "SFT.Computation.RewritingGrammar.candidatesComplete",
+            "SFT.Computation.RewritingGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.RewritingGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.RewritingGrammar.uniqueSurvivor",
+            "SFT.Computation.RewritingGrammar.survivorAccepted",
+            "SFT.Computation.RewritingGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.RewritingGrammar.carrier_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.identity_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.relation_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.trace_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.boundary_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.composition_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.generality_rejected_rejected",
+            "SFT.Computation.RewritingGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Compared entire normalized code against fully read State template; all residual code differences and all changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/RewritingWitnesses.lean",
+          "sha256": "579290cf221e4b31168585dd10c401d6be794f9bc0959317de4f7bd760eb9524",
+          "declarations": [
+            "SFT.Computation.RewritingWitnesses.Witness",
+            "SFT.Computation.RewritingWitnesses.traceCheck",
+            "SFT.Computation.RewritingWitnesses.wordsCheck",
+            "SFT.Computation.RewritingWitnesses.rewriteCheck",
+            "SFT.Computation.RewritingWitnesses.witnesses",
+            "SFT.Computation.RewritingWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.RewritingWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Compared entire normalized code against fully read State template; all residual code differences and all changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/RewritingControls.lean",
+          "sha256": "e4a24f018e08cf82a00510fd82d260b4fc70ce3280215cf0aec2f84b8c36b581",
+          "declarations": [
+            "SFT.Computation.RewritingControls.laws",
+            "SFT.Computation.RewritingControls.exclusions",
+            "SFT.Computation.RewritingControls.closureValue",
+            "SFT.Computation.RewritingControls.falseCandidate",
+            "SFT.Computation.RewritingControls.survivorIds",
+            "SFT.Computation.RewritingControls.distinctIdentifiers",
+            "SFT.Computation.RewritingControls.falsePremise",
+            "SFT.Computation.RewritingControls.tamperedSource",
+            "SFT.Computation.RewritingControls.tamperedArtifact",
+            "SFT.Computation.RewritingControls.boundary",
+            "SFT.Computation.RewritingControls.falsePremisePassed",
+            "SFT.Computation.RewritingControls.boundaryPassed",
+            "SFT.Computation.RewritingControls.controlRecords",
+            "SFT.Computation.RewritingControls.resultData",
+            "SFT.Computation.RewritingControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.RewritingControls.falsePremisePassed",
+            "SFT.Computation.RewritingControls.boundaryPassed"
+          ],
+          "inspection": "Compared entire normalized code against fully read State template; all residual code differences and all changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/RewritingEvidence.lean",
+          "sha256": "446c290cb68576acd47ecfaaf49a3880d889d059bef90850061920b0bc2b902b",
+          "declarations": [
+            "SFT.Computation.RewritingEvidence.candidateRecord",
+            "SFT.Computation.RewritingEvidence.completenessRecord",
+            "SFT.Computation.RewritingEvidence.registrationData",
+            "SFT.Computation.RewritingEvidence.registration",
+            "SFT.Computation.RewritingEvidence.generatedCandidateData",
+            "SFT.Computation.RewritingEvidence.censusData",
+            "SFT.Computation.RewritingEvidence.census",
+            "SFT.Computation.RewritingEvidence.decisionData",
+            "SFT.Computation.RewritingEvidence.decision",
+            "SFT.Computation.RewritingEvidence.decideCandidate",
+            "SFT.Computation.RewritingEvidence.closureData",
+            "SFT.Computation.RewritingEvidence.closure",
+            "SFT.Computation.RewritingEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.RewritingEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.RewritingEvidence.registrationHasNoAxioms",
+            "SFT.Computation.RewritingEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.RewritingEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.RewritingEvidence.why",
+            "SFT.Computation.RewritingEvidence.derivation",
+            "SFT.Computation.RewritingEvidence.check",
+            "SFT.Computation.RewritingEvidence.limitations",
+            "SFT.Computation.RewritingEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.RewritingEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.RewritingEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.RewritingEvidence.registrationHasNoAxioms",
+            "SFT.Computation.RewritingEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.RewritingEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Compared entire normalized code against fully read State template; all residual code differences and all changed literal strings inspected"
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_186_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "9cd9120e342e3213afbc822f11f71d54b57d2d9bd335509e094e8e6db91a3bd5",
+        "matching_theorems": 49
+      },
+      "retained_reports": [
+        {
+          "path": "verification/TURN_186_REWRITING_COMPLETION.json",
+          "sha256": "323e361d87cb0f6a5e2a64ef2a3b5dc2322f5ae7d86c591cd25921251f7c424d",
+          "result": {
+            "claim_id": "SFT-COMP-FORM-REWRITING-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_path": "sft/computation/formal_computation/rewriting/law.py",
+            "related_sources": [
+              "sft/computation/operations.py",
+              "sft/computation/catalog.py",
+              "sft/computation/spec_data.py",
+              "sft/computation/generated_law.py"
+            ],
+            "status": "complete",
+            "components": {
+              "operations.exact_rewrite": "Unchanged original StateWords operation: duplicate-position check, equal lengths and selected-position membership in original order with original errors; full zip-map output. General admission iff, length and exact coordinate proofs.1352 original full output/error comparisons retained.",
+              "catalog/spec_data held-position replacement": "RewritingDerivation proves arbitrary-finite overwrite, idempotence, distinct-position commutation, admitted next replacement, exact replay/coordinate/length for retained rule-identity/source/position/replacement/successor records; finite trace composition and replay of every record.",
+              "catalog/spec_data registered finite rules and generated word boundary": "RewritingClasses represents registered rule applications by a finite list of complete retained records, including identity and exact source/successor. Admitted requires full record membership, generated source/successor membership and original exact rewrite replay. This declarative boundary adds no guard to the executable helper. Native exclusions cover missing registration and words outside the held carrier. admittedPattern proves exact selected source symbol occurrence, source-word decomposition around that occurrence and the replacement at the same held coordinate. No separately implemented general substring-rewrite engine is attributed to this entry.",
+              "catalog/spec_data terminal cyclic branching classes": "Typed classes on the original retained relation: terminal means no admitted outgoing record; cyclic retains a nonempty path returning to its initial word; branching retains two admitted records with the same source and distinct successors. terminalTraceEmpty/terminalNotCyclic/terminalNotBranching, cyclicRepeat and branchTraces establish their exact native properties. No later FORMX termination or confluence theorem is imported.",
+              "catalog composition and induction": "Retained identity, serial composition, one-record successor and relation/carrier extension preserve every prior record and original replay. Native proofs hold for arbitrary finite traces. Registered application rows and generated carrier are source structural inputs, not fitted scientific parameters.",
+              "operations.group_witnesses(formal_computation)": "All three original claim-specific witnesses execute unchanged transition run, generated_words and exact_rewrite, with original names/statements; allWitnessesPass. Prior6349 shared-operation source-expression comparisons retained.",
+              "catalog/spec_data/generated_law": "All256 eight-axis candidates in original order with exact identifiers/forms/reasons, exhaustive enumeration, sole survivor and coordinate rejection. Original four controls, closure, exposition, registration and hashes retained. Fresh full native program matches every actual lookup, output/hash and unknown-ID refusal."
+            },
+            "dependencies": [
+              "SFT-COMP-FORM-AUTOMATON-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": "All eight complete before entry",
+            "native_audit": "verification/TURN_186_PARITY_REPORT.json",
+            "program_comparison": "verification/TURN_186_PROGRAM_REPORT.json",
+            "source_cases": [
+              "verification/TURN_180_STATE_CASES.log",
+              "verification/TURN_182_WORD_CASES.log"
+            ],
+            "remaining": [],
+            "completion_count": 43
+          }
+        },
+        {
+          "path": "verification/TURN_186_PROGRAM_REPORT.json",
+          "sha256": "cd286e11f9c560c9f091c607ad30b7be896788bff30e70ff20a0286700c213f1",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:4efb2a905b4b82b88562af8bc58df30b63eaa7e37fc6d2026698945df864753d",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All RewritingProgram method output fields; full engine admission integration remains separate"
+          }
+        }
+      ]
+    }
+  ],
+  "template_comparison": [
+    {
+      "path": "SFT/Computation/LanguageGrammar.lean",
+      "base": "SFT/Computation/StateGrammar.lean",
+      "normalization": "String literal text abstracted; family module namespace names replaced; all residual code differences displayed and inspected",
+      "residual_diff": ""
+    },
+    {
+      "path": "SFT/Computation/LanguageWitnesses.lean",
+      "base": "SFT/Computation/StateWitnesses.lean",
+      "normalization": "String literal text abstracted; family module namespace names replaced; all residual code differences displayed and inspected",
+      "residual_diff": "--- \n+++ \n@@ -1,2 +1,2 @@\n-import SFT.Computation.StateWords\n+import SFT.Computation.LanguageDerivation\n namespace SFT.Computation.EntryWitnesses\n"
+    },
+    {
+      "path": "SFT/Computation/LanguageControls.lean",
+      "base": "SFT/Computation/StateControls.lean",
+      "normalization": "String literal text abstracted; family module namespace names replaced; all residual code differences displayed and inspected",
+      "residual_diff": ""
+    },
+    {
+      "path": "SFT/Computation/LanguageEvidence.lean",
+      "base": "SFT/Computation/StateEvidence.lean",
+      "normalization": "String literal text abstracted; family module namespace names replaced; all residual code differences displayed and inspected",
+      "residual_diff": "--- \n+++ \n@@ -19,3 +19,3 @@\n   rootTheorems := [SFT.Engine.rootTheoremId]\n-  dependencies := [\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\"]\n+  dependencies := [\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\"]\n   axioms := []\n"
+    },
+    {
+      "path": "SFT/Computation/AutomatonGrammar.lean",
+      "base": "SFT/Computation/StateGrammar.lean",
+      "normalization": "String literal text abstracted; family module namespace names replaced; all residual code differences displayed and inspected",
+      "residual_diff": ""
+    },
+    {
+      "path": "SFT/Computation/AutomatonWitnesses.lean",
+      "base": "SFT/Computation/StateWitnesses.lean",
+      "normalization": "String literal text abstracted; family module namespace names replaced; all residual code differences displayed and inspected",
+      "residual_diff": "--- \n+++ \n@@ -1,2 +1,2 @@\n-import SFT.Computation.StateWords\n+import SFT.Computation.AutomatonRecognition\n namespace SFT.Computation.EntryWitnesses\n"
+    },
+    {
+      "path": "SFT/Computation/AutomatonControls.lean",
+      "base": "SFT/Computation/StateControls.lean",
+      "normalization": "String literal text abstracted; family module namespace names replaced; all residual code differences displayed and inspected",
+      "residual_diff": ""
+    },
+    {
+      "path": "SFT/Computation/AutomatonEvidence.lean",
+      "base": "SFT/Computation/StateEvidence.lean",
+      "normalization": "String literal text abstracted; family module namespace names replaced; all residual code differences displayed and inspected",
+      "residual_diff": "--- \n+++ \n@@ -19,3 +19,3 @@\n   rootTheorems := [SFT.Engine.rootTheoremId]\n-  dependencies := [\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\"]\n+  dependencies := [\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\"]\n   axioms := []\n"
+    },
+    {
+      "path": "SFT/Computation/RewritingGrammar.lean",
+      "base": "SFT/Computation/StateGrammar.lean",
+      "normalization": "String literal text abstracted; family module namespace names replaced; all residual code differences displayed and inspected",
+      "residual_diff": ""
+    },
+    {
+      "path": "SFT/Computation/RewritingWitnesses.lean",
+      "base": "SFT/Computation/StateWitnesses.lean",
+      "normalization": "String literal text abstracted; family module namespace names replaced; all residual code differences displayed and inspected",
+      "residual_diff": "--- \n+++ \n@@ -1,2 +1,2 @@\n-import SFT.Computation.StateWords\n+import SFT.Computation.RewritingClasses\n namespace SFT.Computation.EntryWitnesses\n"
+    },
+    {
+      "path": "SFT/Computation/RewritingControls.lean",
+      "base": "SFT/Computation/StateControls.lean",
+      "normalization": "String literal text abstracted; family module namespace names replaced; all residual code differences displayed and inspected",
+      "residual_diff": ""
+    },
+    {
+      "path": "SFT/Computation/RewritingEvidence.lean",
+      "base": "SFT/Computation/StateEvidence.lean",
+      "normalization": "String literal text abstracted; family module namespace names replaced; all residual code differences displayed and inspected",
+      "residual_diff": "--- \n+++ \n@@ -19,3 +19,3 @@\n   rootTheorems := [SFT.Engine.rootTheoremId]\n-  dependencies := [\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\"]\n+  dependencies := [\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\"]\n   axioms := []\n"
+    }
+  ],
+  "source_correspondence": "Original ordered guards and partial transition domain; exact Execution/Path equivalence, carrier preservation and admitted relation extension; cumulative marker versus host seed; complete append derivation iff; acceptance interpreted from original terminal class; exact held-coordinate overwrite/commutation and registered record trace classes. Source requirements preserved. Shared6349 retained comparison results, four256-candidate full program reports and raw audits reused, no new builds.",
+  "citations_added": [
+    "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/catalog.py#L21",
+    "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/operations.py",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/StateGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/StateWitnesses.lean#L24",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/LanguageGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/LanguageWitnesses.lean#L24",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AutomatonGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AutomatonWitnesses.lean#L24",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RewritingGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RewritingWitnesses.lean#L24"
+  ],
+  "new_proofs": 0,
+  "new_builds": 0,
+  "status": "Section review and repair complete; same-assistant second pass pending; whole-paper review incomplete"
+}

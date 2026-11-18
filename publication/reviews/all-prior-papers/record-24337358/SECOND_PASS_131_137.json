@@ -1,0 +1,108 @@
+{
+  "updated_at": "2026-11-18T23:23:34.708602+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137
+  ],
+  "challenges": [
+    {
+      "claim": "An admitted extension preserves every old run.",
+      "challenge": "Could adding a second target at an old coordinate change the original run?",
+      "evidence": "StateExtension.validAvoidsSeen/validTargetSingleton derive uniqueness from original ordered validation; extendRun requires successful create on the extension and retained original rows/states.",
+      "disposition": "Section132 explicitly states extension admission and both inclusions; a duplicate coordinate fails the original constructor. No unproved automatic compatibility assertion."
+    },
+    {
+      "claim": "Generated language certificates are sound and complete at every finite depth.",
+      "challenge": "Is the distinguished marker silently identified with the empty construction frontier or deduplicated when also a literal symbol?",
+      "evidence": "StateWords.grow starts frontier=[[]] and output=[[empty-One]]; generatedMembership retains the marker disjunction. LanguageDerivation.derivationSound/derivationComplete use the actual append recurrence.",
+      "disposition": "Sections133\u2013134 distinguish the two objects and retain ordinary marker-valued words; append soundness/completeness are general inductions."
+    },
+    {
+      "claim": "Finite acceptance is equivalent to original execution and terminal membership.",
+      "challenge": "Does Accepted insert an assumed successful execution or introduce an unrelated executable recognizer?",
+      "evidence": "AutomatonRecognition.acceptedMeaning proves both directions using StateComposition.executionPath/pathExecution and terminalAppend; original Topic explicitly lists initial state, accepting class and complete run.",
+      "disposition": "Section135 presents a representation of the original accepting-class statement and its iff proof, not an extra executable source operation. Class membership is the specified acceptance condition."
+    },
+    {
+      "claim": "Coordinate rewrites preserve every unchanged position and compose correctly.",
+      "challenge": "Are overwrite and commutation assumed beyond original matching lengths or at the same position?",
+      "evidence": "StateWords.rewriteMeaning derives exact matching lengths and held membership. RewritingDerivation.overwriteRows inducts on paired lists; commuteRows additionally requires different held positions.",
+      "disposition": "Section136 states the exact length/position premises and three coordinate cases; no arbitrary-word or same-position commutation asserted."
+    },
+    {
+      "claim": "Registered rewrite traces have the stated terminal/cyclic/branching properties.",
+      "challenge": "Does a locally supplied record list falsely prove global termination or an unregistered rewrite system?",
+      "evidence": "Original REWRITING Topic declares registered finite rules and generated words. RewritingClasses.Admitted requires record registration, both carrier endpoints and original replay; terminalTraceEmpty uses the head-record contradiction, cyclicRepeat uses traceComposition.",
+      "disposition": "Section137 gives the quantified registered relation and complete predicates/arguments. All conclusions concern those original retained trace classes; no global termination/confluence replacement."
+    },
+    {
+      "claim": "The common eight-axis product and three witnesses are fully exhibited.",
+      "challenge": "Could shared exposition hide different decisions, witnesses or missing candidate coverage across the four entries?",
+      "evidence": "Full StateGrammar/Controls/Witnesses/Evidence read; all12 sibling modules compared with exact residual code differences and every changed literal inspected. Source catalog supplies one formal-computation dimension template and group witness suite. Four retained complete256-output reports match original entry IDs and dependencies.",
+      "disposition": "Section133 lists all pairs, derives membership/criterion/uniqueness and calculates all three actual operation witnesses. Explicit references134/135/137 identify shared exposition; the general operation derivations remain separate."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/catalog.py#L21",
+      "accessible": true,
+      "reviewed_native_bytes_equal": null
+    },
+    {
+      "url": "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/operations.py",
+      "accessible": true,
+      "reviewed_native_bytes_equal": null
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/StateGrammar.lean#L118",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/StateWitnesses.lean#L24",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/LanguageGrammar.lean#L118",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/LanguageWitnesses.lean#L24",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AutomatonGrammar.lean#L118",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AutomatonWitnesses.lean#L24",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RewritingGrammar.lean#L118",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RewritingWitnesses.lean#L24",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    }
+  ],
+  "repair_checked": "CUMULATIVE-FORMAL-COMPUTATION-EXPOSITION-23",
+  "revised_manuscript_sha256": "686f8fc95633797415339a9d6b7e8b75e2c0515d89db557f89a057b6eed4f7b0",
+  "new_builds": 0,
+  "new_scientific_runs": 0,
+  "status": "No unresolved defect in inspected arguments; whole-paper review incomplete"
+}

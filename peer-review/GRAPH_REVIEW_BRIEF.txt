@@ -41,6 +41,27 @@ USEFUL SMALL CASES
 - Distinct disconnected endpoints; equal admitted endpoints; an absent endpoint.
 These examples help examine behavior. The general statements are the quantified native theorems above.
 
+WORK THROUGH THREE CASES
+Before reading the answers, write the queue as complete paths, keep the edge order, and count path length in nodes.
+
+A. Intermediate identity.
+Take N=[a,c], E=[(a,x),(x,c)] and endpoints a,c. Does x have to belong to N?
+
+B. Two shortest witnesses.
+Take N=[a,b,c,d] and E=[(a,b),(a,c),(b,d),(c,d)]. Find the returned path from a to d. Now swap only the first two edges and repeat. Which output changes, and which shortestness statement stays true?
+
+C. Immediate return.
+Suppose the current head path is h and its next scanned neighbor is the target. For any alternative complete target trace P, frontierStrict supplies a queued q with |q|+1 <= |P|. Use QueueOrdered to finish the shortestness argument. Which properties prevent the target from already being queued before this return?
+
+ANSWERS AND PROOF CONNECTIONS
+A. The original endpoint check admits a and c. The edges supply adjacency through x, so the returned path is [a,x,c], of node-length3. Adding an intermediate-node membership requirement would change this operation's domain.
+
+B. The initial queue holds [a]. Expanding a appends [a,b], then [a,c]. Expanding b encounters d and returns [a,b,d]. After the edge swap, the two queued paths reverse order, and expansion of c returns [a,c,d]. Both have node-length3. The source order selects the witness; pathDistanceShortest compares either returned witness with every complete alternative trace under its stated hypotheses.
+
+C. Queue order gives |h| <= |q|. Hence |h ++ [t]|=|h|+1 <= |q|+1 <= |P|. Before the first target encounter, the algorithm has neither visited nor queued the target: encountering it as a neighbor returns instead of appending it. Read frontierStrict with OriginCovered and VisitedBound, and then the invariant preservation in pathLoopBound.
+
+These are reading exercises adapted from Section4 of the published paper, not new verification results. The examples explain particular decisions; the cited theorems state the general discovery, shortestness and negative-result arguments. A useful response can identify one exact source operation, hypothesis or proof step examined.
+
 WHERE TO RESPOND
 An open PREreview request was publicly listed on 18 November 2026:
 https://prereview.org/preprints/doi-10.5281-zenodo.24341593

@@ -43,4 +43,85 @@ def loadScale (bytes : ByteArray) (document : Value) : Except String (Rat × Rat
  let lower ← field row "lower" >>= fraction
  let upper ← field row "upper" >>= fraction
  pure (central,lower,upper)
+-- Original dictionary comprehensions retain the last row for each target identifier.
+def indexedRows (document : Value) : Except String (List (String × Value)) := do
+ let rows ← field document "rows"
+ let rows ← match rows with
+  | .array xs => .ok xs
+  | .null | .integer _ | .boolean _ | .text _ | .object _ => .error "target rows must be a sequence"
+ rows.foldlM (fun acc row => do
+  let key ← field row "target_id" >>= JointCorrelationTargets.text
+  if acc.any (fun p => Text.equal p.1 key) then
+   pure (acc.map fun p => if Text.equal p.1 key then (key,row) else p)
+  else pure (acc ++ [(key,row)])) []
+structure Target where
+ targetId : String
+ species : String
+ inscription : String
+ interval : CapabilityValues.Value
+ lower : Rat
+ upper : Rat
+def loadTargets (identityBytes targetBytes sourceBytes : ByteArray)
+ (identities targetDocument sourceDocument : Value) (files : List (String × ByteArray)) : Except String (List Target) := do
+ if !Text.equal (Text.append "sha256:" (SHA256Chunks.digest identityBytes)) EquilibriumBondLengthExperiment.identityHash ||
+    !Text.equal (Text.append "sha256:" (SHA256Chunks.digest targetBytes)) EquilibriumBondLengthExperiment.targetHash then
+  throw "PROP-001 identity or target registry changed"
+ if !RunningConvergenceMeasurement.sameValue ((field identities "schema").toOption.getD .null)
+     (.text "sft-v3-equilibrium-bond-length-identities/1") ||
+    !RunningConvergenceMeasurement.sameValue ((field targetDocument "schema").toOption.getD .null)
+     (.text "sft-v3-equilibrium-bond-length-withheld-targets/1") then
+  throw "PROP-001 registry schema changed"
+ let identityRows ← indexedRows identities
+ let targetRows ← indexedRows targetDocument
+ if !(identityRows.all fun p => targetRows.any fun q => Text.equal p.1 q.1) ||
+    !(targetRows.all fun p => identityRows.any fun q => Text.equal p.1 q.1) || targetRows.length != 2 then
+  throw "PROP-001 complete target vector changed"
+ let source ← MolecularSpectroscopyRecords.authoritativeRecord sourceBytes files sourceDocument
+ [("hydrogen","H2"),("deuterium","D2")].mapM fun (isotope,species) => do
+  let id := Text.intercalate "" ["NIST-",species,"-X1SIGMA-G-EQUILIBRIUM-DISTANCE"]
+  let identity ← field (.object identityRows) id
+  let target ← field (.object targetRows) id
+  let sourceRow ← field (← field (← field (← field source "sources") isotope) "rows") "equilibrium_internuclear_distance_angstrom"
+  let centre ← RunningConvergenceMeasurement.decimalField sourceRow "inscription"
+  let halfWidth ← RunningConvergenceMeasurement.decimalField sourceRow "last_inscribed_digit_half_width"
+  let lower := subtract centre halfWidth
+  let upper := add centre halfWidth
+  let mismatch := Text.append "PROP-001 source reconstruction differs: " species
+  if !RunningConvergenceMeasurement.sameValue ((field identity "target_value_absent").toOption.getD .null) (.boolean true) then throw mismatch
+  if !RunningConvergenceMeasurement.sameValue (← field identity "species") (.text species) then throw mismatch
+  if !RunningConvergenceMeasurement.sameValue (← field target "inscription") (← field sourceRow "inscription") then throw mismatch
+  if !RunningConvergenceMeasurement.sameValue (← field target "last_inscribed_digit_half_width") (← field sourceRow "last_inscribed_digit_half_width") then throw mismatch
+  let targetCentre ← field target "central" >>= fraction
+  if !(targetCentre == centre) then throw mismatch
+  let targetLower ← field target "lower" >>= fraction
+  if !(targetLower == lower) then throw mismatch
+  let targetUpper ← field target "upper" >>= fraction
+  if !(targetUpper == upper) then throw mismatch
+  let path ← field identity "snapshot_path" >>= JointCorrelationTargets.text
+  let expected ← field identity "snapshot_hash" >>= JointCorrelationTargets.text
+  let bytes ← match files.find? (fun p => Text.equal p.1 path) with
+   | some (_,bytes) => .ok bytes
+   | none => .error (Text.append "FileNotFoundError: " path)
+  if !Text.equal (Text.append "sha256:" (SHA256Chunks.digest bytes)) expected then throw mismatch
+  let lowerValue ← ratio lower
+  let upperValue ← ratio upper
+  let inscription ← field target "inscription" >>= JointCorrelationTargets.text
+  pure ⟨id,species,inscription,.pair lowerValue upperValue,lower,upper⟩
+-- equilibrium_bond_length_batch_v1.py: initial registry binding before spec creation.
+def validateRegistryBinding (identityBytes scaleBytes targetBytes : ByteArray) (document : Value) : Except String Unit := do
+ let rows := [(EquilibriumBondLengthExperiment.identityPath,EquilibriumBondLengthExperiment.identityHash,identityBytes),
+  (EquilibriumBondLengthExperiment.scalePath,EquilibriumBondLengthExperiment.scaleHash,scaleBytes),
+  (EquilibriumBondLengthExperiment.targetPath,EquilibriumBondLengthExperiment.targetHash,targetBytes)]
+ let _ ← rows.mapM fun (path,expected,bytes) => do
+  if !Text.equal (Text.append "sha256:" (SHA256Chunks.digest bytes)) expected then
+   throw (Text.append "PROP-001 registered source changed: " path)
+ let originalRows := (field document "rows").toOption.getD (.array [])
+ let rows ← match originalRows with
+  | .array xs => .ok xs
+  | .null | .integer _ | .boolean _ | .text _ | .object _ => .error "PROP-001 identity registry is incomplete or contains a target"
+ if !RunningConvergenceMeasurement.sameValue ((field document "schema").toOption.getD .null)
+     (.text "sft-v3-equilibrium-bond-length-identities/1") || rows.length != 2 ||
+    !(rows.all fun row => RunningConvergenceMeasurement.sameValue ((field row "target_value_absent").toOption.getD .null) (.boolean true)) then
+  throw "PROP-001 identity registry is incomplete or contains a target"
+ pure ()
 end SFT.Chemistry.EquilibriumBondLengthSource

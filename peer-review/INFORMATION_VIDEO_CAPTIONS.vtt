@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Keep only the first letter: aa and ab map to a; ba and bb map to b. What can the output distinguish?
+
+2
+00:00:08.000 --> 00:00:16.000
+Six source pairs: two close, (aa,ab) and (ba,bb). Four cross-fibre pairs remain distinguished. Every pair is accounted for.
+
+3
+00:00:16.000 --> 00:00:24.000
+The reverse record keeps all possibilities in source order: output a has predecessors [aa,ab]; output b has [ba,bb].
+
+4
+00:00:24.000 --> 00:00:32.000
+Observing a does not select aa or ab. Exact reconstruction requires a retained predecessor label resolving that choice. A singleton fibre recovers directly.
+
+5
+00:00:32.000 --> 00:00:40.000
+Merge a and b to one. All six source pairs now close. Equal first images remain equal after the same later map.
+
+6
+00:00:40.000 --> 00:00:48.000
+Which input distinctions matter for recovery? Read the original operations and corresponding Lean proofs in the paper and review brief. Independent review is welcome.

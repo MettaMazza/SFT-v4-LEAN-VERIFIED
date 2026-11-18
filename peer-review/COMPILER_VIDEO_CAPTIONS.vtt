@@ -1,0 +1,33 @@
+WEBVTT
+
+00:00.000 --> 00:08.000
+Same result. Different execution.
+x + 1/3; 1/3 + x; x + (1/6 + 1/6).
+What should a comparison preserve?
+
+00:08.000 --> 00:16.000
+At x = 2/3, all three return 1.
+At x = 1/2, all three return 5/6.
+
+00:16.000 --> 00:24.000
+Execution-event counts:
+x + 1/3: 6; 1/3 + x: 6;
+x + (1/6 + 1/6): 10.
+
+00:24.000 --> 00:28.000
+The comparison observes the exact result string.
+Complete executions and separate resource ledgers
+retain the differences.
+
+00:28.000 --> 00:32.000
+The first two expressions evaluate
+their leaves in opposite orders.
+
+00:32.000 --> 00:36.000
+What would your application observe?
+The result? Event order? Resource use?
+
+00:36.000 --> 00:40.000
+Definitions, Lean references and reproduction:
+doi:10.5281/zenodo.24341456
+Maria Smith, Ernos Labs. AI-assisted presentation.

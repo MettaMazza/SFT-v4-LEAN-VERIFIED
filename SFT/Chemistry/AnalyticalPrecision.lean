@@ -56,6 +56,7 @@ theorem pairRowsSuccessor (first last : PositiveRatio) (rest : List PositiveRati
  (rest.map (fun other => (first,other))++[(first,last)]) ++ pairRows (rest++[last]) := by
  change (rest++[last]).map (fun other => (first,other)) ++ pairRows (rest++[last]) = _
  rw [SFT.Mathematics.ExactTraceArithmetic.mapAppend]
+ rfl
 
 def pairCount : Nat → Nat
  | 0 => 0

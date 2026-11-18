@@ -55112,9 +55112,9 @@
   ],
   "next_publication_milestone": 1000,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "798complete. Reconcile actual source and existing implementation for SFT-CHEM-MOLECULAR-BOND-ANGLE-003 then continue dependency order toward1000. Reuse existing proofs,keep processes bounded and update paper/timeline/counts/GitHub. Pause only with full1000review package ready.",
+  "authorized_action": "800complete. Reconcile actual source and existing implementation for SFT-CHEM-MOLECULAR-BOND-ANGLE-003 then continue dependency order toward1000. Reuse existing proofs,keep processes bounded and update paper/timeline/counts/GitHub. Pause only with full1000review package ready.",
   "scientific_cursor": {
-    "completed": "SFT-BIO-PROTEIN-QUATERNARY-001",
+    "completed": "SFT-CHEM-ANALYTICAL-PRECISION-REPEATABILITY-002",
     "next": "SFT-CHEM-MOLECULAR-BOND-ANGLE-003",
     "next_milestone": 1000,
     "action": "Continue SFT-CHEM-MOLECULAR-BOND-ANGLE-003 from its actual retained job or source/proof evidence. Preserve live checks; do not repeat completed work."
@@ -67270,10 +67270,11 @@
   },
   "homochirality1201": {
     "claim_id": "SFT-BIO-BIOLOGICAL-HOMOCHIRALITY-001",
-    "status": "six source-generated modules;original empiricalPASS;native not yet built",
+    "status": "complete",
     "source_pin": "work/homochirality1201_source_pin.json",
     "original_report": "work/homochirality1201_original_report.json",
-    "shared_source": "CellIdentitySource for identical cell-family bindings; BiologicalHomochiralitySource and DysregulatedDivisionSource retain fresh original special bindings"
+    "shared_source": "CellIdentitySource for identical cell-family bindings; BiologicalHomochiralitySource and DysregulatedDivisionSource retain fresh original special bindings",
+    "receipt": "verification/TURN1201_HOMOCHIRALITY_COMPLETION.json"
   },
   "cell1202": {
     "claim_id": "SFT-BIO-CELL-001",
@@ -69065,7 +69066,7 @@
   },
   "precision1309": {
     "claim_id": "SFT-CHEM-ANALYTICAL-PRECISION-REPEATABILITY-002",
-    "status": "source translated; native checks queued",
+    "status": "complete",
     "evidence": "verification/TURN1191_ANALYTICAL_PRECISION",
     "jobs": {
       "pid": 39610,
@@ -69074,7 +69075,8 @@
       "wait_for_actual_driver": 35433
     },
     "registration_watcher": 65892,
-    "registration_command": "work/register_precision1309_when_ready.py"
+    "registration_command": "work/register_precision1309_when_ready.py",
+    "receipt": "verification/TURN1309_PRECISION_COMPLETION.json"
   },
   "checkpoint1191": {
     "status": "PASS",
@@ -69347,6 +69349,61 @@
     "graph_checks": "completed147emptyaxioms205cases",
     "bondangle_checks": "completed96emptyaxioms180cases",
     "resource_guard": "atomic launch lock;maximum4 compiler jobs,-j1,-M8192;actual RSS guard unchanged",
-    "no_goal_control_change": true
+    "no_goal_control_change": true,
+    "live_compilers": [
+      {
+        "pid": 84708,
+        "entry": "ClinicalObservation1239",
+        "phase": "full programme"
+      },
+      {
+        "pid": 86603,
+        "entry": "BiologicalHomochirality1201",
+        "phase": "full programme"
+      },
+      {
+        "pid": 89399,
+        "entry": "AnalyticalPrecision1309",
+        "phase": "full programme"
+      },
+      {
+        "pid": 90500,
+        "entry": "XrayDiffraction1163",
+        "phase": "full empirical"
+      }
+    ],
+    "precision_verified": "six modules,144 empty-axiom declarations,18 core cases,full12field3message empirical PASS; fullprogramme89399 retained",
+    "verified_remote_base": "checkpoint1195b_merged",
+    "terminal_controllers": [
+      81071,
+      84003,
+      86115,
+      87072,
+      87236
+    ]
+  },
+  "checkpoint1195": {
+    "status": "PASS",
+    "commit": "57cc51cd7db54e65cdf6d600b8a3ccadf281ad7d",
+    "tree": "e86b724a7d89fffe5c11f80a7d6638c6ec57604c",
+    "files": 81,
+    "complete": 798,
+    "main_head": "57cc51cd7db54e65cdf6d600b8a3ccadf281ad7d",
+    "verified_at": "2026-11-18T13:27:34.629378+00:00"
+  },
+  "continuation1196": {
+    "at": "2026-11-18T13:50:15.499341+00:00",
+    "action": "Finish actual BondAngle empirical and complete programme checks, register on current-source pass; preserve live bounded jobs toward1000",
+    "controller": 95232,
+    "registration_watcher": 95428,
+    "empirical_pid": 95271,
+    "audit": 159,
+    "verified_cases": [
+      180,
+      18,
+      20
+    ],
+    "evidence": "verification/TURN1196_BONDANGLE_COMPONENTS/SOURCE_BINDING.json",
+    "next_action": "Inspect actual retained check results, no duplicate reruns; continue dependency order."
   }
 }

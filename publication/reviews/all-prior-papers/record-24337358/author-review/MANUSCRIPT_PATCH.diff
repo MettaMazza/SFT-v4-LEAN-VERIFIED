@@ -347,11 +347,10 @@
  
  Compression and Redundancy retains all 1,024 kernels and all five operational witnesses. Fresh native execution matches every original program field, including actual candidate lookups, controls and digests. The cumulative 11,626 source-expression comparisons cover exact descriptions, errors, prefix families and complete fixed/short supports. The result applies at every admitted finite width: the recursively generated full support is larger than the complete shorter support, and injectivity on the canonical distinct-label support would contradict that strict count inequality. Prefix parsing separately covers every finite concatenation over an admitted prefix-free family.
  
-@@ -3622,6 +3848,25 @@
- Appending a fresh input and its complete nonempty, duplicate-free support within the held output carrier preserves channel admission. Output support for every prior input is unchanged, while the new input has exactly the appended support in its original order. Every prior confusability decision remains unchanged. The new decision with each prior input is precisely the overlap of its retained support with the new support.
+@@ -3623,6 +3849,25 @@
  
  Every prior distinguishable code remains valid. Its extension by the fresh input is distinguishable exactly when each prior member has disjoint support from the fresh input. The native exhaustive successor theorem establishes that every generated code is an old code, the fresh singleton, or such a permitted extension of an old code, and conversely every one of those alternatives is generated. This closes arbitrary finite carrier growth while retaining the full candidate family used by the greatest-cardinality selection.
-+
+ 
 +
 +
 +Source and verification for this grammar and its worked witnesses: [Original grammar and witnesses](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/channels_capacity/law.py#L78), [ChannelGrammar.candidatesComplete](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ChannelGrammar.lean#L140), [ChannelWitnesses.allWitnessesPass](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ChannelWitnesses.lean#L39).
@@ -370,6 +369,60 @@
 +10. addition: extra-transition-probability versus no-extra-channel-model. A probability law is not supplied by the transport relation. Capacity follows only from exact relation and distinguishability.
 +
 +The five original channel witnesses begin with inputs [a,b,c]. The clean relation [(a,x),(b,y),(c,z)] has mutually disjoint singleton output supports, so its unique greatest code is [a,b,c]. The merged relation [(a,x),(b,x),(c,z)] gives a and b the common output x, while a and c have disjoint supports. Thus [a,b] fails the code test and [a,c] passes. No three-input code survives; both [a,c] and [b,c] have greatest size two and are retained, in that order. Composing the clean relation with [(x,u),(y,v),(z,w)] at the identical ordered interface [x,y,z] gives [(a,u),(b,v),(c,w)] by its three complete paths. ChannelWitnesses.allWitnessesPass checks the clean capacity, merged overlap, both tied maxima, the adverse code and this exact composition. The complete selection and successor arguments above establish the result for arbitrary admitted finite carriers.
- 
++
  All 1,024 channel kernels and all five original operational witnesses are retained. Fresh native execution matches every original registration, census, actual candidate lookup, closure, control and digest field. The cumulative 20,505 source-expression comparisons include 735 fresh-input support/code checks alongside constructor, support, confusability, capacity and composition cases. Channel Capacity is complete at the source finite zero-error boundary; probabilistic error rates and asymptotic coding claims remain outside that original boundary.
+ 
+ 
+@@ -3728,6 +3973,25 @@
+ 
+ The identity-action base admits a single source and yields its singleton predecessor class, unique correction and empty-One trace. At each finite successor, appended registered action cells extend the received support by their exact images. Native admission preservation retains the original carrier and cell conditions. Complete image and predecessor membership after extension is equivalent to prior membership or a new matching action cell. First-occurrence order equations retain the original traversal and deduplication behavior. These results cover arbitrary finite action additions, including shared images, without selecting among ambiguous predecessors.
+ 
++
++
++Source and verification for this grammar and its worked witnesses: [Original grammar and witnesses](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/noise_error/law.py#L91), [NoiseGrammar.candidatesComplete](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/NoiseGrammar.lean#L140), [NoiseWitnesses.allWitnessesPass](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/NoiseWitnesses.lean#L40).
++
++The original noise grammar alternatives and their elimination arguments are:
++
++1. source: partial-source-support versus complete-canonical-sources. An omitted source hides a possible predecessor. Every registered clean word occurs once.
++2. received: sampled-received-forms versus complete-registered-images. Sampling cannot establish the transformation boundary complete. Every generated image under registered actions is retained.
++3. action: opaque-perturbation versus held-action-relation. An opaque change hides which source produced which image. Each cell retains source, image and action identity.
++4. error: scalar-error-size versus complete-changed-position-trace. A scalar count erases changed positions and labels. Every differing position retains old and new labels; identity is empty One.
++5. detection: probability-threshold versus invalid-codeword-witness. A threshold imports a distribution and free parameter. A changed received form outside valid code support is detected structurally.
++6. predecessors: chosen-likely-source versus complete-source-class. Choosing one predecessor imports a prior. Every registered source mapping to the received form is retained.
++7. correction: nearest-form-assumption versus singleton-predecessor. Nearest requires an unforced metric and can tie. Correction occurs exactly when one registered source remains.
++8. cause: stochastic-noise-source versus deterministic-transformation-family. A random cause is neither generated nor needed. Noise names the complete registered action relation over deterministic forms.
++9. generality: sampled-masks versus action-successor. Examples do not establish a fresh action image. A fresh registered action adds its exact source/image cells and updates predecessor classes.
++10. addition: extra-error-rate-or-metric versus no-extra-error-model. A rate, distribution or metric is not supplied by exact transformations. Detection and correction use only code support and predecessor identity.
++
++The five original noise witnesses use source words A=[a,a,a] and B=[b,b,b]. Identity transport of A has no differing positions and returns structural empty One. Transport from A to [b,a,a] changes exactly the first position, giving [(position-1,a,b)]. This received word is absent from the valid codebook [A,B], so the detection result is true. The registered relation contains the two identity cells, (A,[b,a,a],first-label-change), (B,[a,b,b],first-label-change), and (A,[a,a,b],third-label-change). Consequently [b,a,a] has predecessor list [A] and correction returns unique-source A. The adverse relation instead contains (A,[b,a,b],two-position-action) and (B,[b,a,b],one-position-action). Its received word [b,a,b] has the complete ordered predecessor list [A,B]; unique correction is false and the record retains closed-source-class [A,B]. NoiseWitnesses.allWitnessesPass checks these five calculations, with both relations admitted by explicit native proofs. NoiseCorrection.correctionMeaning and noUnrecordedCorrection establish the general uniqueness/provenance result, while NoiseTrace.pairsMembership and NoiseExtension.predecessorsSuccessor supply the arbitrary finite position and action arguments.
++
+ Noise and Error retains all 1,024 kernels, all five operational witnesses and both admitted witness relations. Fresh native execution matches every original registration, census, actual candidate lookup, closure, control, hash and unknown-identifier result. The cumulative 18,867 source-expression comparisons include 1,600 trace, 6,400 detection and 222 successor comparisons. The entry is complete at its finite structural boundary; stochastic frequencies, physical noise mechanisms and asymptotic reliability remain outside that original claim.
+ 
+ 
+@@ -3894,6 +4158,26 @@
+ Appending an action's registered images preserves the old image list and its order. The detection successor theorem is an equivalence: extended detection holds exactly when both prior and added images satisfy the original codebook-membership rule. The correction successor theorem checks every old–old, old–new, new–old and new–new pair of image supports. Their joint disjointness is equivalent to correction of the extended family. The received source class extends by exactly the sources whose new image lists contain that form. These proofs apply to arbitrary finite registered actions and preserve raw list multiplicity.
+ 
+ The stated total source/codeword relation retains one codeword for each registered source. Native recovery proves that every received image of that codeword in a correctable family decodes to the held codeword while preserving the source row. The same recovery result follows after an action addition precisely when the complete successor disjointness conditions hold. No injective message assignment beyond the stated source-map constraint is imposed.
++
++
++
++Source and verification for this grammar and its worked witnesses: [Original grammar and witnesses](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/coding_theory/law.py#L86), [CodingGrammar.candidatesComplete](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/CodingGrammar.lean#L151), [CodingWitnesses.allWitnessesPass](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/CodingWitnesses.lean#L39).
++
++The original coding grammar alternatives and their elimination arguments are:
++
++1. support: partial-word-support versus complete-generated-word-support. Omission hides possible code or error images. Every held-label word over the registered positions occurs once.
++2. codebook: free-valid-list versus held-support-selection. A free list lacks a complete source support boundary. The codebook is an exact nonempty selection of generated words.
++3. encoding: implicit-assignment versus total-source-code-relation. An implicit assignment erases source provenance. Every source message has one retained codeword.
++4. positions: unequal-or-unlabelled-positions versus common-canonical-position-trace. Position changes cannot be located on unequal or anonymous carriers. Every word uses the same retained ordered position carrier.
++5. difference: scalar-distance versus complete-difference-trace. A scalar erases which positions and labels differ. Every changed position retains both code labels; equality is empty One.
++6. errors: sampled-error-outputs versus complete-registered-error-images. Sampling cannot prove image supports disjoint. Every registered action image of every codeword is generated.
++7. detection: likely-corruption versus noncodeword-image. Likelihood imports a prior and threshold. Every nonidentity registered image lies outside the valid codebook.
++8. correction: nearest-codeword versus disjoint-error-image-support. A metric can tie and is not structurally supplied. Every received image belongs to at most one source codeword family.
++9. redundancy: unaccounted-padding versus separation-forcing-positions. Padding without a correction witness is an unforced addition. Every added position participates in the exact disjoint-image certificate.
++10. generality: fixed-mask-example versus error-action-successor. One mask does not establish all registered actions. A fresh action extends every codeword image family and disjointness is rechecked.
++11. addition: extra-distance-or-rate-rule versus no-extra-coding-rule. A borrowed metric or asymptotic rate can select the code. Code status follows only from generated support and error images.
++
++The six source witnesses are worked explicitly below through the complete width-three support, all differing positions, the two complete image families, unique received-image membership and the one-position adverse control. CodingWitnesses.allWitnessesPass checks all six; heldRepetition, widthThreeSeparates, widthTwoDoesNotSeparate and unprotectedDoesNotSeparate retain the codebook and separation evidence. The arbitrary-family argument is CodingActions.correctionSuccessor, whose four disjointness conditions are expanded below.
+ 
+ The original width-three repetition example is a held codebook and its complete single-label image families are disjoint. The one-position uncoded control fails correction; a width-two repetition family also fails, giving the exact finite separation witness for the retained width. Coding includes all 2,048 original kernels and all six original operational witnesses. The cumulative 19,745 source-expression comparisons include 9,375 action-successor detection, correction and decoding outputs. Coding remains within the original finite classical boundary, without a stochastic error model, metric threshold, imported asymptotic rate or quantum-code claim.
  

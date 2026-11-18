@@ -1,0 +1,96 @@
+{
+  "updated_at": "2026-11-18T23:08:30.546810+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    103,
+    104,
+    105,
+    106,
+    107
+  ],
+  "challenges": [
+    {
+      "claim": "Correction selects exactly a registered unique predecessor.",
+      "challenge": "Could multiple action cells from one source create false ambiguity, or an unused received entry produce a fabricated source?",
+      "evidence": "NoiseRelation.firstWordsMembership/firstWordsDistinct; NoiseCorrection.correctionMeaning/ambiguousRetainsAll/correctionRegistered/noUnrecordedCorrection actual bodies.",
+      "disposition": "Deduplication is by predecessor word in first-use order; unused admitted images retain empty closed class. Section103 states both outcomes; no defect demonstrated."
+    },
+    {
+      "claim": "Detection and position traces preserve the original operation.",
+      "challenge": "Does the exposition silently change identity detection to false or add codebook membership of the source?",
+      "evidence": "Pinned noise_error.detectable returns true on structural identity; NoiseTrace.detectionMeaning and unequalWidthError establish its exact branch behavior.",
+      "disposition": "Section104 explicitly retains identity=true, no source-membership guard and original unequal-width error. Complete pairsMembership proof covers arbitrary finite positions."
+    },
+    {
+      "claim": "Registered action successor retains complete predecessor provenance.",
+      "challenge": "Are extra source cells or a hidden nearest-source selection introduced on shared images?",
+      "evidence": "NoiseExtension.extensionAdmitted requires original source membership/nonempty actions and distinct/disjoint added cells; predecessorsSuccessor and predecessorOrder preserve all old/new cells and first-occurrence order.",
+      "disposition": "Section104 states all original admission premises and complete class extension, including shared images; no hidden selection."
+    },
+    {
+      "claim": "Single-label coding images exhaust the original generated family.",
+      "challenge": "Could images outside admitted support, duplicate raw labels or an omitted position invalidate completeness?",
+      "evidence": "CodingImages.changedMembership proves both decomposition directions; imageLength/changedLabels/imageInCompleteSupport derive closure. changedImages recursion retains raw duplicate-label outputs.",
+      "disposition": "Sections105\u2013106 preserve the broad helper domain and admitted support condition separately and show both membership directions."
+    },
+    {
+      "claim": "Correctable coding recovers the registered codeword.",
+      "challenge": "Does recovery assume the desired singleton class or silently deduplicate repeated source occurrences?",
+      "evidence": "CodingDecoding.correctableClass inducts on the actual code list: accepted head excludes every accepting tail occurrence via positional pairs. correctableDecode and decodeRegistered then derive both recovery and provenance.",
+      "disposition": "Section106 contains this induction and explicit singleton/closed output. It does not insert singleton as an independent hypothesis."
+    },
+    {
+      "claim": "Arbitrary action additions preserve recovery under exact separation conditions.",
+      "challenge": "Could one cross orientation be missing or concatenating old/new source classes duplicate a source?",
+      "evidence": "CodingActions.correctionSuccessor expands all four membership combinations; sourceClass remains one filter with disjunctive membership; CodingProvenance.encodedImageRecovered retains row without injective source assumption.",
+      "disposition": "Section107 states all four conditions, a single occurrence-preserving filter and the exact total source-map domain. Its existing full witnesses were preserved, not rewritten as new results."
+    }
+  ],
+  "repairs_checked": [
+    "CUMULATIVE-NOISE-EXPOSITION-17",
+    "CUMULATIVE-CODING-EXPOSITION-18"
+  ],
+  "citations_added": [
+    {
+      "section": 104,
+      "links": [
+        "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/noise_error/law.py#L91",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/NoiseGrammar.lean#L140",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/NoiseWitnesses.lean#L40"
+      ]
+    },
+    {
+      "section": 107,
+      "links": [
+        "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/coding_theory/law.py#L86",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/CodingGrammar.lean#L151",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/CodingWitnesses.lean#L39"
+      ]
+    }
+  ],
+  "revised_manuscript_sha256": "ee644061063c761565c733424840e24d101e00b5dcfd93ed265e5f4c5145ea18",
+  "status": "No unresolved defect in inspected section arguments; entire cumulative paper is not yet passed.",
+  "new_scientific_runs": 0,
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/NoiseGrammar.lean#L140",
+      "sha256": "0443c5e06d448db678651053406bb5b67fd0bff0c1755be3d606b5352518dd4a",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/NoiseWitnesses.lean#L40",
+      "sha256": "20f5c493f6e2084c2a6f43a02c30141fc23cfaba96b79226245bf7010990a4fa",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/CodingGrammar.lean#L151",
+      "sha256": "ab1cd990a5dc92067dc6a6bbcaa8681754a5df0c3b43067b2b1654d04b8bed60",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/CodingWitnesses.lean#L39",
+      "sha256": "e52f0471921aa02a0c6eafe4f1355ea65ddb876c9e95052a83682745d0682aff",
+      "public_bytes_equal_reviewed": true
+    }
+  ]
+}

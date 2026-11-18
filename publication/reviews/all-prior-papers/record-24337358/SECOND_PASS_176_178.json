@@ -1,0 +1,58 @@
+{
+  "updated_at": "2026-11-18T23:53:19.839232+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    176,
+    177,
+    178
+  ],
+  "challenges": [
+    {
+      "section": 176,
+      "challenge": "Is closed execution assumed, or constructed for every admitted input trace?",
+      "evidence": "closedExecution instantiates acceptedLookupTotal at each held input and inductively constructs terminal and every carrier-bound row. operationRowsReplay retains each original table application. finiteDimensionCertificate uses dimensionIffDerivation with actual incidence and held-cell admission.",
+      "disposition": "The manuscript gives the induction, all row memberships and exact dimension equivalence without substituting a new operation."
+    },
+    {
+      "section": 177,
+      "challenge": "Are recurrence answers invented or duplicate dependency references lost?",
+      "evidence": "inputs/Reads preserve every ordered lookup and readCount/readProvenance retain multiplicity. result admits only a singleton matchingResults. fromEmpty constructs each result derivation; cachedIdentityRetained proves existing first lookup persists. problemInvariant retains the source local recurrence preservation premise.",
+      "disposition": "The paper shows bidirectional run/certificate correspondence, sole-row selection, exact table identities, reuse and local-invariant induction."
+    },
+    {
+      "section": 178,
+      "challenge": "Could traversal discard ties or a previous optimum without a concrete new dominance row?",
+      "evidence": "scanReconstruction proves exact equality to incumbent ++ original retained selection. noTieBreak/uniqueOnlySingleton retain all survivors; incumbentAtPrefix counts the shared state once. priorEliminationNeedsNewWitness excludes old preference rows and locates an added feasible distinct dominator.",
+      "disposition": "The paper states the full survivor equation, exact history and added-row necessity, preserving original preference admission."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AlgebraicGeometricGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AlgebraicGeometricWitnesses.lean#L22",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/DynamicProgrammingGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/DynamicProgrammingWitnesses.lean#L22",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/OptimizationGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/OptimizationWitnesses.lean#L22",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "0774ec562e08a34bb88f69600d89c5647519c7cf9a514148242ad868be92fde4",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

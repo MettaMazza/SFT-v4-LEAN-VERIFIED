@@ -1,0 +1,68 @@
+FOCUSED REVIEW: WHOLE WINDING, FLUX AND NEUTRAL CIRCULATION
+Maria Smith, Ernos Labs
+Prepared 18 November 2026 with AI assistance under the author's direction.
+
+PUBLISHED EDITION
+Paired carriers, flux quantization and circulation, version 1.1
+https://doi.org/10.5281/zenodo.24353410
+Begin with Sections 2, 5 and 8. Sections 1, 3–4 and 6–7 develop the paired carrier, coherent transport, magnetic response, weak link and neutral-flow construction.
+
+This is an invitation to independent examination, not a completed independent review.
+
+THE ORIGINAL OPERATION
+A FoldQuantumState has nonempty support with distinct branch words and a distinct phase cycle C of length d >= 2. Every branch phase belongs to C. The original phase_action requires a nonempty successor trace. With trace length m, it preserves every branch word and shifts each selected phase index i to (i+m) mod d, keeping branch order and the entire cycle.
+
+Pinned original state and action:
+https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/quantum_computation/operations.py
+
+The original Materials registrations are SC-FLUX-QUANTIZATION and SF-CIRCULATION. They state whole-winding closure for the paired-carrier phase and the neutral superfluid phase respectively, retaining paired charge or vortex-core boundary:
+https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/materials/obligations.py
+
+WORK THROUGH THE RETURN ARGUMENT
+Take a distinct cycle C and a phase actually found at index i. Finding that phase establishes i < d and d > 0. If shifting by m returns the same phase, distinct cycle labels imply
+  (i+m) mod d = i.
+Quotient/remainder decomposition then gives
+  i+m = d*((i+m)/d) + i.
+Cancel i: m is a whole multiple of d. Conversely, adding d*n leaves the remainder at i, so a whole winding returns the selected phase. Thus:
+  shiftPhase C m phase = some phase
+  iff there exists n : Nat with m = d*n.
+
+In SFT.Materials.FluxWinding, inspect:
+- returnForcesWholeWinding
+- wholeWindingReturns
+- returnExactlyWholeWinding
+
+The general remainder theorem takes a natural count, including zero as the structural empty-count case. The original quantum phase_action retains its nonempty-trace requirement and cycle length at least two. Check these domains explicitly when moving between the lemma and operation.
+
+FROM ACTUAL PATH TO COMPUTED CLASS
+Each loop supplies a valid closed graph path, distinct cycle, selected phase and return along its actual adjacent-pair transition list. Set
+  m = length(adjacentPairs path)
+  w = m / d.
+The return theorem gives m=d*n; positive d makes division yield w=n. The result is m=d*w. The winding output is computed from the retained path and cycle.
+
+For a three-label cycle, consider transition counts 1, 2, 3 and 6. Counts 1 and 2 do not return a selected phase; 3 returns with winding 1; 6 returns with winding 2. Here m counts adjacent transitions, not path vertices. These are reading examples of the quantified argument.
+
+TWO DISTINCT CARRIERS
+FluxWinding.Loop retains the paired label and charge. Its record stores the complete loop, opposed pair and computed winding; pairedChargeRetained and pairedLabelsRetained identify those projections.
+
+SuperflowWinding.Loop retains empty charge support, the vortexCoreBoundary and conditions. singleValuedReturnExactlyWhole applies the same arithmetic to this neutral loop. computedWindingExactly computes its circulation class; neutralCarrier, vortexCoreRetained, closedPathRetained and conditionsRetained state what remains in its record.
+
+Both modules prove base and successor laws for complete lists of records. Earlier loop records remain when a new loop is appended.
+
+Pinned native definitions and full proof bodies:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Materials/FluxWinding.lean
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Materials/SuperflowWinding.lean
+
+REVIEW QUESTIONS
+1. Does the phase-return equivalence preserve the exact selected-phase, distinctness and count hypotheses in both directions?
+2. Does the passage from adjacentPairs to the computed quotient preserve the original path and transition-count convention?
+3. Are the charged and neutral carriers, and all their retained records, faithfully mapped to the two original registrations?
+4. Do the source-bound grammar, closure and experiment records correspond to those same entries? Consult Sections 9–11 and SOURCE_CORRESPONDENCE.json rather than identifying a candidate classification with the entire physical derivation.
+
+EVIDENCE AND RESPONSES
+Use the selected Zenodo edition's SOURCE_AND_EVIDENCE.zip and SOURCE_CORRESPONDENCE.json. The paper identifies TURN806 for flux and TURN809 for circulation within the seven-entry TURN803–809 sequence, together with the original source comparisons, controls and retained axiom audits. This guide reports no new build or experimental run.
+
+Report an exact source operation, full Lean declaration, hypothesis or reproducible example:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+
+A precise objection, question or favorable finding is welcome. State the edition, what you inspected, and affiliations or AI assistance. Maria Smith is the scientific author.

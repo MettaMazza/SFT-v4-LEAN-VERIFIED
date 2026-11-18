@@ -135,84 +135,58 @@
   ],
   "live_jobs": [
     {
-      "session": 84349,
-      "pid": 95752,
-      "driver": "work/check_xray1163_empirical.py"
+      "lane": "quantum",
+      "pid": 90470,
+      "script": "resume1179_quantum.py",
+      "log": "work/detached1180_quantum.log"
     },
     {
-      "session": 2312,
-      "driver": "work/run_biology_batch1167.py",
-      "current_pid": 30829
+      "lane": "xray",
+      "pid": 90471,
+      "script": "resume1179_xray.py",
+      "log": "work/detached1180_xray.log"
     },
     {
-      "session": 69438,
-      "driver": "work/run_metabolism1171_checks.py"
+      "lane": "evolution",
+      "pid": 90472,
+      "script": "resume1179_evolution.py",
+      "log": "work/detached1180_evolution.log"
     },
     {
-      "session": 96210,
-      "driver": "work/run_inheritance1177_checks.py"
+      "lane": "gene",
+      "pid": 90473,
+      "script": "resume1179_gene.py",
+      "log": "work/detached1180_gene.log"
     },
     {
-      "session": 47706,
-      "driver": "work/register_metabolism1171_batch_when_ready.py"
+      "lane": "watchers",
+      "pid": 90474,
+      "script": "resume1179_watchers.py",
+      "log": "work/detached1180_watchers.log"
     },
     {
-      "session": 20830,
-      "driver": "work/register_inheritance1177_batch_when_ready.py"
+      "lane": "medicine1247",
+      "pid": 90475,
+      "script": "run_medicine1247_checks.py",
+      "log": "work/detached1180_medicine1247.log"
     },
     {
-      "session": 43064,
-      "driver": "work/run_evolution1183_checks.py",
-      "waiting_for_pid": 95752
+      "lane": "medicine1247_registration",
+      "pid": 90476,
+      "script": "register_medicine1247_when_ready.py",
+      "log": "work/detached1180_medicine1247_registration.log"
     },
     {
-      "session": 44971,
-      "driver": "work/register_evolution1183_batch_when_ready.py"
+      "kind": "checks",
+      "pid": 90799,
+      "script": "run_accuracy1252_checks.py",
+      "log": "work/detached1180_accuracy_checks.log"
     },
     {
-      "session": 89012,
-      "driver": "work/run_gene_protein1189_checks.py",
-      "waiting_for_pid": 10738
-    },
-    {
-      "session": 58219,
-      "driver": "work/register_gene_protein1189_when_ready.py"
-    },
-    {
-      "session": 79007,
-      "driver": "work/run_cell1201_checks.py",
-      "waiting_for_pid": 37735
-    },
-    {
-      "session": 18993,
-      "driver": "work/register_cell1201_when_ready.py"
-    },
-    {
-      "session": 56657,
-      "driver": "work/run_organism1208_checks.py",
-      "waiting_for_pid": 40722
-    },
-    {
-      "session": 88093,
-      "driver": "work/register_organism1208_when_ready.py"
-    },
-    {
-      "session": 31638,
-      "driver": "work/run_ecology1220_checks.py",
-      "waiting_for_pid": 42827
-    },
-    {
-      "session": 11407,
-      "driver": "work/register_ecology1220_when_ready.py"
-    },
-    {
-      "session": 42637,
-      "driver": "work/run_patient1234_checks.py",
-      "waiting_for_pid": 26915
-    },
-    {
-      "session": 56347,
-      "driver": "work/register_patient1234_when_ready.py"
+      "kind": "registration",
+      "pid": 90800,
+      "script": "register_accuracy1252_when_ready.py",
+      "log": "work/detached1180_accuracy_registration.log"
     }
   ],
   "snapshot": [
@@ -56749,11 +56723,14 @@
     "reason": "Latest user explicitly requested continuation; canonical drive is available. Retained publication recovery snapshot is historical and must not replace current scientific files."
   },
   "last_verified_checkpoint": {
-    "commit": "f20a0eaacdfee5c55781457a3801cbf34ca42b4d",
-    "tree": "dfcc1e9e5186f55175f16b6017829ef7e95e150e",
-    "files": 83,
-    "complete": 768,
-    "receipt": "work/checkpoint1178_remote.json"
+    "status": "PASS",
+    "commit": "78b2645e9d69ff8ad1a58205953afa294fda2701",
+    "tree": "24ae89eecd5be4b69dca300a201f05630e173b8e",
+    "main_verified": true,
+    "files": 443,
+    "complete": 776,
+    "verified_at": "2026-11-18T08:30:41.481818+00:00",
+    "preserved_publication_parent": "7cb8941d26f9f3a94c84b330db90dc3d0e15c953"
   },
   "staged_next_entry": {
     "module": "work/constants-recovery/SFT/Materials/CrystalSystems.lean",
@@ -66968,11 +66945,13 @@
     ],
     "status": "Retained actual audited source/empirical checks; resume unfinished evolution programme then remaining five entries",
     "next": "Run existing six-entry checks and register in source dependency order. Childless old waiting dispatcher35563 replaced; registration watcher44971 retained.",
-    "check_session": 6490,
+    "check_session": null,
     "registration_session": 44971,
     "driver": "work/resume1179_evolution.py",
     "registration_driver": "work/register_evolution1183_batch_when_ready.py",
-    "log": "work/resume1179_evolution.log"
+    "log": "work/detached1180_evolution.log",
+    "pid": 90472,
+    "runtime_note": "Exact existing commands run sequentially within this detached worker; inspect actual process before any restart."
   },
   "checkpoint1170_remote": {
     "status": "PASS",
@@ -67154,14 +67133,16 @@
     "quaternary_binding": "three original special requirements, fresh native extraction required"
   },
   "gene_protein_batch1189": {
-    "check_session": 68398,
+    "check_session": null,
     "registration_session": 58219,
     "driver": "work/resume1179_gene.py",
     "registration_driver": "work/register_gene_protein1189_when_ready.py",
     "waiting_for_worker_pid": 10738,
     "rule": "Take compartment worker slot only after entire existing batch exits; maximum4 compiler jobs; original dependency-ordered registration.",
-    "log": "work/resume1179_gene.log",
-    "status": "Alphabet,Codon,CodonBox checks retained; Gene programme restarted after absence then remaining queued source work"
+    "log": "work/detached1180_gene.log",
+    "status": "Alphabet,Codon,CodonBox checks retained; Gene programme restarted after absence then remaining queued source work",
+    "pid": 90473,
+    "runtime_note": "Exact existing commands run sequentially within this detached worker; inspect actual process before any restart."
   },
   "checkpoint1173_remote": {
     "status": "PASS",
@@ -67243,12 +67224,15 @@
       "SFT-BIO-DYSREGULATED-DIVISION-001"
     ],
     "status": "seven original source translations staged and original validators PASS; native checks queued",
-    "check_session": 79007,
+    "check_session": null,
     "registration_session": 18993,
-    "driver": "work/run_cell1201_checks.py",
+    "driver": "work/resume1179_gene.py",
     "registration_driver": "work/register_cell1201_when_ready.py",
     "waiting_for_worker_pid": 37735,
-    "rule": "Take only gene/protein worker slot after entire batch exits; actual report and dependency registration required."
+    "rule": "Take only gene/protein worker slot after entire batch exits; actual report and dependency registration required.",
+    "pid": 90473,
+    "log": "work/detached1180_gene.log",
+    "runtime_note": "Exact existing commands run sequentially within this detached worker; inspect actual process before any restart."
   },
   "checkpoint1174_remote": {
     "status": "PASS",
@@ -67363,9 +67347,9 @@
       "SFT-BIO-SENESCENCE-001"
     ],
     "status": "twelve pinned source translations and original validators PASS; native checks queued",
-    "check_session": 56657,
+    "check_session": null,
     "registration_session": 88093,
-    "driver": "work/run_organism1208_checks.py",
+    "driver": "work/resume1179_gene.py",
     "registration_driver": "work/register_organism1208_when_ready.py",
     "waiting_for_worker_pid": 40722,
     "expected_audits": {
@@ -67381,7 +67365,10 @@
       "reproduction1217": 115,
       "lifecycle1218": 115,
       "senescence1219": 116
-    }
+    },
+    "pid": 90473,
+    "log": "work/detached1180_gene.log",
+    "runtime_note": "Exact existing commands run sequentially within this detached worker; inspect actual process before any restart."
   },
   "checkpoint1175_remote": {
     "status": "PASS",
@@ -67512,9 +67499,9 @@
       "SFT-BIO-BIO-HANDOFF-001"
     ],
     "status": "fourteen pinned source translations and original validators PASS; native checks queued",
-    "check_session": 31638,
+    "check_session": null,
     "registration_session": 11407,
-    "driver": "work/run_ecology1220_checks.py",
+    "driver": "work/resume1179_gene.py",
     "registration_driver": "work/register_ecology1220_when_ready.py",
     "waiting_for_worker_pid": 42827,
     "expected_audits": {
@@ -67532,7 +67519,10 @@
       "biouncertainty1231": 116,
       "biocausality1232": 116,
       "biohandoff1233": 115
-    }
+    },
+    "pid": 90473,
+    "log": "work/detached1180_gene.log",
+    "runtime_note": "Exact existing commands run sequentially within this detached worker; inspect actual process before any restart."
   },
   "checkpoint1176_remote": {
     "status": "PASS",
@@ -67584,9 +67574,9 @@
   },
   "quantum1235": {
     "status": "Full empirical comparison restarted only after prior worker absence;142audit and14cases retained",
-    "check_session": 89623,
+    "check_session": null,
     "check_driver": "work/run_quantum1235_comparison_retry.py",
-    "log": "work/resume1179_quantum.log",
+    "log": "work/detached1180_quantum.log",
     "original_report": "work/quantum1235_original_report.json",
     "source_pin": "work/quantum1235_source_pin.json",
     "dispatch_parent_temporarily_stopped": 26913,
@@ -67618,7 +67608,8 @@
     "retry_driver": "work/continue_quantum1235_retry.py",
     "registration": "single registration in retry93732 after actual checks; redundant waiting watcher5812 terminated before any registration",
     "worker": "work/resume1179_quantum.py",
-    "full_audit": "work/quantum1235_full_audit_report.json"
+    "full_audit": "work/quantum1235_full_audit_report.json",
+    "pid": 90470
   },
   "episode1236": {
     "claim_id": "SFT-MED-CLINICAL-EPISODE-001",
@@ -67668,13 +67659,16 @@
       "clinicalobservation1239",
       "course1240"
     ],
-    "check_session": 89623,
+    "check_session": null,
     "registration_session": 99912,
     "wait_for_actual_patient_driver": 51661,
     "worker": "work/resume1179_quantum.py",
-    "log": "work/medicine1236_checks_driver.log",
+    "log": "work/detached1180_quantum.log",
     "resource": "reuse first Medicine worker slot after its actual exit;no additional concurrent compiler",
-    "status": "Sequential chain after full PatientIdentity checks; no old PID waits"
+    "status": "Sequential chain after full PatientIdentity checks; no old PID waits",
+    "pid": 90470,
+    "driver": "work/resume1179_quantum.py",
+    "runtime_note": "Exact existing commands run sequentially within this detached worker; inspect actual process before any restart."
   },
   "normal1241": {
     "claim_id": "SFT-MED-NORMAL-VARIATION-001",
@@ -67727,13 +67721,16 @@
       "comorbidity1245",
       "severity1246"
     ],
-    "check_session": 89623,
+    "check_session": null,
     "registration_session": 99912,
     "worker": "work/resume1179_quantum.py",
-    "log": "work/medicine1241_checks_driver.log",
+    "log": "work/detached1180_quantum.log",
     "wait_for_actual_driver": 63247,
     "resource": "Reuse previous Medicine worker slot; no additional simultaneous Lean job",
-    "status": "Sequential chain after full PatientIdentity checks; no old PID waits"
+    "status": "Sequential chain after full PatientIdentity checks; no old PID waits",
+    "pid": 90470,
+    "driver": "work/resume1179_quantum.py",
+    "runtime_note": "Exact existing commands run sequentially within this detached worker; inspect actual process before any restart."
   },
   "recovery1179": {
     "status": "Four workers resumed only unfinished commands after all old process handles were absent",
@@ -67748,6 +67745,230 @@
     "watcher_pids": "work/resume1179_watchers.json",
     "memory_free_percent": 65,
     "previous_turn_classification": "progress: native source translations,source validation,dependency registrations,manuscript updates and remote blobs/tree created; branch update unfinished"
+  },
+  "symptom1247": {
+    "claim_id": "SFT-MED-SYMPTOM-001",
+    "status": "source staged; original empiricalPASS; native checks queued",
+    "expected_audit_declarations": 119,
+    "source_pin": "work/symptom1247_source_pin.json",
+    "original_report": "work/symptom1247_original_report.json"
+  },
+  "sign1248": {
+    "claim_id": "SFT-MED-SIGN-001",
+    "status": "source staged; original empiricalPASS; native checks queued",
+    "expected_audit_declarations": 113,
+    "source_pin": "work/sign1248_source_pin.json",
+    "original_report": "work/sign1248_original_report.json"
+  },
+  "clinicalmeasure1249": {
+    "claim_id": "SFT-MED-CLINICAL-MEASUREMENT-001",
+    "status": "source staged; original empiricalPASS; native checks queued",
+    "expected_audit_declarations": 113,
+    "source_pin": "work/clinicalmeasure1249_source_pin.json",
+    "original_report": "work/clinicalmeasure1249_original_report.json"
+  },
+  "diagnostic1250": {
+    "claim_id": "SFT-MED-DIAGNOSTIC-CLASSIFICATION-001",
+    "status": "source staged; original empiricalPASS; native checks queued",
+    "expected_audit_declarations": 113,
+    "source_pin": "work/diagnostic1250_source_pin.json",
+    "original_report": "work/diagnostic1250_original_report.json"
+  },
+  "differentialdiagnosis1251": {
+    "claim_id": "SFT-MED-DIFFERENTIAL-DIAGNOSIS-001",
+    "status": "source staged; original empiricalPASS; native checks queued",
+    "expected_audit_declarations": 113,
+    "source_pin": "work/differentialdiagnosis1251_source_pin.json",
+    "original_report": "work/differentialdiagnosis1251_original_report.json"
+  },
+  "medicine1247_batch": {
+    "entries": [
+      "symptom1247",
+      "sign1248",
+      "clinicalmeasure1249",
+      "diagnostic1250",
+      "differentialdiagnosis1251"
+    ],
+    "check_session": null,
+    "registration_session": 10283,
+    "worker": "work/run_medicine1247_checks.py",
+    "log": "work/medicine1247_checks_driver.log",
+    "wait_for_actual_driver": 90470,
+    "resource": "Reuse previous Medicine worker slot; no additional simultaneous Lean job",
+    "pid": 90475,
+    "registration_pid": 90476
+  },
+  "accuracy1252": {
+    "claim_id": "SFT-MED-DIAGNOSTIC-ACCURACY-001",
+    "status": "original source binding and empiricalPASS; native translation staged",
+    "source": "sft/medicine/structural_counts.py and generated_law.py:_witnesses",
+    "native": "SFT/Medicine/StructuralCounts.lean and DiagnosticAccuracy*.lean",
+    "expected_audit_declarations": 130,
+    "jobs": [
+      {
+        "kind": "checks",
+        "pid": 90799,
+        "script": "run_accuracy1252_checks.py",
+        "log": "work/detached1180_accuracy_checks.log"
+      },
+      {
+        "kind": "registration",
+        "pid": 90800,
+        "script": "register_accuracy1252_when_ready.py",
+        "log": "work/detached1180_accuracy_registration.log"
+      }
+    ],
+    "next_action": "After preceding five Medicine checks,run existing build,audit,complete counts comparison,full programme and native empirical comparison; register only with completed original parents."
+  },
+  "recovery1180": {
+    "status": "Prior four workers absent after interruption; launchd access to Documents denied; failed jobs removed; restored same existing commands as detached processes in working execution environment",
+    "jobs": [
+      {
+        "lane": "quantum",
+        "pid": 90470,
+        "script": "resume1179_quantum.py",
+        "log": "work/detached1180_quantum.log"
+      },
+      {
+        "lane": "xray",
+        "pid": 90471,
+        "script": "resume1179_xray.py",
+        "log": "work/detached1180_xray.log"
+      },
+      {
+        "lane": "evolution",
+        "pid": 90472,
+        "script": "resume1179_evolution.py",
+        "log": "work/detached1180_evolution.log"
+      },
+      {
+        "lane": "gene",
+        "pid": 90473,
+        "script": "resume1179_gene.py",
+        "log": "work/detached1180_gene.log"
+      },
+      {
+        "lane": "watchers",
+        "pid": 90474,
+        "script": "resume1179_watchers.py",
+        "log": "work/detached1180_watchers.log"
+      },
+      {
+        "lane": "medicine1247",
+        "pid": 90475,
+        "script": "run_medicine1247_checks.py",
+        "log": "work/detached1180_medicine1247.log"
+      },
+      {
+        "lane": "medicine1247_registration",
+        "pid": 90476,
+        "script": "register_medicine1247_when_ready.py",
+        "log": "work/detached1180_medicine1247_registration.log"
+      }
+    ],
+    "previous_turn": "progress: five exact Medicine source translations/original comparisons,source-bound DiagnosticAccuracy table translation and mathematical manuscript update;776registration count retained",
+    "checkpoint_tree1179": "0baa782f5aa7dc977d31fa5af7f8ef937f26db21",
+    "checkpoint_status": "All443blobs exist;treecreation succeeded; commit/main update pending latest publication merge",
+    "live_handles": "Inspect work/detached1180_jobs.json and work/accuracy1252_jobs.json by actual PID/command. Four compiler chains are detached with PPID1. Do not restart live processes after an app interruption."
+  },
+  "checkpoint1180_pending_local": {
+    "entries": [
+      "symptom1247",
+      "sign1248",
+      "clinicalmeasure1249",
+      "diagnostic1250",
+      "differentialdiagnosis1251",
+      "accuracy1252"
+    ],
+    "source_status": "Original bindings/empiricalPASS; native checks queued; paper1116\u20131117 and source/nativefiles are local and must join next checkpoint. Counts unchanged by staging."
+  },
+  "retired_live_jobs1181": [
+    {
+      "session": 84349,
+      "pid": 95752,
+      "driver": "work/check_xray1163_empirical.py"
+    },
+    {
+      "session": 2312,
+      "driver": "work/run_biology_batch1167.py",
+      "current_pid": 30829
+    },
+    {
+      "session": 69438,
+      "driver": "work/run_metabolism1171_checks.py"
+    },
+    {
+      "session": 96210,
+      "driver": "work/run_inheritance1177_checks.py"
+    },
+    {
+      "session": 47706,
+      "driver": "work/register_metabolism1171_batch_when_ready.py"
+    },
+    {
+      "session": 20830,
+      "driver": "work/register_inheritance1177_batch_when_ready.py"
+    },
+    {
+      "session": 43064,
+      "driver": "work/run_evolution1183_checks.py",
+      "waiting_for_pid": 95752
+    },
+    {
+      "session": 44971,
+      "driver": "work/register_evolution1183_batch_when_ready.py"
+    },
+    {
+      "session": 89012,
+      "driver": "work/run_gene_protein1189_checks.py",
+      "waiting_for_pid": 10738
+    },
+    {
+      "session": 58219,
+      "driver": "work/register_gene_protein1189_when_ready.py"
+    },
+    {
+      "session": 79007,
+      "driver": "work/run_cell1201_checks.py",
+      "waiting_for_pid": 37735
+    },
+    {
+      "session": 18993,
+      "driver": "work/register_cell1201_when_ready.py"
+    },
+    {
+      "session": 56657,
+      "driver": "work/run_organism1208_checks.py",
+      "waiting_for_pid": 40722
+    },
+    {
+      "session": 88093,
+      "driver": "work/register_organism1208_when_ready.py"
+    },
+    {
+      "session": 31638,
+      "driver": "work/run_ecology1220_checks.py",
+      "waiting_for_pid": 42827
+    },
+    {
+      "session": 11407,
+      "driver": "work/register_ecology1220_when_ready.py"
+    },
+    {
+      "session": 42637,
+      "driver": "work/run_patient1234_checks.py",
+      "waiting_for_pid": 26915
+    },
+    {
+      "session": 56347,
+      "driver": "work/register_patient1234_when_ready.py"
+    }
+  ],
+  "continuation1181": {
+    "previous_turn": "progress:776complete checkpoint pushed and remotely verified; DiagnosticAccuracy original source translation and checks staged",
+    "action": "Preserve actual detached checks; register passing entries immediately with original completed parents; six staged Medicine entries and paper1116\u20131117 included in this checkpoint. Continue toward1000review milestone.",
+    "pid_manifest": "work/detached1180_jobs.json",
+    "accuracy_pid_manifest": "work/accuracy1252_jobs.json"
   },
   "checkpoint_scope": "776complete frozen source/evidence checkpoint. Runtime jobs subsequently recovered; live current workspace state remains authoritative."
 }

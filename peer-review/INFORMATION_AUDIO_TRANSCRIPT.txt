@@ -1,0 +1,25 @@
+What does a reverse record retain?
+
+This is synthetic narration of an example from Maria Smith's information-loss paper, prepared with AI assistance under her direction.
+
+Start with four inputs: A A, A B, B A, and B B. Keep only the first letter.
+
+A A and A B both become A. B A and B B both become B.
+
+There are six pairs of different inputs. Two pairs now have the same output. The other four pairs still have different outputs.
+
+A reverse record lists every predecessor, in source order. For output A, it lists A A and A B. For output B, it lists B A and B B.
+
+That list keeps the possibilities, but does not choose the original input. If you observe A, was the input A A or A B? Exact recovery needs a retained predecessor label that resolves that choice. If an output has only one predecessor, it can be recovered directly.
+
+Now send both outputs, A and B, to the single output, one. All six pairs now have the same output. Inputs that already had equal outputs cannot become distinguished by applying the same later map.
+
+Which distinctions would your application need to preserve?
+
+The accompanying transcript links to the paper, original operations and Lean proofs. Specific questions and independent review are welcome.
+
+Scientific author: Maria Smith, Ernos Labs.
+Synthetic voice: Apple Daniel (en_GB). This is not a recording of Maria Smith.
+Paper: https://doi.org/10.5281/zenodo.24339200
+Review brief: https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/peer-review/INFORMATION_LOSS_REVIEW_BRIEF.txt
+Interactive example: https://sft-information-loss.mettamazza.chatgpt.site

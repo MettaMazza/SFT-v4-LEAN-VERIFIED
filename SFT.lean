@@ -11823,3 +11823,15 @@ import SFT.Biology.SelectionSource
 import SFT.Biology.SelectionExperiment
 
 import SFT.Biology.SelectionValidation
+
+import SFT.Biology.Fixation
+
+import SFT.Biology.FixationGrammar
+
+import SFT.Biology.FixationEvidence
+
+import SFT.Biology.FixationSource
+
+import SFT.Biology.FixationExperiment
+
+import SFT.Biology.FixationValidation

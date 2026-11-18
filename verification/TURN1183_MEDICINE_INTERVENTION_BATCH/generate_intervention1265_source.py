@@ -56,30 +56,40 @@ def sourceCorpus (files : List Snapshot) (sourceId : String) : Except String Str
 def validateSources (files : List Snapshot) : Except String Unit := do
  if sources.length==13 && !(SFT.Biology.LifeOrganizationSource.distinctIds (sources.map Source.sourceId)) then
   throw "Medicine source identities repeat or are incomplete"
- let mut capturedCount := 0
- let mut failedCount := 0
- for source in sources do
+ let totals ← sources.foldlM (fun (totals : Nat × Nat) source => do
   if Text.equal source.transportStatus "captured" then
-   capturedCount := capturedCount+1
-   let (sp,sh,tp,th) ← match source.snapshotPath,source.snapshotHash,source.textPath,source.textHash with
-    | some sp,some sh,some tp,some th => .ok (sp,sh,tp,th)
-    | _,_,_,_ => .error (Text.append "Medicine captured source lacks immutable paths: " source.sourceId)
+   let sp ← match source.snapshotPath with
+    | some value => .ok value
+    | none => .error (Text.append "Medicine captured source lacks immutable paths: " source.sourceId)
+   let sh ← match source.snapshotHash with
+    | some value => .ok value
+    | none => .error (Text.append "Medicine captured source lacks immutable paths: " source.sourceId)
+   let tp ← match source.textPath with
+    | some value => .ok value
+    | none => .error (Text.append "Medicine captured source lacks immutable paths: " source.sourceId)
+   let th ← match source.textHash with
+    | some value => .ok value
+    | none => .error (Text.append "Medicine captured source lacks immutable paths: " source.sourceId)
    let snapshot ← readSnapshot files sp
    if !Text.equal (bytesHash snapshot) sh then
     throw (Text.append "Medicine snapshot changed: " source.sourceId)
    let text ← readSnapshot files tp
    if !Text.equal (bytesHash text) th then
     throw (Text.append "Medicine snapshot changed: " source.sourceId)
+   return (totals.1+1,totals.2)
   else if Text.equal source.transportStatus "failed" then
-   failedCount := failedCount+1
-   let (fp,fh) ← match source.failurePath,source.failureHash with
-    | some fp,some fh => .ok (fp,fh)
-    | _,_ => .error (Text.append "Medicine failed-transport receipt changed: " source.sourceId)
+   let fp ← match source.failurePath with
+    | some value => .ok value
+    | none => .error (Text.append "Medicine failed-transport receipt changed: " source.sourceId)
+   let fh ← match source.failureHash with
+    | some value => .ok value
+    | none => .error (Text.append "Medicine failed-transport receipt changed: " source.sourceId)
    let failure ← readSnapshot files fp
    if !Text.equal (bytesHash failure) fh then
     throw (Text.append "Medicine failed-transport receipt changed: " source.sourceId)
-  else throw (Text.append "Medicine source has unknown transport status: " source.sourceId)
- if capturedCount != 11 || failedCount != 2 then
+   return (totals.1,totals.2+1)
+  else throw (Text.append "Medicine source has unknown transport status: " source.sourceId)) (0,0)
+ if totals.1 != 11 || totals.2 != 2 then
   throw "Medicine source transport census changed"
  return ()
 def extractRequirements (files : List Snapshot) : Except String (String × String) := do

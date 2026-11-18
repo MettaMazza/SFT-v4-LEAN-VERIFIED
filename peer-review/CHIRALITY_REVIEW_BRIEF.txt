@@ -22,6 +22,26 @@ Native V4 commit: 21cdf559922fb057f8560f42d056ffa035329eb3
 https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Chemistry/Chirality.lean
 All declaration names below have the prefix SFT.Chemistry.Chirality.
 
+NOTATION KEY FOR SECTIONS 1–2
+The paper uses two different records in Section 1. In the raw OrientedStructure record, C is a list of positive counts, A a list of positive-count pairs, and o a held label. In the named comparison record M = (N,C,E,Q,O), C instead denotes element labels. Keep those records distinct when reading the transition.
+
+For the named comparison:
+- N: ordered occurrence names (MolecularCarrier.Raw.occurrences).
+- C: element labels aligned by position with N (Raw.elements).
+- E: pairs of occurrence names recording bonds (Raw.bonds).
+- Q: the open-charge-fibre record (Raw.openChargeFibres); MolecularCarrier.admit requires it to be empty.
+- O: named orientation rows, a list of (occurrence name, orientation word). wordAt returns the first matching row, or none if no row exists.
+- OrientationCell: structural EmptyOne, or a held label with its family and label fields. The labels abbreviated f1 and f2 are fibre-one and fibre-two.
+- w: an ordered triple of orientation cells (OrientationWord).
+- r: reflectCell, exchanging fibre-one and fibre-two, preserving the label family, fixing EmptyOne and leaving other held labels unchanged.
+- Rw: reflectWord, applying r to all three cells. RM: mirrorMolecule, retaining the carrier and reflecting each named orientation row.
+- p: a target-name order. Pairing the source occurrence list with p by position gives the map written phi_p.
+- P(M,M',p): properMatches. It checks the element and bond requirements through MolecularIsomer.candidateMatches and the orientation requirement through orientationMatches. Both corresponding orientation rows must exist; absent rows do not pass.
+- chi(M): chiral M, the Boolean negation of hasProperSuperposition M (mirrorMolecule M). The latter checks equal composition signatures and searches the complete generated target orders.
+- Perm(p,N): p is a permutation of N. In Lean the relation is List.Perm p N. The list of generated orders is arrangementsCore N.
+
+This key expands the existing notation; it does not change the source domain or the hypotheses of any theorem. Molecular admission and the nonempty/distinct-support hypotheses of the quantified comparison are stated separately in the paper and declarations.
+
 1. THE QUANTIFIED COMPARISON
 chiralityExactlyAllProperMapsFail states, for nonempty distinct occurrence support, that chiral m = true is equivalent to properMatches m (mirrorMolecule m) order = false for every order permuting that support. Its proof uses the preserved composition signature and noSuperpositionExactly. This is a quantified equivalence, not a conclusion inferred from the two-occurrence replay.
 

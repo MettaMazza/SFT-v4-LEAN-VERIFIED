@@ -1,0 +1,58 @@
+FOCUSED REVIEW: COMPILER COVERAGE AND SERIAL COMPOSITION
+Maria Smith, Ernos Labs — 18 November 2026
+AI-assisted review invitation under the author's direction.
+
+Paper 31: Compiler correctness by composition of observed executions
+https://doi.org/10.5281/zenodo.24341456
+Start with Sections 1–3; Section 4 gives the worked three-program chain.
+
+REVIEW QUESTION
+Examine how the original compilation boundary is represented, how coverage and successful row certificates refer to the same target, and how the shared intermediate execution connects two compiler stages. Identify a concrete source operation, theorem or paper passage in any finding.
+
+ORIGINAL SOURCE
+Pinned V3 commit: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1
+https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/spec_data.py
+The COMPILATION topic registers source/target grammars, total compiler relation, source/target evaluation, result correspondence, failure rejection and overhead ledger. Its declared boundary is the two frozen language grammars and runtime interface.
+https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/catalog.py
+The catalog supplies the generated semantics dimensions, including complete evaluation trace, observation-bound equivalence and syntax successor.
+https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/semantics/compilation/law.py
+This binding selects SPEC_BY_ID["SFT-COMP-SEM-COMPILATION-001"]; follow that binding rather than expecting an independent evaluator in this small file. The paper's source bundle includes the original operations and registration/derivation documents.
+
+NATIVE PROOF ROUTE
+Pinned V4 commit: 21cdf559922fb057f8560f42d056ffa035329eb3
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CompilationRelation.lean
+
+1. Grammar and totality.
+SFT.Computation.CompilationRelation.coverageMeaning proves the coverage check equivalent to every member of the input carrier having an allowed target.
+SFT.Computation.CompilationRelation.grammarBoundary places each allowed row in the declared source and target carriers.
+SFT.Computation.CompilationRelation.verifiedTotal combines coverage with checks of allowed rows.
+Read completeCompilerCheck and everyRelationRowChecked alongside these declarations: coverage and observation checks belong to the same relation.
+
+2. Runtime and certificates.
+Runtime retains an ordered input support, source and target expression maps, and an observation function on a result plus its event list. checked applies the exact observation certificate.
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ProgramEquivalence.lean
+SFT.Computation.ProgramEquivalence.exactCertificate states that the Boolean certificate is true iff the two executions have equal observations for every member of the supplied support. certificateSound and certificateComplete prove the two directions by induction on that support.
+SFT.Computation.ProgramEquivalence.completeExecutions retains both execution derivations and the observations obtained from them. distinguishingInput extracts a differing input from a failed certificate; completeDistinctions and disjointDistinctions account for the equal/different rows.
+SFT.Computation.CompilationRelation.failureRejected excludes a failed row from Verified.
+
+3. The composition step.
+SFT.Computation.CompilationRelation.serialCorrespondence takes:
+- first.inputs = second.inputs;
+- first.targetExpression middle = second.sourceExpression middle;
+- first.observe = second.observe;
+- successful first and second row checks.
+Its proof obtains both equivalences through checkedMeaning, rewrites the second using those three equalities, and applies SFT.Computation.ProgramEquivalence.composition. At each admitted input, the intermediate observation is the same term in both equalities.
+The paper gives the identity/successor argument for finite chains. The module also provides identityCorrespondence, inputSuccessor and observationSuccessor; the latter retains ledger concatenation when the input support is extended.
+
+WORKED EXAMPLE
+Section 4 compares x + 1/3, 1/3 + x, and x + (1/6 + 1/6). At x = 2/3 all yield 1; at x = 1/2 all yield 5/6. The declared observation is the exact result string. Complete execution records retain event counts 6, 6 and 10 and the differing leaf order. Resource ledgers remain separately available.
+Transcript: https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/peer-review/COMPILER_VIDEO_TRANSCRIPT.txt
+
+RESPOND WITH ONE FINDING
+A useful response names the source operation or full Lean declaration, states the input domain and interface examined, and supplies reasoning or a reproducible counterexample. Review of the entire corpus is unnecessary.
+PREreview request: https://prereview.org/preprints/doi-10.5281-zenodo.24341456
+Public discussion: https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+Email: Maria.smith.sftoe@gmail.com
+Reproduction/edition guide: https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/peer-review/REPRODUCTION_GUIDE.txt
+
+This brief navigates the compilation argument. Paper 31 also develops canonical support/basis construction and candidate classifications; those remain in the paper and source bundle. The brief introduces no replacement definitions or new verification results. An open request is not a completed independent review or endorsement.

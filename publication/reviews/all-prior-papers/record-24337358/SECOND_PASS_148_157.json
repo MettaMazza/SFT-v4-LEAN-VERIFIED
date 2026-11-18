@@ -1,0 +1,199 @@
+{
+  "updated_at": "2026-11-18T23:39:40.160720+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157
+  ],
+  "challenges": [
+    {
+      "section": 148,
+      "challenge": "Does unresolved continuation establish nontermination?",
+      "evidence": "RecognitionTrace separates Unresolved from Decision. The particular loop has a separate loopNoDecision proof from its carrier and transition relation; loopPrefix proves every natural-number prefix.",
+      "disposition": "The paper retains both separate proofs and does not infer nontermination from a finite unresolved prefix."
+    },
+    {
+      "section": 149,
+      "challenge": "Is the complementary machine applied to the same code used by the predictor?",
+      "evidence": "HaltingBoundary registeredPredictionContradiction retains code, decoded name, selected system and ComplementRecord. totalInternalPredictionExcluded instantiates explicit selfSupport and totality at that code.",
+      "disposition": "The existing argument states the self-description support and derives the contradiction at its exact registered input."
+    },
+    {
+      "section": 150,
+      "challenge": "Is the position recurrence quantified over the implemented counter domain?",
+      "evidence": "RecognitionDomain.enumerateRows and EnumerationTrace.positionReconstruction use Nat; source complete_enumeration starts at one.",
+      "disposition": "Repaired integer wording to natural-number counter. The displayed recurrence and original ordered enumeration remain unchanged."
+    },
+    {
+      "section": 151,
+      "challenge": "Does an encoding alone establish a valid reduction?",
+      "evidence": "ReductionTrace.PreservesAnswers explicitly supplies both answer implications. forwardTrace recovers the decoded procedure trace; composition retains intermediate and final carriers and reverse implications.",
+      "disposition": "The manuscript gives the correctness condition and the composition argument; it does not infer answer preservation from encoding alone."
+    },
+    {
+      "section": 152,
+      "challenge": "Does degree invariance claim a stronger quotient than the graph proof?",
+      "evidence": "DegreeClasses.representativeIndependent proves equal membership from mutual reachability; strict and incomparable representative transport use path composition and absence transport.",
+      "disposition": "The manuscript derives membership invariance and exact reachability classes without introducing a new quotient premise."
+    },
+    {
+      "section": 153,
+      "challenge": "Is a finite replay incorrectly called a halt?",
+      "evidence": "UniversalMachineTrace.recoverHalt requires a normal terminal; descriptionParse uses the prior unique-parse proof, and noOracleFromReplay retains the generated loop counterexample.",
+      "disposition": "The manuscript states terminal normality and keeps unresolved replay distinct from halt."
+    },
+    {
+      "section": 154,
+      "challenge": "Is the diagonal merely an assumed opposite answer?",
+      "evidence": "DiagonalTrace.diagonalRequest constructs the opposite terminal one-state request. nativeDiagonal supplies admission and actual Halted execution; contradictionTrace combines the same decoded request with the predictor correctness.",
+      "disposition": "The manuscript gives the constructed request and execution, with explicit SelfSupport and Total premises."
+    },
+    {
+      "section": 155,
+      "challenge": "Is a syntactically checked proof silently treated as semantic truth?",
+      "evidence": "ProofBoundary.CheckedRecord combines original proofIsValid with consistency; noProofBackedTotality separately retains proofBacked and answerPreserving. missingSelfDecision derives the missing same-code answer from the diagonal execution.",
+      "disposition": "The manuscript states the actual checked relation and answer-preservation condition."
+    },
+    {
+      "section": 156,
+      "challenge": "Does the oracle ledger assume an unstated unique-answer function?",
+      "evidence": "OracleTrace.Interface retains a query-answer relation. Valid requires registered interface identity, query membership and the exact answer pair. Ledger induction covers call, nested ledger and continuation.",
+      "disposition": "The manuscript retains the relational interface and the full nested provenance; no functionality premise is inserted."
+    },
+    {
+      "section": 157,
+      "challenge": "Does finite evidence certify all depths or undisclosed computational power?",
+      "evidence": "ComputationalLimit.DepthCertificate retains actual base and successor evidence; arbitraryDepth uses natural-number induction. finiteEvidenceBoundary uses a refuted record outside the sample. fullDisclosure recovers execution, resources and every external source.",
+      "disposition": "The manuscript supplies the induction and finite-evidence obstruction, without asserting existence of a hypercomputer."
+    },
+    {
+      "section": 148,
+      "challenge": "Do the newly written alternatives and witnesses match the original classification?",
+      "evidence": "All eight original ordered pairs, the 256-member binary product, admitted-coordinate criterion, unique survivor and first-rejection reason are tied to the inspected grammar bodies. The three witnesses are the actual ordered enumeration and both complements.",
+      "disposition": "Full forcing exposition and exact worked operations now accompany the ten entry-specific grammar and witness references."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/catalog.py#L21",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/operations.py",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RecognitionGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RecognitionWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/HaltingGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/HaltingWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/EnumerationGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/EnumerationWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ReductionGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ReductionWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/DegreesGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/DegreesWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/UniversalMachineGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/UniversalMachineWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/UndecidabilityGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/UndecidabilityWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/IncompletenessGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/IncompletenessWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RelativeOracleGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RelativeOracleWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/HypercomputationLimitGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/HypercomputationLimitWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "8c737643ca139bb51dfa9893965caf3d8337d6dd2b4dd5c1f4dfd5121f42b5d4",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

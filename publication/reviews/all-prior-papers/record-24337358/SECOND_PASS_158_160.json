@@ -1,0 +1,80 @@
+{
+  "updated_at": "2026-11-18T23:41:48.902852+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    158,
+    159,
+    160
+  ],
+  "challenges": [
+    {
+      "section": 158,
+      "challenge": "Could the extent theorem equate unrelated encodings or silently admit empty support?",
+      "evidence": "InputExtent.ExactExtent includes the actual resourceLedger result. completeExtent derives both counts through mapCount; occupiedPositionsUnique recovers the guard. sameRepresentationSize shares one word, while representationLedger preserves both distinct codewords and lengths.",
+      "disposition": "The manuscript shows the actual projections and ledger guard, gives equality only for the same codeword, and retains representation correspondence explicitly."
+    },
+    {
+      "section": 159,
+      "challenge": "Is peak space assumed, or is serial time double-counted?",
+      "evidence": "ExecutionResources.peakSupport constructs a member maximum by induction and Nat.le_total; peakMeasuredSupport substitutes actual support length. serialObservationCount applies native path composition and appendCount, yielding left.length+right.length+1.",
+      "disposition": "The manuscript gives the induction and counts the shared interface once. Full history reconstruction and the concrete repeated-terminal counterexample remain separate."
+    },
+    {
+      "section": 160,
+      "challenge": "Does circuit depth mean a sampled maximum or all paths in an unstated order?",
+      "evidence": "CircuitResources.causalTraceMeaning uses full rawSelections completeness and path validity. completeLongestTrace derives nonemptiness from an actual witness and applies attained maximum induction; retainedOrderedTrace uses the absent-choice constructor.",
+      "disposition": "The manuscript explicitly quantifies over the supplied dependency order, proves exhaustive membership and preserves earlier paths under extension."
+    },
+    {
+      "section": 158,
+      "challenge": "Are the classification argument and three witness values actually computed by the original operation?",
+      "evidence": "InputSizeGrammar contains the eight original axes, full binary product, constructor proof of the criteria test and unique survivor. InputSizeWitnesses uses the same two-row resourceLedger and checks timeCount, spaceCount and timeTrace.length.",
+      "disposition": "The added exposition states all alternatives and computes all three values as two, preserving the exact time labels and distinct support."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/catalog.py#L21",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/operations.py",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/InputSizeGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/InputSizeWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/TimeSpaceGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/TimeSpaceWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CircuitResourceGrammar.lean#L118",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CircuitResourceWitnesses.lean#L23",
+      "accessible": true,
+      "pinned_source_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "8a052a86609a2ab20f42a4121d4a87ad8efb5745cac762c1c78071c684aade14",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

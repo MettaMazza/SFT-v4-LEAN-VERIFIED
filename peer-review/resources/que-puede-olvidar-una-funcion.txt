@@ -1,0 +1,89 @@
+FICHA DE ACTIVIDADES
+¿Qué puede olvidar una función?
+Cuatro etiquetas, seis pares y una pregunta sobre cómo recuperar la entrada.
+
+Maria Smith, Ernos Labs
+Versión en español preparada con asistencia de IA, 18 de noviembre de 2026.
+Traducción del recurso educativo en inglés; conserva sus ejemplos y convenciones.
+No se ha realizado una prueba de esta ficha en el aula.
+
+ACTIVIDADES
+
+Partimos de la lista ordenada (aa, ab, ba, bb). La función f conserva solo la primera letra. Una segunda función g envía tanto a como b a una única etiqueta: one.
+
+Entrada x     f(x)     g(f(x))
+aa            a        one
+ab            a        one
+ba            b        one
+bb            b        one
+
+1. ¿Qué distinciones se conservan?
+
+Enumera los seis pares no ordenados de etiquetas distintas de la lista inicial. Llamaremos cerrado a un par cuyas imágenes coinciden, y conservado a un par cuyas imágenes son distintas. Clasifica cada par bajo f y después bajo la composición g después de f.
+
+2. ¿Puedes recuperar esta ejecución?
+
+La salida observada es a. Su registro inverso enumera los predecesores (aa, ab). ¿Permite esa lista saber qué entrada se utilizó? ¿Qué cambia para la función identidad, que devuelve cada etiqueta sin modificarla?
+
+3. ¿Cambia la reversibilidad al cambiar el orden?
+
+Mantén f, pero proporciona el orden (bb, aa, ba, ab). Escribe las etiquetas de la imagen en su orden de primera aparición y cada lista de predecesores en el orden de la lista inicial. ¿Hace reversible a f esta reordenación?
+
+4. Explica el paso general.
+
+Si f(u) = f(v), ¿por qué debe cumplirse g(f(u)) = g(f(v))? ¿Qué implica esto para los pares cerrados y conservados bajo composición?
+
+SOLUCIONES RAZONADAS
+
+1. Dos pares cerrados pasan a ser seis.
+
+Siguiendo el orden inicial, los pares son (aa,ab), (aa,ba), (aa,bb), (ab,ba), (ab,bb) y (ba,bb). Bajo f, el primero y el último están cerrados; los otros cuatro están conservados. Bajo g después de f, todas las entradas tienen imagen one: los seis pares están cerrados y ninguno está conservado.
+
+2. Las posibilidades no identifican un predecesor concreto.
+
+Tanto aa como ab producen a. La lista completa de predecesores conserva esas posibilidades, pero para reconstruir la ejecución concreta se necesita una etiqueta de predecesor retenida que resuelva la elección. En la función identidad, cada fibra contiene un único elemento, de modo que la salida determina su única entrada.
+
+Aquí, la fibra de una salida es la lista de las entradas que producen esa salida.
+
+3. Se conserva el orden; la ambigüedad permanece.
+
+El orden de la imagen es (b,a). Las listas de predecesores son (bb,ba) para b y (aa,ab) para a. Cada una sigue teniendo dos elementos. Cambiar la enumeración no hace reversible a la función.
+
+4. Entradas iguales de g tienen salidas iguales.
+
+Al aplicar la misma función g a la igualdad f(u) = f(v), obtenemos g(f(u)) = g(f(v)). Un par cerrado permanece cerrado. Equivalentemente, todo par conservado después de la composición ya estaba conservado antes. La fuente y las pruebas nativas establecen esta propiedad para los portadores finitos admitidos en general, más allá del ejemplo de cuatro etiquetas.
+
+CONVENCIÓN EXACTA DE LA FUENTE
+
+La entrada original es una lista ordenada, no vacía, de cadenas distintas, junto con una aplicación total y univaluada cuyas claves son exactamente las de esa lista. Una fibra inversa con varios elementos se registra con la etiqueta literal "held-predecessor-labels"; una fibra con un solo elemento devuelve su cadena de origen única. El registro vacío de pares conservados se codifica como ("empty-One",), no como un par adicional.
+
+Se mantienen en inglés las etiquetas literales one, "held-predecessor-labels" y "empty-One" para conservar la identidad del ejemplo y de los registros originales.
+
+DERIVACIÓN Y PRUEBAS NATIVAS
+
+Maria Smith, Finite information loss, channel capacity and exact reversibility, secciones 4-5; las secciones 1-3 y 9 presentan la construcción y la derivación general.
+https://doi.org/10.5281/zenodo.24339200
+
+La guía de lectura enlaza la fuente original y las pruebas nativas:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/2cc283424024f79eab6a0436ef2bf766018e0fb5/peer-review/INFORMATION_LOSS_REVIEW_BRIEF.txt
+
+En el espacio de nombres SFT.InformationScience:
+- ConservationReverse.uniqueRecovery y heldRecovery explican los registros inversos.
+- ConservationComposition.closedPersists y retainedSubset establecen el resultado de composición.
+
+PROCEDENCIA
+
+Recurso original en inglés:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/4776a7018efb029e4805ccb62a6609749c6d34b8/peer-review/resources/what-can-a-function-forget.txt
+
+Ficha original imprimible y soluciones:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/553e8eb5f6d09686f92b3065a40f44de276fe1d3/peer-review/resources/what-can-a-function-forget.pdf
+
+Commit original V3: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1.
+Commit nativo V4: 21cdf559922fb057f8560f42d056ffa035329eb3.
+
+Esta traducción conserva los ejercicios del recurso original e incluye una explicación de la palabra fibra. No comunica una nueva verificación científica ni una prueba en el aula. Maria Smith es la autora científica. Preparado con asistencia de IA bajo su dirección.
+
+Para comentar una operación o una prueba concreta:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+Contacto: Maria.smith.sftoe@gmail.com

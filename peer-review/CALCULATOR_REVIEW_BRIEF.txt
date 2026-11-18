@@ -62,3 +62,11 @@ Maria Smith is the scientific author. This reading guide was prepared with AI as
 A public PREreview request for exact-calculator version 1.1 was listed on 18 November 2026:
 https://prereview.org/preprints/doi-10.5281-zenodo.24354302
 This is an invitation for independent assessment, not a completed review.
+
+RUN THE SMALL ARITHMETIC EXAMPLE
+A Python 3 script using only the standard-library Fraction type is available:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/49dc14e68d15db15335c9941ffc7c42f32ab64d9/peer-review/resources/calculator-enclosure-example.py
+Save it locally, then run:
+  python3 calculator-enclosure-example.py --x 1/5 --terms 1
+  python3 calculator-enclosure-example.py --x 1/5 --terms 2
+The outputs reproduce the two rational intervals above. Change --x or --terms to inspect the arithmetic branches. The script is an educational illustration, not the Lean implementation or a proof of the remainder bound.

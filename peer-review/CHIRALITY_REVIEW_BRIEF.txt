@@ -1,0 +1,61 @@
+FOCUSED REVIEW: CHIRALITY AND UNIQUELY LABELLED BRANCH EXTENSION
+Maria Smith, Ernos Labs — 18 November 2026
+AI-assisted reading brief under the scientific author's direction.
+
+PAPER AND QUESTION
+Chirality from exhaustive proper-map comparison
+https://doi.org/10.5281/zenodo.24341917
+
+Read Sections 1–2 for the carrier and comparison, then Section 4 for the extension argument. Examine how a successful extended map would restrict to an old proper map. A finding about one exact step is useful; reviewing the whole SFT corpus is unnecessary.
+
+SOURCE AND PROOF
+Original V3 commit: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1
+https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/chemistry/coordination_isomerism_law_v1.py
+Read _canonical and _mirror: canonicalization visits every occurrence permutation, retains composition and attachment labels and complete orientation words, normalizes the reordered bonds and selects the least full signature. Reflection exchanges fibre-one and fibre-two while retaining other fields.
+
+Native V4 commit: 21cdf559922fb057f8560f42d056ffa035329eb3
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Chemistry/Chirality.lean
+All declaration names below have the prefix SFT.Chemistry.Chirality.
+
+1. THE QUANTIFIED COMPARISON
+chiralityExactlyAllProperMapsFail states, for nonempty distinct occurrence support, that chiral m = true is equivalent to properMatches m (mirrorMolecule m) order = false for every order permuting that support. Its proof uses the preserved composition signature and noSuperpositionExactly. This is a quantified equivalence, not a conclusion inferred from the two-occurrence replay.
+
+The proper comparison retains element identity, both bond-inclusion directions and the orientation comparison. Section 2 specifies these operations; Section 1 distinguishes the raw oriented constructor from the admitted named molecular carrier.
+
+2. WHY THE NEW OCCURRENCE MUST BE FIXED
+uniqueBranchLabelForcesFixedName concerns two extended carriers and an element-preserving permutation. The new name is absent from both old supports; each old name word matches its element-word width; the old supports have equal lengths; and the new elemental label is absent from the old target element word.
+
+The proof obtains the image of the fresh occurrence from the zipped map. Permutation membership puts that image either in the old target support or at the new occurrence. In the old-support case, element preservation would put the new label in the old element word, contradicting freshness. The remaining image is the new occurrence itself. Fixing it is derived from the comparison, not imposed on the map census.
+
+3. RESTRICTING THE SUCCESSFUL MAP
+uniqueBranchProperRestriction takes a successful proper comparison of the extended carriers. In addition to the preceding shape conditions, it requires distinct old target names and covered old bond endpoints on both sides.
+
+It uses the fixed-name result, fixedLastMappingSplits and fixedBranchMapRestrictsPermutation to obtain an old permutation. The proof then combines:
+- alignedBranchElementsRestrict;
+- alignedBranchForwardBondsRestrict;
+- alignedBranchReverseBondsRestrict;
+- alignedBranchOrientationRestricts.
+
+The result is an old permutation whose properMatches comparison is true. Read both bond directions: Section 4.3 explains why an old edge cannot be supplied by a new branch edge containing the fixed fresh occurrence.
+
+4. CHIRALITY CLOSURE
+uniqueBranchPreservesChirality assumes a nonempty distinct old occurrence word, matching name/element widths, covered old bond endpoints, a fresh name, a fresh elemental label, and original chirality. Its orientation word and link list are supplied arguments.
+
+The proof turns original chirality into failure of every old proper map, rewrites reflection of the appended branch using molecularBranchReflection, and considers an extended comparison. A true result would yield an old successful map by uniqueBranchProperRestriction, contradicting original chirality.
+
+admittedUniqueBranchPreservesChirality obtains the shape conditions from MolecularCarrier.admit m.carrier = .ok m.carrier through admittedMoleculeShape and MolecularCarrier.allConstituentEndpoints, then applies the closure theorem. Inspect the stated hypotheses and supplied branch arguments when assessing an example.
+
+REPRODUCTION AND RESPONSE
+The paper's SOURCE_AND_EVIDENCE.zip contains the original source, native proofs and retained checks. Its portable entry point is:
+python3 reproduction/check_paper_arithmetic.py
+Use the paper's exact archive and edition references. Section 8 separates quantified proofs from executable source comparisons.
+
+Please identify the paper passage, source operation or full Lean declaration examined; state the domain and assumptions used; then give your reasoning, calculation or counterexample. Distinguish an unexamined step from a demonstrated discrepancy. Relevant affiliations and AI assistance should be disclosed.
+
+PREreview:
+https://prereview.org/preprints/doi-10.5281-zenodo.24341917
+Structured GitHub response:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/new?template=independent-review.md
+Email: Maria.smith.sftoe@gmail.com
+
+This brief adds no scientific definitions or verification results. A posted invitation or response template is not a completed independent review.

@@ -1,0 +1,848 @@
+{
+  "source_sha256": {
+    "sft/physics/velocity_composition_terminal_law_v1.py": "736a60b63261c85160468d334d83f831002bd8ba7de2c3296fe8e57078265818",
+    "sft/physics/velocity_composition_fizeau_empirical_v1.py": "47523bac6a33196d2fb2bae92ad38ed5c4a88fd724b9a264e5db3109e108e7b4",
+    "sft/physics/velocity_composition_fizeau_validation_v1.py": "37d6b5fbf2f10f25bd32d4afb34cb5a2c756a176e570fd8a9b9a02ce2c1873b8"
+  },
+  "bilinear_census": [
+    {
+      "candidate_id": "numerator-cross-absent__denominator-cross-absent",
+      "numerator_cross": false,
+      "denominator_cross": false,
+      "identity_forced_terms": [
+        "left",
+        "right",
+        "denominator-One"
+      ],
+      "limit_absorbing": false
+    },
+    {
+      "candidate_id": "numerator-cross-absent__denominator-cross-present",
+      "numerator_cross": false,
+      "denominator_cross": true,
+      "identity_forced_terms": [
+        "left",
+        "right",
+        "denominator-One"
+      ],
+      "limit_absorbing": true
+    },
+    {
+      "candidate_id": "numerator-cross-present__denominator-cross-absent",
+      "numerator_cross": true,
+      "denominator_cross": false,
+      "identity_forced_terms": [
+        "left",
+        "right",
+        "denominator-One"
+      ],
+      "limit_absorbing": false
+    },
+    {
+      "candidate_id": "numerator-cross-present__denominator-cross-present",
+      "numerator_cross": true,
+      "denominator_cross": true,
+      "identity_forced_terms": [
+        "left",
+        "right",
+        "denominator-One"
+      ],
+      "limit_absorbing": false
+    }
+  ],
+  "certificate": {
+    "candidate_count": 4,
+    "survivor": "numerator-cross-absent__denominator-cross-present",
+    "closure": true,
+    "associativity": true,
+    "pair_equivalence": true,
+    "strict_sublimit": true,
+    "limiting_speed_absorbing": true,
+    "typed_rest_identity": true,
+    "low_speed_difference_exact": true
+  },
+  "grid": [
+    "1/8",
+    "1/4",
+    "1/3",
+    "1/2",
+    "2/3",
+    "3/4",
+    "7/8",
+    "1"
+  ],
+  "complete_pair_records": [
+    {
+      "left": "1/8",
+      "right": "1/8",
+      "result": "16/65",
+      "pair": [
+        "81/64",
+        "49/64"
+      ],
+      "recovered": "16/65"
+    },
+    {
+      "left": "1/8",
+      "right": "1/4",
+      "result": "4/11",
+      "pair": [
+        "45/32",
+        "21/32"
+      ],
+      "recovered": "4/11"
+    },
+    {
+      "left": "1/8",
+      "right": "1/3",
+      "result": "11/25",
+      "pair": [
+        "3/2",
+        "7/12"
+      ],
+      "recovered": "11/25"
+    },
+    {
+      "left": "1/8",
+      "right": "1/2",
+      "result": "10/17",
+      "pair": [
+        "27/16",
+        "7/16"
+      ],
+      "recovered": "10/17"
+    },
+    {
+      "left": "1/8",
+      "right": "2/3",
+      "result": "19/26",
+      "pair": [
+        "15/8",
+        "7/24"
+      ],
+      "recovered": "19/26"
+    },
+    {
+      "left": "1/8",
+      "right": "3/4",
+      "result": "4/5",
+      "pair": [
+        "63/32",
+        "7/32"
+      ],
+      "recovered": "4/5"
+    },
+    {
+      "left": "1/8",
+      "right": "7/8",
+      "result": "64/71",
+      "pair": [
+        "135/64",
+        "7/64"
+      ],
+      "recovered": "64/71"
+    },
+    {
+      "left": "1/8",
+      "right": "1",
+      "result": "1",
+      "pair": [
+        "9/4",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "1/4",
+      "right": "1/8",
+      "result": "4/11",
+      "pair": [
+        "45/32",
+        "21/32"
+      ],
+      "recovered": "4/11"
+    },
+    {
+      "left": "1/4",
+      "right": "1/4",
+      "result": "8/17",
+      "pair": [
+        "25/16",
+        "9/16"
+      ],
+      "recovered": "8/17"
+    },
+    {
+      "left": "1/4",
+      "right": "1/3",
+      "result": "7/13",
+      "pair": [
+        "5/3",
+        "1/2"
+      ],
+      "recovered": "7/13"
+    },
+    {
+      "left": "1/4",
+      "right": "1/2",
+      "result": "2/3",
+      "pair": [
+        "15/8",
+        "3/8"
+      ],
+      "recovered": "2/3"
+    },
+    {
+      "left": "1/4",
+      "right": "2/3",
+      "result": "11/14",
+      "pair": [
+        "25/12",
+        "1/4"
+      ],
+      "recovered": "11/14"
+    },
+    {
+      "left": "1/4",
+      "right": "3/4",
+      "result": "16/19",
+      "pair": [
+        "35/16",
+        "3/16"
+      ],
+      "recovered": "16/19"
+    },
+    {
+      "left": "1/4",
+      "right": "7/8",
+      "result": "12/13",
+      "pair": [
+        "75/32",
+        "3/32"
+      ],
+      "recovered": "12/13"
+    },
+    {
+      "left": "1/4",
+      "right": "1",
+      "result": "1",
+      "pair": [
+        "5/2",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "1/3",
+      "right": "1/8",
+      "result": "11/25",
+      "pair": [
+        "3/2",
+        "7/12"
+      ],
+      "recovered": "11/25"
+    },
+    {
+      "left": "1/3",
+      "right": "1/4",
+      "result": "7/13",
+      "pair": [
+        "5/3",
+        "1/2"
+      ],
+      "recovered": "7/13"
+    },
+    {
+      "left": "1/3",
+      "right": "1/3",
+      "result": "3/5",
+      "pair": [
+        "16/9",
+        "4/9"
+      ],
+      "recovered": "3/5"
+    },
+    {
+      "left": "1/3",
+      "right": "1/2",
+      "result": "5/7",
+      "pair": [
+        "2",
+        "1/3"
+      ],
+      "recovered": "5/7"
+    },
+    {
+      "left": "1/3",
+      "right": "2/3",
+      "result": "9/11",
+      "pair": [
+        "20/9",
+        "2/9"
+      ],
+      "recovered": "9/11"
+    },
+    {
+      "left": "1/3",
+      "right": "3/4",
+      "result": "13/15",
+      "pair": [
+        "7/3",
+        "1/6"
+      ],
+      "recovered": "13/15"
+    },
+    {
+      "left": "1/3",
+      "right": "7/8",
+      "result": "29/31",
+      "pair": [
+        "5/2",
+        "1/12"
+      ],
+      "recovered": "29/31"
+    },
+    {
+      "left": "1/3",
+      "right": "1",
+      "result": "1",
+      "pair": [
+        "8/3",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "1/2",
+      "right": "1/8",
+      "result": "10/17",
+      "pair": [
+        "27/16",
+        "7/16"
+      ],
+      "recovered": "10/17"
+    },
+    {
+      "left": "1/2",
+      "right": "1/4",
+      "result": "2/3",
+      "pair": [
+        "15/8",
+        "3/8"
+      ],
+      "recovered": "2/3"
+    },
+    {
+      "left": "1/2",
+      "right": "1/3",
+      "result": "5/7",
+      "pair": [
+        "2",
+        "1/3"
+      ],
+      "recovered": "5/7"
+    },
+    {
+      "left": "1/2",
+      "right": "1/2",
+      "result": "4/5",
+      "pair": [
+        "9/4",
+        "1/4"
+      ],
+      "recovered": "4/5"
+    },
+    {
+      "left": "1/2",
+      "right": "2/3",
+      "result": "7/8",
+      "pair": [
+        "5/2",
+        "1/6"
+      ],
+      "recovered": "7/8"
+    },
+    {
+      "left": "1/2",
+      "right": "3/4",
+      "result": "10/11",
+      "pair": [
+        "21/8",
+        "1/8"
+      ],
+      "recovered": "10/11"
+    },
+    {
+      "left": "1/2",
+      "right": "7/8",
+      "result": "22/23",
+      "pair": [
+        "45/16",
+        "1/16"
+      ],
+      "recovered": "22/23"
+    },
+    {
+      "left": "1/2",
+      "right": "1",
+      "result": "1",
+      "pair": [
+        "3",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "2/3",
+      "right": "1/8",
+      "result": "19/26",
+      "pair": [
+        "15/8",
+        "7/24"
+      ],
+      "recovered": "19/26"
+    },
+    {
+      "left": "2/3",
+      "right": "1/4",
+      "result": "11/14",
+      "pair": [
+        "25/12",
+        "1/4"
+      ],
+      "recovered": "11/14"
+    },
+    {
+      "left": "2/3",
+      "right": "1/3",
+      "result": "9/11",
+      "pair": [
+        "20/9",
+        "2/9"
+      ],
+      "recovered": "9/11"
+    },
+    {
+      "left": "2/3",
+      "right": "1/2",
+      "result": "7/8",
+      "pair": [
+        "5/2",
+        "1/6"
+      ],
+      "recovered": "7/8"
+    },
+    {
+      "left": "2/3",
+      "right": "2/3",
+      "result": "12/13",
+      "pair": [
+        "25/9",
+        "1/9"
+      ],
+      "recovered": "12/13"
+    },
+    {
+      "left": "2/3",
+      "right": "3/4",
+      "result": "17/18",
+      "pair": [
+        "35/12",
+        "1/12"
+      ],
+      "recovered": "17/18"
+    },
+    {
+      "left": "2/3",
+      "right": "7/8",
+      "result": "37/38",
+      "pair": [
+        "25/8",
+        "1/24"
+      ],
+      "recovered": "37/38"
+    },
+    {
+      "left": "2/3",
+      "right": "1",
+      "result": "1",
+      "pair": [
+        "10/3",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "3/4",
+      "right": "1/8",
+      "result": "4/5",
+      "pair": [
+        "63/32",
+        "7/32"
+      ],
+      "recovered": "4/5"
+    },
+    {
+      "left": "3/4",
+      "right": "1/4",
+      "result": "16/19",
+      "pair": [
+        "35/16",
+        "3/16"
+      ],
+      "recovered": "16/19"
+    },
+    {
+      "left": "3/4",
+      "right": "1/3",
+      "result": "13/15",
+      "pair": [
+        "7/3",
+        "1/6"
+      ],
+      "recovered": "13/15"
+    },
+    {
+      "left": "3/4",
+      "right": "1/2",
+      "result": "10/11",
+      "pair": [
+        "21/8",
+        "1/8"
+      ],
+      "recovered": "10/11"
+    },
+    {
+      "left": "3/4",
+      "right": "2/3",
+      "result": "17/18",
+      "pair": [
+        "35/12",
+        "1/12"
+      ],
+      "recovered": "17/18"
+    },
+    {
+      "left": "3/4",
+      "right": "3/4",
+      "result": "24/25",
+      "pair": [
+        "49/16",
+        "1/16"
+      ],
+      "recovered": "24/25"
+    },
+    {
+      "left": "3/4",
+      "right": "7/8",
+      "result": "52/53",
+      "pair": [
+        "105/32",
+        "1/32"
+      ],
+      "recovered": "52/53"
+    },
+    {
+      "left": "3/4",
+      "right": "1",
+      "result": "1",
+      "pair": [
+        "7/2",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "7/8",
+      "right": "1/8",
+      "result": "64/71",
+      "pair": [
+        "135/64",
+        "7/64"
+      ],
+      "recovered": "64/71"
+    },
+    {
+      "left": "7/8",
+      "right": "1/4",
+      "result": "12/13",
+      "pair": [
+        "75/32",
+        "3/32"
+      ],
+      "recovered": "12/13"
+    },
+    {
+      "left": "7/8",
+      "right": "1/3",
+      "result": "29/31",
+      "pair": [
+        "5/2",
+        "1/12"
+      ],
+      "recovered": "29/31"
+    },
+    {
+      "left": "7/8",
+      "right": "1/2",
+      "result": "22/23",
+      "pair": [
+        "45/16",
+        "1/16"
+      ],
+      "recovered": "22/23"
+    },
+    {
+      "left": "7/8",
+      "right": "2/3",
+      "result": "37/38",
+      "pair": [
+        "25/8",
+        "1/24"
+      ],
+      "recovered": "37/38"
+    },
+    {
+      "left": "7/8",
+      "right": "3/4",
+      "result": "52/53",
+      "pair": [
+        "105/32",
+        "1/32"
+      ],
+      "recovered": "52/53"
+    },
+    {
+      "left": "7/8",
+      "right": "7/8",
+      "result": "112/113",
+      "pair": [
+        "225/64",
+        "1/64"
+      ],
+      "recovered": "112/113"
+    },
+    {
+      "left": "7/8",
+      "right": "1",
+      "result": "1",
+      "pair": [
+        "15/4",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "1",
+      "right": "1/8",
+      "result": "1",
+      "pair": [
+        "9/4",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "1",
+      "right": "1/4",
+      "result": "1",
+      "pair": [
+        "5/2",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "1",
+      "right": "1/3",
+      "result": "1",
+      "pair": [
+        "8/3",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "1",
+      "right": "1/2",
+      "result": "1",
+      "pair": [
+        "3",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "1",
+      "right": "2/3",
+      "result": "1",
+      "pair": [
+        "10/3",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "1",
+      "right": "3/4",
+      "result": "1",
+      "pair": [
+        "7/2",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "1",
+      "right": "7/8",
+      "result": "1",
+      "pair": [
+        "15/4",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    },
+    {
+      "left": "1",
+      "right": "1",
+      "result": "1",
+      "pair": [
+        "4",
+        "typed-empty-held-part"
+      ],
+      "recovered": "1"
+    }
+  ],
+  "typed_rest_branch_order": [
+    {
+      "value": "TypedRest.REST",
+      "left": "typed-rest-motion",
+      "right": "typed-rest-motion"
+    },
+    {
+      "value": "0",
+      "left": "0",
+      "right": "0"
+    },
+    {
+      "value": "2",
+      "left": "2",
+      "right": "2"
+    },
+    {
+      "value": "1/2",
+      "left": "1/2",
+      "right": "1/2"
+    }
+  ],
+  "guard_checks": [
+    {
+      "input": "0",
+      "error": "speed magnitude must be an exact positive part of the limiting One"
+    },
+    {
+      "input": "-1",
+      "error": "speed magnitude must be an exact positive part of the limiting One"
+    },
+    {
+      "input": "5/4",
+      "error": "speed magnitude must be an exact positive part of the limiting One"
+    }
+  ],
+  "fizeau_source_record": {
+    "schema": "sft-v3-velocity-composition-fizeau-source-record/1",
+    "source_id": "ARXIV-1201.0501-FIZEAU-WATER-AIR",
+    "retrieval_date": "2026-07-25",
+    "source": {
+      "authors": [
+        "Thierry Lahaye",
+        "Pierre Labastie",
+        "Renaud Mathevet"
+      ],
+      "title": "Fizeau's aether-drag experiment in the undergraduate laboratory",
+      "source_uri": "https://arxiv.org/pdf/1201.0501",
+      "snapshot_path": "experiments/external_sources/physics/snapshots/arxiv-1201.0501-fizeau.pdf",
+      "snapshot_hash": "sha256:8c19ceeccda50a3c297aa13c6006a6cf032d41a3c714f128b2be663bd3c5b5b3"
+    },
+    "registered_target": {
+      "water_measured_slope_rad_s_per_m": "274/1000",
+      "water_measured_standard_uncertainty_rad_s_per_m": "3/1000",
+      "relativistic_raw_prediction_rad_s_per_m": "248/1000",
+      "relativistic_profile_and_dispersion_corrected_prediction_rad_s_per_m": "299/1000",
+      "ordinary_addition_prediction_rad_s_per_m": "563/1000",
+      "reported_corrected_agreement_fraction": "8/100",
+      "water_velocity_examples_m_per_s": [
+        "57/10",
+        "8/10",
+        "57/10"
+      ],
+      "air_nonrelativistic_prediction_ruled_out": true,
+      "air_measurements_compatible_with_relativistic_calculation": true,
+      "systematic_limitations_retained": [
+        "flow-rate calibration is estimated at about five percent",
+        "the axial-to-mean turbulent velocity-profile correction is modeled rather than directly measured",
+        "the effective optical interaction length has a percent-level uncertainty",
+        "the water result is a discriminator, not a precision interval confirmation"
+      ],
+      "source_locations": {
+        "composition_equation": "pages 2-3, equations 1-7",
+        "water_measurement": "pages 6-7, Figure 6 and Section V.C-D",
+        "air_measurement": "page 7, Figure 8 and Section V.E"
+      }
+    },
+    "row_custody": {
+      "formal_sft_claim_sealed_before_source_retrieval": true,
+      "formal_receipt_hash": "sha256:337fccb78afd2207d9976e8034d89d1db75ba9fed2f63c44a3b36ae0e90935a0",
+      "measured_slope_retained": true,
+      "measured_uncertainty_retained": true,
+      "raw_relativistic_prediction_retained": true,
+      "corrected_relativistic_prediction_retained": true,
+      "ordinary_addition_unfavorable_control_retained": true,
+      "air_result_retained": true,
+      "systematic_limitations_retained": true,
+      "measurement_selected_formal_survivor": false,
+      "target_inaccessible_to_formal_derivation": true
+    }
+  },
+  "fizeau_analysis": {
+    "measured": "137/500",
+    "uncertainty": "3/1000",
+    "measured_interval": [
+      "271/1000",
+      "277/1000"
+    ],
+    "raw_relativistic": "31/125",
+    "corrected_relativistic": "299/1000",
+    "ordinary_addition": "563/1000",
+    "raw_distance": "13/500",
+    "corrected_distance": "1/40",
+    "best_relativistic_distance": "1/40",
+    "ordinary_distance": "289/1000",
+    "measurement_inside_complete_relativistic_systematics_bracket": true,
+    "relativistic_more_than_ten_times_closer": true,
+    "ordinary_outside_measurement_interval": true,
+    "air_control_retained": true,
+    "all_limitations_retained": true
+  },
+  "adverse_analysis": {
+    "measured": "137/500",
+    "uncertainty": "3/1000",
+    "measured_interval": [
+      "271/1000",
+      "277/1000"
+    ],
+    "raw_relativistic": "31/125",
+    "corrected_relativistic": "299/1000",
+    "ordinary_addition": "137/500",
+    "raw_distance": "13/500",
+    "corrected_distance": "1/40",
+    "best_relativistic_distance": "1/40",
+    "ordinary_distance": "0",
+    "measurement_inside_complete_relativistic_systematics_bracket": true,
+    "relativistic_more_than_ten_times_closer": false,
+    "ordinary_outside_measurement_interval": false,
+    "air_control_retained": true,
+    "all_limitations_retained": true
+  },
+  "method": "Unchanged original functions and exact typed enum definitions; both source-byte bindings and full original15field numerical comparison retained. General native operation proofs and full-program audits reused."
+}

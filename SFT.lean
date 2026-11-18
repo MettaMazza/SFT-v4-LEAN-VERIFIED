@@ -11785,3 +11785,15 @@ import SFT.Biology.HeritabilitySource
 import SFT.Biology.HeritabilityExperiment
 
 import SFT.Biology.HeritabilityValidation
+
+import SFT.Biology.DifferentialReproduction
+
+import SFT.Biology.DifferentialReproductionGrammar
+
+import SFT.Biology.DifferentialReproductionEvidence
+
+import SFT.Biology.DifferentialReproductionSource
+
+import SFT.Biology.DifferentialReproductionExperiment
+
+import SFT.Biology.DifferentialReproductionValidation

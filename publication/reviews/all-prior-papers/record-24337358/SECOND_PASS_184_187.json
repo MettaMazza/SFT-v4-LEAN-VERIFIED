@@ -1,0 +1,49 @@
+{
+  "updated_at": "2026-11-18T23:58:04.036733+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    184,
+    185,
+    186,
+    187
+  ],
+  "challenges": [
+    {
+      "section": 184,
+      "challenge": "Is equality interpreted as a zero error or is difference orientation changed?",
+      "evidence": "Original exact_error_ledger emits Fraction(1,1) with equal, otherwise the positive difference and held-below/held-above. equalMarker/belowValue/aboveValue preserve these branches and exact cross multiplication.",
+      "disposition": "The manuscript explicitly gives structural One for equality, both cross-product branches, positivity and original support/value rejection order."
+    },
+    {
+      "section": 185,
+      "challenge": "Does the complete ledger claim rely only on 1,849 comparisons?",
+      "evidence": "rowMeaning/exactAdmission prove both directions for arbitrary lists; positiveLedger constructs every equal-length nonempty positive pair; noOmittedRows gives both lengths. The inspected independent Fraction generator enumerates43 supports and1849 ordered pairs, including invalid values and supports, as retained comparison evidence.",
+      "disposition": "The paper supplies general induction and constructive acceptance separately from the exact finite comparison family."
+    },
+    {
+      "section": 186,
+      "challenge": "Can an intermediate observation be omitted or a missing registered numerical value silently accepted?",
+      "evidence": "NumericalTrace.Records retains lookup, exact ledger and recursive suffix at each state; correspondence proves executable equivalence, identityTrace and nativeCount preserve all states and actions+1. Missing-state and invalid-ledger branches return none.",
+      "disposition": "The manuscript gives every recursion premise, complete projections/count and exact successor append."
+    },
+    {
+      "section": 187,
+      "challenge": "Is finite convergence obtained by silently assuming an arbitrary process reaches a target?",
+      "evidence": "TerminalCertificate retains actual original execution, full observations and explicit endpoint enclosure. certifiedOutput derives the final registered numerical row; completePerturbationPaths constructs the original stability check from actual supplied paths, while successorCertificate retains the next transition and enclosure.",
+      "disposition": "The paper enumerates the six certificate conditions and full path-to-stability construction, preserving the original source statement without adding automatic convergence or an infinite limit."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/NumericalGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/NumericalWitnesses.lean#L22",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "fa900472c40411221bcbbcbd2e24e19bb4283da192da4619eec8987fe611bb48",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

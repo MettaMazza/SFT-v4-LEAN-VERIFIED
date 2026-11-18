@@ -1,0 +1,50 @@
+{
+  "updated_at": "2026-11-18T23:56:29.499364+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    181,
+    182,
+    183
+  ],
+  "challenges": [
+    {
+      "section": 181,
+      "challenge": "Does replay silently change first-match or duplicate process-row semantics?",
+      "evidence": "replayEvent uses original lookupFirst and exact step, while update maps every matching process row. replayLocal derives both LocalStep and exact updated store; globalDerivation/globalReplay prove both directions. updateOther and globalIdentities preserve unaffected lookups and the full identity sequence.",
+      "disposition": "The manuscript explicitly states all-row replacement and first-match lookup and gives both local and global certificate equivalences."
+    },
+    {
+      "section": 182,
+      "challenge": "Does receipt validity assume delivery of every send or fail to bind actual messages and event order?",
+      "evidence": "valid quantifies over all sent/received bindings and every received row, with a matching earlier send. completeReceiptProvenance and validFromRows give both directions; beforeMeaning uses actual scan positions, with transitivity and noSelfCause derived by index equality/order.",
+      "disposition": "The paper retains separate sent/received ledgers, exact identity/payload/event conditions, unreceived sends and local-failure rejection."
+    },
+    {
+      "section": 183,
+      "challenge": "Is prefix coverage merely sampled, or does summary loss discard source ordering or extension?",
+      "evidence": "prefixMeaning derives exact decomposition for arbitrary finite input; prefixCount and exactOutput retain every prefix. pairMembership and lossMeaning characterize the complete ordered support product. prefixRetained/outputRetained/retainedLoss preserve every prior record under arbitrary appended segments.",
+      "disposition": "The manuscript shows the general prefix induction, exact Cartesian filter, full path/summary reconstruction and initial-observation-inclusive resource count."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/DistributedAlgorithmGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/DistributedAlgorithmWitnesses.lean#L22",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/OnlineStreamingGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/OnlineStreamingWitnesses.lean#L22",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "f028ac2913da72794c6a7244b191a02079a34c2ce51978acc8e9a470e7cc5feb",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

@@ -1,0 +1,61 @@
+FOCUSED REVIEW: WHAT DOES A REVERSE RECORD RETAIN?
+Maria Smith, Ernos Labs — 18 November 2026
+AI-assisted review invitation under the author's direction.
+
+Paper 30: Finite information loss, channel capacity and exact reversibility
+https://doi.org/10.5281/zenodo.24339200
+Suggested starting point: Sections 4–5, then Sections 1–3 and 9 for construction and general derivation.
+
+REVIEW QUESTION
+Does the original reverse-record operation, and its native Lean translation, preserve exactly the predecessor information specified by the source? Please examine the distinction between recording all predecessors and recovering which predecessor supplied a particular output.
+
+SOURCE DOMAIN AND WORKED EXAMPLE
+The input is a nonempty ordered list of distinct source strings and a total single-valued map with exactly those source keys. Image order is first occurrence along the source; fibre members retain source order.
+
+For source (aa, ab, ba, bb), let f retain the first letter:
+aa -> a; ab -> a; ba -> b; bb -> b.
+The six source pairs split into:
+closed: (aa,ab), (ba,bb);
+retained: (aa,ba), (aa,bb), (ab,ba), (ab,bb).
+
+The reverse record returns:
+(a, ("held-predecessor-labels", (aa,ab)))
+(b, ("held-predecessor-labels", (ba,bb))).
+A singleton fibre instead returns its unique source string. The held list preserves all possible predecessors; it does not select which one supplied an individual output. A retained predecessor label must resolve that choice for reconstruction.
+
+Now compose with g(a)=g(b)=one. All six source pairs close. For any admitted total maps f and g, f(u)=f(v) implies g(f(u))=g(f(v)); thus closed pairs persist and downstream retained pairs are a subset of upstream retained pairs. The paper derives this for arbitrary admitted finite carriers, not only this four-label example.
+
+SOURCE AND PROOF NAVIGATION
+Original V3 commit: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1
+https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/conservation_loss_transformation/law.py
+Inspect validate_transformation, transformation_ledger, reverse_record, compose and downstream_retention_law, together with SPEC's statement and source-successor derivation.
+
+Native V4 commit: 21cdf559922fb057f8560f42d056ffa035329eb3
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ConservationReverse.lean
+Relevant full declaration names:
+SFT.InformationScience.ConservationReverse.uniqueRecovery
+SFT.InformationScience.ConservationReverse.heldRecovery
+SFT.InformationScience.ConservationReverse.distinctPredecessorsNotUnique
+
+uniqueRecovery uses membership of a unique reverse row, source membership and the indicated image to prove equality to the recorded source.
+heldRecovery proves membership in the held list iff source membership and the indicated image.
+distinctPredecessorsNotUnique uses two distinct members to exclude the unique-record constructor.
+
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ConservationComposition.lean
+SFT.InformationScience.ConservationComposition.closedPersists
+SFT.InformationScience.ConservationComposition.retainedSubset
+SFT.InformationScience.ConservationComposition.downstreamTrue
+
+closedPersists carries equal upstream images through the actual composed rows. retainedSubset derives the retained-pair inclusion. downstreamTrue connects it to the validated returned subset check, using validation of the first map and of the second map on the first image carrier.
+
+The Zenodo SOURCE_AND_EVIDENCE.zip supplies these proof bodies and their dependencies. SOURCE_CORRESPONDENCE.json and verification/TURN_164_CONSERVATION_COMPLETION.json identify the retained correspondence and checks. This brief introduces no replacement scientific definitions or new verification results.
+
+HOW TO RESPOND
+Choose one concrete step. Identify the source operation, Lean declaration or paper passage, the domain you examined, and your supporting reasoning or counterexample. A short finding or precise unresolved question is welcome; reviewing the whole corpus is unnecessary.
+Public review discussion:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+Optional response form:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/peer-review/FOCUSED_REVIEW_FORM.txt
+Email: Maria.smith.sftoe@gmail.com
+
+Please disclose relevant affiliation and AI assistance. This is a request for independent review, not a completed review or endorsement.

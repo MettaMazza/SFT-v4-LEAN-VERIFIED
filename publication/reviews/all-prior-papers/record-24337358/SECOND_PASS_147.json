@@ -1,0 +1,43 @@
+{
+  "updated_at": "2026-11-18T23:30:53.903291+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    147
+  ],
+  "challenges": [
+    {
+      "claim": "The same interpreter handles every held frozen request.",
+      "challenge": "Is the correspondence merely one witness or does it assume the requested code exists?",
+      "evidence": "UniversalInterpretation.completeFrozenGrammar derives code existence through ModelEncoding.finiteRoundTrip and distinct registry lookup; exactRequest executes the recovered machine/initial/actions tuple.",
+      "disposition": "Section147 quantifies over every admitted finite registry and every held request, shows the decoder/lookup equations and derives code existence. No fixed depth cutoff is introduced."
+    },
+    {
+      "claim": "Interpretation preserves original errors and provenance.",
+      "challenge": "Are absent descriptions confused with original execution failure?",
+      "evidence": "interpret returns Option (Except ...); rejectedDescription/unregisteredDescription give none, whereas exactRequest wraps the unchanged run, including its error, in some. interpretationOrigin recovers its precise registry row.",
+      "disposition": "Section147 separates missing interpretation from original execution errors and retains every successful path and terminal."
+    },
+    {
+      "claim": "Resource counting retains the initial observation and independent occupied support.",
+      "challenge": "Could timeCount be claimed as action count, or could occupied labels be assumed equal to the trace?",
+      "evidence": "Actual prior ResourceRecord inspection reused; original resource_ledger separately accepts trace and occupied, returns their distinct counts, and numbers every observation. TURN200 retained resource report checked.",
+      "disposition": "Section147 explicitly states timeCount=actions.length+1, separate occupied support and exact guard precedence. No invented equality or fixed overhead."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/UniversalGrammar.lean#L118",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/UniversalWitnesses.lean#L25",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    }
+  ],
+  "resource_audits_reused": 5,
+  "revised_manuscript_sha256": "e7442c096cb8c8c432eb5a22afcbd13f2d7e2eefdaf5b5037875ae1be24914c9",
+  "status": "Inspected section passes second review; entire cumulative paper remains under review.",
+  "new_builds": 0
+}

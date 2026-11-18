@@ -1,0 +1,921 @@
+{
+  "updated_at": "2026-11-18T23:28:44.975366+00:00",
+  "sections_read": [
+    143,
+    144,
+    145,
+    146
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "records": [
+    {
+      "prefix": "Process",
+      "native_modules_read": [
+        {
+          "path": "SFT/Computation/ProcessFailure.lean",
+          "sha256": "130585c04d2f1930a7627a5454e617274697fe5fe8c7f10731ba1f2f5fe7ed6b",
+          "declarations": [
+            "SFT.Computation.ProcessFailure.Failure",
+            "SFT.Computation.ProcessFailure.failureObserved",
+            "SFT.Computation.ProcessFailure.observedFailureRecorded",
+            "SFT.Computation.ProcessFailure.failureIff",
+            "SFT.Computation.ProcessFailure.failureRetainsChoices",
+            "SFT.Computation.ProcessFailure.failurePrefixReplay",
+            "SFT.Computation.ProcessFailure.failureNotSuccess",
+            "SFT.Computation.ProcessFailure.serialFailure",
+            "SFT.Computation.ProcessFailure.admittedFailureObserved"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ProcessFailure.failureObserved",
+            "SFT.Computation.ProcessFailure.observedFailureRecorded",
+            "SFT.Computation.ProcessFailure.failureIff",
+            "SFT.Computation.ProcessFailure.failureRetainsChoices",
+            "SFT.Computation.ProcessFailure.failurePrefixReplay",
+            "SFT.Computation.ProcessFailure.failureNotSuccess",
+            "SFT.Computation.ProcessFailure.serialFailure",
+            "SFT.Computation.ProcessFailure.admittedFailureObserved"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/ProcessGrammar.lean",
+          "sha256": "04e963b0a779f08770d35f5768aaf16d56dd8a17e6ae3c7d7bb9d597bfc4621f",
+          "declarations": [
+            "SFT.Computation.ProcessGrammar.Carrier",
+            "SFT.Computation.ProcessGrammar.carrierName",
+            "SFT.Computation.ProcessGrammar.Identity",
+            "SFT.Computation.ProcessGrammar.identityName",
+            "SFT.Computation.ProcessGrammar.Relation",
+            "SFT.Computation.ProcessGrammar.relationName",
+            "SFT.Computation.ProcessGrammar.Trace",
+            "SFT.Computation.ProcessGrammar.traceName",
+            "SFT.Computation.ProcessGrammar.Boundary",
+            "SFT.Computation.ProcessGrammar.boundaryName",
+            "SFT.Computation.ProcessGrammar.Composition",
+            "SFT.Computation.ProcessGrammar.compositionName",
+            "SFT.Computation.ProcessGrammar.Generality",
+            "SFT.Computation.ProcessGrammar.generalityName",
+            "SFT.Computation.ProcessGrammar.Addition",
+            "SFT.Computation.ProcessGrammar.additionName",
+            "SFT.Computation.ProcessGrammar.Candidate",
+            "SFT.Computation.ProcessGrammar.sourceFields",
+            "SFT.Computation.ProcessGrammar.candidateId",
+            "SFT.Computation.ProcessGrammar.exactForm",
+            "SFT.Computation.ProcessGrammar.survivorId",
+            "SFT.Computation.ProcessGrammar.survives",
+            "SFT.Computation.ProcessGrammar.criteriaDecision",
+            "SFT.Computation.ProcessGrammar.decisionReason",
+            "SFT.Computation.ProcessGrammar.generationRule",
+            "SFT.Computation.ProcessGrammar.grammarBoundary",
+            "SFT.Computation.ProcessGrammar.candidates",
+            "SFT.Computation.ProcessGrammar.survivor",
+            "SFT.Computation.ProcessGrammar.generatedCardinality",
+            "SFT.Computation.ProcessGrammar.candidatesComplete",
+            "SFT.Computation.ProcessGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ProcessGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ProcessGrammar.uniqueSurvivor",
+            "SFT.Computation.ProcessGrammar.survivorAccepted",
+            "SFT.Computation.ProcessGrammar.ExactCriteria",
+            "SFT.Computation.ProcessGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ProcessGrammar.carrier_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.identity_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.relation_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.trace_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.boundary_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.composition_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.generality_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ProcessGrammar.generatedCardinality",
+            "SFT.Computation.ProcessGrammar.candidatesComplete",
+            "SFT.Computation.ProcessGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ProcessGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ProcessGrammar.uniqueSurvivor",
+            "SFT.Computation.ProcessGrammar.survivorAccepted",
+            "SFT.Computation.ProcessGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ProcessGrammar.carrier_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.identity_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.relation_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.trace_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.boundary_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.composition_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.generality_rejected_rejected",
+            "SFT.Computation.ProcessGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Normalized full code compared with fully read State template; all residual code and changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/ProcessWitnesses.lean",
+          "sha256": "2f4b94fabfb3a4e2f61551df30e021805aed1bc19eeebe7bc92071a37132257e",
+          "declarations": [
+            "SFT.Computation.ProcessWitnesses.Witness",
+            "SFT.Computation.ProcessWitnesses.traceCheck",
+            "SFT.Computation.ProcessWitnesses.wordsCheck",
+            "SFT.Computation.ProcessWitnesses.rewriteCheck",
+            "SFT.Computation.ProcessWitnesses.witnesses",
+            "SFT.Computation.ProcessWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ProcessWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Normalized full code compared with fully read State template; all residual code and changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/ProcessControls.lean",
+          "sha256": "120b5c387e5a417c4ff424995af86854b464810454f80b03f762ae117be732e5",
+          "declarations": [
+            "SFT.Computation.ProcessControls.laws",
+            "SFT.Computation.ProcessControls.exclusions",
+            "SFT.Computation.ProcessControls.closureValue",
+            "SFT.Computation.ProcessControls.falseCandidate",
+            "SFT.Computation.ProcessControls.survivorIds",
+            "SFT.Computation.ProcessControls.distinctIdentifiers",
+            "SFT.Computation.ProcessControls.falsePremise",
+            "SFT.Computation.ProcessControls.tamperedSource",
+            "SFT.Computation.ProcessControls.tamperedArtifact",
+            "SFT.Computation.ProcessControls.boundary",
+            "SFT.Computation.ProcessControls.falsePremisePassed",
+            "SFT.Computation.ProcessControls.boundaryPassed",
+            "SFT.Computation.ProcessControls.controlRecords",
+            "SFT.Computation.ProcessControls.resultData",
+            "SFT.Computation.ProcessControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ProcessControls.falsePremisePassed",
+            "SFT.Computation.ProcessControls.boundaryPassed"
+          ],
+          "inspection": "Normalized full code compared with fully read State template; all residual code and changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/ProcessEvidence.lean",
+          "sha256": "d835c5226b8dfe30b94056a12df5f7f51c3b0ffa30131747ca26cc03410702f9",
+          "declarations": [
+            "SFT.Computation.ProcessEvidence.candidateRecord",
+            "SFT.Computation.ProcessEvidence.completenessRecord",
+            "SFT.Computation.ProcessEvidence.registrationData",
+            "SFT.Computation.ProcessEvidence.registration",
+            "SFT.Computation.ProcessEvidence.generatedCandidateData",
+            "SFT.Computation.ProcessEvidence.censusData",
+            "SFT.Computation.ProcessEvidence.census",
+            "SFT.Computation.ProcessEvidence.decisionData",
+            "SFT.Computation.ProcessEvidence.decision",
+            "SFT.Computation.ProcessEvidence.decideCandidate",
+            "SFT.Computation.ProcessEvidence.closureData",
+            "SFT.Computation.ProcessEvidence.closure",
+            "SFT.Computation.ProcessEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ProcessEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ProcessEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ProcessEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ProcessEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.ProcessEvidence.why",
+            "SFT.Computation.ProcessEvidence.derivation",
+            "SFT.Computation.ProcessEvidence.check",
+            "SFT.Computation.ProcessEvidence.limitations",
+            "SFT.Computation.ProcessEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ProcessEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ProcessEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ProcessEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ProcessEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ProcessEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Normalized full code compared with fully read State template; all residual code and changed literal strings inspected"
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_196_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "553b2e4e218ea63982e15df37d59e087afc7b6c6275c0fac41d77bb646dcdf88",
+        "matching_theorems": 31
+      },
+      "retained_reports": [
+        {
+          "path": "verification/TURN_196_OPERATIONAL_PROCESS_COMPLETION.json",
+          "sha256": "e28e652ff699372e676fe0545618df57fa2883363869f18fb3319db633338cf0",
+          "result": {
+            "claim_id": "SFT-COMP-FORM-OPERATIONAL-PROCESS-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "status": "complete",
+            "source_sha256": {
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/formal_computation/operational_process/law.py": "24d8d9e46b580a0d414c9b254813996e58d756d959408b49325b21bb6ace9c07",
+              "claims/SFT-COMP-FORM-OPERATIONAL-PROCESS-001/execution.py": "5e455fcae48783350a0ba1f5ca774aefdb2814a13a2328b02dab903dd45d6a74",
+              "claims/SFT-COMP-FORM-OPERATIONAL-PROCESS-001/independent_validator.py": "e7e0197467aaeb5d5faba751c6528d17c1be5e79320b667c8cbc1190e4e923fe",
+              "claims/SFT-COMP-FORM-OPERATIONAL-PROCESS-001/WHY_DERIVATION_CHECK.md": "aa6794c27d482de2b1c6632fa836be11bd939d52e3d3862e09a8816517de5ee0",
+              "claims/SFT-COMP-FORM-OPERATIONAL-PROCESS-001/certificate.json": "5260df5d45b5949c4027d3390934822cc36a876845d5ce6de5af1c8e1ef35da7",
+              "claims/SFT-COMP-FORM-OPERATIONAL-PROCESS-001/registration.json": "6b400e90bf7e70b1c6818f70eba7a580c64b1da56021f9f0d4f01ab6031f2e50",
+              "receipts/engine/model_admitted/SFT-COMP-FORM-OPERATIONAL-PROCESS-001-d3349d79836c6e8e.json": "1b4cf33cf8a8397e6d0ed572de13e5ed3d50884fb3982d0a68640ff1464f8dcc"
+            },
+            "components": {
+              "actual source": "Ninth formal_computation topic OPERATIONAL-PROCESS, exact six-file execution binding and preceding Circuit dependency. Preserves generated execution/observable behavior boundary and exclusion of imported process algebra/distributed timing.",
+              "initial enabled choices and complete successful trace": "Unchanged StateTransition.create/run/step guards and StateExtension.admittedStepIff retain initial carrier membership and exact enabled source rows. runFromMeaning and StateComposition.Path retain all requested choices and each corresponding configuration. Exact source observations remain the original successful complete trace or propagated error; no stochastic or unregistered scheduler added.",
+              "failed class derivation": "ProcessFailure.Failure records precisely the original runFrom stop/continue error branches. failureObserved and observedFailureRecorded prove iff correspondence for arbitrary finite inputs. failureRetainsChoices decomposes the entire requested actions into successful choices, failed action and unexecuted suffix. failurePrefixReplay reconstructs every preceding configuration. failureNotSuccess excludes a successful observation for the same failure; admittedFailureObserved preserves the original top-level carrier guard.",
+              "composition and successor": "serialFailure prepends any exact successful Path to a recorded failure, retaining all earlier choices/configurations and the same source error. Completed StateComposition.nativeComposition/pathSuccessor/successorTrace preserve successful serial and successor execution. StateExtension retains both component runs under admitted assembly. Base run retains initial configuration without predecessor.",
+              "cyclic and terminal classes": "Completed BindingTrace.Normal/Cyclic and MachineExecution.Halted retain declared terminal no-outgoing transition and nonempty return path boundaries. Native normalTraceEmpty/normalNotCyclic/cycleReplay/cycleRepeat and haltReconstructs/haltedContinuationEmpty preserve complete traces and output observations; these are original registered trace classes, not an imported process algebra.",
+              "original full grammar and validation": "ProcessGrammar exhausts original ordered256 candidates and proves source decision/criteria equivalence, sole survivor and rejected coordinates. ProcessWitnesses/Controls/Evidence reproduce all3 witnesses,4 controls, registration, census, actual lookups, closure, exposition and hashes. Fresh full native comparison includes unknown-ID refusal; original certificate/independent product validator retained. Unchanged6349 shared-operation source-expression comparisons remain applicable."
+            },
+            "dependencies": [
+              "SFT-COMP-FORM-CIRCUIT-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": "All8 complete before this entry",
+            "native_audit": "verification/TURN_196_PARITY_REPORT.json",
+            "program_comparison": "verification/TURN_196_PROGRAM_REPORT.json",
+            "remaining": [],
+            "completion_count": 48
+          }
+        },
+        {
+          "path": "verification/TURN_196_PROGRAM_REPORT.json",
+          "sha256": "e2dad99a48d94c28b86617f1258bb9aa625775b89c7c0e0d92c8d44aa9966217",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:ca32b606f98729a29a5a4a2c123efa575bd499b2522eb2b8b0eb1c73186eebf4",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All ProcessProgram method output fields; full engine admission integration remains separate"
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "Assembly",
+      "native_modules_read": [
+        {
+          "path": "SFT/Computation/AssemblyDecomposition.lean",
+          "sha256": "4cfed547793f09c1ca73fe851691ce9a0817e9afb56ad4c622c89143a638bba6",
+          "declarations": [
+            "SFT.Computation.AssemblyDecomposition.pathDecompose",
+            "SFT.Computation.AssemblyDecomposition.serialIffDecomposable",
+            "SFT.Computation.AssemblyDecomposition.nativeDecomposition",
+            "SFT.Computation.AssemblyDecomposition.ParallelRecord",
+            "SFT.Computation.AssemblyDecomposition.Reconstructs",
+            "SFT.Computation.AssemblyDecomposition.parallelReconstruction",
+            "SFT.Computation.AssemblyDecomposition.componentObservationUnique",
+            "SFT.Computation.AssemblyDecomposition.parallelComponents"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AssemblyDecomposition.pathDecompose",
+            "SFT.Computation.AssemblyDecomposition.serialIffDecomposable",
+            "SFT.Computation.AssemblyDecomposition.nativeDecomposition",
+            "SFT.Computation.AssemblyDecomposition.parallelReconstruction",
+            "SFT.Computation.AssemblyDecomposition.componentObservationUnique",
+            "SFT.Computation.AssemblyDecomposition.parallelComponents"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/AssemblyGrammar.lean",
+          "sha256": "1460e6e1165dcb185445d3f0b32dbf70742d8fea4a3adb1b2e25370fac2f9006",
+          "declarations": [
+            "SFT.Computation.AssemblyGrammar.Carrier",
+            "SFT.Computation.AssemblyGrammar.carrierName",
+            "SFT.Computation.AssemblyGrammar.Identity",
+            "SFT.Computation.AssemblyGrammar.identityName",
+            "SFT.Computation.AssemblyGrammar.Relation",
+            "SFT.Computation.AssemblyGrammar.relationName",
+            "SFT.Computation.AssemblyGrammar.Trace",
+            "SFT.Computation.AssemblyGrammar.traceName",
+            "SFT.Computation.AssemblyGrammar.Boundary",
+            "SFT.Computation.AssemblyGrammar.boundaryName",
+            "SFT.Computation.AssemblyGrammar.Composition",
+            "SFT.Computation.AssemblyGrammar.compositionName",
+            "SFT.Computation.AssemblyGrammar.Generality",
+            "SFT.Computation.AssemblyGrammar.generalityName",
+            "SFT.Computation.AssemblyGrammar.Addition",
+            "SFT.Computation.AssemblyGrammar.additionName",
+            "SFT.Computation.AssemblyGrammar.Candidate",
+            "SFT.Computation.AssemblyGrammar.sourceFields",
+            "SFT.Computation.AssemblyGrammar.candidateId",
+            "SFT.Computation.AssemblyGrammar.exactForm",
+            "SFT.Computation.AssemblyGrammar.survivorId",
+            "SFT.Computation.AssemblyGrammar.survives",
+            "SFT.Computation.AssemblyGrammar.criteriaDecision",
+            "SFT.Computation.AssemblyGrammar.decisionReason",
+            "SFT.Computation.AssemblyGrammar.generationRule",
+            "SFT.Computation.AssemblyGrammar.grammarBoundary",
+            "SFT.Computation.AssemblyGrammar.candidates",
+            "SFT.Computation.AssemblyGrammar.survivor",
+            "SFT.Computation.AssemblyGrammar.generatedCardinality",
+            "SFT.Computation.AssemblyGrammar.candidatesComplete",
+            "SFT.Computation.AssemblyGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.AssemblyGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.AssemblyGrammar.uniqueSurvivor",
+            "SFT.Computation.AssemblyGrammar.survivorAccepted",
+            "SFT.Computation.AssemblyGrammar.ExactCriteria",
+            "SFT.Computation.AssemblyGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.AssemblyGrammar.carrier_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.identity_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.relation_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.trace_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.boundary_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.composition_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.generality_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AssemblyGrammar.generatedCardinality",
+            "SFT.Computation.AssemblyGrammar.candidatesComplete",
+            "SFT.Computation.AssemblyGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.AssemblyGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.AssemblyGrammar.uniqueSurvivor",
+            "SFT.Computation.AssemblyGrammar.survivorAccepted",
+            "SFT.Computation.AssemblyGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.AssemblyGrammar.carrier_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.identity_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.relation_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.trace_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.boundary_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.composition_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.generality_rejected_rejected",
+            "SFT.Computation.AssemblyGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Normalized full code compared with fully read State template; all residual code and changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/AssemblyWitnesses.lean",
+          "sha256": "301d6436b709252f2ddac59cc3bcf2a890254b2337af26bd198aea3808aeea6a",
+          "declarations": [
+            "SFT.Computation.AssemblyWitnesses.Witness",
+            "SFT.Computation.AssemblyWitnesses.traceCheck",
+            "SFT.Computation.AssemblyWitnesses.wordsCheck",
+            "SFT.Computation.AssemblyWitnesses.rewriteCheck",
+            "SFT.Computation.AssemblyWitnesses.witnesses",
+            "SFT.Computation.AssemblyWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AssemblyWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Normalized full code compared with fully read State template; all residual code and changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/AssemblyControls.lean",
+          "sha256": "1857334dfb87d4bdde3207342299469008a21da0857a918df812e101954d391e",
+          "declarations": [
+            "SFT.Computation.AssemblyControls.laws",
+            "SFT.Computation.AssemblyControls.exclusions",
+            "SFT.Computation.AssemblyControls.closureValue",
+            "SFT.Computation.AssemblyControls.falseCandidate",
+            "SFT.Computation.AssemblyControls.survivorIds",
+            "SFT.Computation.AssemblyControls.distinctIdentifiers",
+            "SFT.Computation.AssemblyControls.falsePremise",
+            "SFT.Computation.AssemblyControls.tamperedSource",
+            "SFT.Computation.AssemblyControls.tamperedArtifact",
+            "SFT.Computation.AssemblyControls.boundary",
+            "SFT.Computation.AssemblyControls.falsePremisePassed",
+            "SFT.Computation.AssemblyControls.boundaryPassed",
+            "SFT.Computation.AssemblyControls.controlRecords",
+            "SFT.Computation.AssemblyControls.resultData",
+            "SFT.Computation.AssemblyControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AssemblyControls.falsePremisePassed",
+            "SFT.Computation.AssemblyControls.boundaryPassed"
+          ],
+          "inspection": "Normalized full code compared with fully read State template; all residual code and changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/AssemblyEvidence.lean",
+          "sha256": "c031925b3fae2a8d841ab6351e2664806ee81da6a8c17e1aea79e6f3e5441c09",
+          "declarations": [
+            "SFT.Computation.AssemblyEvidence.candidateRecord",
+            "SFT.Computation.AssemblyEvidence.completenessRecord",
+            "SFT.Computation.AssemblyEvidence.registrationData",
+            "SFT.Computation.AssemblyEvidence.registration",
+            "SFT.Computation.AssemblyEvidence.generatedCandidateData",
+            "SFT.Computation.AssemblyEvidence.censusData",
+            "SFT.Computation.AssemblyEvidence.census",
+            "SFT.Computation.AssemblyEvidence.decisionData",
+            "SFT.Computation.AssemblyEvidence.decision",
+            "SFT.Computation.AssemblyEvidence.decideCandidate",
+            "SFT.Computation.AssemblyEvidence.closureData",
+            "SFT.Computation.AssemblyEvidence.closure",
+            "SFT.Computation.AssemblyEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.AssemblyEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.AssemblyEvidence.registrationHasNoAxioms",
+            "SFT.Computation.AssemblyEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.AssemblyEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.AssemblyEvidence.why",
+            "SFT.Computation.AssemblyEvidence.derivation",
+            "SFT.Computation.AssemblyEvidence.check",
+            "SFT.Computation.AssemblyEvidence.limitations",
+            "SFT.Computation.AssemblyEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AssemblyEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.AssemblyEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.AssemblyEvidence.registrationHasNoAxioms",
+            "SFT.Computation.AssemblyEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.AssemblyEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Normalized full code compared with fully read State template; all residual code and changed literal strings inspected"
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_197_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "1d3ff90f5f3420e2b7422f4a6a351e38ae88731644a71e090909533a052785b6",
+        "matching_theorems": 29
+      },
+      "retained_reports": [
+        {
+          "path": "verification/TURN_197_COMPOSITION_COMPLETION.json",
+          "sha256": "dbf1965c11ebdcc5bca124f1afa2c0c7f42c26f6549c4f7d5aaa7247ab9f2a59",
+          "result": {
+            "claim_id": "SFT-COMP-FORM-COMPOSITION-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "status": "complete",
+            "source_sha256": {
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/formal_computation/composition/law.py": "09c67ba09778cd0888bfa979ae4e8d27317480796679cb7923de8e4a992ab246",
+              "claims/SFT-COMP-FORM-COMPOSITION-001/execution.py": "7c4950d0b7154baf632646413a3897640e44a65dcbca6465e19c33354290bd52",
+              "claims/SFT-COMP-FORM-COMPOSITION-001/independent_validator.py": "385a332797a99ed503e26cdfc1e9465781d4da733d9a89ccc918c59ffbf26a23",
+              "claims/SFT-COMP-FORM-COMPOSITION-001/WHY_DERIVATION_CHECK.md": "6021dbeaf164d1158d9ee499829e801794bb28b92180bf014917091235796954",
+              "claims/SFT-COMP-FORM-COMPOSITION-001/certificate.json": "8d927039934679de4f4f9d92b76fe6c5dd264b705773d40850606cd6935a9af8",
+              "claims/SFT-COMP-FORM-COMPOSITION-001/registration.json": "d02358f4d116cda71cdedfd22240591fa205c2f5afcbe10bbe3a95222055ac43",
+              "receipts/engine/model_admitted/SFT-COMP-FORM-COMPOSITION-001-b0fea8f79a1c2c93.json": "66b376cd5368708fd9babf62ae5ba4cc9c80597b66f84265d062f61a1183eca9"
+            },
+            "components": {
+              "actual source": "Tenth formal_computation topic COMPOSITION and exact six-file execution binding, previous Operational-Process dependency. Retains independent parallel support and serial matching; concurrency involving communication/shared causality remains downstream.",
+              "serial decomposition and replay": "AssemblyDecomposition.pathDecompose splits any original retained Path at an arbitrary declared action cut into both component Paths, with complete predecessor trace concatenation and held intermediate interface. serialIffDecomposable proves both directions against existing pathSerial. nativeDecomposition reconstructs both original runFrom observations from a successful composed run, preserving the complete terminal trace.",
+              "independent parallel support and component identities": "ParallelRecord is a typed representation of the declared retained components: both original systems, initial configurations, action choices and original Except observations. Reconstructs retains exact source execution equations independently. parallelReconstruction and parallelComponents reproduce the component observation pair; componentObservationUnique proves unchanged held systems/inputs/actions determine the same pair. No shared timing/state/communication operation is attributed to V3.",
+              "interface mismatch and complete reconstruction": "Original CategoryPaths.composeRejected/composeResult/composeRetains preserve exact source/target matching, mismatch error, both component traces and original component fields. CircuitComposition exactFirstInterface/interfaceMismatchExcluded/completeTrace/serial/successor retain all component evaluation rows. No weaker interface criterion introduced.",
+              "base successor assembly boundaries": "Original StateTransition.runBase and StateComposition.pathSuccessor/successorTrace/nativeComposition retain identity trace, serial interfaces and arbitrary finite extension. StateExtension.commonAssemblyPreservesRuns retains both component traces in an admitted common relation; independent parallel observations do not introduce interaction or claim downstream concurrency.",
+              "original program and validation": "Full256 original ordered grammar, exhaustive forcing/sole survivor/rejected coordinate proofs,3 original group witnesses,4 original controls, full registration/census/closure/exposition and digests. Fresh native actual lookups and unknown-ID refusal match pinned claim artifacts. Original independent product validator/certificate retained; unchanged6349 source-expression comparisons remain applicable."
+            },
+            "dependencies": [
+              "SFT-COMP-FORM-OPERATIONAL-PROCESS-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": "All8 complete before this entry",
+            "native_audit": "verification/TURN_197_PARITY_REPORT.json",
+            "program_comparison": "verification/TURN_197_PROGRAM_REPORT.json",
+            "remaining": [],
+            "completion_count": 49
+          }
+        },
+        {
+          "path": "verification/TURN_197_PROGRAM_REPORT.json",
+          "sha256": "ed00efe9808c62a8aca0ab3432a7ec2843eacfc74a969e6361b884ac47e9d733",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:a5acf66751f0f1f687e326d1a5d57eb0d930f9341a51301ecb7778266222f3e1",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All AssemblyProgram method output fields; full engine admission integration remains separate"
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "Model",
+      "native_modules_read": [
+        {
+          "path": "SFT/Computation/ModelSimulation.lean",
+          "sha256": "ef4918d6ee285eb675a1362273fb47867ff85ea43da55f1afb1231ba0467f230",
+          "declarations": [
+            "SFT.Computation.ModelSimulation.StepSimulation",
+            "SFT.Computation.ModelSimulation.flattened",
+            "SFT.Computation.ModelSimulation.pathSimulation",
+            "SFT.Computation.ModelSimulation.simulatedObservation",
+            "SFT.Computation.ModelSimulation.reconstructedTerminal",
+            "SFT.Computation.ModelSimulation.identitySimulation",
+            "SFT.Computation.ModelSimulation.composeSimulation",
+            "SFT.Computation.ModelSimulation.flattenedAppend",
+            "SFT.Computation.ModelSimulation.ledgerSuccessor"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ModelSimulation.pathSimulation",
+            "SFT.Computation.ModelSimulation.simulatedObservation",
+            "SFT.Computation.ModelSimulation.reconstructedTerminal",
+            "SFT.Computation.ModelSimulation.identitySimulation",
+            "SFT.Computation.ModelSimulation.composeSimulation",
+            "SFT.Computation.ModelSimulation.flattenedAppend",
+            "SFT.Computation.ModelSimulation.ledgerSuccessor"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/ModelEncoding.lean",
+          "sha256": "2de6f28a26ba173acaadacc853c3605eecb9e24d8c541a1f281567f08c18e367",
+          "declarations": [
+            "SFT.Computation.ModelEncoding.Translates",
+            "SFT.Computation.ModelEncoding.finiteRoundTrip",
+            "SFT.Computation.ModelEncoding.registeredTranslation",
+            "SFT.Computation.ModelEncoding.translationUnique",
+            "SFT.Computation.ModelEncoding.registeredReconstruction",
+            "SFT.Computation.ModelEncoding.registeredExecution"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ModelEncoding.finiteRoundTrip",
+            "SFT.Computation.ModelEncoding.registeredTranslation",
+            "SFT.Computation.ModelEncoding.translationUnique",
+            "SFT.Computation.ModelEncoding.registeredReconstruction",
+            "SFT.Computation.ModelEncoding.registeredExecution"
+          ],
+          "inspection": "Full definitions and proof bodies read"
+        },
+        {
+          "path": "SFT/Computation/ModelGrammar.lean",
+          "sha256": "0ba226b5e22e1cc406cb7b7075319faeb6d0921dff4a53dde32cef111e5012dd",
+          "declarations": [
+            "SFT.Computation.ModelGrammar.Carrier",
+            "SFT.Computation.ModelGrammar.carrierName",
+            "SFT.Computation.ModelGrammar.Identity",
+            "SFT.Computation.ModelGrammar.identityName",
+            "SFT.Computation.ModelGrammar.Relation",
+            "SFT.Computation.ModelGrammar.relationName",
+            "SFT.Computation.ModelGrammar.Trace",
+            "SFT.Computation.ModelGrammar.traceName",
+            "SFT.Computation.ModelGrammar.Boundary",
+            "SFT.Computation.ModelGrammar.boundaryName",
+            "SFT.Computation.ModelGrammar.Composition",
+            "SFT.Computation.ModelGrammar.compositionName",
+            "SFT.Computation.ModelGrammar.Generality",
+            "SFT.Computation.ModelGrammar.generalityName",
+            "SFT.Computation.ModelGrammar.Addition",
+            "SFT.Computation.ModelGrammar.additionName",
+            "SFT.Computation.ModelGrammar.Candidate",
+            "SFT.Computation.ModelGrammar.sourceFields",
+            "SFT.Computation.ModelGrammar.candidateId",
+            "SFT.Computation.ModelGrammar.exactForm",
+            "SFT.Computation.ModelGrammar.survivorId",
+            "SFT.Computation.ModelGrammar.survives",
+            "SFT.Computation.ModelGrammar.criteriaDecision",
+            "SFT.Computation.ModelGrammar.decisionReason",
+            "SFT.Computation.ModelGrammar.generationRule",
+            "SFT.Computation.ModelGrammar.grammarBoundary",
+            "SFT.Computation.ModelGrammar.candidates",
+            "SFT.Computation.ModelGrammar.survivor",
+            "SFT.Computation.ModelGrammar.generatedCardinality",
+            "SFT.Computation.ModelGrammar.candidatesComplete",
+            "SFT.Computation.ModelGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ModelGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ModelGrammar.uniqueSurvivor",
+            "SFT.Computation.ModelGrammar.survivorAccepted",
+            "SFT.Computation.ModelGrammar.ExactCriteria",
+            "SFT.Computation.ModelGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ModelGrammar.carrier_rejected_rejected",
+            "SFT.Computation.ModelGrammar.identity_rejected_rejected",
+            "SFT.Computation.ModelGrammar.relation_rejected_rejected",
+            "SFT.Computation.ModelGrammar.trace_rejected_rejected",
+            "SFT.Computation.ModelGrammar.boundary_rejected_rejected",
+            "SFT.Computation.ModelGrammar.composition_rejected_rejected",
+            "SFT.Computation.ModelGrammar.generality_rejected_rejected",
+            "SFT.Computation.ModelGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ModelGrammar.generatedCardinality",
+            "SFT.Computation.ModelGrammar.candidatesComplete",
+            "SFT.Computation.ModelGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ModelGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ModelGrammar.uniqueSurvivor",
+            "SFT.Computation.ModelGrammar.survivorAccepted",
+            "SFT.Computation.ModelGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ModelGrammar.carrier_rejected_rejected",
+            "SFT.Computation.ModelGrammar.identity_rejected_rejected",
+            "SFT.Computation.ModelGrammar.relation_rejected_rejected",
+            "SFT.Computation.ModelGrammar.trace_rejected_rejected",
+            "SFT.Computation.ModelGrammar.boundary_rejected_rejected",
+            "SFT.Computation.ModelGrammar.composition_rejected_rejected",
+            "SFT.Computation.ModelGrammar.generality_rejected_rejected",
+            "SFT.Computation.ModelGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Normalized full code compared with fully read State template; all residual code and changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/ModelWitnesses.lean",
+          "sha256": "b1df70a62d40cfe17701dfc8cebfb833db4ddc2dbae392bb794d03814b02aa60",
+          "declarations": [
+            "SFT.Computation.ModelWitnesses.Witness",
+            "SFT.Computation.ModelWitnesses.traceCheck",
+            "SFT.Computation.ModelWitnesses.wordsCheck",
+            "SFT.Computation.ModelWitnesses.rewriteCheck",
+            "SFT.Computation.ModelWitnesses.witnesses",
+            "SFT.Computation.ModelWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ModelWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Normalized full code compared with fully read State template; all residual code and changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/ModelControls.lean",
+          "sha256": "051acc3e62bc5a65a5a0d86b58d0275dcd8ddc542b886e52fd9d07faefbe9971",
+          "declarations": [
+            "SFT.Computation.ModelControls.laws",
+            "SFT.Computation.ModelControls.exclusions",
+            "SFT.Computation.ModelControls.closureValue",
+            "SFT.Computation.ModelControls.falseCandidate",
+            "SFT.Computation.ModelControls.survivorIds",
+            "SFT.Computation.ModelControls.distinctIdentifiers",
+            "SFT.Computation.ModelControls.falsePremise",
+            "SFT.Computation.ModelControls.tamperedSource",
+            "SFT.Computation.ModelControls.tamperedArtifact",
+            "SFT.Computation.ModelControls.boundary",
+            "SFT.Computation.ModelControls.falsePremisePassed",
+            "SFT.Computation.ModelControls.boundaryPassed",
+            "SFT.Computation.ModelControls.controlRecords",
+            "SFT.Computation.ModelControls.resultData",
+            "SFT.Computation.ModelControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ModelControls.falsePremisePassed",
+            "SFT.Computation.ModelControls.boundaryPassed"
+          ],
+          "inspection": "Normalized full code compared with fully read State template; all residual code and changed literal strings inspected"
+        },
+        {
+          "path": "SFT/Computation/ModelEvidence.lean",
+          "sha256": "2ef8280c6288f0994a47cf396fba9d370e7c6840b2bc6e475a938790441c398f",
+          "declarations": [
+            "SFT.Computation.ModelEvidence.candidateRecord",
+            "SFT.Computation.ModelEvidence.completenessRecord",
+            "SFT.Computation.ModelEvidence.registrationData",
+            "SFT.Computation.ModelEvidence.registration",
+            "SFT.Computation.ModelEvidence.generatedCandidateData",
+            "SFT.Computation.ModelEvidence.censusData",
+            "SFT.Computation.ModelEvidence.census",
+            "SFT.Computation.ModelEvidence.decisionData",
+            "SFT.Computation.ModelEvidence.decision",
+            "SFT.Computation.ModelEvidence.decideCandidate",
+            "SFT.Computation.ModelEvidence.closureData",
+            "SFT.Computation.ModelEvidence.closure",
+            "SFT.Computation.ModelEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ModelEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ModelEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ModelEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ModelEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.ModelEvidence.why",
+            "SFT.Computation.ModelEvidence.derivation",
+            "SFT.Computation.ModelEvidence.check",
+            "SFT.Computation.ModelEvidence.limitations",
+            "SFT.Computation.ModelEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ModelEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ModelEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ModelEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ModelEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ModelEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Normalized full code compared with fully read State template; all residual code and changed literal strings inspected"
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_199_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "b2d5dae1b517d23d5f9ad2fccdf5eecc07045ae25a466d320ee0a665064f9c7b",
+        "matching_theorems": 35
+      },
+      "retained_reports": [
+        {
+          "path": "verification/TURN_199_MODEL_EQUIVALENCE_COMPLETION.json",
+          "sha256": "2b63391b3183d91b46167a6e1ddff8614dab4556fea43992495a9eb9902e87b9",
+          "result": {
+            "claim_id": "SFT-COMP-FORM-MODEL-EQUIVALENCE-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "status": "complete",
+            "source_sha256": {
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/formal_computation/model_equivalence/law.py": "231cd31cf752074f76f8af218b5eb4cab3215eff6f4e82c3682754bbf51325f7",
+              "claims/SFT-COMP-FORM-MODEL-EQUIVALENCE-001/execution.py": "30f6f49ee39320ce1ff6f919545b6cc37f41b0a7005624185061c2ab71a820a6",
+              "claims/SFT-COMP-FORM-MODEL-EQUIVALENCE-001/independent_validator.py": "097cf98b463c5028d19a3c6d3c6ad5b54b24528cf6b148ed72711b90e37b0f67",
+              "claims/SFT-COMP-FORM-MODEL-EQUIVALENCE-001/WHY_DERIVATION_CHECK.md": "857ce755b0a2e749e2015e5b55c0f17417c79c9cabfc044983523be83f9b6700",
+              "claims/SFT-COMP-FORM-MODEL-EQUIVALENCE-001/certificate.json": "709aa7033b01c0e84d7c20b4806a9ef66b2e406cf97838b0185e9a68dfce8c3d",
+              "claims/SFT-COMP-FORM-MODEL-EQUIVALENCE-001/registration.json": "4a95bf4d417b24c78361b2c0a9d4a4e8c12b2cab0338b6181cb9df0ca383c2d9",
+              "receipts/engine/model_admitted/SFT-COMP-FORM-MODEL-EQUIVALENCE-001-911ff906b2d84071.json": "f5c714c6c22c0c09662ec222b2f0414eb0d3e28ec718cc1c43e2a800fa68f698"
+            },
+            "components": {
+              "actual source": "Eleventh formal_computation topic MODEL-EQUIVALENCE and exact six-file execution binding. Complete source descriptions; total encoding; target descriptions; step or trace simulation; result preservation; reverse reconstruction; overhead ledger. Source boundary is the two registered generated model grammars.",
+              "complete descriptions and total encoding": "ModelEncoding.Translates composes original EncodingMaps.lookupFirst with EncodingDecoder.decode on the held String descriptions and original Codewords. finiteRoundTrip derives total lookup and exact decoding for every admitted source item from validateEncoding and exactDecoder. registeredTranslation uses the registered shared code coverage to derive a held target description and both forward and reverse table relations. No replacement serialization, machine model or algorithm is attributed to V3.",
+              "original execution and reconstruction": "ModelEncoding.registeredExecution starts from an admitted original System and successful native run. nativePath recovers the complete predecessor trace and terminal; executionStates establishes carrier membership. registeredReconstruction derives target carrier membership and reverse decoding from the actual validated finite encoding tables. The theorem constructs the original target run, retains the complete observed trace and derives exact reverse reconstruction of the source terminal. The theorem applies in each direction with the two registered grammars/tables and their step-or-trace simulation exchanged. The source simulation condition remains explicit; no universal equivalence of arbitrary unregistered models is asserted.",
+              "step trace result and overhead": "ModelSimulation.pathSimulation inductively constructs every finite target path from registered local simulation, and simulatedObservation replays it through original run. Its ledger retains the full target-action segment for every source step, with exact source-step length, flattening order, concatenation and successor. Result preservation retains the encoded terminal. No fixed numerical overhead or one-target-step restriction.",
+              "base composition successor": "identitySimulation supplies the identity translation; composeSimulation composes complete simulations through retained paths. Original StateComposition pathSerial/pathSuccessor and AssemblyDecomposition provide exact serial assembly/decomposition and independent retained parallel observations. No conventional external model added.",
+              "full grammar controls and program": "All256 ordered source candidates, exhaustive forcing/sole survivor/rejected coordinates,3 original witnesses,4 original controls, registration/census/closure/exposition and digests. Fresh native actual lookups, every original field/hash and unknown-ID refusal agree with pinned V3. Original independent literal product validator/certificate retained. Unchanged6349 shared-operation expression comparisons remain applicable."
+            },
+            "dependencies": [
+              "SFT-COMP-FORM-COMPOSITION-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": "All8 complete before this entry",
+            "native_audit": "verification/TURN_199_PARITY_REPORT.json",
+            "program_comparison": "verification/TURN_199_PROGRAM_REPORT.json",
+            "remaining": [],
+            "completion_count": 50
+          }
+        },
+        {
+          "path": "verification/TURN_199_PROGRAM_REPORT.json",
+          "sha256": "522a9148f3303e7056246481b0e8e4b8d3b71486b7ceaeb00b69713d6453c80f",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:0162711d6244b48f48e65f584f7d4d7ebec34ca89f8ddd5803006fa81eb7c497",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All ModelProgram method output fields; full engine admission integration remains separate"
+          }
+        }
+      ]
+    }
+  ],
+  "shared_sources": "Actual computation operations/catalog/generated engine inspection in SOURCE_READBACK_131_137 reused; exact three original spec_data topic records read here. EncodingMaps/Decoder proof review from090\u2013092 and Category/Graph reviews reused.",
+  "template_comparisons": [
+    {
+      "path": "SFT/Computation/ProcessGrammar.lean",
+      "residual_diff": "",
+      "changed_literals": [
+        "\"The forced execution and observable process behavior kernel retains initial configuration; enabled transitions; retained choices; complete path trace; terminal, failed and cyclic classes; observation record; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"Generate the literal product of the eight registered Formal Computation structural axes for execution and observable process behavior.\"",
+        "\"All generated finite execution and observable process behavior structures whose carriers, relations, traces and interfaces are composed from admitted Foundation, Mathematics and Information Science forms. Does not import process algebra or distributed timing.\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ProcessWitnesses.lean",
+      "residual_diff": "--- \n+++ \n@@ -1,2 +1,3 @@\n import SFT.Computation.StateWords\n+import SFT.Computation.ProcessFailure\n namespace SFT.Computation.EntryWitnesses\n",
+      "changed_literals": [
+        "\"formal_computation exact operational witness 1 for SFT-COMP-FORM-OPERATIONAL-PROCESS-001\"",
+        "\"formal_computation exact operational witness 2 for SFT-COMP-FORM-OPERATIONAL-PROCESS-001\"",
+        "\"formal_computation exact operational witness 3 for SFT-COMP-FORM-OPERATIONAL-PROCESS-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ProcessControls.lean",
+      "residual_diff": "",
+      "changed_literals": [
+        "\"Carrier law: initial configuration; enabled transitions; retained choices; complete path trace; terminal, failed and cyclic classes; observation record.\"",
+        "\"Does not import process algebra or distributed timing.\"",
+        "\"The forced execution and observable process behavior kernel retains initial configuration; enabled transitions; retained choices; complete path trace; terminal, failed and cyclic classes; observation record; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"The structural One supplies one canonical execution and observable process behavior form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated execution and observable process behavior form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"SFT-COMP-FORM-OPERATIONAL-PROCESS-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ProcessEvidence.lean",
+      "residual_diff": "--- \n+++ \n@@ -19,3 +19,3 @@\n   rootTheorems := [SFT.Engine.rootTheoremId]\n-  dependencies := [\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\"]\n+  dependencies := [\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\"]\n   axioms := []\n",
+      "changed_literals": [
+        "\"SFT-COMP-FORM-OPERATIONAL-PROCESS-001\"",
+        "\"Fold operational-process law\"",
+        "\"The forced execution and observable process behavior kernel retains initial configuration; enabled transitions; retained choices; complete path trace; terminal, failed and cyclic classes; observation record; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"SFT-COMP-FORM-CIRCUIT-001\"",
+        "\"The structural One supplies one canonical execution and observable process behavior form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated execution and observable process behavior form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"Fold operational-process law is required to derive execution and observable process behavior without importing its conventional answer-producing model.\"",
+        "\"Admitted finite forms, exact relations, distinction ledgers and composition supply the carriers. Exhausting the eight group-specific axes forces the only structure retaining: initial configuration; enabled transitions; retained choices; complete path trace; terminal, failed and cyclic classes; observation record.\"",
+        "\"Does not import process algebra or distributed timing.\"",
+        "\"operational process\"",
+        "\"labelled transition system\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/AssemblyGrammar.lean",
+      "residual_diff": "",
+      "changed_literals": [
+        "\"The forced serial and parallel process assembly kernel retains exact input and output interfaces; serial matching; independent parallel support; retained component identities; reconstruction witness; failure on mismatch; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"Generate the literal product of the eight registered Formal Computation structural axes for serial and parallel process assembly.\"",
+        "\"All generated finite serial and parallel process assembly structures whose carriers, relations, traces and interfaces are composed from admitted Foundation, Mathematics and Information Science forms. Concurrency laws requiring communication or shared causality remain downstream.\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/AssemblyWitnesses.lean",
+      "residual_diff": "--- \n+++ \n@@ -1,2 +1,3 @@\n import SFT.Computation.StateWords\n+import SFT.Computation.AssemblyDecomposition\n namespace SFT.Computation.EntryWitnesses\n",
+      "changed_literals": [
+        "\"formal_computation exact operational witness 1 for SFT-COMP-FORM-COMPOSITION-001\"",
+        "\"formal_computation exact operational witness 2 for SFT-COMP-FORM-COMPOSITION-001\"",
+        "\"formal_computation exact operational witness 3 for SFT-COMP-FORM-COMPOSITION-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/AssemblyControls.lean",
+      "residual_diff": "",
+      "changed_literals": [
+        "\"Carrier law: exact input and output interfaces; serial matching; independent parallel support; retained component identities; reconstruction witness; failure on mismatch.\"",
+        "\"Concurrency laws requiring communication or shared causality remain downstream.\"",
+        "\"The forced serial and parallel process assembly kernel retains exact input and output interfaces; serial matching; independent parallel support; retained component identities; reconstruction witness; failure on mismatch; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"The structural One supplies one canonical serial and parallel process assembly form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated serial and parallel process assembly form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"SFT-COMP-FORM-COMPOSITION-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/AssemblyEvidence.lean",
+      "residual_diff": "--- \n+++ \n@@ -19,3 +19,3 @@\n   rootTheorems := [SFT.Engine.rootTheoremId]\n-  dependencies := [\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\"]\n+  dependencies := [\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\"]\n   axioms := []\n",
+      "changed_literals": [
+        "\"SFT-COMP-FORM-COMPOSITION-001\"",
+        "\"Fold process composition and decomposition law\"",
+        "\"The forced serial and parallel process assembly kernel retains exact input and output interfaces; serial matching; independent parallel support; retained component identities; reconstruction witness; failure on mismatch; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"SFT-COMP-FORM-OPERATIONAL-PROCESS-001\"",
+        "\"The structural One supplies one canonical serial and parallel process assembly form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated serial and parallel process assembly form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"Fold process composition and decomposition law is required to derive serial and parallel process assembly without importing its conventional answer-producing model.\"",
+        "\"Admitted finite forms, exact relations, distinction ledgers and composition supply the carriers. Exhausting the eight group-specific axes forces the only structure retaining: exact input and output interfaces; serial matching; independent parallel support; retained component identities; reconstruction witness; failure on mismatch.\"",
+        "\"Concurrency laws requiring communication or shared causality remain downstream.\"",
+        "\"decomposition\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ModelGrammar.lean",
+      "residual_diff": "",
+      "changed_literals": [
+        "\"The forced bidirectional execution-preserving translations kernel retains complete source descriptions; total encoding; target descriptions; step or trace simulation; result preservation; reverse reconstruction; overhead ledger; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"Generate the literal product of the eight registered Formal Computation structural axes for bidirectional execution-preserving translations.\"",
+        "\"All generated finite bidirectional execution-preserving translations structures whose carriers, relations, traces and interfaces are composed from admitted Foundation, Mathematics and Information Science forms. Equivalence applies only to the two registered generated model grammars.\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ModelWitnesses.lean",
+      "residual_diff": "--- \n+++ \n@@ -1,2 +1,3 @@\n import SFT.Computation.StateWords\n+import SFT.Computation.ModelEncoding\n namespace SFT.Computation.EntryWitnesses\n",
+      "changed_literals": [
+        "\"formal_computation exact operational witness 1 for SFT-COMP-FORM-MODEL-EQUIVALENCE-001\"",
+        "\"formal_computation exact operational witness 2 for SFT-COMP-FORM-MODEL-EQUIVALENCE-001\"",
+        "\"formal_computation exact operational witness 3 for SFT-COMP-FORM-MODEL-EQUIVALENCE-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ModelControls.lean",
+      "residual_diff": "",
+      "changed_literals": [
+        "\"Carrier law: complete source descriptions; total encoding; target descriptions; step or trace simulation; result preservation; reverse reconstruction; overhead ledger.\"",
+        "\"Equivalence applies only to the two registered generated model grammars.\"",
+        "\"The forced bidirectional execution-preserving translations kernel retains complete source descriptions; total encoding; target descriptions; step or trace simulation; result preservation; reverse reconstruction; overhead ledger; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"The structural One supplies one canonical bidirectional execution-preserving translations form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated bidirectional execution-preserving translations form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"SFT-COMP-FORM-MODEL-EQUIVALENCE-001\""
+      ]
+    },
+    {
+      "path": "SFT/Computation/ModelEvidence.lean",
+      "residual_diff": "--- \n+++ \n@@ -19,3 +19,3 @@\n   rootTheorems := [SFT.Engine.rootTheoremId]\n-  dependencies := [\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\"]\n+  dependencies := [\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\",\"<text>\"]\n   axioms := []\n",
+      "changed_literals": [
+        "\"SFT-COMP-FORM-MODEL-EQUIVALENCE-001\"",
+        "\"Fold computational-model equivalence law\"",
+        "\"The forced bidirectional execution-preserving translations kernel retains complete source descriptions; total encoding; target descriptions; step or trace simulation; result preservation; reverse reconstruction; overhead ledger; every operation is source-bound, trace-complete, boundary-explicit, composition-preserving, successor-general and contains no imported answer-producing premise.\"",
+        "\"SFT-COMP-FORM-COMPOSITION-001\"",
+        "\"The structural One supplies one canonical bidirectional execution-preserving translations form with its identity trace and no unrecorded predecessor.\"",
+        "\"Appending one generated bidirectional execution-preserving translations form adds its exact carrier row, relations, trace positions and new pair/interface distinctions while preserving every earlier record.\"",
+        "\"Fold computational-model equivalence law is required to derive bidirectional execution-preserving translations without importing its conventional answer-producing model.\"",
+        "\"Admitted finite forms, exact relations, distinction ledgers and composition supply the carriers. Exhausting the eight group-specific axes forces the only structure retaining: complete source descriptions; total encoding; target descriptions; step or trace simulation; result preservation; reverse reconstruction; overhead ledger.\"",
+        "\"Equivalence applies only to the two registered generated model grammars.\"",
+        "\"model equivalence\"",
+        "\"simulation\""
+      ]
+    }
+  ],
+  "source_correspondence": "Failure iff original execution error, exact successful-prefix and unexecuted-suffix decomposition; arbitrary-cut serial decomposition and independent paired original observations; complete target-action segment induction under original step-or-trace simulation; actual finite encoding validation/decoder coverage derives reverse terminal reconstruction. No fixed overhead, unregistered model or new source operation added.",
+  "citations_added": [
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ProcessGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ProcessWitnesses.lean#L25",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AssemblyGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AssemblyWitnesses.lean#L25",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ModelGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ModelWitnesses.lean#L25"
+  ],
+  "new_proofs": 0,
+  "new_builds": 0,
+  "status": "Section review and repair complete; second pass pending, whole-paper review incomplete"
+}

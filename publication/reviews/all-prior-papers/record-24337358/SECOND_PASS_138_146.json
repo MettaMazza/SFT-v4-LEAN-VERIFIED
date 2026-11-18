@@ -1,0 +1,172 @@
+{
+  "updated_at": "2026-11-18T23:29:30.562030+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "challenges": [
+    {
+      "claim": "Recursion preserves every intermediate value and composes at its terminal.",
+      "challenge": "Is the step function replaced by a fixed example, or is the same interface counted twice?",
+      "evidence": "Original structural_recursion accepts a supplied callable. RecursionDerivation.valuesDerivation/derivationUnique quantify over that exact Step; valuesTerminal and valuesComposition remove the terminal from predecessors before concatenation.",
+      "disposition": "Section138 states arbitrary supplied f, the complete recurrence and terminal/predecessor equations. Distinct combined positions remain the exact executable guard."
+    },
+    {
+      "claim": "The FORM binding entry and FORMX helpers have their actual source scope.",
+      "challenge": "Does the paper import a later substitution algorithm into the earlier six-file execution binding or suppress its nested-binder behavior?",
+      "evidence": "Pinned FORM execution.py builds GeneratedComputationProgram from exactly six declared files; original law/catalog and three group witnesses inspected. Separate FORMX free/rename/substitute and BindingTerms/Substitution/Correspondence/Ledger bodies inspected; nestedSourceResult and the two binder ledgers explicitly disagree on binder address.",
+      "disposition": "Sections139\u2013140 retain distinct source ownership. Added full exact diagnostic in140, including absent target x, first candidate u, resulting term and both binder addresses. No claim that the helper preserves binder identity is made."
+    },
+    {
+      "claim": "The new nested-binder calculation is exact.",
+      "challenge": "Could u be unavailable, or could the outer substitution stop before renaming?",
+      "evidence": "For abs(y,abs(u,var(y))), binder y differs from target x and is free in replacement var(y). Body free set is {y}; replacement free set is {y}; candidate u differs from x and is in neither set. Source rename traverses both binder and variable labels.",
+      "disposition": "Original helper therefore returns abs(u,abs(u,var(u))). BindingLedger.sourceTargetAbsent/nestedSourceResult/originalBinderLedger/resultingBinderLedger/differentHeldBinder prove the displayed calculation and address change. This is an existing result, not a new diagnostic execution."
+    },
+    {
+      "claim": "Halt traces establish the terminal boundary separately from action exhaustion.",
+      "challenge": "Could finishing a requested input be mislabeled as a no-outgoing-step halt?",
+      "evidence": "MachineExecution.Halted separately requires BindingTrace.Normal at the terminal; haltedContinuationEmpty uses its explicit successful-edge exclusion.",
+      "disposition": "Section141 defines H using N(t) and derives reconstruction/no continuation; it never infers N(t) from input exhaustion."
+    },
+    {
+      "claim": "Circuit evaluation retains complete paths and excludes return paths when feed-forward.",
+      "challenge": "Are arbitrary arrow endpoints treated as registered graph wires, or is a finite sample used to certify acyclicity?",
+      "evidence": "CircuitGraph.Registered requires both endpoints in graph.nodes and their pair in graph.edges. evaluationPath inducts over actual Category composition. declaredCycleTrace and feedForwardExcludesReturn reuse inspected complete Graph return-path results.",
+      "disposition": "Section142 states the registration hypotheses and exact cycle-predicate equivalence. No unregistered edge or sample-only acyclicity inference."
+    },
+    {
+      "claim": "Failure certificates reconstruct exactly the original error branches.",
+      "challenge": "Can the record erase earlier successful choices or attribute an unexecuted suffix to the failure prefix?",
+      "evidence": "ProcessFailure.failureIff proves both directions; failureRetainsChoices splits requested actions into chosen++failedAction::unexecuted; failurePrefixReplay reconstructs before++[failed].",
+      "disposition": "Section143 gives the exact clauses and inductive split. The suffix remains unexecuted and serialFailure retains each prior successful action/configuration."
+    },
+    {
+      "claim": "Composition decomposes at every cut and retains independent observations.",
+      "challenge": "Does a shared interface get duplicated, or do parallel records invent communication?",
+      "evidence": "AssemblyDecomposition.pathDecompose inducts on the chosen left actions; nativeDecomposition gives two traces sharing only their boundary. ParallelRecord.Reconstructs uses the two original run results separately, including errors.",
+      "disposition": "Section144 displays exact predecessor concatenation and two independent execution equations; no scheduler or communication rule introduced."
+    },
+    {
+      "claim": "Registered model translation preserves results and reverse reconstruction.",
+      "challenge": "Is reverse decoding merely assumed, or is the original step-or-trace condition hidden?",
+      "evidence": "ModelEncoding.registeredTranslation/registeredReconstruction derive reverse table relation from validateEncoding, exactDecoder and used-code coverage. ModelSimulation.pathSimulation uses the original explicit StepSimulation and retains one full target segment per source step.",
+      "disposition": "Sections145\u2013146 explicitly quantify the original simulation condition; the reverse terminal relation follows from validated tables, not the generic reconstructedTerminal helper premise. No fixed overhead or universal equivalence of unrelated models is asserted."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RecursionGrammar.lean#L118",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RecursionWitnesses.lean#L24",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/BindingGrammar.lean#L118",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/BindingWitnesses.lean#L24",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/MachineGrammar.lean#L118",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/MachineWitnesses.lean#L24",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CircuitGrammar.lean#L118",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CircuitWitnesses.lean#L25",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/formx_001_022_laws_v1.py#L143",
+      "accessible": true,
+      "reviewed_native_bytes_equal": null
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/BindingLedger.lean#L93",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/BindingLedger.lean#L95",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/BindingLedger.lean#L97",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/BindingLedger.lean#L99",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/BindingLedger.lean#L103",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ProcessGrammar.lean#L118",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ProcessWitnesses.lean#L25",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AssemblyGrammar.lean#L118",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AssemblyWitnesses.lean#L25",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ModelGrammar.lean#L118",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ModelWitnesses.lean#L25",
+      "accessible": true,
+      "reviewed_native_bytes_equal": true
+    }
+  ],
+  "repair_checked": "CUMULATIVE-FORMX-DIAGNOSTIC-24 plus shared133 grammar references",
+  "revised_manuscript_sha256": "bd5320cdeee2e401aeafdf37ce21d405e2fd6f3babe930af7709e3a60a34dbf4",
+  "new_builds": 0,
+  "new_scientific_runs": 0,
+  "status": "No unresolved discrepancy between inspected section statements and cited source/proof arguments; whole-paper review incomplete."
+}

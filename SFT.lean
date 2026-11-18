@@ -11761,3 +11761,15 @@ import SFT.Biology.ReplicationLineageSource
 import SFT.Biology.ReplicationLineageExperiment
 
 import SFT.Biology.ReplicationLineageValidation
+
+import SFT.Biology.BiologicalVariation
+
+import SFT.Biology.BiologicalVariationGrammar
+
+import SFT.Biology.BiologicalVariationEvidence
+
+import SFT.Biology.BiologicalVariationSource
+
+import SFT.Biology.BiologicalVariationExperiment
+
+import SFT.Biology.BiologicalVariationValidation

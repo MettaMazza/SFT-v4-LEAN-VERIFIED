@@ -1,0 +1,90 @@
+{
+  "updated_at": "2026-11-18T22:59:36.362631+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    95,
+    96,
+    97,
+    98,
+    99
+  ],
+  "challenges": [
+    {
+      "claim": "Entropy refinement implies closed-pair count monotonicity.",
+      "challenge": "Could list membership containment hide duplicates or reverse pair orientation?",
+      "evidence": "EntropyPairs.filteredPairMonotone inducts over the common source support, preserving orientation; sourcePairsUnique/classPairsUnique/closedPairsUnique establish uniqueness; pairSubsetLength removes each head before applying induction.",
+      "disposition": "The manuscript gives this actual chain, including the admitted partitions and raw refinement distinction; no defect demonstrated."
+    },
+    {
+      "claim": "Fresh entropy states preserve old information and exact weights.",
+      "challenge": "Does preservation of other classes incorrectly preserve their previous fractional weights, or require a new observation label?",
+      "evidence": "EntropyExtension.oldImage/fibreSuccessor/validSuccessor require fresh state only; successorPartValue uses support.length+1 for every returned row.",
+      "disposition": "Section97 expressly changes every denominator, permits existing or fresh labels, and gives the exact ordered pair recurrence."
+    },
+    {
+      "claim": "Compression reconstructs exact source and retains resources.",
+      "challenge": "Could empty blocks or first-lookup semantics disagree with source last-key dictionaries?",
+      "evidence": "CompressionDescription.validMeaning rejects repeated keys; blockOfRow gives unique row equality. losslessMeaning preserves empty-message short circuit; resourceCounts counts rows, not characters.",
+      "disposition": "Section98 preserves these domains and units explicitly; no defect demonstrated."
+    },
+    {
+      "claim": "Prefix parsing is unique for every admitted finite stream.",
+      "challenge": "Could the proof merely test three sample words?",
+      "evidence": "CompressionPrefix.commonInitial, prefixForbiddenExtension, firstWordUnique and uniqueParse prove common head and cancellation induction for arbitrary finite parses.",
+      "disposition": "Section99 supplies each induction step; examples remain separate."
+    },
+    {
+      "claim": "Complete canonical supports cannot all receive shorter distinct codes.",
+      "challenge": "Does the proof silently impose distinct alphabet labels on the broader raw executable helper?",
+      "evidence": "CompressionSupport.wordsCount/shortCountBound preserve multiplicities; noDistinctShortAssignment concerns distinct output lists; CompressionCanonical.inheritedNoInjectiveShortCode obtains distinct labels from original QuantitySupport admission.",
+      "disposition": "Section99 already separates both original domains and states the bridge explicitly; no additional guard or weaker replacement needed."
+    }
+  ],
+  "repairs_checked": [
+    "CUMULATIVE-ENTROPY-EXPOSITION-14",
+    "CUMULATIVE-COMPRESSION-EXPOSITION-15"
+  ],
+  "citations_added": [
+    {
+      "section": 97,
+      "links": [
+        "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/entropy_uncertainty/law.py#L72",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/EntropyGrammar.lean#L129",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/EntropyWitnesses.lean#L46"
+      ]
+    },
+    {
+      "section": 99,
+      "links": [
+        "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/compression_redundancy/law.py#L82",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/CompressionGrammar.lean#L140",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/CompressionWitnesses.lean#L34"
+      ]
+    }
+  ],
+  "revised_manuscript_sha256": "dac77fd982e8061744fad4cd14d614876ff9bac693f597ba05303fdfde0c6bcd",
+  "status": "No unresolved defect in inspected section arguments; entire cumulative paper is not yet passed.",
+  "new_scientific_runs": 0,
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/EntropyGrammar.lean#L129",
+      "sha256": "c00f4655c9081746bb66a8ab290edddc4d1163f4d2d2691ea4623cc71d0220b4",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/EntropyWitnesses.lean#L46",
+      "sha256": "2af4024fb8e6e481bbc9a675c53346f9de66c7156ef2ba7052583db3cce01c2a",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/CompressionGrammar.lean#L140",
+      "sha256": "0f2c64e5a4926f0f2b7fd23d60e805c4d7c1b7cc9d03509626cbfa1d5e3e622e",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/CompressionWitnesses.lean#L34",
+      "sha256": "2d9fe3afbf4c4f06f62381b2f2ab4ca815e244757e384cce4a7a076a4fb9b6e5",
+      "public_bytes_equal_reviewed": true
+    }
+  ]
+}

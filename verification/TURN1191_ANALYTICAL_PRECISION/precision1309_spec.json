@@ -1,0 +1,248 @@
+{
+  "claim_id": "SFT-CHEM-ANALYTICAL-PRECISION-REPEATABILITY-002",
+  "title": "Fold analytical precision and repeatability law",
+  "statement": "Same-condition replicates force all exact pair distances and extreme spread while retaining every adverse replicate separately from trueness.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-CHEM-MEAS-UNCERTAINTY-001",
+    "SFT-CHEM-ANALYTICAL-SAMPLE-001",
+    "SFT-CHEM-ANALYTICAL-ACCURACY-TRUENESS-001"
+  ],
+  "generation_rule": "Generate the literal product of eight registered analytical decisions.",
+  "grammar_boundary": "Eight dimensions exhaust identity, conditions, support, pair comparison, spread, class, adverse custody and extension.",
+  "dimensions": [
+    {
+      "key": "identity",
+      "choices": [
+        {
+          "name": "replicates-without-sample",
+          "admitted": false,
+          "reason": "Results cannot be paired."
+        },
+        {
+          "name": "held-sample-measurand-method",
+          "admitted": true,
+          "reason": "All replicate identities remain."
+        }
+      ]
+    },
+    {
+      "key": "conditions",
+      "choices": [
+        {
+          "name": "mixed-condition-pool",
+          "admitted": false,
+          "reason": "Repeatability is obscured."
+        },
+        {
+          "name": "same-held-repeatability-conditions",
+          "admitted": true,
+          "reason": "Conditions are identical and explicit."
+        }
+      ]
+    },
+    {
+      "key": "support",
+      "choices": [
+        {
+          "name": "summary-only",
+          "admitted": false,
+          "reason": "A summary erases rows."
+        },
+        {
+          "name": "complete-positive-ordered-replicates",
+          "admitted": true,
+          "reason": "Every replicate remains."
+        }
+      ]
+    },
+    {
+      "key": "comparison",
+      "choices": [
+        {
+          "name": "signed-deviation-list",
+          "admitted": false,
+          "reason": "Signed values are not native proof distances."
+        },
+        {
+          "name": "all-pair-positive-distance-or-EmptyOne",
+          "admitted": true,
+          "reason": "All unordered pairs are exact."
+        }
+      ]
+    },
+    {
+      "key": "spread",
+      "choices": [
+        {
+          "name": "fitted-dispersion-parameter",
+          "admitted": false,
+          "reason": "A fit cannot define observed spread."
+        },
+        {
+          "name": "exact-extreme-distance-or-EmptyOne",
+          "admitted": true,
+          "reason": "Spread is forced by retained extrema."
+        }
+      ]
+    },
+    {
+      "key": "class",
+      "choices": [
+        {
+          "name": "precision-equals-trueness",
+          "admitted": false,
+          "reason": "Agreement with a reference is distinct."
+        },
+        {
+          "name": "repeatability-class-held-separately",
+          "admitted": true,
+          "reason": "Precision and trueness remain separate."
+        }
+      ]
+    },
+    {
+      "key": "adverse",
+      "choices": [
+        {
+          "name": "outlier-deleted",
+          "admitted": false,
+          "reason": "Deletion inflates precision."
+        },
+        {
+          "name": "all-adverse-replicates-retained",
+          "admitted": true,
+          "reason": "Every registered replicate remains."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "summary-renormalized",
+          "admitted": false,
+          "reason": "Earlier distances disappear."
+        },
+        {
+          "name": "successor-retains-and-recomputes-pairs",
+          "admitted": true,
+          "reason": "New replicates extend all pair comparisons."
+        }
+      ]
+    }
+  ],
+  "exact_result": "held-sample-measurand-method__same-held-repeatability-conditions__complete-positive-ordered-replicates__all-pair-positive-distance-or-EmptyOne__exact-extreme-distance-or-EmptyOne__repeatability-class-held-separately__all-adverse-replicates-retained__successor-retains-and-recomputes-pairs",
+  "induction_base": "Two same-condition replicates supply the first pair distance.",
+  "induction_step": "Every successor adds all new pairs without erasing prior rows.",
+  "exclusions": [
+    "no numerical zero negative irrational imaginary continuum fitted free random or imported native parameter",
+    "no external value threshold model or selected successful result chooses the survivor",
+    "all favorable adverse absent unavailable unresolved uncertainty assumption correction fit and loss rows remain"
+  ],
+  "operational_witnesses": [
+    [
+      "identity",
+      "Identity held.",
+      true
+    ],
+    [
+      "conditions",
+      "Condition held.",
+      true
+    ],
+    [
+      "support",
+      "Three rows retained.",
+      true
+    ],
+    [
+      "comparison",
+      "Three pairs retained.",
+      true
+    ],
+    [
+      "spread",
+      "Spread exact.",
+      true
+    ],
+    [
+      "class",
+      "No reference imported.",
+      true
+    ],
+    [
+      "adverse",
+      "Lowest row retained.",
+      true
+    ],
+    [
+      "successor",
+      "Pairs extend.",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-ANALYTICAL-PRECISION-REPEATABILITY-002",
+  "expected_observation_label": "complete-analytical-precision-repeatability-vector",
+  "target_rows": [
+    {
+      "target_id": "SFT-CHEM-ANAL-002-IDENTITY",
+      "source_id": "NIST-SRM-1959-CERTIFICATION-2010",
+      "source_locator": "identity",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    },
+    {
+      "target_id": "SFT-CHEM-ANAL-002-REPLICATES",
+      "source_id": "NIST-SRM-1959-CERTIFICATION-2010",
+      "source_locator": "replicates",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    },
+    {
+      "target_id": "SFT-CHEM-ANAL-002-WITHIN-SET",
+      "source_id": "NIST-SRM-1959-CERTIFICATION-2010",
+      "source_locator": "within set",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    },
+    {
+      "target_id": "SFT-CHEM-ANAL-002-BETWEEN-SET",
+      "source_id": "NIST-SRM-1959-CERTIFICATION-2010",
+      "source_locator": "between set",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    },
+    {
+      "target_id": "SFT-CHEM-ANAL-002-METHOD-AGREEMENT",
+      "source_id": "NIST-SRM-1959-CERTIFICATION-2010",
+      "source_locator": "method agreement",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    },
+    {
+      "target_id": "SFT-CHEM-ANAL-002-DRIFT",
+      "source_id": "NIST-SRM-1959-CERTIFICATION-2010",
+      "source_locator": "drift",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    },
+    {
+      "target_id": "SFT-CHEM-ANAL-002-ADVERSE-LIMITS",
+      "source_id": "NIST-SRM-1959-CERTIFICATION-2010",
+      "source_locator": "adverse limits",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    },
+    {
+      "target_id": "SFT-CHEM-ANAL-002-COMPLETE-SOURCE",
+      "source_id": "ANAL-001-005-SOURCE-INVENTORY",
+      "source_locator": "complete source",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+  "falsification_condition": "The claim halts if the survivor is nonunique; any registered analytical row, uncertainty, adverse result, page or byte is omitted; or an external result selects the law. Eight dimensions exhaust identity, conditions, support, pair comparison, spread, class, adverse custody and extension."
+}

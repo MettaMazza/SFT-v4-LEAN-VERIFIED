@@ -68960,7 +68960,14 @@
       "script": "work/run_correspondence1308_checks.py",
       "log": "work/correspondence1308_checks.log",
       "wait_for_actual_driver": 19129
-    }
+    },
+    "actual_live_compilers": [
+      "32022 422720 /Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean -j1 -M8192 --run /Users/dolltrading/Documents/Codex/2026-10-26/p/work/turn1064_recovery/PatientIdentityProgram1234.lean sha256:b0e3e4a37708bd724f9b423eda37318dd85c3a376a98be59968beb554025ab51",
+      "32246 420784 /Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean -j1 -M8192 --run /Users/dolltrading/Documents/Codex/2026-10-26/p/work/turn1064_recovery/FixationProgram1187.lean sha256:dfe610e8f36b3cd60ea973305775dbca7ad11fb9770a6ca702039355920d3279",
+      "34862 414064 /Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean -j1 -M8192 --run /Users/dolltrading/Documents/Codex/2026-10-26/p/work/turn1064_recovery/ProteinFoldProgram1196.lean sha256:85ff6cef6aed6684617b0454f0c152d3d625b99ef83912d50dcb1bfac7f85cde",
+      "90500 2508384 /Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean -j1 -M8192 --run work/XrayDiffractionValidationProgram1163.lean"
+    ],
+    "next_action": "Preserve four live compiler chains and pending equilibrium19129/correspondence35433. Continue actual source-bound derivation work while these comparisons run; register each actual passed entry with its original dependencies. MolecularCorrespondence source is staged in three modules,with native checks pending; do not recreate it or treat pending checks as absent V3 derivation."
   },
   "correspondence1308": {
     "claim_id": "SFT-CHEM-OPERATIONAL-CLASSICAL-QUANTUM-CORRESPONDENCE-015",
@@ -68971,6 +68978,37 @@
       "script": "work/run_correspondence1308_checks.py",
       "log": "work/correspondence1308_checks.log",
       "wait_for_actual_driver": 19129
+    }
+  },
+  "checkpoint1190": {
+    "status": "PASS",
+    "commit": "945fe01938d6c3f706f638803265dffe66105402",
+    "tree": "205d96eac3c7cda994699ed9928936f7c35bd1c8",
+    "main_verified": true,
+    "files": 34,
+    "complete": 781,
+    "verified_at": "2026-11-18T10:38:42.821460+00:00",
+    "preserved_publication_parent": "51fe0217c1d20c5e58b0d482df223e7e43a1e1f2"
+  },
+  "continuation1191": {
+    "previous_turn": "progress: MolecularCorrespondence source translated and checkpoint945fe019 verified; existing four compiler jobs preserved",
+    "action": "Preserve existing four live compiler chains. Precision six-module translation and original empiricalPASS staged; queued same-slot driver39610 follows correspondence35433. Resolve only actual check failures; register passing original entries in dependency order and continue toward1000.",
+    "jobs": {
+      "pid": 39610,
+      "script": "work/run_precision1309_checks.py",
+      "log": "work/precision1309_checks.log",
+      "wait_for_actual_driver": 35433
+    }
+  },
+  "precision1309": {
+    "claim_id": "SFT-CHEM-ANALYTICAL-PRECISION-REPEATABILITY-002",
+    "status": "source translated; native checks queued",
+    "evidence": "verification/TURN1191_ANALYTICAL_PRECISION",
+    "jobs": {
+      "pid": 39610,
+      "script": "work/run_precision1309_checks.py",
+      "log": "work/precision1309_checks.log",
+      "wait_for_actual_driver": 35433
     }
   }
 }

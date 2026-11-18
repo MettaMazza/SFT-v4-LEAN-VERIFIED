@@ -1,0 +1,110 @@
+{
+  "experiment_id": "SFT-EXP-CHEM-ANALYTICAL-PRECISION-REPEATABILITY-002",
+  "claim_id": "SFT-CHEM-ANALYTICAL-PRECISION-REPEATABILITY-002",
+  "provenance": "observational_derivation",
+  "frozen_relation": "held-sample-measurand-method__same-held-repeatability-conditions__complete-positive-ordered-replicates__all-pair-positive-distance-or-EmptyOne__exact-extreme-distance-or-EmptyOne__repeatability-class-held-separately__all-adverse-replicates-retained__successor-retains-and-recomputes-pairs",
+  "target_references": [
+    [
+      "SFT-CHEM-ANAL-002-IDENTITY",
+      "NIST-SRM-1959-CERTIFICATION-2010",
+      "identity",
+      "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    ],
+    [
+      "SFT-CHEM-ANAL-002-REPLICATES",
+      "NIST-SRM-1959-CERTIFICATION-2010",
+      "replicates",
+      "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    ],
+    [
+      "SFT-CHEM-ANAL-002-WITHIN-SET",
+      "NIST-SRM-1959-CERTIFICATION-2010",
+      "within set",
+      "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    ],
+    [
+      "SFT-CHEM-ANAL-002-BETWEEN-SET",
+      "NIST-SRM-1959-CERTIFICATION-2010",
+      "between set",
+      "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    ],
+    [
+      "SFT-CHEM-ANAL-002-METHOD-AGREEMENT",
+      "NIST-SRM-1959-CERTIFICATION-2010",
+      "method agreement",
+      "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    ],
+    [
+      "SFT-CHEM-ANAL-002-DRIFT",
+      "NIST-SRM-1959-CERTIFICATION-2010",
+      "drift",
+      "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    ],
+    [
+      "SFT-CHEM-ANAL-002-ADVERSE-LIMITS",
+      "NIST-SRM-1959-CERTIFICATION-2010",
+      "adverse limits",
+      "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    ],
+    [
+      "SFT-CHEM-ANAL-002-COMPLETE-SOURCE",
+      "ANAL-001-005-SOURCE-INVENTORY",
+      "complete source",
+      "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+      "sha256:d64666cd6403b01ca04c69d46d25aabf8cfdb9872fe4cad14b887cbae67032e9"
+    ]
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/snapshots/anal-001-005-performance-v1/complete-postseal-analysis-v1.json",
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-CHEM-ANALYTICAL-PRECISION-REPEATABILITY-002-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "chemical-observation",
+          "complete-analytical-precision-repeatability-vector"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "sealed_consequence_label": "complete-analytical-precision-repeatability-vector",
+  "falsification_condition": "The claim halts if the survivor is nonunique; any registered analytical row, uncertainty, adverse result, page or byte is omitted; or an external result selects the law. Eight dimensions exhaust identity, conditions, support, pair comparison, spread, class, adverse custody and extension.",
+  "development_observation_disclosed": true,
+  "observation_may_have_informed_question_and_candidate_relation": true,
+  "not_claimed_as_unknown-target_forward_prediction": true,
+  "external_target_api_absent_from_candidate_generator_and_eliminator": true,
+  "target_content_inaccessible_to_prediction_execution": true,
+  "comparison_implementation_inaccessible_to_prediction_execution": true,
+  "all_rows_required": true
+}

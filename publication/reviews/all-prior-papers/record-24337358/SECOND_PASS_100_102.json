@@ -1,0 +1,57 @@
+{
+  "updated_at": "2026-11-18T23:02:57.112753+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    100,
+    101,
+    102
+  ],
+  "challenges": [
+    {
+      "claim": "Capacity includes every greatest distinguishable code.",
+      "challenge": "Could the procedure omit a maximum tie or count reordered selections as additional codes?",
+      "evidence": "Prior paper30 actual ChannelSelections and ChannelCapacity inspection, identical files in PRIOR_REVIEW_SOURCE_REUSE.json. Complete source-index combinations are filtered, then every maximum-length result is retained in original order.",
+      "disposition": "Section101 shows take/skip completeness, maximum bound and attainment, and exact maximum-family membership; worked merged channel retains both [a,c] and [b,c]. No defect demonstrated."
+    },
+    {
+      "claim": "Successor closure accounts for every finite code.",
+      "challenge": "Does the three-way case split accidentally replace original enumeration order or assume all old codes can extend?",
+      "evidence": "ChannelExtension.candidateAlternatives; priorCode/appendCode/appendCodePrior actual proofs reused.",
+      "disposition": "Section102 states membership equivalence only and includes the necessary disjointness checks for extension; no ordering replacement or unconditional extension is asserted."
+    },
+    {
+      "claim": "Composition cannot recover an intermediate merged distinction.",
+      "challenge": "Would missing second-stage outputs invalidate the common-output witness?",
+      "evidence": "ChannelComposition path-membership and admitted-totality proof previously inspected; pinned source constructor rejects input without image.",
+      "disposition": "Section101 uses exact ordered interface equality and second-stage totality to construct the shared final output. No unstated hypothesis added."
+    }
+  ],
+  "repairs_checked": [
+    "CUMULATIVE-CHANNEL-EXPOSITION-16"
+  ],
+  "citations_added": [
+    {
+      "section": 102,
+      "links": [
+        "https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/channels_capacity/law.py#L78",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ChannelGrammar.lean#L140",
+        "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ChannelWitnesses.lean#L39"
+      ]
+    }
+  ],
+  "revised_manuscript_sha256": "dd3d1412234a229d0b195e1f8a9786c572884f47140404058eb4c0d55c52e78d",
+  "status": "No unresolved defect in inspected section arguments; entire cumulative paper is not yet passed.",
+  "new_scientific_runs": 0,
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ChannelGrammar.lean#L140",
+      "sha256": "fce51cdcd950c2e025f71693e5e23d67dd7b97b1dce948fe411fa1a61b70d95d",
+      "public_bytes_equal_reviewed": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ChannelWitnesses.lean#L39",
+      "sha256": "2b92864238654377c5e9759ba0fe423e6223b5b8393e2af31d553bb2911149b4",
+      "public_bytes_equal_reviewed": true
+    }
+  ]
+}

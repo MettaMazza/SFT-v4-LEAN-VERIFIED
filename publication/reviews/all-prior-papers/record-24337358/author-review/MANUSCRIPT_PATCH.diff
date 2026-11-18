@@ -347,3 +347,29 @@
  
  Compression and Redundancy retains all 1,024 kernels and all five operational witnesses. Fresh native execution matches every original program field, including actual candidate lookups, controls and digests. The cumulative 11,626 source-expression comparisons cover exact descriptions, errors, prefix families and complete fixed/short supports. The result applies at every admitted finite width: the recursively generated full support is larger than the complete shorter support, and injectivity on the canonical distinct-label support would contradict that strict count inequality. Prefix parsing separately covers every finite concatenation over an admitted prefix-free family.
  
+@@ -3622,6 +3848,25 @@
+ Appending a fresh input and its complete nonempty, duplicate-free support within the held output carrier preserves channel admission. Output support for every prior input is unchanged, while the new input has exactly the appended support in its original order. Every prior confusability decision remains unchanged. The new decision with each prior input is precisely the overlap of its retained support with the new support.
+ 
+ Every prior distinguishable code remains valid. Its extension by the fresh input is distinguishable exactly when each prior member has disjoint support from the fresh input. The native exhaustive successor theorem establishes that every generated code is an old code, the fresh singleton, or such a permitted extension of an old code, and conversely every one of those alternatives is generated. This closes arbitrary finite carrier growth while retaining the full candidate family used by the greatest-cardinality selection.
++
++
++
++Source and verification for this grammar and its worked witnesses: [Original grammar and witnesses](https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/information_science/channels_capacity/law.py#L78), [ChannelGrammar.candidatesComplete](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ChannelGrammar.lean#L140), [ChannelWitnesses.allWitnessesPass](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/InformationScience/ChannelWitnesses.lean#L39).
++
++The original channel grammar alternatives and their elimination arguments are:
++
++1. inputs: partial-input-carrier versus complete-canonical-inputs. An omitted input changes possible messages and capacity. Every registered input occurs once.
++2. outputs: partial-output-carrier versus complete-canonical-outputs. An omitted output hides a possible transport image. Every registered output occurs once.
++3. relation: opaque-channel-box versus held-transport-relation. An opaque box hides source-to-output alternatives. Every possible source/output pair is retained.
++4. totality: missing-input-row versus nonempty-output-support-per-input. An input without an output is outside the claimed channel action. Every input has at least one retained image.
++5. confusability: probability-threshold versus overlapping-output-support. A threshold imports a distribution and free scale. Confusability is exact shared output membership.
++6. codes: sampled-input-set versus pairwise-disjoint-output-selection. Sampling cannot establish every pair separated. Every selected input pair has disjoint output support.
++7. capacity: logarithmic-rate versus complete-greatest-code-family. A real logarithmic rate imports scale and asymptotic assumptions. Every input selection is generated and all maximum distinguishable ties survive.
++8. composition: endpoint-guess versus exact-relational-paths. Endpoints alone omit the shared interface path. Every source-to-middle and middle-to-target path generates one composite cell.
++9. generality: sampled-channels versus carrier-successor. Examples do not establish a fresh input relation. A fresh input adds its complete output support and all new confusability pairs.
++10. addition: extra-transition-probability versus no-extra-channel-model. A probability law is not supplied by the transport relation. Capacity follows only from exact relation and distinguishability.
++
++The five original channel witnesses begin with inputs [a,b,c]. The clean relation [(a,x),(b,y),(c,z)] has mutually disjoint singleton output supports, so its unique greatest code is [a,b,c]. The merged relation [(a,x),(b,x),(c,z)] gives a and b the common output x, while a and c have disjoint supports. Thus [a,b] fails the code test and [a,c] passes. No three-input code survives; both [a,c] and [b,c] have greatest size two and are retained, in that order. Composing the clean relation with [(x,u),(y,v),(z,w)] at the identical ordered interface [x,y,z] gives [(a,u),(b,v),(c,w)] by its three complete paths. ChannelWitnesses.allWitnessesPass checks the clean capacity, merged overlap, both tied maxima, the adverse code and this exact composition. The complete selection and successor arguments above establish the result for arbitrary admitted finite carriers.
+ 
+ All 1,024 channel kernels and all five original operational witnesses are retained. Fresh native execution matches every original registration, census, actual candidate lookup, closure, control and digest field. The cumulative 20,505 source-expression comparisons include 735 fresh-input support/code checks alongside constructor, support, confusability, capacity and composition cases. Channel Capacity is complete at the source finite zero-error boundary; probabilistic error rates and asymptotic coding claims remain outside that original boundary.
+ 

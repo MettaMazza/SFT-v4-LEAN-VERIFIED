@@ -11653,3 +11653,15 @@ import SFT.Biology.MetabolicTransformationSource
 import SFT.Biology.MetabolicTransformationExperiment
 
 import SFT.Biology.MetabolicTransformationValidation
+
+import SFT.Biology.EnergyCoupling
+
+import SFT.Biology.EnergyCouplingGrammar
+
+import SFT.Biology.EnergyCouplingEvidence
+
+import SFT.Biology.EnergyCouplingSource
+
+import SFT.Biology.EnergyCouplingExperiment
+
+import SFT.Biology.EnergyCouplingValidation

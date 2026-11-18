@@ -1,0 +1,13 @@
+from pathlib import Path
+w=Path('work');out=w/'turn1064_recovery/SFT/Chemistry'
+s=(w/'resolved_spec1164.py').read_text().replace('1164','1235').replace('rovibronic_joint_batch_v1','molecular_measurement_batch_v1').replace('ROVIBRONIC_JOINT_SPEC','MOLECULAR_MEASUREMENT_SPEC').replace('resolved','quantum');(w/'quantum_spec1235.py').write_text(s)
+for kind in ['grammar','evidence']:
+ s=(w/f'resolved_{kind}1164.py').read_text().replace('1164','1235').replace('ResolvedRovibronic','MolecularMeasurement').replace('resolved','quantum');(w/f'quantum_{kind}1235.py').write_text(s)
+ ns={};exec(s,ns)
+s=(w/'MolecularMeasurementGrammar1235.lean').read_text().replace('import «work».MolecularMeasurementCarrier1235','import SFT.Foundation.CommonRefinement').replace('SFT.Physics.MolecularMeasurementGrammar','SFT.Chemistry.MolecularMeasurementGrammar').replace('namespace SFT.Chemistry.MolecularMeasurementGrammar','namespace SFT.Chemistry.MolecularMeasurementGrammar\nset_option maxHeartbeats 20000000')
+# Generator's membership local binder is named record for this grammar.
+s=s.replace('memMap _ extension _ hextension','memMap _ record _ hrecord');(out/'MolecularMeasurementGrammar.lean').write_text(s)
+s=(w/'MolecularMeasurementEvidence1235.lean').read_text().replace('import «work».MolecularMeasurementGrammar1235','import SFT.Chemistry.MolecularMeasurementGrammar\nimport SFT.Chemistry.MolecularMeasurement').replace('SFT.Physics.MolecularMeasurementEvidence','SFT.Chemistry.MolecularMeasurementEvidence').replace('branch := "physics"','branch := "chemistry"');a=s.index('def onePairWitness');b=s.index('def claimId',a);spec=ns['spec'];q=ns['q'];names=['retainedWitness','closedWitness','overlapWitness'];s=s[:a]+'def witnesses : Value := .array ['+','.join('.array [.text '+q(n)+',.text '+q(e)+',.boolean MolecularMeasurement.'+x+']' for(n,e,_),x in zip(spec.operational_witnesses,names))+']\n'+s[b:];(out/'MolecularMeasurementEvidence.lean').write_text(s)
+s=(w/'factor_conjugated1078_grammar.py').read_text().replace('ConjugatedSupport','MolecularMeasurement').replace("['carrier','connectivity','fibres','alternation','coverage','propagation','observation','extension']",repr([d.key for d in spec.dimensions]));exec(s,{})
+s=(w/'build_resolved_grammar1164.py').read_text().replace('ResolvedRovibronic','MolecularMeasurement').replace('resolved_grammar1164','quantum1235').replace('1164','1235');s=s.replace("['MolecularMeasurementGrammar','MolecularMeasurementEvidence']","['MolecularMeasurement','MolecularMeasurementGrammar','MolecularMeasurementEvidence']");(w/'build_quantum1235.py').write_text(s)
+print('Staged full eight-axis256grammar and source-bound evidence')

@@ -11773,3 +11773,15 @@ import SFT.Biology.BiologicalVariationSource
 import SFT.Biology.BiologicalVariationExperiment
 
 import SFT.Biology.BiologicalVariationValidation
+
+import SFT.Biology.Heritability
+
+import SFT.Biology.HeritabilityGrammar
+
+import SFT.Biology.HeritabilityEvidence
+
+import SFT.Biology.HeritabilitySource
+
+import SFT.Biology.HeritabilityExperiment
+
+import SFT.Biology.HeritabilityValidation

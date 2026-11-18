@@ -1,0 +1,68 @@
+SFT — SELECT THE EDITION BEFORE REPRODUCING A RESULT
+Maria Smith, Ernos Labs
+Reader navigation updated 18 November 2026; AI-assisted preparation under the author's direction.
+
+For the cumulative edition submitted to Journal of Formalized Reasoning, use edition 0.3:
+https://doi.org/10.5281/zenodo.24205463
+Its native checkout is 43a7295f5d39a1df4ca25b2c1e9b8a21164d55ee. The preserved guide below targets that edition. Submission is not an independent review or acceptance.
+
+For a standalone paper, begin with that paper's exact DOI and download its SOURCE_CORRESPONDENCE.json and SOURCE_AND_EVIDENCE.zip from the publication. Read the recorded v3_commit, v4_commit, original source paths, Lean module names and completion_evidence fields before choosing a checkout. Follow each entry's recorded evidence to the actual check commands and reports. Do not substitute the current main branch or apply edition 0.3's checkout to a paper whose correspondence records another pin.
+
+For example, information-loss paper 30:
+https://doi.org/10.5281/zenodo.24339200
+Its correspondence records original V3 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1 and native V4 21cdf559922fb057f8560f42d056ffa035329eb3.
+The original source and native proof navigation for its reverse-record and composition argument is here:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/peer-review/INFORMATION_LOSS_REVIEW_BRIEF.txt
+The README at that exact native pin provides its configured reproduction commands:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/README.md#run-the-proofs
+
+Record the actual git rev-parse HEAD in both checkouts, the toolchain version, the command executed and its output. Keep a source-output comparison distinct from a Lean theorem or axiom audit. These instructions identify existing evidence and reproduction routes; no commands or scientific checks were rerun to prepare this navigation update.
+
+PRESERVED EDITION 0.3 REPRODUCTION GUIDE
+
+SFT V3 AND ITS V4 TRANSLATION — REPRODUCTION REFERENCES
+Prepared15November2026. Commands for a reviewer's separate checkout; not executed during this editorial task.
+
+Version selection
+Use the complete repositories at the recorded commits, not a mixture of latest main and an older coverage file. V3 is read-only scientific source. Reviewers can create their own checkouts:
+
+git clone https://github.com/MettaMazza/ernos-labs-sft-platform.git sft-v3-review
+git -C sft-v3-review checkout --detach 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1
+git clone https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED.git sft-v4-review
+git -C sft-v4-review checkout --detach 43a7295f5d39a1df4ca25b2c1e9b8a21164d55ee
+
+From the V4 checkout, with elan installed, the published README specifies:
+lake build
+lake env lean Audit.lean
+lake env lean --run Parity.lean
+lake env lean --run RootParity.lean
+
+Set SFT_V3_SOURCE to the absolute path of the pinned V3 checkout. The published scripts include:
+SFT_V3_SOURCE=/absolute/path/to/sft-v3-review python3 verification/check_current_parity.py
+SFT_V3_SOURCE=/absolute/path/to/sft-v3-review python3 verification/check_root_evidence.py
+SFT_V3_SOURCE=/absolute/path/to/sft-v3-review python3 verification/check_count_representation.py
+
+Authoritative edition instructions:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/43a7295f5d39a1df4ca25b2c1e9b8a21164d55ee/README.md#L126
+The toolchain is pinned by lean-toolchain. The README identifies Lean4.35.0 and describes the configured command scopes. It also records that the historical milestone used retained checks and a focused integration import, and that its whole-root rebuild was not completed because an older GeometryGrammar cache object was absent. This is the exact historical build record, not a fresh finding about today's checkout and not an extra scientific completion condition.
+
+What the discussed evidence establishes
+Root output report: TURN_111_ROOT_EVIDENCE_REPORT.json compares census, decisions, closure, four controls and stored fields/hashes, checks registration,16SHA256vectors,10canonical-JSONvectors and unknown-ID rejection.
+One output report: TURN_112_ONE_PROGRAM_REPORT.json covers all original OneProgram methods,6candidate lookups, closure,4controls, hashes and unknown-ID refusal.
+Count output report: TURN_112_COUNT_PROGRAM_REPORT.json covers all original CountProgram methods,10candidate lookups, closure,4controls, hashes and unknown-ID refusal.
+
+The native theorems discussed in the reading guide have explicit entries in the retained audit logs:
+TURN_110_ALL_DECLARATIONS_AUDIT.log:
+SFT.Foundation.Root.Derivation.classificationExact
+SFT.Foundation.Root.Derivation.acceptanceIffWitnessedOccurrence
+TURN_112_ALL_DECLARATIONS_AUDIT.log:
+SFT.Foundation.One.Derivation.acceptedIffCompleteWithoutAddition
+SFT.Foundation.Count.TraceDerivation.finiteGenerationPreservesExactRetention
+SFT.Foundation.Count.TraceDerivation.uniqueCompleteGeneratedTrace
+SFT.Foundation.Count.Representation.proposalAcceptedIffExactRetention
+Each named audit entry records no axiom dependencies. The source and proof-body explanations in the guide supply the correspondence argument; an audit line alone is not a substitute for that argument.
+
+The configured Count representation script exercises bounded concrete proposal lists as an execution comparison. The universal finite-trace and proposal results are separate Lean theorems. The configured candidate-parity script checks its declared candidate rows and fields; it must not be described as a substitute for every full-program or derivation check in the whole corpus.
+
+Preserved evidence and new preparation checks
+This task reused the retained scientific evidence. Its new checks are manuscript/archive identities, reference-path construction and document QA. No scientific theorem, build result or peer-review outcome is being newly certified by this guide.

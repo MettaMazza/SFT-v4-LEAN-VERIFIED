@@ -1,0 +1,82 @@
+FIZEAU REVIEW BRIEF: FROM VELOCITY COMPOSITION TO THE EXPERIMENTAL DISCRIMINATOR
+Maria Smith, Ernos Labs
+Prepared with AI assistance; invitation for independent assessment.
+
+Paper 16, edition 1.1:
+https://doi.org/10.5281/zenodo.24353090
+Start with Sections 6–8 for the optical comparison; Sections 1–5 give the original positive motion domain, forced composition law, closure, reconstruction, associativity and complete source grammars.
+
+THE CONCRETE QUESTION
+Does the optical correspondence and the complete experimental comparison preserve the original source's equations, records and conditions? A useful review can examine one derivation step, one target inscription or one native operation.
+
+READ THE PHASE CORRESPONDENCE
+The paper's primary experimental source is Lahaye, Labastie and Mathevet, "Fizeau's aether-drag experiment in the undergraduate laboratory":
+https://arxiv.org/abs/1201.0501
+Its retained PDF is included with the edition.
+
+For collinear propagation, Section 6 follows the primary source's frequency and wave-vector transformation together. Taking omega/k cancels the common frame factor and yields the phase-speed composition. The two optical arms use opposite medium orientations; this is distinguished from the original positive same-direction carrier of the native law.
+
+For index n, medium speed v, interaction length 2 ell and vacuum wavelength lambda:
+v+ = (c/n + v)/(1 + v/(nc))
+v- = (c/n - v)/(1 - v/(nc))
+Delta phi = [8 pi ell v/(lambda c)] (n²-1)/(1-n²v²/c²).
+
+At first order in v/c, the relativistic factor is n²-1; the ordinary-addition alternative gives n². Follow the paper's intermediate common-denominator calculation rather than jumping directly to the final factor.
+
+The source's dispersion correction and axial/mean-flow correction remain explicit. The turbulent profile yields mean velocity = (6/7) times axial velocity. The paper retains the published rounded corrected slope rather than refitting it.
+
+WORK THROUGH THE EXACT WATER RECORD
+All slopes below are in rad s/m:
+Measured m = 274/1000; statistical uncertainty s = 3/1000.
+Measured interval = [271/1000, 277/1000].
+Raw prediction r = 248/1000.
+Corrected prediction q = 299/1000.
+Ordinary-addition alternative o = 563/1000.
+
+Distances from the measured centre:
+|m-r| = 26/1000
+|m-q| = 25/1000
+|m-o| = 289/1000.
+
+Three exact decisions:
+1. 248 <= 271 < 277 <= 299: the complete raw-to-corrected bracket contains the measured interval.
+2. 10 × 25 < 289: the nearer retained relativistic prediction is more than ten times closer than the ordinary-addition alternative (distance ratio 289/25 = 11.56).
+3. 563 > 277: ordinary addition lies outside the measured interval.
+
+Both retained point predictions lie outside the statistical interval, on opposite sides. The source-defined comparison is the complete systematic bracket and discrimination against the alternative. Preserve that actual result when discussing the experiment.
+
+KEEP THE FULL EXPERIMENTAL RECORD
+The four registered conditions are:
+- Flow-rate calibration estimated at about five percent.
+- Axial/mean turbulent-profile correction modelled rather than measured directly in this apparatus.
+- Percent-level effective optical interaction-length uncertainty.
+- Water comparison used as a discriminator rather than a precision interval confirmation.
+
+The air record retains compatibility with the relativistic calculation and rejection of ordinary addition, together with the primary authors' reported unexplained apparently oscillating fringe shift. Review the primary figures and the paper's account together.
+
+FOLLOW THE NATIVE OPERATIONS AND EVIDENCE
+In SFT/Physics/FizeauAnalysis.lean, namespace SFT.Physics.FizeauAnalysis:
+exactAnalysis returns all fifteen fields, including numerical values, distances and decisions.
+originalMeasuredInterval, originalDistances, originalBracket, originalTenfold and originalOrdinaryOutside establish the registered rational results.
+originalAirControl binds the two retained air flags.
+originalLimitationCount exposes the four-member length check.
+originalTamperedControl changes only the ordinary prediction to the measured centre: its distance becomes zero, and the tenfold comparison is false.
+
+For complete target identity and field correspondence, also read:
+SFT.Physics.FizeauRecords.authoritativeRecord
+SFT.Physics.FizeauMeasurement.exactFizeauAnalysis
+SFT.Physics.FizeauValidation.validate.
+Section 8 explains the record/PDF hashes, original numeric strings, air flags, conditions, seal and release sequence. The numerical comparison and full source-bound validation have distinct roles; inspect both.
+
+ORIGINAL SOURCE AND EDITION
+V3 pin: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1.
+Formal source: sft/physics/velocity_composition_terminal_law_v1.py.
+Empirical sources: velocity_composition_fizeau_empirical_v1.py, velocity_composition_fizeau_validation_v1.py, velocity_composition_fizeau_execution_v1.py and generated_empirical_law.py.
+V4 evidence pin: 21cdf559922fb057f8560f42d056ffa035329eb3.
+Completion evidence: verification/TURN_1030_VELOCITY_033_COMPLETION.json and verification/TURN_1031_FIZEAU_034_COMPLETION.json.
+
+Use the selected edition's SOURCE_AND_EVIDENCE.zip and SOURCE_CORRESPONDENCE.json for exact paths, digests and retained build/audit/source-comparison results. This guide adds no new scientific verification or independent-review claim.
+
+CONTRIBUTE A REVIEW
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+Identify the paper edition, original source equation or record, native declaration where relevant, and the reasoning or reproducible comparison behind your finding. Supporting and contrary evidence are welcome.

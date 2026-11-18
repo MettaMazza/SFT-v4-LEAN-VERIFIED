@@ -1,0 +1,66 @@
+FOCUSED REVIEW: FAULT WIDTH AND CIRCUIT RECOVERY
+Maria Smith, Ernos Labs — 18 November 2026
+Prepared with AI assistance under the author's direction.
+
+Paper 33, version 1.1:
+Phase, interference and error correction in native Fold circuits
+https://doi.org/10.5281/zenodo.24354217
+Read Sections 5–7, then Sections 2–4 for the state and gate carrier.
+
+A SMALL EXAMPLE: TWO CHANGED POSITIONS
+The supplied fault order is the length t of a nonempty, duplicate-free fault trace. Its first correcting repetition width is 2t+1. For t=2, encode held as five copies. Changing any two positions leaves three held and two returned, so held has strict majority. Fewer changes also preserve that majority. The source has two labels, held and returned; the symmetric argument recovers returned.
+
+Why does width four fail? Change its first two positions:
+  [returned, returned, held, held].
+The counts tie. Width three fails with:
+  [returned, returned, held].
+The changed label has the majority. Width two fails with [returned,held], and width one with [returned]. Each uses at most two changed positions.
+
+These four words are the original source construction at widths 1 through 4, not a selection of arbitrary counterexamples. For general positive width w<=2t, the operation changes the first floor((w+1)/2) positions. That number is at most t, and the remaining held count cannot exceed the returned count.
+
+WHAT THE NATIVE ARGUMENT PROVES
+The all-mask correction result and the smaller-width counterexamples are separate obligations. The paper first counts changed and unchanged labels for every mask within the allowance. At width 2t+1, the original count is at least t+1 while the changed count is at most t. It then constructs a failing row for every smaller positive width. Together they establish the first correcting width for this declared repetition and decoder construction.
+
+Full native namespace: SFT.QuantumComputation
+Inspect:
+  ReversibleFaults.faultMasksExactly
+  ErrorCorrection.everyCensusRowRecovers
+  UnboundedFaults.predecessorAllowance
+  UnboundedFaults.everyPredecessorDefeatsHeld
+  UnboundedFaults.everySourceWordRecovers
+  UnboundedComposition.recoveryPreservesCircuit
+
+The original operational decoder reports an error on a tie. The later fault-order decoder returns no-strict-majority. Both exact interfaces remain in the archive; a tie does not recover held in either case.
+
+FOLLOW RECOVERY INTO A CIRCUIT
+The source recoverWord operation uses the canonical mask changing the first t positions of each width-(2t+1) block. everySourceWordRecovers proves exact equality for every word whose labels are held or returned, by induction on the word and the two label cases.
+
+recoveryPreservesCircuit takes that successful recovered word, a branch position with its surrounding branches and phase label, a cycle and a gate list. Replacing recovered by source preserves the complete evaluate result. Its proof substitutes the exact word-recovery equality. This includes the evaluator's returned trace or error; read the actual hypotheses and result type.
+
+For the distinct circuit-reversal result, inspect:
+  SFT.QuantumComputation.Circuit.circuitInverseAndLedger
+It assumes an admitted initial state, valid gates and successful evaluation. It returns the reverse-order backward trace, one predecessor state per gate, and preservation of branch count.
+
+ORIGINAL SOURCE AND EXACT EDITION
+V3: 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1
+  sft/quantum_computation/lineage_laws.py
+  forced_width; shorter_widths_fail
+  sft/quantum_computation/operations.py
+V4: 21cdf559922fb057f8560f42d056ffa035329eb3
+  SFT/QuantumComputation/UnboundedFaults.lean
+  SFT/QuantumComputation/UnboundedComposition.lean
+  SFT/QuantumComputation/Circuit.lean
+These files, dependencies and evidence are in SOURCE_AND_EVIDENCE.zip on the selected Zenodo record. SOURCE_CORRESPONDENCE.json and Section 8 identify the full entry obligations and retained comparisons.
+
+QUESTIONS FOR AN INDEPENDENT REVIEW
+1. Does the mask enumeration cover every ordered positional subset within the allowance, in original source order?
+2. Do the counterexample construction and arithmetic cover every smaller positive width, rather than selected widths?
+3. How do the all-mask correction theorem and canonical-mask recoverWord operation connect, with their respective domains kept explicit?
+4. Does exact word recovery preserve the entire evaluator result at the supplied branch position?
+5. Does the inverse trace restore the complete admitted state and retain the claimed ledger?
+
+Report the version, original operation, full Lean declaration, inputs and reasoning for any finding. Short assessments of one connection are welcome.
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+Correspondence: Maria.smith.sftoe@gmail.com
+
+This is an AI-assisted reading guide and invitation, not a completed independent review. The small example is an illustration of the published construction, not a new scientific completion or Lean compilation.

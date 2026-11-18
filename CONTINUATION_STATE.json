@@ -187,6 +187,18 @@
       "pid": 90800,
       "script": "register_accuracy1252_when_ready.py",
       "log": "work/detached1180_accuracy_registration.log"
+    },
+    {
+      "kind": "checks",
+      "pid": 93367,
+      "script": "run_medicine1253_checks.py",
+      "log": "work/detached1181_medicine1253_checks.log"
+    },
+    {
+      "kind": "registration",
+      "pid": 93368,
+      "script": "register_medicine1253_when_ready.py",
+      "log": "work/detached1181_medicine1253_registration.log"
     }
   ],
   "snapshot": [
@@ -56724,13 +56736,13 @@
   },
   "last_verified_checkpoint": {
     "status": "PASS",
-    "commit": "78b2645e9d69ff8ad1a58205953afa294fda2701",
-    "tree": "24ae89eecd5be4b69dca300a201f05630e173b8e",
+    "commit": "d4f96ed61eeaf8de63a5202c8f1bb0d64c48d7c0",
+    "tree": "ab1a1e366bc64fee60a02f37692efd3680ba5a06",
     "main_verified": true,
-    "files": 443,
+    "files": 161,
     "complete": 776,
-    "verified_at": "2026-11-18T08:30:41.481818+00:00",
-    "preserved_publication_parent": "7cb8941d26f9f3a94c84b330db90dc3d0e15c953"
+    "verified_at": "2026-11-18T08:39:52.734130+00:00",
+    "preserved_publication_parent": "e90ab236bdb8ef7f61232d2ff0233d3c47e02e5b"
   },
   "staged_next_entry": {
     "module": "work/constants-recovery/SFT/Materials/CrystalSystems.lean",
@@ -67968,7 +67980,95 @@
     "previous_turn": "progress:776complete checkpoint pushed and remotely verified; DiagnosticAccuracy original source translation and checks staged",
     "action": "Preserve actual detached checks; register passing entries immediately with original completed parents; six staged Medicine entries and paper1116\u20131117 included in this checkpoint. Continue toward1000review milestone.",
     "pid_manifest": "work/detached1180_jobs.json",
-    "accuracy_pid_manifest": "work/accuracy1252_jobs.json"
+    "accuracy_pid_manifest": "work/accuracy1252_jobs.json",
+    "next_action": "Preserve actual detached checks90470\u201390473; register actual passing source entries through current watchers. Next local push includes causal Medicine1253\u20131258 andpaper1118. Continue original dependency order toward1000,with existing bounded queues; do not restart live jobs."
+  },
+  "association1253": {
+    "claim_id": "SFT-MED-CLINICAL-ASSOCIATION-001",
+    "status": "source staged; original empiricalPASS; native checks queued",
+    "expected_audit_declarations": 119,
+    "source_pin": "work/association1253_source_pin.json",
+    "original_report": "work/association1253_original_report.json"
+  },
+  "clinicalcause1254": {
+    "claim_id": "SFT-MED-CLINICAL-CAUSE-001",
+    "status": "source staged; original empiricalPASS; native checks queued",
+    "expected_audit_declarations": 113,
+    "source_pin": "work/clinicalcause1254_source_pin.json",
+    "original_report": "work/clinicalcause1254_original_report.json"
+  },
+  "clinicalmechanism1255": {
+    "claim_id": "SFT-MED-CLINICAL-MECHANISM-001",
+    "status": "source staged; original empiricalPASS; native checks queued",
+    "expected_audit_declarations": 113,
+    "source_pin": "work/clinicalmechanism1255_source_pin.json",
+    "original_report": "work/clinicalmechanism1255_original_report.json"
+  },
+  "confounding1256": {
+    "claim_id": "SFT-MED-CONFOUNDING-001",
+    "status": "source staged; original empiricalPASS; native checks queued",
+    "expected_audit_declarations": 113,
+    "source_pin": "work/confounding1256_source_pin.json",
+    "original_report": "work/confounding1256_original_report.json"
+  },
+  "mediation1257": {
+    "claim_id": "SFT-MED-MEDIATION-001",
+    "status": "source staged; original empiricalPASS; native checks queued",
+    "expected_audit_declarations": 113,
+    "source_pin": "work/mediation1257_source_pin.json",
+    "original_report": "work/mediation1257_original_report.json"
+  },
+  "effectmod1258": {
+    "claim_id": "SFT-MED-EFFECT-MODIFICATION-001",
+    "status": "source staged; original empiricalPASS; native checks queued",
+    "expected_audit_declarations": 113,
+    "source_pin": "work/effectmod1258_source_pin.json",
+    "original_report": "work/effectmod1258_original_report.json"
+  },
+  "medicine1253_batch": {
+    "jobs": [
+      {
+        "kind": "checks",
+        "pid": 93367,
+        "script": "run_medicine1253_checks.py",
+        "log": "work/detached1181_medicine1253_checks.log"
+      },
+      {
+        "kind": "registration",
+        "pid": 93368,
+        "script": "register_medicine1253_when_ready.py",
+        "log": "work/detached1181_medicine1253_registration.log"
+      }
+    ],
+    "entries": [
+      "association1253",
+      "clinicalcause1254",
+      "clinicalmechanism1255",
+      "confounding1256",
+      "mediation1257",
+      "effectmod1258"
+    ],
+    "check_session": null,
+    "registration_session": null,
+    "worker": "work/run_medicine1253_checks.py",
+    "log": "work/medicine1253_checks_driver.log",
+    "wait_for_actual_driver": 90799,
+    "resource": "Reuse previous Medicine worker slot; no additional simultaneous Lean job"
+  },
+  "checkpoint1181_pending_local": {
+    "entries": [
+      "association1253",
+      "clinicalcause1254",
+      "clinicalmechanism1255",
+      "confounding1256",
+      "mediation1257",
+      "effectmod1258"
+    ],
+    "status": "Original six bindings and empirical resultsPASS;36nativefiles andmathsection1118staged; native checks queued after90475then90799. Include next checkpoint."
+  },
+  "continuation1182": {
+    "previous_turn": "progress:diagnostic source checkpoint pushed and verified; six clinical causality translations andoriginalcomparisons prepared",
+    "next_action": "Preserve four actual detached compilerchains; queueoriginalsourcechecks andregister inoriginaldependency order. Pushclinicalcausalitysourcebatchandmathematicalpaper1118; next sourcefamily isrisk/prognosis/outcome."
   },
   "checkpoint_scope": "776complete frozen source/evidence checkpoint. Runtime jobs subsequently recovered; live current workspace state remains authoritative."
 }

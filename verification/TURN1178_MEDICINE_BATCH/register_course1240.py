@@ -31,6 +31,16 @@ for fn in ['README.md','ZENODO_PAPER_DRAFT.txt','docs/assets/sft-banner.svg']:
  if fn=='README.md':s=re.sub(r'\[latest completion evidence\]\([^)]*\)','[latest completion evidence]('+receipt+')',s)
  if fn=='ZENODO_PAPER_DRAFT.txt':s=s.replace('All 113 current native declarations have empty axiom dependencies; the fresh native empirical and full programme comparisons are being completed before registration.','All 113 current native declarations have empty axiom dependencies. The complete native empirical and full programme comparisons agree with V3 and the entry is registered complete.')
  if fn.endswith('.svg'):s=s.replace(str(oldCount),str(newCount))
+ if fn=='ZENODO_PAPER_DRAFT.txt':
+  sectionStart=s.find('\n1114.5. ')
+  if sectionStart>=0:
+   headingEnd=sectionStart+len('\n1114.5. ')
+   nextHeading=re.search(r'\n\d+(?:\.\d+)*\. ',s[headingEnd:])
+   sectionEnd=headingEnd+nextHeading.start() if nextHeading else len(s)
+   part=s[sectionStart:sectionEnd]
+   for pending in ['Native builds, audits and complete programme/empirical comparisons are queued and are not yet counted as entry completion.','All original empirical outputs and manifest bindings pass; native build, empty-axiom audit and fresh full programme/empirical comparison are queued. This entry is not yet included in the completed count.']:
+    part=part.replace(pending,'Native verification is complete: '+str(len(auditNames))+' audited declarations have empty axiom dependencies; the complete original programme, independent adverse controls and empirical outputs agree with V3. Completion receipt: '+receipt+'.')
+   s=s[:sectionStart]+part+s[sectionEnd:]
  p.write_text(s)
 with(r/'ZENODO_PAPER_DRAFT.txt').open('a')as f:f.write('\nLongitudinalCourse verification is complete: all 113 audited declarations have empty axiom dependencies. The complete 256-candidate programme and original source outputs agree. The independent validator accepts the original record and rejects all three adverse modifications. The empirical comparison agrees in all twelve fields and four messages, including the exact LongitudinalCourse authority fragments and original Medicine pre-source seal. Completion receipt: '+receipt+'. Timeline TURN1240.\n')
 with(r/'TIMELINE.txt').open('a')as f:f.write('\nTURN1240 registration — '+now+' — LongitudinalCourse complete at '+str(newCount)+'.113 empty-axiom declarations,256original candidates,three independent adverse cases and12field4message empirical receipt pass. Retained exact native Medicine source/seal evidence and registered bytes; three CRLF materializations match their original registered SHA256 values. Updated counts,correspondence,paper and timeline.\n')

@@ -1,0 +1,55 @@
+{
+  "status": "passed_unchanged_published_edition",
+  "record_id": 24336763,
+  "catalog_id": 6,
+  "completed_at": "2026-11-18T18:57:14.090880+00:00",
+  "review_type": "Same-assistant source-bound review and second adversarial pass; not an independent review.",
+  "author": "Maria Smith",
+  "v3_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "v4_commit": "21cdf559922fb057f8560f42d056ffa035329eb3",
+  "inspection_record": "REVIEW_PROGRESS.json",
+  "identity_evidence": "RETAINED_EVIDENCE_IDENTITY.json",
+  "publication_qa": "PUBLICATION_QA.json",
+  "pdf_sha256": "970451dbd48a11c1c91c818708b19224e68c527f754c0a3d690db08dcd2345ff",
+  "findings_requiring_revision": [],
+  "second_pass": [
+    {
+      "challenge": "Does the84-word prefix substitute for all finite word lengths?",
+      "evidence": "PrimitiveMaps.leastGeneratorUnique compares an arbitrary List Primitive with foldGenerates; nonemptiness and the length bound force a singleton, then singletonGeneratorIffFold. everyLargerWordNonminimal and successorPreservesNonminimality exclude every later word. Sections1and11 reproduce this argument.",
+      "disposition": "Answered by existing general proof and manuscript."
+    },
+    {
+      "challenge": "Are four primitives asserted without identifying the source grammar and reductions?",
+      "evidence": "Pinned primitive_map_uniqueness.py closure_record states normalized cost through two source occurrences. Sections1and9 state that grammar and show identity/product/closed-whole/self-junction reductions and failed totality of raw junction and guarded removal. PrimitiveReductions proof bodies establish the displayed reductions.",
+      "disposition": "Source grammar, reductions and theorem domain are explicit; no revision required."
+    },
+    {
+      "challenge": "Does square exclusion depend on a sampled rational search?",
+      "evidence": "PrimitiveMaps.squareInjective uses normalization cross-products and naturalSquareInjective; everyPositiveSquareIterateContracts and squarePositiveReturnIffOne cover arbitrary positive iterations and exact parts. Section10.2 includes the strict-order induction.",
+      "disposition": "General proof inspected; sampled-search objection does not apply."
+    },
+    {
+      "challenge": "Are Count and first Fold only candidate labels?",
+      "evidence": "Count.TraceDerivation.uniqueCompleteGeneratedTrace and Count.Representation.proposalAcceptedIffExactRetention connect generated positions, multiplicity and no ungenerated additions. FoldDerivation minimalNonidentityUnique and firstPositionDomainExhausted force the first two-position stage. FoldStage.stageAcceptanceIff retains the actual remaining source criteria; original equal-fibre/no-selector and return argument is exposed in section5.",
+      "disposition": "Construction and criteria are both stated and supported."
+    },
+    {
+      "challenge": "Does common-refinement pairing conflate label strings with generated positions?",
+      "evidence": "Original has_generated_bijection pairs generated range indices; CommonRefinement.generatedBijectionIffEqualLength and acceptedIndexPairing preserve this. Section4.2 explicitly identifies generated index pairing while retaining source string labels. Reflexive/symmetric/transitive and uniform refinement are constructed by inverse maps.",
+      "disposition": "Representation agrees with source and exposition."
+    },
+    {
+      "challenge": "Are all-depth assembly and uniform dynamics merely finite controls?",
+      "evidence": "FoldAssembly.supportIffLengthAndHeldLabels, allFiniteSupportsUnique, FoldAssemblyTrace.canonicalAssemblyFacts and AssemblyRecords.recordAcceptanceIff cover every finite depth and full transitions/returns. FoldSorted.foldedUniformDivision and FoldUniformCheck.everyEvenDivisionRemainsUniform quantify arbitrary positive n. Sections6and8 give intermediate arguments.",
+      "disposition": "Full proof bodies inspected; finite controls kept separate."
+    },
+    {
+      "challenge": "Are audit and publication claims applicable to the actual reviewed edition?",
+      "evidence": "63pinnedV3files,246archiveevidencefiles and62directcurrentmodules match. All1311listed empty-audit records found with none nonempty. Eleven retained programme reports preserve2182candidates and44controls. Public manuscript/PDF bytes and local-file checksums match;14PDFpages reviewed and contacts/citations/defaultpreview verified.",
+      "disposition": "Applicable retained evidence confirmed without scientific reruns."
+    }
+  ],
+  "publication_disposition": "Keep the existing published contact edition; no manuscript change or duplicate Zenodo version needed.",
+  "new_lean_builds": 0,
+  "new_scientific_proofs": 0
+}

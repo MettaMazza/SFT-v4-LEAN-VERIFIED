@@ -11957,3 +11957,15 @@ import SFT.Biology.ProteinEnsembleSource
 import SFT.Biology.ProteinEnsembleExperiment
 
 import SFT.Biology.ProteinEnsembleValidation
+
+import SFT.Biology.ProteinFunction
+
+import SFT.Biology.ProteinFunctionGrammar
+
+import SFT.Biology.ProteinFunctionEvidence
+
+import SFT.Biology.ProteinFunctionSource
+
+import SFT.Biology.ProteinFunctionExperiment
+
+import SFT.Biology.ProteinFunctionValidation

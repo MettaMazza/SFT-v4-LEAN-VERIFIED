@@ -55112,9 +55112,9 @@
   ],
   "next_publication_milestone": 1000,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "792complete. Reconcile actual source and existing implementation for SFT-CHEM-OPERATIONAL-CLASSICAL-QUANTUM-CORRESPONDENCE-015 then continue dependency order toward1000. Reuse existing proofs,keep processes bounded and update paper/timeline/counts/GitHub. Pause only with full1000review package ready.",
+  "authorized_action": "793complete. Reconcile actual source and existing implementation for SFT-CHEM-OPERATIONAL-CLASSICAL-QUANTUM-CORRESPONDENCE-015 then continue dependency order toward1000. Reuse existing proofs,keep processes bounded and update paper/timeline/counts/GitHub. Pause only with full1000review package ready.",
   "scientific_cursor": {
-    "completed": "SFT-BIO-PROTEIN-ENSEMBLE-001",
+    "completed": "SFT-BIO-PROTEIN-FUNCTION-001",
     "next": "SFT-CHEM-OPERATIONAL-CLASSICAL-QUANTUM-CORRESPONDENCE-015",
     "next_milestone": 1000,
     "action": "Continue SFT-CHEM-OPERATIONAL-CLASSICAL-QUANTUM-CORRESPONDENCE-015 from its actual retained job or source/proof evidence. Preserve live checks; do not repeat completed work."
@@ -67166,10 +67166,11 @@
   },
   "proteinfunction1198": {
     "claim_id": "SFT-BIO-PROTEIN-FUNCTION-001",
-    "status": "six source-generated modules;original empiricalPASS;native not yet built",
+    "status": "complete",
     "source_pin": "work/proteinfunction1198_source_pin.json",
     "original_report": "work/proteinfunction1198_original_report.json",
-    "shared_source": "ProteinSequenceSource for identical family bindings; ProteinQuaternarySource uses its original three special requirements freshly"
+    "shared_source": "ProteinSequenceSource for identical family bindings; ProteinQuaternarySource uses its original three special requirements freshly",
+    "receipt": "verification/TURN1198_PROTEINFUNCTION_COMPLETION.json"
   },
   "proteininteraction1199": {
     "claim_id": "SFT-BIO-PROTEIN-INTERACTION-001",
@@ -69099,6 +69100,74 @@
       "35433": "exited because prerequisite programme report absent after preceding failure",
       "39610": "exited because preceding programme report absent; no native Precision check ran"
     },
-    "equilibrium_repair": "Original exact common-base equality uses explicit Int.decEq/Nat.decEq, avoiding library ordering instance axiom dependencies;129audit,14domaincases and14instruction/12registrationfieldsPASS."
+    "equilibrium_repair": "Original exact common-base equality uses explicit Int.decEq/Nat.decEq, avoiding library ordering instance axiom dependencies;129audit,14domaincases and14instruction/12registrationfieldsPASS.",
+    "verified_github_checkpoint": {
+      "status": "PASS",
+      "commit": "274e037a502495c50258e8a960fe6a9922a2f006",
+      "tree": "60c548a3b3691ef19a6089a3b6120cbe6d9d031f",
+      "parent": "b62d5f33545afa9b89a72a93b137a60c0c665607",
+      "main_verified": true,
+      "files": 349,
+      "complete": 792,
+      "verified_at": "2026-11-18T11:41:17.326437+00:00"
+    },
+    "actual_live_compilers": [
+      {
+        "pid": 51103,
+        "rss_kib": 422896,
+        "command": "/Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean -j1 -M8192 --run /Users/dolltrading/Documents/Codex/2026-10-26/p/work/turn1064_recovery/ClinicalEpisodeProgram1236.lean sha256:4ec878951c405f1e910fb5dfbf071145ea587f68410c70b2678c2a1d6aaad666"
+      },
+      {
+        "pid": 53385,
+        "rss_kib": 419936,
+        "command": "/Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean -j1 -M8192 --run /Users/dolltrading/Documents/Codex/2026-10-26/p/work/turn1064_recovery/ProteinFunctionProgram1198.lean sha256:36255b8898b54d7bde403fa0856a61f80d5e1bc652c0dbdf0b0cf825491221be"
+      },
+      {
+        "pid": 55927,
+        "rss_kib": 1403568,
+        "command": "/Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean -j1 -M8192 --run work/EquilibriumBondLengthValidationProgram1307.lean"
+      },
+      {
+        "pid": 90500,
+        "rss_kib": 2718160,
+        "command": "/Users/dolltrading/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean -j1 -M8192 --run work/XrayDiffractionValidationProgram1163.lean"
+      }
+    ]
+  },
+  "massvector1310": {
+    "status": "native_source_checks_pass_full_programme_pending",
+    "source_claim": "SFT-CHEM-MASS-ISOTOPE-FRAGMENT-VECTOR-014",
+    "modules": [
+      "SFT/Chemistry/MassIsotopeFragment.lean",
+      "SFT/Chemistry/MassIsotopeFragmentGrammar.lean",
+      "SFT/Chemistry/MassIsotopeFragmentEvidence.lean",
+      "SFT/Chemistry/MassIsotopeFragmentAnalysis.lean",
+      "SFT/Chemistry/MassIsotopeFragmentExperiment.lean",
+      "SFT/Chemistry/MassIsotopeFragmentValidation.lean"
+    ],
+    "audit": "work/massvector1310_full_audit_report.json",
+    "cases": [
+      31,
+      11
+    ],
+    "queue": "work/queue_massvector1310.py",
+    "remaining": [
+      "Fresh complete256-candidate programme and original independent controls",
+      "Fresh native empirical output using unchanged source-prefix evidence after retained Xray run completes"
+    ],
+    "reuse": "Actual XrayDiffraction coordinate/vector proof; full native sourcePrefix reused only after retained actual empirical run passes"
+  },
+  "continuation1193": {
+    "at": "2026-11-18T12:05:04.526094+00:00",
+    "previous_turn_classification": "progress: retained ProteinFunction run registered793; Mass sixmodules142emptyaxioms42sourcecases",
+    "medicine_scheduler_resumed": 51028,
+    "retained_schedulers": [
+      51028,
+      55808,
+      90473,
+      90471
+    ],
+    "resource_limit": 4,
+    "next_action": "Preserve live queues. Chemistry55808 performs correspondence1308 then precision1309. Mass1310 follows actual Xray source-prefix pass. Register passing entries in source dependency order and continue toward1000; do not duplicate unchanged builds."
   }
 }

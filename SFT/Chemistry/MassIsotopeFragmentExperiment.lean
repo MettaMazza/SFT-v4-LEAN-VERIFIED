@@ -1,0 +1,58 @@
+import SFT.Chemistry.MassIsotopeFragmentEvidence
+import SFT.Chemistry.NuclideCarrierAnalysis
+import SFT.Physics.MolecularSpectroscopyMeasurement
+namespace SFT.Chemistry.MassIsotopeFragmentExperiment
+open SFT.Host SFT.Host.Canonical
+def claimId : String := "SFT-CHEM-MASS-ISOTOPE-FRAGMENT-VECTOR-014"
+def experimentId : String := "SFT-EXP-CHEM-MASS-ISOTOPE-FRAGMENT-VECTOR-014"
+def expectedLabel : String := "complete-anal-014-postseal-source-vector"
+def falsification : String := "ANAL-014 halts if its survivor is nonunique; any registered source, target, value, line, page, condition, unit, uncertainty, favorable, adverse, absent, unavailable, unresolved, fitted, superseded or transport row is omitted; the implementation-distinct reconstruction disagrees; any dependency is missing; or external evidence selects the native law."
+def sourceIds : List String := ["NIST-WEBBOOK-SRD69-GUIDE","NIST-WEBBOOK-BENZENE-MULTIMODAL","NIST-WEBBOOK-ACETONE-MULTIMODAL","NIST-WEBBOOK-CYCLOHEXANE-MULTIMODAL","NIST-WEBBOOK-SRD69-GUIDE","NIST-WEBBOOK-BENZENE-MULTIMODAL","NIST-WEBBOOK-ACETONE-MULTIMODAL","NIST-WEBBOOK-CYCLOHEXANE-MULTIMODAL"]
+def targetIds : List String := ["SFT-CHEM-ANAL-014-IDENTITY-COMPOSITION","SFT-CHEM-ANAL-014-CHARGE-ISOTOPE","SFT-CHEM-ANAL-014-COMPLETE-MASS-COORDINATES","SFT-CHEM-ANAL-014-COMPLETE-FRAGMENT-VECTOR","SFT-CHEM-ANAL-014-RESPONSE-RATIOS","SFT-CHEM-ANAL-014-IONIZATION-CONDITION","SFT-CHEM-ANAL-014-STATUS-ADVERSE-ABSENT","SFT-CHEM-ANAL-014-COMPLETE-SOURCE"]
+def snapshotHashes : List String := ["sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a","sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a","sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a","sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a","sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a","sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a","sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a","sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a"]
+def predictionDocument : Value := .object [("schema",.text "sft-v3-fold-program/1"),("program_id",.text "SFT-EXP-CHEM-MASS-ISOTOPE-FRAGMENT-VECTOR-014-prediction"),("instructions",.array [.object [("opcode",.text "input"),("destination",.text "premise"),("arguments",.array [.text "registered-premise"])],.object [("opcode",.text "label"),("destination",.text "prediction"),("arguments",.array [.text "chemical-observation",.text "complete-anal-014-postseal-source-vector"])],.object [("opcode",.text "pair"),("destination",.text "bound-result"),("arguments",.array [.text "premise",.text "prediction"])],.object [("opcode",.text "emit"),("destination",.text ""),("arguments",.array [.text "prediction"])]])]
+def registration : Value := .object [("experiment_id",.text "SFT-EXP-CHEM-MASS-ISOTOPE-FRAGMENT-VECTOR-014"),("claim_id",.text "SFT-CHEM-MASS-ISOTOPE-FRAGMENT-VECTOR-014"),("provenance",.text "observational_derivation"),("frozen_relation",.text "held-molecular-parent-and-ion-carriers__held-isotope-and-charge-composition__exact-positive-mass-charge-ratio__held-parent-fragment-transition-path__exact-event-over-reference-event-ratio__held-ionization-and-acquisition-condition__complete-peak-isotope-error-absence-custody__successor-retains-and-appends-complete-fragments"),("target_references",.array [.array [.text "SFT-CHEM-ANAL-014-IDENTITY-COMPOSITION",.text "NIST-WEBBOOK-SRD69-GUIDE",.text "sft chem anal 014 identity composition",.text "experiments/external_sources/chemistry/snapshots/anal-012-022-whole-subfield-v1/complete-postseal-analysis-v1.json",.text "sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a"],.array [.text "SFT-CHEM-ANAL-014-CHARGE-ISOTOPE",.text "NIST-WEBBOOK-BENZENE-MULTIMODAL",.text "sft chem anal 014 charge isotope",.text "experiments/external_sources/chemistry/snapshots/anal-012-022-whole-subfield-v1/complete-postseal-analysis-v1.json",.text "sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a"],.array [.text "SFT-CHEM-ANAL-014-COMPLETE-MASS-COORDINATES",.text "NIST-WEBBOOK-ACETONE-MULTIMODAL",.text "sft chem anal 014 complete mass coordinates",.text "experiments/external_sources/chemistry/snapshots/anal-012-022-whole-subfield-v1/complete-postseal-analysis-v1.json",.text "sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a"],.array [.text "SFT-CHEM-ANAL-014-COMPLETE-FRAGMENT-VECTOR",.text "NIST-WEBBOOK-CYCLOHEXANE-MULTIMODAL",.text "sft chem anal 014 complete fragment vector",.text "experiments/external_sources/chemistry/snapshots/anal-012-022-whole-subfield-v1/complete-postseal-analysis-v1.json",.text "sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a"],.array [.text "SFT-CHEM-ANAL-014-RESPONSE-RATIOS",.text "NIST-WEBBOOK-SRD69-GUIDE",.text "sft chem anal 014 response ratios",.text "experiments/external_sources/chemistry/snapshots/anal-012-022-whole-subfield-v1/complete-postseal-analysis-v1.json",.text "sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a"],.array [.text "SFT-CHEM-ANAL-014-IONIZATION-CONDITION",.text "NIST-WEBBOOK-BENZENE-MULTIMODAL",.text "sft chem anal 014 ionization condition",.text "experiments/external_sources/chemistry/snapshots/anal-012-022-whole-subfield-v1/complete-postseal-analysis-v1.json",.text "sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a"],.array [.text "SFT-CHEM-ANAL-014-STATUS-ADVERSE-ABSENT",.text "NIST-WEBBOOK-ACETONE-MULTIMODAL",.text "sft chem anal 014 status adverse absent",.text "experiments/external_sources/chemistry/snapshots/anal-012-022-whole-subfield-v1/complete-postseal-analysis-v1.json",.text "sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a"],.array [.text "SFT-CHEM-ANAL-014-COMPLETE-SOURCE",.text "NIST-WEBBOOK-CYCLOHEXANE-MULTIMODAL",.text "sft chem anal 014 complete source",.text "experiments/external_sources/chemistry/snapshots/anal-012-022-whole-subfield-v1/complete-postseal-analysis-v1.json",.text "sha256:c4eedffde052b92f065bf990b18b96ec9941ea458f35e6e7a3fd466e6b561f4a"]]),("observation_registry_path",.text "experiments/external_sources/chemistry/snapshots/anal-012-022-whole-subfield-v1/complete-postseal-analysis-v1.json"),("prediction_program",.object [("schema",.text "sft-v3-fold-program/1"),("program_id",.text "SFT-EXP-CHEM-MASS-ISOTOPE-FRAGMENT-VECTOR-014-prediction"),("instructions",.array [.object [("opcode",.text "input"),("destination",.text "premise"),("arguments",.array [.text "registered-premise"])],.object [("opcode",.text "label"),("destination",.text "prediction"),("arguments",.array [.text "chemical-observation",.text "complete-anal-014-postseal-source-vector"])],.object [("opcode",.text "pair"),("destination",.text "bound-result"),("arguments",.array [.text "premise",.text "prediction"])],.object [("opcode",.text "emit"),("destination",.text ""),("arguments",.array [.text "prediction"])]])]),("sealed_consequence_label",.text "complete-anal-014-postseal-source-vector"),("falsification_condition",.text "ANAL-014 halts if its survivor is nonunique; any registered source, target, value, line, page, condition, unit, uncertainty, favorable, adverse, absent, unavailable, unresolved, fitted, superseded or transport row is omitted; the implementation-distinct reconstruction disagrees; any dependency is missing; or external evidence selects the native law."),("development_observation_disclosed",.boolean true),("observation_may_have_informed_question_and_candidate_relation",.boolean true),("not_claimed_as_unknown-target_forward_prediction",.boolean true),("external_target_api_absent_from_candidate_generator_and_eliminator",.boolean true),("target_content_inaccessible_to_prediction_execution",.boolean true),("comparison_implementation_inaccessible_to_prediction_execution",.boolean true),("all_rows_required",.boolean true)]
+def programFields : List (String × Value) := match predictionDocument with
+ | .object fs => fs
+ | .null | .text _ | .boolean _ | .integer _ | .array _ => []
+def labelValue (family label : String) : Value := .object [("family",.text family),("label",.text label)]
+def envelope (registrationHash derivationSeal : String) : Value := .object [
+ ("experiment_id",.text experimentId),
+ ("registered_inputs",.object [("registered-premise",.text (identity (labelValue "sealed-derivation" derivationSeal)))]),
+ ("withheld_target_ids",.array (targetIds.map Value.text)),("frozen_relation_hash",.text derivationSeal),
+ ("experiment_registration_hash",.text registrationHash)]
+def dimensions : List (String × List (String × Bool)) := [("carrier",[("mass-peaks-without-molecule",false),("held-molecular-parent-and-ion-carriers",true)]),("composition",[("nominal-mass-only",false),("held-isotope-and-charge-composition",true)]),("coordinate",[("floating-mass-to-charge",false),("exact-positive-mass-charge-ratio",true)]),("fragmentation",[("peak-without-fragment-path",false),("held-parent-fragment-transition-path",true)]),("response",[("normalized-major-peak-only",false),("exact-event-over-reference-event-ratio",true)]),("condition",[("unconditioned-ionization",false),("held-ionization-and-acquisition-condition",true)]),("custody",[("selected-diagnostic-peaks",false),("complete-peak-isotope-error-absence-custody",true)]),("extension",[("refitted-added-fragment",false),("successor-retains-and-appends-complete-fragments",true)])]
+def distinct (xs : List String) : Bool := (xs.foldl (fun acc x => if acc.any (Text.equal x) then acc else x::acc) []).length == xs.length
+def validateSpec : Except String Unit := do
+ if !(Text.chars "SFT-CHEM-").isPrefixOf (Text.chars claimId) then throw "empirical Chemistry claim identity is invalid"
+ if !(Text.chars "SFT-EXP-CHEM-").isPrefixOf (Text.chars experimentId) then throw "empirical Chemistry experiment identity is invalid"
+ if MassIsotopeFragmentEvidence.dependencies.isEmpty || dimensions.length != 8 || targetIds.isEmpty then
+  throw "empirical Chemistry law lacks dependencies, eight dimensions or targets"
+ if !distinct (dimensions.map Prod.fst) then throw "empirical Chemistry law contains duplicate dimensions"
+ let _ ← dimensions.mapM fun d => do
+  if d.2.length != 2 then throw "each Chemistry dimension must exhaust two registered forms"
+  if (d.2.filter Prod.snd).length != 1 then throw "dimension requires one preserving form"
+ if (NuclideCarrierSurface.trimLine (Text.chars expectedLabel)).isEmpty || (NuclideCarrierSurface.trimLine (Text.chars falsification)).isEmpty then
+  throw "Chemistry prediction or falsification condition is missing"
+ if !distinct targetIds then throw "Chemistry target identities are duplicated"
+ if !(snapshotHashes.all fun h => (Text.chars "sha256:").isPrefixOf (Text.chars h)) then throw "Chemistry target snapshot identity is invalid"
+ if !([(MassIsotopeFragment.witness 0),(MassIsotopeFragment.witness 1),(MassIsotopeFragment.witness 2),
+  (MassIsotopeFragment.witness 3),(MassIsotopeFragment.witness 4),(MassIsotopeFragment.witness 5),
+  (MassIsotopeFragment.witness 6),(MassIsotopeFragment.witness 7)].all id) then throw "Chemistry operational witness failed"
+ return ()
+#print axioms claimId
+#print axioms experimentId
+#print axioms expectedLabel
+#print axioms falsification
+#print axioms sourceIds
+#print axioms targetIds
+#print axioms snapshotHashes
+#print axioms predictionDocument
+#print axioms registration
+#print axioms programFields
+#print axioms labelValue
+#print axioms envelope
+#print axioms dimensions
+#print axioms distinct
+#print axioms validateSpec
+end SFT.Chemistry.MassIsotopeFragmentExperiment

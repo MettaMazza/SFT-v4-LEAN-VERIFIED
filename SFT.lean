@@ -12263,3 +12263,15 @@ import SFT.Biology.DifferentiationSource
 import SFT.Biology.DifferentiationExperiment
 
 import SFT.Biology.DifferentiationValidation
+
+import SFT.Biology.Development
+
+import SFT.Biology.DevelopmentGrammar
+
+import SFT.Biology.DevelopmentEvidence
+
+import SFT.Biology.DevelopmentSource
+
+import SFT.Biology.DevelopmentExperiment
+
+import SFT.Biology.DevelopmentValidation

@@ -12275,3 +12275,15 @@ import SFT.Biology.DevelopmentSource
 import SFT.Biology.DevelopmentExperiment
 
 import SFT.Biology.DevelopmentValidation
+
+import SFT.Biology.Morphogenesis
+
+import SFT.Biology.MorphogenesisGrammar
+
+import SFT.Biology.MorphogenesisEvidence
+
+import SFT.Biology.MorphogenesisSource
+
+import SFT.Biology.MorphogenesisExperiment
+
+import SFT.Biology.MorphogenesisValidation

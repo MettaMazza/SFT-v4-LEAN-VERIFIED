@@ -12221,3 +12221,21 @@ import SFT.Biology.MulticellularCompositionSource
 import SFT.Biology.MulticellularCompositionExperiment
 
 import SFT.Biology.MulticellularCompositionValidation
+
+import SFT.Chemistry.DihedralTorsion
+
+import SFT.Chemistry.DihedralTorsionCycle
+
+import SFT.Chemistry.DihedralTorsionWitnesses
+
+import SFT.Chemistry.DihedralTorsionGrammar
+
+import SFT.Chemistry.DihedralTorsionEvidence
+
+import SFT.Chemistry.DihedralTorsionExperiment
+
+import SFT.Chemistry.DihedralTorsionSource
+
+import SFT.Chemistry.DihedralTorsionPrediction
+
+import SFT.Chemistry.DihedralTorsionValidation

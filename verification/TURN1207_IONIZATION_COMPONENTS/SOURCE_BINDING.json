@@ -1,0 +1,44 @@
+{
+  "claim_id": "SFT-CHEM-MOLECULAR-IONIZATION-ENERGY-007",
+  "v3_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "status": "verified_components",
+  "whole_entry_complete": false,
+  "lean_source_sha256": {
+    "SFT/Chemistry/MolecularIonization.lean": "f153d853e59e3fbc274aeeac03cb5a6976a998a801a3660f246259aea70d575e"
+  },
+  "native_declarations": [
+    "SFT.Chemistry.MolecularIonization.orderedIonizationTake",
+    "SFT.Chemistry.MolecularIonization.ratioLess",
+    "SFT.Chemistry.MolecularIonization.leastTakeFrom",
+    "SFT.Chemistry.MolecularIonization.leastAdiabaticTake",
+    "SFT.Chemistry.MolecularIonization.verticalNotBelowAdiabatic",
+    "SFT.Chemistry.MolecularIonization.validateCarrier",
+    "SFT.Chemistry.MolecularIonization.orderedTakeExact",
+    "SFT.Chemistry.MolecularIonization.terminalTakeMagnitude",
+    "SFT.Chemistry.MolecularIonization.initial",
+    "SFT.Chemistry.MolecularIonization.terminalEight",
+    "SFT.Chemistry.MolecularIonization.terminalSix",
+    "SFT.Chemistry.MolecularIonization.terminalSeven",
+    "SFT.Chemistry.MolecularIonization.terminalNine",
+    "SFT.Chemistry.MolecularIonization.terminals",
+    "SFT.Chemistry.MolecularIonization.ratioPair",
+    "SFT.Chemistry.MolecularIonization.orderedTakeWitness",
+    "SFT.Chemistry.MolecularIonization.leastWitness",
+    "SFT.Chemistry.MolecularIonization.verticalWitness",
+    "SFT.Chemistry.MolecularIonization.reverseWitness",
+    "SFT.Chemistry.MolecularIonization.absentVerticalWitness"
+  ],
+  "source_operations": [
+    "sft/chemistry/molecular_ionization_law_v1.py:ordered_ionization_take",
+    "sft/chemistry/molecular_ionization_law_v1.py:least_adiabatic_take",
+    "sft/chemistry/molecular_ionization_law_v1.py:vertical_not_below_adiabatic",
+    "sft/chemistry/molecular_ionization_law_v1.py:MolecularIonizationCarrier",
+    "sft/chemistry/molecular_ionization_law_v1.py:_witnesses"
+  ],
+  "reused_proof": "SFT.Chemistry.DihedralTorsion.barrierTakeExact and barrierMagnitude",
+  "checks": [
+    "python3 work/build_ionization1320_core.py",
+    "python3 work/check_ionization1320_core.py"
+  ],
+  "results": "Core compiles;20 exported declarations empty axioms;37 original/native cases agree. Complete minimum theorem compiles; its audit and subsequent grammar/empirical verification are separately queued."
+}

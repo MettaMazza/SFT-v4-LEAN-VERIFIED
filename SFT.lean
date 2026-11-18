@@ -12185,3 +12185,15 @@ import SFT.Chemistry.MolecularDipoleMagnitudeSource
 import SFT.Chemistry.MolecularDipoleMagnitudePrediction
 
 import SFT.Chemistry.MolecularDipoleMagnitudeValidation
+
+import SFT.Biology.CellDivision
+
+import SFT.Biology.CellDivisionGrammar
+
+import SFT.Biology.CellDivisionEvidence
+
+import SFT.Biology.CellDivisionSource
+
+import SFT.Biology.CellDivisionExperiment
+
+import SFT.Biology.CellDivisionValidation

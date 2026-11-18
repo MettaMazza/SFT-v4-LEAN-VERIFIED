@@ -12159,3 +12159,29 @@ import SFT.Chemistry.AnalyticalInterferenceMatrixAnalysis
 import SFT.Chemistry.AnalyticalInterferenceMatrixExperiment
 
 import SFT.Chemistry.AnalyticalInterferenceMatrixValidation
+
+import SFT.Biology.ExcitableThreshold
+
+import SFT.Biology.ExcitableThresholdGrammar
+
+import SFT.Biology.ExcitableThresholdEvidence
+
+import SFT.Biology.ExcitableThresholdSource
+
+import SFT.Biology.ExcitableThresholdExperiment
+
+import SFT.Biology.ExcitableThresholdValidation
+
+import SFT.Chemistry.MolecularDipoleMagnitude
+
+import SFT.Chemistry.MolecularDipoleMagnitudeGrammar
+
+import SFT.Chemistry.MolecularDipoleMagnitudeEvidence
+
+import SFT.Chemistry.MolecularDipoleMagnitudeExperiment
+
+import SFT.Chemistry.MolecularDipoleMagnitudeSource
+
+import SFT.Chemistry.MolecularDipoleMagnitudePrediction
+
+import SFT.Chemistry.MolecularDipoleMagnitudeValidation

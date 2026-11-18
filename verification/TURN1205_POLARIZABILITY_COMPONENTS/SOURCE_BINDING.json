@@ -1,0 +1,47 @@
+{
+  "claim_id": "SFT-CHEM-MOLECULAR-POLARIZABILITY-006",
+  "v3_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "status": "verified_components",
+  "whole_entry_complete": false,
+  "lean_source_sha256": {
+    "SFT/Chemistry/MolecularPolarizability.lean": "44ff36cf757b38f2043773ec0be0a24d8de6155808d9e2a8db116c6465e2cec4",
+    "SFT/Chemistry/MolecularPolarizabilityRepetition.lean": "9c566a1391505b72838f6569405608ec96cba89bfcab682332c3165744473a90"
+  },
+  "native_declarations": [
+    "SFT.Chemistry.MolecularPolarizability.normalizedRatio",
+    "SFT.Chemistry.MolecularPolarizability.component",
+    "SFT.Chemistry.MolecularPolarizability.exactResponse",
+    "SFT.Chemistry.MolecularPolarizability.repeatedEqualFieldResponse",
+    "SFT.Chemistry.MolecularPolarizability.exactIsotropicResponse",
+    "SFT.Chemistry.MolecularPolarizability.validateCarrier",
+    "SFT.Chemistry.MolecularPolarizability.axisA",
+    "SFT.Chemistry.MolecularPolarizability.axisB",
+    "SFT.Chemistry.MolecularPolarizability.axisC",
+    "SFT.Chemistry.MolecularPolarizability.witnessComponent",
+    "SFT.Chemistry.MolecularPolarizability.firstComponent",
+    "SFT.Chemistry.MolecularPolarizability.secondComponent",
+    "SFT.Chemistry.MolecularPolarizability.thirdComponent",
+    "SFT.Chemistry.MolecularPolarizability.ratioPair",
+    "SFT.Chemistry.MolecularPolarizability.responseWitness",
+    "SFT.Chemistry.MolecularPolarizability.repetitionWitness",
+    "SFT.Chemistry.MolecularPolarizability.isotropicWitness",
+    "SFT.Chemistry.MolecularPolarizability.incompleteWitness",
+    "SFT.Chemistry.MolecularPolarizability.duplicateWitness",
+    "SFT.Chemistry.MolecularPolarizabilityRepetition.everyEqualFieldRepetition"
+  ],
+  "source_operations": [
+    "molecular_polarizability_law_v1.py:PolarizabilityComponent/exact_response",
+    "molecular_polarizability_law_v1.py:repeated_equal_field_response",
+    "molecular_polarizability_law_v1.py:exact_isotropic_response",
+    "molecular_polarizability_law_v1.py:MolecularPolarizabilityCarrier",
+    "molecular_polarizability_law_v1.py:_witnesses"
+  ],
+  "source_derivation": "Equal positive repetition scales induced and electric distinctions together; actual repeated component response is unchanged for every positive count. Three distinct axes give exact one-third sum.",
+  "proof": "SFT.Chemistry.MolecularPolarizabilityRepetition.everyEqualFieldRepetition",
+  "reused_proof": "SFT.Physics.CommonScaleAxis.commonUnitCancellation with existing exact normalization correspondence",
+  "checks": [
+    "python3 work/build_polarizability1319_repetition.py",
+    "python3 work/check_polarizability1319_core.py"
+  ],
+  "results": "Two native modules;20 exported declarations empty axioms;48 original/native cases pass. Grammar/full programme and252row empirical integration not yet complete."
+}

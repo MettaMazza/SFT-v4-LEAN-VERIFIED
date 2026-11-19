@@ -1,0 +1,80 @@
+{
+  "updated_at": "2026-11-19T00:12:50.781534+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    196,
+    197,
+    198,
+    199,
+    200
+  ],
+  "challenges": [
+    {
+      "section": 196,
+      "challenge": "Does complete trace insert an unvisited right child after left failure or omit a completed left child after right failure?",
+      "evidence": "Execution.leftFailure has only the actual left trace; rightFailure retains first++second. reconstruct/replay establish exactExecution and noOmittedRows, while sourceResult preserves the original duplicate-first evaluator.",
+      "disposition": "All branch equations and full frame construction in the paper match the proof bodies."
+    },
+    {
+      "section": 197,
+      "challenge": "Does soundness alone support correspondence, and are failures or arbitrary nested contexts excluded?",
+      "evidence": "adequacy inductively reconstructs every complete trace from Meaning; exactMeaning is an iff including errors. sameResults/equalResults and contextualMeaning prove exact result equivalence under arbitrary context induction.",
+      "disposition": "Paper gives both directions and the full-result relation, separately from finite candidate classification."
+    },
+    {
+      "section": 198,
+      "challenge": "Is a positive typing check treated as unconditional successful execution, or as equality of old and substituted values?",
+      "evidence": "completeTypedTrace explicitly retains distinct bindings; substitution proves Typed for any typed replacement, and substitutionEvaluation concludes existence of a positive output and its full trace. ExactMismatch gives every rejection derivation.",
+      "disposition": "Paper states positivity/type preservation and original environment admission, with no unsupported old/new value equality."
+    },
+    {
+      "section": 199,
+      "challenge": "Can support extension discard old rows or interface failure be repaired by an appended suffix?",
+      "evidence": "typeSuccessor uses old/new admission and identical old verdicts to prove exact ordered-list extension. exactRun reconstructs each original fold call; completeTrace flattens all successful component traces, and failedPrefix preserves the first rejection.",
+      "disposition": "Paper gives these exact hypotheses, list equations and constructor-based failure behavior."
+    },
+    {
+      "section": 200,
+      "challenge": "Does equivalence silently erase traces or claim agreement on unexamined inputs or an arbitrary replacement observer?",
+      "evidence": "completeExecutions reconstructs both full traces for every ledger row; exactCertificate covers every member of supplied support and distinguishingInput constructs a counterexample to a false decision. supportAssembly requires both component agreements; observationPostmap uses congruence of the declared map.",
+      "disposition": "Paper states the original input/observation boundary and complete ledger, with exact extension and post-map arguments."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/EvaluationGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/EvaluationWitnesses.lean#L29",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/MeaningGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/MeaningWitnesses.lean#L29",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/TypeGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/TypeWitnesses.lean#L29",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/EquivalenceGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/EquivalenceWitnesses.lean#L29",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "3d4a8cba91bc0e3aa4a9967c65b3fbd9a8b2c6604c42a9a68ab5ddd531b52d09",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

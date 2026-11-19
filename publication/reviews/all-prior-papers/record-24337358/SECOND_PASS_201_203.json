@@ -1,0 +1,58 @@
+{
+  "updated_at": "2026-11-19T00:14:00.945608+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    201,
+    202,
+    203
+  ],
+  "challenges": [
+    {
+      "section": 201,
+      "challenge": "Does termination assume its conclusion or replace a universal statement by finite samples?",
+      "evidence": "accessible and callAccessible construct well-foundedness by syntax induction for every expression; terminalCoverage uses complete execution reconstruction. For transition systems Ranked explicitly supplies edgewise decrease, pathBound derives every path-length bound, and originalLoopCounterexample refutes every rank for the actual loop.",
+      "disposition": "Paper gives both complete quantified arguments and the exact separate rank premise; no sample count substitutes for induction."
+    },
+    {
+      "section": 202,
+      "challenge": "Does total correctness silently discard error results or use a postcondition selected from the result?",
+      "evidence": "Specification retains supplied mode/pre/post functions; exactCertificate proves both modes, with finite evaluator existence from reconstruct. failureMeaning retains exactly runtime errors, and failedCertificate produces a precondition-admitted failing input.",
+      "disposition": "Paper explicitly retains runtime errors and makes their admissibility depend on the original supplied postcondition."
+    },
+    {
+      "section": 203,
+      "challenge": "Is refinement oriented correctly and do liveness or invariant claims lack original execution evidence?",
+      "evidence": "Refines is narrow.allowed inclusion in broad.allowed; refinementPreserves transports narrow certificates to broad and removedRowFalsifies produces the exact exclusion. invariantPreservation inducts on actual Path with base/step premises; liveReconstruction/terminalReconstruction recover admitted native runs. verifiedCarrier applies the same relation to the full correctness execution.",
+      "disposition": "Displayed equations, refinement direction and exact path/terminal witnesses match the existing proof bodies."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/TerminationGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/TerminationWitnesses.lean#L29",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CorrectnessGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CorrectnessWitnesses.lean#L29",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SpecificationGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SpecificationWitnesses.lean#L29",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "de79b72bb1d3282416120ebffc32ff36bd0ef7ae6359cd8955f261799db25a47",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

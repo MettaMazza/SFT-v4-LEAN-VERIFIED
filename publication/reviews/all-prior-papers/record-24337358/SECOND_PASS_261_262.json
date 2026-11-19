@@ -1,0 +1,43 @@
+{
+  "updated_at": "2026-11-19T02:08:52.713646+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    261,
+    262
+  ],
+  "challenges": [
+    {
+      "section": 261,
+      "challenge": "Does the limit assume a failed learner without constructing an actual source counterexample?",
+      "evidence": "Pair retains equal ordered observations, distinct required target labels and each target row in its original hypothesis. sameDecision follows by equality substitution. constructCounterexample decides equality to the left target and supplies the failed side; counterexampleSource retains both source membership and the unobserved boundary.",
+      "disposition": "Paper includes the full case split, source witness and preprocessing/extension derivations."
+    },
+    {
+      "section": 262,
+      "challenge": "Can an explanation pass without its actual trace, model identity, premises or supported decision?",
+      "evidence": "verificationMeaning is a two-direction conjunction of all four exact conditions. verifiedExecution reconstructs actual transitions; the four rejection theorems refute altered fields. counterfactualComplete retains every supplied input and actual result including errors. serialCertificate uses actual Path composition and terminal equality.",
+      "disposition": "Full verification and tamper arguments already appear explicitly and match the proof bodies."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/LearningLimitsGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/LearningLimitsWitnesses.lean#L16",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/InterpretabilityGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/InterpretabilityWitnesses.lean#L16",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "7590f2860f0b395d805a2af20e4988a4bcd6d6d1a0dbfa0fc041950cf51a37dc",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

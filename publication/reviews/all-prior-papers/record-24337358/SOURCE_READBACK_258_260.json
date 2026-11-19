@@ -1,0 +1,847 @@
+{
+  "updated_at": "2026-11-19T02:08:19.892467+00:00",
+  "sections_read": [
+    258,
+    259,
+    260
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "records": [
+    {
+      "section": 258,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/Reinforcement.lean",
+          "sha256": "6d5dd4672b5e7bc5ae8f42277a887879bedfcf704049148bf5eb176dd8e230af",
+          "declarations": [
+            "SFT.Computation.Reinforcement.Interaction",
+            "SFT.Computation.Reinforcement.Policy",
+            "SFT.Computation.Reinforcement.Model",
+            "SFT.Computation.Reinforcement.rowAdmitted",
+            "SFT.Computation.Reinforcement.replay",
+            "SFT.Computation.Reinforcement.retained",
+            "SFT.Computation.Reinforcement.rejected",
+            "SFT.Computation.Reinforcement.labels",
+            "SFT.Computation.Reinforcement.evaluations",
+            "SFT.Computation.Reinforcement.Trace",
+            "SFT.Computation.Reinforcement.replayMeaning",
+            "SFT.Computation.Reinforcement.retainedMeaning",
+            "SFT.Computation.Reinforcement.exhaustion",
+            "SFT.Computation.Reinforcement.rowMeaning",
+            "SFT.Computation.Reinforcement.compared",
+            "SFT.Computation.Reinforcement.comparisonMeaning",
+            "SFT.Computation.Reinforcement.evaluationComplete",
+            "SFT.Computation.Reinforcement.Extension",
+            "SFT.Computation.Reinforcement.rowExtension",
+            "SFT.Computation.Reinforcement.traceExtension",
+            "SFT.Computation.Reinforcement.retainedExtension",
+            "SFT.Computation.Reinforcement.finalState",
+            "SFT.Computation.Reinforcement.traceComposition",
+            "SFT.Computation.Reinforcement.labelComposition",
+            "SFT.Computation.Reinforcement.disjoint"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.Reinforcement.replayMeaning",
+            "SFT.Computation.Reinforcement.retainedMeaning",
+            "SFT.Computation.Reinforcement.exhaustion",
+            "SFT.Computation.Reinforcement.rowMeaning",
+            "SFT.Computation.Reinforcement.comparisonMeaning",
+            "SFT.Computation.Reinforcement.evaluationComplete",
+            "SFT.Computation.Reinforcement.rowExtension",
+            "SFT.Computation.Reinforcement.traceExtension",
+            "SFT.Computation.Reinforcement.retainedExtension",
+            "SFT.Computation.Reinforcement.traceComposition",
+            "SFT.Computation.Reinforcement.labelComposition",
+            "SFT.Computation.Reinforcement.disjoint"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ReinforcementGrammar.lean",
+          "sha256": "a1ff66ee59f1cc596c2ae6f4943d731770ac736c3d201a90d9193e03ee3c71b3",
+          "declarations": [
+            "SFT.Computation.ReinforcementGrammar.Support",
+            "SFT.Computation.ReinforcementGrammar.supportName",
+            "SFT.Computation.ReinforcementGrammar.Representation",
+            "SFT.Computation.ReinforcementGrammar.representationName",
+            "SFT.Computation.ReinforcementGrammar.Inference",
+            "SFT.Computation.ReinforcementGrammar.inferenceName",
+            "SFT.Computation.ReinforcementGrammar.Evaluation",
+            "SFT.Computation.ReinforcementGrammar.evaluationName",
+            "SFT.Computation.ReinforcementGrammar.Uncertainty",
+            "SFT.Computation.ReinforcementGrammar.uncertaintyName",
+            "SFT.Computation.ReinforcementGrammar.Resources",
+            "SFT.Computation.ReinforcementGrammar.resourcesName",
+            "SFT.Computation.ReinforcementGrammar.Generality",
+            "SFT.Computation.ReinforcementGrammar.generalityName",
+            "SFT.Computation.ReinforcementGrammar.Addition",
+            "SFT.Computation.ReinforcementGrammar.additionName",
+            "SFT.Computation.ReinforcementGrammar.Candidate",
+            "SFT.Computation.ReinforcementGrammar.sourceFields",
+            "SFT.Computation.ReinforcementGrammar.candidateId",
+            "SFT.Computation.ReinforcementGrammar.exactForm",
+            "SFT.Computation.ReinforcementGrammar.survivorId",
+            "SFT.Computation.ReinforcementGrammar.survives",
+            "SFT.Computation.ReinforcementGrammar.criteriaDecision",
+            "SFT.Computation.ReinforcementGrammar.decisionReason",
+            "SFT.Computation.ReinforcementGrammar.generationRule",
+            "SFT.Computation.ReinforcementGrammar.grammarBoundary",
+            "SFT.Computation.ReinforcementGrammar.candidates",
+            "SFT.Computation.ReinforcementGrammar.survivor",
+            "SFT.Computation.ReinforcementGrammar.generatedCardinality",
+            "SFT.Computation.ReinforcementGrammar.candidatesComplete",
+            "SFT.Computation.ReinforcementGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ReinforcementGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ReinforcementGrammar.uniqueSurvivor",
+            "SFT.Computation.ReinforcementGrammar.survivorAccepted",
+            "SFT.Computation.ReinforcementGrammar.ExactCriteria",
+            "SFT.Computation.ReinforcementGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ReinforcementGrammar.support_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.representation_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.inference_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.evaluation_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.uncertainty_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.resources_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.generality_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReinforcementGrammar.generatedCardinality",
+            "SFT.Computation.ReinforcementGrammar.candidatesComplete",
+            "SFT.Computation.ReinforcementGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ReinforcementGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ReinforcementGrammar.uniqueSurvivor",
+            "SFT.Computation.ReinforcementGrammar.survivorAccepted",
+            "SFT.Computation.ReinforcementGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ReinforcementGrammar.support_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.representation_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.inference_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.evaluation_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.uncertainty_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.resources_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.generality_rejected_rejected",
+            "SFT.Computation.ReinforcementGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ReinforcementWitnesses.lean",
+          "sha256": "453fce8edc642a30b4087d68ab5b4073a97d89b270eb778666f331c79b8652bc",
+          "declarations": [
+            "SFT.Computation.ReinforcementWitnesses.Witness",
+            "SFT.Computation.ReinforcementWitnesses.checks",
+            "SFT.Computation.ReinforcementWitnesses.witnesses",
+            "SFT.Computation.ReinforcementWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReinforcementWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ReinforcementControls.lean",
+          "sha256": "0d1f1d94ce6be4a73d5e1b96291576c40d886601ffbfd0c9a087cfce12690eb1",
+          "declarations": [
+            "SFT.Computation.ReinforcementControls.laws",
+            "SFT.Computation.ReinforcementControls.exclusions",
+            "SFT.Computation.ReinforcementControls.closureValue",
+            "SFT.Computation.ReinforcementControls.falseCandidate",
+            "SFT.Computation.ReinforcementControls.survivorIds",
+            "SFT.Computation.ReinforcementControls.distinctIdentifiers",
+            "SFT.Computation.ReinforcementControls.falsePremise",
+            "SFT.Computation.ReinforcementControls.tamperedSource",
+            "SFT.Computation.ReinforcementControls.tamperedArtifact",
+            "SFT.Computation.ReinforcementControls.boundary",
+            "SFT.Computation.ReinforcementControls.falsePremisePassed",
+            "SFT.Computation.ReinforcementControls.boundaryPassed",
+            "SFT.Computation.ReinforcementControls.controlRecords",
+            "SFT.Computation.ReinforcementControls.resultData",
+            "SFT.Computation.ReinforcementControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReinforcementControls.falsePremisePassed",
+            "SFT.Computation.ReinforcementControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ReinforcementEvidence.lean",
+          "sha256": "a256b13ccfbd47e706a290d11d93b18ec545037e2e557b8b62c8a7836409851d",
+          "declarations": [
+            "SFT.Computation.ReinforcementEvidence.candidateRecord",
+            "SFT.Computation.ReinforcementEvidence.completenessRecord",
+            "SFT.Computation.ReinforcementEvidence.registrationData",
+            "SFT.Computation.ReinforcementEvidence.registration",
+            "SFT.Computation.ReinforcementEvidence.generatedCandidateData",
+            "SFT.Computation.ReinforcementEvidence.censusData",
+            "SFT.Computation.ReinforcementEvidence.census",
+            "SFT.Computation.ReinforcementEvidence.decisionData",
+            "SFT.Computation.ReinforcementEvidence.decision",
+            "SFT.Computation.ReinforcementEvidence.decideCandidate",
+            "SFT.Computation.ReinforcementEvidence.closureData",
+            "SFT.Computation.ReinforcementEvidence.closure",
+            "SFT.Computation.ReinforcementEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ReinforcementEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ReinforcementEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ReinforcementEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ReinforcementEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.ReinforcementEvidence.why",
+            "SFT.Computation.ReinforcementEvidence.derivation",
+            "SFT.Computation.ReinforcementEvidence.check",
+            "SFT.Computation.ReinforcementEvidence.limitations",
+            "SFT.Computation.ReinforcementEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReinforcementEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ReinforcementEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ReinforcementEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ReinforcementEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ReinforcementEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_316_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "a5afa0c5e920a0a827383d0caf1c28fc50e87c01bed892512f068c36034086d9",
+        "matching_theorems": 35
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_316_REINFORCEMENT_COMPLETION.json",
+          "sha256": "f6392fb7d71c11f941767f2cf0623293474a3504471aea8bd0d96bd0671579e8",
+          "result": {
+            "claim_id": "SFT-COMP-LEARN-REINFORCEMENT-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/learning_intelligence/reinforcement/law.py": "09afdeca7aba073e6470d0c3903ab2f7f345e6c097bbb43054f19717bfe86293",
+              "claims/SFT-COMP-LEARN-REINFORCEMENT-001/WHY_DERIVATION_CHECK.md": "34a8e2191f04dc1ba49cb439a83b72c410344e0776e1ff39e6af6d944ffb236a",
+              "claims/SFT-COMP-LEARN-REINFORCEMENT-001/registration.json": "01a6fea8c1adc353d7f5fe1a30f7a1768b4d2e36948d4b595d44bfad8d1c284e",
+              "claims/SFT-COMP-LEARN-REINFORCEMENT-001/execution.py": "e353ef02bb7454036b39234518d57877a3f743c800f1c8bed3a629de51487f7e",
+              "claims/SFT-COMP-LEARN-REINFORCEMENT-001/independent_validator.py": "da48be79eee265f57c6f68cedb05c9d0854ac166be248ed43adb71c59183a7ef",
+              "claims/SFT-COMP-LEARN-REINFORCEMENT-001/certificate.json": "1aee167f0e00ab51b5ec9a423168de53cd5d37eb18c3e696f41f2df46774d30c"
+            },
+            "components": {
+              "exact interaction rows": "rowMeaning proves exact current/source state,held source/target states,action,outcome,environment row and policy action relation. No stochastic cause,fitted value function or external reward scale imported.",
+              "trajectory replay": "replayMeaning proves actual typed interaction execution; retainedMeaning retains exactly supported trajectories passing replay. exhaustion and disjoint give complete retained/rejected ledgers.",
+              "policy evaluation and comparison": "evaluationComplete retains every registered policy and its complete trajectory ledger. comparisonMeaning uses the exact supplied preference relation without an external score. labels retains each exact outcome in order.",
+              "composition and extension": "traceComposition preserves state interfaces; labelComposition preserves ordered outcome records. rowExtension,traceExtension and retainedExtension preserve earlier trajectories under enlarged source supports.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-LEARN-SEARCH-PLANNING-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-LEARN-SEARCH-PLANNING-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 1024,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_316_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_316_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_316_PROGRAM_REPORT.json",
+          "sha256": "99da9a492cf51e61714728bb8d03550606ae2fb9ebc41dbd2a577b361917b5f7",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:6ddc0f26308bb7a994c49435c6b65a7e566854bd9a4777a0edb8505c18911acd",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original Reinforcement registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    },
+    {
+      "section": 259,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/MultiAgent.lean",
+          "sha256": "1ad077b5fba2a67fefbd4c6c85ba04cc53c1116735283ccd114052085bcbb129",
+          "declarations": [
+            "SFT.Computation.MultiAgent.JointRow",
+            "SFT.Computation.MultiAgent.Model",
+            "SFT.Computation.MultiAgent.actionSupported",
+            "SFT.Computation.MultiAgent.rowAdmitted",
+            "SFT.Computation.MultiAgent.rows",
+            "SFT.Computation.MultiAgent.localObservations",
+            "SFT.Computation.MultiAgent.observationMeaning",
+            "SFT.Computation.MultiAgent.actionMeaning",
+            "SFT.Computation.MultiAgent.recordedActionsSupported",
+            "SFT.Computation.MultiAgent.rowMeaning",
+            "SFT.Computation.MultiAgent.JointTrace",
+            "SFT.Computation.MultiAgent.jointComposition",
+            "SFT.Computation.MultiAgent.communication",
+            "SFT.Computation.MultiAgent.communicationMeaning",
+            "SFT.Computation.MultiAgent.finalState",
+            "SFT.Computation.MultiAgent.replay",
+            "SFT.Computation.MultiAgent.replayMeaning",
+            "SFT.Computation.MultiAgent.cycleCheck",
+            "SFT.Computation.MultiAgent.cycleLedger",
+            "SFT.Computation.MultiAgent.traceEnd",
+            "SFT.Computation.MultiAgent.cycleMeaning",
+            "SFT.Computation.MultiAgent.cycleLedgerMeaning",
+            "SFT.Computation.MultiAgent.Extension",
+            "SFT.Computation.MultiAgent.rowExtension",
+            "SFT.Computation.MultiAgent.traceExtension"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.MultiAgent.observationMeaning",
+            "SFT.Computation.MultiAgent.actionMeaning",
+            "SFT.Computation.MultiAgent.recordedActionsSupported",
+            "SFT.Computation.MultiAgent.rowMeaning",
+            "SFT.Computation.MultiAgent.jointComposition",
+            "SFT.Computation.MultiAgent.communicationMeaning",
+            "SFT.Computation.MultiAgent.replayMeaning",
+            "SFT.Computation.MultiAgent.traceEnd",
+            "SFT.Computation.MultiAgent.cycleMeaning",
+            "SFT.Computation.MultiAgent.cycleLedgerMeaning",
+            "SFT.Computation.MultiAgent.rowExtension",
+            "SFT.Computation.MultiAgent.traceExtension"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/MultiAgentGrammar.lean",
+          "sha256": "2b2f38f38db38d59ac45dab843e7480d55c8456a741822736f55a16c5e6305a7",
+          "declarations": [
+            "SFT.Computation.MultiAgentGrammar.Support",
+            "SFT.Computation.MultiAgentGrammar.supportName",
+            "SFT.Computation.MultiAgentGrammar.Representation",
+            "SFT.Computation.MultiAgentGrammar.representationName",
+            "SFT.Computation.MultiAgentGrammar.Inference",
+            "SFT.Computation.MultiAgentGrammar.inferenceName",
+            "SFT.Computation.MultiAgentGrammar.Evaluation",
+            "SFT.Computation.MultiAgentGrammar.evaluationName",
+            "SFT.Computation.MultiAgentGrammar.Uncertainty",
+            "SFT.Computation.MultiAgentGrammar.uncertaintyName",
+            "SFT.Computation.MultiAgentGrammar.Resources",
+            "SFT.Computation.MultiAgentGrammar.resourcesName",
+            "SFT.Computation.MultiAgentGrammar.Generality",
+            "SFT.Computation.MultiAgentGrammar.generalityName",
+            "SFT.Computation.MultiAgentGrammar.Addition",
+            "SFT.Computation.MultiAgentGrammar.additionName",
+            "SFT.Computation.MultiAgentGrammar.Candidate",
+            "SFT.Computation.MultiAgentGrammar.sourceFields",
+            "SFT.Computation.MultiAgentGrammar.candidateId",
+            "SFT.Computation.MultiAgentGrammar.exactForm",
+            "SFT.Computation.MultiAgentGrammar.survivorId",
+            "SFT.Computation.MultiAgentGrammar.survives",
+            "SFT.Computation.MultiAgentGrammar.criteriaDecision",
+            "SFT.Computation.MultiAgentGrammar.decisionReason",
+            "SFT.Computation.MultiAgentGrammar.generationRule",
+            "SFT.Computation.MultiAgentGrammar.grammarBoundary",
+            "SFT.Computation.MultiAgentGrammar.candidates",
+            "SFT.Computation.MultiAgentGrammar.survivor",
+            "SFT.Computation.MultiAgentGrammar.generatedCardinality",
+            "SFT.Computation.MultiAgentGrammar.candidatesComplete",
+            "SFT.Computation.MultiAgentGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.MultiAgentGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.MultiAgentGrammar.uniqueSurvivor",
+            "SFT.Computation.MultiAgentGrammar.survivorAccepted",
+            "SFT.Computation.MultiAgentGrammar.ExactCriteria",
+            "SFT.Computation.MultiAgentGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.MultiAgentGrammar.support_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.representation_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.inference_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.evaluation_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.uncertainty_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.resources_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.generality_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.MultiAgentGrammar.generatedCardinality",
+            "SFT.Computation.MultiAgentGrammar.candidatesComplete",
+            "SFT.Computation.MultiAgentGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.MultiAgentGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.MultiAgentGrammar.uniqueSurvivor",
+            "SFT.Computation.MultiAgentGrammar.survivorAccepted",
+            "SFT.Computation.MultiAgentGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.MultiAgentGrammar.support_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.representation_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.inference_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.evaluation_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.uncertainty_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.resources_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.generality_rejected_rejected",
+            "SFT.Computation.MultiAgentGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/MultiAgentWitnesses.lean",
+          "sha256": "ca7216d775daadd9a03d08037552b833b27b19fce570a049813a817cc7589ddb",
+          "declarations": [
+            "SFT.Computation.MultiAgentWitnesses.Witness",
+            "SFT.Computation.MultiAgentWitnesses.checks",
+            "SFT.Computation.MultiAgentWitnesses.witnesses",
+            "SFT.Computation.MultiAgentWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.MultiAgentWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/MultiAgentControls.lean",
+          "sha256": "3070a557aa541aad37ffbd6bd7f435a80867bff3e2d4b0b2ca7e1ad052f26e77",
+          "declarations": [
+            "SFT.Computation.MultiAgentControls.laws",
+            "SFT.Computation.MultiAgentControls.exclusions",
+            "SFT.Computation.MultiAgentControls.closureValue",
+            "SFT.Computation.MultiAgentControls.falseCandidate",
+            "SFT.Computation.MultiAgentControls.survivorIds",
+            "SFT.Computation.MultiAgentControls.distinctIdentifiers",
+            "SFT.Computation.MultiAgentControls.falsePremise",
+            "SFT.Computation.MultiAgentControls.tamperedSource",
+            "SFT.Computation.MultiAgentControls.tamperedArtifact",
+            "SFT.Computation.MultiAgentControls.boundary",
+            "SFT.Computation.MultiAgentControls.falsePremisePassed",
+            "SFT.Computation.MultiAgentControls.boundaryPassed",
+            "SFT.Computation.MultiAgentControls.controlRecords",
+            "SFT.Computation.MultiAgentControls.resultData",
+            "SFT.Computation.MultiAgentControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.MultiAgentControls.falsePremisePassed",
+            "SFT.Computation.MultiAgentControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/MultiAgentEvidence.lean",
+          "sha256": "d3659441eeaad1d19281c9c53fe3f4d1bb92cb77e55a7421cfd959e4886db6d7",
+          "declarations": [
+            "SFT.Computation.MultiAgentEvidence.candidateRecord",
+            "SFT.Computation.MultiAgentEvidence.completenessRecord",
+            "SFT.Computation.MultiAgentEvidence.registrationData",
+            "SFT.Computation.MultiAgentEvidence.registration",
+            "SFT.Computation.MultiAgentEvidence.generatedCandidateData",
+            "SFT.Computation.MultiAgentEvidence.censusData",
+            "SFT.Computation.MultiAgentEvidence.census",
+            "SFT.Computation.MultiAgentEvidence.decisionData",
+            "SFT.Computation.MultiAgentEvidence.decision",
+            "SFT.Computation.MultiAgentEvidence.decideCandidate",
+            "SFT.Computation.MultiAgentEvidence.closureData",
+            "SFT.Computation.MultiAgentEvidence.closure",
+            "SFT.Computation.MultiAgentEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.MultiAgentEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.MultiAgentEvidence.registrationHasNoAxioms",
+            "SFT.Computation.MultiAgentEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.MultiAgentEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.MultiAgentEvidence.why",
+            "SFT.Computation.MultiAgentEvidence.derivation",
+            "SFT.Computation.MultiAgentEvidence.check",
+            "SFT.Computation.MultiAgentEvidence.limitations",
+            "SFT.Computation.MultiAgentEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.MultiAgentEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.MultiAgentEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.MultiAgentEvidence.registrationHasNoAxioms",
+            "SFT.Computation.MultiAgentEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.MultiAgentEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_317_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "6216101f6e69900b38b728c120c41360f200ccabdedc57f4728d8814c7663789",
+        "matching_theorems": 35
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_317_MULTIAGENT_COMPLETION.json",
+          "sha256": "d2ae4cb499175b5c0896ae18acda3437f8d56688da768e7a606e1c7bb9dd2d01",
+          "result": {
+            "claim_id": "SFT-COMP-LEARN-MULTIAGENT-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/learning_intelligence/multiagent/law.py": "cfc90fa1be2dc3aa9054faf2597c8284804b098ed4c966ac13b9cd02148954ff",
+              "claims/SFT-COMP-LEARN-MULTIAGENT-001/WHY_DERIVATION_CHECK.md": "5a4168540baff7a2f90e279a8a892bc6da97cab8ef26ba830405b8368b2e5b52",
+              "claims/SFT-COMP-LEARN-MULTIAGENT-001/registration.json": "4d5b68c8f011bba82b3f932961466e42363ec333145bb95469970a3439da25ee",
+              "claims/SFT-COMP-LEARN-MULTIAGENT-001/execution.py": "4ec9973a5547eb6903a5c1e768466816bee2b64a59fb3501bf84c5399dffcb8f",
+              "claims/SFT-COMP-LEARN-MULTIAGENT-001/independent_validator.py": "f4e7819229c0914e6831aa3b99e5ca331aa94ae309d909cee98360b8b6e03092",
+              "claims/SFT-COMP-LEARN-MULTIAGENT-001/certificate.json": "2467c7f53a56d53d976c5c997b1e486104735267db9cd32af0ad589549b2eae5"
+            },
+            "components": {
+              "joint support": "rowMeaning proves source/target states,outcome and every supplied action are generated; recordedActionsSupported retains agent identities and exact action pairs. No simultaneous-all-agent condition added.",
+              "observations and communication": "observationMeaning gives exact agent/state filtering of source observations; communicationMeaning reconstructs the complete generated communication execution.",
+              "joint trajectories and cycles": "JointTrace retains exact admitted joint rows; replayMeaning proves executable replay equivalent to the typed path and final state. cycleMeaning and cycleLedgerMeaning prove returning traces and exact membership in the complete supplied cycle support.",
+              "composition and extension": "jointComposition preserves shared state interfaces. rowExtension and traceExtension preserve earlier generated transitions and traces under enlarged source supports. Game-theoretic correspondence remains downstream and requires exact preference relations.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-LEARN-REINFORCEMENT-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-LEARN-REINFORCEMENT-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 2208,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_317_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_317_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_317_PROGRAM_REPORT.json",
+          "sha256": "bf5f1bbe5d71cfda93b721d819f442957643afc21f47366e4b2449d2f2e5fc9b",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:f62816b2440c54f007826324e7acdc51362bb01ebec449195d02bc2171ed0fb0",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original MultiAgent registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    },
+    {
+      "section": 260,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/Adaptation.lean",
+          "sha256": "1a95552f183f28521f270f16767756ca69192686ece250ef8c25e114f77ed935",
+          "declarations": [
+            "SFT.Computation.Adaptation.Model",
+            "SFT.Computation.Adaptation.Request",
+            "SFT.Computation.Adaptation.Receipt",
+            "SFT.Computation.Adaptation.identityHeld",
+            "SFT.Computation.Adaptation.adapt",
+            "SFT.Computation.Adaptation.identityMeaning",
+            "SFT.Computation.Adaptation.acceptedReceipt",
+            "SFT.Computation.Adaptation.identityRejected",
+            "SFT.Computation.Adaptation.executionFailure",
+            "SFT.Computation.Adaptation.receiptTrace",
+            "SFT.Computation.Adaptation.improves",
+            "SFT.Computation.Adaptation.improvementMeaning",
+            "SFT.Computation.Adaptation.admittedReceipt",
+            "SFT.Computation.Adaptation.updateComposition",
+            "SFT.Computation.Adaptation.Extension",
+            "SFT.Computation.Adaptation.updateExtension"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.Adaptation.identityMeaning",
+            "SFT.Computation.Adaptation.acceptedReceipt",
+            "SFT.Computation.Adaptation.identityRejected",
+            "SFT.Computation.Adaptation.executionFailure",
+            "SFT.Computation.Adaptation.receiptTrace",
+            "SFT.Computation.Adaptation.improvementMeaning",
+            "SFT.Computation.Adaptation.admittedReceipt",
+            "SFT.Computation.Adaptation.updateComposition",
+            "SFT.Computation.Adaptation.updateExtension"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/AdaptationGrammar.lean",
+          "sha256": "15465f5ce0026be9d02f39071b73fc20810b2b2f08da69f37c1f12d2a9ba4e4f",
+          "declarations": [
+            "SFT.Computation.AdaptationGrammar.Support",
+            "SFT.Computation.AdaptationGrammar.supportName",
+            "SFT.Computation.AdaptationGrammar.Representation",
+            "SFT.Computation.AdaptationGrammar.representationName",
+            "SFT.Computation.AdaptationGrammar.Inference",
+            "SFT.Computation.AdaptationGrammar.inferenceName",
+            "SFT.Computation.AdaptationGrammar.Evaluation",
+            "SFT.Computation.AdaptationGrammar.evaluationName",
+            "SFT.Computation.AdaptationGrammar.Uncertainty",
+            "SFT.Computation.AdaptationGrammar.uncertaintyName",
+            "SFT.Computation.AdaptationGrammar.Resources",
+            "SFT.Computation.AdaptationGrammar.resourcesName",
+            "SFT.Computation.AdaptationGrammar.Generality",
+            "SFT.Computation.AdaptationGrammar.generalityName",
+            "SFT.Computation.AdaptationGrammar.Addition",
+            "SFT.Computation.AdaptationGrammar.additionName",
+            "SFT.Computation.AdaptationGrammar.Candidate",
+            "SFT.Computation.AdaptationGrammar.sourceFields",
+            "SFT.Computation.AdaptationGrammar.candidateId",
+            "SFT.Computation.AdaptationGrammar.exactForm",
+            "SFT.Computation.AdaptationGrammar.survivorId",
+            "SFT.Computation.AdaptationGrammar.survives",
+            "SFT.Computation.AdaptationGrammar.criteriaDecision",
+            "SFT.Computation.AdaptationGrammar.decisionReason",
+            "SFT.Computation.AdaptationGrammar.generationRule",
+            "SFT.Computation.AdaptationGrammar.grammarBoundary",
+            "SFT.Computation.AdaptationGrammar.candidates",
+            "SFT.Computation.AdaptationGrammar.survivor",
+            "SFT.Computation.AdaptationGrammar.generatedCardinality",
+            "SFT.Computation.AdaptationGrammar.candidatesComplete",
+            "SFT.Computation.AdaptationGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.AdaptationGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.AdaptationGrammar.uniqueSurvivor",
+            "SFT.Computation.AdaptationGrammar.survivorAccepted",
+            "SFT.Computation.AdaptationGrammar.ExactCriteria",
+            "SFT.Computation.AdaptationGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.AdaptationGrammar.support_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.representation_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.inference_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.evaluation_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.uncertainty_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.resources_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.generality_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AdaptationGrammar.generatedCardinality",
+            "SFT.Computation.AdaptationGrammar.candidatesComplete",
+            "SFT.Computation.AdaptationGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.AdaptationGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.AdaptationGrammar.uniqueSurvivor",
+            "SFT.Computation.AdaptationGrammar.survivorAccepted",
+            "SFT.Computation.AdaptationGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.AdaptationGrammar.support_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.representation_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.inference_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.evaluation_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.uncertainty_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.resources_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.generality_rejected_rejected",
+            "SFT.Computation.AdaptationGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/AdaptationWitnesses.lean",
+          "sha256": "3a9a02c2fe6f1374af4332282019993f241e17697f170ae9c3bdf9fdb03cec7e",
+          "declarations": [
+            "SFT.Computation.AdaptationWitnesses.Witness",
+            "SFT.Computation.AdaptationWitnesses.checks",
+            "SFT.Computation.AdaptationWitnesses.witnesses",
+            "SFT.Computation.AdaptationWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AdaptationWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/AdaptationControls.lean",
+          "sha256": "db7c071dcfacbadf6a78c7f99af896f192d34d9daee2230ac1b11e773cc68826",
+          "declarations": [
+            "SFT.Computation.AdaptationControls.laws",
+            "SFT.Computation.AdaptationControls.exclusions",
+            "SFT.Computation.AdaptationControls.closureValue",
+            "SFT.Computation.AdaptationControls.falseCandidate",
+            "SFT.Computation.AdaptationControls.survivorIds",
+            "SFT.Computation.AdaptationControls.distinctIdentifiers",
+            "SFT.Computation.AdaptationControls.falsePremise",
+            "SFT.Computation.AdaptationControls.tamperedSource",
+            "SFT.Computation.AdaptationControls.tamperedArtifact",
+            "SFT.Computation.AdaptationControls.boundary",
+            "SFT.Computation.AdaptationControls.falsePremisePassed",
+            "SFT.Computation.AdaptationControls.boundaryPassed",
+            "SFT.Computation.AdaptationControls.controlRecords",
+            "SFT.Computation.AdaptationControls.resultData",
+            "SFT.Computation.AdaptationControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AdaptationControls.falsePremisePassed",
+            "SFT.Computation.AdaptationControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/AdaptationEvidence.lean",
+          "sha256": "b157713fe2451972a33b697433b271bac6dc8bd5642176903c5c7258ad8673a5",
+          "declarations": [
+            "SFT.Computation.AdaptationEvidence.candidateRecord",
+            "SFT.Computation.AdaptationEvidence.completenessRecord",
+            "SFT.Computation.AdaptationEvidence.registrationData",
+            "SFT.Computation.AdaptationEvidence.registration",
+            "SFT.Computation.AdaptationEvidence.generatedCandidateData",
+            "SFT.Computation.AdaptationEvidence.censusData",
+            "SFT.Computation.AdaptationEvidence.census",
+            "SFT.Computation.AdaptationEvidence.decisionData",
+            "SFT.Computation.AdaptationEvidence.decision",
+            "SFT.Computation.AdaptationEvidence.decideCandidate",
+            "SFT.Computation.AdaptationEvidence.closureData",
+            "SFT.Computation.AdaptationEvidence.closure",
+            "SFT.Computation.AdaptationEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.AdaptationEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.AdaptationEvidence.registrationHasNoAxioms",
+            "SFT.Computation.AdaptationEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.AdaptationEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.AdaptationEvidence.why",
+            "SFT.Computation.AdaptationEvidence.derivation",
+            "SFT.Computation.AdaptationEvidence.check",
+            "SFT.Computation.AdaptationEvidence.limitations",
+            "SFT.Computation.AdaptationEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AdaptationEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.AdaptationEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.AdaptationEvidence.registrationHasNoAxioms",
+            "SFT.Computation.AdaptationEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.AdaptationEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read Inference template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_318_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "9d4d607916d2d1627cdcc2a0331d591b1d450257c53606afa1e2ba531e346aea",
+        "matching_theorems": 32
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_318_ADAPTATION_COMPLETION.json",
+          "sha256": "ba453ed03c1010781d26ccd9c0c27d961836a31549ac7a3477ee72b694115ef4",
+          "result": {
+            "claim_id": "SFT-COMP-LEARN-ADAPTATION-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/learning_intelligence/adaptation/law.py": "23b62a5bc175ad5809a4ba7dd48f78ab22c6b12468c316107fd97d3d45b66413",
+              "claims/SFT-COMP-LEARN-ADAPTATION-001/WHY_DERIVATION_CHECK.md": "020a22429835956ce58596f5e6a2f15413c16f5c37cc7a62dff638790b3d3505",
+              "claims/SFT-COMP-LEARN-ADAPTATION-001/registration.json": "223048b785207c715745251efc6a13f6f8434a10a860f6ab99f6c3cd59470691",
+              "claims/SFT-COMP-LEARN-ADAPTATION-001/execution.py": "b5c461ba462f4fa32d4c5a6257ee0dd9f2dfd169c89341bc7b7ad0f35ab219fa",
+              "claims/SFT-COMP-LEARN-ADAPTATION-001/independent_validator.py": "345e8b3a892498a8ce22d1c5137456a0e871e791d240f392fed16d8c18611209",
+              "claims/SFT-COMP-LEARN-ADAPTATION-001/certificate.json": "91106997ee21e3af64af50d204f15140fb45d2cab40e787ae912af997f452d5b"
+            },
+            "components": {
+              "update carrier and identity": "Model retains initial process,admissible update system,constitutional engine identity,claim law and exact performance relation. identityMeaning proves exact identity preservation; identityRejected stops changed requests.",
+              "history and trace": "acceptedReceipt retains the full observation history,actual update trace and original constitutional/law identities. receiptTrace reconstructs every update as an exact generated execution.",
+              "performance and failure": "improvementMeaning retains exact membership in the supplied performance relation; no score or success assertion added. executionFailure propagates original update errors.",
+              "composition and extension": "updateComposition preserves serial update traces and identity. updateExtension preserves successful receipts under admitted source extension with unchanged initial/constitutional/law identities.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-LEARN-MULTIAGENT-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-LEARN-MULTIAGENT-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 640,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_318_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_318_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_318_PROGRAM_REPORT.json",
+          "sha256": "89d01f5384dccbd2ab776e3b1c628ac86d4db42a560ffc5529c6d6087e73c41b",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:d86cf331ef2b3a2f54cc9d847ad323ae0a0637c68ba19ea2401be1abc075ea95",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original Adaptation registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    }
+  ],
+  "original_source_files": [
+    {
+      "path": "claims/SFT-COMP-LEARN-REINFORCEMENT-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "34a8e2191f04dc1ba49cb439a83b72c410344e0776e1ff39e6af6d944ffb236a"
+    },
+    {
+      "path": "claims/SFT-COMP-LEARN-MULTIAGENT-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "5a4168540baff7a2f90e279a8a892bc6da97cab8ef26ba830405b8368b2e5b52"
+    },
+    {
+      "path": "claims/SFT-COMP-LEARN-ADAPTATION-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "020a22429835956ce58596f5e6a2f15413c16f5c37cc7a62dff638790b3d3505"
+    }
+  ],
+  "source_correspondence": "Full Reinforcement/MultiAgent/Adaptation proof bodies read. Complete companion comparison against Inference has no code differences and every changed literal read. Complete original three WHY diffs against the fully inspected Inference document read. Retained316\u2013318 completion/program reports reused. Generated case suites not rerun or newly read in full.",
+  "new_proofs": 0,
+  "new_builds": 0,
+  "citations_added": [
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ReinforcementGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ReinforcementWitnesses.lean#L16",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/MultiAgentGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/MultiAgentWitnesses.lean#L16",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AdaptationGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AdaptationWitnesses.lean#L16"
+  ],
+  "status": "Sections258\u2013260 reviewed; whole-paper review incomplete"
+}

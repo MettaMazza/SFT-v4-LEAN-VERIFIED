@@ -1,0 +1,58 @@
+{
+  "updated_at": "2026-11-19T01:51:15.104898+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    255,
+    256,
+    257
+  ],
+  "challenges": [
+    {
+      "section": 255,
+      "challenge": "Does optimization discard ties or introduce an objective-order assumption into the survivor theorem?",
+      "evidence": "exactOptima uses the exact incoming-row exclusion without an extra order premise; eliminationEvidence separately requires preferenceValid to construct a distinct feasible eliminator. retainTies preserves both undominated names. selectionExtension tests both original and appended objective rows.",
+      "disposition": "Paper gives those exact conditions and the full trace/composition equations."
+    },
+    {
+      "section": 256,
+      "challenge": "Does computational induction substitute finite agreement for a successor proof?",
+      "evidence": "nextAlternatives proves both directions by splitting appended-list membership. generatedContinuation applies the actual base and successor certificate by Nat induction. grammarExtension holds evidence fixed.",
+      "disposition": "The complete appended-evidence and structural induction arguments are explicit and match proof bodies."
+    },
+    {
+      "section": 257,
+      "challenge": "Does plan selection omit actual transition execution, failed plans or the composition interface?",
+      "evidence": "selectionMeaning requires a supported plan, successful actual run and goal membership; selectedExecution reconstructs source admission and Execution. ledgerComplete retains errors, while planComposition requires matching Path endpoints, supported concatenation and an actual goal. selectedExtension requires admitted enlarged transitions.",
+      "disposition": "Paper preserves the complete support, execution, resource and interface arguments."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/LearningOptimizationGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/LearningOptimizationWitnesses.lean#L16",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ComputationalInductionGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ComputationalInductionWitnesses.lean#L16",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SearchPlanningGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SearchPlanningWitnesses.lean#L16",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "dc0281888af463fb2b09ecf1c2c2a55474cc34216308ba4b7399e768dfbb54b8",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

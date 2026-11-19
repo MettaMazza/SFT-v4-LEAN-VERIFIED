@@ -1,0 +1,50 @@
+{
+  "updated_at": "2026-11-19T00:04:39.894567+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    188,
+    189,
+    190
+  ],
+  "challenges": [
+    {
+      "section": 188,
+      "challenge": "Does successful raw evaluation imply positive output, or does contextual rewriting silently assume termination?",
+      "evidence": "SymbolicEvaluation.sourceAdmission reconstructs arbitrary signed bound-name values; positiveEvaluation separately uses PositiveEnvironment. Normalized includes the complete Trace and terminal Normal. normalIdentityOnly excludes further nonempty traces from that terminal; frozenRuleBoundary transports traces but not absence of newly admitted rewrites.",
+      "disposition": "Paper explicitly separates raw values from scientific positive bindings and states terminal normality and its rule-extension obligation; every finite context and trace is covered by induction."
+    },
+    {
+      "section": 189,
+      "challenge": "Has the original signed integer domain or ratio orientation been replaced?",
+      "evidence": "Pinned exact_approximation rejects optimum<1 or candidate<optimum and returns Fraction(optimum,candidate). ApproximateBound.admission proves both directions over Int; reconstruct gives O*d=n*C and bound positivity, while sourceRows and extension retain both actual objective rows.",
+      "disposition": "Manuscript preserves the exact source domain, rejections, ratio and row identity."
+    },
+    {
+      "section": 190,
+      "challenge": "Can a certificate use an unrelated terminal error or omit intermediate observations, and can later composition recover a lost distinction?",
+      "evidence": "Certificate.outputRow binds the terminal value to its same BoundRecord; appendTerminal and completeRecords concatenate every prior record. actualExecution, allStateIdentities and fullResourceTrace give the original run and actions+1 observations. lossPersists derives preservation of equal approximate images; successorChangedCandidate explicitly preserves the reference.",
+      "disposition": "Paper includes the binding equations, full counts, complete/disjoint distinction partition and exact changed-candidate successor premises."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SymbolicGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SymbolicWitnesses.lean#L22",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ApproximateGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ApproximateWitnesses.lean#L22",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "6f4fc7c44aa2f9613cdb541c56b5b8e7cdcbdee98a341364207e9634ce3bc1f7",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

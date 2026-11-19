@@ -1,0 +1,1166 @@
+{
+  "updated_at": "2026-11-19T00:55:43.087096+00:00",
+  "sections_read": [
+    246,
+    247,
+    248,
+    249
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "records": [
+    {
+      "section": 246,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/Multiparty.lean",
+          "sha256": "b71c14118b698d7eac40e171b2b8b2e7887b9d512004fbcfac9ba58544da37fe",
+          "declarations": [
+            "SFT.Computation.Multiparty.Input",
+            "SFT.Computation.Multiparty.Row",
+            "SFT.Computation.Multiparty.Model",
+            "SFT.Computation.Multiparty.supported",
+            "SFT.Computation.Multiparty.rows",
+            "SFT.Computation.Multiparty.rowMeaning",
+            "SFT.Computation.Multiparty.corruptedInputs",
+            "SFT.Computation.Multiparty.coalitionViews",
+            "SFT.Computation.Multiparty.corruptionInputMeaning",
+            "SFT.Computation.Multiparty.coalitionViewMeaning",
+            "SFT.Computation.Multiparty.pairs",
+            "SFT.Computation.Multiparty.pairMeaning",
+            "SFT.Computation.Multiparty.samePublic",
+            "SFT.Computation.Multiparty.leaks",
+            "SFT.Computation.Multiparty.leakageLedger",
+            "SFT.Computation.Multiparty.leakageMeaning",
+            "SFT.Computation.Multiparty.Execution",
+            "SFT.Computation.Multiparty.executionTrace",
+            "SFT.Computation.Multiparty.excludedCorruption",
+            "SFT.Computation.Multiparty.privateFor",
+            "SFT.Computation.Multiparty.exactPrivacy",
+            "SFT.Computation.Multiparty.noLeakage",
+            "SFT.Computation.Multiparty.secure",
+            "SFT.Computation.Multiparty.exactSecurity",
+            "SFT.Computation.Multiparty.registeredPrivacy",
+            "SFT.Computation.Multiparty.Extension",
+            "SFT.Computation.Multiparty.rowExtension",
+            "SFT.Computation.Multiparty.extendExecution",
+            "SFT.Computation.Multiparty.leakageExtension"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.Multiparty.rowMeaning",
+            "SFT.Computation.Multiparty.corruptionInputMeaning",
+            "SFT.Computation.Multiparty.coalitionViewMeaning",
+            "SFT.Computation.Multiparty.pairMeaning",
+            "SFT.Computation.Multiparty.leakageMeaning",
+            "SFT.Computation.Multiparty.executionTrace",
+            "SFT.Computation.Multiparty.excludedCorruption",
+            "SFT.Computation.Multiparty.exactPrivacy",
+            "SFT.Computation.Multiparty.noLeakage",
+            "SFT.Computation.Multiparty.exactSecurity",
+            "SFT.Computation.Multiparty.registeredPrivacy",
+            "SFT.Computation.Multiparty.rowExtension",
+            "SFT.Computation.Multiparty.leakageExtension"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/MultipartyGrammar.lean",
+          "sha256": "6c7178c8efa66e69b452ea488847b389fd3596a9ce0aa4240077bd7e80e65e3e",
+          "declarations": [
+            "SFT.Computation.MultipartyGrammar.Support",
+            "SFT.Computation.MultipartyGrammar.supportName",
+            "SFT.Computation.MultipartyGrammar.Adversary",
+            "SFT.Computation.MultipartyGrammar.adversaryName",
+            "SFT.Computation.MultipartyGrammar.Interaction",
+            "SFT.Computation.MultipartyGrammar.interactionName",
+            "SFT.Computation.MultipartyGrammar.Observation",
+            "SFT.Computation.MultipartyGrammar.observationName",
+            "SFT.Computation.MultipartyGrammar.Security",
+            "SFT.Computation.MultipartyGrammar.securityName",
+            "SFT.Computation.MultipartyGrammar.Resources",
+            "SFT.Computation.MultipartyGrammar.resourcesName",
+            "SFT.Computation.MultipartyGrammar.Generality",
+            "SFT.Computation.MultipartyGrammar.generalityName",
+            "SFT.Computation.MultipartyGrammar.Addition",
+            "SFT.Computation.MultipartyGrammar.additionName",
+            "SFT.Computation.MultipartyGrammar.Candidate",
+            "SFT.Computation.MultipartyGrammar.sourceFields",
+            "SFT.Computation.MultipartyGrammar.candidateId",
+            "SFT.Computation.MultipartyGrammar.exactForm",
+            "SFT.Computation.MultipartyGrammar.survivorId",
+            "SFT.Computation.MultipartyGrammar.survives",
+            "SFT.Computation.MultipartyGrammar.criteriaDecision",
+            "SFT.Computation.MultipartyGrammar.decisionReason",
+            "SFT.Computation.MultipartyGrammar.generationRule",
+            "SFT.Computation.MultipartyGrammar.grammarBoundary",
+            "SFT.Computation.MultipartyGrammar.candidates",
+            "SFT.Computation.MultipartyGrammar.survivor",
+            "SFT.Computation.MultipartyGrammar.generatedCardinality",
+            "SFT.Computation.MultipartyGrammar.candidatesComplete",
+            "SFT.Computation.MultipartyGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.MultipartyGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.MultipartyGrammar.uniqueSurvivor",
+            "SFT.Computation.MultipartyGrammar.survivorAccepted",
+            "SFT.Computation.MultipartyGrammar.ExactCriteria",
+            "SFT.Computation.MultipartyGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.MultipartyGrammar.support_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.adversary_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.interaction_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.observation_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.security_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.resources_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.generality_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.MultipartyGrammar.generatedCardinality",
+            "SFT.Computation.MultipartyGrammar.candidatesComplete",
+            "SFT.Computation.MultipartyGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.MultipartyGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.MultipartyGrammar.uniqueSurvivor",
+            "SFT.Computation.MultipartyGrammar.survivorAccepted",
+            "SFT.Computation.MultipartyGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.MultipartyGrammar.support_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.adversary_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.interaction_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.observation_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.security_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.resources_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.generality_rejected_rejected",
+            "SFT.Computation.MultipartyGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/MultipartyWitnesses.lean",
+          "sha256": "8c140610a9d21bbdf806d18ac97ce37c2e63082aecc9f6daf59731ac8458380b",
+          "declarations": [
+            "SFT.Computation.MultipartyWitnesses.Witness",
+            "SFT.Computation.MultipartyWitnesses.checks",
+            "SFT.Computation.MultipartyWitnesses.witnesses",
+            "SFT.Computation.MultipartyWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.MultipartyWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/MultipartyControls.lean",
+          "sha256": "26ebcd8aa1ab2e0f61c43b80c9caccdbbed4247bf87ccd2fb2949c6dcfc0c044",
+          "declarations": [
+            "SFT.Computation.MultipartyControls.laws",
+            "SFT.Computation.MultipartyControls.exclusions",
+            "SFT.Computation.MultipartyControls.closureValue",
+            "SFT.Computation.MultipartyControls.falseCandidate",
+            "SFT.Computation.MultipartyControls.survivorIds",
+            "SFT.Computation.MultipartyControls.distinctIdentifiers",
+            "SFT.Computation.MultipartyControls.falsePremise",
+            "SFT.Computation.MultipartyControls.tamperedSource",
+            "SFT.Computation.MultipartyControls.tamperedArtifact",
+            "SFT.Computation.MultipartyControls.boundary",
+            "SFT.Computation.MultipartyControls.falsePremisePassed",
+            "SFT.Computation.MultipartyControls.boundaryPassed",
+            "SFT.Computation.MultipartyControls.controlRecords",
+            "SFT.Computation.MultipartyControls.resultData",
+            "SFT.Computation.MultipartyControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.MultipartyControls.falsePremisePassed",
+            "SFT.Computation.MultipartyControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/MultipartyEvidence.lean",
+          "sha256": "756016fffa978cf383fdbfc21d6f2fc87b6c0c761434cd28ef523fdb78933c8f",
+          "declarations": [
+            "SFT.Computation.MultipartyEvidence.candidateRecord",
+            "SFT.Computation.MultipartyEvidence.completenessRecord",
+            "SFT.Computation.MultipartyEvidence.registrationData",
+            "SFT.Computation.MultipartyEvidence.registration",
+            "SFT.Computation.MultipartyEvidence.generatedCandidateData",
+            "SFT.Computation.MultipartyEvidence.censusData",
+            "SFT.Computation.MultipartyEvidence.census",
+            "SFT.Computation.MultipartyEvidence.decisionData",
+            "SFT.Computation.MultipartyEvidence.decision",
+            "SFT.Computation.MultipartyEvidence.decideCandidate",
+            "SFT.Computation.MultipartyEvidence.closureData",
+            "SFT.Computation.MultipartyEvidence.closure",
+            "SFT.Computation.MultipartyEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.MultipartyEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.MultipartyEvidence.registrationHasNoAxioms",
+            "SFT.Computation.MultipartyEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.MultipartyEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.MultipartyEvidence.why",
+            "SFT.Computation.MultipartyEvidence.derivation",
+            "SFT.Computation.MultipartyEvidence.check",
+            "SFT.Computation.MultipartyEvidence.limitations",
+            "SFT.Computation.MultipartyEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.MultipartyEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.MultipartyEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.MultipartyEvidence.registrationHasNoAxioms",
+            "SFT.Computation.MultipartyEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.MultipartyEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_304_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "1e4fc63659f962c0ef0ee019d09312660615d16edad0ef16a62df00557faeb02",
+        "matching_theorems": 36
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_304_MULTIPARTY_COMPLETION.json",
+          "sha256": "e81356c2d33d1f30c01d86edb0e8d048df79edede934ae74068b3b26cb31628b",
+          "result": {
+            "claim_id": "SFT-COMP-SEC-MULTIPARTY-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/cryptography_security/multiparty/law.py": "2371c1d8737ee7bf03edccee41dc673215d3ff804c5595158d6f6622424037f2",
+              "claims/SFT-COMP-SEC-MULTIPARTY-001/WHY_DERIVATION_CHECK.md": "1cbc8691d9b0e41d1cf1909a6fcf7ee709d6d01fc123f7614196bd8fbebb377c",
+              "claims/SFT-COMP-SEC-MULTIPARTY-001/registration.json": "a774fd96e14990a0d2550aad62b53563f7c77c01c8950df86b2c659571008e2a",
+              "claims/SFT-COMP-SEC-MULTIPARTY-001/execution.py": "3333edc288e62de1df94b5c7e4a283534efa26693ebc6493219ab3bee8785515",
+              "claims/SFT-COMP-SEC-MULTIPARTY-001/independent_validator.py": "7a8285ce886b2b7228cbc776fecc2cbc72d99ee8f9e8b3d3e69a57ea8d2810fd",
+              "claims/SFT-COMP-SEC-MULTIPARTY-001/certificate.json": "c81b00e11cd9c74110ec3c07d44029a0d6def4c4c1cde2c6a0848cbc17e1dce7"
+            },
+            "components": {
+              "source carriers": "Party identities,private inputs,joint output relation,local views,communication process and explicit registered corruption sets. rowMeaning,corruptionInputMeaning and coalitionViewMeaning preserve exact source projections.",
+              "complete leakage ledger": "pairMeaning gives complete ordered joint rows. leakageMeaning identifies exactly pairs agreeing in joint output and corrupted inputs but distinguished by coalition views.",
+              "privacy and security derivation": "exactPrivacy proves computed per-coalition check equivalent to view agreement for all pairs with matching public output/corrupted input. noLeakage excludes every leakage row under that check. exactSecurity checks every registered corruption; registeredPrivacy applies it to an admitted execution.",
+              "communication and boundary": "Execution retains actual communication steps and source output row with explicit registered coalition. executionTrace reconstructs all retained transitions; excludedCorruption rejects undeclared adversaries.",
+              "source extension": "rowExtension,extendExecution and leakageExtension preserve all earlier source rows,communication traces,corruption boundaries and leakage witnesses.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-SEC-ZERO-KNOWLEDGE-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-SEC-ZERO-KNOWLEDGE-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 768,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_304_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_304_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_304_PROGRAM_REPORT.json",
+          "sha256": "f947bd41b333f58195fd757120e89ae6ebb105109111d67b6fb0a78ad40585e0",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:f99a5d1d82db730ede50111e4923fbdf63981e58c2187b81d9e5e7a3a0398dc4",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original Multiparty registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    },
+    {
+      "section": 247,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/Adversarial.lean",
+          "sha256": "0807ee095500cd57fc8b58015c165548a3962d14821cc0c4b534dad48ebf7357",
+          "declarations": [
+            "SFT.Computation.Adversarial.Schedule",
+            "SFT.Computation.Adversarial.Model",
+            "SFT.Computation.Adversarial.admitted",
+            "SFT.Computation.Adversarial.rows",
+            "SFT.Computation.Adversarial.favorable",
+            "SFT.Computation.Adversarial.unfavorable",
+            "SFT.Computation.Adversarial.rowMeaning",
+            "SFT.Computation.Adversarial.favorableMeaning",
+            "SFT.Computation.Adversarial.unfavorableMeaning",
+            "SFT.Computation.Adversarial.outcomeExhaustion",
+            "SFT.Computation.Adversarial.outcomeDisjoint",
+            "SFT.Computation.Adversarial.secure",
+            "SFT.Computation.Adversarial.exactSecurity",
+            "SFT.Computation.Adversarial.stops",
+            "SFT.Computation.Adversarial.Execution",
+            "SFT.Computation.Adversarial.StoppedExecution",
+            "SFT.Computation.Adversarial.executionMeaning",
+            "SFT.Computation.Adversarial.actualSecurity",
+            "SFT.Computation.Adversarial.undefinedAdversary",
+            "SFT.Computation.Adversarial.overBudget",
+            "SFT.Computation.Adversarial.Extension",
+            "SFT.Computation.Adversarial.rowExtension",
+            "SFT.Computation.Adversarial.favorableExtension",
+            "SFT.Computation.Adversarial.unfavorableExtension",
+            "SFT.Computation.Adversarial.extendExecution",
+            "SFT.Computation.Adversarial.extendStopped",
+            "SFT.Computation.Adversarial.retainedSchedule",
+            "SFT.Computation.Adversarial.noUnfavorable",
+            "SFT.Computation.Adversarial.counterexampleRejectsSecurity"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.Adversarial.rowMeaning",
+            "SFT.Computation.Adversarial.favorableMeaning",
+            "SFT.Computation.Adversarial.unfavorableMeaning",
+            "SFT.Computation.Adversarial.outcomeExhaustion",
+            "SFT.Computation.Adversarial.outcomeDisjoint",
+            "SFT.Computation.Adversarial.exactSecurity",
+            "SFT.Computation.Adversarial.executionMeaning",
+            "SFT.Computation.Adversarial.actualSecurity",
+            "SFT.Computation.Adversarial.undefinedAdversary",
+            "SFT.Computation.Adversarial.overBudget",
+            "SFT.Computation.Adversarial.rowExtension",
+            "SFT.Computation.Adversarial.favorableExtension",
+            "SFT.Computation.Adversarial.unfavorableExtension",
+            "SFT.Computation.Adversarial.retainedSchedule",
+            "SFT.Computation.Adversarial.noUnfavorable",
+            "SFT.Computation.Adversarial.counterexampleRejectsSecurity"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/AdversarialGrammar.lean",
+          "sha256": "1eaad4c11531268a6a9fd3c61ed88d4030d4543dc63480dc7b6b053929a8c6bc",
+          "declarations": [
+            "SFT.Computation.AdversarialGrammar.Support",
+            "SFT.Computation.AdversarialGrammar.supportName",
+            "SFT.Computation.AdversarialGrammar.Adversary",
+            "SFT.Computation.AdversarialGrammar.adversaryName",
+            "SFT.Computation.AdversarialGrammar.Interaction",
+            "SFT.Computation.AdversarialGrammar.interactionName",
+            "SFT.Computation.AdversarialGrammar.Observation",
+            "SFT.Computation.AdversarialGrammar.observationName",
+            "SFT.Computation.AdversarialGrammar.Security",
+            "SFT.Computation.AdversarialGrammar.securityName",
+            "SFT.Computation.AdversarialGrammar.Resources",
+            "SFT.Computation.AdversarialGrammar.resourcesName",
+            "SFT.Computation.AdversarialGrammar.Generality",
+            "SFT.Computation.AdversarialGrammar.generalityName",
+            "SFT.Computation.AdversarialGrammar.Addition",
+            "SFT.Computation.AdversarialGrammar.additionName",
+            "SFT.Computation.AdversarialGrammar.Candidate",
+            "SFT.Computation.AdversarialGrammar.sourceFields",
+            "SFT.Computation.AdversarialGrammar.candidateId",
+            "SFT.Computation.AdversarialGrammar.exactForm",
+            "SFT.Computation.AdversarialGrammar.survivorId",
+            "SFT.Computation.AdversarialGrammar.survives",
+            "SFT.Computation.AdversarialGrammar.criteriaDecision",
+            "SFT.Computation.AdversarialGrammar.decisionReason",
+            "SFT.Computation.AdversarialGrammar.generationRule",
+            "SFT.Computation.AdversarialGrammar.grammarBoundary",
+            "SFT.Computation.AdversarialGrammar.candidates",
+            "SFT.Computation.AdversarialGrammar.survivor",
+            "SFT.Computation.AdversarialGrammar.generatedCardinality",
+            "SFT.Computation.AdversarialGrammar.candidatesComplete",
+            "SFT.Computation.AdversarialGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.AdversarialGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.AdversarialGrammar.uniqueSurvivor",
+            "SFT.Computation.AdversarialGrammar.survivorAccepted",
+            "SFT.Computation.AdversarialGrammar.ExactCriteria",
+            "SFT.Computation.AdversarialGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.AdversarialGrammar.support_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.adversary_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.interaction_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.observation_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.security_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.resources_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.generality_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AdversarialGrammar.generatedCardinality",
+            "SFT.Computation.AdversarialGrammar.candidatesComplete",
+            "SFT.Computation.AdversarialGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.AdversarialGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.AdversarialGrammar.uniqueSurvivor",
+            "SFT.Computation.AdversarialGrammar.survivorAccepted",
+            "SFT.Computation.AdversarialGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.AdversarialGrammar.support_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.adversary_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.interaction_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.observation_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.security_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.resources_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.generality_rejected_rejected",
+            "SFT.Computation.AdversarialGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/AdversarialWitnesses.lean",
+          "sha256": "97431266428593966b0c1372e65b716496cd40705c731fa1b8854391568a8b35",
+          "declarations": [
+            "SFT.Computation.AdversarialWitnesses.Witness",
+            "SFT.Computation.AdversarialWitnesses.checks",
+            "SFT.Computation.AdversarialWitnesses.witnesses",
+            "SFT.Computation.AdversarialWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AdversarialWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/AdversarialControls.lean",
+          "sha256": "2cdba684b87b14bc99a5740aca39b36ad23e77da2269892c527e22f7032aa5a2",
+          "declarations": [
+            "SFT.Computation.AdversarialControls.laws",
+            "SFT.Computation.AdversarialControls.exclusions",
+            "SFT.Computation.AdversarialControls.closureValue",
+            "SFT.Computation.AdversarialControls.falseCandidate",
+            "SFT.Computation.AdversarialControls.survivorIds",
+            "SFT.Computation.AdversarialControls.distinctIdentifiers",
+            "SFT.Computation.AdversarialControls.falsePremise",
+            "SFT.Computation.AdversarialControls.tamperedSource",
+            "SFT.Computation.AdversarialControls.tamperedArtifact",
+            "SFT.Computation.AdversarialControls.boundary",
+            "SFT.Computation.AdversarialControls.falsePremisePassed",
+            "SFT.Computation.AdversarialControls.boundaryPassed",
+            "SFT.Computation.AdversarialControls.controlRecords",
+            "SFT.Computation.AdversarialControls.resultData",
+            "SFT.Computation.AdversarialControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AdversarialControls.falsePremisePassed",
+            "SFT.Computation.AdversarialControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/AdversarialEvidence.lean",
+          "sha256": "c401217925ef58f3d8f65d7633051c433499d38286820aeeefda2ae3f4f75b40",
+          "declarations": [
+            "SFT.Computation.AdversarialEvidence.candidateRecord",
+            "SFT.Computation.AdversarialEvidence.completenessRecord",
+            "SFT.Computation.AdversarialEvidence.registrationData",
+            "SFT.Computation.AdversarialEvidence.registration",
+            "SFT.Computation.AdversarialEvidence.generatedCandidateData",
+            "SFT.Computation.AdversarialEvidence.censusData",
+            "SFT.Computation.AdversarialEvidence.census",
+            "SFT.Computation.AdversarialEvidence.decisionData",
+            "SFT.Computation.AdversarialEvidence.decision",
+            "SFT.Computation.AdversarialEvidence.decideCandidate",
+            "SFT.Computation.AdversarialEvidence.closureData",
+            "SFT.Computation.AdversarialEvidence.closure",
+            "SFT.Computation.AdversarialEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.AdversarialEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.AdversarialEvidence.registrationHasNoAxioms",
+            "SFT.Computation.AdversarialEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.AdversarialEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.AdversarialEvidence.why",
+            "SFT.Computation.AdversarialEvidence.derivation",
+            "SFT.Computation.AdversarialEvidence.check",
+            "SFT.Computation.AdversarialEvidence.limitations",
+            "SFT.Computation.AdversarialEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.AdversarialEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.AdversarialEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.AdversarialEvidence.registrationHasNoAxioms",
+            "SFT.Computation.AdversarialEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.AdversarialEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_305_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "e397e30f34f34ac0d6ad324a07934c70a0f229442dd48451169445db2189826a",
+        "matching_theorems": 39
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_305_ADVERSARIAL_COMPLETION.json",
+          "sha256": "b73ddadef63b352ba89c6b153f3419972b32a769e2360788665d5c0d3f874617",
+          "result": {
+            "claim_id": "SFT-COMP-SEC-ADVERSARIAL-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/cryptography_security/adversarial/law.py": "e0f9e14365706a9213c60f3c672cdf2e89ad3135b3d8f591c5007036607f8454",
+              "claims/SFT-COMP-SEC-ADVERSARIAL-001/WHY_DERIVATION_CHECK.md": "93d6a560b7c640b49d27f158847e2f1eeb2cc984473d7a2fd633e3dca6eb9bab",
+              "claims/SFT-COMP-SEC-ADVERSARIAL-001/registration.json": "c83988f9febcc8ea1dce8749d9ae854f30a7248eb9d230846785e14d57294cfa",
+              "claims/SFT-COMP-SEC-ADVERSARIAL-001/execution.py": "7566ef3ee7773d8e4634715f6d6a243d9e3e7ea9784d8d1b59d550b6878cc99e",
+              "claims/SFT-COMP-SEC-ADVERSARIAL-001/independent_validator.py": "96d09eed9d0f8f82e9f8e40a0dace5196f41186274f4b9e4af7201eca52e0857",
+              "claims/SFT-COMP-SEC-ADVERSARIAL-001/certificate.json": "ffd560eefe8fa383a65d1b4e0c566cf7d95c7737a858f30f3f5336d135b23677"
+            },
+            "components": {
+              "source carriers": "System process,registered strategies,resource bound,schedules,security states and stopping states. rowMeaning proves exact source strategy/schedule/resource admission.",
+              "complete outcome ledgers": "favorableMeaning and unfavorableMeaning identify every admitted secure/insecure final-state row; outcomeExhaustion and outcomeDisjoint establish complete exclusive classification.",
+              "security derivation": "exactSecurity proves computed whole-row security equivalent to secure outcomes for every admitted schedule. noUnfavorable excludes every adverse row; counterexampleRejectsSecurity refutes the computed security result from an actual adverse member.",
+              "actual execution and boundary": "Execution retains actual source transitions and terminal state; StoppedExecution retains the source stopping rule. executionMeaning reconstructs the trace and actualSecurity applies the checked result. undefinedAdversary and overBudget reject exact source exclusions.",
+              "source extension": "rowExtension,favorableExtension,unfavorableExtension,extendExecution and extendStopped preserve earlier source rows,outcomes and stopped traces under registered support/resource extension.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-SEC-MULTIPARTY-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-SEC-MULTIPARTY-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 2048,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_305_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_305_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_305_PROGRAM_REPORT.json",
+          "sha256": "9c792f0c551bb87e5c32f64ddd767ae8718508a581dac287aecbe3d7ead9fe84",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:be1520c84305b1e364a98fef71e3a03a2b35b42e3131c3722cfe77c1c24208b6",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original Adversarial registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    },
+    {
+      "section": 248,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/SecurityDefinition.lean",
+          "sha256": "e891c6c974dbcf1c7a10e0b231d87d909ec44628ec54c19f29e7c073a0acd2a1",
+          "declarations": [
+            "SFT.Computation.SecurityDefinition.Attempt",
+            "SFT.Computation.SecurityDefinition.Model",
+            "SFT.Computation.SecurityDefinition.admitted",
+            "SFT.Computation.SecurityDefinition.rows",
+            "SFT.Computation.SecurityDefinition.successes",
+            "SFT.Computation.SecurityDefinition.bounded",
+            "SFT.Computation.SecurityDefinition.boundedSuccesses",
+            "SFT.Computation.SecurityDefinition.rowMeaning",
+            "SFT.Computation.SecurityDefinition.successMeaning",
+            "SFT.Computation.SecurityDefinition.boundedMeaning",
+            "SFT.Computation.SecurityDefinition.boundedSuccessMeaning",
+            "SFT.Computation.SecurityDefinition.allFail",
+            "SFT.Computation.SecurityDefinition.boundedFail",
+            "SFT.Computation.SecurityDefinition.exactAllFail",
+            "SFT.Computation.SecurityDefinition.exactBoundedFail",
+            "SFT.Computation.SecurityDefinition.allImpliesBounded",
+            "SFT.Computation.SecurityDefinition.smallerBudget",
+            "SFT.Computation.SecurityDefinition.observationClass",
+            "SFT.Computation.SecurityDefinition.classMeaning",
+            "SFT.Computation.SecurityDefinition.closedClassNoRecovery",
+            "SFT.Computation.SecurityDefinition.Reduction",
+            "SFT.Computation.SecurityDefinition.reductionBoundedFailure",
+            "SFT.Computation.SecurityDefinition.fullObservationClosure",
+            "SFT.Computation.SecurityDefinition.exactObservationClosure",
+            "SFT.Computation.SecurityDefinition.observationNoRecovery",
+            "SFT.Computation.SecurityDefinition.Extension",
+            "SFT.Computation.SecurityDefinition.rowExtension",
+            "SFT.Computation.SecurityDefinition.successExtension",
+            "SFT.Computation.SecurityDefinition.boundedSuccessExtension",
+            "SFT.Computation.SecurityDefinition.identityReduction",
+            "SFT.Computation.SecurityDefinition.composeReduction",
+            "SFT.Computation.SecurityDefinition.composedTranslation"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.SecurityDefinition.rowMeaning",
+            "SFT.Computation.SecurityDefinition.successMeaning",
+            "SFT.Computation.SecurityDefinition.boundedMeaning",
+            "SFT.Computation.SecurityDefinition.boundedSuccessMeaning",
+            "SFT.Computation.SecurityDefinition.exactAllFail",
+            "SFT.Computation.SecurityDefinition.exactBoundedFail",
+            "SFT.Computation.SecurityDefinition.allImpliesBounded",
+            "SFT.Computation.SecurityDefinition.smallerBudget",
+            "SFT.Computation.SecurityDefinition.classMeaning",
+            "SFT.Computation.SecurityDefinition.closedClassNoRecovery",
+            "SFT.Computation.SecurityDefinition.reductionBoundedFailure",
+            "SFT.Computation.SecurityDefinition.exactObservationClosure",
+            "SFT.Computation.SecurityDefinition.observationNoRecovery",
+            "SFT.Computation.SecurityDefinition.rowExtension",
+            "SFT.Computation.SecurityDefinition.successExtension",
+            "SFT.Computation.SecurityDefinition.boundedSuccessExtension",
+            "SFT.Computation.SecurityDefinition.composedTranslation"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/SecurityDefinitionGrammar.lean",
+          "sha256": "12d51e3e6ed28f4eaa0d99e96e76cdf16f28400c0c70561ce75b9ac31ce8f4d6",
+          "declarations": [
+            "SFT.Computation.SecurityDefinitionGrammar.Support",
+            "SFT.Computation.SecurityDefinitionGrammar.supportName",
+            "SFT.Computation.SecurityDefinitionGrammar.Adversary",
+            "SFT.Computation.SecurityDefinitionGrammar.adversaryName",
+            "SFT.Computation.SecurityDefinitionGrammar.Interaction",
+            "SFT.Computation.SecurityDefinitionGrammar.interactionName",
+            "SFT.Computation.SecurityDefinitionGrammar.Observation",
+            "SFT.Computation.SecurityDefinitionGrammar.observationName",
+            "SFT.Computation.SecurityDefinitionGrammar.Security",
+            "SFT.Computation.SecurityDefinitionGrammar.securityName",
+            "SFT.Computation.SecurityDefinitionGrammar.Resources",
+            "SFT.Computation.SecurityDefinitionGrammar.resourcesName",
+            "SFT.Computation.SecurityDefinitionGrammar.Generality",
+            "SFT.Computation.SecurityDefinitionGrammar.generalityName",
+            "SFT.Computation.SecurityDefinitionGrammar.Addition",
+            "SFT.Computation.SecurityDefinitionGrammar.additionName",
+            "SFT.Computation.SecurityDefinitionGrammar.Candidate",
+            "SFT.Computation.SecurityDefinitionGrammar.sourceFields",
+            "SFT.Computation.SecurityDefinitionGrammar.candidateId",
+            "SFT.Computation.SecurityDefinitionGrammar.exactForm",
+            "SFT.Computation.SecurityDefinitionGrammar.survivorId",
+            "SFT.Computation.SecurityDefinitionGrammar.survives",
+            "SFT.Computation.SecurityDefinitionGrammar.criteriaDecision",
+            "SFT.Computation.SecurityDefinitionGrammar.decisionReason",
+            "SFT.Computation.SecurityDefinitionGrammar.generationRule",
+            "SFT.Computation.SecurityDefinitionGrammar.grammarBoundary",
+            "SFT.Computation.SecurityDefinitionGrammar.candidates",
+            "SFT.Computation.SecurityDefinitionGrammar.survivor",
+            "SFT.Computation.SecurityDefinitionGrammar.generatedCardinality",
+            "SFT.Computation.SecurityDefinitionGrammar.candidatesComplete",
+            "SFT.Computation.SecurityDefinitionGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.SecurityDefinitionGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.SecurityDefinitionGrammar.uniqueSurvivor",
+            "SFT.Computation.SecurityDefinitionGrammar.survivorAccepted",
+            "SFT.Computation.SecurityDefinitionGrammar.ExactCriteria",
+            "SFT.Computation.SecurityDefinitionGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.SecurityDefinitionGrammar.support_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.adversary_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.interaction_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.observation_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.security_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.resources_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.generality_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.SecurityDefinitionGrammar.generatedCardinality",
+            "SFT.Computation.SecurityDefinitionGrammar.candidatesComplete",
+            "SFT.Computation.SecurityDefinitionGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.SecurityDefinitionGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.SecurityDefinitionGrammar.uniqueSurvivor",
+            "SFT.Computation.SecurityDefinitionGrammar.survivorAccepted",
+            "SFT.Computation.SecurityDefinitionGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.SecurityDefinitionGrammar.support_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.adversary_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.interaction_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.observation_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.security_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.resources_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.generality_rejected_rejected",
+            "SFT.Computation.SecurityDefinitionGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/SecurityDefinitionWitnesses.lean",
+          "sha256": "8acb8df730b813aaac40269096082165dd7000645a13f76a54e245385dd838e8",
+          "declarations": [
+            "SFT.Computation.SecurityDefinitionWitnesses.Witness",
+            "SFT.Computation.SecurityDefinitionWitnesses.checks",
+            "SFT.Computation.SecurityDefinitionWitnesses.witnesses",
+            "SFT.Computation.SecurityDefinitionWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.SecurityDefinitionWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/SecurityDefinitionControls.lean",
+          "sha256": "65ce78fbcb952b27cb628ceefe5e6a702cb341fd7833afb52e05c28d46b14a67",
+          "declarations": [
+            "SFT.Computation.SecurityDefinitionControls.laws",
+            "SFT.Computation.SecurityDefinitionControls.exclusions",
+            "SFT.Computation.SecurityDefinitionControls.closureValue",
+            "SFT.Computation.SecurityDefinitionControls.falseCandidate",
+            "SFT.Computation.SecurityDefinitionControls.survivorIds",
+            "SFT.Computation.SecurityDefinitionControls.distinctIdentifiers",
+            "SFT.Computation.SecurityDefinitionControls.falsePremise",
+            "SFT.Computation.SecurityDefinitionControls.tamperedSource",
+            "SFT.Computation.SecurityDefinitionControls.tamperedArtifact",
+            "SFT.Computation.SecurityDefinitionControls.boundary",
+            "SFT.Computation.SecurityDefinitionControls.falsePremisePassed",
+            "SFT.Computation.SecurityDefinitionControls.boundaryPassed",
+            "SFT.Computation.SecurityDefinitionControls.controlRecords",
+            "SFT.Computation.SecurityDefinitionControls.resultData",
+            "SFT.Computation.SecurityDefinitionControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.SecurityDefinitionControls.falsePremisePassed",
+            "SFT.Computation.SecurityDefinitionControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/SecurityDefinitionEvidence.lean",
+          "sha256": "683198329d7f0987b541974f1c673981daf8327dd5651d46c7be8e8462b28637",
+          "declarations": [
+            "SFT.Computation.SecurityDefinitionEvidence.candidateRecord",
+            "SFT.Computation.SecurityDefinitionEvidence.completenessRecord",
+            "SFT.Computation.SecurityDefinitionEvidence.registrationData",
+            "SFT.Computation.SecurityDefinitionEvidence.registration",
+            "SFT.Computation.SecurityDefinitionEvidence.generatedCandidateData",
+            "SFT.Computation.SecurityDefinitionEvidence.censusData",
+            "SFT.Computation.SecurityDefinitionEvidence.census",
+            "SFT.Computation.SecurityDefinitionEvidence.decisionData",
+            "SFT.Computation.SecurityDefinitionEvidence.decision",
+            "SFT.Computation.SecurityDefinitionEvidence.decideCandidate",
+            "SFT.Computation.SecurityDefinitionEvidence.closureData",
+            "SFT.Computation.SecurityDefinitionEvidence.closure",
+            "SFT.Computation.SecurityDefinitionEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.SecurityDefinitionEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.SecurityDefinitionEvidence.registrationHasNoAxioms",
+            "SFT.Computation.SecurityDefinitionEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.SecurityDefinitionEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.SecurityDefinitionEvidence.why",
+            "SFT.Computation.SecurityDefinitionEvidence.derivation",
+            "SFT.Computation.SecurityDefinitionEvidence.check",
+            "SFT.Computation.SecurityDefinitionEvidence.limitations",
+            "SFT.Computation.SecurityDefinitionEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.SecurityDefinitionEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.SecurityDefinitionEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.SecurityDefinitionEvidence.registrationHasNoAxioms",
+            "SFT.Computation.SecurityDefinitionEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.SecurityDefinitionEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_306_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "1738808c99814187afcf86b623084b7ec4eed54024a7e736c11dd69c5c783817",
+        "matching_theorems": 40
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_306_SECURITY_DEFINITION_COMPLETION.json",
+          "sha256": "2dffb50d70efbc2eccb6b639b37ba53ae6b31f44a260803b27d7d02d2588b2ee",
+          "result": {
+            "claim_id": "SFT-COMP-SEC-SECURITY-DEFINITION-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/cryptography_security/security_definition/law.py": "43ef37710b09ee7b4617ff8b8385a406e48bbcccdb37a892175abcefe01514e8",
+              "claims/SFT-COMP-SEC-SECURITY-DEFINITION-001/WHY_DERIVATION_CHECK.md": "ce7137acdc387b6656e82522c2467e92b0c4f1fcf99492ead59bd77a94868bfe",
+              "claims/SFT-COMP-SEC-SECURITY-DEFINITION-001/registration.json": "99158e336cb92beec6b66eacd0337f9937a0c928e74672bbbb6f40c1e1320706",
+              "claims/SFT-COMP-SEC-SECURITY-DEFINITION-001/execution.py": "740130faa0ce829bf8774627ad5a0d00c794403094e1c90a395e6756c886f25e",
+              "claims/SFT-COMP-SEC-SECURITY-DEFINITION-001/independent_validator.py": "81414a1d9e9a037218a6c89c12312e0818a6985b5082918964bf60638ea145a4",
+              "claims/SFT-COMP-SEC-SECURITY-DEFINITION-001/certificate.json": "39ead8841569385e94086a1cefb06599caac759f32024d85291e78a2568b3201"
+            },
+            "components": {
+              "source carriers": "Exact secret support,observation relation,registered adversaries,attempt rows and costs. rowMeaning,classMeaning,successMeaning and boundedSuccessMeaning preserve exact support and success parts.",
+              "bounded and whole-support cases": "exactAllFail and exactBoundedFail distinguish the complete registered attempt set from its cost-bounded subset. allImpliesBounded and smallerBudget prove one-way implications without conflating domains.",
+              "observation closure": "exactObservationClosure proves the full observation-closure check equivalent to retaining every supported secret in each admitted observed class. observationNoRecovery excludes recovery of two distinct secrets from a common view. This is not equated with absence of successful guesses.",
+              "reduction and composition": "Reduction retains source admission,successful guesses and costs; reductionBoundedFailure transfers a checked bound through the certificate. identityReduction and composeReduction preserve those interfaces.",
+              "source extension": "rowExtension,successExtension and boundedSuccessExtension preserve prior attempts and success witnesses. No security result is silently extended to newly admitted adversaries.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-SEC-ADVERSARIAL-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-SEC-ADVERSARIAL-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 1024,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_306_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_306_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_306_PROGRAM_REPORT.json",
+          "sha256": "a46b8cb012172c178d4f0cff272d130fc767482323f77220af60ddd5ef21f834",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:41a6b4267c2f2ae8babb09d61629ef19a5f4aad0cc3b512c5655628ea2e4d003",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original SecurityDefinition registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    },
+    {
+      "section": 249,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/PostQuantumBoundary.lean",
+          "sha256": "23f7b2bfb26089ff2e4fd911e4b0d6de0f4b52c18a517d8d82a88be09b00ab30",
+          "declarations": [
+            "SFT.Computation.PostQuantumBoundary.Capability",
+            "SFT.Computation.PostQuantumBoundary.Oracle",
+            "SFT.Computation.PostQuantumBoundary.Query",
+            "SFT.Computation.PostQuantumBoundary.Model",
+            "SFT.Computation.PostQuantumBoundary.admitted",
+            "SFT.Computation.PostQuantumBoundary.queryCost",
+            "SFT.Computation.PostQuantumBoundary.ledgerAdmitted",
+            "SFT.Computation.PostQuantumBoundary.queryMeaning",
+            "SFT.Computation.PostQuantumBoundary.ledgerMeaning",
+            "SFT.Computation.PostQuantumBoundary.classical",
+            "SFT.Computation.PostQuantumBoundary.DeclaredLedger",
+            "SFT.Computation.PostQuantumBoundary.ClassicalLedger",
+            "SFT.Computation.PostQuantumBoundary.classicalOnly",
+            "SFT.Computation.PostQuantumBoundary.declaredQuantumNotClassical",
+            "SFT.Computation.PostQuantumBoundary.ClassicalExecution",
+            "SFT.Computation.PostQuantumBoundary.classicalTrace",
+            "SFT.Computation.PostQuantumBoundary.unmetDependencies",
+            "SFT.Computation.PostQuantumBoundary.missingDependencyMeaning",
+            "SFT.Computation.PostQuantumBoundary.Migration",
+            "SFT.Computation.PostQuantumBoundary.ledgerMigration",
+            "SFT.Computation.PostQuantumBoundary.migrateClassical",
+            "SFT.Computation.PostQuantumBoundary.migrationRetainsQueries",
+            "SFT.Computation.PostQuantumBoundary.ReductionUse",
+            "SFT.Computation.PostQuantumBoundary.dependencyComplete",
+            "SFT.Computation.PostQuantumBoundary.certifiedBoundedTransfer"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.PostQuantumBoundary.queryMeaning",
+            "SFT.Computation.PostQuantumBoundary.ledgerMeaning",
+            "SFT.Computation.PostQuantumBoundary.classicalOnly",
+            "SFT.Computation.PostQuantumBoundary.declaredQuantumNotClassical",
+            "SFT.Computation.PostQuantumBoundary.classicalTrace",
+            "SFT.Computation.PostQuantumBoundary.missingDependencyMeaning",
+            "SFT.Computation.PostQuantumBoundary.ledgerMigration",
+            "SFT.Computation.PostQuantumBoundary.migrationRetainsQueries",
+            "SFT.Computation.PostQuantumBoundary.dependencyComplete",
+            "SFT.Computation.PostQuantumBoundary.certifiedBoundedTransfer"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/PostQuantumBoundaryGrammar.lean",
+          "sha256": "dddab435c710394285662755d578b06fd693883c733ed199bed0744d5b7d4a41",
+          "declarations": [
+            "SFT.Computation.PostQuantumBoundaryGrammar.Support",
+            "SFT.Computation.PostQuantumBoundaryGrammar.supportName",
+            "SFT.Computation.PostQuantumBoundaryGrammar.Adversary",
+            "SFT.Computation.PostQuantumBoundaryGrammar.adversaryName",
+            "SFT.Computation.PostQuantumBoundaryGrammar.Interaction",
+            "SFT.Computation.PostQuantumBoundaryGrammar.interactionName",
+            "SFT.Computation.PostQuantumBoundaryGrammar.Observation",
+            "SFT.Computation.PostQuantumBoundaryGrammar.observationName",
+            "SFT.Computation.PostQuantumBoundaryGrammar.Security",
+            "SFT.Computation.PostQuantumBoundaryGrammar.securityName",
+            "SFT.Computation.PostQuantumBoundaryGrammar.Resources",
+            "SFT.Computation.PostQuantumBoundaryGrammar.resourcesName",
+            "SFT.Computation.PostQuantumBoundaryGrammar.Generality",
+            "SFT.Computation.PostQuantumBoundaryGrammar.generalityName",
+            "SFT.Computation.PostQuantumBoundaryGrammar.Addition",
+            "SFT.Computation.PostQuantumBoundaryGrammar.additionName",
+            "SFT.Computation.PostQuantumBoundaryGrammar.Candidate",
+            "SFT.Computation.PostQuantumBoundaryGrammar.sourceFields",
+            "SFT.Computation.PostQuantumBoundaryGrammar.candidateId",
+            "SFT.Computation.PostQuantumBoundaryGrammar.exactForm",
+            "SFT.Computation.PostQuantumBoundaryGrammar.survivorId",
+            "SFT.Computation.PostQuantumBoundaryGrammar.survives",
+            "SFT.Computation.PostQuantumBoundaryGrammar.criteriaDecision",
+            "SFT.Computation.PostQuantumBoundaryGrammar.decisionReason",
+            "SFT.Computation.PostQuantumBoundaryGrammar.generationRule",
+            "SFT.Computation.PostQuantumBoundaryGrammar.grammarBoundary",
+            "SFT.Computation.PostQuantumBoundaryGrammar.candidates",
+            "SFT.Computation.PostQuantumBoundaryGrammar.survivor",
+            "SFT.Computation.PostQuantumBoundaryGrammar.generatedCardinality",
+            "SFT.Computation.PostQuantumBoundaryGrammar.candidatesComplete",
+            "SFT.Computation.PostQuantumBoundaryGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.PostQuantumBoundaryGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.PostQuantumBoundaryGrammar.uniqueSurvivor",
+            "SFT.Computation.PostQuantumBoundaryGrammar.survivorAccepted",
+            "SFT.Computation.PostQuantumBoundaryGrammar.ExactCriteria",
+            "SFT.Computation.PostQuantumBoundaryGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.PostQuantumBoundaryGrammar.support_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.adversary_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.interaction_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.observation_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.security_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.resources_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.generality_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.PostQuantumBoundaryGrammar.generatedCardinality",
+            "SFT.Computation.PostQuantumBoundaryGrammar.candidatesComplete",
+            "SFT.Computation.PostQuantumBoundaryGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.PostQuantumBoundaryGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.PostQuantumBoundaryGrammar.uniqueSurvivor",
+            "SFT.Computation.PostQuantumBoundaryGrammar.survivorAccepted",
+            "SFT.Computation.PostQuantumBoundaryGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.PostQuantumBoundaryGrammar.support_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.adversary_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.interaction_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.observation_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.security_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.resources_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.generality_rejected_rejected",
+            "SFT.Computation.PostQuantumBoundaryGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/PostQuantumBoundaryWitnesses.lean",
+          "sha256": "bd9cad40eabe82fb5a73535489b17ccbe6a1d4891df0d290b18a68a80c7d8ef6",
+          "declarations": [
+            "SFT.Computation.PostQuantumBoundaryWitnesses.Witness",
+            "SFT.Computation.PostQuantumBoundaryWitnesses.checks",
+            "SFT.Computation.PostQuantumBoundaryWitnesses.witnesses",
+            "SFT.Computation.PostQuantumBoundaryWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.PostQuantumBoundaryWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/PostQuantumBoundaryControls.lean",
+          "sha256": "927ada5a407076a16e74a294d79d3de069d7e693d53edce33bd7dba9d3ece0ec",
+          "declarations": [
+            "SFT.Computation.PostQuantumBoundaryControls.laws",
+            "SFT.Computation.PostQuantumBoundaryControls.exclusions",
+            "SFT.Computation.PostQuantumBoundaryControls.closureValue",
+            "SFT.Computation.PostQuantumBoundaryControls.falseCandidate",
+            "SFT.Computation.PostQuantumBoundaryControls.survivorIds",
+            "SFT.Computation.PostQuantumBoundaryControls.distinctIdentifiers",
+            "SFT.Computation.PostQuantumBoundaryControls.falsePremise",
+            "SFT.Computation.PostQuantumBoundaryControls.tamperedSource",
+            "SFT.Computation.PostQuantumBoundaryControls.tamperedArtifact",
+            "SFT.Computation.PostQuantumBoundaryControls.boundary",
+            "SFT.Computation.PostQuantumBoundaryControls.falsePremisePassed",
+            "SFT.Computation.PostQuantumBoundaryControls.boundaryPassed",
+            "SFT.Computation.PostQuantumBoundaryControls.controlRecords",
+            "SFT.Computation.PostQuantumBoundaryControls.resultData",
+            "SFT.Computation.PostQuantumBoundaryControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.PostQuantumBoundaryControls.falsePremisePassed",
+            "SFT.Computation.PostQuantumBoundaryControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/PostQuantumBoundaryEvidence.lean",
+          "sha256": "52e8dfde86cf4c92fd4c0a94d87dc7de718dcd36e6b83f665b56e9bf9f9f6b42",
+          "declarations": [
+            "SFT.Computation.PostQuantumBoundaryEvidence.candidateRecord",
+            "SFT.Computation.PostQuantumBoundaryEvidence.completenessRecord",
+            "SFT.Computation.PostQuantumBoundaryEvidence.registrationData",
+            "SFT.Computation.PostQuantumBoundaryEvidence.registration",
+            "SFT.Computation.PostQuantumBoundaryEvidence.generatedCandidateData",
+            "SFT.Computation.PostQuantumBoundaryEvidence.censusData",
+            "SFT.Computation.PostQuantumBoundaryEvidence.census",
+            "SFT.Computation.PostQuantumBoundaryEvidence.decisionData",
+            "SFT.Computation.PostQuantumBoundaryEvidence.decision",
+            "SFT.Computation.PostQuantumBoundaryEvidence.decideCandidate",
+            "SFT.Computation.PostQuantumBoundaryEvidence.closureData",
+            "SFT.Computation.PostQuantumBoundaryEvidence.closure",
+            "SFT.Computation.PostQuantumBoundaryEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.PostQuantumBoundaryEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.PostQuantumBoundaryEvidence.registrationHasNoAxioms",
+            "SFT.Computation.PostQuantumBoundaryEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.PostQuantumBoundaryEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.PostQuantumBoundaryEvidence.why",
+            "SFT.Computation.PostQuantumBoundaryEvidence.derivation",
+            "SFT.Computation.PostQuantumBoundaryEvidence.check",
+            "SFT.Computation.PostQuantumBoundaryEvidence.limitations",
+            "SFT.Computation.PostQuantumBoundaryEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.PostQuantumBoundaryEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.PostQuantumBoundaryEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.PostQuantumBoundaryEvidence.registrationHasNoAxioms",
+            "SFT.Computation.PostQuantumBoundaryEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.PostQuantumBoundaryEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read OneWayness template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_307_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "453cb218bb7d7f08c87756c0e2e6adfe3df4bc5e9593cb5a8e51cda419d3c1f0",
+        "matching_theorems": 33
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_307_POST_QUANTUM_BOUNDARY_COMPLETION.json",
+          "sha256": "b98f1edeacfb156bc7c73c4fcda44158da15898e9da52fe4c78bb41e98ab8e7b",
+          "result": {
+            "claim_id": "SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/cryptography_security/post_quantum_boundary/law.py": "a6bf766bc05cdf37a93e3e361bc2637a674f07eaa180c3a13158b1dad43bd380",
+              "claims/SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001/WHY_DERIVATION_CHECK.md": "303968ab585f64fbd00a07698c6a641dd87e14c81f8f1bd9b10e5fe8f2537e26",
+              "claims/SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001/registration.json": "05eaccb9a50dead35bcc9577c612e19db4a7aa5e6b9ccaacdf82a354a6efc3c4",
+              "claims/SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001/execution.py": "5f593f5449ffcf09019d7a0abb51e22700038165b5f61bc807ebabafa18aaec3",
+              "claims/SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001/independent_validator.py": "64e382281524105179cdbf2736f5253aeb4d2820c44bb903fc1ca2eaabc48445",
+              "claims/SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001/certificate.json": "573eeca258b30bb0cad9ce979557a8fe9f72dc48c025c4f823fb875f7d860456"
+            },
+            "components": {
+              "declared query carriers": "Classical scheme,typed oracle capabilities,exact query rows,query count and resource limits. queryMeaning and ledgerMeaning give exact declared support and resource admission.",
+              "operational boundary": "DeclaredLedger records an admitted interface ledger; ClassicalLedger additionally checks every capability classical. classicalOnly and declaredQuantumNotClassical prove that a declared quantum interface is not a classical operation. ClassicalExecution retains actual classical transitions; classicalTrace reconstructs them.",
+              "reduction dependencies": "missingDependencyMeaning gives the exact unmet dependency ledger. ReductionUse retains an actual success/cost-preserving certificate and evidence for every registered dependency; dependencyComplete and certifiedBoundedTransfer preserve those requirements.",
+              "migration": "Migration retains prior interfaces,query rows,resource bounds,dependencies and actual scheme executions. ledgerMigration and migrateClassical preserve previous ledgers and executions; migrationRetainsQueries proves unchanged queries.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-SEC-SECURITY-DEFINITION-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-SEC-SECURITY-DEFINITION-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 770,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_307_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_307_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_307_PROGRAM_REPORT.json",
+          "sha256": "521a5978a07de89156e4072e08eb0e88afe7cf6aea342098fdd9e74cf2dcf1ce",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:db51baede6272149653383aac66a7f35aa42bc3af23f7a03f111bd71035fa022",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original PostQuantumBoundary registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    }
+  ],
+  "original_source_files": [
+    {
+      "path": "claims/SFT-COMP-SEC-MULTIPARTY-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "1cbc8691d9b0e41d1cf1909a6fcf7ee709d6d01fc123f7614196bd8fbebb377c"
+    },
+    {
+      "path": "claims/SFT-COMP-SEC-ADVERSARIAL-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "93d6a560b7c640b49d27f158847e2f1eeb2cc984473d7a2fd633e3dca6eb9bab"
+    },
+    {
+      "path": "claims/SFT-COMP-SEC-SECURITY-DEFINITION-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "ce7137acdc387b6656e82522c2467e92b0c4f1fcf99492ead59bd77a94868bfe"
+    },
+    {
+      "path": "claims/SFT-COMP-SEC-POST-QUANTUM-BOUNDARY-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "303968ab585f64fbd00a07698c6a641dd87e14c81f8f1bd9b10e5fe8f2537e26"
+    }
+  ],
+  "source_correspondence": "Full Multiparty/Adversarial/SecurityDefinition/PostQuantumBoundary proof bodies read. Complete companion comparison against OneWayness has no code differences and every changed literal read. Complete original four WHY diffs against the fully inspected OneWayness document read. Retained304\u2013307 completion/program reports reused. Generated case suites not rerun or newly read in full.",
+  "new_proofs": 0,
+  "new_builds": 0,
+  "citations_added": [
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/MultipartyGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/MultipartyWitnesses.lean#L15",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AdversarialGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AdversarialWitnesses.lean#L15",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SecurityDefinitionGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SecurityDefinitionWitnesses.lean#L15",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/PostQuantumBoundaryGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/PostQuantumBoundaryWitnesses.lean#L15"
+  ],
+  "status": "Sections246\u2013249 reviewed; whole-paper review incomplete"
+}

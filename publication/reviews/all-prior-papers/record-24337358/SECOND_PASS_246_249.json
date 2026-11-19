@@ -1,0 +1,73 @@
+{
+  "updated_at": "2026-11-19T00:55:43.087096+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    246,
+    247,
+    248,
+    249
+  ],
+  "challenges": [
+    {
+      "section": 246,
+      "challenge": "Does a privacy conclusion omit corruption support or communication execution?",
+      "evidence": "exactPrivacy quantifies over every pair of supported joint rows with the same output and ordered corrupted-input projection; coalitionViewMeaning preserves the ordered view projection. exactSecurity quantifies over registered coalitions, while Execution additionally supplies coalition membership and an actual run. leakageExtension preserves actual earlier witnesses.",
+      "disposition": "Full paper argument and its precise projections match the inspected proof."
+    },
+    {
+      "section": 247,
+      "challenge": "Does a schedule label substitute for an actual execution, or does extension discard adverse outcomes?",
+      "evidence": "rowMeaning establishes registration and the action bound; Execution separately establishes StateTransition.run and terminal-state equality. Extension preserves secure-state membership in both directions, and unfavorableExtension retains each adverse row.",
+      "disposition": "Paper retains both execution requirements and the complete outcome partition."
+    },
+    {
+      "section": 248,
+      "challenge": "Are observation closure, failure of all guesses and bounded failure conflated?",
+      "evidence": "exactObservationClosure quantifies over the full observed secret class. exactAllFail and exactBoundedFail quantify over different attempt supports. reductionBoundedFailure requires source admission, success preservation and nonincreasing cost; identityReduction and composeReduction preserve each requirement.",
+      "disposition": "The paper derives each conclusion separately and includes the cost inequality needed for reduction."
+    },
+    {
+      "section": 249,
+      "challenge": "Does declaring a quantum-capable interface certify quantum execution or an unsupported reduction?",
+      "evidence": "DeclaredLedger checks registered query rows and both limits; ClassicalLedger additionally requires the classical constructor. declaredQuantumNotClassical proves constructor exclusion. ClassicalExecution separately retains the actual run. ReductionUse requires both the actual reduction certificate and all registered dependency records.",
+      "disposition": "Paper gives those exact definitions and derivations; migration retains the same queries and actual execution."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/MultipartyGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/MultipartyWitnesses.lean#L15",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AdversarialGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AdversarialWitnesses.lean#L15",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SecurityDefinitionGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SecurityDefinitionWitnesses.lean#L15",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/PostQuantumBoundaryGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/PostQuantumBoundaryWitnesses.lean#L15",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "7f5c44bfae0bad54e3e1f91a0140135f0530005caf61ab951065631a87cd384d",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

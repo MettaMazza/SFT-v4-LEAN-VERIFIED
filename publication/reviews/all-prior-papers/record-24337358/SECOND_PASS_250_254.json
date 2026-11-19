@@ -1,0 +1,96 @@
+{
+  "updated_at": "2026-11-19T01:33:26.394423+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    250,
+    251,
+    252,
+    253,
+    254
+  ],
+  "challenges": [
+    {
+      "section": 250,
+      "challenge": "Does inference silently choose a winner or change source error priority?",
+      "evidence": "consistentHypotheses rejects duplicate names before empty support, then filters in original order. retainedMeaning and outputNameMeaning reconstruct every evidence row; uncertaintyMeaning enumerates every distinct-name retained pair. moreEvidence proves the correct reverse inclusion.",
+      "disposition": "Full operational derivation preserved; source grammar and all original witness calculations added."
+    },
+    {
+      "section": 251,
+      "challenge": "Does duplicate evidence or an absent prediction become a successful label or falsification?",
+      "evidence": "predictionMeaning requires the exact singleton output list, without deduplication. falsifiedMeaning requires an actual successful prediction unequal to the target. TargetCustody excludes target inputs from every training row. Extension preserves input/label lists and requires new evidence to be included in old evidence.",
+      "disposition": "All conditions appear explicitly in the paper and match the proof bodies."
+    },
+    {
+      "section": 252,
+      "challenge": "Does representation composition erase provenance or assume recoverability from equal words?",
+      "evidence": "compositionRows reconstructs an actual intermediate encoding/interface row; compositionSources preserves the complete source projection. noRecoveryFromClosed uses two distinct supported identities with the same word, while valid encoding supplies exact closed/retained ledger meanings through existing encoding proofs.",
+      "disposition": "Paper retains exact validation, intermediate row and equal-word contradiction."
+    },
+    {
+      "section": 253,
+      "challenge": "Is correctness on a generated family silently transferred to unrepresented targets?",
+      "evidence": "structuralFamily is full Nat induction on the supplied base and successor. structuralCoversTargets separately requires every target row to equal a generated member. everyWithheldChecked uses explicit completeTargets; failureExtension preserves adverse rows.",
+      "disposition": "Paper gives both full induction and the exact coverage substitution."
+    },
+    {
+      "section": 254,
+      "challenge": "Does teaching assume a distinguishing example or merely report a Boolean failure?",
+      "evidence": "incompatibleWitness recursively traverses the actual sample, returning a head failure or a tail witness. teachingWitness derives incompatibility from distinct identity and the checked closure, then adds target membership. sampleExtension uses reverse evidence inclusion and target compatibility.",
+      "disposition": "Constructive witness derivation and all extension conditions are already explicit."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/InferenceGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/InferenceGrammar.lean#L148",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/InferenceGrammar.lean#L155",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/InferenceWitnesses.lean#L16",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ClassificationPredictionGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ClassificationPredictionWitnesses.lean#L16",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RepresentationLearningGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/RepresentationLearningWitnesses.lean#L16",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/GeneralizationGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/GeneralizationWitnesses.lean#L16",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SampleComplexityGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SampleComplexityWitnesses.lean#L16",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "66f54ac9f3779f9303ff2162d5f873caedc32fb4be3fb06df72f38803d4cb964",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

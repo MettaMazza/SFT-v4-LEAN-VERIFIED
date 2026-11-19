@@ -1,0 +1,57 @@
+{
+  "updated_at": "2026-11-19T00:21:48.135184+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    207,
+    208,
+    209,
+    210
+  ],
+  "challenges": [
+    {
+      "section": 207,
+      "challenge": "Could closure include reflexive empty paths or invented edges?",
+      "evidence": "Path has original-edge and concatenation constructors only. roundsSound and exactClosure prove both directions; emptyPathImpossible and cycleBoundary distinguish positive paths from reflexivity.",
+      "disposition": "Full positive-path meaning and cycle boundary preserved."
+    },
+    {
+      "section": 208,
+      "challenge": "Can bounded iteration silently return a nonclosed relation?",
+      "evidence": "missingDecreases proves strict descent on actual growth. closeBounded zero case refutes growth from the bound; successor recurses with a proved smaller bound. nativeStable and nativeExact derive genuine closure.",
+      "disposition": "No unfinished fallback exists; manuscript gives the complete decreasing-measure argument."
+    },
+    {
+      "section": 209,
+      "challenge": "Does mathematical closure omit original guard precedence, duplicates or text ordering?",
+      "evidence": "causalClosure checks unique events first, then escaping endpoints, then actual closure cycles; sortedSet removes duplicates using lexicographic UTF-8 comparison. All1602 retained test inputs/outputs and the exact full-output driver were inspected, including all512 three-node directed edge sets and Unicode/duplicate cases; existing passing log reused.",
+      "disposition": "Original error strings, guard order and exact output rows retained; no new execution claimed."
+    },
+    {
+      "section": 210,
+      "challenge": "Does a valid schedule assume local enabledness or omit empty and independent schedules?",
+      "evidence": "allSchedulesComplete handles empty carrier and arbitrary distinct carrier permutations; Admitted retains actual source event/process binding and Local traces. everyEventEnabled and everyProcessObserved derive original transitions and full runs; independentLocalOrders constructs both orders on distinct processes.",
+      "disposition": "All hypotheses and derivations explicit; grammar and three witnesses expanded before second review."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ConcurrencyGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ConcurrencyGrammar.lean#L148",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ConcurrencyGrammar.lean#L155",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ConcurrencyWitnesses.lean#L16",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "4033b266a452a8761aa6a967ff90525e608bc808b80c04807512c2d645a8a2b8",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

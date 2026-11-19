@@ -1,0 +1,43 @@
+{
+  "updated_at": "2026-11-19T00:48:18.421245+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    240,
+    241
+  ],
+  "challenges": [
+    {
+      "section": 240,
+      "challenge": "Does a matching credential automatically identify the actual actor?",
+      "evidence": "VerificationTrace does not equate actor with claim. exactVerificationTrace proves all original support and credential/response conjuncts; exactAuthenticity checks actual actor equality across the entire accepted support. acceptedImpersonationFails proves the contrary case fails that check.",
+      "disposition": "The manuscript correctly separates credential acceptance from computed authenticity and preserves actual adverse support."
+    },
+    {
+      "section": 241,
+      "challenge": "Does noninjectivity merely assert that a collision exists without constructing a retained pair?",
+      "evidence": "largerDomainNotInjective maps distinct messages to singleton output words and invokes the existing subset-length bound. largerDomainCollision contradicts an empty full ledger by decidable message equality. largerDomainWitness extracts the head of the nonempty ledger and applies collisionMeaning to recover both actual supported messages and equal images.",
+      "disposition": "The manuscript contains the finite counting argument and witness extraction; original distinct-source and output-bound hypotheses are explicit."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AuthenticationGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/AuthenticationWitnesses.lean#L15",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/HashingGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/HashingWitnesses.lean#L15",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "b4b6363a4fb3221cd821d39c88c90d505af3b8938554eca46b114eeb60dc6a69",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

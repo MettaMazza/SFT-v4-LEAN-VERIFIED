@@ -1,0 +1,73 @@
+{
+  "updated_at": "2026-11-19T00:50:52.040670+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    242,
+    243,
+    244,
+    245
+  ],
+  "challenges": [
+    {
+      "section": 242,
+      "challenge": "Does the proof claim hiding and binding are universally incompatible?",
+      "evidence": "bindingHidingBoundary requires verified openings and the explicit implication from equal observation to equal commitment. Actual separatedModel verifies two distinct commitments with one shared view and has empty bindingCollisions; nativeCompatibleHiding proves recovery contradiction.",
+      "disposition": "Exact theorem premises retained and compatible example expanded."
+    },
+    {
+      "section": 243,
+      "challenge": "Does the signature guarantee silently quantify outside the adversary support?",
+      "evidence": "exactUnforgeability quantifies over m.adversary; forgeryMeaning includes that membership. correctnessTrace preserves the actual signed row. Source extension proves old positive rows and traces remain, without asserting a newly enlarged adversary passes the check.",
+      "disposition": "Paper quantifiers and full ledger argument match the source-bound proof."
+    },
+    {
+      "section": 244,
+      "challenge": "Does extraction return a label without a supported witness or omit the interaction interface?",
+      "evidence": "exactExtraction reconstructs a registered extraction row with exact transcript equality and statement/witness membership. Interaction retains actual prover/verifier runs and getLast interface equality; acceptedExtraction uses the checked full adversary condition. Concrete stay transition proof read.",
+      "disposition": "Existing general argument preserved; actual source witness and two runs expanded."
+    },
+    {
+      "section": 245,
+      "challenge": "Does equal observation mean equal list multiplicity, or does coverage alone certify execution?",
+      "evidence": "matchMeaning proves membership equivalence by inclusion in both directions, not list equality. exactCoverage returns registered matching rows. SimulationTrace separately proves run and terminal transcript; nativeSimulation supplies both in the concrete example. Common simulation closes the same-statement unequal-witness pair through observation-membership transitivity.",
+      "disposition": "Paper already distinguishes coverage from execution; full retained simulator and closed-witness example expanded."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CommitmentGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/CommitmentWitnesses.lean#L15",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SignatureGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SignatureWitnesses.lean#L15",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ProofKnowledgeGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ProofKnowledgeWitnesses.lean#L15",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ZeroKnowledgeGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ZeroKnowledgeWitnesses.lean#L15",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "dc14cd371de9d2e5640999a4697e49f03ceb680fbb045c4c1ab36dc6c80ae108",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-11-19T00:09:47.486476+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    193,
+    194,
+    195
+  ],
+  "challenges": [
+    {
+      "section": 193,
+      "challenge": "Does accumulated renaming change original whole-body renaming or fresh-name failure order?",
+      "evidence": "mapCompose, mappedExecution and renamedExecution prove exact equality for arbitrary terms; conflictingBinder uses the actual selected fresh name; exhaustedBeforeDescent preserves search failure before initializer recursion. Original source functions read in full.",
+      "disposition": "Paper gives exact branches and ordered partial operation, preserving original behavior."
+    },
+    {
+      "section": 194,
+      "challenge": "Is capture safety obtained by imposing a new value-only restriction?",
+      "evidence": "Pinned step calls substitute only after is_value(initializer); valueShape identifies exactly that constructor. sourceAgreement proves replacement always succeeds; formationPreserved handles shadowing via scopeTransport; binderIdentitiesPreserved, targetRemoved and otherFreePreserved supply all displayed invariants.",
+      "disposition": "Original evaluator domain is derived from its actual call guard; paper separately retains the wider helper behavior."
+    },
+    {
+      "section": 195,
+      "challenge": "Is arbitrary open substitution reduced to a literal witness or dependent on an assumed alias rule?",
+      "evidence": "dischargeBinding inducts on full Evaluation with arbitrary replacement Evaluation; nativeDischarge replays it and openReplacementScope resolves every result occurrence. originalAdmissionRequiresFresh derives canonical freshness from successful duplicate-free environment admission.",
+      "disposition": "Paper includes general environment discharge and lookup equations, matching the strongest existing proof."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SemBindingGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SemBindingWitnesses.lean#L29",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "afb20f36c9ee74b7035c69480c4d73ca42596411a3419e2572c6d22d374a0968",
+  "status": "Inspected sections pass; whole cumulative paper remains under review."
+}

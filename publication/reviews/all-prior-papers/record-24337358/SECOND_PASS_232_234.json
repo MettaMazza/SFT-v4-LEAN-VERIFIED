@@ -1,0 +1,58 @@
+{
+  "updated_at": "2026-11-19T00:43:47.607358+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    232,
+    233,
+    234
+  ],
+  "challenges": [
+    {
+      "section": 232,
+      "challenge": "Is the lost-order object merely assumed, without actual source transitions for the two histories?",
+      "evidence": "retainedOrderLoss takes two actual Trace proofs. Retained firstOrder/secondOrder construct each registered Step from the original system rows and propagation support; realLostOrder composes them with the general impossibility proof.",
+      "disposition": "Both concrete intermediate states and terminal equality now explained; complete general trace induction retained."
+    },
+    {
+      "section": 233,
+      "challenge": "Can an ungenerated fault be certified by the existence of a recovery row, or can a mismatched component recover it?",
+      "evidence": "classify tests generated membership first. recoveryMeaning requires original row membership, exact component and fault-after/recovery-before equality. exactGuarantee quantifies over generated support; composedGuarantee preserves actual matching witnesses from each source.",
+      "disposition": "All three classifications and declared recovery trace are correctly exposed in the paper."
+    },
+    {
+      "section": 234,
+      "challenge": "Does common knowledge use a fixed iteration cutoff or collapse into individual knowledge?",
+      "evidence": "commonReachability/nativeExact and commonIteration/nativeRounds use existing finite missing-pair termination proof. baseSupported supplies all endpoint obligations; commonStable gives closure. Two-observer chain has a-b and b-c edges and rejects truth support a,b despite individual acceptance at a.",
+      "disposition": "Full fixed-point/path derivation retained; concrete chain and admission rejection explained."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ReplicationGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ReplicationWitnesses.lean#L16",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/FaultModelGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/FaultModelWitnesses.lean#L16",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/DistributedKnowledgeGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/DistributedKnowledgeWitnesses.lean#L16",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "87005ac91ced9891e40f057463cfedbdf76465cbfc56fa897806a58f7da695b9",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

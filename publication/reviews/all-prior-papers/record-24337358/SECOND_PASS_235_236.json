@@ -1,0 +1,43 @@
+{
+  "updated_at": "2026-11-19T00:44:43.805051+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    235,
+    236
+  ],
+  "challenges": [
+    {
+      "section": 235,
+      "challenge": "Does the recurrence miss short paths or admit a path through an unregistered starting process?",
+      "evidence": "neighborhoodTrace inducts over radius with explicit held start and reconstructs a registered edge followed by the smaller trace. traceNeighborhood inducts over every retained Reach constructor and handles identities at any radius. queryBoundary rejects absent starts; omittedRowRejected derives contradiction from traceRows.",
+      "disposition": "Full iff and actual quantified domain already explicit in the paper; shared grammar references added."
+    },
+    {
+      "section": 236,
+      "challenge": "Can a valid-looking final state hide an unregistered action, message or resource, or can extension drop the original trace?",
+      "evidence": "Execution retains schedule membership, Trace proof, complete deliveries and initialSupport. ActionAdmitted ties each action to an actual registered machine step; resourceSource/faultSource recover its support from trace provenance. Inclusion covers all eight network fields; extendExecution retains every original action/state/message/result, proved by four reflexive equalities. Full native concrete execution and four adverse cases inspected.",
+      "disposition": "Original complete execution and successor argument match the paper; no external platform result introduced."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/LocalityGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/LocalityWitnesses.lean#L16",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/NetworkComputationGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/NetworkComputationWitnesses.lean#L16",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "eb9a5c11472224902169887933b32fc574721f7f91e1200a3704b1a4566332bf",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

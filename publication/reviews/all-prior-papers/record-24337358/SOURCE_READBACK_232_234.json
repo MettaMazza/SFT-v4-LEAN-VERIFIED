@@ -1,0 +1,901 @@
+{
+  "updated_at": "2026-11-19T00:43:47.607358+00:00",
+  "sections_read": [
+    232,
+    233,
+    234
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "records": [
+    {
+      "section": 232,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/Replication.lean",
+          "sha256": "bf26d52b7c468833e3aa681f39e8bf841ee4f9cbe1002b904b4d84a5fefc6117",
+          "declarations": [
+            "SFT.Computation.Replication.Replica",
+            "SFT.Computation.Replication.Update",
+            "SFT.Computation.Replication.Change",
+            "SFT.Computation.Replication.Step",
+            "SFT.Computation.Replication.identitiesRetained",
+            "SFT.Computation.Replication.replicaCountRetained",
+            "SFT.Computation.Replication.recipientHeld",
+            "SFT.Computation.Replication.originalTransition",
+            "SFT.Computation.Replication.unaffectedCopyRetained",
+            "SFT.Computation.Replication.Trace",
+            "SFT.Computation.Replication.traceIdentities",
+            "SFT.Computation.Replication.traceUpdateProvenance",
+            "SFT.Computation.Replication.serialTrace",
+            "SFT.Computation.Replication.traceLength",
+            "SFT.Computation.Replication.consistent",
+            "SFT.Computation.Replication.stateClass",
+            "SFT.Computation.Replication.consistencyMeaning",
+            "SFT.Computation.Replication.classMeaning",
+            "SFT.Computation.Replication.completeStateClass",
+            "SFT.Computation.Replication.distinctClasses",
+            "SFT.Computation.Replication.convergenceObservation",
+            "SFT.Computation.Replication.conflictRejectsConsistency",
+            "SFT.Computation.Replication.parallelConsistency",
+            "SFT.Computation.Replication.OrderLoss",
+            "SFT.Computation.Replication.lostOrderCannotRecover",
+            "SFT.Computation.Replication.earlierUpdateRetained",
+            "SFT.Computation.Replication.changeParallelRight",
+            "SFT.Computation.Replication.changeParallelLeft",
+            "SFT.Computation.Replication.stepParallel",
+            "SFT.Computation.Replication.traceSuccessor",
+            "SFT.Computation.Replication.retainedOrderLoss",
+            "SFT.Computation.Replication.nativeOrderLossCannotRecover"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.Replication.identitiesRetained",
+            "SFT.Computation.Replication.replicaCountRetained",
+            "SFT.Computation.Replication.recipientHeld",
+            "SFT.Computation.Replication.originalTransition",
+            "SFT.Computation.Replication.unaffectedCopyRetained",
+            "SFT.Computation.Replication.traceIdentities",
+            "SFT.Computation.Replication.traceUpdateProvenance",
+            "SFT.Computation.Replication.serialTrace",
+            "SFT.Computation.Replication.traceLength",
+            "SFT.Computation.Replication.consistencyMeaning",
+            "SFT.Computation.Replication.classMeaning",
+            "SFT.Computation.Replication.completeStateClass",
+            "SFT.Computation.Replication.distinctClasses",
+            "SFT.Computation.Replication.convergenceObservation",
+            "SFT.Computation.Replication.conflictRejectsConsistency",
+            "SFT.Computation.Replication.parallelConsistency",
+            "SFT.Computation.Replication.lostOrderCannotRecover",
+            "SFT.Computation.Replication.earlierUpdateRetained",
+            "SFT.Computation.Replication.changeParallelRight",
+            "SFT.Computation.Replication.changeParallelLeft",
+            "SFT.Computation.Replication.stepParallel",
+            "SFT.Computation.Replication.traceSuccessor",
+            "SFT.Computation.Replication.nativeOrderLossCannotRecover"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ReplicationGrammar.lean",
+          "sha256": "bb94a1f68b9675cb957e0e4495670f3dc2b86469698f653eea2378777a37ed9a",
+          "declarations": [
+            "SFT.Computation.ReplicationGrammar.Processes",
+            "SFT.Computation.ReplicationGrammar.processesName",
+            "SFT.Computation.ReplicationGrammar.Events",
+            "SFT.Computation.ReplicationGrammar.eventsName",
+            "SFT.Computation.ReplicationGrammar.Causality",
+            "SFT.Computation.ReplicationGrammar.causalityName",
+            "SFT.Computation.ReplicationGrammar.Communication",
+            "SFT.Computation.ReplicationGrammar.communicationName",
+            "SFT.Computation.ReplicationGrammar.Faults",
+            "SFT.Computation.ReplicationGrammar.faultsName",
+            "SFT.Computation.ReplicationGrammar.Knowledge",
+            "SFT.Computation.ReplicationGrammar.knowledgeName",
+            "SFT.Computation.ReplicationGrammar.Generality",
+            "SFT.Computation.ReplicationGrammar.generalityName",
+            "SFT.Computation.ReplicationGrammar.Addition",
+            "SFT.Computation.ReplicationGrammar.additionName",
+            "SFT.Computation.ReplicationGrammar.Candidate",
+            "SFT.Computation.ReplicationGrammar.sourceFields",
+            "SFT.Computation.ReplicationGrammar.candidateId",
+            "SFT.Computation.ReplicationGrammar.exactForm",
+            "SFT.Computation.ReplicationGrammar.survivorId",
+            "SFT.Computation.ReplicationGrammar.survives",
+            "SFT.Computation.ReplicationGrammar.criteriaDecision",
+            "SFT.Computation.ReplicationGrammar.decisionReason",
+            "SFT.Computation.ReplicationGrammar.generationRule",
+            "SFT.Computation.ReplicationGrammar.grammarBoundary",
+            "SFT.Computation.ReplicationGrammar.candidates",
+            "SFT.Computation.ReplicationGrammar.survivor",
+            "SFT.Computation.ReplicationGrammar.generatedCardinality",
+            "SFT.Computation.ReplicationGrammar.candidatesComplete",
+            "SFT.Computation.ReplicationGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ReplicationGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ReplicationGrammar.uniqueSurvivor",
+            "SFT.Computation.ReplicationGrammar.survivorAccepted",
+            "SFT.Computation.ReplicationGrammar.ExactCriteria",
+            "SFT.Computation.ReplicationGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ReplicationGrammar.processes_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.events_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.causality_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.communication_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.faults_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.knowledge_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.generality_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReplicationGrammar.generatedCardinality",
+            "SFT.Computation.ReplicationGrammar.candidatesComplete",
+            "SFT.Computation.ReplicationGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ReplicationGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ReplicationGrammar.uniqueSurvivor",
+            "SFT.Computation.ReplicationGrammar.survivorAccepted",
+            "SFT.Computation.ReplicationGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ReplicationGrammar.processes_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.events_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.causality_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.communication_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.faults_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.knowledge_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.generality_rejected_rejected",
+            "SFT.Computation.ReplicationGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ReplicationWitnesses.lean",
+          "sha256": "a974bd68fb50265a1e9b2f71d0769ba1a123abf8995fcba1d502f269f6256fc2",
+          "declarations": [
+            "SFT.Computation.ReplicationWitnesses.Witness",
+            "SFT.Computation.ReplicationWitnesses.checks",
+            "SFT.Computation.ReplicationWitnesses.witnesses",
+            "SFT.Computation.ReplicationWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReplicationWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ReplicationControls.lean",
+          "sha256": "f5e983f458bafc18ff494124bf9fff81e1d79edb6cd5b6ab877857dd9232126c",
+          "declarations": [
+            "SFT.Computation.ReplicationControls.laws",
+            "SFT.Computation.ReplicationControls.exclusions",
+            "SFT.Computation.ReplicationControls.closureValue",
+            "SFT.Computation.ReplicationControls.falseCandidate",
+            "SFT.Computation.ReplicationControls.survivorIds",
+            "SFT.Computation.ReplicationControls.distinctIdentifiers",
+            "SFT.Computation.ReplicationControls.falsePremise",
+            "SFT.Computation.ReplicationControls.tamperedSource",
+            "SFT.Computation.ReplicationControls.tamperedArtifact",
+            "SFT.Computation.ReplicationControls.boundary",
+            "SFT.Computation.ReplicationControls.falsePremisePassed",
+            "SFT.Computation.ReplicationControls.boundaryPassed",
+            "SFT.Computation.ReplicationControls.controlRecords",
+            "SFT.Computation.ReplicationControls.resultData",
+            "SFT.Computation.ReplicationControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReplicationControls.falsePremisePassed",
+            "SFT.Computation.ReplicationControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ReplicationEvidence.lean",
+          "sha256": "a84ef52290259042bac9d0a25e7423543e6e48e1282bbf8523623c8bd17c4ed9",
+          "declarations": [
+            "SFT.Computation.ReplicationEvidence.candidateRecord",
+            "SFT.Computation.ReplicationEvidence.completenessRecord",
+            "SFT.Computation.ReplicationEvidence.registrationData",
+            "SFT.Computation.ReplicationEvidence.registration",
+            "SFT.Computation.ReplicationEvidence.generatedCandidateData",
+            "SFT.Computation.ReplicationEvidence.censusData",
+            "SFT.Computation.ReplicationEvidence.census",
+            "SFT.Computation.ReplicationEvidence.decisionData",
+            "SFT.Computation.ReplicationEvidence.decision",
+            "SFT.Computation.ReplicationEvidence.decideCandidate",
+            "SFT.Computation.ReplicationEvidence.closureData",
+            "SFT.Computation.ReplicationEvidence.closure",
+            "SFT.Computation.ReplicationEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ReplicationEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ReplicationEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ReplicationEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ReplicationEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.ReplicationEvidence.why",
+            "SFT.Computation.ReplicationEvidence.derivation",
+            "SFT.Computation.ReplicationEvidence.check",
+            "SFT.Computation.ReplicationEvidence.limitations",
+            "SFT.Computation.ReplicationEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ReplicationEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ReplicationEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ReplicationEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ReplicationEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ReplicationEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_290_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "d7d1d0e8c04dfa82de774de95543abe5bb6967930b9e3f0db1d1ad4561ca4ee3",
+        "matching_theorems": 46
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_290_REPLICATION_COMPLETION.json",
+          "sha256": "da8df10e995a8bef775ee1c018e14fed675293040411c10cb9d27e39e35329cc",
+          "result": {
+            "claim_id": "SFT-COMP-DIST-REPLICATION-CONSISTENCY-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/distributed_computation/replication_consistency/law.py": "516d810ebbf2f5588cd16644ab852b4cfd6d7cb394204860fe418e4a79dd8528",
+              "claims/SFT-COMP-DIST-REPLICATION-CONSISTENCY-001/WHY_DERIVATION_CHECK.md": "2875b98b03c5c09131c0d1a58a80c0ac477c5b1e9413b67c5c4ebe7a512d3751",
+              "claims/SFT-COMP-DIST-REPLICATION-CONSISTENCY-001/registration.json": "cc61d0657b6b7ceb677fd1c93f0e5c64b6da95ffb4bb7eea0cbaa393aee113b7",
+              "claims/SFT-COMP-DIST-REPLICATION-CONSISTENCY-001/execution.py": "8ab197c3fcd099e149ea6b86518336881ac3fcfacb98d143bd90e8ced69e389b",
+              "claims/SFT-COMP-DIST-REPLICATION-CONSISTENCY-001/independent_validator.py": "222e3a4816763d90181744ce9f65c1c0dc74976f3b478ed52fa859e8814f8bee",
+              "claims/SFT-COMP-DIST-REPLICATION-CONSISTENCY-001/certificate.json": "94d06b4b2301161c5e5c56c1a4a0e899cdcd876070164f32288491f46a4d290f"
+            },
+            "components": {
+              "replicas and update events": "Replica/Update/Change/Step retain identities,state,update labels,registered events,actual source transition and original propagation row. identitiesRetained,replicaCountRetained,recipientHeld,originalTransition and unaffectedCopyRetained preserve source carriers.",
+              "propagation and convergence trace": "Trace retains every update and intermediate replica state. traceIdentities,traceUpdateProvenance,traceLength and serialTrace establish complete provenance and interfaces.",
+              "consistency and conflict classes": "consistent/stateClass,consistencyMeaning,classMeaning,completeStateClass and distinctClasses give exact complete state observations and disjoint conflict classes. convergenceObservation and conflictRejectsConsistency derive agreement/rejection without timing or an imported merge policy.",
+              "lost-order ledger": "OrderLoss retains both distinct update histories and identical terminal observations. retainedOrderLoss links it to two admitted native traces; nativeOrderLossCannotRecover proves no observation-only reconstruction. Concrete two-order replay proof verifies an actual example.",
+              "base,composition and successor": "Trace.identity,changeParallelLeft/Right,stepParallel,parallelConsistency,traceSuccessor and earlierUpdateRetained preserve original identities,interfaces and prior history records.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-DIST-AGREEMENT-IMPOSSIBILITY-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-DIST-AGREEMENT-IMPOSSIBILITY-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 726,
+              "concrete_trace_and_loss_proofs": 3,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_290_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_290_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_290_PROGRAM_REPORT.json",
+          "sha256": "30051e8059dbaf5513e0726c1436e97addc8697331bab314fa6179cc9cb00125",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:4801ddc5795d08b9ae79597d99aad0e2fb576dd02dd680e5954d31772fde1a83",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original Replication registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    },
+    {
+      "section": 233,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/FaultModel.lean",
+          "sha256": "460f907ca4bd0a5060dcd9eada9224e5a4e4b934c94b3c421aa4d615381213f6",
+          "declarations": [
+            "SFT.Computation.FaultModel.Transition",
+            "SFT.Computation.FaultModel.Fault",
+            "SFT.Computation.FaultModel.Model",
+            "SFT.Computation.FaultModel.deviation",
+            "SFT.Computation.FaultModel.detected",
+            "SFT.Computation.FaultModel.matching",
+            "SFT.Computation.FaultModel.recoveryRows",
+            "SFT.Computation.FaultModel.Result",
+            "SFT.Computation.FaultModel.classify",
+            "SFT.Computation.FaultModel.deviationMeaning",
+            "SFT.Computation.FaultModel.detectionMeaning",
+            "SFT.Computation.FaultModel.indistinguishableNominal",
+            "SFT.Computation.FaultModel.matchingMeaning",
+            "SFT.Computation.FaultModel.recoveryMeaning",
+            "SFT.Computation.FaultModel.outsideMeaning",
+            "SFT.Computation.FaultModel.uncorrectableMeaning",
+            "SFT.Computation.FaultModel.recoverableMeaning",
+            "SFT.Computation.FaultModel.correctable",
+            "SFT.Computation.FaultModel.allGeneratedCorrectable",
+            "SFT.Computation.FaultModel.correctableMeaning",
+            "SFT.Computation.FaultModel.exactGuarantee",
+            "SFT.Computation.FaultModel.RecoveryTrace",
+            "SFT.Computation.FaultModel.recoveryTraceProvenance",
+            "SFT.Computation.FaultModel.serialRecovery",
+            "SFT.Computation.FaultModel.recoveryRowTrace",
+            "SFT.Computation.FaultModel.extend",
+            "SFT.Computation.FaultModel.recoveryExtension",
+            "SFT.Computation.FaultModel.earlierFaultRetained",
+            "SFT.Computation.FaultModel.composedGuarantee"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.FaultModel.deviationMeaning",
+            "SFT.Computation.FaultModel.detectionMeaning",
+            "SFT.Computation.FaultModel.indistinguishableNominal",
+            "SFT.Computation.FaultModel.matchingMeaning",
+            "SFT.Computation.FaultModel.recoveryMeaning",
+            "SFT.Computation.FaultModel.outsideMeaning",
+            "SFT.Computation.FaultModel.uncorrectableMeaning",
+            "SFT.Computation.FaultModel.recoverableMeaning",
+            "SFT.Computation.FaultModel.correctableMeaning",
+            "SFT.Computation.FaultModel.exactGuarantee",
+            "SFT.Computation.FaultModel.recoveryTraceProvenance",
+            "SFT.Computation.FaultModel.serialRecovery",
+            "SFT.Computation.FaultModel.recoveryRowTrace",
+            "SFT.Computation.FaultModel.recoveryExtension",
+            "SFT.Computation.FaultModel.earlierFaultRetained",
+            "SFT.Computation.FaultModel.composedGuarantee"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/FaultModelGrammar.lean",
+          "sha256": "c760fa8c1ce5fd6cbd9091d645ac20562d6dce954d721ad36c8c1529e20704c2",
+          "declarations": [
+            "SFT.Computation.FaultModelGrammar.Processes",
+            "SFT.Computation.FaultModelGrammar.processesName",
+            "SFT.Computation.FaultModelGrammar.Events",
+            "SFT.Computation.FaultModelGrammar.eventsName",
+            "SFT.Computation.FaultModelGrammar.Causality",
+            "SFT.Computation.FaultModelGrammar.causalityName",
+            "SFT.Computation.FaultModelGrammar.Communication",
+            "SFT.Computation.FaultModelGrammar.communicationName",
+            "SFT.Computation.FaultModelGrammar.Faults",
+            "SFT.Computation.FaultModelGrammar.faultsName",
+            "SFT.Computation.FaultModelGrammar.Knowledge",
+            "SFT.Computation.FaultModelGrammar.knowledgeName",
+            "SFT.Computation.FaultModelGrammar.Generality",
+            "SFT.Computation.FaultModelGrammar.generalityName",
+            "SFT.Computation.FaultModelGrammar.Addition",
+            "SFT.Computation.FaultModelGrammar.additionName",
+            "SFT.Computation.FaultModelGrammar.Candidate",
+            "SFT.Computation.FaultModelGrammar.sourceFields",
+            "SFT.Computation.FaultModelGrammar.candidateId",
+            "SFT.Computation.FaultModelGrammar.exactForm",
+            "SFT.Computation.FaultModelGrammar.survivorId",
+            "SFT.Computation.FaultModelGrammar.survives",
+            "SFT.Computation.FaultModelGrammar.criteriaDecision",
+            "SFT.Computation.FaultModelGrammar.decisionReason",
+            "SFT.Computation.FaultModelGrammar.generationRule",
+            "SFT.Computation.FaultModelGrammar.grammarBoundary",
+            "SFT.Computation.FaultModelGrammar.candidates",
+            "SFT.Computation.FaultModelGrammar.survivor",
+            "SFT.Computation.FaultModelGrammar.generatedCardinality",
+            "SFT.Computation.FaultModelGrammar.candidatesComplete",
+            "SFT.Computation.FaultModelGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.FaultModelGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.FaultModelGrammar.uniqueSurvivor",
+            "SFT.Computation.FaultModelGrammar.survivorAccepted",
+            "SFT.Computation.FaultModelGrammar.ExactCriteria",
+            "SFT.Computation.FaultModelGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.FaultModelGrammar.processes_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.events_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.causality_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.communication_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.faults_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.knowledge_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.generality_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.FaultModelGrammar.generatedCardinality",
+            "SFT.Computation.FaultModelGrammar.candidatesComplete",
+            "SFT.Computation.FaultModelGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.FaultModelGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.FaultModelGrammar.uniqueSurvivor",
+            "SFT.Computation.FaultModelGrammar.survivorAccepted",
+            "SFT.Computation.FaultModelGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.FaultModelGrammar.processes_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.events_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.causality_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.communication_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.faults_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.knowledge_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.generality_rejected_rejected",
+            "SFT.Computation.FaultModelGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/FaultModelWitnesses.lean",
+          "sha256": "456eaf904215f36d4d4ad3783406060d502086844de29fc559af9999a845860f",
+          "declarations": [
+            "SFT.Computation.FaultModelWitnesses.Witness",
+            "SFT.Computation.FaultModelWitnesses.checks",
+            "SFT.Computation.FaultModelWitnesses.witnesses",
+            "SFT.Computation.FaultModelWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.FaultModelWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/FaultModelControls.lean",
+          "sha256": "78f0ddd28224ade6597b31fc9786708c0c38798521abf289f085590ea19cd071",
+          "declarations": [
+            "SFT.Computation.FaultModelControls.laws",
+            "SFT.Computation.FaultModelControls.exclusions",
+            "SFT.Computation.FaultModelControls.closureValue",
+            "SFT.Computation.FaultModelControls.falseCandidate",
+            "SFT.Computation.FaultModelControls.survivorIds",
+            "SFT.Computation.FaultModelControls.distinctIdentifiers",
+            "SFT.Computation.FaultModelControls.falsePremise",
+            "SFT.Computation.FaultModelControls.tamperedSource",
+            "SFT.Computation.FaultModelControls.tamperedArtifact",
+            "SFT.Computation.FaultModelControls.boundary",
+            "SFT.Computation.FaultModelControls.falsePremisePassed",
+            "SFT.Computation.FaultModelControls.boundaryPassed",
+            "SFT.Computation.FaultModelControls.controlRecords",
+            "SFT.Computation.FaultModelControls.resultData",
+            "SFT.Computation.FaultModelControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.FaultModelControls.falsePremisePassed",
+            "SFT.Computation.FaultModelControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/FaultModelEvidence.lean",
+          "sha256": "05aebd1237e8265387f87345972085fcaa0a692ca22499033124bedf350f669b",
+          "declarations": [
+            "SFT.Computation.FaultModelEvidence.candidateRecord",
+            "SFT.Computation.FaultModelEvidence.completenessRecord",
+            "SFT.Computation.FaultModelEvidence.registrationData",
+            "SFT.Computation.FaultModelEvidence.registration",
+            "SFT.Computation.FaultModelEvidence.generatedCandidateData",
+            "SFT.Computation.FaultModelEvidence.censusData",
+            "SFT.Computation.FaultModelEvidence.census",
+            "SFT.Computation.FaultModelEvidence.decisionData",
+            "SFT.Computation.FaultModelEvidence.decision",
+            "SFT.Computation.FaultModelEvidence.decideCandidate",
+            "SFT.Computation.FaultModelEvidence.closureData",
+            "SFT.Computation.FaultModelEvidence.closure",
+            "SFT.Computation.FaultModelEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.FaultModelEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.FaultModelEvidence.registrationHasNoAxioms",
+            "SFT.Computation.FaultModelEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.FaultModelEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.FaultModelEvidence.why",
+            "SFT.Computation.FaultModelEvidence.derivation",
+            "SFT.Computation.FaultModelEvidence.check",
+            "SFT.Computation.FaultModelEvidence.limitations",
+            "SFT.Computation.FaultModelEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.FaultModelEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.FaultModelEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.FaultModelEvidence.registrationHasNoAxioms",
+            "SFT.Computation.FaultModelEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.FaultModelEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_291_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "5e08651281f1bbf724a44148c50efe189eb4ab39448f3755e3e478c247cdaa55",
+        "matching_theorems": 39
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_291_FAULT_MODEL_COMPLETION.json",
+          "sha256": "fbc40d800918750b9946afe49fb1c627cac9ccb09c904f5e523222fb1e57b4c7",
+          "result": {
+            "claim_id": "SFT-COMP-DIST-FAULT-MODEL-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/distributed_computation/fault_model/law.py": "7987787dbf041d7d0753483dfc17e17d52b2dfce9d624610677ef063d7e566cc",
+              "claims/SFT-COMP-DIST-FAULT-MODEL-001/WHY_DERIVATION_CHECK.md": "4672f7096f7b12181b0602eb84a8f34a8564d27f9e0bfe56b0c0f2f1d80e1b1a",
+              "claims/SFT-COMP-DIST-FAULT-MODEL-001/registration.json": "e1dba0081df3ba1a53ee7c03af12e14d0ca6dffe7f96cad6fe4c30530d69a015",
+              "claims/SFT-COMP-DIST-FAULT-MODEL-001/execution.py": "b7e748a246ab74830aa38ee07c79161dbd6b0cbdf5d5f5449adab1f66ee7762b",
+              "claims/SFT-COMP-DIST-FAULT-MODEL-001/independent_validator.py": "7c6e2a223b84186042a0771126c32f7c2b2ee2bb808488d4e54113f6790dda2f",
+              "claims/SFT-COMP-DIST-FAULT-MODEL-001/certificate.json": "e1d070df21abccbca44059ad2942da271f65bb6419f09622050b9e021cd6e602"
+            },
+            "components": {
+              "nominal/fault carriers": "Transition,Fault,Model retain nominal relation,generated actions,affected component and observation. deviationMeaning proves declared fault membership and deviation from nominal transition support.",
+              "detection observations": "detectionMeaning gives exact separation from nominal observation support; indistinguishableNominal proves an observation-only decision cannot distinguish identical observations.",
+              "recovery and uncorrectable boundary": "recoveryMeaning preserves exact declared row,affected component and post-fault source state. outsideMeaning,uncorrectableMeaning,recoverableMeaning partition outside support,no recovery and complete matching recovery rows.",
+              "guarantee scope": "exactGuarantee quantifies only over generated fault actions. Outside actions remain outside regardless of any available recovery row. No ungenerated-fault guarantee.",
+              "trace,base,composition,successor": "RecoveryTrace.identity/next retain source rows and matching state interfaces; recoveryTraceProvenance,recoveryRowTrace,serialRecovery prove exact trace reconstruction. recoveryExtension,earlierFaultRetained and composedGuarantee preserve earlier records under source assembly and one-form extension.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-DIST-REPLICATION-CONSISTENCY-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-DIST-REPLICATION-CONSISTENCY-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 3328,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_291_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_291_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_291_PROGRAM_REPORT.json",
+          "sha256": "b6beb8762ae024ab8e26a57ddd6faa71475b64aa6ae5c4d53194f4e29840be6f",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:aed7d195a63919509b9ba1882ada8b2d58945898ae7e7281aff800ac5fdcc7e0",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original FaultModel registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    },
+    {
+      "section": 234,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/DistributedKnowledge.lean",
+          "sha256": "6998bea0ba361e36652df9b484be7159bfc074c099ba1d90cec040c0223352e4",
+          "declarations": [
+            "SFT.Computation.DistributedKnowledge.Observer",
+            "SFT.Computation.DistributedKnowledge.Model",
+            "SFT.Computation.DistributedKnowledge.admitted",
+            "SFT.Computation.DistributedKnowledge.localClass",
+            "SFT.Computation.DistributedKnowledge.individual",
+            "SFT.Computation.DistributedKnowledge.localClassMeaning",
+            "SFT.Computation.DistributedKnowledge.individualMeaning",
+            "SFT.Computation.DistributedKnowledge.individualTruth",
+            "SFT.Computation.DistributedKnowledge.sameObservationKnowledge",
+            "SFT.Computation.DistributedKnowledge.counterexampleRejects",
+            "SFT.Computation.DistributedKnowledge.localEdges",
+            "SFT.Computation.DistributedKnowledge.identityEdges",
+            "SFT.Computation.DistributedKnowledge.baseEdges",
+            "SFT.Computation.DistributedKnowledge.pairSupportMeaning",
+            "SFT.Computation.DistributedKnowledge.localEdgeMeaning",
+            "SFT.Computation.DistributedKnowledge.baseSupported",
+            "SFT.Computation.DistributedKnowledge.commonEdges",
+            "SFT.Computation.DistributedKnowledge.commonClass",
+            "SFT.Computation.DistributedKnowledge.common",
+            "SFT.Computation.DistributedKnowledge.commonReachability",
+            "SFT.Computation.DistributedKnowledge.commonIteration",
+            "SFT.Computation.DistributedKnowledge.commonStable",
+            "SFT.Computation.DistributedKnowledge.commonClassMeaning",
+            "SFT.Computation.DistributedKnowledge.commonMeaning",
+            "SFT.Computation.DistributedKnowledge.commonTruth",
+            "SFT.Computation.DistributedKnowledge.commonImpliesIndividual",
+            "SFT.Computation.DistributedKnowledge.commonPathComposition",
+            "SFT.Computation.DistributedKnowledge.commonExtension",
+            "SFT.Computation.DistributedKnowledge.decision",
+            "SFT.Computation.DistributedKnowledge.decisionBoundary",
+            "SFT.Computation.DistributedKnowledge.admittedMaps"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.DistributedKnowledge.localClassMeaning",
+            "SFT.Computation.DistributedKnowledge.individualMeaning",
+            "SFT.Computation.DistributedKnowledge.individualTruth",
+            "SFT.Computation.DistributedKnowledge.sameObservationKnowledge",
+            "SFT.Computation.DistributedKnowledge.counterexampleRejects",
+            "SFT.Computation.DistributedKnowledge.pairSupportMeaning",
+            "SFT.Computation.DistributedKnowledge.localEdgeMeaning",
+            "SFT.Computation.DistributedKnowledge.baseSupported",
+            "SFT.Computation.DistributedKnowledge.commonReachability",
+            "SFT.Computation.DistributedKnowledge.commonIteration",
+            "SFT.Computation.DistributedKnowledge.commonStable",
+            "SFT.Computation.DistributedKnowledge.commonClassMeaning",
+            "SFT.Computation.DistributedKnowledge.commonMeaning",
+            "SFT.Computation.DistributedKnowledge.commonTruth",
+            "SFT.Computation.DistributedKnowledge.commonImpliesIndividual",
+            "SFT.Computation.DistributedKnowledge.commonPathComposition",
+            "SFT.Computation.DistributedKnowledge.commonExtension",
+            "SFT.Computation.DistributedKnowledge.decisionBoundary",
+            "SFT.Computation.DistributedKnowledge.admittedMaps"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/DistributedKnowledgeGrammar.lean",
+          "sha256": "4f14f8ed9ba3d2587d7d9985ea04649d324f0546b8ca1a2bd703450ac2847978",
+          "declarations": [
+            "SFT.Computation.DistributedKnowledgeGrammar.Processes",
+            "SFT.Computation.DistributedKnowledgeGrammar.processesName",
+            "SFT.Computation.DistributedKnowledgeGrammar.Events",
+            "SFT.Computation.DistributedKnowledgeGrammar.eventsName",
+            "SFT.Computation.DistributedKnowledgeGrammar.Causality",
+            "SFT.Computation.DistributedKnowledgeGrammar.causalityName",
+            "SFT.Computation.DistributedKnowledgeGrammar.Communication",
+            "SFT.Computation.DistributedKnowledgeGrammar.communicationName",
+            "SFT.Computation.DistributedKnowledgeGrammar.Faults",
+            "SFT.Computation.DistributedKnowledgeGrammar.faultsName",
+            "SFT.Computation.DistributedKnowledgeGrammar.Knowledge",
+            "SFT.Computation.DistributedKnowledgeGrammar.knowledgeName",
+            "SFT.Computation.DistributedKnowledgeGrammar.Generality",
+            "SFT.Computation.DistributedKnowledgeGrammar.generalityName",
+            "SFT.Computation.DistributedKnowledgeGrammar.Addition",
+            "SFT.Computation.DistributedKnowledgeGrammar.additionName",
+            "SFT.Computation.DistributedKnowledgeGrammar.Candidate",
+            "SFT.Computation.DistributedKnowledgeGrammar.sourceFields",
+            "SFT.Computation.DistributedKnowledgeGrammar.candidateId",
+            "SFT.Computation.DistributedKnowledgeGrammar.exactForm",
+            "SFT.Computation.DistributedKnowledgeGrammar.survivorId",
+            "SFT.Computation.DistributedKnowledgeGrammar.survives",
+            "SFT.Computation.DistributedKnowledgeGrammar.criteriaDecision",
+            "SFT.Computation.DistributedKnowledgeGrammar.decisionReason",
+            "SFT.Computation.DistributedKnowledgeGrammar.generationRule",
+            "SFT.Computation.DistributedKnowledgeGrammar.grammarBoundary",
+            "SFT.Computation.DistributedKnowledgeGrammar.candidates",
+            "SFT.Computation.DistributedKnowledgeGrammar.survivor",
+            "SFT.Computation.DistributedKnowledgeGrammar.generatedCardinality",
+            "SFT.Computation.DistributedKnowledgeGrammar.candidatesComplete",
+            "SFT.Computation.DistributedKnowledgeGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.DistributedKnowledgeGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.DistributedKnowledgeGrammar.uniqueSurvivor",
+            "SFT.Computation.DistributedKnowledgeGrammar.survivorAccepted",
+            "SFT.Computation.DistributedKnowledgeGrammar.ExactCriteria",
+            "SFT.Computation.DistributedKnowledgeGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.DistributedKnowledgeGrammar.processes_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.events_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.causality_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.communication_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.faults_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.knowledge_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.generality_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.DistributedKnowledgeGrammar.generatedCardinality",
+            "SFT.Computation.DistributedKnowledgeGrammar.candidatesComplete",
+            "SFT.Computation.DistributedKnowledgeGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.DistributedKnowledgeGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.DistributedKnowledgeGrammar.uniqueSurvivor",
+            "SFT.Computation.DistributedKnowledgeGrammar.survivorAccepted",
+            "SFT.Computation.DistributedKnowledgeGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.DistributedKnowledgeGrammar.processes_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.events_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.causality_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.communication_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.faults_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.knowledge_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.generality_rejected_rejected",
+            "SFT.Computation.DistributedKnowledgeGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/DistributedKnowledgeWitnesses.lean",
+          "sha256": "07062967ed0105039dcc61a16b350be11fab7213e06f0a2abe01ba123cd0660a",
+          "declarations": [
+            "SFT.Computation.DistributedKnowledgeWitnesses.Witness",
+            "SFT.Computation.DistributedKnowledgeWitnesses.checks",
+            "SFT.Computation.DistributedKnowledgeWitnesses.witnesses",
+            "SFT.Computation.DistributedKnowledgeWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.DistributedKnowledgeWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/DistributedKnowledgeControls.lean",
+          "sha256": "81aab9b00f5e61c84c21b789e311433b784ecaf22f7a46048707f91bf2aa2385",
+          "declarations": [
+            "SFT.Computation.DistributedKnowledgeControls.laws",
+            "SFT.Computation.DistributedKnowledgeControls.exclusions",
+            "SFT.Computation.DistributedKnowledgeControls.closureValue",
+            "SFT.Computation.DistributedKnowledgeControls.falseCandidate",
+            "SFT.Computation.DistributedKnowledgeControls.survivorIds",
+            "SFT.Computation.DistributedKnowledgeControls.distinctIdentifiers",
+            "SFT.Computation.DistributedKnowledgeControls.falsePremise",
+            "SFT.Computation.DistributedKnowledgeControls.tamperedSource",
+            "SFT.Computation.DistributedKnowledgeControls.tamperedArtifact",
+            "SFT.Computation.DistributedKnowledgeControls.boundary",
+            "SFT.Computation.DistributedKnowledgeControls.falsePremisePassed",
+            "SFT.Computation.DistributedKnowledgeControls.boundaryPassed",
+            "SFT.Computation.DistributedKnowledgeControls.controlRecords",
+            "SFT.Computation.DistributedKnowledgeControls.resultData",
+            "SFT.Computation.DistributedKnowledgeControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.DistributedKnowledgeControls.falsePremisePassed",
+            "SFT.Computation.DistributedKnowledgeControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/DistributedKnowledgeEvidence.lean",
+          "sha256": "5d04ea8d5d7fdb9d12f1b7a57e2ed35b6ac08567985fc080c5830aa2d8dc2641",
+          "declarations": [
+            "SFT.Computation.DistributedKnowledgeEvidence.candidateRecord",
+            "SFT.Computation.DistributedKnowledgeEvidence.completenessRecord",
+            "SFT.Computation.DistributedKnowledgeEvidence.registrationData",
+            "SFT.Computation.DistributedKnowledgeEvidence.registration",
+            "SFT.Computation.DistributedKnowledgeEvidence.generatedCandidateData",
+            "SFT.Computation.DistributedKnowledgeEvidence.censusData",
+            "SFT.Computation.DistributedKnowledgeEvidence.census",
+            "SFT.Computation.DistributedKnowledgeEvidence.decisionData",
+            "SFT.Computation.DistributedKnowledgeEvidence.decision",
+            "SFT.Computation.DistributedKnowledgeEvidence.decideCandidate",
+            "SFT.Computation.DistributedKnowledgeEvidence.closureData",
+            "SFT.Computation.DistributedKnowledgeEvidence.closure",
+            "SFT.Computation.DistributedKnowledgeEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.DistributedKnowledgeEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.DistributedKnowledgeEvidence.registrationHasNoAxioms",
+            "SFT.Computation.DistributedKnowledgeEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.DistributedKnowledgeEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.DistributedKnowledgeEvidence.why",
+            "SFT.Computation.DistributedKnowledgeEvidence.derivation",
+            "SFT.Computation.DistributedKnowledgeEvidence.check",
+            "SFT.Computation.DistributedKnowledgeEvidence.limitations",
+            "SFT.Computation.DistributedKnowledgeEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.DistributedKnowledgeEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.DistributedKnowledgeEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.DistributedKnowledgeEvidence.registrationHasNoAxioms",
+            "SFT.Computation.DistributedKnowledgeEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.DistributedKnowledgeEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against previously read Concurrency template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_292_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "3b83929fa522916223e496d008bf84a7cafbaa32d5a3946ef23410b7cc75227f",
+        "matching_theorems": 42
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_292_DISTRIBUTED_KNOWLEDGE_COMPLETION.json",
+          "sha256": "aa8f862fc374dbb8e65a18ace9e1243c5fea5811cedb721de03e91ac8e1807ce",
+          "result": {
+            "claim_id": "SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/distributed_computation/distributed_knowledge/law.py": "3aefee7c1da8e4cae310e897ac97103e9f5088f392372133d3a00f6f2ab8dffa",
+              "claims/SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001/WHY_DERIVATION_CHECK.md": "e161b2e944c65276c9f943005df7826d341a5b7f182f8c19bfa9fe021874c6e1",
+              "claims/SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001/registration.json": "2f9441f2b55724ff3d9bbcf5e41381b0169617a09775979a2aef97aff2f2b16b",
+              "claims/SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001/execution.py": "9e3790ff4fc21cd8acd990059167d21902bce70772655f7d41844db49bc9d411",
+              "claims/SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001/independent_validator.py": "d57576a86329dcea185da3115475063b007e8f7f86045f61e2a3698537ffed87",
+              "claims/SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001/certificate.json": "ade3abd3ff26e1d31bfbc0f60b7d161c4f862ddae1e76c8f6850c3f4786d700f"
+            },
+            "components": {
+              "observation carriers": "Model and Observer preserve execution support and local maps. admittedMaps proves complete validated maps on admitted support.",
+              "individual knowledge": "localClassMeaning,individualMeaning,individualTruth,sameObservationKnowledge,counterexampleRejects establish exact indistinguishability support and knowledge.",
+              "common knowledge": "commonIteration,commonReachability,commonStable prove the complete finite iteration and exact path closure without a depth cutoff. commonMeaning,commonTruth,commonImpliesIndividual establish observation-relative common knowledge.",
+              "boundary and composition": "decisionBoundary excludes unregistered execution support. commonPathComposition and commonExtension preserve exact registered relation paths.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-DIST-FAULT-MODEL-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-DIST-FAULT-MODEL-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 388,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_292_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_292_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_292_PROGRAM_REPORT.json",
+          "sha256": "30b3a3e431b8c027ab6539f531e4582ff90c9a36a8c977550d10bfe246c02c69",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:d2ca5491f24d445df5d48630109f35c3d1e739ee4a899acfeacc4973f8b991f5",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original DistributedKnowledge registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    }
+  ],
+  "original_source_files": [
+    {
+      "path": "claims/SFT-COMP-DIST-REPLICATION-CONSISTENCY-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "2875b98b03c5c09131c0d1a58a80c0ac477c5b1e9413b67c5c4ebe7a512d3751"
+    },
+    {
+      "path": "claims/SFT-COMP-DIST-FAULT-MODEL-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "4672f7096f7b12181b0602eb84a8f34a8564d27f9e0bfe56b0c0f2f1d80e1b1a"
+    },
+    {
+      "path": "claims/SFT-COMP-DIST-DISTRIBUTED-KNOWLEDGE-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "e161b2e944c65276c9f943005df7826d341a5b7f182f8c19bfa9fe021874c6e1"
+    }
+  ],
+  "source_correspondence": "Full Replication, FaultModel and DistributedKnowledge proof bodies read. Full normalized companion comparison has no code differences; all changed literals and three original WHY derivations read. Retained reports reused. Concrete firstOrder/secondOrder/realLostOrder proof bodies and the two-observer chain case inspected. CausalTermination nativeExact/nativeRounds/nativeClosed proof inspection reused from208; observation validation reused from112. No case suite rerun or complete generated-case read claimed.",
+  "new_proofs": 0,
+  "new_builds": 0,
+  "citations_added": [
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ReplicationGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ReplicationWitnesses.lean#L16",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/FaultModelGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/FaultModelWitnesses.lean#L16",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/DistributedKnowledgeGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/DistributedKnowledgeWitnesses.lean#L16"
+  ],
+  "status": "Sections232\u2013234 reviewed; whole-paper review incomplete"
+}

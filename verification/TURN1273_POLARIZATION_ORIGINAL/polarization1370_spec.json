@@ -1,0 +1,248 @@
+{
+  "claim_id": "SFT-CHEM-OVERPOTENTIAL-POLARIZATION-010",
+  "title": "Fold overpotential and polarization law",
+  "statement": "Polarization is an ordered finite current-potential response about one held equilibrium reference, with anodic, cathodic and equilibrium sides separated from positive exact magnitudes.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-CHEM-ELECTRODE-POTENTIAL-CHEMICAL-RELATION-002",
+    "SFT-CHEM-ELECTRODE-REACTION-RATE-009"
+  ],
+  "generation_rule": "Generate the literal product of eight registered polarization decisions.",
+  "grammar_boundary": "Eight dimensions exhaust reference, orientation, magnitude, current, equilibrium, curve, condition and record.",
+  "dimensions": [
+    {
+      "key": "reference",
+      "choices": [
+        {
+          "name": "reference-free-voltage",
+          "admitted": false,
+          "reason": "Overpotential needs equilibrium reference."
+        },
+        {
+          "name": "one-held-equilibrium-reference",
+          "admitted": true,
+          "reason": "Every point retains its equilibrium reference."
+        }
+      ]
+    },
+    {
+      "key": "orientation",
+      "choices": [
+        {
+          "name": "signed-potential-offset",
+          "admitted": false,
+          "reason": "A sign imports negative magnitude."
+        },
+        {
+          "name": "held-anodic-cathodic-equilibrium-side",
+          "admitted": true,
+          "reason": "Potential side is held separately."
+        }
+      ]
+    },
+    {
+      "key": "magnitude",
+      "choices": [
+        {
+          "name": "continuum-difference-premise",
+          "admitted": false,
+          "reason": "A continuum difference is not an exact proof."
+        },
+        {
+          "name": "exact-positive-potential-distance",
+          "admitted": true,
+          "reason": "Distance is exact positive Take."
+        }
+      ]
+    },
+    {
+      "key": "current",
+      "choices": [
+        {
+          "name": "anonymous-current",
+          "admitted": false,
+          "reason": "Current loses reaction direction."
+        },
+        {
+          "name": "held-current-direction-positive-magnitude",
+          "admitted": true,
+          "reason": "Current direction and magnitude remain separate."
+        }
+      ]
+    },
+    {
+      "key": "equilibrium",
+      "choices": [
+        {
+          "name": "numerical-zero-origin",
+          "admitted": false,
+          "reason": "Numerical zero is not native equilibrium."
+        },
+        {
+          "name": "structural-EmptyOne-equilibrium-point",
+          "admitted": true,
+          "reason": "Coincidence closes potential and net current."
+        }
+      ]
+    },
+    {
+      "key": "curve",
+      "choices": [
+        {
+          "name": "selected-polarization-point",
+          "admitted": false,
+          "reason": "One point hides response organization."
+        },
+        {
+          "name": "complete-ordered-finite-polarization-curve",
+          "admitted": true,
+          "reason": "Every scan point and reversal is retained."
+        }
+      ]
+    },
+    {
+      "key": "condition",
+      "choices": [
+        {
+          "name": "mixed-condition-curve",
+          "admitted": false,
+          "reason": "Mixed conditions are incomparable."
+        },
+        {
+          "name": "common-electrode-reference-condition",
+          "admitted": true,
+          "reason": "Curve support remains common."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "fitted-tafel-line",
+          "admitted": false,
+          "reason": "A fitted line can hide deviations."
+        },
+        {
+          "name": "complete-raw-potential-current-vector",
+          "admitted": true,
+          "reason": "Raw values, breaks, hysteresis and anomalies remain downstream."
+        }
+      ]
+    }
+  ],
+  "exact_result": "one-held-equilibrium-reference__held-anodic-cathodic-equilibrium-side__exact-positive-potential-distance__held-current-direction-positive-magnitude__structural-EmptyOne-equilibrium-point__complete-ordered-finite-polarization-curve__common-electrode-reference-condition__complete-raw-potential-current-vector",
+  "induction_base": "One equilibrium point supplies the structural reference without a numerical-zero magnitude.",
+  "induction_step": "Appending the next scan point retains its ordinal, side, potential distance, current and common condition.",
+  "exclusions": [
+    "no numerical zero negative irrational imaginary continuum fitted free random or imported native parameter",
+    "no external polarization value or fitted line selects the survivor",
+    "all scan reversals breaks hysteresis IR drops and uncertainties remain downstream provenance"
+  ],
+  "operational_witnesses": [
+    [
+      "ordered",
+      "All scan points retained.",
+      true
+    ],
+    [
+      "reference",
+      "Reference retained.",
+      true
+    ],
+    [
+      "equilibrium",
+      "Equilibrium is EmptyOne.",
+      true
+    ],
+    [
+      "anodic",
+      "Anodic side held.",
+      true
+    ],
+    [
+      "cathodic",
+      "Cathodic side held.",
+      true
+    ],
+    [
+      "positive",
+      "Magnitudes positive.",
+      true
+    ],
+    [
+      "condition",
+      "Condition common.",
+      true
+    ],
+    [
+      "omission",
+      "Missing ordinal halts.",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-OVERPOTENTIAL-POLARIZATION-010",
+  "expected_observation_label": "complete-overpotential-polarization-vector",
+  "target_rows": [
+    {
+      "target_id": "SFT-CHEM-ECHEM-010-EQUILIBRIUM-REFERENCE",
+      "source_id": "NBS-JRES-GALVANIC-COUPLES-1950",
+      "source_locator": "equilibrium reference",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-010-POLARIZATION-DIRECTION",
+      "source_id": "NBS-JRES-GALVANIC-COUPLES-1950",
+      "source_locator": "polarization direction",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-010-POTENTIAL-DISTANCE",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "potential distance",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-010-CURRENT-RESPONSE",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "current response",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-010-CURVE-VECTOR",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "curve vector",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-010-REVERSAL-BREAKS",
+      "source_id": "NBS-JRES-GALVANIC-COUPLES-1950",
+      "source_locator": "reversal breaks",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-010-IR-DROP-UNCERTAINTY",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "ir drop uncertainty",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-010-COMPLETE-SOURCES",
+      "source_id": "ECHEM-009-012-SOURCE-INVENTORY",
+      "source_locator": "complete sources",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+  "falsification_condition": "The claim halts if the survivor is nonunique; any equilibrium, scan direction, point, reversal, break, IR drop, uncertainty or source page is omitted; or an external curve selects the law."
+}

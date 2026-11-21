@@ -1,0 +1,250 @@
+{
+  "claim_id": "SFT-CHEM-ELECTRODE-REACTION-RATE-009",
+  "title": "Fold electrode reaction-rate law",
+  "statement": "Electrode reaction rate is an exact positive count of forward and reverse reaction events per positive counted resource, retaining reaction, interface, condition, potential orientation and structural balance.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-COMP-CPLX-TIME-SPACE-001",
+    "SFT-CHEM-HALF-REACTION-IDENTITY-ORIENTATION-001",
+    "SFT-CHEM-ELECTROCHEMICAL-WORK-REACTION-DIRECTION-005",
+    "SFT-CHEM-IONIC-MOBILITY-TRANSFERENCE-008"
+  ],
+  "generation_rule": "Generate the literal product of eight registered electrode-rate decisions.",
+  "grammar_boundary": "Eight dimensions exhaust reaction custody, events, resource, potential, net, balance, record and extension.",
+  "dimensions": [
+    {
+      "key": "reaction",
+      "choices": [
+        {
+          "name": "anonymous-current",
+          "admitted": false,
+          "reason": "Current alone loses reaction identity."
+        },
+        {
+          "name": "complete-reaction-interface-custody",
+          "admitted": true,
+          "reason": "Reaction and interface remain held."
+        }
+      ]
+    },
+    {
+      "key": "events",
+      "choices": [
+        {
+          "name": "continuum-current-premise",
+          "admitted": false,
+          "reason": "Continuum flow hides event support."
+        },
+        {
+          "name": "positive-counted-forward-reverse-events",
+          "admitted": true,
+          "reason": "Both event directions are counted."
+        }
+      ]
+    },
+    {
+      "key": "resource",
+      "choices": [
+        {
+          "name": "unbounded-rate",
+          "admitted": false,
+          "reason": "Rate without resource is undefined."
+        },
+        {
+          "name": "exact-events-per-counted-resource",
+          "admitted": true,
+          "reason": "Rate is an exact positive ratio."
+        }
+      ]
+    },
+    {
+      "key": "potential",
+      "choices": [
+        {
+          "name": "signed-overpotential-premise",
+          "admitted": false,
+          "reason": "Signed potential imports negative magnitude."
+        },
+        {
+          "name": "held-potential-orientation",
+          "admitted": true,
+          "reason": "Potential direction is held separately."
+        }
+      ]
+    },
+    {
+      "key": "net",
+      "choices": [
+        {
+          "name": "subtracted-negative-rate",
+          "admitted": false,
+          "reason": "Signed subtraction can produce negative proof values."
+        },
+        {
+          "name": "positive-Take-with-held-rate-direction",
+          "admitted": true,
+          "reason": "Net events use positive Take and held direction."
+        }
+      ]
+    },
+    {
+      "key": "balance",
+      "choices": [
+        {
+          "name": "numerical-zero-net-current",
+          "admitted": false,
+          "reason": "Numerical zero is not a native magnitude."
+        },
+        {
+          "name": "structural-EmptyOne-balanced-events",
+          "admitted": true,
+          "reason": "Equal event counts close net distinction."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "selected-current-point",
+          "admitted": false,
+          "reason": "One point hides the curve and conditions."
+        },
+        {
+          "name": "complete-current-potential-condition-vector",
+          "admitted": true,
+          "reason": "Every registered current/potential/condition row remains downstream."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "fitted-exchange-current-exponential",
+          "admitted": false,
+          "reason": "A fit imports answer-producing parameters."
+        },
+        {
+          "name": "event-successor-recomputes-exact-rate",
+          "admitted": true,
+          "reason": "Successors extend the ledger without refitting."
+        }
+      ]
+    }
+  ],
+  "exact_result": "complete-reaction-interface-custody__positive-counted-forward-reverse-events__exact-events-per-counted-resource__held-potential-orientation__positive-Take-with-held-rate-direction__structural-EmptyOne-balanced-events__complete-current-potential-condition-vector__event-successor-recomputes-exact-rate",
+  "induction_base": "One counted electrode event over one counted resource interval supplies the first exact rate.",
+  "induction_step": "Appending one event recomputes the exact ledger rate without an exchange-current fit.",
+  "exclusions": [
+    "no numerical zero negative irrational imaginary continuum fitted free random or imported native parameter",
+    "no external current potential curve or rate selects the survivor",
+    "all external signs fits discontinuities and IR drops remain downstream provenance"
+  ],
+  "operational_witnesses": [
+    [
+      "forward",
+      "Forward excess is held.",
+      true
+    ],
+    [
+      "reverse",
+      "Reverse excess is held.",
+      true
+    ],
+    [
+      "take",
+      "Net magnitude is positive Take.",
+      true
+    ],
+    [
+      "balance",
+      "Equal counts close to EmptyOne.",
+      true
+    ],
+    [
+      "complete",
+      "Complete activity retains both directions.",
+      true
+    ],
+    [
+      "reaction",
+      "Reaction remains held.",
+      true
+    ],
+    [
+      "condition",
+      "Condition remains held.",
+      true
+    ],
+    [
+      "no-fit",
+      "Successor rate is recomputed from counts.",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-ELECTRODE-REACTION-RATE-009",
+  "expected_observation_label": "complete-electrode-reaction-rate-vector",
+  "target_rows": [
+    {
+      "target_id": "SFT-CHEM-ECHEM-009-REACTION-INTERFACE",
+      "source_id": "NBS-JRES-GALVANIC-COUPLES-1950",
+      "source_locator": "reaction interface",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-009-CURRENT-POTENTIAL",
+      "source_id": "NBS-JRES-GALVANIC-COUPLES-1950",
+      "source_locator": "current potential",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-009-ANODIC-CATHODIC",
+      "source_id": "NBS-JRES-GALVANIC-COUPLES-1950",
+      "source_locator": "anodic cathodic",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-009-RATE-CORRESPONDENCE",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "rate correspondence",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-009-CONDITIONS",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "conditions",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-009-RAW-VECTOR",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "raw vector",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-009-ADVERSE-MODELS",
+      "source_id": "ECHEM-009-012-SHARED-SOURCES",
+      "source_locator": "adverse models",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-009-COMPLETE-SOURCES",
+      "source_id": "ECHEM-009-012-SOURCE-INVENTORY",
+      "source_locator": "complete sources",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+  "falsification_condition": "The claim halts if the survivor is nonunique; any reaction, interface, event direction, resource, current, potential, condition, adverse record or source page is omitted; or an external curve selects the law."
+}

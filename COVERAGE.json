@@ -59903,8 +59903,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-COMPETING-CHANNEL-BRANCHING-006-21b108e96fa5c917.json",
       "statement": "For one complete source-ordered set of registered product channels under a held reaction and condition, exact retained channel support forces the complete support as its exact sum and every branch share as channel support over that complete support. Structural EmptyOne rows remain held; no imported probability normalization, fitted branching equation or favorable-channel selection enters the relation.",
       "title": "Exact complete-support competing-channel branching relation",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Chemistry/CompetingChannel.lean",
+        "SFT/Chemistry/CompetingChannelGrammar.lean",
+        "SFT/Chemistry/CompetingChannelEvidence.lean",
+        "SFT/Chemistry/CompetingChannelAnalysis.lean",
+        "SFT/Chemistry/CompetingChannelExperiment.lean",
+        "SFT/Chemistry/CompetingChannelSource.lean",
+        "SFT/Chemistry/CompetingChannelPrediction.lean",
+        "SFT/Chemistry/CompetingChannelValidation.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "97dba8f05640c62d96cb64ef9a7f1b7529f8bdab4f13e1a76b4a8c4c6b453c1d",
       "v3_registration": {
@@ -59960,7 +59969,11 @@
         "statement": "For one complete source-ordered set of registered product channels, exact retained support forces the complete support as its exact sum and every branch share as channel support over that complete support, with every weak and absent channel retained.",
         "status": "empirically_tested",
         "title": "Exact complete-support competing-channel branching relation"
-      }
+      },
+      "remaining": [
+        "Native source-specific build and empty-axiom audit of the staged eight modules.",
+        "Fresh native core/analysis/prediction/programme/registration/empirical output comparisons against pinned V3, then registration after original dependencies are complete."
+      ]
     },
     {
       "branch": "chemistry",
@@ -201863,11 +201876,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-21T12:24:10.953027+00:00",
+  "updated_at": "2026-11-21T12:44:34.789037+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 58,
-    "pending": 1853,
+    "in_progress": 59,
+    "pending": 1852,
     "fully_reconstructed_claims": 870,
     "axiom_free_exported_results": 53963,
     "axiom_free_audited_definitions_and_theorems": 121694

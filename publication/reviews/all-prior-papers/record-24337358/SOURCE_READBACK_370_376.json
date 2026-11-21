@@ -1,0 +1,1026 @@
+{
+  "updated_at": "2026-11-21T13:10:12.905282+00:00",
+  "sections_read": [
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "sft/physics/mechanics_laws.py:ACCELERATION/INERTIA/MOMENTUM/FORCE/WORK_ENERGY/POWER exact source specifications and reused law constructor; sft/mathematics/calculator/values.py:EmptyOne, FoldScalar guard, reverse/add/subtract/multiply/reciprocal/divide bodies"
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Physics/MechanicalInertia.lean",
+      "sha256": "48fb582f41881160cd2262ba41d41670fa41cc89601920a15edd753f1ed5282d",
+      "theorems": [
+        "SFT.Physics.MechanicalInertia.successorAdmissible",
+        "SFT.Physics.MechanicalInertia.continuationUnique",
+        "SFT.Physics.MechanicalInertia.closedSuccessor",
+        "SFT.Physics.MechanicalInertia.changedRequiresSource",
+        "SFT.Physics.MechanicalInertia.closedPath",
+        "SFT.Physics.MechanicalInertia.runAppend",
+        "SFT.Physics.MechanicalInertia.sourcesAppend",
+        "SFT.Physics.MechanicalInertia.closedVelocityPath",
+        "SFT.Physics.MechanicalInertia.closedPathRetainsSpeed",
+        "SFT.Physics.MechanicalInertia.closedPathRetainsOrientation"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/MechanicalMomentum.lean",
+      "sha256": "6410b2f811512adb46a7ec2c24f53af72da6a9d42e0c4f5879f676d8c11dd952",
+      "theorems": [
+        "SFT.Physics.MechanicalMomentum.cellsRetainEveryPart",
+        "SFT.Physics.MechanicalMomentum.cellsCount",
+        "SFT.Physics.MechanicalMomentum.cellMembership",
+        "SFT.Physics.MechanicalMomentum.cellsAppend",
+        "SFT.Physics.MechanicalMomentum.cellsRecoverParts",
+        "SFT.Physics.MechanicalMomentum.cellsRecoverMotion",
+        "SFT.Physics.MechanicalMomentum.productExact",
+        "SFT.Physics.MechanicalMomentum.magnitudePositive",
+        "SFT.Physics.MechanicalMomentum.everyPartHasCompleteVelocity",
+        "SFT.Physics.MechanicalMomentum.noUnregisteredCell"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/MechanicalAcceleration.lean",
+      "sha256": "42fc0b5b4fceedd2137b5972f4e24da910b57dd1513d4e0cae29524f009c8349",
+      "theorems": [
+        "SFT.Physics.MechanicalAcceleration.orientationRoundTrip",
+        "SFT.Physics.MechanicalAcceleration.scalarRoundTrip",
+        "SFT.Physics.MechanicalAcceleration.reversalMatches",
+        "SFT.Physics.MechanicalAcceleration.exactChangeRate",
+        "SFT.Physics.MechanicalAcceleration.durationExact",
+        "SFT.Physics.MechanicalAcceleration.unchangedIsEmptyOne",
+        "SFT.Physics.MechanicalAcceleration.positiveChangeRateExact",
+        "SFT.Physics.MechanicalAcceleration.changedBeforeDistinguished",
+        "SFT.Physics.MechanicalAcceleration.changedAfterDistinguished",
+        "SFT.Physics.MechanicalAcceleration.changedProvenanceDistinguished",
+        "SFT.Physics.MechanicalAcceleration.retainedBeforeObservation",
+        "SFT.Physics.MechanicalAcceleration.retainedAfterObservation"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/MechanicalForce.lean",
+      "sha256": "d46da76f5a63d3c974127f26285d945658c4dab7fee15af5d5d3ce71fef9dbe2",
+      "theorems": [
+        "SFT.Physics.MechanicalForce.exactChangeRate",
+        "SFT.Physics.MechanicalForce.durationExact",
+        "SFT.Physics.MechanicalForce.unchangedIsEmptyOne",
+        "SFT.Physics.MechanicalForce.positiveChangeRateExact",
+        "SFT.Physics.MechanicalForce.changedBeforeDistinguished",
+        "SFT.Physics.MechanicalForce.changedAfterDistinguished",
+        "SFT.Physics.MechanicalForce.changedProvenanceDistinguished",
+        "SFT.Physics.MechanicalForce.retainedBeforeObservation",
+        "SFT.Physics.MechanicalForce.retainedAfterObservation"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/MechanicalWorkEnergy.lean",
+      "sha256": "c2b346d9c588429e240e93eb299b9219ac6f00c53fc7cd6042db1f3c2b69e31a",
+      "theorems": [
+        "SFT.Physics.MechanicalWorkEnergy.exactComposition",
+        "SFT.Physics.MechanicalWorkEnergy.retainsEveryTransferRow",
+        "SFT.Physics.MechanicalWorkEnergy.interactionCount",
+        "SFT.Physics.MechanicalWorkEnergy.interactionMembership",
+        "SFT.Physics.MechanicalWorkEnergy.positiveCompositionExact",
+        "SFT.Physics.MechanicalWorkEnergy.emptyTransferIsEmpty",
+        "SFT.Physics.MechanicalWorkEnergy.energyIsRetainedWork",
+        "SFT.Physics.MechanicalWorkEnergy.energyRetainsInteraction",
+        "SFT.Physics.MechanicalWorkEnergy.changedForceDistinguished",
+        "SFT.Physics.MechanicalWorkEnergy.changedDisplacementDistinguished",
+        "SFT.Physics.MechanicalWorkEnergy.pairExpansion",
+        "SFT.Physics.MechanicalWorkEnergy.energyDimensionClosure"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/MechanicalPower.lean",
+      "sha256": "41e828d0998fa51377b94d29461dd6bbaf9ca88bf04d6997f1655b2e4838e39a",
+      "theorems": [
+        "SFT.Physics.MechanicalPower.exactEnergyRate",
+        "SFT.Physics.MechanicalPower.durationExact",
+        "SFT.Physics.MechanicalPower.positiveEnergyRate",
+        "SFT.Physics.MechanicalPower.positiveRateExact",
+        "SFT.Physics.MechanicalPower.absentEnergyIsEmpty",
+        "SFT.Physics.MechanicalPower.retainsCompleteTransfer"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/InertiaGrammar.lean",
+      "sha256": "e763ee603a369692520260e226edc51eebe2087440e0904e53bce20a9228cb2c",
+      "theorems": [
+        "SFT.Physics.InertiaGrammar.generatedCardinality",
+        "SFT.Physics.InertiaGrammar.candidatesComplete",
+        "SFT.Physics.InertiaGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.InertiaGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.InertiaGrammar.uniqueSurvivor",
+        "SFT.Physics.InertiaGrammar.survivorAccepted",
+        "SFT.Physics.InertiaGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.InertiaGrammar.carrier_rejected_rejected",
+        "SFT.Physics.InertiaGrammar.relation_rejected_rejected",
+        "SFT.Physics.InertiaGrammar.provenance_rejected_rejected",
+        "SFT.Physics.InertiaGrammar.prediction_rejected_rejected",
+        "SFT.Physics.InertiaGrammar.record_rejected_rejected",
+        "SFT.Physics.InertiaGrammar.rows_rejected_rejected",
+        "SFT.Physics.InertiaGrammar.generality_rejected_rejected",
+        "SFT.Physics.InertiaGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/InertiaEvidence.lean",
+      "sha256": "bc53f5a78da27222d5e6d52b19eedf5294213d3e9695c7fec4340b187395c8ee",
+      "theorems": [
+        "SFT.Physics.InertiaEvidence.orderedEventWitnessPassed",
+        "SFT.Physics.InertiaEvidence.heldOrientationWitnessPassed",
+        "SFT.Physics.InertiaEvidence.registrationNoAxioms",
+        "SFT.Physics.InertiaEvidence.registrationNoFreeParameters",
+        "SFT.Physics.InertiaEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/InertiaExperiment.lean",
+      "sha256": "f11da6ca5deb1a16accf1d6ceb1720e4f3c04c48a11c950a8a5821d4f1e4086b",
+      "theorems": [
+        "SFT.Physics.InertiaExperiment.completeTargetCount",
+        "SFT.Physics.InertiaExperiment.completeTargetLabels",
+        "SFT.Physics.InertiaExperiment.changedSourceRejected",
+        "SFT.Physics.InertiaExperiment.registeredSpecValid",
+        "SFT.Physics.InertiaExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/MomentumGrammar.lean",
+      "sha256": "e0ee95419aab5736a1fd4293064b3eb7f38e9008c3da706e223a76a2ee0f7789",
+      "theorems": [
+        "SFT.Physics.MomentumGrammar.generatedCardinality",
+        "SFT.Physics.MomentumGrammar.candidatesComplete",
+        "SFT.Physics.MomentumGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.MomentumGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.MomentumGrammar.uniqueSurvivor",
+        "SFT.Physics.MomentumGrammar.survivorAccepted",
+        "SFT.Physics.MomentumGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.MomentumGrammar.carrier_rejected_rejected",
+        "SFT.Physics.MomentumGrammar.relation_rejected_rejected",
+        "SFT.Physics.MomentumGrammar.provenance_rejected_rejected",
+        "SFT.Physics.MomentumGrammar.prediction_rejected_rejected",
+        "SFT.Physics.MomentumGrammar.record_rejected_rejected",
+        "SFT.Physics.MomentumGrammar.rows_rejected_rejected",
+        "SFT.Physics.MomentumGrammar.generality_rejected_rejected",
+        "SFT.Physics.MomentumGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/MomentumEvidence.lean",
+      "sha256": "66f28a6fc7eaab56d147f87c2a295588a663158f20bc05e0fa7eba3bfc02e098",
+      "theorems": [
+        "SFT.Physics.MomentumEvidence.orderedEventWitnessPassed",
+        "SFT.Physics.MomentumEvidence.heldOrientationWitnessPassed",
+        "SFT.Physics.MomentumEvidence.registrationNoAxioms",
+        "SFT.Physics.MomentumEvidence.registrationNoFreeParameters",
+        "SFT.Physics.MomentumEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/MomentumExperiment.lean",
+      "sha256": "fbd94f46f9556b9aeaa32e57090c482e64524a93df0e202ff775f21e5b595838",
+      "theorems": [
+        "SFT.Physics.MomentumExperiment.completeTargetCount",
+        "SFT.Physics.MomentumExperiment.completeTargetLabels",
+        "SFT.Physics.MomentumExperiment.changedSourceRejected",
+        "SFT.Physics.MomentumExperiment.registeredSpecValid",
+        "SFT.Physics.MomentumExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/AccelerationGrammar.lean",
+      "sha256": "0be4ad93bf287f440071e16f1931c50eece5a8f3d262d9511828af913fd9e2ed",
+      "theorems": [
+        "SFT.Physics.AccelerationGrammar.generatedCardinality",
+        "SFT.Physics.AccelerationGrammar.candidatesComplete",
+        "SFT.Physics.AccelerationGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.AccelerationGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.AccelerationGrammar.uniqueSurvivor",
+        "SFT.Physics.AccelerationGrammar.survivorAccepted",
+        "SFT.Physics.AccelerationGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.AccelerationGrammar.carrier_rejected_rejected",
+        "SFT.Physics.AccelerationGrammar.relation_rejected_rejected",
+        "SFT.Physics.AccelerationGrammar.provenance_rejected_rejected",
+        "SFT.Physics.AccelerationGrammar.prediction_rejected_rejected",
+        "SFT.Physics.AccelerationGrammar.record_rejected_rejected",
+        "SFT.Physics.AccelerationGrammar.rows_rejected_rejected",
+        "SFT.Physics.AccelerationGrammar.generality_rejected_rejected",
+        "SFT.Physics.AccelerationGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/AccelerationEvidence.lean",
+      "sha256": "c866e8b2255f43f8d11c9e0eae20e3c2dd80cb0b6bade20fb09f2a44eb0f4ec7",
+      "theorems": [
+        "SFT.Physics.AccelerationEvidence.orderedEventWitnessPassed",
+        "SFT.Physics.AccelerationEvidence.heldOrientationWitnessPassed",
+        "SFT.Physics.AccelerationEvidence.registrationNoAxioms",
+        "SFT.Physics.AccelerationEvidence.registrationNoFreeParameters",
+        "SFT.Physics.AccelerationEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/AccelerationExperiment.lean",
+      "sha256": "fdbdf4255db1c381d4db10b814ea77f64718ab149209fa2e3fcb24c90486e1dc",
+      "theorems": [
+        "SFT.Physics.AccelerationExperiment.completeTargetCount",
+        "SFT.Physics.AccelerationExperiment.completeTargetLabels",
+        "SFT.Physics.AccelerationExperiment.changedSourceRejected",
+        "SFT.Physics.AccelerationExperiment.registeredSpecValid",
+        "SFT.Physics.AccelerationExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/ForceGrammar.lean",
+      "sha256": "ff6427429d85acd1d0c1467695d39707a85525439371726e548383d246d60acc",
+      "theorems": [
+        "SFT.Physics.ForceGrammar.generatedCardinality",
+        "SFT.Physics.ForceGrammar.candidatesComplete",
+        "SFT.Physics.ForceGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.ForceGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.ForceGrammar.uniqueSurvivor",
+        "SFT.Physics.ForceGrammar.survivorAccepted",
+        "SFT.Physics.ForceGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.ForceGrammar.carrier_rejected_rejected",
+        "SFT.Physics.ForceGrammar.relation_rejected_rejected",
+        "SFT.Physics.ForceGrammar.provenance_rejected_rejected",
+        "SFT.Physics.ForceGrammar.prediction_rejected_rejected",
+        "SFT.Physics.ForceGrammar.record_rejected_rejected",
+        "SFT.Physics.ForceGrammar.rows_rejected_rejected",
+        "SFT.Physics.ForceGrammar.generality_rejected_rejected",
+        "SFT.Physics.ForceGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/ForceEvidence.lean",
+      "sha256": "e58194be9ee421dc84ccea7e2e1a8abd8390af43932d27f27bad951289ea3085",
+      "theorems": [
+        "SFT.Physics.ForceEvidence.orderedEventWitnessPassed",
+        "SFT.Physics.ForceEvidence.heldOrientationWitnessPassed",
+        "SFT.Physics.ForceEvidence.registrationNoAxioms",
+        "SFT.Physics.ForceEvidence.registrationNoFreeParameters",
+        "SFT.Physics.ForceEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/ForceExperiment.lean",
+      "sha256": "ce77a51e741f6acd0b3a4e797e2d95b840bfff9785c48ca712e323749c55e473",
+      "theorems": [
+        "SFT.Physics.ForceExperiment.completeTargetCount",
+        "SFT.Physics.ForceExperiment.completeTargetLabels",
+        "SFT.Physics.ForceExperiment.changedSourceRejected",
+        "SFT.Physics.ForceExperiment.registeredSpecValid",
+        "SFT.Physics.ForceExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/WorkEnergyGrammar.lean",
+      "sha256": "32dd39fbf226bb79159eee24c7d5e7d84053bb032b35517a55f42b2684e07c9d",
+      "theorems": [
+        "SFT.Physics.WorkEnergyGrammar.generatedCardinality",
+        "SFT.Physics.WorkEnergyGrammar.candidatesComplete",
+        "SFT.Physics.WorkEnergyGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.WorkEnergyGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.WorkEnergyGrammar.uniqueSurvivor",
+        "SFT.Physics.WorkEnergyGrammar.survivorAccepted",
+        "SFT.Physics.WorkEnergyGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.WorkEnergyGrammar.carrier_rejected_rejected",
+        "SFT.Physics.WorkEnergyGrammar.relation_rejected_rejected",
+        "SFT.Physics.WorkEnergyGrammar.provenance_rejected_rejected",
+        "SFT.Physics.WorkEnergyGrammar.prediction_rejected_rejected",
+        "SFT.Physics.WorkEnergyGrammar.record_rejected_rejected",
+        "SFT.Physics.WorkEnergyGrammar.rows_rejected_rejected",
+        "SFT.Physics.WorkEnergyGrammar.generality_rejected_rejected",
+        "SFT.Physics.WorkEnergyGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/WorkEnergyEvidence.lean",
+      "sha256": "931f205c839563bafbf751b2e366cec5347703102ae4ac62a6a4490fb1bad217",
+      "theorems": [
+        "SFT.Physics.WorkEnergyEvidence.orderedEventWitnessPassed",
+        "SFT.Physics.WorkEnergyEvidence.heldOrientationWitnessPassed",
+        "SFT.Physics.WorkEnergyEvidence.registrationNoAxioms",
+        "SFT.Physics.WorkEnergyEvidence.registrationNoFreeParameters",
+        "SFT.Physics.WorkEnergyEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/WorkEnergyExperiment.lean",
+      "sha256": "dc2f1aad638cfa2158f3275f5e7ec13809dcaac2f78905d6f1086d991e5a58b4",
+      "theorems": [
+        "SFT.Physics.WorkEnergyExperiment.completeTargetCount",
+        "SFT.Physics.WorkEnergyExperiment.completeTargetLabels",
+        "SFT.Physics.WorkEnergyExperiment.changedSourceRejected",
+        "SFT.Physics.WorkEnergyExperiment.registeredSpecValid",
+        "SFT.Physics.WorkEnergyExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/PowerGrammar.lean",
+      "sha256": "7a1716c3922c3921f63f3172fe862fd988285584f3748d159cd4b1a7d3372345",
+      "theorems": [
+        "SFT.Physics.PowerGrammar.generatedCardinality",
+        "SFT.Physics.PowerGrammar.candidatesComplete",
+        "SFT.Physics.PowerGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.PowerGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.PowerGrammar.uniqueSurvivor",
+        "SFT.Physics.PowerGrammar.survivorAccepted",
+        "SFT.Physics.PowerGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.PowerGrammar.carrier_rejected_rejected",
+        "SFT.Physics.PowerGrammar.relation_rejected_rejected",
+        "SFT.Physics.PowerGrammar.provenance_rejected_rejected",
+        "SFT.Physics.PowerGrammar.prediction_rejected_rejected",
+        "SFT.Physics.PowerGrammar.record_rejected_rejected",
+        "SFT.Physics.PowerGrammar.rows_rejected_rejected",
+        "SFT.Physics.PowerGrammar.generality_rejected_rejected",
+        "SFT.Physics.PowerGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/PowerEvidence.lean",
+      "sha256": "8bac6c7248f71c9c4f3f0f7e312f3945d18c6d88b9909d7948cfaa6298aaf8cb",
+      "theorems": [
+        "SFT.Physics.PowerEvidence.orderedEventWitnessPassed",
+        "SFT.Physics.PowerEvidence.heldOrientationWitnessPassed",
+        "SFT.Physics.PowerEvidence.registrationNoAxioms",
+        "SFT.Physics.PowerEvidence.registrationNoFreeParameters",
+        "SFT.Physics.PowerEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/PowerExperiment.lean",
+      "sha256": "4f0cc57d65a4b4c9e222d2c18a1b5f0334a0993a8d04758c753d90cec239f350",
+      "theorems": [
+        "SFT.Physics.PowerExperiment.completeTargetCount",
+        "SFT.Physics.PowerExperiment.completeTargetLabels",
+        "SFT.Physics.PowerExperiment.changedSourceRejected",
+        "SFT.Physics.PowerExperiment.registeredSpecValid",
+        "SFT.Physics.PowerExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Mathematics/FoldScalar.lean",
+      "sha256": "feea74e4123e206e047c67a0f78ed2936df46f0d591d594609e0ea26fb40ba18",
+      "theorems": [
+        "SFT.Mathematics.FoldScalar.denominatorPositive",
+        "SFT.Mathematics.FoldScalar.oppositeTwice",
+        "SFT.Mathematics.FoldScalar.reverseTwice",
+        "SFT.Mathematics.FoldScalar.reversalPreservesMagnitude",
+        "SFT.Mathematics.FoldScalar.addEmptyLeft",
+        "SFT.Mathematics.FoldScalar.addEmptyRight",
+        "SFT.Mathematics.FoldScalar.equalOrientationsAdd",
+        "SFT.Mathematics.FoldScalar.sumExact",
+        "SFT.Mathematics.FoldScalar.leftRemainderExact",
+        "SFT.Mathematics.FoldScalar.rightRemainderExact",
+        "SFT.Mathematics.FoldScalar.opposedLeft",
+        "SFT.Mathematics.FoldScalar.opposedRight",
+        "SFT.Mathematics.FoldScalar.opposedEqual",
+        "SFT.Mathematics.FoldScalar.opposedEmptyIff",
+        "SFT.Mathematics.FoldScalar.addMultiply",
+        "SFT.Mathematics.FoldScalar.leftRemainderReconstructs",
+        "SFT.Mathematics.FoldScalar.rightRemainderReconstructs",
+        "SFT.Mathematics.FoldScalar.subtractSelf",
+        "SFT.Mathematics.FoldScalar.subtractEmpty",
+        "SFT.Mathematics.FoldScalar.subtractFromEmpty",
+        "SFT.Mathematics.FoldScalar.quotientExact",
+        "SFT.Mathematics.FoldScalar.divisionRetainsOrientation",
+        "SFT.Mathematics.FoldScalar.divisionPreservesEmpty",
+        "SFT.Mathematics.FoldScalar.quotientPositive",
+        "SFT.Mathematics.FoldScalar.productEmptyLeft",
+        "SFT.Mathematics.FoldScalar.productEmptyRight",
+        "SFT.Mathematics.FoldScalar.equalOrientationProduct",
+        "SFT.Mathematics.FoldScalar.oppositeOrientationProduct",
+        "SFT.Mathematics.FoldScalar.productMagnitudeExact",
+        "SFT.Mathematics.FoldScalar.reverseProductLeft",
+        "SFT.Mathematics.FoldScalar.reverseProductBoth"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    }
+  ],
+  "shards": [],
+  "audit": {
+    "path": "verification/TURN_484_REGISTERED_DECLARATIONS_AUDIT.log + verification/TURN_485_REGISTERED_DECLARATIONS_AUDIT.log",
+    "sha256": "b96d82e2c848da9f31323c1333dd06a78749de6912cbf938a4cbb860898140b5",
+    "matching_theorems": 240
+  },
+  "reports": [
+    {
+      "path": "verification/TURN_484_acceleration_independent484_report.json",
+      "sha256": "34e9f3deca64717840b303caeb713680593d069bfda8aadf224e268bc279d966",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-ACCELERATION-001",
+              "survivor": "complete-fold-carrier__velocity-change-per-recurrence__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-acceleration-484"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-ACCELERATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-acceleration-484"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-ACCELERATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-acceleration-484"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-ACCELERATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-acceleration-484"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_484_acceleration_program484_report.json",
+      "sha256": "299414fcc8f4bbc57d610364e46401a46dda1e21385966d5e47ac55c6869b261",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:88ffe9c177e9655bc14605137d8db2884c7ffa8df0da7ba13014bf67de29b71f",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All AccelerationProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_484_acceleration_validation484_report.json",
+      "sha256": "6e7646352ab497001f05db3be42e69a181ac806af370d02d6f61efa9ff1555b6",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 40801,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_484_force_independent484_report.json",
+      "sha256": "54468f4e8979cd9a79b9b8d05199da8827b808ad796f90b0120a9b101fe7cb78",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-FORCE-001",
+              "survivor": "complete-fold-carrier__momentum-transfer-per-duration__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-force-484"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-FORCE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-force-484"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-FORCE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-force-484"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-FORCE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-force-484"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_484_force_program484_report.json",
+      "sha256": "a2553631c28c2ca396f4035bb488d5e181db6464558d519abdecec313518b97e",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:cb39e08f950e946cd516455c2fc545cd9f22d3a8282e41fd8d8145488f5694db",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All ForceProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_484_force_validation484_report.json",
+      "sha256": "6e7646352ab497001f05db3be42e69a181ac806af370d02d6f61efa9ff1555b6",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 40801,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_484_inertia_independent483_report.json",
+      "sha256": "685383fa9403f4c3ce49e2b672943e0517f6e66d5cacec16512efa5e997a9f0b",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-INERTIA-001",
+              "survivor": "complete-fold-carrier__closed-trace-motion-persistence__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-inertia-483"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-INERTIA-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-inertia-483"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-INERTIA-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-inertia-483"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-INERTIA-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-inertia-483"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_484_inertia_program483_report.json",
+      "sha256": "59376e724b90a95c3ec387af7e61ab2c446db614cab7c8c4875cce7ce720900b",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:d5b6704050d0ba9b99388045ce83e92338864f67bd1ab4dfd27ad33dec435cd1",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All InertiaProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_484_inertia_validation483_report.json",
+      "sha256": "6e7646352ab497001f05db3be42e69a181ac806af370d02d6f61efa9ff1555b6",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 40801,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_484_momentum_independent483_report.json",
+      "sha256": "57fbb2c6ff674913b5f78fc71dd88e087e2f86db6b749e4d2b3ad3f526c95f37",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-MOMENTUM-001",
+              "survivor": "complete-fold-carrier__inertia-velocity-pair-cell-composition__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-momentum-483"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-MOMENTUM-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-momentum-483"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-MOMENTUM-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-momentum-483"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-MOMENTUM-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-momentum-483"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_484_momentum_program483_report.json",
+      "sha256": "3595232d9f88e25e00c65013b5edefda92488ff79c04dddf01faa810c6076fdd",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:443c1ce5c004f7f2bbcf8498a3dad47ff763a2df362a1eb20c3448a0dfdbacd5",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All MomentumProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_484_momentum_validation483_report.json",
+      "sha256": "6e7646352ab497001f05db3be42e69a181ac806af370d02d6f61efa9ff1555b6",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 40801,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_484_scalar484_report.json",
+      "sha256": "1790f60c3d29c1145734a42c0bca1153e43cb40f95b2ae5dd30fbe7dd61d8e14",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_path": "sft/mathematics/calculator/values.py",
+        "source_sha256": "820323016205f322f58b32460dc601d0c1f586aa6352c1bb4742e4f502b681c5",
+        "checks": {
+          "reverse": 51,
+          "add": 2601,
+          "subtract": 2601,
+          "rate": 13005
+        },
+        "total": 18258,
+        "scope": "Fresh native outputs against unchanged pinned source reverse/add_scalar/subtract_scalar/divide_scalar on structural Empty One, both orientations and all numerator/denominator pairs1..5; rates over five positive durations. Universal operation identities are separately kernel proved; finite replay does not substitute for them."
+      }
+    },
+    {
+      "path": "verification/TURN_485_power_independent485_report.json",
+      "sha256": "23155e289a7a3dbf070b11ddc0761c94bca78d1778c8ce10c580a0914e0b61bc",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-POWER-001",
+              "survivor": "complete-fold-carrier__energy-transfer-per-duration__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-power-485"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-POWER-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-power-485"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-POWER-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-power-485"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-POWER-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-power-485"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_485_power_program485_report.json",
+      "sha256": "6d01b07a56d9f2bb8bab90d2d52be037922fc2e6b14abe5e9e9cc05bb5a6c41a",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:5f0a1752b0cd74fd8e92489b01155f19471eb892c5a17cacb6b3d2049d42f756",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All PowerProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_485_power_validation485_report.json",
+      "sha256": "6e7646352ab497001f05db3be42e69a181ac806af370d02d6f61efa9ff1555b6",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 40801,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_485_scalar485_report.json",
+      "sha256": "61be6b44a8be40ef25ec015cb38896cfb2471d1c5eb81aa7ae4dd130ec77d7b8",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_path": "sft/mathematics/calculator/values.py",
+        "source_sha256": "820323016205f322f58b32460dc601d0c1f586aa6352c1bb4742e4f502b681c5",
+        "checks": {
+          "reverse": 51,
+          "multiply": 2601,
+          "add": 2601,
+          "subtract": 2601,
+          "rate": 13005
+        },
+        "total": 20859,
+        "scope": "Fresh native outputs against unchanged pinned source reverse/add_scalar/subtract_scalar/multiply_scalar/divide_scalar on structural Empty One, both orientations and all numerator/denominator pairs1..5; rates over five positive durations. Universal operation identities are separately kernel proved; finite replay does not substitute for them."
+      }
+    },
+    {
+      "path": "verification/TURN_485_workenergy_independent485_report.json",
+      "sha256": "e10604b37ac52a5733096dd29661d1560df6347a00feca6f18c80fb5037793f9",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-WORK-ENERGY-001",
+              "survivor": "complete-fold-carrier__force-displacement-transfer-composition__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-workenergy-485"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-WORK-ENERGY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-workenergy-485"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-WORK-ENERGY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-workenergy-485"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-MECH-WORK-ENERGY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-workenergy-485"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_485_workenergy_program485_report.json",
+      "sha256": "08d78f4d4c1e22308ee6077d8cedc0d8c99c07ab3c7ac8855ef17e7ddbf1d68b",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:f58fd1918c003907e5f787681c7d21ec3689f7784cafb6b5a53d9f93550f2345",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All WorkEnergyProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_485_workenergy_validation485_report.json",
+      "sha256": "6e7646352ab497001f05db3be42e69a181ac806af370d02d6f61efa9ff1555b6",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 40801,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    }
+  ],
+  "new_proofs": 0,
+  "new_builds": 0
+}

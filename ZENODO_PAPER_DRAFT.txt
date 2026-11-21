@@ -33327,3 +33327,68 @@ The fourteen-field experiment registration binds that complete prediction, its v
     71+5+8=84 messages in the original twelve-field receipt.
 
 Original source: sft/chemistry/kinetic_isotope_effect_validation_v1.py, _identities, _exact_pair, exact_kinetic_isotope_effect_analysis, prediction_program_document, experiment_registration_record, _source_rows, _prediction_map and KineticIsotopeEffectValidator.validate. Native translation: SFT/Chemistry/KineticIsotopeEffectAnalysis.lean, KineticIsotopeEffectExperiment.lean, KineticIsotopeEffectSource.lean, KineticIsotopeEffectPrediction.lean and KineticIsotopeEffectValidation.lean. Timeline: TURN1261. The original pinned program and empirical validation pass; native analysis, custody, controls and full-receipt correspondence remain queued for verification, with no completed-entry credit yet assigned.
+
+1206. Joint product states and reaction-scattering shares
+
+An incoming reaction channel retains four fields: its registered channel identity, held reaction identity, ordered incoming carriers and preparation identity. At least two distinct incoming carriers are required. An outgoing state retains its positive source occurrence, registered outgoing channel identity, the same held reaction identity, the complete ordered product carriers and their corresponding ordered states, its orientation relative to the incoming channel, a positive completed-event count and its evidence status.
+
+For an outgoing carrier word C=(c₁,…,cₘ) and its state word P=(p₁,…,pₘ), the original guards require
+
+    m≥2,    |C|=|P|,    cᵢ≠cⱼ for i≠j.
+
+The carrier and state words retain their order and pairing. The original source does not impose a separate all-distinct requirement on the state labels within a word. For the complete outgoing support S=(s₁,…,sₙ), n≥1, occurrence ordinals are exactly 1,…,n, and every reaction identity agrees with the incoming channel. Distinctness is tested on the full key
+
+    W(s)=(outgoing channel, ordered carriers, ordered states, orientation).
+
+Consequently a change only in event count or evidence status does not make a repeated W(s) a new state. Conversely, different orientations or outgoing channel identities remain distinct according to that original key.
+
+Let Nᵢ be the positive completed-event count in state sᵢ. The complete support supplies the denominator
+
+    T=Σᵢ₌₁ⁿNᵢ,    T>0,
+    share(sᵢ)=Nᵢ/T.
+
+The source witness has event counts (3,2,1), so T=6 and the three exact shares are
+
+    (3/6,2/6,1/6)=(1/2,1/3,1/6).
+
+Each of the seven returned fields remains attached to its source state: incoming channel identity, outgoing channel identity, ordered product carriers, ordered product states, incoming/outgoing orientation, exact event share and evidence status. The source witness keeps same-oriented, transverse-oriented and opposed-oriented as held relations. No angular continuum or signed orientation number enters the law.
+
+For each registered scattering occurrence q, let L(q) be its entire ordered list of seven-field records. A nonempty family Fₙ=(q₁,…,qₙ) has consecutive source ordinals. Appending qₙ₊₁ preserves the full result prefix:
+
+    map(L,Fₙ++[qₙ₊₁])=map(L,Fₙ)++[L(qₙ₊₁)],
+    take(n,map(L,Fₙ++[qₙ₊₁]))=map(L,Fₙ),
+    |Fₙ++[qₙ₊₁]|=n+1.
+
+This family extension leaves each earlier complete support and its own denominator unchanged. It is not an operation that adds a state to an existing support while holding that support's old shares fixed. Repeated complete supports at different family occurrences remain permitted by the original source.
+
+The eight original binary grammar axes are incoming, outgoing, composition, quantity, orientation, observation, provenance and prediction. Their literal product contains 2⁸=256 alternatives. The original elimination rules retain the finite held incoming preparation, complete distinct joint outgoing support, exact count shares, held orientations, complete observation surface, separated provenance and value-free prediction seal.
+
+Original source at commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1: sft/chemistry/reaction_dynamics_scattering_law_v1.py, RetainedIncomingReactionChannel, RetainedOutgoingProductState, CompleteFiniteProductStateSupport, ExactProductStateScatteringRecord, forced_reaction_scattering_product_state_law, CompleteScatteringFamily and append_scattering_occurrence_preserves_complete_family; reaction_dynamics_scattering_batch_v1.py, REACTION_DYNAMICS_SCATTERING_SPEC. Native translation: SFT/Chemistry/ReactionDynamicsScattering.lean, ReactionDynamicsScatteringGrammar.lean and ReactionDynamicsScatteringEvidence.lean. Timeline: TURN1262. These newly translated operations are queued for native verification and have not yet received completed-entry credit.
+
+1207. Complete state-resolved source and post-seal comparison
+
+The original source support instantiates the incoming F-plus-CH4 channel under its crossed-beam preparation. Each outgoing state jointly retains CH3 and HF with their corresponding held state identities. The same exact count-share operation supplies the three witness shares; experimental branching, speed, energy, angular and processing inscriptions remain in the separate post-seal source vector.
+
+The complete external census is
+
+    1 article landing + 9 article pages + 11 supplementary pages
+    + 16 transparent-review pages + 14 worksheets =51 records,
+    9+ 11+ 16=36 PDF pages.
+
+All 978,591 nonempty worksheet cells and 6,408 key state-resolved cells remain bound. Four complete vectors retain pair-correlated branching, state-resolved scattering, sampling and contamination, and before/after-correction records. The eighteen-field analysis retains all nine original headline inscriptions, including the distinct experimental and theoretical umbrella-excited flux inscriptions, 57% and 58%, and the source's forward, sideways and backward product-pair assignments. Processing statuses and the complete transparent-review adverse surface are preserved without replacing them with a selected favorable observation.
+
+The prediction's identity word contains one sealed premise, seven identity coordinates and four law labels:
+
+    word width=1+7+4=12.
+
+Each row uses one target-label instruction, seven identity-label instructions, four law-label instructions and one word instruction. For all 51 records, including the initial input and final table and emit operations,
+
+    instruction count=1+51(1+7+4+1)+2=666.
+
+The fourteen-field registration binds this complete consequence before the targets open. Nineteen forbidden identity keys exclude measured values, processing values, payloads and target hashes from the pre-seal identity surface. After release, the validator checks all eight identity fields, each nonempty payload and its hash, all five original source files, and every twelve-cell consequence.
+
+Eight original controls include removal of a source record and an actual mismatch between the incoming and outgoing reaction identities. The complete empirical receipt has twelve fields and retains
+
+    51 record messages + 6 explanatory messages + 8 control messages =65 messages.
+
+Original source: sft/chemistry/reaction_dynamics_scattering_validation_v1.py, _incoming, _outgoing, _support, exact_reaction_dynamics_scattering_analysis, _identities, prediction_program_document, experiment_registration_record, _source_rows, _prediction_map and ReactionDynamicsScatteringValidator.validate. Native translation: SFT/Chemistry/ReactionDynamicsScatteringAnalysis.lean, ReactionDynamicsScatteringExperiment.lean, ReactionDynamicsScatteringSource.lean, ReactionDynamicsScatteringPrediction.lean and ReactionDynamicsScatteringValidation.lean. Timeline: TURN1262. The original pinned program and empirical validation pass; native source analysis, custody, controls and receipt correspondence are queued for verification.

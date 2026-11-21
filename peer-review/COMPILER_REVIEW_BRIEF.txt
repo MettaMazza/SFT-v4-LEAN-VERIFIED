@@ -61,6 +61,9 @@ The source records an enter and leave event for each join, name and value occurr
 C. Compose two stages.
 Write the two equations supplied by successful checks of e0 against e1 and e1 against e2 at a supplied input. Identify the shared term. In serialCorrespondence, locate the equalities for input support, intermediate expression and observation function that make this term identical across the interface.
 
+D. Failure order.
+Use an empty environment, the unbound name x, and the positive literal 1/3. Compare join(name(x), value(1/3)) with join(value(1/3), name(x)). Write each complete enter/leave sequence. Do they return the same error? Does the final error alone distinguish their execution histories?
+
 WORKED ANSWERS
 A. At x=2/3 the three results are 1; at x=1/2 they are 5/6. The replacement x+1/2 returns 7/6 and 1 respectively, so each of the two inputs distinguishes it from e0 under the paper's exact-result observation.
 
@@ -71,7 +74,15 @@ o(run(sigma,e0)) = o(run(sigma,e1))
 o(run(sigma,e1)) = o(run(sigma,e2)).
 Equality transitivity connects the endpoints. The second equality must use the same input and observation and the same intermediate expression; the three interface equalities in serialCorrespondence establish exactly that identification.
 
-The two inputs illustrate the source operation. The general theorem quantifies over the runtimes and supplied supports in its statement; its proof is not replaced by these examples. These exercises adapt Sections 3–4 of the published paper and introduce no new verification results.
+D. Both return the original error "unbound name". The empty environment has no duplicate binding identities.
+The first trace is: enter outer join; enter name(x); leave name(x) with error; leave outer join with error. The literal is never evaluated: 4 events.
+The swapped trace is: enter outer join; enter value(1/3); leave value(1/3) with success; enter name(x); leave name(x) with error; leave outer join with error: 6 events.
+Here the event descriptions abbreviate the full native records, which also retain the environment, expression and result. Equal final errors do not distinguish these two histories; the complete records do.
+The original evaluate_expression in sft/computation/operations.py evaluates the left operand before the right and raises the lookup error. The native run and Execution constructors retain the corresponding frames. Read SFT.Computation.EvaluationTrace.firstFailureStops and SFT.Computation.EvaluationTrace.secondFailureRetainsFirst: each proof applies replay to its corresponding failure constructor. Both require distinct environment binding identities; the second additionally retains a successful left execution.
+https://github.com/MettaMazza/ernos-labs-sft-platform/blob/76f1b34e9e9682989adcbb088797b4ae4ce4fcf1/sft/computation/operations.py
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/EvaluationTrace.lean
+
+The two inputs illustrate the source operation. The general theorem quantifies over the runtimes and supplied supports in its statement; its proof is not replaced by these examples. These exercises adapt Sections 2–4 of the published paper and introduce no new verification results.
 
 RESPOND WITH ONE FINDING
 A useful response names the source operation or full Lean declaration, states the input domain and interface examined, and supplies reasoning or a reproducible counterexample. Review of the entire corpus is unnecessary.

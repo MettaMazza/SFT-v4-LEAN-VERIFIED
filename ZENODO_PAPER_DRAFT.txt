@@ -33806,3 +33806,23 @@ Let A and T denote the verified audit and target identities, and R the complete 
 Fresh execution of the pinned V3 programme yields 256 candidates and one survivor, passes all four controls and the full empirical validator, and passes the original independent validator's positive and three adverse checks. The native obligation, grammar and evidence modules are staged for current-source build, axiom audit and complete programme comparison; native source/empirical integration remains in progress. These results do not yet add a completed census entry.
 
 Pinned V3 sources: claims/SFT-CONSC-OBSERVATION-ACT-001/execution.py and independent_validator.py; sft/consciousness_cognitive_science/obligations.py, generated_law.py (_dimensions, _witnesses, _blueprints, candidate_forms, unique_survivor), external_bindings.py and empirical_program.py (validate_pre_source_seal, validate_external_evidence, _target_row, experiment_registration_record, BlindConsciousnessBoundaryValidator.validate); sft/physics/generated_empirical_law.py, inherited programme methods. Native correspondence: SFT/Consciousness/ObservationAct.lean, ObservationActGrammar.lean and ObservationActEvidence.lean; StructuralModel.lean supplies the source Fold operations. Evidence: verification/TURN1278_OBSERVATION_ORIGINAL. Timeline: TURN1278.
+
+Observation-act source and receipt construction
+
+The branch seal binds 72 original claims and 72·256 = 18,432 generated candidates. For seal payload P with claimed identity h, validation requires
+
+  H(P without complete_branch_pre_source_seal_hash) = h,
+
+with both source-selection and outcome-opening flags false. The prediction-set identity is computed from every original (claim, exact result, predicted observation label) triple. Every file named by the seal must reproduce its declared byte hash.
+
+For source audit A and target record T, their own identity fields are removed before recomputing their canonical hashes. The target record separately binds both H(A without audit_hash) and the raw audit-file byte hash. These two checks retain the distinction between a canonical record identity and an immutable captured file. Complete accounting requires
+
+  claims(T) = passed_claims(T) = 72,
+  unresolved_claims(T) = 0,
+  present_features(A) + absent_features(A) = registered_features(A).
+
+These counts belong to the host record and are not proof magnitudes. Every manifest hash is checked, and every transport record with both a snapshot path and a hash must reproduce that snapshot identity. No missing source or adverse feature is converted into support.
+
+The seventeen-field experiment registration retains the target row's complete source evidence and the extraction identity H(audit_hash, targets_hash, row). The empirical measurement payload includes that extraction identity together with the registration, derivation and prediction seals, comparison, tampered-consequence control, missing-feature control and complete execution trace. The twelve-field result preserves all five original messages.
+
+The original source-operation comparison accepts the unchanged package and rejects eight cases altering the seal identity, opening flag, claim count, candidate count, prediction-set identity, sealed-file identity, audit identity or target identity. The native source, experiment and validation operations are staged for current-source audit and direct comparison. Native correspondence: SFT/Consciousness/Source.lean, verifyIdentityPayload, validatePreSourceSeal, validateExternalEvidence and targetRow; ObservationActExperiment.lean, registration, experimentRegistration, predictionDocument and validateSpec; ObservationActValidation.lean, validateResolved and validate. Pinned V3 source: sft/consciousness_cognitive_science/empirical_program.py, corresponding source and custody functions. Evidence: verification/TURN1279_OBSERVATION_SOURCE_GUARDS. Timeline: TURN1279.

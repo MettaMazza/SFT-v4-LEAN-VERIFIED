@@ -12951,3 +12951,15 @@ import SFT.Medicine.AllocationSource
 import SFT.Medicine.AllocationExperiment
 
 import SFT.Medicine.AllocationValidation
+
+import SFT.Medicine.AdherenceCrossover
+
+import SFT.Medicine.AdherenceCrossoverGrammar
+
+import SFT.Medicine.AdherenceCrossoverEvidence
+
+import SFT.Medicine.AdherenceCrossoverSource
+
+import SFT.Medicine.AdherenceCrossoverExperiment
+
+import SFT.Medicine.AdherenceCrossoverValidation

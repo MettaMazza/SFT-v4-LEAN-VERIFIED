@@ -33744,3 +33744,30 @@ All twelve original source authorities and the complete NIST byte identity are c
 Sources: sft/chemistry/electrochemical_storage_handoff_law_v1.py, OwnedStorageCoordinate, storage_handoff and _witnesses; echem_storage_handoff_batch_v1.py, STORAGE_SPEC and AUTHORITIES; echem_storage_handoff_validation_v1.py, exact_analysis and StorageHandoffValidator.validate; the claim's execution.py and independent_validator.py. Native correspondence: SFT/Chemistry/ElectrochemicalStorageHandoff.lean, makeCoordinate, storageHandoff and originalEightWitnesses, with Grammar, Evidence, Analysis, Experiment and Validation modules. Evidence: verification/TURN1276_STORAGE_ORIGINAL. Timeline: TURN1276.
 
 The electrode-rate and polarization core modules compile with all ten audited declarations having empty axiom dependencies, including both originalEightWitnesses theorems. Their complete-record comparisons and full entry integration remain in progress. Evidence: verification/TURN1276_POLARIZATION_CORE. Timeline: TURN1276.
+
+1227. Observation records and the generated Fold fibres
+
+The Consciousness foundation uses the same exact positive rational part domain and Fold operation already derived at the root. For 0 < x ≤ 1,
+
+  F(x) = 2x if 2x ≤ 1, and F(x) = 2x − 1 otherwise.
+
+Solving the two branches for a given image y gives the complete preimage pair
+
+  F⁻¹(y) = {y/2, (y+1)/2}.
+
+The first lies in (0,1/2] and the second in (1/2,1]; both fold to y. Conversely, the branch selected by any admitted x gives one of these two values. This is the existing general exactTwoPreimages equivalence, not an inference from the examples below.
+
+An observation stores (source,image,held_fibre). Its image is F(source). When retention is requested, the source comparison chooses the lower label if source = y/2 and otherwise the upper label if source = (y+1)/2. Exhaustion of the two fibres ensures that every admitted source receives a label. Reconstruction selects the corresponding predecessor, so the reconstructed source equals the original. Without a retained label the original reversible_from_record operation returns false. For directly supplied observation records, the original operation interprets any held label other than lower as upper; the translation preserves this decision.
+
+At y = 1/2 the two coordinates are 1/4 and 3/4. Thus
+
+  F(1/4) = F(3/4) = 1/2,
+  1/4 + 3/4 = 1, and F(1/2) = 1.
+
+The finite self-model trace is (1/4,1/2,1). The complementary recurrent pair follows from F(1/3)=2/3 and F(2/3)=1/3. The three-position support is (1/7,2/7,4/7): its Fold images are (2/7,4/7,1/7), because 2·4/7−1=1/7, and its parts sum to (1+2+4)/7=1. The red_of_red record carries the named qualitative identity with that support and its recurrence. Its external-assignment marker retains V3's explicit separation between this structural derivation and assignment of the label to a stimulus/report class.
+
+For a positive integer count n, orbit returns (x,F(x),…,Fⁿ⁻¹(x)); it rejects Boolean, non-integer and nonpositive counts with the original error. first_return examines F(x),F²(x),…,Fⁿ(x) in order and returns the first matching positive host index, or none. These host counts are declared search and trace lengths.
+
+Original-source execution verifies all ten registered structural witnesses. Six hundred full observation records, covering both retention settings for every pair 1 ≤ numerator ≤ denominator ≤ 24, are retained for the native comparison. The source-bound native module and its general observation proof composition are staged; their build, axiom audit and comparison are pending and do not increase the completed-entry count.
+
+Pinned V3 source: sft/consciousness_cognitive_science/structural_model.py, fold, preimage_fibre, ObservationAct, observe, orbit, first_return, observer_observed_lock, finite_self_model_trace, recurrent_pair, three_quality_support, red_of_red_structure and structural_witnesses. Existing native root verification: SFT/Foundation/FoldFibres.lean, exactTwoPreimages; FoldDynamics.lean, thirdFoldsToTwoThirds and twoThirdsFoldsToThird; HalfOneDerivation.lean, halfFoldsToOne. Staged source translation: SFT/Consciousness/StructuralModel.lean, corresponding operations and retainedObservation/unretainedObservation. Evidence: verification/TURN1277_CONSCIOUSNESS_SOURCE. Timeline: TURN1277.

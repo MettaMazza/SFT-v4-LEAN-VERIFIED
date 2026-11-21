@@ -1,0 +1,249 @@
+{
+  "claim_id": "SFT-CHEM-CORROSION-REACTION-NETWORK-012",
+  "title": "Fold coupled corrosion reaction-network law",
+  "statement": "Corrosion is a coupled anodic-cathodic network under one retained material and environment, with exact counted path rates, synchronized support, held excess orientation and structural balance.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-CHEM-REDOX-COUPLING-001",
+    "SFT-CHEM-ELECTRODE-REACTION-RATE-009",
+    "SFT-CHEM-OVERPOTENTIAL-POLARIZATION-010"
+  ],
+  "generation_rule": "Generate the literal product of eight registered corrosion-network decisions.",
+  "grammar_boundary": "Eight dimensions exhaust material, network, events, resource, coupling, orientation, balance and record.",
+  "dimensions": [
+    {
+      "key": "material",
+      "choices": [
+        {
+          "name": "material-free-rate",
+          "admitted": false,
+          "reason": "A rate without material is not corrosion identity."
+        },
+        {
+          "name": "held-material-environment-custody",
+          "admitted": true,
+          "reason": "Material and environment remain held."
+        }
+      ]
+    },
+    {
+      "key": "network",
+      "choices": [
+        {
+          "name": "single-reaction-answer",
+          "admitted": false,
+          "reason": "Corrosion requires coupled reactions."
+        },
+        {
+          "name": "complete-anodic-cathodic-network",
+          "admitted": true,
+          "reason": "Both paths remain explicit."
+        }
+      ]
+    },
+    {
+      "key": "events",
+      "choices": [
+        {
+          "name": "continuum-loss-rate",
+          "admitted": false,
+          "reason": "A continuum rate hides events."
+        },
+        {
+          "name": "positive-counted-path-events",
+          "admitted": true,
+          "reason": "Every reaction event is counted."
+        }
+      ]
+    },
+    {
+      "key": "resource",
+      "choices": [
+        {
+          "name": "unbounded-corrosion-rate",
+          "admitted": false,
+          "reason": "Rate needs resource support."
+        },
+        {
+          "name": "exact-events-per-resource-ratio",
+          "admitted": true,
+          "reason": "Each path rate is exact."
+        }
+      ]
+    },
+    {
+      "key": "coupling",
+      "choices": [
+        {
+          "name": "independent-fitted-rates",
+          "admitted": false,
+          "reason": "Independent fits need not conserve current."
+        },
+        {
+          "name": "exact-synchronized-path-rate",
+          "admitted": true,
+          "reason": "Coupled rate is the exact shared support."
+        }
+      ]
+    },
+    {
+      "key": "orientation",
+      "choices": [
+        {
+          "name": "signed-net-current",
+          "admitted": false,
+          "reason": "A sign imports negative magnitude."
+        },
+        {
+          "name": "held-excess-path-orientation",
+          "admitted": true,
+          "reason": "Any excess is held with positive magnitude."
+        }
+      ]
+    },
+    {
+      "key": "balance",
+      "choices": [
+        {
+          "name": "numerical-zero-corrosion-current",
+          "admitted": false,
+          "reason": "Numerical zero is not native balance."
+        },
+        {
+          "name": "structural-EmptyOne-balanced-excess",
+          "admitted": true,
+          "reason": "Balanced paths close excess structurally."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "selected-corrosion-rate",
+          "admitted": false,
+          "reason": "One rate hides potential, mass loss and adverse rows."
+        },
+        {
+          "name": "complete-potential-current-rate-mass-loss-vector",
+          "admitted": true,
+          "reason": "Every registered corrosion record remains downstream."
+        }
+      ]
+    }
+  ],
+  "exact_result": "held-material-environment-custody__complete-anodic-cathodic-network__positive-counted-path-events__exact-events-per-resource-ratio__exact-synchronized-path-rate__held-excess-path-orientation__structural-EmptyOne-balanced-excess__complete-potential-current-rate-mass-loss-vector",
+  "induction_base": "One anodic and one cathodic event on common material/environment support form the first coupled network.",
+  "induction_step": "Appending path events recomputes exact synchronized and excess rates while retaining both paths.",
+  "exclusions": [
+    "no numerical zero negative irrational imaginary continuum fitted free random or imported native parameter",
+    "no external corrosion current mass loss or fitted ratio selects the survivor",
+    "all discrepancies estimates controls and IR drops remain downstream provenance"
+  ],
+  "operational_witnesses": [
+    [
+      "paths",
+      "Both paths retained.",
+      true
+    ],
+    [
+      "material",
+      "Material retained.",
+      true
+    ],
+    [
+      "environment",
+      "Environment retained.",
+      true
+    ],
+    [
+      "rate",
+      "Synchronized rate exact.",
+      true
+    ],
+    [
+      "balance",
+      "Balanced excess EmptyOne.",
+      true
+    ],
+    [
+      "orientation",
+      "Anodic excess held.",
+      true
+    ],
+    [
+      "positive",
+      "Excess magnitude positive.",
+      true
+    ],
+    [
+      "network",
+      "Reaction identities retained.",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-CORROSION-REACTION-NETWORK-012",
+  "expected_observation_label": "complete-corrosion-reaction-network-vector",
+  "target_rows": [
+    {
+      "target_id": "SFT-CHEM-ECHEM-012-MATERIAL-ENVIRONMENT",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "material environment",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-012-ANODIC-CATHODIC-NETWORK",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "anodic cathodic network",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-012-CORROSION-POTENTIAL",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "corrosion potential",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-012-CORROSION-CURRENT",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "corrosion current",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-012-MASS-LOSS-RATE",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "mass loss rate",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-012-POLARIZATION-CONTROL",
+      "source_id": "NBS-JRES-GALVANIC-COUPLES-1950",
+      "source_locator": "polarization control",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-012-ADVERSE-UNCERTAINTY",
+      "source_id": "NBS-JRES-IRON-CORROSION-1957",
+      "source_locator": "adverse uncertainty",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-012-COMPLETE-SOURCES",
+      "source_id": "ECHEM-009-012-SOURCE-INVENTORY",
+      "source_locator": "complete sources",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:9ef756e0ad20505cd5af19f924480b3b39d03826c4737f2850890416fbffdf4c"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/snapshots/echem-009-012-polarization-v1/complete-postseal-analysis-v1.json",
+  "falsification_condition": "The claim halts if the survivor is nonunique; any material, environment, reaction path, potential, current, rate, mass loss, discrepancy, control or source page is omitted; or an external result selects the law."
+}

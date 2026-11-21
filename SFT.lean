@@ -13023,3 +13023,15 @@ import SFT.Medicine.DoseResponseSource
 import SFT.Medicine.DoseResponseExperiment
 
 import SFT.Medicine.DoseResponseValidation
+
+import SFT.Medicine.AdverseEvent
+
+import SFT.Medicine.AdverseEventGrammar
+
+import SFT.Medicine.AdverseEventEvidence
+
+import SFT.Medicine.AdverseEventSource
+
+import SFT.Medicine.AdverseEventExperiment
+
+import SFT.Medicine.AdverseEventValidation

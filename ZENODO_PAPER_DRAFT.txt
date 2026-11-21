@@ -33624,3 +33624,37 @@ The external branch reuses the seven-source reconstruction of Section 1218, with
 The original four-instruction prediction and sixteen-field registration precede release of the eight ordered comparisons. Removing the final target is rejected. The original twelve-field empirical receipt, three measurement messages and independent adverse cases pass. Six native modules and their 395 complete-record core comparisons, exhaustive programme comparison, axiom audits and full empirical comparison are staged; native completion is not yet registered.
 
 Sources: sft/chemistry/electrolysis_product_law_v1.py, ElectrolysisAccount, electrolysis_product_amount, compose_carrier_batches and _witnesses; echem_transport_batch_v1.py, ELECTROLYSIS_SPEC; echem_transport_validation_v1.py, exact_analysis and _Validator.validate; the claim's execution.py and independent_validator.py, at the pinned V3 commit. Native correspondence: SFT/Chemistry/ElectrolysisProduct.lean, makeAccount, electrolysisProductAmount, composeCarrierBatches and originalEightWitnesses; its Grammar, Evidence, Analysis, Experiment and Validation modules, with shared sourcePrefix reused from ElectrochemicalWorkAnalysis. Original evidence: verification/TURN1271_ELECTROLYSIS_ORIGINAL. Timeline: TURN1271.
+
+1220. Species-resolved ionic conductivity
+
+Each observed ionic species retains its identity, transport direction, electrolyte composition, condition and finite path, together with positive carried-distinction count n_i and positive path-resource count r_i. Its exact response is k_i=n_i/r_i. A conductivity account is nonempty; every contribution shares composition, condition and path, and every species occurs exactly once. The result retains the entire ordered contribution vector and those common identities with
+    K = sum_{i=1}^{m} n_i/r_i.
+For two fractions, exact composition uses
+    a/b + c/d = (ad+bc)/(bd),
+followed by positive rational normalization. Iterating this operation over the complete vector produces the original total. Appending a distinct positive contribution gives
+    K_new = K + n_new/r_new,
+    K_new - K = n_new/r_new > 0.
+No prior contribution is refitted or discarded. The original witness uses 3/2+1/2=2; it also retains both species and the common composition and condition, establishes positive extension, and rejects mixed conditions and the empty vector.
+
+The eight binary axes retain carrier, direction, composition, condition, path, aggregation, record and extension. All 256 combinations are enumerated; the accepted conjunction retains the complete species vector, held directions, common support, finite resource counts, exact sum, complete source record and positive-species successor. The actual registered dependency identity is supplied by CONDUCTIVITY_SPEC in the pinned batch.
+
+The eight external comparisons retain SRM 3190 identity, aqueous-HCl composition, temperature 25.000 Celsius and uncertainty 0.005, conductivity 25.11 microSiemens/cm, expanded uncertainty 0.26 and coverage factor 1.96, species-resolved AC/DC methods and all 52 primary-method pages, six catalog materials, and all 280 claim-specific source pages and controls. These are external source inscriptions. The nine-field summary also retains the shared 519-page family, 1,754,402 characters and complete vector identity. Four prediction instructions and sixteen registration fields precede release of the ordered targets. The original twelve-field receipt and three messages pass, as do the independent validator and three adverse tests. Native core 245-case comparison, audits, full 256-programme and empirical checks are staged and queued.
+
+Sources: sft/chemistry/ionic_conductivity_law_v1.py, IonicTransportContribution, exact_response, ionic_conductivity, append_species and _witnesses; echem_transport_batch_v1.py, CONDUCTIVITY_SPEC; echem_transport_validation_v1.py, exact_analysis and _Validator.validate; the claim's execution.py and independent_validator.py. Native correspondence: SFT/Chemistry/IonicConductivity.lean, makeContribution, exactResponse, ionicConductivity, appendSpecies and originalEightWitnesses, with its Grammar, Evidence, Analysis, Experiment and Validation modules. Evidence: verification/TURN1272_IONIC_TRANSPORT_ORIGINAL/conductivity1367_original_report.json. Timeline: TURN1272.
+
+1221. Ionic mobility and the complete transference partition
+
+For species i, let t_i, n_i and r_i be its positive traversal, carrier and path-resource counts. Its held direction remains separate from these magnitudes. The original account computes
+    mu_i = t_i/(n_i r_i),
+    c_i = mu_i n_i = t_i/r_i.
+The accounts share composition, condition and path, retain distinct species, and form a nonempty vector. Their complete contribution total is C=sum_i c_i. Each row retains species, direction, mobility and exact transference part
+    theta_i = c_i/C.
+Positivity gives theta_i>0, and inclusion of c_i in C gives theta_i<=1. The result computes the sum of these parts:
+    sum_i theta_i = (sum_i c_i)/C = C/C = One.
+The implementation assembles the actual parts and their sum. It does not substitute One for the calculation. With traversals 3 and 1, one carrier each and resource 2, the contributions are 3/2 and 1/2, total 2, and parts 3/4 and 1/4. An absent species is represented separately by EmptyOne. Duplicate-species accounts are rejected; distinct held directions remain attached to their respective rows.
+
+The eight binary axes retain identity, direction, mobility, composition, partition, whole, absence and record. Their 256 alternatives preserve the complete source grammar and its unique accepted combination. The eight external comparisons retain three species, ten transference-method pages and temperature 25 ± 0.05 Celsius, ten potassium concentration supports, fourteen experimental runs, four tables and three sodium-difference pairs, mobility/current-direction custody, the lithium inscriptions 0.314 and 0.304, stationary/nonreversing and preliminary or unexplained rows, and all 213 claim-specific source pages. The ten-field summary retains these source results together with the shared 519-page family, its 1,754,402 characters, vector identity and provenance declaration.
+
+The original four-instruction/sixteen-field prediction registration, eight comparisons, omission rejection and twelve-field/three-message empirical receipt are retained. The original programme and empirical validator pass, and the independent validator rejects all three adverse cases. Native 162-case complete-record comparison, full 256-programme checks, axiom audits and empirical receipt comparison remain queued.
+
+Sources: sft/chemistry/ionic_mobility_transference_law_v1.py, IonicMobilityAccount.mobility, contribution, mobility_and_transference, absent_species_transference and _witnesses; sft/engine/exact.py, ExactPart; echem_transport_batch_v1.py, MOBILITY_SPEC; echem_transport_validation_v1.py, exact_analysis and _Validator.validate; the claim's execution.py and independent_validator.py. Native correspondence: SFT/Chemistry/IonicMobilityTransference.lean, makeAccount, mobility, contribution, exactPart, mobilityAndTransference, absentSpeciesTransference and originalEightWitnesses, with its Grammar, Evidence, Analysis, Experiment and Validation modules. Evidence: verification/TURN1272_IONIC_TRANSPORT_ORIGINAL/mobility1368_original_report.json. Timeline: TURN1272.

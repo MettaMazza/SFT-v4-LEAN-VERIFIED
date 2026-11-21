@@ -1,0 +1,125 @@
+{
+  "updated_at": "2026-11-21T12:40:44.360788+00:00",
+  "sections_read": [
+    318
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "original_sources": [
+    {
+      "path": "sft/physics/cosmology_prior_value_laws.py",
+      "sha256": "86eecffe4f50cc7ce538411d8e2eb761fe907ce74b8abb28ca7fa74606debb6b",
+      "inspection": "complete file"
+    },
+    {
+      "path": "sft/physics/cosmology_prior_value_validation.py",
+      "sha256": "30166900e0118b10fbeaec0014064172a4a0e1bcdcac366702d92f9f3b0901b5",
+      "inspection": "complete file"
+    },
+    {
+      "path": "sft/physics/hubble_calibration_law.py",
+      "sha256": "1a0b032cdade5bdb4c2df908d44b6c3c09b98e58cc9ed7f384c0ea6fb9f20654",
+      "inspection": "complete file"
+    },
+    {
+      "path": "sft/physics/hubble_calibration_validation.py",
+      "sha256": "36fbf11aa8e2011b02487b71da405fdb708dfdf64582f7844286c770719bb26a",
+      "inspection": "complete file"
+    }
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Physics/CosmicRatios.lean",
+      "sha256": "37575187ab554a5d41c9f70c19e7bfdd34dc87c887eae017dfc987645769c3f5",
+      "theorems": [
+        "SFT.Physics.CosmicRatios.darkExact",
+        "SFT.Physics.CosmicRatios.hubbleExact",
+        "SFT.Physics.CosmicRatios.darkLeastCover",
+        "SFT.Physics.CosmicRatios.hubbleLeastDeepCover",
+        "SFT.Physics.CosmicRatios.darkFirstReturn",
+        "SFT.Physics.CosmicRatios.hubbleFirstReturn"
+      ],
+      "inspection": "complete definitions and proof bodies"
+    },
+    {
+      "path": "SFT/Physics/CosmicIntervals.lean",
+      "sha256": "9f4425b274d3da6ddb80eafb1c53c49dbcc8c13fdaa43718e6b5142ab0ed6909",
+      "theorems": [
+        "SFT.Physics.CosmicIntervals.originalHubbleWitnesses",
+        "SFT.Physics.CosmicIntervals.originalDensityWitnesses",
+        "SFT.Physics.CosmicIntervals.containedBounds"
+      ],
+      "inspection": "complete definitions and proof bodies"
+    }
+  ],
+  "additional_full_proof_read": {
+    "path": "SFT/Physics/AlphaCovers.lean",
+    "sha256": "89d4daf4f42f157861ee749b885910d728c40125c5d737d59b67d6c7f28c504a"
+  },
+  "audit": {
+    "path": "verification/TURN_483_REGISTERED_DECLARATIONS_AUDIT.log",
+    "sha256": "b9b0fa89f5b65603106e8e9f3ecaefa83268fa3c82a99e4bc08f9a0915cd8da0",
+    "matching_theorems": 9
+  },
+  "reports": [
+    {
+      "path:n": "verification/TURN_483_cosmic_source_report.json",
+      "sha256": "7fe905a75687609c178f84afaf6d12f4e1ca5b6e93dcd5877fae5b45e484cc14",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "scope": "Every field of both original structure functions, including complete ordered first-return traces; fresh native Lean output compared to isolated unchanged pinned Python definitions. V3 used only as verification oracle, never as Lean execution or proof premise.",
+        "functions": [
+          "dark_baryon_structure",
+          "hubble_calibration_structure"
+        ],
+        "fields": 19
+      }
+    },
+    {
+      "path:n": "verification/TURN_487_cosmic_source_report.json",
+      "sha256": "7fe905a75687609c178f84afaf6d12f4e1ca5b6e93dcd5877fae5b45e484cc14",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "scope": "Every field of both original structure functions, including complete ordered first-return traces; fresh native Lean output compared to isolated unchanged pinned Python definitions. V3 used only as verification oracle, never as Lean execution or proof premise.",
+        "functions": [
+          "dark_baryon_structure",
+          "hubble_calibration_structure"
+        ],
+        "fields": 19
+      }
+    },
+    {
+      "path:n": "verification/TURN_483_DarkBaryon_validation377_report.json",
+      "sha256": "f51c836aecffb9586268b5a0ef84e960467395667a4d9d64a62b1e7159feb765",
+      "result": {
+        "status": "PASS",
+        "claim_id": "SFT-PHYS-COSMO-DARK-BARYON-FRACTION-001",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_bytes": 743,
+        "source_sha256": "274e0189de5846ce0b8c2d7b83ae06c72587cf8325d4d2b2338e88dd0a74a88f",
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Original source interval parsing and guards, both exact predictions, complete blind validator execution, source hash, sealing, custody, both rows, hostile audit, controls, all certificates and receipt; host labels supplied from pinned record, protected snapshots supplied identical."
+      }
+    },
+    {
+      "path:n": "verification/TURN_487_Hubble_validation377_report.json",
+      "sha256": "bdbe7eeeb885e6413b380acb1fe5c7e4f15385a835279449824c880abb745ec3",
+      "result": {
+        "status": "PASS",
+        "claim_id": "SFT-PHYS-COSMO-HUBBLE-CALIBRATION-001",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_bytes": 1316,
+        "source_sha256": "4f5bc28ad7a691b9b1fb64bb68a30546f5c82ea7f2e9797f4ade713cad498c04",
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Original source interval parsing and guards, both exact predictions, complete blind validator execution, source hash, sealing, custody, both rows, hostile audit, controls, all certificates and receipt; host labels supplied from pinned record, protected snapshots supplied identical."
+      }
+    }
+  ],
+  "receipt_metadata_discrepancy": "TURN_487_HUBBLE_COMPLETION source_path/source_sha256 repeat the dark-baryon file. This review binds Hubble directly to its actual pinned source and complete native definitions instead of propagating that copied metadata.",
+  "inspection_scope": "Section318 operational structures/interval proof. Dedicated full dark-baryon and Hubble grammars remain at sections369 and387.",
+  "new_builds": 0,
+  "new_proofs": 0
+}

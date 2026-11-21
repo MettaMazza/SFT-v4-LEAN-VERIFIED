@@ -1,0 +1,51 @@
+{
+  "updated_at": "2026-11-21T12:33:34.047258+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    312,
+    313,
+    314
+  ],
+  "challenges": [
+    {
+      "challenge": "Can a release change its target package, repeat, or conceal multiple identity failures?",
+      "resolution": "releasePreservesPackage copies all values/nonce/seal fields; successfulReleaseCannotRepeat uses the resulting released flag. exchangeChecksExactly decomposes all seven ordered violation lists and proves both directions, preserving simultaneous failures."
+    },
+    {
+      "challenge": "Does naming or snapshot representation erase supplied payloads or files?",
+      "resolution": "completeTargetEntries reconstructs every original named entry, including its canonical payload and order; everyNamedPackageAccepted proves the converse. snapshotRetainsEveryFile preserves the entire supplied path projection and snapshotRetainsBothTrees concatenates both full ordered trees."
+    },
+    {
+      "challenge": "Can executable source or changed authority pass, or can parsing errors be hidden?",
+      "resolution": "sourceNeverAdmitted covers all value constructors; acceptedTreeUnchanged implies exact Snapshot equality, making changedSnapshotNeverAdmitted immediate; parserFailureRetained returns the original parser error. acceptedCertificateBound retains the exact parsed program and document identities."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Physics/TargetCustodyGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Physics/TargetCustodyGrammar.lean#L161",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Physics/TargetCustodyWitness.lean#L22",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Physics/HostileGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Physics/HostileGrammar.lean#L161",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Physics/HostilePackage.lean#L85",
+      "public_bytes_equal": true
+    }
+  ],
+  "status": "Inspected sections pass second review; whole-paper review incomplete.",
+  "new_builds": 0
+}

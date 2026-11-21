@@ -1,0 +1,488 @@
+{
+  "updated_at": "2026-11-21T12:35:16.130894+00:00",
+  "sections_read": [
+    315,
+    316
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "native_modules": [
+    {
+      "path": "SFT/Physics/ObservationCarrier.lean",
+      "sha256": "09e12c26f04fcc077a0eac761918a7c70e05de27ce98541f97c608b08268c95b",
+      "declarations": [
+        "SFT.Physics.ObservationCarrier.onePair",
+        "SFT.Physics.ObservationCarrier.appendPair",
+        "SFT.Physics.ObservationCarrier.oneReferencePair",
+        "SFT.Physics.ObservationCarrier.successorRetainsPrior",
+        "SFT.Physics.ObservationCarrier.successorAddsOne",
+        "SFT.Physics.ObservationCarrier.ExternalTargetRow",
+        "SFT.Physics.ObservationCarrier.Comparison",
+        "SFT.Physics.ObservationCarrier.compareRow",
+        "SFT.Physics.ObservationCarrier.comparisonRetainsCoordinates",
+        "SFT.Physics.ObservationCarrier.comparisonPassesExactly",
+        "SFT.Physics.ObservationCarrier.tamperedControlPassed",
+        "SFT.Physics.ObservationCarrier.tamperedControlRejectsChanged",
+        "SFT.Physics.ObservationCarrier.allPassed",
+        "SFT.Physics.ObservationCarrier.acceptedRowsAllPass"
+      ],
+      "empty_axiom_theorems": [
+        "SFT.Physics.ObservationCarrier.oneReferencePair",
+        "SFT.Physics.ObservationCarrier.successorRetainsPrior",
+        "SFT.Physics.ObservationCarrier.successorAddsOne",
+        "SFT.Physics.ObservationCarrier.comparisonRetainsCoordinates",
+        "SFT.Physics.ObservationCarrier.comparisonPassesExactly",
+        "SFT.Physics.ObservationCarrier.tamperedControlRejectsChanged",
+        "SFT.Physics.ObservationCarrier.acceptedRowsAllPass"
+      ],
+      "inspection": "Full operational definitions, guards, certificate/receipt fields and proofs read. Grammar proof suffix matches fully read custody proof after exact axis renaming; full actual grammar prefix and evidence read."
+    },
+    {
+      "path": "SFT/Physics/ObservationPrediction.lean",
+      "sha256": "8a5fe11685a77d1ddb016e5fe7a382cffb2a89b682330ea7c61e27d55185abfb",
+      "declarations": [
+        "SFT.Physics.ObservationPrediction.predictionSteps",
+        "SFT.Physics.ObservationPrediction.predictionProgram",
+        "SFT.Physics.ObservationPrediction.isInput",
+        "SFT.Physics.ObservationPrediction.onlyRegisteredInput",
+        "SFT.Physics.ObservationPrediction.oneTerminalEmission",
+        "SFT.Physics.ObservationPrediction.emittedRegister",
+        "SFT.Physics.ObservationPrediction.traceHasFourRows"
+      ],
+      "empty_axiom_theorems": [
+        "SFT.Physics.ObservationPrediction.onlyRegisteredInput",
+        "SFT.Physics.ObservationPrediction.oneTerminalEmission",
+        "SFT.Physics.ObservationPrediction.emittedRegister",
+        "SFT.Physics.ObservationPrediction.traceHasFourRows"
+      ],
+      "inspection": "Full operational definitions, guards, certificate/receipt fields and proofs read. Grammar proof suffix matches fully read custody proof after exact axis renaming; full actual grammar prefix and evidence read."
+    },
+    {
+      "path": "SFT/Physics/ObservationGrammar.lean",
+      "sha256": "9b3e82d1d5ff36631a7cb6e2ab2ac478978baf3144d7d4830a123dfb533d3f2a",
+      "declarations": [
+        "SFT.Physics.ObservationGrammar.Carrier",
+        "SFT.Physics.ObservationGrammar.carrierName",
+        "SFT.Physics.ObservationGrammar.Relation",
+        "SFT.Physics.ObservationGrammar.relationName",
+        "SFT.Physics.ObservationGrammar.Provenance",
+        "SFT.Physics.ObservationGrammar.provenanceName",
+        "SFT.Physics.ObservationGrammar.Prediction",
+        "SFT.Physics.ObservationGrammar.predictionName",
+        "SFT.Physics.ObservationGrammar.Record",
+        "SFT.Physics.ObservationGrammar.recordName",
+        "SFT.Physics.ObservationGrammar.Rows",
+        "SFT.Physics.ObservationGrammar.rowsName",
+        "SFT.Physics.ObservationGrammar.Generality",
+        "SFT.Physics.ObservationGrammar.generalityName",
+        "SFT.Physics.ObservationGrammar.Extension",
+        "SFT.Physics.ObservationGrammar.extensionName",
+        "SFT.Physics.ObservationGrammar.Candidate",
+        "SFT.Physics.ObservationGrammar.sourceFields",
+        "SFT.Physics.ObservationGrammar.candidateId",
+        "SFT.Physics.ObservationGrammar.exactForm",
+        "SFT.Physics.ObservationGrammar.survivorId",
+        "SFT.Physics.ObservationGrammar.survives",
+        "SFT.Physics.ObservationGrammar.criteriaDecision",
+        "SFT.Physics.ObservationGrammar.decisionReason",
+        "SFT.Physics.ObservationGrammar.generationRule",
+        "SFT.Physics.ObservationGrammar.grammarBoundary",
+        "SFT.Physics.ObservationGrammar.candidates",
+        "SFT.Physics.ObservationGrammar.survivor",
+        "SFT.Physics.ObservationGrammar.generatedCardinality",
+        "SFT.Physics.ObservationGrammar.candidatesComplete",
+        "SFT.Physics.ObservationGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.ObservationGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.ObservationGrammar.uniqueSurvivor",
+        "SFT.Physics.ObservationGrammar.survivorAccepted",
+        "SFT.Physics.ObservationGrammar.ExactCriteria",
+        "SFT.Physics.ObservationGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.ObservationGrammar.carrier_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.relation_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.provenance_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.prediction_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.record_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.rows_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.generality_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.extension_rejected_rejected"
+      ],
+      "empty_axiom_theorems": [
+        "SFT.Physics.ObservationGrammar.generatedCardinality",
+        "SFT.Physics.ObservationGrammar.candidatesComplete",
+        "SFT.Physics.ObservationGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.ObservationGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.ObservationGrammar.uniqueSurvivor",
+        "SFT.Physics.ObservationGrammar.survivorAccepted",
+        "SFT.Physics.ObservationGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.ObservationGrammar.carrier_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.relation_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.provenance_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.prediction_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.record_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.rows_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.generality_rejected_rejected",
+        "SFT.Physics.ObservationGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational definitions, guards, certificate/receipt fields and proofs read. Grammar proof suffix matches fully read custody proof after exact axis renaming; full actual grammar prefix and evidence read."
+    },
+    {
+      "path": "SFT/Physics/ObservationEvidence.lean",
+      "sha256": "f10a7edd9986ac13f7a10e62d61db53f96bf2c9a114d3c6a6a2c9d76ecd46677",
+      "declarations": [
+        "SFT.Physics.ObservationEvidence.onePairWitness",
+        "SFT.Physics.ObservationEvidence.successorWitness",
+        "SFT.Physics.ObservationEvidence.witnesses",
+        "SFT.Physics.ObservationEvidence.onePairWitnessPassed",
+        "SFT.Physics.ObservationEvidence.successorWitnessPassed",
+        "SFT.Physics.ObservationEvidence.claimId",
+        "SFT.Physics.ObservationEvidence.dependencies",
+        "SFT.Physics.ObservationEvidence.candidateRecord",
+        "SFT.Physics.ObservationEvidence.completenessRecord",
+        "SFT.Physics.ObservationEvidence.registrationData",
+        "SFT.Physics.ObservationEvidence.registration",
+        "SFT.Physics.ObservationEvidence.generatedCandidateData",
+        "SFT.Physics.ObservationEvidence.censusData",
+        "SFT.Physics.ObservationEvidence.census",
+        "SFT.Physics.ObservationEvidence.decisionData",
+        "SFT.Physics.ObservationEvidence.decideCandidate",
+        "SFT.Physics.ObservationEvidence.closureValue",
+        "SFT.Physics.ObservationEvidence.exclusions",
+        "SFT.Physics.ObservationEvidence.closureData",
+        "SFT.Physics.ObservationEvidence.closure",
+        "SFT.Physics.ObservationEvidence.control",
+        "SFT.Physics.ObservationEvidence.runControls",
+        "SFT.Physics.ObservationEvidence.registrationNoAxioms",
+        "SFT.Physics.ObservationEvidence.registrationNoFreeParameters",
+        "SFT.Physics.ObservationEvidence.decisionSurvival"
+      ],
+      "empty_axiom_theorems": [
+        "SFT.Physics.ObservationEvidence.onePairWitnessPassed",
+        "SFT.Physics.ObservationEvidence.successorWitnessPassed",
+        "SFT.Physics.ObservationEvidence.registrationNoAxioms",
+        "SFT.Physics.ObservationEvidence.registrationNoFreeParameters",
+        "SFT.Physics.ObservationEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational definitions, guards, certificate/receipt fields and proofs read. Grammar proof suffix matches fully read custody proof after exact axis renaming; full actual grammar prefix and evidence read."
+    },
+    {
+      "path": "SFT/Physics/ObservationExperiment.lean",
+      "sha256": "e95539f91ef47c140163225465ec940e4a1d1b59900f10ad1f237c026c47ba8b",
+      "declarations": [
+        "SFT.Physics.ObservationExperiment.labelValue",
+        "SFT.Physics.ObservationExperiment.nonblank",
+        "SFT.Physics.ObservationExperiment.TargetRow",
+        "SFT.Physics.ObservationExperiment.claimId",
+        "SFT.Physics.ObservationExperiment.experimentId",
+        "SFT.Physics.ObservationExperiment.expectedLabel",
+        "SFT.Physics.ObservationExperiment.frozenRelation",
+        "SFT.Physics.ObservationExperiment.sourcePath",
+        "SFT.Physics.ObservationExperiment.snapshotHash",
+        "SFT.Physics.ObservationExperiment.falsification",
+        "SFT.Physics.ObservationExperiment.program",
+        "SFT.Physics.ObservationExperiment.programValue",
+        "SFT.Physics.ObservationExperiment.programDocument",
+        "SFT.Physics.ObservationExperiment.targetRows",
+        "SFT.Physics.ObservationExperiment.registration",
+        "SFT.Physics.ObservationExperiment.registrationHash",
+        "SFT.Physics.ObservationExperiment.sourceMatches",
+        "SFT.Physics.ObservationExperiment.sourceMatchesOriginal",
+        "SFT.Physics.ObservationExperiment.checkSource",
+        "SFT.Physics.ObservationExperiment.envelope",
+        "SFT.Physics.ObservationExperiment.targets",
+        "SFT.Physics.ObservationExperiment.targetsValue",
+        "SFT.Physics.ObservationExperiment.completeTargetCount",
+        "SFT.Physics.ObservationExperiment.completeTargetLabels",
+        "SFT.Physics.ObservationExperiment.changedSourceRejected",
+        "SFT.Physics.ObservationExperiment.specDependencies",
+        "SFT.Physics.ObservationExperiment.specDimensions",
+        "SFT.Physics.ObservationExperiment.uniqueNames",
+        "SFT.Physics.ObservationExperiment.specWitnesses",
+        "SFT.Physics.ObservationExperiment.validateSpec",
+        "SFT.Physics.ObservationExperiment.registeredSpecValid"
+      ],
+      "empty_axiom_theorems": [
+        "SFT.Physics.ObservationExperiment.sourceMatchesOriginal",
+        "SFT.Physics.ObservationExperiment.completeTargetCount",
+        "SFT.Physics.ObservationExperiment.completeTargetLabels",
+        "SFT.Physics.ObservationExperiment.changedSourceRejected",
+        "SFT.Physics.ObservationExperiment.registeredSpecValid"
+      ],
+      "inspection": "Full operational definitions, guards, certificate/receipt fields and proofs read. Grammar proof suffix matches fully read custody proof after exact axis renaming; full actual grammar prefix and evidence read."
+    },
+    {
+      "path": "SFT/Physics/ObservationComparison.lean",
+      "sha256": "abec2353a21261b8a550925105c9ab99bee2a2dfcb39dc99f76ba0aaecb855d8",
+      "declarations": [
+        "SFT.Physics.ObservationComparison.lookup",
+        "SFT.Physics.ObservationComparison.releasedLabel",
+        "SFT.Physics.ObservationComparison.compareRows",
+        "SFT.Physics.ObservationComparison.completeRowsRetained",
+        "SFT.Physics.ObservationComparison.comparisonValue",
+        "SFT.Physics.ObservationComparison.controlValue",
+        "SFT.Physics.ObservationComparison.accepted",
+        "SFT.Physics.ObservationComparison.acceptanceRequiresAllRows",
+        "SFT.Physics.ObservationComparison.missingRowRejects",
+        "SFT.Physics.ObservationComparison.registeredComparisons",
+        "SFT.Physics.ObservationComparison.message",
+        "SFT.Physics.ObservationComparison.sourceIds"
+      ],
+      "empty_axiom_theorems": [
+        "SFT.Physics.ObservationComparison.completeRowsRetained",
+        "SFT.Physics.ObservationComparison.acceptanceRequiresAllRows",
+        "SFT.Physics.ObservationComparison.missingRowRejects",
+        "SFT.Physics.ObservationComparison.registeredComparisons"
+      ],
+      "inspection": "Full operational definitions, guards, certificate/receipt fields and proofs read. Grammar proof suffix matches fully read custody proof after exact axis renaming; full actual grammar prefix and evidence read."
+    },
+    {
+      "path": "SFT/Physics/ObservationValidation.lean",
+      "sha256": "e2f28a94c89cd7def6a8b35da89c5d99123cce4802118b64f85e93a19574e66e",
+      "declarations": [
+        "SFT.Physics.ObservationValidation.PredictionSeal",
+        "SFT.Physics.ObservationValidation.Snapshot",
+        "SFT.Physics.ObservationValidation.inputValues",
+        "SFT.Physics.ObservationValidation.sealPrediction",
+        "SFT.Physics.ObservationValidation.programFields",
+        "SFT.Physics.ObservationValidation.observation",
+        "SFT.Physics.ObservationValidation.certificate",
+        "SFT.Physics.ObservationValidation.isolation",
+        "SFT.Physics.ObservationValidation.custodyCertificate",
+        "SFT.Physics.ObservationValidation.receipt",
+        "SFT.Physics.ObservationValidation.Validation",
+        "SFT.Physics.ObservationValidation.validate",
+        "SFT.Physics.ObservationValidation.resealRejected"
+      ],
+      "empty_axiom_theorems": [
+        "SFT.Physics.ObservationValidation.resealRejected"
+      ],
+      "inspection": "Full operational definitions, guards, certificate/receipt fields and proofs read. Grammar proof suffix matches fully read custody proof after exact axis renaming; full actual grammar prefix and evidence read."
+    },
+    {
+      "path": "SFT/Physics/ObservationValidationProofs.lean",
+      "sha256": "c883abc17ee9ab179b66dcba931296672be69da27d9e076215711c825eafcf62",
+      "declarations": [
+        "SFT.Physics.ObservationValidation.sourceMismatchRejects",
+        "SFT.Physics.ObservationValidation.sealBindsExecution",
+        "SFT.Physics.ObservationValidation.emptyPremiseRejected",
+        "SFT.Physics.ObservationValidation.programDocumentRetained"
+      ],
+      "empty_axiom_theorems": [
+        "SFT.Physics.ObservationValidation.sourceMismatchRejects",
+        "SFT.Physics.ObservationValidation.sealBindsExecution",
+        "SFT.Physics.ObservationValidation.emptyPremiseRejected",
+        "SFT.Physics.ObservationValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational definitions, guards, certificate/receipt fields and proofs read. Grammar proof suffix matches fully read custody proof after exact axis renaming; full actual grammar prefix and evidence read."
+    }
+  ],
+  "retained_audit": {
+    "path": "verification/TURN_480_audit480_observation.log",
+    "sha256": "91b6d72674250803febb8c86ca10bd22ceb823cfcd27634e187a1701c42da18a",
+    "matching_theorems": 45
+  },
+  "original_source_files": [
+    {
+      "path": "sft/physics/generated_empirical_law.py",
+      "sha256": "65703f059b0a6059af6f06aff9e11f1fcef19a1b10d2a8fa4b675418c8ca8071",
+      "inspection": "Full pinned source read"
+    },
+    {
+      "path": "sft/physics/measurement_laws.py",
+      "sha256": "8f00975e86bf56fa533d139f3c57696cba8d0c9447beab16778264b75216237b",
+      "inspection": "Full pinned source read"
+    }
+  ],
+  "reports": [
+    {
+      "path": "verification/TURN_480_MEASUREMENT_COMPLETION.json",
+      "sha256": "57155a2139b3c7b64fbb0fb2522e6d3e65076b527ab2dbcf3307b6f4c5e99c29",
+      "result": {
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "entries": [
+          {
+            "claim_id": "SFT-PHYS-MEAS-OBSERVATION-CARRIER-001",
+            "status": "complete",
+            "modules": [
+              "SFT/Physics/ObservationCarrier.lean",
+              "SFT/Physics/ObservationPrediction.lean",
+              "SFT/Physics/ObservationGrammar.lean",
+              "SFT/Physics/ObservationEvidence.lean",
+              "SFT/Physics/ObservationExperiment.lean",
+              "SFT/Physics/ObservationComparison.lean",
+              "SFT/Physics/ObservationValidation.lean",
+              "SFT/Physics/ObservationValidationProofs.lean"
+            ],
+            "dependencies": {
+              "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001": "complete",
+              "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-SYMBOL-DISTINCTION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001": "complete",
+              "SFT-PHYS-MEAS-TARGET-CUSTODY-001": "complete",
+              "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001": "complete"
+            },
+            "audit_declarations": 150,
+            "theorems": 45,
+            "axiom_dependencies": [],
+            "program_comparison": "verification/TURN_480_observation_program480_report.json",
+            "empirical_comparison": "verification/TURN_480_observation_validation480_window_report.json",
+            "independent_validation": "Previously retained observation validation; fresh full program and empirical comparison repeated."
+          },
+          {
+            "claim_id": "SFT-PHYS-MEAS-QUANTITY-CARRIER-001",
+            "status": "complete",
+            "modules": [
+              "SFT/Physics/QuantityCarrier.lean",
+              "SFT/Physics/QuantityClasses.lean",
+              "SFT/Physics/QuantityGrammar.lean",
+              "SFT/Physics/QuantityEvidence.lean",
+              "SFT/Physics/QuantityExperiment.lean",
+              "SFT/Physics/QuantityValidation.lean",
+              "SFT/Physics/QuantityValidationProofs.lean"
+            ],
+            "dependencies": {
+              "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001": "complete",
+              "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-SYMBOL-DISTINCTION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001": "complete",
+              "SFT-PHYS-MEAS-TARGET-CUSTODY-001": "complete",
+              "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001": "complete",
+              "SFT-PHYS-MEAS-OBSERVATION-CARRIER-001": "complete"
+            },
+            "audit_declarations": 134,
+            "theorems": 44,
+            "axiom_dependencies": [],
+            "program_comparison": "verification/TURN_480_quantity_program480_report.json",
+            "empirical_comparison": "verification/TURN_480_quantity_validation480_window_report.json",
+            "independent_validation": "verification/TURN_480_quantity_independent480_report.json"
+          },
+          {
+            "claim_id": "SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001",
+            "status": "complete",
+            "modules": [
+              "SFT/Physics/DimensionComposition.lean",
+              "SFT/Physics/DimensionGrammar.lean",
+              "SFT/Physics/DimensionEvidence.lean",
+              "SFT/Physics/DimensionExperiment.lean",
+              "SFT/Physics/DimensionValidation.lean",
+              "SFT/Physics/DimensionValidationProofs.lean"
+            ],
+            "dependencies": {
+              "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001": "complete",
+              "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-SYMBOL-DISTINCTION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001": "complete",
+              "SFT-PHYS-MEAS-TARGET-CUSTODY-001": "complete",
+              "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001": "complete",
+              "SFT-PHYS-MEAS-QUANTITY-CARRIER-001": "complete"
+            },
+            "audit_declarations": 156,
+            "theorems": 61,
+            "axiom_dependencies": [],
+            "program_comparison": "verification/TURN_480_dimension_program479_report.json",
+            "empirical_comparison": "verification/TURN_480_dimension_validation480_window_report.json",
+            "independent_validation": "verification/TURN_480_dimension_independent479_report.json"
+          },
+          {
+            "claim_id": "SFT-PHYS-MEAS-UNIT-COMPARISON-001",
+            "status": "complete",
+            "modules": [
+              "SFT/Physics/ReferenceTransport.lean",
+              "SFT/Physics/DimensionReferenceTransport.lean",
+              "SFT/Physics/UnitGrammar.lean",
+              "SFT/Physics/UnitEvidence.lean",
+              "SFT/Physics/UnitExperiment.lean",
+              "SFT/Physics/UnitValidation.lean",
+              "SFT/Physics/UnitValidationProofs.lean"
+            ],
+            "dependencies": {
+              "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001": "complete",
+              "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-SYMBOL-DISTINCTION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-PHYS-MEAS-CAPABILITY-PREDICTION-001": "complete",
+              "SFT-PHYS-MEAS-TARGET-CUSTODY-001": "complete",
+              "SFT-PHYS-MEAS-HOSTILE-PACKAGE-001": "complete",
+              "SFT-PHYS-MEAS-DIMENSION-COMPOSITION-001": "complete"
+            },
+            "audit_declarations": 153,
+            "theorems": 52,
+            "axiom_dependencies": [],
+            "program_comparison": "verification/TURN_480_unit_program480_report.json",
+            "empirical_comparison": "verification/TURN_480_unit_validation480_window_report.json",
+            "independent_validation": "verification/TURN_480_unit_independent480_report.json"
+          }
+        ],
+        "completed_entries": 196,
+        "build_scope": "Targeted builds of all changed measurement modules; no new full-model build asserted."
+      }
+    },
+    {
+      "path": "verification/TURN_480_observation_program480_report.json",
+      "sha256": "07bb21fedd92fb7771989133290ddf26c3c6381fb5bb9a5a332a975768a7de8a",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:99bdb19d7d84e7464f072fc44f536b7167af77971799ea02594035eb5b2632a0",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All ObservationProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_480_observation_validation480_window_report.json",
+      "sha256": "f9d37dbced3d04e66dcb77dc5a2d338b3e3c13c4af06c68358db71e79660f352",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 1979202,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Fresh compiled current-source native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_480_custody480_source_identity.json",
+      "sha256": "9935285775dc0abf26fec556704aaae3b9bb981b630e0e1bae033005f312631f",
+      "result": {
+        "moved_declarations": [
+          {
+            "name": "SFT.Physics.LeptonDecimal.spaceCodes",
+            "original_body_sha256": "bf356c05d080dd690e106016e95794230ee697fab5f0864973b204ba237dd422"
+          },
+          {
+            "name": "SFT.Physics.LeptonDecimal.trimCodes",
+            "original_body_sha256": "9159c821e699f19a986cccec34a74ec12803eb18f0536768fc08c3506a523966"
+          },
+          {
+            "name": "SFT.Physics.LeptonDecimal.strip",
+            "original_body_sha256": "71d8d7f99241c6daa27b9e3bae9efe44322b88b54b8af693fd672f12c8f78de9"
+          },
+          {
+            "name": "SFT.Physics.LeptonPrediction.nonblank",
+            "original_body_sha256": "1442cf9a2085cd95429613ebeafc69a76001bf0d0d39f53882c57a9fb36ede8f"
+          },
+          {
+            "name": "SFT.Physics.LeptonCustody.PredictionSeal",
+            "original_body_sha256": "795a7016c0fd0531f7b437e55107768d557ce0ce0ab269741b4932c48e58b765"
+          }
+        ],
+        "exact_declaration_text_preserved": true,
+        "TargetCustody_body_unchanged": true
+      }
+    }
+  ],
+  "new_proofs": 0,
+  "new_builds": 0,
+  "status": "Inspected sections reviewed; whole-paper review incomplete."
+}

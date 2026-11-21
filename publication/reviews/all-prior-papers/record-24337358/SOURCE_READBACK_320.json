@@ -1,0 +1,236 @@
+{
+  "updated_at": "2026-11-21T12:43:45.228248+00:00",
+  "sections_read": [
+    320
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "native_modules": [
+    {
+      "path": "SFT/Physics/PlanckHierarchy.lean",
+      "sha256": "03bd017d80c8a14df634aac2c9b50929390b9c2ae6ee9963f076c3e9315100c8",
+      "theorems": [
+        "SFT.Physics.PlanckHierarchy.forcedUpperDepth",
+        "SFT.Physics.PlanckHierarchy.massivePositions",
+        "SFT.Physics.PlanckHierarchy.squaredHierarchyExact",
+        "SFT.Physics.PlanckHierarchy.leastCompleteCover",
+        "SFT.Physics.PlanckHierarchy.massivePredecessorUnique",
+        "SFT.Physics.PlanckHierarchy.terminalAlphaExact",
+        "SFT.Physics.PlanckHierarchy.exactTerminalHierarchy",
+        "SFT.Physics.PlanckHierarchy.terminalTransportStrict",
+        "SFT.Physics.PlanckHierarchy.retainedUnsquaredExponent"
+      ],
+      "inspection": "full definitions and proof bodies"
+    },
+    {
+      "path": "SFT/Physics/PlanckColourCorrespondence.lean",
+      "sha256": "5ae716114787f5ddbd27a3891aaddf457d6777369760d94c2e73ef6a11bce033",
+      "theorems": [
+        "SFT.Physics.PlanckColourCorrespondence.existingShareIsForcedCoupling",
+        "SFT.Physics.PlanckColourCorrespondence.existingShareRetainsBothLabelsOverGenerator"
+      ],
+      "inspection": "full definitions and proof bodies"
+    }
+  ],
+  "additional_full_proof_read": {
+    "path": "SFT/Physics/ColourCouplingDerivation.lean",
+    "sha256": "ee8aa1cf02198b56dbab9b31e91f676ad034ce8ef27c6713b3e0ddc2653dd6f8"
+  },
+  "source_components": {
+    "sft/physics/lineage_particle_laws.py": [
+      "upper_cover_depth",
+      "massive_state_count",
+      "proton_planck_squared_ratio",
+      "PROTON_PLANCK_SPEC"
+    ],
+    "sft/physics/precision_value_laws_v1.py": [
+      "imports",
+      "terminal_alpha",
+      "proton_planck_terminal_transport",
+      "terminal_proton_planck_squared_ratio",
+      "PROTON_PLANCK_TERMINAL_SPEC"
+    ],
+    "sft/physics/atomic_constants.py": [
+      "colour_coupling"
+    ]
+  },
+  "retained_audit": {
+    "path": "verification/TURN_496_planck496_audit.log",
+    "sha256": "d2b94c4685c1988b7d6b43db3f67da05f53db0e62e378db8f4cbd5ae1cba45f8",
+    "matching_theorems": 11
+  },
+  "reports": [
+    {
+      "path": "verification/TURN_381_planck_base_program_report.json",
+      "sha256": "3ab04cd6be32324216bc115c0f8483953ad574f64c6dbd88ad6483b63e6eee1e",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:d847dbf538c92b07c9f710c9f33887685b40dca9eef56f3943e855ac2f49b5bb",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All PlanckBaseProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_381_planck_base_INDEPENDENT.json",
+      "sha256": "52395b0503b818eb982e94719e9bd12cc1e3b94e0a5d286fa28c1a9b4cdc348f",
+      "result": [
+        {
+          "claim_id": "SFT-PHYS-SCALE-PROTON-PLANCK-HIERARCHY-002",
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "claim_id": "SFT-PHYS-SCALE-PROTON-PLANCK-HIERARCHY-002",
+              "exact_arithmetic_reconstructed": true,
+              "generated_cardinality": 256,
+              "unique_survivor": "generated-exact-carrier__admitted-dependency-trace__depth-seven-support-predecessor-at-half-One__complete-registered-product__all-predecessor-forms-rejected__derivation-sealed-before-comparison__complete-trace-controls-and-census__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "sha256:5d2f08b5bd30059644269313d7cf73d173e43997a6468844a174ed239ed9f278"
+          }
+        },
+        {
+          "claim_id": "SFT-PHYS-SCALE-PROTON-PLANCK-HIERARCHY-002",
+          "case": "omitted-row",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "claim_id": "SFT-PHYS-SCALE-PROTON-PLANCK-HIERARCHY-002",
+              "exact_arithmetic_reconstructed": true,
+              "generated_cardinality": 256,
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "sha256:5d2f08b5bd30059644269313d7cf73d173e43997a6468844a174ed239ed9f278"
+          }
+        },
+        {
+          "claim_id": "SFT-PHYS-SCALE-PROTON-PLANCK-HIERARCHY-002",
+          "case": "extra-survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "claim_id": "SFT-PHYS-SCALE-PROTON-PLANCK-HIERARCHY-002",
+              "exact_arithmetic_reconstructed": true,
+              "generated_cardinality": 256,
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "sha256:5d2f08b5bd30059644269313d7cf73d173e43997a6468844a174ed239ed9f278"
+          }
+        },
+        {
+          "claim_id": "SFT-PHYS-SCALE-PROTON-PLANCK-HIERARCHY-002",
+          "case": "failed-control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "claim_id": "SFT-PHYS-SCALE-PROTON-PLANCK-HIERARCHY-002",
+              "exact_arithmetic_reconstructed": true,
+              "generated_cardinality": 256,
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "sha256:5d2f08b5bd30059644269313d7cf73d173e43997a6468844a174ed239ed9f278"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_490_planck_native489_report.json",
+      "sha256": "20e7a018784fb412c54c2a01bf7d8495a2068d753aca6223bc25b7bd6fe78081",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:5eca6d00fe54b7afbabb728a9dab3716786ae87790266d141e993221dddce0d6",
+        "candidate_lookup_decisions": 1024,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All PlanckTerminalProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_490_planck_independent490_report.json",
+      "sha256": "7deac7cb7077074d2415117df2d64adb55e5be035660800b2ece2a4d04bdf8ea",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "claim_id": "SFT-PHYS-SCALE-PROTON-PLANCK-TERMINAL-003",
+              "exact_result": "255923934603817488008405160690199418432572494970880/1511539186407",
+              "generated_cardinality": 1024,
+              "unique_survivor": "admitted-lower-law-carrier__complete-promotion-termination__complete-binary-terminal-support__bare-hierarchy-times-One-complement-of-two-thirds-alpha__single-typed-terminal-alpha-transport__orientation-fixed-by-share-or-retention__complete-registered-product__bare-and-intermediate-forms-preserved__exact-result-sealed-before-target-release__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-planck-490"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "claim_id": "SFT-PHYS-SCALE-PROTON-PLANCK-TERMINAL-003",
+              "exact_result": "255923934603817488008405160690199418432572494970880/1511539186407",
+              "generated_cardinality": 1024,
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-planck-490"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "claim_id": "SFT-PHYS-SCALE-PROTON-PLANCK-TERMINAL-003",
+              "exact_result": "255923934603817488008405160690199418432572494970880/1511539186407",
+              "generated_cardinality": 1024,
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-planck-490"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "claim_id": "SFT-PHYS-SCALE-PROTON-PLANCK-TERMINAL-003",
+              "exact_result": "255923934603817488008405160690199418432572494970880/1511539186407",
+              "generated_cardinality": 1024,
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-planck-490"
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "Section320 operational argument; terminal grammar review remains at440. ColourCouplingDerivation proof read; no fresh audit or build claimed.",
+  "new_proofs": 0,
+  "new_builds": 0
+}

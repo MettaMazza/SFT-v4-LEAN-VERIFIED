@@ -12975,3 +12975,15 @@ import SFT.Medicine.CointerventionSource
 import SFT.Medicine.CointerventionExperiment
 
 import SFT.Medicine.CointerventionValidation
+
+import SFT.Medicine.Dose
+
+import SFT.Medicine.DoseGrammar
+
+import SFT.Medicine.DoseEvidence
+
+import SFT.Medicine.DoseSource
+
+import SFT.Medicine.DoseExperiment
+
+import SFT.Medicine.DoseValidation

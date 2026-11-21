@@ -12999,3 +12999,15 @@ import SFT.Medicine.ClinicalExposureSource
 import SFT.Medicine.ClinicalExposureExperiment
 
 import SFT.Medicine.ClinicalExposureValidation
+
+import SFT.Medicine.ClinicalResponse
+
+import SFT.Medicine.ClinicalResponseGrammar
+
+import SFT.Medicine.ClinicalResponseEvidence
+
+import SFT.Medicine.ClinicalResponseSource
+
+import SFT.Medicine.ClinicalResponseExperiment
+
+import SFT.Medicine.ClinicalResponseValidation

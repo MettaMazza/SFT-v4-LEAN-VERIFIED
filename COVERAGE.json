@@ -113086,9 +113086,16 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ELECTROLYSIS-PRODUCT-AMOUNT-006-95fcb8396d3792c9.json",
       "statement": "Electrolysis product amount is the exact transferred-carrier to stoichiometric-carrier ratio with complete product, path and remainder custody.",
       "title": "Fold electrolysis and product-amount law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Chemistry/ElectrolysisProduct.lean",
+        "SFT/Chemistry/ElectrolysisProductGrammar.lean",
+        "SFT/Chemistry/ElectrolysisProductEvidence.lean",
+        "SFT/Chemistry/ElectrolysisProductAnalysis.lean",
+        "SFT/Chemistry/ElectrolysisProductExperiment.lean",
+        "SFT/Chemistry/ElectrolysisProductValidation.lean"
+      ],
+      "artifact_runtime_parity": "Original pinned256programme/full12field3message receipt/three independent adverse cases PASS; native core395cases and full checks queued.",
       "registration_sha256": "8093738d96d063e30a7c3823a342ddc4282e0dcef84fbc2238828cb2ba5db8d4",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -113133,7 +113140,10 @@
         "statement": "Electrolysis product amount is the exact transferred-carrier to stoichiometric-carrier ratio with complete product, path and remainder custody.",
         "status": "empirically_tested",
         "title": "Fold electrolysis and product-amount law"
-      }
+      },
+      "remaining": [
+        "Collect native core395cases, full256programme/controls, source analysis, experiment and receipt checks; register after original dependencies complete."
+      ]
     },
     {
       "branch": "chemistry",
@@ -202034,11 +202044,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-21T15:58:58.909115+00:00",
+  "updated_at": "2026-11-21T16:07:01.504413+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 66,
-    "pending": 1839,
+    "in_progress": 67,
+    "pending": 1838,
     "fully_reconstructed_claims": 876,
     "axiom_free_exported_results": 54234,
     "axiom_free_audited_definitions_and_theorems": 122374

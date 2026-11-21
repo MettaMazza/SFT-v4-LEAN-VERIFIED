@@ -1,0 +1,23 @@
+{
+  "updated_at": "2026-11-21T13:36:15.681756+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "challenges": [
+    {
+      "challenge": "Does observed transition remove the deterministic source paths?",
+      "resolution": "forcedObservedTransition uses the source noStableReturn condition exactly as stated. everyTerminalBranchHasSource retains the complete generated trace equivalence; full support and predecessor counts are retained. exactEventSelection and onlyCompletePathWeight give the unique positive ratio for represented events."
+    },
+    {
+      "challenge": "Do reaction totals hide omitted or changed carrier occurrences?",
+      "resolution": "completeCarrierClosure proves ordered carrier/provenance projection equality, everyTargetFromOriginalChannel gives original preimages, and sourceAndTargetCounts retains one row per channel. Aggregates are applied to that entire common carrier projection."
+    },
+    {
+      "challenge": "Could fission be a single internal excitation?",
+      "resolution": "completeOutputDecomposition retains two explicit products plus the remainder; multipleRecurrentProducts and list-length contradiction exclude any singleton output. Every product retains its generated recurrence."
+    },
+    {
+      "challenge": "Is fusion release based on an independently chosen separated mass?",
+      "resolution": "Composition.separatedIsCompleteInput binds separated support to totalInertia of all incident words, and boundIsOutput binds the output to the same binding record. wholeInputExceedsBoundSupport rewrites those identities; sourceMassEnergyRelease applies exact binding conversion and completeRecord retains inputs, output, channels and release."
+    }
+  ],
+  "status": "435\u2013438 pass second review; whole-paper review pending."
+}

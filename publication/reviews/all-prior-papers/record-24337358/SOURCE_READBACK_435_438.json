@@ -1,0 +1,633 @@
+{
+  "updated_at": "2026-11-21T13:36:15.681756+00:00",
+  "sections_read": [
+    435,
+    436,
+    437,
+    438
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "sft/physics/matter_nuclear_laws.py:matter_law, RADIOACTIVITY, NUCLEAR_REACTIONS, FISSION, FUSION; full original file read in424\u2013425."
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Physics/NuclearRadioactivity.lean",
+      "sha256": "f0dd578d970efd456c0af9ab201a866659220f188a505dea93e6a24c644c8530",
+      "theorems": [
+        "SFT.Physics.NuclearRadioactivity.forcedObservedTransition",
+        "SFT.Physics.NuclearRadioactivity.everyTerminalBranchHasSource",
+        "SFT.Physics.NuclearRadioactivity.completePathSupportRetained",
+        "SFT.Physics.NuclearRadioactivity.exactEventSelection",
+        "SFT.Physics.NuclearRadioactivity.exactCompletePathWeight",
+        "SFT.Physics.NuclearRadioactivity.onlyCompletePathWeight",
+        "SFT.Physics.NuclearRadioactivity.allGatePredecessorsRetained"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/NuclearReactions.lean",
+      "sha256": "0c4954b547c17ee3c28f3b53c8acd808e0f38682355594ec774c556362453f12",
+      "theorems": [
+        "SFT.Physics.NuclearReactions.completeCarrierClosure",
+        "SFT.Physics.NuclearReactions.everyAggregateConserved",
+        "SFT.Physics.NuclearReactions.everyChannelHasSourceAndTarget",
+        "SFT.Physics.NuclearReactions.sourceAndTargetCounts",
+        "SFT.Physics.NuclearReactions.everyTargetFromOriginalChannel",
+        "SFT.Physics.NuclearReactions.everyInputWordRecurrent",
+        "SFT.Physics.NuclearReactions.everyOutputWordRecurrent"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/NuclearFission.lean",
+      "sha256": "96f7606806f11d0e3e36247f02d75e114e10c95ccdf1b9c4e6dededc194cb909",
+      "theorems": [
+        "SFT.Physics.NuclearFission.exactlyOneInput",
+        "SFT.Physics.NuclearFission.completeOutputDecomposition",
+        "SFT.Physics.NuclearFission.multipleRecurrentProducts",
+        "SFT.Physics.NuclearFission.notSingleInternalExcitation",
+        "SFT.Physics.NuclearFission.completeFissionCarrierClosure",
+        "SFT.Physics.NuclearFission.everyProductSeparatelyRecurrent"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/NuclearFusion.lean",
+      "sha256": "13b2f9c8fb7d348675354c78826014e3a0c19c8fb59344a936a98c0d8bfaeec7",
+      "theorems": [
+        "SFT.Physics.NuclearFusion.completeIncidentComposition",
+        "SFT.Physics.NuclearFusion.multipleIncidentWords",
+        "SFT.Physics.NuclearFusion.exactlyOneBoundProduct",
+        "SFT.Physics.NuclearFusion.wholeInputExceedsBoundSupport",
+        "SFT.Physics.NuclearFusion.completeFusionCarrierClosure",
+        "SFT.Physics.NuclearFusion.namedPositiveRelease",
+        "SFT.Physics.NuclearFusion.sourceMassEnergyRelease",
+        "SFT.Physics.NuclearFusion.productRecurrenceRetained"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/RadioactivityGrammar.lean",
+      "sha256": "212a593a9819dfbb2c66acf83704bc9781d9687fbfde911a947e4e0cb1959698",
+      "theorems": [
+        "SFT.Physics.RadioactivityGrammar.generatedCardinality",
+        "SFT.Physics.RadioactivityGrammar.candidatesComplete",
+        "SFT.Physics.RadioactivityGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.RadioactivityGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.RadioactivityGrammar.uniqueSurvivor",
+        "SFT.Physics.RadioactivityGrammar.survivorAccepted",
+        "SFT.Physics.RadioactivityGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.RadioactivityGrammar.carrier_rejected_rejected",
+        "SFT.Physics.RadioactivityGrammar.relation_rejected_rejected",
+        "SFT.Physics.RadioactivityGrammar.provenance_rejected_rejected",
+        "SFT.Physics.RadioactivityGrammar.prediction_rejected_rejected",
+        "SFT.Physics.RadioactivityGrammar.record_rejected_rejected",
+        "SFT.Physics.RadioactivityGrammar.rows_rejected_rejected",
+        "SFT.Physics.RadioactivityGrammar.generality_rejected_rejected",
+        "SFT.Physics.RadioactivityGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/RadioactivityEvidence.lean",
+      "sha256": "cabb0232cbdda69ee65bb483b789e7c3803f814b45bcf0efe69965b3c0343daf",
+      "theorems": [
+        "SFT.Physics.RadioactivityEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.RadioactivityEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.RadioactivityEvidence.registrationNoAxioms",
+        "SFT.Physics.RadioactivityEvidence.registrationNoFreeParameters",
+        "SFT.Physics.RadioactivityEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/RadioactivityExperiment.lean",
+      "sha256": "84409e76f0aa9df6d318b0fd6f1fcf1b52d06b49812c8323437c68f2e3537dfd",
+      "theorems": [
+        "SFT.Physics.RadioactivityExperiment.completeTargetCount",
+        "SFT.Physics.RadioactivityExperiment.completeTargetLabels",
+        "SFT.Physics.RadioactivityExperiment.changedSourceRejected",
+        "SFT.Physics.RadioactivityExperiment.registeredSpecValid",
+        "SFT.Physics.RadioactivityExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/NuclearReactionsGrammar.lean",
+      "sha256": "4f15cbb58a54ad5f3de810db7b2e811cdefbbcc500e974a1a943ae2a3e65d620",
+      "theorems": [
+        "SFT.Physics.NuclearReactionsGrammar.generatedCardinality",
+        "SFT.Physics.NuclearReactionsGrammar.candidatesComplete",
+        "SFT.Physics.NuclearReactionsGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.NuclearReactionsGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.NuclearReactionsGrammar.uniqueSurvivor",
+        "SFT.Physics.NuclearReactionsGrammar.survivorAccepted",
+        "SFT.Physics.NuclearReactionsGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.NuclearReactionsGrammar.carrier_rejected_rejected",
+        "SFT.Physics.NuclearReactionsGrammar.relation_rejected_rejected",
+        "SFT.Physics.NuclearReactionsGrammar.provenance_rejected_rejected",
+        "SFT.Physics.NuclearReactionsGrammar.prediction_rejected_rejected",
+        "SFT.Physics.NuclearReactionsGrammar.record_rejected_rejected",
+        "SFT.Physics.NuclearReactionsGrammar.rows_rejected_rejected",
+        "SFT.Physics.NuclearReactionsGrammar.generality_rejected_rejected",
+        "SFT.Physics.NuclearReactionsGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/NuclearReactionsEvidence.lean",
+      "sha256": "09f6c9c54a5f96d8cc85415161c12cd6295039d834caba7bca84b9cb3bb74009",
+      "theorems": [
+        "SFT.Physics.NuclearReactionsEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.NuclearReactionsEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.NuclearReactionsEvidence.registrationNoAxioms",
+        "SFT.Physics.NuclearReactionsEvidence.registrationNoFreeParameters",
+        "SFT.Physics.NuclearReactionsEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/NuclearReactionsExperiment.lean",
+      "sha256": "206ffc5f615dce8ebc8bd107bddf6ea20ff868addaa130193223fcfef3560efc",
+      "theorems": [
+        "SFT.Physics.NuclearReactionsExperiment.completeTargetCount",
+        "SFT.Physics.NuclearReactionsExperiment.completeTargetLabels",
+        "SFT.Physics.NuclearReactionsExperiment.changedSourceRejected",
+        "SFT.Physics.NuclearReactionsExperiment.registeredSpecValid",
+        "SFT.Physics.NuclearReactionsExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/FissionGrammar.lean",
+      "sha256": "3786976bdd78fde9c09fab2402a53ffd0045c2011bf611ea8281692f00a23d7e",
+      "theorems": [
+        "SFT.Physics.FissionGrammar.generatedCardinality",
+        "SFT.Physics.FissionGrammar.candidatesComplete",
+        "SFT.Physics.FissionGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.FissionGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.FissionGrammar.uniqueSurvivor",
+        "SFT.Physics.FissionGrammar.survivorAccepted",
+        "SFT.Physics.FissionGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.FissionGrammar.carrier_rejected_rejected",
+        "SFT.Physics.FissionGrammar.relation_rejected_rejected",
+        "SFT.Physics.FissionGrammar.provenance_rejected_rejected",
+        "SFT.Physics.FissionGrammar.prediction_rejected_rejected",
+        "SFT.Physics.FissionGrammar.record_rejected_rejected",
+        "SFT.Physics.FissionGrammar.rows_rejected_rejected",
+        "SFT.Physics.FissionGrammar.generality_rejected_rejected",
+        "SFT.Physics.FissionGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/FissionEvidence.lean",
+      "sha256": "58459711be0d4dca6a815618f1ae0e7f4b1248b62fb3c2a03f8a59200c54aae8",
+      "theorems": [
+        "SFT.Physics.FissionEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.FissionEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.FissionEvidence.registrationNoAxioms",
+        "SFT.Physics.FissionEvidence.registrationNoFreeParameters",
+        "SFT.Physics.FissionEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/FissionExperiment.lean",
+      "sha256": "8e24bed0f09be6d6a5a87916dd747017468af7db6f6edfb531ef1c6fb8e2e011",
+      "theorems": [
+        "SFT.Physics.FissionExperiment.completeTargetCount",
+        "SFT.Physics.FissionExperiment.completeTargetLabels",
+        "SFT.Physics.FissionExperiment.changedSourceRejected",
+        "SFT.Physics.FissionExperiment.registeredSpecValid",
+        "SFT.Physics.FissionExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/FusionGrammar.lean",
+      "sha256": "e003e7bdb830c6d5d3968ec041b89295d663e834f7029eb7aece631748c22f42",
+      "theorems": [
+        "SFT.Physics.FusionGrammar.generatedCardinality",
+        "SFT.Physics.FusionGrammar.candidatesComplete",
+        "SFT.Physics.FusionGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.FusionGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.FusionGrammar.uniqueSurvivor",
+        "SFT.Physics.FusionGrammar.survivorAccepted",
+        "SFT.Physics.FusionGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.FusionGrammar.carrier_rejected_rejected",
+        "SFT.Physics.FusionGrammar.relation_rejected_rejected",
+        "SFT.Physics.FusionGrammar.provenance_rejected_rejected",
+        "SFT.Physics.FusionGrammar.prediction_rejected_rejected",
+        "SFT.Physics.FusionGrammar.record_rejected_rejected",
+        "SFT.Physics.FusionGrammar.rows_rejected_rejected",
+        "SFT.Physics.FusionGrammar.generality_rejected_rejected",
+        "SFT.Physics.FusionGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/FusionEvidence.lean",
+      "sha256": "11c74befb4b741d94dbc0da684b1b3eee1499ef5bc1e65d30a7bb98c9159452a",
+      "theorems": [
+        "SFT.Physics.FusionEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.FusionEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.FusionEvidence.registrationNoAxioms",
+        "SFT.Physics.FusionEvidence.registrationNoFreeParameters",
+        "SFT.Physics.FusionEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/FusionExperiment.lean",
+      "sha256": "bc7a2f1e89203f4575bc8f21c5685c66502702b939df56ae9b4dd5232964bd3c",
+      "theorems": [
+        "SFT.Physics.FusionExperiment.completeTargetCount",
+        "SFT.Physics.FusionExperiment.completeTargetLabels",
+        "SFT.Physics.FusionExperiment.changedSourceRejected",
+        "SFT.Physics.FusionExperiment.registeredSpecValid",
+        "SFT.Physics.FusionExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    }
+  ],
+  "shards": [],
+  "audit": {
+    "path": "verification/TURN_495_REGISTERED_DECLARATIONS_AUDIT.log",
+    "sha256": "cd2a998cc497e5edcd40af8a558fc35ce745c295beab2fe7fbf4f4ccd26bb662",
+    "additional_audit": {
+      "path": "verification/TURN_496_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "cb59a25d3cdc1274aaa44418108a07c4ab0f508c5882bbfd28902a00ce73579d"
+    },
+    "matching_theorems": 128
+  },
+  "reports": [
+    {
+      "path": "verification/TURN_495_radioactivity_independent495_report.json",
+      "sha256": "e400ee66b784a3fb9118872dd096e9cf5d2fcaaca58c4f12de2e59e45554058f",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-RADIOACTIVITY-001",
+              "survivor": "complete-fold-carrier__nonreturning-nuclear-transition-support__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-radioactivity-495"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-RADIOACTIVITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-radioactivity-495"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-RADIOACTIVITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-radioactivity-495"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-RADIOACTIVITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-radioactivity-495"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_495_radioactivity_program495_report.json",
+      "sha256": "a7ae4ed24e61eb68d4bdaa9412204fdb602637def059e75277475cc7536773e3",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:273f3a543b43ca1522707cc521dc8ca7b294b36cffd379a51963940262ca28f0",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All RadioactivityProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_495_radioactivity_validation495_report.json",
+      "sha256": "8947f486ed56826e86c4c05284d4d5b7fcbce38e32bdc7c2ee2310e9d5a349f8",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 1329,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_496_fission_independent496_report.json",
+      "sha256": "da5994e96905cd17131a4db836e565d3288a396c162a338f87fa61bb81376b65",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-FISSION-001",
+              "survivor": "complete-fold-carrier__bound-word-multiple-product-decomposition__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-fission-496"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-FISSION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-fission-496"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-FISSION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-fission-496"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-FISSION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-fission-496"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_496_fission_program496_report.json",
+      "sha256": "5b6d4663d43da61c1db026e4519fa7d13e62001bfd2027092a0bed25fa3cabde",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:de201d487f30f1538d3129d5586fc1357329f6bb4b7cc60e1495711119d9246f",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All FissionProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_496_fission_validation496_report.json",
+      "sha256": "356d1dac5acec069fe48b1a2128cd755e13361370abb4b3c8ad71914657293b0",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 1171,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_496_fusion_independent496_report.json",
+      "sha256": "43ab5f4854f39da998b6bc56715521367131db1b7c2797250e21c65074247a42",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-FUSION-001",
+              "survivor": "complete-fold-carrier__multiple-word-bound-composition__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-fusion-496"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-FUSION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-fusion-496"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-FUSION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-fusion-496"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-FUSION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-fusion-496"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_496_fusion_program496_report.json",
+      "sha256": "8cebaa1dfc027ac7f350a222038daeff3ebdde6cf663abed87faa12ea5855816",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:9f4db1843099be37632c5ceb2509b9c49a8b486d75fe5aa23f44b63887db43e2",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All FusionProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_496_fusion_validation496_report.json",
+      "sha256": "356d1dac5acec069fe48b1a2128cd755e13361370abb4b3c8ad71914657293b0",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 1171,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_496_nuclearreactions_independent496_report.json",
+      "sha256": "c26d8815068d6695de5f9fdaf1e551e5c701db15d2dda5275df9871c95e84ad0",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-REACTIONS-001",
+              "survivor": "complete-fold-carrier__complete-nuclear-channel-accounting__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-nuclearreactions-496"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-REACTIONS-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-nuclearreactions-496"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-REACTIONS-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-nuclearreactions-496"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-NUCLEAR-REACTIONS-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-nuclearreactions-496"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_496_nuclearreactions_program496_report.json",
+      "sha256": "a41109e9d93eb32faac4c34e86c5af567d51af77b134906498110a52a5bb14e6",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:39b1e4d4ec2f64e601b1c6724c2838f65797441cb1df32d4406b2c37bac7b8ac",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All NuclearReactionsProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_496_nuclearreactions_validation496_report.json",
+      "sha256": "356d1dac5acec069fe48b1a2128cd755e13361370abb4b3c8ad71914657293b0",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 1171,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    }
+  ],
+  "new_proofs": 0,
+  "new_builds": 0
+}

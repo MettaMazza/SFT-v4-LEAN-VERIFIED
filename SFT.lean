@@ -12927,3 +12927,15 @@ import SFT.Medicine.ComparatorSource
 import SFT.Medicine.ComparatorExperiment
 
 import SFT.Medicine.ComparatorValidation
+
+import SFT.Medicine.Counterfactual
+
+import SFT.Medicine.CounterfactualGrammar
+
+import SFT.Medicine.CounterfactualEvidence
+
+import SFT.Medicine.CounterfactualSource
+
+import SFT.Medicine.CounterfactualExperiment
+
+import SFT.Medicine.CounterfactualValidation

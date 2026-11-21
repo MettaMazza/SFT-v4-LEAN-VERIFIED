@@ -60340,8 +60340,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-DIFFUSION-LIMITED-REACTION-BOUNDARY-011-9a0aab13e6029bd9.json",
       "statement": "A diffusion-limited reaction occurrence is admissible only after one complete finite transport word carries the same held reactant identity to an encounter state that is exactly the reaction entry state. The exact completion relation counts completed reaction occurrences per positive held observation partition. No diffusion equation, continuum concentration field, Fick or Smoluchowski law, fitted coefficient or stochastic collision weight is imported.",
       "title": "Exact diffusion-limited reaction boundary",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Chemistry/DiffusionLimitedReaction.lean",
+        "SFT/Chemistry/DiffusionLimitedReactionGrammar.lean",
+        "SFT/Chemistry/DiffusionLimitedReactionEvidence.lean",
+        "SFT/Chemistry/DiffusionLimitedReactionAnalysis.lean",
+        "SFT/Chemistry/DiffusionLimitedReactionExperiment.lean",
+        "SFT/Chemistry/DiffusionLimitedReactionSource.lean",
+        "SFT/Chemistry/DiffusionLimitedReactionPrediction.lean",
+        "SFT/Chemistry/DiffusionLimitedReactionValidation.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "d0257b6e5ea845db87bbdc582e136bad3d95b4622d31583b1c033c6303cdf414",
       "v3_registration": {
@@ -60414,7 +60423,11 @@
         "statement": "A diffusion-limited reaction occurrence is admissible only after one complete finite transport word carries the same held reactant identity to an encounter state that is exactly the reaction entry state. The exact completion relation counts completed reaction occurrences per positive held observation partition. No diffusion equation, continuum concentration field, Fick or Smoluchowski law, fitted coefficient or stochastic collision weight is imported.",
         "status": "empirically_tested",
         "title": "Exact diffusion-limited reaction boundary"
-      }
+      },
+      "remaining": [
+        "Consume retained bounded builds and empty-axiom audits of all eight modules.",
+        "Verify96core/30analysis/11prediction cases,3517instructions/14registration fields,all256programme alternatives and full12field264message empirical receipt against official pinned V3 execution;register immediately after actual original prerequisites complete."
+      ]
     },
     {
       "branch": "chemistry",
@@ -201928,11 +201941,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-21T13:51:10.140025+00:00",
+  "updated_at": "2026-11-21T14:05:44.110361+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 60,
-    "pending": 1848,
+    "in_progress": 61,
+    "pending": 1847,
     "fully_reconstructed_claims": 873,
     "axiom_free_exported_results": 54099,
     "axiom_free_audited_definitions_and_theorems": 122035

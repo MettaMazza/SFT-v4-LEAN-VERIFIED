@@ -1,0 +1,444 @@
+[
+  {
+    "case": "original_butane_census",
+    "result": {
+      "ok": {
+        "alphabets": [
+          {
+            "reversal": [
+              [
+                {
+                  "family": "torsion-state",
+                  "label": "anti"
+                },
+                {
+                  "family": "torsion-state",
+                  "label": "anti"
+                }
+              ],
+              [
+                {
+                  "family": "torsion-state",
+                  "label": "gauche-forward"
+                },
+                {
+                  "family": "torsion-state",
+                  "label": "gauche-reverse"
+                }
+              ],
+              [
+                {
+                  "family": "torsion-state",
+                  "label": "gauche-reverse"
+                },
+                {
+                  "family": "torsion-state",
+                  "label": "gauche-forward"
+                }
+              ]
+            ],
+            "states": [
+              {
+                "family": "torsion-state",
+                "label": "anti"
+              },
+              {
+                "family": "torsion-state",
+                "label": "gauche-forward"
+              },
+              {
+                "family": "torsion-state",
+                "label": "gauche-reverse"
+              }
+            ]
+          }
+        ],
+        "automorphisms": [
+          {
+            "image": [
+              {
+                "value": 1
+              },
+              {
+                "value": 2
+              },
+              {
+                "value": 3
+              },
+              {
+                "value": 4
+              }
+            ]
+          },
+          {
+            "image": [
+              {
+                "value": 4
+              },
+              {
+                "value": 3
+              },
+              {
+                "value": 2
+              },
+              {
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "equivalence_classes": [
+          [
+            {
+              "states": [
+                {
+                  "family": "torsion-state",
+                  "label": "anti"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "states": [
+                {
+                  "family": "torsion-state",
+                  "label": "gauche-forward"
+                }
+              ]
+            },
+            {
+              "states": [
+                {
+                  "family": "torsion-state",
+                  "label": "gauche-reverse"
+                }
+              ]
+            }
+          ]
+        ],
+        "generated_assignments": [
+          {
+            "states": [
+              {
+                "family": "torsion-state",
+                "label": "anti"
+              }
+            ]
+          },
+          {
+            "states": [
+              {
+                "family": "torsion-state",
+                "label": "gauche-forward"
+              }
+            ]
+          },
+          {
+            "states": [
+              {
+                "family": "torsion-state",
+                "label": "gauche-reverse"
+              }
+            ]
+          }
+        ],
+        "graph": {
+          "atom_types": [
+            {
+              "family": "atom-type",
+              "label": "carbon"
+            },
+            {
+              "family": "atom-type",
+              "label": "carbon"
+            },
+            {
+              "family": "atom-type",
+              "label": "carbon"
+            },
+            {
+              "family": "atom-type",
+              "label": "carbon"
+            }
+          ],
+          "bonds": [
+            [
+              {
+                "value": 1
+              },
+              {
+                "value": 2
+              }
+            ],
+            [
+              {
+                "value": 2
+              },
+              {
+                "value": 3
+              }
+            ],
+            [
+              {
+                "value": 3
+              },
+              {
+                "value": 4
+              }
+            ]
+          ]
+        },
+        "rotors": [
+          {
+            "ordered_sites": [
+              {
+                "value": 1
+              },
+              {
+                "value": 2
+              },
+              {
+                "value": 3
+              },
+              {
+                "value": 4
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case": "original_six_witnesses",
+    "result": {
+      "ok": [
+        [
+          "complete-raw-generation",
+          "Three held torsion assignments are generated exactly once.",
+          true
+        ],
+        [
+          "complete-automorphism-census",
+          "The four-site path has identity and reversal and no selected action.",
+          true
+        ],
+        [
+          "exact-orbit-quotient",
+          "Anti is self-equivalent and the two opposed gauche orientations form one class.",
+          true
+        ],
+        [
+          "partition-certificate",
+          "Every assignment occurs in exactly one nonempty conformer class.",
+          true
+        ],
+        [
+          "incomplete-reversal-control",
+          "A torsion alphabet without complete involution halts.",
+          true
+        ],
+        [
+          "missing-path-control",
+          "A rotor without its complete bonded path halts.",
+          true
+        ]
+      ]
+    }
+  },
+  {
+    "case": "empty_atoms",
+    "result": {
+      "error": "a conformer carrier requires positive finite atom support"
+    }
+  },
+  {
+    "case": "self_bond",
+    "result": {
+      "error": "a molecular bond requires two distinct positive positions"
+    }
+  },
+  {
+    "case": "duplicate_reversed_bond",
+    "result": {
+      "error": "molecular bonds must be complete distinct positive-position pairs"
+    }
+  },
+  {
+    "case": "disconnected",
+    "result": {
+      "error": "conformer generation requires one connected molecular graph"
+    }
+  },
+  {
+    "case": "incomplete_reversal",
+    "result": {
+      "error": "torsion reversal must cover every held state exactly once"
+    }
+  },
+  {
+    "case": "duplicate_reversal_key_last_value",
+    "result": {
+      "ok": {
+        "reversal": [
+          [
+            {
+              "family": "torsion-state",
+              "label": "anti"
+            },
+            {
+              "family": "torsion-state",
+              "label": "gauche-forward"
+            }
+          ],
+          [
+            {
+              "family": "torsion-state",
+              "label": "anti"
+            },
+            {
+              "family": "torsion-state",
+              "label": "anti"
+            }
+          ]
+        ],
+        "states": [
+          {
+            "family": "torsion-state",
+            "label": "anti"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case": "empty_action",
+    "result": {
+      "ok": {
+        "image": []
+      }
+    }
+  },
+  {
+    "case": "duplicate_action_position",
+    "result": {
+      "error": "graph action must be a complete positive-position bijection"
+    }
+  },
+  {
+    "case": "empty_rotor_product",
+    "result": {
+      "error": "conformer generation requires at least one retained rotor"
+    }
+  },
+  {
+    "case": "original_cartesian_product",
+    "result": {
+      "ok": [
+        {
+          "states": [
+            {
+              "family": "torsion-state",
+              "label": "anti"
+            }
+          ]
+        },
+        {
+          "states": [
+            {
+              "family": "torsion-state",
+              "label": "gauche-forward"
+            }
+          ]
+        },
+        {
+          "states": [
+            {
+              "family": "torsion-state",
+              "label": "gauche-reverse"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case": "action_0_assignment_0",
+    "result": {
+      "ok": {
+        "states": [
+          {
+            "family": "torsion-state",
+            "label": "anti"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case": "action_0_assignment_1",
+    "result": {
+      "ok": {
+        "states": [
+          {
+            "family": "torsion-state",
+            "label": "gauche-forward"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case": "action_0_assignment_2",
+    "result": {
+      "ok": {
+        "states": [
+          {
+            "family": "torsion-state",
+            "label": "gauche-reverse"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case": "action_1_assignment_0",
+    "result": {
+      "ok": {
+        "states": [
+          {
+            "family": "torsion-state",
+            "label": "anti"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case": "action_1_assignment_1",
+    "result": {
+      "ok": {
+        "states": [
+          {
+            "family": "torsion-state",
+            "label": "gauche-reverse"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case": "action_1_assignment_2",
+    "result": {
+      "ok": {
+        "states": [
+          {
+            "family": "torsion-state",
+            "label": "gauche-forward"
+          }
+        ]
+      }
+    }
+  }
+]

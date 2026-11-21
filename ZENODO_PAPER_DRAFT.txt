@@ -35053,4 +35053,42 @@ The analysis constructs two accepted geometries on the same two-ligand entity. I
 
 The final predicate requires every row comparison, every Boolean analysis flag other than the two explicit exclusion flags, both exclusions equal False, at least one retained coordinate-absence row and all six controls. The controls reject an omitted row and numerical zero, retain the equal-count/different-signature distinction, preserve all four adverse identity rows, retain all53targets and exclude the withheld registry hash from prediction. The twelve-field result includes the original isolation and custody certificates, full ten-message measurement list and canonical receipt hash.
 
+Writing Iᵢ, Lᵢ and Tᵢ for the identity, law-label and released-target tests, A for the conjunction of the retained Boolean analysis flags, Fg and Fc for the geometry-parameter and count-selects-shape flags, Nabs for the retained absence count, and C₁,…,C₆ for the controls, the original decision is
+
+  passed = (⋀ᵢ₌₁⁵³ (Iᵢ ∧ Lᵢ ∧ Tᵢ)) ∧ A ∧ (Fg=False) ∧ (Fc=False) ∧ (Nabs≥1) ∧ (⋀ⱼ₌₁⁶ Cⱼ).
+
+The two exclusion flags are omitted from A because their required value is False, which is checked separately. Non-Boolean vectors and counts are preserved in the analysis record rather than coerced into that Boolean conjunction. This is the decision implemented by CoordinationGeometryComparison.analysisPassed and CoordinationGeometryValidation.validate; the native checks remain pending. Timeline: TURN1289.
+
 Additional native references: SFT/Chemistry/CoordinationGeometryPrediction.lean (identities,recordInstructions,predictionDocument); CoordinationGeometrySource.lean (predictionMap,bindTarget,sourceRows); CoordinationGeometryAnalysis.lean (analysisEntity,analysisGeometry,analysis); CoordinationGeometryComparison.lean (compare,controls,analysisPassed); CoordinationGeometryExperiment.lean (registration,envelope,validateSpec); CoordinationGeometryValidation.lean (validate,isolation,custodyCertificate). Pinned original: coordination_geometry_validation_v1.py, _identities, prediction_program_document, _source_rows, exact_coordination_geometry_analysis and CoordinationGeometryValidator.validate. Timeline: TURN1288. Native comparisons and audits are pending.
+
+1303. Complete conformer generation and exact equivalence
+
+The original carrier is a finite connected molecular graph G=(A,E), with positive atom positions V={1,…,n}. Each atom retains its atom-type label. Every bond joins two distinct positions, is normalized into ascending endpoint order and is retained exactly once. Starting from position1, adjacency expansion reaches all of V; a disconnected graph is rejected. The normalized bonds are stored in lexicographic order.
+
+A retained rotor is an ordered molecular path. Its original validation requires four distinct retained positions and the complete three-bond path. Each rotor has a positive finite alphabet Sᵢ of distinct torsion-state labels and a reversal map ρᵢ. The map covers the alphabet and is an involution:
+
+  dom(ρᵢ)=Sᵢ,  ρᵢ(Sᵢ)⊆Sᵢ,  ρᵢ(ρᵢ(s))=s.
+
+The original dictionary construction uses the last value when a reversal key repeats. This behavior is retained; the complete coverage and involution checks apply to the resulting map. The generated assignment carrier is the complete ordered Cartesian product
+
+  Ω = S₁ × ⋯ × Sᵣ.
+
+Every permutation π of V is enumerated. It is retained precisely when it preserves every atom-type label and the complete normalized bond set:
+
+  Aut(G) = {π∈Sym(V) : Aπ(i)=Ai for all i, and π(E)=E}.
+
+For each source rotor and assignment state, π maps its complete ordered site word. Exactly one target rotor must match that word either directly or reversed. The target alphabet must equal the source alphabet in order; duplicate or omitted target rotors are rejected. A direct match retains the state, while a reversed match applies ρᵢ. This defines the exact action on the complete assignment.
+
+For an unassigned anchor ω, its orbit is
+
+  O(ω)={π·ω : π∈Aut(G)}.
+
+The source selects the earliest remaining assignment in generated order, retains the entire orbit in that same order and removes its members from the remaining set. No coordinate tolerance, energy ranking or selected symmetry list enters this operation. The six-field census retains G, the complete rotor list, all alphabets, every generated automorphism, every assignment and the orbit classes. Its partition guard requires distinct flattened class members and equality with the generated assignment set.
+
+For the four-carbon path, exhaustive permutation filtering retains identity and reversal. The held alphabet consists of anti, gauche-forward and gauche-reverse. Reversal fixes anti and exchanges the two gauche labels. Thus all three assignments are generated, and the exact classes are
+
+  {anti},  {gauche-forward, gauche-reverse}.
+
+The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Three native modules are staged; compilation, axiom audits, source-specific general correspondence, complete native comparison and the entry's original grammar and external validation remain pending. This entry is not counted complete.
+
+Pinned V3: claims/SFT-CHEM-CONFORMER-GENERATION-EQUIVALENCE-005/execution.py; sft/chemistry/conformer_generation_equivalence_law_v1.py, FiniteMolecularGraph, HeldRotor, HeldTorsionAlphabet, GraphAutomorphism, finite_graph_automorphisms, generate_conformer_assignments, _apply_action, conformer_census and butane_four_site_census. Native: SFT/Chemistry/ConformerCarrier.lean, ConformerAssignments.lean and ConformerCensus.lean; reused MolecularGraphEnumeration.permutations. Original evidence: verification/TURN1290_CONFORMER_ORIGINAL. Timeline: TURN1290.

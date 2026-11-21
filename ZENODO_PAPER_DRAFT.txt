@@ -35089,7 +35089,7 @@ For the four-carbon path, exhaustive permutation filtering retains identity and 
 
   {anti},  {gauche-forward, gauche-reverse}.
 
-The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Sixteen native modules are staged, including the complete grammar, operational witnesses, prediction, source binding, independent external analysis, full validation assembly and source-bound product/constructor proofs. Compilation, axiom audits, remaining general correspondence and native output comparisons remain pending. This entry is not counted complete.
+The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Seventeen native modules are staged, including the complete grammar, operational witnesses, prediction, source binding, independent external analysis, full validation assembly and source-bound product/constructor proofs. Compilation, axiom audits, remaining general correspondence and native output comparisons remain pending. This entry is not counted complete.
 
 Pinned V3: claims/SFT-CHEM-CONFORMER-GENERATION-EQUIVALENCE-005/execution.py; sft/chemistry/conformer_generation_equivalence_law_v1.py, FiniteMolecularGraph, HeldRotor, HeldTorsionAlphabet, GraphAutomorphism, finite_graph_automorphisms, generate_conformer_assignments, _apply_action, conformer_census and butane_four_site_census. Native: SFT/Chemistry/ConformerCarrier.lean, ConformerAssignments.lean and ConformerCensus.lean; reused MolecularGraphEnumeration.permutations. Original evidence: verification/TURN1290_CONFORMER_ORIGINAL. Timeline: TURN1290.
 
@@ -35144,3 +35144,19 @@ The census constructor preserves the graph, ordered rotors, alphabets, complete 
 Its other guards require a nonempty rotor list, equal rotor/alphabet lengths and nonempty assignment and class lists. These constructor conditions are retained separately from the derivation of the orbit traversal. Native compilation and axiom audits of these source-bound statements remain pending.
 
 Original source: sft/chemistry/conformer_generation_equivalence_law_v1.py, HeldTorsionAlphabet.__post_init__, generate_conformer_assignments and ExactConformerCensus.__post_init__, pinned to V3 commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native references: ConformerUniqueness.generatedExactlyOnce; ConformerAlphabetProofs.checkedStatesDistinct, acceptedInputStatesDistinct and acceptedStatesRetained; ConformerGenerationClosure.admittedProductCompleteAndUnique; ConformerPartition.acceptedFields, acceptedRotorGuard, acceptedNonemptyGuard and acceptedPartitionGuard. Timeline: TURN1294.
+
+The orbit list is ordered by generation position, exactly as in the original conformer census. For the ordered generated carrier Ω and an orbit O, the retained class is
+
+  ordered(O) = [x∈Ω : x∈O].
+
+This is a subsequence of Ω, and its membership condition is precisely x∈Ω and x∈O. It introduces neither a label-based sorting rule nor a numerical tolerance. For remaining assignments R, the next anchor is the first member of Ω satisfying x∈R. The corresponding decomposition is
+
+  Ω = P ++ [a] ++ S,    a∈R,    ∀p∈P, p∉R.
+
+Thus the rejected prefix P witnesses that a has the least surviving generation position. Following that class, the difference update is
+
+  R′ = [x∈R : x∉O],
+
+which also preserves generation order. The Cartesian nonduplication argument makes each assignment's generation position unique. These facts connect the ordered list representation to the source's assignment_order dictionary, minimum-remaining selection and ordered orbit output. Native checks of the ordering statements and their complete traversal composition remain pending.
+
+Original source: sft/chemistry/conformer_generation_equivalence_law_v1.py, conformer_census, pinned to V3 commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native reference: SFT/Chemistry/ConformerOrbitOrder.lean, orbitOrderRetained, orbitMembersExact, firstRemaining, removalOrderRetained and firstRemainingDecomposition; computational operation: ConformerCensus.quotient. Timeline: TURN1295.

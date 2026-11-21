@@ -12939,3 +12939,15 @@ import SFT.Medicine.CounterfactualSource
 import SFT.Medicine.CounterfactualExperiment
 
 import SFT.Medicine.CounterfactualValidation
+
+import SFT.Medicine.Allocation
+
+import SFT.Medicine.AllocationGrammar
+
+import SFT.Medicine.AllocationEvidence
+
+import SFT.Medicine.AllocationSource
+
+import SFT.Medicine.AllocationExperiment
+
+import SFT.Medicine.AllocationValidation

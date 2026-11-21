@@ -12915,3 +12915,15 @@ import SFT.Biology.BioHandoffSource
 import SFT.Biology.BioHandoffExperiment
 
 import SFT.Biology.BioHandoffValidation
+
+import SFT.Medicine.Comparator
+
+import SFT.Medicine.ComparatorGrammar
+
+import SFT.Medicine.ComparatorEvidence
+
+import SFT.Medicine.ComparatorSource
+
+import SFT.Medicine.ComparatorExperiment
+
+import SFT.Medicine.ComparatorValidation

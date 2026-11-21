@@ -1,0 +1,1092 @@
+{
+  "updated_at": "2026-11-21T14:48:17.088776+00:00",
+  "sections_read": [
+    497,
+    498,
+    499,
+    500,
+    501
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "sft/physics/collective_matter_laws.py: VISCOSITY through PLASMA_MHD, previous collective_law and VALUE_SPECS",
+    "Five original WHY_DERIVATION_CHECK.md records",
+    "Full original plasma collective and plasma oscillation execution bindings"
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Physics/CollectiveViscosity.lean",
+      "sha256": "a1c3bf99123c63fffd7b055450198b615444be7d2444fa8dc3ca7a399a1ca471",
+      "theorems": [
+        "SFT.Physics.CollectiveViscosity.exactInterfaceCount",
+        "SFT.Physics.CollectiveViscosity.leftRecurrenceExact",
+        "SFT.Physics.CollectiveViscosity.rightRecurrenceExact",
+        "SFT.Physics.CollectiveViscosity.sameRecurrenceBoundary",
+        "SFT.Physics.CollectiveViscosity.exactResponseRatio",
+        "SFT.Physics.CollectiveViscosity.presentResponse",
+        "SFT.Physics.CollectiveViscosity.exactResponseMagnitude",
+        "SFT.Physics.CollectiveViscosity.transferIsAdjacentTangential",
+        "SFT.Physics.CollectiveViscosity.transferCarrierPaired",
+        "SFT.Physics.CollectiveViscosity.coefficientUnique"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/CollectiveTurbulence.lean",
+      "sha256": "6bfded7556a4b67b62bb5c21f2887ceeb9d3096e0127c71da847e169331dbcba",
+      "theorems": [
+        "SFT.Physics.CollectiveTurbulence.everyFineClassRetained",
+        "SFT.Physics.CollectiveTurbulence.refinementExactlyContainment",
+        "SFT.Physics.CollectiveTurbulence.refinedCarrierBalance",
+        "SFT.Physics.CollectiveTurbulence.refinedCarrierIdentity",
+        "SFT.Physics.CollectiveTurbulence.scaleCensusCount",
+        "SFT.Physics.CollectiveTurbulence.cascadeExactlyEnumerated",
+        "SFT.Physics.CollectiveTurbulence.noUngeneratedCascade",
+        "SFT.Physics.CollectiveTurbulence.everyCascadeCarrierConserved",
+        "SFT.Physics.CollectiveTurbulence.scaleSuccessorRetainsAll",
+        "SFT.Physics.CollectiveTurbulence.deterministicFlowHistory",
+        "SFT.Physics.CollectiveTurbulence.allHistoryRowsRetained",
+        "SFT.Physics.CollectiveTurbulence.exactFirstRecurrence"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/TurbulenceScaleProofs.lean",
+      "sha256": "e13716374ece8da1c1ad48f5a1408fb3d205bd39c389e73d68aef9be39c385e9",
+      "theorems": [],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/CollectivePlasma.lean",
+      "sha256": "91afc55fc4e2271795d21b0296457d8870de76917e5c1b76b6ee7f738ce0bec0",
+      "theorems": [
+        "SFT.Physics.CollectivePlasma.everyMobileCarrierCoupled",
+        "SFT.Physics.CollectivePlasma.noUnrecordedCoupling",
+        "SFT.Physics.CollectivePlasma.couplingIsAdjacent",
+        "SFT.Physics.CollectivePlasma.twoOrientationsExhaust",
+        "SFT.Physics.CollectivePlasma.magneticChargeIsTransportedCharge",
+        "SFT.Physics.CollectivePlasma.collectiveChargeConserved",
+        "SFT.Physics.CollectivePlasma.heldOrientationsConserved",
+        "SFT.Physics.CollectivePlasma.bothRecurrenceLegsComplete",
+        "SFT.Physics.CollectivePlasma.coupledMotionRetainsCarrier",
+        "SFT.Physics.CollectivePlasma.completeCollectiveCensus",
+        "SFT.Physics.CollectivePlasma.fieldResponseUnique"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/CollectivePlasmaOscillation.lean",
+      "sha256": "538e06c6ba4f3463eebd7d3dcf6b8522910e36f10cb9b2850ad1fdb896c7ac67",
+      "theorems": [
+        "SFT.Physics.CollectivePlasmaOscillation.returnedDisplacement",
+        "SFT.Physics.CollectivePlasmaOscillation.intermediateSeparationDistinguished",
+        "SFT.Physics.CollectivePlasmaOscillation.bothRestoringStepsRetained",
+        "SFT.Physics.CollectivePlasmaOscillation.reversedChargeReversesField",
+        "SFT.Physics.CollectivePlasmaOscillation.recurrenceRetainsCharge",
+        "SFT.Physics.CollectivePlasmaOscillation.screeningExactlyClosedObservation",
+        "SFT.Physics.CollectivePlasmaOscillation.screenedSourceRetained",
+        "SFT.Physics.CollectivePlasmaOscillation.distinctObservationNotScreened"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/CollectiveMagnetofluid.lean",
+      "sha256": "7187d6123acff2b003a251b4645c2b4134ec181a1b0a31be94da806a0c30d909",
+      "theorems": [
+        "SFT.Physics.CollectiveMagnetofluid.commonGeneratedNetwork",
+        "SFT.Physics.CollectiveMagnetofluid.eachFluidTransferHasField",
+        "SFT.Physics.CollectiveMagnetofluid.eachFieldTransferHasFluid",
+        "SFT.Physics.CollectiveMagnetofluid.exactJointCarrierConservation",
+        "SFT.Physics.CollectiveMagnetofluid.fluidProjectionConserved",
+        "SFT.Physics.CollectiveMagnetofluid.chargeProjectionConserved",
+        "SFT.Physics.CollectiveMagnetofluid.sharedTransferIdentity",
+        "SFT.Physics.CollectiveMagnetofluid.sharedMagneticCharge",
+        "SFT.Physics.CollectiveMagnetofluid.jointBoundaryBalance",
+        "SFT.Physics.CollectiveMagnetofluid.unequalTransferCensusRejected"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaMeasured.lean",
+      "sha256": "d59d0b6f2a47e88f4c316def7bf4b1414ced2c8a3a40ca8a0f763a211dbe35a0",
+      "theorems": [
+        "SFT.Physics.PlasmaMeasured.resealRejected",
+        "SFT.Physics.PlasmaMeasured.sourceMismatchRejected",
+        "SFT.Physics.PlasmaMeasured.sealBindsExactInputs"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/ViscosityGrammar.lean",
+      "sha256": "6333ce9896503cb3b022a6d8b39b1fbe9313de8f55ce6b92439265fe003b7806",
+      "theorems": [
+        "SFT.Physics.ViscosityGrammar.generatedCardinality",
+        "SFT.Physics.ViscosityGrammar.candidatesComplete",
+        "SFT.Physics.ViscosityGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.ViscosityGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.ViscosityGrammar.uniqueSurvivor",
+        "SFT.Physics.ViscosityGrammar.survivorAccepted",
+        "SFT.Physics.ViscosityGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.ViscosityGrammar.carrier_rejected_rejected",
+        "SFT.Physics.ViscosityGrammar.relation_rejected_rejected",
+        "SFT.Physics.ViscosityGrammar.provenance_rejected_rejected",
+        "SFT.Physics.ViscosityGrammar.prediction_rejected_rejected",
+        "SFT.Physics.ViscosityGrammar.record_rejected_rejected",
+        "SFT.Physics.ViscosityGrammar.rows_rejected_rejected",
+        "SFT.Physics.ViscosityGrammar.generality_rejected_rejected",
+        "SFT.Physics.ViscosityGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/ViscosityEvidence.lean",
+      "sha256": "3b0776e5293b72bd4c552ceb4c265af3842c0b1edecb138793e65b23cb466b19",
+      "theorems": [
+        "SFT.Physics.ViscosityEvidence.registrationNoAxioms",
+        "SFT.Physics.ViscosityEvidence.registrationNoFreeParameters",
+        "SFT.Physics.ViscosityEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/ViscosityExperiment.lean",
+      "sha256": "7715ab63d4921e3cf009445ad2b4971517b18d3b6f7cdf2c75682ff4d4bd8cf6",
+      "theorems": [
+        "SFT.Physics.ViscosityExperiment.completeTargetCount",
+        "SFT.Physics.ViscosityExperiment.completeTargetLabels",
+        "SFT.Physics.ViscosityExperiment.changedSourceRejected",
+        "SFT.Physics.ViscosityExperiment.registeredSpecValid",
+        "SFT.Physics.ViscosityExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/ViscosityValidation.lean",
+      "sha256": "c485edb930a9c5a0a880f116c45d9a0aed70afbfd36c59f5dfec13f003d52486",
+      "theorems": [
+        "SFT.Physics.ViscosityValidation.resealRejected"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/ViscosityValidationProofs.lean",
+      "sha256": "c3fd1bea98611ec2dd864a8682396e59d3d0b39821d0546e0aea147291aac1de",
+      "theorems": [
+        "SFT.Physics.ViscosityValidation.sourceMismatchRejects",
+        "SFT.Physics.ViscosityValidation.sealBindsExecution",
+        "SFT.Physics.ViscosityValidation.emptyPremiseRejected",
+        "SFT.Physics.ViscosityValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/TurbulenceGrammar.lean",
+      "sha256": "a9fb653a26e6607ffb72295b96930a780268cdc7361f40deee5779fad137e57a",
+      "theorems": [
+        "SFT.Physics.TurbulenceGrammar.generatedCardinality",
+        "SFT.Physics.TurbulenceGrammar.candidatesComplete",
+        "SFT.Physics.TurbulenceGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.TurbulenceGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.TurbulenceGrammar.uniqueSurvivor",
+        "SFT.Physics.TurbulenceGrammar.survivorAccepted",
+        "SFT.Physics.TurbulenceGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.TurbulenceGrammar.carrier_rejected_rejected",
+        "SFT.Physics.TurbulenceGrammar.relation_rejected_rejected",
+        "SFT.Physics.TurbulenceGrammar.provenance_rejected_rejected",
+        "SFT.Physics.TurbulenceGrammar.prediction_rejected_rejected",
+        "SFT.Physics.TurbulenceGrammar.record_rejected_rejected",
+        "SFT.Physics.TurbulenceGrammar.rows_rejected_rejected",
+        "SFT.Physics.TurbulenceGrammar.generality_rejected_rejected",
+        "SFT.Physics.TurbulenceGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/TurbulenceEvidence.lean",
+      "sha256": "4dbfe7c7f311b508e2e23e49eabc2a0278068764e77936d496f888028bfea51a",
+      "theorems": [
+        "SFT.Physics.TurbulenceEvidence.registrationNoAxioms",
+        "SFT.Physics.TurbulenceEvidence.registrationNoFreeParameters",
+        "SFT.Physics.TurbulenceEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/TurbulenceExperiment.lean",
+      "sha256": "31be376281d0649faf21eff820bdd8fad4ecaef97ca598517cb560d3cee16863",
+      "theorems": [
+        "SFT.Physics.TurbulenceExperiment.completeTargetCount",
+        "SFT.Physics.TurbulenceExperiment.completeTargetLabels",
+        "SFT.Physics.TurbulenceExperiment.changedSourceRejected",
+        "SFT.Physics.TurbulenceExperiment.registeredSpecValid",
+        "SFT.Physics.TurbulenceExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/TurbulenceValidation.lean",
+      "sha256": "9f40e4bfd43ff1d8835fb2b562f205f06f7cdd210243d9ec7f1e5375ccf1883d",
+      "theorems": [
+        "SFT.Physics.TurbulenceValidation.resealRejected"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/TurbulenceValidationProofs.lean",
+      "sha256": "35edd736ac64082b377aef2b54f554d17ef0a846df9748f98304003c0b6abb5b",
+      "theorems": [
+        "SFT.Physics.TurbulenceValidation.sourceMismatchRejects",
+        "SFT.Physics.TurbulenceValidation.sealBindsExecution",
+        "SFT.Physics.TurbulenceValidation.emptyPremiseRejected",
+        "SFT.Physics.TurbulenceValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaCollectiveGrammar.lean",
+      "sha256": "5f4ec2020f32b439f7d27afc6a6ea944475488c08e31897399b8408b11ac02f3",
+      "theorems": [
+        "SFT.Physics.PlasmaCollectiveGrammar.generatedCardinality",
+        "SFT.Physics.PlasmaCollectiveGrammar.candidatesComplete",
+        "SFT.Physics.PlasmaCollectiveGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.PlasmaCollectiveGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.PlasmaCollectiveGrammar.uniqueSurvivor",
+        "SFT.Physics.PlasmaCollectiveGrammar.survivorAccepted",
+        "SFT.Physics.PlasmaCollectiveGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.PlasmaCollectiveGrammar.carrier_rejected_rejected",
+        "SFT.Physics.PlasmaCollectiveGrammar.relation_rejected_rejected",
+        "SFT.Physics.PlasmaCollectiveGrammar.provenance_rejected_rejected",
+        "SFT.Physics.PlasmaCollectiveGrammar.prediction_rejected_rejected",
+        "SFT.Physics.PlasmaCollectiveGrammar.record_rejected_rejected",
+        "SFT.Physics.PlasmaCollectiveGrammar.rows_rejected_rejected",
+        "SFT.Physics.PlasmaCollectiveGrammar.generality_rejected_rejected",
+        "SFT.Physics.PlasmaCollectiveGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaCollectiveEvidence.lean",
+      "sha256": "ec05818795771fb115a296f47ad1680befd64e8acfae968c743a32d42b9e2c48",
+      "theorems": [
+        "SFT.Physics.PlasmaCollectiveEvidence.registrationNoAxioms",
+        "SFT.Physics.PlasmaCollectiveEvidence.registrationNoFreeParameters",
+        "SFT.Physics.PlasmaCollectiveEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaCollectiveExperiment.lean",
+      "sha256": "b1b6a14fe5c451928f6b88ac9b594051d467adaf60bee2acfb7c322eadac5c33",
+      "theorems": [
+        "SFT.Physics.PlasmaCollectiveExperiment.completeTargetCount",
+        "SFT.Physics.PlasmaCollectiveExperiment.completeTargetLabels",
+        "SFT.Physics.PlasmaCollectiveExperiment.changedSourceRejected",
+        "SFT.Physics.PlasmaCollectiveExperiment.registeredSpecValid",
+        "SFT.Physics.PlasmaCollectiveExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaCollectiveValidation.lean",
+      "sha256": "e4912dd8126e21aef4e578139ae433cdebf39ea75335d1472f93864b0686cc98",
+      "theorems": [
+        "SFT.Physics.PlasmaCollectiveValidation.resealRejected"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaCollectiveValidationProofs.lean",
+      "sha256": "db16e3e4c4d0c1f6c9f76432e2675f348593d0bfd1610e43a94adca87af4e6c9",
+      "theorems": [
+        "SFT.Physics.PlasmaCollectiveValidation.sourceMismatchRejects",
+        "SFT.Physics.PlasmaCollectiveValidation.sealBindsExecution",
+        "SFT.Physics.PlasmaCollectiveValidation.emptyPremiseRejected",
+        "SFT.Physics.PlasmaCollectiveValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaOscillationGrammar.lean",
+      "sha256": "551dcd11d3f0102d24bd78e5f11f2d13534e6085a03b6199f38cb2e610912145",
+      "theorems": [
+        "SFT.Physics.PlasmaOscillationGrammar.generatedCardinality",
+        "SFT.Physics.PlasmaOscillationGrammar.candidatesComplete",
+        "SFT.Physics.PlasmaOscillationGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.PlasmaOscillationGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.PlasmaOscillationGrammar.uniqueSurvivor",
+        "SFT.Physics.PlasmaOscillationGrammar.survivorAccepted",
+        "SFT.Physics.PlasmaOscillationGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.PlasmaOscillationGrammar.carrier_rejected_rejected",
+        "SFT.Physics.PlasmaOscillationGrammar.relation_rejected_rejected",
+        "SFT.Physics.PlasmaOscillationGrammar.provenance_rejected_rejected",
+        "SFT.Physics.PlasmaOscillationGrammar.prediction_rejected_rejected",
+        "SFT.Physics.PlasmaOscillationGrammar.record_rejected_rejected",
+        "SFT.Physics.PlasmaOscillationGrammar.rows_rejected_rejected",
+        "SFT.Physics.PlasmaOscillationGrammar.generality_rejected_rejected",
+        "SFT.Physics.PlasmaOscillationGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaOscillationEvidence.lean",
+      "sha256": "6b5ba167751b8c02aa0f7173f7a1f6f9caabffcdaa8f674fa89aca115f3465c8",
+      "theorems": [
+        "SFT.Physics.PlasmaOscillationEvidence.registrationNoAxioms",
+        "SFT.Physics.PlasmaOscillationEvidence.registrationNoFreeParameters",
+        "SFT.Physics.PlasmaOscillationEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaOscillationExperiment.lean",
+      "sha256": "2feeeab9fc2a73674a9d17c2c66c93172be03b402c4c1228a1bff9b77b842b09",
+      "theorems": [
+        "SFT.Physics.PlasmaOscillationExperiment.completeTargetCount",
+        "SFT.Physics.PlasmaOscillationExperiment.completeTargetLabels",
+        "SFT.Physics.PlasmaOscillationExperiment.changedSourceRejected",
+        "SFT.Physics.PlasmaOscillationExperiment.registeredSpecValid",
+        "SFT.Physics.PlasmaOscillationExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaOscillationValidation.lean",
+      "sha256": "7d72d1d4d61f8130b9f518a9a36a4fac685d6ed4d30fc2b73dac5922f94a0d00",
+      "theorems": [
+        "SFT.Physics.PlasmaOscillationValidation.resealRejected"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaOscillationValidationProofs.lean",
+      "sha256": "e14a09c9175efab807d3e185494e9269104697b95fc763681faaad5f3b9662d1",
+      "theorems": [
+        "SFT.Physics.PlasmaOscillationValidation.sourceMismatchRejects",
+        "SFT.Physics.PlasmaOscillationValidation.sealBindsExecution",
+        "SFT.Physics.PlasmaOscillationValidation.emptyPremiseRejected",
+        "SFT.Physics.PlasmaOscillationValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaMHDGrammar.lean",
+      "sha256": "713625ae19a5509d666f31463e4d1ab8d0ea1030469da3e8d49db8f693b28a31",
+      "theorems": [
+        "SFT.Physics.PlasmaMHDGrammar.generatedCardinality",
+        "SFT.Physics.PlasmaMHDGrammar.candidatesComplete",
+        "SFT.Physics.PlasmaMHDGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.PlasmaMHDGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.PlasmaMHDGrammar.uniqueSurvivor",
+        "SFT.Physics.PlasmaMHDGrammar.survivorAccepted",
+        "SFT.Physics.PlasmaMHDGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.PlasmaMHDGrammar.carrier_rejected_rejected",
+        "SFT.Physics.PlasmaMHDGrammar.relation_rejected_rejected",
+        "SFT.Physics.PlasmaMHDGrammar.provenance_rejected_rejected",
+        "SFT.Physics.PlasmaMHDGrammar.prediction_rejected_rejected",
+        "SFT.Physics.PlasmaMHDGrammar.record_rejected_rejected",
+        "SFT.Physics.PlasmaMHDGrammar.rows_rejected_rejected",
+        "SFT.Physics.PlasmaMHDGrammar.generality_rejected_rejected",
+        "SFT.Physics.PlasmaMHDGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaMHDEvidence.lean",
+      "sha256": "68e9dd4bc2821d54a54fb9197018369b534587bacf3f2b6e612bdcd54b33f42c",
+      "theorems": [
+        "SFT.Physics.PlasmaMHDEvidence.registrationNoAxioms",
+        "SFT.Physics.PlasmaMHDEvidence.registrationNoFreeParameters",
+        "SFT.Physics.PlasmaMHDEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaMHDExperiment.lean",
+      "sha256": "c34d80e1df2aaae4ced90a56e87ad8d3c2de21d8114e9231c025335954c70cc6",
+      "theorems": [
+        "SFT.Physics.PlasmaMHDExperiment.completeTargetCount",
+        "SFT.Physics.PlasmaMHDExperiment.completeTargetLabels",
+        "SFT.Physics.PlasmaMHDExperiment.changedSourceRejected",
+        "SFT.Physics.PlasmaMHDExperiment.registeredSpecValid",
+        "SFT.Physics.PlasmaMHDExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaMHDValidation.lean",
+      "sha256": "d9a929d5997d8999b76d0de41f7dffe64b89448413fc03849f333d12d224741b",
+      "theorems": [
+        "SFT.Physics.PlasmaMHDValidation.resealRejected"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    },
+    {
+      "path": "SFT/Physics/PlasmaMHDValidationProofs.lean",
+      "sha256": "d339fa53c2067d45b1a1b7f5bce7ec6eb1c8a0cead34bb3336d269c72ddb75d2",
+      "theorems": [
+        "SFT.Physics.PlasmaMHDValidation.sourceMismatchRejects",
+        "SFT.Physics.PlasmaMHDValidation.sealBindsExecution",
+        "SFT.Physics.PlasmaMHDValidation.emptyPremiseRejected",
+        "SFT.Physics.PlasmaMHDValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational bodies; complete companion code/literal comparison against Density; PlasmaMeasured complete comparison against DensityMeasured."
+    }
+  ],
+  "reused_upstream": [
+    {
+      "path": "SFT/Mathematics/DynamicsReturns.lean",
+      "sha256": "cafb218e5da8a711bdb9f748be380b0e5fcb2b70293f4500252b9b7d0883412f",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_082_084.json"
+    },
+    {
+      "path": "SFT/Mathematics/FiniteRefinementTrace.lean",
+      "sha256": "e3de6ab1ec1b8c31d2e816d47ae3fe2ed937d6977aca658f6e5ec00b54bb9a57",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_334_339.json"
+    },
+    {
+      "path": "SFT/Physics/MechanicalVelocity.lean",
+      "sha256": "da39d8fde572293839f603420bc5222971c975ca568fcfeb9a9e486c0c3a8f6d",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_363_368.json"
+    },
+    {
+      "path": "SFT/Physics/MechanicalConstraintOscillation.lean",
+      "sha256": "5803da20d3a11c982ee57a47258b5c1dd8225f0c6b652912cd2db74cc5260444",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_377_381.json"
+    },
+    {
+      "path": "SFT/Physics/FieldElectricPotential.lean",
+      "sha256": "ade006bf10a83fa3ddceb018c89f87a03d2920af2c6e161838dc85657e7e80bc",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_382_386.json"
+    },
+    {
+      "path": "SFT/Physics/FieldElectromagnetic.lean",
+      "sha256": "867285a079353331163e7d9b58b3c6796e2ce01d6394bf4b89cb6fc86307978e",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_388_392.json"
+    }
+  ],
+  "audits": [
+    {
+      "path": "verification/TURN_540_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "67e873947219d237b2eafdc406ee4ad3df8c5ae64a17517ab9fa32073a5b2bd1"
+    },
+    {
+      "path": "verification/TURN_540_auditcollective540_Viscosity.log",
+      "sha256": "16981c4607d078bf15a6e9bd387c39514179b7863dabb2c14b7026ac0408a059"
+    },
+    {
+      "path": "verification/TURN_541_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "7e5c53bd24429a2ece55bc8a08c6b09ba1337a50371148ff2a93d4ba49d0c5c0"
+    },
+    {
+      "path": "verification/TURN_541_auditcollective541_Turbulence.log",
+      "sha256": "966a5c768b560dc13bb7db5080c3c888b0257bbc0a4145399d21f423eeb2ba31"
+    },
+    {
+      "path": "verification/TURN_542_PlasmaMeasuredAudit542.log",
+      "sha256": "e7e24aed137aa0e1367f9b147bf2d344b97ce822fe5703759589e20e2e671161"
+    },
+    {
+      "path": "verification/TURN_542_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "0e533efa98b5a14a1777b4872bedd2c398b8ec96b48893250ef37621804cd977"
+    },
+    {
+      "path": "verification/TURN_542_auditcollective542_PlasmaCollective.log",
+      "sha256": "bc393787917cd04e33a1a8dcf9a2f121875dab0cf5912841de50b0a9dc6dfb35"
+    },
+    {
+      "path": "verification/TURN_542_plasmaoscillation543_audit.log",
+      "sha256": "6a557bdc9a7b86324a7d4cd1a2537fc2d388a51fc6520b35845bc5af41f193da"
+    },
+    {
+      "path": "verification/TURN_543_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "43b45c05d98c15e6d6d3e8baadc04d9629698b143fd305a2f7c7f4374f4817cc"
+    },
+    {
+      "path": "verification/TURN_543_auditcollective543_PlasmaOscillation.log",
+      "sha256": "76a02135eda93899c22310f9b7df88ac158821fbf646c0e9c658508553fd9760"
+    },
+    {
+      "path": "verification/TURN_544_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "b4e5efdb68fc46a02f1ec6359959b7b401a9b73fd2b86a4553d89efcfb0e7aba"
+    },
+    {
+      "path": "verification/TURN_544_auditcollective544_PlasmaMHD.log",
+      "sha256": "db851e18ac4462e1bda73bed19fd96d8330836b564354bfd14971ae8f073c0d3"
+    }
+  ],
+  "matching_theorems": 194,
+  "reports": [
+    {
+      "path": "verification/TURN_540_viscosity_independent540_report.json",
+      "sha256": "402763463684fcd15b23d9289cb37725cedaa758ad2b6b0c3286442a2ec8f942",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-VISCOSITY-001",
+              "survivor": "complete-fold-carrier__tangential-adjacent-momentum-transfer__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-viscosity-540"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-VISCOSITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-viscosity-540"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-VISCOSITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-viscosity-540"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-VISCOSITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-viscosity-540"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_540_viscosity_program540_report.json",
+      "sha256": "973e5cf90fd7ca0e79d2631c2919d7f3384ee2cde8628acaf194f26f77b47cd4",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:7ef2a3786fb504b69aa64fd2dc22720096cad991236c9713b9310c8827270ac5",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All UnitProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_540_viscosity_validation540_report.json",
+      "sha256": "1d6c8e4fa1035a7759e9cd37938bad224a76942999e71b0556d7afb51ec067c5",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 116882,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_541_turbulence_independent541_report.json",
+      "sha256": "6d1cb3f4e0b0f30e526d7be751442635c47a9d43903e7f5ed6e013d4b60ac4be",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-TURBULENCE-001",
+              "survivor": "complete-fold-carrier__multiscale-flow-recurrence-transfer__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-turbulence-541"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-TURBULENCE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-turbulence-541"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-TURBULENCE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-turbulence-541"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-TURBULENCE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-turbulence-541"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_541_turbulence_program541_report.json",
+      "sha256": "a80237f3586b1977e7c41f0440c524ec5d4e4504870e4a18f68e83a3dc973298",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:1d7f62f73bd0650e4705ba612c4d86f3640108c8d91e45efcd8db87d7fb3e369",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All UnitProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_541_turbulence_validation541_report.json",
+      "sha256": "24c82ac613dd78279f9e8b114af726ea4a4e1a2e5e3e1617a89bf8997ae9756a",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 88315,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_542_PlasmaMeasured542_report.json",
+      "sha256": "c97b78ebce869c3146a00045cc9c12017e0d687459bf521379641db107117e77",
+      "result": {
+        "module": "PlasmaMeasured",
+        "status": "PASS",
+        "source_sha256": "d59d0b6f2a47e88f4c316def7bf4b1414ced2c8a3a40ca8a0f763a211dbe35a0",
+        "audited_declarations": [
+          "SFT.Physics.PlasmaMeasured.Snapshot",
+          "SFT.Physics.PlasmaMeasured.PredictionSeal",
+          "SFT.Physics.PlasmaMeasured.experimentId",
+          "SFT.Physics.PlasmaMeasured.claimId",
+          "SFT.Physics.PlasmaMeasured.snapshotHash",
+          "SFT.Physics.PlasmaMeasured.sourceId",
+          "SFT.Physics.PlasmaMeasured.relationId",
+          "SFT.Physics.PlasmaMeasured.relationStatement",
+          "SFT.Physics.PlasmaMeasured.falsification",
+          "SFT.Physics.PlasmaMeasured.targetId",
+          "SFT.Physics.PlasmaMeasured.targetQuantity",
+          "SFT.Physics.PlasmaMeasured.program",
+          "SFT.Physics.PlasmaMeasured.programFields",
+          "SFT.Physics.PlasmaMeasured.registration",
+          "SFT.Physics.PlasmaMeasured.registrationHash",
+          "SFT.Physics.PlasmaMeasured.inputs",
+          "SFT.Physics.PlasmaMeasured.envelope",
+          "SFT.Physics.PlasmaMeasured.sealPrediction",
+          "SFT.Physics.PlasmaMeasured.isolation",
+          "SFT.Physics.PlasmaMeasured.custodyCertificate",
+          "SFT.Physics.PlasmaMeasured.measurementReceipt",
+          "SFT.Physics.PlasmaMeasured.measurement",
+          "SFT.Physics.PlasmaMeasured.sourceMatches",
+          "SFT.Physics.PlasmaMeasured.validate",
+          "SFT.Physics.PlasmaMeasured.resealRejected",
+          "SFT.Physics.PlasmaMeasured.sourceMismatchRejected",
+          "SFT.Physics.PlasmaMeasured.sealBindsExactInputs"
+        ],
+        "axiom_dependencies": [],
+        "full_empirical_output_matches": true
+      }
+    },
+    {
+      "path": "verification/TURN_542_plasmacollective_independent542_report.json",
+      "sha256": "022545c4b3ae09a3e7c66ef2ea7ef6c65771b189efc3e77e0613d2c05fc535ef",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-PLASMA-COLLECTIVE-001",
+              "survivor": "complete-fold-carrier__mobile-charge-network-field-coupling__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-plasmacollective-542"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-PLASMA-COLLECTIVE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-plasmacollective-542"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-PLASMA-COLLECTIVE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-plasmacollective-542"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-PLASMA-COLLECTIVE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-plasmacollective-542"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_542_plasmacollective_program542_report.json",
+      "sha256": "a6a634feff3ebc63bd82ff4ea9f4a298bf82566a2c8e6e7b632fd58a2deb5207",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:1a17a43a87ddbe90c7ffff4645ea017347a3955e923efcc63bd5280c4c9e8186",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All UnitProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_542_plasmacollective_validation542_report.json",
+      "sha256": "c70108f1cc82c39e1122634aaad76b3df609d9c2f93a664749b2f1ffc5c632ff",
+      "result": {
+        "status": "PASS",
+        "source_snapshot_bytes": 40801,
+        "fresh_native_execution": true,
+        "all_validation_fields_and_hashes_match": true,
+        "numeric_adapter": "PlasmaMeasured",
+        "source_sha256": "d59d0b6f2a47e88f4c316def7bf4b1414ced2c8a3a40ca8a0f763a211dbe35a0"
+      }
+    },
+    {
+      "path": "verification/TURN_542_plasmaoscillation543_core_report.json",
+      "sha256": "0f567b0f33890941572dec985ffc7f2ab121b095bf4646640e0ce628dd94b405",
+      "result": {
+        "source_sha256": "538e06c6ba4f3463eebd7d3dcf6b8522910e36f10cb9b2850ad1fdb896c7ac67",
+        "declarations": [
+          "SFT.Physics.CollectivePlasmaOscillation.RestoringResponse",
+          "SFT.Physics.CollectivePlasmaOscillation.returnedDisplacement",
+          "SFT.Physics.CollectivePlasmaOscillation.intermediateSeparationDistinguished",
+          "SFT.Physics.CollectivePlasmaOscillation.bothRestoringStepsRetained",
+          "SFT.Physics.CollectivePlasmaOscillation.reversedChargeReversesField",
+          "SFT.Physics.CollectivePlasmaOscillation.recurrenceRetainsCharge",
+          "SFT.Physics.CollectivePlasmaOscillation.ScreenedResponse",
+          "SFT.Physics.CollectivePlasmaOscillation.screened",
+          "SFT.Physics.CollectivePlasmaOscillation.screeningExactlyClosedObservation",
+          "SFT.Physics.CollectivePlasmaOscillation.screenedSourceRetained",
+          "SFT.Physics.CollectivePlasmaOscillation.distinctObservationNotScreened",
+          "SFT.Physics.CollectivePlasmaOscillation.arbitraryRestoringPath",
+          "SFT.Physics.CollectivePlasmaOscillation.arbitraryPeriod",
+          "SFT.Physics.CollectivePlasmaOscillation.completeChargeConservation"
+        ],
+        "axiom_dependencies": [],
+        "status": "PASS",
+        "scope": "Core only; original full entry grammar, controls and empirical comparison not yet run."
+      }
+    },
+    {
+      "path": "verification/TURN_543_plasmaoscillation_independent543_report.json",
+      "sha256": "fd4eeadc9f511b65a9242b7d2b8b146ba73f4026ec7853284b92597c8358742a",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-PLASMA-OSCILLATION-001",
+              "survivor": "complete-fold-carrier__charge-separation-restoring-recurrence__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-plasmaoscillation-543"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-PLASMA-OSCILLATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-plasmaoscillation-543"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-PLASMA-OSCILLATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-plasmaoscillation-543"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-PLASMA-OSCILLATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-plasmaoscillation-543"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_543_plasmaoscillation_program543_report.json",
+      "sha256": "abb180181aa68d9d7ea4797d6f4f4540731cadbde6f63b874ac4bf499f997774",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:32e35ac55e76c5661d80eeaf2b1cb3ab1f8caaac3e3a1c29bcaea6e6798d39d7",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All UnitProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_543_plasmaoscillation_validation543_report.json",
+      "sha256": "bd87d43153db1793e7119058f34625e9ec475d813b1f4438ffd23d8e4ae4e70e",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 44546,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_544_magnetofluid544_core_report.json",
+      "sha256": "1c5bf42afab02747e1c054a4bc93725cab3cab0d051252108d99a9ecae208d7e",
+      "result": {
+        "status": "PASS",
+        "source_sha256": "7187d6123acff2b003a251b4645c2b4134ec181a1b0a31be94da806a0c30d909",
+        "declarations": [
+          "SFT.Physics.CollectiveMagnetofluid.JointCarrier",
+          "SFT.Physics.CollectiveMagnetofluid.chargeTransfer",
+          "SFT.Physics.CollectiveMagnetofluid.Magnetofluid",
+          "SFT.Physics.CollectiveMagnetofluid.commonGeneratedNetwork",
+          "SFT.Physics.CollectiveMagnetofluid.eachFluidTransferHasField",
+          "SFT.Physics.CollectiveMagnetofluid.eachFieldTransferHasFluid",
+          "SFT.Physics.CollectiveMagnetofluid.exactJointCarrierConservation",
+          "SFT.Physics.CollectiveMagnetofluid.fluidProjectionConserved",
+          "SFT.Physics.CollectiveMagnetofluid.chargeProjectionConserved",
+          "SFT.Physics.CollectiveMagnetofluid.sharedTransferIdentity",
+          "SFT.Physics.CollectiveMagnetofluid.sharedMagneticCharge",
+          "SFT.Physics.CollectiveMagnetofluid.jointBoundaryBalance",
+          "SFT.Physics.CollectiveMagnetofluid.unequalTransferCensusRejected"
+        ],
+        "axiom_dependencies": [],
+        "scope": "Core only; full source entry not registered"
+      }
+    },
+    {
+      "path": "verification/TURN_544_plasmamhd_independent544_report.json",
+      "sha256": "506de940c5e68b91a02559fec16727ea01a857799f857ba59327edf3c6d5e035",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-PLASMA-MHD-001",
+              "survivor": "complete-fold-carrier__fluid-flow-electromagnetic-joint-composition__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-plasmamhd-544"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-PLASMA-MHD-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-plasmamhd-544"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-PLASMA-MHD-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-plasmamhd-544"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-PLASMA-MHD-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-plasmamhd-544"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_544_plasmamhd_program544_report.json",
+      "sha256": "802aab32a4f32a395ad9567df4b856fcef4a8ddf8aea080b36386b7bcb60f604",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:bc7e3dd69af9792887aac4aa519554faed5ecce78cbbd933307323f97348d3b2",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All UnitProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_544_plasmamhd_validation544_report.json",
+      "sha256": "24c82ac613dd78279f9e8b114af726ea4a4e1a2e5e3e1617a89bf8997ae9756a",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 88315,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    }
+  ],
+  "plasma_measured_result": [
+    "Faraday constant: exact predicted interval [120606665154137523/1250000000000, 120606665154137523/1250000000000]; external interval [2412133303/25000, 9648533213/100000]; overlap True",
+    "deliberately displaced unfavorable interval rejected"
+  ],
+  "followup": {
+    "section": 500,
+    "status": "Specific source-to-proof connection under investigation; no scientific absence or failure conclusion",
+    "source_statement": "sft/physics/collective_matter_laws.py PLASMA_OSCILLATION: displacement creates restoring field recurrence; complete mobile response closes the source distinction",
+    "inspected_declarations": [
+      "SFT.Physics.CollectivePlasmaOscillation.RestoringResponse",
+      "SFT.Physics.CollectivePlasmaOscillation.returnedDisplacement",
+      "SFT.Physics.CollectivePlasmaOscillation.screeningExactlyClosedObservation",
+      "SFT.Physics.MechanicalConstraintOscillation.Oscillation",
+      "SFT.Physics.MechanicalConstraintOscillation.forcedCarrierReturn",
+      "SFT.Physics.FieldElectricPotential.ElectricInteraction",
+      "SFT.Physics.FieldElectromagnetic.Carrier",
+      "SFT.Physics.CollectiveRadiation.plasmaSquaredCarriers",
+      "SFT.Physics.CollectiveRadiationBalances.originalPlasmaBalances"
+    ],
+    "observed_arguments": "RestoringResponse retains a motion:Oscillation plus its source-displacement equality. Oscillation retains two reversal equations; forcedCarrierReturn composes those equations with reverseTwice. Screening equivalence derives common fibre from equal observed images. CollectiveRadiation computes the two positive exact squared carriers from one charge stiffness. These inspected results are retained and not rederived.",
+    "exact_next_investigation": "Trace the original charge-stiffness balance derivation and its registered dependencies to the source-displacement/restoring-motion and mobile-response/observation-closure constructions. Inspect equivalent source-bound declarations before drawing an absence conclusion; do not impose universal terminal convergence or alter original domains.",
+    "retained_copies": "constants-recovery copies of CollectivePlasmaOscillation, MechanicalConstraintOscillation and FieldElectricPotential exactly match published source. Canonical and turn1064_recovery reference search completed; broad name search is not a proof-absence finding.",
+    "additional_source": "sft/physics/collective_radiation_response_terminal_law_v1.py plasma_squared_carriers read; corresponding full collective radiation review at section917 remains pending."
+  },
+  "new_proofs": 0,
+  "new_builds": 0
+}

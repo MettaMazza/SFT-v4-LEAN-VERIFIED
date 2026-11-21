@@ -1,0 +1,996 @@
+{
+  "updated_at": "2026-11-21T14:41:20.840567+00:00",
+  "sections_read": [
+    492,
+    493,
+    494,
+    495,
+    496
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "sft/physics/collective_matter_laws.py: SOURCES, collective_law, COARSE_GRAIN through INVISCID and VALUE_SPECS",
+    "All five original WHY_DERIVATION_CHECK.md records",
+    "Full claims/SFT-PHYS-FLUID-DENSITY-001/execution.py binding to BlindExactMeasuredValueValidator",
+    "Previously inspected measured_value runtime and thermal predecessor proofs"
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Physics/CollectiveCoarseGrain.lean",
+      "sha256": "aec123823b25571db3d21d7b448293db43943667570c93f933395b92b3553521",
+      "theorems": [
+        "SFT.Physics.CollectiveCoarseGrain.completeNetworkRetained",
+        "SFT.Physics.CollectiveCoarseGrain.exactRegion",
+        "SFT.Physics.CollectiveCoarseGrain.sameClassExactly",
+        "SFT.Physics.CollectiveCoarseGrain.everyCellHasUniqueClass",
+        "SFT.Physics.CollectiveCoarseGrain.everyClassIsCompleteFibre",
+        "SFT.Physics.CollectiveCoarseGrain.adjacentCellsShareObservation",
+        "SFT.Physics.CollectiveCoarseGrain.distinctClassesCannotShareCell",
+        "SFT.Physics.CollectiveCoarseGrain.sameClassReflexive",
+        "SFT.Physics.CollectiveCoarseGrain.sameClassSymmetric",
+        "SFT.Physics.CollectiveCoarseGrain.sameClassTransitive"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/CollectiveDensity.lean",
+      "sha256": "2c94f4259c2b1bb0378bce34b224e9f0d00b32d0947da812ba664d98613103df",
+      "theorems": [
+        "SFT.Physics.CollectiveDensity.supportPositive",
+        "SFT.Physics.CollectiveDensity.exactContentOverSupport",
+        "SFT.Physics.CollectiveDensity.densityPositive",
+        "SFT.Physics.CollectiveDensity.supportIsCompleteRegion",
+        "SFT.Physics.CollectiveDensity.denominatorCountsEveryRegionCell",
+        "SFT.Physics.CollectiveDensity.contentAndRegionRetained",
+        "SFT.Physics.CollectiveDensity.countContentRatio"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/CollectivePressure.lean",
+      "sha256": "4132b507651342c5ef83126bdcad41c778e3c535d2a4c05cc4cc0a0cf141e41a",
+      "theorems": [
+        "SFT.Physics.CollectivePressure.completeBoundary",
+        "SFT.Physics.CollectivePressure.generatedDenominator",
+        "SFT.Physics.CollectivePressure.positiveStress",
+        "SFT.Physics.CollectivePressure.exactStressRatio",
+        "SFT.Physics.CollectivePressure.absentTransfer",
+        "SFT.Physics.CollectivePressure.stressRetainsOrientationReversal",
+        "SFT.Physics.CollectivePressure.closureIgnoresOnlyHeldOrientation",
+        "SFT.Physics.CollectivePressure.pressureOrientationClosed",
+        "SFT.Physics.CollectivePressure.pressureRetainsExactMagnitude",
+        "SFT.Physics.CollectivePressure.closedObservationDetermined"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/CollectiveFlow.lean",
+      "sha256": "e0fcd4587378433d576edd1ae17ac4f9899f9c8a62b182ac65216fbe139b60e9",
+      "theorems": [
+        "SFT.Physics.CollectiveFlow.completeRegionBalance",
+        "SFT.Physics.CollectiveFlow.exactOutgoingCarriers",
+        "SFT.Physics.CollectiveFlow.exactIncomingCarriers",
+        "SFT.Physics.CollectiveFlow.everyOutflowIsNamedAdjacent",
+        "SFT.Physics.CollectiveFlow.everyInflowIsNamedAdjacent",
+        "SFT.Physics.CollectiveFlow.everyOutgoingRecordIncluded",
+        "SFT.Physics.CollectiveFlow.everyIncomingRecordIncluded",
+        "SFT.Physics.CollectiveFlow.joinedRegionsBalance",
+        "SFT.Physics.CollectiveFlow.joinedRegionClosesInternalTransfer"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/CollectiveInviscid.lean",
+      "sha256": "522de90b1dbcf72c7d08508a0fcc032dca0ce86bcd3725d2937b774ee641983c",
+      "theorems": [
+        "SFT.Physics.CollectiveInviscid.normalOnlyIff",
+        "SFT.Physics.CollectiveInviscid.noTangentialTransfer",
+        "SFT.Physics.CollectiveInviscid.normalExchangeRemainsAdjacent",
+        "SFT.Physics.CollectiveInviscid.fullCarrierLedgerRetained",
+        "SFT.Physics.CollectiveInviscid.tangentLabelRetained",
+        "SFT.Physics.CollectiveInviscid.sourceIdentityRetained",
+        "SFT.Physics.CollectiveInviscid.exactNormalPressure",
+        "SFT.Physics.CollectiveInviscid.normalSuccessor",
+        "SFT.Physics.CollectiveInviscid.tangentialSuccessorRejected"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/DensityMeasured.lean",
+      "sha256": "554834022d833763c07495494b725102655a63d407460499cf18f454aed279a3",
+      "theorems": [
+        "SFT.Physics.DensityMeasured.resealRejected",
+        "SFT.Physics.DensityMeasured.sourceMismatchRejected",
+        "SFT.Physics.DensityMeasured.sealBindsExactInputs"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/CoarseGrainGrammar.lean",
+      "sha256": "a1dbdbc094bf05fe838ba3757c56bfb26a8d3edbcedc1c7d74db5badb42f904b",
+      "theorems": [
+        "SFT.Physics.CoarseGrainGrammar.generatedCardinality",
+        "SFT.Physics.CoarseGrainGrammar.candidatesComplete",
+        "SFT.Physics.CoarseGrainGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.CoarseGrainGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.CoarseGrainGrammar.uniqueSurvivor",
+        "SFT.Physics.CoarseGrainGrammar.survivorAccepted",
+        "SFT.Physics.CoarseGrainGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.CoarseGrainGrammar.carrier_rejected_rejected",
+        "SFT.Physics.CoarseGrainGrammar.relation_rejected_rejected",
+        "SFT.Physics.CoarseGrainGrammar.provenance_rejected_rejected",
+        "SFT.Physics.CoarseGrainGrammar.prediction_rejected_rejected",
+        "SFT.Physics.CoarseGrainGrammar.record_rejected_rejected",
+        "SFT.Physics.CoarseGrainGrammar.rows_rejected_rejected",
+        "SFT.Physics.CoarseGrainGrammar.generality_rejected_rejected",
+        "SFT.Physics.CoarseGrainGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/CoarseGrainEvidence.lean",
+      "sha256": "9fbeb4065b5aaecf73718a969b5b6515e681656b9db16e0d44d83cb21dba0ab6",
+      "theorems": [
+        "SFT.Physics.CoarseGrainEvidence.registrationNoAxioms",
+        "SFT.Physics.CoarseGrainEvidence.registrationNoFreeParameters",
+        "SFT.Physics.CoarseGrainEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/CoarseGrainExperiment.lean",
+      "sha256": "4fa4f5974ff39bc1509646b92b274d6d27d7881b94e60bd9f24f68d8bd2a2a9e",
+      "theorems": [
+        "SFT.Physics.CoarseGrainExperiment.completeTargetCount",
+        "SFT.Physics.CoarseGrainExperiment.completeTargetLabels",
+        "SFT.Physics.CoarseGrainExperiment.changedSourceRejected",
+        "SFT.Physics.CoarseGrainExperiment.registeredSpecValid",
+        "SFT.Physics.CoarseGrainExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/CoarseGrainValidation.lean",
+      "sha256": "c12029d41308415638d349450c79278d702eb27b8262daab9f84be5dfa9a09bc",
+      "theorems": [
+        "SFT.Physics.CoarseGrainValidation.resealRejected"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/CoarseGrainValidationProofs.lean",
+      "sha256": "ab76cfe17b08fb55c6e3439b5ba2cf68f9c35e8620264038a33abfa1f0d9a46e",
+      "theorems": [
+        "SFT.Physics.CoarseGrainValidation.sourceMismatchRejects",
+        "SFT.Physics.CoarseGrainValidation.sealBindsExecution",
+        "SFT.Physics.CoarseGrainValidation.emptyPremiseRejected",
+        "SFT.Physics.CoarseGrainValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/DensityGrammar.lean",
+      "sha256": "2e0ae1d359a7dda4edb4d2291afeff6d98e500409376ae40695b912ded8b8252",
+      "theorems": [
+        "SFT.Physics.DensityGrammar.generatedCardinality",
+        "SFT.Physics.DensityGrammar.candidatesComplete",
+        "SFT.Physics.DensityGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.DensityGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.DensityGrammar.uniqueSurvivor",
+        "SFT.Physics.DensityGrammar.survivorAccepted",
+        "SFT.Physics.DensityGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.DensityGrammar.carrier_rejected_rejected",
+        "SFT.Physics.DensityGrammar.relation_rejected_rejected",
+        "SFT.Physics.DensityGrammar.provenance_rejected_rejected",
+        "SFT.Physics.DensityGrammar.prediction_rejected_rejected",
+        "SFT.Physics.DensityGrammar.record_rejected_rejected",
+        "SFT.Physics.DensityGrammar.rows_rejected_rejected",
+        "SFT.Physics.DensityGrammar.generality_rejected_rejected",
+        "SFT.Physics.DensityGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/DensityEvidence.lean",
+      "sha256": "90e7284fe047a0691ae8087d7018125b01e650d4b24c8f61516e0ea9c3cf8eb9",
+      "theorems": [
+        "SFT.Physics.DensityEvidence.registrationNoAxioms",
+        "SFT.Physics.DensityEvidence.registrationNoFreeParameters",
+        "SFT.Physics.DensityEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/DensityExperiment.lean",
+      "sha256": "7bc17ca85c8d7168f989c9f74df4afad35bb9ff9ccc57076421d8072019f5f8e",
+      "theorems": [
+        "SFT.Physics.DensityExperiment.completeTargetCount",
+        "SFT.Physics.DensityExperiment.completeTargetLabels",
+        "SFT.Physics.DensityExperiment.changedSourceRejected",
+        "SFT.Physics.DensityExperiment.registeredSpecValid",
+        "SFT.Physics.DensityExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/DensityValidation.lean",
+      "sha256": "53439da3fb62d84f0ad5172efb9ee1b48c4d63c0b5c44f66668e9d616f09e7c3",
+      "theorems": [
+        "SFT.Physics.DensityValidation.resealRejected"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/DensityValidationProofs.lean",
+      "sha256": "68ed68ad4ecf9f31373d5f6031f10b594702a33a5db2a2de3cfb8a18ca0c3147",
+      "theorems": [
+        "SFT.Physics.DensityValidation.sourceMismatchRejects",
+        "SFT.Physics.DensityValidation.sealBindsExecution",
+        "SFT.Physics.DensityValidation.emptyPremiseRejected",
+        "SFT.Physics.DensityValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/PressureStressGrammar.lean",
+      "sha256": "72df6135ecbf1b71f7af37292104a895e0573cf4f30239093e6a2a64a8129285",
+      "theorems": [
+        "SFT.Physics.PressureStressGrammar.generatedCardinality",
+        "SFT.Physics.PressureStressGrammar.candidatesComplete",
+        "SFT.Physics.PressureStressGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.PressureStressGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.PressureStressGrammar.uniqueSurvivor",
+        "SFT.Physics.PressureStressGrammar.survivorAccepted",
+        "SFT.Physics.PressureStressGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.PressureStressGrammar.carrier_rejected_rejected",
+        "SFT.Physics.PressureStressGrammar.relation_rejected_rejected",
+        "SFT.Physics.PressureStressGrammar.provenance_rejected_rejected",
+        "SFT.Physics.PressureStressGrammar.prediction_rejected_rejected",
+        "SFT.Physics.PressureStressGrammar.record_rejected_rejected",
+        "SFT.Physics.PressureStressGrammar.rows_rejected_rejected",
+        "SFT.Physics.PressureStressGrammar.generality_rejected_rejected",
+        "SFT.Physics.PressureStressGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/PressureStressEvidence.lean",
+      "sha256": "c323056cc789b491910e9a8bd6edffcd160b98693e946aaa6db3387c19231f20",
+      "theorems": [
+        "SFT.Physics.PressureStressEvidence.registrationNoAxioms",
+        "SFT.Physics.PressureStressEvidence.registrationNoFreeParameters",
+        "SFT.Physics.PressureStressEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/PressureStressExperiment.lean",
+      "sha256": "b38e86d2aacf560ffb13437e544be9a251627a02204ed4be64b5fa62cdc13ba9",
+      "theorems": [
+        "SFT.Physics.PressureStressExperiment.completeTargetCount",
+        "SFT.Physics.PressureStressExperiment.completeTargetLabels",
+        "SFT.Physics.PressureStressExperiment.changedSourceRejected",
+        "SFT.Physics.PressureStressExperiment.registeredSpecValid",
+        "SFT.Physics.PressureStressExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/PressureStressValidation.lean",
+      "sha256": "f258dcce5791c577d1a223b9219b2006f0b77f080c6e0313af9b8aef59dc4e50",
+      "theorems": [
+        "SFT.Physics.PressureStressValidation.resealRejected"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/PressureStressValidationProofs.lean",
+      "sha256": "767f8b4a0fcd62f1325b82cf2198caa48b81da11e6f388c73aa159ce261d0d26",
+      "theorems": [
+        "SFT.Physics.PressureStressValidation.sourceMismatchRejects",
+        "SFT.Physics.PressureStressValidation.sealBindsExecution",
+        "SFT.Physics.PressureStressValidation.emptyPremiseRejected",
+        "SFT.Physics.PressureStressValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/FlowConservationGrammar.lean",
+      "sha256": "b5ff6ee85db44d70c8ecc8c18a58337127808a8f1492318ca06014fa5812649e",
+      "theorems": [
+        "SFT.Physics.FlowConservationGrammar.generatedCardinality",
+        "SFT.Physics.FlowConservationGrammar.candidatesComplete",
+        "SFT.Physics.FlowConservationGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.FlowConservationGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.FlowConservationGrammar.uniqueSurvivor",
+        "SFT.Physics.FlowConservationGrammar.survivorAccepted",
+        "SFT.Physics.FlowConservationGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.FlowConservationGrammar.carrier_rejected_rejected",
+        "SFT.Physics.FlowConservationGrammar.relation_rejected_rejected",
+        "SFT.Physics.FlowConservationGrammar.provenance_rejected_rejected",
+        "SFT.Physics.FlowConservationGrammar.prediction_rejected_rejected",
+        "SFT.Physics.FlowConservationGrammar.record_rejected_rejected",
+        "SFT.Physics.FlowConservationGrammar.rows_rejected_rejected",
+        "SFT.Physics.FlowConservationGrammar.generality_rejected_rejected",
+        "SFT.Physics.FlowConservationGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/FlowConservationEvidence.lean",
+      "sha256": "f5f632fe653f1120b0addf1002f49c12f70c606525a3b2e1096079bf2ed24311",
+      "theorems": [
+        "SFT.Physics.FlowConservationEvidence.registrationNoAxioms",
+        "SFT.Physics.FlowConservationEvidence.registrationNoFreeParameters",
+        "SFT.Physics.FlowConservationEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/FlowConservationExperiment.lean",
+      "sha256": "35d7918f8d2a17ba9f58b5b49293ca6a46890ce0e3b6a426a17bef6797b30aa5",
+      "theorems": [
+        "SFT.Physics.FlowConservationExperiment.completeTargetCount",
+        "SFT.Physics.FlowConservationExperiment.completeTargetLabels",
+        "SFT.Physics.FlowConservationExperiment.changedSourceRejected",
+        "SFT.Physics.FlowConservationExperiment.registeredSpecValid",
+        "SFT.Physics.FlowConservationExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/FlowConservationValidation.lean",
+      "sha256": "96ad9a582967192a3e82adfc5db0574235e7209a6830b86acad5468f678e9670",
+      "theorems": [
+        "SFT.Physics.FlowConservationValidation.resealRejected"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/FlowConservationValidationProofs.lean",
+      "sha256": "1809f427d1d0c32987fcb3a914ec31a049e59548b198592a2f144d1b50dc4092",
+      "theorems": [
+        "SFT.Physics.FlowConservationValidation.sourceMismatchRejects",
+        "SFT.Physics.FlowConservationValidation.sealBindsExecution",
+        "SFT.Physics.FlowConservationValidation.emptyPremiseRejected",
+        "SFT.Physics.FlowConservationValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/InviscidGrammar.lean",
+      "sha256": "ef6e992e22b00c02a1e293c3f46ef98ae0e6746aa1fff08e963ed4cfc03ae0bb",
+      "theorems": [
+        "SFT.Physics.InviscidGrammar.generatedCardinality",
+        "SFT.Physics.InviscidGrammar.candidatesComplete",
+        "SFT.Physics.InviscidGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.InviscidGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.InviscidGrammar.uniqueSurvivor",
+        "SFT.Physics.InviscidGrammar.survivorAccepted",
+        "SFT.Physics.InviscidGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.InviscidGrammar.carrier_rejected_rejected",
+        "SFT.Physics.InviscidGrammar.relation_rejected_rejected",
+        "SFT.Physics.InviscidGrammar.provenance_rejected_rejected",
+        "SFT.Physics.InviscidGrammar.prediction_rejected_rejected",
+        "SFT.Physics.InviscidGrammar.record_rejected_rejected",
+        "SFT.Physics.InviscidGrammar.rows_rejected_rejected",
+        "SFT.Physics.InviscidGrammar.generality_rejected_rejected",
+        "SFT.Physics.InviscidGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/InviscidEvidence.lean",
+      "sha256": "a8dfaa11d0993a485fe030a8fc695e8da44a18c261179fb5d9df09c0e64c51de",
+      "theorems": [
+        "SFT.Physics.InviscidEvidence.registrationNoAxioms",
+        "SFT.Physics.InviscidEvidence.registrationNoFreeParameters",
+        "SFT.Physics.InviscidEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/InviscidExperiment.lean",
+      "sha256": "62e3f5960330dac9a801a7fcca6833bc48bb6f0ed06b17439b67d662a2a1e48a",
+      "theorems": [
+        "SFT.Physics.InviscidExperiment.completeTargetCount",
+        "SFT.Physics.InviscidExperiment.completeTargetLabels",
+        "SFT.Physics.InviscidExperiment.changedSourceRejected",
+        "SFT.Physics.InviscidExperiment.registeredSpecValid",
+        "SFT.Physics.InviscidExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/InviscidValidation.lean",
+      "sha256": "960eb8a1ff7453849cd7c23d039a8aaea5fd02f1db90265c2a3fdf1ce62e3847",
+      "theorems": [
+        "SFT.Physics.InviscidValidation.resealRejected"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    },
+    {
+      "path": "SFT/Physics/InviscidValidationProofs.lean",
+      "sha256": "e7242e662cdd69d9b14eee666a74b8282c875bec2d69a3dc290f35c1d4fd4c0d",
+      "theorems": [
+        "SFT.Physics.InviscidValidation.sourceMismatchRejects",
+        "SFT.Physics.InviscidValidation.sealBindsExecution",
+        "SFT.Physics.InviscidValidation.emptyPremiseRejected",
+        "SFT.Physics.InviscidValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational proof bodies; all companion code/literal differences against StateRelation inspected; DensityMeasured full comparison with BackfillMolarPlanck."
+    }
+  ],
+  "reused_upstream": [
+    {
+      "path": "SFT/Mathematics/GraphPathCompleteness.lean",
+      "sha256": "9502edd8b63aa4e6f0e034997975f44a5c152ce6a6cac11dbbee6277717f5214",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_059_078.json"
+    },
+    {
+      "path": "SFT/Mathematics/GraphInduction.lean",
+      "sha256": "94eb8e26766381711f0e07187e44079954cbf2c6111c04aa33b87b180a5805c3",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_059_078.json"
+    },
+    {
+      "path": "SFT/Physics/MechanicalDuration.lean",
+      "sha256": "4bbe4ed0b40a81f0ae4d0caede45f050977192e165566a844f87bad7c47deb8c",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_363_368.json"
+    },
+    {
+      "path": "SFT/Physics/FieldSourceContinuity.lean",
+      "sha256": "eb543076b21baebc2a668fea9b2ff6298a7b773de5633fc537b1b049ec3143a2",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_393_399.json"
+    }
+  ],
+  "audits": [
+    {
+      "path": "verification/TURN_535_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "fc1ebe3982484da749e9bd9423770e6d76b090a236ae99aa85257d1f1596cdf7"
+    },
+    {
+      "path": "verification/TURN_535_auditcollective535_CoarseGrain.log",
+      "sha256": "ac17b3535f7b4435420092d0089827e08634a6f1c20783eb27ce00d82b01ab3b"
+    },
+    {
+      "path": "verification/TURN_536_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "0ac7d7cd343367297745108fb9d895d54bc27ac2fdef5cc5d4c04cf8cd28096c"
+    },
+    {
+      "path": "verification/TURN_536_auditcollective536_Density.log",
+      "sha256": "1a177ab2d7608a683d6f23f12cf1db029e142cc73bbbff6b48f266cbe1cdd87f"
+    },
+    {
+      "path": "verification/TURN_537_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "0421bcfc8a59d25bffec22290ae3ccf1b5dc24791b42de769b028c307619ede6"
+    },
+    {
+      "path": "verification/TURN_537_auditcollective537_PressureStress.log",
+      "sha256": "f7ba093b2d7de64212d84c47cd70451a443448c027d718dcc871438cc77198cf"
+    },
+    {
+      "path": "verification/TURN_538_DensityMeasuredAudit536.log",
+      "sha256": "b5179afb35d25f57824ff4f962c3024f8a6419664e16ed287837065bff2f4eab"
+    },
+    {
+      "path": "verification/TURN_538_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "ea1686f5bd9f3ddff44af35127d4adba3bb6f7da2574f0c4e6dd5ec25cd418f6"
+    },
+    {
+      "path": "verification/TURN_538_auditcollective538_FlowConservation.log",
+      "sha256": "70ebc94d0303691ec6bc2465f1d7102038f9bb130b4ab31d42a188b24e1cac34"
+    },
+    {
+      "path": "verification/TURN_539_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "be730d9486ce26e94fb29249b15418453d648d2b0729615e972ec34f38df4d38"
+    },
+    {
+      "path": "verification/TURN_539_auditcollective539_Inviscid.log",
+      "sha256": "199c59c741c0d16a775505202aaed8ebb100249729b24434dca7bc034b67832a"
+    }
+  ],
+  "matching_theorems": 188,
+  "reports": [
+    {
+      "path": "verification/TURN_535_coarsegrain_independent535_report.json",
+      "sha256": "f10e4d9dbd29b07bba467650d23b10c372ee1a22aac89e1ed622cd6b2e3a4f62",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-CONTINUUM-COARSE-GRAIN-001",
+              "survivor": "complete-fold-carrier__finite-cell-observation-quotient__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-coarsegrain-535"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-CONTINUUM-COARSE-GRAIN-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-coarsegrain-535"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-CONTINUUM-COARSE-GRAIN-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-coarsegrain-535"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-CONTINUUM-COARSE-GRAIN-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-coarsegrain-535"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_535_coarsegrain_program535_report.json",
+      "sha256": "5d539130d94ccc0201c4bd2a48464bea75dc953c9c6f1ef5456d0726b9f82c1f",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:7eed273621cf5466b155832334d6233f73b2969d81c206d2099fbf4eff584b37",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All UnitProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_535_coarsegrain_validation535_report.json",
+      "sha256": "24c82ac613dd78279f9e8b114af726ea4a4e1a2e5e3e1617a89bf8997ae9756a",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 88315,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_536_density_independent536_report.json",
+      "sha256": "43b67c661948e0e6a7a24cbda92afe7d91a67fe52ba58bb0eab2d77bdccc795e",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-DENSITY-001",
+              "survivor": "complete-fold-carrier__content-over-generated-support__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-density-536"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-DENSITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-density-536"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-DENSITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-density-536"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-DENSITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-density-536"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_536_density_program536_report.json",
+      "sha256": "03768b6f795b4826287e1f0daf12a1087ba9da3dbbf5c96f4f53889fcab1923f",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:2174bd50493277533f2bcb3ca5327a31201118dc149504ea5603ec2bbe31deba",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All UnitProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_536_density_validation536_report.json",
+      "sha256": "b9e87a32c15420f9ad2c98846be96b57e6741d75d416592af7ca8f545f26ea47",
+      "result": {
+        "status": "PASS",
+        "source_snapshot_bytes": 40801,
+        "fresh_native_execution": true,
+        "all_validation_fields_and_hashes_match": true,
+        "numeric_adapter": "DensityMeasured",
+        "source_sha256": "554834022d833763c07495494b725102655a63d407460499cf18f454aed279a3"
+      }
+    },
+    {
+      "path": "verification/TURN_537_pressurestress_independent537_report.json",
+      "sha256": "97fe8ec8984119f67b5b602171df7cca1a855fa704f7f4a89f6b3d827eb9703b",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-PRESSURE-STRESS-001",
+              "survivor": "complete-fold-carrier__momentum-transfer-over-boundary-support__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-pressurestress-537"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-PRESSURE-STRESS-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-pressurestress-537"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-PRESSURE-STRESS-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-pressurestress-537"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-PRESSURE-STRESS-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-pressurestress-537"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_537_pressurestress_program537_report.json",
+      "sha256": "9735a5e5508ae74b9dec96cee0816fd550cd05923d2b7c5a88b4ce65d08cd5c5",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:fa1293b29e0e53ca46291f56f2a6d76cace71777596bb5d5c4008416b3a759ba",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All UnitProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_537_pressurestress_validation537_report.json",
+      "sha256": "1d6c8e4fa1035a7759e9cd37938bad224a76942999e71b0556d7afb51ec067c5",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 116882,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_538_DensityMeasured536_report.json",
+      "sha256": "a20fde1389afcf35eec4153c9d16ca732acad319e4c0d75304cf42c9916f2e5d",
+      "result": {
+        "module": "DensityMeasured",
+        "status": "PASS",
+        "source_sha256": "554834022d833763c07495494b725102655a63d407460499cf18f454aed279a3",
+        "audited_declarations": [
+          "SFT.Physics.DensityMeasured.Snapshot",
+          "SFT.Physics.DensityMeasured.PredictionSeal",
+          "SFT.Physics.DensityMeasured.experimentId",
+          "SFT.Physics.DensityMeasured.claimId",
+          "SFT.Physics.DensityMeasured.snapshotHash",
+          "SFT.Physics.DensityMeasured.sourceId",
+          "SFT.Physics.DensityMeasured.relationId",
+          "SFT.Physics.DensityMeasured.relationStatement",
+          "SFT.Physics.DensityMeasured.falsification",
+          "SFT.Physics.DensityMeasured.targetId",
+          "SFT.Physics.DensityMeasured.targetQuantity",
+          "SFT.Physics.DensityMeasured.program",
+          "SFT.Physics.DensityMeasured.programFields",
+          "SFT.Physics.DensityMeasured.registration",
+          "SFT.Physics.DensityMeasured.registrationHash",
+          "SFT.Physics.DensityMeasured.inputs",
+          "SFT.Physics.DensityMeasured.envelope",
+          "SFT.Physics.DensityMeasured.sealPrediction",
+          "SFT.Physics.DensityMeasured.isolation",
+          "SFT.Physics.DensityMeasured.custodyCertificate",
+          "SFT.Physics.DensityMeasured.measurementReceipt",
+          "SFT.Physics.DensityMeasured.measurement",
+          "SFT.Physics.DensityMeasured.sourceMatches",
+          "SFT.Physics.DensityMeasured.validate",
+          "SFT.Physics.DensityMeasured.resealRejected",
+          "SFT.Physics.DensityMeasured.sourceMismatchRejected",
+          "SFT.Physics.DensityMeasured.sealBindsExactInputs"
+        ],
+        "axiom_dependencies": [],
+        "full_empirical_output_matches": true
+      }
+    },
+    {
+      "path": "verification/TURN_538_flowconservation_independent538_report.json",
+      "sha256": "ba841b0f1c197806df1dfff01866752dc84f672887d36a8adfa679090a325653",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-CONSERVATION-001",
+              "survivor": "complete-fold-carrier__interior-change-boundary-flux-pairing__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-flowconservation-538"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-CONSERVATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-flowconservation-538"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-CONSERVATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-flowconservation-538"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-CONSERVATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-flowconservation-538"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_538_flowconservation_program538_report.json",
+      "sha256": "f45f694eecdde672331f56aff56888fcdc3e8c60d1609be323326b399c85cc7a",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:17c21e0e61208e61b4b3a30ede51a89dd492c9720b01444d85b5b4cd8676f409",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All UnitProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_538_flowconservation_validation538_report.json",
+      "sha256": "1d6c8e4fa1035a7759e9cd37938bad224a76942999e71b0556d7afb51ec067c5",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 116882,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_539_inviscid_independent539_report.json",
+      "sha256": "4e611a0b443e632cd80e1cf95736d3f26f0c47d15b9ff83e72cce3074c7f590b",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-INVISCID-001",
+              "survivor": "complete-fold-carrier__no-tangential-momentum-transfer-boundary__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-inviscid-539"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-INVISCID-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-inviscid-539"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-INVISCID-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-inviscid-539"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-FLUID-INVISCID-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-inviscid-539"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_539_inviscid_program539_report.json",
+      "sha256": "f967bebbd44b222a2ecfd07a0321836b25a44c8dd1c42a26acd906fe5d791474",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:77981b1d9a4897ac79c4b93ee40fe02ef653ce17a93c9ddbfdf7b4137a8e45d6",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All UnitProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_539_inviscid_validation539_report.json",
+      "sha256": "1d6c8e4fa1035a7759e9cd37938bad224a76942999e71b0556d7afb51ec067c5",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 116882,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    }
+  ],
+  "density_measured_result": [
+    "molar mass constant: exact predicted interval [625000000461504249/625000000000000000000, 48828125066636203/48828125000000000000]; external interval [50000000037/50000000000000, 12500000017/12500000000000]; overlap True",
+    "deliberately displaced unfavorable interval rejected"
+  ],
+  "new_proofs": 0,
+  "new_builds": 0
+}

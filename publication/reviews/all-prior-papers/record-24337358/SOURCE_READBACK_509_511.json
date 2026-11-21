@@ -1,0 +1,1350 @@
+{
+  "updated_at": "2026-11-21T15:04:16.288871+00:00",
+  "sections_read": [
+    509,
+    510,
+    511
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "catalog.py ENTITY/SPECIES_BOUNDARY, DIMENSIONS and first two CHEMISTRY_SPECS",
+    "generated_law.py complete chemistry spec, registration, prediction, source extraction and validator",
+    "Pinned observations.json and complete original M03986/CT01038 IUPAC definitions"
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Chemistry/EntityIdentity.lean",
+      "sha256": "0f061037130a511b0669543f2588c51446e35bbaaf7f0237a79545f88078a90b",
+      "theorems": [
+        "SFT.Chemistry.EntityIdentity.recordExactly",
+        "SFT.Chemistry.EntityIdentity.identityExactly",
+        "SFT.Chemistry.EntityIdentity.constitutionDistinguished",
+        "SFT.Chemistry.EntityIdentity.isotopeDistinguished",
+        "SFT.Chemistry.EntityIdentity.contextDistinguished",
+        "SFT.Chemistry.EntityIdentity.leastRequiredIdentity",
+        "SFT.Chemistry.EntityIdentity.noExtraIdentityRule",
+        "SFT.Chemistry.EntityIdentity.extensionCarrier",
+        "SFT.Chemistry.EntityIdentity.extensionConstitution",
+        "SFT.Chemistry.EntityIdentity.extensionIsotope",
+        "SFT.Chemistry.EntityIdentity.extensionRetainsCoordinate",
+        "SFT.Chemistry.EntityIdentity.priorCoordinatesExact",
+        "SFT.Chemistry.EntityIdentity.extensionRetainsDistinctions",
+        "SFT.Chemistry.EntityIdentity.finiteExtensionCarrier",
+        "SFT.Chemistry.EntityIdentity.finiteExtensionConstitution",
+        "SFT.Chemistry.EntityIdentity.finiteExtensionIsotope",
+        "SFT.Chemistry.EntityIdentity.finiteExtensionRetainsCoordinate",
+        "SFT.Chemistry.EntityIdentity.erasedIdentityCannotRecover"
+      ],
+      "inspection": "Full operational code/proof body read; Species companions complete normalized code and changed-literal comparison; SourceText generated table checked by retained Unicode13 receipt and its full generator, with execution code read."
+    },
+    {
+      "path": "SFT/Chemistry/EntityGrammar.lean",
+      "sha256": "84f08b0145ec24762980c0230c4de9720c87b68e5b1fcfd015008dd53a4d1578",
+      "theorems": [
+        "SFT.Chemistry.EntityGrammar.generatedCardinality",
+        "SFT.Chemistry.EntityGrammar.candidatesComplete",
+        "SFT.Chemistry.EntityGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Chemistry.EntityGrammar.uniqueCriteriaSurvivor",
+        "SFT.Chemistry.EntityGrammar.uniqueSurvivor",
+        "SFT.Chemistry.EntityGrammar.survivorAccepted",
+        "SFT.Chemistry.EntityGrammar.acceptanceIffExactCriteria",
+        "SFT.Chemistry.EntityGrammar.carrier_rejected_rejected",
+        "SFT.Chemistry.EntityGrammar.constitution_rejected_rejected",
+        "SFT.Chemistry.EntityGrammar.isotope_rejected_rejected",
+        "SFT.Chemistry.EntityGrammar.distinction_rejected_rejected",
+        "SFT.Chemistry.EntityGrammar.precision_rejected_rejected",
+        "SFT.Chemistry.EntityGrammar.record_rejected_rejected",
+        "SFT.Chemistry.EntityGrammar.provenance_rejected_rejected",
+        "SFT.Chemistry.EntityGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational code/proof body read; Species companions complete normalized code and changed-literal comparison; SourceText generated table checked by retained Unicode13 receipt and its full generator, with execution code read."
+    },
+    {
+      "path": "SFT/Chemistry/EntityEvidence.lean",
+      "sha256": "6bf364c49bb072119f8726aec13f9d57b3686ce53074fbc0994f1aaad4fb34a1",
+      "theorems": [
+        "SFT.Chemistry.EntityEvidence.registrationNoAxioms",
+        "SFT.Chemistry.EntityEvidence.registrationNoFreeParameters",
+        "SFT.Chemistry.EntityEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational code/proof body read; Species companions complete normalized code and changed-literal comparison; SourceText generated table checked by retained Unicode13 receipt and its full generator, with execution code read."
+    },
+    {
+      "path": "SFT/Chemistry/SourceText.lean",
+      "sha256": "5973dc657957ac540661d84063f62fdb93da5d8a05b30fdf85664cdb1ceb902d",
+      "theorems": [],
+      "inspection": "Full operational code/proof body read; Species companions complete normalized code and changed-literal comparison; SourceText generated table checked by retained Unicode13 receipt and its full generator, with execution code read."
+    },
+    {
+      "path": "SFT/Chemistry/SourceExtraction.lean",
+      "sha256": "f7d1be5f290f4e4320c713cc69d1a900c10a00f5f42de3f090cb4b4a83cd68fc",
+      "theorems": [],
+      "inspection": "Full operational code/proof body read; Species companions complete normalized code and changed-literal comparison; SourceText generated table checked by retained Unicode13 receipt and its full generator, with execution code read."
+    },
+    {
+      "path": "SFT/Chemistry/EntityExperiment.lean",
+      "sha256": "3e9bbc40fb5c0d4d34fe71acb47196577f622d5eb6f803446ed60adedfe3689b",
+      "theorems": [
+        "SFT.Chemistry.EntityExperiment.completeReferenceCount",
+        "SFT.Chemistry.EntityExperiment.targetContentAbsent",
+        "SFT.Chemistry.EntityExperiment.fixedSpecAdmitted"
+      ],
+      "inspection": "Full operational code/proof body read; Species companions complete normalized code and changed-literal comparison; SourceText generated table checked by retained Unicode13 receipt and its full generator, with execution code read."
+    },
+    {
+      "path": "SFT/Chemistry/EntityValidation.lean",
+      "sha256": "cb3b088ef27e4b3b65b941e3b82b07bffc1769f924ebb6b45fd1eb5d33eb52dd",
+      "theorems": [
+        "SFT.Chemistry.EntityValidation.resealRejected"
+      ],
+      "inspection": "Full operational code/proof body read; Species companions complete normalized code and changed-literal comparison; SourceText generated table checked by retained Unicode13 receipt and its full generator, with execution code read."
+    },
+    {
+      "path": "SFT/Chemistry/SpeciesClass.lean",
+      "sha256": "81c9be4c7300e855c409483f4f33857541eed36919daf8d9dc3bef06d79b66e6",
+      "theorems": [
+        "SFT.Chemistry.SpeciesClass.equivalentReflexive",
+        "SFT.Chemistry.SpeciesClass.equivalentSymmetric",
+        "SFT.Chemistry.SpeciesClass.equivalentTransitive",
+        "SFT.Chemistry.SpeciesClass.completeClass",
+        "SFT.Chemistry.SpeciesClass.everyMemberCovered",
+        "SFT.Chemistry.SpeciesClass.equivalentRepresentatives",
+        "SFT.Chemistry.SpeciesClass.overlappingClassesAgree",
+        "SFT.Chemistry.SpeciesClass.leastRequiredQuotient",
+        "SFT.Chemistry.SpeciesClass.singletonBase",
+        "SFT.Chemistry.SpeciesClass.successorRetains",
+        "SFT.Chemistry.SpeciesClass.admittedSuccessorJoins",
+        "SFT.Chemistry.SpeciesClass.mixedIdentityRejected",
+        "SFT.Chemistry.SpeciesClass.differentSupportRejected",
+        "SFT.Chemistry.SpeciesClass.differentTimescaleRejected",
+        "SFT.Chemistry.SpeciesClass.refinedBoundaryClass"
+      ],
+      "inspection": "Full operational code/proof body read; Species companions complete normalized code and changed-literal comparison; SourceText generated table checked by retained Unicode13 receipt and its full generator, with execution code read."
+    },
+    {
+      "path": "SFT/Chemistry/SpeciesGrammar.lean",
+      "sha256": "2c738b548fea8e310836db952586e9d80affab50e1b7b7e5ee13a36630381c6a",
+      "theorems": [
+        "SFT.Chemistry.SpeciesGrammar.generatedCardinality",
+        "SFT.Chemistry.SpeciesGrammar.candidatesComplete",
+        "SFT.Chemistry.SpeciesGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Chemistry.SpeciesGrammar.uniqueCriteriaSurvivor",
+        "SFT.Chemistry.SpeciesGrammar.uniqueSurvivor",
+        "SFT.Chemistry.SpeciesGrammar.survivorAccepted",
+        "SFT.Chemistry.SpeciesGrammar.acceptanceIffExactCriteria",
+        "SFT.Chemistry.SpeciesGrammar.carrier_rejected_rejected",
+        "SFT.Chemistry.SpeciesGrammar.member_identity_rejected_rejected",
+        "SFT.Chemistry.SpeciesGrammar.support_rejected_rejected",
+        "SFT.Chemistry.SpeciesGrammar.timescale_rejected_rejected",
+        "SFT.Chemistry.SpeciesGrammar.solid_support_rejected_rejected",
+        "SFT.Chemistry.SpeciesGrammar.record_rejected_rejected",
+        "SFT.Chemistry.SpeciesGrammar.provenance_rejected_rejected",
+        "SFT.Chemistry.SpeciesGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational code/proof body read; Species companions complete normalized code and changed-literal comparison; SourceText generated table checked by retained Unicode13 receipt and its full generator, with execution code read."
+    },
+    {
+      "path": "SFT/Chemistry/SpeciesEvidence.lean",
+      "sha256": "35225787117c4f47df57c26460c210a9d1a2ef2bf98c730a16e656d728abb90d",
+      "theorems": [
+        "SFT.Chemistry.SpeciesEvidence.registrationNoAxioms",
+        "SFT.Chemistry.SpeciesEvidence.registrationNoFreeParameters",
+        "SFT.Chemistry.SpeciesEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational code/proof body read; Species companions complete normalized code and changed-literal comparison; SourceText generated table checked by retained Unicode13 receipt and its full generator, with execution code read."
+    },
+    {
+      "path": "SFT/Chemistry/SpeciesExperiment.lean",
+      "sha256": "088f55c53da322d1cda8c3ec4061107cef38333705fffc416037899a31239a2f",
+      "theorems": [
+        "SFT.Chemistry.SpeciesExperiment.completeReferenceCount",
+        "SFT.Chemistry.SpeciesExperiment.targetContentAbsent",
+        "SFT.Chemistry.SpeciesExperiment.fixedSpecAdmitted"
+      ],
+      "inspection": "Full operational code/proof body read; Species companions complete normalized code and changed-literal comparison; SourceText generated table checked by retained Unicode13 receipt and its full generator, with execution code read."
+    },
+    {
+      "path": "SFT/Chemistry/SpeciesValidation.lean",
+      "sha256": "adb131474d86246a1540a446176a8956a3ccfac3e485984719ef5f3353e4ba66",
+      "theorems": [
+        "SFT.Chemistry.SpeciesValidation.resealRejected"
+      ],
+      "inspection": "Full operational code/proof body read; Species companions complete normalized code and changed-literal comparison; SourceText generated table checked by retained Unicode13 receipt and its full generator, with execution code read."
+    }
+  ],
+  "reports": [
+    {
+      "path": "verification/TURN_555_entity_validation555_report.json",
+      "sha256": "69733f3e130e8ac66b50d8207b8986c61d0ccc05d4d076932b6abcb767606675",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "all_validation_fields_and_hashes_match": true,
+        "source_snapshot_bytes": 3040,
+        "registry_bytes": 2331,
+        "source_extraction_compared": true,
+        "fresh_native_lean_execution": true,
+        "adapter_inputs": "JSON documents decoded from same pinned bytes by source IO adapter; original host metadata; equal protected snapshots"
+      }
+    },
+    {
+      "path": "verification/TURN_555_extraction555_report.json",
+      "sha256": "a5ae7009334af7fba4aa635440d039668eb9caa783602b5c3cf14d59e4286814",
+      "result": {
+        "status": "PASS",
+        "cases": [
+          {
+            "case": "original",
+            "result": {
+              "ok": [
+                {
+                  "target_id": "chemical-entity-iupac-m03986",
+                  "source_id": "IUPAC-GOLD-BOOK-M03986-2026",
+                  "source_locator": "https://goldbook.iupac.org/terms/view/M03986/json :: term M03986, current definition",
+                  "observed_label": "singular-carrier__constitution-and-isotope-retained__separately-distinguishable__context-bounded-precision",
+                  "snapshot_hash": "sha256:6b0f6e183ef109d6f3483bcd1d70ca73a6d57e496f9ca32da23964bca652de8e",
+                  "extraction_hash": "sha256:02fe57871809a766ef6b0951ad82c8265a3065104353ad479ea29db8dc7165a0"
+                }
+              ]
+            }
+          },
+          {
+            "case": "schema",
+            "result": {
+              "error": "Chemistry observation registry schema is invalid"
+            }
+          },
+          {
+            "case": "duplicate",
+            "result": {
+              "error": "Chemistry observation registry contains duplicate target identities"
+            }
+          },
+          {
+            "case": "absent",
+            "result": {
+              "error": "registered Chemistry target is absent from the source-derived registry"
+            }
+          },
+          {
+            "case": "source",
+            "result": {
+              "error": "Chemistry observation source identity differs from registration"
+            }
+          },
+          {
+            "case": "term",
+            "result": {
+              "error": "IUPAC term identity or status differs from observation registration"
+            }
+          },
+          {
+            "case": "feature",
+            "result": {
+              "error": "source-derived Chemistry feature extraction is invalid"
+            }
+          },
+          {
+            "case": "fragment",
+            "result": {
+              "error": "source-derived Chemistry target is not reproduced by the official definition"
+            }
+          },
+          {
+            "case": "snapshot",
+            "result": {
+              "error": "official Chemistry snapshot differs from registration"
+            }
+          },
+          {
+            "case": "casefold",
+            "result": {
+              "ok": [
+                {
+                  "target_id": "chemical-entity-iupac-m03986",
+                  "source_id": "IUPAC-GOLD-BOOK-M03986-2026",
+                  "source_locator": "https://goldbook.iupac.org/terms/view/M03986/json :: term M03986, current definition",
+                  "observed_label": "singular-carrier__constitution-and-isotope-retained__separately-distinguishable__context-bounded-precision",
+                  "snapshot_hash": "sha256:6b0f6e183ef109d6f3483bcd1d70ca73a6d57e496f9ca32da23964bca652de8e",
+                  "extraction_hash": "sha256:ff1d667a9d19c251d82bb20a3ddba69367e7a99b7a7b6a4e3af42adaf6b16314"
+                }
+              ]
+            }
+          }
+        ],
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_function": "sft/chemistry/generated_law.py:_source_derived_targets",
+        "comparison": "Fresh Lean execution against exact pinned Python function body"
+      }
+    },
+    {
+      "path": "verification/TURN_556_ENTITY_COMPLETION.json",
+      "sha256": "c1c2f6a95e18722c3abc16a6177edfa0fb94c8f0e674407aa6167aaa9eef2e85",
+      "result": {
+        "status": "complete",
+        "claim_id": "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_hashes": {
+          "sft/chemistry/catalog.py": "90750420738638bdadd783f0fb83bc667ee414cc48036e5cdc2f9a2a61089fd6",
+          "sft/chemistry/generated_law.py": "678de1061dcd4b4a24deefd7757045729d89677d6170bd907cde70bc9ca2e15a",
+          "sft/chemistry/obligations.py": "b502afe57640149166b4ca69b433d02b3361155eb624f9af8cb8918f77ac0ad7",
+          "sft/physics/generated_empirical_law.py": "65703f059b0a6059af6f06aff9e11f1fcef19a1b10d2a8fa4b675418c8ca8071"
+        },
+        "source_component_correspondence": {
+          "EntityIdentity": "Pinned chemical-entity constitution/isotope/context record; least required identity; single and arbitrary finite extensions; no erased required identity can be recovered.",
+          "EntityGrammar": "Original eight-axis256 candidate product, exact decisions and sole survivor.",
+          "EntityEvidence": "Original chemistry registration, full census, elimination reasons, controls and closure.",
+          "SourceText": "Source Python Unicode casefold and whitespace predicates required by feature matching; complete nonidentity table retained.",
+          "SourceExtraction": "Exact registry and duplicate checks, source identity and snapshot digest, current term identity, ordered feature shape, nonblank fields, fragment matching, reconstructed labels and extraction hashes.",
+          "EntityExperiment": "Pinned chemistry specification validation, chemical prediction instructions, source-reference registration and envelope.",
+          "EntityValidation": "Original chemistry execution, isolation, custody nonce, release, complete comparison fields, tampered-label control, certificates and receipt."
+        },
+        "lean_source_sha256": {
+          "EntityIdentity": "0f061037130a511b0669543f2588c51446e35bbaaf7f0237a79545f88078a90b",
+          "EntityGrammar": "84f08b0145ec24762980c0230c4de9720c87b68e5b1fcfd015008dd53a4d1578",
+          "EntityEvidence": "6bf364c49bb072119f8726aec13f9d57b3686ce53074fbc0994f1aaad4fb34a1",
+          "SourceText": "5973dc657957ac540661d84063f62fdb93da5d8a05b30fdf85664cdb1ceb902d",
+          "SourceExtraction": "f7d1be5f290f4e4320c713cc69d1a900c10a00f5f42de3f090cb4b4a83cd68fc",
+          "EntityExperiment": "3e9bbc40fb5c0d4d34fe71acb47196577f622d5eb6f803446ed60adedfe3689b",
+          "EntityValidation": "cb3b088ef27e4b3b65b941e3b82b07bffc1769f924ebb6b45fd1eb5d33eb52dd"
+        },
+        "dependencies": {
+          "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+          "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+          "SFT-MATH-ORDER-LATTICE-001": "complete",
+          "SFT-MATH-LOGIC-PROOF-001": "complete",
+          "SFT-INFO-SYMBOL-DISTINCTION-001": "complete",
+          "SFT-INFO-ENCODING-DECODING-001": "complete",
+          "SFT-INFO-CONSERVATION-LOSS-001": "complete",
+          "SFT-PHYS-MEAS-OBSERVATION-CARRIER-001": "complete",
+          "SFT-PHYS-MEAS-QUANTITY-CARRIER-001": "complete",
+          "SFT-PHYS-MEAS-VALUE-RECORD-001": "complete",
+          "SFT-PHYS-MEAS-UNCERTAINTY-001": "complete",
+          "SFT-PHYS-MATTER-CONSERVED-LABELS-001": "complete"
+        },
+        "candidate_rows": 256,
+        "program_report": "verification/TURN_556_entity_program554_report.json",
+        "empirical_report": "verification/TURN_555_entity_validation555_report.json",
+        "extraction_report": "verification/TURN_555_extraction555_report.json",
+        "independent_validator_cases": [
+          {
+            "case": "original",
+            "expected": true,
+            "actual": {
+              "certificate": {
+                "candidate_count": 256,
+                "claim_id": "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+                "survivor": "singular-carrier__constitution-retained__isotope-retained__separately-distinguishable__context-bounded-precision__held-observation-record__source-bound-proof-trace__no-extra-rule"
+              },
+              "passed": true,
+              "recomputed_from_declared_inputs": true,
+              "validated_seal_hash": "native-entity-556"
+            }
+          },
+          {
+            "case": "omitted_candidate",
+            "expected": false,
+            "actual": {
+              "certificate": {
+                "candidate_count": 256,
+                "claim_id": "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+                "survivor": null
+              },
+              "passed": false,
+              "recomputed_from_declared_inputs": true,
+              "validated_seal_hash": "native-entity-556"
+            }
+          },
+          {
+            "case": "additional_survivor",
+            "expected": false,
+            "actual": {
+              "certificate": {
+                "candidate_count": 256,
+                "claim_id": "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+                "survivor": null
+              },
+              "passed": false,
+              "recomputed_from_declared_inputs": true,
+              "validated_seal_hash": "native-entity-556"
+            }
+          },
+          {
+            "case": "failed_control",
+            "expected": false,
+            "actual": {
+              "certificate": {
+                "candidate_count": 256,
+                "claim_id": "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+                "survivor": null
+              },
+              "passed": false,
+              "recomputed_from_declared_inputs": true,
+              "validated_seal_hash": "native-entity-556"
+            }
+          }
+        ],
+        "axiom_dependencies": [],
+        "audited_declarations": [
+          "SFT.Chemistry.EntityIdentity.Record",
+          "SFT.Chemistry.EntityIdentity.Entity",
+          "SFT.Chemistry.EntityIdentity.sameIdentity",
+          "SFT.Chemistry.EntityIdentity.extend",
+          "SFT.Chemistry.EntityIdentity.recordExactly",
+          "SFT.Chemistry.EntityIdentity.identityExactly",
+          "SFT.Chemistry.EntityIdentity.constitutionDistinguished",
+          "SFT.Chemistry.EntityIdentity.isotopeDistinguished",
+          "SFT.Chemistry.EntityIdentity.contextDistinguished",
+          "SFT.Chemistry.EntityIdentity.leastRequiredIdentity",
+          "SFT.Chemistry.EntityIdentity.noExtraIdentityRule",
+          "SFT.Chemistry.EntityIdentity.extensionCarrier",
+          "SFT.Chemistry.EntityIdentity.extensionConstitution",
+          "SFT.Chemistry.EntityIdentity.extensionIsotope",
+          "SFT.Chemistry.EntityIdentity.extensionRetainsCoordinate",
+          "SFT.Chemistry.EntityIdentity.priorCoordinates",
+          "SFT.Chemistry.EntityIdentity.priorCoordinatesExact",
+          "SFT.Chemistry.EntityIdentity.extensionRetainsDistinctions",
+          "SFT.Chemistry.EntityIdentity.extendMany",
+          "SFT.Chemistry.EntityIdentity.finiteExtensionCarrier",
+          "SFT.Chemistry.EntityIdentity.finiteExtensionConstitution",
+          "SFT.Chemistry.EntityIdentity.finiteExtensionIsotope",
+          "SFT.Chemistry.EntityIdentity.finiteExtensionRetainsCoordinate",
+          "SFT.Chemistry.EntityIdentity.erasedIdentityCannotRecover",
+          "SFT.Chemistry.EntityGrammar.Carrier",
+          "SFT.Chemistry.EntityGrammar.carrierName",
+          "SFT.Chemistry.EntityGrammar.Constitution",
+          "SFT.Chemistry.EntityGrammar.constitutionName",
+          "SFT.Chemistry.EntityGrammar.Isotope",
+          "SFT.Chemistry.EntityGrammar.isotopeName",
+          "SFT.Chemistry.EntityGrammar.Distinction",
+          "SFT.Chemistry.EntityGrammar.distinctionName",
+          "SFT.Chemistry.EntityGrammar.Precision",
+          "SFT.Chemistry.EntityGrammar.precisionName",
+          "SFT.Chemistry.EntityGrammar.Record",
+          "SFT.Chemistry.EntityGrammar.recordName",
+          "SFT.Chemistry.EntityGrammar.Provenance",
+          "SFT.Chemistry.EntityGrammar.provenanceName",
+          "SFT.Chemistry.EntityGrammar.Extension",
+          "SFT.Chemistry.EntityGrammar.extensionName",
+          "SFT.Chemistry.EntityGrammar.Candidate",
+          "SFT.Chemistry.EntityGrammar.sourceFields",
+          "SFT.Chemistry.EntityGrammar.candidateId",
+          "SFT.Chemistry.EntityGrammar.exactForm",
+          "SFT.Chemistry.EntityGrammar.survivorId",
+          "SFT.Chemistry.EntityGrammar.survives",
+          "SFT.Chemistry.EntityGrammar.criteriaDecision",
+          "SFT.Chemistry.EntityGrammar.decisionReason",
+          "SFT.Chemistry.EntityGrammar.generationRule",
+          "SFT.Chemistry.EntityGrammar.grammarBoundary",
+          "SFT.Chemistry.EntityGrammar.candidates",
+          "SFT.Chemistry.EntityGrammar.survivor",
+          "SFT.Chemistry.EntityGrammar.generatedCardinality",
+          "SFT.Chemistry.EntityGrammar.candidatesComplete",
+          "SFT.Chemistry.EntityGrammar.sourceDecisionMatchesCriteria",
+          "SFT.Chemistry.EntityGrammar.uniqueCriteriaSurvivor",
+          "SFT.Chemistry.EntityGrammar.uniqueSurvivor",
+          "SFT.Chemistry.EntityGrammar.survivorAccepted",
+          "SFT.Chemistry.EntityGrammar.ExactCriteria",
+          "SFT.Chemistry.EntityGrammar.acceptanceIffExactCriteria",
+          "SFT.Chemistry.EntityGrammar.carrier_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.constitution_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.isotope_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.distinction_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.precision_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.record_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.provenance_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.extension_rejected_rejected",
+          "SFT.Chemistry.EntityEvidence.witnesses",
+          "SFT.Chemistry.EntityEvidence.claimId",
+          "SFT.Chemistry.EntityEvidence.dependencies",
+          "SFT.Chemistry.EntityEvidence.candidateRecord",
+          "SFT.Chemistry.EntityEvidence.completenessRecord",
+          "SFT.Chemistry.EntityEvidence.registrationData",
+          "SFT.Chemistry.EntityEvidence.registration",
+          "SFT.Chemistry.EntityEvidence.generatedCandidateData",
+          "SFT.Chemistry.EntityEvidence.censusData",
+          "SFT.Chemistry.EntityEvidence.census",
+          "SFT.Chemistry.EntityEvidence.decisionData",
+          "SFT.Chemistry.EntityEvidence.decideCandidate",
+          "SFT.Chemistry.EntityEvidence.closureValue",
+          "SFT.Chemistry.EntityEvidence.exclusions",
+          "SFT.Chemistry.EntityEvidence.closureData",
+          "SFT.Chemistry.EntityEvidence.closure",
+          "SFT.Chemistry.EntityEvidence.control",
+          "SFT.Chemistry.EntityEvidence.runControls",
+          "SFT.Chemistry.EntityEvidence.registrationNoAxioms",
+          "SFT.Chemistry.EntityEvidence.registrationNoFreeParameters",
+          "SFT.Chemistry.EntityEvidence.decisionSurvival",
+          "SFT.Chemistry.SourceText.foldTable",
+          "SFT.Chemistry.SourceText.foldedChar",
+          "SFT.Chemistry.SourceText.casefold",
+          "SFT.Chemistry.SourceText.whitespace",
+          "SFT.Chemistry.SourceText.nonblank",
+          "SFT.Chemistry.SourceExtraction.Reference",
+          "SFT.Chemistry.SourceExtraction.field",
+          "SFT.Chemistry.SourceExtraction.textValue",
+          "SFT.Chemistry.SourceExtraction.arrayValue",
+          "SFT.Chemistry.SourceExtraction.textField",
+          "SFT.Chemistry.SourceExtraction.unique",
+          "SFT.Chemistry.SourceExtraction.uniqueValues",
+          "SFT.Chemistry.SourceExtraction.nonblankValue",
+          "SFT.Chemistry.SourceExtraction.validFeature",
+          "SFT.Chemistry.SourceExtraction.Resolved",
+          "SFT.Chemistry.SourceExtraction.resolve",
+          "SFT.Chemistry.SourceExtraction.Snapshot",
+          "SFT.Chemistry.SourceExtraction.resolveAll",
+          "SFT.Chemistry.SourceExtraction.resolvedValue",
+          "SFT.Chemistry.EntityExperiment.claimId",
+          "SFT.Chemistry.EntityExperiment.experimentId",
+          "SFT.Chemistry.EntityExperiment.expectedLabel",
+          "SFT.Chemistry.EntityExperiment.frozenRelation",
+          "SFT.Chemistry.EntityExperiment.falsification",
+          "SFT.Chemistry.EntityExperiment.observationRegistryPath",
+          "SFT.Chemistry.EntityExperiment.references",
+          "SFT.Chemistry.EntityExperiment.predictionSteps",
+          "SFT.Chemistry.EntityExperiment.program",
+          "SFT.Chemistry.EntityExperiment.programFields",
+          "SFT.Chemistry.EntityExperiment.programDocument",
+          "SFT.Chemistry.EntityExperiment.registration",
+          "SFT.Chemistry.EntityExperiment.registrationHash",
+          "SFT.Chemistry.EntityExperiment.labelValue",
+          "SFT.Chemistry.EntityExperiment.envelope",
+          "SFT.Chemistry.EntityExperiment.targets",
+          "SFT.Chemistry.EntityExperiment.completeReferenceCount",
+          "SFT.Chemistry.EntityExperiment.targetContentAbsent",
+          "SFT.Chemistry.EntityExperiment.specDimensions",
+          "SFT.Chemistry.EntityExperiment.specWitnesses",
+          "SFT.Chemistry.EntityExperiment.validateSpec",
+          "SFT.Chemistry.EntityExperiment.fixedSpecAdmitted",
+          "SFT.Chemistry.EntityValidation.PredictionSeal",
+          "SFT.Chemistry.EntityValidation.Snapshot",
+          "SFT.Chemistry.EntityValidation.inputValues",
+          "SFT.Chemistry.EntityValidation.sealPrediction",
+          "SFT.Chemistry.EntityValidation.programFields",
+          "SFT.Chemistry.EntityValidation.observation",
+          "SFT.Chemistry.EntityValidation.certificate",
+          "SFT.Chemistry.EntityValidation.isolation",
+          "SFT.Chemistry.EntityValidation.custodyCertificate",
+          "SFT.Chemistry.EntityValidation.Comparison",
+          "SFT.Chemistry.EntityValidation.compareRows",
+          "SFT.Chemistry.EntityValidation.comparisonValue",
+          "SFT.Chemistry.EntityValidation.controlPassed",
+          "SFT.Chemistry.EntityValidation.controlValue",
+          "SFT.Chemistry.EntityValidation.message",
+          "SFT.Chemistry.EntityValidation.sourceIds",
+          "SFT.Chemistry.EntityValidation.receipt",
+          "SFT.Chemistry.EntityValidation.Validation",
+          "SFT.Chemistry.EntityValidation.validate",
+          "SFT.Chemistry.EntityValidation.resealRejected"
+        ],
+        "added_registered_theorems": [
+          "SFT.Chemistry.EntityIdentity.recordExactly",
+          "SFT.Chemistry.EntityIdentity.identityExactly",
+          "SFT.Chemistry.EntityIdentity.constitutionDistinguished",
+          "SFT.Chemistry.EntityIdentity.isotopeDistinguished",
+          "SFT.Chemistry.EntityIdentity.contextDistinguished",
+          "SFT.Chemistry.EntityIdentity.leastRequiredIdentity",
+          "SFT.Chemistry.EntityIdentity.noExtraIdentityRule",
+          "SFT.Chemistry.EntityIdentity.extensionCarrier",
+          "SFT.Chemistry.EntityIdentity.extensionConstitution",
+          "SFT.Chemistry.EntityIdentity.extensionIsotope",
+          "SFT.Chemistry.EntityIdentity.extensionRetainsCoordinate",
+          "SFT.Chemistry.EntityIdentity.priorCoordinatesExact",
+          "SFT.Chemistry.EntityIdentity.extensionRetainsDistinctions",
+          "SFT.Chemistry.EntityIdentity.finiteExtensionCarrier",
+          "SFT.Chemistry.EntityIdentity.finiteExtensionConstitution",
+          "SFT.Chemistry.EntityIdentity.finiteExtensionIsotope",
+          "SFT.Chemistry.EntityIdentity.finiteExtensionRetainsCoordinate",
+          "SFT.Chemistry.EntityIdentity.erasedIdentityCannotRecover",
+          "SFT.Chemistry.EntityGrammar.generatedCardinality",
+          "SFT.Chemistry.EntityGrammar.candidatesComplete",
+          "SFT.Chemistry.EntityGrammar.sourceDecisionMatchesCriteria",
+          "SFT.Chemistry.EntityGrammar.uniqueCriteriaSurvivor",
+          "SFT.Chemistry.EntityGrammar.uniqueSurvivor",
+          "SFT.Chemistry.EntityGrammar.survivorAccepted",
+          "SFT.Chemistry.EntityGrammar.acceptanceIffExactCriteria",
+          "SFT.Chemistry.EntityGrammar.carrier_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.constitution_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.isotope_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.distinction_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.precision_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.record_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.provenance_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.extension_rejected_rejected",
+          "SFT.Chemistry.EntityEvidence.registrationNoAxioms",
+          "SFT.Chemistry.EntityEvidence.registrationNoFreeParameters",
+          "SFT.Chemistry.EntityEvidence.decisionSurvival",
+          "SFT.Chemistry.EntityExperiment.completeReferenceCount",
+          "SFT.Chemistry.EntityExperiment.targetContentAbsent",
+          "SFT.Chemistry.EntityExperiment.fixedSpecAdmitted",
+          "SFT.Chemistry.EntityValidation.resealRejected"
+        ],
+        "added_audited_definitions_and_theorems": [
+          "SFT.Chemistry.EntityIdentity.sameIdentity",
+          "SFT.Chemistry.EntityIdentity.extend",
+          "SFT.Chemistry.EntityIdentity.recordExactly",
+          "SFT.Chemistry.EntityIdentity.identityExactly",
+          "SFT.Chemistry.EntityIdentity.constitutionDistinguished",
+          "SFT.Chemistry.EntityIdentity.isotopeDistinguished",
+          "SFT.Chemistry.EntityIdentity.contextDistinguished",
+          "SFT.Chemistry.EntityIdentity.leastRequiredIdentity",
+          "SFT.Chemistry.EntityIdentity.noExtraIdentityRule",
+          "SFT.Chemistry.EntityIdentity.extensionCarrier",
+          "SFT.Chemistry.EntityIdentity.extensionConstitution",
+          "SFT.Chemistry.EntityIdentity.extensionIsotope",
+          "SFT.Chemistry.EntityIdentity.extensionRetainsCoordinate",
+          "SFT.Chemistry.EntityIdentity.priorCoordinates",
+          "SFT.Chemistry.EntityIdentity.priorCoordinatesExact",
+          "SFT.Chemistry.EntityIdentity.extensionRetainsDistinctions",
+          "SFT.Chemistry.EntityIdentity.extendMany",
+          "SFT.Chemistry.EntityIdentity.finiteExtensionCarrier",
+          "SFT.Chemistry.EntityIdentity.finiteExtensionConstitution",
+          "SFT.Chemistry.EntityIdentity.finiteExtensionIsotope",
+          "SFT.Chemistry.EntityIdentity.finiteExtensionRetainsCoordinate",
+          "SFT.Chemistry.EntityIdentity.erasedIdentityCannotRecover",
+          "SFT.Chemistry.EntityGrammar.carrierName",
+          "SFT.Chemistry.EntityGrammar.constitutionName",
+          "SFT.Chemistry.EntityGrammar.isotopeName",
+          "SFT.Chemistry.EntityGrammar.distinctionName",
+          "SFT.Chemistry.EntityGrammar.precisionName",
+          "SFT.Chemistry.EntityGrammar.recordName",
+          "SFT.Chemistry.EntityGrammar.provenanceName",
+          "SFT.Chemistry.EntityGrammar.extensionName",
+          "SFT.Chemistry.EntityGrammar.sourceFields",
+          "SFT.Chemistry.EntityGrammar.candidateId",
+          "SFT.Chemistry.EntityGrammar.exactForm",
+          "SFT.Chemistry.EntityGrammar.survivorId",
+          "SFT.Chemistry.EntityGrammar.survives",
+          "SFT.Chemistry.EntityGrammar.criteriaDecision",
+          "SFT.Chemistry.EntityGrammar.decisionReason",
+          "SFT.Chemistry.EntityGrammar.generationRule",
+          "SFT.Chemistry.EntityGrammar.grammarBoundary",
+          "SFT.Chemistry.EntityGrammar.candidates",
+          "SFT.Chemistry.EntityGrammar.survivor",
+          "SFT.Chemistry.EntityGrammar.generatedCardinality",
+          "SFT.Chemistry.EntityGrammar.candidatesComplete",
+          "SFT.Chemistry.EntityGrammar.sourceDecisionMatchesCriteria",
+          "SFT.Chemistry.EntityGrammar.uniqueCriteriaSurvivor",
+          "SFT.Chemistry.EntityGrammar.uniqueSurvivor",
+          "SFT.Chemistry.EntityGrammar.survivorAccepted",
+          "SFT.Chemistry.EntityGrammar.ExactCriteria",
+          "SFT.Chemistry.EntityGrammar.acceptanceIffExactCriteria",
+          "SFT.Chemistry.EntityGrammar.carrier_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.constitution_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.isotope_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.distinction_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.precision_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.record_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.provenance_rejected_rejected",
+          "SFT.Chemistry.EntityGrammar.extension_rejected_rejected",
+          "SFT.Chemistry.EntityEvidence.witnesses",
+          "SFT.Chemistry.EntityEvidence.claimId",
+          "SFT.Chemistry.EntityEvidence.dependencies",
+          "SFT.Chemistry.EntityEvidence.candidateRecord",
+          "SFT.Chemistry.EntityEvidence.completenessRecord",
+          "SFT.Chemistry.EntityEvidence.registrationData",
+          "SFT.Chemistry.EntityEvidence.registration",
+          "SFT.Chemistry.EntityEvidence.generatedCandidateData",
+          "SFT.Chemistry.EntityEvidence.censusData",
+          "SFT.Chemistry.EntityEvidence.census",
+          "SFT.Chemistry.EntityEvidence.decisionData",
+          "SFT.Chemistry.EntityEvidence.decideCandidate",
+          "SFT.Chemistry.EntityEvidence.closureValue",
+          "SFT.Chemistry.EntityEvidence.exclusions",
+          "SFT.Chemistry.EntityEvidence.closureData",
+          "SFT.Chemistry.EntityEvidence.closure",
+          "SFT.Chemistry.EntityEvidence.control",
+          "SFT.Chemistry.EntityEvidence.runControls",
+          "SFT.Chemistry.EntityEvidence.registrationNoAxioms",
+          "SFT.Chemistry.EntityEvidence.registrationNoFreeParameters",
+          "SFT.Chemistry.EntityEvidence.decisionSurvival",
+          "SFT.Chemistry.SourceText.foldTable",
+          "SFT.Chemistry.SourceText.foldedChar",
+          "SFT.Chemistry.SourceText.casefold",
+          "SFT.Chemistry.SourceText.whitespace",
+          "SFT.Chemistry.SourceText.nonblank",
+          "SFT.Chemistry.SourceExtraction.field",
+          "SFT.Chemistry.SourceExtraction.textValue",
+          "SFT.Chemistry.SourceExtraction.arrayValue",
+          "SFT.Chemistry.SourceExtraction.textField",
+          "SFT.Chemistry.SourceExtraction.unique",
+          "SFT.Chemistry.SourceExtraction.uniqueValues",
+          "SFT.Chemistry.SourceExtraction.nonblankValue",
+          "SFT.Chemistry.SourceExtraction.validFeature",
+          "SFT.Chemistry.SourceExtraction.resolve",
+          "SFT.Chemistry.SourceExtraction.resolveAll",
+          "SFT.Chemistry.SourceExtraction.resolvedValue",
+          "SFT.Chemistry.EntityExperiment.claimId",
+          "SFT.Chemistry.EntityExperiment.experimentId",
+          "SFT.Chemistry.EntityExperiment.expectedLabel",
+          "SFT.Chemistry.EntityExperiment.frozenRelation",
+          "SFT.Chemistry.EntityExperiment.falsification",
+          "SFT.Chemistry.EntityExperiment.observationRegistryPath",
+          "SFT.Chemistry.EntityExperiment.references",
+          "SFT.Chemistry.EntityExperiment.predictionSteps",
+          "SFT.Chemistry.EntityExperiment.program",
+          "SFT.Chemistry.EntityExperiment.programFields",
+          "SFT.Chemistry.EntityExperiment.programDocument",
+          "SFT.Chemistry.EntityExperiment.registration",
+          "SFT.Chemistry.EntityExperiment.registrationHash",
+          "SFT.Chemistry.EntityExperiment.labelValue",
+          "SFT.Chemistry.EntityExperiment.envelope",
+          "SFT.Chemistry.EntityExperiment.targets",
+          "SFT.Chemistry.EntityExperiment.completeReferenceCount",
+          "SFT.Chemistry.EntityExperiment.targetContentAbsent",
+          "SFT.Chemistry.EntityExperiment.specDimensions",
+          "SFT.Chemistry.EntityExperiment.specWitnesses",
+          "SFT.Chemistry.EntityExperiment.validateSpec",
+          "SFT.Chemistry.EntityExperiment.fixedSpecAdmitted",
+          "SFT.Chemistry.EntityValidation.inputValues",
+          "SFT.Chemistry.EntityValidation.sealPrediction",
+          "SFT.Chemistry.EntityValidation.programFields",
+          "SFT.Chemistry.EntityValidation.observation",
+          "SFT.Chemistry.EntityValidation.certificate",
+          "SFT.Chemistry.EntityValidation.isolation",
+          "SFT.Chemistry.EntityValidation.custodyCertificate",
+          "SFT.Chemistry.EntityValidation.compareRows",
+          "SFT.Chemistry.EntityValidation.comparisonValue",
+          "SFT.Chemistry.EntityValidation.controlPassed",
+          "SFT.Chemistry.EntityValidation.controlValue",
+          "SFT.Chemistry.EntityValidation.message",
+          "SFT.Chemistry.EntityValidation.sourceIds",
+          "SFT.Chemistry.EntityValidation.receipt",
+          "SFT.Chemistry.EntityValidation.validate",
+          "SFT.Chemistry.EntityValidation.resealRejected"
+        ],
+        "remaining": [],
+        "executed_commands": [
+          "python3 work/entity_program554.py (original session85540, terminal0; no restart)",
+          "python3 work/check_extraction555.py",
+          "python3 work/check_entity_validation555.py",
+          "python3 work/build_validation555.py",
+          "pinned independent_validator.py on original and three changed native outputs",
+          "python3 work/register_entity556.py"
+        ]
+      }
+    },
+    {
+      "path": "verification/TURN_556_SPECIES_COMPLETION.json",
+      "sha256": "4df80d30b310c7d168be6371f94f131d58d470979d3f6826248fc787683893d7",
+      "result": {
+        "status": "complete",
+        "claim_id": "SFT-CHEM-MEAS-CHEMICAL-SPECIES-001",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_hashes": {
+          "sft/chemistry/catalog.py": "90750420738638bdadd783f0fb83bc667ee414cc48036e5cdc2f9a2a61089fd6",
+          "sft/chemistry/generated_law.py": "678de1061dcd4b4a24deefd7757045729d89677d6170bd907cde70bc9ca2e15a",
+          "sft/chemistry/obligations.py": "b502afe57640149166b4ca69b433d02b3361155eb624f9af8cb8918f77ac0ad7",
+          "sft/physics/generated_empirical_law.py": "65703f059b0a6059af6f06aff9e11f1fcef19a1b10d2a8fa4b675418c8ca8071"
+        },
+        "source_component_correspondence": {
+          "SpeciesClass": "Exact equivalence of chemical identity, accessible support membership and experimental timescale; complete class support, coverage, representative independence, overlap closure, least retained quotient, singleton base, successor retention and mixed/timescale rejection.",
+          "SpeciesGrammar": "Original eight-axis256 candidate product, exact decisions and sole survivor.",
+          "SpeciesEvidence": "Original chemistry registration, full census, elimination reasons, controls and closure.",
+          "SourceText": "Source Python Unicode casefold and whitespace predicates required by feature matching; complete nonidentity table retained.",
+          "SourceExtraction": "Exact registry and duplicate checks, source identity and snapshot digest, current term identity, ordered feature shape, nonblank fields, fragment matching, reconstructed labels and extraction hashes.",
+          "SpeciesExperiment": "Pinned chemistry specification validation, chemical prediction instructions, source-reference registration and envelope.",
+          "SpeciesValidation": "Original chemistry execution, isolation, custody nonce, release, complete comparison fields, tampered-label control, certificates and receipt."
+        },
+        "lean_source_sha256": {
+          "SpeciesClass": "81c9be4c7300e855c409483f4f33857541eed36919daf8d9dc3bef06d79b66e6",
+          "SpeciesGrammar": "2c738b548fea8e310836db952586e9d80affab50e1b7b7e5ee13a36630381c6a",
+          "SpeciesEvidence": "35225787117c4f47df57c26460c210a9d1a2ef2bf98c730a16e656d728abb90d",
+          "SpeciesExperiment": "088f55c53da322d1cda8c3ec4061107cef38333705fffc416037899a31239a2f",
+          "SpeciesValidation": "adb131474d86246a1540a446176a8956a3ccfac3e485984719ef5f3353e4ba66"
+        },
+        "dependencies": {
+          "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+          "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+          "SFT-MATH-ORDER-LATTICE-001": "complete",
+          "SFT-MATH-LOGIC-PROOF-001": "complete",
+          "SFT-INFO-SYMBOL-DISTINCTION-001": "complete",
+          "SFT-INFO-ENCODING-DECODING-001": "complete",
+          "SFT-INFO-CONSERVATION-LOSS-001": "complete",
+          "SFT-PHYS-MEAS-OBSERVATION-CARRIER-001": "complete",
+          "SFT-PHYS-MEAS-QUANTITY-CARRIER-001": "complete",
+          "SFT-PHYS-MEAS-VALUE-RECORD-001": "complete",
+          "SFT-PHYS-MEAS-UNCERTAINTY-001": "complete",
+          "SFT-PHYS-MATTER-CONSERVED-LABELS-001": "complete",
+          "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001": "complete"
+        },
+        "candidate_rows": 256,
+        "program_report": "verification/TURN_556_species_program556_report.json",
+        "empirical_report": "verification/TURN_556_species_validation556_report.json",
+        "extraction_report": "verification/TURN_555_extraction555_report.json",
+        "independent_validator_cases": [
+          {
+            "case": "original",
+            "expected": true,
+            "actual": {
+              "certificate": {
+                "candidate_count": 256,
+                "claim_id": "SFT-CHEM-MEAS-CHEMICAL-SPECIES-001",
+                "survivor": "ensemble-carrier__chemical-identity-equivalence__shared-energy-support__experiment-timescale-boundary__molecular-or-solid-unit-support__held-member-and-class-record__source-bound-proof-trace__no-extra-rule"
+              },
+              "passed": true,
+              "recomputed_from_declared_inputs": true,
+              "validated_seal_hash": "native-species-556"
+            }
+          },
+          {
+            "case": "omitted_candidate",
+            "expected": false,
+            "actual": {
+              "certificate": {
+                "candidate_count": 256,
+                "claim_id": "SFT-CHEM-MEAS-CHEMICAL-SPECIES-001",
+                "survivor": null
+              },
+              "passed": false,
+              "recomputed_from_declared_inputs": true,
+              "validated_seal_hash": "native-species-556"
+            }
+          },
+          {
+            "case": "additional_survivor",
+            "expected": false,
+            "actual": {
+              "certificate": {
+                "candidate_count": 256,
+                "claim_id": "SFT-CHEM-MEAS-CHEMICAL-SPECIES-001",
+                "survivor": null
+              },
+              "passed": false,
+              "recomputed_from_declared_inputs": true,
+              "validated_seal_hash": "native-species-556"
+            }
+          },
+          {
+            "case": "failed_control",
+            "expected": false,
+            "actual": {
+              "certificate": {
+                "candidate_count": 256,
+                "claim_id": "SFT-CHEM-MEAS-CHEMICAL-SPECIES-001",
+                "survivor": null
+              },
+              "passed": false,
+              "recomputed_from_declared_inputs": true,
+              "validated_seal_hash": "native-species-556"
+            }
+          }
+        ],
+        "axiom_dependencies": [],
+        "audited_declarations": [
+          "SFT.Chemistry.SpeciesClass.Member",
+          "SFT.Chemistry.SpeciesClass.sameSupport",
+          "SFT.Chemistry.SpeciesClass.equivalent",
+          "SFT.Chemistry.SpeciesClass.classContains",
+          "SFT.Chemistry.SpeciesClass.equivalentReflexive",
+          "SFT.Chemistry.SpeciesClass.equivalentSymmetric",
+          "SFT.Chemistry.SpeciesClass.equivalentTransitive",
+          "SFT.Chemistry.SpeciesClass.completeClass",
+          "SFT.Chemistry.SpeciesClass.everyMemberCovered",
+          "SFT.Chemistry.SpeciesClass.equivalentRepresentatives",
+          "SFT.Chemistry.SpeciesClass.overlappingClassesAgree",
+          "SFT.Chemistry.SpeciesClass.leastRequiredQuotient",
+          "SFT.Chemistry.SpeciesClass.singletonBase",
+          "SFT.Chemistry.SpeciesClass.successorRetains",
+          "SFT.Chemistry.SpeciesClass.admittedSuccessorJoins",
+          "SFT.Chemistry.SpeciesClass.mixedIdentityRejected",
+          "SFT.Chemistry.SpeciesClass.differentSupportRejected",
+          "SFT.Chemistry.SpeciesClass.differentTimescaleRejected",
+          "SFT.Chemistry.SpeciesClass.refinedBoundaryClass",
+          "SFT.Chemistry.SpeciesGrammar.Carrier",
+          "SFT.Chemistry.SpeciesGrammar.carrierName",
+          "SFT.Chemistry.SpeciesGrammar.Member_identity",
+          "SFT.Chemistry.SpeciesGrammar.member_identityName",
+          "SFT.Chemistry.SpeciesGrammar.Support",
+          "SFT.Chemistry.SpeciesGrammar.supportName",
+          "SFT.Chemistry.SpeciesGrammar.Timescale",
+          "SFT.Chemistry.SpeciesGrammar.timescaleName",
+          "SFT.Chemistry.SpeciesGrammar.Solid_support",
+          "SFT.Chemistry.SpeciesGrammar.solid_supportName",
+          "SFT.Chemistry.SpeciesGrammar.Record",
+          "SFT.Chemistry.SpeciesGrammar.recordName",
+          "SFT.Chemistry.SpeciesGrammar.Provenance",
+          "SFT.Chemistry.SpeciesGrammar.provenanceName",
+          "SFT.Chemistry.SpeciesGrammar.Extension",
+          "SFT.Chemistry.SpeciesGrammar.extensionName",
+          "SFT.Chemistry.SpeciesGrammar.Candidate",
+          "SFT.Chemistry.SpeciesGrammar.sourceFields",
+          "SFT.Chemistry.SpeciesGrammar.candidateId",
+          "SFT.Chemistry.SpeciesGrammar.exactForm",
+          "SFT.Chemistry.SpeciesGrammar.survivorId",
+          "SFT.Chemistry.SpeciesGrammar.survives",
+          "SFT.Chemistry.SpeciesGrammar.criteriaDecision",
+          "SFT.Chemistry.SpeciesGrammar.decisionReason",
+          "SFT.Chemistry.SpeciesGrammar.generationRule",
+          "SFT.Chemistry.SpeciesGrammar.grammarBoundary",
+          "SFT.Chemistry.SpeciesGrammar.candidates",
+          "SFT.Chemistry.SpeciesGrammar.survivor",
+          "SFT.Chemistry.SpeciesGrammar.generatedCardinality",
+          "SFT.Chemistry.SpeciesGrammar.candidatesComplete",
+          "SFT.Chemistry.SpeciesGrammar.sourceDecisionMatchesCriteria",
+          "SFT.Chemistry.SpeciesGrammar.uniqueCriteriaSurvivor",
+          "SFT.Chemistry.SpeciesGrammar.uniqueSurvivor",
+          "SFT.Chemistry.SpeciesGrammar.survivorAccepted",
+          "SFT.Chemistry.SpeciesGrammar.ExactCriteria",
+          "SFT.Chemistry.SpeciesGrammar.acceptanceIffExactCriteria",
+          "SFT.Chemistry.SpeciesGrammar.carrier_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.member_identity_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.support_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.timescale_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.solid_support_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.record_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.provenance_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.extension_rejected_rejected",
+          "SFT.Chemistry.SpeciesEvidence.witnesses",
+          "SFT.Chemistry.SpeciesEvidence.claimId",
+          "SFT.Chemistry.SpeciesEvidence.dependencies",
+          "SFT.Chemistry.SpeciesEvidence.candidateRecord",
+          "SFT.Chemistry.SpeciesEvidence.completenessRecord",
+          "SFT.Chemistry.SpeciesEvidence.registrationData",
+          "SFT.Chemistry.SpeciesEvidence.registration",
+          "SFT.Chemistry.SpeciesEvidence.generatedCandidateData",
+          "SFT.Chemistry.SpeciesEvidence.censusData",
+          "SFT.Chemistry.SpeciesEvidence.census",
+          "SFT.Chemistry.SpeciesEvidence.decisionData",
+          "SFT.Chemistry.SpeciesEvidence.decideCandidate",
+          "SFT.Chemistry.SpeciesEvidence.closureValue",
+          "SFT.Chemistry.SpeciesEvidence.exclusions",
+          "SFT.Chemistry.SpeciesEvidence.closureData",
+          "SFT.Chemistry.SpeciesEvidence.closure",
+          "SFT.Chemistry.SpeciesEvidence.control",
+          "SFT.Chemistry.SpeciesEvidence.runControls",
+          "SFT.Chemistry.SpeciesEvidence.registrationNoAxioms",
+          "SFT.Chemistry.SpeciesEvidence.registrationNoFreeParameters",
+          "SFT.Chemistry.SpeciesEvidence.decisionSurvival",
+          "SFT.Chemistry.SpeciesExperiment.claimId",
+          "SFT.Chemistry.SpeciesExperiment.experimentId",
+          "SFT.Chemistry.SpeciesExperiment.expectedLabel",
+          "SFT.Chemistry.SpeciesExperiment.frozenRelation",
+          "SFT.Chemistry.SpeciesExperiment.falsification",
+          "SFT.Chemistry.SpeciesExperiment.observationRegistryPath",
+          "SFT.Chemistry.SpeciesExperiment.references",
+          "SFT.Chemistry.SpeciesExperiment.predictionSteps",
+          "SFT.Chemistry.SpeciesExperiment.program",
+          "SFT.Chemistry.SpeciesExperiment.programFields",
+          "SFT.Chemistry.SpeciesExperiment.programDocument",
+          "SFT.Chemistry.SpeciesExperiment.registration",
+          "SFT.Chemistry.SpeciesExperiment.registrationHash",
+          "SFT.Chemistry.SpeciesExperiment.labelValue",
+          "SFT.Chemistry.SpeciesExperiment.envelope",
+          "SFT.Chemistry.SpeciesExperiment.targets",
+          "SFT.Chemistry.SpeciesExperiment.completeReferenceCount",
+          "SFT.Chemistry.SpeciesExperiment.targetContentAbsent",
+          "SFT.Chemistry.SpeciesExperiment.specDimensions",
+          "SFT.Chemistry.SpeciesExperiment.specWitnesses",
+          "SFT.Chemistry.SpeciesExperiment.validateSpec",
+          "SFT.Chemistry.SpeciesExperiment.fixedSpecAdmitted",
+          "SFT.Chemistry.SpeciesValidation.PredictionSeal",
+          "SFT.Chemistry.SpeciesValidation.Snapshot",
+          "SFT.Chemistry.SpeciesValidation.inputValues",
+          "SFT.Chemistry.SpeciesValidation.sealPrediction",
+          "SFT.Chemistry.SpeciesValidation.programFields",
+          "SFT.Chemistry.SpeciesValidation.observation",
+          "SFT.Chemistry.SpeciesValidation.certificate",
+          "SFT.Chemistry.SpeciesValidation.isolation",
+          "SFT.Chemistry.SpeciesValidation.custodyCertificate",
+          "SFT.Chemistry.SpeciesValidation.Comparison",
+          "SFT.Chemistry.SpeciesValidation.compareRows",
+          "SFT.Chemistry.SpeciesValidation.comparisonValue",
+          "SFT.Chemistry.SpeciesValidation.controlPassed",
+          "SFT.Chemistry.SpeciesValidation.controlValue",
+          "SFT.Chemistry.SpeciesValidation.message",
+          "SFT.Chemistry.SpeciesValidation.sourceIds",
+          "SFT.Chemistry.SpeciesValidation.receipt",
+          "SFT.Chemistry.SpeciesValidation.Validation",
+          "SFT.Chemistry.SpeciesValidation.validate",
+          "SFT.Chemistry.SpeciesValidation.resealRejected"
+        ],
+        "added_registered_theorems": [
+          "SFT.Chemistry.SpeciesClass.equivalentReflexive",
+          "SFT.Chemistry.SpeciesClass.equivalentSymmetric",
+          "SFT.Chemistry.SpeciesClass.equivalentTransitive",
+          "SFT.Chemistry.SpeciesClass.completeClass",
+          "SFT.Chemistry.SpeciesClass.everyMemberCovered",
+          "SFT.Chemistry.SpeciesClass.equivalentRepresentatives",
+          "SFT.Chemistry.SpeciesClass.overlappingClassesAgree",
+          "SFT.Chemistry.SpeciesClass.leastRequiredQuotient",
+          "SFT.Chemistry.SpeciesClass.singletonBase",
+          "SFT.Chemistry.SpeciesClass.successorRetains",
+          "SFT.Chemistry.SpeciesClass.admittedSuccessorJoins",
+          "SFT.Chemistry.SpeciesClass.mixedIdentityRejected",
+          "SFT.Chemistry.SpeciesClass.differentSupportRejected",
+          "SFT.Chemistry.SpeciesClass.differentTimescaleRejected",
+          "SFT.Chemistry.SpeciesClass.refinedBoundaryClass",
+          "SFT.Chemistry.SpeciesGrammar.generatedCardinality",
+          "SFT.Chemistry.SpeciesGrammar.candidatesComplete",
+          "SFT.Chemistry.SpeciesGrammar.sourceDecisionMatchesCriteria",
+          "SFT.Chemistry.SpeciesGrammar.uniqueCriteriaSurvivor",
+          "SFT.Chemistry.SpeciesGrammar.uniqueSurvivor",
+          "SFT.Chemistry.SpeciesGrammar.survivorAccepted",
+          "SFT.Chemistry.SpeciesGrammar.acceptanceIffExactCriteria",
+          "SFT.Chemistry.SpeciesGrammar.carrier_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.member_identity_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.support_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.timescale_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.solid_support_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.record_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.provenance_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.extension_rejected_rejected",
+          "SFT.Chemistry.SpeciesEvidence.registrationNoAxioms",
+          "SFT.Chemistry.SpeciesEvidence.registrationNoFreeParameters",
+          "SFT.Chemistry.SpeciesEvidence.decisionSurvival",
+          "SFT.Chemistry.SpeciesExperiment.completeReferenceCount",
+          "SFT.Chemistry.SpeciesExperiment.targetContentAbsent",
+          "SFT.Chemistry.SpeciesExperiment.fixedSpecAdmitted",
+          "SFT.Chemistry.SpeciesValidation.resealRejected"
+        ],
+        "added_audited_definitions_and_theorems": [
+          "SFT.Chemistry.SpeciesClass.sameSupport",
+          "SFT.Chemistry.SpeciesClass.equivalent",
+          "SFT.Chemistry.SpeciesClass.classContains",
+          "SFT.Chemistry.SpeciesClass.equivalentReflexive",
+          "SFT.Chemistry.SpeciesClass.equivalentSymmetric",
+          "SFT.Chemistry.SpeciesClass.equivalentTransitive",
+          "SFT.Chemistry.SpeciesClass.completeClass",
+          "SFT.Chemistry.SpeciesClass.everyMemberCovered",
+          "SFT.Chemistry.SpeciesClass.equivalentRepresentatives",
+          "SFT.Chemistry.SpeciesClass.overlappingClassesAgree",
+          "SFT.Chemistry.SpeciesClass.leastRequiredQuotient",
+          "SFT.Chemistry.SpeciesClass.singletonBase",
+          "SFT.Chemistry.SpeciesClass.successorRetains",
+          "SFT.Chemistry.SpeciesClass.admittedSuccessorJoins",
+          "SFT.Chemistry.SpeciesClass.mixedIdentityRejected",
+          "SFT.Chemistry.SpeciesClass.differentSupportRejected",
+          "SFT.Chemistry.SpeciesClass.differentTimescaleRejected",
+          "SFT.Chemistry.SpeciesClass.refinedBoundaryClass",
+          "SFT.Chemistry.SpeciesGrammar.carrierName",
+          "SFT.Chemistry.SpeciesGrammar.member_identityName",
+          "SFT.Chemistry.SpeciesGrammar.supportName",
+          "SFT.Chemistry.SpeciesGrammar.timescaleName",
+          "SFT.Chemistry.SpeciesGrammar.solid_supportName",
+          "SFT.Chemistry.SpeciesGrammar.recordName",
+          "SFT.Chemistry.SpeciesGrammar.provenanceName",
+          "SFT.Chemistry.SpeciesGrammar.extensionName",
+          "SFT.Chemistry.SpeciesGrammar.sourceFields",
+          "SFT.Chemistry.SpeciesGrammar.candidateId",
+          "SFT.Chemistry.SpeciesGrammar.exactForm",
+          "SFT.Chemistry.SpeciesGrammar.survivorId",
+          "SFT.Chemistry.SpeciesGrammar.survives",
+          "SFT.Chemistry.SpeciesGrammar.criteriaDecision",
+          "SFT.Chemistry.SpeciesGrammar.decisionReason",
+          "SFT.Chemistry.SpeciesGrammar.generationRule",
+          "SFT.Chemistry.SpeciesGrammar.grammarBoundary",
+          "SFT.Chemistry.SpeciesGrammar.candidates",
+          "SFT.Chemistry.SpeciesGrammar.survivor",
+          "SFT.Chemistry.SpeciesGrammar.generatedCardinality",
+          "SFT.Chemistry.SpeciesGrammar.candidatesComplete",
+          "SFT.Chemistry.SpeciesGrammar.sourceDecisionMatchesCriteria",
+          "SFT.Chemistry.SpeciesGrammar.uniqueCriteriaSurvivor",
+          "SFT.Chemistry.SpeciesGrammar.uniqueSurvivor",
+          "SFT.Chemistry.SpeciesGrammar.survivorAccepted",
+          "SFT.Chemistry.SpeciesGrammar.ExactCriteria",
+          "SFT.Chemistry.SpeciesGrammar.acceptanceIffExactCriteria",
+          "SFT.Chemistry.SpeciesGrammar.carrier_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.member_identity_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.support_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.timescale_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.solid_support_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.record_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.provenance_rejected_rejected",
+          "SFT.Chemistry.SpeciesGrammar.extension_rejected_rejected",
+          "SFT.Chemistry.SpeciesEvidence.witnesses",
+          "SFT.Chemistry.SpeciesEvidence.claimId",
+          "SFT.Chemistry.SpeciesEvidence.dependencies",
+          "SFT.Chemistry.SpeciesEvidence.candidateRecord",
+          "SFT.Chemistry.SpeciesEvidence.completenessRecord",
+          "SFT.Chemistry.SpeciesEvidence.registrationData",
+          "SFT.Chemistry.SpeciesEvidence.registration",
+          "SFT.Chemistry.SpeciesEvidence.generatedCandidateData",
+          "SFT.Chemistry.SpeciesEvidence.censusData",
+          "SFT.Chemistry.SpeciesEvidence.census",
+          "SFT.Chemistry.SpeciesEvidence.decisionData",
+          "SFT.Chemistry.SpeciesEvidence.decideCandidate",
+          "SFT.Chemistry.SpeciesEvidence.closureValue",
+          "SFT.Chemistry.SpeciesEvidence.exclusions",
+          "SFT.Chemistry.SpeciesEvidence.closureData",
+          "SFT.Chemistry.SpeciesEvidence.closure",
+          "SFT.Chemistry.SpeciesEvidence.control",
+          "SFT.Chemistry.SpeciesEvidence.runControls",
+          "SFT.Chemistry.SpeciesEvidence.registrationNoAxioms",
+          "SFT.Chemistry.SpeciesEvidence.registrationNoFreeParameters",
+          "SFT.Chemistry.SpeciesEvidence.decisionSurvival",
+          "SFT.Chemistry.SpeciesExperiment.claimId",
+          "SFT.Chemistry.SpeciesExperiment.experimentId",
+          "SFT.Chemistry.SpeciesExperiment.expectedLabel",
+          "SFT.Chemistry.SpeciesExperiment.frozenRelation",
+          "SFT.Chemistry.SpeciesExperiment.falsification",
+          "SFT.Chemistry.SpeciesExperiment.observationRegistryPath",
+          "SFT.Chemistry.SpeciesExperiment.references",
+          "SFT.Chemistry.SpeciesExperiment.predictionSteps",
+          "SFT.Chemistry.SpeciesExperiment.program",
+          "SFT.Chemistry.SpeciesExperiment.programFields",
+          "SFT.Chemistry.SpeciesExperiment.programDocument",
+          "SFT.Chemistry.SpeciesExperiment.registration",
+          "SFT.Chemistry.SpeciesExperiment.registrationHash",
+          "SFT.Chemistry.SpeciesExperiment.labelValue",
+          "SFT.Chemistry.SpeciesExperiment.envelope",
+          "SFT.Chemistry.SpeciesExperiment.targets",
+          "SFT.Chemistry.SpeciesExperiment.completeReferenceCount",
+          "SFT.Chemistry.SpeciesExperiment.targetContentAbsent",
+          "SFT.Chemistry.SpeciesExperiment.specDimensions",
+          "SFT.Chemistry.SpeciesExperiment.specWitnesses",
+          "SFT.Chemistry.SpeciesExperiment.validateSpec",
+          "SFT.Chemistry.SpeciesExperiment.fixedSpecAdmitted",
+          "SFT.Chemistry.SpeciesValidation.inputValues",
+          "SFT.Chemistry.SpeciesValidation.sealPrediction",
+          "SFT.Chemistry.SpeciesValidation.programFields",
+          "SFT.Chemistry.SpeciesValidation.observation",
+          "SFT.Chemistry.SpeciesValidation.certificate",
+          "SFT.Chemistry.SpeciesValidation.isolation",
+          "SFT.Chemistry.SpeciesValidation.custodyCertificate",
+          "SFT.Chemistry.SpeciesValidation.compareRows",
+          "SFT.Chemistry.SpeciesValidation.comparisonValue",
+          "SFT.Chemistry.SpeciesValidation.controlPassed",
+          "SFT.Chemistry.SpeciesValidation.controlValue",
+          "SFT.Chemistry.SpeciesValidation.message",
+          "SFT.Chemistry.SpeciesValidation.sourceIds",
+          "SFT.Chemistry.SpeciesValidation.receipt",
+          "SFT.Chemistry.SpeciesValidation.validate",
+          "SFT.Chemistry.SpeciesValidation.resealRejected"
+        ],
+        "remaining": [],
+        "executed_commands": [
+          "python3 work/prepare_species556.py",
+          "python3 work/build_species556.py (native compilation; already-built EntityIdentity and SpeciesClass retained on grammar retry)",
+          "python3 work/prepare_species_experiment556.py",
+          "python3 work/build_species_protocol556.py",
+          "python3 work/run_species556.py",
+          "python3 work/check_species_validation556.py",
+          "python3 work/audit_species556.py",
+          "pinned independent_validator.py on fresh native output and three altered cases",
+          "python3 work/register_species556.py"
+        ],
+        "reused_evidence": [
+          "TURN_555_extraction555_report.json for unchanged generic SourceExtraction",
+          "TURN_555_entity555_audit.log for unchanged SourceText, SourceExtraction and EntityIdentity"
+        ],
+        "scientific_declarations": [
+          "SFT.Chemistry.SpeciesClass.sameSupport",
+          "SFT.Chemistry.SpeciesClass.equivalent",
+          "SFT.Chemistry.SpeciesClass.classContains",
+          "SFT.Chemistry.SpeciesClass.completeClass",
+          "SFT.Chemistry.SpeciesClass.everyMemberCovered",
+          "SFT.Chemistry.SpeciesClass.equivalentRepresentatives",
+          "SFT.Chemistry.SpeciesClass.overlappingClassesAgree",
+          "SFT.Chemistry.SpeciesClass.leastRequiredQuotient",
+          "SFT.Chemistry.SpeciesClass.singletonBase",
+          "SFT.Chemistry.SpeciesClass.successorRetains",
+          "SFT.Chemistry.SpeciesClass.admittedSuccessorJoins",
+          "SFT.Chemistry.SpeciesClass.mixedIdentityRejected",
+          "SFT.Chemistry.SpeciesClass.differentSupportRejected",
+          "SFT.Chemistry.SpeciesClass.differentTimescaleRejected",
+          "SFT.Chemistry.SpeciesClass.refinedBoundaryClass"
+        ]
+      }
+    },
+    {
+      "path": "verification/TURN_556_entity_independent556_report.json",
+      "sha256": "871da889a2e264486396adcced4d87ef12857996b068cd8078e2b9a7cf385ee4",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+              "survivor": "singular-carrier__constitution-retained__isotope-retained__separately-distinguishable__context-bounded-precision__held-observation-record__source-bound-proof-trace__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-entity-556"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-entity-556"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-entity-556"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-CHEM-MEAS-CHEMICAL-ENTITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-entity-556"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_556_entity_program554_report.json",
+      "sha256": "2cb221943b0135ce7fc96204d2c14ede30734d3ef247c8bd945c59080feb0190",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:edd9a8adf1425f02310e8915ca2e9398c713acb20ff85f926a1e2bda5126b079",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All UnitProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_556_species_independent556_report.json",
+      "sha256": "d02735a509b9fd1b45c800c2ff1187bea5cba9c19cabc6147c3e6041ec1e0650",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-CHEM-MEAS-CHEMICAL-SPECIES-001",
+              "survivor": "ensemble-carrier__chemical-identity-equivalence__shared-energy-support__experiment-timescale-boundary__molecular-or-solid-unit-support__held-member-and-class-record__source-bound-proof-trace__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-species-556"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-CHEM-MEAS-CHEMICAL-SPECIES-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-species-556"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-CHEM-MEAS-CHEMICAL-SPECIES-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-species-556"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-CHEM-MEAS-CHEMICAL-SPECIES-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-species-556"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_556_species_program556_report.json",
+      "sha256": "faae3f4ea9b1635494ce30a3c4da5644b794a613a6254941d76d0c50defc3142",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:b3a32af04a4953c6b3a8db15997ac327b6e96c746dd69d0f8c5a8c2bc038dbee",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All UnitProgram method output fields; full engine admission integration remains separate"
+      }
+    },
+    {
+      "path": "verification/TURN_556_species_validation556_report.json",
+      "sha256": "fa263bcce41c3cf41ef89c76d4444695ba58dca36bdfd48ab45ac2aa52edaade",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "all_validation_fields_and_hashes_match": true,
+        "source_snapshot_bytes": 3655,
+        "registry_bytes": 2331,
+        "source_extraction_compared": true,
+        "fresh_native_lean_execution": true,
+        "adapter_inputs": "JSON documents decoded from same pinned bytes by source IO adapter; original host metadata; equal protected snapshots"
+      }
+    }
+  ],
+  "casefold_source": {
+    "unicode_version": "13.0.0",
+    "nonidentity_rows": 1490,
+    "lean_sha256": "5973dc657957ac540661d84063f62fdb93da5d8a05b30fdf85664cdb1ceb902d",
+    "source_operation": "Python str.casefold and str.strip nonblank predicate used by chemistry/generated_law.py"
+  },
+  "audits": [
+    {
+      "path": "verification/TURN_554_entity554_audit.log",
+      "sha256": "7c8831d9065f2b44358f82c74ce0780d5c2d5d10312d8b82a1e5b43b7ed540ca"
+    },
+    {
+      "path": "verification/TURN_555_entity555_audit.log",
+      "sha256": "6efae435b2f139c20971e49ae6db8df1f7174489311a3b6c99fae57466ca242a"
+    },
+    {
+      "path": "verification/TURN_556_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "97dbf7f5e506ca0107ed6c0b36a3c7e7d59f94addd432a5ca39956014b7de476"
+    },
+    {
+      "path": "verification/TURN_556_species556_audit.log",
+      "sha256": "3a10761808fa8146b6095bc90dae88ec789247d53aaf18a879470e8a55bf34d2"
+    }
+  ],
+  "matching_theorems": 77,
+  "new_proofs": 0,
+  "new_builds": 0
+}

@@ -59652,8 +59652,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-TEMPERATURE-DEPENDENCE-RELATION-003-6bc633600c0f5fdf.json",
       "statement": "Chemical temperature dependence is the complete source-ordered relation between each held registered reaction's exact positive temperature support and exact positive elementary-transition rate response, retaining density, bath gas, method, uncertainty, repeated conditions, structural absences and unfavorable rows. The table is the relation; no Arrhenius, exponential, logarithmic, prefactor or activation fit enters.",
       "title": "Exact condition-bound temperature-dependence relation",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Chemistry/TemperatureDependence.lean",
+        "SFT/Chemistry/TemperatureDependenceGrammar.lean",
+        "SFT/Chemistry/TemperatureDependenceEvidence.lean",
+        "SFT/Chemistry/TemperatureDependenceAnalysis.lean",
+        "SFT/Chemistry/TemperatureDependenceExperiment.lean",
+        "SFT/Chemistry/TemperatureDependenceSource.lean",
+        "SFT/Chemistry/TemperatureDependencePrediction.lean",
+        "SFT/Chemistry/TemperatureDependenceValidation.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "d8999754927cfce0227d2563eba9f82955828effc1f270c0c46f703d345f46f1",
       "v3_registration": {
@@ -59712,7 +59721,11 @@
         "statement": "Chemical temperature dependence is the complete source-ordered relation between each held registered reaction's exact positive temperature support and exact positive elementary-transition rate response, retaining complete conditions, structural absences and unfavorable rows; no imported or fitted functional form enters.",
         "status": "empirically_tested",
         "title": "Exact condition-bound temperature-dependence relation"
-      }
+      },
+      "remaining": [
+        "Native source-specific build and empty-axiom audit of the staged eight modules.",
+        "Fresh native core/analysis/prediction/programme/registration/empirical output comparisons against the pinned source, then registration after original dependencies are complete."
+      ]
     },
     {
       "branch": "chemistry",
@@ -59724,8 +59737,17 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ACTIVATION-BARRIER-VALUE-RELATION-004-50c0543ffc31753e.json",
       "statement": "For a complete generated reaction path with retained species, torsion and state identities, exact relative support and structural least-state EmptyOne force the activation barrier as the greatest positive path support under a held least-state-to-boundary orientation. Complete source profiles, references, absences and unresolved rows remain held.",
       "title": "Exact generated-path activation-barrier value relation",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Chemistry/ActivationBarrier.lean",
+        "SFT/Chemistry/ActivationBarrierGrammar.lean",
+        "SFT/Chemistry/ActivationBarrierEvidence.lean",
+        "SFT/Chemistry/ActivationBarrierAnalysis.lean",
+        "SFT/Chemistry/ActivationBarrierExperiment.lean",
+        "SFT/Chemistry/ActivationBarrierSource.lean",
+        "SFT/Chemistry/ActivationBarrierPrediction.lean",
+        "SFT/Chemistry/ActivationBarrierValidation.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "f61f9e5ff0384433b017027fee658160b97db1eb0a305480cd23b48cd2678280",
       "v3_registration": {
@@ -59782,7 +59804,11 @@
         "statement": "For a complete generated path with retained species, torsion and state identities, exact relative support and structural least-state EmptyOne force the activation barrier as the greatest positive path support under held orientation.",
         "status": "empirically_tested",
         "title": "Exact generated-path activation-barrier value relation"
-      }
+      },
+      "remaining": [
+        "Native source-specific build and empty-axiom audit of the staged eight modules.",
+        "Fresh native core/analysis/prediction/programme/registration/empirical output comparisons against the pinned source, then registration after original dependencies are complete."
+      ]
     },
     {
       "branch": "chemistry",
@@ -201824,11 +201850,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-21T11:47:57.658296+00:00",
+  "updated_at": "2026-11-21T12:11:17.206924+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 87,
-    "pending": 1856,
+    "in_progress": 89,
+    "pending": 1854,
     "fully_reconstructed_claims": 838,
     "axiom_free_exported_results": 52515,
     "axiom_free_audited_definitions_and_theorems": 118020

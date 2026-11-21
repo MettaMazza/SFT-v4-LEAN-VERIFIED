@@ -13011,3 +13011,15 @@ import SFT.Medicine.ClinicalResponseSource
 import SFT.Medicine.ClinicalResponseExperiment
 
 import SFT.Medicine.ClinicalResponseValidation
+
+import SFT.Medicine.DoseResponse
+
+import SFT.Medicine.DoseResponseGrammar
+
+import SFT.Medicine.DoseResponseEvidence
+
+import SFT.Medicine.DoseResponseSource
+
+import SFT.Medicine.DoseResponseExperiment
+
+import SFT.Medicine.DoseResponseValidation

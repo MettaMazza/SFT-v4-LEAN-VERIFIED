@@ -35089,7 +35089,7 @@ For the four-carbon path, exhaustive permutation filtering retains identity and 
 
   {anti},  {gauche-forward, gauche-reverse}.
 
-The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Twelve native modules are staged, including the complete grammar, operational witnesses, prediction, source binding, independent external analysis and full validation assembly. Compilation, axiom audits, remaining general correspondence and native output comparisons remain pending. This entry is not counted complete.
+The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Sixteen native modules are staged, including the complete grammar, operational witnesses, prediction, source binding, independent external analysis, full validation assembly and source-bound product/constructor proofs. Compilation, axiom audits, remaining general correspondence and native output comparisons remain pending. This entry is not counted complete.
 
 Pinned V3: claims/SFT-CHEM-CONFORMER-GENERATION-EQUIVALENCE-005/execution.py; sft/chemistry/conformer_generation_equivalence_law_v1.py, FiniteMolecularGraph, HeldRotor, HeldTorsionAlphabet, GraphAutomorphism, finite_graph_automorphisms, generate_conformer_assignments, _apply_action, conformer_census and butane_four_site_census. Native: SFT/Chemistry/ConformerCarrier.lean, ConformerAssignments.lean and ConformerCensus.lean; reused MolecularGraphEnumeration.permutations. Original evidence: verification/TURN1290_CONFORMER_ORIGINAL. Timeline: TURN1290.
 
@@ -35129,3 +35129,18 @@ Here Tmin, Trotation and Tenergy are the original exact terminology tests concer
 The prediction is sealed before targets are released. The target custodian retains the original development-observed designation. The isolation certificate binds the interpreter, programme, input manifest, target identity, comparison implementation, prediction, output and trace. The custody certificate binds the registration, target identity, prediction and release manifest. The returned twelve-field empirical record includes both certificates and the sixteen original measurement/control messages. Native full-field comparison and axiom audits remain pending.
 
 Native references: SFT/Chemistry/ConformerComparison.lean, compare, controls and analysisPassed; ConformerExperiment.lean, registration, envelope and validateSpec; ConformerValidation.lean, validate, isolation and custodyCertificate. Original source: pinned conformer_generation_equivalence_validation_v1.py, ConformerGenerationEquivalenceValidator.validate. Timeline: TURN1293.
+
+For accepted torsion alphabets A₁,…,Aₖ, complete generation is the ordered Cartesian product Ωₖ=A₁×⋯×Aₖ. The recursive construction is
+
+  Ω₀ = {()},    Ωₖ₊₁ = ⋃ₐ∈A₁ {(a,w) : w∈Ωₖ},
+  |Ω₀| = 1,    |Ωₖ₊₁| = |A₁|·|Ωₖ|.
+
+Membership is equivalent to selecting one retained state from every corresponding alphabet. Within each prefix block, equality of (a,w) and (a,w′) reduces to w=w′. Between different prefix blocks, equality would force a=b, contrary to the constructor's distinct-state guard. Induction therefore gives generation without duplicates. The guard itself compares the cardinality after duplicate removal with the original cardinality: each retained fresh state contributes one and a repeated state contributes none. Equality of the two cardinalities excludes every repeated state. This connects nonduplication to the original alphabet admission operation.
+
+The census constructor preserves the graph, ordered rotors, alphabets, complete automorphism list, generated assignments and ordered classes. With F the concatenation of all returned classes, its original partition checks are
+
+  |unique(F)| = |F|,    F ⊆ Ω,    Ω ⊆ F.
+
+Its other guards require a nonempty rotor list, equal rotor/alphabet lengths and nonempty assignment and class lists. These constructor conditions are retained separately from the derivation of the orbit traversal. Native compilation and axiom audits of these source-bound statements remain pending.
+
+Original source: sft/chemistry/conformer_generation_equivalence_law_v1.py, HeldTorsionAlphabet.__post_init__, generate_conformer_assignments and ExactConformerCensus.__post_init__, pinned to V3 commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native references: ConformerUniqueness.generatedExactlyOnce; ConformerAlphabetProofs.checkedStatesDistinct, acceptedInputStatesDistinct and acceptedStatesRetained; ConformerGenerationClosure.admittedProductCompleteAndUnique; ConformerPartition.acceptedFields, acceptedRotorGuard, acceptedNonemptyGuard and acceptedPartitionGuard. Timeline: TURN1294.

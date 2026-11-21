@@ -1,0 +1,858 @@
+{
+  "updated_at": "2026-11-21T11:47:48.400407+00:00",
+  "sections_read": [
+    275,
+    276,
+    277
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "records": [
+    {
+      "section": 275,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/Simulation.lean",
+          "sha256": "de36400df4f3635318a6fd8fcfefa90b9835b941c842cbba6145a5b61b324bc4",
+          "declarations": [
+            "SFT.Computation.Simulation.Model",
+            "SFT.Computation.Simulation.Report",
+            "SFT.Computation.Simulation.observe",
+            "SFT.Computation.Simulation.simulate",
+            "SFT.Computation.Simulation.observationLength",
+            "SFT.Computation.Simulation.simulationSource",
+            "SFT.Computation.Simulation.executionCertificate",
+            "SFT.Computation.Simulation.completeObservationCount",
+            "SFT.Computation.Simulation.missingObservationRejected",
+            "SFT.Computation.Simulation.ObservationRows",
+            "SFT.Computation.Simulation.observationReplay",
+            "SFT.Computation.Simulation.observationReconstruction",
+            "SFT.Computation.Simulation.observationComposition",
+            "SFT.Computation.Simulation.exactSimulation",
+            "SFT.Computation.Simulation.composedSimulation",
+            "SFT.Computation.Simulation.comparisonAccepted",
+            "SFT.Computation.Simulation.comparisonBoundary",
+            "SFT.Computation.Simulation.successorSimulation",
+            "SFT.Computation.Simulation.observationExtension",
+            "SFT.Computation.Simulation.simulationExtension",
+            "SFT.Computation.Simulation.registeredObservation",
+            "SFT.Computation.Simulation.simulationStates"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.Simulation.observationLength",
+            "SFT.Computation.Simulation.simulationSource",
+            "SFT.Computation.Simulation.executionCertificate",
+            "SFT.Computation.Simulation.completeObservationCount",
+            "SFT.Computation.Simulation.missingObservationRejected",
+            "SFT.Computation.Simulation.observationReplay",
+            "SFT.Computation.Simulation.observationReconstruction",
+            "SFT.Computation.Simulation.observationComposition",
+            "SFT.Computation.Simulation.exactSimulation",
+            "SFT.Computation.Simulation.composedSimulation",
+            "SFT.Computation.Simulation.comparisonBoundary",
+            "SFT.Computation.Simulation.successorSimulation",
+            "SFT.Computation.Simulation.observationExtension",
+            "SFT.Computation.Simulation.simulationExtension",
+            "SFT.Computation.Simulation.registeredObservation",
+            "SFT.Computation.Simulation.simulationStates"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/SimulationGrammar.lean",
+          "sha256": "1a886a20054d19566dd02f61abde4752aad473398aded880b0fadb2359f9aeab",
+          "declarations": [
+            "SFT.Computation.SimulationGrammar.Model",
+            "SFT.Computation.SimulationGrammar.modelName",
+            "SFT.Computation.SimulationGrammar.Inputs",
+            "SFT.Computation.SimulationGrammar.inputsName",
+            "SFT.Computation.SimulationGrammar.Operation",
+            "SFT.Computation.SimulationGrammar.operationName",
+            "SFT.Computation.SimulationGrammar.Error",
+            "SFT.Computation.SimulationGrammar.errorName",
+            "SFT.Computation.SimulationGrammar.Closure",
+            "SFT.Computation.SimulationGrammar.closureName",
+            "SFT.Computation.SimulationGrammar.Validation",
+            "SFT.Computation.SimulationGrammar.validationName",
+            "SFT.Computation.SimulationGrammar.Generality",
+            "SFT.Computation.SimulationGrammar.generalityName",
+            "SFT.Computation.SimulationGrammar.Addition",
+            "SFT.Computation.SimulationGrammar.additionName",
+            "SFT.Computation.SimulationGrammar.Candidate",
+            "SFT.Computation.SimulationGrammar.sourceFields",
+            "SFT.Computation.SimulationGrammar.candidateId",
+            "SFT.Computation.SimulationGrammar.exactForm",
+            "SFT.Computation.SimulationGrammar.survivorId",
+            "SFT.Computation.SimulationGrammar.survives",
+            "SFT.Computation.SimulationGrammar.criteriaDecision",
+            "SFT.Computation.SimulationGrammar.decisionReason",
+            "SFT.Computation.SimulationGrammar.generationRule",
+            "SFT.Computation.SimulationGrammar.grammarBoundary",
+            "SFT.Computation.SimulationGrammar.candidates",
+            "SFT.Computation.SimulationGrammar.survivor",
+            "SFT.Computation.SimulationGrammar.generatedCardinality",
+            "SFT.Computation.SimulationGrammar.candidatesComplete",
+            "SFT.Computation.SimulationGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.SimulationGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.SimulationGrammar.uniqueSurvivor",
+            "SFT.Computation.SimulationGrammar.survivorAccepted",
+            "SFT.Computation.SimulationGrammar.ExactCriteria",
+            "SFT.Computation.SimulationGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.SimulationGrammar.model_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.inputs_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.operation_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.error_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.closure_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.validation_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.generality_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.SimulationGrammar.generatedCardinality",
+            "SFT.Computation.SimulationGrammar.candidatesComplete",
+            "SFT.Computation.SimulationGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.SimulationGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.SimulationGrammar.uniqueSurvivor",
+            "SFT.Computation.SimulationGrammar.survivorAccepted",
+            "SFT.Computation.SimulationGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.SimulationGrammar.model_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.inputs_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.operation_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.error_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.closure_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.validation_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.generality_rejected_rejected",
+            "SFT.Computation.SimulationGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/SimulationWitnesses.lean",
+          "sha256": "ce5dc9ca5c5bf8f6f744c179253897e03c64ac0928e3f18ac36ecbad9f9d15b5",
+          "declarations": [
+            "SFT.Computation.SimulationWitnesses.Witness",
+            "SFT.Computation.SimulationWitnesses.checks",
+            "SFT.Computation.SimulationWitnesses.witnesses",
+            "SFT.Computation.SimulationWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.SimulationWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/SimulationControls.lean",
+          "sha256": "5dacfa5ec4c3bdd10edfbb33b16a2da8612322e5eb1d92e9d98ea05ebe763314",
+          "declarations": [
+            "SFT.Computation.SimulationControls.laws",
+            "SFT.Computation.SimulationControls.exclusions",
+            "SFT.Computation.SimulationControls.closureValue",
+            "SFT.Computation.SimulationControls.falseCandidate",
+            "SFT.Computation.SimulationControls.survivorIds",
+            "SFT.Computation.SimulationControls.distinctIdentifiers",
+            "SFT.Computation.SimulationControls.falsePremise",
+            "SFT.Computation.SimulationControls.tamperedSource",
+            "SFT.Computation.SimulationControls.tamperedArtifact",
+            "SFT.Computation.SimulationControls.boundary",
+            "SFT.Computation.SimulationControls.falsePremisePassed",
+            "SFT.Computation.SimulationControls.boundaryPassed",
+            "SFT.Computation.SimulationControls.controlRecords",
+            "SFT.Computation.SimulationControls.resultData",
+            "SFT.Computation.SimulationControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.SimulationControls.falsePremisePassed",
+            "SFT.Computation.SimulationControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/SimulationEvidence.lean",
+          "sha256": "d1cbddc11e6857dbb4df062bc31569329de41d51c65018397dcd86a69b030583",
+          "declarations": [
+            "SFT.Computation.SimulationEvidence.candidateRecord",
+            "SFT.Computation.SimulationEvidence.completenessRecord",
+            "SFT.Computation.SimulationEvidence.registrationData",
+            "SFT.Computation.SimulationEvidence.registration",
+            "SFT.Computation.SimulationEvidence.generatedCandidateData",
+            "SFT.Computation.SimulationEvidence.censusData",
+            "SFT.Computation.SimulationEvidence.census",
+            "SFT.Computation.SimulationEvidence.decisionData",
+            "SFT.Computation.SimulationEvidence.decision",
+            "SFT.Computation.SimulationEvidence.decideCandidate",
+            "SFT.Computation.SimulationEvidence.closureData",
+            "SFT.Computation.SimulationEvidence.closure",
+            "SFT.Computation.SimulationEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.SimulationEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.SimulationEvidence.registrationHasNoAxioms",
+            "SFT.Computation.SimulationEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.SimulationEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.SimulationEvidence.why",
+            "SFT.Computation.SimulationEvidence.derivation",
+            "SFT.Computation.SimulationEvidence.check",
+            "SFT.Computation.SimulationEvidence.limitations",
+            "SFT.Computation.SimulationEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.SimulationEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.SimulationEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.SimulationEvidence.registrationHasNoAxioms",
+            "SFT.Computation.SimulationEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.SimulationEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_333_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "7d9810434b00f51a4b51be706b35907644d3ec94694245a26ef15593a0a681db",
+        "matching_theorems": 39
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_333_SIMULATION_COMPLETION.json",
+          "sha256": "71a96fd6e3db3c5fd38d6ef4c48e33e569b9072d37383e9261148ed89c789ee7",
+          "result": {
+            "claim_id": "SFT-COMP-SCI-SIMULATION-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/scientific_computation/simulation/law.py": "7ed32e34e667c421e39818fee5a768b8c2158bb7fbf39194d63f663816bc21fe",
+              "sft/information_science/encoding_decoding/law.py": "9579d9c4804044271ad96146c54947e9bb4363b9528219275468770c1e28fd4f",
+              "claims/SFT-COMP-SCI-SIMULATION-001/WHY_DERIVATION_CHECK.md": "26067b2d9e6963fe9d831fcfe59ec2c0deab7dc9ca7ee74302d4878c4cba6014",
+              "claims/SFT-COMP-SCI-SIMULATION-001/registration.json": "fa53825502632f38c3ddb58c7b0b5cf5a7be3524facf8ad6c3341572ee474cdc",
+              "claims/SFT-COMP-SCI-SIMULATION-001/execution.py": "3d2d038876ddf991e4bc6d6ef159b47d1682f44870e25f3667ac660d49f75a4d",
+              "claims/SFT-COMP-SCI-SIMULATION-001/independent_validator.py": "59121d12c170f6b18bff68df6b8124fced8c6381963cb5b0e308adb0c6fae19b",
+              "claims/SFT-COMP-SCI-SIMULATION-001/certificate.json": "fb78e86fad92b56b3cae390705ec2cb08f44e1758abde0b66510517e2a618a91"
+            },
+            "components": {
+              "admitted execution": "Model carries original state-system admission and exact observation map with unique keys. simulationSource/executionCertificate reconstruct original run/Execution;simulationStates proves every visited state lies in registered carrier.",
+              "complete observation source": "ObservationRows and replay/reconstruction retain every actual source lookup in order. completeObservationCount gives one observation for every state,including initial. missingObservationRejected halts omitted visited observations;registeredObservation proves source map membership.",
+              "composition/successor/extension": "composedSimulation preserves serial state and observation traces;successorSimulation appends actual next state/observation. simulationExtension preserves every accepted report under admitted retained states/transitions and observations.",
+              "comparison boundary": "comparisonAccepted/comparisonBoundary use only the declared observation/external-trace relation. This proves a registered model consequence,not an empirical natural-law claim.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-SCI-SYMBOLIC-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-SCI-SYMBOLIC-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 1280,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_333_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_333_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_333_PROGRAM_REPORT.json",
+          "sha256": "8dbc96473d10b9206493aea03551dbe6fb07d3e0a4848993675dbdb7d9b9ad16",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:c8e683c02a890d93d37979d9946e396fba5e64c5789dbdd9d1f08c65f97c7e45",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original Simulation registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    },
+    {
+      "section": 276,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/ComputationalDynamics.lean",
+          "sha256": "31c13785455d190e65be384d2833be99b27b957e9c90dadb61614005fa95fe6d",
+          "declarations": [
+            "SFT.Computation.ComputationalDynamics.Model",
+            "SFT.Computation.ComputationalDynamics.Orbit",
+            "SFT.Computation.ComputationalDynamics.admitOrbit",
+            "SFT.Computation.ComputationalDynamics.orbitSource",
+            "SFT.Computation.ComputationalDynamics.orbitReconstruction",
+            "SFT.Computation.ComputationalDynamics.identityOrbit",
+            "SFT.Computation.ComputationalDynamics.noReturnExactlyDistinct",
+            "SFT.Computation.ComputationalDynamics.returnedOrbit",
+            "SFT.Computation.ComputationalDynamics.fixedTerminal",
+            "SFT.Computation.ComputationalDynamics.preservedLedger",
+            "SFT.Computation.ComputationalDynamics.orbitInvariant",
+            "SFT.Computation.ComputationalDynamics.perturbationCertificate",
+            "SFT.Computation.ComputationalDynamics.composeOrbits",
+            "SFT.Computation.ComputationalDynamics.successorOrbit",
+            "SFT.Computation.ComputationalDynamics.successorTime",
+            "SFT.Computation.ComputationalDynamics.retainedOrbit",
+            "SFT.Computation.ComputationalDynamics.predecessorDistinctions"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ComputationalDynamics.orbitSource",
+            "SFT.Computation.ComputationalDynamics.orbitReconstruction",
+            "SFT.Computation.ComputationalDynamics.identityOrbit",
+            "SFT.Computation.ComputationalDynamics.noReturnExactlyDistinct",
+            "SFT.Computation.ComputationalDynamics.returnedOrbit",
+            "SFT.Computation.ComputationalDynamics.fixedTerminal",
+            "SFT.Computation.ComputationalDynamics.preservedLedger",
+            "SFT.Computation.ComputationalDynamics.orbitInvariant",
+            "SFT.Computation.ComputationalDynamics.perturbationCertificate",
+            "SFT.Computation.ComputationalDynamics.composeOrbits",
+            "SFT.Computation.ComputationalDynamics.successorOrbit",
+            "SFT.Computation.ComputationalDynamics.successorTime",
+            "SFT.Computation.ComputationalDynamics.retainedOrbit",
+            "SFT.Computation.ComputationalDynamics.predecessorDistinctions"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ComputationalDynamicsGrammar.lean",
+          "sha256": "3d2ea6378b15be480079aba0078a285428960413e2ab74aafaf231bb8aef356d",
+          "declarations": [
+            "SFT.Computation.ComputationalDynamicsGrammar.Model",
+            "SFT.Computation.ComputationalDynamicsGrammar.modelName",
+            "SFT.Computation.ComputationalDynamicsGrammar.Inputs",
+            "SFT.Computation.ComputationalDynamicsGrammar.inputsName",
+            "SFT.Computation.ComputationalDynamicsGrammar.Operation",
+            "SFT.Computation.ComputationalDynamicsGrammar.operationName",
+            "SFT.Computation.ComputationalDynamicsGrammar.Error",
+            "SFT.Computation.ComputationalDynamicsGrammar.errorName",
+            "SFT.Computation.ComputationalDynamicsGrammar.Closure",
+            "SFT.Computation.ComputationalDynamicsGrammar.closureName",
+            "SFT.Computation.ComputationalDynamicsGrammar.Validation",
+            "SFT.Computation.ComputationalDynamicsGrammar.validationName",
+            "SFT.Computation.ComputationalDynamicsGrammar.Generality",
+            "SFT.Computation.ComputationalDynamicsGrammar.generalityName",
+            "SFT.Computation.ComputationalDynamicsGrammar.Addition",
+            "SFT.Computation.ComputationalDynamicsGrammar.additionName",
+            "SFT.Computation.ComputationalDynamicsGrammar.Candidate",
+            "SFT.Computation.ComputationalDynamicsGrammar.sourceFields",
+            "SFT.Computation.ComputationalDynamicsGrammar.candidateId",
+            "SFT.Computation.ComputationalDynamicsGrammar.exactForm",
+            "SFT.Computation.ComputationalDynamicsGrammar.survivorId",
+            "SFT.Computation.ComputationalDynamicsGrammar.survives",
+            "SFT.Computation.ComputationalDynamicsGrammar.criteriaDecision",
+            "SFT.Computation.ComputationalDynamicsGrammar.decisionReason",
+            "SFT.Computation.ComputationalDynamicsGrammar.generationRule",
+            "SFT.Computation.ComputationalDynamicsGrammar.grammarBoundary",
+            "SFT.Computation.ComputationalDynamicsGrammar.candidates",
+            "SFT.Computation.ComputationalDynamicsGrammar.survivor",
+            "SFT.Computation.ComputationalDynamicsGrammar.generatedCardinality",
+            "SFT.Computation.ComputationalDynamicsGrammar.candidatesComplete",
+            "SFT.Computation.ComputationalDynamicsGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ComputationalDynamicsGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ComputationalDynamicsGrammar.uniqueSurvivor",
+            "SFT.Computation.ComputationalDynamicsGrammar.survivorAccepted",
+            "SFT.Computation.ComputationalDynamicsGrammar.ExactCriteria",
+            "SFT.Computation.ComputationalDynamicsGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ComputationalDynamicsGrammar.model_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.inputs_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.operation_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.error_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.closure_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.validation_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.generality_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ComputationalDynamicsGrammar.generatedCardinality",
+            "SFT.Computation.ComputationalDynamicsGrammar.candidatesComplete",
+            "SFT.Computation.ComputationalDynamicsGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ComputationalDynamicsGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ComputationalDynamicsGrammar.uniqueSurvivor",
+            "SFT.Computation.ComputationalDynamicsGrammar.survivorAccepted",
+            "SFT.Computation.ComputationalDynamicsGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ComputationalDynamicsGrammar.model_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.inputs_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.operation_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.error_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.closure_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.validation_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.generality_rejected_rejected",
+            "SFT.Computation.ComputationalDynamicsGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ComputationalDynamicsWitnesses.lean",
+          "sha256": "0affb9aef60a6054ef58c6adfc1dd84e75aba1a6fc2f3f776199660a40036506",
+          "declarations": [
+            "SFT.Computation.ComputationalDynamicsWitnesses.Witness",
+            "SFT.Computation.ComputationalDynamicsWitnesses.checks",
+            "SFT.Computation.ComputationalDynamicsWitnesses.witnesses",
+            "SFT.Computation.ComputationalDynamicsWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ComputationalDynamicsWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ComputationalDynamicsControls.lean",
+          "sha256": "4394bc854eb65de7971520b9aeaf241c09e1055dc5f204c9f61ae40d5e622ec7",
+          "declarations": [
+            "SFT.Computation.ComputationalDynamicsControls.laws",
+            "SFT.Computation.ComputationalDynamicsControls.exclusions",
+            "SFT.Computation.ComputationalDynamicsControls.closureValue",
+            "SFT.Computation.ComputationalDynamicsControls.falseCandidate",
+            "SFT.Computation.ComputationalDynamicsControls.survivorIds",
+            "SFT.Computation.ComputationalDynamicsControls.distinctIdentifiers",
+            "SFT.Computation.ComputationalDynamicsControls.falsePremise",
+            "SFT.Computation.ComputationalDynamicsControls.tamperedSource",
+            "SFT.Computation.ComputationalDynamicsControls.tamperedArtifact",
+            "SFT.Computation.ComputationalDynamicsControls.boundary",
+            "SFT.Computation.ComputationalDynamicsControls.falsePremisePassed",
+            "SFT.Computation.ComputationalDynamicsControls.boundaryPassed",
+            "SFT.Computation.ComputationalDynamicsControls.controlRecords",
+            "SFT.Computation.ComputationalDynamicsControls.resultData",
+            "SFT.Computation.ComputationalDynamicsControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ComputationalDynamicsControls.falsePremisePassed",
+            "SFT.Computation.ComputationalDynamicsControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ComputationalDynamicsEvidence.lean",
+          "sha256": "1b15a5b0c576a2651cb73b682d297b9879c685294a0f590807b7d9af70897614",
+          "declarations": [
+            "SFT.Computation.ComputationalDynamicsEvidence.candidateRecord",
+            "SFT.Computation.ComputationalDynamicsEvidence.completenessRecord",
+            "SFT.Computation.ComputationalDynamicsEvidence.registrationData",
+            "SFT.Computation.ComputationalDynamicsEvidence.registration",
+            "SFT.Computation.ComputationalDynamicsEvidence.generatedCandidateData",
+            "SFT.Computation.ComputationalDynamicsEvidence.censusData",
+            "SFT.Computation.ComputationalDynamicsEvidence.census",
+            "SFT.Computation.ComputationalDynamicsEvidence.decisionData",
+            "SFT.Computation.ComputationalDynamicsEvidence.decision",
+            "SFT.Computation.ComputationalDynamicsEvidence.decideCandidate",
+            "SFT.Computation.ComputationalDynamicsEvidence.closureData",
+            "SFT.Computation.ComputationalDynamicsEvidence.closure",
+            "SFT.Computation.ComputationalDynamicsEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ComputationalDynamicsEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ComputationalDynamicsEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ComputationalDynamicsEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ComputationalDynamicsEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.ComputationalDynamicsEvidence.why",
+            "SFT.Computation.ComputationalDynamicsEvidence.derivation",
+            "SFT.Computation.ComputationalDynamicsEvidence.check",
+            "SFT.Computation.ComputationalDynamicsEvidence.limitations",
+            "SFT.Computation.ComputationalDynamicsEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ComputationalDynamicsEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ComputationalDynamicsEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ComputationalDynamicsEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ComputationalDynamicsEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ComputationalDynamicsEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_334_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "1c983676db126c81d300de06b76c37637bcd1d4691ddd997743d9d617339c891",
+        "matching_theorems": 37
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_334_COMPUTATIONAL_DYNAMICS_COMPLETION.json",
+          "sha256": "2dca5438244985bfb063c726eaf6b63a6f8d9eb0cbe4ea80007eb75945e70990",
+          "result": {
+            "claim_id": "SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/scientific_computation/computational_dynamics/law.py": "dab1e229de32709d825252046c423fc3becfc36fc05e429ca924e45200986ea9",
+              "sft/mathematics/dynamical_systems/law.py": "3e1fe87bc1b0c29ed8cfb7fe49c340e69319ed89ab2dbc07fff4ff9440c97894",
+              "claims/SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001/WHY_DERIVATION_CHECK.md": "135dc745af1378f9ee1ce92c56798c5c94915bd3b5ab401352b9f5f2c2b14311",
+              "claims/SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001/registration.json": "24b01f6a1fb4ca22d9082e9fe2cd8d1f99a22b8f7f99c36595d309bf7b1e33fe",
+              "claims/SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001/execution.py": "df8db005c3bf8b65c7c3d02313191fec3478326bc26526d9d6fcc0d09c1c6fc2",
+              "claims/SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001/independent_validator.py": "5103351727016fcc69195dda30ea85da3d8ece0e39ba640d3f36a045c005029c",
+              "claims/SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001/certificate.json": "621a1099cb7cce201cd5f3638070ed874ca84696bff56170e821a9e20cf75669"
+            },
+            "components": {
+              "admitted model and orbit": "Model retains original validDynamics relation admission without a deterministic-update restriction. orbitSource and orbitReconstruction recover every source state,registered adjacent pair,actual transitionTime and firstReturn. identityOrbit preserves original empty-One clock.",
+              "terminal and return classes": "fixedTerminal is exact original self-edge membership. noReturnExactlyDistinct and returnedOrbit prove no-return iff distinctness and the earliest ordered repeated-state cycle,including valid constituent transitions.",
+              "invariant and perturbation support": "preservedLedger and orbitInvariant prove arbitrary finite trajectory preservation in a registered closed ledger. perturbationCertificate is equivalent to actual ordered source search success for every registered perturbation;no arbitrary time or search bound.",
+              "composition successor and retention": "composeOrbits joins exact state interfaces. successorOrbit adds a registered edge;successorTime appends its actual pair clock label. retainedOrbit preserves complete reports under retained source states and relation rows. predecessorDistinctions retains exact source-to-image records.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-SCI-SIMULATION-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-SCI-SIMULATION-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 2745,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_334_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_334_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_334_PROGRAM_REPORT.json",
+          "sha256": "6393ce524cc04c91b04e714faa6d87ba97f070fb3f83527faaa6bbb3984a3aeb",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:fb8bacdb9b1b4ec965b144d3d65d72b86dd81919c721a370e797b55c99b236f1",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original ComputationalDynamics registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    },
+    {
+      "section": 277,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/InverseProblem.lean",
+          "sha256": "77f70fd17670e5f2119e31614063d5eb70d69ea9080f944a7b016a8974fc1cc5",
+          "declarations": [
+            "SFT.Computation.InverseProblem.Model",
+            "SFT.Computation.InverseProblem.predecessors",
+            "SFT.Computation.InverseProblem.predecessorExactly",
+            "SFT.Computation.InverseProblem.observationRegistered",
+            "SFT.Computation.InverseProblem.reconstruct",
+            "SFT.Computation.InverseProblem.reconstructionExactly",
+            "SFT.Computation.InverseProblem.uniqueReconstruction",
+            "SFT.Computation.InverseProblem.ambiguityPreserved",
+            "SFT.Computation.InverseProblem.reconstructedSource",
+            "SFT.Computation.InverseProblem.excludedObservation",
+            "SFT.Computation.InverseProblem.Exclusions",
+            "SFT.Computation.InverseProblem.remainingPredecessors",
+            "SFT.Computation.InverseProblem.remainingExactly",
+            "SFT.Computation.InverseProblem.undeclaredCannotExclude",
+            "SFT.Computation.InverseProblem.reconstructRemaining",
+            "SFT.Computation.InverseProblem.remainingReconstructionExactly",
+            "SFT.Computation.InverseProblem.exclusionReconstructionCertificate",
+            "SFT.Computation.InverseProblem.relationalComposition",
+            "SFT.Computation.InverseProblem.predecessorRetention",
+            "SFT.Computation.InverseProblem.singletonSource",
+            "SFT.Computation.InverseProblem.filterAgrees",
+            "SFT.Computation.InverseProblem.predecessorSuccessor"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.InverseProblem.predecessorExactly",
+            "SFT.Computation.InverseProblem.observationRegistered",
+            "SFT.Computation.InverseProblem.reconstructionExactly",
+            "SFT.Computation.InverseProblem.uniqueReconstruction",
+            "SFT.Computation.InverseProblem.ambiguityPreserved",
+            "SFT.Computation.InverseProblem.reconstructedSource",
+            "SFT.Computation.InverseProblem.excludedObservation",
+            "SFT.Computation.InverseProblem.remainingExactly",
+            "SFT.Computation.InverseProblem.undeclaredCannotExclude",
+            "SFT.Computation.InverseProblem.remainingReconstructionExactly",
+            "SFT.Computation.InverseProblem.exclusionReconstructionCertificate",
+            "SFT.Computation.InverseProblem.relationalComposition",
+            "SFT.Computation.InverseProblem.predecessorRetention",
+            "SFT.Computation.InverseProblem.singletonSource",
+            "SFT.Computation.InverseProblem.filterAgrees",
+            "SFT.Computation.InverseProblem.predecessorSuccessor"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/InverseProblemGrammar.lean",
+          "sha256": "7cbbebacdae031908c201d194d8fd2cac2859ca100a57167aa9568b12cc59a7f",
+          "declarations": [
+            "SFT.Computation.InverseProblemGrammar.Model",
+            "SFT.Computation.InverseProblemGrammar.modelName",
+            "SFT.Computation.InverseProblemGrammar.Inputs",
+            "SFT.Computation.InverseProblemGrammar.inputsName",
+            "SFT.Computation.InverseProblemGrammar.Operation",
+            "SFT.Computation.InverseProblemGrammar.operationName",
+            "SFT.Computation.InverseProblemGrammar.Error",
+            "SFT.Computation.InverseProblemGrammar.errorName",
+            "SFT.Computation.InverseProblemGrammar.Closure",
+            "SFT.Computation.InverseProblemGrammar.closureName",
+            "SFT.Computation.InverseProblemGrammar.Validation",
+            "SFT.Computation.InverseProblemGrammar.validationName",
+            "SFT.Computation.InverseProblemGrammar.Generality",
+            "SFT.Computation.InverseProblemGrammar.generalityName",
+            "SFT.Computation.InverseProblemGrammar.Addition",
+            "SFT.Computation.InverseProblemGrammar.additionName",
+            "SFT.Computation.InverseProblemGrammar.Candidate",
+            "SFT.Computation.InverseProblemGrammar.sourceFields",
+            "SFT.Computation.InverseProblemGrammar.candidateId",
+            "SFT.Computation.InverseProblemGrammar.exactForm",
+            "SFT.Computation.InverseProblemGrammar.survivorId",
+            "SFT.Computation.InverseProblemGrammar.survives",
+            "SFT.Computation.InverseProblemGrammar.criteriaDecision",
+            "SFT.Computation.InverseProblemGrammar.decisionReason",
+            "SFT.Computation.InverseProblemGrammar.generationRule",
+            "SFT.Computation.InverseProblemGrammar.grammarBoundary",
+            "SFT.Computation.InverseProblemGrammar.candidates",
+            "SFT.Computation.InverseProblemGrammar.survivor",
+            "SFT.Computation.InverseProblemGrammar.generatedCardinality",
+            "SFT.Computation.InverseProblemGrammar.candidatesComplete",
+            "SFT.Computation.InverseProblemGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.InverseProblemGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.InverseProblemGrammar.uniqueSurvivor",
+            "SFT.Computation.InverseProblemGrammar.survivorAccepted",
+            "SFT.Computation.InverseProblemGrammar.ExactCriteria",
+            "SFT.Computation.InverseProblemGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.InverseProblemGrammar.model_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.inputs_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.operation_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.error_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.closure_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.validation_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.generality_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.InverseProblemGrammar.generatedCardinality",
+            "SFT.Computation.InverseProblemGrammar.candidatesComplete",
+            "SFT.Computation.InverseProblemGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.InverseProblemGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.InverseProblemGrammar.uniqueSurvivor",
+            "SFT.Computation.InverseProblemGrammar.survivorAccepted",
+            "SFT.Computation.InverseProblemGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.InverseProblemGrammar.model_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.inputs_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.operation_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.error_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.closure_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.validation_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.generality_rejected_rejected",
+            "SFT.Computation.InverseProblemGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/InverseProblemWitnesses.lean",
+          "sha256": "61c6bb0571bdb4cc3cd6a83da7f06e7e2eaf3647423de2e3486a08f53e741dd6",
+          "declarations": [
+            "SFT.Computation.InverseProblemWitnesses.Witness",
+            "SFT.Computation.InverseProblemWitnesses.checks",
+            "SFT.Computation.InverseProblemWitnesses.witnesses",
+            "SFT.Computation.InverseProblemWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.InverseProblemWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/InverseProblemControls.lean",
+          "sha256": "cb9abd61ca42a4ba5b3696990695d3914d7c81a5d1c8bde9e1841f5cb63a805f",
+          "declarations": [
+            "SFT.Computation.InverseProblemControls.laws",
+            "SFT.Computation.InverseProblemControls.exclusions",
+            "SFT.Computation.InverseProblemControls.closureValue",
+            "SFT.Computation.InverseProblemControls.falseCandidate",
+            "SFT.Computation.InverseProblemControls.survivorIds",
+            "SFT.Computation.InverseProblemControls.distinctIdentifiers",
+            "SFT.Computation.InverseProblemControls.falsePremise",
+            "SFT.Computation.InverseProblemControls.tamperedSource",
+            "SFT.Computation.InverseProblemControls.tamperedArtifact",
+            "SFT.Computation.InverseProblemControls.boundary",
+            "SFT.Computation.InverseProblemControls.falsePremisePassed",
+            "SFT.Computation.InverseProblemControls.boundaryPassed",
+            "SFT.Computation.InverseProblemControls.controlRecords",
+            "SFT.Computation.InverseProblemControls.resultData",
+            "SFT.Computation.InverseProblemControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.InverseProblemControls.falsePremisePassed",
+            "SFT.Computation.InverseProblemControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/InverseProblemEvidence.lean",
+          "sha256": "a79a8d1385256107fb2d7744a7d5f9773e0af12e58d77b7d36e48ea8af73f21b",
+          "declarations": [
+            "SFT.Computation.InverseProblemEvidence.candidateRecord",
+            "SFT.Computation.InverseProblemEvidence.completenessRecord",
+            "SFT.Computation.InverseProblemEvidence.registrationData",
+            "SFT.Computation.InverseProblemEvidence.registration",
+            "SFT.Computation.InverseProblemEvidence.generatedCandidateData",
+            "SFT.Computation.InverseProblemEvidence.censusData",
+            "SFT.Computation.InverseProblemEvidence.census",
+            "SFT.Computation.InverseProblemEvidence.decisionData",
+            "SFT.Computation.InverseProblemEvidence.decision",
+            "SFT.Computation.InverseProblemEvidence.decideCandidate",
+            "SFT.Computation.InverseProblemEvidence.closureData",
+            "SFT.Computation.InverseProblemEvidence.closure",
+            "SFT.Computation.InverseProblemEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.InverseProblemEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.InverseProblemEvidence.registrationHasNoAxioms",
+            "SFT.Computation.InverseProblemEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.InverseProblemEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.InverseProblemEvidence.why",
+            "SFT.Computation.InverseProblemEvidence.derivation",
+            "SFT.Computation.InverseProblemEvidence.check",
+            "SFT.Computation.InverseProblemEvidence.limitations",
+            "SFT.Computation.InverseProblemEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.InverseProblemEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.InverseProblemEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.InverseProblemEvidence.registrationHasNoAxioms",
+            "SFT.Computation.InverseProblemEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.InverseProblemEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_335_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "a8f37b74842bad761c3d8c222a3bcf0a6e4233c91b52c9fa77fd479f39ecaa61",
+        "matching_theorems": 39
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_335_INVERSE_PROBLEM_COMPLETION.json",
+          "sha256": "46d6cf4c22309ea5cbfba772f8b1c1f20dfa8dd628799a511e168e16c9653163",
+          "result": {
+            "claim_id": "SFT-COMP-SCI-INVERSE-PROBLEM-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/scientific_computation/inverse_problem/law.py": "3b3f1fbe0291d8404508f61961c171b56b1f52dd1f65e9e68c924daa00a6a4df",
+              "sft/mathematics/discrete_mathematics/law.py": "a7928796f5d4e2e37ede151360fdd19df76edcb4d5110fc9997182698e62cfc1",
+              "claims/SFT-COMP-SCI-INVERSE-PROBLEM-001/WHY_DERIVATION_CHECK.md": "328c50da237d87e906e2443bceb5639375ff6772cbd3195f212c764b824193cc",
+              "claims/SFT-COMP-SCI-INVERSE-PROBLEM-001/registration.json": "da1a3cd054aa1765f5280064e77c00158dded29d3de1d2e39615f4f533f0d50d",
+              "claims/SFT-COMP-SCI-INVERSE-PROBLEM-001/execution.py": "4a028e8c556243c4291d8b6b025496ea6895a440894eb7ab5b9f59f57bd475d5",
+              "claims/SFT-COMP-SCI-INVERSE-PROBLEM-001/independent_validator.py": "ba8e58ab8973f97f2531c5884015e52b77b1aaea3446ae2afee636a6f4720acf",
+              "claims/SFT-COMP-SCI-INVERSE-PROBLEM-001/certificate.json": "ebc85b84c9c8cf66924979193c024ed4886598fcf7681a11f4f656f3b9ccc3c7"
+            },
+            "components": {
+              "general forward relation": "Model uses original generatedCollection and generatedRelation over complete canonical forms,without imposing a total single-valued map. predecessors retains every possible source in original source order;predecessorExactly and observationRegistered prove exact relation and endpoint correspondence.",
+              "identifiability and ambiguity": "reconstructionExactly,uniqueReconstruction and reconstructedSource prove precisely singleton-fibre reconstruction. ambiguityPreserved retains two distinct possible sources;excludedObservation rejects unregistered observations.",
+              "registered exclusions": "Exclusions retains declared and applied forms with an explicit registration certificate. remainingExactly retains the full eligible fibre;undeclaredCannotExclude proves no unregistered exclusion can remove a possible source. exclusionReconstructionCertificate gives the exact remaining singleton and every retained predecessor.",
+              "composition base successor": "relationalComposition reconstructs an actual intermediate relation witness and proves the converse. singletonSource supplies structural base;predecessorRetention and predecessorSuccessor preserve earlier rows and append exactly the newly generated source membership.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 1984,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_335_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_335_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_335_PROGRAM_REPORT.json",
+          "sha256": "de29b3e4f7254c651f8ee0560485fc0a39fa45982b9de58792d8f0c5e07bde64",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:ebbe50d370311564302b91465ef3dcd85324bc6b44c2e4865abf130155e60ad0",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original InverseProblem registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    }
+  ],
+  "original_source_files": [
+    {
+      "path": "claims/SFT-COMP-SCI-SIMULATION-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "26067b2d9e6963fe9d831fcfe59ec2c0deab7dc9ca7ee74302d4878c4cba6014"
+    },
+    {
+      "path": "claims/SFT-COMP-SCI-COMPUTATIONAL-DYNAMICS-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "135dc745af1378f9ee1ce92c56798c5c94915bd3b5ab401352b9f5f2c2b14311"
+    },
+    {
+      "path": "claims/SFT-COMP-SCI-INVERSE-PROBLEM-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "328c50da237d87e906e2443bceb5639375ff6772cbd3195f212c764b824193cc"
+    }
+  ],
+  "source_correspondence": "Full Simulation/ComputationalDynamics/InverseProblem proof bodies read. Complete companion comparison against ExactApproximate has no code differences and every changed literal read. Complete original three WHY diffs against the fully inspected ExactApproximate document read. Retained333\u2013335 completion/program reports reused. Generated case suites not rerun or newly read in full.",
+  "new_proofs": 0,
+  "new_builds": 0,
+  "citations_added": [
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SimulationGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SimulationWitnesses.lean#L20",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ComputationalDynamicsGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ComputationalDynamicsWitnesses.lean#L20",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/InverseProblemGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/InverseProblemWitnesses.lean#L20"
+  ],
+  "status": "Sections275\u2013277 reviewed; whole-paper review incomplete"
+}

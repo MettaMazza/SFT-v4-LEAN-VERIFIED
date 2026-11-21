@@ -1,0 +1,870 @@
+{
+  "updated_at": "2026-11-19T10:31:49.793325+00:00",
+  "sections_read": [
+    272,
+    273,
+    274
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "records": [
+    {
+      "section": 272,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/Discretization.lean",
+          "sha256": "6947dc487eac9022afccb38d137c322ea8543d8081f965f3f11e7f30a472358d",
+          "declarations": [
+            "SFT.Computation.Discretization.Model",
+            "SFT.Computation.Discretization.OperatorRow",
+            "SFT.Computation.Discretization.localOperator",
+            "SFT.Computation.Discretization.operators",
+            "SFT.Computation.Discretization.localReconstruction",
+            "SFT.Computation.Discretization.completeSourceRelation",
+            "SFT.Computation.Discretization.exactLocalOperator",
+            "SFT.Computation.Discretization.missingSourceRejected",
+            "SFT.Computation.Discretization.retainedOperator",
+            "SFT.Computation.Discretization.completeCoverage",
+            "SFT.Computation.Discretization.declaredOperatorExists",
+            "SFT.Computation.Discretization.allOperatorsExist",
+            "SFT.Computation.Discretization.modelOperatorsExist",
+            "SFT.Computation.Discretization.closedLedger",
+            "SFT.Computation.Discretization.closedLedgerExists",
+            "SFT.Computation.Discretization.closedLedgerMeaning",
+            "SFT.Computation.Discretization.retainedLedger",
+            "SFT.Computation.Discretization.retainedLedgerMeaning",
+            "SFT.Computation.Discretization.Refinement",
+            "SFT.Computation.Discretization.refinementRetainsDistinction",
+            "SFT.Computation.Discretization.refinementClosedContained",
+            "SFT.Computation.Discretization.operatorsComposition",
+            "SFT.Computation.Discretization.appendOperator"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.Discretization.localReconstruction",
+            "SFT.Computation.Discretization.completeSourceRelation",
+            "SFT.Computation.Discretization.exactLocalOperator",
+            "SFT.Computation.Discretization.missingSourceRejected",
+            "SFT.Computation.Discretization.retainedOperator",
+            "SFT.Computation.Discretization.completeCoverage",
+            "SFT.Computation.Discretization.declaredOperatorExists",
+            "SFT.Computation.Discretization.allOperatorsExist",
+            "SFT.Computation.Discretization.modelOperatorsExist",
+            "SFT.Computation.Discretization.closedLedgerExists",
+            "SFT.Computation.Discretization.closedLedgerMeaning",
+            "SFT.Computation.Discretization.retainedLedgerMeaning",
+            "SFT.Computation.Discretization.refinementRetainsDistinction",
+            "SFT.Computation.Discretization.refinementClosedContained",
+            "SFT.Computation.Discretization.operatorsComposition",
+            "SFT.Computation.Discretization.appendOperator"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/DiscretizationGrammar.lean",
+          "sha256": "922dc99b10dfacfcd95952daaa95d910526b136278cc55aab006d2f134c6c8f2",
+          "declarations": [
+            "SFT.Computation.DiscretizationGrammar.Model",
+            "SFT.Computation.DiscretizationGrammar.modelName",
+            "SFT.Computation.DiscretizationGrammar.Inputs",
+            "SFT.Computation.DiscretizationGrammar.inputsName",
+            "SFT.Computation.DiscretizationGrammar.Operation",
+            "SFT.Computation.DiscretizationGrammar.operationName",
+            "SFT.Computation.DiscretizationGrammar.Error",
+            "SFT.Computation.DiscretizationGrammar.errorName",
+            "SFT.Computation.DiscretizationGrammar.Closure",
+            "SFT.Computation.DiscretizationGrammar.closureName",
+            "SFT.Computation.DiscretizationGrammar.Validation",
+            "SFT.Computation.DiscretizationGrammar.validationName",
+            "SFT.Computation.DiscretizationGrammar.Generality",
+            "SFT.Computation.DiscretizationGrammar.generalityName",
+            "SFT.Computation.DiscretizationGrammar.Addition",
+            "SFT.Computation.DiscretizationGrammar.additionName",
+            "SFT.Computation.DiscretizationGrammar.Candidate",
+            "SFT.Computation.DiscretizationGrammar.sourceFields",
+            "SFT.Computation.DiscretizationGrammar.candidateId",
+            "SFT.Computation.DiscretizationGrammar.exactForm",
+            "SFT.Computation.DiscretizationGrammar.survivorId",
+            "SFT.Computation.DiscretizationGrammar.survives",
+            "SFT.Computation.DiscretizationGrammar.criteriaDecision",
+            "SFT.Computation.DiscretizationGrammar.decisionReason",
+            "SFT.Computation.DiscretizationGrammar.generationRule",
+            "SFT.Computation.DiscretizationGrammar.grammarBoundary",
+            "SFT.Computation.DiscretizationGrammar.candidates",
+            "SFT.Computation.DiscretizationGrammar.survivor",
+            "SFT.Computation.DiscretizationGrammar.generatedCardinality",
+            "SFT.Computation.DiscretizationGrammar.candidatesComplete",
+            "SFT.Computation.DiscretizationGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.DiscretizationGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.DiscretizationGrammar.uniqueSurvivor",
+            "SFT.Computation.DiscretizationGrammar.survivorAccepted",
+            "SFT.Computation.DiscretizationGrammar.ExactCriteria",
+            "SFT.Computation.DiscretizationGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.DiscretizationGrammar.model_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.inputs_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.operation_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.error_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.closure_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.validation_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.generality_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.DiscretizationGrammar.generatedCardinality",
+            "SFT.Computation.DiscretizationGrammar.candidatesComplete",
+            "SFT.Computation.DiscretizationGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.DiscretizationGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.DiscretizationGrammar.uniqueSurvivor",
+            "SFT.Computation.DiscretizationGrammar.survivorAccepted",
+            "SFT.Computation.DiscretizationGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.DiscretizationGrammar.model_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.inputs_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.operation_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.error_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.closure_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.validation_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.generality_rejected_rejected",
+            "SFT.Computation.DiscretizationGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/DiscretizationWitnesses.lean",
+          "sha256": "90417abbc0640feb06aa7618661fb756e50b564b6baaa04703eb897cbe32654a",
+          "declarations": [
+            "SFT.Computation.DiscretizationWitnesses.Witness",
+            "SFT.Computation.DiscretizationWitnesses.checks",
+            "SFT.Computation.DiscretizationWitnesses.witnesses",
+            "SFT.Computation.DiscretizationWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.DiscretizationWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/DiscretizationControls.lean",
+          "sha256": "ce04a30de7c2b8a908c45fed4f51275e1fb0fc1afbdb7e6b6b5e9343a7560b35",
+          "declarations": [
+            "SFT.Computation.DiscretizationControls.laws",
+            "SFT.Computation.DiscretizationControls.exclusions",
+            "SFT.Computation.DiscretizationControls.closureValue",
+            "SFT.Computation.DiscretizationControls.falseCandidate",
+            "SFT.Computation.DiscretizationControls.survivorIds",
+            "SFT.Computation.DiscretizationControls.distinctIdentifiers",
+            "SFT.Computation.DiscretizationControls.falsePremise",
+            "SFT.Computation.DiscretizationControls.tamperedSource",
+            "SFT.Computation.DiscretizationControls.tamperedArtifact",
+            "SFT.Computation.DiscretizationControls.boundary",
+            "SFT.Computation.DiscretizationControls.falsePremisePassed",
+            "SFT.Computation.DiscretizationControls.boundaryPassed",
+            "SFT.Computation.DiscretizationControls.controlRecords",
+            "SFT.Computation.DiscretizationControls.resultData",
+            "SFT.Computation.DiscretizationControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.DiscretizationControls.falsePremisePassed",
+            "SFT.Computation.DiscretizationControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/DiscretizationEvidence.lean",
+          "sha256": "18888e8cc500d3a43c3e3ca43350efb8a93e0fef47e1df1dc06256b22a5e4209",
+          "declarations": [
+            "SFT.Computation.DiscretizationEvidence.candidateRecord",
+            "SFT.Computation.DiscretizationEvidence.completenessRecord",
+            "SFT.Computation.DiscretizationEvidence.registrationData",
+            "SFT.Computation.DiscretizationEvidence.registration",
+            "SFT.Computation.DiscretizationEvidence.generatedCandidateData",
+            "SFT.Computation.DiscretizationEvidence.censusData",
+            "SFT.Computation.DiscretizationEvidence.census",
+            "SFT.Computation.DiscretizationEvidence.decisionData",
+            "SFT.Computation.DiscretizationEvidence.decision",
+            "SFT.Computation.DiscretizationEvidence.decideCandidate",
+            "SFT.Computation.DiscretizationEvidence.closureData",
+            "SFT.Computation.DiscretizationEvidence.closure",
+            "SFT.Computation.DiscretizationEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.DiscretizationEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.DiscretizationEvidence.registrationHasNoAxioms",
+            "SFT.Computation.DiscretizationEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.DiscretizationEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.DiscretizationEvidence.why",
+            "SFT.Computation.DiscretizationEvidence.derivation",
+            "SFT.Computation.DiscretizationEvidence.check",
+            "SFT.Computation.DiscretizationEvidence.limitations",
+            "SFT.Computation.DiscretizationEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.DiscretizationEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.DiscretizationEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.DiscretizationEvidence.registrationHasNoAxioms",
+            "SFT.Computation.DiscretizationEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.DiscretizationEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_330_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "7fce65f7f8904cce674786e79d6809569d0d54a6dcab038bb5a7fe6b1b31a7c7",
+        "matching_theorems": 39
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_330_DISCRETIZATION_COMPLETION.json",
+          "sha256": "36baf7220c764e9791d45a09948e8184499a09e4b4b1dec30eb7a6be4090faaa",
+          "result": {
+            "claim_id": "SFT-COMP-SCI-DISCRETIZATION-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/scientific_computation/discretization/law.py": "17dc0b83d76ff978b167bff397cf382ece43a8d887d66fbc7b44f708613a37cd",
+              "sft/information_science/encoding_decoding/law.py": "9579d9c4804044271ad96146c54947e9bb4363b9528219275468770c1e28fd4f",
+              "claims/SFT-COMP-SCI-DISCRETIZATION-001/WHY_DERIVATION_CHECK.md": "0e3a13bb385c9a1dd92f0253b68e0de292b4f259ed6140c116a3a047f3e1194c",
+              "claims/SFT-COMP-SCI-DISCRETIZATION-001/registration.json": "cffe886daf318f9984a66ca1b55d8ba3fd2fd348695bd592081e562faf325b2c",
+              "claims/SFT-COMP-SCI-DISCRETIZATION-001/execution.py": "1d6d737ea04eeeb8649cd8a0b6ae1ab60ee511aa1ad1146ddee47477707eb615",
+              "claims/SFT-COMP-SCI-DISCRETIZATION-001/independent_validator.py": "79cef573223f5e43da1e7a40b90e046bfa2a0e6395dacf84fdf723bebfe7fdfc",
+              "claims/SFT-COMP-SCI-DISCRETIZATION-001/certificate.json": "e409514091bd6674f0b1691a4d70145af786c16ad963eb3ebb71ded1fb9ba874"
+            },
+            "components": {
+              "source/cells/coverage": "Model retains finite source and cells,actual admitted encoding and declared relation with source endpoints. completeCoverage and modelOperatorsExist prove every source image and relation operator exists.",
+              "operators and trace": "localReconstruction recovers both source lookups;completeSourceRelation preserves every edge identity/order. missingSourceRejected halts uncovered endpoints.",
+              "distinction boundary": "closedLedgerMeaning retains exactly original closed source classes;retainedLedgerMeaning records all source pairs with distinct images. Actual pinned encoding/loss functions used without continuum or ungenerated model input.",
+              "refinement/successor": "Registered refinement projection proves earlier distinctions retained and finer closed classes contained in coarse classes. retainedOperator,operatorsComposition and appendOperator preserve earlier source traces and exact interfaces.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-SCI-ERROR-PROPAGATION-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-SCI-ERROR-PROPAGATION-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 513,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_330_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_330_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_330_PROGRAM_REPORT.json",
+          "sha256": "69c049149e7ce1154e4e90ca2d520c3526d605692760fb5c383539c044a2e46b",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:fb2079496ebb17f2dfb5cf163b7b360fee2dcbaaa0ad198198a4ee65af700d0e",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original Discretization registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    },
+    {
+      "section": 273,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/Convergence.lean",
+          "sha256": "eceac422092fc3dde470f5a36d923e040d3ff0a8590d86e2d7cfb3d9d58fc96a",
+          "declarations": [
+            "SFT.Computation.Convergence.errorClasses",
+            "SFT.Computation.Convergence.nested",
+            "SFT.Computation.Convergence.strictClassDescent",
+            "SFT.Computation.Convergence.State",
+            "SFT.Computation.Convergence.referenceRetained",
+            "SFT.Computation.Convergence.errorClassSource",
+            "SFT.Computation.Convergence.nestedMeaning",
+            "SFT.Computation.Convergence.nestedComposition",
+            "SFT.Computation.Convergence.strictClassDescentMeaning",
+            "SFT.Computation.Convergence.NestedTrace",
+            "SFT.Computation.Convergence.traceNested",
+            "SFT.Computation.Convergence.closedErrorCannotReturn",
+            "SFT.Computation.Convergence.Model",
+            "SFT.Computation.Convergence.reportAt",
+            "SFT.Computation.Convergence.step",
+            "SFT.Computation.Convergence.targetReached",
+            "SFT.Computation.Convergence.reportSource",
+            "SFT.Computation.Convergence.stepSource",
+            "SFT.Computation.Convergence.runSteps",
+            "SFT.Computation.Convergence.Steps",
+            "SFT.Computation.Convergence.stepsReplay",
+            "SFT.Computation.Convergence.stepsReconstruct",
+            "SFT.Computation.Convergence.stepsCount",
+            "SFT.Computation.Convergence.StrictTrace",
+            "SFT.Computation.Convergence.strictTraceBound",
+            "SFT.Computation.Convergence.terminalName",
+            "SFT.Computation.Convergence.run",
+            "SFT.Computation.Convergence.reachesTarget",
+            "SFT.Computation.Convergence.targetBoundary",
+            "SFT.Computation.Convergence.stepsNested",
+            "SFT.Computation.Convergence.certifiedDescent",
+            "SFT.Computation.Convergence.stepsStrict",
+            "SFT.Computation.Convergence.runSource"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.Convergence.referenceRetained",
+            "SFT.Computation.Convergence.errorClassSource",
+            "SFT.Computation.Convergence.nestedMeaning",
+            "SFT.Computation.Convergence.nestedComposition",
+            "SFT.Computation.Convergence.strictClassDescentMeaning",
+            "SFT.Computation.Convergence.traceNested",
+            "SFT.Computation.Convergence.closedErrorCannotReturn",
+            "SFT.Computation.Convergence.reportSource",
+            "SFT.Computation.Convergence.stepSource",
+            "SFT.Computation.Convergence.stepsReplay",
+            "SFT.Computation.Convergence.stepsReconstruct",
+            "SFT.Computation.Convergence.stepsCount",
+            "SFT.Computation.Convergence.strictTraceBound",
+            "SFT.Computation.Convergence.targetBoundary",
+            "SFT.Computation.Convergence.stepsNested",
+            "SFT.Computation.Convergence.stepsStrict",
+            "SFT.Computation.Convergence.runSource"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ConvergenceGrammar.lean",
+          "sha256": "936e77c68e3e5629a0bea342d6d5a42fb93407e96ea0e77a3bba805dce7c3350",
+          "declarations": [
+            "SFT.Computation.ConvergenceGrammar.Model",
+            "SFT.Computation.ConvergenceGrammar.modelName",
+            "SFT.Computation.ConvergenceGrammar.Inputs",
+            "SFT.Computation.ConvergenceGrammar.inputsName",
+            "SFT.Computation.ConvergenceGrammar.Operation",
+            "SFT.Computation.ConvergenceGrammar.operationName",
+            "SFT.Computation.ConvergenceGrammar.Error",
+            "SFT.Computation.ConvergenceGrammar.errorName",
+            "SFT.Computation.ConvergenceGrammar.Closure",
+            "SFT.Computation.ConvergenceGrammar.closureName",
+            "SFT.Computation.ConvergenceGrammar.Validation",
+            "SFT.Computation.ConvergenceGrammar.validationName",
+            "SFT.Computation.ConvergenceGrammar.Generality",
+            "SFT.Computation.ConvergenceGrammar.generalityName",
+            "SFT.Computation.ConvergenceGrammar.Addition",
+            "SFT.Computation.ConvergenceGrammar.additionName",
+            "SFT.Computation.ConvergenceGrammar.Candidate",
+            "SFT.Computation.ConvergenceGrammar.sourceFields",
+            "SFT.Computation.ConvergenceGrammar.candidateId",
+            "SFT.Computation.ConvergenceGrammar.exactForm",
+            "SFT.Computation.ConvergenceGrammar.survivorId",
+            "SFT.Computation.ConvergenceGrammar.survives",
+            "SFT.Computation.ConvergenceGrammar.criteriaDecision",
+            "SFT.Computation.ConvergenceGrammar.decisionReason",
+            "SFT.Computation.ConvergenceGrammar.generationRule",
+            "SFT.Computation.ConvergenceGrammar.grammarBoundary",
+            "SFT.Computation.ConvergenceGrammar.candidates",
+            "SFT.Computation.ConvergenceGrammar.survivor",
+            "SFT.Computation.ConvergenceGrammar.generatedCardinality",
+            "SFT.Computation.ConvergenceGrammar.candidatesComplete",
+            "SFT.Computation.ConvergenceGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ConvergenceGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ConvergenceGrammar.uniqueSurvivor",
+            "SFT.Computation.ConvergenceGrammar.survivorAccepted",
+            "SFT.Computation.ConvergenceGrammar.ExactCriteria",
+            "SFT.Computation.ConvergenceGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ConvergenceGrammar.model_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.inputs_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.operation_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.error_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.closure_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.validation_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.generality_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ConvergenceGrammar.generatedCardinality",
+            "SFT.Computation.ConvergenceGrammar.candidatesComplete",
+            "SFT.Computation.ConvergenceGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ConvergenceGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ConvergenceGrammar.uniqueSurvivor",
+            "SFT.Computation.ConvergenceGrammar.survivorAccepted",
+            "SFT.Computation.ConvergenceGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ConvergenceGrammar.model_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.inputs_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.operation_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.error_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.closure_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.validation_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.generality_rejected_rejected",
+            "SFT.Computation.ConvergenceGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ConvergenceWitnesses.lean",
+          "sha256": "4d281714ba73415e63d6057f30ccae40c92f77d4cd711a6625261b8b0afe8a6f",
+          "declarations": [
+            "SFT.Computation.ConvergenceWitnesses.Witness",
+            "SFT.Computation.ConvergenceWitnesses.checks",
+            "SFT.Computation.ConvergenceWitnesses.witnesses",
+            "SFT.Computation.ConvergenceWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ConvergenceWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ConvergenceControls.lean",
+          "sha256": "dfbb8e62bd9f8b1a60797e5855f541c841e44906ba873816a3a2a40fb76682ba",
+          "declarations": [
+            "SFT.Computation.ConvergenceControls.laws",
+            "SFT.Computation.ConvergenceControls.exclusions",
+            "SFT.Computation.ConvergenceControls.closureValue",
+            "SFT.Computation.ConvergenceControls.falseCandidate",
+            "SFT.Computation.ConvergenceControls.survivorIds",
+            "SFT.Computation.ConvergenceControls.distinctIdentifiers",
+            "SFT.Computation.ConvergenceControls.falsePremise",
+            "SFT.Computation.ConvergenceControls.tamperedSource",
+            "SFT.Computation.ConvergenceControls.tamperedArtifact",
+            "SFT.Computation.ConvergenceControls.boundary",
+            "SFT.Computation.ConvergenceControls.falsePremisePassed",
+            "SFT.Computation.ConvergenceControls.boundaryPassed",
+            "SFT.Computation.ConvergenceControls.controlRecords",
+            "SFT.Computation.ConvergenceControls.resultData",
+            "SFT.Computation.ConvergenceControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ConvergenceControls.falsePremisePassed",
+            "SFT.Computation.ConvergenceControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ConvergenceEvidence.lean",
+          "sha256": "944ac7bab27437b2e1ca4b6f588025a5b45da14bf2eed04d47356a7edbfa28e1",
+          "declarations": [
+            "SFT.Computation.ConvergenceEvidence.candidateRecord",
+            "SFT.Computation.ConvergenceEvidence.completenessRecord",
+            "SFT.Computation.ConvergenceEvidence.registrationData",
+            "SFT.Computation.ConvergenceEvidence.registration",
+            "SFT.Computation.ConvergenceEvidence.generatedCandidateData",
+            "SFT.Computation.ConvergenceEvidence.censusData",
+            "SFT.Computation.ConvergenceEvidence.census",
+            "SFT.Computation.ConvergenceEvidence.decisionData",
+            "SFT.Computation.ConvergenceEvidence.decision",
+            "SFT.Computation.ConvergenceEvidence.decideCandidate",
+            "SFT.Computation.ConvergenceEvidence.closureData",
+            "SFT.Computation.ConvergenceEvidence.closure",
+            "SFT.Computation.ConvergenceEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ConvergenceEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ConvergenceEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ConvergenceEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ConvergenceEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.ConvergenceEvidence.why",
+            "SFT.Computation.ConvergenceEvidence.derivation",
+            "SFT.Computation.ConvergenceEvidence.check",
+            "SFT.Computation.ConvergenceEvidence.limitations",
+            "SFT.Computation.ConvergenceEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ConvergenceEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ConvergenceEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ConvergenceEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ConvergenceEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ConvergenceEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_331_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "1f05eb83baabf6872e1c43756c9afcd304c619910023d95a636dfa9ad37f0129",
+        "matching_theorems": 40
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_331_CONVERGENCE_COMPLETION.json",
+          "sha256": "9e6484944d33e16af5dfe7c22f60a42cd185ce0755e9e309efab91dc64a53ff0",
+          "result": {
+            "claim_id": "SFT-COMP-SCI-CONVERGENCE-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/scientific_computation/convergence/law.py": "3f02571662ec71efda3e69abf81b5ce20ae40f80e0e4d904bfccd442712a6d29",
+              "sft/information_science/encoding_decoding/law.py": "9579d9c4804044271ad96146c54947e9bb4363b9528219275468770c1e28fd4f",
+              "claims/SFT-COMP-SCI-CONVERGENCE-001/WHY_DERIVATION_CHECK.md": "a085ef681353d7b0ac02d22dc0601e871e168ffbd4c00d481410cf0d85839a72",
+              "claims/SFT-COMP-SCI-CONVERGENCE-001/registration.json": "92dc286818c979ccdc0b562630192777bbd90b3a6e5453130abe5449e2250712",
+              "claims/SFT-COMP-SCI-CONVERGENCE-001/execution.py": "be9e30ed43039ea2ce268b87aadd00a432c995c8653ffe8661b9a096347fb9af",
+              "claims/SFT-COMP-SCI-CONVERGENCE-001/independent_validator.py": "a063f127548a7d40e45b58527269e4ccc050ea9bd6c4bf7691578bbfcb0fdd58",
+              "claims/SFT-COMP-SCI-CONVERGENCE-001/certificate.json": "a0c0bf30068bd66e75805ea54c98adb733fb48d5a9c35eafbb7812f411dfc38a"
+            },
+            "components": {
+              "exact reference and reports": "State/reportSource preserve original exact reference, registered output lookup and actual exact-error ledger. errorClassSource recovers every unresolved cell from an actual non-equal source row.",
+              "registered comparison and traces": "stepSource requires both registered refinement and comparison membership, exact before/after reports and checked nested classes. stepsReplay/reconstruct/count and runSource preserve every executable transition.",
+              "successor closure": "nestedMeaning/composition,stepsNested and closedErrorCannotReturn prove finite successor nesting and preservation of closed cells. strictClassDescentMeaning and stepsStrict/strictTraceBound prove the explicit class-cardinality descent certificate and finite bound when that checked property holds; arbitrary registered refinements are not asserted to satisfy strict descent.",
+              "target boundary": "targetReached and reachesTarget retain registered terminal identity and actual report admission;targetBoundary reconstructs target membership and successful terminal report.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-SCI-DISCRETIZATION-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-SCI-DISCRETIZATION-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 793,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_331_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_331_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_331_PROGRAM_REPORT.json",
+          "sha256": "1b815d2745177e5fcd8de0d391ca271cd5e8ff2867f955e313f3170b90bbe65c",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:119a67a6a0e8a1a61cf2acd01d62f4a442ffa9bcc4efd6a8bc93b1ff439a6d42",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original Convergence registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    },
+    {
+      "section": 274,
+      "native_modules": [
+        {
+          "path": "SFT/Computation/ScientificSymbolic.lean",
+          "sha256": "5e91a3e6e5fe459103cba267ad1fb3138326f5678b61ebc2bce3944e86c07651",
+          "declarations": [
+            "SFT.Computation.ScientificSymbolic.normalForm",
+            "SFT.Computation.ScientificSymbolic.normalizationSource",
+            "SFT.Computation.ScientificSymbolic.typedNormalization",
+            "SFT.Computation.ScientificSymbolic.Model",
+            "SFT.Computation.ScientificSymbolic.Rewrite",
+            "SFT.Computation.ScientificSymbolic.rewriteValue",
+            "SFT.Computation.ScientificSymbolic.normalizedLiteral",
+            "SFT.Computation.ScientificSymbolic.rewriteNormalization",
+            "SFT.Computation.ScientificSymbolic.TypedTrace",
+            "SFT.Computation.ScientificSymbolic.sourceTrace",
+            "SFT.Computation.ScientificSymbolic.traceTypes",
+            "SFT.Computation.ScientificSymbolic.traceNormalization",
+            "SFT.Computation.ScientificSymbolic.traceEvaluation",
+            "SFT.Computation.ScientificSymbolic.composeTraces",
+            "SFT.Computation.ScientificSymbolic.appendRewrite",
+            "SFT.Computation.ScientificSymbolic.everyRegisteredRule",
+            "SFT.Computation.ScientificSymbolic.normalizationBoundary"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ScientificSymbolic.normalizationSource",
+            "SFT.Computation.ScientificSymbolic.typedNormalization",
+            "SFT.Computation.ScientificSymbolic.rewriteValue",
+            "SFT.Computation.ScientificSymbolic.normalizedLiteral",
+            "SFT.Computation.ScientificSymbolic.rewriteNormalization",
+            "SFT.Computation.ScientificSymbolic.sourceTrace",
+            "SFT.Computation.ScientificSymbolic.traceTypes",
+            "SFT.Computation.ScientificSymbolic.traceNormalization",
+            "SFT.Computation.ScientificSymbolic.traceEvaluation",
+            "SFT.Computation.ScientificSymbolic.composeTraces",
+            "SFT.Computation.ScientificSymbolic.appendRewrite",
+            "SFT.Computation.ScientificSymbolic.everyRegisteredRule",
+            "SFT.Computation.ScientificSymbolic.normalizationBoundary"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ScientificSymbolicGrammar.lean",
+          "sha256": "7d984b8eadb45088e1a9108ea4a7d6adcc2e95fde016bd5f72dc28fc0001bb1f",
+          "declarations": [
+            "SFT.Computation.ScientificSymbolicGrammar.Model",
+            "SFT.Computation.ScientificSymbolicGrammar.modelName",
+            "SFT.Computation.ScientificSymbolicGrammar.Inputs",
+            "SFT.Computation.ScientificSymbolicGrammar.inputsName",
+            "SFT.Computation.ScientificSymbolicGrammar.Operation",
+            "SFT.Computation.ScientificSymbolicGrammar.operationName",
+            "SFT.Computation.ScientificSymbolicGrammar.Error",
+            "SFT.Computation.ScientificSymbolicGrammar.errorName",
+            "SFT.Computation.ScientificSymbolicGrammar.Closure",
+            "SFT.Computation.ScientificSymbolicGrammar.closureName",
+            "SFT.Computation.ScientificSymbolicGrammar.Validation",
+            "SFT.Computation.ScientificSymbolicGrammar.validationName",
+            "SFT.Computation.ScientificSymbolicGrammar.Generality",
+            "SFT.Computation.ScientificSymbolicGrammar.generalityName",
+            "SFT.Computation.ScientificSymbolicGrammar.Addition",
+            "SFT.Computation.ScientificSymbolicGrammar.additionName",
+            "SFT.Computation.ScientificSymbolicGrammar.Candidate",
+            "SFT.Computation.ScientificSymbolicGrammar.sourceFields",
+            "SFT.Computation.ScientificSymbolicGrammar.candidateId",
+            "SFT.Computation.ScientificSymbolicGrammar.exactForm",
+            "SFT.Computation.ScientificSymbolicGrammar.survivorId",
+            "SFT.Computation.ScientificSymbolicGrammar.survives",
+            "SFT.Computation.ScientificSymbolicGrammar.criteriaDecision",
+            "SFT.Computation.ScientificSymbolicGrammar.decisionReason",
+            "SFT.Computation.ScientificSymbolicGrammar.generationRule",
+            "SFT.Computation.ScientificSymbolicGrammar.grammarBoundary",
+            "SFT.Computation.ScientificSymbolicGrammar.candidates",
+            "SFT.Computation.ScientificSymbolicGrammar.survivor",
+            "SFT.Computation.ScientificSymbolicGrammar.generatedCardinality",
+            "SFT.Computation.ScientificSymbolicGrammar.candidatesComplete",
+            "SFT.Computation.ScientificSymbolicGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ScientificSymbolicGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ScientificSymbolicGrammar.uniqueSurvivor",
+            "SFT.Computation.ScientificSymbolicGrammar.survivorAccepted",
+            "SFT.Computation.ScientificSymbolicGrammar.ExactCriteria",
+            "SFT.Computation.ScientificSymbolicGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ScientificSymbolicGrammar.model_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.inputs_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.operation_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.error_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.closure_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.validation_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.generality_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.addition_rejected_rejected"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ScientificSymbolicGrammar.generatedCardinality",
+            "SFT.Computation.ScientificSymbolicGrammar.candidatesComplete",
+            "SFT.Computation.ScientificSymbolicGrammar.sourceDecisionMatchesCriteria",
+            "SFT.Computation.ScientificSymbolicGrammar.uniqueCriteriaSurvivor",
+            "SFT.Computation.ScientificSymbolicGrammar.uniqueSurvivor",
+            "SFT.Computation.ScientificSymbolicGrammar.survivorAccepted",
+            "SFT.Computation.ScientificSymbolicGrammar.acceptanceIffExactCriteria",
+            "SFT.Computation.ScientificSymbolicGrammar.model_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.inputs_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.operation_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.error_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.closure_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.validation_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.generality_rejected_rejected",
+            "SFT.Computation.ScientificSymbolicGrammar.addition_rejected_rejected"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ScientificSymbolicWitnesses.lean",
+          "sha256": "d748acc1f7b320e6340f6fa6bc7abb23c1a71b6820571b05d602935d59c75a62",
+          "declarations": [
+            "SFT.Computation.ScientificSymbolicWitnesses.Witness",
+            "SFT.Computation.ScientificSymbolicWitnesses.checks",
+            "SFT.Computation.ScientificSymbolicWitnesses.witnesses",
+            "SFT.Computation.ScientificSymbolicWitnesses.allWitnessesPass"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ScientificSymbolicWitnesses.allWitnessesPass"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ScientificSymbolicControls.lean",
+          "sha256": "c3fb93ccb461f6c0027bc07a6580d095f621e76a46a2391ce7caedf0cbb8bf49",
+          "declarations": [
+            "SFT.Computation.ScientificSymbolicControls.laws",
+            "SFT.Computation.ScientificSymbolicControls.exclusions",
+            "SFT.Computation.ScientificSymbolicControls.closureValue",
+            "SFT.Computation.ScientificSymbolicControls.falseCandidate",
+            "SFT.Computation.ScientificSymbolicControls.survivorIds",
+            "SFT.Computation.ScientificSymbolicControls.distinctIdentifiers",
+            "SFT.Computation.ScientificSymbolicControls.falsePremise",
+            "SFT.Computation.ScientificSymbolicControls.tamperedSource",
+            "SFT.Computation.ScientificSymbolicControls.tamperedArtifact",
+            "SFT.Computation.ScientificSymbolicControls.boundary",
+            "SFT.Computation.ScientificSymbolicControls.falsePremisePassed",
+            "SFT.Computation.ScientificSymbolicControls.boundaryPassed",
+            "SFT.Computation.ScientificSymbolicControls.controlRecords",
+            "SFT.Computation.ScientificSymbolicControls.resultData",
+            "SFT.Computation.ScientificSymbolicControls.runControls"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ScientificSymbolicControls.falsePremisePassed",
+            "SFT.Computation.ScientificSymbolicControls.boundaryPassed"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        },
+        {
+          "path": "SFT/Computation/ScientificSymbolicEvidence.lean",
+          "sha256": "4c1596e50933baaba240b5d4fa9e67df3d0b6d04945314535cdcc669a46575ac",
+          "declarations": [
+            "SFT.Computation.ScientificSymbolicEvidence.candidateRecord",
+            "SFT.Computation.ScientificSymbolicEvidence.completenessRecord",
+            "SFT.Computation.ScientificSymbolicEvidence.registrationData",
+            "SFT.Computation.ScientificSymbolicEvidence.registration",
+            "SFT.Computation.ScientificSymbolicEvidence.generatedCandidateData",
+            "SFT.Computation.ScientificSymbolicEvidence.censusData",
+            "SFT.Computation.ScientificSymbolicEvidence.census",
+            "SFT.Computation.ScientificSymbolicEvidence.decisionData",
+            "SFT.Computation.ScientificSymbolicEvidence.decision",
+            "SFT.Computation.ScientificSymbolicEvidence.decideCandidate",
+            "SFT.Computation.ScientificSymbolicEvidence.closureData",
+            "SFT.Computation.ScientificSymbolicEvidence.closure",
+            "SFT.Computation.ScientificSymbolicEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ScientificSymbolicEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ScientificSymbolicEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ScientificSymbolicEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ScientificSymbolicEvidence.lookupDependsOnlyOnIdentifier",
+            "SFT.Computation.ScientificSymbolicEvidence.why",
+            "SFT.Computation.ScientificSymbolicEvidence.derivation",
+            "SFT.Computation.ScientificSymbolicEvidence.check",
+            "SFT.Computation.ScientificSymbolicEvidence.limitations",
+            "SFT.Computation.ScientificSymbolicEvidence.correspondenceTerms"
+          ],
+          "empty_axiom_theorems": [
+            "SFT.Computation.ScientificSymbolicEvidence.nativeDecisionPreservesSurvival",
+            "SFT.Computation.ScientificSymbolicEvidence.nativeDecisionPreservesReason",
+            "SFT.Computation.ScientificSymbolicEvidence.registrationHasNoAxioms",
+            "SFT.Computation.ScientificSymbolicEvidence.registrationHasNoFreeParameters",
+            "SFT.Computation.ScientificSymbolicEvidence.lookupDependsOnlyOnIdentifier"
+          ],
+          "inspection": "Full operational proof bodies read; all four companions compared completely against fully read ExactApproximate template, with all changed literals inspected."
+        }
+      ],
+      "retained_audit": {
+        "path": "verification/TURN_332_ALL_DECLARATIONS_AUDIT.log",
+        "sha256": "967378733392c23cb68c319842921d8c5063f8c4a366d2caacd41d73ae196503",
+        "matching_theorems": 36
+      },
+      "reports": [
+        {
+          "path": "verification/TURN_332_SCIENTIFIC_SYMBOLIC_COMPLETION.json",
+          "sha256": "6679578e30bf5e5a97983f9c5fb98db11026b5e99532ad4cf60d2714584d5ac0",
+          "result": {
+            "claim_id": "SFT-COMP-SCI-SYMBOLIC-001",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_sha256": {
+              "sft/computation/catalog.py": "e2974c5e73bf176502818577c700c7bc73c63363f6b38956a1e34b596f979b08",
+              "sft/computation/spec_data.py": "04aa0084d4a0d174c932f379c2845fe8857147958fc4f7363007c34da8e43389",
+              "sft/computation/operations.py": "6fff9fae8be2cf7f78889425a68c569c05e892891aede683a7d647a496e757f7",
+              "sft/computation/generated_law.py": "5d1a6ddf32d1cc87e80f4a31059a394d5f6b91d7e75d587852da71053f242f2d",
+              "sft/computation/scientific_computation/symbolic/law.py": "151005f12cf4a0e5003a4e3bcb89091ed4c2801eb786115bde5f79d3ba6bf725",
+              "sft/information_science/encoding_decoding/law.py": "9579d9c4804044271ad96146c54947e9bb4363b9528219275468770c1e28fd4f",
+              "claims/SFT-COMP-SCI-SYMBOLIC-001/WHY_DERIVATION_CHECK.md": "7eb21a2bba7a24b8ef97f746a4be35f38e2be11dbc43b1236aea709a187a0d4e",
+              "claims/SFT-COMP-SCI-SYMBOLIC-001/registration.json": "821f9d2a264cda00588eec75d4e7e9ef2067a3763597c4dfdef357309d5d2ef7",
+              "claims/SFT-COMP-SCI-SYMBOLIC-001/execution.py": "4e0de756e54e9bc44a5355e72a062cabcf5dfaa04c367b2b68499ec536f617f0",
+              "claims/SFT-COMP-SCI-SYMBOLIC-001/independent_validator.py": "d89058b91d5132540eb21bcdc58bbc264444c293ef473d1854b1acf9fe7b3a93",
+              "claims/SFT-COMP-SCI-SYMBOLIC-001/certificate.json": "1890a168b8d224c830b9a11f564bc2b624494062276ce14e396dd3f260a26674"
+            },
+            "components": {
+              "syntax/evaluator normalization": "normalForm preserves actual original evaluator output/error into literal syntax. typedNormalization and normalizedLiteral prove evaluator correspondence and idempotent positive literal result under original type admission.320 original evaluator comparisons pass including raw source rejection and binding cases.",
+              "registered rewrites and type interfaces": "Rewrite retains original admitted rule/context and checked source/target positive semantic types. rewriteValue/rewriteNormalization preserve exact evaluator identity. Concrete half-plus-half typed rewrite and normalization proofs pass native kernel checks.",
+              "complete typed traces": "TypedTrace/sourceTrace retain original ordered records;traceTypes/traceEvaluation/traceNormalization prove source/terminal types,exact value and normalized result. everyRegisteredRule retains rule membership.",
+              "composition/successor/normality boundary": "composeTraces and appendRewrite preserve prior records and interfaces. normalizationBoundary requires the original registered Normal certificate;literal evaluation alone is not asserted to terminate arbitrary rewrite systems. Physical interpretation remains outside this formal closure.",
+              "grammar and controls": "Complete original256 candidates,three witnesses,four controls,every source program field/hash and unknown-ID rejection match pinned V3."
+            },
+            "dependencies": [
+              "SFT-COMP-SCI-CONVERGENCE-001",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+              "SFT-MATH-DISCRETE-001",
+              "SFT-MATH-GRAPH-NETWORK-001",
+              "SFT-MATH-LOGIC-PROOF-001",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+              "SFT-INFO-ENCODING-DECODING-001",
+              "SFT-INFO-CONSERVATION-LOSS-001"
+            ],
+            "dependency_status": {
+              "SFT-COMP-SCI-CONVERGENCE-001": "complete",
+              "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+              "SFT-MATH-DISCRETE-001": "complete",
+              "SFT-MATH-GRAPH-NETWORK-001": "complete",
+              "SFT-MATH-LOGIC-PROOF-001": "complete",
+              "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001": "complete",
+              "SFT-INFO-ENCODING-DECODING-001": "complete",
+              "SFT-INFO-CONSERVATION-LOSS-001": "complete"
+            },
+            "native_checks": {
+              "kernel_output_checks": 322,
+              "axiom_dependencies": 0,
+              "audit": "verification/TURN_332_PARITY_REPORT.json"
+            },
+            "remaining": [],
+            "status": "complete",
+            "program_comparison": "verification/TURN_332_PROGRAM_REPORT.json"
+          }
+        },
+        {
+          "path": "verification/TURN_332_PROGRAM_REPORT.json",
+          "sha256": "938c4f3527c69ee4e8205293f8fff6d9a74bf6967bad3931ea649b57a09508e7",
+          "result": {
+            "status": "PASS",
+            "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+            "source_manifest_hash": "sha256:8f3afcab73070c32caa7f7a244e2d3381cfe0c4c10361d97d213528b7a67cfa9",
+            "candidate_lookup_decisions": 256,
+            "all_census_trace_hashes_match": true,
+            "all_decision_proof_hashes_match": true,
+            "closure_and_controls_match": true,
+            "registration_fields_match": true,
+            "unknown_identifier_rejected": true,
+            "fresh_native_lean_execution": true,
+            "scope": "All original ScientificSymbolic registration/census/actual identifier lookups/closure/controls/output fields and hashes; unknown-ID rejection."
+          }
+        }
+      ]
+    }
+  ],
+  "original_source_files": [
+    {
+      "path": "claims/SFT-COMP-SCI-DISCRETIZATION-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "0e3a13bb385c9a1dd92f0253b68e0de292b4f259ed6140c116a3a047f3e1194c"
+    },
+    {
+      "path": "claims/SFT-COMP-SCI-CONVERGENCE-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "a085ef681353d7b0ac02d22dc0601e871e168ffbd4c00d481410cf0d85839a72"
+    },
+    {
+      "path": "claims/SFT-COMP-SCI-SYMBOLIC-001/WHY_DERIVATION_CHECK.md",
+      "sha256": "7eb21a2bba7a24b8ef97f746a4be35f38e2be11dbc43b1236aea709a187a0d4e"
+    }
+  ],
+  "source_correspondence": "Full Discretization/Convergence/ScientificSymbolic proof bodies read. Complete companion comparison against ExactApproximate has no code differences and every changed literal read. Complete original three WHY diffs against the fully inspected ExactApproximate document read. Retained330\u2013332 completion/program reports reused. Generated case suites not rerun or newly read in full.",
+  "new_proofs": 0,
+  "new_builds": 0,
+  "citations_added": [
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/DiscretizationGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/DiscretizationWitnesses.lean#L20",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ConvergenceGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ConvergenceWitnesses.lean#L20",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ScientificSymbolicGrammar.lean#L118",
+    "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ScientificSymbolicWitnesses.lean#L20"
+  ],
+  "status": "Sections272\u2013274 reviewed; whole-paper review incomplete"
+}

@@ -1,0 +1,58 @@
+{
+  "updated_at": "2026-11-21T11:47:48.400407+00:00",
+  "review_type": "same-assistant adversarial second pass, not independent",
+  "sections": [
+    275,
+    276,
+    277
+  ],
+  "challenges": [
+    {
+      "section": 275,
+      "challenge": "Can composition omit the shared state or lose an observation?",
+      "evidence": "ObservationRows reconstructs every lookup; observationLength plus executionLength gives schedule length plus one. composedSimulation uses before and after plus terminal, joining the shared state once through StateComposition.Path. successorSimulation appends the actual next observation; simulationExtension retains exact lookups.",
+      "disposition": "The manuscript states the full recursions, count induction and serial/successor interfaces."
+    },
+    {
+      "section": 276,
+      "challenge": "Is a first return or perturbation result assuming deterministic dynamics or a time bound?",
+      "evidence": "Model admits the original relation without a function restriction. returnedOrbit invokes the earliest-return decomposition with a distinct prefix and retained transitions. preservedLedger inducts over every adjacent pair. perturbationCertificate uses the existing unbounded finite Reaches certificate for each registered start.",
+      "disposition": "The manuscript preserves the relational domain, exact first-return conditions and source-defined perturbation support."
+    },
+    {
+      "section": 277,
+      "challenge": "Can reconstruction silently select among ambiguous predecessors or apply an undeclared exclusion?",
+      "evidence": "reconstructionExactly is equivalent to the entire ordered fibre being a singleton; ambiguityPreserved derives a contradiction from two distinct members. remainingExactly retains all unexcluded members and undeclaredCannotExclude uses applied-subset-declared. relationalComposition constructs its intermediate witness in both directions; predecessorSuccessor preserves old decisions.",
+      "disposition": "All forcing steps, exact exclusion certificate and successor cases are present in the manuscript."
+    }
+  ],
+  "public_citation_checks": [
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SimulationGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/SimulationWitnesses.lean#L20",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ComputationalDynamicsGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/ComputationalDynamicsWitnesses.lean#L20",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/InverseProblemGrammar.lean#L118",
+      "public_bytes_equal": true
+    },
+    {
+      "url": "https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/21cdf559922fb057f8560f42d056ffa035329eb3/SFT/Computation/InverseProblemWitnesses.lean#L20",
+      "public_bytes_equal": true
+    }
+  ],
+  "revised_manuscript_sha256": "ca369189dd73ed2c565cd30f2505ec99224a5989364908aeb0307e02cd79e9c2",
+  "status": "Inspected sections pass second review; whole cumulative paper remains under review.",
+  "new_builds": 0
+}

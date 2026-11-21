@@ -1,0 +1,954 @@
+{
+  "updated_at": "2026-11-21T14:32:53.750337+00:00",
+  "sections_read": [
+    486,
+    487,
+    488,
+    489,
+    490
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "sft/physics/thermodynamics_laws.py: PHASE_EQUILIBRIUM through RESPONSE with previously reviewed thermal_law",
+    "All five original WHY_DERIVATION_CHECK.md records",
+    "Inherited calculator scalar operations already inspected in476\u2013480"
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Physics/ThermoPhaseEquilibrium.lean",
+      "sha256": "0cadf44df61ffbe0a9ae30f775f0ad922f355514b78f36e52d1707b97fffd312",
+      "theorems": [
+        "SFT.Physics.ThermoPhaseEquilibrium.coexistenceCriterion",
+        "SFT.Physics.ThermoPhaseEquilibrium.distinctFibresPersist",
+        "SFT.Physics.ThermoPhaseEquilibrium.commonOrderBefore",
+        "SFT.Physics.ThermoPhaseEquilibrium.commonOrderAfter",
+        "SFT.Physics.ThermoPhaseEquilibrium.completeBoundaryBalance",
+        "SFT.Physics.ThermoPhaseEquilibrium.coexistenceReversible",
+        "SFT.Physics.ThermoPhaseEquilibrium.changedSelectedFibreExcludesUnchangedPhase",
+        "SFT.Physics.ThermoPhaseEquilibrium.transitionRetainsAllCarriers",
+        "SFT.Physics.ThermoPhaseEquilibrium.transitionRetainsSourceIdentity"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/ThermoKineticTransport.lean",
+      "sha256": "2940d223af06fc2f0e2dad3f8402e346b901be70cf4982afeb3fb574ec6ea897",
+      "theorems": [
+        "SFT.Physics.ThermoKineticTransport.allStepsAdjacent",
+        "SFT.Physics.ThermoKineticTransport.nontrivialArrivalHasPredecessor",
+        "SFT.Physics.ThermoKineticTransport.allTransportCarriersConserved",
+        "SFT.Physics.ThermoKineticTransport.transportRetainsEveryRecord",
+        "SFT.Physics.ThermoKineticTransport.permutationMembership",
+        "SFT.Physics.ThermoKineticTransport.permutationLength",
+        "SFT.Physics.ThermoKineticTransport.collisionRetainsEveryRecord",
+        "SFT.Physics.ThermoKineticTransport.collisionRemainsLocal",
+        "SFT.Physics.ThermoKineticTransport.collisionCountConserved",
+        "SFT.Physics.ThermoKineticTransport.collisionBoundaryClosed"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/ThermoFluctuation.lean",
+      "sha256": "abc025cd424533ab5bcd4f499e369178a78923ac03eeca5bc3ab4e99ac19fe36",
+      "theorems": [
+        "SFT.Physics.ThermoFluctuation.deterministicSteps",
+        "SFT.Physics.ThermoFluctuation.deterministicObservedHistory",
+        "SFT.Physics.ThermoFluctuation.everyTraceRowRetained",
+        "SFT.Physics.ThermoFluctuation.countRowsSuccessor",
+        "SFT.Physics.ThermoFluctuation.exactCensusWeight",
+        "SFT.Physics.ThermoFluctuation.recurrenceRestoresCounts",
+        "SFT.Physics.ThermoFluctuation.recurrenceRestoresWeight",
+        "SFT.Physics.ThermoFluctuation.recurrenceClosesFluctuation",
+        "SFT.Physics.ThermoFluctuation.nativeReturnHistory"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/ThermoIrreversibility.lean",
+      "sha256": "5c583ac556e0f00e291b17de5118854067d2f31ff750116c3408232b574f5dbd",
+      "theorems": [
+        "SFT.Physics.ThermoIrreversibility.macroProjectionPreserved",
+        "SFT.Physics.ThermoIrreversibility.retainedLabelPreserved",
+        "SFT.Physics.ThermoIrreversibility.mergedHistoriesCannotBothBeDecoded",
+        "SFT.Physics.ThermoIrreversibility.extensionDistinguishesExactly",
+        "SFT.Physics.ThermoIrreversibility.labelsMustSeparateMergedHistories",
+        "SFT.Physics.ThermoIrreversibility.completeRecordReconstructs",
+        "SFT.Physics.ThermoIrreversibility.completeRecordInjective",
+        "SFT.Physics.ThermoIrreversibility.retainedDecoderRecovers"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/ThermoResponse.lean",
+      "sha256": "94e197e8253d7aadee52aa715b75b63d85bfccf161aef3ba48eff26f8d4b1126",
+      "theorems": [
+        "SFT.Physics.ThermoResponse.sameHeldSupport",
+        "SFT.Physics.ThermoResponse.allReadingsInSameRecurrence",
+        "SFT.Physics.ThermoResponse.recurrenceIsGenerated",
+        "SFT.Physics.ThermoResponse.exactChangeRatio",
+        "SFT.Physics.ThermoResponse.sourceChangeBoundary",
+        "SFT.Physics.ThermoResponse.unchangedResponse",
+        "SFT.Physics.ThermoResponse.orientedCoefficient",
+        "SFT.Physics.ThermoResponse.exactCoefficientMagnitude",
+        "SFT.Physics.ThermoResponse.sameChangesSameCoefficient",
+        "SFT.Physics.ThermoResponse.successfulCoefficientUnique",
+        "SFT.Physics.ThermoResponse.originalReadingsRetained"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/PhaseEquilibriumGrammar.lean",
+      "sha256": "785c126ad66baccc482dec146139cd39a8793d29e3f39552558160691079294f",
+      "theorems": [
+        "SFT.Physics.PhaseEquilibriumGrammar.generatedCardinality",
+        "SFT.Physics.PhaseEquilibriumGrammar.candidatesComplete",
+        "SFT.Physics.PhaseEquilibriumGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.PhaseEquilibriumGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.PhaseEquilibriumGrammar.uniqueSurvivor",
+        "SFT.Physics.PhaseEquilibriumGrammar.survivorAccepted",
+        "SFT.Physics.PhaseEquilibriumGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.PhaseEquilibriumGrammar.carrier_rejected_rejected",
+        "SFT.Physics.PhaseEquilibriumGrammar.relation_rejected_rejected",
+        "SFT.Physics.PhaseEquilibriumGrammar.provenance_rejected_rejected",
+        "SFT.Physics.PhaseEquilibriumGrammar.prediction_rejected_rejected",
+        "SFT.Physics.PhaseEquilibriumGrammar.record_rejected_rejected",
+        "SFT.Physics.PhaseEquilibriumGrammar.rows_rejected_rejected",
+        "SFT.Physics.PhaseEquilibriumGrammar.generality_rejected_rejected",
+        "SFT.Physics.PhaseEquilibriumGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/PhaseEquilibriumEvidence.lean",
+      "sha256": "03f1633dd511ba0c410cb34bc0573f142f1fec34a95654d5bf5dc64891aea9d0",
+      "theorems": [
+        "SFT.Physics.PhaseEquilibriumEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.PhaseEquilibriumEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.PhaseEquilibriumEvidence.registrationNoAxioms",
+        "SFT.Physics.PhaseEquilibriumEvidence.registrationNoFreeParameters",
+        "SFT.Physics.PhaseEquilibriumEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/PhaseEquilibriumExperiment.lean",
+      "sha256": "5c0d0f69298fad8316f85cebe98efa584fb06171016cf2f86a04eda845a07bd3",
+      "theorems": [
+        "SFT.Physics.PhaseEquilibriumExperiment.completeTargetCount",
+        "SFT.Physics.PhaseEquilibriumExperiment.completeTargetLabels",
+        "SFT.Physics.PhaseEquilibriumExperiment.changedSourceRejected",
+        "SFT.Physics.PhaseEquilibriumExperiment.registeredSpecValid",
+        "SFT.Physics.PhaseEquilibriumExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/PhaseEquilibriumValidation.lean",
+      "sha256": "4167b4f734e52582c865c91cdcb184bc0b017ab11e89c720bde7e504dbda6a56",
+      "theorems": [
+        "SFT.Physics.PhaseEquilibriumValidation.resealRejected"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/PhaseEquilibriumValidationProofs.lean",
+      "sha256": "5e922979fb6c1267251dcc4d4292b613b89808810737918ac4c5685e1f5f2917",
+      "theorems": [
+        "SFT.Physics.PhaseEquilibriumValidation.sourceMismatchRejects",
+        "SFT.Physics.PhaseEquilibriumValidation.sealBindsExecution",
+        "SFT.Physics.PhaseEquilibriumValidation.emptyPremiseRejected",
+        "SFT.Physics.PhaseEquilibriumValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/KineticTransportGrammar.lean",
+      "sha256": "460cb466b449542a4c3ab59a9b8874250fe546aa3beb95ef1c685f411f9cdd11",
+      "theorems": [
+        "SFT.Physics.KineticTransportGrammar.generatedCardinality",
+        "SFT.Physics.KineticTransportGrammar.candidatesComplete",
+        "SFT.Physics.KineticTransportGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.KineticTransportGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.KineticTransportGrammar.uniqueSurvivor",
+        "SFT.Physics.KineticTransportGrammar.survivorAccepted",
+        "SFT.Physics.KineticTransportGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.KineticTransportGrammar.carrier_rejected_rejected",
+        "SFT.Physics.KineticTransportGrammar.relation_rejected_rejected",
+        "SFT.Physics.KineticTransportGrammar.provenance_rejected_rejected",
+        "SFT.Physics.KineticTransportGrammar.prediction_rejected_rejected",
+        "SFT.Physics.KineticTransportGrammar.record_rejected_rejected",
+        "SFT.Physics.KineticTransportGrammar.rows_rejected_rejected",
+        "SFT.Physics.KineticTransportGrammar.generality_rejected_rejected",
+        "SFT.Physics.KineticTransportGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/KineticTransportEvidence.lean",
+      "sha256": "253995373ada8c8166899c733e7d4552da587dcfcc46ed656719947f586ea18d",
+      "theorems": [
+        "SFT.Physics.KineticTransportEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.KineticTransportEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.KineticTransportEvidence.registrationNoAxioms",
+        "SFT.Physics.KineticTransportEvidence.registrationNoFreeParameters",
+        "SFT.Physics.KineticTransportEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/KineticTransportExperiment.lean",
+      "sha256": "07aaab38581665f8bca45c4ce8ca9c8976158fb27d8e4d9f6b2289d78e1ab738",
+      "theorems": [
+        "SFT.Physics.KineticTransportExperiment.completeTargetCount",
+        "SFT.Physics.KineticTransportExperiment.completeTargetLabels",
+        "SFT.Physics.KineticTransportExperiment.changedSourceRejected",
+        "SFT.Physics.KineticTransportExperiment.registeredSpecValid",
+        "SFT.Physics.KineticTransportExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/KineticTransportValidation.lean",
+      "sha256": "c576001f4e2ccf5e2c69e197a61903ccf443df8d2eb14cc75babcfb44f18b86f",
+      "theorems": [
+        "SFT.Physics.KineticTransportValidation.resealRejected"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/KineticTransportValidationProofs.lean",
+      "sha256": "89513ca5d98af692e429747ab8170ba173739f18af4427883c916cb8236b0995",
+      "theorems": [
+        "SFT.Physics.KineticTransportValidation.sourceMismatchRejects",
+        "SFT.Physics.KineticTransportValidation.sealBindsExecution",
+        "SFT.Physics.KineticTransportValidation.emptyPremiseRejected",
+        "SFT.Physics.KineticTransportValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/FluctuationGrammar.lean",
+      "sha256": "174e26f961269bca9b7d25d33c1a94291a92f18537a24dd8d2d07ac00fbf20e7",
+      "theorems": [
+        "SFT.Physics.FluctuationGrammar.generatedCardinality",
+        "SFT.Physics.FluctuationGrammar.candidatesComplete",
+        "SFT.Physics.FluctuationGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.FluctuationGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.FluctuationGrammar.uniqueSurvivor",
+        "SFT.Physics.FluctuationGrammar.survivorAccepted",
+        "SFT.Physics.FluctuationGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.FluctuationGrammar.carrier_rejected_rejected",
+        "SFT.Physics.FluctuationGrammar.relation_rejected_rejected",
+        "SFT.Physics.FluctuationGrammar.provenance_rejected_rejected",
+        "SFT.Physics.FluctuationGrammar.prediction_rejected_rejected",
+        "SFT.Physics.FluctuationGrammar.record_rejected_rejected",
+        "SFT.Physics.FluctuationGrammar.rows_rejected_rejected",
+        "SFT.Physics.FluctuationGrammar.generality_rejected_rejected",
+        "SFT.Physics.FluctuationGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/FluctuationEvidence.lean",
+      "sha256": "b57d63b49257a02157e91f6c258a8fab283cac551077c0e96aa2f4ac542c6c6c",
+      "theorems": [
+        "SFT.Physics.FluctuationEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.FluctuationEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.FluctuationEvidence.registrationNoAxioms",
+        "SFT.Physics.FluctuationEvidence.registrationNoFreeParameters",
+        "SFT.Physics.FluctuationEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/FluctuationExperiment.lean",
+      "sha256": "c318c25b32d798e9f7c3b63df3272b8bdea2cc54dc9323e1dbefabdbcd2da131",
+      "theorems": [
+        "SFT.Physics.FluctuationExperiment.completeTargetCount",
+        "SFT.Physics.FluctuationExperiment.completeTargetLabels",
+        "SFT.Physics.FluctuationExperiment.changedSourceRejected",
+        "SFT.Physics.FluctuationExperiment.registeredSpecValid",
+        "SFT.Physics.FluctuationExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/FluctuationValidation.lean",
+      "sha256": "e1e2aa6e3a8d1edcecc552aedef2d801a792d423d990a690c50042e671b16acc",
+      "theorems": [
+        "SFT.Physics.FluctuationValidation.resealRejected"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/FluctuationValidationProofs.lean",
+      "sha256": "0a30ae71721509b20e794bd949a976b00a8adafe7712b62b86fa16e1f027a206",
+      "theorems": [
+        "SFT.Physics.FluctuationValidation.sourceMismatchRejects",
+        "SFT.Physics.FluctuationValidation.sealBindsExecution",
+        "SFT.Physics.FluctuationValidation.emptyPremiseRejected",
+        "SFT.Physics.FluctuationValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/IrreversibilityGrammar.lean",
+      "sha256": "214585e43bfbe23ef64215581efa703025eadbe745714a63819dec1ffc888ae4",
+      "theorems": [
+        "SFT.Physics.IrreversibilityGrammar.generatedCardinality",
+        "SFT.Physics.IrreversibilityGrammar.candidatesComplete",
+        "SFT.Physics.IrreversibilityGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.IrreversibilityGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.IrreversibilityGrammar.uniqueSurvivor",
+        "SFT.Physics.IrreversibilityGrammar.survivorAccepted",
+        "SFT.Physics.IrreversibilityGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.IrreversibilityGrammar.carrier_rejected_rejected",
+        "SFT.Physics.IrreversibilityGrammar.relation_rejected_rejected",
+        "SFT.Physics.IrreversibilityGrammar.provenance_rejected_rejected",
+        "SFT.Physics.IrreversibilityGrammar.prediction_rejected_rejected",
+        "SFT.Physics.IrreversibilityGrammar.record_rejected_rejected",
+        "SFT.Physics.IrreversibilityGrammar.rows_rejected_rejected",
+        "SFT.Physics.IrreversibilityGrammar.generality_rejected_rejected",
+        "SFT.Physics.IrreversibilityGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/IrreversibilityEvidence.lean",
+      "sha256": "e91b8179f6f86f92eb650aaa55c51314cfbde0753c94466470b611028cd19b50",
+      "theorems": [
+        "SFT.Physics.IrreversibilityEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.IrreversibilityEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.IrreversibilityEvidence.registrationNoAxioms",
+        "SFT.Physics.IrreversibilityEvidence.registrationNoFreeParameters",
+        "SFT.Physics.IrreversibilityEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/IrreversibilityExperiment.lean",
+      "sha256": "4188ed3b0ed8a8b6f4c6e9de5d7c524ddd64e0aebad5946c801862478d179532",
+      "theorems": [
+        "SFT.Physics.IrreversibilityExperiment.completeTargetCount",
+        "SFT.Physics.IrreversibilityExperiment.completeTargetLabels",
+        "SFT.Physics.IrreversibilityExperiment.changedSourceRejected",
+        "SFT.Physics.IrreversibilityExperiment.registeredSpecValid",
+        "SFT.Physics.IrreversibilityExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/IrreversibilityValidation.lean",
+      "sha256": "f618fd110034d3760de01941ec976e01b49140bfcc2a36c9153bda8c80bf972e",
+      "theorems": [
+        "SFT.Physics.IrreversibilityValidation.resealRejected"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/IrreversibilityValidationProofs.lean",
+      "sha256": "bdfd2980b08a4d2f66d1fa7f29b0a547b6f1a72495d49be24a10c4664680f9f7",
+      "theorems": [
+        "SFT.Physics.IrreversibilityValidation.sourceMismatchRejects",
+        "SFT.Physics.IrreversibilityValidation.sealBindsExecution",
+        "SFT.Physics.IrreversibilityValidation.emptyPremiseRejected",
+        "SFT.Physics.IrreversibilityValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/ThermalResponseGrammar.lean",
+      "sha256": "36eb030ca3faaeaf36743203c8c376da024134c7565df79095a6eb670c9fde67",
+      "theorems": [
+        "SFT.Physics.ThermalResponseGrammar.generatedCardinality",
+        "SFT.Physics.ThermalResponseGrammar.candidatesComplete",
+        "SFT.Physics.ThermalResponseGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.ThermalResponseGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.ThermalResponseGrammar.uniqueSurvivor",
+        "SFT.Physics.ThermalResponseGrammar.survivorAccepted",
+        "SFT.Physics.ThermalResponseGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.ThermalResponseGrammar.carrier_rejected_rejected",
+        "SFT.Physics.ThermalResponseGrammar.relation_rejected_rejected",
+        "SFT.Physics.ThermalResponseGrammar.provenance_rejected_rejected",
+        "SFT.Physics.ThermalResponseGrammar.prediction_rejected_rejected",
+        "SFT.Physics.ThermalResponseGrammar.record_rejected_rejected",
+        "SFT.Physics.ThermalResponseGrammar.rows_rejected_rejected",
+        "SFT.Physics.ThermalResponseGrammar.generality_rejected_rejected",
+        "SFT.Physics.ThermalResponseGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/ThermalResponseEvidence.lean",
+      "sha256": "ee0b8676eb44ba4586ccc2a6d5159f694cd183e4b7e999d8d8a37486c588c82a",
+      "theorems": [
+        "SFT.Physics.ThermalResponseEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.ThermalResponseEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.ThermalResponseEvidence.registrationNoAxioms",
+        "SFT.Physics.ThermalResponseEvidence.registrationNoFreeParameters",
+        "SFT.Physics.ThermalResponseEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/ThermalResponseExperiment.lean",
+      "sha256": "46b47174026c3ac508a5bfa631e10901b946c8637d574a848470a6a7ccc5bcac",
+      "theorems": [
+        "SFT.Physics.ThermalResponseExperiment.completeTargetCount",
+        "SFT.Physics.ThermalResponseExperiment.completeTargetLabels",
+        "SFT.Physics.ThermalResponseExperiment.changedSourceRejected",
+        "SFT.Physics.ThermalResponseExperiment.registeredSpecValid",
+        "SFT.Physics.ThermalResponseExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/ThermalResponseValidation.lean",
+      "sha256": "1dda8e0327ab6aa68d4fd94d9857a5f5cae8cc3aa8aa179277b443a53b2e7c5d",
+      "theorems": [
+        "SFT.Physics.ThermalResponseValidation.resealRejected"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    },
+    {
+      "path": "SFT/Physics/ThermalResponseValidationProofs.lean",
+      "sha256": "215693e787804130d55db2bb815c6e0a5ffc157f971f19fc395732735e963c57",
+      "theorems": [
+        "SFT.Physics.ThermalResponseValidation.sourceMismatchRejects",
+        "SFT.Physics.ThermalResponseValidation.sealBindsExecution",
+        "SFT.Physics.ThermalResponseValidation.emptyPremiseRejected",
+        "SFT.Physics.ThermalResponseValidation.programDocumentRetained"
+      ],
+      "inspection": "Full operational proof bodies; complete companion code and all changed literals compared with reviewed StateRelation template."
+    }
+  ],
+  "reused_upstream": [
+    {
+      "path": "SFT/Mathematics/CombinatorialArrangements.lean",
+      "sha256": "63022c47b5a3fc6b60b943edd596aa92216573dec480e19e549dc534b182d012",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_019_049.json"
+    },
+    {
+      "path": "SFT/InformationScience/ConservationCardinality.lean",
+      "sha256": "35b86a56016c956ea1aa5bff14f381ed4a407927eb0e686a71ecf31e6aef784b",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_113_118.json"
+    },
+    {
+      "path": "SFT/Mathematics/FoldScalar.lean",
+      "sha256": "feea74e4123e206e047c67a0f78ed2936df46f0d591d594609e0ea26fb40ba18",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_370_376.json"
+    },
+    {
+      "path": "SFT/Physics/FieldLocality.lean",
+      "sha256": "8688e217caefdb487f8b19930652ae540c7b528c352dafc5bf273e685196645c",
+      "receipt": "publication/reviews/all-prior-papers/record-24337358/SOURCE_READBACK_388_392.json"
+    }
+  ],
+  "reused_thermal_receipts": [
+    "SOURCE_READBACK_476_480.json",
+    "SOURCE_READBACK_481_485.json"
+  ],
+  "audits": [
+    {
+      "path": "verification/TURN_529_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "f0665855d9a0eb065012417ddf018b355b4cd41f0c2ea974282c01c9ea21ee4f"
+    },
+    {
+      "path": "verification/TURN_529_auditthermo529_PhaseEquilibrium.log",
+      "sha256": "f73a0673767c10d6cd02cebc337c15b432a4601580b2e6dee647ce7a14bd24a8"
+    },
+    {
+      "path": "verification/TURN_530_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "86e1374cbc746b311918ff33891d8874b5ae5b7383317de8767a50ef51d0a2ab"
+    },
+    {
+      "path": "verification/TURN_530_auditthermo530_KineticTransport.log",
+      "sha256": "6d8c7a23a7e253239f6d89ac2d4855d55ececb048a4d015436fb6760de3058e0"
+    },
+    {
+      "path": "verification/TURN_531_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "ddb96fba63259506565a0b47125d1914357fb03f635c89664121c00b696eeffa"
+    },
+    {
+      "path": "verification/TURN_531_auditthermo531_Fluctuation.log",
+      "sha256": "5a35f18d063e391e3c94f70287d3fe7129643ef5f439e02237b651676f305eca"
+    },
+    {
+      "path": "verification/TURN_532_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "ff2fe4ae3207543ace0e3ab5c4f1d94d73c7df547752edab5cc467d99bf9eb01"
+    },
+    {
+      "path": "verification/TURN_532_auditthermo532_Irreversibility.log",
+      "sha256": "8b91334e72f35a227843d901a35efb209e1950cfe0ee832d0b747d8ccc99171d"
+    },
+    {
+      "path": "verification/TURN_533_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "6e928c4ca14658d91494d59ac2d0b3bb52cce87172c5025bb653892e9cd5ea70"
+    },
+    {
+      "path": "verification/TURN_533_auditthermo533_ThermalResponse.log",
+      "sha256": "10cd96cfdc4f066f49b20dd1b3a6c52008803249cc2d0dedf5d728301d19bc6c"
+    }
+  ],
+  "matching_theorems": 197,
+  "reports": [
+    {
+      "path": "verification/TURN_529_phaseequilibrium_independent529_report.json",
+      "sha256": "4ce32446a5c26620688bbd2020a38b5f875db7ac55e7e3083354465a63ab5f94",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001",
+              "survivor": "complete-fold-carrier__coexisting-observation-fibres-under-balanced-exchange__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-phaseequilibrium-529"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-phaseequilibrium-529"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-phaseequilibrium-529"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-PHASE-EQUILIBRIUM-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-phaseequilibrium-529"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_529_phaseequilibrium_program529_report.json",
+      "sha256": "059dc7a64f437dd3deb11386316c73706060b5716dee8ffe9f1b533342e69ee1",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:500813f6ac91be300d730b71689ca9330667887f4ebd6d97ac3b77914245ad2f",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All PhaseEquilibriumProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_529_phaseequilibrium_validation529_report.json",
+      "sha256": "1d6c8e4fa1035a7759e9cd37938bad224a76942999e71b0556d7afb51ec067c5",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 116882,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_530_kinetictransport_independent530_report.json",
+      "sha256": "01f9d89085fb3ece9f1a1024debbc2d53126f066decca2b3df87728387d96bf5",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-KINETIC-TRANSPORT-001",
+              "survivor": "complete-fold-carrier__cellwise-carrier-propagation-and-local-permutation__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-kinetictransport-530"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-KINETIC-TRANSPORT-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-kinetictransport-530"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-KINETIC-TRANSPORT-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-kinetictransport-530"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-KINETIC-TRANSPORT-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-kinetictransport-530"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_530_kinetictransport_program530_report.json",
+      "sha256": "123c7612326abb8ec034739f0495b47c7d256abe6cc7fcf2d66ea3265f001126",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:27dc7b5558723466a12162ff23a4c83eb32bb10ce9053af043919dae22f6d8d4",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All KineticTransportProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_530_kinetictransport_validation530_report.json",
+      "sha256": "1d6c8e4fa1035a7759e9cd37938bad224a76942999e71b0556d7afb51ec067c5",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 116882,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_531_fluctuation_independent531_report.json",
+      "sha256": "9ea6793e9b1aee17f5161510709fc6604dfa2eb1d150886589e11562eaff19e4",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-FLUCTUATION-001",
+              "survivor": "complete-fold-carrier__finite-count-departure-and-recurrence__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-fluctuation-531"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-FLUCTUATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-fluctuation-531"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-FLUCTUATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-fluctuation-531"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-FLUCTUATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-fluctuation-531"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_531_fluctuation_program531_report.json",
+      "sha256": "fc39260136946c4a5ea7c34568d3a668f24d9d392313da2997adf61a2e45bb4b",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:9e7385a5320d843028b9c3cffb918c0cbcbc4b5ef29a98d10c68f48b2183297a",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All FluctuationProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_531_fluctuation_validation531_report.json",
+      "sha256": "a71160d70b6efa36d0d63f98987cd1e6fa861d82abe0a28709eea7e24be6c1b7",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 42229,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_532_irreversibility_independent532_report.json",
+      "sha256": "ac2657d1fc6fbfb3b0ec49eddaa74b349a56b57fe8d41be8c4709e549c2544b2",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-IRREVERSIBILITY-001",
+              "survivor": "complete-fold-carrier__macro-history-merging-with-microtrace-retention__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-irreversibility-532"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-IRREVERSIBILITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-irreversibility-532"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-IRREVERSIBILITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-irreversibility-532"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-IRREVERSIBILITY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-irreversibility-532"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_532_irreversibility_program532_report.json",
+      "sha256": "b8e76f31719921c72fc56234106dc456756dd287964b4c55ae44d06c58933c79",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:47d423e50a3b67c092517b42de9ef930ab20226a2be315c511c8d4e1ce7f4078",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All IrreversibilityProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_532_irreversibility_validation532_report.json",
+      "sha256": "1d6c8e4fa1035a7759e9cd37938bad224a76942999e71b0556d7afb51ec067c5",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 116882,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_533_thermalresponse_independent533_report.json",
+      "sha256": "83d2439a03ba032099e75db82bd6c53c5c7269708c7152d0f504ec8e179e9725",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-RESPONSE-001",
+              "survivor": "complete-fold-carrier__exact-source-response-change-ratio__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-thermalresponse-533"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-RESPONSE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-thermalresponse-533"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-RESPONSE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-thermalresponse-533"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-THERMO-RESPONSE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-thermalresponse-533"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_533_thermalresponse_program533_report.json",
+      "sha256": "0319de1585f617918fde8db557d8d88d9e6958cc9da3d88d57483f204d81f981",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:6e79304fa667cd6f93ef31a4f8ff35ec930d6cafa75c59f2bbbf91dfe3ab074d",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All ThermalResponseProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_533_thermalresponse_validation533_report.json",
+      "sha256": "24c82ac613dd78279f9e8b114af726ea4a4e1a2e5e3e1617a89bf8997ae9756a",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 88315,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    }
+  ],
+  "program_adapters": "All ten exact namespace-renamed matches to fully read524 adapters.",
+  "new_proofs": 0,
+  "new_builds": 0
+}

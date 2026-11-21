@@ -12963,3 +12963,15 @@ import SFT.Medicine.AdherenceCrossoverSource
 import SFT.Medicine.AdherenceCrossoverExperiment
 
 import SFT.Medicine.AdherenceCrossoverValidation
+
+import SFT.Medicine.Cointervention
+
+import SFT.Medicine.CointerventionGrammar
+
+import SFT.Medicine.CointerventionEvidence
+
+import SFT.Medicine.CointerventionSource
+
+import SFT.Medicine.CointerventionExperiment
+
+import SFT.Medicine.CointerventionValidation

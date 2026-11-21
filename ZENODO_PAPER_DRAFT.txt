@@ -35089,7 +35089,7 @@ For the four-carbon path, exhaustive permutation filtering retains identity and 
 
   {anti},  {gauche-forward, gauche-reverse}.
 
-The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Twenty-one native modules are staged, including the complete grammar, operational witnesses, prediction, source binding, independent external analysis, full validation assembly and source-bound product/constructor proofs. Compilation, axiom audits, remaining general correspondence and native output comparisons remain pending. This entry is not counted complete.
+The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Twenty-three native modules are staged, including the complete grammar, operational witnesses, prediction, source binding, independent external analysis, full validation assembly and source-bound product/constructor proofs. Compilation, axiom audits, remaining general correspondence and native output comparisons remain pending. This entry is not counted complete.
 
 Pinned V3: claims/SFT-CHEM-CONFORMER-GENERATION-EQUIVALENCE-005/execution.py; sft/chemistry/conformer_generation_equivalence_law_v1.py, FiniteMolecularGraph, HeldRotor, HeldTorsionAlphabet, GraphAutomorphism, finite_graph_automorphisms, generate_conformer_assignments, _apply_action, conformer_census and butane_four_site_census. Native: SFT/Chemistry/ConformerCarrier.lean, ConformerAssignments.lean and ConformerCensus.lean; reused MolecularGraphEnumeration.permutations. Original evidence: verification/TURN1290_CONFORMER_ORIGINAL. Timeline: TURN1290.
 
@@ -35191,3 +35191,18 @@ The corresponding original rotor-update operation preserves its supplied state s
 The operation still rejects an already-filled target index, missing target alphabet or changed ordered alphabet. Its unchanged-orientation branch retains sᵢ directly. This connects own-index selection to the actual update body used by the complete assignment action. Compilation, axiom audits and composition through the complete action and orbit traversal remain pending.
 
 Original source: sft/chemistry/conformer_generation_equivalence_law_v1.py, finite_graph_automorphisms and _apply_action, pinned to V3 commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native references: ConformerIdentity.identityPermutationGenerated, identityPosition, identitySiteWord and identityBond; ConformerRotorAction.identicalSitesMatch, directTargetRetained, uniqueIdentityMatch, identityMappedMatch and identitySuccessfulStep; ConformerAssignments.transformRotor and applyAction. Timeline: TURN1297.
+
+The complete identity-action proof composes those original rotor updates in their registered order. Let Z=zip(zip(rotors,states),alphabets). After processing its first k rows, the transformed record is
+
+  Tₖ=[(0,s₀),…,(k−1,sₖ₋₁)].
+
+The base record is empty. The original successful update appends (k,sₖ), so induction over the actual monadic fold gives this record for every processed row. Nested zip can stop at its shortest input; that behavior is preserved. The original input guard requires |states|=|rotors|, and the final guard requires |T|=|rotors|. Because every processed row contributes exactly one retained state, those guards imply that no state was truncated and that T indexes the entire assignment.
+
+The final source operation reads indices 0,…,n−1 in order. For any decomposition states=P++[s]++S, lookup of index |P| in its indexed record returns (|P|,s): each earlier index differs, and the next index matches exactly. Induction through the original readback therefore yields
+
+  readback(n,[(0,s₀),…,(n−1,sₙ₋₁)])=[s₀,…,sₙ₋₁],
+  apply_identity(states)=states whenever the original action succeeds.
+
+Both the identity update and readback statements concern the actual computational operations, retaining all original error branches and input guards. Native compilation and axiom audits remain pending, as does composition with the complete graph-action filtering and orbit traversal.
+
+Original source: sft/chemistry/conformer_generation_equivalence_law_v1.py, _apply_action, pinned to V3 commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native references: ConformerIdentityFold.identityFoldRetains, sourceRowIndex, identityOriginalFold, originalZipCoversAssignment, indexedStateProjection and identityCompleteFold; ConformerReadback.completeIndexedReadback and successfulIdentityAction; ConformerAssignments.readback and applyAction. Timeline: TURN1298.

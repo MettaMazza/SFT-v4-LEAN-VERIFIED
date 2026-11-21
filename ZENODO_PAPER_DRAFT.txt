@@ -35089,7 +35089,7 @@ For the four-carbon path, exhaustive permutation filtering retains identity and 
 
   {anti},  {gauche-forward, gauche-reverse}.
 
-The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Twenty-three native modules are staged, including the complete grammar, operational witnesses, prediction, source binding, independent external analysis, full validation assembly and source-bound product/constructor proofs. Compilation, axiom audits, remaining general correspondence and native output comparisons remain pending. This entry is not counted complete.
+The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Twenty-five native modules are staged, including the complete grammar, operational witnesses, prediction, source binding, independent external analysis, full validation assembly and source-bound product/constructor proofs. Compilation, axiom audits, remaining general correspondence and native output comparisons remain pending. This entry is not counted complete.
 
 Pinned V3: claims/SFT-CHEM-CONFORMER-GENERATION-EQUIVALENCE-005/execution.py; sft/chemistry/conformer_generation_equivalence_law_v1.py, FiniteMolecularGraph, HeldRotor, HeldTorsionAlphabet, GraphAutomorphism, finite_graph_automorphisms, generate_conformer_assignments, _apply_action, conformer_census and butane_four_site_census. Native: SFT/Chemistry/ConformerCarrier.lean, ConformerAssignments.lean and ConformerCensus.lean; reused MolecularGraphEnumeration.permutations. Original evidence: verification/TURN1290_CONFORMER_ORIGINAL. Timeline: TURN1290.
 
@@ -35206,3 +35206,15 @@ The final source operation reads indices 0,…,n−1 in order. For any decomposi
 Both the identity update and readback statements concern the actual computational operations, retaining all original error branches and input guards. Native compilation and axiom audits remain pending, as does composition with the complete graph-action filtering and orbit traversal.
 
 Original source: sft/chemistry/conformer_generation_equivalence_law_v1.py, _apply_action, pinned to V3 commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native references: ConformerIdentityFold.identityFoldRetains, sourceRowIndex, identityOriginalFold, originalZipCoversAssignment, indexedStateProjection and identityCompleteFold; ConformerReadback.completeIndexedReadback and successfulIdentityAction; ConformerAssignments.readback and applyAction. Timeline: TURN1298.
+
+The identity permutation also passes the original action-construction and graph-preservation tests. Its positive positions are Pₙ=(1,…,n). The bound p≤n for every retained p follows from its range index p−1<n. Appending n+1 to Pₙ cannot duplicate an earlier position, so induction establishes distinctness. Hence duplicate removal preserves Pₙ and its count is n; the complete-position guard is satisfied. Converting each p to its positive-count representation returns that same p, without altering the position list.
+
+Under this admitted identity action, each atom lookup compares an atom label with itself. Each normalized bond b=(u,v) satisfies ordered_bond(u,v)=b; applying the identity to its endpoints and normalizing again therefore returns b. Normalization's fixedness follows directly from the original two cases u<v and v<u after rejection of equal endpoints. Thus
+
+  atom_matches(id)=[true,…,true],
+  mapped_bonds(id)=B,
+  mapped_bonds(id)⊆B and B⊆mapped_bonds(id).
+
+Substitution into the complete original candidate-check body returns the identity action as a retained candidate. The endpoint bounds and normalized-bond conditions are those of the original finite graph constructor. Binding its successful output to these conditions, and composing candidate retention through the full enumeration, remain part of the pending native translation checks; no independent scientific premise is added.
+
+Original source: sft/chemistry/conformer_generation_equivalence_law_v1.py, _ordered_bond, GraphAutomorphism.__post_init__, finite_graph_automorphisms and FiniteMolecularGraph.__post_init__, pinned to V3 commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native references: ConformerIdentityValues.positionWithinSupport, positionsUnique, identityActionAccepted, reconstructPositions and identityCandidateConstructed; ConformerIdentityFilters.identityAtomResults, normalizedBondFixed, identityBondResults and identityCandidatePassesFilters. Timeline: TURN1299. Compilation and axiom audits remain pending.

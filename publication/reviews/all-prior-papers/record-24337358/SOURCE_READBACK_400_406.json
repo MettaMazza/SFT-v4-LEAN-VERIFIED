@@ -1,0 +1,1097 @@
+{
+  "updated_at": "2026-11-21T13:23:22.884780+00:00",
+  "sections_read": [
+    400,
+    401,
+    402,
+    403,
+    404,
+    405,
+    406
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "sft/physics/wave_laws.py:wave, SPEED_LENGTH_FREQUENCY, SUPERPOSITION, INTERFERENCE, DIFFRACTION, POLARIZATION, DISPERSION, RESONANCE; complete source operations and witnesses. LeastCommonReturn proof inspection reused from327\u2013333; FoldScalar proof inspection reused from370\u2013376."
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Physics/WaveSpeedRelation.lean",
+      "sha256": "71b4d808815205bb8aedd4f5829c9d336a394dd1778dd52e11bb860b719ab5fe",
+      "theorems": [
+        "SFT.Physics.WaveSpeedRelation.wavelengthTimesFrequency",
+        "SFT.Physics.WaveSpeedRelation.wavelengthOverPeriod",
+        "SFT.Physics.WaveSpeedRelation.speedPositive",
+        "SFT.Physics.WaveSpeedRelation.changedEndpointsDistinguished",
+        "SFT.Physics.WaveSpeedRelation.speedUnique",
+        "SFT.Physics.WaveSpeedRelation.changedSpatialRepeatDistinguished",
+        "SFT.Physics.WaveSpeedRelation.changedTemporalRepeatDistinguished"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/WaveSuperposition.lean",
+      "sha256": "2143d3481a9a3219779daf3adbfd1a9e4a4c01c80a5420bbc3168457b4631fcc",
+      "theorems": [
+        "SFT.Physics.WaveSuperposition.leftMap",
+        "SFT.Physics.WaveSuperposition.leftIgnoresRight",
+        "SFT.Physics.WaveSuperposition.rightMap",
+        "SFT.Physics.WaveSuperposition.rightIgnoresLeft",
+        "SFT.Physics.WaveSuperposition.recoversLeft",
+        "SFT.Physics.WaveSuperposition.recoversRight",
+        "SFT.Physics.WaveSuperposition.noBranchCollision",
+        "SFT.Physics.WaveSuperposition.leftInjective",
+        "SFT.Physics.WaveSuperposition.rightInjective",
+        "SFT.Physics.WaveSuperposition.completeCount",
+        "SFT.Physics.WaveSuperposition.completeReconstruction"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/WaveInterference.lean",
+      "sha256": "c35033dac59ab5c52c4aa309fb10751c6c9836615a6bcef1813b6a8acdb0e770",
+      "theorems": [
+        "SFT.Physics.WaveInterference.matchingLabelsRetainSupport",
+        "SFT.Physics.WaveInterference.matchingSupportExact",
+        "SFT.Physics.WaveInterference.opposedLabelsUseHeldRemainder",
+        "SFT.Physics.WaveInterference.equalOpposedSupportCloses",
+        "SFT.Physics.WaveInterference.closureExactlyEqualSupport",
+        "SFT.Physics.WaveInterference.unequalLeftSupportRetained",
+        "SFT.Physics.WaveInterference.unequalRightSupportRetained",
+        "SFT.Physics.WaveInterference.bothPredecessorsRetained",
+        "SFT.Physics.WaveInterference.commonObservationCell",
+        "SFT.Physics.WaveInterference.changedSourceTraceDistinguished"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/WaveDiffraction.lean",
+      "sha256": "c84e053a27c45ccb0f6a74bba7d30723b93ad047abcc2958ffe93c4b6215c42b",
+      "theorems": [
+        "SFT.Physics.WaveDiffraction.retainedMember",
+        "SFT.Physics.WaveDiffraction.everyGeneratedOrigin",
+        "SFT.Physics.WaveDiffraction.everyReachableSuccessor",
+        "SFT.Physics.WaveDiffraction.excludedPathCannotContribute",
+        "SFT.Physics.WaveDiffraction.reachableOutputIsLocal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/WavePolarization.lean",
+      "sha256": "81a50ef5dda84fed555418a66f7185e2b290f35aad3575a13528d4ed9470376b",
+      "theorems": [
+        "SFT.Physics.WavePolarization.oppositeTwice",
+        "SFT.Physics.WavePolarization.orientationChanges",
+        "SFT.Physics.WavePolarization.positiveCarrierUnchanged",
+        "SFT.Physics.WavePolarization.recurrenceUnchanged",
+        "SFT.Physics.WavePolarization.frequencyUnchanged",
+        "SFT.Physics.WavePolarization.transverseRoleUnchanged",
+        "SFT.Physics.WavePolarization.twoHeldOrientations"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/WaveDispersion.lean",
+      "sha256": "1ed3ce7bfc9be49c9715a217169dcc9257cd78625bc5479379e300fb7faf1817",
+      "theorems": [
+        "SFT.Physics.WaveDispersion.everyLabelRetained",
+        "SFT.Physics.WaveDispersion.everyResponseRetained",
+        "SFT.Physics.WaveDispersion.labelHasExactSpeed",
+        "SFT.Physics.WaveDispersion.responseIsCausal",
+        "SFT.Physics.WaveDispersion.phaseRetainsWholeRecurrence",
+        "SFT.Physics.WaveDispersion.timingSeparationPersists",
+        "SFT.Physics.WaveDispersion.changedSpeedChangesResponse",
+        "SFT.Physics.WaveDispersion.successorPreservesLabels"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/WaveResonance.lean",
+      "sha256": "3ff25dff8fcb0c5ed1adf52bfa752d55de762df06f923320b5170855bb4bbaae",
+      "theorems": [
+        "SFT.Physics.WaveResonance.returnPositive",
+        "SFT.Physics.WaveResonance.commonReturnMatches",
+        "SFT.Physics.WaveResonance.unmatchedPhasesExcluded",
+        "SFT.Physics.WaveResonance.leastMatchedReturn",
+        "SFT.Physics.WaveResonance.allMatchedReturnsRefine",
+        "SFT.Physics.WaveResonance.uniqueLeastReturn",
+        "SFT.Physics.WaveResonance.completeTransferCount",
+        "SFT.Physics.WaveResonance.everyTransferAligned",
+        "SFT.Physics.WaveResonance.successorRetainsTransfers"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/SpeedRelationGrammar.lean",
+      "sha256": "d821c347b292062a24e966a60aa46be186bac90ad4d5e1e42032eec656508f2d",
+      "theorems": [
+        "SFT.Physics.SpeedRelationGrammar.generatedCardinality",
+        "SFT.Physics.SpeedRelationGrammar.candidatesComplete",
+        "SFT.Physics.SpeedRelationGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.SpeedRelationGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.SpeedRelationGrammar.uniqueSurvivor",
+        "SFT.Physics.SpeedRelationGrammar.survivorAccepted",
+        "SFT.Physics.SpeedRelationGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.SpeedRelationGrammar.carrier_rejected_rejected",
+        "SFT.Physics.SpeedRelationGrammar.relation_rejected_rejected",
+        "SFT.Physics.SpeedRelationGrammar.provenance_rejected_rejected",
+        "SFT.Physics.SpeedRelationGrammar.prediction_rejected_rejected",
+        "SFT.Physics.SpeedRelationGrammar.record_rejected_rejected",
+        "SFT.Physics.SpeedRelationGrammar.rows_rejected_rejected",
+        "SFT.Physics.SpeedRelationGrammar.generality_rejected_rejected",
+        "SFT.Physics.SpeedRelationGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/SpeedRelationEvidence.lean",
+      "sha256": "4e9cf4679dc4c14b15960ddfa02251d658c8a048c4809242aa0a04ed9fc0ad3c",
+      "theorems": [
+        "SFT.Physics.SpeedRelationEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.SpeedRelationEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.SpeedRelationEvidence.registrationNoAxioms",
+        "SFT.Physics.SpeedRelationEvidence.registrationNoFreeParameters",
+        "SFT.Physics.SpeedRelationEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/SpeedRelationExperiment.lean",
+      "sha256": "1fa185f8489be7398243322fe291c3846ad09485011b1c7de1ab59d3185ed7a1",
+      "theorems": [
+        "SFT.Physics.SpeedRelationExperiment.completeTargetCount",
+        "SFT.Physics.SpeedRelationExperiment.completeTargetLabels",
+        "SFT.Physics.SpeedRelationExperiment.changedSourceRejected",
+        "SFT.Physics.SpeedRelationExperiment.registeredSpecValid",
+        "SFT.Physics.SpeedRelationExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/SuperpositionGrammar.lean",
+      "sha256": "b8537c2fdf63040182e0263916e1b798aa5b1d6afcbf7bb135f89c9d735670da",
+      "theorems": [
+        "SFT.Physics.SuperpositionGrammar.generatedCardinality",
+        "SFT.Physics.SuperpositionGrammar.candidatesComplete",
+        "SFT.Physics.SuperpositionGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.SuperpositionGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.SuperpositionGrammar.uniqueSurvivor",
+        "SFT.Physics.SuperpositionGrammar.survivorAccepted",
+        "SFT.Physics.SuperpositionGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.SuperpositionGrammar.carrier_rejected_rejected",
+        "SFT.Physics.SuperpositionGrammar.relation_rejected_rejected",
+        "SFT.Physics.SuperpositionGrammar.provenance_rejected_rejected",
+        "SFT.Physics.SuperpositionGrammar.prediction_rejected_rejected",
+        "SFT.Physics.SuperpositionGrammar.record_rejected_rejected",
+        "SFT.Physics.SuperpositionGrammar.rows_rejected_rejected",
+        "SFT.Physics.SuperpositionGrammar.generality_rejected_rejected",
+        "SFT.Physics.SuperpositionGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/SuperpositionEvidence.lean",
+      "sha256": "56ff1ea723fb675da8e5002dca3b650aa234754338d1ca766b0e1a0b5f2fae70",
+      "theorems": [
+        "SFT.Physics.SuperpositionEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.SuperpositionEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.SuperpositionEvidence.registrationNoAxioms",
+        "SFT.Physics.SuperpositionEvidence.registrationNoFreeParameters",
+        "SFT.Physics.SuperpositionEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/SuperpositionExperiment.lean",
+      "sha256": "ef7c4800a903ee1132a158b9b6d2c25f24490f1a60fe5669f23c7c61b30f6ed1",
+      "theorems": [
+        "SFT.Physics.SuperpositionExperiment.completeTargetCount",
+        "SFT.Physics.SuperpositionExperiment.completeTargetLabels",
+        "SFT.Physics.SuperpositionExperiment.changedSourceRejected",
+        "SFT.Physics.SuperpositionExperiment.registeredSpecValid",
+        "SFT.Physics.SuperpositionExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/InterferenceGrammar.lean",
+      "sha256": "aba84df33277d74380abffa46ccfeed6e15e5f4b26a9a44dd41ac102aa87dc07",
+      "theorems": [
+        "SFT.Physics.InterferenceGrammar.generatedCardinality",
+        "SFT.Physics.InterferenceGrammar.candidatesComplete",
+        "SFT.Physics.InterferenceGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.InterferenceGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.InterferenceGrammar.uniqueSurvivor",
+        "SFT.Physics.InterferenceGrammar.survivorAccepted",
+        "SFT.Physics.InterferenceGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.InterferenceGrammar.carrier_rejected_rejected",
+        "SFT.Physics.InterferenceGrammar.relation_rejected_rejected",
+        "SFT.Physics.InterferenceGrammar.provenance_rejected_rejected",
+        "SFT.Physics.InterferenceGrammar.prediction_rejected_rejected",
+        "SFT.Physics.InterferenceGrammar.record_rejected_rejected",
+        "SFT.Physics.InterferenceGrammar.rows_rejected_rejected",
+        "SFT.Physics.InterferenceGrammar.generality_rejected_rejected",
+        "SFT.Physics.InterferenceGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/InterferenceEvidence.lean",
+      "sha256": "31df210273327706659840edfbdf62dacd0b81f37e7b10dd5013535c4676ee1a",
+      "theorems": [
+        "SFT.Physics.InterferenceEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.InterferenceEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.InterferenceEvidence.registrationNoAxioms",
+        "SFT.Physics.InterferenceEvidence.registrationNoFreeParameters",
+        "SFT.Physics.InterferenceEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/InterferenceExperiment.lean",
+      "sha256": "0cf0cc708cfdfb5614995bfe03d13442d5ffe0c9cdce00b50a1d7f95132c7e92",
+      "theorems": [
+        "SFT.Physics.InterferenceExperiment.completeTargetCount",
+        "SFT.Physics.InterferenceExperiment.completeTargetLabels",
+        "SFT.Physics.InterferenceExperiment.changedSourceRejected",
+        "SFT.Physics.InterferenceExperiment.registeredSpecValid",
+        "SFT.Physics.InterferenceExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/DiffractionGrammar.lean",
+      "sha256": "63c4fe050a253d5d207f2a530102dff6953c4431282bc8ac5aff27581df108cf",
+      "theorems": [
+        "SFT.Physics.DiffractionGrammar.generatedCardinality",
+        "SFT.Physics.DiffractionGrammar.candidatesComplete",
+        "SFT.Physics.DiffractionGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.DiffractionGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.DiffractionGrammar.uniqueSurvivor",
+        "SFT.Physics.DiffractionGrammar.survivorAccepted",
+        "SFT.Physics.DiffractionGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.DiffractionGrammar.carrier_rejected_rejected",
+        "SFT.Physics.DiffractionGrammar.relation_rejected_rejected",
+        "SFT.Physics.DiffractionGrammar.provenance_rejected_rejected",
+        "SFT.Physics.DiffractionGrammar.prediction_rejected_rejected",
+        "SFT.Physics.DiffractionGrammar.record_rejected_rejected",
+        "SFT.Physics.DiffractionGrammar.rows_rejected_rejected",
+        "SFT.Physics.DiffractionGrammar.generality_rejected_rejected",
+        "SFT.Physics.DiffractionGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/DiffractionEvidence.lean",
+      "sha256": "548e032921899647a6672ce399674c6778aa1bd29f8bb5e48542a7d244a220d7",
+      "theorems": [
+        "SFT.Physics.DiffractionEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.DiffractionEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.DiffractionEvidence.registrationNoAxioms",
+        "SFT.Physics.DiffractionEvidence.registrationNoFreeParameters",
+        "SFT.Physics.DiffractionEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/DiffractionExperiment.lean",
+      "sha256": "5136782435664df4d287bb821742f58871d236dff167efbfdc39934388d7bfbf",
+      "theorems": [
+        "SFT.Physics.DiffractionExperiment.completeTargetCount",
+        "SFT.Physics.DiffractionExperiment.completeTargetLabels",
+        "SFT.Physics.DiffractionExperiment.changedSourceRejected",
+        "SFT.Physics.DiffractionExperiment.registeredSpecValid",
+        "SFT.Physics.DiffractionExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/PolarizationGrammar.lean",
+      "sha256": "d5534ea3a7515982b4ea453655c87d986f39bf312001e11ea20b63e612fe1153",
+      "theorems": [
+        "SFT.Physics.PolarizationGrammar.generatedCardinality",
+        "SFT.Physics.PolarizationGrammar.candidatesComplete",
+        "SFT.Physics.PolarizationGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.PolarizationGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.PolarizationGrammar.uniqueSurvivor",
+        "SFT.Physics.PolarizationGrammar.survivorAccepted",
+        "SFT.Physics.PolarizationGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.PolarizationGrammar.carrier_rejected_rejected",
+        "SFT.Physics.PolarizationGrammar.relation_rejected_rejected",
+        "SFT.Physics.PolarizationGrammar.provenance_rejected_rejected",
+        "SFT.Physics.PolarizationGrammar.prediction_rejected_rejected",
+        "SFT.Physics.PolarizationGrammar.record_rejected_rejected",
+        "SFT.Physics.PolarizationGrammar.rows_rejected_rejected",
+        "SFT.Physics.PolarizationGrammar.generality_rejected_rejected",
+        "SFT.Physics.PolarizationGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/PolarizationEvidence.lean",
+      "sha256": "b95765cd583b90edaf6027ad914c02e37d4b7e26c56bd3b2fa13a64fa9907fc4",
+      "theorems": [
+        "SFT.Physics.PolarizationEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.PolarizationEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.PolarizationEvidence.registrationNoAxioms",
+        "SFT.Physics.PolarizationEvidence.registrationNoFreeParameters",
+        "SFT.Physics.PolarizationEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/PolarizationExperiment.lean",
+      "sha256": "a9d57e8b5b76841ad323798cff03cc21e22df178ad306e5f3bf93be113275494",
+      "theorems": [
+        "SFT.Physics.PolarizationExperiment.completeTargetCount",
+        "SFT.Physics.PolarizationExperiment.completeTargetLabels",
+        "SFT.Physics.PolarizationExperiment.changedSourceRejected",
+        "SFT.Physics.PolarizationExperiment.registeredSpecValid",
+        "SFT.Physics.PolarizationExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/DispersionGrammar.lean",
+      "sha256": "2d920dbfe3444155d1aeb890b04a18798e01c85819fd1ceb8224d0304168cf9c",
+      "theorems": [
+        "SFT.Physics.DispersionGrammar.generatedCardinality",
+        "SFT.Physics.DispersionGrammar.candidatesComplete",
+        "SFT.Physics.DispersionGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.DispersionGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.DispersionGrammar.uniqueSurvivor",
+        "SFT.Physics.DispersionGrammar.survivorAccepted",
+        "SFT.Physics.DispersionGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.DispersionGrammar.carrier_rejected_rejected",
+        "SFT.Physics.DispersionGrammar.relation_rejected_rejected",
+        "SFT.Physics.DispersionGrammar.provenance_rejected_rejected",
+        "SFT.Physics.DispersionGrammar.prediction_rejected_rejected",
+        "SFT.Physics.DispersionGrammar.record_rejected_rejected",
+        "SFT.Physics.DispersionGrammar.rows_rejected_rejected",
+        "SFT.Physics.DispersionGrammar.generality_rejected_rejected",
+        "SFT.Physics.DispersionGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/DispersionEvidence.lean",
+      "sha256": "bf479d96346298a6e9dc6af7f4e64ca00f8dc9576eb9ef23e11c5761aaa2ca97",
+      "theorems": [
+        "SFT.Physics.DispersionEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.DispersionEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.DispersionEvidence.registrationNoAxioms",
+        "SFT.Physics.DispersionEvidence.registrationNoFreeParameters",
+        "SFT.Physics.DispersionEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/DispersionExperiment.lean",
+      "sha256": "de06be8974fed29356a32a653fed8fe13fb992f6926328a168a424867962da8b",
+      "theorems": [
+        "SFT.Physics.DispersionExperiment.completeTargetCount",
+        "SFT.Physics.DispersionExperiment.completeTargetLabels",
+        "SFT.Physics.DispersionExperiment.changedSourceRejected",
+        "SFT.Physics.DispersionExperiment.registeredSpecValid",
+        "SFT.Physics.DispersionExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/ResonanceGrammar.lean",
+      "sha256": "ba3e1dd73af2864ac91d345cd324e4579a23a389d5b4bd7dbc0466952ccfa578",
+      "theorems": [
+        "SFT.Physics.ResonanceGrammar.generatedCardinality",
+        "SFT.Physics.ResonanceGrammar.candidatesComplete",
+        "SFT.Physics.ResonanceGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.ResonanceGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.ResonanceGrammar.uniqueSurvivor",
+        "SFT.Physics.ResonanceGrammar.survivorAccepted",
+        "SFT.Physics.ResonanceGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.ResonanceGrammar.carrier_rejected_rejected",
+        "SFT.Physics.ResonanceGrammar.relation_rejected_rejected",
+        "SFT.Physics.ResonanceGrammar.provenance_rejected_rejected",
+        "SFT.Physics.ResonanceGrammar.prediction_rejected_rejected",
+        "SFT.Physics.ResonanceGrammar.record_rejected_rejected",
+        "SFT.Physics.ResonanceGrammar.rows_rejected_rejected",
+        "SFT.Physics.ResonanceGrammar.generality_rejected_rejected",
+        "SFT.Physics.ResonanceGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/ResonanceEvidence.lean",
+      "sha256": "98bf9d19df1e16e857f5e9f1aea924db008e30a2311f612aaab883190fd4012e",
+      "theorems": [
+        "SFT.Physics.ResonanceEvidence.sourceResponseWitnessPassed",
+        "SFT.Physics.ResonanceEvidence.closedTransferWitnessPassed",
+        "SFT.Physics.ResonanceEvidence.registrationNoAxioms",
+        "SFT.Physics.ResonanceEvidence.registrationNoFreeParameters",
+        "SFT.Physics.ResonanceEvidence.decisionSurvival"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    },
+    {
+      "path": "SFT/Physics/ResonanceExperiment.lean",
+      "sha256": "399f7a3548c91438033a8b401fa42c1ce2c7e814a9af50a46986c004cdc56ccb",
+      "theorems": [
+        "SFT.Physics.ResonanceExperiment.completeTargetCount",
+        "SFT.Physics.ResonanceExperiment.completeTargetLabels",
+        "SFT.Physics.ResonanceExperiment.changedSourceRejected",
+        "SFT.Physics.ResonanceExperiment.registeredSpecValid",
+        "SFT.Physics.ResonanceExperiment.sourceMatchesOriginal"
+      ],
+      "inspection": "Full operational proof bodies; complete grammar companion comparison and actual literals/control/evidence fields inspected."
+    }
+  ],
+  "shards": [],
+  "audit": {
+    "path": "verification/TURN_489_REGISTERED_DECLARATIONS_AUDIT.log",
+    "sha256": "3c5420228fda6c937c6ff188ae0805b62a25fd2c830b0fef4c4a678dbbdb7bbe",
+    "additional_audit": {
+      "path": "verification/TURN_490_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "814e089efff453d9b6347f2a8c30e884f6447f770e61d3491c2b9700c53f5a91"
+    },
+    "matching_theorems": 232
+  },
+  "reports": [
+    {
+      "path": "verification/TURN_489_speedrelation_independent489_report.json",
+      "sha256": "ce36343e1926a9e08e1e3f9d9dc005c21a0dd4e979fa7b9bb487e117202b4770",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001",
+              "survivor": "complete-fold-carrier__spatial-repeat-times-recurrence-rate__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-speedrelation-489"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-speedrelation-489"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-speedrelation-489"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-SPEED-LENGTH-FREQUENCY-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-speedrelation-489"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_489_speedrelation_program489_report.json",
+      "sha256": "f13716c33e4f1a4e4fe3614bca76fd0364dde1c83ca1e6ec20b333f826dc3035",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:ef50b7f656f86bbb15cd4cb0d3c8172cf7736f419eda1817621fb875f7031a87",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All SpeedRelationProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_489_speedrelation_validation489_report.json",
+      "sha256": "bd87d43153db1793e7119058f34625e9ec475d813b1f4438ffd23d8e4ae4e70e",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 44546,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_490_diffraction_independent490_report.json",
+      "sha256": "e36675d2f8f47cc4d1e3a34d9d5e98ed22ebd636b78a173e500b3316f7a4bc23",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-DIFFRACTION-001",
+              "survivor": "complete-fold-carrier__aperture-constrained-path-regeneration__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-diffraction-490"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-DIFFRACTION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-diffraction-490"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-DIFFRACTION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-diffraction-490"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-DIFFRACTION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-diffraction-490"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_490_diffraction_program490_report.json",
+      "sha256": "9e258d7def815524b5fcab913217b69ad220436d130634736412cbe268da0982",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:7161343d80b1f1dfcca31709a1932fc0c38ac92cc61923966f7f6819137a1c93",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All DiffractionProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_490_diffraction_validation490_report.json",
+      "sha256": "bd87d43153db1793e7119058f34625e9ec475d813b1f4438ffd23d8e4ae4e70e",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 44546,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_490_dispersion_independent490_report.json",
+      "sha256": "cb20987e49106f0642802672f38bc7536dc7ace77a12db66e5fb67176fac6df1",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-DISPERSION-001",
+              "survivor": "complete-fold-carrier__frequency-labelled-support-response__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-dispersion-490"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-DISPERSION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-dispersion-490"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-DISPERSION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-dispersion-490"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-DISPERSION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-dispersion-490"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_490_dispersion_program490_report.json",
+      "sha256": "afcef390db3c3a7976500b098cd2e70a667541810c22c6b04468f76a5bbb8812",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:99dfb753c9092b1a1d9e26c0d60986514bd3b990a3c69ce166e2a40c5802da83",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All DispersionProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_490_dispersion_validation490_report.json",
+      "sha256": "bd87d43153db1793e7119058f34625e9ec475d813b1f4438ffd23d8e4ae4e70e",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 44546,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_490_interference_independent490_report.json",
+      "sha256": "cce475eec88fdf623d0ade69abab40bcb10a517652cbfc5c74013907bf4dc33f",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-INTERFERENCE-001",
+              "survivor": "complete-fold-carrier__phase-labelled-predecessor-merging__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-interference-490"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-INTERFERENCE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-interference-490"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-INTERFERENCE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-interference-490"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-INTERFERENCE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-interference-490"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_490_interference_program490_report.json",
+      "sha256": "fbd5e207aa1ad0780146fccc91170b92d3f9337f24c8d7faff95de89b0fa7f1c",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:be7b9c926641bd8cabda9e0e20899b92c7e630147cf731a62da44fede8cd2f66",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All InterferenceProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_490_interference_validation490_report.json",
+      "sha256": "bd87d43153db1793e7119058f34625e9ec475d813b1f4438ffd23d8e4ae4e70e",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 44546,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_490_polarization_independent490_report.json",
+      "sha256": "08dd83717c6aa6f337c877d84fc99316ae0c7855ad874cf364edc0b858d226b4",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-POLARIZATION-001",
+              "survivor": "complete-fold-carrier__held-transverse-recurrence-orientation__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-polarization-490"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-POLARIZATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-polarization-490"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-POLARIZATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-polarization-490"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-POLARIZATION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-polarization-490"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_490_polarization_program490_report.json",
+      "sha256": "0581051fdf49ffbcf2ce67f71f65d4dc8ae37416de47bb09fce20bc72c89897c",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:ff32660b2dd6d39c4658c6320647c05df6c2f984de9ebf2883d67a9628371925",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All PolarizationProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_490_polarization_validation490_report.json",
+      "sha256": "bd87d43153db1793e7119058f34625e9ec475d813b1f4438ffd23d8e4ae4e70e",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 44546,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_490_resonance_independent490_report.json",
+      "sha256": "06c78c3b5c83bd11bc9908a4476b09101a4a6bbb55196183e54ad71fa5467815",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-RESONANCE-001",
+              "survivor": "complete-fold-carrier__common-refinement-recurrence-matching__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-resonance-490"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-RESONANCE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-resonance-490"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-RESONANCE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-resonance-490"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-RESONANCE-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-resonance-490"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_490_resonance_program490_report.json",
+      "sha256": "bb246a88a46aca8494ded38bc82da7db3672705b883c6495d13dd53de7c284f8",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:4530e5320e83f41278376ce35c1394e1134d846d07515c70aa7c78fbf5b24e35",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All ResonanceProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_490_resonance_validation490_report.json",
+      "sha256": "bd87d43153db1793e7119058f34625e9ec475d813b1f4438ffd23d8e4ae4e70e",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 44546,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_490_superposition_independent490_report.json",
+      "sha256": "3774ef3c623b5a78d76f66623847fd6fcfe63bccb417d5d89d50053dae267ced",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-SUPERPOSITION-001",
+              "survivor": "complete-fold-carrier__labelled-disjoint-wave-junction__source-bound-proof-trace__capability-closed-prediction__separate-measurement-record__complete-registered-rows__one-successor-closure__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-superposition-490"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-SUPERPOSITION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-superposition-490"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-SUPERPOSITION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-superposition-490"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "candidate_count": 256,
+              "claim_id": "SFT-PHYS-WAVE-SUPERPOSITION-001",
+              "survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-superposition-490"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_490_superposition_program490_report.json",
+      "sha256": "cdc2f253d6893cdb082b6c68f8d9408d1ebd53d298f791f024fc010e9d3646d4",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:1e084c75cd32f819fb2724505d0d805269b650e12b6cd78784cb2d5aff46c356",
+        "candidate_lookup_decisions": 256,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All SuperpositionProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_490_superposition_validation490_report.json",
+      "sha256": "bd87d43153db1793e7119058f34625e9ec475d813b1f4438ffd23d8e4ae4e70e",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 44546,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    }
+  ],
+  "new_proofs": 0,
+  "new_builds": 0
+}

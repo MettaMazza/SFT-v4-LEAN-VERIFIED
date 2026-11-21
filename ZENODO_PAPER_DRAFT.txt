@@ -33392,3 +33392,56 @@ Eight original controls include removal of a source record and an actual mismatc
     51 record messages + 6 explanatory messages + 8 control messages =65 messages.
 
 Original source: sft/chemistry/reaction_dynamics_scattering_validation_v1.py, _incoming, _outgoing, _support, exact_reaction_dynamics_scattering_analysis, _identities, prediction_program_document, experiment_registration_record, _source_rows, _prediction_map and ReactionDynamicsScatteringValidator.validate. Native translation: SFT/Chemistry/ReactionDynamicsScatteringAnalysis.lean, ReactionDynamicsScatteringExperiment.lean, ReactionDynamicsScatteringSource.lean, ReactionDynamicsScatteringPrediction.lean and ReactionDynamicsScatteringValidation.lean. Timeline: TURN1262. The original pinned program and empirical validation pass; native source analysis, custody, controls and receipt correspondence are queued for verification.
+
+1208. Exhaustive mechanism paths and retained proof traces
+
+A mechanism search receives a held initial state s, a held terminal state t and the complete ordered list E of registered transitions. A transition records a source state, destination state and its law/trace label. The original operation carries three items at every search position: the current state x, the accumulated label trace τ and the visited-state word V. Initially these are
+
+    (x,τ,V)=(s,(),(s)).
+
+A terminal position x=t contributes its complete trace τ immediately and is not expanded further. Otherwise a registered edge e=(a,b,ℓ) extends the position exactly when
+
+    a=x and b∉V.
+
+Its successor is
+
+    (b, τ++(ℓ), V++(b)).
+
+The visited-state condition excludes repeated states, including a self-loop at the current state and any return to the initial state. It does not discard a distinct parallel transition merely because another transition has the same label. All eligible transitions contribute their continuations. In particular, two registered edge occurrences carrying the same complete label trace produce two retained copies of that trace. The final operation sorts the complete trace list lexicographically; it does not replace it with a set.
+
+For the transition list
+
+    (1,2,"first"), (2,3,"second"), (1,3,"direct"), (2,1,"cycle"),
+
+the search from 1 to 3 produces
+
+    (("direct"),("first","second")).
+
+The edge from 2 back to 1 fails the visited-state condition. Searching from 1 to 1 instead produces the single empty trace (()), because the initial state is already terminal. A search with no route produces the empty trace list (). These two outputs therefore remain distinct.
+
+Termination follows from the original finite transition support and simple-path condition. If an edge occurrence were used twice in one path, its destination state would be revisited, contradicting the admission condition. Consequently a path uses at most |E| edge occurrences. The translation derives its recursion index from |E|; it introduces no externally chosen search cutoff. It visits successors in the reverse transition order corresponding to the original last-in-first-out stack, then applies the original lexicographic ordering. Existing molecular-graph word ordering is reused.
+
+The eight binary grammar axes retain held states, admitted transitions, complete simple-path enumeration, stepwise carrier custody, all parallel routes, the declared cycle/resource boundary, kernel stepwise acceptance and the complete premise/alternative/step/terminal trace. Their literal product contains 2⁸=256 alternatives. The operation consumes the registered transition list; the separate sequential and parallel mechanism entries retain the source-specific transition and carrier conditions on that list.
+
+Original source at commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1: sft/chemistry/computational_chemistry_laws_v1.py, mechanism_paths and LAW_ROWS["009"]; computational_chemistry_batch_v1.py, SPECS_BY_NUMBER["009"]. Native translation: SFT/Chemistry/MechanismSearch.lean, MechanismSearchGrammar.lean and MechanismSearchEvidence.lean, reusing MolecularGraphEnumeration.stringListLE and MolecularGraphRefinement.sortedRows. Timeline: TURN1263. Native verification is queued; no completed-entry credit has been assigned to this staged translation.
+
+1209. Mechanism-search external source correspondence
+
+The computational-chemistry family binds 59 original artifacts totaling 444,644,830 bytes. The mechanism-search entry uses eight separately registered target checks, covering held states, admitted transitions, all simple paths, carrier traces, parallel routes, the cycle boundary, kernel acceptance and complete proof traces.
+
+The implementation-distinct source operation for this entry independently counts every retained Rhea source line and every USPTO data row:
+
+    N_Rhea=36,444,    N_USPTO=50,016.
+
+The independent reconstruction condition is the conjunction of these exact counts. The complete result-vector identity binds four original components together:
+
+    V=hash(source surface, complete source manifest,
+           family claim results, registered target checks).
+
+Each of the eight checks is retained in its original target order. A failed independent reconstruction changes the final registered comparison to failure. Removing the last comparison fails the equality between the resulting target sequence and the complete registered target sequence; a selected passing subset cannot satisfy that original condition.
+
+The original direct analysis passes all eight target checks and preserves the complete source surface. Its complete 256-candidate program is accepted by the original independent validator, while omission of a candidate, addition of a survivor and failure of a control are rejected. These results are recorded separately from the pending native operation comparisons and empirical receipt binding.
+
+Original source: sft/chemistry/computational_chemistry_validation_v1.py, _independent_surface case009 and exact_analysis; computational_chemistry_batch_v1.py, AUTHORITIES, SOURCE_ARTIFACTS and _targets. Native search and grammar references: SFT/Chemistry/MechanismSearch.lean, MechanismSearchGrammar.lean and MechanismSearchEvidence.lean. Original comparison evidence: verification/TURN1263_SEARCH_ORIGINAL. Timeline: TURN1263. Native source-analysis and full custody/receipt translation remain pending.
+
+The pinned V3 empirical binding ComputationalChemistryValidatorV2 in sft/chemistry/computational_chemistry_validation_v2.py preserves the same eight comparisons, complete source vector and post-seal custody. Its original twelve-field, five-message result passes with the protected source tree unchanged. Evidence: verification/TURN1263_SEARCH_ORIGINAL/search1360_original_v2_report.json and search1360_original_empirical_v2.json. Timeline: TURN1263. The corresponding native receipt translation remains pending.

@@ -1,0 +1,848 @@
+{
+  "updated_at": "2026-11-21T14:11:33.289358+00:00",
+  "sections_read": [
+    470
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "sft/physics/cosmic_budget_law.py: full ten-field construction and11-axis specification; upstream unchanged AlphaBlocks and CosmicRatios inspected evidence reused",
+    "sft/physics/cosmic_budget_validation.py: full outward interval propagation, refined and leading checks then blind validator"
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Physics/CosmoCompleteBudget.lean",
+      "sha256": "9cefe52dd6b530ff8f91c05299d7f25e6c5ab0588bdcbd1d90973a5c4b2fc6eb",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudget.exactTenFields",
+        "SFT.Physics.CosmoCompleteBudget.supportPartition",
+        "SFT.Physics.CosmoCompleteBudget.globalClosurePassed",
+        "SFT.Physics.CosmoCompleteBudget.matterClosurePassed",
+        "SFT.Physics.CosmoCompleteBudget.boundaryPairsExactly",
+        "SFT.Physics.CosmoCompleteBudget.completeBoundaryCount",
+        "SFT.Physics.CosmoCompleteBudget.inheritedWithinMatter"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetIntervals.lean",
+      "sha256": "2d8809b62b39c5cb1ec9c7ebaca17fb2ca44cbb585877d665e011fd0fafc695e",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetIntervals.originalCompleteComparison"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetComparison.lean",
+      "sha256": "45ef4f1bf810882aba3aebe3e026da0a3ac11427fd352a6567d791c4bd2fc501",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetComparison.completeRowsRetained",
+        "SFT.Physics.CosmoCompleteBudgetComparison.acceptanceRequiresAllRows",
+        "SFT.Physics.CosmoCompleteBudgetComparison.missingRowRejects",
+        "SFT.Physics.CosmoCompleteBudgetComparison.registeredComparisons"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetWitnesses.lean",
+      "sha256": "1fadeb22e1c8deb3c1b40bb2ef6e2c3858f11488c53887ee98ca8807fe615cee",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetWitnesses.check0Passed",
+        "SFT.Physics.CosmoCompleteBudgetWitnesses.check1Passed",
+        "SFT.Physics.CosmoCompleteBudgetWitnesses.check2Passed",
+        "SFT.Physics.CosmoCompleteBudgetWitnesses.check3Passed",
+        "SFT.Physics.CosmoCompleteBudgetWitnesses.allWitnessesPass"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetControls.lean",
+      "sha256": "280d8ffbadaf39fbf50e7043b9206405e88735e678af03316cd6fc9dc03cd775",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetControls.falsePremisePassed",
+        "SFT.Physics.CosmoCompleteBudgetControls.boundaryPassed"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetEvidence.lean",
+      "sha256": "29790e4c094b74172559b7035891fabcebd82f3addb959b83917cb09b2e7d8db",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetEvidence.nativeDecisionPreservesSurvival",
+        "SFT.Physics.CosmoCompleteBudgetEvidence.nativeDecisionPreservesReason",
+        "SFT.Physics.CosmoCompleteBudgetEvidence.registrationHasNoAxioms",
+        "SFT.Physics.CosmoCompleteBudgetEvidence.registrationHasNoFreeParameters",
+        "SFT.Physics.CosmoCompleteBudgetEvidence.lookupDependsOnlyOnIdentifier"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetExperiment.lean",
+      "sha256": "b4908637652bef7f0d0c88d38cba28c880e461f670d1087376282c443f4e1086",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetExperiment.sourceMatchesOriginal",
+        "SFT.Physics.CosmoCompleteBudgetExperiment.completeTargetCount",
+        "SFT.Physics.CosmoCompleteBudgetExperiment.completeTargetLabels",
+        "SFT.Physics.CosmoCompleteBudgetExperiment.changedSourceRejected",
+        "SFT.Physics.CosmoCompleteBudgetExperiment.registeredSpecValid"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetGrammarBase.lean",
+      "sha256": "198be557943e9cca5b52140e602ee3c0a415c68b213782e5b9847e71e8f1f892",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.generatedCardinality",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.candidatesComplete"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetGrammar.lean",
+      "sha256": "982e1b6ee41b264c6feceeddcec63c2de9075a014252f17831618a5927058702",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueSurvivor",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.survivorAccepted",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.support_rejected_rejected",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.boundary_rejected_rejected",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.pinning_rejected_rejected",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.free_rejected_rejected",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.global_rejected_rejected",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.internal_rejected_rejected",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.composition_rejected_rejected",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.closure_rejected_rejected",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.target_rejected_rejected",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.provenance_rejected_rejected",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetValidation.lean",
+      "sha256": "a8307fd2a198c890a55236aed0a60f0f27f06fad529985727f8e84712966f432",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetValidation.resealRejected"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetValidationProofs.lean",
+      "sha256": "87490273341fdd1ca5dac18a29369bbd7f0a9ee344ead4ecc0a86f644789b63b",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetValidation.sourceMismatchRejects",
+        "SFT.Physics.CosmoCompleteBudgetValidation.sealBindsExecution",
+        "SFT.Physics.CosmoCompleteBudgetValidation.emptyPremiseRejected",
+        "SFT.Physics.CosmoCompleteBudgetValidation.programDocumentRetained"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus0.lean",
+      "sha256": "aa1993b849c0231e7c57fa7445d4554064163e1d921c88ae347c3bef6d7078ae",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus0",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus0"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus1.lean",
+      "sha256": "f11c4def80cb979db481c6133a545816c313f6094d97355f2591a53ac2b015ce",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus1",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus1"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus2.lean",
+      "sha256": "4567d11748986a3bf30f78e9cd166c042115d228ee9b01aa01befef948327511",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus2",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus2"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus3.lean",
+      "sha256": "1d5ece61c3ce2c437ef85e62d5dcf94ddff51ab43336b9577c3baa2b88d7523f",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus3",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus3"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus4.lean",
+      "sha256": "e40cd9817b820d916d2b7ad18c1161fd95b86247fc43c7bd648f497203e450e4",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus4",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus4"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus5.lean",
+      "sha256": "63a34509646af7293265e0494a0fbd160e98aa5771ec8e9cd3bb6104ab05aec4",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus5",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus5"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus6.lean",
+      "sha256": "c70cf358fe6814f0d33dfac70610dfdc54f3293989a938172f1fe0c8db2fc577",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus6",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus6"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus7.lean",
+      "sha256": "e6c01898e20c125431ad6681ace79209c9908de22146a6cfe28c604b96fc3ca6",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus7",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus7"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus8.lean",
+      "sha256": "3925c1438e261e211b3dbac91dd48018cfe367edb6bc294572d13ce81f3b4348",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus8",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus8"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus9.lean",
+      "sha256": "5021129e8d075c86ffe11849a54d68847eea6787bdfdb51801445e305d811506",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus9",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus9"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus10.lean",
+      "sha256": "5d66a2587f442cfbc7775b58cdf96d435ae3731f164ab1d32c43ba2efda364d1",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus10",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus10"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus11.lean",
+      "sha256": "d6d21798d5316e12f5de4fa8f3e5f0a8cd822228d79a5fb3c63102c0152b05d9",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus11",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus11"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus12.lean",
+      "sha256": "341a06f825b0b6dbffd8eefc236adca66dc6397ae0f91ebac7e93f8ea02eaf27",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus12",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus12"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus13.lean",
+      "sha256": "894f602250278f6d0d109c2dab9953018f13f418022da4419af4cbc06074af7c",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus13",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus13"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus14.lean",
+      "sha256": "a0a04cdd65f25e64fe70fa2cd00d352bbaf01e28b41012800277970c91cf525a",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus14",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus14"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus15.lean",
+      "sha256": "ab9208a420ca029ecc93f405a9816b94fc43513e34ab8037cba517f13f8d3921",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus15",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus15"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus16.lean",
+      "sha256": "a9de4e18a17fe1b3e2ede36c8588e1ff7158cca9bb39ef1168a5a7a623a81efd",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus16",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus16"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus17.lean",
+      "sha256": "83525f950dd347b63a7ef296e6d70a273aba59dfa1db2ef12459779af57e00a7",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus17",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus17"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus18.lean",
+      "sha256": "98f62299bc2dac57eb5b0a497c56d05e5d03334507fa884f3a911fb87c49fc25",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus18",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus18"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus19.lean",
+      "sha256": "1d9bde35e6db641ccad248f4be9303312df28f0b0ffee5910ebd9048d03a8ab2",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus19",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus19"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus20.lean",
+      "sha256": "e6c8ee0277bf35f9084707700814e85a63ee88dfa78caa0e9339bfcfdcc7af36",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus20",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus20"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus21.lean",
+      "sha256": "a44a774877e373568220f60fafafc50bf663f82b1463bee3e614ccbdd3feca85",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus21",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus21"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus22.lean",
+      "sha256": "1f721f18389ed2ce4d4f6be09e56ce07f02e650264b38d19a6376f634e9bb57b",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus22",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus22"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus23.lean",
+      "sha256": "72129cc1bc62e421bf91fa5b82b7164e6bbcb437e6efba1d0d616cdbedcd5785",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus23",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus23"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus24.lean",
+      "sha256": "78fe6cc1b1215eee39adc4ded0ab0b898a9ddcf420310f0a9ef428eec32c5dcf",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus24",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus24"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus25.lean",
+      "sha256": "a8ff1d7864281ee0f77ea72897b3854e18a43a05da5c333a493f2198cdc6d5c3",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus25",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus25"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus26.lean",
+      "sha256": "2a77a680e4ac394f21d7d535a194e0491c903e2a4856b140b6143307c4179c04",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus26",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus26"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus27.lean",
+      "sha256": "143667d526df53d3ed537c832f55fa5230ced9303bc96667ee52e10e3f448924",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus27",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus27"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus28.lean",
+      "sha256": "719e7b06c0833c47c450f0f9dcf3a70b06a5adb409f88a757b0821b6a1400281",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus28",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus28"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus29.lean",
+      "sha256": "33f91050865bd337d3a6f1fa3f063f05b52d6db25627432324faf7d10a5abad7",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus29",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus29"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus30.lean",
+      "sha256": "9dce277d888f61bde4556d2dd5b6ae21cd0080be16bd3dd6a79a5c9992e36c21",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus30",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus30"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus31.lean",
+      "sha256": "879ff2b29da9da55e0610d9866cdc9b71a1690f5c589aa90ceb2ed1557037552",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus31",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus31"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus32.lean",
+      "sha256": "523e0b3675874af330f116e828ebedf3fbcb02e12b94802a75fa87096e8b17b8",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus32",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus32"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus33.lean",
+      "sha256": "111adbdd4b1e53b0c3686e79d9aeaf2f4f38e27ef4d81ba515c6325540222fb2",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus33",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus33"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus34.lean",
+      "sha256": "8619017809d9e5213aa2a57e0604794ee5e4de49497b2a4f5c83ee87b077615d",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus34",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus34"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus35.lean",
+      "sha256": "750cda2b8a7f189574d1d894b4cfb01f6487aaf0caf724bec33d9aa3e1e0a67c",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus35",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus35"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus36.lean",
+      "sha256": "6676ff008ddc6b1fd016e7f2d791ab5c6f76136fb63a536c944131ac77c952b3",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus36",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus36"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus37.lean",
+      "sha256": "2de4d0b102f6f08113647e16f724908b6e9d802f0de672f4fe23616c723292c1",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus37",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus37"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus38.lean",
+      "sha256": "2943b1e794d35a4eb847aae0d09c2e9b628192d7962b1329f10a19383fbefb9b",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus38",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus38"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus39.lean",
+      "sha256": "45e61d6301209568d0aee257b4f7ecf90347b67dd34e31fe99063ec2fd3c0ebf",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus39",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus39"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus40.lean",
+      "sha256": "903828b9b472b97a195afb94aa25a5648578eb1d3f6f2bb4bf4f519ea95a6441",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus40",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus40"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus41.lean",
+      "sha256": "73c73dd0c5127c5146d121148f14781c5eeab8bc190e14316cae734785d4fb73",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus41",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus41"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus42.lean",
+      "sha256": "eab402b4b3f58570e7fa25cd48cc36ce06d0651738aa0f2d10d41c11b395c1e0",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus42",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus42"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus43.lean",
+      "sha256": "4ad8218c2ef2118a834b9c20e830324a30b82f7b313ff9b9c24bde821147cf64",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus43",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus43"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus44.lean",
+      "sha256": "54cc1253e8d5a28bc6447e17459c12f8f46f0b5c2425d2cac6ad359bcb0066de",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus44",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus44"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus45.lean",
+      "sha256": "e9c7e02b166a37c1570be9c03d6861b2536631f0976e031668a599645f89b660",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus45",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus45"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus46.lean",
+      "sha256": "1f72a42df84c764e63b299a3003c76488e8b46a2d63cf009e0500fdde325e614",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus46",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus46"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus47.lean",
+      "sha256": "1a545a1aff3ab5d358d5a2facb899c951f1817d128b908dda1ad4b6f85fb79f6",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus47",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus47"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus48.lean",
+      "sha256": "9a2242eb302a1150b7de97337a2b64be9f2a5625c490f3b826ab36ded54615e5",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus48",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus48"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus49.lean",
+      "sha256": "dd61166b0fdd974db5b041f6cd31e5bc23bfc95c7082cb633c01b9a04b5196a2",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus49",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus49"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus50.lean",
+      "sha256": "2aae5b6f95e3a13fc1ed1d00c12e24e51fca150b7dd92487d1a00d87593596d7",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus50",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus50"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus51.lean",
+      "sha256": "80b8c5f3b29fa22b5bd1817652d254e22bdfd3e42f355924b112560d57b462ae",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus51",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus51"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus52.lean",
+      "sha256": "59206ecc8c57c2715d1da1dc8a11e3bc67883027632098537732c8709ead151b",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus52",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus52"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus53.lean",
+      "sha256": "d3c9c6b355e86d713bafa729427da3f8e750586992e08cf93d7e5c9063042272",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus53",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus53"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus54.lean",
+      "sha256": "6e28021d14227b4eb7e5565222e409f94ef1725acfe5d02ab1f3f955bf3188cc",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus54",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus54"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus55.lean",
+      "sha256": "8ef1afae85c266a283808ac320a99cf06087075579da183ff675113da393e6bf",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus55",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus55"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus56.lean",
+      "sha256": "770250a113ba26cfc6edeac7e8abe5c73f67507387b5ce0d21affca42bf6a326",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus56",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus56"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus57.lean",
+      "sha256": "6039acf3977a26d2068c9d4e24981eb08c1f09c398984c93d38f1b611d9fd563",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus57",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus57"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus58.lean",
+      "sha256": "c86d4206fac5af4843e0bb087e3b7174df2ae8720c21b03d9f693358abc3662e",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus58",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus58"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus59.lean",
+      "sha256": "51b11d74b16cc756ca0f88d8a39658497eadf1c949a16ea25176df43ee91b574",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus59",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus59"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus60.lean",
+      "sha256": "9318799cd5a22b33e8c3784abb2852a0c41f9437e8ec9f5763e06b1267f00b00",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus60",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus60"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus61.lean",
+      "sha256": "81b7399e2857a8a03c22b37ac92e83ba86693cf6d250cf5139fd834903d9bf56",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus61",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus61"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus62.lean",
+      "sha256": "51348814be15045bdf49f8d2c1c01bdfbdb10b69e6f2b899952279a626512bad",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus62",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus62"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoCompleteBudgetCensus63.lean",
+      "sha256": "b3f389a4fafc4ded0db3011e4305935f6e494bc59095beb1210fdf8360970d55",
+      "theorems": [
+        "SFT.Physics.CosmoCompleteBudgetGrammar.decisionCensus63",
+        "SFT.Physics.CosmoCompleteBudgetGrammar.uniqueCensus63"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    }
+  ],
+  "audits": [
+    {
+      "path": "verification/TURN_515_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "b41517899640b2c2fffc63d03bf71a1bc677b174f6613f13d0790c6a1c97fe24"
+    },
+    {
+      "path": "verification/TURN_515_auditflatbudget514_CosmoCompleteBudget.log",
+      "sha256": "c6945a6c63d17c65909c7596649023ff34522116e7b76b957a1546afa16b3756"
+    }
+  ],
+  "matching_theorems": 180,
+  "reports": [
+    {
+      "path": "verification/TURN_515_cosmocompletebudget_independent514_report.json",
+      "sha256": "81f52b88fc318fec68310d08b7cfdbf8d37c73de539ba640a7d487a5f43e4f84",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "budget": {
+                "baryon": "25/512",
+                "cold_dark": "135/512",
+                "matter": "5/16",
+                "vacuum": "11/16"
+              },
+              "claim_id": "SFT-PHYS-COSMO-COMPLETE-BUDGET-001",
+              "generated_cardinality": 2048,
+              "unique_survivor": "least-generator-volume-binary-cover__complete-two-state-boundary-pair__all-depth-boundary-pairs__complete-unpinned-complement__five-sixteenths-and-eleven-sixteenths__admitted-five-to-twenty-seven-partition__global-matter-times-internal-shares__exact-four-part-One-closure__all-planck-rows-inaccessible-until-seal__disclosed-successor-observational-reconstruction__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-cosmocompletebudget-514"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "budget": {
+                "baryon": "25/512",
+                "cold_dark": "135/512",
+                "matter": "5/16",
+                "vacuum": "11/16"
+              },
+              "claim_id": "SFT-PHYS-COSMO-COMPLETE-BUDGET-001",
+              "generated_cardinality": 2048,
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-cosmocompletebudget-514"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "budget": {
+                "baryon": "25/512",
+                "cold_dark": "135/512",
+                "matter": "5/16",
+                "vacuum": "11/16"
+              },
+              "claim_id": "SFT-PHYS-COSMO-COMPLETE-BUDGET-001",
+              "generated_cardinality": 2048,
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-cosmocompletebudget-514"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "budget": {
+                "baryon": "25/512",
+                "cold_dark": "135/512",
+                "matter": "5/16",
+                "vacuum": "11/16"
+              },
+              "claim_id": "SFT-PHYS-COSMO-COMPLETE-BUDGET-001",
+              "generated_cardinality": 2048,
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-cosmocompletebudget-514"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_515_cosmocompletebudget_program514_report.json",
+      "sha256": "dbd7a6190cb39254f2b53d4d5e6f527eea248c7d6701798ce5dd3b8a048ab34a",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:d1211befaf769f9729f7d8b95168e99e2193f47b1e8a72a950fbf9ad7d471152",
+        "candidate_lookup_decisions": 2048,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All CosmoCompleteBudgetProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_515_cosmocompletebudget_validation514_report.json",
+      "sha256": "36521eb9d06b06bba52fa1d4ede4c5a8566278a590a134bebfc887dc9b9fbe04",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 1338,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    }
+  ],
+  "new_proofs": 0,
+  "new_builds": 0
+}

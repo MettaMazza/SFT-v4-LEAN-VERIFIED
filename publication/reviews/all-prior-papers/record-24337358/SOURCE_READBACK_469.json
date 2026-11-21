@@ -1,0 +1,971 @@
+{
+  "updated_at": "2026-11-21T14:09:46.421208+00:00",
+  "sections_read": [
+    469
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "sft/physics/spatial_flatness_law.py: full module including exact closed_partition, refine_partition and original11-axis specification",
+    "sft/physics/spatial_flatness_validation.py: full module including interval check then blind validator"
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatness.lean",
+      "sha256": "381b8b47570a9d953f398b941343aec956fe7d0e0bade48c97fd0779be5126eb",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatness.closedExactly",
+        "SFT.Physics.CosmoSpatialFlatness.emptyRejected",
+        "SFT.Physics.CosmoSpatialFlatness.positiveSplitAccepted",
+        "SFT.Physics.CosmoSpatialFlatness.refineRetainsPrefix"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessProofs.lean",
+      "sha256": "db3abdd434a95e22ba25387440aa808841b43ad246d3a288cc1f5d0154904d8b",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatness.addMul",
+        "SFT.Physics.CosmoSpatialFlatness.mulLeftComm",
+        "SFT.Physics.CosmoSpatialFlatness.addLeftComm",
+        "SFT.Physics.CosmoSpatialFlatness.exactIntegerAccumulation",
+        "SFT.Physics.CosmoSpatialFlatness.naturalTotalScaled",
+        "SFT.Physics.CosmoSpatialFlatness.totalAppend",
+        "SFT.Physics.CosmoSpatialFlatness.splitScaled",
+        "SFT.Physics.CosmoSpatialFlatness.splitPreservesNaturalClosure",
+        "SFT.Physics.CosmoSpatialFlatness.positiveMapped",
+        "SFT.Physics.CosmoSpatialFlatness.everyPositiveSplitPreservesClosure",
+        "SFT.Physics.CosmoSpatialFlatness.asRatPositive",
+        "SFT.Physics.CosmoSpatialFlatness.everyPositiveRatRepresented",
+        "SFT.Physics.CosmoSpatialFlatness.everyAdmittedFamilyRepresented",
+        "SFT.Physics.CosmoSpatialFlatness.closedMappedExactly",
+        "SFT.Physics.CosmoSpatialFlatness.mappedAppend",
+        "SFT.Physics.CosmoSpatialFlatness.mappedLength",
+        "SFT.Physics.CosmoSpatialFlatness.refinementPreservesClosedPartition",
+        "SFT.Physics.CosmoSpatialFlatness.allFiniteRefinementsPreserveAbsence"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessIntervals.lean",
+      "sha256": "d8b75f89d518a3bda03bad3d07eff0a6333a5b3c805551994e20a7ec29fb427e",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessIntervals.completeIntervalContainsAbsence"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessComparison.lean",
+      "sha256": "dd41e3352aa6a2e4919f32139473d788be8976cdc96491a600b896a893b1b66e",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessComparison.completeRowsRetained",
+        "SFT.Physics.CosmoSpatialFlatnessComparison.acceptanceRequiresAllRows",
+        "SFT.Physics.CosmoSpatialFlatnessComparison.missingRowRejects",
+        "SFT.Physics.CosmoSpatialFlatnessComparison.registeredComparisons"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessWitnesses.lean",
+      "sha256": "7239198d0214acf7dd03466c241ff79242490655c9b778961f19057f6acaae66",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessWitnesses.check0Passed",
+        "SFT.Physics.CosmoSpatialFlatnessWitnesses.check1Passed",
+        "SFT.Physics.CosmoSpatialFlatnessWitnesses.check2Passed",
+        "SFT.Physics.CosmoSpatialFlatnessWitnesses.allWitnessesPass"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessControls.lean",
+      "sha256": "f9222ae7b351b6d26743c004da9d1d970747c4db9f2a0b87dbad24a3a67213ab",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessControls.falsePremisePassed",
+        "SFT.Physics.CosmoSpatialFlatnessControls.boundaryPassed"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessEvidence.lean",
+      "sha256": "ffcd119aafd4609e500e232cf491a3c711e567eba05e3fdf5dd868acb257627f",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessEvidence.nativeDecisionPreservesSurvival",
+        "SFT.Physics.CosmoSpatialFlatnessEvidence.nativeDecisionPreservesReason",
+        "SFT.Physics.CosmoSpatialFlatnessEvidence.registrationHasNoAxioms",
+        "SFT.Physics.CosmoSpatialFlatnessEvidence.registrationHasNoFreeParameters",
+        "SFT.Physics.CosmoSpatialFlatnessEvidence.lookupDependsOnlyOnIdentifier"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessExperiment.lean",
+      "sha256": "bdf68094b851542314d76c7c8682083102689ffeb10c7bb420d484d4f1fc8801",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessExperiment.sourceMatchesOriginal",
+        "SFT.Physics.CosmoSpatialFlatnessExperiment.completeTargetCount",
+        "SFT.Physics.CosmoSpatialFlatnessExperiment.completeTargetLabels",
+        "SFT.Physics.CosmoSpatialFlatnessExperiment.changedSourceRejected",
+        "SFT.Physics.CosmoSpatialFlatnessExperiment.registeredSpecValid"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessGrammarBase.lean",
+      "sha256": "411b8dc899d3978f54d0c1143ed6bb360515811823769a880d03b454b5e0ec98",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.generatedCardinality",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.candidatesComplete"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessGrammar.lean",
+      "sha256": "ddfe0a15a88bc8196722dfd653acd603e155c92500980d86949afcc0f490bad2",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueSurvivor",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.survivorAccepted",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.carrier_rejected_rejected",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.component_rejected_rejected",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.normalization_rejected_rejected",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.completeness_rejected_rejected",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.remainder_rejected_rejected",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.absence_rejected_rejected",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.refinement_rejected_rejected",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.scope_rejected_rejected",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.target_rejected_rejected",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.provenance_rejected_rejected",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessValidation.lean",
+      "sha256": "da008cdf2305b863547c76fd16df547e3647b23f63075f51d66f0be013561784",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessValidation.resealRejected"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessValidationProofs.lean",
+      "sha256": "5a0827f3d31e05e1fbdf246a7d1a5c386752166507ef97cc4319be450a2416f5",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessValidation.sourceMismatchRejects",
+        "SFT.Physics.CosmoSpatialFlatnessValidation.sealBindsExecution",
+        "SFT.Physics.CosmoSpatialFlatnessValidation.emptyPremiseRejected",
+        "SFT.Physics.CosmoSpatialFlatnessValidation.programDocumentRetained"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus0.lean",
+      "sha256": "2dfd9ea4f6167fa566be8095a5ec36f1102ba1808acde28fb3251819fbf19e8c",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus0",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus0"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus1.lean",
+      "sha256": "057f54d7d0110da6754c859b6fd403d6f2df7373b1d891d0e79a6dd03ee776e0",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus1",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus1"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus2.lean",
+      "sha256": "7dfd930204cb5e1bc1268bc6605742f6f52bfeb117b7698b28512b2d3ceea1d5",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus2",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus2"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus3.lean",
+      "sha256": "a79eb5160b216da57ff43b76b4b39d88119adb4ddc796fd53dad70e5daa06248",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus3",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus3"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus4.lean",
+      "sha256": "b2dd9464a12d88a72d7bf17ff14d18defe0e1e229a8a34dc64dba80416f72870",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus4",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus4"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus5.lean",
+      "sha256": "05d4fee7b72b1bef4291902180d5938b90df0a0444943aa1e0f37311f15248da",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus5",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus5"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus6.lean",
+      "sha256": "1315193f57d62c302364fa4d781c32cc332eaa181bc4be470e17e4c6fd845f32",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus6",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus6"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus7.lean",
+      "sha256": "7cbf78040664ffe1f15686474f573961989b06f348ad8c084197ed8e43b92072",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus7",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus7"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus8.lean",
+      "sha256": "a3edf52e6f5966d77804eb187dc5afd6e2d9b5b059fa6b40dfda653d2d873859",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus8",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus8"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus9.lean",
+      "sha256": "c75817662e75d237e0b9296ac313df4798ad4fddae1f5c89edac571eed93915b",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus9",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus9"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus10.lean",
+      "sha256": "4950c6f45c38e78de79dc6bf4120d1fc0b9197e37cf4e9a794863424958a2800",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus10",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus10"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus11.lean",
+      "sha256": "da9614fa8bdd4f3c78857757f63d882a81cb995da74bf9c8c628ecc2fbfc3ce3",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus11",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus11"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus12.lean",
+      "sha256": "99c058259ca50e284f0a6d8731f70114d12a8401f2ed3cdf67692e0cd7e8af24",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus12",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus12"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus13.lean",
+      "sha256": "b865c54292e89358ba8e7b1efb9a510d7c271ae250f14ab2e2fc96418c4f9295",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus13",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus13"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus14.lean",
+      "sha256": "0c186de150450ef620a123c2e33d8f17ee0d9fce2ae7c948e6933f4acdce37b6",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus14",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus14"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus15.lean",
+      "sha256": "d3486514e2f06f3189667394115ee32a9ebb2a4cd6ea6a411e62008a5158b5e9",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus15",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus15"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus16.lean",
+      "sha256": "6d2c5c4cbf1bac413c9f38162b3617d494363508a5c48a8e86c615c10b42db35",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus16",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus16"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus17.lean",
+      "sha256": "4be2afc0b5bb40d6c8b8c28e0261e205a33465400e95afa043934b71f98d6d2f",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus17",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus17"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus18.lean",
+      "sha256": "dc8d1ac8f5bd8b6eb012fd9b18be48f1814893386b09c6790d0e575526f5b872",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus18",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus18"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus19.lean",
+      "sha256": "8542b51d5938d98fff541bea88fabf25e195c5b8cb8be4395fa8190140311e8b",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus19",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus19"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus20.lean",
+      "sha256": "cf8528514ee60a4d5ec3dc0d25daa1a34c5fe3dcb392beb7edc20d9871fcdb40",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus20",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus20"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus21.lean",
+      "sha256": "056faf56271eba37060a61ec110367d59b4495967fd20a9aaf652503553592f3",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus21",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus21"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus22.lean",
+      "sha256": "4d36f095997540327402ab4a647f1ad484f6e2ff83778ec2afddd49fbee77fb5",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus22",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus22"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus23.lean",
+      "sha256": "99364f2cf7c8c71f232ed1472c3f074f9bc39902a3e649bc076c8b27bc60bcfa",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus23",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus23"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus24.lean",
+      "sha256": "a989ce836ecceaae0920c7d634a14a18dc83cd8d21096fb17347c04066efde2b",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus24",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus24"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus25.lean",
+      "sha256": "de8851700327aa02958cd86c098b045b2c2c4cabce92fb501088a5164db994d6",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus25",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus25"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus26.lean",
+      "sha256": "8aa2a0de7ba58bfae9e45b49353eb1364bedbb692c380347d91962e4a564f0d1",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus26",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus26"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus27.lean",
+      "sha256": "31847fd7f2bc55ee920ed1177b265bd65c28cd94a3875de786a72c27e31d89a4",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus27",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus27"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus28.lean",
+      "sha256": "5b6ec51614a7f6792d6f576feed6792112fe18fc8300652f4c754c955f7ecf2e",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus28",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus28"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus29.lean",
+      "sha256": "2f578d228917ec8c884c5e466030ed224395b7f4849cec4a569e0cedb50953ca",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus29",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus29"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus30.lean",
+      "sha256": "fd5559dfb361a9ab312f99c39d6ba60316c265083e97523ed58d765820637114",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus30",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus30"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus31.lean",
+      "sha256": "47ad39e3b0b665400d164b5b9f9c2e978c9e02014d61c0b290df6408e98a651c",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus31",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus31"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus32.lean",
+      "sha256": "a1cff9af11add47fa9774c6ea357441ecc64736bd3c68c32745fd1501910cb56",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus32",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus32"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus33.lean",
+      "sha256": "f7fcfb7c8649fe7e5d614cd3675dd4d5b92f61219b0441a670604a946e5f6ece",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus33",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus33"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus34.lean",
+      "sha256": "c950d6879881ad6b9a9adc4c86e74a8c38afbb8b7d8994576977c6dbb5ff3364",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus34",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus34"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus35.lean",
+      "sha256": "cfde4552a0138e065cd1c4a81c244d18ca6180e1c5434e77ad4cefdb93a60885",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus35",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus35"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus36.lean",
+      "sha256": "66efafa01b61c83369cfb4a111aa46dce321525a2ad7b31f378d0e11a5ed83ca",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus36",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus36"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus37.lean",
+      "sha256": "0a9fa4beab0d94a028ed4b8c504948db1d57ff6ab741d4f152f0c776eafa7af7",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus37",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus37"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus38.lean",
+      "sha256": "ec33d64e72eb24d7208f27f5b304d5840c8451261f7e1652d842b666fe0799c6",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus38",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus38"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus39.lean",
+      "sha256": "c3a2178a95bcaa66c5d8658207648608b1d07cdbb87c45172ee32673d5084ed3",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus39",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus39"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus40.lean",
+      "sha256": "3ac85b4f01a12d54581e40ad3cba20f3f9187d620bd33e66d98340be1634e713",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus40",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus40"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus41.lean",
+      "sha256": "d936f83cd4c8e6e19da3c0e076e48fc889d45fc827d1eaa760545a44a06e4e29",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus41",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus41"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus42.lean",
+      "sha256": "d35d896cadbcdea6c1ffbb148690eb03e5f1a50a6b4925da1215a2d106d62d8b",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus42",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus42"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus43.lean",
+      "sha256": "3bc21a00fac12915c4845b79e34dc1ecb13435ca01419541cfe9e72b88c47bbb",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus43",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus43"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus44.lean",
+      "sha256": "e425b7d4944e6c56a6b516912d48b53083e186a371b98708c567c0caf3afa3ff",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus44",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus44"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus45.lean",
+      "sha256": "909e81db6d0eaeddcab3b2958ecbbac3bcbcd2bc051e328310a6596c9f849b74",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus45",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus45"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus46.lean",
+      "sha256": "ab4314b4d5f7ed2bbefbd0ca5053d50e400eebb78a80900233b80cfec992eeef",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus46",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus46"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus47.lean",
+      "sha256": "544a2ad416d3fe227177df7ae469b1d183e7d34700632309c90baa051fa0dad9",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus47",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus47"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus48.lean",
+      "sha256": "86707405669f8d65817f8b91ad3b37f76e554db2d9be59dec35650e8b7e2dcf8",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus48",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus48"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus49.lean",
+      "sha256": "2212b94e8b3dc20b459d6710d3f6cf2daa0f5be046ad4986f3b9bae46b5b1dfb",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus49",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus49"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus50.lean",
+      "sha256": "8b4cb43936e7b470cd100c230732daa7e2a21e61f1bc28878ec90fbf63f04979",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus50",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus50"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus51.lean",
+      "sha256": "5d68c0a92fe0d5e505fd4b59ae2983fed1d490651fd6c1356a2be02b4395c993",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus51",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus51"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus52.lean",
+      "sha256": "160cf7b2213cd4673db42c44408969207d1c96810581555b91bcb8c9681ba606",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus52",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus52"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus53.lean",
+      "sha256": "7a821239c81078e64d10f0bdbc5fc27810a01bd404fb5205dceee2f8ef73ab12",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus53",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus53"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus54.lean",
+      "sha256": "3d94dc52c4dbf6a0a814fb69e7bafd8e3ab8c75bf03aa455be38e575e7e21c59",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus54",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus54"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus55.lean",
+      "sha256": "765342edcd210b521c28d952a31381191db7aec03a209e90ba781a5f311fc347",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus55",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus55"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus56.lean",
+      "sha256": "1bd0d99f603fa32091cc3091cfbf6af741e4b7ce0fa03bcbe55842cc3995e520",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus56",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus56"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus57.lean",
+      "sha256": "37c4ff449e782f2dc00a6e6e49ee57f2f1f70ee61303072752595c8cb71b9fcb",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus57",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus57"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus58.lean",
+      "sha256": "5b6aa1613663dc618cc33a0b134ef5bf617ab6ceb3b79aee97d943c883fa61ad",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus58",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus58"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus59.lean",
+      "sha256": "f3e1a1e8d601f2d1303c2e535a42fdace6d3b7c34d8b2032d11124f152e27e35",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus59",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus59"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus60.lean",
+      "sha256": "7fb57c998b4e796373a4b4f9b71f1fba79d406c954d9a93ad1daa2a7402b408b",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus60",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus60"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus61.lean",
+      "sha256": "799a61a8413fff9c91f898649940ffe17d5bb95e00c3d30850d2023e02912926",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus61",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus61"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus62.lean",
+      "sha256": "dfe46d51a27d4ea7f8500bebb0c80648da18723990a35356c5823142c37e1f1c",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus62",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus62"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    },
+    {
+      "path": "SFT/Physics/CosmoSpatialFlatnessCensus63.lean",
+      "sha256": "b29e2638d757cb39e957267ccd392496d22013325688ae8a99d5f364ecc42bb7",
+      "theorems": [
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.decisionCensus63",
+        "SFT.Physics.CosmoSpatialFlatnessGrammar.uniqueCensus63"
+      ],
+      "inspection": "Full proof bodies;64 census templates verified identical after exact prefix substitution and compiler heartbeat-limit normalization only; both complete dispatches checked."
+    }
+  ],
+  "audits": [
+    {
+      "path": "verification/TURN_515_REGISTERED_DECLARATIONS_AUDIT.log",
+      "sha256": "b41517899640b2c2fffc63d03bf71a1bc677b174f6613f13d0790c6a1c97fe24"
+    },
+    {
+      "path": "verification/TURN_515_auditflatbudget514_CosmoSpatialFlatness.log",
+      "sha256": "a69835ea46134067432741bb470c72e27042e7924d29c3e8283c8fd429e3f10d"
+    }
+  ],
+  "matching_theorems": 194,
+  "reports": [
+    {
+      "path": "verification/TURN_515_cosmospatialflatness_independent514_report.json",
+      "sha256": "e7808172045bf5a2b1c374234cbc5b37a3a9a683247028518d1b9b54569e9132",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "base_partition": [
+                "1/3",
+                "2/3"
+              ],
+              "claim_id": "SFT-PHYS-COSMO-SPATIAL-FLATNESS-001",
+              "curvature_remainder": "empty-One-form",
+              "generated_cardinality": 2048,
+              "positive_refinement": [
+                "1/3",
+                "1/6",
+                "1/2"
+              ],
+              "unique_survivor": "one-common-total-carrier__exact-positive-held-part__common-One-normalization__every-generated-part-exhausts-One__unassigned-part-remainder__empty-One-form__positive-parent-preserving-split__all-finite-repartitions__curvature-record-inaccessible-until-seal__observational-reconstruction-with-independent-runtime__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-cosmospatialflatness-514"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "base_partition": [
+                "1/3",
+                "2/3"
+              ],
+              "claim_id": "SFT-PHYS-COSMO-SPATIAL-FLATNESS-001",
+              "curvature_remainder": "empty-One-form",
+              "generated_cardinality": 2048,
+              "positive_refinement": [
+                "1/3",
+                "1/6",
+                "1/2"
+              ],
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-cosmospatialflatness-514"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "base_partition": [
+                "1/3",
+                "2/3"
+              ],
+              "claim_id": "SFT-PHYS-COSMO-SPATIAL-FLATNESS-001",
+              "curvature_remainder": "empty-One-form",
+              "generated_cardinality": 2048,
+              "positive_refinement": [
+                "1/3",
+                "1/6",
+                "1/2"
+              ],
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-cosmospatialflatness-514"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "base_partition": [
+                "1/3",
+                "2/3"
+              ],
+              "claim_id": "SFT-PHYS-COSMO-SPATIAL-FLATNESS-001",
+              "curvature_remainder": "empty-One-form",
+              "generated_cardinality": 2048,
+              "positive_refinement": [
+                "1/3",
+                "1/6",
+                "1/2"
+              ],
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-cosmospatialflatness-514"
+          }
+        }
+      ]
+    },
+    {
+      "path": "verification/TURN_515_cosmospatialflatness_program514_report.json",
+      "sha256": "590f89b7b2f921f4df62a6a6f0ba5fbe86feb0b4c6cd7d9c38d2871153fa9cb8",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:34000aa9eb14f2f83a9f2bc1652509fac37592d7698da5ee08cf030f4738cb60",
+        "candidate_lookup_decisions": 2048,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All CosmoSpatialFlatnessProgram method output fields; complete empirical validator checked separately."
+      }
+    },
+    {
+      "path": "verification/TURN_515_cosmospatialflatness_validation514_report.json",
+      "sha256": "5462c5e4dfe6b7c0ff221fe8ab3d5659ead586e25785dcf7dee551ed434de6d3",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "fresh_native_execution": true,
+        "source_snapshot_bytes": 773,
+        "all_validation_fields_and_hashes_match": true,
+        "scope": "Full native blind validator output against pinned original empirical_validation,including source byte hashing,execution,sealing,custody,audit,all rows,controls,certificates and receipt. Host metadata supplied from pinned record; snapshots supplied identical because source output depends on their equality,not their content."
+      }
+    },
+    {
+      "path": "verification/TURN_515_flatness_operations515_report.json",
+      "sha256": "d2d01daaf3d37bcbb6005bad18c0b7fec842a802969dec0f390047c50d09206a",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_path": "sft/physics/spatial_flatness_law.py",
+        "source_sha256": "187c884534b795248e4a1efe236427fa826f3dd93e8209b78cb12de6739b31c1",
+        "cases": 21,
+        "closed_partition_cases": 11,
+        "refine_partition_cases": 10,
+        "actual": [
+          "empty-One",
+          "empty-One",
+          "empty-One",
+          "error: a cosmic partition requires exact positive parts",
+          "error: the registered component family does not close to the One",
+          "error: a cosmic partition requires exact positive parts",
+          "error: a cosmic partition requires exact positive parts",
+          "error: the registered component family does not close to the One",
+          "error: a cosmic partition requires exact positive parts",
+          "error: a cosmic partition requires exact positive parts",
+          "empty-One",
+          [
+            [
+              "1",
+              "3"
+            ],
+            [
+              "1",
+              "6"
+            ],
+            [
+              "1",
+              "2"
+            ]
+          ],
+          [
+            [
+              "-1",
+              "1"
+            ],
+            [
+              "1",
+              "1"
+            ],
+            [
+              "1",
+              "1"
+            ]
+          ],
+          [
+            [
+              "1",
+              "3"
+            ],
+            [
+              "2",
+              "3"
+            ]
+          ],
+          [
+            [
+              "1",
+              "3"
+            ],
+            [
+              "1",
+              "3"
+            ],
+            [
+              "1",
+              "3"
+            ]
+          ],
+          "error: partition refinement requires one retained component",
+          "error: partition refinement requires one retained component",
+          "error: partition refinement requires one retained component",
+          "error: refinement must be a positive exact split of one component",
+          "error: refinement must be a positive exact split of one component",
+          "error: refinement must be a positive exact split of one component"
+        ],
+        "driver_sha256": "b398061c0bd6bc9fb5a0aaf6583c055961661f659dbbf24a5c5d03968c62d4ba",
+        "scope": "Fresh native Lean operation outputs compared directly with the two functions extracted unchanged from the pinned V3 source; includes non-Fraction and nonpositive closure guards, exact sum, Boolean/negative/out-of-range indices, nonpositive/mismatched children and preservation of an untouched negative prefix."
+      }
+    }
+  ],
+  "new_proofs": 0,
+  "new_builds": 0
+}

@@ -1,0 +1,816 @@
+{
+  "status": "PASS",
+  "scope": "Source and manuscript correspondence for nine obligation fields and sixteen grammar choice labels per entry; not a substitute for native entry verification",
+  "entries": 72,
+  "original_source_sha256": {
+    "sft/consciousness_cognitive_science/obligations.py": "fb58dd2a9395a830bd80338bf5c3bb33130131e77b4e2fd4fd2ba3205686570e",
+    "sft/consciousness_cognitive_science/generated_law.py": "80ac5b8fdefb45207e2f46f8f4becd5d149cf900947755ddaf3573ade58328cd",
+    "sft/consciousness_cognitive_science/structural_model.py": "d9d5a4bf64d0d93ba11ef70d014fc2cd4809c93d39ea966f2aa8898051135067"
+  },
+  "rows": [
+    {
+      "claim_id": "SFT-CONSC-OBSERVATION-ACT-001",
+      "family": "observation_interior_observation",
+      "module": "SFT/Consciousness/ObservationAct.lean",
+      "sha256": "8f459f5fd6acaec071035d5cea624d09214b432821ab9453879beae29ba6c890",
+      "section": "1228. Observation-act grammar, closure and external evidence binding",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.sameImage",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-EXTERNAL-OBSERVATION-001",
+      "family": "observation_interior_observation",
+      "module": "SFT/Consciousness/ExternalObservation.lean",
+      "sha256": "6757db4a26d83bb31da6523e20c0a4fe118e3c0c433e43abd06116a27c1ff314",
+      "section": "1229. External observation",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.sameImage",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-INTERIOR-OBSERVATION-001",
+      "family": "observation_interior_observation",
+      "module": "SFT/Consciousness/InteriorObservation.lean",
+      "sha256": "256af73c582da7ae5deefe22119ffdc302e86c4513c29563a43eca228fba594f",
+      "section": "1230. Interior observation",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.sameImage",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-OBSERVER-OBSERVED-001",
+      "family": "observation_interior_observation",
+      "module": "SFT/Consciousness/ObserverObserved.lean",
+      "sha256": "d2a6b7a55891a12aad640b17fa0b8f6a47c8f0cee0c13c92d5923faf1ad86c55",
+      "section": "1231. Observer and observed distinction",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.sameImage",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-OBSERVATION-CLASS-001",
+      "family": "observation_interior_observation",
+      "module": "SFT/Consciousness/ObservationClass.lean",
+      "sha256": "af26616599eb92b2920ceefbf807339ba202a5d318b718821051cd9e31da6d54",
+      "section": "1232. Observation equivalence class",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.sameImage",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-OBSERVATIONAL-MOMENT-001",
+      "family": "observation_interior_observation",
+      "module": "SFT/Consciousness/ObservationalMoment.lean",
+      "sha256": "4dfe0bc5ed8c2ec36b7f6f6ea0f3435f0f484860363c11432ca7d08ed3b72e82",
+      "section": "1233. Atomic observational moment",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.sameImage",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-MEASUREMENT-CONSCIOUSNESS-BOUNDARY-001",
+      "family": "observation_interior_observation",
+      "module": "SFT/Consciousness/MeasurementConsciousnessBoundary.lean",
+      "sha256": "3a5e60d22c8ae0ad2563db4f271ebf563d23f7e16b557d104c9a6b6827e14409",
+      "section": "1234. Measurement and consciousness boundary",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.sameImage",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-COGNITIVE-ACCESS-001",
+      "family": "access_report_presence",
+      "module": "SFT/Consciousness/CognitiveAccess.lean",
+      "sha256": "aa826cefec57ad2b0429bdfcb66b579777b6cb0b15cba128ff8688608b26c5f4",
+      "section": "1235. Cognitive access",
+      "witness_body": "def exactFoldWitness : Bool := (match StructuralModel.observe StructuralModel.quarter false with | .ok act => !(StructuralModel.reversibleFromRecord act) | .error _ => false)",
+      "original_family_witnesses": [
+        "unretained_observation_is_not_reversible"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-REPORT-001",
+      "family": "access_report_presence",
+      "module": "SFT/Consciousness/Report.lean",
+      "sha256": "b6bb63eb948959fe36f03d002460f7116bb6f224f0024e66d748e2d7d94d082f",
+      "section": "1236. Report",
+      "witness_body": "def exactFoldWitness : Bool := (match StructuralModel.observe StructuralModel.quarter false with | .ok act => !(StructuralModel.reversibleFromRecord act) | .error _ => false)",
+      "original_family_witnesses": [
+        "unretained_observation_is_not_reversible"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-PHENOMENAL-PRESENCE-001",
+      "family": "access_report_presence",
+      "module": "SFT/Consciousness/PhenomenalPresence.lean",
+      "sha256": "fa2dd402acfe083672a72eb76220cc7634645e55647506a9916eee6434ff1a3d",
+      "section": "1237. Phenomenal presence",
+      "witness_body": "def exactFoldWitness : Bool := (match StructuralModel.observe StructuralModel.quarter false with | .ok act => !(StructuralModel.reversibleFromRecord act) | .error _ => false)",
+      "original_family_witnesses": [
+        "unretained_observation_is_not_reversible"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-REPORTABILITY-001",
+      "family": "access_report_presence",
+      "module": "SFT/Consciousness/Reportability.lean",
+      "sha256": "93ff783e0d10c7d30842338261c91225fc8cd40d5a8e48a68c327cd47de954d0",
+      "section": "1238. Reportability",
+      "witness_body": "def exactFoldWitness : Bool := (match StructuralModel.observe StructuralModel.quarter false with | .ok act => !(StructuralModel.reversibleFromRecord act) | .error _ => false)",
+      "original_family_witnesses": [
+        "unretained_observation_is_not_reversible"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-UNCONSCIOUS-PROCESS-001",
+      "family": "access_report_presence",
+      "module": "SFT/Consciousness/UnconsciousProcess.lean",
+      "sha256": "cc45f404b99f0c44f0815db0f2240e68af8c395b3b6a1f37d867723c4cd8f0fb",
+      "section": "1239. Active unavailable processing",
+      "witness_body": "def exactFoldWitness : Bool := (match StructuralModel.observe StructuralModel.quarter false with | .ok act => !(StructuralModel.reversibleFromRecord act) | .error _ => false)",
+      "original_family_witnesses": [
+        "unretained_observation_is_not_reversible"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-ALTERED-STATE-REPORT-BOUNDARY-001",
+      "family": "access_report_presence",
+      "module": "SFT/Consciousness/AlteredStateReportBoundary.lean",
+      "sha256": "82577ba0ae3219f421f3ebc5c54c3f1100d4f8deedbc68a1bfcba1cf23d9109f",
+      "section": "1240. Altered-state evidence boundary",
+      "witness_body": "def exactFoldWitness : Bool := (match StructuralModel.observe StructuralModel.quarter false with | .ok act => !(StructuralModel.reversibleFromRecord act) | .error _ => false)",
+      "original_family_witnesses": [
+        "unretained_observation_is_not_reversible"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-CONTENT-PLURALITY-001",
+      "family": "binding_unity",
+      "module": "SFT/Consciousness/ContentPlurality.lean",
+      "sha256": "c03336b03884fa3114d6485d05e93ef1a5a29dd69d800236619a76a764c19316",
+      "section": "1241. Plural conscious contents",
+      "witness_body": "def exactFoldWitness : Bool := (StructuralModel.observerObservedLock.wholePartition && StructuralModel.observerObservedLock.completion)",
+      "original_family_witnesses": [
+        "observer_observed_partition_the_one",
+        "binding_lock_completes"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-BINDING-001",
+      "family": "binding_unity",
+      "module": "SFT/Consciousness/Binding.lean",
+      "sha256": "e5b724f8d5c507bc6f8aa096544aa44d5ce444f49b14c0ec571763a61c083fbb",
+      "section": "1242. Binding relation",
+      "witness_body": "def exactFoldWitness : Bool := (StructuralModel.observerObservedLock.wholePartition && StructuralModel.observerObservedLock.completion)",
+      "original_family_witnesses": [
+        "observer_observed_partition_the_one",
+        "binding_lock_completes"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-UNITY-001",
+      "family": "binding_unity",
+      "module": "SFT/Consciousness/Unity.lean",
+      "sha256": "a3565152dfa20bd187d4abbe06749986617d61dde4164efc73c1b6e60d10e88a",
+      "section": "1243. Unity of experience",
+      "witness_body": "def exactFoldWitness : Bool := (StructuralModel.observerObservedLock.wholePartition && StructuralModel.observerObservedLock.completion)",
+      "original_family_witnesses": [
+        "observer_observed_partition_the_one",
+        "binding_lock_completes"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-INTEGRATION-BOUNDARY-001",
+      "family": "binding_unity",
+      "module": "SFT/Consciousness/IntegrationBoundary.lean",
+      "sha256": "00fa9bfbeac983974f4882065ca8847a2e4dfb99dc78caf6f330e5f90c60a521",
+      "section": "1244. Integration boundary",
+      "witness_body": "def exactFoldWitness : Bool := (StructuralModel.observerObservedLock.wholePartition && StructuralModel.observerObservedLock.completion)",
+      "original_family_witnesses": [
+        "observer_observed_partition_the_one",
+        "binding_lock_completes"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-SYNCHRONY-BOUNDARY-001",
+      "family": "binding_unity",
+      "module": "SFT/Consciousness/SynchronyBoundary.lean",
+      "sha256": "e8616db94b7910ef06d00a518c3a289a32ca9999784b05ceb1e00c0c72f7fdec",
+      "section": "1245. Synchrony and binding distinction",
+      "witness_body": "def exactFoldWitness : Bool := (StructuralModel.observerObservedLock.wholePartition && StructuralModel.observerObservedLock.completion)",
+      "original_family_witnesses": [
+        "observer_observed_partition_the_one",
+        "binding_lock_completes"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-FRAGMENTATION-001",
+      "family": "binding_unity",
+      "module": "SFT/Consciousness/Fragmentation.lean",
+      "sha256": "f855e07702338e5952af122405a98d462264158e4d2c30e05abf88b7744a0f82",
+      "section": "1246. Fragmentation and divided access",
+      "witness_body": "def exactFoldWitness : Bool := (StructuralModel.observerObservedLock.wholePartition && StructuralModel.observerObservedLock.completion)",
+      "original_family_witnesses": [
+        "observer_observed_partition_the_one",
+        "binding_lock_completes"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-PERSPECTIVE-001",
+      "family": "subject_perspective_interiority",
+      "module": "SFT/Consciousness/Perspective.lean",
+      "sha256": "240166901e754e65f5b501fa1c5c32d553bb8d7da343c9cc2e2716fe8f0490a6",
+      "section": "1247. Perspective",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.distinct",
+      "original_family_witnesses": [
+        "two_preimages_are_distinct"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-INTERIORITY-001",
+      "family": "subject_perspective_interiority",
+      "module": "SFT/Consciousness/Interiority.lean",
+      "sha256": "4915d344fcdb268671c64277090a4d6ea57cf91ca0caba44d4ca23d31fca06ff",
+      "section": "1248. Interiority",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.distinct",
+      "original_family_witnesses": [
+        "two_preimages_are_distinct"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-SUBJECT-CARRIER-001",
+      "family": "subject_perspective_interiority",
+      "module": "SFT/Consciousness/SubjectCarrier.lean",
+      "sha256": "b5a3a05674ea48b4aaec697987372978e826d226f2b2038c73cc68d247e53c99",
+      "section": "1249. Subject carrier",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.distinct",
+      "original_family_witnesses": [
+        "two_preimages_are_distinct"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-SELF-INVARIANT-001",
+      "family": "subject_perspective_interiority",
+      "module": "SFT/Consciousness/SelfInvariant.lean",
+      "sha256": "a2055749e87b175d0ee20e543128ff0d2d68da6095d660e12986db529b6b5d45",
+      "section": "1250. Self invariant",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.distinct",
+      "original_family_witnesses": [
+        "two_preimages_are_distinct"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-FIRST-THIRD-PERSON-001",
+      "family": "subject_perspective_interiority",
+      "module": "SFT/Consciousness/FirstThirdPerson.lean",
+      "sha256": "052d333ed003051ca679e62663402b6771598a3107cc49148ab006378fdc903e",
+      "section": "1251. First- and third-person evidence",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.distinct",
+      "original_family_witnesses": [
+        "two_preimages_are_distinct"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-PHENOMENAL-PRIVACY-001",
+      "family": "subject_perspective_interiority",
+      "module": "SFT/Consciousness/PhenomenalPrivacy.lean",
+      "sha256": "853ef8f5350f4bc98b767c021627549e305268ef86f81cfa811ec9fd5abdbc94",
+      "section": "1252. Phenomenal privacy",
+      "witness_body": "def exactFoldWitness : Bool := StructuralModel.observerObservedLock.distinct",
+      "original_family_witnesses": [
+        "two_preimages_are_distinct"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-SELF-OBSERVATION-001",
+      "family": "self_observation_introspection",
+      "module": "SFT/Consciousness/SelfObservation.lean",
+      "sha256": "888f1e3460707834ae54cb3f9ab74d869a7a6483fd315f3d36f237631143340d",
+      "section": "1253. Self-observation closure",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"retained_observation_is_reversible\") with | some (_, passed) => passed | none => false) && (match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"unretained_observation_is_not_reversible\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "retained_observation_is_reversible",
+        "unretained_observation_is_not_reversible"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-INTROSPECTION-BLIND-SPOT-001",
+      "family": "self_observation_introspection",
+      "module": "SFT/Consciousness/IntrospectionBlindSpot.lean",
+      "sha256": "15b8a08a277aaa668b9445e3cc1a68da4796e2465203fa4a8578a74d91d246f1",
+      "section": "1254. Introspection blind spot",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"retained_observation_is_reversible\") with | some (_, passed) => passed | none => false) && (match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"unretained_observation_is_not_reversible\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "retained_observation_is_reversible",
+        "unretained_observation_is_not_reversible"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-SELF-HISTORY-RECONSTRUCTION-001",
+      "family": "self_observation_introspection",
+      "module": "SFT/Consciousness/SelfHistoryReconstruction.lean",
+      "sha256": "29b67b47d4a25d3b05c1bdc4cd1f6879194cc8dc64512df8ca3358e8167ce2dd",
+      "section": "1255. Self-history reconstruction",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"retained_observation_is_reversible\") with | some (_, passed) => passed | none => false) && (match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"unretained_observation_is_not_reversible\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "retained_observation_is_reversible",
+        "unretained_observation_is_not_reversible"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-INTROSPECTION-LOSS-001",
+      "family": "self_observation_introspection",
+      "module": "SFT/Consciousness/IntrospectionLoss.lean",
+      "sha256": "125007a06390957a55137c72ba47a5455f7262651f4a9270811bfb41b117936f",
+      "section": "1256. Accumulated introspection loss",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"retained_observation_is_reversible\") with | some (_, passed) => passed | none => false) && (match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"unretained_observation_is_not_reversible\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "retained_observation_is_reversible",
+        "unretained_observation_is_not_reversible"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-CONFABULATION-BOUNDARY-001",
+      "family": "self_observation_introspection",
+      "module": "SFT/Consciousness/ConfabulationBoundary.lean",
+      "sha256": "22109180a4a96c865753ebfa561024e927d95670a737ee93fd851bd7f5147da7",
+      "section": "1257. Confabulation boundary",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"retained_observation_is_reversible\") with | some (_, passed) => passed | none => false) && (match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"unretained_observation_is_not_reversible\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "retained_observation_is_reversible",
+        "unretained_observation_is_not_reversible"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-DETERMINISM-SELF-OPACITY-001",
+      "family": "self_observation_introspection",
+      "module": "SFT/Consciousness/DeterminismSelfOpacity.lean",
+      "sha256": "1e3fc12d190150a222fed172d322d16b80ae40e2de78971ea68b916c60df6f54",
+      "section": "1258. Determinism with self-opacity",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"retained_observation_is_reversible\") with | some (_, passed) => passed | none => false) && (match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"unretained_observation_is_not_reversible\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "retained_observation_is_reversible",
+        "unretained_observation_is_not_reversible"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-MEMORY-CARRIER-001",
+      "family": "memory_temporal_identity",
+      "module": "SFT/Consciousness/MemoryCarrier.lean",
+      "sha256": "6ad25fb9dee2299d0618d7e04b6097e98a44a4b941c4f6bd32ca65b1919d7f8f",
+      "section": "1259. Memory carrier",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"complementary_pair_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "complementary_pair_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-MEMORY-PERSISTENCE-001",
+      "family": "memory_temporal_identity",
+      "module": "SFT/Consciousness/MemoryPersistence.lean",
+      "sha256": "1cd4bae69108a4a21fb73508d48572b1bc78848f69586d15218a96a5395e8dca",
+      "section": "1260. Memory persistence",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"complementary_pair_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "complementary_pair_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-RECALL-RECONSTRUCTION-001",
+      "family": "memory_temporal_identity",
+      "module": "SFT/Consciousness/RecallReconstruction.lean",
+      "sha256": "e17cdee2252a52340a5012440f1181b421873415e558b8b6a0d2199618e7c855",
+      "section": "1261. Recall and reconstruction",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"complementary_pair_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "complementary_pair_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-TEMPORAL-CONTINUITY-001",
+      "family": "memory_temporal_identity",
+      "module": "SFT/Consciousness/TemporalContinuity.lean",
+      "sha256": "0e76dc63f810ef8fdfda55f920ff3d5f3e7ec92ccb87207a56de0dd050d20666",
+      "section": "1262. Temporal continuity",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"complementary_pair_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "complementary_pair_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-IDENTITY-CONTINUITY-001",
+      "family": "memory_temporal_identity",
+      "module": "SFT/Consciousness/IdentityContinuity.lean",
+      "sha256": "b5e6bc33f70f8b714fb6a3e832e42ac6d8a20ef093735d7f674b205d680159be",
+      "section": "1263. Identity continuity",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"complementary_pair_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "complementary_pair_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-CESSATION-001",
+      "family": "memory_temporal_identity",
+      "module": "SFT/Consciousness/Cessation.lean",
+      "sha256": "da023774e76dd0c91f633e9301a361d97b62bb1daa44e442fd66edf579b613d1",
+      "section": "1264. Cessation of a conscious organization",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"complementary_pair_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "complementary_pair_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-SELF-REPRESENTATION-001",
+      "family": "finite_self_model",
+      "module": "SFT/Consciousness/SelfRepresentation.lean",
+      "sha256": "942c584ca28304cd16a816d8aac9e2e9edfff388006be56726ec7818fc95002b",
+      "section": "1265. Self representation",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"self_model_closes_in_two_nonidentity_acts\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "self_model_closes_in_two_nonidentity_acts"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-SELF-APPLICATION-001",
+      "family": "finite_self_model",
+      "module": "SFT/Consciousness/SelfApplication.lean",
+      "sha256": "eb8458ab533b868ba7545ecfddf3cc6c1e45d276d16d7ed2ed7f2c9721c2bc5f",
+      "section": "1266. Self application",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"self_model_closes_in_two_nonidentity_acts\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "self_model_closes_in_two_nonidentity_acts"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-SELF-MODEL-DEPTH-001",
+      "family": "finite_self_model",
+      "module": "SFT/Consciousness/SelfModelDepth.lean",
+      "sha256": "5048eb2ba9eb3a4e2451f1cd13bcd9a855dfe30cbe070a164e407301b698eaa6",
+      "section": "1267. Finite self-model depth",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"self_model_closes_in_two_nonidentity_acts\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "self_model_closes_in_two_nonidentity_acts"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-SELF-SIMULATION-BOUNDARY-001",
+      "family": "finite_self_model",
+      "module": "SFT/Consciousness/SelfSimulationBoundary.lean",
+      "sha256": "ef40f76f455aed072bf336306bd5f7bb85b382c3f8dd80de442fa56e2c54950e",
+      "section": "1268. Self-simulation boundary",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"self_model_closes_in_two_nonidentity_acts\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "self_model_closes_in_two_nonidentity_acts"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-SELF-VERIFICATION-LIMIT-001",
+      "family": "finite_self_model",
+      "module": "SFT/Consciousness/SelfVerificationLimit.lean",
+      "sha256": "b404488746037348095d8d273045bc6d4b97b1d94ac4d3a211bbdde83703d2ae",
+      "section": "1269. Self-verification limit",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"self_model_closes_in_two_nonidentity_acts\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "self_model_closes_in_two_nonidentity_acts"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-ATTENTION-001",
+      "family": "attention_availability",
+      "module": "SFT/Consciousness/Attention.lean",
+      "sha256": "bd043c77a58348fc651f367329e095fbe0c0259dae3cdc4d06a97b95fe37d02d",
+      "section": "1270. Attention",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"two_preimages_are_distinct\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "two_preimages_are_distinct"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-ATTENTIONAL-FOCUS-001",
+      "family": "attention_availability",
+      "module": "SFT/Consciousness/AttentionalFocus.lean",
+      "sha256": "f1e231defd4a0bedcef69eded8701cbf03841d31ccefc52e314a326df6232068",
+      "section": "1271. Attentional focus",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"two_preimages_are_distinct\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "two_preimages_are_distinct"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-COGNITIVE-AVAILABILITY-001",
+      "family": "attention_availability",
+      "module": "SFT/Consciousness/CognitiveAvailability.lean",
+      "sha256": "fb838f77c2df14e5c0e7f0e34076df31cbc478d9ed26044cd581409017306c5f",
+      "section": "1272. Cognitive availability",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"two_preimages_are_distinct\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "two_preimages_are_distinct"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-ATTENTIONAL-CAPACITY-001",
+      "family": "attention_availability",
+      "module": "SFT/Consciousness/AttentionalCapacity.lean",
+      "sha256": "c442dc3f8c297848060f8c2eec583ef0afedb3bf30de2a48d82f08d1c814c8e0",
+      "section": "1273. Attentional capacity",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"two_preimages_are_distinct\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "two_preimages_are_distinct"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-ATTENTIONAL-SWITCH-001",
+      "family": "attention_availability",
+      "module": "SFT/Consciousness/AttentionalSwitch.lean",
+      "sha256": "d38ec388b374b5b421c64eab3013cad505bfc4a583ac0eb8ca7e602604448493",
+      "section": "1274. Attentional switching",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"two_preimages_are_distinct\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "two_preimages_are_distinct"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-COGNITIVE-REPRESENTATION-001",
+      "family": "cognition_inference_representation",
+      "module": "SFT/Consciousness/CognitiveRepresentation.lean",
+      "sha256": "c2e271333c1f3a1a41faa0578ddea843c079488a5362c6ceece72093f6fae601",
+      "section": "1275. Cognitive representation",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"two_preimages_share_one_image\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-INTENTIONAL-RELATION-001",
+      "family": "cognition_inference_representation",
+      "module": "SFT/Consciousness/IntentionalRelation.lean",
+      "sha256": "9eca35f2c178d346ef82973ae8047955e3e85c0272546b6e1e6499ca1e575c33",
+      "section": "1276. Intentional relation",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"two_preimages_share_one_image\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-COGNITIVE-INFERENCE-001",
+      "family": "cognition_inference_representation",
+      "module": "SFT/Consciousness/CognitiveInference.lean",
+      "sha256": "5eb0948509660f516ad7fa52665d000d90f21c4e90e395e3e956592e663c2367",
+      "section": "1277. Cognitive inference",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"two_preimages_share_one_image\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-PREDICTION-001",
+      "family": "cognition_inference_representation",
+      "module": "SFT/Consciousness/Prediction.lean",
+      "sha256": "f06c6299ecd71589b349f4b4213771f8bb8311372c27d872e9f77453624d4a95",
+      "section": "1278. Prediction and anticipation",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"two_preimages_share_one_image\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-EXPECTATION-001",
+      "family": "cognition_inference_representation",
+      "module": "SFT/Consciousness/Expectation.lean",
+      "sha256": "03ce8ef711894923d13356929a53529e6889537de915bfc5db61961d5921e8e5",
+      "section": "1279. Expectation",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"two_preimages_share_one_image\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-DETERMINED-AGENCY-001",
+      "family": "cognition_inference_representation",
+      "module": "SFT/Consciousness/DeterminedAgency.lean",
+      "sha256": "b2c4d719ddd5d95fdf66e3dce8a16141e7ca0d5f718204262c9bac26b43016e5",
+      "section": "1280. Determined agency boundary",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"two_preimages_share_one_image\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "two_preimages_share_one_image"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-REALIZATION-CARRIER-001",
+      "family": "substrate_realization",
+      "module": "SFT/Consciousness/RealizationCarrier.lean",
+      "sha256": "0c291bed5392c21f7e12918f1bb1b0dd4556a061ba15bf4f16ad4f029c7bd91c",
+      "section": "1281. Consciousness realization carrier",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"observer_observed_partition_the_one\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "observer_observed_partition_the_one"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-STRUCTURAL-CRITERION-001",
+      "family": "substrate_realization",
+      "module": "SFT/Consciousness/StructuralCriterion.lean",
+      "sha256": "b2fc2ba830d2d77f078dccaa2587f94625b1aac73a61dab339fd796367d9f797",
+      "section": "1282. Consciousness structural criterion",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"observer_observed_partition_the_one\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "observer_observed_partition_the_one"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-SUBSTRATE-INDEPENDENCE-001",
+      "family": "substrate_realization",
+      "module": "SFT/Consciousness/SubstrateIndependence.lean",
+      "sha256": "76ea15bcd7b024fa0908004c6675365dde226eb6526fb599ece1f7c3efcfc5a5",
+      "section": "1283. Substrate independence",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"observer_observed_partition_the_one\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "observer_observed_partition_the_one"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-FEEDFORWARD-BOUNDARY-001",
+      "family": "substrate_realization",
+      "module": "SFT/Consciousness/FeedforwardBoundary.lean",
+      "sha256": "6b49eff1d3fed844ea883f72f4ef4bcdae67ed4c36370ec017d555c13af040e7",
+      "section": "1284. Feed-forward boundary",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"observer_observed_partition_the_one\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "observer_observed_partition_the_one"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-REALIZATION-EQUIVALENCE-001",
+      "family": "substrate_realization",
+      "module": "SFT/Consciousness/RealizationEquivalence.lean",
+      "sha256": "11d5c081bd0c1705ba84496e86d794bbaf352a9f981a27571e4bdd11c4b89486",
+      "section": "1285. Realization equivalence",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"observer_observed_partition_the_one\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "observer_observed_partition_the_one"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-ARTIFICIAL-CONSCIOUSNESS-EVIDENCE-001",
+      "family": "substrate_realization",
+      "module": "SFT/Consciousness/ArtificialConsciousnessEvidence.lean",
+      "sha256": "b39a8395679c4305aa366006428f373a66dd1b1accbed1cb599dfd6855d2ff47",
+      "section": "1286. Artificial consciousness evidence boundary",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"observer_observed_partition_the_one\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "observer_observed_partition_the_one"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-QUALITATIVE-DISTINCTION-001",
+      "family": "qualia_resonance_composition",
+      "module": "SFT/Consciousness/QualitativeDistinction.lean",
+      "sha256": "51b630538c38e094475c02af44b0d78228d6b3f6cda1ae33379d1d67ffd26615",
+      "section": "1287. Qualitative distinction",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"three_quality_support_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "three_quality_support_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-QUALITATIVE-IDENTITY-001",
+      "family": "qualia_resonance_composition",
+      "module": "SFT/Consciousness/QualitativeIdentity.lean",
+      "sha256": "6679922c92bdd88187cb9662112105f3f3b9a3a7bde8b7ae136d56180e5c263b",
+      "section": "1288. Qualitative identity",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"three_quality_support_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "three_quality_support_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-QUALITATIVE-SIMILARITY-001",
+      "family": "qualia_resonance_composition",
+      "module": "SFT/Consciousness/QualitativeSimilarity.lean",
+      "sha256": "bc99b427934c1408a4e65eae4cd14b55cc13c47bb30cd738f186ba830c7cea64",
+      "section": "1289. Qualitative similarity",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"three_quality_support_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "three_quality_support_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-QUALIA-RESONANCE-001",
+      "family": "qualia_resonance_composition",
+      "module": "SFT/Consciousness/QualiaResonance.lean",
+      "sha256": "40f656d84e0b7f74f40fd9e37e69b838653b7fe23d0ee1e819a5dcdd477da507",
+      "section": "1290. Qualia resonance",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"three_quality_support_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "three_quality_support_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-QUALIA-RECURRENCE-001",
+      "family": "qualia_resonance_composition",
+      "module": "SFT/Consciousness/QualiaRecurrence.lean",
+      "sha256": "1615eb8baeeb928147b66dabee1dd0c9c126d270d3cac025950dc2efa64ba09c",
+      "section": "1291. Qualia recurrence",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"three_quality_support_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "three_quality_support_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-QUALIA-COMPOSITION-001",
+      "family": "qualia_resonance_composition",
+      "module": "SFT/Consciousness/QualiaComposition.lean",
+      "sha256": "d7ec7d1bdbaca69208ea15954cdc9f966d5ab47ce03fc4689f583deabd2cf00e",
+      "section": "1292. Qualia composition",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"three_quality_support_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "three_quality_support_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-CROSS-MODAL-QUALIA-001",
+      "family": "qualia_resonance_composition",
+      "module": "SFT/Consciousness/CrossModalQualia.lean",
+      "sha256": "f56ad55fd85e17a504f06b86e9a1b62eeca477ce5401913be397a8a39ccd602c",
+      "section": "1293. Cross-modal qualitative binding",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"three_quality_support_recurs\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "three_quality_support_recurs"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-RED-STIMULUS-BOUNDARY-001",
+      "family": "red_of_red",
+      "module": "SFT/Consciousness/RedStimulusBoundary.lean",
+      "sha256": "f10b0676d8027545f0f65c2f551319e316cd55c5f2eee08492889cb4247910a3",
+      "section": "1294. Red stimulus and experience boundary",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"red_of_red_form_is_complete\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "red_of_red_form_is_complete"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-RED-QUALITATIVE-IDENTITY-001",
+      "family": "red_of_red",
+      "module": "SFT/Consciousness/RedQualitativeIdentity.lean",
+      "sha256": "9fb670b3b8add0e0adaf9b31509eb45c9da73a542b354a45d24f7dfefaa76702",
+      "section": "1295. Red qualitative identity",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"red_of_red_form_is_complete\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "red_of_red_form_is_complete"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-RED-OF-RED-001",
+      "family": "red_of_red",
+      "module": "SFT/Consciousness/RedOfRed.lean",
+      "sha256": "a3ca8a88ab5fc923f249da7c703a7da3ceab0f1d6ac99e5d598a53eb298c318d",
+      "section": "1296. The red-of-red self-reidentification",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"red_of_red_form_is_complete\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "red_of_red_form_is_complete"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-RED-RECURRENCE-001",
+      "family": "red_of_red",
+      "module": "SFT/Consciousness/RedRecurrence.lean",
+      "sha256": "49163c7acc2212062a6431d0928ad542c2a06db875bbf71960c3895f3db220a1",
+      "section": "1297. Red recurrence",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"red_of_red_form_is_complete\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "red_of_red_form_is_complete"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-RED-CONTROLS-001",
+      "family": "red_of_red",
+      "module": "SFT/Consciousness/RedControls.lean",
+      "sha256": "9d45e4fcaaaf737ddd3481e30750d0cc63e721f04321bfcb5d1b27652a439ef1",
+      "section": "1298. Red-of-red contrast controls",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"red_of_red_form_is_complete\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "red_of_red_form_is_complete"
+      ]
+    },
+    {
+      "claim_id": "SFT-CONSC-RED-EMPIRICAL-BOUNDARY-001",
+      "family": "red_of_red",
+      "module": "SFT/Consciousness/RedEmpiricalBoundary.lean",
+      "sha256": "1dec90e323acfe40cdff6d3e23ae3766d1ed8029a1f01b1707de9466ee553c4d",
+      "section": "1299. Red-of-red empirical boundary",
+      "witness_body": "def exactFoldWitness : Bool := ((match StructuralModel.structuralWitnesses.find? (fun row => SFT.Host.Text.equal row.1 \"red_of_red_form_is_complete\") with | some (_, passed) => passed | none => false))",
+      "original_family_witnesses": [
+        "red_of_red_form_is_complete"
+      ]
+    }
+  ]
+}

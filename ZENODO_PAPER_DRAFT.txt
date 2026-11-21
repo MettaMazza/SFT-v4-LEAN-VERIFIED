@@ -35089,7 +35089,7 @@ For the four-carbon path, exhaustive permutation filtering retains identity and 
 
   {anti},  {gauche-forward, gauche-reverse}.
 
-The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Nineteen native modules are staged, including the complete grammar, operational witnesses, prediction, source binding, independent external analysis, full validation assembly and source-bound product/constructor proofs. Compilation, axiom audits, remaining general correspondence and native output comparisons remain pending. This entry is not counted complete.
+The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Twenty-one native modules are staged, including the complete grammar, operational witnesses, prediction, source binding, independent external analysis, full validation assembly and source-bound product/constructor proofs. Compilation, axiom audits, remaining general correspondence and native output comparisons remain pending. This entry is not counted complete.
 
 Pinned V3: claims/SFT-CHEM-CONFORMER-GENERATION-EQUIVALENCE-005/execution.py; sft/chemistry/conformer_generation_equivalence_law_v1.py, FiniteMolecularGraph, HeldRotor, HeldTorsionAlphabet, GraphAutomorphism, finite_graph_automorphisms, generate_conformer_assignments, _apply_action, conformer_census and butane_four_site_census. Native: SFT/Chemistry/ConformerCarrier.lean, ConformerAssignments.lean and ConformerCensus.lean; reused MolecularGraphEnumeration.permutations. Original evidence: verification/TURN1290_CONFORMER_ORIGINAL. Timeline: TURN1290.
 
@@ -35177,3 +35177,17 @@ The initial set is R₀={1}. If k consecutive expansions change the set, inducti
 The native trace records precisely two source cases: stop when E(R)=R, or advance to E(R) and continue the same operation. Induction on the remaining bound proves that the actual reach(n,B,{1}) is the endpoint of that source trace. Induction on the trace then proves E(reach(n,B,{1}))=reach(n,B,{1}). The final constructor compares this closed reached set with the complete registered position set. Compilation and axiom audits of these source-bound statements remain pending.
 
 Original source: sft/chemistry/conformer_generation_equivalence_law_v1.py, FiniteMolecularGraph.__post_init__, pinned to V3 commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native references: ConformerCarrier.expand and reach; ConformerReachSet.expansionUnique, expansionRetainsPrefix, expansionInside, expansionStopsExactly and expansionGrows; ConformerReachability.registeredCardinality, boundedReachRunsOriginal, originalRunEndsFixed, initialReachRunsOriginal and initialReachFixed. Timeline: TURN1296.
+
+The identity action is retained by complete position-permutation generation. Selecting the first position, then the first remaining position, recursively reproduces the input order; hence (1,…,n) is one generated permutation. Its pointwise action is
+
+  id(p)=p,    id((p₁,…,pₘ))=(p₁,…,pₘ).
+
+In particular it preserves every rotor's ordered site word and the normalized endpoints of every bond. For rotor rᵢ, the direct-match part of the original target search therefore includes (i,false), where false denotes unchanged orientation. If that original search accepts exactly one match q, membership of (i,false) forces q=(i,false). An ambiguous target list follows the original rejection branch; no additional uniqueness premise is inserted.
+
+The corresponding original rotor-update operation preserves its supplied state sᵢ:
+
+  successful identity update(T,rᵢ,sᵢ,Aᵢ) = T ++ [(i,sᵢ)].
+
+The operation still rejects an already-filled target index, missing target alphabet or changed ordered alphabet. Its unchanged-orientation branch retains sᵢ directly. This connects own-index selection to the actual update body used by the complete assignment action. Compilation, axiom audits and composition through the complete action and orbit traversal remain pending.
+
+Original source: sft/chemistry/conformer_generation_equivalence_law_v1.py, finite_graph_automorphisms and _apply_action, pinned to V3 commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native references: ConformerIdentity.identityPermutationGenerated, identityPosition, identitySiteWord and identityBond; ConformerRotorAction.identicalSitesMatch, directTargetRetained, uniqueIdentityMatch, identityMappedMatch and identitySuccessfulStep; ConformerAssignments.transformRotor and applyAction. Timeline: TURN1297.

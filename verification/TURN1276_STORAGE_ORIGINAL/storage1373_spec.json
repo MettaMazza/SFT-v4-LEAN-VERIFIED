@@ -1,0 +1,251 @@
+{
+  "claim_id": "SFT-CHEM-ELECTROCHEMICAL-STORAGE-HANDOFF-013",
+  "title": "Fold electrochemical storage ownership and handoff law",
+  "statement": "Electrochemical storage retains one exact owner per coordinate: Chemistry owns species and reactions, Materials owns bulk response and degradation, and Engineering owns implementation, joined only by explicit directed claim handoffs.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-MATH-CATEGORY-TYPE-COMPOSITION-001",
+    "SFT-CHEM-CELL-POTENTIAL-COMPOSITION-003",
+    "SFT-CHEM-CORROSION-REACTION-NETWORK-012",
+    "SFT-MAT-DEGR-CORROSION-001",
+    "SFT-ENG-REQUIREMENT-001"
+  ],
+  "generation_rule": "Generate the literal product of eight registered storage-handoff decisions.",
+  "grammar_boundary": "Eight dimensions exhaust subject, Chemistry scope, Materials scope, Engineering scope, ownership, handoff, record and extension.",
+  "dimensions": [
+    {
+      "key": "subject",
+      "choices": [
+        {
+          "name": "anonymous-storage-number",
+          "admitted": false,
+          "reason": "A device number loses the chemical/material subject."
+        },
+        {
+          "name": "complete-storage-coordinate-custody",
+          "admitted": true,
+          "reason": "Every owned coordinate remains explicit."
+        }
+      ]
+    },
+    {
+      "key": "chemistry",
+      "choices": [
+        {
+          "name": "chemistry-owns-device-performance",
+          "admitted": false,
+          "reason": "Bulk response exceeds Chemistry ownership."
+        },
+        {
+          "name": "chemistry-owns-species-reactions",
+          "admitted": true,
+          "reason": "Chemistry owns cell species and reactions."
+        }
+      ]
+    },
+    {
+      "key": "materials",
+      "choices": [
+        {
+          "name": "materials-owns-reaction-law",
+          "admitted": false,
+          "reason": "Reaction identity exceeds Materials ownership."
+        },
+        {
+          "name": "materials-own-bulk-device-response",
+          "admitted": true,
+          "reason": "Materials owns bulk response and degradation."
+        }
+      ]
+    },
+    {
+      "key": "engineering",
+      "choices": [
+        {
+          "name": "engineering-owns-natural-law",
+          "admitted": false,
+          "reason": "Implementation does not select natural law."
+        },
+        {
+          "name": "engineering-owns-implementation",
+          "admitted": true,
+          "reason": "Engineering owns implementation only."
+        }
+      ]
+    },
+    {
+      "key": "ownership",
+      "choices": [
+        {
+          "name": "overlapping-branch-ownership",
+          "admitted": false,
+          "reason": "Duplicate ownership destroys exact provenance."
+        },
+        {
+          "name": "exactly-one-owner-per-coordinate",
+          "admitted": true,
+          "reason": "Every coordinate maps to one owner."
+        }
+      ]
+    },
+    {
+      "key": "handoff",
+      "choices": [
+        {
+          "name": "untraced-cross-branch-use",
+          "admitted": false,
+          "reason": "An untraced use loses dependency custody."
+        },
+        {
+          "name": "explicit-directed-claim-handoff",
+          "admitted": true,
+          "reason": "Every cross-branch use names source and destination."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "selected-device-summary",
+          "admitted": false,
+          "reason": "One summary hides chemical and material records."
+        },
+        {
+          "name": "complete-chemistry-material-record-pair",
+          "admitted": true,
+          "reason": "Both admitted records and their boundary remain."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "application-redefines-ownership",
+          "admitted": false,
+          "reason": "An application cannot change branch law."
+        },
+        {
+          "name": "new-coordinate-requires-new-unique-owner",
+          "admitted": true,
+          "reason": "Every lawful extension must add one explicit owner."
+        }
+      ]
+    }
+  ],
+  "exact_result": "complete-storage-coordinate-custody__chemistry-owns-species-reactions__materials-own-bulk-device-response__engineering-owns-implementation__exactly-one-owner-per-coordinate__explicit-directed-claim-handoff__complete-chemistry-material-record-pair__new-coordinate-requires-new-unique-owner",
+  "induction_base": "The first chemical-state coordinate has one Chemistry owner and one admitted source claim.",
+  "induction_step": "Appending a new coordinate requires one new explicit owner and directed handoff without changing prior ownership.",
+  "exclusions": [
+    "no numerical zero negative irrational imaginary continuum fitted free random or imported native parameter",
+    "no device result source status or application selects ownership",
+    "no duplicated branch ownership or untraced cross-branch use"
+  ],
+  "operational_witnesses": [
+    [
+      "complete",
+      "All three coordinates remain.",
+      true
+    ],
+    [
+      "chemistry",
+      "Species/reactions have one owner.",
+      true
+    ],
+    [
+      "materials",
+      "Bulk response has one owner.",
+      true
+    ],
+    [
+      "engineering",
+      "Implementation has one owner.",
+      true
+    ],
+    [
+      "ordered",
+      "The handoff is ordered.",
+      true
+    ],
+    [
+      "distinct",
+      "All source claims remain distinct.",
+      true
+    ],
+    [
+      "duplicate",
+      "Duplicate ownership paths halt.",
+      true
+    ],
+    [
+      "extension",
+      "A new coordinate requires a new explicit record.",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-ELECTROCHEMICAL-STORAGE-HANDOFF-013",
+  "expected_observation_label": "complete-electrochemical-storage-handoff-vector",
+  "target_rows": [
+    {
+      "target_id": "SFT-CHEM-ECHEM-013-CHEMISTRY-OWNER",
+      "source_id": "SFT-CHEM-CELL-POTENTIAL-COMPOSITION-003",
+      "source_locator": "chemistry owner",
+      "snapshot_path": "experiments/external_sources/chemistry/echem_013_complete_postseal_analysis_v1.json",
+      "snapshot_hash": "sha256:d8b99cd7258aaf4c9acc75e98edb457041eb065f378b0ea41a27f914f79060a6"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-013-MATERIALS-OWNER",
+      "source_id": "SFT-MAT-DEGR-CORROSION-001",
+      "source_locator": "materials owner",
+      "snapshot_path": "experiments/external_sources/chemistry/echem_013_complete_postseal_analysis_v1.json",
+      "snapshot_hash": "sha256:d8b99cd7258aaf4c9acc75e98edb457041eb065f378b0ea41a27f914f79060a6"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-013-ENGINEERING-BOUNDARY",
+      "source_id": "SFT-ENG-REQUIREMENT-001",
+      "source_locator": "engineering boundary",
+      "snapshot_path": "experiments/external_sources/chemistry/echem_013_complete_postseal_analysis_v1.json",
+      "snapshot_hash": "sha256:d8b99cd7258aaf4c9acc75e98edb457041eb065f378b0ea41a27f914f79060a6"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-013-UNIQUE-OWNERSHIP",
+      "source_id": "SFT-V3-LIVE-CLAIM-CENSUS",
+      "source_locator": "unique ownership",
+      "snapshot_path": "experiments/external_sources/chemistry/echem_013_complete_postseal_analysis_v1.json",
+      "snapshot_hash": "sha256:d8b99cd7258aaf4c9acc75e98edb457041eb065f378b0ea41a27f914f79060a6"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-013-DIRECTED-HANDOFF",
+      "source_id": "SFT-V3-LIVE-DEPENDENCY-GRAPH",
+      "source_locator": "directed handoff",
+      "snapshot_path": "experiments/external_sources/chemistry/echem_013_complete_postseal_analysis_v1.json",
+      "snapshot_hash": "sha256:d8b99cd7258aaf4c9acc75e98edb457041eb065f378b0ea41a27f914f79060a6"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-013-PAIRED-RECORDS",
+      "source_id": "SFT-CHEM-MAT-PAIRED-RECEIPTS",
+      "source_locator": "paired records",
+      "snapshot_path": "experiments/external_sources/chemistry/echem_013_complete_postseal_analysis_v1.json",
+      "snapshot_hash": "sha256:d8b99cd7258aaf4c9acc75e98edb457041eb065f378b0ea41a27f914f79060a6"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-013-EXTERNAL-MATERIAL-SURFACE",
+      "source_id": "NIST-METAL-ADDITIVE-CORROSION",
+      "source_locator": "external material surface",
+      "snapshot_path": "experiments/external_sources/chemistry/echem_013_complete_postseal_analysis_v1.json",
+      "snapshot_hash": "sha256:d8b99cd7258aaf4c9acc75e98edb457041eb065f378b0ea41a27f914f79060a6"
+    },
+    {
+      "target_id": "SFT-CHEM-ECHEM-013-NO-DUPLICATE-OWNERSHIP",
+      "source_id": "SFT-V3-BRANCH-OWNERSHIP-BOUNDARY",
+      "source_locator": "no duplicate ownership",
+      "snapshot_path": "experiments/external_sources/chemistry/echem_013_complete_postseal_analysis_v1.json",
+      "snapshot_hash": "sha256:d8b99cd7258aaf4c9acc75e98edb457041eb065f378b0ea41a27f914f79060a6"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/echem_013_complete_postseal_analysis_v1.json",
+  "falsification_condition": "The claim halts if the survivor is nonunique; any owner, coordinate, admitted receipt, directed handoff, external material record or duplication control is omitted; or an application outcome selects the ownership law."
+}

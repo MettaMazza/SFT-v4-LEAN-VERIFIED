@@ -12299,3 +12299,219 @@ import SFT.Biology.RegenerationSource
 import SFT.Biology.RegenerationExperiment
 
 import SFT.Biology.RegenerationValidation
+
+import SFT.Biology.Organism
+
+import SFT.Biology.OrganismGrammar
+
+import SFT.Biology.OrganismEvidence
+
+import SFT.Biology.OrganismSource
+
+import SFT.Biology.OrganismExperiment
+
+import SFT.Biology.OrganismValidation
+
+import SFT.Biology.Physiology
+
+import SFT.Biology.PhysiologyGrammar
+
+import SFT.Biology.PhysiologyEvidence
+
+import SFT.Biology.PhysiologySource
+
+import SFT.Biology.PhysiologyExperiment
+
+import SFT.Biology.PhysiologyValidation
+
+import SFT.Biology.Homeostasis
+
+import SFT.Biology.HomeostasisGrammar
+
+import SFT.Biology.HomeostasisEvidence
+
+import SFT.Biology.HomeostasisSource
+
+import SFT.Biology.HomeostasisExperiment
+
+import SFT.Biology.HomeostasisValidation
+
+import SFT.Biology.Reproduction
+
+import SFT.Biology.ReproductionGrammar
+
+import SFT.Biology.ReproductionEvidence
+
+import SFT.Biology.ReproductionSource
+
+import SFT.Biology.ReproductionExperiment
+
+import SFT.Biology.ReproductionValidation
+
+import SFT.Biology.LifeCycle
+
+import SFT.Biology.LifeCycleGrammar
+
+import SFT.Biology.LifeCycleEvidence
+
+import SFT.Biology.LifeCycleSource
+
+import SFT.Biology.LifeCycleExperiment
+
+import SFT.Biology.LifeCycleValidation
+
+import SFT.Biology.Senescence
+
+import SFT.Biology.SenescenceGrammar
+
+import SFT.Biology.SenescenceEvidence
+
+import SFT.Biology.SenescenceSource
+
+import SFT.Biology.SenescenceExperiment
+
+import SFT.Biology.SenescenceValidation
+
+import SFT.Biology.Population
+
+import SFT.Biology.PopulationGrammar
+
+import SFT.Biology.PopulationEvidence
+
+import SFT.Biology.PopulationSource
+
+import SFT.Biology.PopulationExperiment
+
+import SFT.Biology.PopulationValidation
+
+import SFT.Biology.SpeciesBoundary
+
+import SFT.Biology.SpeciesBoundaryGrammar
+
+import SFT.Biology.SpeciesBoundaryEvidence
+
+import SFT.Biology.SpeciesBoundarySource
+
+import SFT.Biology.SpeciesBoundaryExperiment
+
+import SFT.Biology.SpeciesBoundaryValidation
+
+import SFT.Biology.Community
+
+import SFT.Biology.CommunityGrammar
+
+import SFT.Biology.CommunityEvidence
+
+import SFT.Biology.CommunitySource
+
+import SFT.Biology.CommunityExperiment
+
+import SFT.Biology.CommunityValidation
+
+import SFT.Biology.TrophicNetwork
+
+import SFT.Biology.TrophicNetworkGrammar
+
+import SFT.Biology.TrophicNetworkEvidence
+
+import SFT.Biology.TrophicNetworkSource
+
+import SFT.Biology.TrophicNetworkExperiment
+
+import SFT.Biology.TrophicNetworkValidation
+
+import SFT.Biology.Ecosystem
+
+import SFT.Biology.EcosystemGrammar
+
+import SFT.Biology.EcosystemEvidence
+
+import SFT.Biology.EcosystemSource
+
+import SFT.Biology.EcosystemExperiment
+
+import SFT.Biology.EcosystemValidation
+
+import SFT.Biology.EcologicalRecurrence
+
+import SFT.Biology.EcologicalRecurrenceGrammar
+
+import SFT.Biology.EcologicalRecurrenceEvidence
+
+import SFT.Biology.EcologicalRecurrenceSource
+
+import SFT.Biology.EcologicalRecurrenceExperiment
+
+import SFT.Biology.EcologicalRecurrenceValidation
+
+import SFT.Biology.EcologicalNetwork
+
+import SFT.Biology.EcologicalNetworkGrammar
+
+import SFT.Biology.EcologicalNetworkEvidence
+
+import SFT.Biology.EcologicalNetworkSource
+
+import SFT.Biology.EcologicalNetworkExperiment
+
+import SFT.Biology.EcologicalNetworkValidation
+
+import SFT.Biology.BiologicalAllometry
+
+import SFT.Biology.BiologicalAllometryGrammar
+
+import SFT.Biology.BiologicalAllometryEvidence
+
+import SFT.Biology.BiologicalAllometrySource
+
+import SFT.Biology.BiologicalAllometryExperiment
+
+import SFT.Biology.BiologicalAllometryValidation
+
+import SFT.Biology.BioSpecimen
+
+import SFT.Biology.BioSpecimenGrammar
+
+import SFT.Biology.BioSpecimenEvidence
+
+import SFT.Biology.BioSpecimenSource
+
+import SFT.Biology.BioSpecimenExperiment
+
+import SFT.Biology.BioSpecimenValidation
+
+import SFT.Biology.BioCondition
+
+import SFT.Biology.BioConditionGrammar
+
+import SFT.Biology.BioConditionEvidence
+
+import SFT.Biology.BioConditionSource
+
+import SFT.Biology.BioConditionExperiment
+
+import SFT.Biology.BioConditionValidation
+
+import SFT.Biology.BioAssay
+
+import SFT.Biology.BioAssayGrammar
+
+import SFT.Biology.BioAssayEvidence
+
+import SFT.Biology.BioAssaySource
+
+import SFT.Biology.BioAssayExperiment
+
+import SFT.Biology.BioAssayValidation
+
+import SFT.Biology.BioUncertainty
+
+import SFT.Biology.BioUncertaintyGrammar
+
+import SFT.Biology.BioUncertaintyEvidence
+
+import SFT.Biology.BioUncertaintySource
+
+import SFT.Biology.BioUncertaintyExperiment
+
+import SFT.Biology.BioUncertaintyValidation

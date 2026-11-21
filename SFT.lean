@@ -12987,3 +12987,15 @@ import SFT.Medicine.DoseSource
 import SFT.Medicine.DoseExperiment
 
 import SFT.Medicine.DoseValidation
+
+import SFT.Medicine.ClinicalExposure
+
+import SFT.Medicine.ClinicalExposureGrammar
+
+import SFT.Medicine.ClinicalExposureEvidence
+
+import SFT.Medicine.ClinicalExposureSource
+
+import SFT.Medicine.ClinicalExposureExperiment
+
+import SFT.Medicine.ClinicalExposureValidation

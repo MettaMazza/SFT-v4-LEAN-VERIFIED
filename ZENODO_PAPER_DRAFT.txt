@@ -35089,7 +35089,7 @@ For the four-carbon path, exhaustive permutation filtering retains identity and 
 
   {anti},  {gauche-forward, gauche-reverse}.
 
-The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Twenty-seven native modules are staged, including the complete grammar, operational witnesses, prediction, source binding, independent external analysis, full validation assembly and source-bound product/constructor proofs. Compilation, axiom audits, remaining general correspondence and native output comparisons remain pending. This entry is not counted complete.
+The six original operational witnesses check complete three-state generation, the two-action automorphism census, the exact two-class quotient, retention of all three assignments, rejection of incomplete reversal and rejection of the missing bonded path. Original execution of these constructions and controls is retained. Twenty-eight native modules are staged, including the complete grammar, operational witnesses, prediction, source binding, independent external analysis, full validation assembly and source-bound product/constructor proofs. Compilation, axiom audits, remaining general correspondence and native output comparisons remain pending. This entry is not counted complete.
 
 Pinned V3: claims/SFT-CHEM-CONFORMER-GENERATION-EQUIVALENCE-005/execution.py; sft/chemistry/conformer_generation_equivalence_law_v1.py, FiniteMolecularGraph, HeldRotor, HeldTorsionAlphabet, GraphAutomorphism, finite_graph_automorphisms, generate_conformer_assignments, _apply_action, conformer_census and butane_four_site_census. Native: SFT/Chemistry/ConformerCarrier.lean, ConformerAssignments.lean and ConformerCensus.lean; reused MolecularGraphEnumeration.permutations. Original evidence: verification/TURN1290_CONFORMER_ORIGINAL. Timeline: TURN1290.
 
@@ -35228,3 +35228,15 @@ These are conclusions of the actual successful constructor, rather than independ
 This composition uses the original generated identity rather than inserting an assumed action. Combined with the complete identity-assignment result, it supplies the action needed for the source's orbit-progress argument. The corresponding native compilation, axiom audits and complete orbit-traversal verification remain pending.
 
 Original source: sft/chemistry/conformer_generation_equivalence_law_v1.py, FiniteMolecularGraph.__post_init__ and finite_graph_automorphisms, pinned to V3 commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native references: ConformerAdmittedGraph.normalizationProducesFixed and acceptedGraphConditions; ConformerActionEnumeration.admittedEnumerationRetainsIdentity; ConformerIdentity.identityPermutationGenerated; ConformerIdentityFilters.identityCandidatePassesFilters. Timeline: TURN1300.
+
+Orbit progress follows from the original graph and rotor admission operations. Successful rotor validation places every ordered site within Pₙ; successful validation of the complete rotor list therefore supplies the site bounds for the complete identity-action derivation. The generated graph-action list contains id. If its original action map succeeds on anchor a, its identity result is exactly a, so
+
+  a ∈ [apply(a,g) : g∈G].
+
+The orbit is formed by duplicate removal from that list. When a is processed, either it already occurs in the retained set or the operation appends it. Later insertions preserve its membership. Thus
+
+  a∈O(a),    O(a)=unique([apply(a,g) : g∈G]).
+
+The source difference update is R′=[x∈R : x∉O(a)]. It excludes a. For a selected anchor a∈R, removal of that retained element gives |R′|<|R|; filtering cannot increase any remaining suffix. Hence successful iterations strictly reduce the finite remaining assignment set. This progress is derived from the actual generated identity and original action operation, rather than supplied as an additional orbit assumption.
+
+Original source: sft/chemistry/conformer_generation_equivalence_law_v1.py, HeldRotor.validate_on, _apply_action and conformer_census, pinned to V3 commit76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native reference: ConformerOrbitProgress.acceptedRotorBounds, validatedRotorBounds, generatedImagesContainAnchor, dedupRetainsAnchor, generatedOrbitContainsAnchor, orbitRemovalDropsAnchor and orbitRemovalShrinks. Timeline: TURN1301. Native compilation, axiom audits and complete traversal-correspondence verification remain pending.

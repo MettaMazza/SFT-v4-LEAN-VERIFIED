@@ -1,0 +1,854 @@
+{
+  "updated_at": "2026-11-21T13:53:33.238028+00:00",
+  "sections_read": [
+    448
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "sft/physics/source_boundary_growth.py: complete original method and specification; exact positive guards, successor scan, stop certificate and ten axes."
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Physics/BoundaryGrowthDiscriminator.lean",
+      "sha256": "25b2ddc8ca87f52c257da6b068726f544b9d09e847136559a975f3d412ab4489",
+      "theorems": [
+        "SFT.Physics.BoundaryGrowthDiscriminator.successorBudget",
+        "SFT.Physics.BoundaryGrowthDiscriminator.exactPowerLowerBound",
+        "SFT.Physics.BoundaryGrowthDiscriminator.derivedStrictExcess",
+        "SFT.Physics.BoundaryGrowthDiscriminator.anyPositiveUpperDenominator",
+        "SFT.Physics.BoundaryGrowthDiscriminator.strictExcessSuccessor",
+        "SFT.Physics.BoundaryGrowthDiscriminator.everyLaterPowerExcluded",
+        "SFT.Physics.BoundaryGrowthDiscriminator.completeDerivedTailExcluded",
+        "SFT.Physics.BoundaryGrowthDiscriminator.syntheticCubic",
+        "SFT.Physics.BoundaryGrowthDiscriminator.syntheticInterval",
+        "SFT.Physics.BoundaryGrowthDiscriminator.allAtOrBeyondExcluded",
+        "SFT.Physics.BoundaryGrowthDiscriminator.everyCompatibleExponentBelowBound",
+        "SFT.Physics.BoundaryGrowthDiscriminator.censusAfterExcessEmpty",
+        "SFT.Physics.BoundaryGrowthDiscriminator.stopScanRetainsCompleteFamily",
+        "SFT.Physics.BoundaryGrowthDiscriminator.originalCubicScan",
+        "SFT.Physics.BoundaryGrowthDiscriminator.originalIntervalScan",
+        "SFT.Physics.BoundaryGrowthDiscriminator.firstExcessStopsAbove",
+        "SFT.Physics.BoundaryGrowthDiscriminator.originalStopIndex",
+        "SFT.Physics.BoundaryGrowthDiscriminator.originalStopCertificate",
+        "SFT.Physics.BoundaryGrowthDiscriminator.positivePowerSuccessor",
+        "SFT.Physics.BoundaryGrowthDiscriminator.originalMethodAlwaysCloses",
+        "SFT.Physics.BoundaryGrowthDiscriminator.allFractionInputsRetainOriginalGuards",
+        "SFT.Physics.BoundaryGrowthDiscriminator.originalCheckedCubic",
+        "SFT.Physics.BoundaryGrowthDiscriminator.originalCheckedInterval",
+        "SFT.Physics.BoundaryGrowthDiscriminator.originalCheckedStop"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementGrammarBase.lean",
+      "sha256": "a74d97804124ff8c3ac16c6daed7710f7b750fa4b780ddaac1e69b0fa24f0ef7",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.generatedCardinality",
+        "SFT.Physics.BoundaryMeasurementGrammar.candidatesComplete"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementGrammar.lean",
+      "sha256": "1f73e42a3a340cad72c6c7981f469a895026c56b1a673198dd1f1460686d8371",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.sourceDecisionMatchesCriteria",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCriteriaSurvivor",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueSurvivor",
+        "SFT.Physics.BoundaryMeasurementGrammar.survivorAccepted",
+        "SFT.Physics.BoundaryMeasurementGrammar.acceptanceIffExactCriteria",
+        "SFT.Physics.BoundaryMeasurementGrammar.source_rejected_rejected",
+        "SFT.Physics.BoundaryMeasurementGrammar.distance_rejected_rejected",
+        "SFT.Physics.BoundaryMeasurementGrammar.response_rejected_rejected",
+        "SFT.Physics.BoundaryMeasurementGrammar.scale_rejected_rejected",
+        "SFT.Physics.BoundaryMeasurementGrammar.candidates_rejected_rejected",
+        "SFT.Physics.BoundaryMeasurementGrammar.selection_rejected_rejected",
+        "SFT.Physics.BoundaryMeasurementGrammar.stopping_rejected_rejected",
+        "SFT.Physics.BoundaryMeasurementGrammar.target_rejected_rejected",
+        "SFT.Physics.BoundaryMeasurementGrammar.record_rejected_rejected",
+        "SFT.Physics.BoundaryMeasurementGrammar.extension_rejected_rejected"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementWitnesses.lean",
+      "sha256": "9daf6b38abf5a77006a204da7282f2a67a3c0ff7b496e00cdec8c536ed2704b4",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementWitnesses.check0Passed",
+        "SFT.Physics.BoundaryMeasurementWitnesses.check1Passed",
+        "SFT.Physics.BoundaryMeasurementWitnesses.check2Passed",
+        "SFT.Physics.BoundaryMeasurementWitnesses.allWitnessesPass"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementControls.lean",
+      "sha256": "07675efa78ca046bc847cb9443f3da597fd09811aca38a0a3667169c0fb58d6a",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementControls.falsePremisePassed",
+        "SFT.Physics.BoundaryMeasurementControls.boundaryPassed"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementEvidence.lean",
+      "sha256": "077150cb569ae291068037f6411637306462f1517b4306e73fe7b0c32b85ae49",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementEvidence.nativeDecisionPreservesSurvival",
+        "SFT.Physics.BoundaryMeasurementEvidence.nativeDecisionPreservesReason",
+        "SFT.Physics.BoundaryMeasurementEvidence.registrationHasNoAxioms",
+        "SFT.Physics.BoundaryMeasurementEvidence.registrationHasNoFreeParameters",
+        "SFT.Physics.BoundaryMeasurementEvidence.lookupDependsOnlyOnIdentifier"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus0.lean",
+      "sha256": "f9ade0aecf6410b92c0c00b70e1ec4794497142fc0abecc00eddb7d40019b87e",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus0",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus0"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus1.lean",
+      "sha256": "d382eb614fe67d163a97217c101f4bf7beb12a2c240f034a3eafe612928063dd",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus1",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus1"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus2.lean",
+      "sha256": "ed506bf7b759ef740aedc8e3ef5adbd3e8387b78f9bd1a097d9446c1982d7eaf",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus2",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus2"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus3.lean",
+      "sha256": "20fae3fc597ee1acbe9fc80111f5404347e1ad299f10e36a9dc01d8f96c5caef",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus3",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus3"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus4.lean",
+      "sha256": "4e497f755aff56d4f52e98ffd38d8f58c3d880c92507fa94c54f940d3ce2a51e",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus4",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus4"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus5.lean",
+      "sha256": "23de86f0e2a7db60b11de3ba0262847017d0c09c2bfc3db3256fdf4eb4c6b910",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus5",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus5"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus6.lean",
+      "sha256": "dbf5747e3c0d2b84f477b12799e00cf8f84512ee02500db89099075e8d0f8313",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus6",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus6"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus7.lean",
+      "sha256": "e2c29c373a44cfd95427bc7131000ff09af5401cafc651bee0edce08a8641e56",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus7",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus7"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus8.lean",
+      "sha256": "6f7b464f11bbd58b70b83bcf8b57a8a6a7e799fe3c7020ae509835d0d84a6f53",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus8",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus8"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus9.lean",
+      "sha256": "9bb0648a83d7db5e7dc9c59d32ae5510423cec82c725ebed9755c559ad655ffb",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus9",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus9"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus10.lean",
+      "sha256": "74084767167e698acc2585941611e430a225fedc25b21e3932119ac2c1465d16",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus10",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus10"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus11.lean",
+      "sha256": "c5eeebfd3a507f4223f3e9bc0be75ca00b28367873aa0b5f937bd9e1255af045",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus11",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus11"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus12.lean",
+      "sha256": "a02ff2f6341ed97741b2ee0d16f23f12aa33336d9ad699c04d705c81807d8708",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus12",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus12"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus13.lean",
+      "sha256": "0f3b4f5648b8a27653c92ae95cd6e180c33d49439a8092c0e93da8e549887703",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus13",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus13"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus14.lean",
+      "sha256": "7c018cefeeffa81f326b83b1aca1a79df6c785a9a07b381c87f577d936ea5f74",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus14",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus14"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus15.lean",
+      "sha256": "edd863780bc1c518bfa87cefeae0f3f556bdd32c969118bd84406179bbc5763c",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus15",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus15"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus16.lean",
+      "sha256": "9e0f03de98775dae62e9b36d1ed47df49397639fad89105ab7da38e1d084cc09",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus16",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus16"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus17.lean",
+      "sha256": "c69253bbe7ac07354f29ebd37f446e78261567f502cdb8f3394ec7dd84545b3b",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus17",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus17"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus18.lean",
+      "sha256": "33244b35d13e81c9795ef3fd223acb34d515fc245bbbb4ecfcc15839066ac724",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus18",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus18"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus19.lean",
+      "sha256": "018dfb79604eb2abd60f06dbd34c77864cf53d0c13d8a4b84aea80d180766818",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus19",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus19"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus20.lean",
+      "sha256": "7992fdbedec00d2867bdc60eb5d142bb463dd26e2bb6a1181f005e4634fef7be",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus20",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus20"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus21.lean",
+      "sha256": "e9aea5330c416678f6c1bf3ddb9f346d5013cab0f592ef976a3e6598de0f6ad5",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus21",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus21"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus22.lean",
+      "sha256": "4681a85d55979341099e82ccadbaa6dbf350b797ae0f78f20f6f85d21ae944d5",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus22",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus22"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus23.lean",
+      "sha256": "7c1602a729d563694c1302b01c9740e114b8dab3be7e71217faa6a6ca6aa0f48",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus23",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus23"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus24.lean",
+      "sha256": "35101e5e8458659eab5742595b60e8fffcddc15478eb4a4a800d0fa7b80405c9",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus24",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus24"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus25.lean",
+      "sha256": "7b529ab245a10206a92dad20a4d18f2323bd91863466c8e20b6caf7ce71b2206",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus25",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus25"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus26.lean",
+      "sha256": "0bbec2edc061144ec8e993600b0a752c36f88c47f0e29a009cac66fb49af7fba",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus26",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus26"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus27.lean",
+      "sha256": "d842b6ba921b2eebf825b1e941d8d3b1c51a5a117a62106e00b846c49bdc58a5",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus27",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus27"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus28.lean",
+      "sha256": "5ea4c94c12b4b9dd7a35212aca5d8f8b416f258884ff6d03c0c0c6fd019c2f32",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus28",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus28"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus29.lean",
+      "sha256": "bdd0e5b8a3853ef435d8bfe3764adacdedf7a515afc394cefc2fba4720f6a7d0",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus29",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus29"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus30.lean",
+      "sha256": "2842ca9f94d2d75894bfe5a57d14fc0959238a2a30bc5caa3a7436e326bf319c",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus30",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus30"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus31.lean",
+      "sha256": "8a6e69b538f92d8a8e518586dcb79d9f8b465bf202f8218d35a57d4ed07427f3",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus31",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus31"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus32.lean",
+      "sha256": "7312edb6b2abc30bd504260d2ba17b274b9b8a7e23d0b191f4db7d8a47c2d94d",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus32",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus32"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus33.lean",
+      "sha256": "c4f7df49f242ad6ad2a8a8221669cdb70cbc3db437f53d2c9abb97e2487902a6",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus33",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus33"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus34.lean",
+      "sha256": "a8a1c5fac3b28547912a07d5e0b5da74f40954fa373fa875c95fe521cf331651",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus34",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus34"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus35.lean",
+      "sha256": "a220c2d9e61f140cdc6e94e5bf3a2bd5884fcab9f323e7960e44080cc83feffe",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus35",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus35"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus36.lean",
+      "sha256": "1369a00acd200f5211665aed0d97ddb8d7abe818a0b2ed41c131bd2bb53092a8",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus36",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus36"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus37.lean",
+      "sha256": "0aaa18b68a8db1984530d303aa4dc1ed83bd56ee03919e50b07fbc49e0537642",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus37",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus37"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus38.lean",
+      "sha256": "87fe4cb2c9bea632a63b734e2836212e4bffbbedc89c2329f92ef841d796c04c",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus38",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus38"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus39.lean",
+      "sha256": "611217fa3c9b2dbabe4c45dcae7dc15afd4f125176a9af8a23477a0e0f88294e",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus39",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus39"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus40.lean",
+      "sha256": "d629ff1b61e82bb787449d4922c2358abba69d9e6e4034f9389b2d4c99f4581e",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus40",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus40"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus41.lean",
+      "sha256": "b627c661f908b172ed9b459111591fe625b28e13b0da1e63b66dc10702bcea13",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus41",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus41"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus42.lean",
+      "sha256": "f2c78d6554e187d4ef57ba15c2690f56d75ae4e8fd047dfd5f70f84eef2b594b",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus42",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus42"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus43.lean",
+      "sha256": "29d8e0a1a9d1df40cdfef2149c4bab50c764a19491a76834081f03c4a8403918",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus43",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus43"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus44.lean",
+      "sha256": "ac974e005f21d6132d8a572feca12415b912ad853cef0534bdeb8444c35a6040",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus44",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus44"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus45.lean",
+      "sha256": "f1aa6e7004f863a4e240a642a94ef04ea55215f686a94d951791afa2ae61ea85",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus45",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus45"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus46.lean",
+      "sha256": "fe6bfc0598901a5927359b47f4551accb7d8f41c36a238d5c643c47e2a306816",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus46",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus46"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus47.lean",
+      "sha256": "558b2d554ead08afd2f5395e029eceb0c75430a892454226df829411b123b75b",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus47",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus47"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus48.lean",
+      "sha256": "bce7fba88f7a5b6a43ec3c0684993e25c06a5e58bae1549ffd00462212b65073",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus48",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus48"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus49.lean",
+      "sha256": "a267263bfb11aa1803f8411b9c09f3cf612387ded0c8d4d855946b6bf33dd42b",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus49",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus49"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus50.lean",
+      "sha256": "db0be22007159439fb9bcda4992ba4ec0e88b12af0d6a4ad5eb8109111ed9472",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus50",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus50"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus51.lean",
+      "sha256": "26685bffbca770ad3ff31454658e99666f996a005afc729d8b76212bbb841a81",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus51",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus51"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus52.lean",
+      "sha256": "410c1738a8a3e14caf2573c60ae5b480cd3f4ef8d3fe5479d420a07199650215",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus52",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus52"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus53.lean",
+      "sha256": "7cab37044de5f6a882c56aa58bb2d3679bbb07525a4d60b930f3a2160b8b285d",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus53",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus53"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus54.lean",
+      "sha256": "1fa32fdc85a6faf00a5c5f0432c588e02f0a05f77b20a083afa14e724205ef3f",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus54",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus54"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus55.lean",
+      "sha256": "4ea6d4ccb286feff426af8d008110d24dd2786addbbcb654168e1293884c5565",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus55",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus55"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus56.lean",
+      "sha256": "597212007fbd9555d5d0d6fe93480588a21475cdca75382239709ab5eaddfec2",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus56",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus56"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus57.lean",
+      "sha256": "ac15411a4636ea6c792eae575a76178d2d6b9998fd6bf92d092bfdc81d19d38b",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus57",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus57"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus58.lean",
+      "sha256": "b650a55dc1d48bee80803e343b5fecf10beee207c2a6808684ac48125879bdca",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus58",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus58"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus59.lean",
+      "sha256": "6859df64942be84221e0e66aeb735e9b741aa28aa10b06bf21d0ca4f3c3c07a8",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus59",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus59"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus60.lean",
+      "sha256": "6ed0511c1beb2cc2cabb313b5bd35048cd81fabe4274670fe50544b149022f9b",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus60",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus60"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus61.lean",
+      "sha256": "c706c5d183f69f025bf8d0a593db9bae09dc35685ac46cd2c8a54dfdc98a0996",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus61",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus61"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus62.lean",
+      "sha256": "c461d33952f67c4716c8ec9d540637a40f6345a309c91516fe628e51f682fcc5",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus62",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus62"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/BoundaryMeasurementCensus63.lean",
+      "sha256": "77c4dc412ddae242e6bcfd7f394120bcddf67f5702f8b16ac7df60cc133aa305",
+      "theorems": [
+        "SFT.Physics.BoundaryMeasurementGrammar.decisionCensus63",
+        "SFT.Physics.BoundaryMeasurementGrammar.uniqueCensus63"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    }
+  ],
+  "audit": {
+    "path": "verification/TURN_499_boundary499_audit.log",
+    "sha256": "d1d87ff28fa02b0a4364a7918c69697f0b8f16f695de7e6af804807375c16343",
+    "matching_theorems": 180
+  },
+  "reports": [
+    {
+      "path": "verification/TURN_499_boundary499_build_report.json",
+      "sha256": "4efbc477b1dbc7466c172b85848cc3e4f27b6638380d849fc7fbdcf2a449b27b",
+      "result": {
+        "status": "PASS",
+        "modules": [
+          "BoundaryGrowthDiscriminator",
+          "BoundaryMeasurementGrammarBase",
+          "BoundaryMeasurementCensus0",
+          "BoundaryMeasurementCensus1",
+          "BoundaryMeasurementCensus2",
+          "BoundaryMeasurementCensus3",
+          "BoundaryMeasurementCensus4",
+          "BoundaryMeasurementCensus5",
+          "BoundaryMeasurementCensus6",
+          "BoundaryMeasurementCensus7",
+          "BoundaryMeasurementCensus8",
+          "BoundaryMeasurementCensus9",
+          "BoundaryMeasurementCensus10",
+          "BoundaryMeasurementCensus11",
+          "BoundaryMeasurementCensus12",
+          "BoundaryMeasurementCensus13",
+          "BoundaryMeasurementCensus14",
+          "BoundaryMeasurementCensus15",
+          "BoundaryMeasurementCensus16",
+          "BoundaryMeasurementCensus17",
+          "BoundaryMeasurementCensus18",
+          "BoundaryMeasurementCensus19",
+          "BoundaryMeasurementCensus20",
+          "BoundaryMeasurementCensus21",
+          "BoundaryMeasurementCensus22",
+          "BoundaryMeasurementCensus23",
+          "BoundaryMeasurementCensus24",
+          "BoundaryMeasurementCensus25",
+          "BoundaryMeasurementCensus26",
+          "BoundaryMeasurementCensus27",
+          "BoundaryMeasurementCensus28",
+          "BoundaryMeasurementCensus29",
+          "BoundaryMeasurementCensus30",
+          "BoundaryMeasurementCensus31",
+          "BoundaryMeasurementCensus32",
+          "BoundaryMeasurementCensus33",
+          "BoundaryMeasurementCensus34",
+          "BoundaryMeasurementCensus35",
+          "BoundaryMeasurementCensus36",
+          "BoundaryMeasurementCensus37",
+          "BoundaryMeasurementCensus38",
+          "BoundaryMeasurementCensus39",
+          "BoundaryMeasurementCensus40",
+          "BoundaryMeasurementCensus41",
+          "BoundaryMeasurementCensus42",
+          "BoundaryMeasurementCensus43",
+          "BoundaryMeasurementCensus44",
+          "BoundaryMeasurementCensus45",
+          "BoundaryMeasurementCensus46",
+          "BoundaryMeasurementCensus47",
+          "BoundaryMeasurementCensus48",
+          "BoundaryMeasurementCensus49",
+          "BoundaryMeasurementCensus50",
+          "BoundaryMeasurementCensus51",
+          "BoundaryMeasurementCensus52",
+          "BoundaryMeasurementCensus53",
+          "BoundaryMeasurementCensus54",
+          "BoundaryMeasurementCensus55",
+          "BoundaryMeasurementCensus56",
+          "BoundaryMeasurementCensus57",
+          "BoundaryMeasurementCensus58",
+          "BoundaryMeasurementCensus59",
+          "BoundaryMeasurementCensus60",
+          "BoundaryMeasurementCensus61",
+          "BoundaryMeasurementCensus62",
+          "BoundaryMeasurementCensus63",
+          "BoundaryMeasurementGrammar",
+          "BoundaryMeasurementWitnesses",
+          "BoundaryMeasurementControls",
+          "BoundaryMeasurementEvidence"
+        ],
+        "complete_candidates": 1024,
+        "full_census_blocks": 64,
+        "all_cases_per_block": 16
+      }
+    },
+    {
+      "path": "verification/TURN_499_boundary499_program_report.json",
+      "sha256": "01d3f718a1b5fa0726504b9671ced7fefc8f3dab6fdea43bb69ee91319d5c295",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:6b6069bb58cce5f30869ea2ed0cc6228b1809295b42c454f51af592277d61059",
+        "candidate_lookup_decisions": 1024,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "registration_statement_source": "pinned executable SPEC.statement through FormalPrerequisiteProgram.registration",
+        "static_registration_statement": "After a structural boundary-growth law is independently derived and sealed, a complete source-boundary experiment checks it without a fitted exponent or logarithm by comparing exact positive distance and response ratios, generating every positive exponent by repeated composition, retaining the complete compatible family and closing all later candidates only after a monotonic strict-excess certificate. The observed family cannot supply or alter the structural law.",
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All BoundaryMeasurementProgram499 method output fields; original independent validator checked separately"
+      }
+    },
+    {
+      "path": "verification/TURN_499_boundary499_independent_report.json",
+      "sha256": "054275a96545a4f0ef2a8af4a6978ad0d8b7a4d6a284f7a6cd0f8a377e029aa9",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "claim_id": "SFT-PHYS-MEAS-BOUNDARY-GROWTH-001",
+              "generated_cardinality": 1024,
+              "unique_survivor": "one-retained-source-boundary__exact-positive-distance-ratio__complete-positive-response-ratio-interval__same-source-ratio-cancellation__positive-successor-power-family__all-interval-compatible-exponents__monotonic-strict-excess-certificate__postseal-custodied-observations__complete-ratio-power-decision-trace__no-extra-rule"
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-colour-496"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "claim_id": "SFT-PHYS-MEAS-BOUNDARY-GROWTH-001",
+              "generated_cardinality": 1024,
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-colour-496"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "claim_id": "SFT-PHYS-MEAS-BOUNDARY-GROWTH-001",
+              "generated_cardinality": 1024,
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-colour-496"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "claim_id": "SFT-PHYS-MEAS-BOUNDARY-GROWTH-001",
+              "generated_cardinality": 1024,
+              "unique_survivor": null
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-colour-496"
+          }
+        }
+      ]
+    }
+  ],
+  "new_proofs": 0,
+  "new_builds": 0
+}

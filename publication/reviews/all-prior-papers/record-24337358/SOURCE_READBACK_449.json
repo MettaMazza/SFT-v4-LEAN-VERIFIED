@@ -1,0 +1,619 @@
+{
+  "updated_at": "2026-11-21T13:54:43.998531+00:00",
+  "sections_read": [
+    449
+  ],
+  "source_pin": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+  "source_components": [
+    "sft/physics/coupling_running_convergence_terminal_law_v1.py: entire original module; exact operations, certificate, nine axes, registration and controls."
+  ],
+  "native_modules": [
+    {
+      "path": "SFT/Physics/RunningConvergence.lean",
+      "sha256": "dc7028fc943a9f2904d0e423f275512b50e9bab1f8b4f691844c6eefa05f8377",
+      "theorems": [
+        "SFT.Physics.RunningConvergence.scaleLoopExact",
+        "SFT.Physics.RunningConvergence.everyPositiveLevel",
+        "SFT.Physics.RunningConvergence.supportSuccessor",
+        "SFT.Physics.RunningConvergence.reachingSourceRun",
+        "SFT.Physics.RunningConvergence.reachingCovers",
+        "SFT.Physics.RunningConvergence.reachingSupportPositive",
+        "SFT.Physics.RunningConvergence.pairDenominatorExceedsSupport",
+        "SFT.Physics.RunningConvergence.everyPositiveToleranceWitness",
+        "SFT.Physics.RunningConvergence.doubledGapDenominatorIncreases",
+        "SFT.Physics.RunningConvergence.sourceInitialSupports",
+        "SFT.Physics.RunningConvergence.unitCover",
+        "SFT.Physics.RunningConvergence.exampleCover",
+        "SFT.Physics.RunningConvergence.addSubtractLeft",
+        "SFT.Physics.RunningConvergence.orderedDifferencePositive",
+        "SFT.Physics.RunningConvergence.successorHoldingNumerator",
+        "SFT.Physics.RunningConvergence.finitePositiveShortfall",
+        "SFT.Physics.RunningConvergence.pairGapStrictlyShrinks",
+        "SFT.Physics.RunningConvergence.carrierSpecificOrientation",
+        "SFT.Physics.RunningConvergence.couplingExample",
+        "SFT.Physics.RunningConvergence.shortfallExample",
+        "SFT.Physics.RunningConvergence.successorExample",
+        "SFT.Physics.RunningConvergence.pairGapExample",
+        "SFT.Physics.RunningConvergence.everySourceOrderedPair",
+        "SFT.Physics.RunningConvergence.allOriginalToleranceWitnesses"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceGrammarBase.lean",
+      "sha256": "cd9cbfac0801d50e9941d74070785540f42cf27871bf493f1b7851e950ca2139",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.generatedCardinality",
+        "SFT.Physics.RunningConvergenceGrammar.candidatesComplete"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceGrammar.lean",
+      "sha256": "4554e00546cad06fe9d820181f8b4515cee22c5a5cb081eec4c636eae090aec8",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueSurvivor",
+        "SFT.Physics.RunningConvergenceGrammar.survivorPasses"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergencePredicates.lean",
+      "sha256": "cf9b1a9fdc12342c29be922cbc3b47c4ef8a121fda29a5ca368047ecc7529424",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.sectorDomainComputed",
+        "SFT.Physics.RunningConvergenceGrammar.scaleGenerationComputed",
+        "SFT.Physics.RunningConvergenceGrammar.couplingFormComputed",
+        "SFT.Physics.RunningConvergenceGrammar.successorLawComputed",
+        "SFT.Physics.RunningConvergenceGrammar.pairGapLawComputed",
+        "SFT.Physics.RunningConvergenceGrammar.convergenceLawComputed",
+        "SFT.Physics.RunningConvergenceGrammar.physicalTranslationComputed",
+        "SFT.Physics.RunningConvergenceGrammar.targetBoundaryComputed",
+        "SFT.Physics.RunningConvergenceGrammar.extensionComputed"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCertificate.lean",
+      "sha256": "efb59cfe2223209ff8f8c988730033804ac546b962480e27f157a8db74cc2882",
+      "theorems": [],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceEvidence.lean",
+      "sha256": "1d26b5fe0b58feb32db37aa3d8fc7983ebdc66abe4c63f870b040d64589017ae",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceEvidence.nativeDecisionPreservesSurvival",
+        "SFT.Physics.RunningConvergenceEvidence.nativeDecisionPreservesReason",
+        "SFT.Physics.RunningConvergenceEvidence.registrationHasNoAxioms",
+        "SFT.Physics.RunningConvergenceEvidence.registrationHasNoFreeParameters"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus0.lean",
+      "sha256": "72d4bb0981e0369e4ff96688bcaebb9f9a72288f92ae5bcf1ba7d1f9d5387581",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus0"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus1.lean",
+      "sha256": "f512a287055cf79415144de3c9e5b6fb4d9c07d75cf30d73be036e390e1cc808",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus1"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus2.lean",
+      "sha256": "985048e929d2988a398afe385370188c23f7552f6c7afa5c50816053b9b17679",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus2"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus3.lean",
+      "sha256": "87274b3498355eb877878fbb5b46e6bd74351265352c467d3b11817376d86152",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus3"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus4.lean",
+      "sha256": "272db895308bc588f7077dd7db77619cf8dea137670cceec12229ff1e10b2451",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus4"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus5.lean",
+      "sha256": "3be21bfa489b216384a4a6de5f6a1dba220c28c24e66ac231dd71b33a825c865",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus5"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus6.lean",
+      "sha256": "676befe38291c55f4c6ecd9ead1af22e94bd6a3fe58e19f75d16eb1d9eb22ad5",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus6"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus7.lean",
+      "sha256": "bd434f07ebcd473fdb1b6110f335a779a312a0c14733561543df7e90a8984227",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus7"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus8.lean",
+      "sha256": "b3501e68ab905185fa021110f098ac2b87f30a2f4d39c12477493efca6501b9c",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus8"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus9.lean",
+      "sha256": "31b185e2024d8f4762852af9086f6e9b212ca2723b651458fdab3735e0182b53",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus9"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus10.lean",
+      "sha256": "53d23d590bf696905eb79d65bffd7a5b518f134b0322ad66951a80480438f2d1",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus10"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus11.lean",
+      "sha256": "0991b7a4ff090c6016c113920e48621bd04e133a44467112590d921e36e65ca4",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus11"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus12.lean",
+      "sha256": "9c22d048ef2a5ab3483ac53e3628dc4fbbaa62ada6404c0f7c465c2114b17143",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus12"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus13.lean",
+      "sha256": "e213b86aeacc7f9f6765912b9c5504a0ee9f0cfa44a82e9194ffd047dca7efd3",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus13"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus14.lean",
+      "sha256": "dbe4ce37a28224214baee3a52e9a7d649a69020bedbc770a1cacfa460419f8e1",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus14"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus15.lean",
+      "sha256": "a81f6a51fcad89234e561b3c0f84c379a40c1f782b66466581c536727f309ae6",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus15"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus16.lean",
+      "sha256": "762ae22202aea5504e159fac104fc217f7f36f344491ba4a6aab1ebc18b6aa91",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus16"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus17.lean",
+      "sha256": "af43eff22e08e53b191da083c3c10427498e67aab447f5c79c1844125fafd8a6",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus17"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus18.lean",
+      "sha256": "43157462c768f63fae9bc2d6cb955cb09bd658b23dcac7efd9f208da4689dab2",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus18"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus19.lean",
+      "sha256": "538ec79cef25208976fd82db608f667a49e1d26e32a42036d087a318139e20ba",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus19"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus20.lean",
+      "sha256": "0b29bdce633e08bad41faf7673cde2412192f75ef929fb559555d880eb0a66ea",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus20"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus21.lean",
+      "sha256": "e2f3dd8bd6523ec7a33ec90d52e8fecb77d92d47d2f4730001491dd9185fc126",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus21"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus22.lean",
+      "sha256": "0cb5d340fa0379cd886220c7218ef308285f50d167509cfafaacbd8d1adbd229",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus22"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus23.lean",
+      "sha256": "bc2fe2062c9be939e4e695fdc70b393b082f42c17c8cf8bd5987388de79f4c57",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus23"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus24.lean",
+      "sha256": "9d68b77c2331bf640ca6c4c4602c41836c97820ac56f844627bf49a4cf7e40b4",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus24"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus25.lean",
+      "sha256": "d093bea736d43e9063ed96ee9d3fbe31e2b510a7d21f60513ce735848af6273e",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus25"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    },
+    {
+      "path": "SFT/Physics/RunningConvergenceCensus26.lean",
+      "sha256": "aa350decfbac7e4f966d03909b05e4faff5c716af52e2b5d15a263289d34a949",
+      "theorems": [
+        "SFT.Physics.RunningConvergenceGrammar.uniqueCensus26"
+      ],
+      "inspection": "Full proof bodies or verified identical census templates inspected."
+    }
+  ],
+  "audit": {
+    "path": "verification/TURN_500_REGISTERED_DECLARATIONS_AUDIT.log",
+    "sha256": "87d225e60f33c42ce3e5dd208240ddf15336d75119f17a479e6305897eb3b2a5",
+    "matching_theorems": 68
+  },
+  "reports": [
+    {
+      "path": "verification/TURN_500_running499_certificate_report.json",
+      "sha256": "c0396c3de7ba1450ea157ab7000c730791cead9ec3658e0d819a5f83f4add5c8",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "compared": "Every formal_certificate field from fresh Lean execution against pinned V3 execution",
+        "ordered_pairs": 6,
+        "tolerance_denominators": 6,
+        "convergence_witnesses": 36,
+        "levels": 6,
+        "full_entry_complete": false
+      }
+    },
+    {
+      "path": "verification/TURN_500_running500_census_build_report.json",
+      "sha256": "9a9aee6486e2b0215537747a1c8a76d8442b6c3b561456cfe1d347ebcadd166b",
+      "result": {
+        "status": "PASS",
+        "complete_candidates": 8748,
+        "modules": [
+          "RunningConvergenceCensus0",
+          "RunningConvergenceCensus1",
+          "RunningConvergenceCensus2",
+          "RunningConvergenceCensus3",
+          "RunningConvergenceCensus4",
+          "RunningConvergenceCensus5",
+          "RunningConvergenceCensus6",
+          "RunningConvergenceCensus7",
+          "RunningConvergenceCensus8",
+          "RunningConvergenceCensus9",
+          "RunningConvergenceCensus10",
+          "RunningConvergenceCensus11",
+          "RunningConvergenceCensus12",
+          "RunningConvergenceCensus13",
+          "RunningConvergenceCensus14",
+          "RunningConvergenceCensus15",
+          "RunningConvergenceCensus16",
+          "RunningConvergenceCensus17",
+          "RunningConvergenceCensus18",
+          "RunningConvergenceCensus19",
+          "RunningConvergenceCensus20",
+          "RunningConvergenceCensus21",
+          "RunningConvergenceCensus22",
+          "RunningConvergenceCensus23",
+          "RunningConvergenceCensus24",
+          "RunningConvergenceCensus25",
+          "RunningConvergenceCensus26",
+          "RunningConvergenceGrammar"
+        ]
+      }
+    },
+    {
+      "path": "verification/TURN_500_running500_native_build_report.json",
+      "sha256": "4d03b25875428471b15f12bd1b05f430010759b194f51121ccc55649109e1ddb",
+      "result": {
+        "status": "PASS",
+        "modules": [
+          "RunningConvergence",
+          "RunningConvergenceGrammarBase",
+          "RunningConvergencePredicates",
+          "RunningConvergenceCensus0",
+          "RunningConvergenceCensus1",
+          "RunningConvergenceCensus2",
+          "RunningConvergenceCensus3",
+          "RunningConvergenceCensus4",
+          "RunningConvergenceCensus5",
+          "RunningConvergenceCensus6",
+          "RunningConvergenceCensus7",
+          "RunningConvergenceCensus8",
+          "RunningConvergenceCensus9",
+          "RunningConvergenceCensus10",
+          "RunningConvergenceCensus11",
+          "RunningConvergenceCensus12",
+          "RunningConvergenceCensus13",
+          "RunningConvergenceCensus14",
+          "RunningConvergenceCensus15",
+          "RunningConvergenceCensus16",
+          "RunningConvergenceCensus17",
+          "RunningConvergenceCensus18",
+          "RunningConvergenceCensus19",
+          "RunningConvergenceCensus20",
+          "RunningConvergenceCensus21",
+          "RunningConvergenceCensus22",
+          "RunningConvergenceCensus23",
+          "RunningConvergenceCensus24",
+          "RunningConvergenceCensus25",
+          "RunningConvergenceCensus26",
+          "RunningConvergenceGrammar",
+          "RunningConvergenceCertificate",
+          "RunningConvergenceEvidence"
+        ],
+        "complete_candidates": 8748,
+        "full_census_blocks": 27,
+        "all_cases_per_block": 324
+      }
+    },
+    {
+      "path": "verification/TURN_500_running500_program_report.json",
+      "sha256": "705229514e6d0667908544a43bef8563bf189e88ff0659d7f66b3e70253bd099",
+      "result": {
+        "status": "PASS",
+        "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+        "source_manifest_hash": "sha256:8e5b0d59dd3626f39dcb398cba57819bac31eca897583d65bb5b99084d67f3f9",
+        "candidate_lookup_decisions": 8748,
+        "all_census_trace_hashes_match": true,
+        "all_decision_proof_hashes_match": true,
+        "closure_and_controls_match": true,
+        "registration_fields_match": true,
+        "unknown_identifier_rejected": true,
+        "fresh_native_lean_execution": true,
+        "scope": "All RunningConvergenceProgram500 method output fields; original independent validator checked separately"
+      }
+    },
+    {
+      "path": "verification/TURN_500_running500_independent_report.json",
+      "sha256": "19581483c18b90cf4582e9e45a5549eab637125c61a4c03ee4d83e4370cad8c0",
+      "result": [
+        {
+          "case": "original",
+          "expected": true,
+          "actual": {
+            "certificate": {
+              "all_finite_tolerance_witnesses_passed": true,
+              "base_extreme_gap": "5/24",
+              "base_vector": [
+                "2/3",
+                "3/4",
+                "5/6",
+                "7/8"
+              ],
+              "computed_surviving_ids": [
+                "complete-prime-sectors-through-seven__One-base-binary-depth-successor__holding-share-of-sector-plus-support__binary-support-successor-raises-holding-share__exact-generator-gap-over-paired-sources__finite-positive-epsilon-witness-for-every-pair__carrier-specific-self-source-range-and-screening-exposure__sealed-before-release__empty-extension"
+              ],
+              "generated_cardinality": 8748,
+              "level_four_extreme_gap": "1/30",
+              "level_four_vector": [
+                "9/10",
+                "10/11",
+                "12/13",
+                "14/15"
+              ],
+              "sectors": [
+                2,
+                3,
+                5,
+                7
+              ],
+              "supports": [
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "target_values_used": false
+            },
+            "passed": true,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-running500"
+          }
+        },
+        {
+          "case": "omitted_candidate",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "all_finite_tolerance_witnesses_passed": true,
+              "base_extreme_gap": "5/24",
+              "base_vector": [
+                "2/3",
+                "3/4",
+                "5/6",
+                "7/8"
+              ],
+              "computed_surviving_ids": [
+                "complete-prime-sectors-through-seven__One-base-binary-depth-successor__holding-share-of-sector-plus-support__binary-support-successor-raises-holding-share__exact-generator-gap-over-paired-sources__finite-positive-epsilon-witness-for-every-pair__carrier-specific-self-source-range-and-screening-exposure__sealed-before-release__empty-extension"
+              ],
+              "generated_cardinality": 8748,
+              "level_four_extreme_gap": "1/30",
+              "level_four_vector": [
+                "9/10",
+                "10/11",
+                "12/13",
+                "14/15"
+              ],
+              "sectors": [
+                2,
+                3,
+                5,
+                7
+              ],
+              "supports": [
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "target_values_used": false
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-running500"
+          }
+        },
+        {
+          "case": "additional_survivor",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "all_finite_tolerance_witnesses_passed": true,
+              "base_extreme_gap": "5/24",
+              "base_vector": [
+                "2/3",
+                "3/4",
+                "5/6",
+                "7/8"
+              ],
+              "computed_surviving_ids": [
+                "complete-prime-sectors-through-seven__One-base-binary-depth-successor__holding-share-of-sector-plus-support__binary-support-successor-raises-holding-share__exact-generator-gap-over-paired-sources__finite-positive-epsilon-witness-for-every-pair__carrier-specific-self-source-range-and-screening-exposure__sealed-before-release__empty-extension"
+              ],
+              "generated_cardinality": 8748,
+              "level_four_extreme_gap": "1/30",
+              "level_four_vector": [
+                "9/10",
+                "10/11",
+                "12/13",
+                "14/15"
+              ],
+              "sectors": [
+                2,
+                3,
+                5,
+                7
+              ],
+              "supports": [
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "target_values_used": false
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-running500"
+          }
+        },
+        {
+          "case": "failed_control",
+          "expected": false,
+          "actual": {
+            "certificate": {
+              "all_finite_tolerance_witnesses_passed": true,
+              "base_extreme_gap": "5/24",
+              "base_vector": [
+                "2/3",
+                "3/4",
+                "5/6",
+                "7/8"
+              ],
+              "computed_surviving_ids": [
+                "complete-prime-sectors-through-seven__One-base-binary-depth-successor__holding-share-of-sector-plus-support__binary-support-successor-raises-holding-share__exact-generator-gap-over-paired-sources__finite-positive-epsilon-witness-for-every-pair__carrier-specific-self-source-range-and-screening-exposure__sealed-before-release__empty-extension"
+              ],
+              "generated_cardinality": 8748,
+              "level_four_extreme_gap": "1/30",
+              "level_four_vector": [
+                "9/10",
+                "10/11",
+                "12/13",
+                "14/15"
+              ],
+              "sectors": [
+                2,
+                3,
+                5,
+                7
+              ],
+              "supports": [
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "target_values_used": false
+            },
+            "passed": false,
+            "recomputed_from_declared_inputs": true,
+            "validated_seal_hash": "native-running500"
+          }
+        }
+      ]
+    }
+  ],
+  "new_proofs": 0,
+  "new_builds": 0
+}

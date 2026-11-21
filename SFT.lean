@@ -12903,3 +12903,15 @@ import SFT.Medicine.InterventionSource
 import SFT.Medicine.InterventionExperiment
 
 import SFT.Medicine.InterventionValidation
+
+import SFT.Biology.BioHandoff
+
+import SFT.Biology.BioHandoffGrammar
+
+import SFT.Biology.BioHandoffEvidence
+
+import SFT.Biology.BioHandoffSource
+
+import SFT.Biology.BioHandoffExperiment
+
+import SFT.Biology.BioHandoffValidation

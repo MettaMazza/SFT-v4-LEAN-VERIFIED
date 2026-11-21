@@ -1,0 +1,73 @@
+TRY IT FIRST / RECURRENCES
+Can a ratio stop changing?
+One update rule. Six retained rows. A question about exact equality.
+You need: whole-number arithmetic, fractions and the meaning of coprime.
+The rule Start with (a,b) = (1,1). Replace the pair by (a+b,a). The requested depth counts retained
+rows, including the initial row.
+1. Build the history
+Complete the table. Keep the ratio as an exact fraction a/b.
+Row
+First coordinate a
+Second coordinate b
+Ratio a/b
+1
+1
+1
+1/1
+2
+3
+4
+5
+6
+2. Count updates, not just rows
+What does depth one return? How many updates produce depth six? Explain why the initial pair
+matters.
+3. Could a positive rational ratio stay fixed?
+If x = a/b, the next ratio is (a+b)/a = 1 + 1/x. Suppose x = p/q in lowest terms, with p and q positive
+integers. An unchanged ratio would satisfy:
+p^2 = pq + q^2
+Show that q divides p^2 and p divides q^2. What does coprimality force? Test the remaining pair. Turn
+over for the reasoning.
+Maria Smith | Ernos Labs | Prepared with AI assistance | 21 November 2026
+1/2
+
+
+WORKED ANSWERS / FOLLOW THE ARGUMENT
+Finite ratios, exact decisions
+These exercises explain a published source operation. They are not a new proof run or an independent review.
+1. The six retained rows
+(1,1), (2,1), (3,2), (5,3), (8,5), (13,8).
+Their first/second ratios are 1/1, 2/1, 3/2, 5/3, 8/5 and 13/8.
+2. Row count and update count
+Depth one returns just [(1,1)]. Depth six performs five updates and retains six rows. In the source, the
+loop starts at 1 and stops before depth. The native history index counts updates; the original positive
+depth counts rows.
+3. Excluding every positive rational fixed ratio
+Assume p and q are positive and coprime, and p^2 = pq + q^2. Since p^2 = q(p+q), q divides p^2. If q were
+greater than 1, it would have a prime divisor r. Then r would divide p^2, hence p, contradicting coprimality
+of p and q. Therefore q = 1.
+Also q^2 = p^2 - pq = p(p-q), so p divides q^2. With q = 1, the positive integer p divides 1, forcing p = 1. But
+(p,q) = (1,1) makes the assumed equation read 1 = 2. This is a contradiction.
+What has been established? No positive rational ratio is an exact fixed point of this update. This
+argument quantifies over all coprime positive pairs; it is not a test of only the six rows. Establishing
+convergence is a different question from this fixed-point exclusion.
+From this exercise to the original source
+Read Section 6 of Maria Smith, Crystallographic restriction and aperiodic substitution in SFT, version 1.1.
+doi.org/10.5281/zenodo.24354427
+The source-and-proof reading guide links the pinned V3 operations substitution_populations and
+rational_inflation_fixed_point_certificate, and the native Lean module QuasicrystalInflation.lean.
+In namespace SFT.Materials.QuasicrystalInflation, inspect originalDepthCount, originalSixSuccessors and
+rationalFixedScaleExcluded. The former identifies every positive requested row count; the last proves the universal
+exclusion above.
+Source pins: V3 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1;
+V4 21cdf559922fb057f8560f42d056ffa035329eb3.
+Questions or findings are welcome in the public review discussion. State the edition and the exact input, argument or
+declaration examined. Scientific author: Maria Smith. AI assistance supports preparation under her direction.
+Maria Smith | Ernos Labs | Prepared with AI assistance | 21 November 2026
+2/2
+
+Clickable-source URLs in the PDF:
+https://doi.org/10.5281/zenodo.24354427
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/peer-review/SUBSTITUTION_REVIEW_BRIEF.txt
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
+

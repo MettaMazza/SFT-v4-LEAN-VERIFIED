@@ -33154,3 +33154,28 @@ Parallel Mechanism native empirical verification remains pending. Pinned V3: sft
 Enthalpy post-seal analysis verification: EnthalpyStateAnalysis.exactEnthalpyAnalysis has empty Lean axiom dependencies. All nineteen original source-operation comparisons pass. These analysis checks retain the original full-entry programme, source, empirical and dependency obligations. Evidence: verification/TURN1256_ENTHALPY_ANALYSIS. Pinned source: sft/chemistry/enthalpy_equivalent_state_validation_v1.py. Native file: SFT/Chemistry/EnthalpyStateAnalysis.lean. Timeline: TURN1256.
 
 Free-energy reaction-direction post-seal analysis verification: FreeEnergyReactionAnalysis.speciesColumns, analyzeRow and exactReactionDirectionAnalysis have empty Lean axiom dependencies. All twenty-six original source-operation comparisons pass, retaining the Gibbs/logK sign opposition, exact crossing bracket, complete species columns and original observation counts. Evidence: verification/TURN1256_FREE_ENERGY_ANALYSIS. Pinned source: sft/chemistry/free_energy_equivalent_direction_validation_v1.py. Native file: SFT/Chemistry/FreeEnergyReactionAnalysis.lean. Timeline: TURN1256.
+
+1197. Reversible kinetics and equilibrium support from one closed pair graph
+
+For two distinct retained registered states a and b, the original construction retains the directed transitions e₊=(a→b,o₊,c,s₊) and e₋=(b→a,o₋,c,s₋), including each transition identity. Their orientations satisfy o₊≠o₋ and their held condition boundary c is identical. The graph guard checks the four endpoint equalities explicitly:
+  entry(e₊)=a, exit(e₊)=b, entry(e₋)=b, exit(e₋)=a.
+The two readings follow directly from these retained records. The kinetic word is K(G)=(e₊,e₋); the recurrence support is R(G)=(a,b). Thus G supplies both readings without replacing either by a fitted rate, an imported equilibrium constant, an averaged terminal composition or a steady-state premise. The result retains five fields: the pair identity, R(G), K(G), edge count 2, and the original exact-correspondence identity.
+
+A family F=(G₁,…,Gₙ) is nonempty, has positive consecutive source occurrences 1,…,n, and has distinct registered pair identities. For a valid next occurrence Gₙ₊₁, the complete result word is
+  C(F)=(C(G₁),…,C(Gₙ)),
+  C(F∥Gₙ₊₁)=C(F)∥C(Gₙ₊₁).
+Consequently taking its first n elements recovers C(F), and its length increases by one. The original append operation constructs the extended family through the same guards before checking these identities. It does not merge repeated observations or remove held status information.
+
+The eight original binary grammar axes retain both directions, the same closed graph, the directed edge word, recurrence support, separately retained compositions, all statuses, complete source custody and a value-free identity seal. Their Cartesian product has 2⁸=256 alternatives. The source program enumerates all 256 and applies its original elimination decisions, four operational witnesses, controls and closure.
+
+Pinned V3 sources (commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1): sft/chemistry/reversible_kinetic_equilibrium_law_v1.py, reversible_kinetic_equilibrium_batch_v1.py and claims/SFT-CHEM-REVERSIBLE-KINETIC-EQUILIBRIUM-CORRESPONDENCE-009/execution.py. Native translation: SFT/Chemistry/ReversibleKineticEquilibrium.lean (makeDirectedTransition, makeGraph, forcedReversibleKineticEquilibriumCorrespondence, makePair, makeFamily, appendReversiblePairPreservesCompleteFamily); corresponding Grammar and Evidence modules. The three native modules are staged, with their build, axiom audit and 47 source-operation comparisons queued; this entry is not yet counted complete. Original-program evidence: verification/TURN1257_REVERSIBLE_ORIGINAL. Timeline: TURN1257.
+
+1198. Separate directional observations and complete reversible-source custody
+
+The original independent validator retains 164 source records:
+  10 article pages + 144 supplementary pages + 1 description page + 1 movie record + 8 archive members = 164.
+The PDF subset contains 155 pages. The movie record binds all 73 frames. In the same-pair forward observation the retained fractions change from (83/100,17/100) to (8/25,17/25) over 88 hours. The reverse observation retains (49/50,1/50) initially and (71/100,29/100) terminally over 82 hours. Each displayed pair sums exactly to One. The terminal 68/32 and 71/29 records remain separate: the source does not average their disagreement into a common fitted result. Two continuation-pair records preserve the source's direction-label disagreements. Four activation-energy entries and four relative-energy entries remain post-seal provenance; the external zero reference is explicitly interpreted as structural EmptyOne reference separation.
+
+The original program and independent validator pass their complete source run, including twelve empirical-output fields and 176 measurement/control messages. These results establish the retained source baseline for native output comparison. Native analysis, sealing, prediction and full-validator translation remain to be assembled against that baseline. No additional completed entry is claimed from the original-source run alone.
+
+Pinned V3 source: sft/chemistry/reversible_kinetic_equilibrium_validation_v1.py, exact_reversible_kinetic_equilibrium_analysis and ReversibleKineticEquilibriumValidator.validate; the capture specification and all bound source records are identified in verification/TURN1257_REVERSIBLE_ORIGINAL/reversible1355_source_pin.json. Native graph operations and corresponding mathematical references are listed in §1197. Timeline: TURN1257.

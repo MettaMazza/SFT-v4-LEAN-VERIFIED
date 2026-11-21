@@ -12515,3 +12515,391 @@ import SFT.Biology.BioUncertaintySource
 import SFT.Biology.BioUncertaintyExperiment
 
 import SFT.Biology.BioUncertaintyValidation
+
+import SFT.Biology.BioCausality
+
+import SFT.Biology.BioCausalityGrammar
+
+import SFT.Biology.BioCausalityEvidence
+
+import SFT.Biology.BioCausalitySource
+
+import SFT.Biology.BioCausalityExperiment
+
+import SFT.Biology.BioCausalityValidation
+
+import SFT.Medicine.PatientIdentity
+
+import SFT.Medicine.PatientIdentityGrammar
+
+import SFT.Medicine.PatientIdentityEvidence
+
+import SFT.Medicine.PatientIdentitySource
+
+import SFT.Medicine.PatientIdentitySeal
+
+import SFT.Medicine.PatientIdentityExperiment
+
+import SFT.Medicine.PatientIdentityValidation
+
+import SFT.Medicine.ClinicalEpisode
+
+import SFT.Medicine.ClinicalEpisodeGrammar
+
+import SFT.Medicine.ClinicalEpisodeEvidence
+
+import SFT.Medicine.ClinicalEpisodeSource
+
+import SFT.Medicine.ClinicalEpisodeExperiment
+
+import SFT.Medicine.ClinicalEpisodeValidation
+
+import SFT.Medicine.ClinicalPopulation
+
+import SFT.Medicine.ClinicalPopulationGrammar
+
+import SFT.Medicine.ClinicalPopulationEvidence
+
+import SFT.Medicine.ClinicalPopulationSource
+
+import SFT.Medicine.ClinicalPopulationExperiment
+
+import SFT.Medicine.ClinicalPopulationValidation
+
+import SFT.Medicine.HealthState
+
+import SFT.Medicine.HealthStateGrammar
+
+import SFT.Medicine.HealthStateEvidence
+
+import SFT.Medicine.HealthStateSource
+
+import SFT.Medicine.HealthStateExperiment
+
+import SFT.Medicine.HealthStateValidation
+
+import SFT.Medicine.ClinicalObservation
+
+import SFT.Medicine.ClinicalObservationGrammar
+
+import SFT.Medicine.ClinicalObservationEvidence
+
+import SFT.Medicine.ClinicalObservationSource
+
+import SFT.Medicine.ClinicalObservationExperiment
+
+import SFT.Medicine.ClinicalObservationValidation
+
+import SFT.Medicine.LongitudinalCourse
+
+import SFT.Medicine.LongitudinalCourseGrammar
+
+import SFT.Medicine.LongitudinalCourseEvidence
+
+import SFT.Medicine.LongitudinalCourseSource
+
+import SFT.Medicine.LongitudinalCourseExperiment
+
+import SFT.Medicine.LongitudinalCourseValidation
+
+import SFT.Medicine.NormalVariation
+
+import SFT.Medicine.NormalVariationGrammar
+
+import SFT.Medicine.NormalVariationEvidence
+
+import SFT.Medicine.NormalVariationSource
+
+import SFT.Medicine.NormalVariationExperiment
+
+import SFT.Medicine.NormalVariationValidation
+
+import SFT.Medicine.Dysfunction
+
+import SFT.Medicine.DysfunctionGrammar
+
+import SFT.Medicine.DysfunctionEvidence
+
+import SFT.Medicine.DysfunctionSource
+
+import SFT.Medicine.DysfunctionExperiment
+
+import SFT.Medicine.DysfunctionValidation
+
+import SFT.Medicine.DiseaseState
+
+import SFT.Medicine.DiseaseStateGrammar
+
+import SFT.Medicine.DiseaseStateEvidence
+
+import SFT.Medicine.DiseaseStateSource
+
+import SFT.Medicine.DiseaseStateExperiment
+
+import SFT.Medicine.DiseaseStateValidation
+
+import SFT.Medicine.InjuryState
+
+import SFT.Medicine.InjuryStateGrammar
+
+import SFT.Medicine.InjuryStateEvidence
+
+import SFT.Medicine.InjuryStateSource
+
+import SFT.Medicine.InjuryStateExperiment
+
+import SFT.Medicine.InjuryStateValidation
+
+import SFT.Medicine.Comorbidity
+
+import SFT.Medicine.ComorbidityGrammar
+
+import SFT.Medicine.ComorbidityEvidence
+
+import SFT.Medicine.ComorbiditySource
+
+import SFT.Medicine.ComorbidityExperiment
+
+import SFT.Medicine.ComorbidityValidation
+
+import SFT.Medicine.SeverityStage
+
+import SFT.Medicine.SeverityStageGrammar
+
+import SFT.Medicine.SeverityStageEvidence
+
+import SFT.Medicine.SeverityStageSource
+
+import SFT.Medicine.SeverityStageExperiment
+
+import SFT.Medicine.SeverityStageValidation
+
+import SFT.Medicine.SymptomRecord
+
+import SFT.Medicine.SymptomRecordGrammar
+
+import SFT.Medicine.SymptomRecordEvidence
+
+import SFT.Medicine.SymptomRecordSource
+
+import SFT.Medicine.SymptomRecordExperiment
+
+import SFT.Medicine.SymptomRecordValidation
+
+import SFT.Medicine.ClinicalSign
+
+import SFT.Medicine.ClinicalSignGrammar
+
+import SFT.Medicine.ClinicalSignEvidence
+
+import SFT.Medicine.ClinicalSignSource
+
+import SFT.Medicine.ClinicalSignExperiment
+
+import SFT.Medicine.ClinicalSignValidation
+
+import SFT.Medicine.ClinicalMeasurement
+
+import SFT.Medicine.ClinicalMeasurementGrammar
+
+import SFT.Medicine.ClinicalMeasurementEvidence
+
+import SFT.Medicine.ClinicalMeasurementSource
+
+import SFT.Medicine.ClinicalMeasurementExperiment
+
+import SFT.Medicine.ClinicalMeasurementValidation
+
+import SFT.Medicine.DiagnosticClassification
+
+import SFT.Medicine.DiagnosticClassificationGrammar
+
+import SFT.Medicine.DiagnosticClassificationEvidence
+
+import SFT.Medicine.DiagnosticClassificationSource
+
+import SFT.Medicine.DiagnosticClassificationExperiment
+
+import SFT.Medicine.DiagnosticClassificationValidation
+
+import SFT.Medicine.DifferentialDiagnosis
+
+import SFT.Medicine.DifferentialDiagnosisGrammar
+
+import SFT.Medicine.DifferentialDiagnosisEvidence
+
+import SFT.Medicine.DifferentialDiagnosisSource
+
+import SFT.Medicine.DifferentialDiagnosisExperiment
+
+import SFT.Medicine.DifferentialDiagnosisValidation
+
+import SFT.Medicine.StructuralCounts
+
+import SFT.Medicine.DiagnosticAccuracy
+
+import SFT.Medicine.DiagnosticAccuracyGrammar
+
+import SFT.Medicine.DiagnosticAccuracyEvidence
+
+import SFT.Medicine.DiagnosticAccuracySource
+
+import SFT.Medicine.DiagnosticAccuracyExperiment
+
+import SFT.Medicine.DiagnosticAccuracyValidation
+
+import SFT.Medicine.ClinicalAssociation
+
+import SFT.Medicine.ClinicalAssociationGrammar
+
+import SFT.Medicine.ClinicalAssociationEvidence
+
+import SFT.Medicine.ClinicalAssociationSource
+
+import SFT.Medicine.ClinicalAssociationExperiment
+
+import SFT.Medicine.ClinicalAssociationValidation
+
+import SFT.Medicine.ClinicalCause
+
+import SFT.Medicine.ClinicalCauseGrammar
+
+import SFT.Medicine.ClinicalCauseEvidence
+
+import SFT.Medicine.ClinicalCauseSource
+
+import SFT.Medicine.ClinicalCauseExperiment
+
+import SFT.Medicine.ClinicalCauseValidation
+
+import SFT.Medicine.ClinicalMechanism
+
+import SFT.Medicine.ClinicalMechanismGrammar
+
+import SFT.Medicine.ClinicalMechanismEvidence
+
+import SFT.Medicine.ClinicalMechanismSource
+
+import SFT.Medicine.ClinicalMechanismExperiment
+
+import SFT.Medicine.ClinicalMechanismValidation
+
+import SFT.Medicine.Confounding
+
+import SFT.Medicine.ConfoundingGrammar
+
+import SFT.Medicine.ConfoundingEvidence
+
+import SFT.Medicine.ConfoundingSource
+
+import SFT.Medicine.ConfoundingExperiment
+
+import SFT.Medicine.ConfoundingValidation
+
+import SFT.Medicine.Mediation
+
+import SFT.Medicine.MediationGrammar
+
+import SFT.Medicine.MediationEvidence
+
+import SFT.Medicine.MediationSource
+
+import SFT.Medicine.MediationExperiment
+
+import SFT.Medicine.MediationValidation
+
+import SFT.Medicine.EffectModification
+
+import SFT.Medicine.EffectModificationGrammar
+
+import SFT.Medicine.EffectModificationEvidence
+
+import SFT.Medicine.EffectModificationSource
+
+import SFT.Medicine.EffectModificationExperiment
+
+import SFT.Medicine.EffectModificationValidation
+
+import SFT.Medicine.ClinicalRisk
+
+import SFT.Medicine.ClinicalRiskGrammar
+
+import SFT.Medicine.ClinicalRiskEvidence
+
+import SFT.Medicine.ClinicalRiskSource
+
+import SFT.Medicine.ClinicalRiskExperiment
+
+import SFT.Medicine.ClinicalRiskValidation
+
+import SFT.Medicine.IncidencePrevalence
+
+import SFT.Medicine.IncidencePrevalenceGrammar
+
+import SFT.Medicine.IncidencePrevalenceEvidence
+
+import SFT.Medicine.IncidencePrevalenceSource
+
+import SFT.Medicine.IncidencePrevalenceExperiment
+
+import SFT.Medicine.IncidencePrevalenceValidation
+
+import SFT.Medicine.Prognosis
+
+import SFT.Medicine.PrognosisGrammar
+
+import SFT.Medicine.PrognosisEvidence
+
+import SFT.Medicine.PrognosisSource
+
+import SFT.Medicine.PrognosisExperiment
+
+import SFT.Medicine.PrognosisValidation
+
+import SFT.Medicine.ClinicalOutcome
+
+import SFT.Medicine.ClinicalOutcomeGrammar
+
+import SFT.Medicine.ClinicalOutcomeEvidence
+
+import SFT.Medicine.ClinicalOutcomeSource
+
+import SFT.Medicine.ClinicalOutcomeExperiment
+
+import SFT.Medicine.ClinicalOutcomeValidation
+
+import SFT.Medicine.CensoringCompeting
+
+import SFT.Medicine.CensoringCompetingGrammar
+
+import SFT.Medicine.CensoringCompetingEvidence
+
+import SFT.Medicine.CensoringCompetingSource
+
+import SFT.Medicine.CensoringCompetingExperiment
+
+import SFT.Medicine.CensoringCompetingValidation
+
+import SFT.Medicine.PrognosticCalibration
+
+import SFT.Medicine.PrognosticCalibrationGrammar
+
+import SFT.Medicine.PrognosticCalibrationEvidence
+
+import SFT.Medicine.PrognosticCalibrationSource
+
+import SFT.Medicine.PrognosticCalibrationExperiment
+
+import SFT.Medicine.PrognosticCalibrationValidation
+
+import SFT.Medicine.Intervention
+
+import SFT.Medicine.InterventionGrammar
+
+import SFT.Medicine.InterventionEvidence
+
+import SFT.Medicine.InterventionSource
+
+import SFT.Medicine.InterventionExperiment
+
+import SFT.Medicine.InterventionValidation

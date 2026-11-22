@@ -1,6 +1,6 @@
 # SFT: choose a worked example
 
-Six illustrated entry points into Maria Smith’s published papers. Start with a question, inspect the diagram, then follow the paper or focused guide to the construction and proofs.
+Seven illustrated entry points into Maria Smith’s published papers. Start with a question, inspect the diagram, then follow the paper or focused guide to the construction and proofs.
 
 Scientific author: **Maria Smith, Ernos Labs**. These educational illustrations were prepared with AI assistance under her direction. Preserve the author credit, paper DOI and source context when sharing. The diagrams introduce examples; their linked papers and proof references contain the general arguments.
 
@@ -53,6 +53,14 @@ Exhaust the two candidate maps of the paper’s two-occurrence chirality base.
 ![Exhaust the two candidate maps of the paper’s two-occurrence chirality base.](chirality-two-maps.png)
 
 [Full-size PNG](chirality-two-maps.png) · [Detailed accessible description](chirality-two-maps-alt.txt) · [Paper](https://doi.org/10.5281/zenodo.24341917) · [Focused reading guide](../CHIRALITY_REVIEW_BRIEF.txt)
+
+## Which side holds the answer?
+
+Compare the one-term and two-term rational enclosures of atan(1/5). The rows use separate scales; the second interval is 3/125 as wide.
+
+![Odd term count subtracts the next-term magnitude; even term count adds it. Both intervals retain exact rational endpoints.](calculator-parity-card.png)
+
+[Full-size PNG](calculator-parity-card.png) · [Detailed accessible description](calculator-parity-card-alt.txt) · [Paper, version 1.1](https://doi.org/10.5281/zenodo.24354302) · [Focused reading guide](../CALCULATOR_REVIEW_BRIEF.txt) · [Illustrated article](https://mariasmith732266.substack.com/p/how-to-check-a-numerical-bound-without) · [Runnable notebook](calculator-enclosure-example.ipynb)
 
 ## Try a longer exercise
 

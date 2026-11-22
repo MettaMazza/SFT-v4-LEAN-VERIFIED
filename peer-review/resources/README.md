@@ -64,6 +64,7 @@ Compare the one-term and two-term rational enclosures of atan(1/5). The rows use
 
 ## Try a longer exercise
 
+- [Which shortest route is returned?](which-shortest-route.pdf) — printable diamond-graph exercise and worked answers, with [text version](which-shortest-route.txt).
 - [What can a function forget?](what-can-a-function-forget.pdf) — printable worksheet with [text version](what-can-a-function-forget.txt) and [Spanish text](que-puede-olvidar-una-funcion.txt).
 - [Can a ratio stop changing?](can-a-ratio-stop-changing.pdf) — substitution exercise with [text version](can-a-ratio-stop-changing.txt).
 - [Compute bounds for pi](calculator-enclosure-example.py) — run `python3 calculator-enclosure-example.py --machin --terms 8`; [instructions and expected output](RUN_CALCULATOR_EXAMPLE.txt).

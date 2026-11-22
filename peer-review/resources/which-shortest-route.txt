@@ -1,0 +1,52 @@
+WORK IT OUT / PAPER 34, VERSION 1.1
+Which shortest route is returned?
+Two routes can be equally short. The stored edge order can still decide which one the
+operation returns.
+a
+b
+c
+d
+Given: nodes [a,b,c,d]; undirected edges [(a,b),(a,c),(b,d),(c,d)]. Find a route from a to d. The drawing
+shows connections; the list gives their order.
+Follow this operation. Start with queue [[a]]. Remove the first complete path and scan its final node's
+neighbors in stored edge order. Skip a head already visited. On encountering the target as a neighbor,
+return the extended path immediately. Otherwise append eligible extensions to the queue. Count path
+length in nodes.
+1. After expanding a, write the queue. Which path is returned next?
+2. Swap only the first two stored edges. Write the new queue after a, then the returned path. Does the
+shortest length change?
+3. A domain check: let the supplied node list be [a,d], and edges [(a,x),(x,d)]. Does the operation
+require x to appear in the node list?
+Maria Smith, Ernos Labs | AI-assisted educational handout | 22 November 2026
+1
+
+ANSWERS / FOLLOW THE PROOF
+One distance, two witnesses
+1. Original order. Expanding a queues [[a,b],[a,c]]. Expanding b encounters d and immediately returns
+[a,b,d]. Its node-length is 3.
+2. Swapped order. With [(a,c),(a,b),(b,d),(c,d)], expanding a queues [[a,c],[a,b]]. Expanding c returns
+[a,c,d], also of node-length 3. The selected witness changes; the shortest length does not.
+3. Intermediate identity. The original operation checks endpoint membership. The edges supply
+adjacency through x, so it permits [a,x,d], of node-length 3. Requiring every intermediate identity to
+belong to the supplied node list would change this operation.
+Why immediate return is shortest. For a current head path h and any complete alternative target
+trace P, the frontier argument supplies a queued q with |q|+1 <= |P|. Queue ordering gives |h| <= |q|.
+Therefore:
+|h ++ [target]| = |h| + 1 <= |q| + 1 <= |P|.
+Before the first target encounter, it has neither been visited nor queued: meeting it as a neighbor
+returns instead of appending it. Read the exact hypotheses and invariant preservation in the paper and
+declarations below.
+Read the original construction and native proof.
+Paper: doi.org/10.5281/zenodo.24354792, Section 4.
+Lean namespace: SFT.Mathematics.GeometryTopology.
+Declarations: frontierStrict, pathLoopBound, pathDistanceShortest and pathDistanceNoneIff.
+Open the focused source-and-proof reading guide
+It links original V3 at commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1 and native V4 at
+21cdf559922fb057f8560f42d056ffa035329eb3.
+These exercises adapt the existing published example; they are not new verification results. The general discovery,
+shortestness and negative-result statements concern all complete traces under their stated admitted, distinct-endpoint
+hypotheses. Equal admitted endpoints retain the source's structural EmptyOne result.
+Share a useful response: identify the paper edition and exact operation or proof step examined; include your
+reasoning or reproducible result.
+Maria Smith, Ernos Labs | AI-assisted educational handout | 22 November 2026
+2

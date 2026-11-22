@@ -66,6 +66,7 @@ Compare the one-term and two-term rational enclosures of atan(1/5). The rows use
 
 - [What can a function forget?](what-can-a-function-forget.pdf) — printable worksheet with [text version](what-can-a-function-forget.txt) and [Spanish text](que-puede-olvidar-una-funcion.txt).
 - [Can a ratio stop changing?](can-a-ratio-stop-changing.pdf) — substitution exercise with [text version](can-a-ratio-stop-changing.txt).
+- [Compute bounds for pi](calculator-enclosure-example.py) — run `python3 calculator-enclosure-example.py --machin --terms 8`; [instructions and expected output](RUN_CALCULATOR_EXAMPLE.txt).
 - [Exact calculator notebook](calculator-enclosure-example.ipynb) — editable rational examples, with [run instructions](RUN_CALCULATOR_EXAMPLE.txt).
 
 Questions and independent examination are welcome. Identify the example, paper edition and exact step examined; include your reasoning or reproducible result. You can use the focused review form above or the [repository review discussion](https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1).

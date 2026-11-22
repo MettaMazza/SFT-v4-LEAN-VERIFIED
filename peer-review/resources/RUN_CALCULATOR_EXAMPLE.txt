@@ -54,3 +54,18 @@ REPORT A RESULT OR PROBLEM
 https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/issues/1
 
 Include the script commit, Python version, exact command and complete relevant output. Identify whether the question concerns input handling, computed arithmetic or the mathematical argument. Please omit credentials and private machine information.
+
+COMBINE THE BOUNDS FOR PI
+The current script also has a --machin mode. Download this edition to use it:
+https://github.com/MettaMazza/SFT-v4-LEAN-VERIFIED/blob/main/peer-review/resources/calculator-enclosure-example.py
+
+python3 calculator-enclosure-example.py --machin --terms 2
+python3 calculator-enclosure-example.py --machin --terms 8
+
+This mode uses 1/5 and 1/239; --x is unused. The term count applies to each arctangent. It prints both rational intervals, the combined endpoints and their exact width. If those intervals are [a,b] and [c,d], the combination is [16*a-4*d,16*b-4*c]. Subtraction reverses which endpoint of the second interval is used.
+
+With two terms in each sum, the combined endpoints are:
+[306134117864772/97476408149875, 670143059704/213311234375]
+The exact width is 12476980255684/12184551018734375.
+Try changing the term count, and compare the widths without rounding to floats.
+The angle identity and enclosure argument are in paper version 1.1, Section 5. This is an educational execution of the arithmetic, not a new Lean proof or a claim of independent review. Earlier pinned editions above retain their original single-arctangent interface.

@@ -37647,4 +37647,15 @@ After the original blueprint validation, the adapter requires eight dimensions a
 
 If the optional numeric comparison is present and non-null, its first_adverse_result_reclassified field must be exactly false. This conditional preserves the first adverse result without imposing a numeric comparison on rows for which the original record has none. The complete adapter also derives each shared-physics target row from the first retained source-evidence row, with its source identity and registered locator; the source snapshot hash, empirical disposition and directness remain explicit.
 
-Original source: pinned 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/astronomy_cosmology/empirical_program.py, verified, AstronomySpec.validate and build_specs. Native correspondence: SFT/AstronomyCosmology/Source.lean, verifiedPayload, validatePreSourceSeal and validateTargetRecord. These source operations are staged; their native build/audit and original-output comparisons remain pending. Full blueprint validation and adapter/programme assembly are separate outstanding bindings, so this subsection adds no completed entry. Timeline: TIMELINE.txt TURN1352.
+For dimension d with required property p_d and choice c with property set P_c, adaptation retains the name and explanation and sets its preservation flag to [p_d in P_c]. Dimension validation requires two distinct choice names and exactly one preserving choice:
+
+ |C_d|=2, |{name(c):c in C_d}|=2, sum(c in C_d)[p_d in P_c]=1.
+
+The candidate sequence is the ordered Cartesian product of the eight choice lists. Its preservation predicate retains both the original length check and the paired property tests:
+
+ G=C_1 x ... x C_8, |G|=2^8=256,
+ preserves(f)=(|f|=8) and all((d,c) in zip(dimensions,f))[p_d in P_c].
+
+The unique-survivor operation enumerates G and filters it by this predicate; it returns a form only when the filtered sequence has length one. Blueprint validation also requires the SFT-ASTRO- claim prefix, eight dimensions, every operational witness, and equality of the declared exact result to the survivor names joined in order by the original double-underscore separator. During target assembly, the claim-indexed dictionary retains the last row for a repeated key, and the first source-evidence row supplies the source identity and locator. The returned adapter retains its blueprint, adapted dimensions, target rows, snapshot path, snapshot hash, empirical disposition and directness.
+
+Original source: pinned 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/astronomy_cosmology/empirical_program.py, verified, AstronomySpec.validate and build_specs. Blueprint and grammar source: sft/astronomy_cosmology/generated_law.py, Dimension.validate, AstronomyBlueprint.validate, candidate_forms, candidate_preserves and unique_survivor. Native correspondence: SFT/AstronomyCosmology/Source.lean, verifiedPayload, validatePreSourceSeal and validateTargetRecord. The staged native operations now include validateDimension, candidateForms, candidatePreserves, uniqueSurvivor, validateBlueprint, adapt, buildSpecs and validateSpec. Their native build/audit and original-output comparisons remain pending, as does per-entry programme binding; this subsection adds no completed entry. Timeline: TIMELINE.txt TURN1352 and TURN1353.

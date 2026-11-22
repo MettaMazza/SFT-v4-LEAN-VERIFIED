@@ -37616,3 +37616,17 @@ The native propertyDecisionMatchesCriteria and sourcePropertyDecisionMatches dec
 The original programme returns one survivor and four controls; the independent validator accepts that output and rejects omitted-candidate, additional-survivor and failed-control variants. Native compilation, axiom audit and full output validation remain pending, so this entry is not yet counted complete.
 
 Pinned V3: claims/SFT-EARTH-HAZARD-RISK-HANDOFF-001/execution.py and independent_validator.py; sft/earth_environment/obligations.py, this record; structural_model.py, boundary_transfer, transfer_is_two_sided, observation_statuses and structural_witnesses; generated_law.py, _family_witness, _dimensions, candidate_preserves and _blueprints; empirical_program.py, original registration and validator. Commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native correspondence: SFT/EarthEnvironment/StructuralModel.lean, boundaryTransfer, transferIsTwoSided, observationStatuses and structuralWitnesses; EarthHazardRiskHandoff.lean, EarthHazardRiskHandoffGrammar.lean, EarthHazardRiskHandoffEvidence.lean, EarthHazardRiskHandoffExperiment.lean and EarthHazardRiskHandoffValidation.lean. Evidence: verification/TURN1323_EARTH_FINAL_ORIGINAL/earthhazard1521_original_report.json. Timeline: TURN1323.
+
+
+1385. Astronomy foundation: exact Fold witness construction
+
+The original Astronomy construction uses unrestricted rational inputs. For q in Q it sets d=2q and returns
+
+ F(q) = 2q                 if 2q <= 1,
+        2q - 1            otherwise.
+
+The two-state cycle is F(1/3)=2/3, F(2/3)=1/3. The three-state cycle is F(1/7)=2/7, F(2/7)=4/7, F(4/7)=1/7, and its partition is (1+2+4)/7=1. For i=1,...,6, the ordered-history difference (i+1)/8-i/8=1/8 is positive. Joint population count is 2*3=6. Filtering the registered exponent sequence (1,2,3,4) by equality to 4 gives the single survivor (4). The predecessor witness is F(1/4)=1/2=F(3/4).
+
+The other two witnesses check distinctness of the ordered source/path/observer/instrument/record labels and of direct/retrieval/proxy/reconstruction/model/forecast/missing evidence labels. The source returns these nine named Boolean results in its declared order. The staged native construction retains that order and uses the existing exact signed rational arithmetic, including negative and zero inputs; it introduces no positive-only domain restriction. Its build, axiom audit and original-output comparison are pending, so this subsection records the source construction without adding a completed entry.
+
+Original source: pinned 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/astronomy_cosmology/structural_model.py, fold and structural_witnesses. Native correspondence: SFT/AstronomyCosmology/StructuralModel.lean, SFT.AstronomyCosmology.StructuralModel.fold and structuralWitnesses, originalNineWitnesses (verification pending). Chronological work record: TIMELINE.txt TURN1341.

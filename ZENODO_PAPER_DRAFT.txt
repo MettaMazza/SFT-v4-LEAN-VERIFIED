@@ -37630,3 +37630,21 @@ The two-state cycle is F(1/3)=2/3, F(2/3)=1/3. The three-state cycle is F(1/7)=2
 The other two witnesses check distinctness of the ordered source/path/observer/instrument/record labels and of direct/retrieval/proxy/reconstruction/model/forecast/missing evidence labels. The source returns these nine named Boolean results in its declared order. The staged native construction retains that order and uses the existing exact signed rational arithmetic, including negative and zero inputs; it introduces no positive-only domain restriction. Its build, axiom audit and original-output comparison are pending, so this subsection records the source construction without adding a completed entry.
 
 Original source: pinned 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/astronomy_cosmology/structural_model.py, fold and structural_witnesses. Native correspondence: SFT/AstronomyCosmology/StructuralModel.lean, SFT.AstronomyCosmology.StructuralModel.fold and structuralWitnesses, originalNineWitnesses (verification pending). Chronological work record: TIMELINE.txt TURN1341.
+
+
+1386. Astronomy adapter: seal identity and retained target disposition
+
+The Astronomy branch adapts the existing generated empirical physics programme and its blind external measurement validator. Its own source-evidence verification removes the declared identity field k from a decoded record R, computes the canonical SHA-256 identity, and requires
+
+ H(R without k) = R[k].
+
+For the pre-source seal S, all three source-selection/content/outcome flags must be exactly false. Every original sealed-file pair (p,h) must satisfy H_bytes(file(p))=h. These checks occur before the target-set construction.
+
+After the original blueprint validation, the adapter requires eight dimensions and a nonempty target-row sequence. For the verified target row T and blueprint claim c with expected label e, it checks
+
+ T.claim_id=c, T.observed_label=e, T.exact_match=True,
+ T.external_evidence_selected_survivor=False.
+
+If the optional numeric comparison is present and non-null, its first_adverse_result_reclassified field must be exactly false. This conditional preserves the first adverse result without imposing a numeric comparison on rows for which the original record has none. The complete adapter also derives each shared-physics target row from the first retained source-evidence row, with its source identity and registered locator; the source snapshot hash, empirical disposition and directness remain explicit.
+
+Original source: pinned 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, sft/astronomy_cosmology/empirical_program.py, verified, AstronomySpec.validate and build_specs. Native correspondence: SFT/AstronomyCosmology/Source.lean, verifiedPayload, validatePreSourceSeal and validateTargetRecord. These source operations are staged; their native build/audit and original-output comparisons remain pending. Full blueprint validation and adapter/programme assembly are separate outstanding bindings, so this subsection adds no completed entry. Timeline: TIMELINE.txt TURN1352.

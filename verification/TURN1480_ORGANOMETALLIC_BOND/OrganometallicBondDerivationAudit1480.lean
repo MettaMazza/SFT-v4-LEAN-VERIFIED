@@ -1,0 +1,12 @@
+import SFT.Chemistry.OrganometallicBondDerivation
+#print axioms SFT.Chemistry.OrganometallicBondDerivation.structuralAbsence
+#print axioms SFT.Chemistry.OrganometallicBondDerivation.topologyRetains
+#print axioms SFT.Chemistry.OrganometallicBondDerivation.forceRowsRetains
+#print axioms SFT.Chemistry.OrganometallicBondDerivation.forceRowsIdentity
+#print axioms SFT.Chemistry.OrganometallicBondDerivation.appendIdentity
+#print axioms SFT.Chemistry.OrganometallicBondDerivation.appendRetains
+#print axioms SFT.Chemistry.OrganometallicBondDerivation.appendCount
+#print axioms SFT.Chemistry.OrganometallicBondDerivation.countedSuccessor
+#print axioms SFT.Chemistry.OrganometallicBondDerivation.appendClassification
+#print axioms SFT.Chemistry.OrganometallicBondDerivation.electronWords
+#print axioms SFT.Chemistry.OrganometallicBondDerivation.appendElectrons

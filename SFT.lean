@@ -14965,3 +14965,23 @@ import SFT.Chemistry.InorganicMagneticStateComparison
 import SFT.Chemistry.InorganicMagneticStateExperiment
 
 import SFT.Chemistry.InorganicMagneticStateValidation
+
+import SFT.Chemistry.OrganometallicBond
+
+import SFT.Chemistry.OrganometallicBondDerivation
+
+import SFT.Chemistry.OrganometallicBondGrammar
+
+import SFT.Chemistry.OrganometallicBondEvidence
+
+import SFT.Chemistry.OrganometallicBondPrediction
+
+import SFT.Chemistry.OrganometallicBondSource
+
+import SFT.Chemistry.OrganometallicBondAnalysis
+
+import SFT.Chemistry.OrganometallicBondComparison
+
+import SFT.Chemistry.OrganometallicBondExperiment
+
+import SFT.Chemistry.OrganometallicBondValidation

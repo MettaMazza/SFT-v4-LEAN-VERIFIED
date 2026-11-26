@@ -1,0 +1,20 @@
+import SFT.Chemistry.OrganometallicBond
+#print axioms SFT.Chemistry.OrganometallicBond.incidence
+#print axioms SFT.Chemistry.OrganometallicBond.sameKey
+#print axioms SFT.Chemistry.OrganometallicBond.distinctKeys
+#print axioms SFT.Chemistry.OrganometallicBond.topology
+#print axioms SFT.Chemistry.OrganometallicBond.direct
+#print axioms SFT.Chemistry.OrganometallicBond.forceRows
+#print axioms SFT.Chemistry.OrganometallicBond.forced
+#print axioms SFT.Chemistry.OrganometallicBond.appendDirect
+#print axioms SFT.Chemistry.OrganometallicBond.first
+#print axioms SFT.Chemistry.OrganometallicBond.second
+#print axioms SFT.Chemistry.OrganometallicBond.absenceWitness
+#print axioms SFT.Chemistry.OrganometallicBond.firstWitness
+#print axioms SFT.Chemistry.OrganometallicBond.successorWitness
+#print axioms SFT.Chemistry.OrganometallicBond.duplicateControl
+#print axioms SFT.Chemistry.OrganometallicBond.duplicateWitness
+#print axioms SFT.Chemistry.OrganometallicBond.absencePassed
+#print axioms SFT.Chemistry.OrganometallicBond.firstPassed
+#print axioms SFT.Chemistry.OrganometallicBond.successorPassed
+#print axioms SFT.Chemistry.OrganometallicBond.duplicatePassed

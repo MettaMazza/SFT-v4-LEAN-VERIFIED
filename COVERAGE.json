@@ -61626,9 +61626,20 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ORGANOMETALLIC-METAL-CARBON-BOND-010-52d096e861416551.json",
       "statement": "A metal-carbon organometallic bond is one direct generated incidence between a retained admitted centre occurrence and a retained carbon occurrence on one chemical entity, with complete positive held bond-electron support. The exact organometallic bond topology is the complete distinct incidence support and its positive cardinality. Structural absence of direct incidence remains EmptyOne and cannot be promoted by a compound name, proximity, species table or fitted exception.",
       "title": "Exact direct metal-carbon organometallic bond law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/OrganometallicBond.lean",
+        "SFT/Chemistry/OrganometallicBondDerivation.lean",
+        "SFT/Chemistry/OrganometallicBondGrammar.lean",
+        "SFT/Chemistry/OrganometallicBondEvidence.lean",
+        "SFT/Chemistry/OrganometallicBondPrediction.lean",
+        "SFT/Chemistry/OrganometallicBondSource.lean",
+        "SFT/Chemistry/OrganometallicBondAnalysis.lean",
+        "SFT/Chemistry/OrganometallicBondComparison.lean",
+        "SFT/Chemistry/OrganometallicBondExperiment.lean",
+        "SFT/Chemistry/OrganometallicBondValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS pinned full256programme,original/threeadverse independent cases,33core/15interface cases and full12field11message empirical receipt",
       "registration_sha256": "3c548ad0d9c29fd5f4db0024e5a993553c12e96e2331ef2d7e9f7e120d60a9ba",
       "v3_registration": {
         "branch": "chemistry",
@@ -61682,7 +61693,10 @@
         "statement": "Positive complete direct admitted-centre/carbon incidence support with held bond electrons uniquely forces organometallic bond topology and its exact cardinality; absent direct support remains structural EmptyOne.",
         "status": "empirically_tested",
         "title": "Exact direct metal-carbon organometallic bond law"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN1480_ORGANOMETALLIC_BOND_COMPLETION.json",
+      "verified_scope": "Exactincidence/topologyconstructorsandorderedguards;completeelectronenumeration,canonicalEmptyOneabsence,hostemptyrejection,distinctcentre/carbonkeys,forcedclassificationandappend;4originalwitnessesand33fullsourcecases.; Canonicalstructuralabsence;acceptedconstructionretainsexactrows/count/class;entityidentitypreservation;appendedincidencesandeverypriorelectronwordpreserved;onecountsuccessorandunchangedclassification.; Eightbinaryaxes,all256alternatives,originaldecisionsanduniquesurvivor.; Originalregistration,closure,4controlsandcomputed4witnesses;fullnativeprogrammeparityandoriginalindependentadversecases.; 12value-freeidentityrows,sixidentityfieldsandfourlawsineach11cellword;originalidentityguardsandforbiddenkeys.; Complete12rowtable,seventypedidentitykeys,postsealsourcehashguardsandtargetpayloadbinding.; All13analysisfieldsfromnativeabsence/first/successor;12criteria/scope/example/context/exclusionsurfaces,sixexamples,oneexclusionandone scopedistinction;15fullinterfacecases.; Sixidentity/fourlawbindings,all7originalcontrolsandunchangedpassedconjunction.; All13originalregistrationfields,12references,specguardsandoriginalsourcehashes.; Originalsealedprediction,targetrelease/custody,all12comparisons,complete12field11messageresultandallhashes."
     },
     {
       "branch": "chemistry",
@@ -203261,13 +203275,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-26T22:08:39.960886+00:00",
+  "updated_at": "2026-11-26T22:22:25.376340+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 9,
-    "pending": 1734,
-    "fully_reconstructed_claims": 1038,
-    "axiom_free_exported_results": 61877,
-    "axiom_free_audited_definitions_and_theorems": 142614
+    "pending": 1733,
+    "fully_reconstructed_claims": 1039,
+    "axiom_free_exported_results": 61933,
+    "axiom_free_audited_definitions_and_theorems": 142769
   }
 }

@@ -14523,3 +14523,19 @@ import SFT.Chemistry.MulticomponentDiagramAnalysis
 import SFT.Chemistry.MulticomponentPhaseDiagramPrediction
 
 import SFT.Chemistry.MulticomponentPhaseDiagramValidation
+
+import SFT.Chemistry.ColligativeResponse
+
+import SFT.Chemistry.ColligativeResponseGrammar
+
+import SFT.Chemistry.ColligativeResponseEvidence
+
+import SFT.Chemistry.ColligativeResponseExperiment
+
+import SFT.Chemistry.ColligativeResponseSource
+
+import SFT.Chemistry.ColligativeResponseAnalysis
+
+import SFT.Chemistry.ColligativeResponsePrediction
+
+import SFT.Chemistry.ColligativeResponseValidation

@@ -143,7 +143,7 @@ theorem candidatesComplete (c : Candidate) : c ∈ candidates := by
     apply CommonRefinement.memFlatMap _ _ minimality _ hminimality
     apply CommonRefinement.memFlatMap _ _ identity _ hidentity
     apply CommonRefinement.memFlatMap _ _ record _ hrecord
-    exact Count.TraceDerivation.memMap _ extension _ hextension
+    exact Count.TraceDerivation.memMap _ prediction _ hprediction
 
 theorem sourceDecisionBlock0000 (minimality : Minimality) (identity : Identity) (record : Record) (prediction : Prediction) :
  survives ⟨.rejected,.rejected,.rejected,.rejected,minimality,identity,record,prediction⟩ = criteriaDecision ⟨.rejected,.rejected,.rejected,.rejected,minimality,identity,record,prediction⟩ := by

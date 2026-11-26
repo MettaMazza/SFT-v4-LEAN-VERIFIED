@@ -14141,3 +14141,53 @@ import SFT.Consciousness.DirectionalSynaesthesiaEvidence
 import SFT.Consciousness.NonordinaryThreeQualityGrammar
 
 import SFT.Consciousness.NonordinaryThreeQualityEvidence
+
+import SFT.Consciousness.SleepDreamCycleGrammar
+
+import SFT.Consciousness.SleepDreamCycleEvidence
+
+import SFT.Consciousness.CessationLockAnchorGrammar
+
+import SFT.Consciousness.CessationLockAnchorEvidence
+
+import SFT.Chemistry.MolecularPolarizability
+
+import SFT.Chemistry.MolecularPolarizabilityRepetition
+
+import SFT.Chemistry.MolecularPolarizabilityGrammar
+
+import SFT.Chemistry.MolecularPolarizabilityEvidence
+
+import SFT.Chemistry.MolecularPolarizabilityExperiment
+
+import SFT.Chemistry.MolecularPolarizabilitySource
+
+import SFT.Chemistry.MolecularPolarizabilityPrediction
+
+import SFT.Chemistry.MolecularPolarizabilityValidation
+
+import SFT.Chemistry.MolecularIonization
+
+import SFT.Chemistry.MolecularIonizationMinimum
+
+import SFT.Chemistry.MolecularIonizationGrammar
+
+import SFT.Chemistry.MolecularIonizationEvidence
+
+import SFT.Chemistry.MolecularIonizationExperiment
+
+import SFT.Chemistry.MolecularIonizationSource
+
+import SFT.Chemistry.MolecularIonizationPrediction
+
+import SFT.Chemistry.MolecularIonizationValidation
+
+import SFT.Consciousness.NonordinaryFamilyGrammar
+
+import SFT.Consciousness.NonordinaryFamilyEvidence
+
+import SFT.Consciousness.NonordinaryExternalSource
+
+import SFT.Consciousness.NonordinaryExternalExperiment
+
+import SFT.Consciousness.NonordinaryExternalValidation

@@ -38,7 +38,7 @@ def main : IO Unit := do
  let files ← (← IO.ofExcept (items input "files")).mapM fun row => do
   let path ← IO.ofExcept row.getStr?
   let bytes ← readBytes path
-  let document ← if path.endsWith ".json" then readDocument path else pure CJ.null
+  let document ← if path.endsWith ".json" then readDocument path else pure (SFT.Host.Canonical.Value.null)
   return (⟨path,bytes,document⟩ : NonordinaryExternalSource.File)
  let result ← IO.ofExcept (NonordinaryExternalValidation.validate files derivationSeal host implementation before after)
  IO.println (SFT.Host.Canonical.render result)

@@ -1,0 +1,35 @@
+import SFT.Chemistry.LigandStateSplittingComparison
+import SFT.Chemistry.LigandStateSplittingExperiment
+import SFT.Chemistry.LigandStateSplittingValidation
+#print axioms SFT.Chemistry.LigandStateSplittingComparison.expectedLaws
+#print axioms SFT.Chemistry.LigandStateSplittingComparison.cellAt
+#print axioms SFT.Chemistry.LigandStateSplittingComparison.compare
+#print axioms SFT.Chemistry.LigandStateSplittingComparison.controls
+#print axioms SFT.Chemistry.LigandStateSplittingComparison.analysisPassed
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.claimId
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.experimentId
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.expectedLabel
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.falsification
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.targetRegistryHash
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.sourceFiles
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.sourceIds
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.references
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.registration
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.labelValue
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.envelope
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.specDimensions
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.specWitnesses
+#print axioms SFT.Chemistry.LigandStateSplittingExperiment.validateSpec
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.inputValues
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.sealPrediction
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.certificate
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.isolation
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.custodyCertificate
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.boolText
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.rowText
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.rowInt
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.rowPassed
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.tupleText
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.spectrumTupleText
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.measurementPayload
+#print axioms SFT.Chemistry.LigandStateSplittingValidation.validate

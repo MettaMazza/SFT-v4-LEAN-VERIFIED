@@ -14881,3 +14881,27 @@ import SFT.Chemistry.CoordinationIsomerismComparison
 import SFT.Chemistry.CoordinationIsomerismExperiment
 
 import SFT.Chemistry.CoordinationIsomerismValidation
+
+import SFT.Chemistry.LigandStateSplitting
+
+import SFT.Chemistry.LigandStateSplittingDerivation
+
+import SFT.Chemistry.LigandStateSplittingRetention
+
+import SFT.Chemistry.LigandStateSplittingWitnesses
+
+import SFT.Chemistry.LigandStateSplittingGrammar
+
+import SFT.Chemistry.LigandStateSplittingEvidence
+
+import SFT.Chemistry.LigandStateSplittingPrediction
+
+import SFT.Chemistry.LigandStateSplittingSource
+
+import SFT.Chemistry.LigandStateSplittingAnalysis
+
+import SFT.Chemistry.LigandStateSplittingComparison
+
+import SFT.Chemistry.LigandStateSplittingExperiment
+
+import SFT.Chemistry.LigandStateSplittingValidation

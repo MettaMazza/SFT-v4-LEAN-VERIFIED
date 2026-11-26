@@ -1,0 +1,26 @@
+import SFT.Chemistry.LigandStateSplittingRetention
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.selected
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.selectedMembers
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.selectedAppend
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.additionRetainsSelected
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.insertionRetainsSelected
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.sortingRetainsSelected
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.groupingRetainsSelected
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.partitionRetainsEverySelectedMember
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.consistent
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.additionPreservesIncidenceClass
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.insertionPreservesIncidenceClass
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.sortingPreservesIncidenceClass
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.groupingPreservesIncidenceClass
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.partitionIncidenceClass
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.distinctRanks
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.additionRankOrigin
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.additionPreservesDistinctRanks
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.insertionRankOrigin
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.insertionPreservesDistinctRanks
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.sortingPreservesDistinctRanks
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.groupingPreservesDistinctRanks
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.partitionHasDistinctRanks
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.equalRankIdentifiesLevel
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.exactIncidenceEquivalence
+#print axioms SFT.Chemistry.LigandStateSplittingRetention.generatedEachMemberOnce

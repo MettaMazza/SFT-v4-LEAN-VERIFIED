@@ -14301,3 +14301,35 @@ import SFT.Chemistry.MolecularFormationEnergyPrediction
 import SFT.Chemistry.MolecularFormationEnergyValidation
 
 import SFT.Chemistry.MolecularFormationEnergyExtension
+
+import SFT.Chemistry.CrossPropertyMolecularVector
+
+import SFT.Chemistry.CrossPropertyMolecularVectorGrammar
+
+import SFT.Chemistry.CrossPropertyMolecularVectorEvidence
+
+import SFT.Chemistry.CrossPropertyMolecularVectorExperiment
+
+import SFT.Chemistry.CrossPropertyMolecularVectorSource
+
+import SFT.Chemistry.CrossPropertyMolecularVectorPrediction
+
+import SFT.Chemistry.CrossPropertyMolecularVectorValidation
+
+import SFT.Chemistry.CrossPropertyMolecularVectorExtension
+
+import SFT.Chemistry.FiniteMicrostateSupport
+
+import SFT.Chemistry.FiniteMicrostateSupportGrammar
+
+import SFT.Chemistry.FiniteMicrostateSupportEvidence
+
+import SFT.Chemistry.FiniteMicrostateSupportExperiment
+
+import SFT.Chemistry.FiniteMicrostateSupportSource
+
+import SFT.Chemistry.FiniteMicrostateSupportPrediction
+
+import SFT.Chemistry.FiniteMicrostateSupportValidation
+
+import SFT.Chemistry.FiniteMicrostateSupportExtension

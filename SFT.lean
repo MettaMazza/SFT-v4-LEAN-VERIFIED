@@ -13771,3 +13771,33 @@ import SFT.Consciousness.IdentityContinuityEvidence
 import SFT.Consciousness.IdentityContinuityExperiment
 
 import SFT.Consciousness.IdentityContinuityValidation
+
+import SFT.Consciousness.Cessation
+
+import SFT.Consciousness.CessationGrammar
+
+import SFT.Consciousness.CessationEvidence
+
+import SFT.Consciousness.CessationExperiment
+
+import SFT.Consciousness.CessationValidation
+
+import SFT.Consciousness.SelfRepresentation
+
+import SFT.Consciousness.SelfRepresentationGrammar
+
+import SFT.Consciousness.SelfRepresentationEvidence
+
+import SFT.Consciousness.SelfRepresentationExperiment
+
+import SFT.Consciousness.SelfRepresentationValidation
+
+import SFT.Consciousness.SelfApplication
+
+import SFT.Consciousness.SelfApplicationGrammar
+
+import SFT.Consciousness.SelfApplicationEvidence
+
+import SFT.Consciousness.SelfApplicationExperiment
+
+import SFT.Consciousness.SelfApplicationValidation

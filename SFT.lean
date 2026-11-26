@@ -14715,3 +14715,19 @@ import SFT.Chemistry.CompetingChannelAnalysis
 import SFT.Chemistry.CompetingChannelPrediction
 
 import SFT.Chemistry.CompetingChannelValidation
+
+import SFT.Chemistry.SequentialMechanism
+
+import SFT.Chemistry.SequentialMechanismGrammar
+
+import SFT.Chemistry.SequentialMechanismEvidence
+
+import SFT.Chemistry.SequentialMechanismExperiment
+
+import SFT.Chemistry.SequentialMechanismSource
+
+import SFT.Chemistry.SequentialMechanismAnalysis
+
+import SFT.Chemistry.SequentialMechanismPrediction
+
+import SFT.Chemistry.SequentialMechanismValidation

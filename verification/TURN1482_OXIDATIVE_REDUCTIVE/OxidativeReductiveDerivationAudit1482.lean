@@ -1,0 +1,12 @@
+import SFT.Chemistry.OxidativeReductiveDerivation
+#print axioms SFT.Chemistry.OxidativeReductiveDerivation.sameLabelsSelf
+#print axioms SFT.Chemistry.OxidativeReductiveDerivation.sameIncidencesSelf
+#print axioms SFT.Chemistry.OxidativeReductiveDerivation.oxidativeRetains
+#print axioms SFT.Chemistry.OxidativeReductiveDerivation.oneMetalBase
+#print axioms SFT.Chemistry.OxidativeReductiveDerivation.twoMetalBase
+#print axioms SFT.Chemistry.OxidativeReductiveDerivation.exactInverse
+#print axioms SFT.Chemistry.OxidativeReductiveDerivation.inverseUnique
+#print axioms SFT.Chemistry.OxidativeReductiveDerivation.inversePreserves
+#print axioms SFT.Chemistry.OxidativeReductiveDerivation.matchedEndpointPreserved
+#print axioms SFT.Chemistry.OxidativeReductiveDerivation.noMetalRejected
+#print axioms SFT.Chemistry.OxidativeReductiveDerivation.furtherMetalsRejected

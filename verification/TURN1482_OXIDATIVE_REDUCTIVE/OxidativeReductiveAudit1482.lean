@@ -1,0 +1,19 @@
+import SFT.Chemistry.OxidativeReductive
+#print axioms SFT.Chemistry.OxidativeReductive.sameLabels
+#print axioms SFT.Chemistry.OxidativeReductive.sameIncidences
+#print axioms SFT.Chemistry.OxidativeReductive.uniqueLabels
+#print axioms SFT.Chemistry.OxidativeReductive.oxidativeTrace
+#print axioms SFT.Chemistry.OxidativeReductive.reductiveTrace
+#print axioms SFT.Chemistry.OxidativeReductive.oxidativeHeld
+#print axioms SFT.Chemistry.OxidativeReductive.oxidative
+#print axioms SFT.Chemistry.OxidativeReductive.reductive
+#print axioms SFT.Chemistry.OxidativeReductive.one
+#print axioms SFT.Chemistry.OxidativeReductive.two
+#print axioms SFT.Chemistry.OxidativeReductive.singleWitness
+#print axioms SFT.Chemistry.OxidativeReductive.splitWitness
+#print axioms SFT.Chemistry.OxidativeReductive.reverseWitness
+#print axioms SFT.Chemistry.OxidativeReductive.partitionWitness
+#print axioms SFT.Chemistry.OxidativeReductive.singlePassed
+#print axioms SFT.Chemistry.OxidativeReductive.splitPassed
+#print axioms SFT.Chemistry.OxidativeReductive.reversePassed
+#print axioms SFT.Chemistry.OxidativeReductive.partitionPassed

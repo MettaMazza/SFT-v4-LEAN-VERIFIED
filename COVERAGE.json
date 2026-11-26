@@ -61787,9 +61787,20 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-OXIDATIVE-ADDITION-REDUCTIVE-ELIMINATION-012-9dad1784e9aa6524.json",
       "statement": "Oxidative addition preserves one or two metal occurrences and two distinct covalently bound carriers while replacing the carrier-carrier bond by two metal-carrier incidences. Exact positive electron transfer is held as two on one metal or one on each of two metals, never as signed oxidation. Reductive elimination is the unique exact inverse that removes those incidences, restores the source bond and preserves every occurrence.",
       "title": "Exact oxidative-addition/reductive-elimination inverse law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/OxidativeReductive.lean",
+        "SFT/Chemistry/OxidativeReductiveDerivation.lean",
+        "SFT/Chemistry/OxidativeReductiveGrammar.lean",
+        "SFT/Chemistry/OxidativeReductiveEvidence.lean",
+        "SFT/Chemistry/OxidativeReductivePrediction.lean",
+        "SFT/Chemistry/OxidativeReductiveSource.lean",
+        "SFT/Chemistry/OxidativeReductiveAnalysis.lean",
+        "SFT/Chemistry/OxidativeReductiveComparison.lean",
+        "SFT/Chemistry/OxidativeReductiveExperiment.lean",
+        "SFT/Chemistry/OxidativeReductiveValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 programme, original and three adverse independent cases,89 core and8 interface cases, full12field10message empirical result",
       "registration_sha256": "98ecadd926995767dc819f053e02635f0fa5e1760f5e4114bfe6dd5e64ae9291",
       "v3_registration": {
         "branch": "chemistry",
@@ -61840,7 +61851,10 @@
         "statement": "Oxidative addition conserves two carriers while replacing their bond with two metal incidences and exact held transfer two or one-plus-one; reductive elimination is the exact inverse.",
         "status": "empirically_tested",
         "title": "Exact oxidative-addition/reductive-elimination inverse law"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN1482_OXIDATIVE_REDUCTIVE_COMPLETION.json",
+      "verified_scope": "Original oxidative and reductive trace constructors, ordered guards, exact held labels, one-/two-metal assembly, both transfer partitions and inverse construction; four computed witnesses and89 full original output cases.; General one-/two-metal retained traces and exact partitions, universal reductive inverse, unique operation result, exact preservation of source bond, removed incidences, metal/carrier occurrences and transfer partition; matched endpoint preservation and rejection of zero or three-plus metal partitions.; Eight binary axes, all256 alternatives, original decisions and sole survivor.; Original registration, closure, four controls and computed witnesses, full native programme parity and independent adverse cases.; Five value-free identity rows, six identity fields and four law labels in each eleven-cell word, exact original identity guards and forbidden keys.; Complete five-row table, seven identity keys, exact original errors, source hashes and target payload binding.; All thirteen analysis fields from native single/split/reverse/third-metal results; all five original surfaces and two sources, retained radical-scope distinction; eight full interface cases.; All identity/law/target comparisons, six original empirical controls and exact passed conjunction.; All thirteen registration fields, five source references, original spec guards and source hashes.; Original sealed prediction, target release/custody, five target comparisons and full twelve-field ten-message empirical result with all hashes."
     },
     {
       "branch": "chemistry",
@@ -203289,13 +203303,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-26T22:38:34.981127+00:00",
+  "updated_at": "2026-11-26T22:51:52.541457+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 9,
-    "pending": 1732,
-    "fully_reconstructed_claims": 1040,
-    "axiom_free_exported_results": 61993,
-    "axiom_free_audited_definitions_and_theorems": 142928
+    "pending": 1731,
+    "fully_reconstructed_claims": 1041,
+    "axiom_free_exported_results": 62050,
+    "axiom_free_audited_definitions_and_theorems": 143081
   }
 }

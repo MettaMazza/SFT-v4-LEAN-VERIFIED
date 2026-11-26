@@ -26,15 +26,15 @@ The reading guide links the published papers, worked examples and public review 
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
 
-## 1,000-entry author review — edition 0.5
+## 1,000-entry milestone — edition 0.5
 
 **Consciousness, observation and retained identity. Zero axioms. Zero free scientific parameters.**
 
-The cumulative paper now includes all 77 registered consciousness entries, alongside the fine-structure derivation, Unified Constants and the previously completed sectors. The review edition presents the exact Fold fibres, recurrent states, directional binding, sleep-dream cycle and cessation anchor with their mathematical derivations and original-source, Lean-verification and timeline references.
+The cumulative paper now includes all 77 registered consciousness entries, alongside the fine-structure derivation, Unified Constants and the previously completed sectors. This edition presents the exact Fold fibres, recurrent states, directional binding, sleep-dream cycle and cessation anchor with their mathematical derivations and original-source, Lean-verification and timeline references.
 
-**[Read the full review PDF](publication/SFT_REVIEW.pdf)** · [Manuscript](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Review guide](publication/REVIEW_GUIDE.txt) · [Release index](publication/RELEASE_INDEX.json)
+**[Read the full PDF](https://zenodo.org/records/24560920/files/SFT_PAPER.pdf)** · [Manuscript](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Edition guide](publication/REVIEW_GUIDE.txt) · [Release index](publication/RELEASE_INDEX.json)
 
-Edition 0.5 is **unpublished and awaiting Maria Smith’s review**. Zenodo publication requires her explicit approval. After approval and a separate instruction to resume formalisation, the next checkpoint is 1,250 completed entries, then every further 250.
+**Edition 0.5 is published.** [Zenodo edition 0.5](https://doi.org/10.5281/zenodo.24560920) includes the full PDF and complete source/evidence archive. The next review checkpoint is 1,250 completed entries, then every further 250; scientific continuation remains paused until resumption.
 
 Previously published: [750-entry edition 0.4](https://doi.org/10.5281/zenodo.24320778), with its [published PDF](https://zenodo.org/records/24320778/files/SFT_PAPER.pdf) and [source/evidence archive](https://zenodo.org/records/24320778/files/SFT_FULL_SOURCE_AND_EVIDENCE.zip).
 

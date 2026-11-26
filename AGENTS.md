@@ -9,3 +9,6 @@ The user requested effective use of the32-core/512GiB host. With61percent free m
 
 Completion-display correction — 2026-11-26T12:43:14.402474+00:00
 When updating a displayed completion count, edit only its explicit numerator field. Never replace the old number globally in an SVG or manuscript: the retained registrar used s.replace(str(oldCount),str(newCount)), which also changed the fixed2,781census denominator and a colour literal. Preserve the literal total2,781, source constants, hashes and style values. Check the rendered numerator/denominator against COVERAGE.json after a display update. This is a presentation correction, not a scientific criterion or a reason to rerun completed proofs.
+
+Publication handoff — 2026-11-26T13:15:03.486968+00:00
+The current 1,000-entry edition0.5 is published. Read CONTINUATION_READY1250.txt and the current authorized_action/scientific_cursor in CONTINUATION_STATE.json; historical continuation fields are records, not current instructions. Scientific resumption starts at the retained Chemical Temperature Correspondence cursor toward1,250, only when authorized. Preserve existing proof evidence and inspect actual job state before launching checks. Canonical sync44931 was waiting on filesystem I/O; confirm its receipt before using that copy.

@@ -13901,3 +13901,23 @@ import SFT.Consciousness.IntentionalRelationEvidence
 import SFT.Consciousness.IntentionalRelationExperiment
 
 import SFT.Consciousness.IntentionalRelationValidation
+
+import SFT.Consciousness.CognitiveInference
+
+import SFT.Consciousness.CognitiveInferenceGrammar
+
+import SFT.Consciousness.CognitiveInferenceEvidence
+
+import SFT.Consciousness.CognitiveInferenceExperiment
+
+import SFT.Consciousness.CognitiveInferenceValidation
+
+import SFT.Consciousness.Prediction
+
+import SFT.Consciousness.PredictionGrammar
+
+import SFT.Consciousness.PredictionEvidence
+
+import SFT.Consciousness.PredictionExperiment
+
+import SFT.Consciousness.PredictionValidation

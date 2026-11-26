@@ -13971,3 +13971,73 @@ import SFT.Consciousness.SubstrateIndependenceEvidence
 import SFT.Consciousness.SubstrateIndependenceExperiment
 
 import SFT.Consciousness.SubstrateIndependenceValidation
+
+import SFT.Consciousness.FeedforwardBoundary
+
+import SFT.Consciousness.FeedforwardBoundaryGrammar
+
+import SFT.Consciousness.FeedforwardBoundaryEvidence
+
+import SFT.Consciousness.FeedforwardBoundaryExperiment
+
+import SFT.Consciousness.FeedforwardBoundaryValidation
+
+import SFT.Consciousness.RealizationEquivalence
+
+import SFT.Consciousness.RealizationEquivalenceGrammar
+
+import SFT.Consciousness.RealizationEquivalenceEvidence
+
+import SFT.Consciousness.RealizationEquivalenceExperiment
+
+import SFT.Consciousness.RealizationEquivalenceValidation
+
+import SFT.Consciousness.ArtificialConsciousnessEvidence
+
+import SFT.Consciousness.ArtificialConsciousnessEvidenceGrammar
+
+import SFT.Consciousness.ArtificialConsciousnessEvidenceEvidence
+
+import SFT.Consciousness.ArtificialConsciousnessEvidenceExperiment
+
+import SFT.Consciousness.ArtificialConsciousnessEvidenceValidation
+
+import SFT.Consciousness.QualitativeDistinction
+
+import SFT.Consciousness.QualitativeDistinctionGrammar
+
+import SFT.Consciousness.QualitativeDistinctionEvidence
+
+import SFT.Consciousness.QualitativeDistinctionExperiment
+
+import SFT.Consciousness.QualitativeDistinctionValidation
+
+import SFT.Consciousness.QualitativeIdentity
+
+import SFT.Consciousness.QualitativeIdentityGrammar
+
+import SFT.Consciousness.QualitativeIdentityEvidence
+
+import SFT.Consciousness.QualitativeIdentityExperiment
+
+import SFT.Consciousness.QualitativeIdentityValidation
+
+import SFT.Consciousness.QualitativeSimilarity
+
+import SFT.Consciousness.QualitativeSimilarityGrammar
+
+import SFT.Consciousness.QualitativeSimilarityEvidence
+
+import SFT.Consciousness.QualitativeSimilarityExperiment
+
+import SFT.Consciousness.QualitativeSimilarityValidation
+
+import SFT.Consciousness.QualiaResonance
+
+import SFT.Consciousness.QualiaResonanceGrammar
+
+import SFT.Consciousness.QualiaResonanceEvidence
+
+import SFT.Consciousness.QualiaResonanceExperiment
+
+import SFT.Consciousness.QualiaResonanceValidation

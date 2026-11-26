@@ -14223,3 +14223,81 @@ import SFT.Chemistry.MolecularElectronAffinityValidation
 import SFT.Chemistry.HtmlUnescapeLinear
 
 import SFT.Chemistry.CanonicalExecutionChunks
+
+import SFT.Chemistry.VibrationalFrequency
+
+import SFT.Chemistry.VibrationalFrequencyGrammar
+
+import SFT.Chemistry.VibrationalFrequencyEvidence
+
+import SFT.Chemistry.VibrationalFrequencyExperiment
+
+import SFT.Chemistry.VibrationalFrequencySource
+
+import SFT.Chemistry.VibrationalFrequencyPrediction
+
+import SFT.Chemistry.VibrationalFrequencyValidation
+
+import SFT.Chemistry.CanonicalPackageChunks
+
+import SFT.Chemistry.CapabilityTraceChunks
+
+import SFT.Chemistry.RotationalConstant
+
+import SFT.Chemistry.RotationalConstantGrammar
+
+import SFT.Chemistry.RotationalConstantEvidence
+
+import SFT.Chemistry.RotationalConstantExperiment
+
+import SFT.Chemistry.RotationalConstantSource
+
+import SFT.Chemistry.RotationalConstantPrediction
+
+import SFT.Chemistry.RotationalConstantValidation
+
+import SFT.Chemistry.IntermolecularBinding
+
+import SFT.Chemistry.IntermolecularBindingExtension
+
+import SFT.Chemistry.IntermolecularBindingGrammar
+
+import SFT.Chemistry.IntermolecularBindingEvidence
+
+import SFT.Chemistry.IntermolecularBindingExperiment
+
+import SFT.Chemistry.IntermolecularBindingSource
+
+import SFT.Chemistry.IntermolecularBindingPrediction
+
+import SFT.Chemistry.IntermolecularBindingValidation
+
+import SFT.Chemistry.MolecularMagneticResponse
+
+import SFT.Chemistry.MolecularMagneticResponseGrammar
+
+import SFT.Chemistry.MolecularMagneticResponseEvidence
+
+import SFT.Chemistry.MolecularMagneticResponseExperiment
+
+import SFT.Chemistry.MolecularMagneticResponseSource
+
+import SFT.Chemistry.MolecularMagneticResponsePrediction
+
+import SFT.Chemistry.MolecularMagneticResponseValidation
+
+import SFT.Chemistry.MolecularFormationEnergy
+
+import SFT.Chemistry.MolecularFormationEnergyGrammar
+
+import SFT.Chemistry.MolecularFormationEnergyEvidence
+
+import SFT.Chemistry.MolecularFormationEnergyExperiment
+
+import SFT.Chemistry.MolecularFormationEnergySource
+
+import SFT.Chemistry.MolecularFormationEnergyPrediction
+
+import SFT.Chemistry.MolecularFormationEnergyValidation
+
+import SFT.Chemistry.MolecularFormationEnergyExtension

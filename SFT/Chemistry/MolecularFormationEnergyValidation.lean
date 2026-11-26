@@ -1,3 +1,6 @@
+import SFT.Chemistry.CapabilityTraceChunks
+import SFT.Chemistry.CanonicalPackageChunks
+import SFT.Chemistry.CanonicalExecutionChunks
 import SFT.Chemistry.MolecularFormationEnergyPrediction
 import SFT.Physics.ObservationComparison
 import SFT.Physics.HostilePackage
@@ -12,7 +15,7 @@ abbrev PredictionSeal := LeptonCustody.PredictionSeal
 abbrev Snapshot := HostilePackage.Snapshot
 def envelope (inputs : List (String × CapabilityValues.Value)) (registrationHash derivationSeal : String) : Value := .object [
  ("experiment_id",.text experimentId),
- ("registered_inputs",.object (inputs.map fun (key,value) => (key,.text (CapabilityValues.identity value)))),
+ ("registered_inputs",.object (inputs.map fun (key,value) => (key,.text (CanonicalExecutionChunks.valueIdentity value)))),
  ("withheld_target_ids",.array (targetIds.map Value.text)),
  ("frozen_relation_hash",.text derivationSeal),("experiment_registration_hash",.text registrationHash)]
 def sealPrediction (prior : Option PredictionSeal) (inputs : List (String × CapabilityValues.Value)) (registrationHash derivationSeal : String)
@@ -20,23 +23,23 @@ def sealPrediction (prior : Option PredictionSeal) (inputs : List (String × Cap
  match prior with
  | some _ => .error "prediction is already sealed and cannot be replaced"
  | none =>
-   let env := identity (envelope inputs registrationHash derivationSeal)
+   let env := CanonicalExecutionChunks.identity (envelope inputs registrationHash derivationSeal)
    let payload : Value := .object [("experiment_id",.text experimentId),
      ("prediction_hash",.text execution.outputHash),("trace_hash",.text execution.traceHash),("envelope_hash",.text env)]
-   .ok ⟨experimentId,execution.outputHash,execution.traceHash,env,identity payload⟩
+   .ok ⟨experimentId,execution.outputHash,execution.traceHash,env,CanonicalExecutionChunks.identity payload⟩
 
 def certificate (fields : List (String × Value)) : Value :=
- .object (fields ++ [("certificate_hash",.text (identity (.object fields)))])
+ .object (fields ++ [("certificate_hash",.text (CanonicalExecutionChunks.identity (.object fields)))])
 
 def isolation (registrationHash host implementation : String) (execution : CapabilityExecution.Execution)
     (vault : TargetCustody.Vault) (prediction : PredictionSeal) : Value := certificate [
  ("adapter_id",.text "sft-portable-capability-custody/1"),
  ("executor_id",.text (Text.append experimentId "-prediction-executor")),
  ("host_platform",.text (if host.isEmpty then "registered-host" else host)),("python_implementation",.text implementation),
- ("interpreter_hash",.text (identity (.text "sft-v3-capability-closed-fold-interpreter/1"))),
+ ("interpreter_hash",.text (CanonicalExecutionChunks.identity (.text "sft-v3-capability-closed-fold-interpreter/1"))),
  ("program_hash",.text execution.programHash),("input_manifest_hash",.text execution.inputManifestHash),
  ("registered_target_identity_hash",.text vault.commitment.targetHash),
- ("comparison_implementation_identity_hash",.text (identity (.array [.text "exact-held-formation-state-relation-complete-vector",.text falsification]))),
+ ("comparison_implementation_identity_hash",.text (CanonicalExecutionChunks.identity (.array [.text "exact-held-formation-state-relation-complete-vector",.text falsification]))),
  ("prediction_seal_hash",.text prediction.sealHash),
  ("denied_capabilities",.array (["clock","dynamic_import","environment","filesystem_read","filesystem_write","foreign_function","network","subprocess"].map Value.text)),
  ("attempted_forbidden_operations",.array []),("target_material_present",.boolean false),
@@ -74,7 +77,7 @@ def validate (identityBytes targetBytes primaryBytes resultBytes referenceBytes 
  (before after : Snapshot) : Except String Validation := do
  validateSpec
  let registration ← experimentRegistrationRecord identityBytes identityDocument
- let registrationHash := identity registration
+ let registrationHash := CanonicalExecutionChunks.identity registration
  let document ← predictionProgramDocument identityBytes identityDocument
  let programFields ← match document with
   | .object fields => pure fields
@@ -82,16 +85,16 @@ def validate (identityBytes targetBytes primaryBytes resultBytes referenceBytes 
  let program ← CapabilityDocuments.loadProgramFields programFields
  let premise ← CapabilityValues.heldLabel "sealed-derivation" derivationSeal
  let inputs := [("registered-premise",CapabilityValues.Value.label premise)]
- let execution ← CapabilityExecution.execute program inputs
+ let execution ← CapabilityTraceChunks.execute program inputs
  let prediction ← sealPrediction none inputs registrationHash derivationSeal execution
- let (audited,audit) ← HostilePackage.auditProgram programFields before after
- if !Text.equal (identity (CapabilityExecution.canonicalProgram audited)) execution.programHash || !audit.passed then
+ let (audited,audit) ← CanonicalPackageChunks.auditProgram programFields before after
+ if !Text.equal (CanonicalExecutionChunks.identity (CapabilityExecution.canonicalProgram audited)) execution.programHash || !audit.passed then
   throw "PROP-013 prediction package changed"
  let predicted ← predictionMap execution.output
  let source ← sourceRows identityBytes targetBytes primaryBytes resultBytes referenceBytes identityDocument targets
  let values := source.map fun row => (row.targetId,CapabilityValues.canonical row.value)
  let vault ← TargetCustody.createVault experimentId (Text.append experimentId "-NIST-target-custodian") values
-  (identity (.array [.text registrationHash,.text targetHash])) (identity (envelope inputs registrationHash derivationSeal))
+  (CanonicalExecutionChunks.identity (.array [.text registrationHash,.text targetHash])) (CanonicalExecutionChunks.identity (envelope inputs registrationHash derivationSeal))
  let (_,release) ← TargetCustody.release vault prediction
  TargetCustody.verify vault.commitment release prediction
  let _context ← SFT.Computation.MathematicalModelling.openTargets
@@ -154,6 +157,6 @@ def validate (identityBytes targetBytes primaryBytes resultBytes referenceBytes 
   ("target_custody_certificate",custodyCertificate registrationHash release prediction),
   ("evaluator_verified_seal",.boolean true),("target_opened_after_seal",.boolean true),("all_rows_preserved",.boolean true),
   ("data_source_ids",.array [.text "NIST-CCCBDB-SRD-101-COMPLETE-EXPERIMENTAL-FORMATION-ENERGY",.text "NIST-CCCBDB-THERMODYNAMIC-REFERENCE-STATES"]),
-  ("measurements",.array (messages.map Value.text)),("measurement_receipt_hash",.text (identity payload)),
+  ("measurements",.array (messages.map Value.text)),("measurement_receipt_hash",.text (CanonicalExecutionChunks.identity payload)),
   ("falsification_condition",.text falsification),("passed",.boolean passed)],passed⟩
 end SFT.Chemistry.MolecularFormationEnergyValidation

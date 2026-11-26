@@ -14333,3 +14333,33 @@ import SFT.Chemistry.FiniteMicrostateSupportPrediction
 import SFT.Chemistry.FiniteMicrostateSupportValidation
 
 import SFT.Chemistry.FiniteMicrostateSupportExtension
+
+import SFT.Chemistry.TemperatureCorrespondence
+
+import SFT.Chemistry.TemperatureCorrespondenceGrammar
+
+import SFT.Chemistry.TemperatureCorrespondenceEvidence
+
+import SFT.Chemistry.TemperatureCorrespondenceAnalysis
+
+import SFT.Chemistry.TemperatureCorrespondenceExperiment
+
+import SFT.Chemistry.TemperatureCorrespondenceSource
+
+import SFT.Chemistry.TemperatureCorrespondencePrediction
+
+import SFT.Chemistry.TemperatureCorrespondenceValidation
+
+import SFT.Chemistry.InternalEnergyComposition
+
+import SFT.Chemistry.InternalEnergyCompositionGrammar
+
+import SFT.Chemistry.InternalEnergyCompositionEvidence
+
+import SFT.Chemistry.InternalEnergyCompositionExperiment
+
+import SFT.Chemistry.InternalEnergyCompositionSource
+
+import SFT.Chemistry.InternalEnergyCompositionPrediction
+
+import SFT.Chemistry.InternalEnergyCompositionValidation

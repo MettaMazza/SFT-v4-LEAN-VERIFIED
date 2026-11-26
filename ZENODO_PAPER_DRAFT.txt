@@ -38114,3 +38114,33 @@ The insertion operation reuses an existing equal-rank level; otherwise it adds t
 Equal incidences therefore remain one level and unequal incidences cannot share a level. exactIncidenceEquivalence proves both directions for the actual grouping and sorting functions. Native proofs: SFT/Chemistry/LigandStateSplittingRetention.lean. Original source: ligand_state_splitting_law_v1.py, interaction_rank and forced_ligand_state_splitting; ligand_state_splitting_batch_v1.py, statement and induction_step. Evidence: verification/TURN1476_LIGAND_STATE_SPLITTING/ligandsplit1476_full_audit_report.json. Timeline: TURN1476.
 
 The native empirical validator preserves all fifteen registration fields and all seven original controls. Its source analysis uses the native splitting operations, retains all 32 target identities and reproduces the complete original blind-spectrum peak and separation inscriptions. The exact passed conjunction retains the specified multiplicities, separations, balance distances, IUPAC surfaces, single blind spectrum, two adverse absences, twelve ancillary captures and dimensional-boundary declarations. The final comparison agrees in all twelve returned fields, all thirteen messages and all hashes. Native files: SFT/Chemistry/LigandStateSplittingExperiment.lean, LigandStateSplittingComparison.lean and LigandStateSplittingValidation.lean. Original source: ligand_state_splitting_validation_v1.py, experiment_registration_record and LigandStateSplittingValidator.validate. Evidence: verification/TURN1476_LIGAND_STATE_SPLITTING/ligandsplit1476_empirical_report.json. Timeline: TURN1476.
+
+1393. Complete split-support spin occupancy and exact order
+
+The preceding ligand-incidence construction supplies lower and upper support widths (3,2). For electron count n, an occupancy signature retains lower pairs pₗ, lower singles sₗ, upper pairs pᵤ and upper singles sᵤ. The source exhausts the entire product
+
+  (pₗ,sₗ,pᵤ,sᵤ)∈{0,1,2,3}²×{0,1,2}²
+
+and retains exactly the rows satisfying
+
+  pₗ+sₗ≤3,    pᵤ+sᵤ≤2,
+  2(pₗ+pᵤ)+sₗ+sᵤ=n.
+
+These loop ordinals encode enumeration positions; a vanishing component is returned as structural EmptyOne. No admissible occupancy row is selected in advance. At n=6 the complete retained census has ten signatures.
+
+The derived pair-closure count, unmatched count, split-crossing count and spin width are
+
+  P=pₗ+pᵤ,    U=sₗ+sᵤ,    X=2pᵤ+sᵤ,    W=U+1.
+
+The low-spin operation sorts the complete census lexicographically by (X,U) and requires exactly one minimum. The high-spin operation retains every maximum-U candidate, then every minimum-X candidate within that set, again requiring uniqueness. For six electrons the resulting signatures are
+
+  low:  (pₗ,sₗ,pᵤ,sᵤ)=(3,EmptyOne,EmptyOne,EmptyOne),
+  high: (pₗ,sₗ,pᵤ,sᵤ)=(1,2,EmptyOne,2).
+
+Thus (P,U,X,W) is (3,EmptyOne,EmptyOne,1) for the low state and (1,4,2,5) for the high state. At diluted EmptyOne recurrence, the path cost retains pair closures alone: C_H=1 and C_L=3. For a positive retained recurrence r, the source composes C=P+rX, yielding C_H=1+2r and C_L=3. The original three-entry vector therefore is
+
+  EmptyOne recurrence: high-precedes-low;
+  first retained recurrence: crossover-coincidence;
+  second retained recurrence: low-precedes-high.
+
+Original source: sft/chemistry/complex_spin_state_order_law_v1.py, SpinOccupancySignature, enumerate_complete_spin_signatures, forced_low_spin_state, forced_high_spin_state, counted_state_path_cost and forced_six_electron_order_vector. Native source: SFT/Chemistry/ComplexSpinState.lean. sixCensusHasTen and originalTrichotomy prove the original census size and order vector by kernel reduction. All32 current core declarations have empty axiom dependencies. All39 complete source comparisons agree, covering full censuses and both extrema for electron counts1through11, the complete original order vector and five complete six-electron path-cost vectors. Evidence: verification/TURN1476_COMPLEX_SPIN_STATE/complexspin1476_core_report.json. Timeline: TURN1476. Complete entry registration still requires the original operational witnesses, successor/closure proofs,256candidate grammar,controls and empirical validator.

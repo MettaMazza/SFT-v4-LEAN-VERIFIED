@@ -1,4 +1,4 @@
-## 1000 / 2,781 V3 entries complete
+## 1,000 / 2,781 V3 entries complete
 
 **Author contact:** [Maria.smith.sftoe@gmail.com](mailto:Maria.smith.sftoe@gmail.com) · **Join the SFT Discord community:** [discord.gg/QCNkzq6kZC](https://discord.gg/QCNkzq6kZC)
 
@@ -8,7 +8,7 @@
 The reading guide links the published papers, worked examples and public review requests. Choose a paper’s recorded source and evidence edition when checking its results.
 
 <p align="center">
-  <img src="docs/assets/sft-banner.svg" alt="SFT - Unified Constants complete. 1000 V3 entries verified in Lean, with zero axiom dependencies." width="100%" />
+  <img src="docs/assets/sft-banner.svg" alt="SFT - Consciousness, observation and retained identity. 1,000 V3 entries verified in Lean, with zero axiom dependencies." width="100%" />
 </p>
 
 <p align="center">
@@ -26,15 +26,17 @@ The reading guide links the published papers, worked examples and public review 
   <img alt="Full formalisation in progress" src="https://img.shields.io/badge/Full_formalisation-In_progress-b89143?style=flat-square&amp;labelColor=0b1825" />
 </p>
 
-## 750-entry milestone — edition 0.4
+## 1,000-entry author review — edition 0.5
 
-**Smithian Fold Theory: Zero-Axiom, Zero-Free-Parameter Derivations from First Principles - Lean 4 Formal Verification**
+**Consciousness, observation and retained identity. Zero axioms. Zero free scientific parameters.**
 
-The fine-structure derivation opens the cumulative paper, followed by Unified Constants and the completed mathematics, physics, chemistry, materials, computation and biology work. The full 1,007-page edition contains 1,091 numbered main sections and 16 subsections, with 1,107 bookmarks and original-source, Lean-verification and timeline references.
+The cumulative paper now includes all 77 registered consciousness entries, alongside the fine-structure derivation, Unified Constants and the previously completed sectors. The review edition presents the exact Fold fibres, recurrent states, directional binding, sleep-dream cycle and cessation anchor with their mathematical derivations and original-source, Lean-verification and timeline references.
 
-**[Read the published PDF](https://zenodo.org/records/24320778/files/SFT_PAPER.pdf)** · [Full manuscript](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Full source and evidence](https://zenodo.org/records/24320778/files/SFT_FULL_SOURCE_AND_EVIDENCE.zip) · [Release index](publication/RELEASE_INDEX.json)
+**[Read the full review PDF](publication/SFT_REVIEW.pdf)** · [Manuscript](ZENODO_PAPER_DRAFT.txt) · [Contents](publication/CONTENTS.txt) · [Review guide](publication/REVIEW_GUIDE.txt) · [Release index](publication/RELEASE_INDEX.json)
 
-**[Edition 0.4 is published on Zenodo](https://doi.org/10.5281/zenodo.24320778).** The full PDF is the verified default landing-page preview. Previous edition [0.3](https://doi.org/10.5281/zenodo.24205463) remains available. The author has resumed formalisation toward the next review milestone at 1,000 completed entries, then every 250. Edition 0.4 remains the published 750-entry snapshot.
+Edition 0.5 is **unpublished and awaiting Maria Smith’s review**. Zenodo publication requires her explicit approval. After approval and a separate instruction to resume formalisation, the next checkpoint is 1,250 completed entries, then every further 250.
+
+Previously published: [750-entry edition 0.4](https://doi.org/10.5281/zenodo.24320778), with its [published PDF](https://zenodo.org/records/24320778/files/SFT_PAPER.pdf) and [source/evidence archive](https://zenodo.org/records/24320778/files/SFT_FULL_SOURCE_AND_EVIDENCE.zip).
 
 # One model. Every derivation. Machine-checked.
 

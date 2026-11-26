@@ -5,3 +5,7 @@ Responding to the user’s correction about underusing the M3 Ultra with512GiB R
 
 Resource throughput correction — 2026-11-26T11:03:19.481958+00:00
 The user requested effective use of the32-core/512GiB host. With61percent free memory and8single-threaded running native jobs, raise the concurrent SFT job cap to16; retain8192MiB per process,40GiB aggregate RSS and25percent free-memory floor. Preserve running process handles. Only capacity-waiting controllers with no compiler/native child were replaced to load the new cap; do not restart running work. This changes execution scheduling only, not scientific criteria.
+
+
+Completion-display correction — 2026-11-26T12:43:14.402474+00:00
+When updating a displayed completion count, edit only its explicit numerator field. Never replace the old number globally in an SVG or manuscript: the retained registrar used s.replace(str(oldCount),str(newCount)), which also changed the fixed2,781census denominator and a colour literal. Preserve the literal total2,781, source constants, hashes and style values. Check the rendered numerator/denominator against COVERAGE.json after a display update. This is a presentation correction, not a scientific criterion or a reason to rerun completed proofs.

@@ -13921,3 +13921,53 @@ import SFT.Consciousness.PredictionEvidence
 import SFT.Consciousness.PredictionExperiment
 
 import SFT.Consciousness.PredictionValidation
+
+import SFT.Consciousness.Expectation
+
+import SFT.Consciousness.ExpectationGrammar
+
+import SFT.Consciousness.ExpectationEvidence
+
+import SFT.Consciousness.ExpectationExperiment
+
+import SFT.Consciousness.ExpectationValidation
+
+import SFT.Consciousness.DeterminedAgency
+
+import SFT.Consciousness.DeterminedAgencyGrammar
+
+import SFT.Consciousness.DeterminedAgencyEvidence
+
+import SFT.Consciousness.DeterminedAgencyExperiment
+
+import SFT.Consciousness.DeterminedAgencyValidation
+
+import SFT.Consciousness.RealizationCarrier
+
+import SFT.Consciousness.RealizationCarrierGrammar
+
+import SFT.Consciousness.RealizationCarrierEvidence
+
+import SFT.Consciousness.RealizationCarrierExperiment
+
+import SFT.Consciousness.RealizationCarrierValidation
+
+import SFT.Consciousness.StructuralCriterion
+
+import SFT.Consciousness.StructuralCriterionGrammar
+
+import SFT.Consciousness.StructuralCriterionEvidence
+
+import SFT.Consciousness.StructuralCriterionExperiment
+
+import SFT.Consciousness.StructuralCriterionValidation
+
+import SFT.Consciousness.SubstrateIndependence
+
+import SFT.Consciousness.SubstrateIndependenceGrammar
+
+import SFT.Consciousness.SubstrateIndependenceEvidence
+
+import SFT.Consciousness.SubstrateIndependenceExperiment
+
+import SFT.Consciousness.SubstrateIndependenceValidation

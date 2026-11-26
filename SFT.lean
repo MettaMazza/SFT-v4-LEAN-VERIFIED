@@ -14747,3 +14747,19 @@ import SFT.Chemistry.ParallelMechanismAnalysis
 import SFT.Chemistry.ParallelMechanismPrediction
 
 import SFT.Chemistry.ParallelMechanismValidation
+
+import SFT.Chemistry.ReversibleKineticEquilibrium
+
+import SFT.Chemistry.ReversibleKineticEquilibriumGrammar
+
+import SFT.Chemistry.ReversibleKineticEquilibriumEvidence
+
+import SFT.Chemistry.ReversibleKineticEquilibriumAnalysis
+
+import SFT.Chemistry.ReversibleKineticEquilibriumExperiment
+
+import SFT.Chemistry.ReversibleKineticEquilibriumSource
+
+import SFT.Chemistry.ReversibleKineticEquilibriumPrediction
+
+import SFT.Chemistry.ReversibleKineticEquilibriumValidation

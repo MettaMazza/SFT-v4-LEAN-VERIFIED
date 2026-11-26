@@ -13721,3 +13721,23 @@ import SFT.Consciousness.DeterminismSelfOpacityEvidence
 import SFT.Consciousness.DeterminismSelfOpacityExperiment
 
 import SFT.Consciousness.DeterminismSelfOpacityValidation
+
+import SFT.Consciousness.MemoryCarrier
+
+import SFT.Consciousness.MemoryCarrierGrammar
+
+import SFT.Consciousness.MemoryCarrierEvidence
+
+import SFT.Consciousness.MemoryCarrierExperiment
+
+import SFT.Consciousness.MemoryCarrierValidation
+
+import SFT.Consciousness.MemoryPersistence
+
+import SFT.Consciousness.MemoryPersistenceGrammar
+
+import SFT.Consciousness.MemoryPersistenceEvidence
+
+import SFT.Consciousness.MemoryPersistenceExperiment
+
+import SFT.Consciousness.MemoryPersistenceValidation

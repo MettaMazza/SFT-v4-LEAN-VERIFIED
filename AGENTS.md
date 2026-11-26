@@ -19,3 +19,6 @@ The32-core512GiB machine currently has56percent free memory and approximately23.
 
 Catalytic source-bundle memory exception — 2026-11-26T18:57:16.834944+00:00
 Only the exact native CatalyticTurnoverValidationProgram1466 executable receives16GiB RSS allowance: its original439MiB ZIP expands to roughly14GiB of Lean byte-list cells in the existing universally proved hash backend. Retain24jobs,40GiB aggregate and25percent free-memory floor; every other process remains8GiB. This is execution capacity only, not scientific criteria. Preserve the failed60337receipt and restart only its terminal comparison using retained compiled objects. Do not duplicate original75679 or other live jobs.
+
+Streaming source-bundle execution — 2026-11-26T19:11:45.889460+00:00
+The16GiB Catalytic exception is superseded: retry66843also exceeded that limit. All new jobs again use8GiB per process,24jobs/40GiBaggregate/25percentfree-memory. The proved SHA256Streaming.digestPreserved theorem establishes equality with originalSHA256.digest for every ByteArray with empty axiom dependencies, avoiding whole-byte-list expansion. Isolated Catalytic runtime1468uses this implementation; preserve controller80913 and its actual child, logcatalytic_streaming1468.log. Original75679andregistrar55620remain untilfulloriginalcomparisonPASS. Do not restart either failed list-based comparison.

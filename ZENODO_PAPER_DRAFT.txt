@@ -626,6 +626,25 @@ The chunked hash execution preserves the original canonical identity for every i
 C(0,B,h)=h,\qquad C(n+1,B,h)=C(n,\operatorname{drop}_{64}(B),\operatorname{block}(h,B,0)).
 \]
 The existing induction in SHA256Chunks.everyBlockPreserved establishes equality with the original fold over offsets \(64i\). Thus SHA256Chunks.digestPreserved gives \(H_{\mathrm{chunks}}(b)=H_{\mathrm{original}}(b)\) for every ByteArray. Applying that equality to the canonical serialization gives \(I_{\mathrm{chunks}}(v)=I_{\mathrm{original}}(v)\), including the literal hash prefix. CanonicalExecutionChunks.executePreserved then establishes equality of the complete execution result for every program and input manifest: the original rejection branches, program and input hashes, emitted value, output hash, ordered trace, trace hash and completion flag are preserved. These equality proofs have no axiom dependencies. Original source: sft/engine/canonical.py and sft/claim_evidence/fold_language.py, the original execute operation; native verification: SFT/Host/SHA256Chunks.lean, everyBlockPreserved and digestPreserved; SFT/Chemistry/CanonicalExecutionChunks.lean, identityPreserved and executePreserved. Chronological verification: TIMELINE.txt, TURN1404.
+Streaming host-evidence hash evaluation. Let \(B\) be the input byte array and \(L=|B|\). Define the unchanged SHA-256 padding suffix by
+\[
+z=(64-((L+9)\bmod64))\bmod64,\qquad
+T(L)=[128]\mathbin{\|}[0]^z\mathbin{\|}\left[\left\lfloor\frac{8L}{2^{8(7-i)}}\right\rfloor\bmod256\right]_{i=0}^{7}.
+\]
+Here \(\|\) denotes ordered concatenation. The padded sequence is \(P=B\|T(L)\). Instead of materialising the entire byte array as a list of natural numbers, the implementation uses the reader
+\[
+p_B(i)=\begin{cases}B_i&i<L,\\T(L)_{i-L}&i\ge L.\end{cases}
+\]
+Both the reader and the original list operation return zero outside the padded sequence. Constructive induction over list positions proves \(p_B(i)=\operatorname{get}(P,i)\) for every index. Therefore each initial schedule word at block offset \(o\) is unchanged:
+\[
+W_j=2^{24}p_B(o+4j)+2^{16}p_B(o+4j+1)+2^8p_B(o+4j+2)+p_B(o+4j+3),\quad0\le j<16.
+\]
+The remaining schedule words and compression rounds use the original definitions. Starting from the same standard SHA-256 initial state, equality of each block transition gives equality of the ordered state fold by induction over the \((L+|T(L)|)/64\) blocks. The final hexadecimal rendering consequently satisfies
+\[
+\forall B,\qquad\operatorname{SHA256Streaming.digest}(B)=\operatorname{SHA256.digest}(B).
+\]
+The correspondence proof and executable digest have empty Lean axiom dependency lists. V3 source: sft/engine/canonical.py (SHA-256 host evidence). Lean: SFT/Host/SHA256Streaming.lean, byteAtPreserved, paddedAtPreserved, schedulePreserved, blockPreserved and digestPreserved; original definition: SFT/Host/SHA256.lean. Timeline: TURN1468.
+
 
 Trace construction preserves the same equality at every instruction. For each ordered argument list \(A\), list induction gives \(\operatorname{map}(I_{\mathrm{chunks}},A)=\operatorname{map}(I_{\mathrm{original}},A)\). Together with the output identity equality, this proves equality of every trace row. Applying that equality to each original opcode branch proves equality of the complete register, emitted-value and trace update. Induction on the remaining instruction list then yields
 \[

@@ -14731,3 +14731,19 @@ import SFT.Chemistry.SequentialMechanismAnalysis
 import SFT.Chemistry.SequentialMechanismPrediction
 
 import SFT.Chemistry.SequentialMechanismValidation
+
+import SFT.Chemistry.ParallelMechanism
+
+import SFT.Chemistry.ParallelMechanismGrammar
+
+import SFT.Chemistry.ParallelMechanismEvidence
+
+import SFT.Chemistry.ParallelMechanismExperiment
+
+import SFT.Chemistry.ParallelMechanismSource
+
+import SFT.Chemistry.ParallelMechanismAnalysis
+
+import SFT.Chemistry.ParallelMechanismPrediction
+
+import SFT.Chemistry.ParallelMechanismValidation

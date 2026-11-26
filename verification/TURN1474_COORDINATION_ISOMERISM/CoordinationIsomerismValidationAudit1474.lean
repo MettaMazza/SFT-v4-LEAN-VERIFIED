@@ -1,0 +1,33 @@
+import SFT.Chemistry.CoordinationIsomerismComparison
+import SFT.Chemistry.CoordinationIsomerismExperiment
+import SFT.Chemistry.CoordinationIsomerismValidation
+#print axioms SFT.Chemistry.CoordinationIsomerismComparison.expectedLaws
+#print axioms SFT.Chemistry.CoordinationIsomerismComparison.cellAt
+#print axioms SFT.Chemistry.CoordinationIsomerismComparison.compare
+#print axioms SFT.Chemistry.CoordinationIsomerismComparison.controls
+#print axioms SFT.Chemistry.CoordinationIsomerismComparison.analysisPassed
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.claimId
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.experimentId
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.expectedLabel
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.falsification
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.targetRegistryHash
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.sourceFiles
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.sourceIds
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.references
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.registration
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.labelValue
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.envelope
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.specDimensions
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.specWitnesses
+#print axioms SFT.Chemistry.CoordinationIsomerismExperiment.validateSpec
+#print axioms SFT.Chemistry.CoordinationIsomerismValidation.inputValues
+#print axioms SFT.Chemistry.CoordinationIsomerismValidation.sealPrediction
+#print axioms SFT.Chemistry.CoordinationIsomerismValidation.certificate
+#print axioms SFT.Chemistry.CoordinationIsomerismValidation.isolation
+#print axioms SFT.Chemistry.CoordinationIsomerismValidation.custodyCertificate
+#print axioms SFT.Chemistry.CoordinationIsomerismValidation.boolText
+#print axioms SFT.Chemistry.CoordinationIsomerismValidation.rowText
+#print axioms SFT.Chemistry.CoordinationIsomerismValidation.rowInt
+#print axioms SFT.Chemistry.CoordinationIsomerismValidation.rowPassed
+#print axioms SFT.Chemistry.CoordinationIsomerismValidation.measurementPayload
+#print axioms SFT.Chemistry.CoordinationIsomerismValidation.validate

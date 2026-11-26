@@ -14847,3 +14847,37 @@ import SFT.Chemistry.CoordinationGeometryComparison
 import SFT.Chemistry.CoordinationGeometryExperiment
 
 import SFT.Chemistry.CoordinationGeometryValidation
+
+import SFT.Chemistry.MechanismSearch
+
+import SFT.Chemistry.MechanismSearchGrammar
+
+import SFT.Chemistry.MechanismSearchEvidence
+
+import SFT.Chemistry.MechanismSearchAnalysis
+
+import SFT.Chemistry.MechanismSearchExperiment
+
+import SFT.Chemistry.MechanismSearchValidation
+
+import SFT.Chemistry.CoordinationIsomerism
+
+import SFT.Chemistry.CoordinationIsomerismDerivation
+
+import SFT.Chemistry.CoordinationIsomerismWitnesses
+
+import SFT.Chemistry.CoordinationIsomerismGrammar
+
+import SFT.Chemistry.CoordinationIsomerismEvidence
+
+import SFT.Chemistry.CoordinationIsomerismPrediction
+
+import SFT.Chemistry.CoordinationIsomerismSource
+
+import SFT.Chemistry.CoordinationIsomerismAnalysis
+
+import SFT.Chemistry.CoordinationIsomerismComparison
+
+import SFT.Chemistry.CoordinationIsomerismExperiment
+
+import SFT.Chemistry.CoordinationIsomerismValidation

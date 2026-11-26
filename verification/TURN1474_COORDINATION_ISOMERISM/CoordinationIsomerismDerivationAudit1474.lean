@@ -1,0 +1,7 @@
+import SFT.Chemistry.CoordinationIsomerismDerivation
+#print axioms SFT.Chemistry.CoordinationIsomerismDerivation.constructedExact
+#print axioms SFT.Chemistry.CoordinationIsomerismDerivation.extensionRetains
+#print axioms SFT.Chemistry.CoordinationIsomerismDerivation.singleOccurrenceCensus
+#print axioms SFT.Chemistry.CoordinationIsomerismDerivation.occurrenceSelection
+#print axioms SFT.Chemistry.CoordinationIsomerismDerivation.censusRetainsBranch
+#print axioms SFT.Chemistry.CoordinationIsomerismDerivation.everyOccurrenceBranch

@@ -1,0 +1,15 @@
+from pathlib import Path
+import sys,json,re,ast
+w=Path('work');r=w/'turn1064_recovery/SFT/Chemistry';pin=w/'pinned_coordisomer1473';sys.path.insert(0,str((w/'v3-runtime500').resolve()));import sft.chemistry
+sft.chemistry.__path__=[str((pin/'sft/chemistry').resolve())]+list(sft.chemistry.__path__)
+from sft.chemistry import coordination_isomerism_validation_v1 as v
+q=lambda x:json.dumps(x,ensure_ascii=False)
+tree=ast.parse((pin/'sft/chemistry/coordination_isomerism_validation_v1.py').read_text());laws=next(ast.literal_eval(n.value)for n in ast.walk(tree)if isinstance(n,ast.Assign)and any(isinstance(t,ast.Name)and t.id=='expected_laws'for t in n.targets))
+families=['coordination-isomer-equivalence-law','coordination-isomer-composition-boundary','coordination-isomer-attachment-law','coordination-isomer-orientation-law','coordination-isomer-evidence-law']
+s=(r/'CoordinationGeometryPrediction.lean').read_text().replace('CoordinationGeometry','CoordinationIsomerism').replace('INORG-004','INORG-005').replace('8b93d120cebb9b4c26015f566fbbccdd6a04804e94e69b55264bf779ecd2554c',v.IDENTITY_HASH.split(':')[1]).replace('.integer 53','.integer 17').replace('length != 53','length != 17').replace('all_geometry_point_group_coordinate_distance_angle_definition_status_and_target_payload_values_absent','all_definition_class_example_formula_page_section_status_source_citation_license_disclaimer_and_target_payload_values_absent').replace('coordination-geometry-record-','coordination-isomerism-record-').replace('complete-coordination-geometry-vector','complete-coordination-isomerism-vector').replace('SFT-EXP-CHEM-COORDINATION-GEOMETRY-HELD-ORIENTATION-004',v.COORDINATION_ISOMERISM_SPEC.experiment_id)
+s=re.sub(r'let forbidden := \[[^\n]*\]','let forbidden := ["source_inscription","target_payload_hash","definition","class","example","formula","page","section","status","value","outcome"]',s)
+s=s.replace('rows.length != 17 ||','!equal (get document "preserved_incomplete_preliminary_identity_sha256") (.text '+q(v.PRELIMINARY_IDENTITY_HASH)+') ||\n    rows.length != 17 ||')
+a=s.index('[(1,"source_record_ordinal")');b=s.index('].foldlM',a);s=s[:a]+'['+','.join('('+str(i)+','+q(k)+')'for i,k in enumerate(v.IDENTITY_KEYS[1:],1))+s[b:]
+a=s.index('[("coordination-geometry-law"');b=s.index('].foldl',a);s=s[:a]+'['+','.join('('+q(f)+','+q(l)+')'for f,l in zip(families,laws))+s[b:];(r/'CoordinationIsomerismPrediction.lean').write_text(s)
+s=(r/'CoordinationGeometrySource.lean').read_text().replace('CoordinationGeometry','CoordinationIsomerism').replace('INORG-004','INORG-005').replace('53-record','17-record').replace('length != 53','length != 17').replace('.integer 53','.integer 17').replace('cells.length != 10','cells.length != 12').replace('INORG-005 duplicated a target','INORG-005 prediction duplicated a target');s=re.sub(r'^def identityKeys .*$',lambda _:'def identityKeys : List String := ['+','.join(q(x)for x in v.IDENTITY_KEYS)+']',s,flags=re.M);(r/'CoordinationIsomerismSource.lean').write_text(s)
+(w/'coordisomer1474_laws.json').write_text(json.dumps(laws)+'\n')

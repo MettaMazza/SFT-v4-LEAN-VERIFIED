@@ -1,0 +1,24 @@
+import SFT.Chemistry.CoordinationIsomerismWitnesses
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.base
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.chiral
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.attachmentForm
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.orientationForm
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.equivalenceResult
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.attachmentResult
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.orientationResult
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.mirrorResult
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.successor
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.sameCell
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.sameList
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.successorResult
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.passed
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.equivalenceWitness
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.attachmentWitness
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.mirrorWitness
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.orientationWitness
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.successorWitness
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.equivalencePassed
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.attachmentPassed
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.mirrorPassed
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.orientationPassed
+#print axioms SFT.Chemistry.CoordinationIsomerismWitnesses.successorPassed

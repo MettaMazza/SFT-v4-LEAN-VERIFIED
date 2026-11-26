@@ -1,0 +1,59 @@
+import SFT.Chemistry.CoordinationIsomerismPrediction
+import SFT.Chemistry.JointCorrelationComparison
+namespace SFT.Chemistry.CoordinationIsomerismSource
+open SFT.Host SFT.Physics.CapabilityValues
+open JointCorrelationTargets (field text)
+open CoordinationIsomerismPrediction (get equal)
+abbrev J := Canonical.Value
+
+def identityKeys : List String := ["target_id","source_record_ordinal","authority","source_id","registered_identity","source_record_role","source_locator"]
+def predictionMap (output : Value) : Except String JointCorrelationComparison.Predictions := do
+ let entries ← match output with
+  | .table entries => pure entries
+  | .emptyOne _ | .count _ | .ratio _ _ | .label _ | .word _ | .pair _ _ => throw "INORG-005 prediction is not the complete 17-record table"
+ if entries.length != 17 then throw "INORG-005 prediction is not the complete 17-record table"
+ let resolved ← entries.foldlM (fun resolved (key,value) => do
+  match key with
+  | .label h => match value with
+   | .word cells =>
+    if !Text.equal h.family "target-id" || cells.length != 12 then throw "INORG-005 prediction lost a consequence"
+    pure (JointCorrelationComparison.store resolved h.label value)
+   | .emptyOne _ | .count _ | .ratio _ _ | .label _ | .table _ | .pair _ _ => throw "INORG-005 prediction lost a consequence"
+  | .emptyOne _ | .count _ | .ratio _ _ | .word _ | .table _ | .pair _ _ => throw "INORG-005 prediction lost a consequence") []
+ if resolved.length != 17 then throw "INORG-005 prediction duplicated a target"
+ return resolved
+
+def checkHashes (files : List (String × String × String)) : Except String Unit := do
+ files.forM fun (path,expected,actual) => do
+  if !Text.equal actual expected then throw (Text.append "INORG-005 source changed: " path)
+  pure ()
+
+def bindTarget (identity target : J) : Except String J := do
+ let bound ← identityKeys.mapM fun key => do
+  let wanted ← field identity key
+  pure (equal wanted (get target key))
+ if !(bound.all id) then throw "INORG-005 identity/target binding changed"
+ let inscription ← match get target "source_inscription" with
+  | .null => throw "INORG-005 target payload changed"
+  | .text s => pure (.text s)
+  | .boolean b => pure (.boolean b)
+  | .integer i => pure (.integer i)
+  | .array xs => pure (.array xs)
+  | .object xs => pure (.object xs)
+ let payload := Canonical.Value.array [← field identity "target_id",← field identity "source_record_role",inscription]
+ if !equal (get target "target_payload_hash") (.text (Canonical.identity payload)) then
+  throw "INORG-005 target payload changed"
+ return target
+
+def sourceRows (files : List (String × String × String)) (identityActual : String)
+ (identityDocument targetDocument : J) : Except String (List J) := do
+ checkHashes files
+ let identities ← CoordinationIsomerismPrediction.identities identityActual identityDocument
+ let targets := match get targetDocument "rows" with
+  | .array rows => rows
+  | .null | .text _ | .boolean _ | .integer _ | .object _ => []
+ if !equal (get targetDocument "complete_registered_target_count") (.integer 17) ||
+  !equal (get targetDocument "release_requires_prediction_seal") (.boolean true) || targets.length != 17 then
+  throw "INORG-005 target registry changed"
+ (identities.zip targets).mapM fun (identity,target) => bindTarget identity target
+end SFT.Chemistry.CoordinationIsomerismSource

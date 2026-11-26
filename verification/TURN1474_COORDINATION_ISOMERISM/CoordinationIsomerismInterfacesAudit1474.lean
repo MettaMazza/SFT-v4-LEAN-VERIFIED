@@ -1,0 +1,20 @@
+import SFT.Chemistry.CoordinationIsomerismPrediction
+import SFT.Chemistry.CoordinationIsomerismSource
+import SFT.Chemistry.CoordinationIsomerismAnalysis
+#print axioms SFT.Chemistry.CoordinationIsomerismPrediction.identityHash
+#print axioms SFT.Chemistry.CoordinationIsomerismPrediction.get
+#print axioms SFT.Chemistry.CoordinationIsomerismPrediction.equal
+#print axioms SFT.Chemistry.CoordinationIsomerismPrediction.completeOrdinals
+#print axioms SFT.Chemistry.CoordinationIsomerismPrediction.identities
+#print axioms SFT.Chemistry.CoordinationIsomerismPrediction.identityText
+#print axioms SFT.Chemistry.CoordinationIsomerismPrediction.recordInstructions
+#print axioms SFT.Chemistry.CoordinationIsomerismPrediction.predictionDocument
+#print axioms SFT.Chemistry.CoordinationIsomerismSource.identityKeys
+#print axioms SFT.Chemistry.CoordinationIsomerismSource.predictionMap
+#print axioms SFT.Chemistry.CoordinationIsomerismSource.checkHashes
+#print axioms SFT.Chemistry.CoordinationIsomerismSource.bindTarget
+#print axioms SFT.Chemistry.CoordinationIsomerismSource.sourceRows
+#print axioms SFT.Chemistry.CoordinationIsomerismAnalysis.word
+#print axioms SFT.Chemistry.CoordinationIsomerismAnalysis.makeForm
+#print axioms SFT.Chemistry.CoordinationIsomerismAnalysis.store
+#print axioms SFT.Chemistry.CoordinationIsomerismAnalysis.analysis

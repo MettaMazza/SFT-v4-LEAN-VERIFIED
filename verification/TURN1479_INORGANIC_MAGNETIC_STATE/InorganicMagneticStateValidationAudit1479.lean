@@ -1,0 +1,34 @@
+import SFT.Chemistry.InorganicMagneticStateComparison
+import SFT.Chemistry.InorganicMagneticStateExperiment
+import SFT.Chemistry.InorganicMagneticStateValidation
+#print axioms SFT.Chemistry.InorganicMagneticStateComparison.expectedLaws
+#print axioms SFT.Chemistry.InorganicMagneticStateComparison.cellAt
+#print axioms SFT.Chemistry.InorganicMagneticStateComparison.compare
+#print axioms SFT.Chemistry.InorganicMagneticStateComparison.controls
+#print axioms SFT.Chemistry.InorganicMagneticStateComparison.analysisPassed
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.claimId
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.experimentId
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.expectedLabel
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.falsification
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.targetRegistryHash
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.sourceFiles
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.sourceIds
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.references
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.registration
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.labelValue
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.envelope
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.specDimensions
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.specWitnesses
+#print axioms SFT.Chemistry.InorganicMagneticStateExperiment.validateSpec
+#print axioms SFT.Chemistry.InorganicMagneticStateValidation.inputValues
+#print axioms SFT.Chemistry.InorganicMagneticStateValidation.sealPrediction
+#print axioms SFT.Chemistry.InorganicMagneticStateValidation.certificate
+#print axioms SFT.Chemistry.InorganicMagneticStateValidation.isolation
+#print axioms SFT.Chemistry.InorganicMagneticStateValidation.custodyCertificate
+#print axioms SFT.Chemistry.InorganicMagneticStateValidation.boolText
+#print axioms SFT.Chemistry.InorganicMagneticStateValidation.rowText
+#print axioms SFT.Chemistry.InorganicMagneticStateValidation.rowInt
+#print axioms SFT.Chemistry.InorganicMagneticStateValidation.rowPassed
+#print axioms SFT.Chemistry.InorganicMagneticStateValidation.orientationCountsText
+#print axioms SFT.Chemistry.InorganicMagneticStateValidation.measurementPayload
+#print axioms SFT.Chemistry.InorganicMagneticStateValidation.validate

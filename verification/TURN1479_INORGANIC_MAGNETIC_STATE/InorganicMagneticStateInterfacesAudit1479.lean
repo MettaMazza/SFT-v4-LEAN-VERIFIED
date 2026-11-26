@@ -1,0 +1,17 @@
+import SFT.Chemistry.InorganicMagneticStatePrediction
+import SFT.Chemistry.InorganicMagneticStateSource
+import SFT.Chemistry.InorganicMagneticStateAnalysis
+#print axioms SFT.Chemistry.InorganicMagneticStatePrediction.identityHash
+#print axioms SFT.Chemistry.InorganicMagneticStatePrediction.get
+#print axioms SFT.Chemistry.InorganicMagneticStatePrediction.equal
+#print axioms SFT.Chemistry.InorganicMagneticStatePrediction.completeOrdinals
+#print axioms SFT.Chemistry.InorganicMagneticStatePrediction.identities
+#print axioms SFT.Chemistry.InorganicMagneticStatePrediction.identityText
+#print axioms SFT.Chemistry.InorganicMagneticStatePrediction.recordInstructions
+#print axioms SFT.Chemistry.InorganicMagneticStatePrediction.predictionDocument
+#print axioms SFT.Chemistry.InorganicMagneticStateSource.identityKeys
+#print axioms SFT.Chemistry.InorganicMagneticStateSource.predictionMap
+#print axioms SFT.Chemistry.InorganicMagneticStateSource.checkHashes
+#print axioms SFT.Chemistry.InorganicMagneticStateSource.bindTarget
+#print axioms SFT.Chemistry.InorganicMagneticStateSource.sourceRows
+#print axioms SFT.Chemistry.InorganicMagneticStateAnalysis.analysis

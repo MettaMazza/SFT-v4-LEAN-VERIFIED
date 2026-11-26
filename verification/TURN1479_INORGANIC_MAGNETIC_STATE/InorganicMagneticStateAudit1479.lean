@@ -1,0 +1,25 @@
+import SFT.Chemistry.InorganicMagneticState
+#print axioms SFT.Chemistry.InorganicMagneticState.support
+#print axioms SFT.Chemistry.InorganicMagneticState.unpairedCount
+#print axioms SFT.Chemistry.InorganicMagneticState.spinWidth
+#print axioms SFT.Chemistry.InorganicMagneticState.isEmpty
+#print axioms SFT.Chemistry.InorganicMagneticState.magneticState
+#print axioms SFT.Chemistry.InorganicMagneticState.relationName
+#print axioms SFT.Chemistry.InorganicMagneticState.className
+#print axioms SFT.Chemistry.InorganicMagneticState.forced
+#print axioms SFT.Chemistry.InorganicMagneticState.occurrence
+#print axioms SFT.Chemistry.InorganicMagneticState.fibre
+#print axioms SFT.Chemistry.InorganicMagneticState.complete
+#print axioms SFT.Chemistry.InorganicMagneticState.appendSuccessor
+#print axioms SFT.Chemistry.InorganicMagneticState.balanced
+#print axioms SFT.Chemistry.InorganicMagneticState.high
+#print axioms SFT.Chemistry.InorganicMagneticState.successor
+#print axioms SFT.Chemistry.InorganicMagneticState.balancedWitness
+#print axioms SFT.Chemistry.InorganicMagneticState.positiveWitness
+#print axioms SFT.Chemistry.InorganicMagneticState.successorWitness
+#print axioms SFT.Chemistry.InorganicMagneticState.duplicateControl
+#print axioms SFT.Chemistry.InorganicMagneticState.duplicateWitness
+#print axioms SFT.Chemistry.InorganicMagneticState.balancedPassed
+#print axioms SFT.Chemistry.InorganicMagneticState.positivePassed
+#print axioms SFT.Chemistry.InorganicMagneticState.successorPassed
+#print axioms SFT.Chemistry.InorganicMagneticState.duplicatePassed

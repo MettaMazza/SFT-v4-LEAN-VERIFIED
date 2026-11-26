@@ -1,0 +1,13 @@
+import SFT.Chemistry.InorganicMagneticStateDerivation
+#print axioms SFT.Chemistry.InorganicMagneticStateDerivation.completeSupportCount
+#print axioms SFT.Chemistry.InorganicMagneticStateDerivation.completeSupportWidth
+#print axioms SFT.Chemistry.InorganicMagneticStateDerivation.supportRetains
+#print axioms SFT.Chemistry.InorganicMagneticStateDerivation.appendedRetains
+#print axioms SFT.Chemistry.InorganicMagneticStateDerivation.appendedCount
+#print axioms SFT.Chemistry.InorganicMagneticStateDerivation.appendedWidth
+#print axioms SFT.Chemistry.InorganicMagneticStateDerivation.appendedPositive
+#print axioms SFT.Chemistry.InorganicMagneticStateDerivation.positiveClass
+#print axioms SFT.Chemistry.InorganicMagneticStateDerivation.appendedClass
+#print axioms SFT.Chemistry.InorganicMagneticStateDerivation.firstPositive
+#print axioms SFT.Chemistry.InorganicMagneticStateDerivation.firstWitness
+#print axioms SFT.Chemistry.InorganicMagneticStateDerivation.firstPassed

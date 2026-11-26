@@ -14945,3 +14945,23 @@ import SFT.Chemistry.InorganicColourComparison
 import SFT.Chemistry.InorganicColourExperiment
 
 import SFT.Chemistry.InorganicColourValidation
+
+import SFT.Chemistry.InorganicMagneticState
+
+import SFT.Chemistry.InorganicMagneticStateDerivation
+
+import SFT.Chemistry.InorganicMagneticStateGrammar
+
+import SFT.Chemistry.InorganicMagneticStateEvidence
+
+import SFT.Chemistry.InorganicMagneticStatePrediction
+
+import SFT.Chemistry.InorganicMagneticStateSource
+
+import SFT.Chemistry.InorganicMagneticStateAnalysis
+
+import SFT.Chemistry.InorganicMagneticStateComparison
+
+import SFT.Chemistry.InorganicMagneticStateExperiment
+
+import SFT.Chemistry.InorganicMagneticStateValidation

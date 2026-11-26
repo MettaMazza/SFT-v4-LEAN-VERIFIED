@@ -74,7 +74,7 @@ def analysisJSON (a : Analysis) : Value := .object ([
  ("complete_source_row_counts",.object (a.sources.map fun (k,n)=>(k,.integer n))),
  ("exact_rate_ranges_by_source_declared_order",rangesJSON a.rateRanges),
  ("exact_temperature_ranges_K_by_source_declared_order",rangesJSON a.temperatureRanges)]++a.checks.map (fun (k,b)=>(k,.boolean b)))
-def rateRangesRepr (ranges : List Range) : String := Text.intercalate "" ["{",Text.intercalate ", " (ranges.map fun r=>Text.intercalate "" ["'",r.name,"': {'minimum': '",fractionText r.bounds.1,"', 'maximum': '",fractionText r.bounds.2,"'}"]),"}"]
+def rateRangesRepr (ranges : List MolecularDiffusionAnalysis.Range) : String := Text.intercalate "" ["{",Text.intercalate ", " (ranges.map fun r=>Text.intercalate "" ["'",r.name,"': {'minimum': '",fractionText r.bounds.1,"', 'maximum': '",fractionText r.bounds.2,"'}"]),"}"]
 def validate (identityBytes targetBytes primaryBytes : ByteArray) (sourceBytes : List ByteArray) (identityDocument targets primary : Value) (derivationSeal host implementation : String)
  (before after : Snapshot) : Except String Validation := do
  validateSpec

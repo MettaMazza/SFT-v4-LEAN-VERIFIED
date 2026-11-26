@@ -14827,3 +14827,23 @@ import SFT.Chemistry.ReactionDynamicsScatteringSource
 import SFT.Chemistry.ReactionDynamicsScatteringPrediction
 
 import SFT.Chemistry.ReactionDynamicsScatteringValidation
+
+import SFT.Chemistry.CoordinationGeometry
+
+import SFT.Chemistry.CoordinationGeometryDerivation
+
+import SFT.Chemistry.CoordinationGeometryGrammar
+
+import SFT.Chemistry.CoordinationGeometryEvidence
+
+import SFT.Chemistry.CoordinationGeometryPrediction
+
+import SFT.Chemistry.CoordinationGeometrySource
+
+import SFT.Chemistry.CoordinationGeometryAnalysis
+
+import SFT.Chemistry.CoordinationGeometryComparison
+
+import SFT.Chemistry.CoordinationGeometryExperiment
+
+import SFT.Chemistry.CoordinationGeometryValidation

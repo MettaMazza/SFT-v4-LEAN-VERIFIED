@@ -38,7 +38,7 @@ def identities (bytes : ByteArray) (document : Value) : Except String (List Valu
   ["0.01","0.023","0.045","0.005","75","193"].any (Text.contains serialized) then
   throw "KIN-005 value-free identity boundary changed"
  let isotopes ← rows.mapM fun row=>field row "isotopologue_identity"
- if !(match isotopes with | [a,b]=>sameValue a (.text "H2") && sameValue b (.text "D2") | _=>false) then
+ if !(match isotopes with | [a,b]=>sameValue a (.text "H2") && sameValue b (.text "D2") | [] | [_] | _::_::_::_=>false) then
   throw "KIN-005 value-free identity boundary changed"
  pure rows
 def identityString (value : Value) : Except String String := match value with

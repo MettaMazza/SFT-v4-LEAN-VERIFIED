@@ -118,7 +118,7 @@ def validate (identityBytes targetBytes primaryBytes : ByteArray) (sourceBytes :
    let changed := match get row.row "target_payload" with
     | .object fields=>.object (fields.map fun (key,value)=>
       if Text.equal key "apparent_barrier_orientation" then (key,.text "held-temperature-order") else (key,value))
-    | _=>get row.row "target_payload"
+    | .null | .boolean _ | .integer _ | .text _ | .array _=>get row.row "target_payload"
    let updated := match row.row with
     | .object fields => .object (fields.map fun (key,value) => if Text.equal key "target_payload" then (key,changed) else (key,value))
     | .null | .boolean _ | .integer _ | .text _ | .array _ => row.row

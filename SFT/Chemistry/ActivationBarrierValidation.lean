@@ -127,12 +127,12 @@ def validate (identityBytes targetBytes primaryBytes : ByteArray) (sourceBytes :
         | .array states=>.array (states.zipIdx.map fun (state,i)=>if i==0 then
           match state with
           | .object fields=>.object (fields.map fun (k,v)=>if Text.equal k "energy_kJ_mol_minus1_fold_support" then (k,.text "-1") else (k,v))
-          | _=>state
+          | .null | .boolean _ | .integer _ | .text _ | .array _=>state
          else state)
-        | _=>value
+        | .null | .boolean _ | .integer _ | .text _ | .object _=>value
        (key,states)
       else (key,value))
-    | _=>get row.row "target_payload"
+    | .null | .boolean _ | .integer _ | .text _ | .array _=>get row.row "target_payload"
    let updated := match row.row with
     | .object fields => .object (fields.map fun (key,value) => if Text.equal key "target_payload" then (key,changed) else (key,value))
     | .null | .boolean _ | .integer _ | .text _ | .array _ => row.row

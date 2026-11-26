@@ -42,7 +42,7 @@ def exactKineticIsotopeEffectAnalysis (rows : List InternalEnergyCompositionSour
  pure ⟨rows.length,census,[
  ("complete_source_class_census_matches",censusMatch),
  ("two_distinct_held_isotope_identities_share_same_complete_path",!DihedralTorsion.equalLabel normal.numeratorIsotopologue normal.denominatorIsotopologue && normal.completeReactionPath.length==4),
- ("exact_positive_ordered_rate_quotient_reconstructed",normal.exactRateRatio.num==3 && normal.exactRateRatio.den==2 && inverse.exactRateRatio.num==2 && inverse.exactRateRatio.den==3 && equal.exactRateRatio.num==1 && equal.exactRateRatio.den==1),
+ ("exact_positive_ordered_rate_quotient_reconstructed",(@decide (normal.exactRateRatio.num=3) (Int.decEq _ _)) && normal.exactRateRatio.den==2 && (@decide (inverse.exactRateRatio.num=2) (Int.decEq _ _)) && inverse.exactRateRatio.den==3 && (@decide (equal.exactRateRatio.num=1) (Int.decEq _ _)) && equal.exactRateRatio.den==1),
  ("normal_inverse_and_equal_orientations_remain_held",Text.equal normal.ratioOrientation.label "numerator-rate-greater" && Text.equal inverse.ratioOrientation.label "denominator-rate-greater" && Text.equal equal.ratioOrientation.label "rates-exactly-equal"),
  ("complete_47_pdf_pages_retained",(classes.filter (fun k=>["complete-article-pdf-page","complete-supplementary-information-page","complete-reporting-summary-page"].any (Text.equal k))).length==47),
  ("all_23_source_data_worksheets_retained",(classes.filter (Text.equal "complete-source-data-worksheet")).length==23 && shapes.length==23),

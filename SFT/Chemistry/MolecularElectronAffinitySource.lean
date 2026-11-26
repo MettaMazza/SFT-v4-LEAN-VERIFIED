@@ -1,3 +1,4 @@
+import SFT.Chemistry.HtmlUnescapeLinear
 import SFT.Chemistry.MolecularElectronAffinityExperiment
 import SFT.Chemistry.MolecularIonizationSource
 namespace SFT.Chemistry.MolecularElectronAffinitySource
@@ -58,8 +59,8 @@ def sourceRows (identityBytes targetBytes primaryBytes manifestBytes : ByteArray
   (targetBytes,targetPath,targetHash)].mapM fun (bytes,path,hash) => do
   if !bytesMatch bytes hash then throw (Text.append "PROP-008 registered source changed: " path)
   pure ()
- let catalogText := Text.lowerAscii (ElectronSpinHtml.normalizeSpace (ElectronSpinHtml.unescape catalog.text))
- let guideText := Text.lowerAscii (ElectronSpinHtml.normalizeSpace (ElectronSpinHtml.unescape guide.text))
+ let catalogText := Text.lowerAscii (HtmlUnescapeLinear.normalizeSpace (HtmlUnescapeLinear.unescape catalog.text))
+ let guideText := Text.lowerAscii (HtmlUnescapeLinear.normalizeSpace (HtmlUnescapeLinear.unescape guide.text))
  if !(Text.chars "by convention a positive electron affinity indicates a bound species").isInfixOf_internal (Text.chars catalogText) ||
     !(Text.chars "negative ion is higher in energy than the neutral").isInfixOf_internal (Text.chars guideText) ||
     !(Text.chars "spontaneous loss of the electron").isInfixOf_internal (Text.chars guideText) then
@@ -94,7 +95,7 @@ def sourceRows (identityBytes targetBytes primaryBytes manifestBytes : ByteArray
  (ids.zip rows).mapM fun (id,row) => do
   let path ← field row "snapshot_path" >>= text
   let source ← lookupPage sourcePages path
-  let (sign,magnitude,uncertainty) ← match searchCapture (Text.chars (ElectronSpinHtml.unescape source.text)) with
+  let (sign,magnitude,uncertainty) ← match searchCapture (Text.chars (HtmlUnescapeLinear.unescape source.text)) with
    | none => throw "PROP-008 source affinity is absent"
    | some result => pure result
   let orientation := if Text.equal sign "-" then "anion-above-neutral-unbound-autodetachment" else "anion-below-neutral-bound-attachment"

@@ -14205,3 +14205,21 @@ import SFT.EarthEnvironment.Source
 import SFT.EarthEnvironment.EarthSystemExperiment
 
 import SFT.EarthEnvironment.EarthSystemValidation
+
+import SFT.Chemistry.MolecularElectronAffinity
+
+import SFT.Chemistry.MolecularElectronAffinityGrammar
+
+import SFT.Chemistry.MolecularElectronAffinityEvidence
+
+import SFT.Chemistry.MolecularElectronAffinityExperiment
+
+import SFT.Chemistry.MolecularElectronAffinitySource
+
+import SFT.Chemistry.MolecularElectronAffinityPrediction
+
+import SFT.Chemistry.MolecularElectronAffinityValidation
+
+import SFT.Chemistry.HtmlUnescapeLinear
+
+import SFT.Chemistry.CanonicalExecutionChunks

@@ -13801,3 +13801,73 @@ import SFT.Consciousness.SelfApplicationEvidence
 import SFT.Consciousness.SelfApplicationExperiment
 
 import SFT.Consciousness.SelfApplicationValidation
+
+import SFT.Consciousness.SelfModelDepth
+
+import SFT.Consciousness.SelfModelDepthGrammar
+
+import SFT.Consciousness.SelfModelDepthEvidence
+
+import SFT.Consciousness.SelfModelDepthExperiment
+
+import SFT.Consciousness.SelfModelDepthValidation
+
+import SFT.Consciousness.SelfSimulationBoundary
+
+import SFT.Consciousness.SelfSimulationBoundaryGrammar
+
+import SFT.Consciousness.SelfSimulationBoundaryEvidence
+
+import SFT.Consciousness.SelfSimulationBoundaryExperiment
+
+import SFT.Consciousness.SelfSimulationBoundaryValidation
+
+import SFT.Consciousness.SelfVerificationLimit
+
+import SFT.Consciousness.SelfVerificationLimitGrammar
+
+import SFT.Consciousness.SelfVerificationLimitEvidence
+
+import SFT.Consciousness.SelfVerificationLimitExperiment
+
+import SFT.Consciousness.SelfVerificationLimitValidation
+
+import SFT.Consciousness.Attention
+
+import SFT.Consciousness.AttentionGrammar
+
+import SFT.Consciousness.AttentionEvidence
+
+import SFT.Consciousness.AttentionExperiment
+
+import SFT.Consciousness.AttentionValidation
+
+import SFT.Consciousness.AttentionalFocus
+
+import SFT.Consciousness.AttentionalFocusGrammar
+
+import SFT.Consciousness.AttentionalFocusEvidence
+
+import SFT.Consciousness.AttentionalFocusExperiment
+
+import SFT.Consciousness.AttentionalFocusValidation
+
+import SFT.Consciousness.CognitiveAvailability
+
+import SFT.Consciousness.CognitiveAvailabilityGrammar
+
+import SFT.Consciousness.CognitiveAvailabilityEvidence
+
+import SFT.Consciousness.CognitiveAvailabilityExperiment
+
+import SFT.Consciousness.CognitiveAvailabilityValidation
+
+import SFT.Consciousness.AttentionalCapacity
+
+import SFT.Consciousness.AttentionalCapacityGrammar
+
+import SFT.Consciousness.AttentionalCapacityEvidence
+
+import SFT.Consciousness.AttentionalCapacityExperiment
+
+import SFT.Consciousness.AttentionalCapacityValidation

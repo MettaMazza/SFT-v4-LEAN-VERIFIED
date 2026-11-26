@@ -1,0 +1,7 @@
+import SFT.Chemistry.LigandStateSplittingDerivation
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.incidence
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.incidenceAppend
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.rankIsCompleteIncidence
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.rankSuccessor
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.memberCount
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.addSupportMemberCount

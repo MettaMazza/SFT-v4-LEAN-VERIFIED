@@ -6,6 +6,13 @@ structure Support where
  kind : HeldLabel
  firstAxis : PositiveCount
  secondAxis : PositiveCount
+def sameSupport (a b : Support) : Bool :=
+ Text.equal a.identity.family b.identity.family && Text.equal a.identity.label b.identity.label &&
+ Text.equal a.kind.family b.kind.family && Text.equal a.kind.label b.kind.label &&
+ a.firstAxis.value==b.firstAxis.value && a.secondAxis.value==b.secondAxis.value
+def distinctSupports : List Support → Bool
+ | [] => true
+ | first::rest => !(rest.any (sameSupport first)) && distinctSupports rest
 def support (identity kind : HeldLabel) (first second : PositiveCount) : Except String Support := do
  if !Text.equal identity.family "rank-two-state-support" then
   throw "rank-two support requires a retained identity"
@@ -21,7 +28,12 @@ def generated : Except String (List Support) := do
    (← heldLabel "rank-two-support-kind" kind) (← count pair.1) (← count pair.2)
  let contrasts ← [(1,2),(2,3)].mapM (make "held-axis-contrast" "held-contrast")
  let pairs ← [(1,2),(1,3),(2,3)].mapM (make "boundary-axis-pair" "boundary-pair")
- return contrasts++pairs
+ let result := contrasts++pairs
+ let identities := result.map Support.identity
+ let unique := identities.foldl (fun seen h => if seen.any (fun k => Text.equal h.family k.family && Text.equal h.label k.label) then seen else seen++[h]) []
+ if result.length != 5 || unique.length != 5 then
+  throw "generator three and boundary rank two must produce five supports"
+ return result
 structure Geometry where
  centre : HeldLabel
  words : List (List Cell)
@@ -58,6 +70,10 @@ def interactionRank (s : Support) (g : Geometry) : Rank :=
 structure Level where
  rank : Rank
  members : List Support
+def level (rank : Rank) (members : List Support) : Except String Level := do
+ if members.isEmpty || !distinctSupports members then
+  throw "a split level requires positive distinct member support"
+ return ⟨rank,members⟩
 def addSupport (s : Support) (rank : Rank) : List Level → List Level
  | [] => [⟨rank,[s]⟩]
  | level::rest => if rankNumber rank==rankNumber level.rank then
@@ -92,18 +108,38 @@ structure Splitting where
  lower : Distance
  upper : Distance
  completeMemberPreservation : Bool
+def splitting (centre : HeldLabel) (unperturbed : PositiveCount) (levels : List Level)
+ (separations : List Part) (lower upper : Distance) (preserved : Bool) : Except String Splitting := do
+ if levels.isEmpty then throw "splitting requires at least one retained level"
+ if (levels.map (fun l => l.members.length)).foldl Nat.add 0 != unperturbed.value then
+  throw "splitting must preserve every unperturbed component"
+ if separations.length+1 != levels.length then
+  throw "every adjacent split pair requires one exact separation"
+ let binary := levels.length==2
+ if binary then
+  match lower,upper with
+  | .part low,.part high =>
+   let lowWidth := (levels.headD ⟨.absent,[]⟩).members.length
+   let highWidth := ((levels.drop 1).headD ⟨.absent,[]⟩).members.length
+   if lowWidth*low.numerator.value*high.denominator.value != highWidth*high.numerator.value*low.denominator.value then
+    throw "two-level splitting must preserve the unsplit balance exactly"
+  | .absent,.absent | .absent,.part _ | .part _,.absent =>
+   throw "a two-level split requires both positive balance distances"
+ else
+  match lower,upper with
+  | .absent,.absent => pure ()
+  | .part _,.absent | .absent,.part _ | .part _,.part _ =>
+   throw "non-binary splitting retains no invented pair-balance distance"
+ return ⟨centre,unperturbed,levels,separations,lower,upper,preserved⟩
 def adjacent (width : Nat) : List Level → Except String (List Part)
  | [] | [_] => pure []
  | first::second::rest => do
   let gap ← part (rankNumber second.rank-rankNumber first.rank) width
   return gap::(← adjacent width (second::rest))
-def sameSupport (a b : Support) : Bool :=
- Text.equal a.identity.family b.identity.family && Text.equal a.identity.label b.identity.label &&
- Text.equal a.kind.family b.kind.family && Text.equal a.kind.label b.kind.label &&
- a.firstAxis.value==b.firstAxis.value && a.secondAxis.value==b.secondAxis.value
 def forced (g : Geometry) : Except String Splitting := do
  let supports ← generated
- let levels := sortedLevels (supports.foldl (fun groups s => addSupport s (interactionRank s g) groups) [])
+ let grouped := sortedLevels (supports.foldl (fun groups s => addSupport s (interactionRank s g) groups) [])
+ let levels ← grouped.mapM (fun row => level row.rank row.members)
  let separations ← adjacent g.words.length levels
  let (lower,upper) ← (match levels with
   | [] => pure (.absent,.absent)
@@ -115,12 +151,12 @@ def forced (g : Geometry) : Except String Splitting := do
      let total := a.members.length+b.members.length
      pure (Distance.part (← part b.members.length total),Distance.part (← part a.members.length total)))
  let members := levels.flatMap Level.members
- return ⟨g.centre,← count supports.length,levels,separations,lower,upper,
+ splitting g.centre (← count supports.length) levels separations lower upper (
   members.length==supports.length && supports.all (fun s => members.any (sameSupport s)) &&
-   members.all (fun s => supports.any (sameSupport s))⟩
+   members.all (fun s => supports.any (sameSupport s)))
 def removed (centre : HeldLabel) : Except String Splitting := do
  let supports ← generated
- return ⟨centre,⟨5,by decide⟩,[⟨.absent,supports⟩],[],.absent,.absent,true⟩
+ splitting centre ⟨5,by decide⟩ [← level .absent supports] [] .absent .absent true
 def fibre (name : String) : Except String Cell := do
  return .held (← heldLabel "fold-orientation-fibre" name)
 def six : Except String Geometry := do

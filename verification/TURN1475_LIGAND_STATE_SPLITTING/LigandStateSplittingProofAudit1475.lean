@@ -1,0 +1,25 @@
+import SFT.Chemistry.LigandStateSplittingWitnesses
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.incidence
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.incidenceAppend
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.rankIsCompleteIncidence
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.rankSuccessor
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.memberCount
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.addSupportMemberCount
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.insertLevelMemberCount
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.sortedMemberCount
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.groupMemberCount
+#print axioms SFT.Chemistry.LigandStateSplittingDerivation.partitionCardinality
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.generatorWitness
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.sixPartitionWitness
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.partIs
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.sixBalanceWitness
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.fourPartitionWitness
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.memberWitness
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.removedResult
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.removedWitness
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.generatorPassed
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.sixPartitionPassed
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.sixBalancePassed
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.fourPartitionPassed
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.memberPassed
+#print axioms SFT.Chemistry.LigandStateSplittingWitnesses.removedPassed

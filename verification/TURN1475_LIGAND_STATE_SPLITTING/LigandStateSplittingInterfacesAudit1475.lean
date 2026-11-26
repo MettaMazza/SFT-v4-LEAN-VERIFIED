@@ -1,0 +1,21 @@
+import SFT.Chemistry.LigandStateSplittingPrediction
+import SFT.Chemistry.LigandStateSplittingSource
+import SFT.Chemistry.LigandStateSplittingAnalysis
+#print axioms SFT.Chemistry.LigandStateSplittingPrediction.identityHash
+#print axioms SFT.Chemistry.LigandStateSplittingPrediction.get
+#print axioms SFT.Chemistry.LigandStateSplittingPrediction.equal
+#print axioms SFT.Chemistry.LigandStateSplittingPrediction.completeOrdinals
+#print axioms SFT.Chemistry.LigandStateSplittingPrediction.identities
+#print axioms SFT.Chemistry.LigandStateSplittingPrediction.identityText
+#print axioms SFT.Chemistry.LigandStateSplittingPrediction.recordInstructions
+#print axioms SFT.Chemistry.LigandStateSplittingPrediction.predictionDocument
+#print axioms SFT.Chemistry.LigandStateSplittingSource.identityKeys
+#print axioms SFT.Chemistry.LigandStateSplittingSource.predictionMap
+#print axioms SFT.Chemistry.LigandStateSplittingSource.checkHashes
+#print axioms SFT.Chemistry.LigandStateSplittingSource.bindTarget
+#print axioms SFT.Chemistry.LigandStateSplittingSource.sourceRows
+#print axioms SFT.Chemistry.LigandStateSplittingAnalysis.array
+#print axioms SFT.Chemistry.LigandStateSplittingAnalysis.fractionText
+#print axioms SFT.Chemistry.LigandStateSplittingAnalysis.distanceText
+#print axioms SFT.Chemistry.LigandStateSplittingAnalysis.definition
+#print axioms SFT.Chemistry.LigandStateSplittingAnalysis.analysis

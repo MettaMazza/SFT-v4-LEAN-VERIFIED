@@ -32575,46 +32575,65 @@ Current native evidence: All 148 Reversible Kinetic Equilibrium declarations hav
 
 1200. Catalytic turnover from exact return of the held catalyst
 
-Let C contain n≥2 distinct registered states s₁,…,sₙ and exactly n retained directed transitions e₁,…,eₙ. The original guards require consecutive positive state positions, one identical held catalyst κ throughout the states, and one identical held condition boundary c throughout the transitions. Define sₙ₊₁=s₁. Every edge must satisfy
-  entry(eᵢ)=sᵢ, exit(eᵢ)=sᵢ₊₁, 1≤i≤n.
+Let \(C\) contain \(n\ge2\) distinct registered states \(s_1,\ldots,s_n\) and exactly \(n\) retained directed transitions \(e_1,\ldots,e_n\). The original guards require consecutive positive state positions, one identical held catalyst κ throughout the states, and one identical held condition boundary c throughout the transitions. Define \(s_{n+1}=s_1\). Every edge must satisfy
+\[
+\operatorname{entry}(e_i)=s_i,\qquad\operatorname{exit}(e_i)=s_{i+1},\qquad1\le i\le n.
+\]
 Thus the last edge closes at the exact entry state. Each transition also retains its identity, process identity and evidence status; each state retains its observation status. The turnover construction preserves the whole directed word (e₁,…,eₙ), κ and the cycle identity, returns the exact state s₁, and assigns one completed cycle. These six fields are the original ExactCatalyticTurnover result. A product total or an open endpoint path is not substituted for the closed word.
 
 For positive completed-cycle count N and positive exact interval-part count T, the source constructs the exact positive rational
-  ν=N/T.
+\[
+\nu=\frac{N}{T}.
+\]
 Fraction reduction preserves the relation: 6/4=3/2, and the original operational witness evaluates 3/2. The independent source analysis evaluates the exact count relation 7/5. Neither construction uses a fitted continuum rate or a steady-state assumption.
 
 For a nonempty source-ordered family of n complete occurrences with interval parts t₁,…,tₙ>0, the registered family frequency is
-  νₙ=n/(t₁+⋯+tₙ).
-Appending the next complete occurrence gives νₙ₊₁=(n+1)/(t₁+⋯+tₙ+tₙ₊₁). The source's successor assertion preserves the first n complete turnover results and increases the completed-cycle count by one; it does not assert that the frequency stays unchanged. Source positions must be 1,…,n+1. Repeated cycle identities across different family occurrences are retained: the original family constructor does not impose a uniqueness condition on them.
+\[
+\nu_n=\frac{n}{\sum_{i=1}^{n}t_i},\qquad
+\nu_{n+1}=\frac{n+1}{\sum_{i=1}^{n}t_i+t_{n+1}}.
+\]
+Appending the next complete occurrence preserves the original ordered prefix. If \(\tau(C_i)\) denotes the complete turnover returned for occurrence \(i\), then
+\[
+[\tau(C_1),\ldots,\tau(C_n),\tau(C_{n+1})]_{1:n}=[\tau(C_1),\ldots,\tau(C_n)],
+\qquad N_{n+1}=N_n+1.
+\] The source's successor assertion preserves the first n complete turnover results and increases the completed-cycle count by one; it does not assert that the frequency stays unchanged. Source positions must be 1,…,n+1. Repeated cycle identities across different family occurrences are retained: the original family constructor does not impose a uniqueness condition on them.
 
 The eight original binary grammar axes distinguish catalyst persistence, complete cycle closure, turnover, exact frequency, structural versus observed states, all statuses, complete provenance and value-free prediction. Their complete product has 2⁸=256 alternatives. Four operational witnesses invoke the catalyst-return, complete-word, frequency and append constructions.
 
-Pinned V3 (76f1b34e9e9682989adcbb088797b4ae4ce4fcf1): sft/chemistry/catalytic_turnover_law_v1.py, its ExactPositiveRatio, RetainedCatalystState, RetainedCatalyticTransition, CompleteCatalyticCycle, forced_catalytic_turnover, forced_cycle_frequency and append_complete_cycle_preserves_turnover_family. Native translation: SFT/Chemistry/CatalyticTurnover.lean, makeExactPositiveRatio, ratioFromCounts, makeState, makeTransition, makeCycle, forcedCatalyticTurnover, forcedCycleFrequency, makeOccurrence, makeFamily and appendCompleteCyclePreservesTurnoverFamily; corresponding Grammar and Evidence modules. Native verification remains queued; 83 source-operation cases cover the preserved constructor, cycle, frequency and successor behavior. Timeline: TURN1259.
+Pinned V3 (76f1b34e9e9682989adcbb088797b4ae4ce4fcf1): sft/chemistry/catalytic_turnover_law_v1.py, its ExactPositiveRatio, RetainedCatalystState, RetainedCatalyticTransition, CompleteCatalyticCycle, forced_catalytic_turnover, forced_cycle_frequency and append_complete_cycle_preserves_turnover_family. Native translation: SFT/Chemistry/CatalyticTurnover.lean, makeExactPositiveRatio, ratioFromCounts, makeState, makeTransition, makeCycle, forcedCatalyticTurnover, forcedCycleFrequency, makeOccurrence, makeFamily and appendCompleteCyclePreservesTurnoverFamily; corresponding Grammar and Evidence modules. The 83 source-operation cases pass and cover the preserved constructor, cycle, frequency and successor behavior. Timeline: TURN1259.
 
-Current native evidence: All 83 original Catalytic Turnover core/domain cases pass; all 26 core declarations have empty axiom dependencies. Exact positive ratios, complete catalyst-return cycles, every state and closing edge, held condition boundaries, cycle frequency and complete-family successor preservation retain the original V3 operations. Full grammar and entry verification is running. Verification: verification/TURN1428_CHEMISTRY/. Timeline: TURN1428.
+Current native evidence: All 83 original Catalytic Turnover core/domain cases pass; all 26 core declarations have empty axiom dependencies. Exact positive ratios, complete catalyst-return cycles, every state and closing edge, held condition boundaries, cycle frequency and complete-family successor preservation retain the original V3 operations. The complete 256-alternative programme comparison passes. The full source-bundle empirical comparison is running. Verification: verification/TURN1428_CHEMISTRY/. Timeline: TURN1428.
 
 1201. Complete catalytic source surface and observation boundary
 
 The original independent analysis constructs the five-state source cycle
-  State 1 → State 2 → State 3 → State 4 → State 5 → State 1,
+\[
+\mathrm{State}\ 1\longrightarrow\mathrm{State}\ 2\longrightarrow\mathrm{State}\ 3\longrightarrow\mathrm{State}\ 4\longrightarrow\mathrm{State}\ 5\longrightarrow\mathrm{State}\ 1,
+\]
 retaining oxidative addition, ligand exchange, pre-transmetalation, transmetalation and reductive elimination with return. The same single-LPd catalyst identity occurs at every state. State 2 remains a structural intermediate not separately resolved as a conductance state. Four observed levels therefore do not replace the five-state structural word.
 
 The full source census is
-  1 article landing + 1 attempted-PDF HTML response + 106 supplementary pages
-  + 1 video + 1 repository metadata record + 387 archive members = 497 records.
+\[
+1_{\mathrm{article}}+1_{\mathrm{PDF\ response}}+106_{\mathrm{supplementary\ pages}}+
+1_{\mathrm{video}}+1_{\mathrm{metadata}}+387_{\mathrm{archive\ members}}=497.
+\]
 The movie retains 1,604 frames. The two raw-trace counts sum to 385,617 including their headers. The seven source turnover inscriptions are preserved in order as 0.5, 4.6, 29.6, 39.0, 203.9, 615.6 and 2098.7 per second, together with their substituent and other original inscriptions. The five-row Table S2 and Table S3 records remain different, independently retained tables. External signed decimal and zero inscriptions, the unavailable-PDF response and the low-temperature insufficient-fit disclosure remain visible. Source fits and reported rates remain post-seal provenance; they are not inputs to the closed-cycle proof or its exact count ratio.
 
 For each of the 497 target identities the prediction word retains one sealed premise, eight identity coordinates and four source-derived law labels, for thirteen cells. Its program has
-  1 + 497(1+8+4+1) + 2 = 6,961 instructions.
+\[
+1+497(1+8+4+1)+2=6{,}961\quad\text{instructions}.
+\]
 The fourteen-field registration binds the capture specification, source inventory and all twelve source files. The value-free identity boundary excludes nineteen specified value-bearing keys. Target release verifies every original source-file hash, the complete target census, nine identity bindings per record and each nonempty payload hash. The native analysis assembles all eighteen original fields. Its eight controls include actual construction of a final transition to a state other than the cycle entry, and removal of the last source record. The complete receipt has twelve fields and 497+5+8=510 messages.
 
-Pinned V3: sft/chemistry/catalytic_turnover_batch_v1.py and catalytic_turnover_validation_v1.py, _source_cycle, exact_catalytic_turnover_analysis, prediction_program_document, experiment_registration_record, _source_rows, _prediction_map and CatalyticTurnoverValidator.validate. Native files: SFT/Chemistry/CatalyticTurnoverAnalysis.lean, CatalyticTurnoverExperiment.lean, CatalyticTurnoverSource.lean, CatalyticTurnoverPrediction.lean and CatalyticTurnoverValidation.lean. Native verification remains queued; source-specific completion is not yet registered. Timeline: TURN1259.
+Pinned V3: sft/chemistry/catalytic_turnover_batch_v1.py and catalytic_turnover_validation_v1.py, _source_cycle, exact_catalytic_turnover_analysis, prediction_program_document, experiment_registration_record, _source_rows, _prediction_map and CatalyticTurnoverValidator.validate. Native files: SFT/Chemistry/CatalyticTurnoverAnalysis.lean, CatalyticTurnoverExperiment.lean, CatalyticTurnoverSource.lean, CatalyticTurnoverPrediction.lean and CatalyticTurnoverValidation.lean. Current native checks pass for all 150 audited declarations with empty axiom dependencies, 33 analysis cases, 11 prediction cases, the 6,961-instruction programme and original registration fields. The complete empirical source-bundle comparison is running; entry completion is not yet registered. Timeline: TURN1259.
 
 Component-exchange analysis verification: ComponentExchangeAnalysis.sourceFraction, truthy, analyzeRow and exactComponentExchangeAnalysis have empty Lean axiom dependencies. All twenty-two original analysis comparisons pass against the current native implementation. These results preserve the original analysis's exact fractions, row behavior and complete returned fields; full-entry registration follows its retained programme, empirical and dependency checks. Pinned source: sft/chemistry/component_exchange_validation_v1.py. Native file: SFT/Chemistry/ComponentExchangeAnalysis.lean. Evidence: verification/TURN1259_COMPONENT_EXCHANGE_ANALYSIS. Timeline: TURN1259.
 
 Catalytic source baseline: the original complete 256 candidate programme and independent twelve-field510 message empirical validator pass with the unchanged protected tree and exact registered source manifest. All thirty source-bound file hashes match, including the complete supplementary archive. Evidence: verification/TURN1259_CATALYTIC_ORIGINAL. Native source-output comparisons remain queued. Timeline: TURN1259.
 
 Current native evidence: All 150 Catalytic Turnover declarations have empty axiom dependencies. All 83 original core cases and 33 complete analysis cases pass. The full grammar retains all 256 alternatives; remaining entry comparisons are running. Verification: verification/TURN1431_CHEMISTRY/. Timeline: TURN1431.
+
+The displayed cycle closure, exact count ratio and successor-prefix identities follow the unchanged source operations named above. Lean references: CatalyticTurnover.identityReturn, completeWord, frequency and completeSuccessorFamily, together with makeCycle and appendCompleteCyclePreservesTurnoverFamily. Current check evidence: verification/TURN1469_CATALYTIC_PAPER/. Timeline: TURN1469.
 
 1202. Exact transport-to-reaction encounter boundary
 

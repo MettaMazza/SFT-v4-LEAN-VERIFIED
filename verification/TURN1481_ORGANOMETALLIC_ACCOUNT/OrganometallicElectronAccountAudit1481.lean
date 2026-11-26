@@ -1,0 +1,20 @@
+import SFT.Chemistry.OrganometallicElectronAccount
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.supportRows
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.forcedCapacity
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.completePairs
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.removeSuffix
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.complementary
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.account
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.forcePositive
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.forced
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.appendPair
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.complete
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.partialAccount
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.capacityWitness
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.completeWitness
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.successorWitness
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.haltWitness
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.capacityPassed
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.completePassed
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.successorPassed
+#print axioms SFT.Chemistry.OrganometallicElectronAccount.haltPassed

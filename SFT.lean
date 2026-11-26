@@ -13711,3 +13711,13 @@ import SFT.Consciousness.ConfabulationBoundaryEvidence
 import SFT.Consciousness.ConfabulationBoundaryExperiment
 
 import SFT.Consciousness.ConfabulationBoundaryValidation
+
+import SFT.Consciousness.DeterminismSelfOpacity
+
+import SFT.Consciousness.DeterminismSelfOpacityGrammar
+
+import SFT.Consciousness.DeterminismSelfOpacityEvidence
+
+import SFT.Consciousness.DeterminismSelfOpacityExperiment
+
+import SFT.Consciousness.DeterminismSelfOpacityValidation

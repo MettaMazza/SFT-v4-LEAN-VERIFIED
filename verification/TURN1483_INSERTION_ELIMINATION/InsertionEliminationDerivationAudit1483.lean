@@ -1,0 +1,10 @@
+import SFT.Chemistry.InsertionEliminationDerivation
+#print axioms SFT.Chemistry.InsertionEliminationDerivation.traceRetains
+#print axioms SFT.Chemistry.InsertionEliminationDerivation.insertionDerivation
+#print axioms SFT.Chemistry.InsertionEliminationDerivation.migratoryDerivation
+#print axioms SFT.Chemistry.InsertionEliminationDerivation.extrusionRetains
+#print axioms SFT.Chemistry.InsertionEliminationDerivation.reversedTraceAccepted
+#print axioms SFT.Chemistry.InsertionEliminationDerivation.insertionInverseExists
+#print axioms SFT.Chemistry.InsertionEliminationDerivation.eliminationDerivation
+#print axioms SFT.Chemistry.InsertionEliminationDerivation.traceDifferences
+#print axioms SFT.Chemistry.InsertionEliminationDerivation.matchedTraceExtension

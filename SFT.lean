@@ -15025,3 +15025,23 @@ import SFT.Chemistry.OxidativeReductiveComparison
 import SFT.Chemistry.OxidativeReductiveExperiment
 
 import SFT.Chemistry.OxidativeReductiveValidation
+
+import SFT.Chemistry.InsertionElimination
+
+import SFT.Chemistry.InsertionEliminationDerivation
+
+import SFT.Chemistry.InsertionEliminationGrammar
+
+import SFT.Chemistry.InsertionEliminationEvidence
+
+import SFT.Chemistry.InsertionEliminationPrediction
+
+import SFT.Chemistry.InsertionEliminationSource
+
+import SFT.Chemistry.InsertionEliminationAnalysis
+
+import SFT.Chemistry.InsertionEliminationComparison
+
+import SFT.Chemistry.InsertionEliminationExperiment
+
+import SFT.Chemistry.InsertionEliminationValidation

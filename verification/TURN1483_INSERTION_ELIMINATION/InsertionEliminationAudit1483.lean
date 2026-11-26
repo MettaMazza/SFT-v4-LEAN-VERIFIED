@@ -1,0 +1,24 @@
+import SFT.Chemistry.InsertionElimination
+#print axioms SFT.Chemistry.InsertionElimination.edge
+#print axioms SFT.Chemistry.InsertionElimination.sameEdge
+#print axioms SFT.Chemistry.InsertionElimination.containsEdge
+#print axioms SFT.Chemistry.InsertionElimination.distinctEdges
+#print axioms SFT.Chemistry.InsertionElimination.uniqueEdges
+#print axioms SFT.Chemistry.InsertionElimination.difference
+#print axioms SFT.Chemistry.InsertionElimination.sameSet
+#print axioms SFT.Chemistry.InsertionElimination.trace
+#print axioms SFT.Chemistry.InsertionElimination.insertionHeld
+#print axioms SFT.Chemistry.InsertionElimination.insertion
+#print axioms SFT.Chemistry.InsertionElimination.extrusion
+#print axioms SFT.Chemistry.InsertionElimination.migratoryHeld
+#print axioms SFT.Chemistry.InsertionElimination.migratory
+#print axioms SFT.Chemistry.InsertionElimination.eliminationHeld
+#print axioms SFT.Chemistry.InsertionElimination.elimination
+#print axioms SFT.Chemistry.InsertionElimination.insertionWitness
+#print axioms SFT.Chemistry.InsertionElimination.extrusionWitness
+#print axioms SFT.Chemistry.InsertionElimination.migrationWitness
+#print axioms SFT.Chemistry.InsertionElimination.eliminationWitness
+#print axioms SFT.Chemistry.InsertionElimination.insertionPassed
+#print axioms SFT.Chemistry.InsertionElimination.extrusionPassed
+#print axioms SFT.Chemistry.InsertionElimination.migrationPassed
+#print axioms SFT.Chemistry.InsertionElimination.eliminationPassed

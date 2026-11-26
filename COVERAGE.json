@@ -61866,9 +61866,20 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-INSERTION-ELIMINATION-PATHWAY-013-d78ae550b9001c0a.json",
       "statement": "Insertion replaces one X-Z adjacency by X-Y and Y-Z while conserving all three carriers. Extrusion is its exact inverse. Migratory insertion is the exact composition of migration and insertion, transforming metal-migrant and metal-inserted adjacency into retained metal-inserted and migrant-inserted adjacency. Elimination retains both eliminands and centres while generating the product adjacency and a held unsaturation, ring or carbene boundary.",
       "title": "Exact insertion, migratory-insertion and elimination adjacency-trace law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/InsertionElimination.lean",
+        "SFT/Chemistry/InsertionEliminationDerivation.lean",
+        "SFT/Chemistry/InsertionEliminationGrammar.lean",
+        "SFT/Chemistry/InsertionEliminationEvidence.lean",
+        "SFT/Chemistry/InsertionEliminationPrediction.lean",
+        "SFT/Chemistry/InsertionEliminationSource.lean",
+        "SFT/Chemistry/InsertionEliminationAnalysis.lean",
+        "SFT/Chemistry/InsertionEliminationComparison.lean",
+        "SFT/Chemistry/InsertionEliminationExperiment.lean",
+        "SFT/Chemistry/InsertionEliminationValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 programme, original/threeadverse independent cases,65 core and13 interface cases, full12field10message empirical result",
       "registration_sha256": "8e2bff52da271cc1639bef35b5ee146f983ac7a69c9faf2c518959b374946b04",
       "v3_registration": {
         "branch": "chemistry",
@@ -61917,7 +61928,10 @@
         "statement": "Insertion, exact extrusion, migratory insertion and elimination are complete carrier-preserving before/after adjacency traces with exact removed/added support.",
         "status": "empirically_tested",
         "title": "Exact insertion, migratory-insertion and elimination adjacency-trace law"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN1483_INSERTION_ELIMINATION_COMPLETION.json",
+      "verified_scope": "Exact original ordered endpoint canonicalization, oriented edge equality, set differences and set equality, distinctness and carrier-membership guards, trace fields, insertion, extrusion, migratory insertion and both elimination branches. Four computed original witnesses and65 full source-output cases.; Exact fields of all source constructions; full accepted trace differences; guard-preserving reversal and existence of the exact extrusion inverse for every accepted insertion; matched extension preserves carriers, prior endpoint and exact graph differences.; Eight original binary axes, all256 alternatives, exact decisions and sole survivor.; Original registration, closure, four controls and computed witnesses, full native programme comparison and original independent adverse cases.; Ten value-free identity rows, six identity fields and four laws per eleven-cell word, original identity guards and forbidden keys.; Complete ten-row table, seven identity keys, original errors, v2 target/primary hashes and target payload binding.; All seventeen analysis fields from native insertion/extrusion/migratory and distinct/single-centre elimination; original ten surfaces, three sources, scope distinction and absent rendered example. Thirteen full interface cases.; Original identity/law/target comparisons, six empirical controls and complete passed conjunction.; All thirteen registration fields, ten source references, original spec guards and v2 registered source hashes.; Original sealed prediction, target release/custody, ten target comparisons and full twelve-field ten-message empirical result with all hashes."
     },
     {
       "branch": "chemistry",
@@ -203303,13 +203317,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-26T22:51:52.541457+00:00",
+  "updated_at": "2026-11-26T23:05:12.011809+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 9,
-    "pending": 1731,
-    "fully_reconstructed_claims": 1041,
-    "axiom_free_exported_results": 62050,
-    "axiom_free_audited_definitions_and_theorems": 143081
+    "pending": 1730,
+    "fully_reconstructed_claims": 1042,
+    "axiom_free_exported_results": 62105,
+    "axiom_free_audited_definitions_and_theorems": 143236
   }
 }

@@ -1,0 +1,33 @@
+import SFT.Chemistry.InsertionEliminationComparison
+import SFT.Chemistry.InsertionEliminationExperiment
+import SFT.Chemistry.InsertionEliminationValidation
+#print axioms SFT.Chemistry.InsertionEliminationComparison.expectedLaws
+#print axioms SFT.Chemistry.InsertionEliminationComparison.cellAt
+#print axioms SFT.Chemistry.InsertionEliminationComparison.compare
+#print axioms SFT.Chemistry.InsertionEliminationComparison.controls
+#print axioms SFT.Chemistry.InsertionEliminationComparison.analysisPassed
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.claimId
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.experimentId
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.expectedLabel
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.falsification
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.targetRegistryHash
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.sourceFiles
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.sourceIds
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.references
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.registration
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.labelValue
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.envelope
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.specDimensions
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.specWitnesses
+#print axioms SFT.Chemistry.InsertionEliminationExperiment.validateSpec
+#print axioms SFT.Chemistry.InsertionEliminationValidation.inputValues
+#print axioms SFT.Chemistry.InsertionEliminationValidation.sealPrediction
+#print axioms SFT.Chemistry.InsertionEliminationValidation.certificate
+#print axioms SFT.Chemistry.InsertionEliminationValidation.isolation
+#print axioms SFT.Chemistry.InsertionEliminationValidation.custodyCertificate
+#print axioms SFT.Chemistry.InsertionEliminationValidation.boolText
+#print axioms SFT.Chemistry.InsertionEliminationValidation.rowText
+#print axioms SFT.Chemistry.InsertionEliminationValidation.rowInt
+#print axioms SFT.Chemistry.InsertionEliminationValidation.rowPassed
+#print axioms SFT.Chemistry.InsertionEliminationValidation.measurementPayload
+#print axioms SFT.Chemistry.InsertionEliminationValidation.validate

@@ -1,0 +1,16 @@
+import SFT.Chemistry.InsertionEliminationPrediction
+import SFT.Chemistry.InsertionEliminationSource
+import SFT.Chemistry.InsertionEliminationAnalysis
+#print axioms SFT.Chemistry.InsertionEliminationPrediction.identityHash
+#print axioms SFT.Chemistry.InsertionEliminationPrediction.get
+#print axioms SFT.Chemistry.InsertionEliminationPrediction.equal
+#print axioms SFT.Chemistry.InsertionEliminationPrediction.identities
+#print axioms SFT.Chemistry.InsertionEliminationPrediction.identityText
+#print axioms SFT.Chemistry.InsertionEliminationPrediction.recordInstructions
+#print axioms SFT.Chemistry.InsertionEliminationPrediction.predictionDocument
+#print axioms SFT.Chemistry.InsertionEliminationSource.identityKeys
+#print axioms SFT.Chemistry.InsertionEliminationSource.predictionMap
+#print axioms SFT.Chemistry.InsertionEliminationSource.checkHashes
+#print axioms SFT.Chemistry.InsertionEliminationSource.bindTarget
+#print axioms SFT.Chemistry.InsertionEliminationSource.sourceRows
+#print axioms SFT.Chemistry.InsertionEliminationAnalysis.analysis

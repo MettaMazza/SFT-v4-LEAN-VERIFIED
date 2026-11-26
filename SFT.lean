@@ -13871,3 +13871,33 @@ import SFT.Consciousness.AttentionalCapacityEvidence
 import SFT.Consciousness.AttentionalCapacityExperiment
 
 import SFT.Consciousness.AttentionalCapacityValidation
+
+import SFT.Consciousness.AttentionalSwitch
+
+import SFT.Consciousness.AttentionalSwitchGrammar
+
+import SFT.Consciousness.AttentionalSwitchEvidence
+
+import SFT.Consciousness.AttentionalSwitchExperiment
+
+import SFT.Consciousness.AttentionalSwitchValidation
+
+import SFT.Consciousness.CognitiveRepresentation
+
+import SFT.Consciousness.CognitiveRepresentationGrammar
+
+import SFT.Consciousness.CognitiveRepresentationEvidence
+
+import SFT.Consciousness.CognitiveRepresentationExperiment
+
+import SFT.Consciousness.CognitiveRepresentationValidation
+
+import SFT.Consciousness.IntentionalRelation
+
+import SFT.Consciousness.IntentionalRelationGrammar
+
+import SFT.Consciousness.IntentionalRelationEvidence
+
+import SFT.Consciousness.IntentionalRelationExperiment
+
+import SFT.Consciousness.IntentionalRelationValidation

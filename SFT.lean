@@ -14041,3 +14041,93 @@ import SFT.Consciousness.QualiaResonanceEvidence
 import SFT.Consciousness.QualiaResonanceExperiment
 
 import SFT.Consciousness.QualiaResonanceValidation
+
+import SFT.Consciousness.QualiaRecurrence
+
+import SFT.Consciousness.QualiaRecurrenceGrammar
+
+import SFT.Consciousness.QualiaRecurrenceEvidence
+
+import SFT.Consciousness.QualiaRecurrenceExperiment
+
+import SFT.Consciousness.QualiaRecurrenceValidation
+
+import SFT.Consciousness.QualiaComposition
+
+import SFT.Consciousness.QualiaCompositionGrammar
+
+import SFT.Consciousness.QualiaCompositionEvidence
+
+import SFT.Consciousness.QualiaCompositionExperiment
+
+import SFT.Consciousness.QualiaCompositionValidation
+
+import SFT.Consciousness.CrossModalQualia
+
+import SFT.Consciousness.CrossModalQualiaGrammar
+
+import SFT.Consciousness.CrossModalQualiaEvidence
+
+import SFT.Consciousness.CrossModalQualiaExperiment
+
+import SFT.Consciousness.CrossModalQualiaValidation
+
+import SFT.Consciousness.RedStimulusBoundary
+
+import SFT.Consciousness.RedStimulusBoundaryGrammar
+
+import SFT.Consciousness.RedStimulusBoundaryEvidence
+
+import SFT.Consciousness.RedStimulusBoundaryExperiment
+
+import SFT.Consciousness.RedStimulusBoundaryValidation
+
+import SFT.Consciousness.RedQualitativeIdentity
+
+import SFT.Consciousness.RedQualitativeIdentityGrammar
+
+import SFT.Consciousness.RedQualitativeIdentityEvidence
+
+import SFT.Consciousness.RedQualitativeIdentityExperiment
+
+import SFT.Consciousness.RedQualitativeIdentityValidation
+
+import SFT.Consciousness.RedOfRed
+
+import SFT.Consciousness.RedOfRedGrammar
+
+import SFT.Consciousness.RedOfRedEvidence
+
+import SFT.Consciousness.RedOfRedExperiment
+
+import SFT.Consciousness.RedOfRedValidation
+
+import SFT.Consciousness.RedRecurrence
+
+import SFT.Consciousness.RedRecurrenceGrammar
+
+import SFT.Consciousness.RedRecurrenceEvidence
+
+import SFT.Consciousness.RedRecurrenceExperiment
+
+import SFT.Consciousness.RedRecurrenceValidation
+
+import SFT.Consciousness.RedControls
+
+import SFT.Consciousness.RedControlsGrammar
+
+import SFT.Consciousness.RedControlsEvidence
+
+import SFT.Consciousness.RedControlsExperiment
+
+import SFT.Consciousness.RedControlsValidation
+
+import SFT.Consciousness.RedEmpiricalBoundary
+
+import SFT.Consciousness.RedEmpiricalBoundaryGrammar
+
+import SFT.Consciousness.RedEmpiricalBoundaryEvidence
+
+import SFT.Consciousness.RedEmpiricalBoundaryExperiment
+
+import SFT.Consciousness.RedEmpiricalBoundaryValidation

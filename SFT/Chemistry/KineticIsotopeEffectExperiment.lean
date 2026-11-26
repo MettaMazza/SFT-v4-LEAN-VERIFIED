@@ -65,7 +65,7 @@ def rowInstructions (row : Value) (ordinal : Nat) : Except String (List Value ×
   pure (instruction "label" destination [family,value],destination)
  let laws := [("isotopologue-path-law","two-held-isotope-identities-share-one-complete-reaction-path-and-condition"),("exact-rate-ratio-law","two-exact-positive-event-rates-force-one-ordered-quotient-and-held-orientation"),("complete-observation-law","all-90-ratios-3-direct-decays-replicates-directions-controls-and-adverse-records-retained"),("complete-custody-law","all-71-records-47-pages-23-worksheets-and-923260-nonempty-cells-retained")]
  let lawRows := laws.zipIdx.map fun ((family,label),index) =>
-  let destination := Text.intercalate "" [rowPrefix,"-law-",toString (9+index)]
+  let destination := Text.intercalate "" [rowPrefix,"-law-",toString (8+index)]
   (instruction "label" destination [family,label],destination)
  let registers := ["premise"] ++ labeled.map Prod.snd ++ lawRows.map Prod.snd
  pure ([instruction "label" (Text.append rowPrefix "-target") ["target-id",target]] ++ labeled.map Prod.fst ++

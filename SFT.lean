@@ -14191,3 +14191,17 @@ import SFT.Consciousness.NonordinaryExternalSource
 import SFT.Consciousness.NonordinaryExternalExperiment
 
 import SFT.Consciousness.NonordinaryExternalValidation
+
+import SFT.EarthEnvironment.StructuralModel
+
+import SFT.EarthEnvironment.EarthSystem
+
+import SFT.EarthEnvironment.EarthSystemGrammar
+
+import SFT.EarthEnvironment.EarthSystemEvidence
+
+import SFT.EarthEnvironment.Source
+
+import SFT.EarthEnvironment.EarthSystemExperiment
+
+import SFT.EarthEnvironment.EarthSystemValidation

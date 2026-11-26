@@ -19,7 +19,7 @@ def makeRate (events parts : PositiveCount) (input : FractionInput) : Except Str
   | .fraction r=>pure r
   | .other=>throw "isotopologue event rate must be exact and positive"
  if value.num ≤ 0 then throw "isotopologue event rate must be exact and positive"
- if value.num * Int.ofNat parts.value != Int.ofNat (events.value * value.den) then
+ if !(@decide (value.num * Int.ofNat parts.value = Int.ofNat (events.value * value.den)) (Int.decEq _ _)) then
   throw "isotopologue event rate must equal its complete exact count relation"
  pure ⟨events,parts,value⟩
 def rateFromCounts (events parts : SequentialMechanism.CountInput) : Except String ExactPositiveEventRate := do
@@ -148,7 +148,7 @@ def makeFamily (rows : List OccurrenceInput) : Except String CompleteKineticIsot
 def equalRelation (a b : ExactKineticIsotopeEffectRelation) : Bool :=
  equalLabel a.orderedPairIdentity b.orderedPairIdentity && equalLabel a.numeratorIsotopologue b.numeratorIsotopologue &&
  equalLabel a.denominatorIsotopologue b.denominatorIsotopologue && equalRoles a.completeReactionPath b.completeReactionPath &&
- a.exactRateRatio.num==b.exactRateRatio.num && a.exactRateRatio.den==b.exactRateRatio.den && equalLabel a.ratioOrientation b.ratioOrientation
+ (@decide (a.exactRateRatio.num=b.exactRateRatio.num) (Int.decEq _ _)) && a.exactRateRatio.den==b.exactRateRatio.den && equalLabel a.ratioOrientation b.ratioOrientation
 def appendIsotopologuePairPreservesCompleteFamily (family : CompleteKineticIsotopeFamily) (successor : RegisteredIsotopologuePairOccurrence) : Except String Bool := do
  if successor.sourceOccurrence.value != family.orderedOccurrences.length+1 then throw "kinetic isotope successor must be the next positive occurrence"
  let prior ← family.orderedOccurrences.mapM fun row=>forcedKineticIsotopeEffectRelation (.pair row.pair)
@@ -171,7 +171,7 @@ def heldIdentitiesWitness : Except String Bool := do
  pure (!equalLabel pair.numeratorPath.isotopologueIdentity pair.denominatorPath.isotopologueIdentity)
 def exactRatioWitness : Except String Bool := do
  let result ← forcedKineticIsotopeEffectRelation (.pair (← base))
- pure (result.exactRateRatio.num==3 && result.exactRateRatio.den==2)
+ pure ((@decide (result.exactRateRatio.num=3) (Int.decEq _ _)) && result.exactRateRatio.den==2)
 def orientationWitness : Except String Bool := do
  let result ← forcedKineticIsotopeEffectRelation (.pair (← base))
  pure (Text.equal result.ratioOrientation.label "numerator-rate-greater")

@@ -37998,3 +37998,38 @@ Maria Smith, Chirality from exhaustive proper-map comparison, DOI 10.5281/zenodo
 
 
 
+
+1391. Coordination-form equivalence and the forced distinction order
+
+A retained form is F=(C,A,W,E). C=(c₁,…,cₙ) is the complete composition-label word; A=(a₁,…,aₙ) is the attachment-mode word; W contains one nonempty three-axis word per occurrence; and E retains the distinct unordered adjacency pairs. The constructor requires n≥1, |A|=|W|=n, and each edge joins two distinct positions in {1,…,n}. Each orientation cell is structural EmptyOne or one of the two Fold fibres. Three counts axis positions; it does not introduce a third fibre.
+
+Every occurrence permutation σ is generated. Let pσ(σ(i))=i be its inverse position map. For that order, form the complete vertex and edge words
+
+  Vσ(F)=((cσ(1),aσ(1),Wσ(1)),…,(cσ(n),aσ(n),Wσ(n))),
+  Eσ(F)=sort({sort(pσ(u),pσ(v)) : (u,v)∈E}).
+
+The source canonical signature is the lexicographically least complete pair:
+
+  K(F)=minlex{(Vσ(F),Eσ(F)) : σ∈Perm({1,…,n})}.
+
+The native implementation enumerates this complete list and folds its exact lexicographic minimum. completeVariantMinimum binds the returned canonical value to that fold; exhaustiveOccurrenceOrders binds its input to the existing complete occurrence-permutation generator. No occurrence map is selected in advance. Removing only the orientation component gives K₀(F), which still retains every composition label, attachment label and adjacency.
+
+Comparison first requires equal positive width and equal sorted composition words. For admissible L and R, the exact-equivalence decision is K(L)=K(R). The source then determines the distinction by the following ordered implications:
+
+  K(L)=K(R) ⇒ same-equivalence-class;
+  K(L)≠K(R) ∧ K₀(L)≠K₀(R) ⇒ attachment-class-distinction;
+  K(L)≠K(R) ∧ K₀(L)=K₀(R) ∧ K(M(L))=K(R)
+    ⇒ mirror-complement-class-distinction;
+  K(L)≠K(R) ∧ K₀(L)=K₀(R) ∧ K(M(L))≠K(R)
+    ⇒ orientation-adjacency-class-distinction.
+
+Here M exchanges fibre-one with fibre-two at every occupied cell. Structural EmptyOne remains structural EmptyOne; the source mirror reconstructs its default identity. Thus the mirror operation changes neither the occurrence labels nor the retained edges. The returned record contains the positive occurrence count, the same-composition decision, the exact-equivalence decision, the forced native class and both full canonical signatures.
+
+For an accepted successor with new composition c, attachment a, word w and distinct prior endpoints P⊆{1,…,n}, the source constructs
+
+  C′=C·c,  A′=A·a,  W′=W·w,
+  E′=E·((p,n+1) : p∈P).
+
+Every prior component is retained as a prefix. EmptyOne adjacency and an empty endpoint tuple both add no edges. The complete constructor is applied again to the extended form, preserving its original guards.
+
+Pinned original source: sft/chemistry/coordination_isomerism_law_v1.py, FiniteCoordinationForm, _canonical, _mirror, extend_coordination_form and forced_coordination_isomer_relation. Native source: SFT/Chemistry/CoordinationIsomerism.lean, construct, signatureFor, variants, canonical, mirror, extend and forced. Existing enumeration: SFT/Chemistry/MolecularGraphEnumeration.lean. Current core verification: 37 complete source-output comparisons and 28 empty-axiom declarations; verification/TURN1473_COORDINATION_ISOMERISM/coordisomer1473_core_report.json. Full-entry grammar, operational witnesses, derivation closure and empirical-validator binding remain to be completed. Timeline: TURN1473.

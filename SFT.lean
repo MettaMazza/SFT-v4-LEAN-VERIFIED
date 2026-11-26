@@ -14539,3 +14539,51 @@ import SFT.Chemistry.ColligativeResponseAnalysis
 import SFT.Chemistry.ColligativeResponsePrediction
 
 import SFT.Chemistry.ColligativeResponseValidation
+
+import SFT.Chemistry.SolvationDissolution
+
+import SFT.Chemistry.SolvationDissolutionGrammar
+
+import SFT.Chemistry.SolvationDissolutionEvidence
+
+import SFT.Chemistry.SolvationDissolutionExperiment
+
+import SFT.Chemistry.SolvationDissolutionSource
+
+import SFT.Chemistry.SolvationDissolutionAnalysis
+
+import SFT.Chemistry.SolvationDissolutionPrediction
+
+import SFT.Chemistry.SolvationDissolutionValidation
+
+import SFT.Chemistry.MolecularDiffusion
+
+import SFT.Chemistry.MolecularDiffusionGrammar
+
+import SFT.Chemistry.MolecularDiffusionEvidence
+
+import SFT.Chemistry.MolecularDiffusionExperiment
+
+import SFT.Chemistry.MolecularDiffusionSource
+
+import SFT.Chemistry.MolecularDiffusionAnalysis
+
+import SFT.Chemistry.MolecularDiffusionPrediction
+
+import SFT.Chemistry.MolecularDiffusionValidation
+
+import SFT.Chemistry.ViscousTransport
+
+import SFT.Chemistry.ViscousTransportGrammar
+
+import SFT.Chemistry.ViscousTransportEvidence
+
+import SFT.Chemistry.ViscousTransportExperiment
+
+import SFT.Chemistry.ViscousTransportSource
+
+import SFT.Chemistry.ViscousTransportAnalysis
+
+import SFT.Chemistry.ViscousTransportPrediction
+
+import SFT.Chemistry.ViscousTransportValidation

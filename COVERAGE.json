@@ -61465,9 +61465,20 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-INORGANIC-COLOUR-ELECTRONIC-TRANSITION-008-aa45a1a796871c13.json",
       "statement": "Ligand and metal are the two retained electronic carrier kinds of a coordination entity, forcing the complete four-class directed transition product ligand-to-ligand, ligand-to-metal, metal-to-ligand and metal-to-metal. Every transition retains two state identities, a held source-target direction and the exact positive state-order gap. Selective absorption is a positive proper subset of complete incident observation support; inorganic colour is the exact nonempty complementary observation class retained after that absorption. No wavelength, colour wheel, orbital assignment, peak selection or fitted threshold enters the law.",
       "title": "Exact inorganic electronic-transition and selective-colour law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/InorganicColour.lean",
+        "SFT/Chemistry/InorganicColourDerivation.lean",
+        "SFT/Chemistry/InorganicColourGrammar.lean",
+        "SFT/Chemistry/InorganicColourEvidence.lean",
+        "SFT/Chemistry/InorganicColourPrediction.lean",
+        "SFT/Chemistry/InorganicColourSource.lean",
+        "SFT/Chemistry/InorganicColourAnalysis.lean",
+        "SFT/Chemistry/InorganicColourComparison.lean",
+        "SFT/Chemistry/InorganicColourExperiment.lean",
+        "SFT/Chemistry/InorganicColourValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS pinned full256programme,original/threeadverse independent cases,51core/11interface cases and full12field12message empirical receipt",
       "registration_sha256": "85b411c9b74e5be2271ca84c0518de6af830f9100116132607bb402d22f206b3",
       "v3_registration": {
         "branch": "chemistry",
@@ -61520,7 +61531,10 @@
         "statement": "Two retained carrier kinds force four directed complex-transition classes. Each transition retains endpoint identities and an exact positive order gap; selective absorption and the complementary retained observation class force inorganic colour without a conventional colour wheel.",
         "status": "empirically_tested",
         "title": "Exact inorganic electronic-transition and selective-colour law"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN1478_INORGANIC_COLOUR_COMPLETION.json",
+      "verified_scope": "Originalstate/transition/absorption constructors andorderedguards,fourclasscompleteproduct,positivegap,selectivecomplement,5originalwitnesses;51completeoriginaloutputcases.; Twoincidentdistinctions/eitherabsorbedbase;completecomplementcount;appendedretainedorabsorbednewdistinctionpreservesoldpartition;exactpositivegap successorandunchangedendpointidentities.; Eightbinaryaxes,complete256alternatives,originaleliminationdecisionsanduniquesurvivor.; Sourceexactregistration,closure,fourcontrols,andactual5originalwitnesses;freshfullprogrammecomparisonandindependentadversecases.; Eightvalue-freeidentityrows,sixidentityfieldsandfourlawlabelsineach11cellword;originalidentityguards.; Complete8rowtable,7identitykeys,postsealsourcehashguardsandpayloadbinding.; All19analysisfields,fourdefinitionandfourcompletespectrumsurfaces,all456points,completepeakvectors,originalcustodyandabsentmetal-metaldefinitionboundary;11fullinterfacecases.; Sixidentity/fourlawbindings,all6originalcontrolsandexactpassedconjunction.; All14originalregistrationfields,8targetreferences,specguards,sourceidentitiesandhashes.; Sealedprediction,targetreleaseandcustody,all8comparisons,full12field12messageempiricalresultwithallhashes."
     },
     {
       "branch": "chemistry",
@@ -203233,13 +203247,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-26T21:43:12.344053+00:00",
+  "updated_at": "2026-11-26T21:56:15.869146+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 9,
-    "pending": 1736,
-    "fully_reconstructed_claims": 1036,
-    "axiom_free_exported_results": 61764,
-    "axiom_free_audited_definitions_and_theorems": 142285
+    "pending": 1735,
+    "fully_reconstructed_claims": 1037,
+    "axiom_free_exported_results": 61821,
+    "axiom_free_audited_definitions_and_theorems": 142453
   }
 }

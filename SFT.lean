@@ -14925,3 +14925,23 @@ import SFT.Chemistry.ComplexSpinStateComparison
 import SFT.Chemistry.ComplexSpinStateExperiment
 
 import SFT.Chemistry.ComplexSpinStateValidation
+
+import SFT.Chemistry.InorganicColour
+
+import SFT.Chemistry.InorganicColourDerivation
+
+import SFT.Chemistry.InorganicColourGrammar
+
+import SFT.Chemistry.InorganicColourEvidence
+
+import SFT.Chemistry.InorganicColourPrediction
+
+import SFT.Chemistry.InorganicColourSource
+
+import SFT.Chemistry.InorganicColourAnalysis
+
+import SFT.Chemistry.InorganicColourComparison
+
+import SFT.Chemistry.InorganicColourExperiment
+
+import SFT.Chemistry.InorganicColourValidation

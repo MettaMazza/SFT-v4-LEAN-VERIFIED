@@ -14603,3 +14603,115 @@ import SFT.Chemistry.ThermalConductivityAnalysis
 import SFT.Chemistry.ThermalConductivityPrediction
 
 import SFT.Chemistry.ThermalConductivityValidation
+
+import SFT.Chemistry.CoupledTransport
+
+import SFT.Chemistry.CoupledTransportGrammar
+
+import SFT.Chemistry.CoupledTransportEvidence
+
+import SFT.Chemistry.CoupledTransportExperiment
+
+import SFT.Chemistry.CoupledTransportSource
+
+import SFT.Chemistry.CoupledTransportAnalysis
+
+import SFT.Chemistry.CoupledTransportPrediction
+
+import SFT.Chemistry.CoupledTransportValidation
+
+import SFT.Chemistry.ElementaryTransitionRate
+
+import SFT.Chemistry.ElementaryTransitionRateGrammar
+
+import SFT.Chemistry.ElementaryTransitionRateEvidence
+
+import SFT.Chemistry.ElementaryTransitionRateExperiment
+
+import SFT.Chemistry.ElementaryTransitionRateSource
+
+import SFT.Chemistry.ElementaryTransitionRateAnalysis
+
+import SFT.Chemistry.ElementaryTransitionRatePrediction
+
+import SFT.Chemistry.ElementaryTransitionRateValidation
+
+import SFT.Chemistry.ConcentrationDependence
+
+import SFT.Chemistry.ConcentrationDependenceGrammar
+
+import SFT.Chemistry.ConcentrationDependenceEvidence
+
+import SFT.Chemistry.ConcentrationDependenceExperiment
+
+import SFT.Chemistry.ConcentrationDependenceSource
+
+import SFT.Chemistry.ConcentrationDependenceAnalysis
+
+import SFT.Chemistry.ConcentrationDependencePrediction
+
+import SFT.Chemistry.ConcentrationDependenceValidation
+
+import SFT.Chemistry.TemperatureDependence
+
+import SFT.Chemistry.TemperatureDependenceGrammar
+
+import SFT.Chemistry.TemperatureDependenceEvidence
+
+import SFT.Chemistry.TemperatureDependenceExperiment
+
+import SFT.Chemistry.TemperatureDependenceSource
+
+import SFT.Chemistry.TemperatureDependenceAnalysis
+
+import SFT.Chemistry.TemperatureDependencePrediction
+
+import SFT.Chemistry.TemperatureDependenceValidation
+
+import SFT.Chemistry.ActivationBarrier
+
+import SFT.Chemistry.ActivationBarrierGrammar
+
+import SFT.Chemistry.ActivationBarrierEvidence
+
+import SFT.Chemistry.ActivationBarrierExperiment
+
+import SFT.Chemistry.ActivationBarrierSource
+
+import SFT.Chemistry.ActivationBarrierAnalysis
+
+import SFT.Chemistry.ActivationBarrierPrediction
+
+import SFT.Chemistry.ActivationBarrierValidation
+
+import SFT.Chemistry.TransitionBoundary
+
+import SFT.Chemistry.TransitionBoundaryGrammar
+
+import SFT.Chemistry.TransitionBoundaryEvidence
+
+import SFT.Chemistry.TransitionBoundaryExperiment
+
+import SFT.Chemistry.TransitionBoundarySource
+
+import SFT.Chemistry.TransitionBoundaryAnalysis
+
+import SFT.Chemistry.TransitionBoundaryPrediction
+
+import SFT.Chemistry.TransitionBoundaryValidation
+
+import SFT.Chemistry.CompetingChannel
+
+import SFT.Chemistry.CompetingChannelGrammar
+
+import SFT.Chemistry.CompetingChannelEvidence
+
+import SFT.Chemistry.CompetingChannelExperiment
+
+import SFT.Chemistry.CompetingChannelSource
+
+import SFT.Chemistry.CompetingChannelAnalysis
+
+import SFT.Chemistry.CompetingChannelPrediction
+
+import SFT.Chemistry.CompetingChannelValidation

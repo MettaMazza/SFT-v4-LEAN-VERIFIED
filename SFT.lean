@@ -13035,3 +13035,679 @@ import SFT.Medicine.AdverseEventSource
 import SFT.Medicine.AdverseEventExperiment
 
 import SFT.Medicine.AdverseEventValidation
+
+import SFT.Medicine.ClinicalToxicity
+
+import SFT.Medicine.ClinicalToxicityGrammar
+
+import SFT.Medicine.ClinicalToxicityEvidence
+
+import SFT.Medicine.ClinicalToxicitySource
+
+import SFT.Medicine.ClinicalToxicityExperiment
+
+import SFT.Medicine.ClinicalToxicityValidation
+
+import SFT.Medicine.Efficacy
+
+import SFT.Medicine.EfficacyGrammar
+
+import SFT.Medicine.EfficacyEvidence
+
+import SFT.Medicine.EfficacySource
+
+import SFT.Medicine.EfficacyExperiment
+
+import SFT.Medicine.EfficacyValidation
+
+import SFT.Medicine.Effectiveness
+
+import SFT.Medicine.EffectivenessGrammar
+
+import SFT.Medicine.EffectivenessEvidence
+
+import SFT.Medicine.EffectivenessSource
+
+import SFT.Medicine.EffectivenessExperiment
+
+import SFT.Medicine.EffectivenessValidation
+
+import SFT.Medicine.SafetyEvidence
+
+import SFT.Medicine.SafetyEvidenceGrammar
+
+import SFT.Medicine.SafetyEvidenceEvidence
+
+import SFT.Medicine.SafetyEvidenceSource
+
+import SFT.Medicine.SafetyEvidenceExperiment
+
+import SFT.Medicine.SafetyEvidenceValidation
+
+import SFT.Medicine.BenefitHarm
+
+import SFT.Medicine.BenefitHarmGrammar
+
+import SFT.Medicine.BenefitHarmEvidence
+
+import SFT.Medicine.BenefitHarmSource
+
+import SFT.Medicine.BenefitHarmExperiment
+
+import SFT.Medicine.BenefitHarmValidation
+
+import SFT.Medicine.AbsoluteRelativeEffect
+
+import SFT.Medicine.AbsoluteRelativeEffectGrammar
+
+import SFT.Medicine.AbsoluteRelativeEffectEvidence
+
+import SFT.Medicine.AbsoluteRelativeEffectSource
+
+import SFT.Medicine.AbsoluteRelativeEffectExperiment
+
+import SFT.Medicine.AbsoluteRelativeEffectValidation
+
+import SFT.Medicine.TreatmentHeterogeneity
+
+import SFT.Medicine.TreatmentHeterogeneityGrammar
+
+import SFT.Medicine.TreatmentHeterogeneityEvidence
+
+import SFT.Medicine.TreatmentHeterogeneitySource
+
+import SFT.Medicine.TreatmentHeterogeneityExperiment
+
+import SFT.Medicine.TreatmentHeterogeneityValidation
+
+import SFT.Medicine.ClinicalTrial
+
+import SFT.Medicine.ClinicalTrialGrammar
+
+import SFT.Medicine.ClinicalTrialEvidence
+
+import SFT.Medicine.ClinicalTrialSource
+
+import SFT.Medicine.ClinicalTrialExperiment
+
+import SFT.Medicine.ClinicalTrialValidation
+
+import SFT.Medicine.Randomization
+
+import SFT.Medicine.RandomizationGrammar
+
+import SFT.Medicine.RandomizationEvidence
+
+import SFT.Medicine.RandomizationSource
+
+import SFT.Medicine.RandomizationExperiment
+
+import SFT.Medicine.RandomizationValidation
+
+import SFT.Medicine.Blinding
+
+import SFT.Medicine.BlindingGrammar
+
+import SFT.Medicine.BlindingEvidence
+
+import SFT.Medicine.BlindingSource
+
+import SFT.Medicine.BlindingExperiment
+
+import SFT.Medicine.BlindingValidation
+
+import SFT.Medicine.ObservationalStudy
+
+import SFT.Medicine.ObservationalStudyGrammar
+
+import SFT.Medicine.ObservationalStudyEvidence
+
+import SFT.Medicine.ObservationalStudySource
+
+import SFT.Medicine.ObservationalStudyExperiment
+
+import SFT.Medicine.ObservationalStudyValidation
+
+import SFT.Medicine.EvidenceSynthesis
+
+import SFT.Medicine.EvidenceSynthesisGrammar
+
+import SFT.Medicine.EvidenceSynthesisEvidence
+
+import SFT.Medicine.EvidenceSynthesisSource
+
+import SFT.Medicine.EvidenceSynthesisExperiment
+
+import SFT.Medicine.EvidenceSynthesisValidation
+
+import SFT.Medicine.MissingReporting
+
+import SFT.Medicine.MissingReportingGrammar
+
+import SFT.Medicine.MissingReportingEvidence
+
+import SFT.Medicine.MissingReportingSource
+
+import SFT.Medicine.MissingReportingExperiment
+
+import SFT.Medicine.MissingReportingValidation
+
+import SFT.Medicine.Screening
+
+import SFT.Medicine.ScreeningGrammar
+
+import SFT.Medicine.ScreeningEvidence
+
+import SFT.Medicine.ScreeningSource
+
+import SFT.Medicine.ScreeningExperiment
+
+import SFT.Medicine.ScreeningValidation
+
+import SFT.Medicine.Prevention
+
+import SFT.Medicine.PreventionGrammar
+
+import SFT.Medicine.PreventionEvidence
+
+import SFT.Medicine.PreventionSource
+
+import SFT.Medicine.PreventionExperiment
+
+import SFT.Medicine.PreventionValidation
+
+import SFT.Medicine.Treatment
+
+import SFT.Medicine.TreatmentGrammar
+
+import SFT.Medicine.TreatmentEvidence
+
+import SFT.Medicine.TreatmentSource
+
+import SFT.Medicine.TreatmentExperiment
+
+import SFT.Medicine.TreatmentValidation
+
+import SFT.Medicine.Rehabilitation
+
+import SFT.Medicine.RehabilitationGrammar
+
+import SFT.Medicine.RehabilitationEvidence
+
+import SFT.Medicine.RehabilitationSource
+
+import SFT.Medicine.RehabilitationExperiment
+
+import SFT.Medicine.RehabilitationValidation
+
+import SFT.Medicine.Monitoring
+
+import SFT.Medicine.MonitoringGrammar
+
+import SFT.Medicine.MonitoringEvidence
+
+import SFT.Medicine.MonitoringSource
+
+import SFT.Medicine.MonitoringExperiment
+
+import SFT.Medicine.MonitoringValidation
+
+import SFT.Medicine.StoppingWithdrawal
+
+import SFT.Medicine.StoppingWithdrawalGrammar
+
+import SFT.Medicine.StoppingWithdrawalEvidence
+
+import SFT.Medicine.StoppingWithdrawalSource
+
+import SFT.Medicine.StoppingWithdrawalExperiment
+
+import SFT.Medicine.StoppingWithdrawalValidation
+
+import SFT.Medicine.IndividualInference
+
+import SFT.Medicine.IndividualInferenceGrammar
+
+import SFT.Medicine.IndividualInferenceEvidence
+
+import SFT.Medicine.IndividualInferenceSource
+
+import SFT.Medicine.IndividualInferenceExperiment
+
+import SFT.Medicine.IndividualInferenceValidation
+
+import SFT.Medicine.PopulationInference
+
+import SFT.Medicine.PopulationInferenceGrammar
+
+import SFT.Medicine.PopulationInferenceEvidence
+
+import SFT.Medicine.PopulationInferenceSource
+
+import SFT.Medicine.PopulationInferenceExperiment
+
+import SFT.Medicine.PopulationInferenceValidation
+
+import SFT.Medicine.Transportability
+
+import SFT.Medicine.TransportabilityGrammar
+
+import SFT.Medicine.TransportabilityEvidence
+
+import SFT.Medicine.TransportabilitySource
+
+import SFT.Medicine.TransportabilityExperiment
+
+import SFT.Medicine.TransportabilityValidation
+
+import SFT.Medicine.SubgroupMultiplicity
+
+import SFT.Medicine.SubgroupMultiplicityGrammar
+
+import SFT.Medicine.SubgroupMultiplicityEvidence
+
+import SFT.Medicine.SubgroupMultiplicitySource
+
+import SFT.Medicine.SubgroupMultiplicityExperiment
+
+import SFT.Medicine.SubgroupMultiplicityValidation
+
+import SFT.Medicine.ClinicalDecision
+
+import SFT.Medicine.ClinicalDecisionGrammar
+
+import SFT.Medicine.ClinicalDecisionEvidence
+
+import SFT.Medicine.ClinicalDecisionSource
+
+import SFT.Medicine.ClinicalDecisionExperiment
+
+import SFT.Medicine.ClinicalDecisionValidation
+
+import SFT.Medicine.ClinicalUncertainty
+
+import SFT.Medicine.ClinicalUncertaintyGrammar
+
+import SFT.Medicine.ClinicalUncertaintyEvidence
+
+import SFT.Medicine.ClinicalUncertaintySource
+
+import SFT.Medicine.ClinicalUncertaintyExperiment
+
+import SFT.Medicine.ClinicalUncertaintyValidation
+
+import SFT.Medicine.InformedConsent
+
+import SFT.Medicine.InformedConsentGrammar
+
+import SFT.Medicine.InformedConsentEvidence
+
+import SFT.Medicine.InformedConsentSource
+
+import SFT.Medicine.InformedConsentExperiment
+
+import SFT.Medicine.InformedConsentValidation
+
+import SFT.Medicine.DecisionCapacity
+
+import SFT.Medicine.DecisionCapacityGrammar
+
+import SFT.Medicine.DecisionCapacityEvidence
+
+import SFT.Medicine.DecisionCapacitySource
+
+import SFT.Medicine.DecisionCapacityExperiment
+
+import SFT.Medicine.DecisionCapacityValidation
+
+import SFT.Medicine.ClinicalPrivacy
+
+import SFT.Medicine.ClinicalPrivacyGrammar
+
+import SFT.Medicine.ClinicalPrivacyEvidence
+
+import SFT.Medicine.ClinicalPrivacySource
+
+import SFT.Medicine.ClinicalPrivacyExperiment
+
+import SFT.Medicine.ClinicalPrivacyValidation
+
+import SFT.Medicine.DataMinimization
+
+import SFT.Medicine.DataMinimizationGrammar
+
+import SFT.Medicine.DataMinimizationEvidence
+
+import SFT.Medicine.DataMinimizationSource
+
+import SFT.Medicine.DataMinimizationExperiment
+
+import SFT.Medicine.DataMinimizationValidation
+
+import SFT.Medicine.ClinicalEquipoise
+
+import SFT.Medicine.ClinicalEquipoiseGrammar
+
+import SFT.Medicine.ClinicalEquipoiseEvidence
+
+import SFT.Medicine.ClinicalEquipoiseSource
+
+import SFT.Medicine.ClinicalEquipoiseExperiment
+
+import SFT.Medicine.ClinicalEquipoiseValidation
+
+import SFT.Medicine.ClinicalEvidenceHandoff
+
+import SFT.Medicine.ClinicalEvidenceHandoffGrammar
+
+import SFT.Medicine.ClinicalEvidenceHandoffEvidence
+
+import SFT.Medicine.ClinicalEvidenceHandoffSource
+
+import SFT.Medicine.ClinicalEvidenceHandoffExperiment
+
+import SFT.Medicine.ClinicalEvidenceHandoffValidation
+
+import SFT.Consciousness.StructuralModel
+
+import SFT.Consciousness.Source
+
+import SFT.Consciousness.ObservationAct
+
+import SFT.Consciousness.ObservationActGrammar
+
+import SFT.Consciousness.ObservationActEvidence
+
+import SFT.Consciousness.ObservationActExperiment
+
+import SFT.Consciousness.ObservationActValidation
+
+import SFT.Consciousness.ExternalObservation
+
+import SFT.Consciousness.ExternalObservationGrammar
+
+import SFT.Consciousness.ExternalObservationEvidence
+
+import SFT.Consciousness.ExternalObservationExperiment
+
+import SFT.Consciousness.ExternalObservationValidation
+
+import SFT.Consciousness.InteriorObservation
+
+import SFT.Consciousness.InteriorObservationGrammar
+
+import SFT.Consciousness.InteriorObservationEvidence
+
+import SFT.Consciousness.InteriorObservationExperiment
+
+import SFT.Consciousness.InteriorObservationValidation
+
+import SFT.Consciousness.ObserverObserved
+
+import SFT.Consciousness.ObserverObservedGrammar
+
+import SFT.Consciousness.ObserverObservedEvidence
+
+import SFT.Consciousness.ObserverObservedExperiment
+
+import SFT.Consciousness.ObserverObservedValidation
+
+import SFT.Consciousness.ObservationClass
+
+import SFT.Consciousness.ObservationClassGrammar
+
+import SFT.Consciousness.ObservationClassEvidence
+
+import SFT.Consciousness.ObservationClassExperiment
+
+import SFT.Consciousness.ObservationClassValidation
+
+import SFT.Consciousness.ObservationalMoment
+
+import SFT.Consciousness.ObservationalMomentGrammar
+
+import SFT.Consciousness.ObservationalMomentEvidence
+
+import SFT.Consciousness.ObservationalMomentExperiment
+
+import SFT.Consciousness.ObservationalMomentValidation
+
+import SFT.Consciousness.MeasurementConsciousnessBoundary
+
+import SFT.Consciousness.MeasurementConsciousnessBoundaryGrammar
+
+import SFT.Consciousness.MeasurementConsciousnessBoundaryEvidence
+
+import SFT.Consciousness.MeasurementConsciousnessBoundaryExperiment
+
+import SFT.Consciousness.MeasurementConsciousnessBoundaryValidation
+
+import SFT.Consciousness.CognitiveAccess
+
+import SFT.Consciousness.CognitiveAccessGrammar
+
+import SFT.Consciousness.CognitiveAccessEvidence
+
+import SFT.Consciousness.CognitiveAccessExperiment
+
+import SFT.Consciousness.CognitiveAccessValidation
+
+import SFT.Consciousness.Report
+
+import SFT.Consciousness.ReportGrammar
+
+import SFT.Consciousness.ReportEvidence
+
+import SFT.Consciousness.ReportExperiment
+
+import SFT.Consciousness.ReportValidation
+
+import SFT.Consciousness.PhenomenalPresence
+
+import SFT.Consciousness.PhenomenalPresenceGrammar
+
+import SFT.Consciousness.PhenomenalPresenceEvidence
+
+import SFT.Consciousness.PhenomenalPresenceExperiment
+
+import SFT.Consciousness.PhenomenalPresenceValidation
+
+import SFT.Consciousness.Reportability
+
+import SFT.Consciousness.ReportabilityGrammar
+
+import SFT.Consciousness.ReportabilityEvidence
+
+import SFT.Consciousness.ReportabilityExperiment
+
+import SFT.Consciousness.ReportabilityValidation
+
+import SFT.Consciousness.UnconsciousProcess
+
+import SFT.Consciousness.UnconsciousProcessGrammar
+
+import SFT.Consciousness.UnconsciousProcessEvidence
+
+import SFT.Consciousness.UnconsciousProcessExperiment
+
+import SFT.Consciousness.UnconsciousProcessValidation
+
+import SFT.Consciousness.AlteredStateReportBoundary
+
+import SFT.Consciousness.AlteredStateReportBoundaryGrammar
+
+import SFT.Consciousness.AlteredStateReportBoundaryEvidence
+
+import SFT.Consciousness.AlteredStateReportBoundaryExperiment
+
+import SFT.Consciousness.AlteredStateReportBoundaryValidation
+
+import SFT.Consciousness.ContentPlurality
+
+import SFT.Consciousness.ContentPluralityGrammar
+
+import SFT.Consciousness.ContentPluralityEvidence
+
+import SFT.Consciousness.ContentPluralityExperiment
+
+import SFT.Consciousness.ContentPluralityValidation
+
+import SFT.Consciousness.Binding
+
+import SFT.Consciousness.BindingGrammar
+
+import SFT.Consciousness.BindingEvidence
+
+import SFT.Consciousness.BindingExperiment
+
+import SFT.Consciousness.BindingValidation
+
+import SFT.Consciousness.Unity
+
+import SFT.Consciousness.UnityGrammar
+
+import SFT.Consciousness.UnityEvidence
+
+import SFT.Consciousness.UnityExperiment
+
+import SFT.Consciousness.UnityValidation
+
+import SFT.Consciousness.IntegrationBoundary
+
+import SFT.Consciousness.IntegrationBoundaryGrammar
+
+import SFT.Consciousness.IntegrationBoundaryEvidence
+
+import SFT.Consciousness.IntegrationBoundaryExperiment
+
+import SFT.Consciousness.IntegrationBoundaryValidation
+
+import SFT.Consciousness.SynchronyBoundary
+
+import SFT.Consciousness.SynchronyBoundaryGrammar
+
+import SFT.Consciousness.SynchronyBoundaryEvidence
+
+import SFT.Consciousness.SynchronyBoundaryExperiment
+
+import SFT.Consciousness.SynchronyBoundaryValidation
+
+import SFT.Consciousness.Fragmentation
+
+import SFT.Consciousness.FragmentationGrammar
+
+import SFT.Consciousness.FragmentationEvidence
+
+import SFT.Consciousness.FragmentationExperiment
+
+import SFT.Consciousness.FragmentationValidation
+
+import SFT.Consciousness.Perspective
+
+import SFT.Consciousness.PerspectiveGrammar
+
+import SFT.Consciousness.PerspectiveEvidence
+
+import SFT.Consciousness.PerspectiveExperiment
+
+import SFT.Consciousness.PerspectiveValidation
+
+import SFT.Consciousness.Interiority
+
+import SFT.Consciousness.InteriorityGrammar
+
+import SFT.Consciousness.InteriorityEvidence
+
+import SFT.Consciousness.InteriorityExperiment
+
+import SFT.Consciousness.InteriorityValidation
+
+import SFT.Consciousness.SubjectCarrier
+
+import SFT.Consciousness.SubjectCarrierGrammar
+
+import SFT.Consciousness.SubjectCarrierEvidence
+
+import SFT.Consciousness.SubjectCarrierExperiment
+
+import SFT.Consciousness.SubjectCarrierValidation
+
+import SFT.Consciousness.SelfInvariant
+
+import SFT.Consciousness.SelfInvariantGrammar
+
+import SFT.Consciousness.SelfInvariantEvidence
+
+import SFT.Consciousness.SelfInvariantExperiment
+
+import SFT.Consciousness.SelfInvariantValidation
+
+import SFT.Consciousness.FirstThirdPerson
+
+import SFT.Consciousness.FirstThirdPersonGrammar
+
+import SFT.Consciousness.FirstThirdPersonEvidence
+
+import SFT.Consciousness.FirstThirdPersonExperiment
+
+import SFT.Consciousness.FirstThirdPersonValidation
+
+import SFT.Consciousness.PhenomenalPrivacy
+
+import SFT.Consciousness.PhenomenalPrivacyGrammar
+
+import SFT.Consciousness.PhenomenalPrivacyEvidence
+
+import SFT.Consciousness.PhenomenalPrivacyExperiment
+
+import SFT.Consciousness.PhenomenalPrivacyValidation
+
+import SFT.Consciousness.SelfObservation
+
+import SFT.Consciousness.SelfObservationGrammar
+
+import SFT.Consciousness.SelfObservationEvidence
+
+import SFT.Consciousness.SelfObservationExperiment
+
+import SFT.Consciousness.SelfObservationValidation
+
+import SFT.Consciousness.IntrospectionBlindSpot
+
+import SFT.Consciousness.IntrospectionBlindSpotGrammar
+
+import SFT.Consciousness.IntrospectionBlindSpotEvidence
+
+import SFT.Consciousness.IntrospectionBlindSpotExperiment
+
+import SFT.Consciousness.IntrospectionBlindSpotValidation
+
+import SFT.Consciousness.SelfHistoryReconstruction
+
+import SFT.Consciousness.SelfHistoryReconstructionGrammar
+
+import SFT.Consciousness.SelfHistoryReconstructionEvidence
+
+import SFT.Consciousness.SelfHistoryReconstructionExperiment
+
+import SFT.Consciousness.SelfHistoryReconstructionValidation
+
+import SFT.Consciousness.IntrospectionLoss
+
+import SFT.Consciousness.IntrospectionLossGrammar
+
+import SFT.Consciousness.IntrospectionLossEvidence
+
+import SFT.Consciousness.IntrospectionLossExperiment
+
+import SFT.Consciousness.IntrospectionLossValidation
+
+import SFT.Consciousness.ConfabulationBoundary
+
+import SFT.Consciousness.ConfabulationBoundaryGrammar
+
+import SFT.Consciousness.ConfabulationBoundaryEvidence
+
+import SFT.Consciousness.ConfabulationBoundaryExperiment
+
+import SFT.Consciousness.ConfabulationBoundaryValidation

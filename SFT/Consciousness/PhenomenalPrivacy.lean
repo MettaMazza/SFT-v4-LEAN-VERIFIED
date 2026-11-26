@@ -1,0 +1,22 @@
+import SFT.Consciousness.StructuralModel
+namespace SFT.Consciousness.PhenomenalPrivacy
+structure Obligation where
+ claim_id : String
+ title : String
+ family : String
+ carrier : String
+ distinction : String
+ operation : String
+ retained_record : String
+ evidence_boundary : String
+ statement : String
+def original : Obligation := ⟨"SFT-CONSC-PHENOMENAL-PRIVACY-001","Phenomenal privacy","subject_perspective_interiority","interior-state-and-external-image","private/inaccessible-by-image","preimage-loss-boundary","retained-private-label","formal-and-first-person","Phenomenal privacy follows where an external image closes a predecessor distinction that remains present to the participating interior trace."⟩
+def carrierWitness : Bool := SFT.Physics.CapabilityValues.nonblank original.carrier
+def distinctionWitness : Bool := !(SFT.Host.Text.equal original.distinction original.operation)
+def boundaryWitness : Bool := !(SFT.Host.Text.equal original.evidence_boundary original.carrier) && !(SFT.Host.Text.equal original.evidence_boundary original.distinction)
+def exactFoldWitness : Bool := StructuralModel.observerObservedLock.distinct
+theorem carrierWitnessPassed : carrierWitness = true := rfl
+theorem distinctionWitnessPassed : distinctionWitness = true := rfl
+theorem boundaryWitnessPassed : boundaryWitness = true := rfl
+theorem exactFoldWitnessPassed : exactFoldWitness = true := by decide
+end SFT.Consciousness.PhenomenalPrivacy

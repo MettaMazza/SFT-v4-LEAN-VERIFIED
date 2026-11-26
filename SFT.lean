@@ -14507,3 +14507,19 @@ import SFT.Chemistry.OneComponentBoundaryAnalysis
 import SFT.Chemistry.OneComponentPhaseBoundaryPrediction
 
 import SFT.Chemistry.OneComponentPhaseBoundaryValidation
+
+import SFT.Chemistry.MulticomponentPhaseDiagram
+
+import SFT.Chemistry.MulticomponentPhaseDiagramGrammar
+
+import SFT.Chemistry.MulticomponentPhaseDiagramEvidence
+
+import SFT.Chemistry.MulticomponentPhaseDiagramExperiment
+
+import SFT.Chemistry.MulticomponentPhaseDiagramSource
+
+import SFT.Chemistry.MulticomponentDiagramAnalysis
+
+import SFT.Chemistry.MulticomponentPhaseDiagramPrediction
+
+import SFT.Chemistry.MulticomponentPhaseDiagramValidation

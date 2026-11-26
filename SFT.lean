@@ -13741,3 +13741,33 @@ import SFT.Consciousness.MemoryPersistenceEvidence
 import SFT.Consciousness.MemoryPersistenceExperiment
 
 import SFT.Consciousness.MemoryPersistenceValidation
+
+import SFT.Consciousness.RecallReconstruction
+
+import SFT.Consciousness.RecallReconstructionGrammar
+
+import SFT.Consciousness.RecallReconstructionEvidence
+
+import SFT.Consciousness.RecallReconstructionExperiment
+
+import SFT.Consciousness.RecallReconstructionValidation
+
+import SFT.Consciousness.TemporalContinuity
+
+import SFT.Consciousness.TemporalContinuityGrammar
+
+import SFT.Consciousness.TemporalContinuityEvidence
+
+import SFT.Consciousness.TemporalContinuityExperiment
+
+import SFT.Consciousness.TemporalContinuityValidation
+
+import SFT.Consciousness.IdentityContinuity
+
+import SFT.Consciousness.IdentityContinuityGrammar
+
+import SFT.Consciousness.IdentityContinuityEvidence
+
+import SFT.Consciousness.IdentityContinuityExperiment
+
+import SFT.Consciousness.IdentityContinuityValidation

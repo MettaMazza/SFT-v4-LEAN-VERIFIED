@@ -14131,3 +14131,13 @@ import SFT.Consciousness.RedEmpiricalBoundaryEvidence
 import SFT.Consciousness.RedEmpiricalBoundaryExperiment
 
 import SFT.Consciousness.RedEmpiricalBoundaryValidation
+
+import SFT.Consciousness.NonordinaryLaws
+
+import SFT.Consciousness.DirectionalSynaesthesiaGrammar
+
+import SFT.Consciousness.DirectionalSynaesthesiaEvidence
+
+import SFT.Consciousness.NonordinaryThreeQualityGrammar
+
+import SFT.Consciousness.NonordinaryThreeQualityEvidence

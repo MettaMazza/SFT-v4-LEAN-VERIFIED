@@ -1,0 +1,20 @@
+import SFT.Consciousness.NonordinaryExternalSource
+import SFT.Physics.CapabilityDocuments
+namespace SFT.Consciousness.NonordinaryExternalExperiment
+open SFT.Host SFT.Host.Canonical
+def experimentId : String := "SFT-EXP-CONSC-VALIDATION-NONORDINARY-COMPLETE-FAMILY-002"
+def claimId : String := "SFT-CONSC-VALIDATION-NONORDINARY-COMPLETE-FAMILY-002"
+def targetId : String := "CONSCIOUSNESS-NONORDINARY-COMPLETE-FAMILY-2026-07-28"
+def expectedLabel : String := "stable-directed-inducer-concurrent-observed-with-heterogeneity__multidimensional-nonordinary-report-and-neural-correspondence-observed-with-ontology-separate__nrem-rem-alternation-observed-with-local-global-and-duration-heterogeneity__lost-integrated-function-distinct-from-retained-living-components__favorable-adverse-absent-nonpurpose-and-unresolved-rows-retained"
+def registration : Value := .object [("experiment_id",.text "SFT-EXP-CONSC-VALIDATION-NONORDINARY-COMPLETE-FAMILY-002"),("claim_id",.text "SFT-CONSC-VALIDATION-NONORDINARY-COMPLETE-FAMILY-002"),("target_id",.text "CONSCIOUSNESS-NONORDINARY-COMPLETE-FAMILY-2026-07-28"),("identity_registries",.array [.text "evidence/external/consciousness/nonordinary_2026-07-28/target_identities.json",.text "evidence/external/consciousness/nonordinary_2026-07-28_retry_1/target_identities.json"]),("expected_label",.text "stable-directed-inducer-concurrent-observed-with-heterogeneity__multidimensional-nonordinary-report-and-neural-correspondence-observed-with-ontology-separate__nrem-rem-alternation-observed-with-local-global-and-duration-heterogeneity__lost-integrated-function-distinct-from-retained-living-components__favorable-adverse-absent-nonpurpose-and-unresolved-rows-retained"),("all_result_classes_required",.boolean true),("falsification_condition",.text "Reject if registered sources do not contain stable directed inducer-concurrent experience, empirically measured multidimensional altered experience with separate report and neural records, recurring NREM/REM organization, or a distinction between lost integrated organismal function and retained viable components; also reject if heterogeneity, null/non-purpose rows, unresolved mechanisms, diagnostic confounders or report/ontology boundaries are suppressed, or if source content opened before identity registration.")]
+def predictionDocument : Value := .object [("schema",.text "sft-v3-fold-program/1"),("program_id",.text "SFT-EXP-CONSC-VALIDATION-NONORDINARY-COMPLETE-FAMILY-002-prediction"),("instructions",.array [.object [("opcode",.text "input"),("destination",.text "premise"),("arguments",.array [.text "registered-premise"])],.object [("opcode",.text "label"),("destination",.text "prediction"),("arguments",.array [.text "consciousness-observation",.text "stable-directed-inducer-concurrent-observed-with-heterogeneity__multidimensional-nonordinary-report-and-neural-correspondence-observed-with-ontology-separate__nrem-rem-alternation-observed-with-local-global-and-duration-heterogeneity__lost-integrated-function-distinct-from-retained-living-components__favorable-adverse-absent-nonpurpose-and-unresolved-rows-retained"])],.object [("opcode",.text "pair"),("destination",.text "bound"),("arguments",.array [.text "premise",.text "prediction"])],.object [("opcode",.text "emit"),("destination",.text ""),("arguments",.array [.text "prediction"])]])]
+def programFields : List (String × Value) := match predictionDocument with
+ | .object fs => fs
+ | .null | .text _ | .boolean _ | .integer _ | .array _ => []
+def labelValue (family label : String) : Value := .object [("family",.text family),("label",.text label)]
+def envelope (registrationHash derivationSeal : String) : Value := .object [
+ ("experiment_id",.text experimentId),
+ ("registered_inputs",.object [("registered-premise",.text (identity (labelValue "sealed-derivation" derivationSeal)))]),
+ ("withheld_target_ids",.array [.text targetId]),("frozen_relation_hash",.text derivationSeal),
+ ("experiment_registration_hash",.text registrationHash)]
+end SFT.Consciousness.NonordinaryExternalExperiment

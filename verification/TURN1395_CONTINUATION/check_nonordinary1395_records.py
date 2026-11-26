@@ -1,0 +1,8 @@
+from pathlib import Path
+import subprocess,sys,os,json,hashlib
+w=Path('work');r=(w/'turn1064_recovery').resolve();sys.path.insert(0,str((w/'v3-runtime500').resolve()))
+from sft.consciousness.nonordinary_laws_v1 import directional_synaesthesia_record,three_quality_orbit,sleep_dream_orbit,cessation_lock_anchor
+from sft.engine.canonical import canonical_value
+original=[directional_synaesthesia_record(),three_quality_orbit(),sleep_dream_orbit(),cessation_lock_anchor()];original[1]['generated_support']=sorted(original[1]['generated_support']);expected=canonical_value(original)
+e=dict(os.environ,LEAN_PATH=str(r)+':/Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/lib/lean');cmd=['python3','work/run_lean_guarded.py',str(Path.home()/'.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean'),'-j1','-M8192','--run','work/NonordinaryRecords1395.lean'];p=subprocess.run(cmd,env=e,capture_output=True,text=True);(w/'nonordinary1395_records_execution.log').write_text(p.stdout+p.stderr);assert p.returncode==0,p.stdout+p.stderr;actual=json.loads(p.stdout);assert actual==expected,(actual,expected)
+(w/'nonordinary1395_records_report.json').write_text(json.dumps({'status':'PASS','records':4,'fields':[len(x)for x in actual],'set_encoding':'original frozen support compared as sorted rational elements; trace and route sequences retain their original order','source_sha256':{'SFT/Consciousness/NonordinaryLaws.lean':hashlib.sha256((r/'SFT/Consciousness/NonordinaryLaws.lean').read_bytes()).hexdigest()},'original_source_sha256':hashlib.sha256((w/'pinned1394/sft/consciousness/nonordinary_laws_v1.py').read_bytes()).hexdigest(),'command':cmd},indent=2)+'\n');print('PASS all four original records and all31 fields',flush=True)

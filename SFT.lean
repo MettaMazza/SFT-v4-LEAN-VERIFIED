@@ -14411,3 +14411,35 @@ import SFT.Chemistry.EnthalpyStateAnalysis
 import SFT.Chemistry.EnthalpyEquivalentStatePrediction
 
 import SFT.Chemistry.EnthalpyEquivalentStateValidation
+
+import SFT.Chemistry.FreeEnergyEquivalentDirection
+
+import SFT.Chemistry.FreeEnergyEquivalentDirectionGrammar
+
+import SFT.Chemistry.FreeEnergyEquivalentDirectionEvidence
+
+import SFT.Chemistry.FreeEnergyEquivalentDirectionExperiment
+
+import SFT.Chemistry.FreeEnergyEquivalentDirectionSource
+
+import SFT.Chemistry.FreeEnergyReactionAnalysis
+
+import SFT.Chemistry.FreeEnergyEquivalentDirectionPrediction
+
+import SFT.Chemistry.FreeEnergyEquivalentDirectionValidation
+
+import SFT.Chemistry.ComponentExchange
+
+import SFT.Chemistry.ComponentExchangeGrammar
+
+import SFT.Chemistry.ComponentExchangeEvidence
+
+import SFT.Chemistry.ComponentExchangeExperiment
+
+import SFT.Chemistry.ComponentExchangeSource
+
+import SFT.Chemistry.ComponentExchangeAnalysis
+
+import SFT.Chemistry.ComponentExchangePrediction
+
+import SFT.Chemistry.ComponentExchangeValidation

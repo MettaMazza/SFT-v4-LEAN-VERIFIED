@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "fields": 12,
+  "messages": 264,
+  "all_fields_and_hashes_match": true,
+  "original_target_checks": 251,
+  "original_adverse_controls": 8,
+  "fresh_native": true,
+  "fresh_original": true,
+  "host_primitives": [
+    "Lean JSON input decoding; actual source bytes read and hashed natively"
+  ],
+  "source_sha256": {
+    "DiffusionLimitedReactionAnalysis": "8e3a34cfe371ada3c8892bac079c26874903b356402d78a927f0a2977f8a3982",
+    "DiffusionLimitedReaction": "5fee4d390e169825af67c07b34824333c107d311999bced196fa9795aedf4c6b",
+    "DiffusionLimitedReactionGrammar": "47602d8fe5567bda50c707990e086d983daea65d498c9986847e7315678f7aa3",
+    "DiffusionLimitedReactionEvidence": "7dfea77d0dc6d22e3f8fe4c1d60fdd9be64b81c5d90accd9ec1b48ad3375766b",
+    "DiffusionLimitedReactionExperiment": "a187fdb0b0df72e026c3e7b07355f100549f2e400e329f6455257a1578c5ea25",
+    "DiffusionLimitedReactionSource": "bb75b64cd5ebf5a288efaeb74f3c3ca2d05182421084b0efa42b0d54c90328ec",
+    "DiffusionLimitedReactionPrediction": "55c71eb55c632a890078ef3beeab292d9ad52dc5a74228ce64e51a099e03074d",
+    "DiffusionLimitedReactionValidation": "4dda8877065d9a6b8046907a36ffbf2effa509a9a564aec5cf87e9ddd1ef380f"
+  },
+  "streaming_equivalence": {
+    "status": "PASS",
+    "scope": "Streaming digest equals original SHA256.digest for every ByteArray; unchanged round, schedule and padding algorithms.",
+    "source_sha256": {
+      "work/turn1064_recovery/SFT/Host/SHA256Streaming.lean": "8a71e537929117291be4b8a5f846e182abb7e7f5a26bde74e1218c92f2dbc539",
+      "work/streaming1468/SFT/Host/SHA256Chunks.lean": "2ad7cc332ec07e72b8248c22274b82ef4be08d88a9bace3118ff1c468c0cb596"
+    },
+    "audit_sha256": "6d0f860bdb3589fabe7817a92aebf23a560cf376b0a377ac168df9c3a54a6628",
+    "axioms": []
+  },
+  "execution_backend": "compiled-native-proved-streaming-hash-compiler-specialization",
+  "compiled_build_receipt": "work/diffusionlimit1357_optimized_build1471.json",
+  "compiled_executable_sha256": "ae74518eacd0360282e2cd75e95d7f90078dacca303ea0d748425695bedf1c1b",
+  "runtime_equivalence": {
+    "status": "EQUIVALENCE_AUDIT_PASS",
+    "unchanged_original_canonical": "e18e15a44ebce39c9164e6b265dc07f080d0f2c9331650b79ab60d49b5073105",
+    "isolated_canonical": "6a5b3b19be2719c9561b29e74337ee5d5f87ab826b10b4d6cc8b9e346d6b53d7",
+    "equivalence_theorem": "SFT.Host.SHA256Chunks.digestPreserved",
+    "equivalence_source_sha256": "1f9e21357c66e5ec32218f26fb63317796913164cede85080d4d9c9f94b58417",
+    "changes": [
+      "Import existing SHA256Chunks",
+      "Replace identity hash call only"
+    ],
+    "scientific_sources_changed": false
+  },
+  "runtime_equivalence_audit_sha256": "61408fa532472d83ed2075590eadd68d56e6de15ff6698c52aa82913a8c29fb8"
+}

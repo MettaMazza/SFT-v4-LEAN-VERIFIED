@@ -14763,3 +14763,67 @@ import SFT.Chemistry.ReversibleKineticEquilibriumSource
 import SFT.Chemistry.ReversibleKineticEquilibriumPrediction
 
 import SFT.Chemistry.ReversibleKineticEquilibriumValidation
+
+import SFT.Chemistry.CatalyticTurnover
+
+import SFT.Chemistry.CatalyticTurnoverGrammar
+
+import SFT.Chemistry.CatalyticTurnoverEvidence
+
+import SFT.Chemistry.CatalyticTurnoverAnalysis
+
+import SFT.Chemistry.CatalyticTurnoverExperiment
+
+import SFT.Chemistry.CatalyticTurnoverSource
+
+import SFT.Chemistry.CatalyticTurnoverPrediction
+
+import SFT.Chemistry.CatalyticTurnoverValidation
+
+import SFT.Chemistry.DiffusionLimitedReaction
+
+import SFT.Chemistry.DiffusionLimitedReactionGrammar
+
+import SFT.Chemistry.DiffusionLimitedReactionEvidence
+
+import SFT.Chemistry.DiffusionLimitedReactionAnalysis
+
+import SFT.Chemistry.DiffusionLimitedReactionExperiment
+
+import SFT.Chemistry.DiffusionLimitedReactionSource
+
+import SFT.Chemistry.DiffusionLimitedReactionPrediction
+
+import SFT.Chemistry.DiffusionLimitedReactionValidation
+
+import SFT.Chemistry.KineticIsotopeEffect
+
+import SFT.Chemistry.KineticIsotopeEffectGrammar
+
+import SFT.Chemistry.KineticIsotopeEffectEvidence
+
+import SFT.Chemistry.KineticIsotopeEffectAnalysis
+
+import SFT.Chemistry.KineticIsotopeEffectExperiment
+
+import SFT.Chemistry.KineticIsotopeEffectSource
+
+import SFT.Chemistry.KineticIsotopeEffectPrediction
+
+import SFT.Chemistry.KineticIsotopeEffectValidation
+
+import SFT.Chemistry.ReactionDynamicsScattering
+
+import SFT.Chemistry.ReactionDynamicsScatteringGrammar
+
+import SFT.Chemistry.ReactionDynamicsScatteringEvidence
+
+import SFT.Chemistry.ReactionDynamicsScatteringAnalysis
+
+import SFT.Chemistry.ReactionDynamicsScatteringExperiment
+
+import SFT.Chemistry.ReactionDynamicsScatteringSource
+
+import SFT.Chemistry.ReactionDynamicsScatteringPrediction
+
+import SFT.Chemistry.ReactionDynamicsScatteringValidation

@@ -12,3 +12,7 @@ When updating a displayed completion count, edit only its explicit numerator fie
 
 Publication handoff — 2026-11-26T13:15:03.486968+00:00
 The current 1,000-entry edition0.5 is published. Read CONTINUATION_READY1250.txt and the current authorized_action/scientific_cursor in CONTINUATION_STATE.json; historical continuation fields are records, not current instructions. Scientific resumption starts at the retained Chemical Temperature Correspondence cursor toward1,250, only when authorized. Preserve existing proof evidence and inspect actual job state before launching checks. Canonical sync44931 was waiting on filesystem I/O; confirm its receipt before using that copy.
+
+
+Measured capacity adjustment — 2026-11-26T18:06:17.017605+00:00
+The32-core512GiB machine currently has56percent free memory and approximately23.2GiB Lean/native RSS. The16-job policy left the earliest dependency runner waiting over27minutes. New launches now use a bounded24-job cap, retaining one thread,8192MiB per job,40GiB aggregate and25percent free-memory floor. Existing executing jobs are preserved. Waiting records carry their launch-cap version; FIFO selects capacity-eligible waiting records so older16-cap gates cannot prevent new-cap jobs using otherwise idle capacity. Replace only the Thermal and Mobility launchers confirmed capacity-waiting with no executing child; reuse their retained compiled work. No scientific check, criterion or source-model change.

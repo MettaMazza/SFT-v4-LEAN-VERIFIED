@@ -1,0 +1,10 @@
+import SFT.Chemistry.HeatWorkTransferPartitionExperiment
+import SFT.Chemistry.HeatWorkTransferAnalysis
+namespace SFT.Chemistry.HeatWorkTransferPartitionSource
+-- V3 explicitly imports _source_rows from internal_energy_composition_validation_v1.
+abbrev Target := InternalEnergyCompositionSource.Target
+def sourceRows := InternalEnergyCompositionSource.sourceRows
+abbrev fractionText := InternalEnergyCompositionSource.fractionText
+abbrev Analysis := HeatWorkTransferAnalysis.Analysis
+def exactHeatWorkAnalysis := HeatWorkTransferAnalysis.exactHeatWorkAnalysis
+end SFT.Chemistry.HeatWorkTransferPartitionSource

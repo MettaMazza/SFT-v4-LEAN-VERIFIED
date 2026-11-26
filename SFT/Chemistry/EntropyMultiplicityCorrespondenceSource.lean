@@ -1,0 +1,10 @@
+import SFT.Chemistry.EntropyMultiplicityCorrespondenceExperiment
+import SFT.Chemistry.EntropyPhaseAnalysis
+namespace SFT.Chemistry.EntropyMultiplicityCorrespondenceSource
+-- V3 explicitly imports _source_rows from internal_energy_composition_validation_v1.
+abbrev Target := InternalEnergyCompositionSource.Target
+def sourceRows := InternalEnergyCompositionSource.sourceRows
+abbrev fractionText := InternalEnergyCompositionSource.fractionText
+abbrev Analysis := EntropyPhaseAnalysis.Analysis
+def exactEntropyPhaseAnalysis := EntropyPhaseAnalysis.exactEntropyPhaseAnalysis
+end SFT.Chemistry.EntropyMultiplicityCorrespondenceSource

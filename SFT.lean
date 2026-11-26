@@ -14363,3 +14363,51 @@ import SFT.Chemistry.InternalEnergyCompositionSource
 import SFT.Chemistry.InternalEnergyCompositionPrediction
 
 import SFT.Chemistry.InternalEnergyCompositionValidation
+
+import SFT.Chemistry.HeatWorkTransferPartition
+
+import SFT.Chemistry.HeatWorkTransferPartitionGrammar
+
+import SFT.Chemistry.HeatWorkTransferPartitionEvidence
+
+import SFT.Chemistry.HeatWorkTransferPartitionExperiment
+
+import SFT.Chemistry.HeatWorkTransferPartitionSource
+
+import SFT.Chemistry.HeatWorkTransferAnalysis
+
+import SFT.Chemistry.HeatWorkTransferPartitionPrediction
+
+import SFT.Chemistry.HeatWorkTransferPartitionValidation
+
+import SFT.Chemistry.EntropyMultiplicityCorrespondence
+
+import SFT.Chemistry.EntropyMultiplicityCorrespondenceGrammar
+
+import SFT.Chemistry.EntropyMultiplicityCorrespondenceEvidence
+
+import SFT.Chemistry.EntropyMultiplicityCorrespondenceExperiment
+
+import SFT.Chemistry.EntropyMultiplicityCorrespondenceSource
+
+import SFT.Chemistry.EntropyPhaseAnalysis
+
+import SFT.Chemistry.EntropyMultiplicityCorrespondencePrediction
+
+import SFT.Chemistry.EntropyMultiplicityCorrespondenceValidation
+
+import SFT.Chemistry.EnthalpyEquivalentState
+
+import SFT.Chemistry.EnthalpyEquivalentStateGrammar
+
+import SFT.Chemistry.EnthalpyEquivalentStateEvidence
+
+import SFT.Chemistry.EnthalpyEquivalentStateExperiment
+
+import SFT.Chemistry.EnthalpyEquivalentStateSource
+
+import SFT.Chemistry.EnthalpyStateAnalysis
+
+import SFT.Chemistry.EnthalpyEquivalentStatePrediction
+
+import SFT.Chemistry.EnthalpyEquivalentStateValidation

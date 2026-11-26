@@ -14587,3 +14587,19 @@ import SFT.Chemistry.ViscousTransportAnalysis
 import SFT.Chemistry.ViscousTransportPrediction
 
 import SFT.Chemistry.ViscousTransportValidation
+
+import SFT.Chemistry.ThermalConductivity
+
+import SFT.Chemistry.ThermalConductivityGrammar
+
+import SFT.Chemistry.ThermalConductivityEvidence
+
+import SFT.Chemistry.ThermalConductivityExperiment
+
+import SFT.Chemistry.ThermalConductivitySource
+
+import SFT.Chemistry.ThermalConductivityAnalysis
+
+import SFT.Chemistry.ThermalConductivityPrediction
+
+import SFT.Chemistry.ThermalConductivityValidation

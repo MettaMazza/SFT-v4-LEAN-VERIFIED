@@ -1,0 +1,249 @@
+Analysis of sampling ThermalConductivityValidationProgram1453 (pid 12158) every 10 milliseconds
+Process:         ThermalConductivityValidationProgram1453 [12158]
+Path:            /Users/USER/Documents/*/ThermalConductivityValidationProgram1453
+Load Address:    0x104090000
+Identifier:      ThermalConductivityValidationProgram1453
+Version:         0
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  Python [12144]
+Target Type:     live task
+
+Date/Time:       2026-11-26 18:16:51.403 +0000
+Launch Time:     2026-11-26 18:06:39.945 +0000
+OS Version:      macOS 15.6 (24G84)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         137.9M
+Physical footprint (peak):  451.1M
+Idle exit:                  untracked
+----
+
+Call graph:
+    12 Thread_5718518   DispatchQueue_1: com.apple.main-thread  (serial)
+    + 12 start  (in dyld) + 6076  [0x1875dab98]
+    +   12 main  (in ThermalConductivityValidationProgram1453) + 104  [0x104094e0c]
+    +     12 lean_run_main  (in ThermalConductivityValidationProgram1453) + 160  [0x108031f58]
+    +       12 lean::run_with_thread_stack(std::function<void ()> const&)  (in ThermalConductivityValidationProgram1453) + 100  [0x108031dd8]
+    +         12 _pthread_join  (in libsystem_pthread.dylib) + 608  [0x18797e0b0]
+    +           12 __ulock_wait  (in libsystem_kernel.dylib) + 8  [0x18793b9b8]
+    12 Thread_5718768
+    + 12 thread_start  (in libsystem_pthread.dylib) + 8  [0x187976b80]
+    +   12 _pthread_start  (in libsystem_pthread.dylib) + 136  [0x18797bc0c]
+    +     12 lean::lthread::imp::_main(void*)  (in ThermalConductivityValidationProgram1453) + 56  [0x1080325c0]
+    +       12 lean::event_loop_run_loop(lean::event_loop_t*)  (in ThermalConductivityValidationProgram1453) + 36  [0x10805f5f8]
+    +         12 uv_run  (in ThermalConductivityValidationProgram1453) + 276  [0x10809b898]
+    +           12 uv__io_poll  (in ThermalConductivityValidationProgram1453) + 712  [0x1080a2098]
+    +             12 kevent  (in libsystem_kernel.dylib) + 8  [0x18793fd04]
+    12 Thread_5748649
+      12 thread_start  (in libsystem_pthread.dylib) + 8  [0x187976b80]
+        12 _pthread_start  (in libsystem_pthread.dylib) + 136  [0x18797bc0c]
+          12 lean::lthread::imp::_main(void*)  (in ThermalConductivityValidationProgram1453) + 56  [0x1080325c0]
+            12 std::__function::__func<lean_run_main::$_0, void ()>::operator()()  (in ThermalConductivityValidationProgram1453) + 40  [0x108032a48]
+              12 run_main  (in ThermalConductivityValidationProgram1453) + 24  [0x104094d98]
+                12 _lean_main  (in ThermalConductivityValidationProgram1453) + 1416  [0x104093c48]
+                  12 l_SFT_Chemistry_ThermalConductivityValidation_validate  (in ThermalConductivityValidationProgram1453) + 15892  [0x10429d094]
+                    12 lp_sft__v4_SFT_Host_Canonical_identity  (in ThermalConductivityValidationProgram1453) + 48  [0x1040a9bb8]
+                      12 lp_sft__v4_SFT_Host_SHA256Chunks_digest  (in ThermalConductivityValidationProgram1453) + 76  [0x1040a61ac]
+                        12 lp_sft__v4_SFT_Host_SHA256Chunks_blocks  (in ThermalConductivityValidationProgram1453) + 84  [0x1040a607c]
+                          10 lp_sft__v4_SFT_Host_SHA256Window_block  (in ThermalConductivityValidationProgram1453) + 88  [0x1040a5f04]
+                          ! 10 lp_sft__v4_List_foldl___at___00SFT_Host_SHA256_block_spec__0  (in ThermalConductivityValidationProgram1453) + 228  [0x1040a1e10]
+                          !   4 lp_sft__v4_SFT_Host_SHA256_round  (in ThermalConductivityValidationProgram1453) + 324  [0x1040a15b0]
+                          !   : 1 lp_sft__v4_SFT_Host_SHA256_big1  (in ThermalConductivityValidationProgram1453) + 44  [0x10409ff6c]
+                          !   : | 1 lp_sft__v4_SFT_Host_SHA256_rotate  (in ThermalConductivityValidationProgram1453) + 32  [0x10409f884]
+                          !   : |   1 lean_nat_pow  (in ThermalConductivityValidationProgram1453) + 352  [0x108038acc]
+                          !   : |     1 lean::mpz::~mpz()  (in ThermalConductivityValidationProgram1453) + 20  [0x108032b54]
+                          !   : |       1 free_tiny  (in libsystem_malloc.dylib) + 680  [0x18777fa78]
+                          !   : 1 lp_sft__v4_SFT_Host_SHA256_big1  (in ThermalConductivityValidationProgram1453) + 72  [0x10409ff88]
+                          !   : | 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   : |   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   : |     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   : |       1 lean_apply_2  (in ThermalConductivityValidationProgram1453) + 6088  [0x108043488]
+                          !   : 1 lp_sft__v4_SFT_Host_SHA256_big1  (in ThermalConductivityValidationProgram1453) + 136  [0x10409ffc8]
+                          !   : | 1 lp_sft__v4_SFT_Host_SHA256_rotate  (in ThermalConductivityValidationProgram1453) + 140  [0x10409f8f0]
+                          !   : |   1 lean_nat_pow  (in ThermalConductivityValidationProgram1453) + 168  [0x108038a14]
+                          !   : |     1 __gmpz_init_set_ui  (in ThermalConductivityValidationProgram1453) + 72  [0x10807703c]
+                          !   : 1 lp_sft__v4_SFT_Host_SHA256_big1  (in ThermalConductivityValidationProgram1453) + 164  [0x10409ffe4]
+                          !   :   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :         1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :           1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :             1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :               1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                         1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                           1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                             1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                               1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                         1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 16  [0x10409f110]
+                          !   1 lp_sft__v4_SFT_Host_SHA256_round  (in ThermalConductivityValidationProgram1453) + 468  [0x1040a1640]
+                          !   : 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :         1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :           1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 148  [0x10409f194]
+                          !   :             1 lean_apply_2  (in ThermalConductivityValidationProgram1453) + 6052  [0x108043464]
+                          !   1 lp_sft__v4_SFT_Host_SHA256_round  (in ThermalConductivityValidationProgram1453) + 752  [0x1040a175c]
+                          !   : 1 lp_sft__v4_SFT_Host_SHA256_big0  (in ThermalConductivityValidationProgram1453) + 44  [0x10409fe28]
+                          !   :   1 lp_sft__v4_SFT_Host_SHA256_rotate  (in ThermalConductivityValidationProgram1453) + 140  [0x10409f8f0]
+                          !   :     1 lean_nat_pow  (in ThermalConductivityValidationProgram1453) + 360  [0x108038ad4]
+                          !   :       1 lean::mpz::~mpz()  (in ThermalConductivityValidationProgram1453) + 20  [0x108032b54]
+                          !   :         1 free_tiny  (in libsystem_malloc.dylib) + 460  [0x18777f99c]
+                          !   :           1 tiny_free_no_lock  (in libsystem_malloc.dylib) + 472  [0x18777fcf4]
+                          !   1 lp_sft__v4_SFT_Host_SHA256_round  (in ThermalConductivityValidationProgram1453) + 788  [0x1040a1780]
+                          !   : 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :         1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :           1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :             1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :               1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                         1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                           1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                             1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                               1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                         1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                           1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                             1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                               1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 84  [0x10409f154]
+                          !   1 lp_sft__v4_SFT_Host_SHA256_round  (in ThermalConductivityValidationProgram1453) + 816  [0x1040a179c]
+                          !   : 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :         1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :           1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :             1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :               1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                         1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                           1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                             1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                               1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 148  [0x10409f194]
+                          !   :                                         1 lean_apply_2  (in ThermalConductivityValidationProgram1453) + 64  [0x108041d00]
+                          !   1 lp_sft__v4_SFT_Host_SHA256_round  (in ThermalConductivityValidationProgram1453) + 920  [0x1040a1804]
+                          !   : 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :         1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :           1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :             1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :               1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                         1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                           1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                             1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                               1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                 1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !   :                                   1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 16  [0x10409f110]
+                          !   1 lp_sft__v4_SFT_Host_SHA256_round  (in ThermalConductivityValidationProgram1453) + 948  [0x1040a1820]
+                          !     1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !       1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !         1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !           1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !             1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                          !               1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 148  [0x10409f194]
+                          !                 1 lean_apply_2  (in ThermalConductivityValidationProgram1453) + 312  [0x108041df8]
+                          !                   1 lp_sft__v4_SFT_Host_SHA256_xor___lam__0___boxed  (in ThermalConductivityValidationProgram1453) + 0  [0x10409f494]
+                          2 lp_sft__v4_SFT_Host_SHA256Window_block  (in ThermalConductivityValidationProgram1453) + 40  [0x1040a5ed4]
+                            1 lp_sft__v4_List_foldl___at___00SFT_Host_SHA256_schedule_spec__1  (in ThermalConductivityValidationProgram1453) + 228  [0x1040a0cbc]
+                            : 1 l_List_reverseAux___redArg  (in ThermalConductivityValidationProgram1453) + 112  [0x104322430]
+                            1 lp_sft__v4_List_foldl___at___00SFT_Host_SHA256_schedule_spec__1  (in ThermalConductivityValidationProgram1453) + 560  [0x1040a0e08]
+                              1 lp_sft__v4_SFT_Host_SHA256_small0  (in ThermalConductivityValidationProgram1453) + 160  [0x10409fbf4]
+                                1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                                  1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                                    1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                                      1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                                        1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                                          1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                                            1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                                              1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                                                1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                                                  1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                                                    1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                                                      1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+                                                        1 lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 228  [0x10409f1e4]
+
+Total number in stack (recursive counted multiple, when >=5):
+        103       lp_sft__v4_SFT_Host_SHA256_bits  (in ThermalConductivityValidationProgram1453) + 204  [0x10409f1cc]
+
+Sort by top of stack, same collapsed (when >= 5):
+        __ulock_wait  (in libsystem_kernel.dylib)        12
+        kevent  (in libsystem_kernel.dylib)        12
+
+Binary Images:
+       0x104090000 -        0x108415b6b +ThermalConductivityValidationProgram1453 (0) <807E3E51-F782-3272-9C03-7FFEDDF84A9D> /Users/*/Documents/*/ThermalConductivityValidationProgram1453
+       0x187580000 -        0x1875d3893  libobjc.A.dylib (940.4) <8CA52E4D-F699-3D14-8061-EEA9D4366538> /usr/lib/libobjc.A.dylib
+       0x1875d4000 -        0x18766f577  dyld (1.0.0 - 1286.10) <3247E185-CED2-36FF-9E29-47A77C23E004> /usr/lib/dyld
+       0x187670000 -        0x187673168  libsystem_blocks.dylib (96) <BA8F0C40-B12D-3D8B-8396-FC3F8A733C27> /usr/lib/system/libsystem_blocks.dylib
+       0x187674000 -        0x1876be8ff  libxpc.dylib (2894.140.12) <1B8951EB-68DB-37BA-9581-240B796AA872> /usr/lib/system/libxpc.dylib
+       0x1876bf000 -        0x1876da7ff  libsystem_trace.dylib (1643.120.5) <AC8466B8-AF1D-3895-876B-228151F0DF1D> /usr/lib/system/libsystem_trace.dylib
+       0x1876db000 -        0x1877793b7  libcorecrypto.dylib (1736.140.2) <7254F3F1-A46F-30B6-934A-511B730A8FC7> /usr/lib/system/libcorecrypto.dylib
+       0x18777a000 -        0x1877c106f  libsystem_malloc.dylib (715.140.5) <85947F4E-385D-3B6D-9BF5-844EFE876D53> /usr/lib/system/libsystem_malloc.dylib
+       0x1877c2000 -        0x18780875f  libdispatch.dylib (1521.140.2) <24CE0D89-4114-30C2-A81A-3DB1F5931CFF> /usr/lib/system/libdispatch.dylib
+       0x187809000 -        0x18780bd1b  libsystem_featureflags.dylib (97) <856DB4EF-8C67-3842-970C-6FA814B07749> /usr/lib/system/libsystem_featureflags.dylib
+       0x18780c000 -        0x18788d243  libsystem_c.dylib (1698.140.3) <DFEA8794-80CE-37C3-8F6A-108AA1D0B1B0> /usr/lib/system/libsystem_c.dylib
+       0x18788e000 -        0x18791aff7  libc++.1.dylib (1900.181) <643ED232-CE19-3F63-8015-0AEE768C002F> /usr/lib/libc++.1.dylib
+       0x18791b000 -        0x187938fff  libc++abi.dylib (1900.181) <776A4AFB-71EE-32AB-B2EE-E6FF80818654> /usr/lib/libc++abi.dylib
+       0x187939000 -        0x187974653  libsystem_kernel.dylib (11417.140.69) <6E4A96AD-04B8-3E8A-B91D-087E62306246> /usr/lib/system/libsystem_kernel.dylib
+       0x187975000 -        0x187981a47  libsystem_pthread.dylib (536) <D6494BA9-171E-39FC-B1AA-28ECF87975D1> /usr/lib/system/libsystem_pthread.dylib
+       0x187982000 -        0x1879b1ba3  libdyld.dylib (1286.10) <01BCB3F7-AB89-30BD-87EE-91B291EADAE8> /usr/lib/system/libdyld.dylib
+       0x1879b2000 -        0x1879b9e0b  libsystem_platform.dylib (349.140.6) <FD19A599-8750-31F9-924F-C2810C938371> /usr/lib/system/libsystem_platform.dylib
+       0x1879ba000 -        0x1879e96f7  libsystem_info.dylib (597) <9720B57E-A0DF-3BDD-8149-0801054B5D00> /usr/lib/system/libsystem_info.dylib
+       0x18b480000 -        0x18b48a387  libsystem_darwin.dylib (1698.140.3) <8E58BBDB-E560-3AB4-8A1D-849AB83CBFC5> /usr/lib/system/libsystem_darwin.dylib
+       0x18b8e2000 -        0x18b8f3feb  libsystem_notify.dylib (342) <6A411086-A1A2-349F-B9CA-348F9DCBB415> /usr/lib/system/libsystem_notify.dylib
+       0x18d8e5000 -        0x18d8ffe8f  libsystem_networkextension.dylib (2063.140.6) <8183B684-71EB-3FB1-8378-EB830CADAE7D> /usr/lib/system/libsystem_networkextension.dylib
+       0x18d97c000 -        0x18d993fdb  libsystem_asl.dylib (402) <FE29D1E8-D286-33F9-81CB-822E632D1571> /usr/lib/system/libsystem_asl.dylib
+       0x18f4d9000 -        0x18f4e13a7  libsystem_symptoms.dylib (2022.140.4) <AABA26A2-74BC-3219-BAA3-ACC8D81D8589> /usr/lib/system/libsystem_symptoms.dylib
+       0x192d26000 -        0x192d5638f  libsystem_containermanager.dylib (689.100.6) <24EE4AC1-5C9F-3EE0-8B4E-9D060EBCBD41> /usr/lib/system/libsystem_containermanager.dylib
+       0x193f8b000 -        0x193f8f5df  libsystem_configuration.dylib (1351.140.5) <B1ADB810-702B-3646-8B66-EB2C288FE51A> /usr/lib/system/libsystem_configuration.dylib
+       0x193f90000 -        0x193f9647f  libsystem_sandbox.dylib (2401.140.15) <B86C6D35-683E-3156-BAB2-A422F5AFF2BD> /usr/lib/system/libsystem_sandbox.dylib
+       0x194f9b000 -        0x194f9dfe3  libquarantine.dylib (181.120.2) <8CE8DAD0-52D6-3F46-98EF-161E1397FB48> /usr/lib/system/libquarantine.dylib
+       0x1956b1000 -        0x1956b8033  libsystem_coreservices.dylib (178.6.1) <A4E84D5A-8D0E-3692-B888-89B9EEF8753D> /usr/lib/system/libsystem_coreservices.dylib
+       0x195b30000 -        0x195b6d2b7  libsystem_m.dylib (3291.100.4) <0D060230-BD2F-3C8E-ACB9-8A79F5CD8EDE> /usr/lib/system/libsystem_m.dylib
+       0x195b6f000 -        0x195b724e7  libmacho.dylib (1024.3) <87AB4EEF-3A18-3399-A767-C6BF4ECEDCEB> /usr/lib/system/libmacho.dylib
+       0x195b8c000 -        0x195b995ef  libcommonCrypto.dylib (600035) <E6BC26C2-DED7-3C04-A670-AEDB150BDB1F> /usr/lib/system/libcommonCrypto.dylib
+       0x195b9a000 -        0x195ba3ad7  libunwind.dylib (1900.125) <F753CC2B-775B-3567-B0C6-D2989CA9EBF4> /usr/lib/system/libunwind.dylib
+       0x195bac000 -        0x195bb669f  libcopyfile.dylib (224) <213FA18D-6145-3615-8DB5-906B6863EAB9> /usr/lib/system/libcopyfile.dylib
+       0x195bb7000 -        0x195bba98f  libcompiler_rt.dylib (103.3) <F0F65700-8E9D-35F3-AC32-952D363190BC> /usr/lib/system/libcompiler_rt.dylib
+       0x195bbb000 -        0x195bbfa1b  libsystem_collections.dylib (1698.140.3) <B77BE835-646C-3F05-BDBD-7703DE140F6A> /usr/lib/system/libsystem_collections.dylib
+       0x195bc0000 -        0x195bc32c7  libsystem_secinit.dylib (153.140.2) <D15B45AD-1345-34BF-B8E3-05336C4046A0> /usr/lib/system/libsystem_secinit.dylib
+       0x195bc4000 -        0x195bc6b6f  libremovefile.dylib (81) <9BCF9A24-BECB-3DED-A78E-3A3ECD1B1757> /usr/lib/system/libremovefile.dylib
+       0x195bc7000 -        0x195bc7f27  libkeymgr.dylib (31) <B20C6921-D5BE-3BB5-B68C-32D90D629E39> /usr/lib/system/libkeymgr.dylib
+       0x195bc8000 -        0x195bd0d57  libsystem_dnssd.dylib (2600.140.3) <61F023F3-E2C5-3F19-BA1B-B02D7564ACC4> /usr/lib/system/libsystem_dnssd.dylib
+       0x195bd1000 -        0x195bd60b3  libcache.dylib (95) <2B900F8F-9EDE-3208-AB17-BD1385B5546A> /usr/lib/system/libcache.dylib
+       0x195bd7000 -        0x195bd8ca3  libSystem.B.dylib (1351) <072C7C60-2B6C-3E07-AA56-FD1750EADC2F> /usr/lib/libSystem.B.dylib
+       0x26f0b8000 -        0x26f0bf109  libRosetta.dylib (349) <4EE80AAC-8204-3BD0-AB75-EDD23DE67E2F> /usr/lib/libRosetta.dylib
+       0x2704e3000 -        0x2704e6deb  libsystem_darwindirectory.dylib (122) <277D32FB-F49A-3949-97A4-B190A3DF89E8> /usr/lib/system/libsystem_darwindirectory.dylib
+       0x2704e7000 -        0x2704ee523  libsystem_eligibility.dylib (181.140.5) <27E48AAA-644F-394A-9F62-49CEFB813716> /usr/lib/system/libsystem_eligibility.dylib
+       0x2704ef000 -        0x2704f46c5  libsystem_sanitizers.dylib (19) <FB86D2F7-4501-38E4-9D9A-83F960D7D7BA> /usr/lib/system/libsystem_sanitizers.dylib

@@ -15719,3 +15719,13 @@ import SFT.EarthEnvironment.EarthStressStrainEvidence
 import SFT.EarthEnvironment.EarthStressStrainExperiment
 
 import SFT.EarthEnvironment.EarthStressStrainValidation
+
+import SFT.EarthEnvironment.EarthRupture
+
+import SFT.EarthEnvironment.EarthRuptureGrammar
+
+import SFT.EarthEnvironment.EarthRuptureEvidence
+
+import SFT.EarthEnvironment.EarthRuptureExperiment
+
+import SFT.EarthEnvironment.EarthRuptureValidation

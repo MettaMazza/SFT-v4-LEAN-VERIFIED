@@ -15709,3 +15709,13 @@ import SFT.EarthEnvironment.EarthTectonicMotionEvidence
 import SFT.EarthEnvironment.EarthTectonicMotionExperiment
 
 import SFT.EarthEnvironment.EarthTectonicMotionValidation
+
+import SFT.EarthEnvironment.EarthStressStrain
+
+import SFT.EarthEnvironment.EarthStressStrainGrammar
+
+import SFT.EarthEnvironment.EarthStressStrainEvidence
+
+import SFT.EarthEnvironment.EarthStressStrainExperiment
+
+import SFT.EarthEnvironment.EarthStressStrainValidation

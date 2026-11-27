@@ -15669,3 +15669,13 @@ import SFT.EarthEnvironment.EarthInternalHeatEvidence
 import SFT.EarthEnvironment.EarthInternalHeatExperiment
 
 import SFT.EarthEnvironment.EarthInternalHeatValidation
+
+import SFT.EarthEnvironment.EarthInteriorHeatTransport
+
+import SFT.EarthEnvironment.EarthInteriorHeatTransportGrammar
+
+import SFT.EarthEnvironment.EarthInteriorHeatTransportEvidence
+
+import SFT.EarthEnvironment.EarthInteriorHeatTransportExperiment
+
+import SFT.EarthEnvironment.EarthInteriorHeatTransportValidation

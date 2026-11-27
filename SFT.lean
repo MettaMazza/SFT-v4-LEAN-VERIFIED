@@ -15169,3 +15169,29 @@ import SFT.Chemistry.AromaticRecurrenceComparison
 import SFT.Chemistry.AromaticRecurrenceExperiment
 
 import SFT.Chemistry.AromaticRecurrenceValidation
+
+import SFT.Chemistry.AntiaromaticDistinction
+
+import SFT.Chemistry.AntiaromaticDistinctionDerivation
+
+import SFT.Chemistry.AntiaromaticSupportDerivation
+
+import SFT.Chemistry.AntiaromaticDistinctionWitnesses
+
+import SFT.Chemistry.AntiaromaticDistinctionGrammar
+
+import SFT.Chemistry.AntiaromaticDistinctionEvidence
+
+import SFT.Chemistry.AntiaromaticTables
+
+import SFT.Chemistry.AntiaromaticDistinctionPrediction
+
+import SFT.Chemistry.AntiaromaticDistinctionSource
+
+import SFT.Chemistry.AntiaromaticDistinctionAnalysis
+
+import SFT.Chemistry.AntiaromaticDistinctionComparison
+
+import SFT.Chemistry.AntiaromaticDistinctionExperiment
+
+import SFT.Chemistry.AntiaromaticDistinctionValidation

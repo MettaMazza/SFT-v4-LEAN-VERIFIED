@@ -15649,3 +15649,13 @@ import SFT.EarthEnvironment.EarthHistoryEvidence
 import SFT.EarthEnvironment.EarthHistoryExperiment
 
 import SFT.EarthEnvironment.EarthHistoryValidation
+
+import SFT.EarthEnvironment.EarthInteriorCompartment
+
+import SFT.EarthEnvironment.EarthInteriorCompartmentGrammar
+
+import SFT.EarthEnvironment.EarthInteriorCompartmentEvidence
+
+import SFT.EarthEnvironment.EarthInteriorCompartmentExperiment
+
+import SFT.EarthEnvironment.EarthInteriorCompartmentValidation

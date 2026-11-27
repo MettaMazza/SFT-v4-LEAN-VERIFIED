@@ -15549,3 +15549,13 @@ import SFT.EarthEnvironment.EarthMatterBudgetEvidence
 import SFT.EarthEnvironment.EarthMatterBudgetExperiment
 
 import SFT.EarthEnvironment.EarthMatterBudgetValidation
+
+import SFT.EarthEnvironment.EarthInformationBudget
+
+import SFT.EarthEnvironment.EarthInformationBudgetGrammar
+
+import SFT.EarthEnvironment.EarthInformationBudgetEvidence
+
+import SFT.EarthEnvironment.EarthInformationBudgetExperiment
+
+import SFT.EarthEnvironment.EarthInformationBudgetValidation

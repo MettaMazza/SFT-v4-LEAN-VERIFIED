@@ -15729,3 +15729,13 @@ import SFT.EarthEnvironment.EarthRuptureEvidence
 import SFT.EarthEnvironment.EarthRuptureExperiment
 
 import SFT.EarthEnvironment.EarthRuptureValidation
+
+import SFT.EarthEnvironment.EarthSeismicWave
+
+import SFT.EarthEnvironment.EarthSeismicWaveGrammar
+
+import SFT.EarthEnvironment.EarthSeismicWaveEvidence
+
+import SFT.EarthEnvironment.EarthSeismicWaveExperiment
+
+import SFT.EarthEnvironment.EarthSeismicWaveValidation

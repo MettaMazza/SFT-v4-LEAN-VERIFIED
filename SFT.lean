@@ -15509,3 +15509,13 @@ import SFT.EarthEnvironment.EarthStateEvidence
 import SFT.EarthEnvironment.EarthStateExperiment
 
 import SFT.EarthEnvironment.EarthStateValidation
+
+import SFT.EarthEnvironment.EarthObservation
+
+import SFT.EarthEnvironment.EarthObservationGrammar
+
+import SFT.EarthEnvironment.EarthObservationEvidence
+
+import SFT.EarthEnvironment.EarthObservationExperiment
+
+import SFT.EarthEnvironment.EarthObservationValidation

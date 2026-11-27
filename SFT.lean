@@ -15779,3 +15779,13 @@ import SFT.EarthEnvironment.EarthWaterReservoirEvidence
 import SFT.EarthEnvironment.EarthWaterReservoirExperiment
 
 import SFT.EarthEnvironment.EarthWaterReservoirValidation
+
+import SFT.EarthEnvironment.EarthWaterPhaseHandoff
+
+import SFT.EarthEnvironment.EarthWaterPhaseHandoffGrammar
+
+import SFT.EarthEnvironment.EarthWaterPhaseHandoffEvidence
+
+import SFT.EarthEnvironment.EarthWaterPhaseHandoffExperiment
+
+import SFT.EarthEnvironment.EarthWaterPhaseHandoffValidation

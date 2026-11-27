@@ -55112,12 +55112,12 @@
   ],
   "next_publication_milestone": 1250,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "1051 complete. Continue SFT-CHEM-ELECTROPHILIC-SUBSTITUTION-FAMILY-008 toward1250; update counts,paper,timeline,push; pause at1250review.",
+  "authorized_action": "1053 complete. Continue SFT-CHEM-ADDITION-REACTION-FAMILY-009 from its current v3 transform in dependency order toward1250. Preserve completed evidence, bounded jobs, update counts/paper/timeline and push. Pause at1250 for review.",
   "scientific_cursor": {
-    "completed": "SFT-CHEM-NUCLEOPHILIC-SUBSTITUTION-FAMILY-007",
-    "next": "SFT-CHEM-ELECTROPHILIC-SUBSTITUTION-FAMILY-008",
+    "completed": "SFT-MAT-BULK-WATER-RESPONSE-002",
+    "next": "SFT-CHEM-ADDITION-REACTION-FAMILY-009",
     "next_milestone": 1250,
-    "action": "008 native translation complete131emptyaxiomdeclarations,7witnesses,generalconservation,completecarrier/bothpaths,full256programme,26analysisfields/fourchecks/full452pagetextvectorPASS. Preserve fullnativeempirical PID99218/controller69422; no rebuild. After controllerPASS run register_electrophilic1498.py and prepare_checkpoint1498.py, then sync/push/verify. Counts1051untilfullreplay finishes. Keepgoalactive1250."
+    "action": "Carrier nine declarations zero-axiom PASS; ten original v3 states and five rejection cases match. Continue exact current law_v3 complete transform, reusing law_v1 carriers; do not substitute old v1 transform guards. No pending Electrophilic or BulkWater derivation."
   },
   "video_verification": {
     "checkpoint": "2f3ea0306a280025b6e9577d51a84a966f37cb4c",
@@ -82676,16 +82676,16 @@
   },
   "latest_verified_checkpoint": {
     "status": "PASS",
-    "commit": "e86208b6273ce43c77392633e79234c5277d98e0",
-    "tree": "090409d71feeb4dfcc8de41a79e7e4f32c5cc3e8",
-    "paths": 81,
-    "at": "2026-11-27T11:53:51.196526+00:00"
+    "commit": "add63c015b197c73f12b715ec549733053c252fa",
+    "tree": "e9ad5c98741f672f0e92370ac781c0b48193d3c5",
+    "paths": 74,
+    "at": "2026-11-27T12:16:32.973101+00:00"
   },
   "electrophilic1498_runtime": {
     "at": "2026-11-27T12:08:20.133351+00:00",
-    "status": "running_full_empirical_comparison",
+    "status": "complete",
     "controller_session": 69422,
-    "native_pid": 99218,
+    "native_pid": null,
     "log": "work/electrophilic1498_validation_output.log",
     "controller_log": "work/electrophilic1498_runtime.log",
     "already_passed": [
@@ -82695,44 +82695,195 @@
       "26-field analysis/four checks/452-page text-vector native comparison",
       "entire256-candidate native programme matches original"
     ],
-    "next_action": "Preserve99218/69422; after controllerPASS run register_electrophilic1498.py, prepare_checkpoint1498.py and sync/push/verify. Do not rebuild or rerun completed checks."
+    "next_action": "Poll existing69422 or inspect PID99218/log. When terminalPASS, run register_electrophilic1498.py, then prepare_checkpoint1498.py to register1052andupdatepaper, then freeze a NEW checkpoint number before pushing so published1498receipt remains immutable. Base current GitHub head add63c015b197c73f12b715ec549733053c252fa, tree e9ad5c98741f672f0e92370ac781c0b48193d3c5. Do not rerun completed grammar/programme/analysis or restart livehashing.",
+    "last_confirmed_live": "2026-11-27T12:16:32.973101+00:00",
+    "completed_with": "work/electrophilic1499_streaming_output.log",
+    "full_report": "work/electrophilic1498_validation_report.json",
+    "legacy_pid": 99218,
+    "legacy_cancelled_after_equivalent_pass": true
   },
   "electrophilic1498": {
-    "status": "in_progress",
+    "status": "complete",
     "claim_id": "SFT-CHEM-ELECTROPHILIC-SUBSTITUTION-FAMILY-008",
+    "registered_at": "2026-11-27T12:26:52.846825+00:00",
     "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
     "lean_source_sha256": {
-      "SFT/Chemistry/ElectrophilicAnalysis.lean": "9996530caf3e5bb20af345933dbd9a6f57441c7e4fbed4838d125f1a53bd1586",
       "SFT/Chemistry/ElectrophilicCarrier.lean": "891ad6b91ca8f2b60b2e9fddd50010aec04e0cc378ba26f9febd6d6249636ee5",
-      "SFT/Chemistry/ElectrophilicConservation.lean": "f7b7d184051b607ba03701c753b7937ff4e03e66987e8efb472d5a2904370da6",
-      "SFT/Chemistry/ElectrophilicEvidence.lean": "3b9de78e0b6c53e8a0b36d1d786ff35273b8eb213750e7ec2971eb29a1313447",
-      "SFT/Chemistry/ElectrophilicExperiment.lean": "7db08ae41784381411a389e2273d9b05a091ea73aa019a9ba02cc7cceca41327",
-      "SFT/Chemistry/ElectrophilicGrammar.lean": "ed39f8307bf3b08577a7d368acf6c322665344c97a613d8c58c6768820343dfe",
       "SFT/Chemistry/ElectrophilicPath.lean": "8867e9664ecf1e2b1ea6226aef931e8c3b104c1fda5a0ef1c0dfe6ea1c4a7b43",
+      "SFT/Chemistry/ElectrophilicConservation.lean": "f7b7d184051b607ba03701c753b7937ff4e03e66987e8efb472d5a2904370da6",
+      "SFT/Chemistry/ElectrophilicWitnesses.lean": "34f1a09963aa77feef15d60c07df97e585f0fd04dda47808c77e2bc85301f29a",
+      "SFT/Chemistry/ElectrophilicGrammar.lean": "ed39f8307bf3b08577a7d368acf6c322665344c97a613d8c58c6768820343dfe",
+      "SFT/Chemistry/ElectrophilicEvidence.lean": "3b9de78e0b6c53e8a0b36d1d786ff35273b8eb213750e7ec2971eb29a1313447",
+      "SFT/Chemistry/ElectrophilicAnalysis.lean": "9996530caf3e5bb20af345933dbd9a6f57441c7e4fbed4838d125f1a53bd1586",
       "SFT/Chemistry/ElectrophilicSource.lean": "466226dc325948bee4fda5b41977dd861071d1dbf1a81091f16ab2d467473acf",
-      "SFT/Chemistry/ElectrophilicValidation.lean": "7d6a993ecceae3029801bd02fa2e43770acdfe072b6bb80b21dfeb244f6ae97f",
-      "SFT/Chemistry/ElectrophilicWitnesses.lean": "34f1a09963aa77feef15d60c07df97e585f0fd04dda47808c77e2bc85301f29a"
+      "SFT/Chemistry/ElectrophilicExperiment.lean": "7db08ae41784381411a389e2273d9b05a091ea73aa019a9ba02cc7cceca41327",
+      "SFT/Chemistry/ElectrophilicValidation.lean": "7d6a993ecceae3029801bd02fa2e43770acdfe072b6bb80b21dfeb244f6ae97f"
     },
     "audited_declarations": 131,
     "axiom_dependencies": [],
-    "passed": [
-      "seven original witness proofs",
-      "general transition conservation",
-      "complete carrier and both returned paths match original",
-      "full256-candidate native programme",
-      "26 analysis fields,fourchecks,complete452page textvector match original",
-      "original full empirical validator",
-      "original independent validator andthree tamperedcontrols"
-    ],
-    "remaining": [
-      "Retain running native full empirical replay99218/controller69422; compare its complete12-field report to passingoriginal, then execute prepared registrar."
-    ],
-    "live_runtime": {
-      "pid": 99218,
-      "session": 69422,
-      "log": "work/electrophilic1498_validation_output.log",
-      "controller_log": "work/electrophilic1498_runtime.log"
+    "source_component_correspondence": {
+      "ElectrophilicCarrier": {
+        "source": "sft/chemistry/electrophilic_substitution_law_v1.py",
+        "component": "Five retained role occurrences, structural singletonEmptyOne acceptor, complete source donor/recurrence/leaving pair checks, background-support exclusions, transition conservation and exact source/intermediate/restored-terminal dictionary classification."
+      },
+      "ElectrophilicPath": {
+        "source": "sft/chemistry/electrophilic_substitution_law_v1.py",
+        "component": "Original one/two-transition paths, gap-free occurrence order, adjacent-state/action guards, return records and fresh aromatic-carrier extension preserving prior bond prefixes."
+      },
+      "ElectrophilicConservation": {
+        "source": "sft/chemistry/electrophilic_substitution_law_v1.py",
+        "component": "General successful-transition theorem retains ordered atoms, all held electron occurrences and the supplied transition fields."
+      },
+      "ElectrophilicWitnesses": {
+        "source": "sft/chemistry/electrophilic_substitution_law_v1.py",
+        "component": "Seven original proved witnesses: complete carrier, acceptor transfer, leaving relinquishment, restored recurrence, both path lengths, cleavage-first rejection and retained successor."
+      },
+      "ElectrophilicGrammar": {
+        "source": "sft/chemistry/electrophilic_substitution_batch_v1.py",
+        "component": "All eight original binary axes and256 candidates, complete census and unique source-preserving survivor."
+      },
+      "ElectrophilicEvidence": {
+        "source": "sft/chemistry/electrophilic_substitution_batch_v1.py",
+        "component": "Original registration, all256 decisions, seven witnesses, closure, four controls and unregistered-candidate rejection; entire fresh programme matches original."
+      },
+      "ElectrophilicAnalysis": {
+        "source": "sft/chemistry/electrophilic_substitution_validation_v1.py",
+        "component": "Original complete452-page text-vector count/hash/character guards, four target checks and retained26-field post-seal analysis. External PdfReader extraction is preserved as in V3 and bound to original PDF bytes."
+      },
+      "ElectrophilicSource": {
+        "source": "sft/chemistry/electrophilic_substitution_validation_v1.py",
+        "component": "Original four-target identity, source snapshot and payload guards with exact six-key correspondence and original error order."
+      },
+      "ElectrophilicExperiment": {
+        "source": "sft/chemistry/electrophilic_substitution_validation_v1.py",
+        "component": "Original observational registration, four references, eight dimensions, prediction programme, envelope and seven witnesses."
+      },
+      "ElectrophilicValidation": {
+        "source": "sft/chemistry/electrophilic_substitution_validation_v1.py",
+        "component": "Full source-specific capability execution, seal, audit, target custody, comparisons, omitted-row/tampered-label controls and12-field six-message report; fresh full native report matches passing original."
+      }
     },
-    "ready_registrar": "work/register_electrophilic1498.py"
+    "dependencies": {
+      "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+      "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001": "complete",
+      "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+      "SFT-MATH-DISCRETE-001": "complete",
+      "SFT-MATH-COMBINATORICS-001": "complete",
+      "SFT-MATH-GRAPH-NETWORK-001": "complete",
+      "SFT-MATH-ORDER-LATTICE-001": "complete",
+      "SFT-INFO-CONSERVATION-LOSS-001": "complete",
+      "SFT-COMP-FORM-STATE-TRANSITION-001": "complete",
+      "SFT-CHEM-STOICH-CONSERVATION-001": "complete",
+      "SFT-CHEM-BOND-CHEMICAL-BOND-001": "complete",
+      "SFT-CHEM-BOND-COVALENT-001": "complete",
+      "SFT-CHEM-BOND-ORDER-001": "complete",
+      "SFT-CHEM-MOL-MOLECULE-001": "complete",
+      "SFT-CHEM-RXN-IDENTITY-001": "complete",
+      "SFT-CHEM-RXN-MECHANISM-001": "complete",
+      "SFT-CHEM-ORGANIC-FUNCTIONAL-GROUP-001": "complete",
+      "SFT-CHEM-ORGANIC-REACTION-FAMILY-001": "complete",
+      "SFT-CHEM-CONJUGATED-SUPPORT-001": "complete",
+      "SFT-CHEM-RESONANCE-EQUIVALENT-REPRESENTATION-002": "complete",
+      "SFT-CHEM-AROMATIC-RECURRENCE-STABILITY-003": "complete",
+      "SFT-CHEM-NUCLEOPHILIC-SUBSTITUTION-FAMILY-007": "complete"
+    },
+    "reports": {
+      "electrophilic1498_full_audit_report.json": "127dc29bff09880c4a07f9331b909e5134ee464684be0aac52af52321b496e39",
+      "electrophilic1498_program_report.json": "e7228d98c5ec00c068aa5377028099c77d17610161fcc9a26ef860a32789b3f1",
+      "electrophilic1498_analysis_report.json": "40c01917822ad20a24647b87430f044c313f8165aa5ed9b99935b55d74af3809",
+      "electrophilic1498_paths_report.json": "757b350d54dedb712c190b16445ea41994bb03b19770f4ba4c7eec8606475420",
+      "electrophilic1498_validation_report.json": "e3bff7b2da63b0197605c88acacc24689f8860644ae9cf64e80d2d49fc9ae59b"
+    },
+    "full_empirical_replay_passed": true,
+    "remaining": []
+  },
+  "bulkwater1499": {
+    "status": "complete",
+    "claim_id": "SFT-MAT-BULK-WATER-RESPONSE-002",
+    "registered_at": "2026-11-27T12:36:11.274391+00:00",
+    "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "lean_source_sha256": {
+      "SFT/Materials/BulkWater.lean": "43cf7f52d32b2d35b99f7d05c4061014700d1016b5c7d8ff32e302143e05dc04",
+      "SFT/Materials/BulkWaterGrammar.lean": "458a2437d95357a4275d30ec184b0bd4eba6049308d1cec742a7ec9ee5f9148d",
+      "SFT/Materials/BulkWaterEvidence.lean": "fdcf48822a6fe35b89367b921351427db5729368e34b8a3f91259b5cab48dabc",
+      "SFT/Materials/BulkWaterSource.lean": "0128ee71051172c1f1071589b2525a20c890fd0ea451f82a68ffd641915f0a3e",
+      "SFT/Materials/BulkWaterExperiment.lean": "23b9502b9411d03e830a15f26c8ee7bbb0213a78873f0278bd9f6c06a3a38f5d",
+      "SFT/Materials/BulkWaterValidation.lean": "115d0c142877985488fcd58307b3d4df589a19434effde5be7e70a11b9da733f"
+    },
+    "audited_declarations": 113,
+    "axiom_dependencies": [],
+    "source_component_correspondence": {
+      "BulkWater": {
+        "source": "sft/materials/successor_structural_counts.py",
+        "component": "Exact nine-field water bulk ledger, computed positive field count, complete flag and original operational witness, with three native proofs."
+      },
+      "BulkWaterGrammar": {
+        "source": "sft/materials/successor_derivation.py",
+        "component": "All eight original binary preservation axes, complete256-candidate census and unique survivor."
+      },
+      "BulkWaterEvidence": {
+        "source": "sft/materials/generated_law.py",
+        "component": "Exact original registration,256decisions,complete closure,fourcontrols and witness computed from the original native nine-field certificate; entire native programme and ledger match original."
+      },
+      "BulkWaterSource": {
+        "source": "sft/materials/successor_evidence.py",
+        "component": "Original pre-source seal validation and four source requirements over three sources; original hash mismatch preserved exactly."
+      },
+      "BulkWaterExperiment": {
+        "source": "sft/materials/successor_evidence.py",
+        "component": "Original spec guards,observational identity,three-instruction programme,registration hash and envelope, bound to computed original witness."
+      },
+      "BulkWaterValidation": {
+        "source": "sft/materials/successor_evidence.py",
+        "component": "Original full native validator matches original source-hash rejection; all12downstream reportfields andthree messages compare exactly in separately isolated downstream test; no full empirical success claimed."
+      }
+    },
+    "dependencies": {
+      "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+      "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+      "SFT-MATH-DISCRETE-001": "complete",
+      "SFT-MATH-COMBINATORICS-001": "complete",
+      "SFT-MATH-GRAPH-NETWORK-001": "complete",
+      "SFT-MATH-ORDER-LATTICE-001": "complete",
+      "SFT-MATH-GEOMETRY-TOPOLOGY-001": "complete",
+      "SFT-MATH-DYNAMICAL-SYSTEMS-001": "complete",
+      "SFT-MATH-LOGIC-PROOF-001": "complete",
+      "SFT-INFO-SYMBOL-DISTINCTION-001": "complete",
+      "SFT-INFO-CONSERVATION-LOSS-001": "complete",
+      "SFT-PHYS-MECH-CONSERVATION-001": "complete",
+      "SFT-CHEM-BOND-COVALENT-001": "complete",
+      "SFT-CHEM-BOND-IONIC-001": "complete",
+      "SFT-CHEM-BOND-METALLIC-001": "complete",
+      "SFT-CHEM-POLYMER-CHAIN-001": "complete",
+      "SFT-PHYS-THERMO-MICRO-MACRO-001": "complete",
+      "SFT-CHEM-MOL-INTERMOLECULAR-001": "complete",
+      "SFT-CHEM-INTERMOLECULAR-BINDING-011": "complete",
+      "SFT-MAT-MEAS-PROPERTY-001": "complete",
+      "SFT-MAT-PHASE-TRANSITION-001": "complete",
+      "SFT-MAT-THERM-HEAT-CAPACITY-001": "complete"
+    },
+    "reports": {
+      "bulkwater1499_full_audit_report.json": "2652d3d58e7f2071be60b5569a772013e507618e4ce51bbf4788f39d98e2a818",
+      "bulkwater1499_program_report.json": "14b307a1797e171caa399fe1cf627444548357a797868966621a741f07a618a3",
+      "bulkwater1499_postsource_report.json": "d2cbde4dbb61c134d7b592cd7b69069d0e512d9685c25f5dcf22dc313967c741",
+      "bulkwater1499_validation_report.json": "255cdcf19fdbe219ee8fea2791014d1001fda658941aec73cef0a3bd6e480e44"
+    },
+    "full_empirical_replay_passed": false,
+    "remaining": [],
+    "source_replay_issue": {
+      "kind": "original_source_hash_mismatch",
+      "path": "experiments/external_sources/materials/snapshots/nist-water-complete-2026-07-27.html",
+      "expected": "sha256:ba9fc5225bc8d0d89cbe15703bff2d9dc06ef64244598c420c7666931f1befbf",
+      "actual": "sha256:c972f74fb0bd4aa39bca146038caf7d83a9ed59b8b78e363912551d9d3835736",
+      "full_empirical_replay_passed": false,
+      "original_and_native_error": "successor external source mismatch"
+    }
+  },
+  "addition1499": {
+    "status": "source_trace_started",
+    "actual_execution": "addition_reaction_batch_v3.py / addition_reaction_validation_v3.py",
+    "pin": "work/addition1499_initial_source_pin.json",
+    "read": "entire addition_reaction_law_v3.py and actualexecution.py",
+    "next": "Read actual reused AdditionBond/AdditionState/connected_components from law_v1; retain v2/v1 history but translate current v3 adjacency/layer distinction; stage external inventory using v3 binding. No native Addition module exists from this turn."
   }
 }

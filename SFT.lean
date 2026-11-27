@@ -15091,3 +15091,31 @@ import SFT.Chemistry.SolidLocalComparison
 import SFT.Chemistry.SolidLocalExperiment
 
 import SFT.Chemistry.SolidLocalValidation
+
+import SFT.Chemistry.DefectChemistry
+
+import SFT.Chemistry.DefectFormulaDerivation
+
+import SFT.Chemistry.DefectDerivation
+
+import SFT.Chemistry.DefectClosure
+
+import SFT.Chemistry.DefectSuccessor
+
+import SFT.Chemistry.DefectWitnesses
+
+import SFT.Chemistry.DefectGrammar
+
+import SFT.Chemistry.DefectEvidence
+
+import SFT.Chemistry.DefectPrediction
+
+import SFT.Chemistry.DefectSource
+
+import SFT.Chemistry.DefectAnalysis
+
+import SFT.Chemistry.DefectComparison
+
+import SFT.Chemistry.DefectExperiment
+
+import SFT.Chemistry.DefectValidation

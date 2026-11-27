@@ -62100,9 +62100,24 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-DEFECT-NONSTOICHIOMETRY-016-a3ffe6b3e015e29e.json",
       "statement": "A local solid defect is the exact interruption between one complete reference-site motif and one complete observed motif. A vacancy is a retained reference site with structural EmptyOne occupancy. Missing and added species are separate positive supports, never a signed difference; their primitive count vectors force exact reference and observed formulas, defect class and intrinsic/extrinsic origin.",
       "title": "Exact defect chemistry and non-stoichiometry law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/DefectChemistry.lean",
+        "SFT/Chemistry/DefectFormulaDerivation.lean",
+        "SFT/Chemistry/DefectWitnesses.lean",
+        "SFT/Chemistry/DefectDerivation.lean",
+        "SFT/Chemistry/DefectGrammar.lean",
+        "SFT/Chemistry/DefectEvidence.lean",
+        "SFT/Chemistry/DefectPrediction.lean",
+        "SFT/Chemistry/DefectSource.lean",
+        "SFT/Chemistry/DefectAnalysis.lean",
+        "SFT/Chemistry/DefectClosure.lean",
+        "SFT/Chemistry/DefectSuccessor.lean",
+        "SFT/Chemistry/DefectComparison.lean",
+        "SFT/Chemistry/DefectExperiment.lean",
+        "SFT/Chemistry/DefectValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 programme, original/threeadverse independent cases,255core/generator and18interface cases, full12field13message empirical result",
       "registration_sha256": "3596980a2f233a352ef19e70f0379becb7c8d1d178b9ec31b2e894f059cec7c5",
       "v3_registration": {
         "branch": "chemistry",
@@ -62150,7 +62165,10 @@
         "statement": "A defect is an exact reference/observed local-motif interruption; vacancies are EmptyOne occupancies and non-stoichiometry is separate positive missing and added support.",
         "status": "empirically_tested",
         "title": "Exact defect chemistry and non-stoichiometry law"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN1489_DEFECT_COMPLETION.json",
+      "verified_scope": "Exact reference-site, occupancy, interstitial and reconciliation domains/guards; nine-field defect constructor; ordered primitive formulas, positive directional supports, short-circuit class/origin rules and defect_state.209full generator and46direct constructor comparisons.; Universal whole-vector correspondence: every returned species/count pair equals its original ordered complete count divided by the gcd folded over the same full vector.; Retained site/species/EmptyOne occupancy, all reconciliation fields, mutually exclusive missing/added support and complete occupied-plus-interstitial support concatenation.; Accepted constructor retains every one of its nine exact source fields.; Accepted reference-site/occupancy and interstitial extensions preserve every prior ordered support and use the same full constructor checks.; All four original pristine/vacancy/native-interstitial/foreign-substitution witnesses proved from actual native computations.; Eight original binary axes, all256alternatives, elimination decisions and unique survivor.; Exact source registration, base/successor statements, four controls, native witnesses and independent validation/adverse cases.; Fifteen value-free identity rows, six identity fields and four source laws per eleven-cell word; exact prediction document.; Fifteen-row prediction map, original seven identity keys, V1/V2 target/primary hash bindings, two corrected roles and exact payload identities.; All24fields from native defect states and fifteen external surfaces; both V1 absent note surfaces retained and separately corrected V2 records;18full interface comparisons.; Exact identity/law/target comparisons, eight controls and original passed conjunction.; All original registration fields and source references including preserved V1 and corrected V2 authorities.; Capability-closed execution, sealing/custody/release, fifteen comparisons, full12field13message empirical result and exact hashes."
     },
     {
       "branch": "chemistry",
@@ -203348,13 +203366,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-27T08:33:24.555692+00:00",
+  "updated_at": "2026-11-27T09:04:03.921091+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 9,
-    "pending": 1728,
-    "fully_reconstructed_claims": 1044,
-    "axiom_free_exported_results": 62231,
-    "axiom_free_audited_definitions_and_theorems": 143590
+    "pending": 1727,
+    "fully_reconstructed_claims": 1045,
+    "axiom_free_exported_results": 62288,
+    "axiom_free_audited_definitions_and_theorems": 143771
   }
 }

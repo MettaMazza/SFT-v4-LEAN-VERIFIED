@@ -15739,3 +15739,13 @@ import SFT.EarthEnvironment.EarthSeismicWaveEvidence
 import SFT.EarthEnvironment.EarthSeismicWaveExperiment
 
 import SFT.EarthEnvironment.EarthSeismicWaveValidation
+
+import SFT.EarthEnvironment.EarthquakeCatalog
+
+import SFT.EarthEnvironment.EarthquakeCatalogGrammar
+
+import SFT.EarthEnvironment.EarthquakeCatalogEvidence
+
+import SFT.EarthEnvironment.EarthquakeCatalogExperiment
+
+import SFT.EarthEnvironment.EarthquakeCatalogValidation

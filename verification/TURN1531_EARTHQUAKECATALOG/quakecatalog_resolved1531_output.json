@@ -1,0 +1,61 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "USGS-EARTHQUAKE-FDSN-001",
+    "EARTHSCOPE-SAGE-SERVICES-001",
+    "SMITHSONIAN-GVP-VOTW-001"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:5776ac5c1e7d111645b75b0441e92195942b89c56e4f6ee83e4d8533c6393431",
+  "falsification_condition": "Reject if catalogs with different thresholds or magnitude scales are pooled without a registered translation.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:19f146334e395203107dfec91fbfc52a3226a426720f9cd81fcf5cfa9b42eac0",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:f3bf1b85e2d98b0322b3a0483325efe35b686b175d3b249724cddf5994147895",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-EARTH-EARTHQUAKE-CATALOG-001-E1-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:3cf61160bfce8b2e9b168aa1f7f6779bbd592d35ba33fa84450f54ac54464c7f",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:de5b98238039185db3d278e3b87a6372176128acc31d7e08930cb916ea7dfb47",
+    "prediction_seal_hash": "sha256:accc91e12433d19839045ab5d7cb1a38aa138602f070753df663e45f697697d0",
+    "program_hash": "sha256:631e089a379b6b79dcb18411673b43c90b2c7a2de70b3dda7b7996a9fc7656d7",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:e64d38ce23c57494ea36eb3deec76e3765e40f11813b3faf392adac2ba99b8f1",
+    "target_material_present": false,
+    "trace_hash": "sha256:3e2eeae25140e6658cb6d81ce73e85d71c64525f072198e8431cdc55b9826434"
+  },
+  "measurement_receipt_hash": "sha256:4ab274688adede1536604af50591d5ae8d2530e872f46ab0a7184f9b50093d62",
+  "measurements": [
+    "sft-earth-earthquake-catalog-001-external-earth-evidence: predicted earth:event-detection-location-magnitude-carrier__catalog-membership-and-equivalence-relation__network-threshold-method-duplicates-errors-and-time-held__catalog-completeness-bounded; source-derived earth:event-detection-location-magnitude-carrier__catalog-membership-and-equivalence-relation__network-threshold-method-duplicates-errors-and-time-held__catalog-completeness-bounded; exact match True",
+    "source features: 67 present; 24 absent preserved; 91 registered",
+    "the original failed transport and every adverse, absent and unresolved row remain preserved",
+    "a deliberately changed external consequence was rejected"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:d855c03782ff515b961fa914fdc6cef972625850268dd85a9c84a29c924d7871",
+    "custodian_id": "SFT-EXP-EARTH-EARTHQUAKE-CATALOG-001-E1-external-target-custodian",
+    "experiment_registration_hash": "sha256:5776ac5c1e7d111645b75b0441e92195942b89c56e4f6ee83e4d8533c6393431",
+    "prediction_seal_hash": "sha256:accc91e12433d19839045ab5d7cb1a38aa138602f070753df663e45f697697d0",
+    "registered_target_identity_hash": "sha256:e64d38ce23c57494ea36eb3deec76e3765e40f11813b3faf392adac2ba99b8f1",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:85a7b47fd7da4d0d06f60606c2a7c6eeaead17cc527fa9c626335312cf1835d4"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "native-earthquakecatalog1475"
+}

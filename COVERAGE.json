@@ -62680,7 +62680,7 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-CONFORMER-POPULATION-ORDERING-006-6668695f63755775.json",
       "statement": "For every complete finite conformer quotient, retained observation condition and positive finite trace, each conformer population is exactly its deterministic class-occurrence count divided by the complete trace boundary. An unobserved class is structural EmptyOne. Relative energy order uses structural least state plus positive exact Take, while every condition and observation-timescale remains retained.",
       "title": "Exact conditioned conformer population and ordering law",
-      "lean_status": "in_progress",
+      "lean_status": "complete",
       "lean_modules": [
         "SFT/Chemistry/ConformerPopulation.lean",
         "SFT/Chemistry/ConformerPopulationAnalysis.lean",
@@ -62746,10 +62746,25 @@
         "status": "empirically_tested",
         "title": "Exact conditioned conformer population and ordering law"
       },
-      "remaining": [
-        "Original full empirical replay rejects snapshot hashes at ORG006006 and ORG006007. Preserve the original guard and investigate exact source custody/capture bytes; do not rewrite the pinned source, expected hashes or model. ORG006006 recorded hash is reproduced exactly by original mixed CRLF/LF bytes; ORG006007 captured byte count exceeds pinned bytes by32 and remains specifically unresolved."
-      ],
-      "checkpoint_evidence": "verification/TURN1495_CONFORMER_POPULATION_CHECKPOINT.json"
+      "remaining": [],
+      "checkpoint_evidence": "verification/TURN1495_CONFORMER_POPULATION_CHECKPOINT.json",
+      "completion_evidence": "verification/TURN1496_CONFORMER_POPULATION_COMPLETION.json",
+      "source_replay_issue": {
+        "kind": "original_snapshot_byte_preservation",
+        "paths": [
+          "experiments/external_sources/chemistry/snapshots/org-006-blind-v1/nist-cccbdb-109660-internal-rotation-1.html",
+          "experiments/external_sources/chemistry/snapshots/org-006-blind-v1/osti-22415852-primary-record.html"
+        ],
+        "original_and_native_result": {
+          "error": "ORG-006 source snapshot changed"
+        },
+        "full_empirical_replay_passed": false,
+        "scientific_model_modified": false,
+        "guard_modified": false,
+        "expected_hashes_modified": false,
+        "scope": "Separate source-byte replay issue. Entry completion means faithful verified native formalisation, not successful empirical replay."
+      },
+      "verified_scope": "Original positive Take, singleton/other EmptyOne distinctions, exact condition/boundary/row/census guards, raw occurrence ratios, stable exact ordering and retained-history append.; Ten general proofs of occurrence concatenation, successor increment, boundary bound, observation/row retention, exact generated raw population or structural absence, original positive Take and successor history.; Actual successful census constructor retains all fields, checks full class order, generated trace and total boundary, and checks each retained row through the original forM operation.; Seven original operational witnesses proved from native operations:3/4 and1/4, two classes, energy/population order, successor3/5 and2/5, reversed Take and foreign-assignment rejection.; All eight original binary axes and256 alternatives with original decisions and sole survivor.; Original registration, complete grammar certificate, exclusions, seven witnesses and four controls; full original programme and independent validator including three tampered cases.; Fourteen value-free identity records;171 instructions and eleven-cell prediction words; exact forbidden-field and identity-hash guards.; Exact prediction-map and fourteen-row identity/payload/snapshot guards, preserving original source rejection on pinned normalized HTML bytes.; Original31-field post-seal analysis, exact population-fraction sum and stable order, energy-gap sum, all224supporting rows and retained adverse records.; Original fourteen target comparisons, twelve controls and exact final result conjunction; all isolated component fields match fresh original execution.; Exact14-field original registration, source references, dimensions and seven original witnesses.; Original capability-closed execution, prediction seal, audit, source guard, custody, comparison and12-field20-message report construction. Full native execution reproduces the original snapshot rejection; no successful full empirical replay is claimed."
     },
     {
       "branch": "chemistry",
@@ -62761,9 +62776,14 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-NUCLEOPHILIC-SUBSTITUTION-FAMILY-007-7f79c743cc120a8d.json",
       "statement": "For every complete finite registered exchange carrier, one incoming held pair forms the unique centre-entering bond while the two occurrences of the displaced centre-leaving bond remain held on the leaving carrier. Every atom and electron occurrence is conserved. The complete generated path family consists of a one-transition exchange and cleavage followed by formation; formation before cleavage violates the unique exchange slot.",
       "title": "Exact entering/leaving carrier substitution family law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Chemistry/NucleophilicCarrier.lean",
+        "SFT/Chemistry/NucleophilicPath.lean",
+        "SFT/Chemistry/NucleophilicWitnesses.lean",
+        "SFT/Chemistry/NucleophilicConservation.lean"
+      ],
+      "artifact_runtime_parity": "PASS complete original carrier and both path objects; seven native operational witnesses proved. Grammar and empirical comparisons pending.",
       "registration_sha256": "b618c66d4ea2503ffc210b4af134404a031655c4a021de8be6b3f757cfa332ef",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -62822,7 +62842,13 @@
         "statement": "For every complete finite registered exchange carrier, one incoming held pair forms the unique centre-entering bond while the two occurrences of the displaced centre-leaving bond remain held on the leaving carrier. Every atom and electron occurrence is conserved. The complete generated path family consists of a one-transition exchange and cleavage followed by formation; formation before cleavage violates the unique exchange slot.",
         "status": "empirically_tested",
         "title": "Exact entering/leaving carrier substitution family law"
-      }
+      },
+      "remaining": [
+        "Complete source-specific general forced-path/retained-substrate correspondence proofs.",
+        "Translate original eight-axis grammar, registration, controls and independent validator binding.",
+        "Translate and compare original empirical prediction/source/analysis/validator operations from nucleophilic_substitution_validation_v1.py."
+      ],
+      "checkpoint_evidence": "verification/TURN1496_NUCLEOPHILIC_CHECKPOINT.json"
     },
     {
       "branch": "chemistry",
@@ -203467,13 +203493,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-27T11:10:00.387072+00:00",
+  "updated_at": "2026-11-27T11:20:25.667173+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 10,
-    "pending": 1722,
-    "fully_reconstructed_claims": 1049,
-    "axiom_free_exported_results": 62594,
-    "axiom_free_audited_definitions_and_theorems": 144571
+    "pending": 1721,
+    "fully_reconstructed_claims": 1050,
+    "axiom_free_exported_results": 62656,
+    "axiom_free_audited_definitions_and_theorems": 144747
   }
 }

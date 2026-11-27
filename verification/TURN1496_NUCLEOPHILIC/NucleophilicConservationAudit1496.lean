@@ -1,0 +1,3 @@
+import SFT.Chemistry.NucleophilicConservation
+#print axioms SFT.Chemistry.NucleophilicConservation.transitionConservation
+#print axioms SFT.Chemistry.NucleophilicConservation.pairOccurrenceDistinct

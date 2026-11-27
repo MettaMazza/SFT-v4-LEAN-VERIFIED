@@ -15255,3 +15255,27 @@ import SFT.Chemistry.ConformerComparison
 import SFT.Chemistry.ConformerExperiment
 
 import SFT.Chemistry.ConformerValidation
+
+import SFT.Chemistry.ConformerPopulation
+
+import SFT.Chemistry.ConformerPopulationDerivation
+
+import SFT.Chemistry.ConformerPopulationClosure
+
+import SFT.Chemistry.ConformerPopulationWitnesses
+
+import SFT.Chemistry.ConformerPopulationGrammar
+
+import SFT.Chemistry.ConformerPopulationEvidence
+
+import SFT.Chemistry.ConformerPopulationPrediction
+
+import SFT.Chemistry.ConformerPopulationSource
+
+import SFT.Chemistry.ConformerPopulationAnalysis
+
+import SFT.Chemistry.ConformerPopulationComparison
+
+import SFT.Chemistry.ConformerPopulationExperiment
+
+import SFT.Chemistry.ConformerPopulationValidation

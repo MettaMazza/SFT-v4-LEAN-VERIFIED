@@ -1,0 +1,26 @@
+import SFT.Chemistry.NucleophilicCarrier
+#print axioms SFT.Chemistry.NucleophilicCarrier.occurrence
+#print axioms SFT.Chemistry.NucleophilicCarrier.electron
+#print axioms SFT.Chemistry.NucleophilicCarrier.pair
+#print axioms SFT.Chemistry.NucleophilicCarrier.bond
+#print axioms SFT.Chemistry.NucleophilicCarrier.freePair
+#print axioms SFT.Chemistry.NucleophilicCarrier.samePair
+#print axioms SFT.Chemistry.NucleophilicCarrier.sameEdge
+#print axioms SFT.Chemistry.NucleophilicCarrier.edge
+#print axioms SFT.Chemistry.NucleophilicCarrier.sameBond
+#print axioms SFT.Chemistry.NucleophilicCarrier.sameFree
+#print axioms SFT.Chemistry.NucleophilicCarrier.sameSequence
+#print axioms SFT.Chemistry.NucleophilicCarrier.sameState
+#print axioms SFT.Chemistry.NucleophilicCarrier.pairAtoms
+#print axioms SFT.Chemistry.NucleophilicCarrier.electrons
+#print axioms SFT.Chemistry.NucleophilicCarrier.contains
+#print axioms SFT.Chemistry.NucleophilicCarrier.sameSet
+#print axioms SFT.Chemistry.NucleophilicCarrier.distinctEdges
+#print axioms SFT.Chemistry.NucleophilicCarrier.state
+#print axioms SFT.Chemistry.NucleophilicCarrier.bondAt
+#print axioms SFT.Chemistry.NucleophilicCarrier.freeAt
+#print axioms SFT.Chemistry.NucleophilicCarrier.matchesPair
+#print axioms SFT.Chemistry.NucleophilicCarrier.present
+#print axioms SFT.Chemistry.NucleophilicCarrier.carrier
+#print axioms SFT.Chemistry.NucleophilicCarrier.transition
+#print axioms SFT.Chemistry.NucleophilicCarrier.stateRole

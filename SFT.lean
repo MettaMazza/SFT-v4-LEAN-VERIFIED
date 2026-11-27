@@ -15769,3 +15769,13 @@ import SFT.EarthEnvironment.EarthVolcanicProcessEvidence
 import SFT.EarthEnvironment.EarthVolcanicProcessExperiment
 
 import SFT.EarthEnvironment.EarthVolcanicProcessValidation
+
+import SFT.EarthEnvironment.EarthWaterReservoir
+
+import SFT.EarthEnvironment.EarthWaterReservoirGrammar
+
+import SFT.EarthEnvironment.EarthWaterReservoirEvidence
+
+import SFT.EarthEnvironment.EarthWaterReservoirExperiment
+
+import SFT.EarthEnvironment.EarthWaterReservoirValidation

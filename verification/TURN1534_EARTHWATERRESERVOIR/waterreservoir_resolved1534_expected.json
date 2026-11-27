@@ -1,0 +1,61 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "USGS-NWIS-001",
+    "WQP-WEB-SERVICES-001",
+    "NSIDC-SEA-ICE-INDEX-001"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:765031680bf1c9c452796bbc406ca0770963c6600af8570c72fdf249cd587388",
+  "falsification_condition": "Reject if water outside the observation boundary is treated as absent or if phase and chemical composition are erased.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:82eeaeb993d7f03527ef42a05944e4dc4d19be5038cd46f731dba38dde9eba6d",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:ffbbd67f533d56c037de54cfe42369661b04fe20bd361e9f915d618176dfe6e2",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-EARTH-WATER-RESERVOIR-001-E1-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:326fd50128cb743f2204c25247616dcb18bc5698fcf49f6c00af20f5b77442e4",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:18a71b35d3ed93b45d3ef7fec3fbe3301f8922db1c1b9f46708c2cb77e3c9baa",
+    "prediction_seal_hash": "sha256:2c9fac66903c2895fae040fb0a87a1a6c921395258e1ea3bb85cd3798f39e511",
+    "program_hash": "sha256:ae6055a87f8d8b21de29d2ef9a6556714f1365ed87d3f103d6e46d2180f17473",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:14b4ef222d68aa3e401b1a723860ed0be7567d750c02bf8fd46320a5d510b6df",
+    "target_material_present": false,
+    "trace_hash": "sha256:8da6880f7d041bd500e86847badcf7bf43a50a6aa72282acc7142a7a14148446"
+  },
+  "measurement_receipt_hash": "sha256:b0d666bd2eb1f22a7975d3e584c84c9347365b46d7f178ce85c2b02708031ca8",
+  "measurements": [
+    "sft-earth-water-reservoir-001-external-earth-evidence: predicted earth:phase-location-bounded-water-carrier__storage-membership-and-exchange-relation__amount-phase-composition-boundary-and-time-held__hydrological-domain-bounded; source-derived earth:phase-location-bounded-water-carrier__storage-membership-and-exchange-relation__amount-phase-composition-boundary-and-time-held__hydrological-domain-bounded; exact match True",
+    "source features: 67 present; 24 absent preserved; 91 registered",
+    "the original failed transport and every adverse, absent and unresolved row remain preserved",
+    "a deliberately changed external consequence was rejected"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:d9f80adccdb26bbd41f01234c49eb699caa9d75b72da1a0adb9fdb6d072f35c0",
+    "custodian_id": "SFT-EXP-EARTH-WATER-RESERVOIR-001-E1-external-target-custodian",
+    "experiment_registration_hash": "sha256:765031680bf1c9c452796bbc406ca0770963c6600af8570c72fdf249cd587388",
+    "prediction_seal_hash": "sha256:2c9fac66903c2895fae040fb0a87a1a6c921395258e1ea3bb85cd3798f39e511",
+    "registered_target_identity_hash": "sha256:14b4ef222d68aa3e401b1a723860ed0be7567d750c02bf8fd46320a5d510b6df",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:a44a48f16e428f2323338f21d236943fb85fbfae337bfb7a93f83640262526b0"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "native-earthwaterreservoir1478"
+}

@@ -15529,3 +15529,13 @@ import SFT.EarthEnvironment.EarthAbsenceMissingnessEvidence
 import SFT.EarthEnvironment.EarthAbsenceMissingnessExperiment
 
 import SFT.EarthEnvironment.EarthAbsenceMissingnessValidation
+
+import SFT.EarthEnvironment.EarthEnergyBudget
+
+import SFT.EarthEnvironment.EarthEnergyBudgetGrammar
+
+import SFT.EarthEnvironment.EarthEnergyBudgetEvidence
+
+import SFT.EarthEnvironment.EarthEnergyBudgetExperiment
+
+import SFT.EarthEnvironment.EarthEnergyBudgetValidation

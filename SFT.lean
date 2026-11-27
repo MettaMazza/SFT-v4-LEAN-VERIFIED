@@ -15819,3 +15819,13 @@ import SFT.EarthEnvironment.EarthSurfaceWaterEvidence
 import SFT.EarthEnvironment.EarthSurfaceWaterExperiment
 
 import SFT.EarthEnvironment.EarthSurfaceWaterValidation
+
+import SFT.EarthEnvironment.EarthCryosphere
+
+import SFT.EarthEnvironment.EarthCryosphereGrammar
+
+import SFT.EarthEnvironment.EarthCryosphereEvidence
+
+import SFT.EarthEnvironment.EarthCryosphereExperiment
+
+import SFT.EarthEnvironment.EarthCryosphereValidation

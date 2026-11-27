@@ -1,0 +1,61 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "NASA-EARTHDATA-SEARCH-001",
+    "USGS-LANDSAT-ACCESS-001",
+    "NOAA-GHCND-001"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:806a9c1d3109c69bbb24c3b3cab647296acff01b8e23775f23f770d7f53e4b9c",
+  "falsification_condition": "Reject if any unavailable or unresolved observation is converted into ordinary numerical zero or favorable absence.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:98abc673b4e5b42d14c5f40c14b6785de01daacd2546fc46dde922b20080b1fe",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:94af62cf18716aada96b1a6ab464ecffcae10cf8d1cf6ab23dcd3d279e4ad8da",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-EARTH-ABSENCE-MISSINGNESS-001-E1-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:ba95118938be0cc64d1e8f44bbecd0485b72f3e5b71d065d59722c9f77478bc1",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:9fa92b6aa636772a547405f12c5995c06a1dea9f22f86ef2e4b5da27df760e4b",
+    "prediction_seal_hash": "sha256:540121d6b3a6a6f1a810e336b9411ee0a788caa9d4f0ec12422999fdc9987936",
+    "program_hash": "sha256:e1178a9f361d89a8e8910e4b860f38b81d6bb81a125e90d05606dbd39dbcdabe",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:d1507d84838b9cf59c2db40f117ef50c21fcd6c6a503832563ef74d89bb0fa54",
+    "target_material_present": false,
+    "trace_hash": "sha256:99ecb59a45fc9abc4b9dfd41fa7e1f1f78b68cf3132de9cce9202aabd682e568"
+  },
+  "measurement_receipt_hash": "sha256:bd6d86f8db72a55f11e63f874541f035f16141c8979d89aff3fc05a43615bdf8",
+  "measurements": [
+    "sft-earth-absence-missingness-001-external-earth-evidence: predicted earth:complete-observation-status-carrier__status-class-distinction__detected-absent-censored-missing-outside-scope-held__detection-boundary-declared; source-derived earth:complete-observation-status-carrier__status-class-distinction__detected-absent-censored-missing-outside-scope-held__detection-boundary-declared; exact match True",
+    "source features: 67 present; 24 absent preserved; 91 registered",
+    "the original failed transport and every adverse, absent and unresolved row remain preserved",
+    "a deliberately changed external consequence was rejected"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:db3909b84387ff0e3563b3825555e12f0642875e913caf48c30e7f69d814246a",
+    "custodian_id": "SFT-EXP-EARTH-ABSENCE-MISSINGNESS-001-E1-external-target-custodian",
+    "experiment_registration_hash": "sha256:806a9c1d3109c69bbb24c3b3cab647296acff01b8e23775f23f770d7f53e4b9c",
+    "prediction_seal_hash": "sha256:540121d6b3a6a6f1a810e336b9411ee0a788caa9d4f0ec12422999fdc9987936",
+    "registered_target_identity_hash": "sha256:d1507d84838b9cf59c2db40f117ef50c21fcd6c6a503832563ef74d89bb0fa54",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:6fb39316dbf2cf12cfcc047a7337600faa12f504deec73d08fa259f217af19c2"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "native-earthabsence1453"
+}

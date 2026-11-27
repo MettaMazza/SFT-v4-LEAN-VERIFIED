@@ -1,0 +1,56 @@
+import SFT.Chemistry.NucleophilicPath
+namespace SFT.Chemistry.NucleophilicPathProofs
+open NucleophilicCarrier NucleophilicPath
+
+theorem completePathLengths (c : Carrier) (states : List State) (transitions : List Transition)
+ (out : ExactSubstitution) (accepted : forcedPath c states transitions=.ok out) :
+ (states.length=2 ∨ states.length=3) ∧ transitions.length=states.length-1 := by
+ have good : (!(states.length==2 || states.length==3) || transitions.length != states.length-1)=false := by
+  cases h : (!(states.length==2 || states.length==3) || transitions.length != states.length-1) with
+  | false => rfl
+  | true =>
+   unfold forcedPath at accepted
+   rw [if_pos h] at accepted
+   cases accepted
+ have shape : states.length=2 ∨ states.length=3 := by
+  cases a : (states.length==2) with
+  | true => exact Or.inl (Nat.eq_of_beq_eq_true a)
+  | false =>
+   cases b : (states.length==3) with
+   | true => exact Or.inr (Nat.eq_of_beq_eq_true b)
+   | false => rw [a,b] at good; cases good
+ have length : transitions.length=states.length-1 := by
+  cases h : (transitions.length==states.length-1) with
+  | true => exact Nat.eq_of_beq_eq_true h
+  | false =>
+   change (!(states.length==2 || states.length==3) || !(transitions.length==states.length-1))=false at good
+   rw [h] at good
+   cases a : (!(states.length==2 || states.length==3)) <;> rw [a] at good <;> cases good
+ exact ⟨shape,length⟩
+theorem retainedSubstratePrefix (bonds : List Bond) (added : Bond) :
+ (bonds++[added]).take bonds.length=bonds := by
+ induction bonds with
+ | nil => rfl
+ | cons b bs ih =>
+  change b::(bs++[added]).take bs.length=b::bs
+  rw [ih]
+
+theorem extendedBondCount (bonds : List Bond) (added : Bond) :
+ (bonds++[added]).length=bonds.length+1 := by
+ induction bonds with
+ | nil => rfl
+ | cons b bs ih =>
+  change (bs++[added]).length+1=(bs.length+1)+1
+  rw [ih]
+
+theorem originalExtensionReadback (bonds : List Bond) (added : Bond) :
+ (bonds++[added]).take ((bonds++[added]).length-1)=bonds := by
+ rw [extendedBondCount]
+ exact retainedSubstratePrefix bonds added
+theorem returnedPathRetained (c : Carrier) (states : List State) (transitions : List Transition)
+ (out : ExactSubstitution) (accepted : forcedPath c states transitions=.ok out) :
+ out.carrier=c ∧ out.states=states ∧ out.transitions=transitions := by
+ unfold forcedPath at accepted
+ repeat' (simp only [Bind.bind, Pure.pure, Except.bind, Except.pure, MonadExceptOf.throw, Except.throw] at accepted; split at accepted)
+ all_goals cases accepted <;> exact ⟨rfl,rfl,rfl⟩
+end SFT.Chemistry.NucleophilicPathProofs

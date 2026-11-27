@@ -21,7 +21,7 @@ def forcedPath (c : Carrier) (states : List State) (transitions : List Transitio
  if !(states.length==2 || states.length==3) || transitions.length != states.length-1 then
   throw "substitution admits exactly one-transition or two-transition paths"
  let first ← itemAt states 0
- if !sameState first c.source then throw "path must begin itemAt the complete registered source"
+ if !sameState first c.source then throw "path must begin at the complete registered source"
  if !sameSequence (fun a b => a==b) (transitions.map fun t => t.occurrence.value) ((List.range transitions.length).map (fun n => n+1)) then
   throw "transition occurrences must remain complete and gap-free"
  let roles ← states.mapM (stateRole c)

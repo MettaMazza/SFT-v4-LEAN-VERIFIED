@@ -15279,3 +15279,27 @@ import SFT.Chemistry.ConformerPopulationComparison
 import SFT.Chemistry.ConformerPopulationExperiment
 
 import SFT.Chemistry.ConformerPopulationValidation
+
+import SFT.Chemistry.NucleophilicCarrier
+
+import SFT.Chemistry.NucleophilicPath
+
+import SFT.Chemistry.NucleophilicConservation
+
+import SFT.Chemistry.NucleophilicPathProofs
+
+import SFT.Chemistry.NucleophilicWitnesses
+
+import SFT.Chemistry.NucleophilicGrammar
+
+import SFT.Chemistry.NucleophilicEvidence
+
+import SFT.Chemistry.NucleophilicFormula
+
+import SFT.Chemistry.NucleophilicAnalysis
+
+import SFT.Chemistry.NucleophilicSource
+
+import SFT.Chemistry.NucleophilicExperiment
+
+import SFT.Chemistry.NucleophilicValidation

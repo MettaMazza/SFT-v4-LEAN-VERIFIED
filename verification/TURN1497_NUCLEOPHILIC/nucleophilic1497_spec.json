@@ -1,0 +1,270 @@
+{
+  "claim_id": "SFT-CHEM-NUCLEOPHILIC-SUBSTITUTION-FAMILY-007",
+  "title": "Exact entering/leaving carrier substitution family law",
+  "statement": "For every complete finite registered exchange carrier, one incoming held pair forms the unique centre-entering bond while the two occurrences of the displaced centre-leaving bond remain held on the leaving carrier. Every atom and electron occurrence is conserved. The complete generated path family consists of a one-transition exchange and cleavage followed by formation; formation before cleavage violates the unique exchange slot.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-COMP-FORM-STATE-TRANSITION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-CHEMICAL-BOND-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-ORDER-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-ORGANIC-FUNCTIONAL-GROUP-001",
+    "SFT-CHEM-ORGANIC-REACTION-FAMILY-001",
+    "SFT-CHEM-CONJUGATED-SUPPORT-001",
+    "SFT-CHEM-RESONANCE-EQUIVALENT-REPRESENTATION-002",
+    "SFT-CHEM-SEQUENTIAL-MECHANISM-COMPOSITION-007",
+    "SFT-CHEM-PARALLEL-MECHANISM-COMPOSITION-008"
+  ],
+  "generation_rule": "Generate the literal product of carrier, source, support, change, path, record, observation and extension alternatives; decide all 256 forms only from admitted exact graph, conservation, bond and transition laws.",
+  "grammar_boundary": "Every positive finite complete exchange carrier with distinct centre, retained, entering and leaving occurrences; all source bonds and free pairs; every atom and held electron occurrence; the single exchange slot; both generated path orders; every source record and the complete nine-target external surface.",
+  "dimensions": [
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "selected-product-label-or-disconnected-fragments",
+          "admitted": false,
+          "reason": "A named answer cannot reconstruct one complete reaction carrier."
+        },
+        {
+          "name": "complete-source-ordered-reaction-carrier",
+          "admitted": true,
+          "reason": "Centre, retained neighbour, entering carrier and leaving carrier remain distinct occurrences in one source-ordered record."
+        }
+      ]
+    },
+    {
+      "key": "source",
+      "choices": [
+        {
+          "name": "reactant-or-bond-support-omitted",
+          "admitted": false,
+          "reason": "Omission prevents exact reconstruction of what changes."
+        },
+        {
+          "name": "complete-source-bonds-and-free-entering-pair",
+          "admitted": true,
+          "reason": "The source contains the retained bond, displaced bond and free entering pair exactly."
+        }
+      ]
+    },
+    {
+      "key": "support",
+      "choices": [
+        {
+          "name": "electrons-created-destroyed-or-collapsed-to-charge-number",
+          "admitted": false,
+          "reason": "A scalar charge or incomplete pair loses the transferred occurrences."
+        },
+        {
+          "name": "every-held-pair-occurrence-conserved",
+          "admitted": true,
+          "reason": "Both entering occurrences form the new bond and both displaced occurrences remain with the leaving carrier."
+        }
+      ]
+    },
+    {
+      "key": "change",
+      "choices": [
+        {
+          "name": "endpoint-only-product-or-extra-bond-change",
+          "admitted": false,
+          "reason": "An endpoint or extra edit does not prove the minimal substitution map."
+        },
+        {
+          "name": "one-bond-cleaved-and-one-bond-formed",
+          "admitted": true,
+          "reason": "Only the centre-leaving incidence is replaced by the centre-entering incidence."
+        }
+      ]
+    },
+    {
+      "key": "path",
+      "choices": [
+        {
+          "name": "named-mechanism-rate-law-or-unordered-snapshots",
+          "admitted": false,
+          "reason": "A conventional name or imported kinetic law can select a path."
+        },
+        {
+          "name": "complete-one-transition-and-cleavage-first-path-family",
+          "admitted": true,
+          "reason": "The single exchange slot forces either one exchange transition or cleavage followed by formation."
+        }
+      ]
+    },
+    {
+      "key": "record",
+      "choices": [
+        {
+          "name": "intermediate-adverse-or-mechanism-row-omitted",
+          "admitted": false,
+          "reason": "Selected records falsely collapse the path family."
+        },
+        {
+          "name": "every-state-edge-status-and-source-record-retained",
+          "admitted": true,
+          "reason": "Every generated state, edge, source response, favorable, adverse, absent and unresolved record remains auditable."
+        }
+      ]
+    },
+    {
+      "key": "observation",
+      "choices": [
+        {
+          "name": "substrate-product-mechanism-readable-before-seal",
+          "admitted": false,
+          "reason": "External structures or terminology could select the survivor."
+        },
+        {
+          "name": "value-free-structure-and-mechanism-target-seal",
+          "admitted": true,
+          "reason": "Law and complete target identities seal before any newly registered structure or mechanism outcome opens."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "molecule-specific-exception-or-recomputed-prefix",
+          "admitted": false,
+          "reason": "A special substrate rule is not depth-independent."
+        },
+        {
+          "name": "fresh-retained-substrate-successor-no-extra-rule",
+          "admitted": true,
+          "reason": "Adding one fresh retained substrate occurrence preserves every prior state, edge and support allocation."
+        }
+      ]
+    }
+  ],
+  "exact_result": "complete-source-ordered-reaction-carrier__complete-source-bonds-and-free-entering-pair__every-held-pair-occurrence-conserved__one-bond-cleaved-and-one-bond-formed__complete-one-transition-and-cleavage-first-path-family__every-state-edge-status-and-source-record-retained__value-free-structure-and-mechanism-target-seal__fresh-retained-substrate-successor-no-extra-rule",
+  "induction_base": "A four-occurrence source with one retained bond, one displaced bond and one free entering pair forces one terminal with the retained bond, entering bond and displaced free pair through exactly one or two ordered transitions.",
+  "induction_step": "Append one fresh retained substrate occurrence and its complete held pair outside the exchange slot to every path state. Every prior atom, pair, bond change, state and transition remains unchanged without an extra rule.",
+  "exclusions": [
+    "no native numerical zero; structural absence is EmptyOne",
+    "no negative irrational imaginary continuum fitted free random or imported native parameter",
+    "no conventional nucleophilic SN1 SN2 rate energy solvent or substrate rule used to generate the survivor",
+    "no external substrate product mechanism structure formula charge or source response opened before its applicable seal",
+    "the two development-observed IUPAC records are disclosed and never relabelled blind",
+    "all nine source rows and the V1 identity-hash transcription correction remain preserved"
+  ],
+  "operational_witnesses": [
+    [
+      "complete-carrier",
+      "Every source atom and held electron occurrence survives both complete paths.",
+      true
+    ],
+    [
+      "minimal-bond-change",
+      "Exactly the displaced incidence closes and the entering incidence opens.",
+      true
+    ],
+    [
+      "pair-retention",
+      "The entering pair forms the terminal bond while the displaced pair remains free on the leaving carrier.",
+      true
+    ],
+    [
+      "complete-path-family",
+      "The generated family contains one-transition exchange and cleavage-then-formation paths.",
+      true
+    ],
+    [
+      "formation-first-control",
+      "Formation before cleavage halts because it occupies the one exchange slot twice.",
+      true
+    ],
+    [
+      "pair-collapse-control",
+      "A duplicated electron label cannot masquerade as a complete held pair.",
+      true
+    ],
+    [
+      "successor",
+      "Adding one retained substrate occurrence preserves the complete prior path without an extra rule.",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-NUCLEOPHILIC-SUBSTITUTION-FAMILY-007",
+  "expected_observation_label": "complete-entering-leaving-bond-change-path-and-postseal-structure-vector",
+  "target_rows": [
+    {
+      "target_id": "SFT-CHEM-ORG-007-001",
+      "source_id": "IUPAC::IUPAC-N04249::complete-development-observed-entering-carrier-record::development-observed-before-ORG-007-seal",
+      "source_locator": "nucleophile complete current term record",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-001-016-family-v1/iupac-n04249.json",
+      "snapshot_hash": "sha256:85c076a37280e447019a9a113bdaf969051e6e723b77daf2fe722b0f8b65b362"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-007-002",
+      "source_id": "IUPAC::IUPAC-08191::complete-development-observed-substrate-product-mechanism-record::development-observed-before-ORG-007-seal",
+      "source_locator": "nucleophilic substitution complete current term record",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-001-016-family-v1/iupac-08191.json",
+      "snapshot_hash": "sha256:7c8a0841388fdb34b8d65c41918ce5579b47a72008e5c3239eebcdcd746275b7"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-007-003",
+      "source_id": "IUPAC::IUPAC-E02130::complete-outcome-unopened-entering-group-record::linked-identity-development-observed-exact-payload-unopened-before-ORG-007-seal",
+      "source_locator": "entering group complete current term record linked directly by N04249",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-007-blind-v1/iupac-e02130.json",
+      "snapshot_hash": "sha256:6fea2be0453a7b0161df790c2ad88e3610b0754a7a6ed472ac8e31578a020136"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-007-004",
+      "source_id": "IUPAC::IUPAC-S06078::complete-outcome-unopened-substitution-reaction-record::linked-identity-development-observed-exact-payload-unopened-before-ORG-007-seal",
+      "source_locator": "substitution reaction complete current term record linked directly by N04249",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-007-blind-v1/iupac-s06078.json",
+      "snapshot_hash": "sha256:dba1ebd1933db3a41c15660305677c78bfe4e1ec3ba56bd1341b08d863cebae8"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-007-005",
+      "source_id": "IUPAC::IUPAC-H02809::complete-outcome-unopened-bond-cleavage-support-record::linked-identity-development-observed-exact-payload-unopened-before-ORG-007-seal",
+      "source_locator": "heterolytic complete current term record linked directly by N04249",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-007-blind-v1/iupac-h02809.json",
+      "snapshot_hash": "sha256:ff889ed337490daa9e3ac686badee0875c76687463697b37d46f84be890fa966"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-007-006",
+      "source_id": "NIH National Library of Medicine PubChem::PUBCHEM-PUG-BROMOMETHANE-STRUCTURE::outcome-unopened-source-substrate-structure::name-from-development-observed-example-exact-structure-payload-unopened-before-ORG-007-seal",
+      "source_locator": "complete fixed PubChem PUG property response for named bromomethane",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-007-blind-v1/pubchem-pug-bromomethane-structure.json",
+      "snapshot_hash": "sha256:b409acb12d2e763b117277b468ec208ea988f2cfbfd92d5f092a8431050c7ab5"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-007-007",
+      "source_id": "NIH National Library of Medicine PubChem::PUBCHEM-PUG-HYDROXIDE-STRUCTURE::outcome-unopened-entering-carrier-structure::name-from-development-observed-example-exact-structure-payload-unopened-before-ORG-007-seal",
+      "source_locator": "complete fixed PubChem PUG property response for named hydroxide",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-007-blind-v1/pubchem-pug-hydroxide-structure.json",
+      "snapshot_hash": "sha256:794c267b283f0e561ff538b10f28d5d1dd9df5143e998e661f5c3cca53379c9b"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-007-008",
+      "source_id": "NIH National Library of Medicine PubChem::PUBCHEM-PUG-METHANOL-STRUCTURE::outcome-unopened-terminal-product-structure::name-from-development-observed-example-exact-structure-payload-unopened-before-ORG-007-seal",
+      "source_locator": "complete fixed PubChem PUG property response for named methanol",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-007-blind-v1/pubchem-pug-methanol-structure.json",
+      "snapshot_hash": "sha256:b07f9828024670952ff03f7b2ad7b4fcc7f9a7ff0fc7c0b3771fedd0a196a91e"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-007-009",
+      "source_id": "NIH National Library of Medicine PubChem::PUBCHEM-PUG-BROMIDE-STRUCTURE::outcome-unopened-leaving-carrier-structure::name-from-development-observed-example-exact-structure-payload-unopened-before-ORG-007-seal",
+      "source_locator": "complete fixed PubChem PUG property response for named bromide",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-007-blind-v1/pubchem-pug-bromide-structure.json",
+      "snapshot_hash": "sha256:31b1b9bc0ccea1a01472998dfa8a4d128796a9abe98b7e1a94b145dadfb57030"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/org_007_complete_targets_v1.json",
+  "falsification_condition": "The claim fails if any carrier, source bond, free pair, atom or electron occurrence is omitted; if more or fewer than one centre bond is replaced; if formation-before-cleavage is accepted; if either generated path family is omitted; if the census has other than 256 forms and one survivor; if any of nine external records is erased; if the post-seal IUPAC entering-group, substitution or heterolysis records fail their declared relations; if the PubChem source and terminal formula inventories differ; or if C-Br to C-O connectivity replacement is absent."
+}

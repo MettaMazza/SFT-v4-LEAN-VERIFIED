@@ -15599,3 +15599,13 @@ import SFT.EarthEnvironment.EarthGeologicalMaterialEvidence
 import SFT.EarthEnvironment.EarthGeologicalMaterialExperiment
 
 import SFT.EarthEnvironment.EarthGeologicalMaterialValidation
+
+import SFT.EarthEnvironment.EarthGeologicalLayer
+
+import SFT.EarthEnvironment.EarthGeologicalLayerGrammar
+
+import SFT.EarthEnvironment.EarthGeologicalLayerEvidence
+
+import SFT.EarthEnvironment.EarthGeologicalLayerExperiment
+
+import SFT.EarthEnvironment.EarthGeologicalLayerValidation

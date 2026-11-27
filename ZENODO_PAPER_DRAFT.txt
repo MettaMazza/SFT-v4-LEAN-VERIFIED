@@ -38574,3 +38574,46 @@ Subsequent scanning and the final set-equality test remain the source operations
 The eight original binary grammar axes generate all 2^8 = 256 alternatives, retaining the original eliminations, unique survivor, closure record and four controls. The empirical construction preserves ten registered surfaces from two sources. Its fourteen-field exact analysis computes the direct centre count 2, direct bond count 1, bridge-occurrence count 2, bridge-path count 1, grouping absence, successor centre count 3 and disconnected rejection. It also retains target and source counts, complete surface presence, the one downstream signed-charge inscription surface, target-vector hash, source-recapture count and all-row preservation. Seven original empirical controls preserve omitted-row rejection, numerical-zero rejection, all ten post-seal target hashes, disconnected-cluster rejection, signed-charge scope, no source recapture and prediction/source separation.
 
 Original sources at pinned v3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1: sft/chemistry/metal_cluster_bonding_law_v1.py, MetalCentreRelation, ExactMetalCluster, relation, forced_cluster and append_centre; metal_cluster_bonding_batch_v1.py, statement, induction_base and induction_step; metal_cluster_bonding_validation_v1.py, exact_analysis and MetalClusterBondingValidator.validate. Native sources: SFT/Chemistry/MetalCluster.lean, MetalClusterClosure.lean and MetalClusterDerivation.lean, with their Grammar, Evidence, Prediction, Source, Analysis, Comparison, Experiment and Validation modules. Timeline: TURN1484. All 181 audited declarations have empty axiom dependencies. Seventy-nine complete core comparisons and thirteen interface comparisons match the original outputs. The native programme matches all original fields and hashes for all 256 alternatives. The original independent validator accepts the full programme and rejects the three adverse cases. The complete ten-row empirical result matches all 12 fields, 10 messages and custody hashes. Metal Cluster Bonding is complete as entry 1,043. Evidence: verification/TURN1484_METAL_CLUSTER_COMPLETION.json and its source-bound reports.
+
+1401. Primitive local-solid formula and retained occurrence extension
+
+A local solid motif retains the complete occurrence sequence O. The species name s(x) is the part of an occurrence label before its first # separator. Species are listed in first-occurrence order, and the complete multiplicity of each listed species is
+
+  n_s(O) = |[x in O : s(x) = s]|.
+
+For the ordered species list (s_1,...,s_k), the original primitive-formula operation computes
+
+  g = gcd(n_(s_1),...,n_(s_k)),
+  F(O) = [(s_1, n_(s_1)/g), ..., (s_k, n_(s_k)/g)].
+
+Division is exact natural-number division in the source construction. The stored formula entries carry held chemical-species labels and positive counted values. The occurrence sequence itself is retained; gcd reduction changes the formula coefficients, not the underlying occurrence census. For two A and two B occurrences, g=2 and the primitive vector is (1,1). Adding one A occurrence changes the counts to (3,2), whose gcd is one, and the primitive vector becomes (3,2). Species order follows the original first occurrence, including when B precedes A.
+
+The native speciesName, speciesLabels, speciesCount and primitiveFormula operations preserve these source operations and their failure behavior. formulaEntryRetains proves that an accepted formula entry retains its supplied species and positive count, while primitiveCountPositive establishes positivity from the counted-value representation.
+
+The complete local-solid record is
+
+  S = (motif, O, B, F, A, K, scope, handoff),
+
+where B is the ordered sequence of local bond pairs, A is the repeat-axis support, and K is positive second-constituent occurrence support or structural EmptyOne. The original constructor requires positive distinct occurrence support, the exact recomputed primitive formula, one to three distinct generated repeat axes, and distinct valid bond pairs whose two unequal endpoints occur in O. Ordered bond pairs retain their orientation: (a,b) and (b,a) are distinct supplied pairs. Empty local bond support is admitted by the original constructor. An EmptyOne constituent retains its identity there, and positive constituent support retains all its occurrences.
+
+The ownership labels are fixed as
+
+  scope = (ownership, composition-and-local-bonding),
+  handoff = (ownership-handoff, materials-bulk-response).
+
+solidRetains proves that every accepted constructor result retains all eight fields. It does not replace an explicit local adjacency sequence with an averaged coordination number.
+
+For a supplied species s, the original successor computes n_s(O)+1 as its next occurrence index and constructs x = occurrence(s,n_s(O)+1). It then applies
+
+  O' = O ++ [x],
+  B' = B ++ [(anchor,x)],
+  F' = F(O').
+
+All constructor guards are reapplied. appendDerivation proves these exact field relations for every successful successor, including recomputation of the primitive formula and retention of motif, repeat axes, constituent support and both ownership labels. appendCounts gives
+
+  |O'| = |O| + 1,
+  |B'| = |B| + 1.
+
+occurrenceRetains identifies the generated family and the exact species#index label. The successor is therefore a retained occurrence-and-bond extension with a recomputed formula, while the Chemistry-to-Materials ownership handoff stays fixed.
+
+Original source: sft/chemistry/solid_state_local_coordination_law_v1.py at v3 commit 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1, FormulaEntry, primitive_formula, ExactSolidStateLocalChemistry, occurrence and append_occurrence; solid_state_local_coordination_batch_v1.py, induction_base and induction_step. Native source: SFT/Chemistry/SolidLocal.lean and SolidLocalDerivation.lean. Timeline: TURN1486. The fourteen native definitions and six theorems listed in verification/TURN1486_SOLID_LOCAL_PARTIAL have empty axiom dependencies. Forty-seven complete formula comparisons and sixty-six complete constructor/successor comparisons match the pinned source outputs, covering count pairs, ordering, repeated occurrences, label splitting, all constructor guard classes, retained reversed bonds and successful or rejected successors. These results cover the operations identified above; the entry is not included in the completed-entry total at this checkpoint.

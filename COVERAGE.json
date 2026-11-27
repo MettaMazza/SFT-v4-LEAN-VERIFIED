@@ -62019,9 +62019,12 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-SOLID-STATE-LOCAL-COORDINATION-015-c4c74ec1c8d623cc.json",
       "statement": "Chemistry retains one finite complete local solid motif: every species occurrence, its primitive positive formula ratio, every local bond adjacency, generated repeat rank one through three, and positive second-constituent support or structural EmptyOne. Bulk material response is transferred explicitly to Materials.",
       "title": "Exact solid-state formula, local coordination and ownership law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Chemistry/SolidLocal.lean",
+        "SFT/Chemistry/SolidLocalDerivation.lean"
+      ],
+      "artifact_runtime_parity": "PASS47primitive-formula and66constructor/successor comparisons;fullentry programme/empirical comparisons not yet translated",
       "registration_sha256": "778e66db1e64637dd49881792fea825368d44d164ce31536128980310e41c7db",
       "v3_registration": {
         "branch": "chemistry",
@@ -62072,7 +62075,14 @@
         "statement": "One finite complete local solid motif forces a primitive positive formula, complete local adjacency, generated repeat rank one through three, exact constituent support or EmptyOne, and a Chemistry-to-Materials ownership handoff.",
         "status": "empirically_tested",
         "title": "Exact solid-state formula, local coordination and ownership law"
-      }
+      },
+      "remaining": [
+        "Translate local_solid exactly, including rank guard, generated occurrences, original lookup parsing/overwrite behavior, ordered edges, axes and second-constituent generation",
+        "Complete source-bound primitive gcd reduction derivation and generator correspondence",
+        "Translate all256 original grammar alternatives, original decisions/witnesses/controls and registration",
+        "Translate original ten-row empirical interfaces, all source boundaries and validator; preserve returned mixed-crystal identity mismatch",
+        "Run full source programme/independent/empirical comparisons, register entry and increment completion immediately, then push"
+      ]
     },
     {
       "branch": "chemistry",
@@ -203332,11 +203342,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-26T23:26:59.806293+00:00",
+  "updated_at": "2026-11-27T08:19:24.513457+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 9,
-    "pending": 1729,
+    "in_progress": 10,
+    "pending": 1728,
     "fully_reconstructed_claims": 1043,
     "axiom_free_exported_results": 62176,
     "axiom_free_audited_definitions_and_theorems": 143417

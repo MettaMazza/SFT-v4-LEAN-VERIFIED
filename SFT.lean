@@ -15799,3 +15799,13 @@ import SFT.EarthEnvironment.EarthHydrologicCycleEvidence
 import SFT.EarthEnvironment.EarthHydrologicCycleExperiment
 
 import SFT.EarthEnvironment.EarthHydrologicCycleValidation
+
+import SFT.EarthEnvironment.EarthGroundwater
+
+import SFT.EarthEnvironment.EarthGroundwaterGrammar
+
+import SFT.EarthEnvironment.EarthGroundwaterEvidence
+
+import SFT.EarthEnvironment.EarthGroundwaterExperiment
+
+import SFT.EarthEnvironment.EarthGroundwaterValidation

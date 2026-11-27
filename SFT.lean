@@ -15699,3 +15699,13 @@ import SFT.EarthEnvironment.EarthPlateBoundaryEvidence
 import SFT.EarthEnvironment.EarthPlateBoundaryExperiment
 
 import SFT.EarthEnvironment.EarthPlateBoundaryValidation
+
+import SFT.EarthEnvironment.EarthTectonicMotion
+
+import SFT.EarthEnvironment.EarthTectonicMotionGrammar
+
+import SFT.EarthEnvironment.EarthTectonicMotionEvidence
+
+import SFT.EarthEnvironment.EarthTectonicMotionExperiment
+
+import SFT.EarthEnvironment.EarthTectonicMotionValidation

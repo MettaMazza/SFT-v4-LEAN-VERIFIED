@@ -15859,3 +15859,13 @@ import SFT.EarthEnvironment.EarthAtmosphericRadiativeBudgetEvidence
 import SFT.EarthEnvironment.EarthAtmosphericRadiativeBudgetExperiment
 
 import SFT.EarthEnvironment.EarthAtmosphericRadiativeBudgetValidation
+
+import SFT.EarthEnvironment.EarthMoistureCloud
+
+import SFT.EarthEnvironment.EarthMoistureCloudGrammar
+
+import SFT.EarthEnvironment.EarthMoistureCloudEvidence
+
+import SFT.EarthEnvironment.EarthMoistureCloudExperiment
+
+import SFT.EarthEnvironment.EarthMoistureCloudValidation

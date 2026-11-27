@@ -15067,3 +15067,27 @@ import SFT.Chemistry.MetalClusterComparison
 import SFT.Chemistry.MetalClusterExperiment
 
 import SFT.Chemistry.MetalClusterValidation
+
+import SFT.Chemistry.SolidLocal
+
+import SFT.Chemistry.SolidLocalDerivation
+
+import SFT.Chemistry.SolidLocalGenerator
+
+import SFT.Chemistry.SolidLocalFormulaDerivation
+
+import SFT.Chemistry.SolidLocalGrammar
+
+import SFT.Chemistry.SolidLocalEvidence
+
+import SFT.Chemistry.SolidLocalPrediction
+
+import SFT.Chemistry.SolidLocalSource
+
+import SFT.Chemistry.SolidLocalAnalysis
+
+import SFT.Chemistry.SolidLocalComparison
+
+import SFT.Chemistry.SolidLocalExperiment
+
+import SFT.Chemistry.SolidLocalValidation

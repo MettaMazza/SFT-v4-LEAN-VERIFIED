@@ -1,0 +1,4 @@
+import SFT.Chemistry.ConformerPopulationClosure
+#print axioms SFT.Chemistry.ConformerPopulationClosure.censusClosure
+#print axioms SFT.Chemistry.ConformerPopulationClosure.everyRowChecked
+#print axioms SFT.Chemistry.ConformerPopulationClosure.constructedRowsRetained

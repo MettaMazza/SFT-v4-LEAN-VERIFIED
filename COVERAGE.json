@@ -62680,9 +62680,22 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-CONFORMER-POPULATION-ORDERING-006-6668695f63755775.json",
       "statement": "For every complete finite conformer quotient, retained observation condition and positive finite trace, each conformer population is exactly its deterministic class-occurrence count divided by the complete trace boundary. An unobserved class is structural EmptyOne. Relative energy order uses structural least state plus positive exact Take, while every condition and observation-timescale remains retained.",
       "title": "Exact conditioned conformer population and ordering law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Chemistry/ConformerPopulation.lean",
+        "SFT/Chemistry/ConformerPopulationAnalysis.lean",
+        "SFT/Chemistry/ConformerPopulationClosure.lean",
+        "SFT/Chemistry/ConformerPopulationComparison.lean",
+        "SFT/Chemistry/ConformerPopulationDerivation.lean",
+        "SFT/Chemistry/ConformerPopulationEvidence.lean",
+        "SFT/Chemistry/ConformerPopulationExperiment.lean",
+        "SFT/Chemistry/ConformerPopulationGrammar.lean",
+        "SFT/Chemistry/ConformerPopulationPrediction.lean",
+        "SFT/Chemistry/ConformerPopulationSource.lean",
+        "SFT/Chemistry/ConformerPopulationValidation.lean",
+        "SFT/Chemistry/ConformerPopulationWitnesses.lean"
+      ],
+      "artifact_runtime_parity": "PASS 55 core cases, full256 programme, independent original/3adverse cases,171prediction instructions,31analysisfields,14postseal targets/12controls; actual full-validator source rejection preserved. Empirical replay not passed.",
       "registration_sha256": "0c9ebf232871a325dfd73c4fed069f5a571058427608c7aaf90f606286805470",
       "v3_registration": {
         "$schema": "../../governance/claim.schema.json",
@@ -62732,7 +62745,11 @@
         "statement": "For every complete finite conformer quotient, retained observation condition and positive finite trace, each conformer population is exactly its deterministic class-occurrence count divided by the complete trace boundary. An unobserved class is structural EmptyOne. Relative energy order uses structural least state plus positive exact Take, while every condition and observation-timescale remains retained.",
         "status": "empirically_tested",
         "title": "Exact conditioned conformer population and ordering law"
-      }
+      },
+      "remaining": [
+        "Original full empirical replay rejects snapshot hashes at ORG006006 and ORG006007. Preserve the original guard and investigate exact source custody/capture bytes; do not rewrite the pinned source, expected hashes or model. ORG006006 recorded hash is reproduced exactly by original mixed CRLF/LF bytes; ORG006007 captured byte count exceeds pinned bytes by32 and remains specifically unresolved."
+      ],
+      "checkpoint_evidence": "verification/TURN1495_CONFORMER_POPULATION_CHECKPOINT.json"
     },
     {
       "branch": "chemistry",
@@ -203450,11 +203467,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-27T10:36:02.205809+00:00",
+  "updated_at": "2026-11-27T11:10:00.387072+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 9,
-    "pending": 1723,
+    "in_progress": 10,
+    "pending": 1722,
     "fully_reconstructed_claims": 1049,
     "axiom_free_exported_results": 62594,
     "axiom_free_audited_definitions_and_theorems": 144571

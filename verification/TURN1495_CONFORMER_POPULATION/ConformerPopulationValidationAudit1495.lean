@@ -1,0 +1,25 @@
+import SFT.Chemistry.ConformerPopulationExperiment
+import SFT.Chemistry.ConformerPopulationValidation
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.claimId
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.experimentId
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.expectedLabel
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.falsification
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.targetRegistryHash
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.sourceFiles
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.references
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.registration
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.labelValue
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.envelope
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.specDimensions
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.specWitnesses
+#print axioms SFT.Chemistry.ConformerPopulationExperiment.validateSpec
+#print axioms SFT.Chemistry.ConformerPopulationValidation.inputValues
+#print axioms SFT.Chemistry.ConformerPopulationValidation.sealPrediction
+#print axioms SFT.Chemistry.ConformerPopulationValidation.certificate
+#print axioms SFT.Chemistry.ConformerPopulationValidation.isolation
+#print axioms SFT.Chemistry.ConformerPopulationValidation.custodyCertificate
+#print axioms SFT.Chemistry.ConformerPopulationValidation.boolText
+#print axioms SFT.Chemistry.ConformerPopulationValidation.rowText
+#print axioms SFT.Chemistry.ConformerPopulationValidation.rowPassed
+#print axioms SFT.Chemistry.ConformerPopulationValidation.measurementPayload
+#print axioms SFT.Chemistry.ConformerPopulationValidation.validate

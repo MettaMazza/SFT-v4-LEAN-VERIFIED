@@ -1,0 +1,6 @@
+import SFT.Chemistry.ConformerPopulationComparison
+#print axioms SFT.Chemistry.ConformerPopulationComparison.expectedLaws
+#print axioms SFT.Chemistry.ConformerPopulationComparison.cellAt
+#print axioms SFT.Chemistry.ConformerPopulationComparison.compare
+#print axioms SFT.Chemistry.ConformerPopulationComparison.controls
+#print axioms SFT.Chemistry.ConformerPopulationComparison.analysisPassed

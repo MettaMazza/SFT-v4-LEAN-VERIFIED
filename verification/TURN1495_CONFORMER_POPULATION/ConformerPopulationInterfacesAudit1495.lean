@@ -1,0 +1,13 @@
+import SFT.Chemistry.ConformerPopulationPrediction
+import SFT.Chemistry.ConformerPopulationSource
+#print axioms SFT.Chemistry.ConformerPopulationPrediction.identityHash
+#print axioms SFT.Chemistry.ConformerPopulationPrediction.get
+#print axioms SFT.Chemistry.ConformerPopulationPrediction.equal
+#print axioms SFT.Chemistry.ConformerPopulationPrediction.identities
+#print axioms SFT.Chemistry.ConformerPopulationPrediction.identityText
+#print axioms SFT.Chemistry.ConformerPopulationPrediction.recordInstructions
+#print axioms SFT.Chemistry.ConformerPopulationPrediction.predictionDocument
+#print axioms SFT.Chemistry.ConformerPopulationSource.identityKeys
+#print axioms SFT.Chemistry.ConformerPopulationSource.predictionMap
+#print axioms SFT.Chemistry.ConformerPopulationSource.bindTarget
+#print axioms SFT.Chemistry.ConformerPopulationSource.sourceRows

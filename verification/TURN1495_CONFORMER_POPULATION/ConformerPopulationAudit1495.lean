@@ -1,0 +1,23 @@
+import SFT.Chemistry.ConformerPopulation
+#print axioms SFT.Chemistry.ConformerPopulation.orderedTake
+#print axioms SFT.Chemistry.ConformerPopulation.observation
+#print axioms SFT.Chemistry.ConformerPopulation.singletonEmpty
+#print axioms SFT.Chemistry.ConformerPopulation.positiveRatio
+#print axioms SFT.Chemistry.ConformerPopulation.validEnergy
+#print axioms SFT.Chemistry.ConformerPopulation.row
+#print axioms SFT.Chemistry.ConformerPopulation.sameClass
+#print axioms SFT.Chemistry.ConformerPopulation.sameClasses
+#print axioms SFT.Chemistry.ConformerPopulation.occurrences
+#print axioms SFT.Chemistry.ConformerPopulation.occurrenceNat
+#print axioms SFT.Chemistry.ConformerPopulation.validateCount
+#print axioms SFT.Chemistry.ConformerPopulation.construct
+#print axioms SFT.Chemistry.ConformerPopulation.generatedRow
+#print axioms SFT.Chemistry.ConformerPopulation.conditioned
+#print axioms SFT.Chemistry.ConformerPopulation.appendObservation
+#print axioms SFT.Chemistry.ConformerPopulation.orderKey
+#print axioms SFT.Chemistry.ConformerPopulation.precedes
+#print axioms SFT.Chemistry.ConformerPopulation.insertKeyed
+#print axioms SFT.Chemistry.ConformerPopulation.sortKeyed
+#print axioms SFT.Chemistry.ConformerPopulation.orderedRows
+#print axioms SFT.Chemistry.ConformerPopulation.populationOrder
+#print axioms SFT.Chemistry.ConformerPopulation.energyOrder

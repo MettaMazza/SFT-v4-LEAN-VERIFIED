@@ -1,0 +1,11 @@
+import SFT.Chemistry.ConformerPopulationDerivation
+#print axioms SFT.Chemistry.ConformerPopulationDerivation.occurrencesAppend
+#print axioms SFT.Chemistry.ConformerPopulationDerivation.observationSuccessorCount
+#print axioms SFT.Chemistry.ConformerPopulationDerivation.occurrenceWithinBoundary
+#print axioms SFT.Chemistry.ConformerPopulationDerivation.observationRetained
+#print axioms SFT.Chemistry.ConformerPopulationDerivation.rowRetained
+#print axioms SFT.Chemistry.ConformerPopulationDerivation.generatedRowPositive
+#print axioms SFT.Chemistry.ConformerPopulationDerivation.generatedRowAbsent
+#print axioms SFT.Chemistry.ConformerPopulationDerivation.takeFromLeastRetains
+#print axioms SFT.Chemistry.ConformerPopulationDerivation.takePositiveDifference
+#print axioms SFT.Chemistry.ConformerPopulationDerivation.successorRetainsHistory

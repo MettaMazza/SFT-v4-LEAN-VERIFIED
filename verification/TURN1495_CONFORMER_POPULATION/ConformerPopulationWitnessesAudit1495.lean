@@ -1,0 +1,18 @@
+import SFT.Chemistry.ConformerPopulationWitnesses
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.condition
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.base
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.populations
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.populationWitness
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.censusWitness
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.energyWitness
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.orderWitness
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.successorWitness
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.reverseTakeWitness
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.foreignWitness
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.populationPassed
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.censusPassed
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.energyPassed
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.orderPassed
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.successorPassed
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.reverseTakePassed
+#print axioms SFT.Chemistry.ConformerPopulationWitnesses.foreignPassed

@@ -15195,3 +15195,63 @@ import SFT.Chemistry.AntiaromaticDistinctionComparison
 import SFT.Chemistry.AntiaromaticDistinctionExperiment
 
 import SFT.Chemistry.AntiaromaticDistinctionValidation
+
+import SFT.Chemistry.ConformerCarrier
+
+import SFT.Chemistry.ConformerAssignments
+
+import SFT.Chemistry.ConformerCensus
+
+import SFT.Chemistry.ConformerIdentity
+
+import SFT.Chemistry.ConformerIdentityValues
+
+import SFT.Chemistry.ConformerIdentityFilters
+
+import SFT.Chemistry.ConformerAdmittedGraph
+
+import SFT.Chemistry.ConformerActionEnumeration
+
+import SFT.Chemistry.ConformerAlphabetProofs
+
+import SFT.Chemistry.ConformerGenerationProofs
+
+import SFT.Chemistry.ConformerUniqueness
+
+import SFT.Chemistry.ConformerGenerationClosure
+
+import SFT.Chemistry.ConformerRotorAction
+
+import SFT.Chemistry.ConformerIdentityFold
+
+import SFT.Chemistry.ConformerReadback
+
+import SFT.Chemistry.ConformerOrbitProgress
+
+import SFT.Chemistry.ConformerAssignmentMembership
+
+import SFT.Chemistry.ConformerOrbitOrder
+
+import SFT.Chemistry.ConformerPartition
+
+import SFT.Chemistry.ConformerQuotientTrace
+
+import SFT.Chemistry.ConformerReachSet
+
+import SFT.Chemistry.ConformerReachability
+
+import SFT.Chemistry.ConformerGenerationGrammar
+
+import SFT.Chemistry.ConformerGenerationEvidence
+
+import SFT.Chemistry.ConformerPrediction
+
+import SFT.Chemistry.ConformerSource
+
+import SFT.Chemistry.ConformerAnalysis
+
+import SFT.Chemistry.ConformerComparison
+
+import SFT.Chemistry.ConformerExperiment
+
+import SFT.Chemistry.ConformerValidation

@@ -38974,3 +38974,30 @@ H(S)=[h:(a,b,h)∈B]++[h:(a,h)∈F].
 The source guards require |A|≥2, distinct atom occurrences, the original label families, bond endpoints and free-support owners in A, and no repeated support occurrence in H(S). Bond keys use unordered endpoints together with their support identity. Thus distinct supports may occupy the same endpoint pair; the original carrier does not collapse a multiple-support adjacency into a single layer.
 
 The nine native carrier declarations have empty axiom dependencies. Native execution equals all nested fields of ten current-v3 example states and reproduces five original rejection cases. This is the verified carrier portion of the addition entry; the complete v3 transform, grammar and validator remain the continuation work and this entry has not been counted complete. Original sources: sft/chemistry/addition_reaction_law_v1.py (reused constructors) and addition_reaction_law_v3.py (current binding). Native verification: SFT/Chemistry/AdditionCarrier.lean. Evidence: verification/TURN1499_ADDITION. Timeline: TURN1499.
+
+1411.1. Complete cross-carrier addition transform
+
+Let S and T denote the complete source and terminal states. Their ordered atom words must agree, A(S)=A(T), and their held-support sets must agree, H(S)=H(T). The source graph components C_1,…,C_k are ordered by their first occurrence in the source atom word. The terminal graph must have one connected component and k≥2. The native implementation reuses the established finite graph search and its well-founded worklist order; its distance queue retains the breadth-first distance alongside each frontier occurrence. No search-depth cutoff is introduced.
+
+Write E(S) and E(T) for the sets of unordered endpoint pairs, retaining a separate ordered held-support list on each pair. The new adjacency set is
+N=E(T)\E(S),  |N|=2.
+For every {a,b}∈N, the source component indices satisfy c(a)≠c(b). Each new adjacency carries at least one retained support. Bond-by-support lookup preserves the source's ordered endpoint comparison, while adjacency identity is unordered. Thus reversing a bond's ordered endpoints and adding an adjacency are distinct operations in the exact record.
+
+Let b_S(h) and b_T(h) be the optional held bonds for h. The unchanged supports and reduced multiplicity supports are
+U={h:b_S(h)=b_T(h) and b_S(h) is held},
+R={h:b_S(h)≠b_T(h), b_S(h) is held, and some u∈U occupies the same source endpoint pair as h}.
+The source requires |R|>0. Its relocated-support set also retains changes between bond-held and free support:
+M={h:b_S(h)≠b_T(h) or free_S(h)≠free_T(h)}.
+The returned R and M words are sorted by the original support labels. There is no identification of |N| with |R| or |M|: the cycloaddition witness has |N|=2, |R|=3 and |M|=3.
+
+For each source component receiving exactly two attachment occurrences a,b from N, breadth-first separation d_S(a,b) selects its class. Equal occurrences give structural EmptyOne and same-site; one retained incidence gives adjacent-sites; a positive path of at least two incidences gives non-adjacent-sites. At least one componentwise class must be present. The result retains all ten original fields: reaction identity, source, terminal, source-component count, new adjacencies, new-bond count, reduced supports, reduced-layer count, component site classes and relocated supports.
+
+The successor appends one fresh atom u and one unchanged support h_u at a retained anchor a to both states:
+A′=A++[u],  B′_S=B_S++[(a,u,h_u)],  B′_T=B_T++[(a,u,h_u)].
+It reconstructs the extended transform with the same guards, then compares the prior component count, new adjacencies, reduced supports, site classes and relocated supports, together with both original bond prefixes.
+
+All five original complete example results and six original rejection cases match native execution, including every nested result field. All nine original operational witnesses evaluate identically. The six current native modules contain 118 audited declarations with empty axiom dependencies. The separate kernel equality theorem for the combined nine-witness result is not yet complete; runtime comparison is not substituted for that theorem. The original 256-alternative grammar is implemented and its kernel audit passes. The fresh full native programme comparison and native empirical validator remain tracked separately before entry completion.
+
+The empirical source boundary retains all 104 pinned execution files, including the 48 non-USPTO ORD payloads (12,993,815 bytes), all 131,209 conventional source rows and all 28 preselected reaction vectors. Fresh original execution passes its full validator and independent controls. The native empirical translation remains pending; this is not a claim of completed native validation of those records.
+
+Original sources: sft/chemistry/addition_reaction_law_v3.py (complete transform, component classes, extension and nine witnesses), addition_reaction_law_v1.py (retained carrier and graph components), addition_reaction_batch_v3.py and addition_reaction_validation_v3.py. Native verification: SFT/Chemistry/AdditionCarrier.lean, AdditionGraph.lean, AdditionTransform.lean, AdditionWitnesses.lean, AdditionGrammar.lean and AdditionEvidence.lean. Evidence: verification/TURN1501_ADDITION. Timeline: TURN1501. The entry remains in progress; the completed census count remains 1,053 / 2,781.

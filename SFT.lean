@@ -15829,3 +15829,13 @@ import SFT.EarthEnvironment.EarthCryosphereEvidence
 import SFT.EarthEnvironment.EarthCryosphereExperiment
 
 import SFT.EarthEnvironment.EarthCryosphereValidation
+
+import SFT.EarthEnvironment.EarthAtmosphere
+
+import SFT.EarthEnvironment.EarthAtmosphereGrammar
+
+import SFT.EarthEnvironment.EarthAtmosphereEvidence
+
+import SFT.EarthEnvironment.EarthAtmosphereExperiment
+
+import SFT.EarthEnvironment.EarthAtmosphereValidation

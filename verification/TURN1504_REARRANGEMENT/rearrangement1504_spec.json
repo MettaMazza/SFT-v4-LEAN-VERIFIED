@@ -1,0 +1,339 @@
+{
+  "claim_id": "SFT-CHEM-REARRANGEMENT-REACTION-FAMILY-011",
+  "title": "Exact composition-retaining molecular rearrangement law",
+  "statement": "A complete rearrangement retains every atom and held-support occurrence of one connected carrier while a positive finite family of held supports changes exact incidence; every nonoriginal incidence, direct or opened-reclosure path, degenerate trace and unchanged successor remains generated.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-COMP-FORM-STATE-TRANSITION-001",
+    "SFT-QUANTUM-REVERSIBLE-MODEL-001",
+    "SFT-CHEM-STOICH-COMPOSITION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-CHEMICAL-BOND-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-ORDER-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-MOL-ISOMER-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-ORGANIC-FUNCTIONAL-GROUP-001",
+    "SFT-CHEM-ORGANIC-REACTION-FAMILY-001",
+    "SFT-CHEM-ELIMINATION-REACTION-FAMILY-010"
+  ],
+  "generation_rule": "Generate the literal product of carrier, atom, support, adjacency, path, alternative, observation and extension coordinates; decide all 256 forms only from admitted Fold conservation, graph and reversible laws.",
+  "grammar_boundary": "Every positive finite connected source/terminal carrier pair; every exact atom and held support; every nonoriginal target incidence; both direct and opened-reclosure paths; constitutionally degenerate traces; three complete IUPAC records; the preserved first blind surface; all 38 pages and all eight exact Claisen pairs.",
+  "dimensions": [
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "selected-group-or-product-fragment-only",
+          "admitted": false,
+          "reason": "A fragment cannot prove that the same complete carrier rearranged."
+        },
+        {
+          "name": "complete-source-and-terminal-carrier",
+          "admitted": true,
+          "reason": "The complete connected source and terminal molecular carriers remain explicit."
+        }
+      ]
+    },
+    {
+      "key": "atoms",
+      "choices": [
+        {
+          "name": "atom-created-erased-or-collapsed-to-formula",
+          "admitted": false,
+          "reason": "A changed atom inventory is a different composition, not a rearrangement."
+        },
+        {
+          "name": "every-atom-occurrence-retained-in-source-order",
+          "admitted": true,
+          "reason": "Every exact atom occurrence remains once in the same carrier."
+        }
+      ]
+    },
+    {
+      "key": "supports",
+      "choices": [
+        {
+          "name": "support-created-erased-or-renamed",
+          "admitted": false,
+          "reason": "A replaced bond label cannot be traced through the rearrangement."
+        },
+        {
+          "name": "every-held-support-occurrence-retained-once",
+          "admitted": true,
+          "reason": "Every held support identity remains once while its incidence may move."
+        }
+      ]
+    },
+    {
+      "key": "adjacency",
+      "choices": [
+        {
+          "name": "unchanged-graph-or-unregistered-edit",
+          "admitted": false,
+          "reason": "No change is not a rearrangement and an arbitrary edit is not forced."
+        },
+        {
+          "name": "positive-finite-held-support-incidence-change",
+          "admitted": true,
+          "reason": "At least one held support changes from one exact incidence to another generated incidence."
+        }
+      ]
+    },
+    {
+      "key": "path",
+      "choices": [
+        {
+          "name": "named-mechanism-or-single-imported-order",
+          "admitted": false,
+          "reason": "A conventional mechanism name cannot select the native path."
+        },
+        {
+          "name": "complete-direct-or-opened-reclosure-path-family",
+          "admitted": true,
+          "reason": "The held support moves directly or opens and exactly recloses with its identity retained."
+        }
+      ]
+    },
+    {
+      "key": "alternatives",
+      "choices": [
+        {
+          "name": "species-selected-target-or-degenerate-path-erased",
+          "admitted": false,
+          "reason": "A named product omits other lawful target incidences and constitutionally degenerate traces."
+        },
+        {
+          "name": "all-nonoriginal-incidences-and-degenerate-traces-generated",
+          "admitted": true,
+          "reason": "Every nonoriginal pair is generated and an isomorphic endpoint retains its exact transition trace."
+        }
+      ]
+    },
+    {
+      "key": "observation",
+      "choices": [
+        {
+          "name": "product-scope-readable-before-seal",
+          "admitted": false,
+          "reason": "An opened rearrangement scope could choose the survivor."
+        },
+        {
+          "name": "value-free-rearrangement-product-vector-seal",
+          "admitted": true,
+          "reason": "The law, target identities and predicted relation seal before new product vectors open."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "reaction-specific-exception-or-recomputed-prefix",
+          "admitted": false,
+          "reason": "A named exception is not depth-independent."
+        },
+        {
+          "name": "fresh-unchanged-carrier-successor-no-extra-rule",
+          "admitted": true,
+          "reason": "A fresh unchanged occurrence preserves every prior support move and decision."
+        }
+      ]
+    }
+  ],
+  "exact_result": "complete-source-and-terminal-carrier__every-atom-occurrence-retained-in-source-order__every-held-support-occurrence-retained-once__positive-finite-held-support-incidence-change__complete-direct-or-opened-reclosure-path-family__all-nonoriginal-incidences-and-degenerate-traces-generated__value-free-rearrangement-product-vector-seal__fresh-unchanged-carrier-successor-no-extra-rule",
+  "induction_base": "One retained held support moves from its source atom pair to one different generated pair while every atom, support and unchanged incidence remains explicit and the reverse reconstruction returns exactly.",
+  "induction_step": "Every next positive finite moved-support family is generated by the same incidence rule; appending a fresh unchanged atom and support preserves the complete prior rearrangement and all decisions.",
+  "exclusions": [
+    "no native numerical zero; structural absence is EmptyOne",
+    "no negative irrational imaginary continuum fitted free random or imported native parameter",
+    "no reaction name mechanism yield selectivity temperature time mass formula or measured product selects the survivor",
+    "all optimization, non-detection, signed stereochemical, spectral, adverse, absent and unresolved rows remain preserved",
+    "the first blind incomplete-carrier surface remains unresolved and is never relabelled favorable",
+    "conventional imaginary-frequency and signed decimal inscriptions remain downstream evidence only"
+  ],
+  "operational_witnesses": [
+    [
+      "carrier",
+      "Both endpoints remain complete connected carriers.",
+      true
+    ],
+    [
+      "composition",
+      "Every atom and held support occurrence remains exact.",
+      true
+    ],
+    [
+      "adjacency",
+      "One held support changes its exact incidence.",
+      true
+    ],
+    [
+      "positive-finite-family",
+      "Three held supports may rearrange without a new rule.",
+      true
+    ],
+    [
+      "complete-targets",
+      "Every nonoriginal pair is generated for the moved support.",
+      true
+    ],
+    [
+      "path-family",
+      "Direct relocation and opened exact reclosure are both retained.",
+      true
+    ],
+    [
+      "degenerate",
+      "An isomorphic endpoint retains a nonempty exact support-move trace.",
+      true
+    ],
+    [
+      "reverse",
+      "The complete rearrangement reconstructs exactly in reverse.",
+      true
+    ],
+    [
+      "unchanged-control",
+      "An unchanged adjacency organization halts.",
+      true
+    ],
+    [
+      "composition-control",
+      "A missing atom occurrence halts.",
+      true
+    ],
+    [
+      "successor",
+      "A fresh unchanged occurrence preserves the complete transform.",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-REARRANGEMENT-REACTION-FAMILY-011",
+  "expected_observation_label": "complete-rearrangement-observable-and-preservation-vector",
+  "target_rows": [
+    {
+      "target_id": "SFT-CHEM-ORG-011-IUPAC-MOLECULAR",
+      "source_id": "IUPAC:M03997",
+      "source_locator": "complete molecular-rearrangement record",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-001-016-family-v1/iupac-m03997.json",
+      "snapshot_hash": "sha256:55614e4895882e0d0405d675ffce95f09fffbf30f0f001e071b138655a3ccedd"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-IUPAC-REARRANGEMENT",
+      "source_id": "IUPAC:R05194",
+      "source_locator": "complete rearrangement alias record",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-001-016-family-v1/iupac-r05194.html",
+      "snapshot_hash": "sha256:420b101c1f21ba8055e107379491a899067479c12002a6ae0707016eeadde0ba"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-IUPAC-STAGE",
+      "source_id": "IUPAC:R05196",
+      "source_locator": "complete rearrangement-stage record",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-001-016-family-v1/iupac-r05196.json",
+      "snapshot_hash": "sha256:70da8c9927572e8c39fec4b69fb711b7ebdc5581b275dd310a46fd3a3551d17c"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-CLAISEN-PAIR-01",
+      "source_id": "ACS-FIGSHARE:10.1021/ja803370x.s001:PAIR:1",
+      "source_locator": "complete source page 15 and product page 17",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+      "snapshot_hash": "sha256:2e200b570d0a407ef960fc02e0cd203d73f970af0c666fe5478f930385ef1a27"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-CLAISEN-PAIR-02",
+      "source_id": "ACS-FIGSHARE:10.1021/ja803370x.s001:PAIR:2",
+      "source_locator": "complete source page 15 and product page 19",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+      "snapshot_hash": "sha256:2e200b570d0a407ef960fc02e0cd203d73f970af0c666fe5478f930385ef1a27"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-CLAISEN-PAIR-03",
+      "source_id": "ACS-FIGSHARE:10.1021/ja803370x.s001:PAIR:3",
+      "source_locator": "complete source page 15 and product page 21",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+      "snapshot_hash": "sha256:2e200b570d0a407ef960fc02e0cd203d73f970af0c666fe5478f930385ef1a27"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-CLAISEN-PAIR-04",
+      "source_id": "ACS-FIGSHARE:10.1021/ja803370x.s001:PAIR:4",
+      "source_locator": "complete source page 15 and product page 23",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+      "snapshot_hash": "sha256:2e200b570d0a407ef960fc02e0cd203d73f970af0c666fe5478f930385ef1a27"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-CLAISEN-PAIR-05",
+      "source_id": "ACS-FIGSHARE:10.1021/ja803370x.s001:PAIR:5",
+      "source_locator": "complete source page 16 and product page 25",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+      "snapshot_hash": "sha256:2e200b570d0a407ef960fc02e0cd203d73f970af0c666fe5478f930385ef1a27"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-CLAISEN-PAIR-06",
+      "source_id": "ACS-FIGSHARE:10.1021/ja803370x.s001:PAIR:6",
+      "source_locator": "complete source page 16 and product page 27",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+      "snapshot_hash": "sha256:2e200b570d0a407ef960fc02e0cd203d73f970af0c666fe5478f930385ef1a27"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-CLAISEN-PAIR-07",
+      "source_id": "ACS-FIGSHARE:10.1021/ja803370x.s001:PAIR:7",
+      "source_locator": "complete source page 16 and product page 29",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+      "snapshot_hash": "sha256:2e200b570d0a407ef960fc02e0cd203d73f970af0c666fe5478f930385ef1a27"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-CLAISEN-PAIR-08",
+      "source_id": "ACS-FIGSHARE:10.1021/ja803370x.s001:PAIR:8",
+      "source_locator": "complete source page 16 and product page 31",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+      "snapshot_hash": "sha256:2e200b570d0a407ef960fc02e0cd203d73f970af0c666fe5478f930385ef1a27"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-OPTIMIZATION-03",
+      "source_id": "ACS-FIGSHARE:10.1021/ja803370x.s001:PAGE:3",
+      "source_locator": "complete optimization and non-detection page",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+      "snapshot_hash": "sha256:2e200b570d0a407ef960fc02e0cd203d73f970af0c666fe5478f930385ef1a27"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-OPTIMIZATION-04",
+      "source_id": "ACS-FIGSHARE:10.1021/ja803370x.s001:PAGE:4",
+      "source_locator": "complete counterion and catalyst screen page",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+      "snapshot_hash": "sha256:2e200b570d0a407ef960fc02e0cd203d73f970af0c666fe5478f930385ef1a27"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-TRANSITION-RELATION",
+      "source_id": "ACS-FIGSHARE:10.1021/ja803370x.s001:PAGE:37",
+      "source_locator": "complete conventional transition-relation page",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+      "snapshot_hash": "sha256:2e200b570d0a407ef960fc02e0cd203d73f970af0c666fe5478f930385ef1a27"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-FIRST-BLIND-SURFACE",
+      "source_id": "EUROPE-PMC:ORG-011:V1",
+      "source_locator": "complete first unresolved blind surface preserved",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-europe-pmc-blind-v1/complete-postseal-analysis-v1.json",
+      "snapshot_hash": "sha256:ac22ce665f1b93617b07705518b499ef233c1a8e22122bd27a6768180dfbe031"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-011-COMPLETE-SUPPLEMENT",
+      "source_id": "ACS-FIGSHARE:10.1021/ja803370x.s001",
+      "source_locator": "complete official 38-page supporting information",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+      "snapshot_hash": "sha256:2e200b570d0a407ef960fc02e0cd203d73f970af0c666fe5478f930385ef1a27"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/snapshots/org-011-claisen-blind-v2/complete-postseal-analysis-v2.json",
+  "falsification_condition": "The claim fails if more than one generated form survives; any atom, held support, alternative incidence, path, degenerate trace or successor is omitted; any of eight endpoint inventories differs; any pair lacks a positive connectivity change; any page, optimization, non-detection, signed, spectral or first-surface row is omitted; or the external record is allowed to select the law."
+}

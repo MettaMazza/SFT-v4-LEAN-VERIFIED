@@ -15435,3 +15435,47 @@ import SFT.Chemistry.EliminationAdditionResults.Nonadjacent
 import SFT.Chemistry.EliminationAdditionResults.Same
 
 import SFT.Chemistry.EliminationAdditionResults.Successor
+
+import SFT.Chemistry.Rearrangement
+
+import SFT.Chemistry.RearrangementAnalysis
+
+import SFT.Chemistry.RearrangementEvidence
+
+import SFT.Chemistry.RearrangementExperiment
+
+import SFT.Chemistry.RearrangementGrammar
+
+import SFT.Chemistry.RearrangementSource
+
+import SFT.Chemistry.RearrangementValidation
+
+import SFT.Chemistry.RearrangementWitnessProofs
+
+import SFT.Chemistry.RearrangementWitnesses
+
+import SFT.Chemistry.RearrangementWitnessGraphs.DegenerateSource
+
+import SFT.Chemistry.RearrangementWitnessGraphs.DegenerateTerminal
+
+import SFT.Chemistry.RearrangementWitnessGraphs.MultiSource
+
+import SFT.Chemistry.RearrangementWitnessGraphs.MultiTerminal
+
+import SFT.Chemistry.RearrangementWitnessGraphs.SingleSource
+
+import SFT.Chemistry.RearrangementWitnessGraphs.SingleTerminal
+
+import SFT.Chemistry.RearrangementWitnessGraphs.SuccessorSource
+
+import SFT.Chemistry.RearrangementWitnessGraphs.SuccessorTerminal
+
+import SFT.Chemistry.RearrangementResults.Degenerate
+
+import SFT.Chemistry.RearrangementResults.Multi
+
+import SFT.Chemistry.RearrangementResults.MultiReverse
+
+import SFT.Chemistry.RearrangementResults.Single
+
+import SFT.Chemistry.RearrangementResults.Successor

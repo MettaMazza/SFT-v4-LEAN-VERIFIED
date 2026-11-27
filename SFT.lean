@@ -15759,3 +15759,13 @@ import SFT.EarthEnvironment.EarthquakeMagnitudeFrequencyEvidence
 import SFT.EarthEnvironment.EarthquakeMagnitudeFrequencyExperiment
 
 import SFT.EarthEnvironment.EarthquakeMagnitudeFrequencyValidation
+
+import SFT.EarthEnvironment.EarthVolcanicProcess
+
+import SFT.EarthEnvironment.EarthVolcanicProcessGrammar
+
+import SFT.EarthEnvironment.EarthVolcanicProcessEvidence
+
+import SFT.EarthEnvironment.EarthVolcanicProcessExperiment
+
+import SFT.EarthEnvironment.EarthVolcanicProcessValidation

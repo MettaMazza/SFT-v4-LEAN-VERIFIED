@@ -15679,3 +15679,13 @@ import SFT.EarthEnvironment.EarthInteriorHeatTransportEvidence
 import SFT.EarthEnvironment.EarthInteriorHeatTransportExperiment
 
 import SFT.EarthEnvironment.EarthInteriorHeatTransportValidation
+
+import SFT.EarthEnvironment.EarthCrustMantleBoundary
+
+import SFT.EarthEnvironment.EarthCrustMantleBoundaryGrammar
+
+import SFT.EarthEnvironment.EarthCrustMantleBoundaryEvidence
+
+import SFT.EarthEnvironment.EarthCrustMantleBoundaryExperiment
+
+import SFT.EarthEnvironment.EarthCrustMantleBoundaryValidation

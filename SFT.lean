@@ -15145,3 +15145,27 @@ import SFT.Chemistry.InorganicNetworkExperiment
 import SFT.Chemistry.InorganicNetworkValidation
 
 import SFT.Chemistry.InorganicNetworkSupportDerivation
+
+import SFT.Chemistry.AromaticRecurrence
+
+import SFT.Chemistry.AromaticRecurrenceDerivation
+
+import SFT.Chemistry.AromaticRecurrenceWitnesses
+
+import SFT.Chemistry.AromaticRecurrenceGrammar
+
+import SFT.Chemistry.AromaticRecurrenceEvidence
+
+import SFT.Chemistry.AromaticMagnitude
+
+import SFT.Chemistry.AromaticRecurrencePrediction
+
+import SFT.Chemistry.AromaticRecurrenceSource
+
+import SFT.Chemistry.AromaticRecurrenceAnalysis
+
+import SFT.Chemistry.AromaticRecurrenceComparison
+
+import SFT.Chemistry.AromaticRecurrenceExperiment
+
+import SFT.Chemistry.AromaticRecurrenceValidation

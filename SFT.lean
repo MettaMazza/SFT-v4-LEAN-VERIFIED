@@ -15619,3 +15619,13 @@ import SFT.EarthEnvironment.EarthStratigraphicOrderEvidence
 import SFT.EarthEnvironment.EarthStratigraphicOrderExperiment
 
 import SFT.EarthEnvironment.EarthStratigraphicOrderValidation
+
+import SFT.EarthEnvironment.EarthGeologicalCycle
+
+import SFT.EarthEnvironment.EarthGeologicalCycleGrammar
+
+import SFT.EarthEnvironment.EarthGeologicalCycleEvidence
+
+import SFT.EarthEnvironment.EarthGeologicalCycleExperiment
+
+import SFT.EarthEnvironment.EarthGeologicalCycleValidation

@@ -15889,3 +15889,13 @@ import SFT.EarthEnvironment.EarthWeatherEvidence
 import SFT.EarthEnvironment.EarthWeatherExperiment
 
 import SFT.EarthEnvironment.EarthWeatherValidation
+
+import SFT.EarthEnvironment.EarthIonosphereResonance
+
+import SFT.EarthEnvironment.EarthIonosphereResonanceGrammar
+
+import SFT.EarthEnvironment.EarthIonosphereResonanceEvidence
+
+import SFT.EarthEnvironment.EarthIonosphereResonanceExperiment
+
+import SFT.EarthEnvironment.EarthIonosphereResonanceValidation

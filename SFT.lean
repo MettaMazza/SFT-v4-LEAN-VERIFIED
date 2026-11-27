@@ -15879,3 +15879,13 @@ import SFT.EarthEnvironment.EarthAtmosphericCirculationEvidence
 import SFT.EarthEnvironment.EarthAtmosphericCirculationExperiment
 
 import SFT.EarthEnvironment.EarthAtmosphericCirculationValidation
+
+import SFT.EarthEnvironment.EarthWeather
+
+import SFT.EarthEnvironment.EarthWeatherGrammar
+
+import SFT.EarthEnvironment.EarthWeatherEvidence
+
+import SFT.EarthEnvironment.EarthWeatherExperiment
+
+import SFT.EarthEnvironment.EarthWeatherValidation

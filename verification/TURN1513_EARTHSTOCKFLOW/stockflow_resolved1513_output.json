@@ -1,0 +1,62 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "NASA-CERES-EBAF-001",
+    "NOAA-GML-CO2-001",
+    "NOAA-WOD-001",
+    "USGS-NWIS-001"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:6726ea2d1e23995dd6a5bba45809ecba71aa624c7921c768c77b61e5fde29360",
+  "falsification_condition": "Reject if an instantaneous rate is added to a stock without an interval or if cumulative transfer is presented as simultaneous occupancy.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:d9f60a810a8f73317db58744866a3ad037cde87ec772e510be2bc58792089ed2",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:a631f5d40a2042588e34e6503749ed81ecf5787fe987c45a200bd994557799c4",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-EARTH-STOCK-FLOW-001-E1-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:9060901fc61d9763e7f3f59fa6d5c7eae802cb7c13d70a06b196b29cc11e60eb",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:86669be37a5c80e79e173d78140b74f85bd345bd28ae4ef625f97c1d7b141ab0",
+    "prediction_seal_hash": "sha256:e1ef262c40f7a82adf2a5af88aa8910edd86b9e5b5c537ddf0890a7217872849",
+    "program_hash": "sha256:bd291c88e6ae4b2d45647878cc22cbca5d213331f2fe979d43603fad5d47d541",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:ef338e5b92f5d428da6501bd340ec1a0938dc6867c00a0977db5b7ff2cd7c325",
+    "target_material_present": false,
+    "trace_hash": "sha256:29db250de75e9dd3c65a731e9c428623dbcaad85a3bfc2c65c88faf49c0aa82d"
+  },
+  "measurement_receipt_hash": "sha256:ba2c817f78c3fb98002f4d71e395ea7e68ac0866e7bfcc44122f44e1706a7410",
+  "measurements": [
+    "sft-earth-stock-flow-001-external-earth-evidence: predicted earth:reservoir-stock-interface-flow-carrier__time-integrated-transfer-relation__stock-basis-flow-interval-and-boundary-held__quantity-and-interval-bounded; source-derived earth:reservoir-stock-interface-flow-carrier__time-integrated-transfer-relation__stock-basis-flow-interval-and-boundary-held__quantity-and-interval-bounded; exact match True",
+    "source features: 67 present; 24 absent preserved; 91 registered",
+    "the original failed transport and every adverse, absent and unresolved row remain preserved",
+    "a deliberately changed external consequence was rejected"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:6e582fc9f51eca25c9c5f120583ca4f060c761cd5c7c4eccde26a1540fe4a471",
+    "custodian_id": "SFT-EXP-EARTH-STOCK-FLOW-001-E1-external-target-custodian",
+    "experiment_registration_hash": "sha256:6726ea2d1e23995dd6a5bba45809ecba71aa624c7921c768c77b61e5fde29360",
+    "prediction_seal_hash": "sha256:e1ef262c40f7a82adf2a5af88aa8910edd86b9e5b5c537ddf0890a7217872849",
+    "registered_target_identity_hash": "sha256:ef338e5b92f5d428da6501bd340ec1a0938dc6867c00a0977db5b7ff2cd7c325",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:1cedb805bf3c796eb09cbdc0f719d467b33d5c18cee53ceab6f6d1dc9d7ca8a1"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "native-earthstockflow1457"
+}

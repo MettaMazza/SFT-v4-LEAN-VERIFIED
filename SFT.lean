@@ -15689,3 +15689,13 @@ import SFT.EarthEnvironment.EarthCrustMantleBoundaryEvidence
 import SFT.EarthEnvironment.EarthCrustMantleBoundaryExperiment
 
 import SFT.EarthEnvironment.EarthCrustMantleBoundaryValidation
+
+import SFT.EarthEnvironment.EarthPlateBoundary
+
+import SFT.EarthEnvironment.EarthPlateBoundaryGrammar
+
+import SFT.EarthEnvironment.EarthPlateBoundaryEvidence
+
+import SFT.EarthEnvironment.EarthPlateBoundaryExperiment
+
+import SFT.EarthEnvironment.EarthPlateBoundaryValidation

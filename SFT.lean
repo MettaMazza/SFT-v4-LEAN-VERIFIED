@@ -15639,3 +15639,13 @@ import SFT.EarthEnvironment.EarthGeologicalProvenanceEvidence
 import SFT.EarthEnvironment.EarthGeologicalProvenanceExperiment
 
 import SFT.EarthEnvironment.EarthGeologicalProvenanceValidation
+
+import SFT.EarthEnvironment.EarthHistory
+
+import SFT.EarthEnvironment.EarthHistoryGrammar
+
+import SFT.EarthEnvironment.EarthHistoryEvidence
+
+import SFT.EarthEnvironment.EarthHistoryExperiment
+
+import SFT.EarthEnvironment.EarthHistoryValidation

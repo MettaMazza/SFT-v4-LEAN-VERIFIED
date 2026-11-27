@@ -15629,3 +15629,13 @@ import SFT.EarthEnvironment.EarthGeologicalCycleEvidence
 import SFT.EarthEnvironment.EarthGeologicalCycleExperiment
 
 import SFT.EarthEnvironment.EarthGeologicalCycleValidation
+
+import SFT.EarthEnvironment.EarthGeologicalProvenance
+
+import SFT.EarthEnvironment.EarthGeologicalProvenanceGrammar
+
+import SFT.EarthEnvironment.EarthGeologicalProvenanceEvidence
+
+import SFT.EarthEnvironment.EarthGeologicalProvenanceExperiment
+
+import SFT.EarthEnvironment.EarthGeologicalProvenanceValidation

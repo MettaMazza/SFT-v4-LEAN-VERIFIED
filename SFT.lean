@@ -15749,3 +15749,13 @@ import SFT.EarthEnvironment.EarthquakeCatalogEvidence
 import SFT.EarthEnvironment.EarthquakeCatalogExperiment
 
 import SFT.EarthEnvironment.EarthquakeCatalogValidation
+
+import SFT.EarthEnvironment.EarthquakeMagnitudeFrequency
+
+import SFT.EarthEnvironment.EarthquakeMagnitudeFrequencyGrammar
+
+import SFT.EarthEnvironment.EarthquakeMagnitudeFrequencyEvidence
+
+import SFT.EarthEnvironment.EarthquakeMagnitudeFrequencyExperiment
+
+import SFT.EarthEnvironment.EarthquakeMagnitudeFrequencyValidation

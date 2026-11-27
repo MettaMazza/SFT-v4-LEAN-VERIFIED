@@ -15335,3 +15335,63 @@ import SFT.Materials.BulkWaterSource
 import SFT.Materials.BulkWaterExperiment
 
 import SFT.Materials.BulkWaterValidation
+
+import SFT.Chemistry.AdditionAnalysis
+
+import SFT.Chemistry.AdditionCarrier
+
+import SFT.Chemistry.AdditionEvidence
+
+import SFT.Chemistry.AdditionExperiment
+
+import SFT.Chemistry.AdditionGrammar
+
+import SFT.Chemistry.AdditionGraph
+
+import SFT.Chemistry.AdditionHistory
+
+import SFT.Chemistry.AdditionSource
+
+import SFT.Chemistry.AdditionTransform
+
+import SFT.Chemistry.AdditionValidation
+
+import SFT.Chemistry.AdditionWitnessProofs
+
+import SFT.Chemistry.AdditionWitnesses
+
+import SFT.Chemistry.AdditionWitnessGraphs.AdjacentSource
+
+import SFT.Chemistry.AdditionWitnessGraphs.AdjacentTerminal
+
+import SFT.Chemistry.AdditionWitnessGraphs.CycloSource
+
+import SFT.Chemistry.AdditionWitnessGraphs.CycloTerminal
+
+import SFT.Chemistry.AdditionWitnessGraphs.MultipleSource
+
+import SFT.Chemistry.AdditionWitnessGraphs.MultipleTerminal
+
+import SFT.Chemistry.AdditionWitnessGraphs.NonadjacentSource
+
+import SFT.Chemistry.AdditionWitnessGraphs.NonadjacentTerminal
+
+import SFT.Chemistry.AdditionWitnessGraphs.SameSource
+
+import SFT.Chemistry.AdditionWitnessGraphs.SameTerminal
+
+import SFT.Chemistry.AdditionWitnessGraphs.SuccessorSource
+
+import SFT.Chemistry.AdditionWitnessGraphs.SuccessorTerminal
+
+import SFT.Chemistry.AdditionWitnessResults.Adjacent
+
+import SFT.Chemistry.AdditionWitnessResults.Cyclo
+
+import SFT.Chemistry.AdditionWitnessResults.Multiple
+
+import SFT.Chemistry.AdditionWitnessResults.Nonadjacent
+
+import SFT.Chemistry.AdditionWitnessResults.Same
+
+import SFT.Chemistry.AdditionWitnessResults.Successor

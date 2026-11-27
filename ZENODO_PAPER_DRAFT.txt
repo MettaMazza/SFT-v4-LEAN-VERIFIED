@@ -10,7 +10,7 @@ SFT community and Discord invitation: https://discord.gg/QCNkzq6kZC
 
 Author background: Maria Smith, whose work is developed through Ernos Labs, has never attended formal primary, secondary or further education. In her own account, SFT arose unintentionally from her efforts to understand mathematics; the scientific programme grew from that investigation.
 Programme status: SFT is one ongoing scientific work developed by Maria Smith. V4 is the native Lean translation of V3, with the original derivations and corresponding native proofs cited together. The V4 Lean translation is not yet complete; each edition identifies the source entries and verification evidence available for review at that stage.
-Current native verification: 1,053 entries complete. Published 1,000-entry edition 0.5: DOI 10.5281/zenodo.24560920.
+Current native verification: 1,054 entries complete. Published 1,000-entry edition 0.5: DOI 10.5281/zenodo.24560920.
 
 Edition focus: consciousness, observation and retained identity
 
@@ -38973,7 +38973,7 @@ The current original binding uses addition_reaction_law_v3, reusing the atom, su
 H(S)=[h:(a,b,h)∈B]++[h:(a,h)∈F].
 The source guards require |A|≥2, distinct atom occurrences, the original label families, bond endpoints and free-support owners in A, and no repeated support occurrence in H(S). Bond keys use unordered endpoints together with their support identity. Thus distinct supports may occupy the same endpoint pair; the original carrier does not collapse a multiple-support adjacency into a single layer.
 
-The nine native carrier declarations have empty axiom dependencies. Native execution equals all nested fields of ten current-v3 example states and reproduces five original rejection cases. This is the verified carrier portion of the addition entry; the complete v3 transform, grammar and validator remain the continuation work and this entry has not been counted complete. Original sources: sft/chemistry/addition_reaction_law_v1.py (reused constructors) and addition_reaction_law_v3.py (current binding). Native verification: SFT/Chemistry/AdditionCarrier.lean. Evidence: verification/TURN1499_ADDITION. Timeline: TURN1499.
+The nine native carrier declarations have empty axiom dependencies. Native execution equals all nested fields of ten current-v3 example states and reproduces five original rejection cases. The complete transform, grammar, operational witnesses and native validator are verified in Sections 1411.1–1411.2. Original sources: sft/chemistry/addition_reaction_law_v1.py (reused constructors) and addition_reaction_law_v3.py (current binding). Native verification: SFT/Chemistry/AdditionCarrier.lean. Evidence: verification/TURN1499_ADDITION. Timeline: TURN1499.
 
 1411.1. Complete cross-carrier addition transform
 
@@ -38996,8 +38996,35 @@ The successor appends one fresh atom u and one unchanged support h_u at a retain
 A′=A++[u],  B′_S=B_S++[(a,u,h_u)],  B′_T=B_T++[(a,u,h_u)].
 It reconstructs the extended transform with the same guards, then compares the prior component count, new adjacencies, reduced supports, site classes and relocated supports, together with both original bond prefixes.
 
-All five original complete example results and six original rejection cases match native execution, including every nested result field. All nine original operational witnesses evaluate identically. The six current native modules contain 118 audited declarations with empty axiom dependencies. The separate kernel equality theorem for the combined nine-witness result is not yet complete; runtime comparison is not substituted for that theorem. The original 256-alternative grammar is implemented and its kernel audit passes. The fresh complete native programme matches all 256 original alternatives and decisions, registration, closure, controls and unknown-ID behavior. The native empirical validator remains to be translated before entry completion.
+The six complete transform proofs cover the five original generated results and the retained successor. Each proof uses the complete source and terminal component computations and the exact attachment separations. For the same-site, adjacent-site, non-adjacent-site, multiple-layer and cycloaddition examples, respectively, the ordered values (k,|N|,|R|,|M|) are
+(2,2,1,2), (2,2,1,2), (2,2,1,2), (2,2,3,4), (2,2,3,3).
+Their component separation pairs are
+(EmptyOne,1), (1,1), (2,1), (1,1), (3,1).
+Thus the first three generate all three original attachment classes, while the multiple-layer and cycloaddition witnesses preserve the distinct multiplicity and relocation counts. For an unchanged adjacent source supplied as both source and terminal, the terminal still has two components; the original one-product guard rejects it. The non-adjacent successor retains the original component count, adjacency pairs, reduced and relocated supports, site classes and bond prefixes. The combined native theorem evaluates the original nine witnesses to
+W=(true,true,true,true,true,true,true,true,true).
+Its actual Lean axiom-dependency list is empty. All five original complete returned records and six rejection cases also match native execution field for field.
 
-The empirical source boundary retains all 104 pinned execution files, including the 48 non-USPTO ORD payloads (12,993,815 bytes), all 131,209 conventional source rows and all 28 preselected reaction vectors. Fresh original execution passes its full validator and independent controls. The native empirical translation remains pending; this is not a claim of completed native validation of those records.
+The original grammar contains eight binary preservation axes, so its complete product has |G|=2^8=256 alternatives. The native grammar proves the full census and unique original survivor; the fresh complete programme matches every original alternative and decision, registration, closure, control and unknown-ID behavior.
 
-Original sources: sft/chemistry/addition_reaction_law_v3.py (complete transform, component classes, extension and nine witnesses), addition_reaction_law_v1.py (retained carrier and graph components), addition_reaction_batch_v3.py and addition_reaction_validation_v3.py. Native verification: SFT/Chemistry/AdditionCarrier.lean, AdditionGraph.lean, AdditionTransform.lean, AdditionWitnesses.lean, AdditionGrammar.lean and AdditionEvidence.lean. Evidence: verification/TURN1501_ADDITION. Timeline: TURN1501. The entry remains in progress; the completed census count remains 1,053 / 2,781.
+Original sources: sft/chemistry/addition_reaction_law_v3.py (complete transform, component classes, extension and nine witnesses), addition_reaction_law_v1.py (retained carrier and graph components), and addition_reaction_batch_v3.py. Native verification: SFT/Chemistry/AdditionCarrier.lean, AdditionGraph.lean, AdditionTransform.lean, AdditionWitnesses.lean, AdditionGrammar.lean, AdditionEvidence.lean, AdditionWitnessGraphs/*.lean, AdditionWitnessResults/*.lean and AdditionWitnessProofs.lean (operationalWitnesses, noReductionRejected, successorPassed). Evidence: verification/TURN1501_ADDITION and verification/TURN1502_ADDITION. Timeline: TURN1501–TURN1502.
+
+1411.2. Complete addition: source-selected comparison and retained history
+
+The observational boundary retains all 104 pinned execution files, including 48 independent non-USPTO ORD payloads. For each inventory record i, the source checks successful capture, file presence, exact byte count and SHA256 identity, in that order:
+exists(P_i), |P_i|=n_i, SHA256(P_i)=h_i,
+Σ_(i=1)^48 n_i=12,993,815.
+The inventory retains all 131,209 conventional source rows and the unchanged selection of 28 reaction vectors. The original source snapshot, preseal, inventory, selection, selection seal, analyzer and comparison hashes remain bound to their original registrations. The native runner computes the hashes from the actual source bytes with the verified streaming implementation. No source label or measured result selects the scientific survivor.
+
+For each selected vector j, the original post-seal analysis requires exactly one product and four retained correspondence checks. Each correspondence retains two newly formed adjacencies, three bond-multiplicity changes, injective azide and alkyne atom maps, and the original independently supplied label tokens. Therefore the complete selected comparison contains
+Σ_(j=1)^28 |C_j|=28×4=112
+correspondences. Selected and returned identity words must agree in their original order. The full native analysis equals all fourteen original analysis fields and all twenty-eight original target checks.
+
+Earlier observational records remain part of this boundary. The first four identity/capture records are present. V5 retains 1,065,119 complete conventional rows, with no qualifying or unresolved row. V6 retains the full partition
+47=31 adverse+8 favourable+8 unresolved,
+with no malformed row. V7 retains no query data row. V8 retains
+93=91 favourable+2 adverse,
+with no unresolved or malformed row; the independent confidence inscriptions partition the favourable rows as True and the adverse rows as False. These are retained external records, including absence and adverse outcomes. They are not fitted inputs or altered native structural counts.
+
+The original capability-closed experiment binds the 28 source/target identities, eight dimensions and nine operational witnesses. Its prediction seal precedes target custody and comparison. The omission and tampered-label controls retain their original rejection behavior. Fresh native execution matches the complete original twelve-field empirical report and its seven messages, with full_empirical_replay_passed=true.
+
+Original source: sft/chemistry/addition_reaction_validation_v3.py, its exact registered analyzer and retained HISTORY_PATHS/TOOL_PATHS, pinned at 76f1b34e9e9682989adcbb088797b4ae4ce4fcf1. Native verification: SFT/Chemistry/AdditionHistory.lean, AdditionAnalysis.lean, AdditionSource.lean, AdditionExperiment.lean and AdditionValidation.lean. Evidence: verification/TURN1502_ADDITION/addition1502_validation_report.json and addition1502_full_audit_report.json; original source pin and independent controls: verification/TURN1501_ADDITION. Timeline: TURN1502. The complete entry has 225 audited public definitions/theorems with empty axiom dependencies across thirty modules, and is registered complete at 1,054 / 2,781. Completion evidence: verification/TURN1502_ADDITION_COMPLETION.json.

@@ -15789,3 +15789,13 @@ import SFT.EarthEnvironment.EarthWaterPhaseHandoffEvidence
 import SFT.EarthEnvironment.EarthWaterPhaseHandoffExperiment
 
 import SFT.EarthEnvironment.EarthWaterPhaseHandoffValidation
+
+import SFT.EarthEnvironment.EarthHydrologicCycle
+
+import SFT.EarthEnvironment.EarthHydrologicCycleGrammar
+
+import SFT.EarthEnvironment.EarthHydrologicCycleEvidence
+
+import SFT.EarthEnvironment.EarthHydrologicCycleExperiment
+
+import SFT.EarthEnvironment.EarthHydrologicCycleValidation

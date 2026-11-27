@@ -15045,3 +15045,25 @@ import SFT.Chemistry.InsertionEliminationComparison
 import SFT.Chemistry.InsertionEliminationExperiment
 
 import SFT.Chemistry.InsertionEliminationValidation
+
+import SFT.Chemistry.MetalCluster
+
+import SFT.Chemistry.MetalClusterClosure
+
+import SFT.Chemistry.MetalClusterDerivation
+
+import SFT.Chemistry.MetalClusterGrammar
+
+import SFT.Chemistry.MetalClusterEvidence
+
+import SFT.Chemistry.MetalClusterPrediction
+
+import SFT.Chemistry.MetalClusterSource
+
+import SFT.Chemistry.MetalClusterAnalysis
+
+import SFT.Chemistry.MetalClusterComparison
+
+import SFT.Chemistry.MetalClusterExperiment
+
+import SFT.Chemistry.MetalClusterValidation

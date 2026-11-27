@@ -61943,9 +61943,21 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-METAL-CLUSTER-BONDING-014-700577fb0682ff8f.json",
       "statement": "A metal cluster is one finite complete support of at least two distinct metal centres connected by the generated cluster-relation graph. Direct metal bonds, bridging-ligand paths and held grouping relations are separate support classes; direct or bridging bonding may be structurally absent without destroying a connected cluster. Each class is counted positively or retained as EmptyOne, and a fresh attached centre preserves connectivity.",
       "title": "Exact finite connected metal-cluster and metal-bonding law",
-      "lean_status": "pending",
-      "lean_modules": [],
-      "artifact_runtime_parity": "pending",
+      "lean_status": "complete",
+      "lean_modules": [
+        "SFT/Chemistry/MetalClusterClosure.lean",
+        "SFT/Chemistry/MetalCluster.lean",
+        "SFT/Chemistry/MetalClusterDerivation.lean",
+        "SFT/Chemistry/MetalClusterGrammar.lean",
+        "SFT/Chemistry/MetalClusterEvidence.lean",
+        "SFT/Chemistry/MetalClusterPrediction.lean",
+        "SFT/Chemistry/MetalClusterSource.lean",
+        "SFT/Chemistry/MetalClusterAnalysis.lean",
+        "SFT/Chemistry/MetalClusterComparison.lean",
+        "SFT/Chemistry/MetalClusterExperiment.lean",
+        "SFT/Chemistry/MetalClusterValidation.lean"
+      ],
+      "artifact_runtime_parity": "PASS full256 programme, original/threeadverse independent cases,79 core and13 interface cases, full12field10message empirical result",
       "registration_sha256": "d9bcee100d7c749430341cab6c10284cf3d45e8caa3d09f18ce8663671f113d4",
       "v3_registration": {
         "branch": "chemistry",
@@ -61992,7 +62004,10 @@
         "statement": "A cluster is complete finite connected multicentre support with distinct direct, bridging and held grouping relation classes and positive counts or EmptyOne.",
         "status": "empirically_tested",
         "title": "Exact finite connected metal-cluster and metal-bonding law"
-      }
+      },
+      "remaining": [],
+      "completion_evidence": "verification/TURN1484_METAL_CLUSTER_COMPLETION.json",
+      "verified_scope": "Exact relation and cluster guards, complete bridge support, unordered endpoint/mode duplicate keys, actual set-equality connectivity, positive counts or canonical EmptyOne, forced and appended clusters; four computed source witnesses and79 full original cases, including allowed disconnected outside components and duplicate bridge support.; Exact repeated ordered edge scan, termination from unreached supplied endpoint occurrences, universal fixed point and universal equality of finite executable scan to the source while loop. No caller-selected cutoff or added endpoint-membership guard.; Complete relation and cluster field retention, actual connected acceptance, named-centre cardinality, successful fresh extension retains old relations and labels and increments count by one; exact class-count extension, closure and attached-centre scan.; Eight original binary axes, all256 alternatives, exact decisions and sole survivor.; Original registration, closure, four controls and computed witnesses, full native programme comparison and original independent adverse cases.; Ten value-free identity rows, six identity fields and four laws per eleven-cell word, original identity guards and forbidden keys.; Complete ten-row table, seven identity keys, original errors, original target/primary hashes and target payload binding.; All fourteen analysis fields from native direct, bridging and held-grouping clusters, attached successor and disconnected rejection; ten surfaces, two sources and signed charge surface. Thirteen full interface cases.; Original identity/law/target comparisons, seven empirical controls and complete passed conjunction.; All original registration fields, ten source references, original spec guards and registered source hashes.; Original sealed prediction, target release/custody, ten target comparisons and full twelve-field ten-message empirical result with all hashes."
     },
     {
       "branch": "chemistry",
@@ -203317,13 +203332,13 @@
       }
     }
   ],
-  "updated_at": "2026-11-26T23:05:12.011809+00:00",
+  "updated_at": "2026-11-26T23:26:59.806293+00:00",
   "summary": {
     "total_claims": 2781,
     "in_progress": 9,
-    "pending": 1730,
-    "fully_reconstructed_claims": 1042,
-    "axiom_free_exported_results": 62105,
-    "axiom_free_audited_definitions_and_theorems": 143236
+    "pending": 1729,
+    "fully_reconstructed_claims": 1043,
+    "axiom_free_exported_results": 62176,
+    "axiom_free_audited_definitions_and_theorems": 143417
   }
 }

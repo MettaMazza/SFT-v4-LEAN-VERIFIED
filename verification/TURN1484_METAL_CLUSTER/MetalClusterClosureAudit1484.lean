@@ -1,0 +1,21 @@
+import SFT.Chemistry.MetalClusterClosure
+#print axioms SFT.Chemistry.MetalClusterClosure.missing
+#print axioms SFT.Chemistry.MetalClusterClosure.containsAppend
+#print axioms SFT.Chemistry.MetalClusterClosure.appendPreserves
+#print axioms SFT.Chemistry.MetalClusterClosure.missingMonotone
+#print axioms SFT.Chemistry.MetalClusterClosure.missingStrict
+#print axioms SFT.Chemistry.MetalClusterClosure.Progress
+#print axioms SFT.Chemistry.MetalClusterClosure.progressTrans
+#print axioms SFT.Chemistry.MetalClusterClosure.addProgress
+#print axioms SFT.Chemistry.MetalClusterClosure.scanProgress
+#print axioms SFT.Chemistry.MetalClusterClosure.endpoints
+#print axioms SFT.Chemistry.MetalClusterClosure.endpointsCovered
+#print axioms SFT.Chemistry.MetalClusterClosure.closureDecreases
+#print axioms SFT.Chemistry.MetalClusterClosure.closureOrder
+#print axioms SFT.Chemistry.MetalClusterClosure.closureBody
+#print axioms SFT.Chemistry.MetalClusterClosure.closure
+#print axioms SFT.Chemistry.MetalClusterClosure.closureEquation
+#print axioms SFT.Chemistry.MetalClusterClosure.closureFixed
+#print axioms SFT.Chemistry.MetalClusterClosure.missingBound
+#print axioms SFT.Chemistry.MetalClusterClosure.finiteScanEqualsClosure
+#print axioms SFT.Chemistry.MetalClusterClosure.endpointBoundScan

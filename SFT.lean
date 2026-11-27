@@ -15479,3 +15479,13 @@ import SFT.Chemistry.RearrangementResults.MultiReverse
 import SFT.Chemistry.RearrangementResults.Single
 
 import SFT.Chemistry.RearrangementResults.Successor
+
+import SFT.EarthEnvironment.EarthReservoir
+
+import SFT.EarthEnvironment.EarthReservoirGrammar
+
+import SFT.EarthEnvironment.EarthReservoirEvidence
+
+import SFT.EarthEnvironment.EarthReservoirExperiment
+
+import SFT.EarthEnvironment.EarthReservoirValidation

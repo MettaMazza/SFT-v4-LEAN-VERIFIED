@@ -1,0 +1,235 @@
+{
+  "claim_id": "SFT-CHEM-ELECTROPHILIC-SUBSTITUTION-FAMILY-008",
+  "title": "Exact acceptor-driven aromatic substitution family law",
+  "statement": "For every complete aromatic exchange carrier, the entering structural-EmptyOne acceptor receives both occurrences of one aromatic donor pair. The entering bond forms, the leaving bond closes, and the leaving pair restores the opened aromatic incidence. Every atom and held electron occurrence is conserved through direct exchange or addition followed by recurrence restoration.",
+  "dependencies": [
+    "SFT-FOUNDATION-FORM-ENFORCEMENT-001",
+    "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001",
+    "SFT-MATH-EXACT-ARITHMETIC-001",
+    "SFT-MATH-DISCRETE-001",
+    "SFT-MATH-COMBINATORICS-001",
+    "SFT-MATH-GRAPH-NETWORK-001",
+    "SFT-MATH-ORDER-LATTICE-001",
+    "SFT-INFO-CONSERVATION-LOSS-001",
+    "SFT-COMP-FORM-STATE-TRANSITION-001",
+    "SFT-CHEM-STOICH-CONSERVATION-001",
+    "SFT-CHEM-BOND-CHEMICAL-BOND-001",
+    "SFT-CHEM-BOND-COVALENT-001",
+    "SFT-CHEM-BOND-ORDER-001",
+    "SFT-CHEM-MOL-MOLECULE-001",
+    "SFT-CHEM-RXN-IDENTITY-001",
+    "SFT-CHEM-RXN-MECHANISM-001",
+    "SFT-CHEM-ORGANIC-FUNCTIONAL-GROUP-001",
+    "SFT-CHEM-ORGANIC-REACTION-FAMILY-001",
+    "SFT-CHEM-CONJUGATED-SUPPORT-001",
+    "SFT-CHEM-RESONANCE-EQUIVALENT-REPRESENTATION-002",
+    "SFT-CHEM-AROMATIC-RECURRENCE-STABILITY-003",
+    "SFT-CHEM-NUCLEOPHILIC-SUBSTITUTION-FAMILY-007"
+  ],
+  "generation_rule": "Generate the literal product of carrier, acceptor, donor, change, path, recurrence, observation and extension alternatives; decide all 256 forms solely from admitted Fold, aromatic and ORG-007 support laws.",
+  "grammar_boundary": "Every positive finite aromatic carrier with complete donor, recurrence, entering-acceptor and leaving supports; all one- and two-transition paths; every source record; and the complete four-target, 452-page external surface.",
+  "dimensions": [
+    {
+      "key": "carrier",
+      "choices": [
+        {
+          "name": "selected-product-label-or-nonaromatic-fragments",
+          "admitted": false,
+          "reason": "A named answer or disconnected fragments cannot reconstruct one aromatic reaction carrier."
+        },
+        {
+          "name": "complete-aromatic-source-ordered-carrier",
+          "admitted": true,
+          "reason": "Aromatic left, centre, right, entering acceptor and leaving carrier remain distinct occurrences in one complete source."
+        }
+      ]
+    },
+    {
+      "key": "acceptor",
+      "choices": [
+        {
+          "name": "incoming-pair-imported-or-acceptor-slot-filled",
+          "admitted": false,
+          "reason": "Giving the acceptor a pre-existing pair changes which carrier supplies the new bond."
+        },
+        {
+          "name": "structural-EmptyOne-entering-acceptor-slot",
+          "admitted": true,
+          "reason": "The entering carrier begins with structural EmptyOne and accepts the complete donor pair."
+        }
+      ]
+    },
+    {
+      "key": "donor",
+      "choices": [
+        {
+          "name": "donor-pair-erased-created-or-collapsed-to-charge",
+          "admitted": false,
+          "reason": "A scalar charge or incomplete pair loses the transferred occurrences."
+        },
+        {
+          "name": "complete-aromatic-donor-pair-transfer",
+          "admitted": true,
+          "reason": "Both donor occurrences move from one aromatic incidence to the centre-entering incidence."
+        }
+      ]
+    },
+    {
+      "key": "change",
+      "choices": [
+        {
+          "name": "endpoint-only-product-or-extra-support-change",
+          "admitted": false,
+          "reason": "An endpoint or extra edit does not prove the local exchange."
+        },
+        {
+          "name": "entering-bond-formed-leaving-bond-cleaved",
+          "admitted": true,
+          "reason": "Exactly the entering bond forms and the leaving bond closes while all other local incidences remain retained."
+        }
+      ]
+    },
+    {
+      "key": "path",
+      "choices": [
+        {
+          "name": "named-rate-law-cleavage-first-or-unordered-snapshots",
+          "admitted": false,
+          "reason": "A conventional name, kinetic law or wrong order can select a mechanism."
+        },
+        {
+          "name": "complete-concerted-and-addition-then-restoration-path-family",
+          "admitted": true,
+          "reason": "The generated family retains direct exchange and donor transfer followed by leaving-pair recurrence restoration."
+        }
+      ]
+    },
+    {
+      "key": "recurrence",
+      "choices": [
+        {
+          "name": "aromatic-support-destroyed-or-fitted-restoration",
+          "admitted": false,
+          "reason": "An unclosed or fitted recurrence does not return the carrier to its exact class."
+        },
+        {
+          "name": "leaving-pair-restores-aromatic-incidence",
+          "admitted": true,
+          "reason": "The leaving pair relinquishes both occurrences to restore the opened aromatic incidence exactly."
+        }
+      ]
+    },
+    {
+      "key": "observation",
+      "choices": [
+        {
+          "name": "substrate-product-mechanism-readable-before-seal",
+          "admitted": false,
+          "reason": "External structures or terminology could select the survivor."
+        },
+        {
+          "name": "value-free-aromatic-structure-and-mechanism-target-seal",
+          "admitted": true,
+          "reason": "Law and complete target identities seal before newly registered structure or mechanism outcomes open."
+        }
+      ]
+    },
+    {
+      "key": "extension",
+      "choices": [
+        {
+          "name": "substrate-specific-exception-or-recomputed-prefix",
+          "admitted": false,
+          "reason": "A special aromatic substrate rule is not depth-independent."
+        },
+        {
+          "name": "fresh-aromatic-successor-no-extra-rule",
+          "admitted": true,
+          "reason": "Adding one fresh retained aromatic occurrence preserves every prior state, edge and pair allocation."
+        }
+      ]
+    }
+  ],
+  "exact_result": "complete-aromatic-source-ordered-carrier__structural-EmptyOne-entering-acceptor-slot__complete-aromatic-donor-pair-transfer__entering-bond-formed-leaving-bond-cleaved__complete-concerted-and-addition-then-restoration-path-family__leaving-pair-restores-aromatic-incidence__value-free-aromatic-structure-and-mechanism-target-seal__fresh-aromatic-successor-no-extra-rule",
+  "induction_base": "One five-occurrence aromatic source forces transfer of the complete donor pair to the entering acceptor and restoration of the opened aromatic incidence by the complete leaving pair through exactly one or two transitions.",
+  "induction_step": "Append one fresh aromatic occurrence and pair outside the local exchange support to every path state; every prior occurrence, state, transition and pair allocation remains unchanged without an extra rule.",
+  "exclusions": [
+    "no native numerical zero; structural acceptor absence is EmptyOne",
+    "no negative irrational imaginary continuum fitted free random or imported native parameter",
+    "no conventional electrophilic mechanism rate energy solvent substrate or target used to generate the survivor",
+    "three development-observed records are disclosed and never relabelled blind",
+    "all 452 PDF pages, 25 optimization rows, favorable, zero-yield, adverse, alternative and unresolved records remain retained",
+    "external signed and decimal inscriptions remain downstream evidence only"
+  ],
+  "operational_witnesses": [
+    [
+      "complete-carrier",
+      "Every atom and held electron occurrence survives both generated paths.",
+      true
+    ],
+    [
+      "acceptor-transfer",
+      "The structural EmptyOne entering carrier accepts the complete aromatic donor pair.",
+      true
+    ],
+    [
+      "leaving-relinquishment",
+      "The displaced pair leaves its source bond and restores the opened aromatic incidence.",
+      true
+    ],
+    [
+      "recurrence-restored",
+      "The terminal retains both aromatic incidences and the unchanged recurrence pair.",
+      true
+    ],
+    [
+      "complete-path-family",
+      "The generated family retains one-transition and addition-then-restoration paths.",
+      true
+    ],
+    [
+      "cleavage-first-control",
+      "Cleavage-first cannot duplicate the still occupied aromatic incidence.",
+      true
+    ],
+    [
+      "successor",
+      "Appending one retained aromatic occurrence preserves the complete prior path without another rule.",
+      true
+    ]
+  ],
+  "experiment_id": "SFT-EXP-CHEM-ELECTROPHILIC-SUBSTITUTION-FAMILY-008",
+  "expected_observation_label": "complete-acceptor-donor-aromatic-exchange-path-and-postseal-supplementary-vector",
+  "target_rows": [
+    {
+      "target_id": "SFT-CHEM-ORG-008-001",
+      "source_id": "IUPAC::IUPAC-E02020::complete-development-observed-acceptor-record::development-observed-before-ORG-008-seal",
+      "source_locator": "electrophile complete current term record",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-001-016-family-v1/iupac-e02020.json",
+      "snapshot_hash": "sha256:e9d5d8794a2fa9d9636d3988528c2b54bc3ffe630b23b89dd7502d502a7868c7"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-008-002",
+      "source_id": "IUPAC::IUPAC-08167::complete-development-observed-donor-acceptor-leaving-record::development-observed-before-ORG-008-seal",
+      "source_locator": "electrophilic substitution complete current term record",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-001-016-family-v1/iupac-08167.json",
+      "snapshot_hash": "sha256:6b14423ca31e50fb360d6c73092ada8c336dce1a8f4059f51b27c714d98a712b"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-008-003",
+      "source_id": "Springer Nature, Nature Chemistry::NATURE-CHEMISTRY-S41557-022-01101-0-ARTICLE::complete-development-observed-article-and-supplementary-identity-record::title-abstract-qualitative-mechanism-data-availability-and-supplementary-identity-development-observed",
+      "source_locator": "DOI 10.1038/s41557-022-01101-0 complete public article metadata, abstract, figures, data-availability and supplementary-link surface",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-008-nature-blind-v1/nature-chemistry-s41557-022-01101-0-article.html",
+      "snapshot_hash": "sha256:0747c9b004b805e3633571bb5e82d27f1f4810ec9516dfcbe491d2a60963dd4c"
+    },
+    {
+      "target_id": "SFT-CHEM-ORG-008-004",
+      "source_id": "Springer Nature, Nature Chemistry::NATURE-CHEMISTRY-41557-2022-1101-MOESM1::complete-outcome-unopened-product-structure-experimental-control-and-mechanism-surface::identity-size-and-qualitative-file-description-observed-exact-PDF-pages-products-values-controls-and-mechanistic-details-unopened-before-ORG-008-seal",
+      "source_locator": "complete publisher supplementary PDF directly linked from DOI 10.1038/s41557-022-01101-0; publisher-reported response length 13,165,129 bytes",
+      "snapshot_path": "experiments/external_sources/chemistry/snapshots/org-008-nature-blind-v1/nature-chemistry-41557-2022-1101-moesm1.pdf",
+      "snapshot_hash": "sha256:9b5004aa936f558e0bee49b1849930b522b46127158eb1d6eef051cf6345b0a8"
+    }
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/org_008_complete_targets_v1.json",
+  "falsification_condition": "The claim fails if any carrier, pair, atom, bond change, recurrence state or path is omitted; if cleavage-first or a nonunique 256-form census passes; if any of four sources or 452 supplementary pages is erased; if the IUPAC donor/acceptor relations fail; if the complete PDF lacks EAS-like donor/acceptor coupling, dearomatized support and rearomatization; or if any of 25 optimization rows, including 14 displayed zero-yield rows and mechanism controls, is omitted."
+}

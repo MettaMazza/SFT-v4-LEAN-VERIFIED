@@ -1,0 +1,82 @@
+{
+  "experiment_id": "SFT-EXP-CHEM-ELECTROPHILIC-SUBSTITUTION-FAMILY-008",
+  "claim_id": "SFT-CHEM-ELECTROPHILIC-SUBSTITUTION-FAMILY-008",
+  "provenance": "observational_derivation",
+  "frozen_relation": "complete-aromatic-source-ordered-carrier__structural-EmptyOne-entering-acceptor-slot__complete-aromatic-donor-pair-transfer__entering-bond-formed-leaving-bond-cleaved__complete-concerted-and-addition-then-restoration-path-family__leaving-pair-restores-aromatic-incidence__value-free-aromatic-structure-and-mechanism-target-seal__fresh-aromatic-successor-no-extra-rule",
+  "target_references": [
+    [
+      "SFT-CHEM-ORG-008-001",
+      "IUPAC::IUPAC-E02020::complete-development-observed-acceptor-record::development-observed-before-ORG-008-seal",
+      "electrophile complete current term record",
+      "experiments/external_sources/chemistry/snapshots/org-001-016-family-v1/iupac-e02020.json",
+      "sha256:e9d5d8794a2fa9d9636d3988528c2b54bc3ffe630b23b89dd7502d502a7868c7"
+    ],
+    [
+      "SFT-CHEM-ORG-008-002",
+      "IUPAC::IUPAC-08167::complete-development-observed-donor-acceptor-leaving-record::development-observed-before-ORG-008-seal",
+      "electrophilic substitution complete current term record",
+      "experiments/external_sources/chemistry/snapshots/org-001-016-family-v1/iupac-08167.json",
+      "sha256:6b14423ca31e50fb360d6c73092ada8c336dce1a8f4059f51b27c714d98a712b"
+    ],
+    [
+      "SFT-CHEM-ORG-008-003",
+      "Springer Nature, Nature Chemistry::NATURE-CHEMISTRY-S41557-022-01101-0-ARTICLE::complete-development-observed-article-and-supplementary-identity-record::title-abstract-qualitative-mechanism-data-availability-and-supplementary-identity-development-observed",
+      "DOI 10.1038/s41557-022-01101-0 complete public article metadata, abstract, figures, data-availability and supplementary-link surface",
+      "experiments/external_sources/chemistry/snapshots/org-008-nature-blind-v1/nature-chemistry-s41557-022-01101-0-article.html",
+      "sha256:0747c9b004b805e3633571bb5e82d27f1f4810ec9516dfcbe491d2a60963dd4c"
+    ],
+    [
+      "SFT-CHEM-ORG-008-004",
+      "Springer Nature, Nature Chemistry::NATURE-CHEMISTRY-41557-2022-1101-MOESM1::complete-outcome-unopened-product-structure-experimental-control-and-mechanism-surface::identity-size-and-qualitative-file-description-observed-exact-PDF-pages-products-values-controls-and-mechanistic-details-unopened-before-ORG-008-seal",
+      "complete publisher supplementary PDF directly linked from DOI 10.1038/s41557-022-01101-0; publisher-reported response length 13,165,129 bytes",
+      "experiments/external_sources/chemistry/snapshots/org-008-nature-blind-v1/nature-chemistry-41557-2022-1101-moesm1.pdf",
+      "sha256:9b5004aa936f558e0bee49b1849930b522b46127158eb1d6eef051cf6345b0a8"
+    ]
+  ],
+  "observation_registry_path": "experiments/external_sources/chemistry/org_008_complete_targets_v1.json",
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-CHEM-ELECTROPHILIC-SUBSTITUTION-FAMILY-008-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "chemical-observation",
+          "complete-acceptor-donor-aromatic-exchange-path-and-postseal-supplementary-vector"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "sealed_consequence_label": "complete-acceptor-donor-aromatic-exchange-path-and-postseal-supplementary-vector",
+  "falsification_condition": "The claim fails if any carrier, pair, atom, bond change, recurrence state or path is omitted; if cleavage-first or a nonunique 256-form census passes; if any of four sources or 452 supplementary pages is erased; if the IUPAC donor/acceptor relations fail; if the complete PDF lacks EAS-like donor/acceptor coupling, dearomatized support and rearomatization; or if any of 25 optimization rows, including 14 displayed zero-yield rows and mechanism controls, is omitted.",
+  "development_observation_disclosed": true,
+  "observation_may_have_informed_question_and_candidate_relation": true,
+  "not_claimed_as_unknown-target_forward_prediction": true,
+  "external_target_api_absent_from_candidate_generator_and_eliminator": true,
+  "target_content_inaccessible_to_prediction_execution": true,
+  "comparison_implementation_inaccessible_to_prediction_execution": true,
+  "all_rows_required": true
+}

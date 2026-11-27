@@ -62866,8 +62866,19 @@
       "receipt_path": "receipts/engine/model_admitted/SFT-CHEM-ELECTROPHILIC-SUBSTITUTION-FAMILY-008-e2c208084ac61cb0.json",
       "statement": "For every complete aromatic exchange carrier, the entering structural-EmptyOne acceptor receives both occurrences of one aromatic donor pair. The entering bond forms, the leaving bond closes, and the leaving pair restores the opened aromatic incidence. Every atom and held electron occurrence is conserved through direct exchange or addition followed by recurrence restoration.",
       "title": "Exact acceptor-driven aromatic substitution family law",
-      "lean_status": "pending",
-      "lean_modules": [],
+      "lean_status": "in_progress",
+      "lean_modules": [
+        "SFT/Chemistry/ElectrophilicAnalysis.lean",
+        "SFT/Chemistry/ElectrophilicCarrier.lean",
+        "SFT/Chemistry/ElectrophilicConservation.lean",
+        "SFT/Chemistry/ElectrophilicEvidence.lean",
+        "SFT/Chemistry/ElectrophilicExperiment.lean",
+        "SFT/Chemistry/ElectrophilicGrammar.lean",
+        "SFT/Chemistry/ElectrophilicPath.lean",
+        "SFT/Chemistry/ElectrophilicSource.lean",
+        "SFT/Chemistry/ElectrophilicValidation.lean",
+        "SFT/Chemistry/ElectrophilicWitnesses.lean"
+      ],
       "artifact_runtime_parity": "pending",
       "registration_sha256": "1f9f6c6ff3910ae8deed2cfa88277ff22eb857f7b1a5c20b6f18796cd5c27291",
       "v3_registration": {
@@ -62925,7 +62936,11 @@
         "statement": "The structural-EmptyOne entering acceptor receives the complete aromatic donor pair; the entering bond forms, the leaving bond closes, and the complete leaving pair restores the opened aromatic incidence through the complete one- or two-transition family.",
         "status": "empirically_tested",
         "title": "Exact acceptor-driven aromatic substitution family law"
-      }
+      },
+      "checkpoint_evidence": "verification/TURN1498_ELECTROPHILIC_CHECKPOINT.json",
+      "remaining": [
+        "Retain running native full empirical replay99218/controller69422; compare its complete12-field report to passingoriginal, then execute prepared registrar."
+      ]
     },
     {
       "branch": "chemistry",
@@ -203502,8 +203517,8 @@
   "updated_at": "2026-11-27T11:49:48.264375+00:00",
   "summary": {
     "total_claims": 2781,
-    "in_progress": 9,
-    "pending": 1721,
+    "in_progress": 10,
+    "pending": 1720,
     "fully_reconstructed_claims": 1051,
     "axiom_free_exported_results": 62711,
     "axiom_free_audited_definitions_and_theorems": 144916

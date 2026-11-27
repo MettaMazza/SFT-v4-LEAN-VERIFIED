@@ -55112,12 +55112,12 @@
   ],
   "next_publication_milestone": 1250,
   "publication_review_requirements": "Publication cycle clarification (user instruction, 31 October 2026): The next scientific checkpoint is exactly 500 completed V3 census entries, followed by 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750 and final completion at 2781. On explicit resumption, start at the earliest unfinished dependency identified from actual V3 source and current Lean implementations and proofs. Preserve existing completed work; proceed in dependency order. Before EVERY milestone pause, update and check the ENTIRE cumulative paper, with prose explanations, mathematical derivations including intermediate steps, original pinned V3 sources, actual V4 Lean verification references and corresponding timeline steps throughout. QA the whole manuscript and PDF, update contents, headline, metadata, landing description, counts, source correspondence, evidence and full release bundle including timeline, push and verify the review edition on GitHub, then pause for author review. Publish only after explicit approval of that edition, with SFT_PAPER.pdf as Zenodo default preview and public HTML verification. Publication approval alone never resumes scientific work. Edition 0.2 was approved and published under DOI 10.5281/zenodo.23846751; scientific work remains paused until explicitly resumed.",
-  "authorized_action": "1054 complete. Continue SFT-CHEM-ELIMINATION-REACTION-FAMILY-010 in dependency order toward1250; bounded processes; update counts,paper,timeline,push; pause at1250 for review.",
+  "authorized_action": "1055 complete. Continue SFT-CHEM-REARRANGEMENT-REACTION-FAMILY-011 in dependency order toward1250; bounded processes; update counts,paper,timeline,push; pause at1250 for review.",
   "scientific_cursor": {
-    "completed": "SFT-CHEM-ADDITION-REACTION-FAMILY-009",
-    "next": "SFT-CHEM-ELIMINATION-REACTION-FAMILY-010",
+    "completed": "SFT-CHEM-ELIMINATION-REACTION-FAMILY-010",
+    "next": "SFT-CHEM-REARRANGEMENT-REACTION-FAMILY-011",
     "next_milestone": 1250,
-    "action": "Continue SFT-CHEM-ELIMINATION-REACTION-FAMILY-010 from pinned original source. Addition009 complete:225 public declarations, all original kernel witnesses,256programme and full original empirical report verified. Preserve these results; do not rerun them from old pending prose."
+    "action": "Continue SFT-CHEM-REARRANGEMENT-REACTION-FAMILY-011 from pinned original source. Elimination010 complete:173 public declarations, all original kernel witnesses,256programme and full original empirical report verified. Preserve these results; do not rerun them from old pending prose."
   },
   "video_verification": {
     "checkpoint": "2f3ea0306a280025b6e9577d51a84a966f37cb4c",
@@ -59677,11 +59677,11 @@
     "receipt": "verification/TURN_888_COULOMB_COMPLETION.json"
   },
   "last_verified_push": {
-    "status": "PASS",
-    "commit": "2fae75051b32ba9b066b239e93ea814cfaf64216",
-    "tree": "abc0d8e1a9706df7248d24cc84587c03ccab1a52",
-    "verified_files": 128,
-    "completed_entries": 652
+    "commit": "0ef4c72f0af0006de6ce36e027c0204cb2ec2dda",
+    "tree": "275ec4e44bb41475b3ff65f0e9ed5d53824c0f84",
+    "paths": 92,
+    "remote_receipt": "work/checkpoint1502_verified.json",
+    "canonical_receipt": "work/canonical1502_sync_receipt.json"
   },
   "magnetic889_staged": {
     "registered": true,
@@ -83101,6 +83101,152 @@
       "addition1502_validation_report.json": "ee52931dd0639579c2691059b50b3f0dd28a360860611d1a79ba75fe76da81ad",
       "addition1502_graphs_build_report.json": "818f17f8106d692abc337a32ef7d68faba32d3ec8c806ecc276a941b917fb677",
       "addition1502_results_build_report.json": "2dca0e074d7a3961614a463076ef6cde3841ce503ea0c1db96051ff4f9d6078d"
+    },
+    "full_empirical_replay_passed": true,
+    "remaining": []
+  },
+  "elimination1503": {
+    "status": "complete",
+    "claim_id": "SFT-CHEM-ELIMINATION-REACTION-FAMILY-010",
+    "registered_at": "2026-11-27T14:17:41.401834+00:00",
+    "source_commit": "76f1b34e9e9682989adcbb088797b4ae4ce4fcf1",
+    "lean_source_sha256": {
+      "SFT/Chemistry/Elimination.lean": "eefaf3838a37a185baf099da3fe48c0db260e98019773ba1709e0760570745eb",
+      "SFT/Chemistry/EliminationAnalysis.lean": "bfb6d3c0195e599f5b8f1f90f9cd3c0fd59b5752664c54e6b8c9d2d1ddb951d7",
+      "SFT/Chemistry/EliminationEvidence.lean": "c4c610e7636380958db6652db27388b8520c3e38f0c3a2dcf258da4a31001cde",
+      "SFT/Chemistry/EliminationExperiment.lean": "5295d4c423a46fd8a4029b66304cd859f2e8191484424e5c770da8039542f8d9",
+      "SFT/Chemistry/EliminationGrammar.lean": "0200ee8dc7ae6c78a9a35a53015ab1351d7321be8a13871725b9ed339423d824",
+      "SFT/Chemistry/EliminationSource.lean": "d6e907f997ee870bfd46971a440f085e2eaf241cafcfb8a5f0e9df036e58df1f",
+      "SFT/Chemistry/EliminationValidation.lean": "5cc85b8bef6ce244fa1f48c92a6e017e14eeffef6271e86e7f1f315df3adb7c1",
+      "SFT/Chemistry/EliminationWitnessProofs.lean": "8ffc4ebb5c72d80f4ffdea60543c840ea898e12472f71f5e7315ce25964dcb64",
+      "SFT/Chemistry/EliminationWitnessGraphs/AdjacentSource.lean": "d17b05d37d4026f77d66f4362d64911556413ed448c6dd490965dcfd9159d451",
+      "SFT/Chemistry/EliminationWitnessGraphs/AdjacentTerminal.lean": "db1c81beadce4867c744406f5a74b3a2e0f5da21e76a330108c43eda420a263d",
+      "SFT/Chemistry/EliminationWitnessGraphs/NonadjacentSource.lean": "0a09d67318729c17e48e3202c7b76055b900dc897f0ce1a151edc5f9cf587941",
+      "SFT/Chemistry/EliminationWitnessGraphs/NonadjacentTerminal.lean": "75f5b65c3ad1f9400bba9c8043d7493eee21a99f67cb30c7ea345c1689e8b1de",
+      "SFT/Chemistry/EliminationWitnessGraphs/SameSource.lean": "a5574f504e76c74be1e46c61d0ac6c8dca49c0e80622cac3b607b0c82bf1b64d",
+      "SFT/Chemistry/EliminationWitnessGraphs/SameTerminal.lean": "fccc5b7d9658a05d6e8ce049e23c306dfda840185dec198239353e6763aacd55",
+      "SFT/Chemistry/EliminationWitnessGraphs/SuccessorSource.lean": "6e80e3e41aa12b1e08cd0dbbf873430a3d946d05f89b41536746c88c1238a748",
+      "SFT/Chemistry/EliminationWitnessGraphs/SuccessorTerminal.lean": "f8b2b23855c26ca7c52c8767b658a0ba097e7224783a85ab1acc6e2082e0e9d4",
+      "SFT/Chemistry/EliminationAdditionResults/Adjacent.lean": "431074fdede4dbb596361a627226b5017b299e248e8c9c9acb71eff207f7839f",
+      "SFT/Chemistry/EliminationAdditionResults/Nonadjacent.lean": "f3a01670c4c947f67696b75e7bfdbe85583944d364b7603f7e825e8aa468b29b",
+      "SFT/Chemistry/EliminationAdditionResults/Same.lean": "9aa91f0119d645e604ad5d681d00983c1a92eee0a6c34527dd608a04f82aaa39",
+      "SFT/Chemistry/EliminationAdditionResults/Successor.lean": "2f3d04fdc6ba5902db50fc5d9947c173974b36965c106605b47c7012eaa199f0"
+    },
+    "audited_declarations": 173,
+    "axiom_dependencies": [],
+    "kernel_witness_equality": "SFT.Chemistry.EliminationWitnessProofs.operationalWitnesses",
+    "source_component_correspondence": {
+      "SFT/Chemistry/Elimination.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Exact original ten-field inverse-addition transform with retained ordered atom/support guard, unchanged-product/source successor, original generated witnesses and all original constructor guards."
+      },
+      "SFT/Chemistry/EliminationAnalysis.lean": {
+        "source": "sft/chemistry/elimination_reaction_validation_v1.py",
+        "component": "Full original12-field analysis and47target checks:22archive files,117page vector,32ordered products/5unsuccessfulrows/7optimizationtables/6timepoints, exact hashes,32unresolved complete-carrier records and source guards."
+      },
+      "SFT/Chemistry/EliminationEvidence.lean": {
+        "source": "sft/chemistry/elimination_reaction_batch_v1.py",
+        "component": "Original registration,256decisions, eight computed witnesses, closure, four controls and unknown-ID behavior."
+      },
+      "SFT/Chemistry/EliminationExperiment.lean": {
+        "source": "sft/chemistry/elimination_reaction_validation_v1.py",
+        "component": "Original47source/target references,eightdimensions,eightwitnesses,capabilityclosed prediction,envelope andregistration."
+      },
+      "SFT/Chemistry/EliminationGrammar.lean": {
+        "source": "sft/chemistry/elimination_reaction_batch_v1.py",
+        "component": "Complete original eight-axis256alternative grammar, exhaustive census and unique preserving survivor."
+      },
+      "SFT/Chemistry/EliminationSource.lean": {
+        "source": "sft/chemistry/elimination_reaction_validation_v1.py",
+        "component": "All eleven original authority hashes, preseal payload/order flags and32/5/7complete external row boundary."
+      },
+      "SFT/Chemistry/EliminationValidation.lean": {
+        "source": "sft/chemistry/elimination_reaction_validation_v1.py",
+        "component": "Full original sealed capability/audit/custody/release/comparison, omission/tampered-label controls and12-field seven-message empirical report."
+      },
+      "SFT/Chemistry/EliminationWitnessProofs.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Kernel equalities for three original inverse results, successor, invalid inverse and complete eight operational witnesses, all empty axioms."
+      },
+      "SFT/Chemistry/EliminationWitnessGraphs/AdjacentSource.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Exact original AdjacentSource finite graph execution: every reachability transition, complete component filter/fold and original ordering; source graphs also prove both actual attachment distances."
+      },
+      "SFT/Chemistry/EliminationWitnessGraphs/AdjacentTerminal.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Exact original AdjacentTerminal finite graph execution: every reachability transition, complete component filter/fold and original ordering; source graphs also prove both actual attachment distances."
+      },
+      "SFT/Chemistry/EliminationWitnessGraphs/NonadjacentSource.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Exact original NonadjacentSource finite graph execution: every reachability transition, complete component filter/fold and original ordering; source graphs also prove both actual attachment distances."
+      },
+      "SFT/Chemistry/EliminationWitnessGraphs/NonadjacentTerminal.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Exact original NonadjacentTerminal finite graph execution: every reachability transition, complete component filter/fold and original ordering; source graphs also prove both actual attachment distances."
+      },
+      "SFT/Chemistry/EliminationWitnessGraphs/SameSource.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Exact original SameSource finite graph execution: every reachability transition, complete component filter/fold and original ordering; source graphs also prove both actual attachment distances."
+      },
+      "SFT/Chemistry/EliminationWitnessGraphs/SameTerminal.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Exact original SameTerminal finite graph execution: every reachability transition, complete component filter/fold and original ordering; source graphs also prove both actual attachment distances."
+      },
+      "SFT/Chemistry/EliminationWitnessGraphs/SuccessorSource.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Exact original SuccessorSource finite graph execution: every reachability transition, complete component filter/fold and original ordering; source graphs also prove both actual attachment distances."
+      },
+      "SFT/Chemistry/EliminationWitnessGraphs/SuccessorTerminal.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Exact original SuccessorTerminal finite graph execution: every reachability transition, complete component filter/fold and original ordering; source graphs also prove both actual attachment distances."
+      },
+      "SFT/Chemistry/EliminationAdditionResults/Adjacent.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Kernel equality of the original elimination-specific inverse-addition Adjacent complete ten-field transform result, using the source-bound component and separation proofs."
+      },
+      "SFT/Chemistry/EliminationAdditionResults/Nonadjacent.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Kernel equality of the original elimination-specific inverse-addition Nonadjacent complete ten-field transform result, using the source-bound component and separation proofs."
+      },
+      "SFT/Chemistry/EliminationAdditionResults/Same.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Kernel equality of the original elimination-specific inverse-addition Same complete ten-field transform result, using the source-bound component and separation proofs."
+      },
+      "SFT/Chemistry/EliminationAdditionResults/Successor.lean": {
+        "source": "sft/chemistry/elimination_reaction_law_v1.py",
+        "component": "Kernel equality of the original elimination-specific inverse-addition Successor complete ten-field transform result, using the source-bound component and separation proofs."
+      }
+    },
+    "dependencies": {
+      "SFT-FOUNDATION-FORM-ENFORCEMENT-001": "complete",
+      "SFT-FOUNDATION-MEASURED-VALUE-BOUNDARY-001": "complete",
+      "SFT-MATH-EXACT-ARITHMETIC-001": "complete",
+      "SFT-MATH-DISCRETE-001": "complete",
+      "SFT-MATH-COMBINATORICS-001": "complete",
+      "SFT-MATH-GRAPH-NETWORK-001": "complete",
+      "SFT-MATH-ORDER-LATTICE-001": "complete",
+      "SFT-INFO-CONSERVATION-LOSS-001": "complete",
+      "SFT-COMP-FORM-STATE-TRANSITION-001": "complete",
+      "SFT-QUANTUM-REVERSIBLE-MODEL-001": "complete",
+      "SFT-CHEM-STOICH-COMPOSITION-001": "complete",
+      "SFT-CHEM-STOICH-CONSERVATION-001": "complete",
+      "SFT-CHEM-BOND-CHEMICAL-BOND-001": "complete",
+      "SFT-CHEM-BOND-COVALENT-001": "complete",
+      "SFT-CHEM-BOND-ORDER-001": "complete",
+      "SFT-CHEM-MOL-MOLECULE-001": "complete",
+      "SFT-CHEM-RXN-IDENTITY-001": "complete",
+      "SFT-CHEM-RXN-MECHANISM-001": "complete",
+      "SFT-CHEM-ORGANIC-FUNCTIONAL-GROUP-001": "complete",
+      "SFT-CHEM-ORGANIC-REACTION-FAMILY-001": "complete",
+      "SFT-CHEM-ADDITION-REACTION-FAMILY-009": "complete"
+    },
+    "reports": {
+      "elimination1503_full_audit_report.json": "5ba3cd1b656ed8a2e6452707ca0974b9adf6d68336a0027ebf6a35778184c763",
+      "elimination1503_program_report.json": "2bb7bb53d59a49e0ca3f4113b35ace0210d16c55965321ed21c3ccf40598d076",
+      "elimination1503_validation_report.json": "05c95892bc9f733dfa300a6d4c4818f29455258815a7b4e7eabdc220db7ffcc0",
+      "elimination1503_graphs_build_report.json": "2d231b1e1ea67a1b505dd4e6fbb9a6c9a47f896c3db535ed5ac0265aba51fad5",
+      "elimination1503_results_build_report.json": "988ea056e838b8e11131e1b26c5f1b2d1e83a94b77b5adfbdfa04f70fd465bae",
+      "elimination1503_analysis_report.json": "29af00b78d1da8b82992a58f270effdf50b4ea6cb1d337edd257afc2ba090f9e"
     },
     "full_empirical_replay_passed": true,
     "remaining": []

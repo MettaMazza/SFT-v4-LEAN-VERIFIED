@@ -15395,3 +15395,43 @@ import SFT.Chemistry.AdditionWitnessResults.Nonadjacent
 import SFT.Chemistry.AdditionWitnessResults.Same
 
 import SFT.Chemistry.AdditionWitnessResults.Successor
+
+import SFT.Chemistry.Elimination
+
+import SFT.Chemistry.EliminationAnalysis
+
+import SFT.Chemistry.EliminationEvidence
+
+import SFT.Chemistry.EliminationExperiment
+
+import SFT.Chemistry.EliminationGrammar
+
+import SFT.Chemistry.EliminationSource
+
+import SFT.Chemistry.EliminationValidation
+
+import SFT.Chemistry.EliminationWitnessProofs
+
+import SFT.Chemistry.EliminationWitnessGraphs.AdjacentSource
+
+import SFT.Chemistry.EliminationWitnessGraphs.AdjacentTerminal
+
+import SFT.Chemistry.EliminationWitnessGraphs.NonadjacentSource
+
+import SFT.Chemistry.EliminationWitnessGraphs.NonadjacentTerminal
+
+import SFT.Chemistry.EliminationWitnessGraphs.SameSource
+
+import SFT.Chemistry.EliminationWitnessGraphs.SameTerminal
+
+import SFT.Chemistry.EliminationWitnessGraphs.SuccessorSource
+
+import SFT.Chemistry.EliminationWitnessGraphs.SuccessorTerminal
+
+import SFT.Chemistry.EliminationAdditionResults.Adjacent
+
+import SFT.Chemistry.EliminationAdditionResults.Nonadjacent
+
+import SFT.Chemistry.EliminationAdditionResults.Same
+
+import SFT.Chemistry.EliminationAdditionResults.Successor

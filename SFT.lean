@@ -15609,3 +15609,13 @@ import SFT.EarthEnvironment.EarthGeologicalLayerEvidence
 import SFT.EarthEnvironment.EarthGeologicalLayerExperiment
 
 import SFT.EarthEnvironment.EarthGeologicalLayerValidation
+
+import SFT.EarthEnvironment.EarthStratigraphicOrder
+
+import SFT.EarthEnvironment.EarthStratigraphicOrderGrammar
+
+import SFT.EarthEnvironment.EarthStratigraphicOrderEvidence
+
+import SFT.EarthEnvironment.EarthStratigraphicOrderExperiment
+
+import SFT.EarthEnvironment.EarthStratigraphicOrderValidation

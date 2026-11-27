@@ -15589,3 +15589,13 @@ import SFT.EarthEnvironment.EarthBudgetClosureEvidence
 import SFT.EarthEnvironment.EarthBudgetClosureExperiment
 
 import SFT.EarthEnvironment.EarthBudgetClosureValidation
+
+import SFT.EarthEnvironment.EarthGeologicalMaterial
+
+import SFT.EarthEnvironment.EarthGeologicalMaterialGrammar
+
+import SFT.EarthEnvironment.EarthGeologicalMaterialEvidence
+
+import SFT.EarthEnvironment.EarthGeologicalMaterialExperiment
+
+import SFT.EarthEnvironment.EarthGeologicalMaterialValidation

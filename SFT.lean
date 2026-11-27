@@ -15579,3 +15579,13 @@ import SFT.EarthEnvironment.EarthSourceSinkStorageEvidence
 import SFT.EarthEnvironment.EarthSourceSinkStorageExperiment
 
 import SFT.EarthEnvironment.EarthSourceSinkStorageValidation
+
+import SFT.EarthEnvironment.EarthBudgetClosure
+
+import SFT.EarthEnvironment.EarthBudgetClosureGrammar
+
+import SFT.EarthEnvironment.EarthBudgetClosureEvidence
+
+import SFT.EarthEnvironment.EarthBudgetClosureExperiment
+
+import SFT.EarthEnvironment.EarthBudgetClosureValidation

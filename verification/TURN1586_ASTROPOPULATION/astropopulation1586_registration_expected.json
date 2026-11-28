@@ -1,0 +1,57 @@
+{
+  "experiment_id": "SFT-EXP-ASTRO-POPULATION-001-E1",
+  "claim_id": "SFT-ASTRO-POPULATION-001",
+  "frozen_relation": "selection-bounded-object-set-carrier__population-sampling-bounded__membership-and-distribution-relation__selection-volume-time-weights-and-censoring-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+  "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-POPULATION-001.json",
+  "source_snapshot_hash": "sha256:a311d2547d44992a880bf27cef0a0e3f4e8bb88fd9ed1cca43162f23423e9c84",
+  "target_ids": [
+    "sft-astro-population-001-external-astronomy-evidence"
+  ],
+  "target_locators": [
+    [
+      "sft-astro-population-001-external-astronomy-evidence",
+      "CDS-SIMBAD-001",
+      "https://simbad.cds.unistra.fr/simbad/"
+    ]
+  ],
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-ASTRO-POPULATION-001-E1-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "physical-observation",
+          "astronomy:selection-bounded-object-set-carrier__membership-and-distribution-relation__selection-volume-time-weights-and-censoring-held__population-sampling-bounded"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "expected_observation_label": "astronomy:selection-bounded-object-set-carrier__membership-and-distribution-relation__selection-volume-time-weights-and-censoring-held__population-sampling-bounded",
+  "falsification_condition": "Reject population inference from favorable detections alone.",
+  "all_rows_required": true,
+  "target_inaccessible_before_seal": true
+}

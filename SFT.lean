@@ -16293,3 +16293,13 @@ import SFT.AstronomyCosmology.AstronomicalClassificationEvidence
 import SFT.AstronomyCosmology.AstronomicalClassificationExperiment
 
 import SFT.AstronomyCosmology.AstronomicalClassificationValidation
+
+import SFT.AstronomyCosmology.AstronomicalPopulation
+
+import SFT.AstronomyCosmology.AstronomicalPopulationGrammar
+
+import SFT.AstronomyCosmology.AstronomicalPopulationEvidence
+
+import SFT.AstronomyCosmology.AstronomicalPopulationExperiment
+
+import SFT.AstronomyCosmology.AstronomicalPopulationValidation

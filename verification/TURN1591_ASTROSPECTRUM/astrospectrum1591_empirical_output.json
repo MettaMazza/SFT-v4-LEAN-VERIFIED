@@ -1,0 +1,116 @@
+{
+  "registration": {
+    "all_rows_required": true,
+    "claim_id": "SFT-ASTRO-SPECTRUM-001",
+    "expected_observation_label": "astronomy:ordered-band-signal-carrier__wavelength-frequency-energy-feature-relation__resolution-response-calibration-lines-and-continuum-held__spectral-method-bounded",
+    "experiment_id": "SFT-EXP-ASTRO-SPECTRUM-001-E1",
+    "falsification_condition": "Reject an uncalibrated or selectively cropped feature set.",
+    "frozen_relation": "ordered-band-signal-carrier__spectral-method-bounded__wavelength-frequency-energy-feature-relation__resolution-response-calibration-lines-and-continuum-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+    "prediction_program": {
+      "instructions": [
+        {
+          "arguments": [
+            "registered-premise"
+          ],
+          "destination": "premise",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "physical-observation",
+            "astronomy:ordered-band-signal-carrier__wavelength-frequency-energy-feature-relation__resolution-response-calibration-lines-and-continuum-held__spectral-method-bounded"
+          ],
+          "destination": "prediction",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "premise",
+            "prediction"
+          ],
+          "destination": "bound-result",
+          "opcode": "pair"
+        },
+        {
+          "arguments": [
+            "prediction"
+          ],
+          "destination": "",
+          "opcode": "emit"
+        }
+      ],
+      "program_id": "SFT-EXP-ASTRO-SPECTRUM-001-E1-prediction",
+      "schema": "sft-v3-fold-program/1"
+    },
+    "source_snapshot_hash": "sha256:b7bb2a941f5a93504ff3f7bf9b46dbcf230d780839abc94513097429991482bd",
+    "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-SPECTRUM-001.json",
+    "target_ids": [
+      "sft-astro-spectrum-001-external-astronomy-evidence"
+    ],
+    "target_inaccessible_before_seal": true,
+    "target_locators": [
+      [
+        "sft-astro-spectrum-001-external-astronomy-evidence",
+        "ESA-GAIA-ARCHIVE-001",
+        "https://gea.esac.esa.int/archive/"
+      ]
+    ]
+  },
+  "validation": {
+    "all_rows_preserved": true,
+    "data_source_ids": [
+      "ESA-GAIA-ARCHIVE-001"
+    ],
+    "evaluator_verified_seal": true,
+    "experiment_registration_hash": "sha256:8bd213ec43385c8ce9a326b815820830ca2783abdb2c5e20fe0fa32ea6729b3d",
+    "falsification_condition": "Reject an uncalibrated or selectively cropped feature set.",
+    "isolation_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "attempted_forbidden_operations": [],
+      "certificate_hash": "sha256:73593b88818f2c059d9ead1e16835d6c039a5cd5f8e7fdc0e4ba5d8c5aaf2364",
+      "comparison_code_present": false,
+      "comparison_implementation_identity_hash": "sha256:8d7083ffdd3031d565872a40285457cb8a15c2b3cfe2b0730a83f20f8b1947b5",
+      "completed": true,
+      "denied_capabilities": [
+        "clock",
+        "dynamic_import",
+        "environment",
+        "filesystem_read",
+        "filesystem_write",
+        "foreign_function",
+        "network",
+        "subprocess"
+      ],
+      "executor_id": "SFT-EXP-ASTRO-SPECTRUM-001-E1-prediction-executor",
+      "host_platform": "Darwin",
+      "input_manifest_hash": "sha256:15ca3d445154a5f8ed5605d71c67eaf54d646ccf82c968bba58a4bd5a3584dd1",
+      "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+      "output_hash": "sha256:f397393db871a5c8dc44b329daa8e04052a8ffad3bcf5c103c41fe604fa5266c",
+      "prediction_seal_hash": "sha256:937d5d58003e39b8bc8c00e500f00e2a722517fe431ee21810eca24c90fc0e5b",
+      "program_hash": "sha256:bf69937c7061684150e5e271da5dfa87d95ff6e0df7ce67e07f824604bc3b5eb",
+      "python_implementation": "CPython",
+      "registered_target_identity_hash": "sha256:3225fb219fcae353eeeb4f0963be0d9b0f48980183a64054fec9db36875c69a7",
+      "target_material_present": false,
+      "trace_hash": "sha256:7e281746858ad3e82c5cd189831780d68e340319ab5276cc72be30ddd49b4d0f"
+    },
+    "measurement_receipt_hash": "sha256:eb6b2ee5e0124218554f356829c561e0ff1ec97deea5ca47b820348ac1be516e",
+    "measurements": [
+      "sft-astro-spectrum-001-external-astronomy-evidence: predicted astronomy:ordered-band-signal-carrier__wavelength-frequency-energy-feature-relation__resolution-response-calibration-lines-and-continuum-held__spectral-method-bounded; observed astronomy:ordered-band-signal-carrier__wavelength-frequency-energy-feature-relation__resolution-response-calibration-lines-and-continuum-held__spectral-method-bounded; exact match True",
+      "deliberately tampered unfavorable control rejected"
+    ],
+    "passed": true,
+    "target_custody_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "certificate_hash": "sha256:311aaacdfe48bb910455bbf4556e1f047f3b7a101ce37476a6d10e80b6ea46a9",
+      "custodian_id": "SFT-EXP-ASTRO-SPECTRUM-001-E1-external-target-custodian",
+      "experiment_registration_hash": "sha256:8bd213ec43385c8ce9a326b815820830ca2783abdb2c5e20fe0fa32ea6729b3d",
+      "prediction_seal_hash": "sha256:937d5d58003e39b8bc8c00e500f00e2a722517fe431ee21810eca24c90fc0e5b",
+      "registered_target_identity_hash": "sha256:3225fb219fcae353eeeb4f0963be0d9b0f48980183a64054fec9db36875c69a7",
+      "released_after_prediction_seal": true,
+      "target_absent_until_prediction_seal": true,
+      "target_release_manifest_hash": "sha256:48dc24e853e270fe63aed32d1d7e8426cf297124e52080106bb439a2347cbb14"
+    },
+    "target_opened_after_seal": true,
+    "validated_seal_hash": "native-astrospectrum1591"
+  }
+}

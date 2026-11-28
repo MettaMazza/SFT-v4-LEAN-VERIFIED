@@ -16343,3 +16343,13 @@ import SFT.AstronomyCosmology.FluxLuminosityEvidence
 import SFT.AstronomyCosmology.FluxLuminosityExperiment
 
 import SFT.AstronomyCosmology.FluxLuminosityValidation
+
+import SFT.AstronomyCosmology.AstronomicalSpectrum
+
+import SFT.AstronomyCosmology.AstronomicalSpectrumGrammar
+
+import SFT.AstronomyCosmology.AstronomicalSpectrumEvidence
+
+import SFT.AstronomyCosmology.AstronomicalSpectrumExperiment
+
+import SFT.AstronomyCosmology.AstronomicalSpectrumValidation

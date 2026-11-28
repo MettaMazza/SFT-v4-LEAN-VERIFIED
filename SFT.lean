@@ -16109,3 +16109,13 @@ import SFT.EarthEnvironment.EarthSourcePathReceptorEvidence
 import SFT.EarthEnvironment.EarthSourcePathReceptorExperiment
 
 import SFT.EarthEnvironment.EarthSourcePathReceptorValidation
+
+import SFT.EarthEnvironment.EarthEnvironmentalTransport
+
+import SFT.EarthEnvironment.EarthEnvironmentalTransportGrammar
+
+import SFT.EarthEnvironment.EarthEnvironmentalTransportEvidence
+
+import SFT.EarthEnvironment.EarthEnvironmentalTransportExperiment
+
+import SFT.EarthEnvironment.EarthEnvironmentalTransportValidation

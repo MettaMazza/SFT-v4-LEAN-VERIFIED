@@ -16273,3 +16273,13 @@ import SFT.AstronomyCosmology.SurveySelectionEvidence
 import SFT.AstronomyCosmology.SurveySelectionExperiment
 
 import SFT.AstronomyCosmology.SurveySelectionValidation
+
+import SFT.AstronomyCosmology.AstronomicalObject
+
+import SFT.AstronomyCosmology.AstronomicalObjectGrammar
+
+import SFT.AstronomyCosmology.AstronomicalObjectEvidence
+
+import SFT.AstronomyCosmology.AstronomicalObjectExperiment
+
+import SFT.AstronomyCosmology.AstronomicalObjectValidation

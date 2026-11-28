@@ -1,0 +1,57 @@
+{
+  "experiment_id": "SFT-EXP-ASTRO-OBJECT-001-E1",
+  "claim_id": "SFT-ASTRO-OBJECT-001",
+  "frozen_relation": "cross-epoch-object-carrier__association-bounded__observation-association-relation__positions-times-signals-links-and-alternatives-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+  "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-OBJECT-001.json",
+  "source_snapshot_hash": "sha256:b62cf083b4354db74bbec97bf56bd4de19b82d504fdabf9602c9f006ca8f33ba",
+  "target_ids": [
+    "sft-astro-object-001-external-astronomy-evidence"
+  ],
+  "target_locators": [
+    [
+      "sft-astro-object-001-external-astronomy-evidence",
+      "CDS-SIMBAD-001",
+      "https://simbad.cds.unistra.fr/simbad/"
+    ]
+  ],
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-ASTRO-OBJECT-001-E1-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "physical-observation",
+          "astronomy:cross-epoch-object-carrier__observation-association-relation__positions-times-signals-links-and-alternatives-held__association-bounded"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "expected_observation_label": "astronomy:cross-epoch-object-carrier__observation-association-relation__positions-times-signals-links-and-alternatives-held__association-bounded",
+  "falsification_condition": "Reject if blended or ambiguous detections are forced into one object.",
+  "all_rows_required": true,
+  "target_inaccessible_before_seal": true
+}

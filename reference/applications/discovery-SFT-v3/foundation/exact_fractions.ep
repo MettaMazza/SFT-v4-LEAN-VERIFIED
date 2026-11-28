@@ -1,0 +1,192 @@
+# ============================================================================
+#  EXACT FRACTIONS  --  ratios of whole numbers, always in lowest terms.
+# ============================================================================
+#
+#  WHY THIS MODULE EXISTS
+#  ----------------------
+#  Almost every Fold constant is a ratio of whole numbers forced from the
+#  One -- for instance the inverse fine-structure constant is exactly the
+#  fraction 34259 / 250. To keep the "forced, zero free parameters" guarantee,
+#  these ratios are carried as exact fractions for the whole of a derivation.
+#  A decimal is formed only at the very end, for human eyes, and never feeds
+#  back into a calculation.
+#
+#  HOW A FRACTION IS STORED
+#  ------------------------
+#  Every fraction is kept in lowest terms with the sign on top:
+#     numerator_sign      -- minus one, zero, or plus one
+#     numerator_digits    -- the size of the top, in base-ten digits
+#     denominator_digits  -- the bottom, always a positive whole number
+#  Reducing by the greatest common divisor on construction means two fractions
+#  are equal exactly when their stored parts match.
+#
+#  The three parts are plain numbers and text rather than nested structures,
+#  because a structure cannot safely hold another structure in this language.
+#  Each operation rebuilds the top and bottom as ExactIntegers, computes, and
+#  stores the reduced result back into these flat parts.
+# ============================================================================
+
+import "exact_integers.ep"
+
+define structure Fraction:
+    field numerator_sign as Int
+    field numerator_digits as Str
+    field denominator_digits as Str
+
+
+# ----------------------------------------------------------------------------
+#  Rebuilding the top and bottom as ExactIntegers
+# ----------------------------------------------------------------------------
+
+# The numerator of a fraction, sign and all, as an ExactInteger.
+define fraction_numerator with value as Fraction returning ExactInteger:
+    return exact_integer_from_sign_and_digits(value.numerator_sign and value.numerator_digits)
+
+
+# The denominator of a fraction (always positive) as an ExactInteger.
+define fraction_denominator with value as Fraction returning ExactInteger:
+    return exact_integer_from_sign_and_digits(1 and value.denominator_digits)
+
+
+# ----------------------------------------------------------------------------
+#  Building fractions
+# ----------------------------------------------------------------------------
+
+# Build the fraction top / bottom, reduced to lowest terms, with the sign
+# moved onto the numerator and the denominator forced positive. The bottom
+# must not be zero.
+define fraction_make with top as ExactInteger and bottom as ExactInteger returning Fraction:
+    set numerator to top
+    set denominator to bottom
+    if denominator.sign < 0:
+        set numerator to exact_integer_negate(numerator)
+        set denominator to exact_integer_negate(denominator)
+    set common to exact_integer_greatest_common_divisor(numerator and denominator)
+    if common.sign != 0:
+        set numerator to exact_integer_divide_exactly(numerator and common)
+        set denominator to exact_integer_divide_exactly(denominator and common)
+    set value to create Fraction:
+        numerator_sign is numerator.sign
+        numerator_digits is numerator.digits
+        denominator_digits is denominator.digits
+    return value
+
+
+# The fraction equal to a single whole number (denominator one).
+define fraction_from_whole_number with whole_number as Int returning Fraction:
+    set top to exact_integer_from_number(whole_number)
+    set bottom to exact_integer_one()
+    return fraction_make(top and bottom)
+
+
+# The fraction top / bottom built from two ordinary whole numbers.
+define fraction_from_ratio with top as Int and bottom as Int returning Fraction:
+    set top_integer to exact_integer_from_number(top)
+    set bottom_integer to exact_integer_from_number(bottom)
+    return fraction_make(top_integer and bottom_integer)
+
+
+# ----------------------------------------------------------------------------
+#  Arithmetic on fractions
+# ----------------------------------------------------------------------------
+
+# Add two fractions:  a/b + c/d  =  (a*d + c*b) / (b*d), then reduce.
+define fraction_add with first as Fraction and second as Fraction returning Fraction:
+    set first_top to fraction_numerator(first)
+    set first_bottom to fraction_denominator(first)
+    set second_top to fraction_numerator(second)
+    set second_bottom to fraction_denominator(second)
+    set cross_first to exact_integer_multiply(first_top and second_bottom)
+    set cross_second to exact_integer_multiply(second_top and first_bottom)
+    set top to exact_integer_add(cross_first and cross_second)
+    set bottom to exact_integer_multiply(first_bottom and second_bottom)
+    return fraction_make(top and bottom)
+
+
+# Subtract the second fraction from the first.
+define fraction_subtract with first as Fraction and second as Fraction returning Fraction:
+    set first_top to fraction_numerator(first)
+    set first_bottom to fraction_denominator(first)
+    set second_top to fraction_numerator(second)
+    set second_bottom to fraction_denominator(second)
+    set cross_first to exact_integer_multiply(first_top and second_bottom)
+    set cross_second to exact_integer_multiply(second_top and first_bottom)
+    set top to exact_integer_subtract(cross_first and cross_second)
+    set bottom to exact_integer_multiply(first_bottom and second_bottom)
+    return fraction_make(top and bottom)
+
+
+# Multiply two fractions:  (a/b) * (c/d)  =  (a*c) / (b*d), then reduce.
+define fraction_multiply with first as Fraction and second as Fraction returning Fraction:
+    set first_top to fraction_numerator(first)
+    set first_bottom to fraction_denominator(first)
+    set second_top to fraction_numerator(second)
+    set second_bottom to fraction_denominator(second)
+    set top to exact_integer_multiply(first_top and second_top)
+    set bottom to exact_integer_multiply(first_bottom and second_bottom)
+    return fraction_make(top and bottom)
+
+
+# Divide the first fraction by the second:  (a/b) / (c/d)  =  (a*d) / (b*c).
+define fraction_divide with first as Fraction and second as Fraction returning Fraction:
+    set first_top to fraction_numerator(first)
+    set first_bottom to fraction_denominator(first)
+    set second_top to fraction_numerator(second)
+    set second_bottom to fraction_denominator(second)
+    set top to exact_integer_multiply(first_top and second_bottom)
+    set bottom to exact_integer_multiply(first_bottom and second_top)
+    return fraction_make(top and bottom)
+
+
+# Compare two fractions by cross-multiplying (both denominators are positive):
+# plus one, zero, or minus one.
+define fraction_compare with first as Fraction and second as Fraction returning Int:
+    set first_top to fraction_numerator(first)
+    set first_bottom to fraction_denominator(first)
+    set second_top to fraction_numerator(second)
+    set second_bottom to fraction_denominator(second)
+    set cross_first to exact_integer_multiply(first_top and second_bottom)
+    set cross_second to exact_integer_multiply(second_top and first_bottom)
+    return exact_integer_compare(cross_first and cross_second)
+
+
+# True when two fractions are exactly equal.
+define fraction_is_equal with first as Fraction and second as Fraction returning Bool:
+    return fraction_compare(first and second) == 0
+
+
+# ----------------------------------------------------------------------------
+#  Rendering fractions for human eyes
+# ----------------------------------------------------------------------------
+
+# Render a fraction as "top/bottom", or just "top" when the bottom is one.
+define fraction_to_text with value as Fraction returning Str:
+    if value.denominator_digits equals "1":
+        return exact_integer_to_text(fraction_numerator(value))
+    return concat(concat(exact_integer_to_text(fraction_numerator(value)) and "/") and value.denominator_digits)
+
+
+# Render a fraction as a decimal string with a fixed number of places after
+# the point, by exact long division, truncated (not rounded). This is for
+# display only and is never fed back into a derivation.
+define fraction_to_decimal with value as Fraction and places as Int returning Str:
+    set leading_sign to ""
+    if value.numerator_sign < 0:
+        set leading_sign to "-"
+    set top to exact_integer_absolute(fraction_numerator(value))
+    set bottom to fraction_denominator(value)
+    set whole_part_outcome to exact_integer_divide(top and bottom)
+    set whole_text to whole_part_outcome.quotient_digits
+    set remainder to exact_integer_from_sign_and_digits(1 and whole_part_outcome.remainder_digits)
+    set ten to exact_integer_from_number(10)
+    set fraction_text to ""
+    set place to 0
+    repeat while place < places:
+        set remainder to exact_integer_multiply(remainder and ten)
+        set step_outcome to exact_integer_divide(remainder and bottom)
+        set fraction_text to concat(fraction_text and step_outcome.quotient_digits)
+        set remainder to exact_integer_from_sign_and_digits(1 and step_outcome.remainder_digits)
+        set place to place + 1
+    if places > 0:
+        return concat(concat(concat(leading_sign and whole_text) and ".") and fraction_text)
+    return concat(leading_sign and whole_text)

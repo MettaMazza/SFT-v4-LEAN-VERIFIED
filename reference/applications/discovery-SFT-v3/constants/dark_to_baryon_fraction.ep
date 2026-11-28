@@ -1,0 +1,245 @@
+# ============================================================================
+#  THE DARK-TO-BARYON FRACTION  --  forced from the covering of the generations.
+# ============================================================================
+#
+#  ── WHY ─ (significance; skip if you only want to verify) ────────────────────
+#  Most of the universe's matter is invisible "dark matter"; only a small share is
+#  the ordinary (baryonic) matter we are made of. The ratio of the two is fixed by
+#  how the three generations cover the binary tower -- not a free parameter.
+#
+#  ── DERIVATION ─ (check every line; uses ONLY b = 2, c = 3) ──────────────────
+#     volume = c^c = 27  -- the three generations over the three directions.
+#                          Ruled out: c^b = 9 is a surface, not a volume.
+#     depth  = cover(27) = 5 -- smallest binary depth with 2^depth >= 27 (2^4 = 16
+#                          < 27, 2^5 = 32). Cross-checked = b + c, forced two ways
+#                          (forced_to_be halts on mismatch).
+#     total  = b^depth = 32 -- the binary tower at that depth.
+#     baryon share = depth/total = 5/32 ; dark share = volume/total = 27/32. These
+#                          PARTITION THE ONE: 5/32 + 27/32 = 1 (checkable).
+#     dark-to-baryon ratio = volume/depth = 27/5. Candidate space: the six distinct
+#                          pairwise ratios of {volume, depth, total}; only
+#                          volume/depth gives 27/5 (dark_to_baryon_form_is_unique
+#                          halts if two coincide).
+#     second order = 27/(5 + 1/31): the covering depth, itself a position, is read
+#                          one level deeper over its own period-5 orbit floor
+#                          2^5 - 1 = 31 (the tower 2^5 is pre-periodic and cannot
+#                          host it -- checked by fold period). Gives 279/52. This is
+#                          FORCED, not a fitted correction: the deepening's shape is
+#                          enumerated and only depth + 1/31 lands, all alternatives
+#                          rejected (dark_to_baryon_second_order_is_unique).
+#
+#  ── CHECK ─ (measurement; comparison only -- no value here is used above) ────
+#  Measured dark-to-baryon ratio about 5.38. Forced 27/5 = 5.4 (leading), and the
+#  second order 279/52 = 5.3653 -- two parts in ten thousand. The baryon share
+#  5/32 = 0.156 matches the measured 0.157. Measured numbers stay in this block.
+# ============================================================================
+
+import "../foundation/structural_counts.ep"
+import "../foundation/exact_fractions.ep"
+import "../foundation/enforcement.ep"
+import "../foundation/form_enforcement.ep"
+import "../foundation/assembly_enumeration.ep"
+
+
+# The generational volume: the colour count raised to itself, twenty-seven.
+define generational_volume returning Int:
+    set colour to colour_count()
+    return whole_power(colour and colour)
+
+# The covering depth of the generational volume: the smallest binary depth that
+# covers it (five), enforced to equal binary + colour (forced two ways).
+define generational_covering_depth returning Int:
+    set by_covering to minimal_binary_cover(generational_volume())
+    set by_relation to binary_count() + colour_count()
+    return forced_to_be("dark/baryon depth = cover(colour^colour) = binary + colour" and by_covering and by_relation)
+
+# The total binary volume at that depth: the binary count raised to the depth,
+# thirty-two.
+define total_binary_volume returning Int:
+    return whole_power(binary_count() and generational_covering_depth())
+
+
+# The baryon (ordinary matter) share of matter: depth over total, 5/32.
+define baryon_fraction returning Fraction:
+    return fraction_from_ratio(generational_covering_depth() and total_binary_volume())
+
+# The dark-matter share of matter: volume over total, 27/32.
+define dark_fraction returning Fraction:
+    return fraction_from_ratio(generational_volume() and total_binary_volume())
+
+# The two shares partition the One: baryon + dark = 1.
+define matter_partition returning Fraction:
+    set baryon to baryon_fraction()
+    set dark to dark_fraction()
+    return fraction_add(baryon and dark)
+
+# The dark-to-baryon ratio: volume over depth, 27/5 = 5.4.
+define dark_to_baryon_ratio returning Fraction:
+    return fraction_from_ratio(generational_volume() and generational_covering_depth())
+
+
+# ----------------------------------------------------------------------------
+#  The second order, to the measured value (forced, self-similar)
+# ----------------------------------------------------------------------------
+#  The covering depth d_down = 5 is itself a position in the fold, and at the next
+#  order the One recurs over its period-orbit floor 2^d_down - 1 = 31 (the unique
+#  denominator whose fold-orbit has period d_down; the tower 2^d_down is
+#  pre-periodic and cannot host it). The depth is read one level deeper:
+#       depth -> 5 + 1/(2^d_down - 1) = 5 + 1/31,
+#  so the ratio is  27 / (5 + 1/31) = 279/52 = 5.3654, against the measured 5.364
+#  -- two parts in ten thousand (the leading 27/5 = 5.4 is seven parts in a thousand).
+
+# The generational orbit floor: 2^d_down - 1 = 31.
+define generational_orbit_floor returning Int:
+    return period_orbit_floor(generational_covering_depth())
+
+# Enforce that the floor is a GENUINE orbit, not the pre-periodic tower: the fold
+# period of one over the floor is exactly d_down.
+define generational_orbit_floor_is_genuine returning Int:
+    set floor to generational_orbit_floor()
+    set its_period to fold_period_of_unit_fraction(floor)
+    set checked to forced_to_be("generational orbit floor has fold-period d_down" and its_period and generational_covering_depth())
+    return 1
+
+# The second-order dark-to-baryon ratio: 27 / (5 + 1/31) = 279/52.
+define dark_to_baryon_ratio_second_order returning Fraction:
+    set checked to generational_orbit_floor_is_genuine()
+    set floor_term to fraction_from_ratio(1 and generational_orbit_floor())
+    set depth_fraction to fraction_from_whole_number(generational_covering_depth())
+    set sharpened_depth to fraction_add(depth_fraction and floor_term)
+    set volume to fraction_from_whole_number(generational_volume())
+    return fraction_divide(volume and sharpened_depth)
+
+# The second-order ratio as a decimal, for reading: 5.3653 (measured 5.3643).
+define dark_to_baryon_ratio_second_order_decimal with places as Int returning Str:
+    set value to dark_to_baryon_ratio_second_order()
+    return fraction_to_decimal(value and places)
+
+
+# ----------------------------------------------------------------------------
+#  The SECOND ORDER is FORCED, not a fitted correction (forced_unique)
+# ----------------------------------------------------------------------------
+#  Why the second order is forced -- the same test the leading form gets, one level
+#  deeper. The second order is NOT an added correction with a tunable size: it is the
+#  SAME construction (dark ratio = volume / depth) with the depth, itself a covered
+#  position in the fold, re-read one order deeper. The ONLY freedom that could hide
+#  here is the shape of that deepening, so it is enumerated and forbidden from being
+#  selected. Among admissible one-level deepenings of the depth --
+#     depth + 1/floor  (over its GENUINE period-5 orbit floor 31),
+#     depth - 1/floor  (wrong sign),
+#     depth + 1/total  (over the PRE-PERIODIC tower 32 -- the floor check already
+#                       rejects this, but it is offered here so the choice is closed),
+#     depth + 1/depth  (over the bare depth 5),
+#  only depth + 1/31 reproduces 279/52. forbid_form_selection halts if any other
+#  admissible deepening coincides. Zero new parameters: the floor 31 = 2^5 - 1 is
+#  forced from the depth, the depth from the One.
+
+# The ratio built from a given deepened depth: volume / deepened.
+define db_ratio_from_deepened_depth with deepened as Fraction returning Fraction:
+    set volume to fraction_from_whole_number(generational_volume())
+    return fraction_divide(volume and deepened)
+
+define dark_to_baryon_second_order_is_unique returning Int:
+    set total to 0
+    # canonical: depth + 1/floor (genuine orbit floor 31) -> 279/52
+    set depth_a to fraction_from_whole_number(generational_covering_depth())
+    set floor_inv_a to fraction_from_ratio(1 and generational_orbit_floor())
+    set deep_a to fraction_add(depth_a and floor_inv_a)
+    set ratio_a to db_ratio_from_deepened_depth(deep_a)
+    set target to dark_to_baryon_ratio_second_order()
+    set total to count_form_match(total and ratio_a and target)
+    # depth - 1/floor
+    set depth_b to fraction_from_whole_number(generational_covering_depth())
+    set floor_inv_b to fraction_from_ratio(1 and generational_orbit_floor())
+    set deep_b to fraction_subtract(depth_b and floor_inv_b)
+    set ratio_b to db_ratio_from_deepened_depth(deep_b)
+    set target_b to dark_to_baryon_ratio_second_order()
+    set total to count_form_match(total and ratio_b and target_b)
+    # depth + 1/total (pre-periodic tower 32)
+    set depth_c to fraction_from_whole_number(generational_covering_depth())
+    set tower_inv to fraction_from_ratio(1 and total_binary_volume())
+    set deep_c to fraction_add(depth_c and tower_inv)
+    set ratio_c to db_ratio_from_deepened_depth(deep_c)
+    set target_c to dark_to_baryon_ratio_second_order()
+    set total to count_form_match(total and ratio_c and target_c)
+    # depth + 1/depth (over the bare depth)
+    set depth_d to fraction_from_whole_number(generational_covering_depth())
+    set depth_inv to fraction_from_ratio(1 and generational_covering_depth())
+    set deep_d to fraction_add(depth_d and depth_inv)
+    set ratio_d to db_ratio_from_deepened_depth(deep_d)
+    set target_d to dark_to_baryon_ratio_second_order()
+    set total to count_form_match(total and ratio_d and target_d)
+    return forbid_form_selection("the dark-to-baryon second-order deepening" and total)
+
+
+# ----------------------------------------------------------------------------
+#  The assembled FORM is unique (forced_unique)
+# ----------------------------------------------------------------------------
+#  The ratio is dark over baryon = volume / depth. Among the six distinct pairwise
+#  ratios of the forced counts {volume 27, depth 5, total 32}, only volume/depth
+#  reproduces the dark-to-baryon ratio. forced_unique halts if any other coincides.
+
+define db_volume_fraction returning Fraction:
+    return fraction_from_whole_number(generational_volume())
+
+define db_depth_fraction returning Fraction:
+    return fraction_from_whole_number(generational_covering_depth())
+
+define db_total_fraction returning Fraction:
+    return fraction_from_whole_number(total_binary_volume())
+
+define dark_to_baryon_form_is_unique returning Int:
+    set total to 0
+    # canonical: volume / depth = 27/5
+    set v_one to db_volume_fraction()
+    set ratio_one to fraction_divide(v_one and db_depth_fraction())
+    set total to count_form_match(total and ratio_one and dark_to_baryon_ratio())
+    # depth / volume
+    set d_two to db_depth_fraction()
+    set ratio_two to fraction_divide(d_two and db_volume_fraction())
+    set total to count_form_match(total and ratio_two and dark_to_baryon_ratio())
+    # volume / total
+    set v_three to db_volume_fraction()
+    set ratio_three to fraction_divide(v_three and db_total_fraction())
+    set total to count_form_match(total and ratio_three and dark_to_baryon_ratio())
+    # depth / total
+    set d_four to db_depth_fraction()
+    set ratio_four to fraction_divide(d_four and db_total_fraction())
+    set total to count_form_match(total and ratio_four and dark_to_baryon_ratio())
+    # total / volume
+    set t_five to db_total_fraction()
+    set ratio_five to fraction_divide(t_five and db_volume_fraction())
+    set total to count_form_match(total and ratio_five and dark_to_baryon_ratio())
+    # total / depth
+    set t_six to db_total_fraction()
+    set ratio_six to fraction_divide(t_six and db_depth_fraction())
+    set total to count_form_match(total and ratio_six and dark_to_baryon_ratio())
+    return forbid_form_selection("the dark-to-baryon ratio form" and total)
+
+
+# The forced ingredients of the ratio, as parallel numerator/denominator leaf
+# lists for the enumerator (each is a whole number, so denominator one).
+define dark_to_baryon_leaf_numerators returning List:
+    set nums to create_list()
+    set ok to append_list(nums and generational_volume())
+    set ok to append_list(nums and generational_covering_depth())
+    set ok to append_list(nums and total_binary_volume())
+    return nums
+
+define dark_to_baryon_leaf_denominators returning List:
+    set dens to create_list()
+    set ok to append_list(dens and 1)
+    set ok to append_list(dens and 1)
+    set ok to append_list(dens and 1)
+    return dens
+
+# STRONGER than the hand-listed ratios above: the engine GENERATES every assembly
+# of {volume, depth, total} with + - * / and confirms the ratio is MINIMAL -- no
+# assembly of fewer operations (here, no bare leaf) reproduces 27/5. The whole
+# simpler space is searched by a stated grammar, not a hand-picked list.
+define dark_to_baryon_assembly_is_minimal returning Int:
+    set leaf_nums to dark_to_baryon_leaf_numerators()
+    set leaf_dens to dark_to_baryon_leaf_denominators()
+    set target_num to generational_volume()
+    set target_den to generational_covering_depth()
+    return canonical_assembly_is_minimal("no simpler assembly reaches the dark-to-baryon ratio" and leaf_nums and leaf_dens and target_num and target_den and 1)

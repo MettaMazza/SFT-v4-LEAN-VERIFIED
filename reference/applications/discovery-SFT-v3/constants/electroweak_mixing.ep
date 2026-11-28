@@ -1,0 +1,162 @@
+# ============================================================================
+#  THE ELECTROWEAK MIXING ANGLE  --  the two preimages of the critical coupling.
+# ============================================================================
+#
+#  ── WHY ─ (significance; skip if you only want to verify) ────────────────────
+#  The weak and electromagnetic forces are two faces of one electroweak force; the
+#  "mixing angle" (Weinberg angle) sets how the unified coupling splits between
+#  them. The split is forced, not measured-in.
+#
+#  ── DERIVATION ─ (check every line; uses ONLY b = 2 and the fold) ────────────
+#     unified coupling g = 1/b = 1/2 -- the fold's balance point: the unique value
+#                          that folds to the One and is its own antipode (checkable:
+#                          fold(1/2) = 1, 1 - 1/2 = 1/2).
+#     The fold doubles, so exactly TWO values fold to g; they are its preimages:
+#       sin^2(theta_W) = lower preimage = 1/b^2 = 1/4 (below 1/2).
+#       cos^2(theta_W) = upper preimage = 1 - 1/4 = 3/4 (above 1/2). Candidate space
+#                          for cos^2 over {sin^2, One, b}: {One - sin^2, One + sin^2,
+#                          One - b*sin^2, b*sin^2, One - sin^2/b, sin^2}; only
+#                          One - sin^2 gives 3/4 (cos_squared_form_is_unique).
+#     The two preimages PARTITION THE ONE (1/4 + 3/4 = 1) and each folds back to g.
+#     Running to measurement: the mixing runs with covering level k as
+#                          sin^2(k) = (k+2)^2 / (4(k+1)^2 + (k+2)^2) -- the neutral
+#                          coupling stays at 1/2 while the charged one fills in as
+#                          (k+1)/(k+2). It starts at 1/2 (k=0) and decreases.
+#
+#  ── CHECK ─ (measurement; comparison only -- the measured value lives in the test)
+#  The forced running curve CROSSES the measured Z-scale mixing 0.23113 between
+#  level nine (121/521 = 0.2322) and level ten (36/157 = 0.2293) -- reached by the
+#  forced curve, not fitted. The measured 0.23113 appears only in the test.
+# ============================================================================
+
+import "../foundation/structural_counts.ep"
+import "../foundation/the_one_and_the_fold.ep"
+import "../foundation/form_enforcement.ep"
+import "../foundation/assembly_enumeration.ep"
+
+
+# The unified coupling: one over the binary count, 1/2 -- the fold's balance point.
+define unified_coupling returning Fraction:
+    return fraction_from_ratio(1 and binary_count())
+
+# The lower preimage of the coupling under the fold: one over binary squared,
+# 1/4 -- the sine-squared of the mixing angle.
+define sin_squared_mixing returning Fraction:
+    set binary_squared to whole_power(binary_count() and 2)
+    return fraction_from_ratio(1 and binary_squared)
+
+# The upper preimage: the One less the lower, 3/4 -- the cosine-squared.
+define cos_squared_mixing returning Fraction:
+    set one to fraction_from_whole_number(1)
+    set lower to sin_squared_mixing()
+    return fraction_subtract(one and lower)
+
+# The two preimages partition the One: sin^2 + cos^2 = 1.
+define mixing_partition returning Fraction:
+    set lower to sin_squared_mixing()
+    set upper to cos_squared_mixing()
+    return fraction_add(lower and upper)
+
+
+# ----------------------------------------------------------------------------
+#  The assembled FORM is unique (forced_unique)
+# ----------------------------------------------------------------------------
+#  cos^2 is the PARTITION complement of sin^2: One - sin^2. Among admissible forms
+#  over the forced ingredients {sin^2 = 1/4, the One, binary}, only One - sin^2
+#  reproduces 3/4. forced_unique halts if any other admissible form coincides.
+define cos_squared_form_is_unique returning Int:
+    set total to 0
+    # canonical: One - sin^2 = 3/4
+    set one_a to fraction_from_whole_number(1)
+    set form_a to fraction_subtract(one_a and sin_squared_mixing())
+    set total to count_form_match(total and form_a and cos_squared_mixing())
+    # One + sin^2 = 5/4
+    set one_b to fraction_from_whole_number(1)
+    set form_b to fraction_add(one_b and sin_squared_mixing())
+    set total to count_form_match(total and form_b and cos_squared_mixing())
+    # One - binary*sin^2 = 1/2
+    set one_c to fraction_from_whole_number(1)
+    set binary_c to fraction_from_whole_number(binary_count())
+    set scaled_c to fraction_multiply(binary_c and sin_squared_mixing())
+    set form_c to fraction_subtract(one_c and scaled_c)
+    set total to count_form_match(total and form_c and cos_squared_mixing())
+    # binary * sin^2 = 1/2
+    set binary_d to fraction_from_whole_number(binary_count())
+    set form_d to fraction_multiply(binary_d and sin_squared_mixing())
+    set total to count_form_match(total and form_d and cos_squared_mixing())
+    # One - sin^2/binary = 7/8
+    set binary_e to fraction_from_whole_number(binary_count())
+    set scaled_e to fraction_divide(sin_squared_mixing() and binary_e)
+    set one_e to fraction_from_whole_number(1)
+    set form_e to fraction_subtract(one_e and scaled_e)
+    set total to count_form_match(total and form_e and cos_squared_mixing())
+    # sin^2 itself = 1/4
+    set form_f to sin_squared_mixing()
+    set total to count_form_match(total and form_f and cos_squared_mixing())
+    return forbid_form_selection("the electroweak cos-squared partition form" and total)
+
+
+# Fold a fraction once: double it (with a separate twin) and cast out whole Ones.
+# Used to confirm each preimage folds back to the unified coupling.
+define fold_fraction with size as Fraction returning Fraction:
+    set size_again to fraction_make(fraction_numerator(size) and fraction_denominator(size))
+    set doubled to fraction_add(size and size_again)
+    return cast_out_whole_ones(doubled)
+
+# The lower preimage folds to the unified coupling: fold(1/4) = 1/2.
+define lower_preimage_folds_to_coupling returning Fraction:
+    set lower to sin_squared_mixing()
+    return fold_fraction(lower)
+
+# The upper preimage folds to the unified coupling: fold(3/4) = 1/2.
+define upper_preimage_folds_to_coupling returning Fraction:
+    set upper to cos_squared_mixing()
+    return fold_fraction(upper)
+
+
+# ----------------------------------------------------------------------------
+#  The running mixing, to the measured value
+# ----------------------------------------------------------------------------
+
+# The mixing at covering level k, forced from the level alone:
+#     sin^2(theta_W)_k = (k+2)^2 / (4(k+1)^2 + (k+2)^2),
+# the neutral coupling 1/2 squared over the charged coupling (k+1)/(k+2) squared
+# plus the neutral squared. At k = 0 it is 1/2; it decreases as k grows.
+define weak_mixing_at_level with level as Int returning Fraction:
+    set level_plus_one to level + 1
+    set level_plus_two to level + 2
+    set numerator to whole_power(level_plus_two and 2)
+    set charged_part to 4 * whole_power(level_plus_one and 2)
+    set denominator to charged_part + whole_power(level_plus_two and 2)
+    return fraction_from_ratio(numerator and denominator)
+
+# The bare mixing, the running curve at level zero: 1/2.
+define bare_running_mixing returning Fraction:
+    return weak_mixing_at_level(0)
+
+# (The measured Z-scale value and the crossing check live in the test, on the
+#  comparison side -- no measured number appears in this forced module.)
+
+
+# STRONGER than the hand-listed cos^2 forms above: the engine GENERATES every
+# assembly of {sin^2, the One} with + - * / and confirms cos^2 = 3/4 is MINIMAL --
+# no bare leaf reproduces it (it genuinely needs an operation). The whole simpler
+# space is searched by a stated grammar. sin^2 = 1/binary^2; cos^2 = (binary^2-1)/binary^2.
+define cos_squared_leaf_numerators returning List:
+    set nums to create_list()
+    set ok to append_list(nums and 1)
+    set ok to append_list(nums and 1)
+    return nums
+
+define cos_squared_leaf_denominators returning List:
+    set dens to create_list()
+    set ok to append_list(dens and whole_power(binary_count() and 2))
+    set ok to append_list(dens and 1)
+    return dens
+
+define cos_squared_assembly_is_minimal returning Int:
+    set leaf_nums to cos_squared_leaf_numerators()
+    set leaf_dens to cos_squared_leaf_denominators()
+    set binary_squared to whole_power(binary_count() and 2)
+    set target_num to binary_squared - 1
+    return canonical_assembly_is_minimal("no simpler assembly reaches the electroweak cos-squared" and leaf_nums and leaf_dens and target_num and binary_squared and 1)

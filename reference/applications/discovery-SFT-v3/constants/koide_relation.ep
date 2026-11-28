@@ -1,0 +1,128 @@
+# ============================================================================
+#  THE KOIDE RELATION  --  the charged-lepton mass ratio 2/3, forced.
+# ============================================================================
+#
+#  ── WHY ─ (significance; skip if you only want to verify) ────────────────────
+#  The three charged-lepton masses obey a famous, precise relation (Koide): the sum
+#  of the masses over the square of the sum of their square-roots is almost exactly
+#  2/3. It is forced -- it falls straight out of the lepton cubic.
+#
+#  ── DERIVATION ─ (check every line; uses ONLY the lepton cubic invariants) ───
+#  Already derived (charged_lepton_cubic): sum of roots = 1, pairwise sum e2 = 1/6.
+#  The masses are the SQUARED roots (m_i = x_i^2), so each mass's square-root is the
+#  root x_i. Then by Vieta:
+#     sum of sqrt-masses = sum of roots = 1.
+#     sum of masses = sum of root-squares = (sum of roots)^2 - 2*e2 = 1 - 2*(1/6) = 2/3.
+#     Q = (sum of masses) / (sum of sqrt-masses)^2 = (2/3) / 1 = 2/3. Candidate space
+#                          for the form over {e2, One}: {1 - 2*e2, 1 - e2, 1 + 2*e2,
+#                          2*e2, e2, 1 - 3*e2}; only 1 - 2*e2 gives 2/3
+#                          (koide_form_is_unique). Equivalently Q = 1 - 1/colour.
+#
+#  ── CHECK ─ (measurement; comparison only -- enters only in the test) ────────
+#  From the measured masses the Koide ratio is about 0.666661, against the forced
+#  2/3 = 0.666666... -- agreement to FIVE digits. The measured value needs a square
+#  root (forbidden in the engine), so it enters only as a published number in the test.
+# ============================================================================
+
+import "../constants/charged_lepton_cubic.ep"
+import "../foundation/form_enforcement.ep"
+import "../foundation/assembly_enumeration.ep"
+
+
+# The sum of the charged-lepton masses: the sum of the squared roots,
+# (sum of roots)^2 - 2*(pairwise sum) = 1 - 2*(1/6) = 2/3.
+define sum_of_lepton_masses returning Fraction:
+    set sum_of_roots to no_loss_partition()
+    set sum_of_roots_twin to no_loss_partition()
+    set sum_of_roots_squared to fraction_multiply(sum_of_roots and sum_of_roots_twin)
+    set pairwise_first to second_invariant()
+    set pairwise_second to second_invariant()
+    set twice_pairwise to fraction_add(pairwise_first and pairwise_second)
+    return fraction_subtract(sum_of_roots_squared and twice_pairwise)
+
+# The sum of the square-roots of the masses: the sum of the roots = 1. The roots
+# are positive, so the square-root of each squared root is the root itself.
+define sum_of_root_masses returning Fraction:
+    return no_loss_partition()
+
+# The Koide ratio Q = (sum of masses) / (sum of sqrt-masses)^2 = (2/3) / 1 = 2/3.
+define koide_ratio returning Fraction:
+    set numerator to sum_of_lepton_masses()
+    set sqrt_sum to sum_of_root_masses()
+    set sqrt_sum_twin to sum_of_root_masses()
+    set denominator to fraction_multiply(sqrt_sum and sqrt_sum_twin)
+    return fraction_divide(numerator and denominator)
+
+# The Koide ratio forced straight from the colour count: Q = 1 - 1/colour = 2/3.
+# An independent route to the same value.
+define koide_from_colour returning Fraction:
+    set one to fraction_from_whole_number(1)
+    set inverse_colour to fraction_from_ratio(1 and colour_count())
+    return fraction_subtract(one and inverse_colour)
+
+
+# ----------------------------------------------------------------------------
+#  The assembled FORM is unique (forced_unique)
+# ----------------------------------------------------------------------------
+#  The Koide ratio is One minus twice the pairwise invariant: Q = 1 - 2*e2. Among
+#  admissible forms over the forced e2 = 1/6 and the One, only 1 - 2*e2 reproduces
+#  2/3. forced_unique halts if any other admissible form coincides.
+define koide_form_is_unique returning Int:
+    set total to 0
+    # canonical: 1 - 2*e2 = 2/3
+    set one_a to fraction_from_whole_number(1)
+    set e2_a to second_invariant()
+    set two_e2_a to fraction_add(e2_a and second_invariant())
+    set cand_a to fraction_subtract(one_a and two_e2_a)
+    set total to count_form_match(total and cand_a and koide_ratio())
+    # 1 - e2 = 5/6
+    set one_b to fraction_from_whole_number(1)
+    set cand_b to fraction_subtract(one_b and second_invariant())
+    set total to count_form_match(total and cand_b and koide_ratio())
+    # 1 + 2*e2 = 4/3
+    set one_c to fraction_from_whole_number(1)
+    set e2_c to second_invariant()
+    set two_e2_c to fraction_add(e2_c and second_invariant())
+    set cand_c to fraction_add(one_c and two_e2_c)
+    set total to count_form_match(total and cand_c and koide_ratio())
+    # 2*e2 = 1/3
+    set e2_d to second_invariant()
+    set cand_d to fraction_add(e2_d and second_invariant())
+    set total to count_form_match(total and cand_d and koide_ratio())
+    # e2 = 1/6
+    set cand_e to second_invariant()
+    set total to count_form_match(total and cand_e and koide_ratio())
+    # 1 - 3*e2 = 1/2
+    set one_f to fraction_from_whole_number(1)
+    set e2_f to second_invariant()
+    set two_e2_f to fraction_add(e2_f and second_invariant())
+    set three_e2_f to fraction_add(two_e2_f and second_invariant())
+    set cand_f to fraction_subtract(one_f and three_e2_f)
+    set total to count_form_match(total and cand_f and koide_ratio())
+    return forbid_form_selection("the Koide ratio form" and total)
+
+
+# STRONGER: the engine GENERATES every assembly of {e2, the One} with + - * / and
+# confirms Q = 2/3 is MINIMAL at size two -- no assembly of one operation or less
+# reproduces it. The whole simpler space is searched by a stated grammar. (Two
+# size-2 trees give 2/3 -- 1-(e2+e2) and (1-e2)-e2 -- but they are the same
+# combination by associativity; same-size shape choice is covered by the named-form
+# guard above.) e2 = 1/(2*colour); Q = (colour-1)/colour.
+define koide_leaf_numerators returning List:
+    set nums to create_list()
+    set ok to append_list(nums and 1)
+    set ok to append_list(nums and 1)
+    return nums
+
+define koide_leaf_denominators returning List:
+    set dens to create_list()
+    set ok to append_list(dens and 2 * colour_count())
+    set ok to append_list(dens and 1)
+    return dens
+
+define koide_assembly_is_minimal returning Int:
+    set leaf_nums to koide_leaf_numerators()
+    set leaf_dens to koide_leaf_denominators()
+    set target_num to colour_count() - 1
+    set target_den to colour_count()
+    return canonical_assembly_is_minimal("no simpler assembly reaches the Koide ratio" and leaf_nums and leaf_dens and target_num and target_den and 2)

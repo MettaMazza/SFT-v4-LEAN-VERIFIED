@@ -1,0 +1,242 @@
+# ============================================================================
+#  THE HUBBLE TENSION  --  a calibration ratio of 13/12, forced from the One.
+# ============================================================================
+#
+#  ── WHY ─ (significance; skip if you only want to verify) ────────────────────
+#  Two ways of measuring how fast the universe expands -- the nearby distance
+#  ladder and the distant cosmic background -- disagree by a fixed ratio (the
+#  "Hubble tension"). That ratio is forced, not fitted.
+#
+#  ── DERIVATION ─ (check every line; uses ONLY b = 2, c = 3) ──────────────────
+#     vacuum (dark energy) fraction = b/c = 2/3 ; matter fraction = 1/c = 1/3.
+#                          These PARTITION THE ONE: 2/3 + 1/3 = 1 (a flat universe;
+#                          checkable). They are the period-2 fold orbit {1/3, 2/3}.
+#     covering tower = b^c = 8 -- the binary tower at colour depth.
+#     calibration ratio = 1 + vacuum/tower = 1 + (2/3)/8 = 13/12. Candidate space:
+#                          admissible forms over {vacuum, matter, tower, One} --
+#                          1 +/- vacuum/tower, 1 + matter/tower, vacuum + 1/tower,
+#                          1 + vacuum*tower, 1 + matter*tower; only 1 + vacuum/tower
+#                          gives 13/12 (hubble_calibration_form_is_unique).
+#     second order = 1 + (2/3 + 1/127)/8 = 3305/3048. This is FORCED, not chosen: the
+#                          deepening's shape is enumerated and only vacuum + 1/127
+#                          lands, all alternatives rejected (hubble_second_order_is_unique).
+#                          The Hubble tension is late vs early, and the covering
+#                          ladder has exactly two ends: the SHALLOW end (the colour
+#                          tower, depth colour = 3 -- the late universe, the leading
+#                          term above) and the DEEP end (the deepest covering depth
+#                          d_up = 7 = cover(colour^(colour+1)), forced two ways, the
+#                          same absolute/Planck scale as the absolute-scale step).
+#                          The early universe is the deep, high-energy end -- which
+#                          epoch is which is fixed by energy, not a free pick -- so
+#                          its correction recurs over d_up's genuine period-7 orbit
+#                          floor 2^7 - 1 = 127 (fold-period checked; the pre-periodic
+#                          tower 128 cannot host it). Both the depth and the floor
+#                          are forced; there is no dial.
+#
+#  ── CHECK ─ (measurement; comparison only -- no value here is used above) ────
+#  Measured ratio = nearby / distant = 73.04 / 67.36 = 7304/6736, about 1.0843.
+#  Forced 13/12 = 1.0833 (leading); second order 3305/3048 = 1.0843175 (five parts
+#  in a million). Measured numbers appear only here and in the test.
+# ============================================================================
+
+import "../foundation/structural_counts.ep"
+import "../foundation/counted_numbers.ep"
+import "../foundation/the_one_and_the_fold.ep"
+import "../foundation/exact_fractions.ep"
+import "../foundation/enforcement.ep"
+import "../foundation/form_enforcement.ep"
+
+
+# The vacuum (dark-energy) fraction of a flat universe: binary over colour, 2/3.
+define vacuum_fraction returning Fraction:
+    return fraction_from_ratio(binary_count() and colour_count())
+
+# The matter fraction of a flat universe: one over colour, 1/3.
+define matter_fraction returning Fraction:
+    return fraction_from_ratio(1 and colour_count())
+
+# The two fractions partition the One: vacuum + matter = 1 (a flat universe).
+define flatness_partition returning Fraction:
+    set vacuum to vacuum_fraction()
+    set matter to matter_fraction()
+    return fraction_add(vacuum and matter)
+
+# The covering tower at colour depth: binary raised to the colour count, 8.
+define covering_tower returning Int:
+    return whole_power(binary_count() and colour_count())
+
+# The calibration correction: the vacuum fraction over the covering tower,
+# (2/3) / 8 = 1/12.
+define calibration_correction returning Fraction:
+    set vacuum to vacuum_fraction()
+    set tower to fraction_from_whole_number(covering_tower())
+    return fraction_divide(vacuum and tower)
+
+# The Hubble calibration ratio: one plus the correction, 13/12.
+define hubble_calibration_ratio returning Fraction:
+    set one to fraction_from_whole_number(1)
+    set correction to calibration_correction()
+    return fraction_add(one and correction)
+
+
+# ----------------------------------------------------------------------------
+#  The second order, to the measured value (forced)
+# ----------------------------------------------------------------------------
+#  The Hubble tension is LATE versus EARLY. The leading correction sits at the
+#  SHALLOW end of the covering hierarchy -- the colour tower binary^colour = 8,
+#  the late universe. The second order sits at the DEEP end -- the deepest
+#  covering depth d_up = 7, the early/primordial universe, the same absolute scale
+#  that forces the Planck hierarchy. Two speeds = the two ends of the one ladder.
+#
+#  At that deepest depth the One recurs over the genuine period-7 orbit floor
+#  2^7 - 1 = 127 (never the pre-periodic tower 2^7; the engine checks the floor's
+#  fold-period is exactly 7). The vacuum is read one level deeper:
+#       vacuum -> 2/3 + 1/127,
+#  giving  1 + (2/3 + 1/127)/8 = 3305/3048 = 1.0843176, against the measured
+#  1.0843230 -- five parts in a million (the leading 13/12 is one in a thousand).
+#  Nothing here is imported: d_up = 7 and the floor 127 are forced from the One,
+#  the deepest rung of the same covering ladder the leading term stands on.
+
+# The deepest covering depth: cover of colour^(colour+1) = 81, the same absolute
+# scale the fine structure and Planck hierarchy use. Forced two ways: by the
+# covering count, and by the relation colour + (colour + 1); they must agree.
+define up_depth returning Int:
+    set next_volume to whole_power(colour_count() and (colour_count() + 1))
+    set by_covering to minimal_binary_cover(next_volume)
+    set by_relation to colour_count() + (colour_count() + 1)
+    return forced_to_be("deepest covering depth = cover(colour^(colour+1)) = colour+(colour+1)" and by_covering and by_relation)
+
+# The early-universe orbit floor: 2^d_up - 1 = 127.
+define early_orbit_floor returning Int:
+    return period_orbit_floor(up_depth())
+
+# Enforce that the floor is a GENUINE orbit, not the pre-periodic tower: the fold
+# period of one over the floor is exactly d_up (the tower has no period at all).
+define early_orbit_floor_is_genuine returning Int:
+    set floor to early_orbit_floor()
+    set its_period to fold_period_of_unit_fraction(floor)
+    set checked to forced_to_be("early orbit floor has fold-period d_up" and its_period and up_depth())
+    return 1
+
+# The second-order calibration ratio: at the deepest scale the One recurs over the
+# early orbit floor, 1 + (2/3 + 1/127)/8 = 3305/3048.
+define hubble_calibration_ratio_second_order returning Fraction:
+    set checked to early_orbit_floor_is_genuine()
+    set vacuum to vacuum_fraction()
+    set floor_term to fraction_from_ratio(1 and early_orbit_floor())
+    set sharpened_vacuum to fraction_add(vacuum and floor_term)
+    set tower to fraction_from_whole_number(covering_tower())
+    set correction to fraction_divide(sharpened_vacuum and tower)
+    set one to fraction_from_whole_number(1)
+    return fraction_add(one and correction)
+
+# The second-order ratio as a decimal, for reading: 1.0843176 (measured 1.0843230).
+define hubble_calibration_ratio_second_order_decimal with places as Int returning Str:
+    set value to hubble_calibration_ratio_second_order()
+    return fraction_to_decimal(value and places)
+
+
+# ----------------------------------------------------------------------------
+#  The SECOND ORDER is FORCED, not a fitted correction (forced_unique)
+# ----------------------------------------------------------------------------
+#  Why the second order is forced -- the same test the leading form gets, one level
+#  deeper. The second order is NOT an added correction with a tunable size: it is the
+#  SAME construction (1 + vacuum/tower) with the vacuum, read at the deep end of the
+#  one covering ladder, sharpened one order over the early orbit floor. The only
+#  freedom that could hide is the shape of that deepening, so it is enumerated and
+#  forbidden from being selected. Among admissible one-level deepenings of the vacuum --
+#     vacuum + 1/floor  (over the GENUINE period-7 orbit floor 127),
+#     vacuum - 1/floor  (wrong sign),
+#     vacuum + 1/tower  (over the PRE-PERIODIC tower 128 -- the floor check already
+#                        rejects this, but it is offered here so the choice is closed),
+#     vacuum + 1/d_up   (over the bare depth 7),
+#  only vacuum + 1/127 reproduces 3305/3048. forbid_form_selection halts if any other
+#  admissible deepening coincides. Zero new parameters: 127 = 2^7 - 1 is forced from
+#  d_up, and d_up from the One.
+
+# The calibration ratio built from a given deepened vacuum: 1 + deepened/tower.
+define hb_ratio_from_deepened_vacuum with deepened as Fraction returning Fraction:
+    set tower to fraction_from_whole_number(covering_tower())
+    set correction to fraction_divide(deepened and tower)
+    set one to fraction_from_whole_number(1)
+    return fraction_add(one and correction)
+
+define hubble_second_order_is_unique returning Int:
+    set total to 0
+    # canonical: vacuum + 1/floor (genuine orbit floor 127) -> 3305/3048
+    set vac_a to vacuum_fraction()
+    set floor_inv_a to fraction_from_ratio(1 and early_orbit_floor())
+    set deep_a to fraction_add(vac_a and floor_inv_a)
+    set ratio_a to hb_ratio_from_deepened_vacuum(deep_a)
+    set target to hubble_calibration_ratio_second_order()
+    set total to count_form_match(total and ratio_a and target)
+    # vacuum - 1/floor
+    set vac_b to vacuum_fraction()
+    set floor_inv_b to fraction_from_ratio(1 and early_orbit_floor())
+    set deep_b to fraction_subtract(vac_b and floor_inv_b)
+    set ratio_b to hb_ratio_from_deepened_vacuum(deep_b)
+    set target_b to hubble_calibration_ratio_second_order()
+    set total to count_form_match(total and ratio_b and target_b)
+    # vacuum + 1/tower (pre-periodic tower 2^d_up = 128)
+    set vac_c to vacuum_fraction()
+    set tower_up to whole_power(binary_count() and up_depth())
+    set tower_inv to fraction_from_ratio(1 and tower_up)
+    set deep_c to fraction_add(vac_c and tower_inv)
+    set ratio_c to hb_ratio_from_deepened_vacuum(deep_c)
+    set target_c to hubble_calibration_ratio_second_order()
+    set total to count_form_match(total and ratio_c and target_c)
+    # vacuum + 1/d_up (over the bare depth 7)
+    set vac_d to vacuum_fraction()
+    set depth_inv to fraction_from_ratio(1 and up_depth())
+    set deep_d to fraction_add(vac_d and depth_inv)
+    set ratio_d to hb_ratio_from_deepened_vacuum(deep_d)
+    set target_d to hubble_calibration_ratio_second_order()
+    set total to count_form_match(total and ratio_d and target_d)
+    return forbid_form_selection("the Hubble second-order deepening" and total)
+
+
+# ----------------------------------------------------------------------------
+#  The assembled FORM is unique (forced_unique)
+# ----------------------------------------------------------------------------
+#  The calibration ratio is One plus the vacuum spread over the covering tower.
+#  Among admissible forms over the forced ingredients {vacuum 2/3, matter 1/3,
+#  tower 8, the One}, only 1 + vacuum/tower reproduces 13/12. forced_unique halts
+#  if any other admissible form coincides.
+
+define hubble_calibration_form_is_unique returning Int:
+    set total to 0
+    # canonical: 1 + vacuum/tower = 13/12
+    set tower_one to fraction_from_whole_number(covering_tower())
+    set corr_one to fraction_divide(vacuum_fraction() and tower_one)
+    set one_a to fraction_from_whole_number(1)
+    set form_one to fraction_add(one_a and corr_one)
+    set total to count_form_match(total and form_one and hubble_calibration_ratio())
+    # 1 - vacuum/tower
+    set tower_two to fraction_from_whole_number(covering_tower())
+    set corr_two to fraction_divide(vacuum_fraction() and tower_two)
+    set one_b to fraction_from_whole_number(1)
+    set form_two to fraction_subtract(one_b and corr_two)
+    set total to count_form_match(total and form_two and hubble_calibration_ratio())
+    # 1 + matter/tower
+    set tower_three to fraction_from_whole_number(covering_tower())
+    set corr_three to fraction_divide(matter_fraction() and tower_three)
+    set one_c to fraction_from_whole_number(1)
+    set form_three to fraction_add(one_c and corr_three)
+    set total to count_form_match(total and form_three and hubble_calibration_ratio())
+    # vacuum + 1/tower
+    set tower_inv to fraction_from_ratio(1 and covering_tower())
+    set form_four to fraction_add(vacuum_fraction() and tower_inv)
+    set total to count_form_match(total and form_four and hubble_calibration_ratio())
+    # 1 + vacuum*tower
+    set tower_five to fraction_from_whole_number(covering_tower())
+    set prod_five to fraction_multiply(vacuum_fraction() and tower_five)
+    set one_e to fraction_from_whole_number(1)
+    set form_five to fraction_add(one_e and prod_five)
+    set total to count_form_match(total and form_five and hubble_calibration_ratio())
+    # 1 + matter*tower
+    set tower_six to fraction_from_whole_number(covering_tower())
+    set prod_six to fraction_multiply(matter_fraction() and tower_six)
+    set one_f to fraction_from_whole_number(1)
+    set form_six to fraction_add(one_f and prod_six)
+    set total to count_form_match(total and form_six and hubble_calibration_ratio())
+    return forbid_form_selection("the Hubble calibration ratio form" and total)

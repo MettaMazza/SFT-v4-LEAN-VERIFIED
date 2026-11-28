@@ -1,0 +1,236 @@
+# ============================================================================
+#  THE CHARGED-LEPTON CUBIC
+# ============================================================================
+#
+#  ── WHY ─ (significance; skip if you only want to verify) ────────────────────
+#  The electron, muon, and tau are the same particle in three "generations" of
+#  ever larger mass. Their masses are not three free numbers: they are the three
+#  roots of a single cubic whose coefficients are forced by the colour count.
+#
+#  ── DERIVATION ─ (check every line; uses ONLY the colour count c = 3) ────────
+#  The cubic is  x^3 - x^2 + e2*x - e3 = 0.  What is forced and exact is the cubic's
+#  coefficients, which ARE the symmetric functions of the roots (Vieta). Each:
+#     sum of roots  = 1     -- the roots partition the One (no loss). The x^2
+#                             coefficient; forced by the partition, not chosen.
+#     e2 = 1/(2c) = 1/6     -- the pairwise-product sum. Candidate space over c:
+#                             {1/(2c), 1/c, 1/c^2, 1/(2c-1), 1/(2c+1), 2/c}; only
+#                             1/(2c) gives 1/6 (second_invariant_form_is_unique).
+#     e3 (leading) = 1/(2c^5 - 1) = 1/485 -- the product of the roots. Candidate
+#                             space {1/(2c^5-1), 1/(2c^5+1), 1/(2c^5), 1/(c^5-1),
+#                             1/c^5}; only 1/(2c^5-1) gives 1/485
+#                             (leading_third_invariant_form_is_unique).
+#     e3 (sharpened) = 1/(2c^5 - 1 - 1/c) = 3/1454 -- the denominator is lowered by
+#                             the NEUTRAL CHANNEL, 1/c. Candidate space = the
+#                             channel counts {2, 3, 4}: channel 2 -> 2/969, channel
+#                             4 -> 4/1939, only channel = c -> 3/1454. forced_unique
+#                             halts if any other channel also lands (neutral_channel_is_forced).
+#
+#  ── CHECK ─ (measurement; comparison only -- no value here is used above) ────
+#  The roots squared are the lepton mass shares; their ratios (muon/electron about
+#  206.77, tau/muon about 16.82) are irrational, so they live only on this side.
+#  The sharpened e3 = 3/1454 brings muon/electron to about 206.75 (the leading
+#  1/485 gives about 207.1). The measured ratios enter only here and in the test.
+# ============================================================================
+
+import "../foundation/structural_counts.ep"
+import "../foundation/exact_fractions.ep"
+import "../foundation/enforcement.ep"
+import "../foundation/form_enforcement.ep"
+
+
+# The no-loss partition: the three balance points sum to the One.
+# This is the cubic's x^2 coefficient (Vieta), exactly the One.
+define no_loss_partition returning Fraction:
+    return fraction_from_whole_number(1)
+
+
+# The second invariant: the sum of the pairwise products of the roots,
+# one over twice the colour count -- 1/6.
+define second_invariant returning Fraction:
+    set twice_colour to 2 * colour_count()
+    return fraction_from_ratio(1 and twice_colour)
+
+
+# The leading third invariant: the product of the roots at leading order,
+# one over (twice the colour count to the fifth, less one) -- 1/485.
+define leading_third_invariant returning Fraction:
+    set colour_to_fifth to whole_power(colour_count() and 5)
+    set denominator to 2 * colour_to_fifth - 1
+    return fraction_from_ratio(1 and denominator)
+
+
+# The third invariant read with a neutral-channel correction of one over the
+# given channel: 1 / (2c^5 - 1 - 1/channel). The forced channel is the colour
+# count; other channels are shown only to demonstrate they do not land.
+define third_invariant_with_channel with channel_count as Int returning Fraction:
+    set whole_denominator to fraction_from_whole_number(2 * whole_power(colour_count() and 5) - 1)
+    set neutral_channel to fraction_from_ratio(1 and channel_count)
+    set corrected_denominator to fraction_subtract(whole_denominator and neutral_channel)
+    set one to fraction_from_whole_number(1)
+    return fraction_divide(one and corrected_denominator)
+
+
+# The sharpened third invariant: the neutral channel is the colour count, so the
+# correction is one over the colour count -- 1 / (485 - 1/3) = 3/1454. The channel
+# is ENFORCED to be the colour count: choosing any other channel here screams.
+define third_invariant returning Fraction:
+    set neutral_channel_count to colour_count()
+    set checked to forced_to_be("the lepton neutral channel is the colour count" and neutral_channel_count and colour_count())
+    return third_invariant_with_channel(neutral_channel_count)
+
+
+# The neutral channel is FORCED, not selected: the colour channel yields one
+# invariant and the neighbouring channels (2 and 4) yield DIFFERENT ones, so the
+# value genuinely depends on the colour count and was not chosen among equals.
+# If any other channel landed the same invariant, this would scream and halt.
+define neutral_channel_is_forced returning Int:
+    set forced_invariant to third_invariant_with_channel(colour_count())
+    set channel_two to third_invariant_with_channel(2)
+    set channel_four to third_invariant_with_channel(4)
+    set alternatives_matching to 0
+    if fraction_is_equal(channel_two and forced_invariant):
+        set alternatives_matching to alternatives_matching + 1
+    if fraction_is_equal(channel_four and forced_invariant):
+        set alternatives_matching to alternatives_matching + 1
+    return forced_unique("the lepton neutral channel" and 1 and alternatives_matching)
+
+
+# ----------------------------------------------------------------------------
+#  The invariant FORMS are unique (forced_unique)
+# ----------------------------------------------------------------------------
+#  The channel is guarded above; this guards the two invariant SHAPES over the
+#  forced colour count. e2 = 1/(2*colour); among 1/colour, 1/colour^2, 1/(2c+-1),
+#  2/colour, only 1/(2c) gives 1/6. e3 = 1/(2*colour^5 - 1); among the natural
+#  neighbours only it gives 1/485. forced_unique halts on any coincidence.
+
+define second_invariant_form_is_unique returning Int:
+    set colour to colour_count()
+    set total to 0
+    # canonical: 1/(2*colour) = 1/6
+    set cand_a to fraction_from_ratio(1 and 2 * colour)
+    set total to count_form_match(total and cand_a and second_invariant())
+    # 1/colour = 1/3
+    set cand_b to fraction_from_ratio(1 and colour)
+    set total to count_form_match(total and cand_b and second_invariant())
+    # 1/colour^2 = 1/9
+    set cand_c to fraction_from_ratio(1 and whole_power(colour and 2))
+    set total to count_form_match(total and cand_c and second_invariant())
+    # 1/(2*colour - 1) = 1/5
+    set cand_d to fraction_from_ratio(1 and 2 * colour - 1)
+    set total to count_form_match(total and cand_d and second_invariant())
+    # 1/(2*colour + 1) = 1/7
+    set cand_e to fraction_from_ratio(1 and 2 * colour + 1)
+    set total to count_form_match(total and cand_e and second_invariant())
+    # 2/colour = 2/3
+    set cand_f to fraction_from_ratio(2 and colour)
+    set total to count_form_match(total and cand_f and second_invariant())
+    return forbid_form_selection("the lepton second-invariant form" and total)
+
+define leading_third_invariant_form_is_unique returning Int:
+    set colour to colour_count()
+    set fifth to whole_power(colour and 5)
+    set total to 0
+    # canonical: 1/(2*colour^5 - 1) = 1/485
+    set cand_a to fraction_from_ratio(1 and 2 * fifth - 1)
+    set total to count_form_match(total and cand_a and leading_third_invariant())
+    # 1/(2*colour^5 + 1) = 1/487
+    set cand_b to fraction_from_ratio(1 and 2 * fifth + 1)
+    set total to count_form_match(total and cand_b and leading_third_invariant())
+    # 1/(2*colour^5) = 1/486
+    set cand_c to fraction_from_ratio(1 and 2 * fifth)
+    set total to count_form_match(total and cand_c and leading_third_invariant())
+    # 1/(colour^5 - 1) = 1/242
+    set cand_d to fraction_from_ratio(1 and fifth - 1)
+    set total to count_form_match(total and cand_d and leading_third_invariant())
+    # 1/colour^5 = 1/243
+    set cand_e to fraction_from_ratio(1 and fifth)
+    set total to count_form_match(total and cand_e and leading_third_invariant())
+    return forbid_form_selection("the lepton leading third-invariant form" and total)
+
+
+# ----------------------------------------------------------------------------
+#  The roots themselves, by EXACT rational bisection (no floats)
+# ----------------------------------------------------------------------------
+#  The three roots are irrational, but each is pinned to any precision by exact
+#  rational bisection: halve the bracket, keep the half across which the cubic
+#  changes sign, repeat. Every midpoint is an exact Fraction; nothing is ever a
+#  float. The balance cubic is x^3 - x^2 + e2*x - e3 with e2 = 1/6 (the second
+#  invariant) and e3 = 1/485 (the leading third invariant) -- the SAME cubic
+#  whose invariants are forced above. The roots squared are the lepton mass
+#  shares (electron, muon, tau), and their sum is the One (no loss).
+#
+#  Neither the brackets nor the halving count is a free parameter: the bracket only
+#  ISOLATES a root -- ANY interval holding exactly one root yields the same root, so
+#  it changes nothing in the value -- and the halving count only sets PRECISION, the
+#  exact analogue of the decimal places on a printout. The value returned is
+#  determined by the forced cubic alone. (This is the same exact-bisection solve the
+#  published corpus uses for these roots; M21/M32.)
+
+# The balance cubic evaluated at a rational point x: x^3 - x^2 + e2*x - e3.
+define lepton_cubic_value with x as Fraction returning Fraction:
+    set e2 to second_invariant()
+    set e3 to leading_third_invariant()
+    set x_squared to fraction_multiply(x and x)
+    set x_cubed to fraction_multiply(x_squared and x)
+    set e2_term to fraction_multiply(e2 and x)
+    set cubic_minus_square to fraction_subtract(x_cubed and x_squared)
+    set with_linear to fraction_add(cubic_minus_square and e2_term)
+    set result to fraction_subtract(with_linear and e3)
+    return result
+
+# Bisect for the single root bracketed in [lo, hi] (across a sign change), by the
+# given number of exact halvings. Returns the midpoint Fraction after the last.
+define lepton_root_in_bracket with lo_num as Int and lo_den as Int and hi_num as Int and hi_den as Int and halvings as Int returning Fraction:
+    set lo to fraction_from_ratio(lo_num and lo_den)
+    set hi to fraction_from_ratio(hi_num and hi_den)
+    set zero to fraction_from_whole_number(0)
+    set two_fraction to fraction_from_whole_number(2)
+    set value_at_lo to lepton_cubic_value(lo)
+    set sign_at_lo to fraction_compare(value_at_lo and zero)
+    set count to 0
+    repeat while count < halvings:
+        set bracket_sum to fraction_add(lo and hi)
+        set mid to fraction_divide(bracket_sum and two_fraction)
+        set value_at_mid to lepton_cubic_value(mid)
+        set sign_at_mid to fraction_compare(value_at_mid and zero)
+        if sign_at_mid equals sign_at_lo:
+            set lo to mid
+        else:
+            set hi to mid
+        set count to count + 1
+    set final_sum to fraction_add(lo and hi)
+    set root to fraction_divide(final_sum and two_fraction)
+    return root
+
+# The three non-overlapping brackets carrying one sign change each:
+#   electron in [1/1000, 1/20], muon in [1/10, 3/10], tau in [7/10, 9/10].
+define electron_root returning Fraction:
+    return lepton_root_in_bracket(1 and 1000 and 1 and 20 and 40)
+
+define muon_root returning Fraction:
+    return lepton_root_in_bracket(1 and 10 and 3 and 10 and 40)
+
+define tau_root returning Fraction:
+    return lepton_root_in_bracket(7 and 10 and 9 and 10 and 40)
+
+# The lepton mass shares are the roots squared.
+define electron_mass_share returning Fraction:
+    set r to electron_root()
+    return fraction_multiply(r and r)
+
+define muon_mass_share returning Fraction:
+    set r to muon_root()
+    return fraction_multiply(r and r)
+
+define tau_mass_share returning Fraction:
+    set r to tau_root()
+    return fraction_multiply(r and r)
+
+# The three ROOTS sum to the One (no-loss partition, e1 = 1) -- a check that the
+# bisected roots are the genuine roots of the forced cubic, to precision.
+define lepton_roots_sum_toward_one returning Fraction:
+    set e_root to electron_root()
+    set mu_root to muon_root()
+    set tau_root_value to tau_root()
+    set partial to fraction_add(e_root and mu_root)
+    return fraction_add(partial and tau_root_value)

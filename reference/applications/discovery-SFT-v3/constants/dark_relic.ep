@@ -1,0 +1,83 @@
+# ============================================================================
+#  THE DARK RELIC  --  what the dark matter IS, and how much of it there is.
+# ============================================================================
+#
+#  ── WHY ─ (significance; skip if you only want to verify) ────────────────────
+#  Standard cosmology treats the dark-matter abundance as a freeze-out accident
+#  -- a number computed from an unknown particle's unknown cross-section, tuned
+#  to match observation. Here BOTH halves are forced with zero parameters: the
+#  relic PARTICLE is the lightest neutral baryon of the new prime-5/prime-7
+#  sectors (dark_baryon.ep) -- a many-body bound state, not a WIMP -- and the
+#  relic AMOUNT is the covering ratio 27/5, fixed by counting before any
+#  dynamics happens at all. The amount of dark matter was never an accident.
+#
+#  ── DERIVATION ─ (check every line; every count forced elsewhere) ────────────
+#  The covering structure (dark_to_baryon_fraction.ep) partitions matter:
+#      volume = c^c = 27      -- the counted colour three, cubed
+#      depth  = cover(27) = 5 -- the minimal binary cover: 2^4 < 27 <= 2^5
+#      dark fraction     Omega_dm/Omega_m = 27/2^5 = 27/32   (in the domain)
+#      dark-to-baryon    Omega_dm/Omega_b = 27/5             (read from it)
+#  This module adds the two frontier readings on top of those counts:
+#  (1) THE RELIC IS IDENTIFIED -- the sectors five and seven pass the same
+#      force criterion as the strong sector, so their singlet rule forces
+#      neutral 5- and 7-quark baryons (dark_baryon.ep); the lightest neutral
+#      one is stable (nothing lighter and neutral to decay into) and is the
+#      relic. Its neutrality is the counted fact (p+1)/2 whole at odd p.
+#  (2) THE ABSOLUTE DENSITY IS READ FORWARD -- one measured baryon density
+#      (comparison side ONLY, in the test) times the forced 27/5 gives the
+#      dark density; no cross-section, no freeze-out, no tuning.
+#
+#  ── CHECK ─ (measurement; comparison only) ──────────────────────────────────
+#  Measured (CMB): Omega_b h^2 = 0.0224. Forced forward: Omega_dm h^2 =
+#  27/5 x 0.0224 = 0.12096, against the measured 0.120 -- eight parts in a
+#  thousand at leading order (the second-order reading 279/52 lives in
+#  dark_to_baryon_fraction.ep and lands at two parts in ten thousand). The
+#  measured density enters ONLY in the test, as the comparison anchor.
+# ============================================================================
+
+import "../foundation/structural_counts.ep"
+import "../foundation/counted_numbers.ep"
+import "../foundation/exact_fractions.ep"
+import "../constants/dark_baryon.ep"
+
+
+# The generational volume: the counted colour three, cubed -- 27.
+define relic_volume returning Int:
+    set c to colour_count()
+    return whole_power(c and c)
+
+# The covering depth: the minimal binary cover of 27 -- counted to 5.
+define relic_depth returning Int:
+    set volume to relic_volume()
+    return minimal_binary_cover(volume)
+
+# The forced dark-to-baryon ratio: volume over depth, 27/5.
+define relic_to_baryon returning Fraction:
+    set volume to relic_volume()
+    set depth to relic_depth()
+    return fraction_from_ratio(volume and depth)
+
+# The forced dark fraction of matter: volume over the binary tower, 27/32.
+define relic_fraction_of_matter returning Fraction:
+    set volume to relic_volume()
+    set depth to relic_depth()
+    set tower to whole_power(2 and depth)
+    return fraction_from_ratio(volume and tower)
+
+# THE RELIC IS IDENTIFIED: the new sectors' neutral baryons exist (the singlet
+# census of dark_baryon.ep), and the even alternative is excluded -- so the
+# lightest neutral new-sector baryon is stable and is the dark matter.
+define relic_particle_identified returning Bool:
+    set hadrons_ok to dark_hadrons_forced()
+    set exclusion_ok to even_sector_excluded()
+    if hadrons_ok:
+        return exclusion_ok
+    return false
+
+# The absolute relic density, read FORWARD from one measured baryon density
+# (passed in by the caller -- the measured value lives on the comparison side,
+# never here): Omega_dm h^2 = 27/5 x Omega_b h^2.
+define relic_density_from_baryon with baryon_top as Int and baryon_bottom as Int returning Fraction:
+    set anchor to fraction_from_ratio(baryon_top and baryon_bottom)
+    set ratio to relic_to_baryon()
+    return fraction_multiply(ratio and anchor)

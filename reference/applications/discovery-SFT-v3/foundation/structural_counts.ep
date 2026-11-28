@@ -1,0 +1,70 @@
+# ============================================================================
+#  STRUCTURAL COUNTS  --  the two generators of the theory, forced from the fold.
+# ============================================================================
+#
+#  WHY THIS EXISTS
+#  ---------------
+#  The whole theory is forced from one machine-checked, self-proven theorem --
+#  there is no nothing -- which forces the One and its fold, with no fitted
+#  parameter and nothing chosen. Everything the constants are built from
+#  comes down to just two structural counts. These are not written in by hand,
+#  and not even their source values are chosen: they are READ OFF the fold's own
+#  rhythm.
+#
+#  THE PERIOD SPECTRUM OF THE FOLD
+#  -------------------------------
+#  The fold doubles. Folding one-over-n therefore cycles its numerator
+#  1 -> 2 -> 4 -> ... with the whole Ones cast out (the remainder against n), and
+#  the number of folds to return to one is that orbit's period. As n runs over
+#  the values whose orbit returns (the odd denominators -- an even one never
+#  comes back, since doubling can never undo a factor of two), the periods that
+#  appear are:
+#       1/3 -> 2     1/5 -> 4     1/7 -> 3     1/9 -> 6     1/11 -> 10   ...
+#  The One itself has period one (it folds to itself). Beyond that, the smallest
+#  period the fold admits is TWO, and the next distinct period is THREE. Those
+#  two smallest periods are the two generators. Nothing is chosen here: 1/3 and
+#  1/7 are merely where the periods two and three first appear; the generators
+#  are the periods, read off the spectrum in order.
+#
+#  THE TWO GENERATORS
+#  ------------------
+#     the binary count  = 2   -- the smallest fold period beyond the One.
+#                                (the fold's own doubling factor; also the
+#                                electroweak / electromagnetic sector count.)
+#     the colour count  = 3   -- the next distinct fold period.
+#                                (the colour and generation count.)
+#  Every other number in the theory is forced from these two and the One.
+# ============================================================================
+
+import "counted_numbers.ep"
+
+
+# The smallest fold period strictly greater than a threshold, found by reading
+# the period spectrum: scan the unit fractions 1/n in order (only odd n, whose
+# orbits return), take their fold periods, and keep the smallest one above the
+# threshold. The upper limit is only "scan far enough" -- the smallest periods
+# two and three have appeared by 1/7, so any limit past that gives the same
+# answer; it is not a parameter of the theory.
+define smallest_fold_period_above with threshold as Int returning Int:
+    set best to 0
+    set n to 3
+    repeat while n <= 31:
+        set period to fold_period_of_unit_fraction(n)
+        if period > threshold:
+            if best == 0:
+                set best to period
+            else:
+                if period < best:
+                    set best to period
+        set n to n + 2
+    return best
+
+
+# The binary count: the smallest fold period beyond the One's period of one.
+define binary_count returning Int:
+    return smallest_fold_period_above(1)
+
+
+# The colour count: the smallest fold period beyond the binary count.
+define colour_count returning Int:
+    return smallest_fold_period_above(binary_count())

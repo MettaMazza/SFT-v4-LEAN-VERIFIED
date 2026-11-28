@@ -1,0 +1,33 @@
+{
+  "schema": "fold-protein-target-assisted-witness/v1",
+  "date": "2026-07-17",
+  "result": "Super Parity zero-parameter finite-lattice construction with experimental coordinates used to forward-force path selection.",
+  "sequence": "MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG",
+  "lattice": {
+    "states": 576,
+    "phi_degrees": "-180 + 15 * floor(state / 24)",
+    "psi_degrees": "-180 + 15 * (state mod 24)",
+    "ordering": "row-major phi outer, psi inner"
+  },
+  "states": [19, 31, 408, 18, 189, 115, 168, 177, 184, 391, 312, 55, 454, 125, 506, 544, 119, 116, 295, 209, 103, 498, 271, 251, 130, 180, 130, 178, 179, 154, 156, 132, 83, 84, 404, 54, 561, 443, 131, 131, 192, 79, 451, 92, 93, 396, 490, 191, 174, 7, 452, 222, 210, 18, 240, 132, 132, 156, 107, 470, 187, 144, 219, 295, 385, 54, 454, 148, 520, 165, 193, 36, 336, 83, 70, 0],
+  "files": {
+    "builder": "tools/predict_structure.py",
+    "scorer": "calculate_tm.py",
+    "target_pdb": "verify/1ubq.pdb",
+    "constructed_pdb": "verify/1ubq_test_24_lattice.pdb",
+    "development_log": "verify/task-62.log"
+  },
+  "sha256": {
+    "builder": "31c8c63dc1fad71a78fac748e680dd4ee75cacf7df85fc9b0b06de73af73c3c7",
+    "scorer": "a4ddd86ed8aa4138141f3c44991d7959671d336b88b35274a0d881f3c13d6e85",
+    "target_pdb": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+    "constructed_pdb": "0036d16f9a70d03458ffc2bdfc32876f1fc77f7dac88379cb69352840b02a21d",
+    "development_log": "c1e7381223d6fed9e4c6a04cc2d3f19f21c925983f240a1c201b3c9e8fec8bfd"
+  },
+  "metrics": {
+    "matched_ca_atoms": 76,
+    "tm_score": 0.9891211351471241,
+    "ca_drmsd_angstrom": 0.2608575407959516
+  },
+  "construction_route": "The native target forward-forced selection of the 76-state path from the exact 576-state lattice."
+}

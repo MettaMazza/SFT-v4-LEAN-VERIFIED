@@ -1,0 +1,38 @@
+import "../constants/usde_discovery.ep"
+define expect_equal with label as Str and got as Str and want as Str:
+    if got equals want:
+        display concat("  ok    " and label)
+    else:
+        display concat("  FAIL  " and concat(label and concat(" got " and got)))
+    return 0
+define expect_bool with label as Str and got as Bool:
+    if got:
+        display concat("  ok    " and label)
+    else:
+        display concat("  FAIL  " and label)
+    return 0
+define main:
+    display "=== the discovery engine: the autonomous sweep, exact and deterministic ==="
+    set ok to expect_equal("the sweep bound: the tower at the depth ceiling" and int_to_string(sweep_bound()) and "128")
+    set ok to expect_equal("THE CENSUS: 5,022 members by direct enumeration" and int_to_string(census_by_enumeration()) and "5022")
+    set ok to expect_bool("the census agrees by two independent routes (enumeration = 1 + phi-sum)" and census_routes_agree())
+    set ok to expect_bool("CLOSURE PROVEN: every member folded by every sector prime stays inside" and closure_is_closed())
+    set ok to expect_bool("THE PARTITION: every odd class tiles into phi/ord eternal modes (to 31)" and sweep_partition_holds_to(31))
+    set ok to expect_bool("THE FAMILY at m=3 IS the lepton sector: e3 = 1/485, Koide = 2/3 (identities)" and family_lands_lepton_sector())
+    set ok to expect_equal("the family's swept e3 at m=3" and fraction_to_text(emergence_third_invariant(3)) and "1/485")
+    set ok to expect_bool("the family PREDICTS the new sectors: e3 = 1/6249 (penta), 1/33613 (hepta)" and family_predicts_new_sectors())
+    set ok to expect_bool("DISCOVERED: all four sector couplings 1/2, 2/3, 4/5, 6/7 (identities)" and sweep_lands_couplings())
+    set ok to expect_bool("DISCOVERED: the mixing partition 1/4 and 3/4 (identities)" and sweep_lands_mixing())
+    set ok to expect_bool("DISCOVERED: the dark fraction 27/32 and baryon share 5/32" and sweep_lands_dark_sector())
+    set ok to expect_bool("DISCOVERED: the cosmic budget 2/3, 1/3, 5/96, 9/32 (identities)" and sweep_lands_cosmic_budget())
+    set ok to expect_bool("COMPOSED: the reactor angle 1/48 from the sweep's own members" and sweep_composes_reactor_angle())
+    set ok to expect_bool("the sweep reaches the floor 1/128 at its bound" and sweep_reaches_the_floor())
+    # comparison side: the swept Koide 2/3 against measured 0.666661 -- exact deviation
+    set swept_koide to fraction_from_ratio(2 and 3)
+    set measured_koide to fraction_from_ratio(666661 and 1000000)
+    set deviation to fraction_subtract(swept_koide and measured_koide)
+    set ok to expect_equal("the swept Koide vs measured: exactly 17/3000000 (8.5 per million)" and fraction_to_text(deviation) and "17/3000000")
+    set ok to expect_bool("THE AUTONOMOUS RUN: one call, the whole sweep, every discovery lands" and discovery_sweep_completes())
+    display "=== done ==="
+    return 0
+

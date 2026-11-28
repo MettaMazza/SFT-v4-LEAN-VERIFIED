@@ -1,0 +1,98 @@
+# ============================================================================
+#  COUNTED NUMBERS  --  the structural whole numbers the constants are made of.
+# ============================================================================
+#
+#  WHY THIS EXISTS
+#  ---------------
+#  The constants of the theory are not fitted; they are assembled from whole
+#  numbers that are COUNTED from the structure of the fold. The most important
+#  of these is the covering depth: how many times the fold must double before
+#  its reach covers a given volume. This single count fixes, among other things,
+#  the depth five that covers the generational volume twenty-seven, and the
+#  depth seven that covers the volume eighty-one and sets the tower of the
+#  fine-structure constant. Counting it here, in front of you, is what makes
+#  those constants forced rather than chosen.
+# ============================================================================
+
+
+# The covering depth of a volume: the smallest number of doublings whose reach
+# (two raised to that number) is at least the volume. This is counted by
+# doubling from the One until the reach first covers the volume -- it can only
+# stop at one number, so nothing is chosen.
+#
+#   minimal_binary_cover(3)  = 2   (two doublings reach 4, covering 3)
+#   minimal_binary_cover(27) = 5   (five doublings reach 32, covering 27)
+#   minimal_binary_cover(81) = 7   (seven doublings reach 128, covering 81)
+define minimal_binary_cover with volume as Int returning Int:
+    set depth to 1
+    set reach to 2
+    repeat while reach < volume:
+        set depth to depth + 1
+        set reach to reach * 2
+    return depth
+
+
+# A whole number raised to a whole power, by repeated multiplication. Used to
+# form small structural sizes such as five cubed (the covering cube) from their
+# counted parts. These structural sizes are small, so an ordinary whole number
+# holds them exactly; the large exact arithmetic is reserved for the values that
+# need it.
+define whole_power with base as Int and exponent as Int returning Int:
+    set result to 1
+    set step to 0
+    repeat while step < exponent:
+        set result to result * base
+        set step to step + 1
+    return result
+
+
+# The period of one-over-n under the fold, COUNTED with whole numbers. The fold
+# doubles a value and casts out the whole Ones; acting on one-over-n that is just
+# the numerator doubling, with the whole Ones removed by taking the remainder
+# against n: 1 -> 2 -> 4 -> ... until it returns to 1. The period is the number
+# of folds that takes. This is exactly the fold's own period, computed with whole
+# numbers so it is exact and allocates nothing.
+#   fold_period_of_unit_fraction(3) = 2   (1 -> 2 -> 1)
+#   fold_period_of_unit_fraction(7) = 3   (1 -> 2 -> 4 -> 1)
+#   fold_period_of_unit_fraction(5) = 4   (1 -> 2 -> 4 -> 3 -> 1)
+define fold_period_of_unit_fraction with n as Int returning Int:
+    set value to 2 % n
+    set count to 1
+    repeat while value != 1:
+        set value to (value * 2) % n
+        set count to count + 1
+    return count
+
+
+# The period-orbit floor at covering depth d: two to the depth, less one.
+# This is the UNIQUE denominator whose fold-orbit has period exactly d -- because
+# doubling d times returns to the start modulo (2^d - 1). It is a genuine
+# periodic orbit of the fold. The tower 2^d itself is NOT an orbit: one over the
+# tower is pre-periodic, folding down to the One and never returning. So when the
+# One recurs at a deeper level, it recurs over this orbit floor (2^d - 1), never
+# over the pre-periodic tower (2^d).
+#   period_orbit_floor(5) = 31   (fold period of 1/31 is 5)
+#   period_orbit_floor(7) = 127  (fold period of 1/127 is 7; the absolute-scale floor)
+define period_orbit_floor with depth as Int returning Int:
+    return whole_power(2 and depth) - 1
+
+
+# Render a ratio of two whole numbers as a decimal string with a fixed number of
+# places after the point, truncated (not rounded), by exact long division. This
+# is for reading only and is never fed back into a derivation. It is used for the
+# displayed constants, whose numerator and denominator fit the machine's whole
+# number exactly; values that overflow that are carried by the unlimited-size
+# exact integers instead.
+define ratio_to_decimal_text with numerator as Int and denominator as Int and places as Int returning Str:
+    set whole_part to numerator / denominator
+    set remainder to numerator % denominator
+    set fractional to ""
+    set place to 0
+    repeat while place < places:
+        set remainder to remainder * 10
+        set fractional to concat(fractional and int_to_string(remainder / denominator))
+        set remainder to remainder % denominator
+        set place to place + 1
+    if places > 0:
+        return concat(concat(int_to_string(whole_part) and ".") and fractional)
+    return int_to_string(whole_part)

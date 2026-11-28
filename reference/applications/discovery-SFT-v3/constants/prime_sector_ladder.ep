@@ -1,0 +1,134 @@
+# ============================================================================
+#  THE PRIME-SECTOR LADDER  --  how many forces there are, and two that are new.
+# ============================================================================
+#
+#  ── WHY ─ (significance; skip if you only want to verify) ────────────────────
+#  Each fundamental force is a "sector": a charge that comes in p kinds and binds
+#  because those kinds tile back to unison. The theory forces WHICH sectors can
+#  exist and HOW MANY -- and the answer is a small, closed list. Two of its members
+#  are the known forces; two are predictions of forces not yet identified.
+#
+#  ── DERIVATION ─ (check every line; uses ONLY b = 2, c = 3, and the fold) ────
+#  A sector is labelled by a whole number p and carries a shortfall 1/p. Two things
+#  are forced about which p are allowed:
+#     p must be PRIME -- a composite p factors, and its shortfall does not carry
+#                       back to unison as a single sector (it splits into smaller
+#                       ones). So sectors are prime.
+#     p must be at or below the DEEPEST covering depth = 7 (= cover(colour^(colour+1)),
+#                       forced two ways) -- deeper is unrealized.
+#  The primes from 2 up to 7 are exactly {2, 3, 5, 7} (each checked for primality
+#  in code), so there are EXACTLY FOUR sectors. The next prime, 11, lies beyond 7,
+#  so there is no fifth: the ladder is bounded.
+#  Each sector is a genuine confining force by one uniform criterion, checked for
+#  every p:
+#     partition:  coupling (p-1)/p  +  shortfall 1/p  =  the One.
+#     carry:      the shortfall tiles back to the One in exactly p steps,
+#                 (1/p) * p = 1  -- this is what confines it.
+#     mediators:  p^2 - 1  (the adjoint dimension): 2->3, 3->8, 5->24, 7->48.
+#  Sectors 2 and 3 are the known forces (the electroweak/binary sector and the
+#  strong colour sector, 8 gluons). Sectors 5 and 7 pass the SAME criterion and are
+#  not yet identified: two forced, predicted forces.
+#
+#  ── CHECK ─ (measurement; comparison only) ──────────────────────────────────
+#  The observed short-range confining forces sit at the low sectors; the count of
+#  fundamental sectors being small and closed matches the observed lack of an
+#  endless tower of forces. Sectors 5 and 7 are predictions -- new confining forces
+#  the framework requires, awaiting experiment.
+# ============================================================================
+
+import "../foundation/structural_counts.ep"
+import "../foundation/counted_numbers.ep"
+import "../foundation/exact_fractions.ep"
+import "../foundation/enforcement.ep"
+
+
+# The ladder's ceiling: the deepest covering depth, 7 (forced two ways -- by the
+# covering of colour^(colour+1) and by the relation colour + (colour + 1)).
+define deepest_covering_depth returning Int:
+    set next_volume to whole_power(colour_count() and (colour_count() + 1))
+    set by_covering to minimal_binary_cover(next_volume)
+    set by_relation to colour_count() + (colour_count() + 1)
+    return forced_to_be("deepest depth = cover(colour^(colour+1)) = colour+(colour+1)" and by_covering and by_relation)
+
+# Whether a whole number n (n >= 2) is prime: no divisor strictly between 1 and n.
+define whole_is_prime with n as Int returning Bool:
+    set divisor to 2
+    set prime to true
+    repeat while divisor < n:
+        set quotient to n / divisor
+        set remainder to n - quotient * divisor
+        if remainder < 1:
+            set prime to false
+        set divisor to divisor + 1
+    return prime
+
+# The number of prime sectors: the primes from 2 up to the deepest covering depth.
+# Exactly {2, 3, 5, 7} -- four.
+define prime_sector_count returning Int:
+    set ceiling to deepest_covering_depth()
+    set count to 0
+    set n to 2
+    repeat while n < ceiling + 1:
+        set n_is_prime to whole_is_prime(n)
+        if n_is_prime:
+            set count to count + 1
+        set n to n + 1
+    return count
+
+# The first prime beyond the ceiling: 11, past the deepest depth -- so no fifth
+# sector, the ladder is bounded.
+define first_prime_beyond_ceiling returning Int:
+    set ceiling to deepest_covering_depth()
+    set candidate to ceiling + 1
+    set found to 0
+    repeat while found < 1:
+        set candidate_is_prime to whole_is_prime(candidate)
+        if candidate_is_prime:
+            set found to candidate
+        set candidate to candidate + 1
+    return found
+
+# A sector's shortfall (its charge unit): 1/p.
+define sector_shortfall with p as Int returning Fraction:
+    return fraction_from_ratio(1 and p)
+
+# A sector's coupling: the One less its shortfall, (p-1)/p.
+define sector_coupling with p as Int returning Fraction:
+    set one to fraction_from_whole_number(1)
+    set shortfall to fraction_from_ratio(1 and p)
+    return fraction_subtract(one and shortfall)
+
+# Coupling and shortfall partition the One: (p-1)/p + 1/p = 1.
+define sector_partition_holds with p as Int returning Bool:
+    set coupling to sector_coupling(p)
+    set shortfall to sector_shortfall(p)
+    set total to fraction_add(coupling and shortfall)
+    set one to fraction_from_whole_number(1)
+    return fraction_is_equal(total and one)
+
+# The binding carry: the shortfall tiles back to the One in exactly p steps,
+# (1/p) * p = 1. This is what makes the sector confine.
+define sector_carry_closes with p as Int returning Bool:
+    set shortfall to sector_shortfall(p)
+    set p_fraction to fraction_from_whole_number(p)
+    set tiled to fraction_multiply(shortfall and p_fraction)
+    set one to fraction_from_whole_number(1)
+    return fraction_is_equal(tiled and one)
+
+# A sector's mediator count: p^2 - 1 (the adjoint dimension).
+define sector_mediator_count with p as Int returning Int:
+    set squared to whole_power(p and 2)
+    return squared - 1
+
+# A sector's beta slope: coupling over shortfall, (p-1)/p over 1/p = p - 1
+# -- the strength-to-gap ratio the running inherits (the corpus's
+# derive_running reading), returned as the exact whole number.
+define sector_beta_slope with p as Int returning Int:
+    set coupling to sector_coupling(p)
+    set shortfall to sector_shortfall(p)
+    set ratio to fraction_divide(coupling and shortfall)
+    set slope to fraction_from_whole_number(p - 1)
+    set matches to fraction_is_equal(ratio and slope)
+    if matches:
+        return p - 1
+    return 0 - 1

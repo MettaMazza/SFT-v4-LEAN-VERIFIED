@@ -16243,3 +16243,13 @@ import SFT.AstronomyCosmology.AstronomicalSignalEvidence
 import SFT.AstronomyCosmology.AstronomicalSignalExperiment
 
 import SFT.AstronomyCosmology.AstronomicalSignalValidation
+
+import SFT.AstronomyCosmology.AngularPosition
+
+import SFT.AstronomyCosmology.AngularPositionGrammar
+
+import SFT.AstronomyCosmology.AngularPositionEvidence
+
+import SFT.AstronomyCosmology.AngularPositionExperiment
+
+import SFT.AstronomyCosmology.AngularPositionValidation

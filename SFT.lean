@@ -16199,3 +16199,13 @@ import SFT.EarthEnvironment.EarthForecastValidationEvidence
 import SFT.EarthEnvironment.EarthForecastValidationExperiment
 
 import SFT.EarthEnvironment.EarthForecastValidationValidation
+
+import SFT.EarthEnvironment.EarthHazardRiskHandoff
+
+import SFT.EarthEnvironment.EarthHazardRiskHandoffGrammar
+
+import SFT.EarthEnvironment.EarthHazardRiskHandoffEvidence
+
+import SFT.EarthEnvironment.EarthHazardRiskHandoffExperiment
+
+import SFT.EarthEnvironment.EarthHazardRiskHandoffValidation

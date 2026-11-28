@@ -1,0 +1,57 @@
+{
+  "experiment_id": "SFT-EXP-ASTRO-MORPHOLOGY-001-E1",
+  "claim_id": "SFT-ASTRO-MORPHOLOGY-001",
+  "frozen_relation": "resolved-structure-carrier__morphology-method-bounded__component-adjacency-shape-relation__resolution-band-orientation-distance-and-uncertainty-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+  "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-MORPHOLOGY-001.json",
+  "source_snapshot_hash": "sha256:0a247f668a6bcac27384b8d28e747ad1b732ff40ec245e931d0c29facf9577f5",
+  "target_ids": [
+    "sft-astro-morphology-001-external-astronomy-evidence"
+  ],
+  "target_locators": [
+    [
+      "sft-astro-morphology-001-external-astronomy-evidence",
+      "CDS-SIMBAD-001",
+      "https://simbad.cds.unistra.fr/simbad/"
+    ]
+  ],
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-ASTRO-MORPHOLOGY-001-E1-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "physical-observation",
+          "astronomy:resolved-structure-carrier__component-adjacency-shape-relation__resolution-band-orientation-distance-and-uncertainty-held__morphology-method-bounded"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "expected_observation_label": "astronomy:resolved-structure-carrier__component-adjacency-shape-relation__resolution-band-orientation-distance-and-uncertainty-held__morphology-method-bounded",
+  "falsification_condition": "Reject if resolution or projection is erased.",
+  "all_rows_required": true,
+  "target_inaccessible_before_seal": true
+}

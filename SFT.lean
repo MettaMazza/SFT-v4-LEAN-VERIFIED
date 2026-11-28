@@ -16303,3 +16303,13 @@ import SFT.AstronomyCosmology.AstronomicalPopulationEvidence
 import SFT.AstronomyCosmology.AstronomicalPopulationExperiment
 
 import SFT.AstronomyCosmology.AstronomicalPopulationValidation
+
+import SFT.AstronomyCosmology.AstronomicalMorphology
+
+import SFT.AstronomyCosmology.AstronomicalMorphologyGrammar
+
+import SFT.AstronomyCosmology.AstronomicalMorphologyEvidence
+
+import SFT.AstronomyCosmology.AstronomicalMorphologyExperiment
+
+import SFT.AstronomyCosmology.AstronomicalMorphologyValidation

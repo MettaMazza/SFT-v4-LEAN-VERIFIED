@@ -1,0 +1,57 @@
+{
+  "experiment_id": "SFT-EXP-ASTRO-VARIABILITY-001-E1",
+  "claim_id": "SFT-ASTRO-VARIABILITY-001",
+  "frozen_relation": "time-series-source-carrier__time-series-bounded__state-to-signal-change-relation__cadence-window-band-errors-and-nondetections-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+  "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-VARIABILITY-001.json",
+  "source_snapshot_hash": "sha256:76c74ef8e2acca93d8aaf4c1f774b6ac24ec96d4ff0154d1cc7c1f0f346436c7",
+  "target_ids": [
+    "sft-astro-variability-001-external-astronomy-evidence"
+  ],
+  "target_locators": [
+    [
+      "sft-astro-variability-001-external-astronomy-evidence",
+      "ESA-GAIA-ARCHIVE-001",
+      "https://gea.esac.esa.int/archive/"
+    ]
+  ],
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-ASTRO-VARIABILITY-001-E1-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "physical-observation",
+          "astronomy:time-series-source-carrier__state-to-signal-change-relation__cadence-window-band-errors-and-nondetections-held__time-series-bounded"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "expected_observation_label": "astronomy:time-series-source-carrier__state-to-signal-change-relation__cadence-window-band-errors-and-nondetections-held__time-series-bounded",
+  "falsification_condition": "Reject if sampling aliases or missing intervals are erased.",
+  "all_rows_required": true,
+  "target_inaccessible_before_seal": true
+}

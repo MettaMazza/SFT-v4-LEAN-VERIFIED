@@ -1,0 +1,88 @@
+{
+  "status": "in_progress",
+  "source_repository": "MettaMazza/SFT-v3",
+  "source_revision": "d0b1996c09fd0b27be5a6016324f83ed578c5c94",
+  "engine_source_sha256": "c61a908fd10b78c5934c47b0e93c55847235735d9fe0dc0108bb11a2e7419d7c",
+  "harness_sha256": "61de8c8b923266825a16db3626c1a892a4903825ada28fec5f921c328386ab92",
+  "winning_configuration": {
+    "opponent": "Stockfish",
+    "UCI_LimitStrength": true,
+    "UCI_Elo": 1900,
+    "opponent_time_seconds": 0.05,
+    "games": 12,
+    "search_ceiling": 12,
+    "node_budget": 4194304,
+    "ply_cap": 240,
+    "result": {
+      "win": 6,
+      "draw": 3,
+      "loss": 3,
+      "score_percent": 62.5
+    }
+  },
+  "source_binding_verified": true,
+  "completed_components": [
+    "piece coding",
+    "board construction and copying",
+    "counted empty-board reach",
+    "rank flip",
+    "original thinking budget",
+    "make_move including special moves/rights/clock",
+    "promotion move encoding",
+    "king lookup",
+    "square attack detection"
+  ],
+  "next_component": "pseudo_moves, legal_moves and perft; preserve exact move order",
+  "remaining_after_rules": [
+    "lesser-attacker and attack-map evaluation",
+    "mobility and pawn promotion potential",
+    "side units and rational shares",
+    "endgame table parsing, probing and move selection",
+    "capture ordering and check prefilter",
+    "quiescence, TT, killer ordering, exact search and iterative deepening",
+    "CLI and receipt-bound fixture replay"
+  ],
+  "go": "recovered 19x19 KataGo task361 receipt preserved; producing source revision still to bind, do not substitute latest development implementation",
+  "discovery": "original v2/v3 sources located; select exact intended exploration surface after game engines",
+  "checks": {
+    "chess_board1594_report.json": {
+      "status": "PASS",
+      "source_revision": "d0b1996c09fd0b27be5a6016324f83ed578c5c94",
+      "source_sha256": "c61a908fd10b78c5934c47b0e93c55847235735d9fe0dc0108bb11a2e7419d7c",
+      "translated_source_functions": [
+        "piece_is_white",
+        "piece_is_black",
+        "piece_kind",
+        "starting_state",
+        "empty_state",
+        "copy_state",
+        "counted_reach",
+        "flip_rank",
+        "thinking_budget"
+      ],
+      "comparison_rows": 1309,
+      "axiom_dependencies": [],
+      "scope": "board, piece coding, counted empty-board reach, rank flip and exact original thinking budget; full engine not complete",
+      "stale_generated_C_budget": 131072,
+      "winning_source_budget": 4194304
+    },
+    "chess_moves1595_report.json": {
+      "status": "PASS",
+      "source_revision": "d0b1996c09fd0b27be5a6016324f83ed578c5c94",
+      "source_sha256": "c61a908fd10b78c5934c47b0e93c55847235735d9fe0dc0108bb11a2e7419d7c",
+      "comparison_rows": 34945,
+      "native_audited_functions": 6,
+      "axiom_dependencies": [],
+      "scope": "move updates, promotion move construction, king lookup; full engine not complete"
+    },
+    "chess_attacks1595_report.json": {
+      "status": "PASS",
+      "source_revision": "d0b1996c09fd0b27be5a6016324f83ed578c5c94",
+      "source_sha256": "c61a908fd10b78c5934c47b0e93c55847235735d9fe0dc0108bb11a2e7419d7c",
+      "comparison_rows": 99970,
+      "native_audited_functions": 5,
+      "axiom_dependencies": [],
+      "scope": "attack detection across all pieces/placements/targets and both sides, including missing-king sentinel; full engine not complete"
+    }
+  }
+}

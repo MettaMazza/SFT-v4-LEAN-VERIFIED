@@ -1,0 +1,62 @@
+{
+  "schema": "sft-recovered-measurement-receipts/v1",
+  "project": "FoldBot Chess",
+  "result_type": "measured_implementation_results",
+  "claim_owner": "project measurements; not agent predictions",
+  "source_transcript": {
+    "path": "/Users/mettamazza/.claude/projects/-Users-mettamazza-Desktop-SFTOM/56a9ca3a-002b-4967-98b7-af286e71477b.jsonl",
+    "sha256": "cf8bdcf930440d9fe783eb2d6dd8c63fa0e71dd65946ab28768583a8f9613305"
+  },
+  "matches": [
+    {
+      "opponent": "Stockfish configured at Elo 1700",
+      "protocol_command": "python3 tools/measure_sf.py 1700",
+      "timestamp_utc": "2026-07-05T09:20:41.065Z",
+      "transcript_line": 672,
+      "source_revision": "214de99bdae5afdf83093949eb0323a7be6b1577",
+      "source_sha256": "55a5617e5ca750fc9132dacb3e53b9d71c6751deb60398012c23fd9d155cf8bf",
+      "harness_sha256": "8477b0a189776dd844b67ce6da140e5df8f331fabbaeccd8f91054ab2bb1060d",
+      "games": [
+        {"game": 1, "sft_side": "white", "result": "loss"},
+        {"game": 2, "sft_side": "black", "result": "draw"},
+        {"game": 3, "sft_side": "white", "result": "draw"},
+        {"game": 4, "sft_side": "black", "result": "win"},
+        {"game": 5, "sft_side": "white", "result": "draw"},
+        {"game": 6, "sft_side": "black", "result": "draw"},
+        {"game": 7, "sft_side": "white", "result": "draw"},
+        {"game": 8, "sft_side": "black", "result": "draw"},
+        {"game": 9, "sft_side": "white", "result": "loss"},
+        {"game": 10, "sft_side": "black", "result": "win"},
+        {"game": 11, "sft_side": "white", "result": "draw"},
+        {"game": 12, "sft_side": "black", "result": "win"}
+      ],
+      "aggregate": {"win": 3, "draw": 7, "loss": 2, "score_percent": 54.1666666667}
+    },
+    {
+      "opponent": "Stockfish configured at Elo 1900",
+      "protocol_command": "python3 tools/measure_sf.py 1900",
+      "timestamp_utc": "2026-07-05T10:41:08.422Z",
+      "transcript_lines": [836, 842],
+      "source_revision": "d0b1996c09fd0b27be5a6016324f83ed578c5c94",
+      "source_sha256": "c61a908fd10b78c5934c47b0e93c55847235735d9fe0dc0108bb11a2e7419d7c",
+      "harness_sha256": "61de8c8b923266825a16db3626c1a892a4903825ada28fec5f921c328386ab92",
+      "games": [
+        {"game": 1, "sft_side": "white", "result": "draw"},
+        {"game": 2, "sft_side": "black", "result": "win"},
+        {"game": 3, "sft_side": "white", "result": "win"},
+        {"game": 4, "sft_side": "black", "result": "win"},
+        {"game": 5, "sft_side": "white", "result": "draw"},
+        {"game": 6, "sft_side": "black", "result": "draw"},
+        {"game": 7, "sft_side": "white", "result": "loss"},
+        {"game": 8, "sft_side": "black", "result": "win"},
+        {"game": 9, "sft_side": "white", "result": "win"},
+        {"game": 10, "sft_side": "black", "result": "win"},
+        {"game": 11, "sft_side": "white", "result": "loss"},
+        {"game": 12, "sft_side": "black", "result": "loss"}
+      ],
+      "aggregate": {"win": 6, "draw": 3, "loss": 3, "score_percent": 62.5}
+    }
+  ],
+  "trace_note": "The standalone repository retained the summary ledger but not these raw historical outputs. The original Claude execution transcript preserves the complete 1700 batch and the complete 1900 batch across two poll outputs."
+}
+

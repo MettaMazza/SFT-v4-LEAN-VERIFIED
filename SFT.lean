@@ -16373,3 +16373,13 @@ import SFT.AstronomyCosmology.AstrometricRadialMotionEvidence
 import SFT.AstronomyCosmology.AstrometricRadialMotionExperiment
 
 import SFT.AstronomyCosmology.AstrometricRadialMotionValidation
+
+import SFT.AstronomyCosmology.AstronomicalVariability
+
+import SFT.AstronomyCosmology.AstronomicalVariabilityGrammar
+
+import SFT.AstronomyCosmology.AstronomicalVariabilityEvidence
+
+import SFT.AstronomyCosmology.AstronomicalVariabilityExperiment
+
+import SFT.AstronomyCosmology.AstronomicalVariabilityValidation

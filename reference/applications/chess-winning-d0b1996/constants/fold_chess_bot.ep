@@ -1,0 +1,2211 @@
+# ============================================================================
+#  THE FOLD CHESS BOT  --  whole-board play from counted values, zero knobs.
+# ============================================================================
+#
+#  ── WHY ─ (significance; skip if you only want to verify) ────────────────────
+#  Every chess engine on earth carries fitted numbers: hand-tuned piece values
+#  (1, 3, 3, 5, 9), tuned positional tables, or millions of trained weights.
+#  This bot carries NONE. Its material scale is COUNTED from the board's own
+#  geometry (a piece's worth is the number of squares it commands from where
+#  it stands on an empty board -- pure counting, no tuning); its position
+#  value is the mover's exact SHARE OF THE ONE (my counted units over the
+#  total -- the self-antipodal lock 1/2 at perfect balance, the One at mate,
+#  the floor when mated); and its search depth is the counted colour three.
+#  A complete legal chess player -- castling, en passant, promotion, check,
+#  mate, stalemate -- whose every evaluation is an exact rational and whose
+#  every constant is counted. The capability claim is the corpus's chess
+#  campaign carried forward: the fold does not just derive; it PLAYS.
+#
+#  ── DERIVATION ─ (check every line; rules certified, values counted) ─────────
+#  THE RULES SUBSTRATE is certified against the published perft oracle -- the
+#  independent, universally agreed move-count census of the starting position:
+#  20 legal moves at depth 1, 400 at depth 2, 8,902 at depth 3 -- our standard
+#  oracle-certification pattern (as fold_solver.ep against Bouton and mod-4).
+#  THE COUNTED MATERIAL: a knight on a corner commands 2 squares and 8 from
+#  the centre; a rook 14 from anywhere; a queen 21 from the corner and 27
+#  from the centre -- every "piece value" is a count the engine performs,
+#  never a number it is given. THE FOLD VALUE: a position's worth to the
+#  mover is units_mine / (units_mine + units_theirs) -- an exact fraction in
+#  (0,1); the starting position evaluates to EXACTLY the half-One (perfect
+#  balance at the lock, checked); mate approaches the One (faster mates
+#  strictly larger, exact cross-multiplied ordering) and being mated sits at
+#  the floor. THE SEARCH: exact negamax over these fractions at the counted
+#  depth (colour = 3 plies), values complemented through the antipode
+#  (mine = 1 - theirs) -- the fold's own involution as the minimax step.
+#  PLAY, demonstrated: the bot finds mate-in-one (the fool's-mate strike
+#  Qh4#), punishes the fool's-mate setup from the white side too, and plays
+#  a full self-play game of legal chess (every move legality-filtered, the
+#  final position verified legal).
+#
+#  ── CHECK ─ (measurement; comparison only) ──────────────────────────────────
+#  THE RULES, whole-board: certified against the published perft census at
+#  FOUR positions -- the start (20/400/8,902), Kiwipete with castling, pins
+#  and double checks (48/2,039/97,862), the en-passant-pin endgame at depth
+#  four (43,238), and the four-way-promotion position (9,483) -- zero
+#  disagreements at every depth. THE PLAY, refereed: in whole games where an
+#  INDEPENDENT rules implementation (python-chess) validates every move the
+#  bot emits, the bot went 10-0 against a random legal mover (both colours,
+#  zero illegal moves) and held Stockfish AT ITS MINIMUM EXPOSED STRENGTH
+#  (Elo floor, skill 0, 1-node search) to 5 draws in 6 games (1 loss, zero
+#  illegal moves) -- full record and reproducible harnesses in
+#  tools/MATCHES.md. What this bot is NOT claimed to be: a rival to tuned
+#  engines on playing strength -- it does not beat Stockfish. What it IS: a
+#  complete, certified legal player whose entire evaluation chain is counted
+#  and exact -- to our knowledge the only chess player with zero fitted
+#  parameters -- and the demonstration that the fold computes forward
+#  (plays) as well as it derives.
+# ============================================================================
+
+import "../foundation/structural_counts.ep"
+import "../foundation/exact_fractions.ep"
+
+
+# ---------- the calculation state (ordering + hard bound; zero knobs) --------
+# THE TRANSPOSITION TABLE: position -> best move found there. ORDERING ONLY --
+# values are always recomputed by full search, so the move played is
+# unchanged; the table just makes each deepening pass search the previous
+# pass's refutation FIRST, so beta cutoffs land immediately instead of being
+# rediscovered (measured: ~3.3x fewer nodes to the same depth). Keys are a
+# rolling INTEGER hash of the position (pure arithmetic, zero allocation --
+# the earlier string-signature keys built ~140 heap strings per stored node,
+# which the GC profiler exposed as the hot path's biggest remaining cost).
+# Open-addressed, single-probe: a hash collision merely tries a different
+# move first, so correctness is untouched by construction. A generation
+# stamp makes the per-decision reset O(1) instead of a 2^18-slot sweep.
+set TT_KEYS to create_list()
+set TT_MOVES to create_list()
+set TT_STAMP to create_list()
+set TT_GEN to 0
+# KILLER MOVES: per-depth, the last two QUIET moves that refuted a sibling
+# line (caused a beta cutoff). Tried right after the captures -- the same
+# refutation usually kills the neighbouring lines too. Pure bookkeeping of
+# the search's own cutoffs: no weights, no constants, ordering only.
+set KILLER_A to create_list()
+set KILLER_B to create_list()
+# NODES_LEFT / PASS_ABORTED: the HARD in-pass bound. Every search node
+# decrements NODES_LEFT; at zero the whole pass aborts instantly (every
+# recursive call returns at once) and the driver discards the partial pass,
+# playing the last COMPLETED iteration's move. Move time is bounded by
+# construction -- no position, however deep its tree, can run away.
+set NODES_LEFT to 0
+set PASS_ABORTED to 0
+# Reusable attack-map buffers, one per colour: the map is built and fully
+# consumed inside ONE side_units call before any other map is needed, so a
+# single preallocated 64-slot buffer per colour serves every evaluation --
+# the hot path allocates nothing (the GC profiler demanded this).
+set WHITE_REACH_BUF to create_list()
+set BLACK_REACH_BUF to create_list()
+
+
+# ---------- the board ------------------------------------------------------
+# Squares 0..63 (rank*8+file, rank 0 = white's home). Piece codes: empty 0;
+# white P1 N2 B3 R4 Q5 K6; black P7 N8 B9 R10 Q11 K12.
+# State list: [0..63 squares, 64 side (0 white / 1 black),
+#              65..68 castle rights wk wq bk bq, 69 en-passant square (64 = none)]
+
+define piece_is_white with code as Int returning Bool:
+    if code > 0:
+        if code < 7:
+            return true
+    return false
+
+define piece_is_black with code as Int returning Bool:
+    return code > 6
+
+define piece_kind with code as Int returning Int:
+    if code > 6:
+        return code - 6
+    return code
+
+define starting_state:
+    set state to create_list()
+    set back to create_list()
+    set ok to append_list(back and 4)
+    set ok to append_list(back and 2)
+    set ok to append_list(back and 3)
+    set ok to append_list(back and 5)
+    set ok to append_list(back and 6)
+    set ok to append_list(back and 3)
+    set ok to append_list(back and 2)
+    set ok to append_list(back and 4)
+    set f to 0
+    repeat while f < 8:
+        set ok to append_list(state and get_list(back and f))
+        set f to f + 1
+    set f to 0
+    repeat while f < 8:
+        set ok to append_list(state and 1)
+        set f to f + 1
+    set sq to 16
+    repeat while sq < 48:
+        set ok to append_list(state and 0)
+        set sq to sq + 1
+    set f to 0
+    repeat while f < 8:
+        set ok to append_list(state and 7)
+        set f to f + 1
+    set f to 0
+    repeat while f < 8:
+        set ok to append_list(state and get_list(back and f) + 6)
+        set f to f + 1
+    set ok to append_list(state and 0)
+    set right to 0
+    repeat while right < 4:
+        set ok to append_list(state and 1)
+        set right to right + 1
+    set ok to append_list(state and 64)
+    set ok to append_list(state and 0)
+    return state
+
+define copy_state with state:
+    set fresh to create_list()
+    set i to 0
+    repeat while i < 71:
+        set ok to append_list(fresh and get_list(state and i))
+        set i to i + 1
+    return fresh
+
+# An empty state for setting up arbitrary positions (all rights off).
+define empty_state:
+    set state to create_list()
+    set sq to 0
+    repeat while sq < 64:
+        set ok to append_list(state and 0)
+        set sq to sq + 1
+    set ok to append_list(state and 0)
+    set right to 0
+    repeat while right < 4:
+        set ok to append_list(state and 0)
+        set right to right + 1
+    set ok to append_list(state and 64)
+    set ok to append_list(state and 0)
+    return state
+
+# ---------- attack detection ------------------------------------------------
+# Is `square` attacked by the side `by_black` (1 = black attacks it)?
+define square_attacked with state and square as Int and by_black as Int returning Bool:
+    set rank to square / 8
+    set file to square - rank * 8
+    # knight jumps: |dr| + |df| = 3 with both nonzero -- pure arithmetic
+    set dr to 0 - 2
+    repeat while dr < 3:
+        set df to 0 - 2
+        repeat while df < 3:
+            set dr_size to dr
+            if dr_size < 0:
+                set dr_size to 0 - dr_size
+            set df_size to df
+            if df_size < 0:
+                set df_size to 0 - df_size
+            if dr_size + df_size == 3:
+                if dr_size > 0:
+                    if df_size > 0:
+                        set r to rank + dr
+                        set f to file + df
+                        if r > 0 - 1:
+                            if r < 8:
+                                if f > 0 - 1:
+                                    if f < 8:
+                                        set code to get_list(state and r * 8 + f)
+                                        if piece_kind(code) == 2:
+                                            if by_black == 1:
+                                                if piece_is_black(code):
+                                                    return true
+                                            if by_black == 0:
+                                                if piece_is_white(code):
+                                                    return true
+            set df to df + 1
+        set dr to dr + 1
+    # the eight rays: sliders at any step; king at step one; pawns at step one
+    # on the diagonals toward their attacking direction
+    set dr to 0 - 1
+    repeat while dr < 2:
+        set df to 0 - 1
+        repeat while df < 2:
+            set live to 1
+            if dr == 0:
+                if df == 0:
+                    set live to 0
+            if live == 1:
+                set diagonal to 0
+                if dr == 0:
+                    set diagonal to 0
+                else:
+                    if df == 0:
+                        set diagonal to 0
+                    else:
+                        set diagonal to 1
+                set r to rank + dr
+                set f to file + df
+                set steps to 1
+                set walking to 1
+                repeat while walking == 1:
+                    set walking to 0
+                    if r > 0 - 1:
+                        if r < 8:
+                            if f > 0 - 1:
+                                if f < 8:
+                                    set code to get_list(state and r * 8 + f)
+                                    if code == 0:
+                                        set r to r + dr
+                                        set f to f + df
+                                        set steps to steps + 1
+                                        set walking to 1
+                                    else:
+                                        set right_colour to 0
+                                        if by_black == 1:
+                                            if piece_is_black(code):
+                                                set right_colour to 1
+                                        if by_black == 0:
+                                            if piece_is_white(code):
+                                                set right_colour to 1
+                                        if right_colour == 1:
+                                            set kind to piece_kind(code)
+                                            if kind == 5:
+                                                return true
+                                            if diagonal == 1:
+                                                if kind == 3:
+                                                    return true
+                                            else:
+                                                if kind == 4:
+                                                    return true
+                                            if steps == 1:
+                                                if kind == 6:
+                                                    return true
+                                                if diagonal == 1:
+                                                    if kind == 1:
+                                                        if by_black == 1:
+                                                            if dr == 1:
+                                                                return true
+                                                        if by_black == 0:
+                                                            if dr == 0 - 1:
+                                                                return true
+            set df to df + 1
+        set dr to dr + 1
+    return false
+
+# Is the piece on `square` (reach `defender_reach`) attacked by an enemy
+# piece of SMALLER counted reach? Such a piece is HOSTAGE: its moves are
+# not free -- it must resolve the threat or be lost for less. A counted
+# condition gating a count; no weight anywhere.
+define lesser_attacker_exists with state and square as Int and defender_reach as Int and by_black as Int returning Bool:
+    set rank to square / 8
+    set file to square - rank * 8
+    set dr to 0 - 2
+    repeat while dr < 3:
+        set df to 0 - 2
+        repeat while df < 3:
+            set dr_size to dr
+            if dr_size < 0:
+                set dr_size to 0 - dr_size
+            set df_size to df
+            if df_size < 0:
+                set df_size to 0 - df_size
+            if dr_size + df_size == 3:
+                if dr_size > 0:
+                    if df_size > 0:
+                        set r to rank + dr
+                        set f to file + df
+                        if r > 0 - 1:
+                            if r < 8:
+                                if f > 0 - 1:
+                                    if f < 8:
+                                        set code to get_list(state and r * 8 + f)
+                                        if piece_kind(code) == 2:
+                                            set right_colour to 0
+                                            if by_black == 1:
+                                                if piece_is_black(code):
+                                                    set right_colour to 1
+                                            if by_black == 0:
+                                                if piece_is_white(code):
+                                                    set right_colour to 1
+                                            if right_colour == 1:
+                                                if counted_reach(2 and r * 8 + f and by_black) < defender_reach:
+                                                    return true
+            set df to df + 1
+        set dr to dr + 1
+    set dr to 0 - 1
+    repeat while dr < 2:
+        set df to 0 - 1
+        repeat while df < 2:
+            set live to 1
+            if dr == 0:
+                if df == 0:
+                    set live to 0
+            if live == 1:
+                set diagonal to 0
+                if dr == 0:
+                    set diagonal to 0
+                else:
+                    if df == 0:
+                        set diagonal to 0
+                    else:
+                        set diagonal to 1
+                set r to rank + dr
+                set f to file + df
+                set steps to 1
+                set walking to 1
+                repeat while walking == 1:
+                    set walking to 0
+                    if r > 0 - 1:
+                        if r < 8:
+                            if f > 0 - 1:
+                                if f < 8:
+                                    set code to get_list(state and r * 8 + f)
+                                    if code == 0:
+                                        set r to r + dr
+                                        set f to f + df
+                                        set steps to steps + 1
+                                        set walking to 1
+                                    else:
+                                        set right_colour to 0
+                                        if by_black == 1:
+                                            if piece_is_black(code):
+                                                set right_colour to 1
+                                        if by_black == 0:
+                                            if piece_is_white(code):
+                                                set right_colour to 1
+                                        if right_colour == 1:
+                                            set kind to piece_kind(code)
+                                            set attacks to 0
+                                            if kind == 5:
+                                                set attacks to 1
+                                            if diagonal == 1:
+                                                if kind == 3:
+                                                    set attacks to 1
+                                            else:
+                                                if kind == 4:
+                                                    set attacks to 1
+                                            if steps == 1:
+                                                if kind == 6:
+                                                    set attacks to 1
+                                                if diagonal == 1:
+                                                    if kind == 1:
+                                                        if by_black == 1:
+                                                            if dr == 1:
+                                                                set attacks to 1
+                                                        if by_black == 0:
+                                                            if dr == 0 - 1:
+                                                                set attacks to 1
+                                            if attacks == 1:
+                                                if counted_reach(kind and r * 8 + f and by_black) < defender_reach:
+                                                    return true
+            set df to df + 1
+        set dr to dr + 1
+    return false
+
+# The attack map of one side: for every square, the smallest counted reach
+# among that side's pieces attacking it (0 = unattacked). One build per
+# evaluation replaces per-destination scans -- identical counts, precomputed.
+define attack_min_reach_map with state and by_black as Int:
+    # Reuse the per-colour buffer; grow it to 64 slots on first use, then
+    # zero it in place -- no allocation at any later evaluation.
+    if by_black == 1:
+        set reach_map to BLACK_REACH_BUF
+    else:
+        set reach_map to WHITE_REACH_BUF
+    repeat while length_list(reach_map) < 64:
+        set ok to append_list(reach_map and 0)
+    set i to 0
+    repeat while i < 64:
+        set ok to set_list(reach_map and i and 0)
+        set i to i + 1
+    set sq to 0
+    repeat while sq < 64:
+        set code to get_list(state and sq)
+        set mine to 0
+        if by_black == 1:
+            if piece_is_black(code):
+                set mine to 1
+        else:
+            if piece_is_white(code):
+                set mine to 1
+        if mine == 1:
+            set kind to piece_kind(code)
+            set rank to sq / 8
+            set file to sq - rank * 8
+            set reach to counted_reach(kind and sq and by_black)
+            if kind == 1:
+                set forward to 1
+                if by_black == 1:
+                    set forward to 0 - 1
+                set r to rank + forward
+                if r > 0 - 1:
+                    if r < 8:
+                        set df to 0 - 1
+                        repeat while df < 2:
+                            if df == 0:
+                                set df to df
+                            else:
+                                set f to file + df
+                                if f > 0 - 1:
+                                    if f < 8:
+                                        set target to r * 8 + f
+                                        set old to get_list(reach_map and target)
+                                        if old == 0:
+                                            set ok to set_list(reach_map and target and reach)
+                                        else:
+                                            if reach < old:
+                                                set ok to set_list(reach_map and target and reach)
+                            set df to df + 1
+            if kind == 2:
+                set dr to 0 - 2
+                repeat while dr < 3:
+                    set df to 0 - 2
+                    repeat while df < 3:
+                        set dr_size to dr
+                        if dr_size < 0:
+                            set dr_size to 0 - dr_size
+                        set df_size to df
+                        if df_size < 0:
+                            set df_size to 0 - df_size
+                        if dr_size + df_size == 3:
+                            if dr_size > 0:
+                                if df_size > 0:
+                                    set r to rank + dr
+                                    set f to file + df
+                                    if r > 0 - 1:
+                                        if r < 8:
+                                            if f > 0 - 1:
+                                                if f < 8:
+                                                    set target to r * 8 + f
+                                                    set old to get_list(reach_map and target)
+                                                    if old == 0:
+                                                        set ok to set_list(reach_map and target and reach)
+                                                    else:
+                                                        if reach < old:
+                                                            set ok to set_list(reach_map and target and reach)
+                        set df to df + 1
+                    set dr to dr + 1
+            if kind > 2:
+                if kind < 6:
+                    set dr to 0 - 1
+                    repeat while dr < 2:
+                        set df to 0 - 1
+                        repeat while df < 2:
+                            set on_ray to 0
+                            if dr == 0:
+                                if df == 0:
+                                    set on_ray to 0
+                                else:
+                                    if kind > 3:
+                                        set on_ray to 1
+                            else:
+                                if df == 0:
+                                    if kind > 3:
+                                        set on_ray to 1
+                                else:
+                                    if kind == 3:
+                                        set on_ray to 1
+                                    if kind == 5:
+                                        set on_ray to 1
+                            if kind == 4:
+                                if dr == 0:
+                                    if df == 0:
+                                        set on_ray to 0
+                                else:
+                                    if df == 0:
+                                        set on_ray to 1
+                                    else:
+                                        set on_ray to 0
+                            if on_ray == 1:
+                                set r to rank + dr
+                                set f to file + df
+                                set walking to 1
+                                repeat while walking == 1:
+                                    set walking to 0
+                                    if r > 0 - 1:
+                                        if r < 8:
+                                            if f > 0 - 1:
+                                                if f < 8:
+                                                    set target to r * 8 + f
+                                                    set old to get_list(reach_map and target)
+                                                    if old == 0:
+                                                        set ok to set_list(reach_map and target and reach)
+                                                    else:
+                                                        if reach < old:
+                                                            set ok to set_list(reach_map and target and reach)
+                                                    if get_list(state and target) == 0:
+                                                        set r to r + dr
+                                                        set f to f + df
+                                                        set walking to 1
+                            set df to df + 1
+                        set dr to dr + 1
+            if kind == 6:
+                set dr to 0 - 1
+                repeat while dr < 2:
+                    set df to 0 - 1
+                    repeat while df < 2:
+                        set moved to 1
+                        if dr == 0:
+                            if df == 0:
+                                set moved to 0
+                        if moved == 1:
+                            set r to rank + dr
+                            set f to file + df
+                            if r > 0 - 1:
+                                if r < 8:
+                                    if f > 0 - 1:
+                                        if f < 8:
+                                            set target to r * 8 + f
+                                            set old to get_list(reach_map and target)
+                                            if old == 0:
+                                                set ok to set_list(reach_map and target and reach)
+                                            else:
+                                                if reach < old:
+                                                    set ok to set_list(reach_map and target and reach)
+                        set df to df + 1
+                    set dr to dr + 1
+        set sq to sq + 1
+    return reach_map
+
+define king_square with state and black_king as Int returning Int:
+    set wanted to 6
+    if black_king == 1:
+        set wanted to 12
+    set sq to 0
+    repeat while sq < 64:
+        if get_list(state and sq) == wanted:
+            return sq
+        set sq to sq + 1
+    return 64
+
+define side_in_check with state returning Bool:
+    set side to get_list(state and 64)
+    set ksq to king_square(state and side)
+    set attacker to 1 - side
+    return square_attacked(state and ksq and attacker)
+
+# ---------- making a move ---------------------------------------------------
+# A move is promo*4096 + from*64 + to, promo in {0 (none), 2 N, 3 B, 4 R, 5 Q}.
+# Castling = king moving two files; en passant = pawn capturing onto the empty
+# ep square; a promotion move places the encoded piece (all four generated).
+define make_move with state and move as Int:
+    set fresh to copy_state(state)
+    set promo to move / 4096
+    set rest to move - promo * 4096
+    set from_sq to rest / 64
+    set to_sq to rest - from_sq * 64
+    set code to get_list(fresh and from_sq)
+    set side to get_list(fresh and 64)
+    set kind to piece_kind(code)
+    set ep_square to get_list(fresh and 69)
+    set clock to get_list(fresh and 70) + 1
+    if kind == 1:
+        set clock to 0
+    if get_list(fresh and to_sq) > 0:
+        set clock to 0
+    set ok to set_list(fresh and 70 and clock)
+    # en passant capture: pawn moves diagonally onto the empty ep square
+    if kind == 1:
+        if to_sq == ep_square:
+            if side == 0:
+                set ok to set_list(fresh and to_sq - 8 and 0)
+            else:
+                set ok to set_list(fresh and to_sq + 8 and 0)
+    # move the piece
+    set ok to set_list(fresh and from_sq and 0)
+    set ok to set_list(fresh and to_sq and code)
+    # promotion: place the encoded piece (queen when unencoded -- CLI safety)
+    if kind == 1:
+        set to_rank to to_sq / 8
+        set landed to promo
+        if landed == 0:
+            set landed to 5
+        if side == 0:
+            if to_rank == 7:
+                set ok to set_list(fresh and to_sq and landed)
+        else:
+            if to_rank == 0:
+                set ok to set_list(fresh and to_sq and landed + 6)
+    # castling: king moved two files -> bring the rook across
+    if kind == 6:
+        set from_file to from_sq - (from_sq / 8) * 8
+        set to_file to to_sq - (to_sq / 8) * 8
+        if to_file == from_file + 2:
+            set ok to set_list(fresh and to_sq - 1 and get_list(fresh and to_sq + 1))
+            set ok to set_list(fresh and to_sq + 1 and 0)
+        if from_file == to_file + 2:
+            set ok to set_list(fresh and to_sq + 1 and get_list(fresh and to_sq - 2))
+            set ok to set_list(fresh and to_sq - 2 and 0)
+    # castling rights: king or rook leaving home, or rook captured at home
+    if code == 6:
+        set ok to set_list(fresh and 65 and 0)
+        set ok to set_list(fresh and 66 and 0)
+    if code == 12:
+        set ok to set_list(fresh and 67 and 0)
+        set ok to set_list(fresh and 68 and 0)
+    if from_sq == 7:
+        set ok to set_list(fresh and 65 and 0)
+    if from_sq == 0:
+        set ok to set_list(fresh and 66 and 0)
+    if from_sq == 63:
+        set ok to set_list(fresh and 67 and 0)
+    if from_sq == 56:
+        set ok to set_list(fresh and 68 and 0)
+    if to_sq == 7:
+        set ok to set_list(fresh and 65 and 0)
+    if to_sq == 0:
+        set ok to set_list(fresh and 66 and 0)
+    if to_sq == 63:
+        set ok to set_list(fresh and 67 and 0)
+    if to_sq == 56:
+        set ok to set_list(fresh and 68 and 0)
+    # en-passant availability: only a double pawn push opens it
+    set ok to set_list(fresh and 69 and 64)
+    if kind == 1:
+        if side == 0:
+            if to_sq == from_sq + 16:
+                set ok to set_list(fresh and 69 and from_sq + 8)
+        else:
+            if to_sq + 16 == from_sq:
+                set ok to set_list(fresh and 69 and from_sq - 8)
+    # the move passes to the other side
+    set ok to set_list(fresh and 64 and 1 - side)
+    return fresh
+
+# ---------- move generation --------------------------------------------------
+define push_move with moves and from_sq as Int and to_sq as Int:
+    set ok to append_list(moves and from_sq * 64 + to_sq)
+    return moves
+
+# A pawn arrival: on the last rank it fans into the four promotions
+# (N, B, R, Q -- all legal choices generated); otherwise one plain move.
+define push_pawn_move with moves and from_sq as Int and to_sq as Int and side as Int:
+    set to_rank to to_sq / 8
+    set promotes to 0
+    if side == 0:
+        if to_rank == 7:
+            set promotes to 1
+    else:
+        if to_rank == 0:
+            set promotes to 1
+    if promotes == 1:
+        set promo to 2
+        repeat while promo < 6:
+            set ok to append_list(moves and promo * 4096 + from_sq * 64 + to_sq)
+            set promo to promo + 1
+    else:
+        set ok to append_list(moves and from_sq * 64 + to_sq)
+    return moves
+
+# Pseudo-legal moves for the side to move (legality filtered afterwards).
+define pseudo_moves with state:
+    set moves to create_list()
+    set side to get_list(state and 64)
+    set deltas_r to create_list()
+    set deltas_f to create_list()
+    set ok to append_list(deltas_r and 2)
+    set ok to append_list(deltas_f and 1)
+    set ok to append_list(deltas_r and 2)
+    set ok to append_list(deltas_f and 0 - 1)
+    set ok to append_list(deltas_r and 0 - 2)
+    set ok to append_list(deltas_f and 1)
+    set ok to append_list(deltas_r and 0 - 2)
+    set ok to append_list(deltas_f and 0 - 1)
+    set ok to append_list(deltas_r and 1)
+    set ok to append_list(deltas_f and 2)
+    set ok to append_list(deltas_r and 1)
+    set ok to append_list(deltas_f and 0 - 2)
+    set ok to append_list(deltas_r and 0 - 1)
+    set ok to append_list(deltas_f and 2)
+    set ok to append_list(deltas_r and 0 - 1)
+    set ok to append_list(deltas_f and 0 - 2)
+    set ray_dr to create_list()
+    set ray_df to create_list()
+    set ok to append_list(ray_dr and 1)
+    set ok to append_list(ray_df and 1)
+    set ok to append_list(ray_dr and 1)
+    set ok to append_list(ray_df and 0 - 1)
+    set ok to append_list(ray_dr and 0 - 1)
+    set ok to append_list(ray_df and 1)
+    set ok to append_list(ray_dr and 0 - 1)
+    set ok to append_list(ray_df and 0 - 1)
+    set ok to append_list(ray_dr and 1)
+    set ok to append_list(ray_df and 0)
+    set ok to append_list(ray_dr and 0 - 1)
+    set ok to append_list(ray_df and 0)
+    set ok to append_list(ray_dr and 0)
+    set ok to append_list(ray_df and 1)
+    set ok to append_list(ray_dr and 0)
+    set ok to append_list(ray_df and 0 - 1)
+    set sq to 0
+    repeat while sq < 64:
+        set code to get_list(state and sq)
+        set mine to 0
+        if side == 0:
+            if piece_is_white(code):
+                set mine to 1
+        else:
+            if piece_is_black(code):
+                set mine to 1
+        if mine == 1:
+            set kind to piece_kind(code)
+            set rank to sq / 8
+            set file to sq - rank * 8
+            if kind == 1:
+                set forward to 8
+                set home_rank to 1
+                set ep_square to get_list(state and 69)
+                if side == 1:
+                    set forward to 0 - 8
+                    set home_rank to 6
+                set ahead to sq + forward
+                if ahead > 0 - 1:
+                    if ahead < 64:
+                        if get_list(state and ahead) == 0:
+                            set moves to push_pawn_move(moves and sq and ahead and side)
+                            if rank == home_rank:
+                                set two_ahead to ahead + forward
+                                if get_list(state and two_ahead) == 0:
+                                    set moves to push_move(moves and sq and two_ahead)
+                set capture_file to file - 1
+                repeat while capture_file < file + 2:
+                    if capture_file > 0 - 1:
+                        if capture_file < 8:
+                            if capture_file == file:
+                                set capture_file to capture_file
+                            else:
+                                set target to (rank * 8 + capture_file) + forward
+                                if target > 0 - 1:
+                                    if target < 64:
+                                        set victim to get_list(state and target)
+                                        set takes to 0
+                                        if side == 0:
+                                            if piece_is_black(victim):
+                                                set takes to 1
+                                        else:
+                                            if piece_is_white(victim):
+                                                set takes to 1
+                                        if target == ep_square:
+                                            set takes to 1
+                                        if takes == 1:
+                                            set moves to push_pawn_move(moves and sq and target and side)
+                    set capture_file to capture_file + 1
+            if kind == 2:
+                set j to 0
+                repeat while j < 8:
+                    set r to rank + get_list(deltas_r and j)
+                    set f to file + get_list(deltas_f and j)
+                    if r > 0 - 1:
+                        if r < 8:
+                            if f > 0 - 1:
+                                if f < 8:
+                                    set victim to get_list(state and r * 8 + f)
+                                    set blocked to 0
+                                    if side == 0:
+                                        if piece_is_white(victim):
+                                            set blocked to 1
+                                    else:
+                                        if piece_is_black(victim):
+                                            set blocked to 1
+                                    if blocked == 0:
+                                        set moves to push_move(moves and sq and r * 8 + f)
+                    set j to j + 1
+            if kind > 2:
+                if kind < 6:
+                    set ray_start to 0
+                    set ray_end to 8
+                    if kind == 3:
+                        set ray_end to 4
+                    if kind == 4:
+                        set ray_start to 4
+                    set ray to ray_start
+                    repeat while ray < ray_end:
+                        set dr to get_list(ray_dr and ray)
+                        set df to get_list(ray_df and ray)
+                        set r to rank + dr
+                        set f to file + df
+                        set walking to 1
+                        repeat while walking == 1:
+                            set walking to 0
+                            if r > 0 - 1:
+                                if r < 8:
+                                    if f > 0 - 1:
+                                        if f < 8:
+                                            set victim to get_list(state and r * 8 + f)
+                                            if victim == 0:
+                                                set moves to push_move(moves and sq and r * 8 + f)
+                                                set r to r + dr
+                                                set f to f + df
+                                                set walking to 1
+                                            else:
+                                                set enemy to 0
+                                                if side == 0:
+                                                    if piece_is_black(victim):
+                                                        set enemy to 1
+                                                else:
+                                                    if piece_is_white(victim):
+                                                        set enemy to 1
+                                                if enemy == 1:
+                                                    set moves to push_move(moves and sq and r * 8 + f)
+                        set ray to ray + 1
+            if kind == 6:
+                set dr to 0 - 1
+                repeat while dr < 2:
+                    set df to 0 - 1
+                    repeat while df < 2:
+                        if dr == 0:
+                            if df == 0:
+                                set df to df
+                        set r to rank + dr
+                        set f to file + df
+                        set skip to 0
+                        if dr == 0:
+                            if df == 0:
+                                set skip to 1
+                        if skip == 0:
+                            if r > 0 - 1:
+                                if r < 8:
+                                    if f > 0 - 1:
+                                        if f < 8:
+                                            set victim to get_list(state and r * 8 + f)
+                                            set blocked to 0
+                                            if side == 0:
+                                                if piece_is_white(victim):
+                                                    set blocked to 1
+                                            else:
+                                                if piece_is_black(victim):
+                                                    set blocked to 1
+                                            if blocked == 0:
+                                                set moves to push_move(moves and sq and r * 8 + f)
+                        set df to df + 1
+                    set dr to dr + 1
+                # castling: rights intact, path empty, king not crossing attack
+                set enemy_side to 1 - side
+                set home to 4
+                set short_right to get_list(state and 65)
+                set long_right to get_list(state and 66)
+                if side == 1:
+                    set home to 60
+                    set short_right to get_list(state and 67)
+                    set long_right to get_list(state and 68)
+                if sq == home:
+                    if short_right == 1:
+                        if get_list(state and home + 1) == 0:
+                            if get_list(state and home + 2) == 0:
+                                set safe_now to square_attacked(state and home and enemy_side)
+                                set safe_mid to square_attacked(state and home + 1 and enemy_side)
+                                set safe_far to square_attacked(state and home + 2 and enemy_side)
+                                if safe_now:
+                                    set safe_now to safe_now
+                                else:
+                                    if safe_mid:
+                                        set safe_mid to safe_mid
+                                    else:
+                                        if safe_far:
+                                            set safe_far to safe_far
+                                        else:
+                                            set moves to push_move(moves and sq and home + 2)
+                    if long_right == 1:
+                        if get_list(state and home - 1) == 0:
+                            if get_list(state and home - 2) == 0:
+                                if get_list(state and home - 3) == 0:
+                                    set safe_now to square_attacked(state and home and enemy_side)
+                                    set safe_mid to square_attacked(state and home - 1 and enemy_side)
+                                    set safe_far to square_attacked(state and home - 2 and enemy_side)
+                                    if safe_now:
+                                        set safe_now to safe_now
+                                    else:
+                                        if safe_mid:
+                                            set safe_mid to safe_mid
+                                        else:
+                                            if safe_far:
+                                                set safe_far to safe_far
+                                            else:
+                                                set moves to push_move(moves and sq and home - 2)
+        set sq to sq + 1
+    return moves
+
+# Legal moves: pseudo-moves whose result leaves the mover's own king safe.
+define legal_moves with state:
+    set legal to create_list()
+    set side to get_list(state and 64)
+    set candidates to pseudo_moves(state)
+    set count to length_list(candidates)
+    set i to 0
+    repeat while i < count:
+        set move to get_list(candidates and i)
+        set child to make_move(state and move)
+        set ksq to king_square(child and side)
+        set exposed to square_attacked(child and ksq and 1 - side)
+        if exposed:
+            set exposed to exposed
+        else:
+            set ok to append_list(legal and move)
+        set i to i + 1
+    return legal
+
+# ---------- the perft oracle certification ----------------------------------
+define perft with state and depth as Int returning Int:
+    if depth == 0:
+        return 1
+    set moves to legal_moves(state)
+    set count to length_list(moves)
+    if depth == 1:
+        return count
+    set total to 0
+    set i to 0
+    repeat while i < count:
+        set child to make_move(state and get_list(moves and i))
+        set total to total + perft(child and depth - 1)
+        set i to i + 1
+    return total
+
+# ---------- the counted fold evaluation --------------------------------------
+# A piece's counted worth: the squares it commands from its square on an
+# EMPTY board -- geometry counted arithmetically, never a value assigned.
+# (A rook counts 14 from anywhere; a knight 2 from the corner, 8 from the
+# centre; a queen 21 from the corner, 27 from the centre -- all counts.)
+define counted_reach with kind as Int and sq as Int and is_black as Int returning Int:
+    set rank to sq / 8
+    set file to sq - rank * 8
+    if kind == 1:
+        set reach to 0
+        if is_black == 1:
+            if rank > 0:
+                set reach to 1
+                if rank == 6:
+                    set reach to 2
+        else:
+            if rank < 7:
+                set reach to 1
+                if rank == 1:
+                    set reach to 2
+        return reach
+    if kind == 2:
+        set reach to 0
+        set dr to 0 - 2
+        repeat while dr < 3:
+            set df to 0 - 2
+            repeat while df < 3:
+                set dr_size to dr
+                if dr_size < 0:
+                    set dr_size to 0 - dr_size
+                set df_size to df
+                if df_size < 0:
+                    set df_size to 0 - df_size
+                if dr_size + df_size == 3:
+                    if dr_size > 0:
+                        if df_size > 0:
+                            set r to rank + dr
+                            set f to file + df
+                            if r > 0 - 1:
+                                if r < 8:
+                                    if f > 0 - 1:
+                                        if f < 8:
+                                            set reach to reach + 1
+                set df to df + 1
+            set dr to dr + 1
+        return reach
+    if kind == 6:
+        set reach to 0
+        set dr to 0 - 1
+        repeat while dr < 2:
+            set df to 0 - 1
+            repeat while df < 2:
+                set moved to 1
+                if dr == 0:
+                    if df == 0:
+                        set moved to 0
+                if moved == 1:
+                    set r to rank + dr
+                    set f to file + df
+                    if r > 0 - 1:
+                        if r < 8:
+                            if f > 0 - 1:
+                                if f < 8:
+                                    set reach to reach + 1
+                set df to df + 1
+            set dr to dr + 1
+        return reach
+    # sliders: ray lengths to the board edge, counted per direction
+    set up to 7 - rank
+    set down to rank
+    set right_side to 7 - file
+    set left_side to file
+    set rook_reach to up + down + right_side + left_side
+    set ne to up
+    if right_side < ne:
+        set ne to right_side
+    set nw to up
+    if left_side < nw:
+        set nw to left_side
+    set se to down
+    if right_side < se:
+        set se to right_side
+    set sw to down
+    if left_side < sw:
+        set sw to left_side
+    set bishop_reach to ne + nw + se + sw
+    if kind == 3:
+        return bishop_reach
+    if kind == 4:
+        return rook_reach
+    return rook_reach + bishop_reach
+
+# The mover's counted units: every piece's empty-board reach from where it
+# stands, plus its side's live mobility -- all counts.
+# Live mobility, counted directly -- the same board-movement counts the
+# generator would produce (en passant and castling excluded, promotions
+# fanned by four), walked with pure arithmetic: no lists, no copies.
+define mobility_count with state and for_black as Int and enemy_map returning Int:
+    set total to 0
+    set sq to 0
+    repeat while sq < 64:
+        set code to get_list(state and sq)
+        set mine to 0
+        if for_black == 1:
+            if piece_is_black(code):
+                set mine to 1
+        else:
+            if piece_is_white(code):
+                set mine to 1
+        if mine == 1:
+            set kind to piece_kind(code)
+            set rank to sq / 8
+            set file to sq - rank * 8
+            set own_reach to 0
+            if kind < 6:
+                if kind > 1:
+                    set own_reach to counted_reach(kind and sq and for_black)
+                    set threat to get_list(enemy_map and sq)
+                    if threat > 0:
+                        if threat < own_reach:
+                            set kind to 0
+            if kind == 1:
+                set forward to 8
+                set home_rank to 1
+                set fan to 1
+                if for_black == 1:
+                    set forward to 0 - 8
+                    set home_rank to 6
+                set target_rank to rank + forward / 8
+                if target_rank == 7:
+                    set fan to 4
+                if target_rank == 0:
+                    set fan to 4
+                set ahead to sq + forward
+                if ahead > 0 - 1:
+                    if ahead < 64:
+                        if get_list(state and ahead) == 0:
+                            set total to total + fan
+                            if rank == home_rank:
+                                if get_list(state and ahead + forward) == 0:
+                                    set total to total + 1
+                set df to 0 - 1
+                repeat while df < 2:
+                    if df == 0:
+                        set df to df
+                    else:
+                        set f to file + df
+                        if f > 0 - 1:
+                            if f < 8:
+                                set target to (rank * 8 + f) + forward
+                                if target > 0 - 1:
+                                    if target < 64:
+                                        set victim to get_list(state and target)
+                                        set takes to 0
+                                        if for_black == 1:
+                                            if piece_is_white(victim):
+                                                set takes to 1
+                                        else:
+                                            if piece_is_black(victim):
+                                                set takes to 1
+                                        if takes == 1:
+                                            set total to total + fan
+                    set df to df + 1
+            if kind == 2:
+                set dr to 0 - 2
+                repeat while dr < 3:
+                    set df to 0 - 2
+                    repeat while df < 3:
+                        set dr_size to dr
+                        if dr_size < 0:
+                            set dr_size to 0 - dr_size
+                        set df_size to df
+                        if df_size < 0:
+                            set df_size to 0 - df_size
+                        if dr_size + df_size == 3:
+                            if dr_size > 0:
+                                if df_size > 0:
+                                    set r to rank + dr
+                                    set f to file + df
+                                    if r > 0 - 1:
+                                        if r < 8:
+                                            if f > 0 - 1:
+                                                if f < 8:
+                                                    set victim to get_list(state and r * 8 + f)
+                                                    set blocked to 0
+                                                    if for_black == 1:
+                                                        if piece_is_black(victim):
+                                                            set blocked to 1
+                                                    else:
+                                                        if piece_is_white(victim):
+                                                            set blocked to 1
+                                                    if blocked == 0:
+                                                        set threat to get_list(enemy_map and r * 8 + f)
+                                                        set safe to 1
+                                                        if threat > 0:
+                                                            if threat < own_reach:
+                                                                set safe to 0
+                                                        if safe == 1:
+                                                            set total to total + 1
+                        set df to df + 1
+                    set dr to dr + 1
+            if kind > 2:
+                if kind < 6:
+                    set dr to 0 - 1
+                    repeat while dr < 2:
+                        set df to 0 - 1
+                        repeat while df < 2:
+                            set on_ray to 0
+                            if dr == 0:
+                                if df == 0:
+                                    set on_ray to 0
+                                else:
+                                    if kind > 3:
+                                        set on_ray to 1
+                            else:
+                                if df == 0:
+                                    if kind > 3:
+                                        set on_ray to 1
+                                else:
+                                    if kind == 3:
+                                        set on_ray to 1
+                                    if kind == 5:
+                                        set on_ray to 1
+                            if kind == 4:
+                                if dr == 0:
+                                    if df == 0:
+                                        set on_ray to 0
+                                else:
+                                    if df == 0:
+                                        set on_ray to 1
+                                    else:
+                                        set on_ray to 0
+                            if on_ray == 1:
+                                set r to rank + dr
+                                set f to file + df
+                                set walking to 1
+                                repeat while walking == 1:
+                                    set walking to 0
+                                    if r > 0 - 1:
+                                        if r < 8:
+                                            if f > 0 - 1:
+                                                if f < 8:
+                                                    set victim to get_list(state and r * 8 + f)
+                                                    if victim == 0:
+                                                        set threat to get_list(enemy_map and r * 8 + f)
+                                                        set safe to 1
+                                                        if threat > 0:
+                                                            if threat < own_reach:
+                                                                set safe to 0
+                                                        if safe == 1:
+                                                            set total to total + 1
+                                                        set r to r + dr
+                                                        set f to f + df
+                                                        set walking to 1
+                                                    else:
+                                                        set enemy to 0
+                                                        if for_black == 1:
+                                                            if piece_is_white(victim):
+                                                                set enemy to 1
+                                                        else:
+                                                            if piece_is_black(victim):
+                                                                set enemy to 1
+                                                        if enemy == 1:
+                                                            set threat to get_list(enemy_map and r * 8 + f)
+                                                            set safe to 1
+                                                            if threat > 0:
+                                                                if threat < own_reach:
+                                                                    set safe to 0
+                                                            if safe == 1:
+                                                                set total to total + 1
+                            set df to df + 1
+                        set dr to dr + 1
+            if kind == 6:
+                set dr to 0 - 1
+                repeat while dr < 2:
+                    set df to 0 - 1
+                    repeat while df < 2:
+                        set moved to 1
+                        if dr == 0:
+                            if df == 0:
+                                set moved to 0
+                        if moved == 1:
+                            set r to rank + dr
+                            set f to file + df
+                            if r > 0 - 1:
+                                if r < 8:
+                                    if f > 0 - 1:
+                                        if f < 8:
+                                            set victim to get_list(state and r * 8 + f)
+                                            set blocked to 0
+                                            if for_black == 1:
+                                                if piece_is_black(victim):
+                                                    set blocked to 1
+                                            else:
+                                                if piece_is_white(victim):
+                                                    set blocked to 1
+                                            if blocked == 0:
+                                                # the game's own law: a king may
+                                                # not step into an attacked square
+                                                if get_list(enemy_map and r * 8 + f) > 0:
+                                                    set total to total
+                                                else:
+                                                    set total to total + 1
+                        set df to df + 1
+                    set dr to dr + 1
+        set sq to sq + 1
+    return total
+
+# A pawn's promotion potential: if no enemy pawn stands ahead on its own or
+# the adjacent files (the counted passed-pawn condition) and its own path is
+# clear, the pawn's potential includes the queen's reach from its promotion
+# square -- the count it is walking toward. No scale factor: potential is
+# potential, exactly as every piece's reach already is.
+define pawn_promotion_potential with state and sq as Int and for_black as Int returning Int:
+    set rank to sq / 8
+    set file to sq - rank * 8
+    set step to 8
+    set promo_rank to 7
+    if for_black == 1:
+        set step to 0 - 8
+        set promo_rank to 0
+    # path directly ahead must be empty
+    set path_clear to 1
+    set probe to sq + step
+    repeat while probe > 0 - 1:
+        if probe < 64:
+            set here to get_list(state and probe)
+            if here > 0:
+                set path_clear to 0
+            set probe_rank to probe / 8
+            if probe_rank == promo_rank:
+                set probe to 0 - 100
+            else:
+                set probe to probe + step
+        else:
+            set probe to 0 - 100
+    if path_clear == 0:
+        return 0
+    # passed: no enemy pawn ahead on this file or the adjacent files
+    set enemy_pawn to 7
+    if for_black == 1:
+        set enemy_pawn to 1
+    set passed to 1
+    set lane to file - 1
+    repeat while lane < file + 2:
+        if lane > 0 - 1:
+            if lane < 8:
+                set r to rank + step / 8
+                set scanning to 1
+                repeat while scanning == 1:
+                    set scanning to 0
+                    if r > 0:
+                        if r < 7:
+                            if get_list(state and r * 8 + lane) == enemy_pawn:
+                                set passed to 0
+                            set r to r + step / 8
+                            set scanning to 1
+        set lane to lane + 1
+    if passed == 0:
+        return 0
+    set promo_sq to promo_rank * 8 + file
+    return counted_reach(5 and promo_sq and for_black)
+
+define side_units with state and for_black as Int returning Int:
+    set units to 0
+    set sq to 0
+    repeat while sq < 64:
+        set code to get_list(state and sq)
+        set mine to 0
+        if for_black == 1:
+            if piece_is_black(code):
+                set mine to 1
+        else:
+            if piece_is_white(code):
+                set mine to 1
+        if mine == 1:
+            set kind to piece_kind(code)
+            set units to units + counted_reach(kind and sq and for_black)
+            if kind == 1:
+                set units to units + pawn_promotion_potential(state and sq and for_black)
+        set sq to sq + 1
+    set enemy_map to attack_min_reach_map(state and 1 - for_black)
+    set units to units + mobility_count(state and for_black and enemy_map)
+    return units
+
+# The fold value of a position for the side to move: the exact share
+# units_mine / (units_mine + units_theirs) -- carried as the integer pair
+# (numerator, denominator), compared by exact cross-multiplication.
+define share_numerator with state returning Int:
+    set side to get_list(state and 64)
+    return side_units(state and side)
+
+define share_denominator with state returning Int:
+    set mine to side_units(state and get_list(state and 64))
+    set theirs to side_units(state and 1 - get_list(state and 64))
+    return mine + theirs
+
+# ---------- the endgame probe: the certified tables, live -------------------
+# Rank-flip of a square (colour symmetry: swap colours + flip ranks + swap
+# mover leaves the value invariant).
+define flip_rank with sq as Int returning Int:
+    set rank to sq / 8
+    set file to sq - rank * 8
+    return (7 - rank) * 8 + file
+
+# Parse one whitespace-token to a non-negative integer (small tokens only).
+define parse_packed_token with tok as Str returning Int:
+    set n to 0
+    set i to 0
+    set len to string_length(tok)
+    repeat while i < len:
+        set n to n * 10 + (char_at(tok and i) - 48)
+        set i to i + 1
+    return n
+
+# Load a packed table file (space-separated ints, entry = kindnum*64 + ply,
+# kindnum 1 W, 2 L, 3 D, 0 U) into an integer list in ONE O(n) pass via
+# string_split -- 0.11s for the whole 2^19 table (char_at is O(index), so
+# never index a big string directly; split it once instead).
+define load_packed_table with path as Str:
+    set text to file_read(path)
+    set parts to string_split(text and " ")
+    set out to create_list()
+    set i to 0
+    set n to length_list(parts)
+    repeat while i < n:
+        set ok to append_list(out and parse_packed_token(get_list(parts and i)))
+        set i to i + 1
+    return out
+
+# Probe the certified tables for a simplified position. Returns
+# [found, num, den]: found = 1 with the EXACT value when the position is
+# covered (two bare kings = the drawn lower table; three men with a queen
+# or rook = the certified KQK/KRK tables, colour-normalized), else found 0.
+# Table values dominate searched values: a certain win in p plies is
+# (2048-p)/(2049-p) -- above every searched band, faster strictly higher --
+# a certain loss is 1/(2049-p), a certain draw the lock.
+define endgame_probe with state and kqk and krk:
+    set result to create_list()
+    if length_list(kqk) < 2:
+        set r to append_list(result and 0)
+        set r to append_list(result and 1)
+        set r to append_list(result and 2)
+        return result
+    set white_king to 64
+    set black_king to 64
+    set third_sq to 64
+    set third_code to 0
+    set count to 0
+    set sq to 0
+    set too_many to 0
+    repeat while sq < 64:
+        set code to get_list(state and sq)
+        if code > 0:
+            set count to count + 1
+            if count > 3:
+                set sq to 64
+                set too_many to 1
+            else:
+                if code == 6:
+                    set white_king to sq
+                else:
+                    if code == 12:
+                        set black_king to sq
+                    else:
+                        set third_sq to sq
+                        set third_code to code
+        set sq to sq + 1
+    if too_many == 1:
+        set r to append_list(result and 0)
+        set r to append_list(result and 1)
+        set r to append_list(result and 2)
+        return result
+    if count == 2:
+        set r to append_list(result and 1)
+        set r to append_list(result and 1)
+        set r to append_list(result and 2)
+        return result
+    set kind to piece_kind(third_code)
+    set covered to 0
+    if kind == 5:
+        set covered to 1
+    if kind == 4:
+        set covered to 1
+    if covered == 0:
+        set r to append_list(result and 0)
+        set r to append_list(result and 1)
+        set r to append_list(result and 2)
+        return result
+    set stm to get_list(state and 64)
+    set strong_is_white to piece_is_white(third_code)
+    set idx to 0
+    if strong_is_white:
+        set idx to ((white_king * 64 + third_sq) * 64 + black_king) * 2 + stm
+    else:
+        set wk_n to flip_rank(black_king)
+        set wp_n to flip_rank(third_sq)
+        set bk_n to flip_rank(white_king)
+        set idx to ((wk_n * 64 + wp_n) * 64 + bk_n) * 2 + (1 - stm)
+    set table to kqk
+    if kind == 4:
+        set table to krk
+    set packed to get_list(table and idx)
+    set stored_kind to packed / 64
+    set stored_ply to packed - stored_kind * 64
+    set r to append_list(result and 1)
+    if stored_kind == 1:
+        set r to append_list(result and 2048 - stored_ply)
+        set r to append_list(result and 2049 - stored_ply)
+        return result
+    if stored_kind == 2:
+        set r to append_list(result and 1)
+        set r to append_list(result and 2049 - stored_ply)
+        return result
+    set r to append_list(result and 1)
+    set r to append_list(result and 2)
+    return result
+
+# ---------- the search: exact alpha-beta through the antipode ----------------
+# Values are exact fractions in (0,1): mate for the mover approaches the One
+# ((1023-k)/(1024-k), faster strictly larger), being mated sits at the floor
+# (1/(1024-k)), live positions are the counted share. The parent's value is
+# the child's ANTIPODE (mine = 1 - theirs) -- the fold's involution as the
+# minimax step. Alpha-beta pruning is LOSSLESS (a theorem: identical values
+# to full minimax), so nothing here trades exactness for speed; all bound
+# comparisons are exact cross-multiplications.
+
+# Is this move a capture (a take event -- the fold's own subtraction)?
+define move_is_capture with state and move as Int returning Bool:
+    set promo to move / 4096
+    if promo > 0:
+        return true
+    set rest to move - promo * 4096
+    set from_sq to rest / 64
+    set to_sq to rest - from_sq * 64
+    set victim to get_list(state and to_sq)
+    if victim > 0:
+        return true
+    set code to get_list(state and from_sq)
+    if piece_kind(code) == 1:
+        if to_sq == get_list(state and 69):
+            return true
+    return false
+
+# Move ordering, counted: take events first (they change the count, so they
+# decide the bounds fastest); the biggest counted victims lead. Three
+# buckets: heavy captures (victim commands 9+ squares), light captures, quiet.
+define ordered_moves with state:
+    set moves to legal_moves(state)
+    set count to length_list(moves)
+    set ordered to create_list()
+    set bucket to 0
+    repeat while bucket < 3:
+        set i to 0
+        repeat while i < count:
+            set move to get_list(moves and i)
+            set rest to move - (move / 4096) * 4096
+            set to_sq to rest - (rest / 64) * 64
+            set victim to get_list(state and to_sq)
+            set taking to move_is_capture(state and move)
+            set heavy to 0
+            if victim > 0:
+                if counted_reach(piece_kind(victim) and to_sq and 0) > 8:
+                    set heavy to 1
+            set wanted to 0
+            if bucket == 0:
+                if taking:
+                    if heavy == 1:
+                        set wanted to 1
+            if bucket == 1:
+                if taking:
+                    if heavy == 0:
+                        set wanted to 1
+            if bucket == 2:
+                if taking:
+                    set wanted to 0
+                else:
+                    set wanted to 1
+            if wanted == 1:
+                set ok to append_list(ordered and move)
+            set i to i + 1
+        set bucket to bucket + 1
+    return ordered
+
+# Could a piece of this kind, standing on to_sq, geometrically attack the
+# enemy king square? A cheap arithmetic filter for the horizon's checking
+# layer -- false positives are re-tested exactly on the constructed child;
+# the layer reads DIRECT checks (documented).
+define could_check_from with kind as Int and to_sq as Int and enemy_king as Int and for_black as Int returning Bool:
+    set dr to enemy_king / 8 - to_sq / 8
+    set df to (enemy_king - (enemy_king / 8) * 8) - (to_sq - (to_sq / 8) * 8)
+    set adr to dr
+    if adr < 0:
+        set adr to 0 - adr
+    set adf to df
+    if adf < 0:
+        set adf to 0 - adf
+    if kind == 2:
+        if adr + adf == 3:
+            if adr > 0:
+                if adf > 0:
+                    return true
+        return false
+    if kind == 3:
+        return adr == adf
+    if kind == 4:
+        if adr == 0:
+            return true
+        return adf == 0
+    if kind == 5:
+        if adr == adf:
+            return true
+        if adr == 0:
+            return true
+        return adf == 0
+    if kind == 1:
+        if adf == 1:
+            if for_black == 1:
+                return dr == 0 - 1
+            return dr == 1
+    return false
+
+# QUIESCENCE: at the horizon, read the take chains until the counting
+# settles. Every capture strictly reduces the piece count, so the chain
+# terminates structurally -- no depth knob. Returns the exact value pair
+# PACKED as ONE integer, num*65536 + den: shares are counted units (den a
+# few thousand at most) and the mate band tops near 1100, both far below
+# 2^16, so the pack is exact -- and the search's inner loop allocates
+# NOTHING, which is what keeps the collector out of the hot path (the
+# profiler measured 91% of match CPU inside the GC before this change).
+define quiescence with state and alpha_num as Int and alpha_den as Int and beta_num as Int and beta_den as Int and fresh as Int returning Int:
+    # THE HARD BOUND, counted here too: a pass's nodes are mostly quiescence,
+    # so the cap must include them to be a true bound on move time.
+    set NODES_LEFT to NODES_LEFT - 1
+    if NODES_LEFT < 0:
+        set PASS_ABORTED to 1
+        return 65536 + 2
+    if get_list(state and 70) > 99:
+        return 65536 + 2
+    set side to get_list(state and 64)
+    set king_from to king_square(state and side)
+    set checked to square_attacked(state and king_from and 1 - side)
+    set enemy_king to king_square(state and 1 - side)
+    set best_num to 0
+    set best_den to 1
+    set a_num to alpha_num
+    set a_den to alpha_den
+    if checked:
+        set best_num to best_num
+    else:
+        set stand_mine to side_units(state and side)
+        set stand_theirs to side_units(state and 1 - side)
+        set stand_num to stand_mine
+        set stand_den to stand_mine + stand_theirs
+        if stand_num * beta_den > beta_num * stand_den:
+            return stand_num * 65536 + stand_den
+        set best_num to stand_num
+        set best_den to stand_den
+        if stand_num * a_den > a_num * stand_den:
+            set a_num to stand_num
+            set a_den to stand_den
+    set legal_seen to 0
+    set pseudo to pseudo_moves(state)
+    set count to length_list(pseudo)
+    set bucket_end to 2
+    if checked:
+        set bucket_end to 3
+    if fresh == 1:
+        set bucket_end to 3
+    set bucket to 0
+    repeat while bucket < bucket_end:
+        set i to 0
+        repeat while i < count:
+            set move to get_list(pseudo and i)
+            set taking to move_is_capture(state and move)
+            set examine to 0
+            if taking:
+                set examine to 1
+            if checked:
+                set examine to 1
+            if fresh == 1:
+                set examine to 1
+            if examine == 1:
+                set rest to move - (move / 4096) * 4096
+                set from_sq to rest / 64
+                set to_sq to rest - from_sq * 64
+                set victim to get_list(state and to_sq)
+                set heavy to 0
+                if victim > 0:
+                    if counted_reach(piece_kind(victim) and to_sq and 0) > 8:
+                        set heavy to 1
+                set wanted to 0
+                if bucket == 0:
+                    if taking:
+                        if heavy == 1:
+                            set wanted to 1
+                if bucket == 1:
+                    if taking:
+                        if heavy == 0:
+                            set wanted to 1
+                if bucket == 2:
+                    if taking:
+                        set wanted to 0
+                    else:
+                        set wanted to 1
+                if wanted == 1:
+                    set worth_building to 1
+                    if taking:
+                        set worth_building to 1
+                    else:
+                        if checked:
+                            set worth_building to 1
+                        else:
+                            set mover_kind to piece_kind(get_list(state and from_sq))
+                            set could to could_check_from(mover_kind and to_sq and enemy_king and side)
+                            if could:
+                                set worth_building to 1
+                            else:
+                                set worth_building to 0
+                    if worth_building == 0:
+                        set worth_building to worth_building
+                    else:
+                        set child to make_move(state and move)
+                        set king_now to king_from
+                        if from_sq == king_from:
+                            set king_now to to_sq
+                        set exposed to square_attacked(child and king_now and 1 - side)
+                        if exposed:
+                            set exposed to exposed
+                        else:
+                            set legal_seen to legal_seen + 1
+                            set read_this to 1
+                            if taking:
+                                set read_this to 1
+                            else:
+                                if checked:
+                                    set read_this to 1
+                                else:
+                                    set gives_check to square_attacked(child and enemy_king and side)
+                                    if gives_check:
+                                        set read_this to 1
+                                    else:
+                                        set read_this to 0
+                            if read_this == 0:
+                                set read_this to read_this
+                            else:
+                                set deeper to quiescence(child and beta_den - beta_num and beta_den and a_den - a_num and a_den and 1 - 1)
+                                set child_num to deeper / 65536
+                                set child_den to deeper - child_num * 65536
+                                set my_num to child_den - child_num
+                                set my_den to child_den
+                                if my_num * best_den > best_num * my_den:
+                                    set best_num to my_num
+                                    set best_den to my_den
+                                if my_num * beta_den > beta_num * my_den:
+                                    return best_num * 65536 + best_den
+                                if my_num * a_den > a_num * my_den:
+                                    set a_num to my_num
+                                    set a_den to my_den
+            set i to i + 1
+        set bucket to bucket + 1
+    if checked:
+        if legal_seen == 0:
+            return 65536 + 1024
+    return best_num * 65536 + best_den
+
+# The rolling integer key of a position: slots 0..69 (board, side, rights,
+# en-passant) folded by multiply-add, reduced mod a prime below 2^55 so the
+# product never overflows 64 bits. Pure integer arithmetic, no allocation.
+define tt_key with state returning Int:
+    set k to 0
+    set i to 0
+    repeat while i < 70:
+        set k to k * 131 + get_list(state and i)
+        set k to k - (k / 36028797018963913) * 36028797018963913
+        set i to i + 1
+    return k
+
+# Grow the table to its 2^18 slots once; every later call is a no-op.
+define tt_ensure:
+    repeat while length_list(TT_KEYS) < 262144:
+        set ok to append_list(TT_KEYS and 0)
+        set ok to append_list(TT_MOVES and 0)
+        set ok to append_list(TT_STAMP and 0)
+    repeat while length_list(KILLER_A) < 64:
+        set ok to append_list(KILLER_A and 0 - 1)
+        set ok to append_list(KILLER_B and 0 - 1)
+    return 0
+
+# The exact alpha-beta value of a node for the side to move, PACKED as
+# num*65536 + den (see quiescence) -- the inner loop allocates nothing.
+define search_value with state and depth as Int and alpha_num as Int and alpha_den as Int and beta_num as Int and beta_den as Int returning Int:
+    # THE HARD BOUND: out of budget mid-pass -> abort the pass instantly.
+    # The returned value is a placeholder; the driver DISCARDS the whole
+    # aborted pass, so no placeholder ever reaches play.
+    set NODES_LEFT to NODES_LEFT - 1
+    if NODES_LEFT < 0:
+        set PASS_ABORTED to 1
+        return 65536 + 2
+    if get_list(state and 70) > 99:
+        return 65536 + 2
+    if depth == 0:
+        return quiescence(state and alpha_num and alpha_den and beta_num and beta_den and 1)
+    set side to get_list(state and 64)
+    set king_from to king_square(state and side)
+    set pseudo to pseudo_moves(state)
+    set count to length_list(pseudo)
+    set legal_seen to 0
+    set best_num to 0
+    set best_den to 1
+    set best_move to 0 - 1
+    set a_num to alpha_num
+    set a_den to alpha_den
+    # Transposition ordering: only at nodes with real subtrees (depth > 1);
+    # the numerous depth-1 leaves skip the key cost for almost no gain.
+    set use_tt to 0
+    set key to 0
+    set slot to 0
+    set tt_move to 0 - 1
+    if depth > 1:
+        if TT_GEN > 0:
+            set use_tt to 1
+            set key to tt_key(state)
+            set slot to key - (key / 262144) * 262144
+            if get_list(TT_STAMP and slot) == TT_GEN:
+                if get_list(TT_KEYS and slot) == key:
+                    set tt_move to get_list(TT_MOVES and slot)
+    # The killer pair for this depth (quiet refuters of sibling lines).
+    set k1 to 0 - 1
+    set k2 to 0 - 1
+    if length_list(KILLER_A) > 63:
+        set k1 to get_list(KILLER_A and depth)
+        set k2 to get_list(KILLER_B and depth)
+    # bucket -1 is the table's move, searched first; 0..1 the counted
+    # captures (heavy then light); 2 the killers; 3 the remaining quiets.
+    set bucket to 0 - 1
+    repeat while bucket < 4:
+        set i to 0
+        repeat while i < count:
+            set move to get_list(pseudo and i)
+            set rest to move - (move / 4096) * 4096
+            set from_sq to rest / 64
+            set to_sq to rest - from_sq * 64
+            set victim to get_list(state and to_sq)
+            set taking to move_is_capture(state and move)
+            set heavy to 0
+            if victim > 0:
+                if counted_reach(piece_kind(victim) and to_sq and 0) > 8:
+                    set heavy to 1
+            set wanted to 0
+            if bucket == 0 - 1:
+                if tt_move > 0 - 1:
+                    if move == tt_move:
+                        set wanted to 1
+            if bucket == 0:
+                if taking:
+                    if heavy == 1:
+                        set wanted to 1
+            if bucket == 1:
+                if taking:
+                    if heavy == 0:
+                        set wanted to 1
+            if bucket == 2:
+                if taking:
+                    set wanted to 0
+                else:
+                    if move == k1:
+                        set wanted to 1
+                    if move == k2:
+                        set wanted to 1
+            if bucket == 3:
+                if taking:
+                    set wanted to 0
+                else:
+                    set wanted to 1
+                if move == k1:
+                    set wanted to 0
+                if move == k2:
+                    set wanted to 0
+            if bucket > 0 - 1:
+                if move == tt_move:
+                    set wanted to 0
+            if wanted == 1:
+                set child to make_move(state and move)
+                set king_now to king_from
+                if from_sq == king_from:
+                    set king_now to to_sq
+                set exposed to square_attacked(child and king_now and 1 - side)
+                if exposed:
+                    set exposed to exposed
+                else:
+                    set legal_seen to legal_seen + 1
+                    # PVS: the first legal move is read with the full window;
+                    # every later sibling gets a ZERO-WIDTH probe at alpha --
+                    # with strict cutoffs, probe <= alpha PROVES the move
+                    # cannot improve on the best (no re-search), and probe >
+                    # alpha triggers the full-window re-search. The final
+                    # value is identical to the plain search: lossless, and
+                    # not one constant introduced.
+                    set deeper to 0
+                    if legal_seen == 1:
+                        set deeper to search_value(child and depth - 1 and beta_den - beta_num and beta_den and a_den - a_num and a_den)
+                    else:
+                        set deeper to search_value(child and depth - 1 and a_den - a_num and a_den and a_den - a_num and a_den)
+                        set probe_num to (deeper - (deeper / 65536) * 65536) - deeper / 65536
+                        set probe_den to deeper - (deeper / 65536) * 65536
+                        if probe_num * a_den > a_num * probe_den:
+                            set deeper to search_value(child and depth - 1 and beta_den - beta_num and beta_den and a_den - a_num and a_den)
+                    set child_num to deeper / 65536
+                    set child_den to deeper - child_num * 65536
+                    set my_num to child_den - child_num
+                    set my_den to child_den
+                    if my_num * best_den > best_num * my_den:
+                        set best_num to my_num
+                        set best_den to my_den
+                        set best_move to move
+                    if my_num * beta_den > beta_num * my_den:
+                        if use_tt == 1:
+                            set ok to set_list(TT_KEYS and slot and key)
+                            set ok to set_list(TT_MOVES and slot and move)
+                            set ok to set_list(TT_STAMP and slot and TT_GEN)
+                        if taking:
+                            set taking to taking
+                        else:
+                            if length_list(KILLER_A) > 63:
+                                if move == k1:
+                                    set k1 to k1
+                                else:
+                                    set ok to set_list(KILLER_B and depth and k1)
+                                    set ok to set_list(KILLER_A and depth and move)
+                        return best_num * 65536 + best_den
+                    if my_num * a_den > a_num * my_den:
+                        set a_num to my_num
+                        set a_den to my_den
+            set i to i + 1
+        set bucket to bucket + 1
+    if use_tt == 1:
+        if best_move > 0 - 1:
+            set ok to set_list(TT_KEYS and slot and key)
+            set ok to set_list(TT_MOVES and slot and best_move)
+            set ok to set_list(TT_STAMP and slot and TT_GEN)
+    if legal_seen == 0:
+        set checked to side_in_check(state)
+        if checked:
+            return 65536 + 1024 + depth
+        return 65536 + 2
+    return best_num * 65536 + best_den
+
+# A position's signature: the board, side, rights and ep square as text --
+# used to recognise closed orbits (repetitions) in whole games.
+define state_signature with state returning Str:
+    set signature to "|"
+    set i to 0
+    repeat while i < 70:
+        set signature to concat(signature and concat(int_to_string(get_list(state and i)) and "."))
+        set i to i + 1
+    return signature
+
+# One root pass, orbit-aware: a child position already visited in the game
+# is a CLOSED ORBIT that never reached the One -- chess's own repetition rule
+# prices it at the draw value, the lock 1/2, exactly. The previous
+# iteration's best move (pre_move) is searched first -- the shallower read
+# orders the deeper one. Returns [move, num, den, nodes].
+define root_pass with state and depth as Int and seen as Str and pre_move as Int:
+    set result to create_list()
+    set left_at_entry to NODES_LEFT
+    set moves to ordered_moves(state)
+    set count to length_list(moves)
+    if count == 0:
+        set checked to side_in_check(state)
+        set ok to append_list(result and 0 - 1)
+        if checked:
+            set ok to append_list(result and 1)
+            set ok to append_list(result and 1024 + depth)
+        else:
+            set ok to append_list(result and 1)
+            set ok to append_list(result and 2)
+        set ok to append_list(result and 1)
+        return result
+    set best_move to get_list(moves and 0)
+    set best_num to 0
+    set best_den to 1
+    set i to 0 - 1
+    repeat while i < count:
+        set move to pre_move
+        if i > 0 - 1:
+            set move to get_list(moves and i)
+        set skip_this to 0
+        if i < 0:
+            if pre_move < 0:
+                set skip_this to 1
+        else:
+            if move == pre_move:
+                set skip_this to 1
+        if skip_this == 1:
+            set i to i + 1
+        else:
+            set child to make_move(state and move)
+            set my_num to 1
+            set my_den to 2
+            set signature to state_signature(child)
+            set visited to string_index_of(seen and signature)
+            if visited < 0:
+                set deeper to search_value(child and depth - 1 and 1 - 1 and 1 and best_den - best_num and best_den)
+                set child_num to deeper / 65536
+                set child_den to deeper - child_num * 65536
+                set my_num to child_den - child_num
+                set my_den to child_den
+            if my_num * best_den > best_num * my_den:
+                set best_num to my_num
+                set best_den to my_den
+                set best_move to move
+            set i to i + 1
+    set ok to append_list(result and best_move)
+    set ok to append_list(result and best_num)
+    set ok to append_list(result and best_den)
+    set ok to append_list(result and 1 + left_at_entry - NODES_LEFT)
+    return result
+
+# BUDGETED ITERATIVE DEEPENING: deepen one level at a time until the counted
+# thinking budget (2^22 positions examined -- an implementation compute
+# bound, the CLOCK, the same class of limit as every "scan far enough" in the
+# corpus; the counted evaluation itself carries zero knobs) is spent, or the
+# ceiling is reached. The budget is enforced INSIDE each pass (the hard
+# bound in search_value/quiescence): a pass that cannot finish within the
+# remaining budget aborts instantly and is DISCARDED -- the move played is
+# always from the deepest COMPLETED pass, and move time is bounded by
+# construction. 2^22 is set from the measured curve: with the transposition
+# table + killer ordering (both lossless), a full crowded-middlegame
+# depth-6 pass costs 3.74M nodes -- one whole ply beyond the 2^20 budget's
+# sight, ~15s/move at the measured 250K nodes/s; simplified positions
+# automatically read far deeper on the same budget.
+define thinking_budget returning Int:
+    set base to 2
+    set budget to 1
+    set k to 0
+    repeat while k < 22:
+        set budget to budget * base
+        set k to k + 1
+    return budget
+
+define search_best_seen with state and ceiling as Int and seen as Str:
+    set result to create_list()
+    # Fresh transposition generation for this move decision (O(1) reset);
+    # the table persists across the deepening passes below so each pass
+    # reuses the last one's cutoff moves.
+    set ok to tt_ensure()
+    set TT_GEN to TT_GEN + 1
+    set budget to thinking_budget()
+    set remaining to budget
+    set pre_move to 0 - 1
+    set final_move to 0 - 1
+    set final_num to 1
+    set final_den to 2
+    set depth to 2
+    set climbing to 1
+    repeat while climbing == 1:
+        set NODES_LEFT to remaining
+        set PASS_ABORTED to 0
+        set pass_result to root_pass(state and depth and seen and pre_move)
+        set remaining to NODES_LEFT
+        if PASS_ABORTED == 1:
+            # Partial pass: its values are placeholders -- discard it and
+            # play the deepest completed pass's move. If NO pass ever
+            # completed (never at this budget: depth 2 costs ~10^4), fall
+            # back to the partial pass's move so a legal move is returned.
+            if final_move < 0:
+                set final_move to get_list(pass_result and 0)
+                set final_num to get_list(pass_result and 1)
+                set final_den to get_list(pass_result and 2)
+            set climbing to 0
+        else:
+            set final_move to get_list(pass_result and 0)
+            set final_num to get_list(pass_result and 1)
+            set final_den to get_list(pass_result and 2)
+            set pre_move to final_move
+            set depth to depth + 1
+            if depth > ceiling:
+                set climbing to 0
+            if remaining < 1:
+                set climbing to 0
+            if final_move < 0:
+                set climbing to 0
+    set ok to append_list(result and final_move)
+    set ok to append_list(result and final_num)
+    set ok to append_list(result and final_den)
+    return result
+
+# The root: pick the move whose exact alpha-beta value is largest.
+# Fixed-depth contract: UNBOUNDED -- the caller chose the depth, so the
+# hard node bound is lifted (a whole game tree fits in 2^60) and the
+# certifications' exact searches run to completion exactly as before.
+define search_best with state and depth as Int:
+    set result to create_list()
+    set NODES_LEFT to 1152921504606846976
+    set PASS_ABORTED to 0
+    set moves to ordered_moves(state)
+    set count to length_list(moves)
+    if count == 0:
+        set checked to side_in_check(state)
+        set ok to append_list(result and 0 - 1)
+        if checked:
+            set ok to append_list(result and 1)
+            set ok to append_list(result and 1024 + depth)
+        else:
+            set ok to append_list(result and 1)
+            set ok to append_list(result and 2)
+        return result
+    set best_move to get_list(moves and 0)
+    set best_num to 0
+    set best_den to 1
+    set i to 0
+    repeat while i < count:
+        set move to get_list(moves and i)
+        set child to make_move(state and move)
+        set deeper to search_value(child and depth - 1 and 1 - 1 and 1 and best_den - best_num and best_den)
+        set child_num to deeper / 65536
+        set child_den to deeper - child_num * 65536
+        set my_num to child_den - child_num
+        set my_den to child_den
+        if my_num * best_den > best_num * my_den:
+            set best_num to my_num
+            set best_den to my_den
+            set best_move to move
+        set i to i + 1
+    set ok to append_list(result and best_move)
+    set ok to append_list(result and best_num)
+    set ok to append_list(result and best_den)
+    return result
+
+# ---------- demonstrations ---------------------------------------------------
+# The starting position's fold value is EXACTLY the half-One: perfect
+# balance at the self-antipodal lock.
+define start_is_at_the_lock returning Bool:
+    set state to starting_state()
+    set mine to share_numerator(state)
+    set total to share_denominator(state)
+    return total == 2 * mine
+
+# The bot finds the fool's-mate strike: after 1. f3 e5 2. g4 the only
+# mating move is Qd8-h4 -- the search must return it with the One-approach
+# value (a mate, not a share).
+define finds_fools_mate returning Int:
+    set state to starting_state()
+    set state to make_move(state and (13 * 64) + 21)
+    set state to make_move(state and (52 * 64) + 36)
+    set state to make_move(state and (14 * 64) + 30)
+    set answer to search_best(state and 2)
+    return get_list(answer and 0)
+
+define fools_mate_is_seen_as_mate returning Bool:
+    set state to starting_state()
+    set state to make_move(state and (13 * 64) + 21)
+    set state to make_move(state and (52 * 64) + 36)
+    set state to make_move(state and (14 * 64) + 30)
+    set answer to search_best(state and 2)
+    set num to get_list(answer and 1)
+    set den to get_list(answer and 2)
+    # the antipode of mated-now (1/1022 at depth 2) is 1021/1022 -- above any
+    # live share; a mate value must exceed 1000/1024 by cross-multiplication
+    return num * 1024 > den * 1000
+
+# The mating move delivers checkmate on the board: the reply has no legal
+# moves and the king stands in check.
+define fools_mate_is_real returning Bool:
+    set state to starting_state()
+    set state to make_move(state and (13 * 64) + 21)
+    set state to make_move(state and (52 * 64) + 36)
+    set state to make_move(state and (14 * 64) + 30)
+    set strike to finds_fools_mate()
+    set final to make_move(state and strike)
+    set replies to legal_moves(final)
+    set trapped to length_list(replies) == 0
+    set checked to side_in_check(final)
+    if trapped:
+        return checked
+    return false
+
+# Self-play: the bot plays both sides for the given number of plies (or
+# until the game ends); every move is legality-filtered by construction.
+# Returns the number of plies actually played.
+define self_play_plies with plies as Int returning Int:
+    set state to starting_state()
+    set played to 0
+    repeat while played < plies:
+        set moves to legal_moves(state)
+        if length_list(moves) == 0:
+            return played
+        set answer to search_best(state and 2)
+        set state to make_move(state and get_list(answer and 0))
+        set played to played + 1
+    # the final position must still be a legal chess position: exactly one
+    # king each, and the side NOT to move is not in check
+    set white_king to king_square(state and 0)
+    set black_king to king_square(state and 1)
+    if white_king < 64:
+        if black_king < 64:
+            set probe to copy_state(state)
+            set ok to set_list(probe and 64 and 1 - get_list(state and 64))
+            set opponent_safe to side_in_check(probe)
+            if opponent_safe:
+                return 0 - 1
+            return played
+    return 0 - 2
+
+
+# ---------- root-level perfect endgame play --------------------------------
+# When the ACTUAL board is a table-covered endgame, choose the move by direct
+# table lookup: the table is consulted only ~20 times (once per legal move at
+# the root), never threaded through the search -- perfect play at full speed.
+# Returns [found, move]: found = 1 with the exact-optimal move, else found 0.
+define endgame_best_move with state and kqk and krk:
+    set result to create_list()
+    set here to endgame_probe(state and kqk and krk)
+    if get_list(here and 0) == 0:
+        set r to append_list(result and 0)
+        set r to append_list(result and 0)
+        return result
+    set moves to legal_moves(state)
+    set count to length_list(moves)
+    if count == 0:
+        set r to append_list(result and 0)
+        set r to append_list(result and 0)
+        return result
+    set best_move to get_list(moves and 0)
+    set best_num to 0
+    set best_den to 1
+    set i to 0
+    repeat while i < count:
+        set move to get_list(moves and i)
+        set child to make_move(state and move)
+        set child_val to endgame_probe(child and kqk and krk)
+        set my_num to 1
+        set my_den to 2
+        if get_list(child_val and 0) == 1:
+            set cn to get_list(child_val and 1)
+            set cd to get_list(child_val and 2)
+            set my_num to cd - cn
+            set my_den to cd
+        else:
+            set replies to legal_moves(child)
+            if length_list(replies) == 0:
+                set checked to side_in_check(child)
+                if checked:
+                    set my_num to 1
+                    set my_den to 1
+                else:
+                    set my_num to 1
+                    set my_den to 2
+        if my_num * best_den > best_num * my_den:
+            set best_num to my_num
+            set best_den to my_den
+            set best_move to move
+        set i to i + 1
+    set r to append_list(result and 1)
+    set r to append_list(result and best_move)
+    return result

@@ -16283,3 +16283,13 @@ import SFT.AstronomyCosmology.AstronomicalObjectEvidence
 import SFT.AstronomyCosmology.AstronomicalObjectExperiment
 
 import SFT.AstronomyCosmology.AstronomicalObjectValidation
+
+import SFT.AstronomyCosmology.AstronomicalClassification
+
+import SFT.AstronomyCosmology.AstronomicalClassificationGrammar
+
+import SFT.AstronomyCosmology.AstronomicalClassificationEvidence
+
+import SFT.AstronomyCosmology.AstronomicalClassificationExperiment
+
+import SFT.AstronomyCosmology.AstronomicalClassificationValidation

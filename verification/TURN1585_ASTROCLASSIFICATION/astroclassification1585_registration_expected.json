@@ -1,0 +1,57 @@
+{
+  "experiment_id": "SFT-EXP-ASTRO-CLASSIFICATION-001-E1",
+  "claim_id": "SFT-ASTRO-CLASSIFICATION-001",
+  "frozen_relation": "feature-evidence-class-carrier__classifier-and-taxonomy-bounded__feature-to-class-relation__features-method-probability-alternatives-and-version-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+  "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-CLASSIFICATION-001.json",
+  "source_snapshot_hash": "sha256:05fda4975ae8fff7a2cf1a8483efdfcfbb55aac81f77d495f0fe12be4d38b0f2",
+  "target_ids": [
+    "sft-astro-classification-001-external-astronomy-evidence"
+  ],
+  "target_locators": [
+    [
+      "sft-astro-classification-001-external-astronomy-evidence",
+      "CDS-SIMBAD-001",
+      "https://simbad.cds.unistra.fr/simbad/"
+    ]
+  ],
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-ASTRO-CLASSIFICATION-001-E1-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "physical-observation",
+          "astronomy:feature-evidence-class-carrier__feature-to-class-relation__features-method-probability-alternatives-and-version-held__classifier-and-taxonomy-bounded"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "expected_observation_label": "astronomy:feature-evidence-class-carrier__feature-to-class-relation__features-method-probability-alternatives-and-version-held__classifier-and-taxonomy-bounded",
+  "falsification_condition": "Reject if a label replaces its evidence or an uncertain class becomes certain.",
+  "all_rows_required": true,
+  "target_inaccessible_before_seal": true
+}

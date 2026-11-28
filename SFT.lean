@@ -16099,3 +16099,13 @@ import SFT.EarthEnvironment.EarthPollutantIdentityEvidence
 import SFT.EarthEnvironment.EarthPollutantIdentityExperiment
 
 import SFT.EarthEnvironment.EarthPollutantIdentityValidation
+
+import SFT.EarthEnvironment.EarthSourcePathReceptor
+
+import SFT.EarthEnvironment.EarthSourcePathReceptorGrammar
+
+import SFT.EarthEnvironment.EarthSourcePathReceptorEvidence
+
+import SFT.EarthEnvironment.EarthSourcePathReceptorExperiment
+
+import SFT.EarthEnvironment.EarthSourcePathReceptorValidation

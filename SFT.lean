@@ -16169,3 +16169,13 @@ import SFT.EarthEnvironment.EarthRemoteSensingEvidence
 import SFT.EarthEnvironment.EarthRemoteSensingExperiment
 
 import SFT.EarthEnvironment.EarthRemoteSensingValidation
+
+import SFT.EarthEnvironment.EarthProxyReconstruction
+
+import SFT.EarthEnvironment.EarthProxyReconstructionGrammar
+
+import SFT.EarthEnvironment.EarthProxyReconstructionEvidence
+
+import SFT.EarthEnvironment.EarthProxyReconstructionExperiment
+
+import SFT.EarthEnvironment.EarthProxyReconstructionValidation

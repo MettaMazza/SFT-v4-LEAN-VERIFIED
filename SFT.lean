@@ -16119,3 +16119,13 @@ import SFT.EarthEnvironment.EarthEnvironmentalTransportEvidence
 import SFT.EarthEnvironment.EarthEnvironmentalTransportExperiment
 
 import SFT.EarthEnvironment.EarthEnvironmentalTransportValidation
+
+import SFT.EarthEnvironment.EarthEnvironmentalTransformation
+
+import SFT.EarthEnvironment.EarthEnvironmentalTransformationGrammar
+
+import SFT.EarthEnvironment.EarthEnvironmentalTransformationEvidence
+
+import SFT.EarthEnvironment.EarthEnvironmentalTransformationExperiment
+
+import SFT.EarthEnvironment.EarthEnvironmentalTransformationValidation

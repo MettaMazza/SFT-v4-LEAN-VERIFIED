@@ -106,7 +106,7 @@
   "v2_computational_core": "SFT/Applications/Discovery/Explorer.lean",
   "v2_remaining": [
     "discovery_max console/CLI wiring and prediction/falsification registry callback execution",
-    "USDE cross_reference_physics, autonomous_loop, seeded null baseline, report/inference methods, verify_entire_corpus and live particle adapter",
+    "USDE inference report methods, verify_entire_corpus and live particle adapter; console/timing wrappers for autonomous/sweep methods",
     "complete program-level fidelity and actual axiom dependency requirements; Float/HashSet dependencies are recorded, not empty"
   ],
   "status": "V3 sweep complete with kernel proofs; complete four-program milestone still open",
@@ -367,10 +367,39 @@
       "original": "discovery_sweep_loop",
       "native": "USDESweep.discoverySweep (console/timing wrapper pending)",
       "line": 659
+    },
+    {
+      "original": "cross_reference_physics",
+      "native": "USDEPhysics.crossReferencePhysics",
+      "line": 289
+    },
+    {
+      "original": "run_null_baseline",
+      "native": "USDENull.runNullBaseline",
+      "line": 763
+    },
+    {
+      "original": "autonomous_loop",
+      "native": "USDEAutonomous.autonomousLoop (computational body; console wrapper pending)",
+      "line": 816
+    },
+    {
+      "original": "generate_academic_report",
+      "native": "AcademicReport.generateAcademicReport",
+      "line": 896
     }
   ],
   "usde_source": "reference/applications/discovery-SFT-v2/sftoe/usde.py",
   "usde_source_dependency": "reference/applications/discovery-SFT-v2/sftoe/core.py",
   "usde_evidence": "verification/APPLICATION_DISCOVERY1605",
-  "usde_axiom_detail": "verification/APPLICATION_DISCOVERY1605/axioms.json"
+  "usde_axiom_detail": "verification/APPLICATION_DISCOVERY1605/axioms.json",
+  "usde1606_evidence": "verification/APPLICATION_DISCOVERY1606",
+  "usde1606_remaining": [
+    "generate_inference_report_sweep",
+    "generate_inference_report",
+    "verify_entire_corpus and original native callback bindings",
+    "live particle query adapter",
+    "discovery_max CLI and prediction/falsification callbacks",
+    "console/timing wrappers for sweep/autonomous methods"
+  ]
 }

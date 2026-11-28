@@ -16009,3 +16009,13 @@ import SFT.EarthEnvironment.EarthClimateVariabilityEvidence
 import SFT.EarthEnvironment.EarthClimateVariabilityExperiment
 
 import SFT.EarthEnvironment.EarthClimateVariabilityValidation
+
+import SFT.EarthEnvironment.EarthClimateAttribution
+
+import SFT.EarthEnvironment.EarthClimateAttributionGrammar
+
+import SFT.EarthEnvironment.EarthClimateAttributionEvidence
+
+import SFT.EarthEnvironment.EarthClimateAttributionExperiment
+
+import SFT.EarthEnvironment.EarthClimateAttributionValidation

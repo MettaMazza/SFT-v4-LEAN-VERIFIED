@@ -16223,3 +16223,13 @@ import SFT.AstronomyCosmology.AstronomicalSourceEvidence
 import SFT.AstronomyCosmology.AstronomicalSourceExperiment
 
 import SFT.AstronomyCosmology.AstronomicalSourceValidation
+
+import SFT.AstronomyCosmology.AstronomicalObserver
+
+import SFT.AstronomyCosmology.AstronomicalObserverGrammar
+
+import SFT.AstronomyCosmology.AstronomicalObserverEvidence
+
+import SFT.AstronomyCosmology.AstronomicalObserverExperiment
+
+import SFT.AstronomyCosmology.AstronomicalObserverValidation

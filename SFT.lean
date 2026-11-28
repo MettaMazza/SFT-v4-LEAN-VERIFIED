@@ -15959,3 +15959,13 @@ import SFT.EarthEnvironment.EarthCoastTideEvidence
 import SFT.EarthEnvironment.EarthCoastTideExperiment
 
 import SFT.EarthEnvironment.EarthCoastTideValidation
+
+import SFT.EarthEnvironment.EarthClimate
+
+import SFT.EarthEnvironment.EarthClimateGrammar
+
+import SFT.EarthEnvironment.EarthClimateEvidence
+
+import SFT.EarthEnvironment.EarthClimateExperiment
+
+import SFT.EarthEnvironment.EarthClimateValidation

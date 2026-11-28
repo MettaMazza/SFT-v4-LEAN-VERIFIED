@@ -16179,3 +16179,13 @@ import SFT.EarthEnvironment.EarthProxyReconstructionEvidence
 import SFT.EarthEnvironment.EarthProxyReconstructionExperiment
 
 import SFT.EarthEnvironment.EarthProxyReconstructionValidation
+
+import SFT.EarthEnvironment.EarthModelDataAssimilation
+
+import SFT.EarthEnvironment.EarthModelDataAssimilationGrammar
+
+import SFT.EarthEnvironment.EarthModelDataAssimilationEvidence
+
+import SFT.EarthEnvironment.EarthModelDataAssimilationExperiment
+
+import SFT.EarthEnvironment.EarthModelDataAssimilationValidation

@@ -16049,3 +16049,13 @@ import SFT.EarthEnvironment.EarthNitrogenCycleEvidence
 import SFT.EarthEnvironment.EarthNitrogenCycleExperiment
 
 import SFT.EarthEnvironment.EarthNitrogenCycleValidation
+
+import SFT.EarthEnvironment.EarthPhosphorusCycle
+
+import SFT.EarthEnvironment.EarthPhosphorusCycleGrammar
+
+import SFT.EarthEnvironment.EarthPhosphorusCycleEvidence
+
+import SFT.EarthEnvironment.EarthPhosphorusCycleExperiment
+
+import SFT.EarthEnvironment.EarthPhosphorusCycleValidation

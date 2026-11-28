@@ -1,0 +1,116 @@
+{
+  "registration": {
+    "all_rows_required": true,
+    "claim_id": "SFT-ASTRO-SOURCE-001",
+    "expected_observation_label": "astronomy:emitting-or-interacting-source-carrier__source-state-to-signal-relation__identity-direction-distance-time-and-state-held__source-resolution-bounded",
+    "experiment_id": "SFT-EXP-ASTRO-SOURCE-001-E1",
+    "falsification_condition": "Reject if source identity, direction, distance, time or state is erased.",
+    "frozen_relation": "emitting-or-interacting-source-carrier__source-resolution-bounded__source-state-to-signal-relation__identity-direction-distance-time-and-state-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+    "prediction_program": {
+      "instructions": [
+        {
+          "arguments": [
+            "registered-premise"
+          ],
+          "destination": "premise",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "physical-observation",
+            "astronomy:emitting-or-interacting-source-carrier__source-state-to-signal-relation__identity-direction-distance-time-and-state-held__source-resolution-bounded"
+          ],
+          "destination": "prediction",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "premise",
+            "prediction"
+          ],
+          "destination": "bound-result",
+          "opcode": "pair"
+        },
+        {
+          "arguments": [
+            "prediction"
+          ],
+          "destination": "",
+          "opcode": "emit"
+        }
+      ],
+      "program_id": "SFT-EXP-ASTRO-SOURCE-001-E1-prediction",
+      "schema": "sft-v3-fold-program/1"
+    },
+    "source_snapshot_hash": "sha256:4e0f25240ae45c65f12e6d504e826385d6261f8441eef968707070fbde49d30e",
+    "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-SOURCE-001.json",
+    "target_ids": [
+      "sft-astro-source-001-external-astronomy-evidence"
+    ],
+    "target_inaccessible_before_seal": true,
+    "target_locators": [
+      [
+        "sft-astro-source-001-external-astronomy-evidence",
+        "ESA-GAIA-ARCHIVE-001",
+        "https://gea.esac.esa.int/archive/"
+      ]
+    ]
+  },
+  "validation": {
+    "all_rows_preserved": true,
+    "data_source_ids": [
+      "ESA-GAIA-ARCHIVE-001"
+    ],
+    "evaluator_verified_seal": true,
+    "experiment_registration_hash": "sha256:a86afe2cc13ed9eb8a75643de0da397022dd3c58e1d3041d20d7d6e61e4db0be",
+    "falsification_condition": "Reject if source identity, direction, distance, time or state is erased.",
+    "isolation_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "attempted_forbidden_operations": [],
+      "certificate_hash": "sha256:6e062c4096987ebf464c6ae5819217d90517d0c97ba9cce119b9f9578028d7fe",
+      "comparison_code_present": false,
+      "comparison_implementation_identity_hash": "sha256:330a9365975ed840a79fd1ff3af1242acabbd2dab169f2b19ed2c5672c599f9a",
+      "completed": true,
+      "denied_capabilities": [
+        "clock",
+        "dynamic_import",
+        "environment",
+        "filesystem_read",
+        "filesystem_write",
+        "foreign_function",
+        "network",
+        "subprocess"
+      ],
+      "executor_id": "SFT-EXP-ASTRO-SOURCE-001-E1-prediction-executor",
+      "host_platform": "Darwin",
+      "input_manifest_hash": "sha256:0044fd19a7ad85d974b8a12bf5bc1daf3e99199de676cd2b1738e309fbf871cf",
+      "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+      "output_hash": "sha256:a6fdbbb3b73f7095ef19f4753c65e6d68d26fcee7888e865cedaa30df8826667",
+      "prediction_seal_hash": "sha256:7af12d253b50a8f9301e763a254e089dd53b2d9aba1068a90e329835097810d6",
+      "program_hash": "sha256:7ec364c66ecd8c4c30789ba7515394c86718429ac9a5691e93b75e9b006a2e6f",
+      "python_implementation": "CPython",
+      "registered_target_identity_hash": "sha256:88a6e36c22b4fdc7d0ccb1b3dcfdb21928b27913123dabc3849fad955536947a",
+      "target_material_present": false,
+      "trace_hash": "sha256:b498bb788eccef399f42e7604a541ae617d6482092c4d4e3a3bb9d27e2c51af1"
+    },
+    "measurement_receipt_hash": "sha256:0d3b241462cd84f8efdd42485d39cd943accf5cdd4fb7753cf689890a210018e",
+    "measurements": [
+      "sft-astro-source-001-external-astronomy-evidence: predicted astronomy:emitting-or-interacting-source-carrier__source-state-to-signal-relation__identity-direction-distance-time-and-state-held__source-resolution-bounded; observed astronomy:emitting-or-interacting-source-carrier__source-state-to-signal-relation__identity-direction-distance-time-and-state-held__source-resolution-bounded; exact match True",
+      "deliberately tampered unfavorable control rejected"
+    ],
+    "passed": true,
+    "target_custody_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "certificate_hash": "sha256:9dcdd6c87ce289f272f3d126cffa3a537e38295fe50848aa14bf9b4f7f28725c",
+      "custodian_id": "SFT-EXP-ASTRO-SOURCE-001-E1-external-target-custodian",
+      "experiment_registration_hash": "sha256:a86afe2cc13ed9eb8a75643de0da397022dd3c58e1d3041d20d7d6e61e4db0be",
+      "prediction_seal_hash": "sha256:7af12d253b50a8f9301e763a254e089dd53b2d9aba1068a90e329835097810d6",
+      "registered_target_identity_hash": "sha256:88a6e36c22b4fdc7d0ccb1b3dcfdb21928b27913123dabc3849fad955536947a",
+      "released_after_prediction_seal": true,
+      "target_absent_until_prediction_seal": true,
+      "target_release_manifest_hash": "sha256:da7b37ecc5f95667ed3ae498ed0ab6eba21ee2d3d712cb638564e18753393511"
+    },
+    "target_opened_after_seal": true,
+    "validated_seal_hash": "native-astrosource1578"
+  }
+}

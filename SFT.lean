@@ -16209,3 +16209,17 @@ import SFT.EarthEnvironment.EarthHazardRiskHandoffEvidence
 import SFT.EarthEnvironment.EarthHazardRiskHandoffExperiment
 
 import SFT.EarthEnvironment.EarthHazardRiskHandoffValidation
+
+import SFT.AstronomyCosmology.StructuralModel
+
+import SFT.AstronomyCosmology.Source
+
+import SFT.AstronomyCosmology.AstronomicalSource
+
+import SFT.AstronomyCosmology.AstronomicalSourceGrammar
+
+import SFT.AstronomyCosmology.AstronomicalSourceEvidence
+
+import SFT.AstronomyCosmology.AstronomicalSourceExperiment
+
+import SFT.AstronomyCosmology.AstronomicalSourceValidation

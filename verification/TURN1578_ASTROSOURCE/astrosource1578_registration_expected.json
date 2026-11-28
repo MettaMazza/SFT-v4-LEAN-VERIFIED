@@ -1,0 +1,57 @@
+{
+  "experiment_id": "SFT-EXP-ASTRO-SOURCE-001-E1",
+  "claim_id": "SFT-ASTRO-SOURCE-001",
+  "frozen_relation": "emitting-or-interacting-source-carrier__source-resolution-bounded__source-state-to-signal-relation__identity-direction-distance-time-and-state-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+  "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-SOURCE-001.json",
+  "source_snapshot_hash": "sha256:4e0f25240ae45c65f12e6d504e826385d6261f8441eef968707070fbde49d30e",
+  "target_ids": [
+    "sft-astro-source-001-external-astronomy-evidence"
+  ],
+  "target_locators": [
+    [
+      "sft-astro-source-001-external-astronomy-evidence",
+      "ESA-GAIA-ARCHIVE-001",
+      "https://gea.esac.esa.int/archive/"
+    ]
+  ],
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-ASTRO-SOURCE-001-E1-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "physical-observation",
+          "astronomy:emitting-or-interacting-source-carrier__source-state-to-signal-relation__identity-direction-distance-time-and-state-held__source-resolution-bounded"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "expected_observation_label": "astronomy:emitting-or-interacting-source-carrier__source-state-to-signal-relation__identity-direction-distance-time-and-state-held__source-resolution-bounded",
+  "falsification_condition": "Reject if source identity, direction, distance, time or state is erased.",
+  "all_rows_required": true,
+  "target_inaccessible_before_seal": true
+}

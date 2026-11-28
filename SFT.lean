@@ -16363,3 +16363,13 @@ import SFT.AstronomyCosmology.AstronomicalRedshiftEvidence
 import SFT.AstronomyCosmology.AstronomicalRedshiftExperiment
 
 import SFT.AstronomyCosmology.AstronomicalRedshiftValidation
+
+import SFT.AstronomyCosmology.AstrometricRadialMotion
+
+import SFT.AstronomyCosmology.AstrometricRadialMotionGrammar
+
+import SFT.AstronomyCosmology.AstrometricRadialMotionEvidence
+
+import SFT.AstronomyCosmology.AstrometricRadialMotionExperiment
+
+import SFT.AstronomyCosmology.AstrometricRadialMotionValidation

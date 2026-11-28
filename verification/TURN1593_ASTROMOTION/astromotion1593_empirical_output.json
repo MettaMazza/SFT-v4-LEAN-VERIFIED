@@ -1,0 +1,116 @@
+{
+  "registration": {
+    "all_rows_required": true,
+    "claim_id": "SFT-ASTRO-MOTION-001",
+    "expected_observation_label": "astronomy:time-indexed-position-spectrum-carrier__position-or-feature-change-relation__frame-epochs-baseline-components-and-errors-held__motion-observation-bounded",
+    "experiment_id": "SFT-EXP-ASTRO-MOTION-001-E1",
+    "falsification_condition": "Reject if apparent and physical motion are conflated.",
+    "frozen_relation": "time-indexed-position-spectrum-carrier__motion-observation-bounded__position-or-feature-change-relation__frame-epochs-baseline-components-and-errors-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+    "prediction_program": {
+      "instructions": [
+        {
+          "arguments": [
+            "registered-premise"
+          ],
+          "destination": "premise",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "physical-observation",
+            "astronomy:time-indexed-position-spectrum-carrier__position-or-feature-change-relation__frame-epochs-baseline-components-and-errors-held__motion-observation-bounded"
+          ],
+          "destination": "prediction",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "premise",
+            "prediction"
+          ],
+          "destination": "bound-result",
+          "opcode": "pair"
+        },
+        {
+          "arguments": [
+            "prediction"
+          ],
+          "destination": "",
+          "opcode": "emit"
+        }
+      ],
+      "program_id": "SFT-EXP-ASTRO-MOTION-001-E1-prediction",
+      "schema": "sft-v3-fold-program/1"
+    },
+    "source_snapshot_hash": "sha256:3bbbd6df0713da108baa500fd9dcb5388b47ecbe1f404e9092ce3857d4871ff0",
+    "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-MOTION-001.json",
+    "target_ids": [
+      "sft-astro-motion-001-external-astronomy-evidence"
+    ],
+    "target_inaccessible_before_seal": true,
+    "target_locators": [
+      [
+        "sft-astro-motion-001-external-astronomy-evidence",
+        "ESA-GAIA-ARCHIVE-001",
+        "https://gea.esac.esa.int/archive/"
+      ]
+    ]
+  },
+  "validation": {
+    "all_rows_preserved": true,
+    "data_source_ids": [
+      "ESA-GAIA-ARCHIVE-001"
+    ],
+    "evaluator_verified_seal": true,
+    "experiment_registration_hash": "sha256:09bda808ee71ef013c9e0fa5d6b61eb911b37518210ca45d3db80db5f8b772a2",
+    "falsification_condition": "Reject if apparent and physical motion are conflated.",
+    "isolation_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "attempted_forbidden_operations": [],
+      "certificate_hash": "sha256:f1e8e6978be4040e1ac445f4f1e241c2473ec1ba5b3629b319d2916ce5909faa",
+      "comparison_code_present": false,
+      "comparison_implementation_identity_hash": "sha256:07b43f9feac7512063c3cf11fd8bc6b71efd91cc75e594c455800ff10e0e16ce",
+      "completed": true,
+      "denied_capabilities": [
+        "clock",
+        "dynamic_import",
+        "environment",
+        "filesystem_read",
+        "filesystem_write",
+        "foreign_function",
+        "network",
+        "subprocess"
+      ],
+      "executor_id": "SFT-EXP-ASTRO-MOTION-001-E1-prediction-executor",
+      "host_platform": "Darwin",
+      "input_manifest_hash": "sha256:a9ca3804a5abc2305bdc54a21cc77b94bae2b0a5290a6cef5ded64fadf6cfe30",
+      "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+      "output_hash": "sha256:f25c96142c97f06397e0cc97376c884d9b6acd94c7e4c0a0c0dd6ebdc2e0e09f",
+      "prediction_seal_hash": "sha256:bc786e7ee9aa35b55813fb9529f1b21ce0213feed8bacfb740ab39f406e65e0d",
+      "program_hash": "sha256:f03983b16a68a0dd6a07e5e667025df005a392cf2b0983d753862a1e7598f1e1",
+      "python_implementation": "CPython",
+      "registered_target_identity_hash": "sha256:758c8c95809dbca051d6ec7533856e7d7cf8aca0b23be00521109d1555455a42",
+      "target_material_present": false,
+      "trace_hash": "sha256:df5368686c64ef0ae2e84da5679dd2348e6f41f80df0db0b9a0a3dda40274090"
+    },
+    "measurement_receipt_hash": "sha256:a2934d929a1e9e1730534db57a84d7a2704f8798d8322b67bef1229ba5536395",
+    "measurements": [
+      "sft-astro-motion-001-external-astronomy-evidence: predicted astronomy:time-indexed-position-spectrum-carrier__position-or-feature-change-relation__frame-epochs-baseline-components-and-errors-held__motion-observation-bounded; observed astronomy:time-indexed-position-spectrum-carrier__position-or-feature-change-relation__frame-epochs-baseline-components-and-errors-held__motion-observation-bounded; exact match True",
+      "deliberately tampered unfavorable control rejected"
+    ],
+    "passed": true,
+    "target_custody_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "certificate_hash": "sha256:ea236436859effe9e03deafc0b7ef1ccea82f783491801b5f7d97898ab53f0af",
+      "custodian_id": "SFT-EXP-ASTRO-MOTION-001-E1-external-target-custodian",
+      "experiment_registration_hash": "sha256:09bda808ee71ef013c9e0fa5d6b61eb911b37518210ca45d3db80db5f8b772a2",
+      "prediction_seal_hash": "sha256:bc786e7ee9aa35b55813fb9529f1b21ce0213feed8bacfb740ab39f406e65e0d",
+      "registered_target_identity_hash": "sha256:758c8c95809dbca051d6ec7533856e7d7cf8aca0b23be00521109d1555455a42",
+      "released_after_prediction_seal": true,
+      "target_absent_until_prediction_seal": true,
+      "target_release_manifest_hash": "sha256:f6d3ef19015a64c4b7511c72a49eb44aafa077813503429c7c2b02a21394a9b3"
+    },
+    "target_opened_after_seal": true,
+    "validated_seal_hash": "native-astromotion1593"
+  }
+}

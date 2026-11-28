@@ -15969,3 +15969,13 @@ import SFT.EarthEnvironment.EarthClimateEvidence
 import SFT.EarthEnvironment.EarthClimateExperiment
 
 import SFT.EarthEnvironment.EarthClimateValidation
+
+import SFT.EarthEnvironment.EarthWeatherClimateTimescale
+
+import SFT.EarthEnvironment.EarthWeatherClimateTimescaleGrammar
+
+import SFT.EarthEnvironment.EarthWeatherClimateTimescaleEvidence
+
+import SFT.EarthEnvironment.EarthWeatherClimateTimescaleExperiment
+
+import SFT.EarthEnvironment.EarthWeatherClimateTimescaleValidation

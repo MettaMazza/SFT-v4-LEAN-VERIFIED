@@ -16159,3 +16159,13 @@ import SFT.EarthEnvironment.EarthFieldObservationEvidence
 import SFT.EarthEnvironment.EarthFieldObservationExperiment
 
 import SFT.EarthEnvironment.EarthFieldObservationValidation
+
+import SFT.EarthEnvironment.EarthRemoteSensing
+
+import SFT.EarthEnvironment.EarthRemoteSensingGrammar
+
+import SFT.EarthEnvironment.EarthRemoteSensingEvidence
+
+import SFT.EarthEnvironment.EarthRemoteSensingExperiment
+
+import SFT.EarthEnvironment.EarthRemoteSensingValidation

@@ -1,0 +1,27 @@
+{
+  "schema": "fold-go-recovered-measurement/v1",
+  "result_type": "measured_implementation_result",
+  "command": "python3 -u tools/measure_go.py --size 19 --depth 4 --rounds 2 --engine katago gtp",
+  "started_utc": "2026-07-13T18:16:37Z",
+  "finished_utc": "2026-07-13T23:14:55Z",
+  "raw_log": "tools/recovered_go_19x19_task_361.log",
+  "original_recovery_path": "/Users/mettamazza/.gemini/antigravity/brain/f85803f6-d857-4cb2-826f-e1cd285474a8/.system_generated/tasks/task-361.log",
+  "raw_log_sha256": "b26eda8f0c82cfad7a6d4fb8ca28e62c48b7919c59512c71d37327cb99fd3b18",
+  "board": "19x19",
+  "search_ceiling": 4,
+  "opponent_command": "katago gtp",
+  "rounds": [
+    {"round": 1, "sft_side": "black", "black": 73, "white": 54, "harness_winner": "SFT"},
+    {"round": 2, "sft_side": "white", "black": 66, "white": 70, "harness_winner": "SFT"}
+  ],
+  "aggregate": "SFT 2-0 Opponent",
+  "termination": "historical 128-ply harness cutoff",
+  "scoring": "harness internal Tromp-style area with integer komi 7",
+  "opponent_final_score_requested": false,
+  "protocol_observations": [
+    "Round 1 contains two rejected play responses and the historical harness continued.",
+    "Round 2 contains no logged rejected play response.",
+    "The result is a harness-reported point-at-cutoff measurement, not a pass-pass result."
+  ]
+}
+

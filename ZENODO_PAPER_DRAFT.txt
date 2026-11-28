@@ -44938,6 +44938,29 @@ Moves use the original encoding m=4096p+64a+b, with promotion code p, origin a a
 
 Attack detection retains the source's knight test and ordered rays. Each ray stops at the first occupied square or board edge. A queen attacks along either ray class, a bishop along a diagonal, and a rook along a rank or file. At the first step, a king attacks in either class and a pawn attacks on its colour's specified diagonal. King lookup returns the first matching square, with the source sentinel 64 when absent; side-in-check applies the opposite-side attack predicate at that result.
 
-The native Board, Moves and Attacks modules have 20 audited function declarations with empty axiom dependencies. Direct execution of the corresponding receipt-bound EP statements agrees with 1,309 board/geometry/budget rows, 34,945 complete move-update and promotion rows, and 99,970 attack-detection rows. These results cover the implemented components; legal move generation, full evaluation, search, endgame integration and the complete playable Lean engine remain under translation. The historical match receipt belongs to the original engine revision, not to a newly played Lean match.
+The native Board, Moves and Attacks modules have 20 audited function declarations with empty axiom dependencies. Direct execution of the corresponding receipt-bound EP statements agrees with 1,309 board/geometry/budget rows, 34,945 complete move-update and promotion rows, and 99,970 attack-detection rows. These results cover the implemented components; search, endgame integration and the complete playable Lean engine remain under translation; the following section extends the verified rules and evaluation components. The historical match receipt belongs to the original engine revision, not to a newly played Lean match.
 
 Original references: reference/applications/chess-winning-d0b1996/constants/fold_chess_bot.ep, tools/measure_sf.py and tests/fold_bot_cli.ep. Native references: SFT/Applications/FoldChess/Board.lean, Moves.lean and Attacks.lean. Source-execution comparison evidence: verification/APPLICATION_CHESS1595. Historical receipt: verification/APPLICATION_CHESS1595/original_winning_receipts.json. Chronological reference: TIMELINE.txt TURN1594–1595 application steering.
+
+
+1505. Receipt-bound chess: legal moves and counted evaluation
+
+The original pseudo-move generator scans squares in order, retains the source knight and sliding-ray order, and emits promotion codes 2, 3, 4, 5. For a state s and its mover c, the legal list is the order-preserving restriction
+L(s) = [m in P(s) : not attacked(T(s,m), king(T(s,m),c), 1-c)].
+Here T is the source move-update operation, P its pseudo-move list, and king returns the source sentinel 64 when absent. The original castling checks, en-passant updates and pawn promotions are retained. The perft recurrence is
+N(s,0)=1, N(s,d+1)=sum_{m in L(s)} N(T(s,m),d).
+The original test fixtures yield 20, 400 and 8,902 at starting depths 1–3; 48, 2,039 and 97,862 for Kiwipete depths 1–3; 43,238 for the en-passant/pin fixture at depth 4; and 9,483 for the promotion fixture at depth 3.
+
+For colour c and destination x, the attack map records the minimum counted reach R(p,q,c) among pieces p at q attacking x, with zero for no attacker. Source ray scanning includes the first occupied destination, then stops. The lesser-attacker predicate checks whether an attacking piece has counted reach strictly below the declared defender reach. The evaluator suppresses non-pawn, non-king mobility when its origin is attacked by a smaller-reach piece; each eligible destination is also tested against that threshold. King destinations require zero attack-map threat. Pawn mobility retains quiet moves, home-rank doubles, and a fourfold promotion fan; it does not acquire legal-generator-only castling or en-passant branches.
+
+A pawn contributes the queen reach at its promotion square precisely when its forward path is empty and the source's three-file scan finds no enemy pawn ahead on interior ranks. Writing this contribution as Q(s,q,c), the exact side-unit assembly is
+U(s,c) = sum_{q occupied by c} [R(kind(q),q,c) + I(kind(q)=pawn) Q(s,q,c)] + M(s,c),
+where M is the counted mobility calculation. The evaluator returns the integer pair
+(num,den)=(U(s,c), U(s,c)+U(s,1-c)),
+so its share is num/den and comparisons can retain exact cross-products. No fitted piece-weight table replaces the source counts.
+
+The source capture predicate treats promotions, occupied destinations and the original pawn/en-passant destination condition as captures. Stable ordering emits captures whose victims have counted reach greater than eight, then remaining captures, then quiet moves. The direct-check filter retains the source rank/file displacement tests for knights, bishops, rooks, queens and pawns; actual child-position checks remain a separate search operation.
+
+The four comparison groups contain 828 ordered legal/perft rows, 58,912 attack-reach rows, 4,680 evaluation rows and 67,936 capture-order/check-filter rows. All match direct execution of the receipt-bound EP statements. Thirty additional native declarations have empty axiom dependencies. These checks extend the translated components; the historical winning receipt is preserved independently of the still-unfinished native search and match integration.
+
+Original source: reference/applications/chess-winning-d0b1996/constants/fold_chess_bot.ep, functions pseudo_moves through perft, lesser_attacker_exists, attack_min_reach_map, mobility_count through share_denominator, move_is_capture, ordered_moves and could_check_from; original fixtures: reference/applications/chess-winning-d0b1996/tests/test_fold_chess_bot.ep. Native source: SFT/Applications/FoldChess/LegalMoves.lean, ReachMap.lean, Evaluation.lean and Ordering.lean. Reproduction drivers and source-output comparisons: verification/APPLICATION_CHESS1596. Chronological reference: TIMELINE.txt TURN1596.

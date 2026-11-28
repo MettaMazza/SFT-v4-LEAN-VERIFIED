@@ -1,0 +1,4 @@
+Source: receipt-bound SFT-v3 d0b1996c09fd0b27be5a6016324f83ed578c5c94.
+The run_chess_*_original.py scripts assert its SHA256, execute the selected EP statements by direct syntactic lowering, and regenerate original.log. No generated C is used.
+Compile SFT/Applications/FoldChess modules in dependency order with pinned Lean 4.35.0, repository root in LEAN_PATH. Run ChessRules1596.lean, ChessReach1596.lean, ChessEval1596.lean, ChessOrder1596.lean and ChessLegalAudit1596.lean. Compare native rows to fresh original rows exactly, excluding #print axioms output; require every audited declaration to have empty axiom dependencies.
+The original eight perft cases retain their expected totals. All 132356 new comparison rows matched; 30 new declarations have empty axiom dependencies. These are component checks, not a claim of a newly played Lean match or a completed engine.

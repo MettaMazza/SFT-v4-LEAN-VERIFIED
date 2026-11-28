@@ -30,15 +30,15 @@
     "make_move including special moves/rights/clock",
     "promotion move encoding",
     "king lookup",
-    "square attack detection"
+    "square attack detection",
+    "ordered pseudo/legal move generation and eight original perft fixtures",
+    "lesser-attacker predicate and minimum-reach attack maps",
+    "mobility, passed-pawn promotion potential, side units and rational shares",
+    "capture buckets and direct-check geometry filter"
   ],
-  "next_component": "pseudo_moves, legal_moves and perft; preserve exact move order",
+  "next_component": "Endgame packed-table parsing/probe and receipt-bound tables, then quiescence, TT, search and CLI",
   "remaining_after_rules": [
-    "lesser-attacker and attack-map evaluation",
-    "mobility and pawn promotion potential",
-    "side units and rational shares",
     "endgame table parsing, probing and move selection",
-    "capture ordering and check prefilter",
     "quiescence, TT, killer ordering, exact search and iterative deepening",
     "CLI and receipt-bound fixture replay"
   ],
@@ -83,6 +83,46 @@
       "native_audited_functions": 5,
       "axiom_dependencies": [],
       "scope": "attack detection across all pieces/placements/targets and both sides, including missing-king sentinel; full engine not complete"
+    },
+    "chess_rules1596_report.json": {
+      "status": "PASS",
+      "source_revision": "d0b1996c09fd0b27be5a6016324f83ed578c5c94",
+      "source_sha256": "c61a908fd10b78c5934c47b0e93c55847235735d9fe0dc0108bb11a2e7419d7c",
+      "comparison_rows": 828,
+      "native_audited_definitions": 11,
+      "axiom_dependencies": [],
+      "scope": "rules",
+      "original_perft_cases": 8
+    },
+    "chess_reach1596_report.json": {
+      "status": "PASS",
+      "source_revision": "d0b1996c09fd0b27be5a6016324f83ed578c5c94",
+      "source_sha256": "c61a908fd10b78c5934c47b0e93c55847235735d9fe0dc0108bb11a2e7419d7c",
+      "comparison_rows": 58912,
+      "native_audited_definitions": 5,
+      "axiom_dependencies": [],
+      "scope": "reach",
+      "original_perft_cases": null
+    },
+    "chess_eval1596_report.json": {
+      "status": "PASS",
+      "source_revision": "d0b1996c09fd0b27be5a6016324f83ed578c5c94",
+      "source_sha256": "c61a908fd10b78c5934c47b0e93c55847235735d9fe0dc0108bb11a2e7419d7c",
+      "comparison_rows": 4680,
+      "native_audited_definitions": 11,
+      "axiom_dependencies": [],
+      "scope": "eval",
+      "original_perft_cases": null
+    },
+    "chess_order1596_report.json": {
+      "status": "PASS",
+      "source_revision": "d0b1996c09fd0b27be5a6016324f83ed578c5c94",
+      "source_sha256": "c61a908fd10b78c5934c47b0e93c55847235735d9fe0dc0108bb11a2e7419d7c",
+      "comparison_rows": 67936,
+      "native_audited_definitions": 3,
+      "axiom_dependencies": [],
+      "scope": "order",
+      "original_perft_cases": null
     }
   }
 }

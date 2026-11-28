@@ -16059,3 +16059,13 @@ import SFT.EarthEnvironment.EarthPhosphorusCycleEvidence
 import SFT.EarthEnvironment.EarthPhosphorusCycleExperiment
 
 import SFT.EarthEnvironment.EarthPhosphorusCycleValidation
+
+import SFT.EarthEnvironment.EarthBiosphereExchange
+
+import SFT.EarthEnvironment.EarthBiosphereExchangeGrammar
+
+import SFT.EarthEnvironment.EarthBiosphereExchangeEvidence
+
+import SFT.EarthEnvironment.EarthBiosphereExchangeExperiment
+
+import SFT.EarthEnvironment.EarthBiosphereExchangeValidation

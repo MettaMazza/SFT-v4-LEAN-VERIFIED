@@ -15929,3 +15929,13 @@ import SFT.EarthEnvironment.EarthOceanStratificationEvidence
 import SFT.EarthEnvironment.EarthOceanStratificationExperiment
 
 import SFT.EarthEnvironment.EarthOceanStratificationValidation
+
+import SFT.EarthEnvironment.EarthOceanCirculation
+
+import SFT.EarthEnvironment.EarthOceanCirculationGrammar
+
+import SFT.EarthEnvironment.EarthOceanCirculationEvidence
+
+import SFT.EarthEnvironment.EarthOceanCirculationExperiment
+
+import SFT.EarthEnvironment.EarthOceanCirculationValidation

@@ -16029,3 +16029,13 @@ import SFT.EarthEnvironment.EarthSystemTippingEvidence
 import SFT.EarthEnvironment.EarthSystemTippingExperiment
 
 import SFT.EarthEnvironment.EarthSystemTippingValidation
+
+import SFT.EarthEnvironment.EarthCarbonCycle
+
+import SFT.EarthEnvironment.EarthCarbonCycleGrammar
+
+import SFT.EarthEnvironment.EarthCarbonCycleEvidence
+
+import SFT.EarthEnvironment.EarthCarbonCycleExperiment
+
+import SFT.EarthEnvironment.EarthCarbonCycleValidation

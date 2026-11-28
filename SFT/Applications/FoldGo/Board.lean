@@ -56,13 +56,16 @@ def getGroup (board : GoBoard) (start : Nat) : List Nat × List Nat :=
 def boardKey (board : GoBoard) : String :=
  SFT.Host.Text.join (board.cells.toList.map fun n => SFT.Applications.FoldChess.integerText (Int.ofNat n))
 
-def captureAfterPlacement (board : GoBoard) (idx color : Nat) : GoBoard :=
+def capturedIndices (board : GoBoard) (idx color : Nat) : List Nat :=
  let opponent := 3-color
- let captured := (neighbors board idx).foldl (fun captured square =>
+ (neighbors board idx).foldl (fun captured square =>
   if board.cells.getD square 0 = opponent then
    let (group,libs) := getGroup board square
    if libs.isEmpty then captured++group else captured
   else captured) []
+
+def captureAfterPlacement (board : GoBoard) (idx color : Nat) : GoBoard :=
+ let captured := capturedIndices board idx color
  let cells := captured.foldl (fun cells square => cells.setIfInBounds square 0) board.cells
  {board with cells}
 
@@ -76,9 +79,7 @@ def isLegal (board : GoBoard) (idx color : Nat) : Bool :=
   else !(board.history.any fun old => SFT.Host.Text.equal old (boardKey test))
 
 def retainHistory (board : GoBoard) : GoBoard :=
- let key := boardKey board
- if board.history.any (fun old => SFT.Host.Text.equal old key) then board
- else {board with history := board.history++[key]}
+ {board with history := board.history++[boardKey board]}
 
 def playMove (board : GoBoard) (idx : Option Nat) (color : Nat) : Bool × GoBoard :=
  match idx with
@@ -87,8 +88,10 @@ def playMove (board : GoBoard) (idx : Option Nat) (color : Nat) : Bool × GoBoar
   if !(isLegal board square color) then (false,board)
   else
    let placed := {board with cells := board.cells.setIfInBounds square color}
+   let removed := capturedIndices placed square color
    let captured := captureAfterPlacement placed square color
-   (true,retainHistory {captured with koSquare := none})
+   let ko := if removed.length = 1 then removed.head? else none
+   (true,retainHistory {captured with koSquare := ko})
 
 def legalMoves (board : GoBoard) (color : Nat) : List Nat :=
  (List.range (board.size*board.size)).filter fun idx => isLegal board idx color

@@ -1,0 +1,57 @@
+{
+  "experiment_id": "SFT-EXP-ASTRO-SELECTION-001-E1",
+  "claim_id": "SFT-ASTRO-SELECTION-001",
+  "frozen_relation": "target-opportunity-detection-status-carrier__survey-selection-bounded__selection-and-detection-relation__footprint-cadence-threshold-masks-and-missingness-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+  "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-SELECTION-001.json",
+  "source_snapshot_hash": "sha256:fedc10243c8ffe2c9d1ed97c2a422dab76c7d28047e5ca6db06796f71cae3c9b",
+  "target_ids": [
+    "sft-astro-selection-001-external-astronomy-evidence"
+  ],
+  "target_locators": [
+    [
+      "sft-astro-selection-001-external-astronomy-evidence",
+      "ESA-GAIA-ARCHIVE-001",
+      "https://gea.esac.esa.int/archive/"
+    ]
+  ],
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-ASTRO-SELECTION-001-E1-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "physical-observation",
+          "astronomy:target-opportunity-detection-status-carrier__selection-and-detection-relation__footprint-cadence-threshold-masks-and-missingness-held__survey-selection-bounded"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "expected_observation_label": "astronomy:target-opportunity-detection-status-carrier__selection-and-detection-relation__footprint-cadence-threshold-masks-and-missingness-held__survey-selection-bounded",
+  "falsification_condition": "Reject if a non-detection or missing row becomes ordinary zero or confirmed absence.",
+  "all_rows_required": true,
+  "target_inaccessible_before_seal": true
+}

@@ -15949,3 +15949,13 @@ import SFT.EarthEnvironment.EarthAirSeaExchangeEvidence
 import SFT.EarthEnvironment.EarthAirSeaExchangeExperiment
 
 import SFT.EarthEnvironment.EarthAirSeaExchangeValidation
+
+import SFT.EarthEnvironment.EarthCoastTide
+
+import SFT.EarthEnvironment.EarthCoastTideGrammar
+
+import SFT.EarthEnvironment.EarthCoastTideEvidence
+
+import SFT.EarthEnvironment.EarthCoastTideExperiment
+
+import SFT.EarthEnvironment.EarthCoastTideValidation

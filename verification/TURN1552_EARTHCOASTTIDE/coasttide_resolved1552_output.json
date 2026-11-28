@@ -1,0 +1,61 @@
+{
+  "all_rows_preserved": true,
+  "data_source_ids": [
+    "NOAA-WOD-001",
+    "ARGO-DATA-001",
+    "NSIDC-SEA-ICE-INDEX-001"
+  ],
+  "evaluator_verified_seal": true,
+  "experiment_registration_hash": "sha256:a4ded64a47df9efc98aa6b02a56e591fc7b61d105dae81b0f6a120290b0a0de3",
+  "falsification_condition": "Reject if planetary tidal locking is reowned, if a local response is generalized globally, or if shoreline change is inferred from water level alone.",
+  "isolation_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "attempted_forbidden_operations": [],
+    "certificate_hash": "sha256:6729988c07b09332068271c0e45c41dcadaa65997832cdcadd16b6d91700a83c",
+    "comparison_code_present": false,
+    "comparison_implementation_identity_hash": "sha256:a19847b39728fc9b445f1c472bac6ac6fdc673c3a1c66f5d59666b628ee3efd8",
+    "completed": true,
+    "denied_capabilities": [
+      "clock",
+      "dynamic_import",
+      "environment",
+      "filesystem_read",
+      "filesystem_write",
+      "foreign_function",
+      "network",
+      "subprocess"
+    ],
+    "executor_id": "SFT-EXP-EARTH-COAST-TIDE-001-E1-prediction-executor",
+    "host_platform": "Darwin",
+    "input_manifest_hash": "sha256:0450073c3d7b71917647b2ff0f791e29950caaae722301ed38b69c3de50453fb",
+    "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+    "output_hash": "sha256:7e31a6f7e3d3dae842ec0b641abcb6c1372a494004c28459cf4f8ea07a5a3018",
+    "prediction_seal_hash": "sha256:e6eafb1bd22220be8a3c748381e2e76820a42bdec4b8770a0e8918beacc228a3",
+    "program_hash": "sha256:bcec01304697c3b20d0ccc3558dc9d25c015021682c7c71140d97910d81c84e4",
+    "python_implementation": "CPython",
+    "registered_target_identity_hash": "sha256:b759327e9d6861b992928478fe2af7736a6c26872d80dbd18e9a0f978fca395e",
+    "target_material_present": false,
+    "trace_hash": "sha256:f80aaef928a8a1a8192a409415e892cfa3f3e338f8077dec9e450eb928b2a29f"
+  },
+  "measurement_receipt_hash": "sha256:1a7f16d04eb812e54f3f2374e224fcc4a39946966e93a45710a0340de46c2c7f",
+  "measurements": [
+    "sft-earth-coast-tide-001-external-earth-evidence: predicted earth:ocean-land-orbital-forcing-interface-carrier__periodic-forcing-propagation-and-dissipation-relation__geometry-water-level-current-sediment-time-and-handoff-held__coastal-region-bounded; source-derived earth:ocean-land-orbital-forcing-interface-carrier__periodic-forcing-propagation-and-dissipation-relation__geometry-water-level-current-sediment-time-and-handoff-held__coastal-region-bounded; exact match True",
+    "source features: 67 present; 24 absent preserved; 91 registered",
+    "the original failed transport and every adverse, absent and unresolved row remain preserved",
+    "a deliberately changed external consequence was rejected"
+  ],
+  "passed": true,
+  "target_custody_certificate": {
+    "adapter_id": "sft-portable-capability-custody/1",
+    "certificate_hash": "sha256:5c99ff045be51eccc4b91674935aac15099e9ab2dbaa4c138a400f4b9c6dafb4",
+    "custodian_id": "SFT-EXP-EARTH-COAST-TIDE-001-E1-external-target-custodian",
+    "experiment_registration_hash": "sha256:a4ded64a47df9efc98aa6b02a56e591fc7b61d105dae81b0f6a120290b0a0de3",
+    "prediction_seal_hash": "sha256:e6eafb1bd22220be8a3c748381e2e76820a42bdec4b8770a0e8918beacc228a3",
+    "registered_target_identity_hash": "sha256:b759327e9d6861b992928478fe2af7736a6c26872d80dbd18e9a0f978fca395e",
+    "released_after_prediction_seal": true,
+    "target_absent_until_prediction_seal": true,
+    "target_release_manifest_hash": "sha256:f3b0431d7a61dbc24b5c993ddf27b88042167e930e71d3f0edef49706dc4b1b4"
+  },
+  "target_opened_after_seal": true,
+  "validated_seal_hash": "native-earthcoasttide1496"
+}

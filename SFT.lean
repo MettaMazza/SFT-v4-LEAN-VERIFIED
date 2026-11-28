@@ -16253,3 +16253,13 @@ import SFT.AstronomyCosmology.AngularPositionEvidence
 import SFT.AstronomyCosmology.AngularPositionExperiment
 
 import SFT.AstronomyCosmology.AngularPositionValidation
+
+import SFT.AstronomyCosmology.AstronomicalDistance
+
+import SFT.AstronomyCosmology.AstronomicalDistanceGrammar
+
+import SFT.AstronomyCosmology.AstronomicalDistanceEvidence
+
+import SFT.AstronomyCosmology.AstronomicalDistanceExperiment
+
+import SFT.AstronomyCosmology.AstronomicalDistanceValidation

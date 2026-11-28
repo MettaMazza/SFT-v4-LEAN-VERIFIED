@@ -1,0 +1,57 @@
+{
+  "experiment_id": "SFT-EXP-ASTRO-DISTANCE-001-E1",
+  "claim_id": "SFT-ASTRO-DISTANCE-001",
+  "frozen_relation": "source-observer-separation-carrier__distance-method-bounded__method-specific-distance-inference__method-calibration-ladder-range-and-uncertainty-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+  "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-DISTANCE-001.json",
+  "source_snapshot_hash": "sha256:86ae607cc04ef0e407350a00982d1c62452c8b1720b2ae3d901c06585be477fd",
+  "target_ids": [
+    "sft-astro-distance-001-external-astronomy-evidence"
+  ],
+  "target_locators": [
+    [
+      "sft-astro-distance-001-external-astronomy-evidence",
+      "ESA-GAIA-ARCHIVE-001",
+      "https://gea.esac.esa.int/archive/"
+    ]
+  ],
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-ASTRO-DISTANCE-001-E1-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "physical-observation",
+          "astronomy:source-observer-separation-carrier__method-specific-distance-inference__method-calibration-ladder-range-and-uncertainty-held__distance-method-bounded"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "expected_observation_label": "astronomy:source-observer-separation-carrier__method-specific-distance-inference__method-calibration-ladder-range-and-uncertainty-held__distance-method-bounded",
+  "falsification_condition": "Reject if one distance method silently substitutes for another.",
+  "all_rows_required": true,
+  "target_inaccessible_before_seal": true
+}

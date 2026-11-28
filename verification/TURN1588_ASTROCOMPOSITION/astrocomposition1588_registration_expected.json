@@ -1,0 +1,57 @@
+{
+  "experiment_id": "SFT-EXP-ASTRO-COMPOSITION-001-E1",
+  "claim_id": "SFT-ASTRO-COMPOSITION-001",
+  "frozen_relation": "species-feature-source-carrier__composition-method-bounded__spectral-or-particle-composition-relation__species-lines-model-boundary-abundance-and-errors-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+  "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-COMPOSITION-001.json",
+  "source_snapshot_hash": "sha256:50ecfc0f5f2157a08582ab5b2486c9c5aed4f43fd9bc8f98016b5177240c3957",
+  "target_ids": [
+    "sft-astro-composition-001-external-astronomy-evidence"
+  ],
+  "target_locators": [
+    [
+      "sft-astro-composition-001-external-astronomy-evidence",
+      "CDS-SIMBAD-001",
+      "https://simbad.cds.unistra.fr/simbad/"
+    ]
+  ],
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-ASTRO-COMPOSITION-001-E1-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "physical-observation",
+          "astronomy:species-feature-source-carrier__spectral-or-particle-composition-relation__species-lines-model-boundary-abundance-and-errors-held__composition-method-bounded"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "expected_observation_label": "astronomy:species-feature-source-carrier__spectral-or-particle-composition-relation__species-lines-model-boundary-abundance-and-errors-held__composition-method-bounded",
+  "falsification_condition": "Reject if a line identification or abundance is detached from its method.",
+  "all_rows_required": true,
+  "target_inaccessible_before_seal": true
+}

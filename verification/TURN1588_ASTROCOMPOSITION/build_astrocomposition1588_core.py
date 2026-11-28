@@ -1,0 +1,29 @@
+import os,subprocess,json,re,hashlib
+from pathlib import Path
+root=Path('work/turn1064_recovery');env=dict(os.environ);env['LEAN_PATH']=':'.join([str(Path.home()/'.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean'),str(root.resolve()),'/Volumes/One Touch/SFT v4 Full model LEAN/.lake/build/lib/lean'])
+lean=str(Path.home()/'.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean')
+import time
+while True:
+ audit=Path('work/astronomy1522_structural_entry_audit_report.json')
+ if audit.exists():
+  a=json.loads(audit.read_text())
+  if a['status']=='PASS' and all(hashlib.sha256((root/'SFT/AstronomyCosmology'/(m+'.lean')).read_bytes()).hexdigest()==h for m,h in a['source_sha256'].items()):break
+ time.sleep(15)
+for module in ['AstronomicalComposition','AstronomicalCompositionGrammar','AstronomicalCompositionEvidence']:
+ p=root/'SFT/AstronomyCosmology'/f'{module}.lean'
+ with open('work/'+module+'1588_build.log','w') as log:
+  gen=Path('work/astrocomposition1588_native')/('SFT.AstronomyCosmology.'+module+'.c')
+  subprocess.run(['python3','work/run_lean_guarded.py',lean,'-j1','-M8192','-o',str(p.with_suffix('.olean')),'-c',str(gen),str(p)],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+  gen.with_name(gen.name+'.source.json').write_text(json.dumps({'source':hashlib.sha256(p.read_bytes()).hexdigest(),'generated':hashlib.sha256(gen.read_bytes()).hexdigest()}))
+ print(module+' compiled',flush=True)
+mods=['AstronomicalComposition','AstronomicalCompositionGrammar','AstronomicalCompositionEvidence'];names=[]
+for m in mods:
+ s=(root/'SFT/AstronomyCosmology'/f'{m}.lean').read_text()
+ names += ['SFT.AstronomyCosmology.'+m+'.'+n for n in re.findall(r'^(?:def|theorem)\s+(\w+)',s,re.M)]
+p=Path('work/ObservationCoreAudit1588.lean');p.write_text('\n'.join('import SFT.AstronomyCosmology.'+m for m in mods)+'\n'+'\n'.join('#print axioms '+n for n in names)+'\n')
+with open('work/astrocomposition1588_core_entry_audit.log','w') as log:subprocess.run(['python3','work/run_lean_guarded.py',lean,'-j1','-M8192',str(p)],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+s=Path('work/astrocomposition1588_core_entry_audit.log').read_text();assert s.count('does not depend on any axioms')==len(names),(len(names),s[-3000:]);assert 'depends on axioms'not in s
+Path('work/astrocomposition1588_core_entry_audit_report.json').write_text(json.dumps({'status':'PASS','declarations':names,'count':len(names),'source_sha256':{m:hashlib.sha256((root/'SFT/AstronomyCosmology'/f'{m}.lean').read_bytes()).hexdigest() for m in mods}},indent=2)+'\n')
+print('PASS '+str(len(names))+' empty-axiom declarations',flush=True)
+
+

@@ -1,0 +1,116 @@
+{
+  "registration": {
+    "all_rows_required": true,
+    "claim_id": "SFT-ASTRO-COMPOSITION-001",
+    "expected_observation_label": "astronomy:species-feature-source-carrier__spectral-or-particle-composition-relation__species-lines-model-boundary-abundance-and-errors-held__composition-method-bounded",
+    "experiment_id": "SFT-EXP-ASTRO-COMPOSITION-001-E1",
+    "falsification_condition": "Reject if a line identification or abundance is detached from its method.",
+    "frozen_relation": "species-feature-source-carrier__composition-method-bounded__spectral-or-particle-composition-relation__species-lines-model-boundary-abundance-and-errors-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+    "prediction_program": {
+      "instructions": [
+        {
+          "arguments": [
+            "registered-premise"
+          ],
+          "destination": "premise",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "physical-observation",
+            "astronomy:species-feature-source-carrier__spectral-or-particle-composition-relation__species-lines-model-boundary-abundance-and-errors-held__composition-method-bounded"
+          ],
+          "destination": "prediction",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "premise",
+            "prediction"
+          ],
+          "destination": "bound-result",
+          "opcode": "pair"
+        },
+        {
+          "arguments": [
+            "prediction"
+          ],
+          "destination": "",
+          "opcode": "emit"
+        }
+      ],
+      "program_id": "SFT-EXP-ASTRO-COMPOSITION-001-E1-prediction",
+      "schema": "sft-v3-fold-program/1"
+    },
+    "source_snapshot_hash": "sha256:50ecfc0f5f2157a08582ab5b2486c9c5aed4f43fd9bc8f98016b5177240c3957",
+    "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-COMPOSITION-001.json",
+    "target_ids": [
+      "sft-astro-composition-001-external-astronomy-evidence"
+    ],
+    "target_inaccessible_before_seal": true,
+    "target_locators": [
+      [
+        "sft-astro-composition-001-external-astronomy-evidence",
+        "CDS-SIMBAD-001",
+        "https://simbad.cds.unistra.fr/simbad/"
+      ]
+    ]
+  },
+  "validation": {
+    "all_rows_preserved": true,
+    "data_source_ids": [
+      "CDS-SIMBAD-001"
+    ],
+    "evaluator_verified_seal": true,
+    "experiment_registration_hash": "sha256:f79bf2b4d71b98ac7475e0c017c6f9e4ee1266f5c73d7ec0b5f86ba66304edbb",
+    "falsification_condition": "Reject if a line identification or abundance is detached from its method.",
+    "isolation_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "attempted_forbidden_operations": [],
+      "certificate_hash": "sha256:6e02c919aa482497c86bd8b5c59b36e3c294e1d811856624d2d7d6834f00c381",
+      "comparison_code_present": false,
+      "comparison_implementation_identity_hash": "sha256:3f88cc42772bff67c651660dfba0be0e084d279f68548ee7b5a4d1863d772939",
+      "completed": true,
+      "denied_capabilities": [
+        "clock",
+        "dynamic_import",
+        "environment",
+        "filesystem_read",
+        "filesystem_write",
+        "foreign_function",
+        "network",
+        "subprocess"
+      ],
+      "executor_id": "SFT-EXP-ASTRO-COMPOSITION-001-E1-prediction-executor",
+      "host_platform": "Darwin",
+      "input_manifest_hash": "sha256:c973e7a4b3ef4d5b5749230b87adcdbb50d1cdad003ee806a71a349f1c684708",
+      "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+      "output_hash": "sha256:cb3332c20cd2357c251c57cb5a86bd2b5d83081c78c8ab646ea605e2760b44a1",
+      "prediction_seal_hash": "sha256:fb273f7b74fdebe4b1a3c06424313565363d581d6d8fef067f3b5e7925157773",
+      "program_hash": "sha256:b7942899dcdd492916a3c02f2e9f1f81359858d127d8e8e5e6669f6a0e47d75c",
+      "python_implementation": "CPython",
+      "registered_target_identity_hash": "sha256:5359c87cdf30b6ce51e9f2c5bd3eb7e6481b755c86caaaa748cb4e4ebbd81a55",
+      "target_material_present": false,
+      "trace_hash": "sha256:4a6bee95627f613a8d4cfe63165db0de38697c1eb7045b44b2b930516a0a387b"
+    },
+    "measurement_receipt_hash": "sha256:6dddab30d89d3ec6f32509b79d3c503c497b6d9d326df3efe401133835e8307b",
+    "measurements": [
+      "sft-astro-composition-001-external-astronomy-evidence: predicted astronomy:species-feature-source-carrier__spectral-or-particle-composition-relation__species-lines-model-boundary-abundance-and-errors-held__composition-method-bounded; observed astronomy:species-feature-source-carrier__spectral-or-particle-composition-relation__species-lines-model-boundary-abundance-and-errors-held__composition-method-bounded; exact match True",
+      "deliberately tampered unfavorable control rejected"
+    ],
+    "passed": true,
+    "target_custody_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "certificate_hash": "sha256:d2c49b2a652d7fa31865e5dee5c5e28ef67c498a9e1672421245035ec2b26d91",
+      "custodian_id": "SFT-EXP-ASTRO-COMPOSITION-001-E1-external-target-custodian",
+      "experiment_registration_hash": "sha256:f79bf2b4d71b98ac7475e0c017c6f9e4ee1266f5c73d7ec0b5f86ba66304edbb",
+      "prediction_seal_hash": "sha256:fb273f7b74fdebe4b1a3c06424313565363d581d6d8fef067f3b5e7925157773",
+      "registered_target_identity_hash": "sha256:5359c87cdf30b6ce51e9f2c5bd3eb7e6481b755c86caaaa748cb4e4ebbd81a55",
+      "released_after_prediction_seal": true,
+      "target_absent_until_prediction_seal": true,
+      "target_release_manifest_hash": "sha256:1680645c8d7bda4b08460e924b28d9da085518205505e05e78ced187779e833c"
+    },
+    "target_opened_after_seal": true,
+    "validated_seal_hash": "native-astrocomposition1588"
+  }
+}

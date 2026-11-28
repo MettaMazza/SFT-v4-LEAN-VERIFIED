@@ -1,0 +1,116 @@
+{
+  "registration": {
+    "all_rows_required": true,
+    "claim_id": "SFT-ASTRO-CATALOG-001",
+    "expected_observation_label": "astronomy:versioned-row-provenance-carrier__source-to-catalogue-transformation__query-version-columns-flags-crossmatches-and-missingness-held__catalogue-release-bounded",
+    "experiment_id": "SFT-EXP-ASTRO-CATALOG-001-E1",
+    "falsification_condition": "Reject if catalogue version, query or quality filtering is hidden.",
+    "frozen_relation": "versioned-row-provenance-carrier__catalogue-release-bounded__source-to-catalogue-transformation__query-version-columns-flags-crossmatches-and-missingness-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+    "prediction_program": {
+      "instructions": [
+        {
+          "arguments": [
+            "registered-premise"
+          ],
+          "destination": "premise",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "physical-observation",
+            "astronomy:versioned-row-provenance-carrier__source-to-catalogue-transformation__query-version-columns-flags-crossmatches-and-missingness-held__catalogue-release-bounded"
+          ],
+          "destination": "prediction",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "premise",
+            "prediction"
+          ],
+          "destination": "bound-result",
+          "opcode": "pair"
+        },
+        {
+          "arguments": [
+            "prediction"
+          ],
+          "destination": "",
+          "opcode": "emit"
+        }
+      ],
+      "program_id": "SFT-EXP-ASTRO-CATALOG-001-E1-prediction",
+      "schema": "sft-v3-fold-program/1"
+    },
+    "source_snapshot_hash": "sha256:2c25c22968848cc784fa5c2a5cfa3e52a1606e6955e6246bdf3bb6876aa1dcb6",
+    "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-CATALOG-001.json",
+    "target_ids": [
+      "sft-astro-catalog-001-external-astronomy-evidence"
+    ],
+    "target_inaccessible_before_seal": true,
+    "target_locators": [
+      [
+        "sft-astro-catalog-001-external-astronomy-evidence",
+        "CDS-SIMBAD-001",
+        "https://simbad.cds.unistra.fr/simbad/"
+      ]
+    ]
+  },
+  "validation": {
+    "all_rows_preserved": true,
+    "data_source_ids": [
+      "CDS-SIMBAD-001"
+    ],
+    "evaluator_verified_seal": true,
+    "experiment_registration_hash": "sha256:f64c1f46338a28572c057f2c2dbca31bc88282d2ce4d23cc96252b6c0b290c6b",
+    "falsification_condition": "Reject if catalogue version, query or quality filtering is hidden.",
+    "isolation_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "attempted_forbidden_operations": [],
+      "certificate_hash": "sha256:841287429a227b2939241e59f454af952ef1511e46fd9492001a69fffef88d95",
+      "comparison_code_present": false,
+      "comparison_implementation_identity_hash": "sha256:f7dd6395d5feee0677ac32e4a8ceccb1d58836f0c27730a7270a20d26cbbc6e7",
+      "completed": true,
+      "denied_capabilities": [
+        "clock",
+        "dynamic_import",
+        "environment",
+        "filesystem_read",
+        "filesystem_write",
+        "foreign_function",
+        "network",
+        "subprocess"
+      ],
+      "executor_id": "SFT-EXP-ASTRO-CATALOG-001-E1-prediction-executor",
+      "host_platform": "Darwin",
+      "input_manifest_hash": "sha256:0caf745e463a3f6682f0ef32db894646dd4f42c629473283497d3ff91a6deb36",
+      "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+      "output_hash": "sha256:808944d1134dcbdaeb052ba043569f3ec8a8b27fdeb1db7e013f0a096275a1b7",
+      "prediction_seal_hash": "sha256:a41b60055d721a8d8523d8d1489e016767d5aa842d76be62404473f64f6249bb",
+      "program_hash": "sha256:a385c0c2ffcb1b221edf16de3d782a235ccc55b8b337a1e31e8267e409aae397",
+      "python_implementation": "CPython",
+      "registered_target_identity_hash": "sha256:ba341d072cd1c56c1d589e85f314b6984fbdcd8d4f672680daf2a8b044318fe8",
+      "target_material_present": false,
+      "trace_hash": "sha256:f906389203a73b899fd6515b0c7fb4e45ca1ba8125f1d38ca6d2549f1e2ec4ee"
+    },
+    "measurement_receipt_hash": "sha256:2a5b91084acebbdd8d3a9e62c25899959e7516af26fc5814a316e61e91d26534",
+    "measurements": [
+      "sft-astro-catalog-001-external-astronomy-evidence: predicted astronomy:versioned-row-provenance-carrier__source-to-catalogue-transformation__query-version-columns-flags-crossmatches-and-missingness-held__catalogue-release-bounded; observed astronomy:versioned-row-provenance-carrier__source-to-catalogue-transformation__query-version-columns-flags-crossmatches-and-missingness-held__catalogue-release-bounded; exact match True",
+      "deliberately tampered unfavorable control rejected"
+    ],
+    "passed": true,
+    "target_custody_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "certificate_hash": "sha256:219b2014eefa43c911ac9805ffe1edde9829ff673bbd1aa44b6adbf34b9cbd22",
+      "custodian_id": "SFT-EXP-ASTRO-CATALOG-001-E1-external-target-custodian",
+      "experiment_registration_hash": "sha256:f64c1f46338a28572c057f2c2dbca31bc88282d2ce4d23cc96252b6c0b290c6b",
+      "prediction_seal_hash": "sha256:a41b60055d721a8d8523d8d1489e016767d5aa842d76be62404473f64f6249bb",
+      "registered_target_identity_hash": "sha256:ba341d072cd1c56c1d589e85f314b6984fbdcd8d4f672680daf2a8b044318fe8",
+      "released_after_prediction_seal": true,
+      "target_absent_until_prediction_seal": true,
+      "target_release_manifest_hash": "sha256:bf03501b65237f87191d59f24fbb6ae237848f1c8cceaa6972e0751d5d8b589f"
+    },
+    "target_opened_after_seal": true,
+    "validated_seal_hash": "native-astrocatalog1589"
+  }
+}

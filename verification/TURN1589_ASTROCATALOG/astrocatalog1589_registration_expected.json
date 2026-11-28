@@ -1,0 +1,57 @@
+{
+  "experiment_id": "SFT-EXP-ASTRO-CATALOG-001-E1",
+  "claim_id": "SFT-ASTRO-CATALOG-001",
+  "frozen_relation": "versioned-row-provenance-carrier__catalogue-release-bounded__source-to-catalogue-transformation__query-version-columns-flags-crossmatches-and-missingness-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+  "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-CATALOG-001.json",
+  "source_snapshot_hash": "sha256:2c25c22968848cc784fa5c2a5cfa3e52a1606e6955e6246bdf3bb6876aa1dcb6",
+  "target_ids": [
+    "sft-astro-catalog-001-external-astronomy-evidence"
+  ],
+  "target_locators": [
+    [
+      "sft-astro-catalog-001-external-astronomy-evidence",
+      "CDS-SIMBAD-001",
+      "https://simbad.cds.unistra.fr/simbad/"
+    ]
+  ],
+  "prediction_program": {
+    "schema": "sft-v3-fold-program/1",
+    "program_id": "SFT-EXP-ASTRO-CATALOG-001-E1-prediction",
+    "instructions": [
+      {
+        "opcode": "input",
+        "destination": "premise",
+        "arguments": [
+          "registered-premise"
+        ]
+      },
+      {
+        "opcode": "label",
+        "destination": "prediction",
+        "arguments": [
+          "physical-observation",
+          "astronomy:versioned-row-provenance-carrier__source-to-catalogue-transformation__query-version-columns-flags-crossmatches-and-missingness-held__catalogue-release-bounded"
+        ]
+      },
+      {
+        "opcode": "pair",
+        "destination": "bound-result",
+        "arguments": [
+          "premise",
+          "prediction"
+        ]
+      },
+      {
+        "opcode": "emit",
+        "destination": "",
+        "arguments": [
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "expected_observation_label": "astronomy:versioned-row-provenance-carrier__source-to-catalogue-transformation__query-version-columns-flags-crossmatches-and-missingness-held__catalogue-release-bounded",
+  "falsification_condition": "Reject if catalogue version, query or quality filtering is hidden.",
+  "all_rows_required": true,
+  "target_inaccessible_before_seal": true
+}

@@ -16323,3 +16323,13 @@ import SFT.AstronomyCosmology.AstronomicalCompositionEvidence
 import SFT.AstronomyCosmology.AstronomicalCompositionExperiment
 
 import SFT.AstronomyCosmology.AstronomicalCompositionValidation
+
+import SFT.AstronomyCosmology.AstronomicalCatalog
+
+import SFT.AstronomyCosmology.AstronomicalCatalogGrammar
+
+import SFT.AstronomyCosmology.AstronomicalCatalogEvidence
+
+import SFT.AstronomyCosmology.AstronomicalCatalogExperiment
+
+import SFT.AstronomyCosmology.AstronomicalCatalogValidation

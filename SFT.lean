@@ -15989,3 +15989,13 @@ import SFT.EarthEnvironment.EarthClimateForcingEvidence
 import SFT.EarthEnvironment.EarthClimateForcingExperiment
 
 import SFT.EarthEnvironment.EarthClimateForcingValidation
+
+import SFT.EarthEnvironment.EarthClimateFeedback
+
+import SFT.EarthEnvironment.EarthClimateFeedbackGrammar
+
+import SFT.EarthEnvironment.EarthClimateFeedbackEvidence
+
+import SFT.EarthEnvironment.EarthClimateFeedbackExperiment
+
+import SFT.EarthEnvironment.EarthClimateFeedbackValidation

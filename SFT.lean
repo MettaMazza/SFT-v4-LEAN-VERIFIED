@@ -16089,3 +16089,13 @@ import SFT.EarthEnvironment.EarthBiodiversityEnvironmentEvidence
 import SFT.EarthEnvironment.EarthBiodiversityEnvironmentExperiment
 
 import SFT.EarthEnvironment.EarthBiodiversityEnvironmentValidation
+
+import SFT.EarthEnvironment.EarthPollutantIdentity
+
+import SFT.EarthEnvironment.EarthPollutantIdentityGrammar
+
+import SFT.EarthEnvironment.EarthPollutantIdentityEvidence
+
+import SFT.EarthEnvironment.EarthPollutantIdentityExperiment
+
+import SFT.EarthEnvironment.EarthPollutantIdentityValidation

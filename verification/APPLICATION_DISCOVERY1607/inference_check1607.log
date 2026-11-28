@@ -1,0 +1,92 @@
+PASS source family/name key replacement differs intentionally
+PASS prompt keeps original decimal precision
+PASS system prompt includes exact master text
+PASS global significance takes precedence and ties remain stable
+PASS selection preserves original fifty limit
+Generating LLM reports for 1 sweep discoveries using model 'fixture-model'...
+PASS request disables streaming and preserves context16384
+Sweep Inference Report saved to: work/inference1607/success/report.md
+PASS success count is selected rows
+PASS report contains source heading stats and analysis
+PASS successful response persists exact cache key
+Generating LLM reports for 1 sweep discoveries using model 'fixture-model'...
+Sweep Inference Report saved to: work/inference1607/success/report.md
+PASS cached response suppresses another request
+Generating LLM reports for 2 sweep discoveries using model 'fixture-model'...
+  Failed to generate analysis for Sector m=3 (X/Y*Z): fixture error
+  Failed to generate analysis for Sector m=4 (X/Y*Z): fixture error
+Sweep Inference Report saved to: work/inference1607/failure/report.md
+PASS sweep makes one attempt per failed row and still writes final report
+Generating LLM reports for 1 sweep discoveries using model 'fixture-model'...
+Sweep Inference Report saved to: work/inference1607/incomplete/report.md
+PASS incomplete response does not produce analysis
+Generating LLM reports for 1 sweep discoveries using model 'fixture-model'...
+Sweep Inference Report saved to: work/inference1607/blank/report.md
+PASS source whitespace analysis is displayed but not cached
+Generating LLM reports for 1 sweep discoveries using model 'fixture-model'...
+PASS request disables streaming and preserves context16384
+Sweep Inference Report saved to: work/inference1607/corrupt/report.md
+PASS malformed cache is replaced after successful request
+Generating LLM reports for 1 sweep discoveries using model 'fixture-model'...
+PASS selected malformed row raises before requesting
+PASS shortest original Float representation 0.1
+PASS shortest original Float representation 0.3333333333333333
+PASS shortest original Float representation 2.675
+PASS shortest original Float representation 1e+16
+PASS shortest original Float representation 1e-05
+PASS shortest original Float representation 0.0001
+PASS shortest original Float representation 5e-324
+PASS shortest original Float representation 1.7976931348623157e+308
+PASS shortest original Float representation 2.2250738585072014e-308
+PASS shortest original Float representation 1.0000000000000002
+PASS shortest original Float representation -0.0
+PASS shortest original Float representation 123.0
+PASS JSON string rendering preserves Python ASCII escapes
+PASS ordinary report retains unfiltered source group
+PASS limit-to-matches defaults to excluding unmatched groups
+PASS ordinary cache key uses sorted numerator-denominator pairs
+PASS raw prompt includes twelve original invariant keys
+Generating LLM inference reports for 1 sectors using model 'fixture'...
+  Attempt 1 for Sector m=2 failed: first attempt fixture
+PASS ordinary request carries raw data and original master context
+  Completed analysis for Sector m=2.
+LLM Inference Report saved to: work/inference1607/sector/report.md
+PASS ordinary successful retry sleeps exactly once
+PASS ordinary report preserves original heading and full eigenvalue representation
+Generating LLM inference reports for 1 sectors using model 'fixture'...
+  Loaded analysis for Sector m=2 from cache.
+  Completed analysis for Sector m=2.
+LLM Inference Report saved to: work/inference1607/sector/report.md
+PASS ordinary cached response suppresses request and backoff
+Generating LLM inference reports for 1 sectors using model 'fixture'...
+  Attempt 1 for Sector m=2 failed: Ollama response incomplete or truncated.
+  Attempt 2 for Sector m=2 failed: Ollama response incomplete or truncated.
+  Attempt 3 for Sector m=2 failed: Ollama response incomplete or truncated.
+PASS ordinary incomplete generation makes three attempts and two backoffs
+PASS ordinary failed generation does not write a final report
+Generating LLM inference reports for 1 sectors using model 'fixture'...
+  Attempt 1 for Sector m=2 failed: Ollama response incomplete or truncated.
+  Attempt 2 for Sector m=2 failed: Ollama response incomplete or truncated.
+  Attempt 3 for Sector m=2 failed: Ollama response incomplete or truncated.
+  Completed analysis for Sector m=2.
+LLM Inference Report saved to: work/inference1607/sectorwhite/report.md
+PASS ordinary whitespace retains original three-attempt truthiness behavior
+PASS ordinary whitespace is never persisted as successful cache
+Generating LLM inference reports for 1 sectors using model 'fixture'...
+  Loaded analysis for Sector m=2 from cache.
+PASS empty cached analysis raises without retry as in source
+Generating LLM reports for 2 sweep discoveries using model 'fixture'...
+  Failed to generate analysis for Sector m=3 (X/Y*Z): inappropriate type (error code: 21, illegal operation on a directory)
+  file: work/inference1607/cachewrite/usde_inference_sweep_cache.json
+Sweep Inference Report saved to: work/inference1607/cachewrite/report.md
+PASS sweep retains analysis and in-memory cache after cache-write error
+Generating LLM inference reports for 1 sectors using model 'fixture'...
+  Attempt 1 for Sector m=2 failed: inappropriate type (error code: 21, illegal operation on a directory)
+  file: work/inference1607/sectorwrite/usde_inference_cache.json
+  Attempt 2 for Sector m=2 failed: inappropriate type (error code: 21, illegal operation on a directory)
+  file: work/inference1607/sectorwrite/usde_inference_cache.json
+  Attempt 3 for Sector m=2 failed: inappropriate type (error code: 21, illegal operation on a directory)
+  file: work/inference1607/sectorwrite/usde_inference_cache.json
+  Completed analysis for Sector m=2.
+LLM Inference Report saved to: work/inference1607/sectorwrite/report.md
+PASS ordinary cache-write failure retains analysis across all three attempts

@@ -106,7 +106,7 @@
   "v2_computational_core": "SFT/Applications/Discovery/Explorer.lean",
   "v2_remaining": [
     "discovery_max console/CLI wiring and prediction/falsification registry callback execution",
-    "USDE inference report methods, verify_entire_corpus and live particle adapter; console/timing wrappers for autonomous/sweep methods",
+    "USDE verify_entire_corpus and live particle adapter; console/timing/entrypoint wiring for native methods",
     "complete program-level fidelity and actual axiom dependency requirements; Float/HashSet dependencies are recorded, not empty"
   ],
   "status": "V3 sweep complete with kernel proofs; complete four-program milestone still open",
@@ -387,6 +387,16 @@
       "original": "generate_academic_report",
       "native": "AcademicReport.generateAcademicReport",
       "line": 896
+    },
+    {
+      "original": "generate_inference_report_sweep",
+      "native": "InferenceSweep.generateInferenceReportSweep",
+      "line": 996
+    },
+    {
+      "original": "generate_inference_report",
+      "native": "InferenceSector.generateInferenceReport",
+      "line": 1132
     }
   ],
   "usde_source": "reference/applications/discovery-SFT-v2/sftoe/usde.py",
@@ -395,11 +405,10 @@
   "usde_axiom_detail": "verification/APPLICATION_DISCOVERY1605/axioms.json",
   "usde1606_evidence": "verification/APPLICATION_DISCOVERY1606",
   "usde1606_remaining": [
-    "generate_inference_report_sweep",
-    "generate_inference_report",
     "verify_entire_corpus and original native callback bindings",
     "live particle query adapter",
     "discovery_max CLI and prediction/falsification callbacks",
-    "console/timing wrappers for sweep/autonomous methods"
-  ]
+    "console/timing/entrypoint wiring for translated native methods"
+  ],
+  "usde1607_evidence": "verification/APPLICATION_DISCOVERY1607"
 }

@@ -1,0 +1,116 @@
+{
+  "registration": {
+    "all_rows_required": true,
+    "claim_id": "SFT-ASTRO-FLUX-LUMINOSITY-001",
+    "expected_observation_label": "astronomy:source-path-received-radiation-carrier__flux-distance-luminosity-relation__band-distance-geometry-extinction-and-time-held__radiometric-boundary-declared",
+    "experiment_id": "SFT-EXP-ASTRO-FLUX-LUMINOSITY-001-E1",
+    "falsification_condition": "Reject if apparent brightness is relabelled intrinsic luminosity.",
+    "frozen_relation": "source-path-received-radiation-carrier__radiometric-boundary-declared__flux-distance-luminosity-relation__band-distance-geometry-extinction-and-time-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+    "prediction_program": {
+      "instructions": [
+        {
+          "arguments": [
+            "registered-premise"
+          ],
+          "destination": "premise",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "physical-observation",
+            "astronomy:source-path-received-radiation-carrier__flux-distance-luminosity-relation__band-distance-geometry-extinction-and-time-held__radiometric-boundary-declared"
+          ],
+          "destination": "prediction",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "premise",
+            "prediction"
+          ],
+          "destination": "bound-result",
+          "opcode": "pair"
+        },
+        {
+          "arguments": [
+            "prediction"
+          ],
+          "destination": "",
+          "opcode": "emit"
+        }
+      ],
+      "program_id": "SFT-EXP-ASTRO-FLUX-LUMINOSITY-001-E1-prediction",
+      "schema": "sft-v3-fold-program/1"
+    },
+    "source_snapshot_hash": "sha256:f17448d17f6d20aed81060b10a78b4c05766c604fdcc54b0b2277e1959dd2107",
+    "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-FLUX-LUMINOSITY-001.json",
+    "target_ids": [
+      "sft-astro-flux-luminosity-001-external-astronomy-evidence"
+    ],
+    "target_inaccessible_before_seal": true,
+    "target_locators": [
+      [
+        "sft-astro-flux-luminosity-001-external-astronomy-evidence",
+        "ESA-GAIA-ARCHIVE-001",
+        "https://gea.esac.esa.int/archive/"
+      ]
+    ]
+  },
+  "validation": {
+    "all_rows_preserved": true,
+    "data_source_ids": [
+      "ESA-GAIA-ARCHIVE-001"
+    ],
+    "evaluator_verified_seal": true,
+    "experiment_registration_hash": "sha256:c9c6427d6900e41d697e02598eb433265bedff32f7755bce6552a4979b0a0161",
+    "falsification_condition": "Reject if apparent brightness is relabelled intrinsic luminosity.",
+    "isolation_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "attempted_forbidden_operations": [],
+      "certificate_hash": "sha256:dc1f03677e3800e2bf31dbb0ba08777fb748c635ceac442e2fd43880e318ed34",
+      "comparison_code_present": false,
+      "comparison_implementation_identity_hash": "sha256:fb804345d6cdc44186e4c7aba5ebb49d4ae6899f7afc5a6fbdaf3c17b8f78d1f",
+      "completed": true,
+      "denied_capabilities": [
+        "clock",
+        "dynamic_import",
+        "environment",
+        "filesystem_read",
+        "filesystem_write",
+        "foreign_function",
+        "network",
+        "subprocess"
+      ],
+      "executor_id": "SFT-EXP-ASTRO-FLUX-LUMINOSITY-001-E1-prediction-executor",
+      "host_platform": "Darwin",
+      "input_manifest_hash": "sha256:b764ef1941ccf1c6381bd345387a8bbee4af0bf4dede636ea74e733e40f73073",
+      "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+      "output_hash": "sha256:4dc0fb8d6d537b7b9d6571ceb0ff0e765af541110e1f49cd7ffb098f179b676f",
+      "prediction_seal_hash": "sha256:87d9ef3020d2087b05e62b7f09aa379e7fa81b15fcd60d620e17c0fb52321367",
+      "program_hash": "sha256:050bf5d15a98b91f6e625e6dda5286010f8488a65e99108e73a52f91251d180e",
+      "python_implementation": "CPython",
+      "registered_target_identity_hash": "sha256:cc4bbbd2f2fa8da008463f404f61bfe42fc13d8bdb92e46c56a155743eca8c18",
+      "target_material_present": false,
+      "trace_hash": "sha256:8bde0528060c823fb820bfe77e4ea85f3a7616b83c19b51ea83a7b0eb12cdb21"
+    },
+    "measurement_receipt_hash": "sha256:15f679f6cd67b722c515a2618741c03fc45234ca82770089e6512a66a64bc578",
+    "measurements": [
+      "sft-astro-flux-luminosity-001-external-astronomy-evidence: predicted astronomy:source-path-received-radiation-carrier__flux-distance-luminosity-relation__band-distance-geometry-extinction-and-time-held__radiometric-boundary-declared; observed astronomy:source-path-received-radiation-carrier__flux-distance-luminosity-relation__band-distance-geometry-extinction-and-time-held__radiometric-boundary-declared; exact match True",
+      "deliberately tampered unfavorable control rejected"
+    ],
+    "passed": true,
+    "target_custody_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "certificate_hash": "sha256:94c594306a12ea0431c544264398e704e3da2a3ff884bada827178bcd24ebeba",
+      "custodian_id": "SFT-EXP-ASTRO-FLUX-LUMINOSITY-001-E1-external-target-custodian",
+      "experiment_registration_hash": "sha256:c9c6427d6900e41d697e02598eb433265bedff32f7755bce6552a4979b0a0161",
+      "prediction_seal_hash": "sha256:87d9ef3020d2087b05e62b7f09aa379e7fa81b15fcd60d620e17c0fb52321367",
+      "registered_target_identity_hash": "sha256:cc4bbbd2f2fa8da008463f404f61bfe42fc13d8bdb92e46c56a155743eca8c18",
+      "released_after_prediction_seal": true,
+      "target_absent_until_prediction_seal": true,
+      "target_release_manifest_hash": "sha256:34c026926af3f3836fc2b6381f6d11679796dd193356391f3c928606e031ad0e"
+    },
+    "target_opened_after_seal": true,
+    "validated_seal_hash": "native-astrofluxluminosity1590"
+  }
+}

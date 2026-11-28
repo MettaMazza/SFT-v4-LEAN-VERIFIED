@@ -16039,3 +16039,13 @@ import SFT.EarthEnvironment.EarthCarbonCycleEvidence
 import SFT.EarthEnvironment.EarthCarbonCycleExperiment
 
 import SFT.EarthEnvironment.EarthCarbonCycleValidation
+
+import SFT.EarthEnvironment.EarthNitrogenCycle
+
+import SFT.EarthEnvironment.EarthNitrogenCycleGrammar
+
+import SFT.EarthEnvironment.EarthNitrogenCycleEvidence
+
+import SFT.EarthEnvironment.EarthNitrogenCycleExperiment
+
+import SFT.EarthEnvironment.EarthNitrogenCycleValidation

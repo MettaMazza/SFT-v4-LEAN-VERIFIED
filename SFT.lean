@@ -16149,3 +16149,13 @@ import SFT.EarthEnvironment.EarthEnvironmentalQualityEvidence
 import SFT.EarthEnvironment.EarthEnvironmentalQualityExperiment
 
 import SFT.EarthEnvironment.EarthEnvironmentalQualityValidation
+
+import SFT.EarthEnvironment.EarthFieldObservation
+
+import SFT.EarthEnvironment.EarthFieldObservationGrammar
+
+import SFT.EarthEnvironment.EarthFieldObservationEvidence
+
+import SFT.EarthEnvironment.EarthFieldObservationExperiment
+
+import SFT.EarthEnvironment.EarthFieldObservationValidation

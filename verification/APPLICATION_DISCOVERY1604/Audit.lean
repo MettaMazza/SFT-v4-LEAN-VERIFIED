@@ -1,0 +1,20 @@
+import SFT.Applications.Discovery.MaxCore
+#print axioms SFT.Applications.Discovery.MaxCore.seenAt
+#print axioms SFT.Applications.Discovery.MaxCore.traceLoop
+#print axioms SFT.Applications.Discovery.MaxCore.trace
+#print axioms SFT.Applications.Discovery.MaxCore.addTrace
+#print axioms SFT.Applications.Discovery.MaxCore.deepAxis1
+#print axioms SFT.Applications.Discovery.MaxCore.orbitCensus
+#print axioms SFT.Applications.Discovery.MaxCore.sectorPrimes
+#print axioms SFT.Applications.Discovery.MaxCore.identityPrimes
+#print axioms SFT.Applications.Discovery.MaxCore.ladder
+#print axioms SFT.Applications.Discovery.MaxCore.sectorScan
+#print axioms SFT.Applications.Discovery.MaxCore.ladderShortfall
+#print axioms SFT.Applications.Discovery.MaxCore.ladderSpan
+#print axioms SFT.Applications.Discovery.MaxCore.crossIdentities
+#print axioms SFT.Applications.Discovery.MaxCore.universalModes
+#print axioms SFT.Applications.Discovery.MaxCore.sectorOrbitLengths
+#print axioms SFT.Applications.Discovery.MaxCore.greater
+#print axioms SFT.Applications.Discovery.MaxCore.runningRow
+#print axioms SFT.Applications.Discovery.MaxCore.runningCurves
+#print axioms SFT.Applications.Discovery.MaxCore.onShell

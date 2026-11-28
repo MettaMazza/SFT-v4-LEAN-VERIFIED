@@ -16069,3 +16069,13 @@ import SFT.EarthEnvironment.EarthBiosphereExchangeEvidence
 import SFT.EarthEnvironment.EarthBiosphereExchangeExperiment
 
 import SFT.EarthEnvironment.EarthBiosphereExchangeValidation
+
+import SFT.EarthEnvironment.EarthCoupledEcosystem
+
+import SFT.EarthEnvironment.EarthCoupledEcosystemGrammar
+
+import SFT.EarthEnvironment.EarthCoupledEcosystemEvidence
+
+import SFT.EarthEnvironment.EarthCoupledEcosystemExperiment
+
+import SFT.EarthEnvironment.EarthCoupledEcosystemValidation

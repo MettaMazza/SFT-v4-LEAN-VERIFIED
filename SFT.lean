@@ -16233,3 +16233,13 @@ import SFT.AstronomyCosmology.AstronomicalObserverEvidence
 import SFT.AstronomyCosmology.AstronomicalObserverExperiment
 
 import SFT.AstronomyCosmology.AstronomicalObserverValidation
+
+import SFT.AstronomyCosmology.AstronomicalSignal
+
+import SFT.AstronomyCosmology.AstronomicalSignalGrammar
+
+import SFT.AstronomyCosmology.AstronomicalSignalEvidence
+
+import SFT.AstronomyCosmology.AstronomicalSignalExperiment
+
+import SFT.AstronomyCosmology.AstronomicalSignalValidation

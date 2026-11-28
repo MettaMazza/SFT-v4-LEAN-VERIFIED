@@ -1,0 +1,116 @@
+{
+  "registration": {
+    "all_rows_required": true,
+    "claim_id": "SFT-ASTRO-SIGNAL-001",
+    "expected_observation_label": "astronomy:source-path-detector-signal-carrier__propagation-and-detection-relation__emission-path-band-arrival-and-quality-held__signal-channel-bounded",
+    "experiment_id": "SFT-EXP-ASTRO-SIGNAL-001-E1",
+    "falsification_condition": "Reject if propagation, detector response or non-detection is omitted.",
+    "frozen_relation": "source-path-detector-signal-carrier__signal-channel-bounded__propagation-and-detection-relation__emission-path-band-arrival-and-quality-held__evidence-class-explicit__root-bound-forward-forcing__positive-finite-extension-retains-all-rows__no-extra-rule",
+    "prediction_program": {
+      "instructions": [
+        {
+          "arguments": [
+            "registered-premise"
+          ],
+          "destination": "premise",
+          "opcode": "input"
+        },
+        {
+          "arguments": [
+            "physical-observation",
+            "astronomy:source-path-detector-signal-carrier__propagation-and-detection-relation__emission-path-band-arrival-and-quality-held__signal-channel-bounded"
+          ],
+          "destination": "prediction",
+          "opcode": "label"
+        },
+        {
+          "arguments": [
+            "premise",
+            "prediction"
+          ],
+          "destination": "bound-result",
+          "opcode": "pair"
+        },
+        {
+          "arguments": [
+            "prediction"
+          ],
+          "destination": "",
+          "opcode": "emit"
+        }
+      ],
+      "program_id": "SFT-EXP-ASTRO-SIGNAL-001-E1-prediction",
+      "schema": "sft-v3-fold-program/1"
+    },
+    "source_snapshot_hash": "sha256:034a9f694c0b1a040f68fdac09f6ad9c9857a4bd9704714b5bd243d3614aa78a",
+    "source_snapshot_path": "experiments/astronomy_cosmology/targets/SFT-ASTRO-SIGNAL-001.json",
+    "target_ids": [
+      "sft-astro-signal-001-external-astronomy-evidence"
+    ],
+    "target_inaccessible_before_seal": true,
+    "target_locators": [
+      [
+        "sft-astro-signal-001-external-astronomy-evidence",
+        "ESA-GAIA-ARCHIVE-001",
+        "https://gea.esac.esa.int/archive/"
+      ]
+    ]
+  },
+  "validation": {
+    "all_rows_preserved": true,
+    "data_source_ids": [
+      "ESA-GAIA-ARCHIVE-001"
+    ],
+    "evaluator_verified_seal": true,
+    "experiment_registration_hash": "sha256:ab7c7a840102cf7ed01c188802d280c2968b4b9c1badf587464cf9719daa745a",
+    "falsification_condition": "Reject if propagation, detector response or non-detection is omitted.",
+    "isolation_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "attempted_forbidden_operations": [],
+      "certificate_hash": "sha256:3219cd465339966dee804c25bce559e83d0a50513a2572be218123b52c5eec55",
+      "comparison_code_present": false,
+      "comparison_implementation_identity_hash": "sha256:67062074dfae14950cf14b16c4dc66d7b1f8e89781de032ff1e97c6074c5f0bb",
+      "completed": true,
+      "denied_capabilities": [
+        "clock",
+        "dynamic_import",
+        "environment",
+        "filesystem_read",
+        "filesystem_write",
+        "foreign_function",
+        "network",
+        "subprocess"
+      ],
+      "executor_id": "SFT-EXP-ASTRO-SIGNAL-001-E1-prediction-executor",
+      "host_platform": "Darwin",
+      "input_manifest_hash": "sha256:2d70e3e33f9e9f329ce6cbb23bef75299d205f10e2bd2a9e750ee661ebe70faf",
+      "interpreter_hash": "sha256:74c830c25a558c7ae0698b0106438efc723b4f04edd75c0be8205031503f3686",
+      "output_hash": "sha256:922ad38e29b140a1418bcecb4d88cfa90f1071a5cd0154d4dcbcb00ef0d5a8bd",
+      "prediction_seal_hash": "sha256:78ea9ee32c2a69788022fea0b26666fe87973116ecaad94ab0b6f051df601c02",
+      "program_hash": "sha256:a402238a135ad9c46a74c94f3c9aa869aa0e472ed674d20cd0147fadb17197c5",
+      "python_implementation": "CPython",
+      "registered_target_identity_hash": "sha256:32e9a487ebedfee5a39f8e1d437d8c4fa0ead840470fe02ef35bcab31b70f6e3",
+      "target_material_present": false,
+      "trace_hash": "sha256:367772770e7d4f7c43d52f2ed766ba157db358779ff9d0c8fc274b51cbd79dc6"
+    },
+    "measurement_receipt_hash": "sha256:d223fba2625c9ec7b378786796e5fcee03cdff0b8920e949824fa119bde54bf0",
+    "measurements": [
+      "sft-astro-signal-001-external-astronomy-evidence: predicted astronomy:source-path-detector-signal-carrier__propagation-and-detection-relation__emission-path-band-arrival-and-quality-held__signal-channel-bounded; observed astronomy:source-path-detector-signal-carrier__propagation-and-detection-relation__emission-path-band-arrival-and-quality-held__signal-channel-bounded; exact match True",
+      "deliberately tampered unfavorable control rejected"
+    ],
+    "passed": true,
+    "target_custody_certificate": {
+      "adapter_id": "sft-portable-capability-custody/1",
+      "certificate_hash": "sha256:cff3234cde34bc9e3add43ed55fd6d65745b804ed7875bec0af52860ce91f604",
+      "custodian_id": "SFT-EXP-ASTRO-SIGNAL-001-E1-external-target-custodian",
+      "experiment_registration_hash": "sha256:ab7c7a840102cf7ed01c188802d280c2968b4b9c1badf587464cf9719daa745a",
+      "prediction_seal_hash": "sha256:78ea9ee32c2a69788022fea0b26666fe87973116ecaad94ab0b6f051df601c02",
+      "registered_target_identity_hash": "sha256:32e9a487ebedfee5a39f8e1d437d8c4fa0ead840470fe02ef35bcab31b70f6e3",
+      "released_after_prediction_seal": true,
+      "target_absent_until_prediction_seal": true,
+      "target_release_manifest_hash": "sha256:a25c0fd633276fe35480e2dd928286cc0f8842997941f275f79c61141eb1810c"
+    },
+    "target_opened_after_seal": true,
+    "validated_seal_hash": "native-astrosignal1580"
+  }
+}

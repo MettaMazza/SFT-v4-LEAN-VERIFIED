@@ -15999,3 +15999,13 @@ import SFT.EarthEnvironment.EarthClimateFeedbackEvidence
 import SFT.EarthEnvironment.EarthClimateFeedbackExperiment
 
 import SFT.EarthEnvironment.EarthClimateFeedbackValidation
+
+import SFT.EarthEnvironment.EarthClimateVariability
+
+import SFT.EarthEnvironment.EarthClimateVariabilityGrammar
+
+import SFT.EarthEnvironment.EarthClimateVariabilityEvidence
+
+import SFT.EarthEnvironment.EarthClimateVariabilityExperiment
+
+import SFT.EarthEnvironment.EarthClimateVariabilityValidation

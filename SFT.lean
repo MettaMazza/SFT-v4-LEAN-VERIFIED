@@ -16139,3 +16139,13 @@ import SFT.EarthEnvironment.EarthEnvironmentalAccumulationEvidence
 import SFT.EarthEnvironment.EarthEnvironmentalAccumulationExperiment
 
 import SFT.EarthEnvironment.EarthEnvironmentalAccumulationValidation
+
+import SFT.EarthEnvironment.EarthEnvironmentalQuality
+
+import SFT.EarthEnvironment.EarthEnvironmentalQualityGrammar
+
+import SFT.EarthEnvironment.EarthEnvironmentalQualityEvidence
+
+import SFT.EarthEnvironment.EarthEnvironmentalQualityExperiment
+
+import SFT.EarthEnvironment.EarthEnvironmentalQualityValidation
